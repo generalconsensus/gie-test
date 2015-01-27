@@ -313,7 +313,7 @@ libraries[ckeditor][directory_name] = "ckeditor"
 libraries[ckeditor][type] = "library"
 
 ; OpenPolicy Profile
-projects[openpolicy][type] = "profile"
-projects[openpolicy][download][type] = "git"
-projects[openpolicy][download][url] = "git@code.forumone.com:openpolicy/openpolicy-profile.git"
-projects[openpolicy][download][branch] = "0.4.x"
+;projects[openpolicy][type] = "profile"
+;projects[openpolicy][download][type] = "git"
+;projects[openpolicy][download][url] = "git@code.forumone.com:openpolicy/openpolicy-profile.git"
+;projects[openpolicy][download][branch] = "0.4.x"

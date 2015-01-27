@@ -1,14 +1,14 @@
 # The name for the application, should only be things that can be in a directory name
-set :application, 'app'
+set :application, 'giexchange'
 
 # The repo URL
-set :repo_url, 'repo'
+set :repo_url, 'git@github.com:forumone/DAI-USAID.git'
 
 # Use git for the SCM
 set :scm, :git
 
 # Or use the line below to deploy via rsync
-# set :scm, :rsync
+set :scm, :rsync
 
 # Use a remote cache for git
 set :deploy_via, :remote_cache
