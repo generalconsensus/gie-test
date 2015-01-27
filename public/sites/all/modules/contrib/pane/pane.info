@@ -1,0 +1,11 @@
+name = Pane
+description = Translatable custom panel panes
+core = 7.x
+
+dependencies[] = ctools
+; Information added by Drupal.org packaging script on 2014-07-02
+version = "7.x-2.5"
+core = "7.x"
+project = "pane"
+datestamp = "1404319728"
+

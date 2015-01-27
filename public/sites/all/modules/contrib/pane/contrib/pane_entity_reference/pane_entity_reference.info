@@ -1,0 +1,12 @@
+name = Pane Entity Reference
+description = Entity reference pane
+core = 7.x
+
+dependencies[] = pane
+dependencies[] = entityreference
+; Information added by Drupal.org packaging script on 2014-07-02
+version = "7.x-2.5"
+core = "7.x"
+project = "pane"
+datestamp = "1404319728"
+

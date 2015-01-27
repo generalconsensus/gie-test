@@ -1,0 +1,433 @@
+<?php
+
+/**
+ * Implements hook_init().
+ */
+function pane_init() {
+  drupal_add_js(drupal_get_path('module', 'pane') .'/pane.js');
+}
+
+/**
+ * Implements hook_menu().
+ *
+ * @return array
+ */
+function pane_menu() {
+  $items = array();
+
+  $items['admin/structure/pane'] = array(
+    'title' => 'Panes',
+    'page callback' => 'drupal_get_form',
+    'page arguments' => array('pane_panes_list'),
+    'access arguments' => array('administer panes'),
+    'type' => MENU_NORMAL_ITEM,
+    'file' => 'pane.admin.inc',
+  );
+  $items['admin/structure/pane/list'] = array(
+    'title' => 'List',
+    'access arguments' => array('administer panes'),
+    'type' => MENU_DEFAULT_LOCAL_TASK,
+    'weight' => -10,
+  );
+
+  return $items;
+}
+
+/**
+ * Implements hook_permission().
+ *
+ * @return array
+ */
+function pane_permission() {
+  return array(
+    'administer pane settings' => array(
+      'title' => t('Administer pane settings'),
+      'description' => t('Administer pane settings'),
+    ),
+    'administer panes' => array(
+      'title' => t('Edit pane content'),
+      'description' => t('Edit pane content'),
+    ),
+  );
+}
+
+/**
+ * Implements hook_ctools_plugin_directory().
+ *
+ * @param string $owner
+ * @param string $plugin_type
+ *
+ * @return string
+ */
+function pane_ctools_plugin_directory($owner, $plugin_type) {
+  if ($owner == 'ctools' && $plugin_type == 'content_types') {
+    return 'plugins/content_types';
+  }
+}
+
+/**
+ * Implements hook_ctools_plugin_type().
+ *
+ * @return array
+ */
+function pane_ctools_plugin_type() {
+  return array(
+    'plugins' => array(
+      'cache' => TRUE,
+      'use hooks' => TRUE,
+      'classes' => array('handler'),
+    ),
+  );
+}
+
+/**
+ * Returns the registry of pane plugins
+ *
+ * @param boolean $reset
+ *
+ * @return array
+ */
+function pane_registry($reset = FALSE) {
+  $plugins = &drupal_static(__FUNCTION__, array());
+
+  if (TRUE === empty($plugins)) {
+    $cache = cache_get('pane_registry');
+
+    if (FALSE === isset($cache->data) || TRUE == $reset) {
+      $plugins = module_invoke_all('pane_registry');
+    }
+    else {
+      $plugins = $cache->data;
+    }
+
+    cache_set('pane_registry', $plugins);
+  }
+
+  return $plugins;
+}
+
+/**
+ * Implements hook_pane_registry
+ *
+ * @return array
+ */
+function pane_pane_registry() {
+  $registry = array();
+
+  $registry['text'] = array(
+    'title' => t('Text'),
+    'description' => t('Custom text'),
+    'plugin' => 'pane_text',
+  );
+
+  return $registry;
+}
+
+/**
+ * Implements hook_pane_plugins
+ *
+ * @return array
+ */
+function pane_pane_plugins() {
+  $plugins = array();
+
+  $plugins['pane_base'] = array(
+    'handler' => array(
+      'path' => drupal_get_path('module', 'pane') . '/includes',
+      'file' => 'pane_base.inc',
+      'class' => 'pane_base',
+    ),
+  );
+
+  $plugins['pane_text'] = array(
+    'handler' => array(
+      'path' => drupal_get_path('module', 'pane') . '/plugins/panes',
+      'file' => 'pane_text.inc',
+      'class' => 'pane_text',
+      'parent' => 'pane_base',
+    ),
+  );
+
+  return $plugins;
+}
+
+/**
+ * Implements hook_block_info().
+ *
+ * @return array
+ */
+function pane_block_info() {
+  $block = array();
+  foreach (pane_get_containers() as $container) {
+    $block[$container->name] = array(
+      'info' => "Pane - $container->title - block",
+      'cache' => DRUPAL_CACHE_GLOBAL,
+    );
+  }
+  return $block;
+}
+
+/**
+ * Implements hook_block_view().
+ *
+ * @param string $delta
+ *
+ * @return array
+ */
+function pane_block_view($delta = '') {
+  global $language;
+
+  $lang = LANGUAGE_NONE;
+
+  if (drupal_multilingual()) {
+    $lang = (TRUE === isset($form_state['values']['language'])) ? $form_state['values']['language'] : $language->language;
+  }
+
+  $container = pane_load_container($delta, $lang);
+  $block = array();
+
+  if (FALSE !== $container) {
+    $block['subject'] = filter_xss($container->title);
+    $block['content'] = array(
+      '#markup' => $container->render(),
+      '#prefix' => '<div class = "'. str_replace('_', '-', substr($container->name, 0, -12)) .'">',
+      '#suffix' => '</div>',
+    );
+  }
+
+  return $block;
+}
+
+/**
+ * Implements hook_block_configure
+ *
+ * @param string $delta
+ *
+ * @return array:
+ */
+function pane_block_configure($delta = '') {
+  global $language;
+
+  $lang = LANGUAGE_NONE;
+
+  if (drupal_multilingual()) {
+    $lang = (TRUE === isset($form_state['values']['language'])) ? $form_state['values']['language'] : $language->language;
+  }
+
+  $container = pane_load_container($delta, $lang);
+
+  $form = array();
+
+  if (FALSE !== $container) {
+    // Set to a child to avoid issues with #tree
+    $form['pane'] = $container->data_edit_form_wrapper();
+  }
+
+  return $form;
+}
+
+/**
+ * Implements hook_block_save
+ *
+ * @param string $delta
+ * @param array $edit
+ */
+function pane_block_save($delta = '', $edit = array()) {
+  $container = pane_load_container($delta);
+
+  if (FALSE !== $container) {
+    $form_state = array('values' => $edit);
+    
+    // Merge pane values into form_state because of #tree issues
+    $form_state['values'] += $edit['pane'];
+    
+    // Make it look like we're inside CTools
+    $form_state['process_input'] = TRUE;
+    
+    $form = array();
+
+    // Manually trigger the validate function in case it needs to actually make changes
+    $container->data_edit_form_validate($form, $form_state);
+    $container->data_edit_form_wrapper_submit($form, $form_state);
+    $container->save_data();
+  }
+}
+
+/**
+ * Returns the data for a Pane
+ *
+ * @param stdClass $container
+ * @param string $lang
+ *
+ * @return pane_base
+ */
+function pane_get_data($container, $lang = LANGUAGE_NONE) {
+  ctools_include('export');
+
+  $plugin = pane_get_plugin($container);
+  $plugin->setLang($lang)
+    ->setContainer($container->name)
+    ->setTitle($container->title)
+    ->setDescription($container->description)
+    ->setPlugin($container->plugin)
+    ->setConfiguration($container->configuration)
+    ->load_data();
+
+  return $plugin;
+}
+
+/**
+ * Retrieves the pane plugin for the container
+ *
+ * @param unknown $container
+ * @return pane_base
+ */
+function pane_get_plugin($container) {
+  return pane_instance($container->plugin);
+}
+
+/**
+ * Returns an instance of a pane from the plugin name
+ *
+ * @param string $plugin
+ * @return pane_base
+ */
+function pane_instance($plugin) {
+  $class = _pane_get_class($plugin);
+  $pane = new $class();
+  $pane->setPlugin($plugin);
+
+  return $pane;
+}
+
+/**
+ * Returns the class name for a plugin
+ *
+ * @param string $plugin
+ * @return string
+ */
+function _pane_get_class($plugin) {
+  ctools_include('plugins');
+
+  $registry = pane_registry();
+  $info = $registry[$plugin];
+  $plugins = ctools_get_plugins('pane', 'plugins');
+
+  $class = ctools_plugin_get_class($plugins[$info['plugin']], 'handler');
+
+  return $class;
+}
+
+/**
+ * Returns an array of available custom translatable panes
+ *
+ * @param boolean $load_data
+ *   Whether we should load the data along with the container
+ *   
+ * @return array
+ */
+function pane_get_containers($load_data = FALSE) {
+  return pane_load_container(NULL, LANGUAGE_NONE, $load_data);
+}
+
+/**
+ * Load a pane and perform token replacement
+ *
+ * @param string $name
+ *   The name of the pane to load
+ *   
+ * @param string $lang
+ *   The language to load content for
+ *   
+ * @param boolean $load_data
+ *   Whether to load the data along with the container
+ *   
+ * @return array
+ */
+function pane_load_container($name = NULL, $lang = LANGUAGE_NONE, $load_data = TRUE) {
+  ctools_include('export');
+
+  if (NULL !== $name) {
+    $presets = ctools_export_load_object('pane_container', 'names', array($name));
+    $container = FALSE;
+    
+    if (TRUE === isset($presets[$name])) {
+      $container = (TRUE === $load_data) ? pane_get_data($presets[$name], $lang) : $presets[$name];
+    }
+    
+    return $container;
+  }
+  else {
+    $containers = array();
+
+    foreach (ctools_export_load_object('pane_container') as $container) {
+      $containers[] = (TRUE === $load_data) ? pane_get_data($container, $lang) : $container;
+    }
+
+    return $containers;
+  }
+}
+
+/**
+ * Save a Pane container
+ *
+ * @param stdClass $pane
+ */
+function pane_save_container($container) {
+  ctools_include('export');
+  $presets = ctools_export_load_object('pane_container', 'names', array($container->name));
+
+  $current_pane = (TRUE === isset($presets[$container->name])) ? $presets[$container->name] : FALSE;
+
+  if (FALSE === $current_pane) {
+    $current_pane = ctools_export_crud_new('pane_container');
+  }
+
+  $container = (object) array_merge((array) $current_pane, array(
+    'configuration' => $container->configuration,
+    'name' => $container->name,
+    'title' => $container->title,
+    'description' => $container->description,
+    'plugin' => $container->plugin,
+  ));
+
+  ctools_export_crud_save('pane_container', $container);
+}
+
+/**
+ * Delete a Pane container
+ *
+ * @param stdClass $container
+ */
+function pane_delete_container($container) {
+  ctools_export_crud_delete('pane_container', $container);
+}
+
+/**
+ * Change the language for a pane
+ *
+ * @param array $form
+ * @param array $form_state
+ */
+function pane_change_language(&$form, &$form_state) {
+  $form_state['rebuild'] = TRUE;
+
+  // If we're editing through the block interface we have to reload the container
+  // to get the edits to the form state to work since we don't have that through
+  // hook_block_configure
+  if (TRUE === isset($form_state['values']['delta'])) {
+    global $language;
+
+    $lang = LANGUAGE_NONE;
+
+    if (drupal_multilingual()) {
+      $lang = (TRUE === isset($form_state['values']['language'])) ? $form_state['values']['language'] : $language->language;
+    }
+
+    $container = pane_load_container($form_state['values']['delta'], $lang);
+
+    if (FALSE !== $container) {
+      $container->data_edit_form_wrapper($form, $form_state);
+    }
+  }
+}

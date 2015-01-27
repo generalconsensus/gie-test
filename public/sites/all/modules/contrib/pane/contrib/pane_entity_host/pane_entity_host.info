@@ -1,0 +1,12 @@
+name = Pane Entity Host
+description = Provides a pane that hosts another entity
+core = 7.x
+
+dependencies[] = pane
+
+; Information added by Drupal.org packaging script on 2014-07-02
+version = "7.x-2.5"
+core = "7.x"
+project = "pane"
+datestamp = "1404319728"
+
