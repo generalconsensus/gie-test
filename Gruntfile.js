@@ -34,5 +34,5 @@ module.exports = function(grunt) {
 
   var stage = grunt.option('stage') || 'dev';
 
-  grunt.registerTask('default', [ 'compass:' + stage ]);
+  grunt.registerTask('default', [ ]);
 };
