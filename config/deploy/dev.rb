@@ -24,9 +24,9 @@ set :branch, "master"
 # Supports bulk-adding hosts to roles, the primary
 # server in each group is considered to be the first
 # unless any hosts have the primary property set.
-role :app, %w{dev.giexchange.forumone.com}, :primary => true
-role :web, %w{dev.giexchange.forumone.com}
-role :db,  %w{dev.giexchange.forumone.com}
+role :app, %w{giexchange@giexchange.forumone.com}, :primary => true
+role :web, %w{giexchange@giexchange.forumone.com}
+role :db,  %w{giexchange@giexchange.forumone.com}
 
 # Extended Server Syntax
 # ======================
