@@ -1,5 +1,5 @@
 # Custom SSH config
-Host dev.giexchange.forumone.com
+Host giexchange.forumone.com
 	user giexchange
 	StrictHostKeyChecking no
 	ForwardAgent yes
