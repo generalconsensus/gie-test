@@ -1,5 +1,4 @@
 <?php
-
 $aliases['local'] = array(
   'parent' => '@parent',
   'uri' => 'http://10.11.12.14',
