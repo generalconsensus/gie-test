@@ -23,10 +23,13 @@ $aliases['local'] = array(
 );
 
 $aliases['dev'] = array(
-  'uri' => 'dev.example.com',
-  'root' => '/var/www/vhosts/example.dev/public',
-  'remote-host' => 'dev.example.com',
-  'remote-user' => 'example',
+  'uri' => 'dev.giexchange.forumone.com',
+  'root' => '/var/www/vhosts/giexchange.dev/public',
+  'remote-host' => 'dev.giexchange.forumone.com',
+  'remote-user' => 'giexchange',
+  'path-aliases' => array(
+    '%files' => 'sites/default/files',
+  ),
   'command-specific' => array(
     'rsync' => array ( 
       'mode' => 'rzv'
