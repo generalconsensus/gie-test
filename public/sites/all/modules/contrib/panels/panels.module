@@ -20,7 +20,7 @@ define('PANELS_REQUIRED_CTOOLS_API', '2.0.8');
  *   ; Requires Panels v7.x-3.4 or newer.
  *   dependencies[] = panels (>=3.4)
  */
-define('PANELS_VERSION', '7.x-3.5-dev');
+define('PANELS_VERSION', '7.x-3.5');
 
 
 define('PANELS_TITLE_FIXED', 0); // Hide title use to be true/false. So false remains old behavior.
@@ -1334,6 +1334,7 @@ function template_preprocess_panels_pane(&$vars) {
   $vars['pane_suffix'] = !empty($content->pane_suffix) ? $content->pane_suffix : '';
 
   $vars['title'] = !empty($content->title) ? $content->title : '';
+  $vars['title_heading'] = !empty($content->title_heading) ? $content->title_heading : 'h2';
   $vars['title_attributes_array']['class'][] = 'pane-title';
 
   $vars['feeds'] = !empty($content->feeds) ? implode(' ', $content->feeds) : '';

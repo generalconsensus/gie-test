@@ -579,3 +579,48 @@ $conf['404_fast_html'] = '<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML+RDFa 1.0//EN"
  * Remove the leading hash signs to disable.
  */
 # $conf['allow_authorize_operations'] = FALSE;
+
+/**
+ * Solr Search API overrides
+ *
+ * Configuration setting per Solr instance
+ */
+$conf['search_api_solr_overrides'] = array(
+  'solr_server' => array(
+    'name' => t('Solr Server (Overridden)'),
+    'options' => array(
+      'host' => 'localhost',
+      'port' => 8983,
+      'path' => '/solr/drupal'
+    )
+  )
+);
+
+/**
+ * memcache configuration
+ */
+$conf['cache_backends'][] = 'sites/all/modules/contrib/memcache/memcache.inc';
+$conf['cache_default_class'] = 'MemCacheDrupal';
+$conf['cache_class_cache_form'] = 'DrupalDatabaseCache';
+
+/**
+ * Secure pages
+ */
+$conf['https'] = FALSE;
+$conf['securepages_secure'] = 0;
+
+/**
+ * Google Analytics
+ */
+$conf['googleanalytics_account'] = '';
+
+/**
+ * Disable core search
+ */
+$conf['search_cron_limit'] = 0;
+
+/**
+ * Change file upload sizes
+ */
+ini_set('upload_max_filesize','20M');
+ini_set('post_max_size','20M');
