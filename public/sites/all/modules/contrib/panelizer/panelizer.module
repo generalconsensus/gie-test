@@ -319,14 +319,10 @@ function panelizer_entity_view_alter(&$build, $entity_type) {
 
   list($entity_id, $revision_id, $bundle) = entity_extract_ids($entity_type, $entity);
 
-  // If the requested view mode does not exist, rendering will fall back
-  // to 'default' and we should check that one instead.
-  $view_mode = $build['#view_mode'];
-
-  // Test to see if this view mode is actually panelizable at all.
-  if (!isset($handler->plugin['view modes'][$view_mode]) || (empty($handler->plugin['view modes'][$view_mode]['custom settings']) && empty($handler->plugin['view mode status'][$bundle][$view_mode]))) {
-    $view_mode = 'default';
-  }
+  // If the requested view mode does not exist, check if a substitute is
+  // assigned, otherwise rendering will fall back to 'default' and we should
+  // check that one instead.
+  $view_mode = $handler->get_view_mode($build['#view_mode'], $bundle);
 
   // Make sure the bundle + view mode is actually panelized!
   if (!$handler->is_panelized($bundle . '.' . $view_mode)) {
@@ -356,7 +352,6 @@ function panelizer_entity_view_alter(&$build, $entity_type) {
     $build['#panelizer_entity_id'] = $entity_id;
   }
   $recursion_prevention[$entity_type][$entity_id][$view_mode] = FALSE;
-
 }
 
 // -----------------------------------------------------------------------
@@ -1392,6 +1387,18 @@ function panelizer_features_pipe_panelizer_defaults_alter(&$more, $data, $export
   return $more;
 }
 
+/**
+ * Implements hook_search_api_alter_callback_info().
+ */
+function panelizer_search_api_alter_callback_info() {
+  $info = array();
+  $info['panelizer'] = array(
+    'name' => t('Panelizer'),
+    'description' => t('Add the content from the Panelizer "Full page override" to the search index.'),
+    'class' => 'PanelizerSearchApiAlterCallback',
+  );
+  return $info;
+}
 // -----------------------------------------------------------------------
 // Theme functions where necessary.
 
@@ -1670,6 +1677,16 @@ function panelizer_form_panels_ipe_edit_control_form_alter(&$form, &$form_state)
   // If the entity already has customized panelizer data, add the revert button.
   if (!empty($panelizer->did)) {
     if ($handler->has_default_panel($bundle . '.' . $view_mode)) {
+      $uri = entity_uri($handler->entity_type, $entity);
+      $url = $uri['path'];
+      // Support for Workbench Moderation to redirect to the newest revision for
+      // this node.
+      if ($handler->entity_type == 'node' && module_exists('workbench_moderation')) {
+        $url = 'node/' . $entity->nid . '/current-revision';
+      }
+      $redirect_url = url($uri['path'] . '/panelizer/' . $view_mode . '/reset', array('query' => array('destination' => $url)));
+      drupal_add_js(array('panelizer' => array('revert_default_url' => $redirect_url)), 'setting');
+
       $form['buttons']['revert_default'] = array(
         '#type' => 'submit',
         '#value' => t('Revert to @bundle_name default', array('@bundle_name' => $entity_info['bundles'][$bundle]['label'])),
@@ -1844,4 +1861,43 @@ function panelizer_node_revision_load($revision_id = NULL) {
     return $revision_id;
   }
   return FALSE;
+}
+
+/**
+ * Implements hook_clone_node_alter().
+ *
+ * Custom integration for Node Clone to handle objects that might be embedded
+ * in a custom Panelizer display. Currently supports Fieldable Panels Panes.
+ */
+function panelizer_clone_node_alter(&$node, $context) {
+  if (!empty($node->panelizer)) {
+    foreach ($node->panelizer as $view_mode => &$panelizer) {
+      // Only deal with custom displays, ignore default displays which would
+      // be selected in $panelizer->name.
+      if (!empty($panelizer->did) && !empty($panelizer->display)) {
+        // Loop over each pane.
+        foreach ($panelizer->display->content as &$pane) {
+          // Clone each FPP and then assign the new fpid.
+          if ($pane->type == 'fieldable_panels_pane') {
+            list($subtype, $fpid) = explode(':', $pane->subtype);
+            if ($subtype == 'fpid') {
+              // Clone the FPP object.
+              $fpp = fieldable_panels_panes_load($fpid);
+
+              // Clean the some basic settings.
+              $fpp->fpid = NULL;
+              $fpp->created = NULL;
+              $fpp->timestamp = NULL;
+
+              // Save the cloned FPP.
+              $newfpp = fieldable_panels_panes_save($fpp);
+
+              // Update the FPP reference.
+              $pane->subtype = 'fpid:' . $newfpp->fpid;
+            }
+          }
+        }
+      }
+    }
+  }
 }
