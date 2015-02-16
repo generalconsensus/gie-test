@@ -1,0 +1,19 @@
+<?php
+
+/**
+ * Implements hook_install().
+ */
+function gie_general_install() {
+
+}
+
+/**
+ * Implements hook_update_n
+ * enable new features
+ function gie_general_update_7000() {
+   $modules = array(
+     'gie_general'
+   );
+   module_enable($modules);
+ }
+ */
