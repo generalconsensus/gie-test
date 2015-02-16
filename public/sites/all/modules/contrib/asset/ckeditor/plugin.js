@@ -478,7 +478,7 @@ var Assets;
         CKEDITOR.dialog.add('assetSearch', Assets.searchDialog);
         editor.addCommand('assetSearch', new CKEDITOR.dialogCommand('assetSearch'));
         editor.ui.addButton('assetSearch', {
-          label: editor.lang.assets_btn_search,
+          label: editor.lang.asset.assets_btn_search,
           command: 'assetSearch',
           icon: this.path + 'search.png'
         });
@@ -593,33 +593,33 @@ var Assets;
           editor.addMenuGroup('asset');
 
           editor.addMenuItem('assetoverride', {
-            label: editor.lang.assets_override,
+            label: editor.lang.asset.assets_override,
             command: 'assetOverride',
             group: 'asset',
             icon: this.path + 'gear.png'
           });
 
           editor.addMenuItem('assetedit', {
-            label: editor.lang.assets_edit,
+            label: editor.lang.asset.assets_edit,
             command: 'assetEdit',
             group: 'asset',
             icon: this.path + 'edit.png'
           });
 
           editor.addMenuItem('assetdelete', {
-            label: editor.lang.assets_delete,
+            label: editor.lang.asset.assets_delete,
             command: 'assetDelete',
             group: 'asset'
           });
 
           editor.addMenuItem('assetcut', {
-            label: editor.lang.assets_cut,
+            label: editor.lang.asset.assets_cut,
             command: 'assetCut',
             group: 'asset'
           });
 
           editor.addMenuItem('assetpaste', {
-            label: editor.lang.assets_paste,
+            label: editor.lang.asset.assets_paste,
             command: 'assetPaste',
             group: 'asset'
           });
@@ -627,13 +627,13 @@ var Assets;
           editor.addMenuGroup('newline', 200);
           editor.addMenuItems({
             addLineBefore: {
-              label: editor.lang.assets_nl_before,
+              label: editor.lang.asset.assets_nl_before,
               command: 'addLineBefore',
               group: 'newline',
               order: 1
             },
             addLineAfter: {
-              label: editor.lang.assets_nl_after,
+              label: editor.lang.asset.assets_nl_after,
               command: 'addLineAfter',
               group: 'newline',
               order: 2

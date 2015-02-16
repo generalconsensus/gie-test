@@ -34,3 +34,7 @@
 .asset div.field {
   clear: both;
 }
+
+div[name=asset_frame] {
+  height: 100%;
+}

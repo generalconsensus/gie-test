@@ -113,7 +113,7 @@ function asset_entity_info() {
   // Support entity cache module.
   if (module_exists('entitycache')) {
     $return['asset']['field cache'] = FALSE;
-    $return['asset']['entity cache'] = TRUE;
+    $return['asset']['entity cache'] = FALSE;
   }
 
   return $return;
