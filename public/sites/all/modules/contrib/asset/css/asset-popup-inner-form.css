@@ -5,3 +5,7 @@
 #page-title .page-title {
   margin: 10px 40px;
 }
+
+#assets-wysiwyg-form .form-type-radios {
+    display: block !important;
+}
