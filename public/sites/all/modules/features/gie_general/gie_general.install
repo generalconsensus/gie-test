@@ -9,11 +9,16 @@ function gie_general_install() {
 
 /**
  * Implements hook_update_n
- * enable new features
- function gie_general_update_7000() {
-   $modules = array(
-     'gie_general'
-   );
-   module_enable($modules);
- }
- */
+ * disable core modules that are replaced by contrib modules
+*/
+
+function gie_general_update_7000() {
+    $modules = array(
+        'overlay',
+        'toolbar',
+        'shortcut',
+        'dashboard',
+        'color'
+    );
+    module_disable($modules, TRUE);
+}
