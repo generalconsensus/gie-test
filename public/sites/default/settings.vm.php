@@ -599,9 +599,9 @@ $conf['search_api_solr_overrides'] = array(
 /**
  * memcache configuration
  */
-$conf['cache_backends'][] = 'sites/all/modules/contrib/memcache/memcache.inc';
-$conf['cache_default_class'] = 'MemCacheDrupal';
-$conf['cache_class_cache_form'] = 'DrupalDatabaseCache';
+#$conf['cache_backends'][] = 'sites/all/modules/contrib/memcache/memcache.inc';
+#$conf['cache_default_class'] = 'MemCacheDrupal';
+#$conf['cache_class_cache_form'] = 'DrupalDatabaseCache';
 
 /**
  * Secure pages
