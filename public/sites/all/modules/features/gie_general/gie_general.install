@@ -22,3 +22,10 @@ function gie_general_update_7000() {
     );
     module_disable($modules, TRUE);
 }
+
+function gie_general_update_7001() {
+    $modules = array(
+        'gie_assets'
+    );
+    module_enable($modules, TRUE);
+}

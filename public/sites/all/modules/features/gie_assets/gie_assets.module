@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the GIE Assets feature.
+ */
+
+include_once 'gie_assets.features.inc';
