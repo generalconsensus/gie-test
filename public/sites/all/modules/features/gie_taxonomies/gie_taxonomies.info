@@ -1,0 +1,14 @@
+name = GIE Taxonomies
+description = Configuration for the various taxonomies
+core = 7.x
+package = GIE
+version = 7.x-1.0
+dependencies[] = features
+dependencies[] = taxonomy
+dependencies[] = text
+features[features_api][] = api:2
+features[field_base][] = description_field
+features[field_base][] = name_field
+features[field_instance][] = taxonomy_term-topic-description_field
+features[field_instance][] = taxonomy_term-topic-name_field
+features[taxonomy][] = topic
