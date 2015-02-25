@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the GIE Organization feature.
+ */
+
+include_once 'gie_organization.features.inc';
