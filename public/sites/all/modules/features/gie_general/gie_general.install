@@ -29,3 +29,16 @@ function gie_general_update_7001() {
     );
     module_enable($modules, TRUE);
 }
+
+/**
+ * Enable GIE Resource, Organization, Program and Taxonomy features.
+ */
+function gie_general_update_7002() {
+  $modules = array(
+    'gie_resource',
+    'gie_organization',
+    'gie_program',
+    'gie_taxonomies',
+  );
+  module_enable($modules, TRUE);
+}
