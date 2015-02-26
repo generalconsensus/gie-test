@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the GIE Innovation feature.
+ */
+
+include_once 'gie_innovation.features.inc';
