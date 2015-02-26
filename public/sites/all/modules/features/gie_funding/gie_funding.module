@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the GIE Funding Ops feature.
+ */
+
+include_once 'gie_funding.features.inc';
