@@ -62,3 +62,13 @@ function gie_general_update_7004() {
   );
   module_enable($modules, TRUE);
 }
+
+/**
+ * Enable GIE Profile feature.
+ */
+function gie_general_update_7005() {
+  $modules = array(
+    'gie_user'
+  );
+  module_enable($modules, TRUE);
+}
