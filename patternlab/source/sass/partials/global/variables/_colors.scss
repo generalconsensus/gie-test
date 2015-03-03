@@ -1,0 +1,48 @@
+// @file
+// Color variables
+// http://sass-lang.com/docs/yardoc/file.SASS_REFERENCE.html#variables_
+
+$blue: #003359;
+$lightblue: #7090b7;
+$orange: #dc5606;
+$lightorange: #ed7d3a;
+$red: #b71234;
+
+$primary-text-color: #565a5c;
+$secondary-text-color: #555;
+$heading-text-color: $blue;
+$body-color: #fff;
+$link-color: $orange;
+$link-hover-color: darken($orange,10%);
+$selection-background: blue;
+$selection-foreground: #fff;
+$status-color: #4d8e4d;
+$warning-color: #fcce00;
+$error-color: #900;
+$border-color: #ccc;
+$gradient-light: rgba(255, 255, 255, 0.2);
+$gradient-dark: rgba(0, 0, 0, 0.2);
+
+// Buttons
+$button-bg-color: $blue;
+$button-text-color: #fff;
+
+// Forms
+$form-bg-color: #eee; // Used for fieldsets and vertical-tabs.
+$form-border-color: #ccc;
+
+// Mobile Menu
+$mobile-menu-bg-color: rgba(0, 0, 0, 0.9);
+$mobile-menu-bg-color-fallback: #111;
+$mobile-menu-border-color: #666;
+$mobile-menu-text-color: #eee;
+$mobile-menu-link-color: #37b;
+$mobile-submenu-bg-color: #eee;
+$mobile-submenu-border-color: #ccc;
+$mobile-submenu-text-color: #333;
+$mobile-submenu-link-color: #ddd;
+
+// Nav
+$pillbox-bg-color: #f9f9f9;
+$pillbox-text-color: #333;
+$pipeline-border-color: #ccc;
