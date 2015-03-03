@@ -9,9 +9,9 @@
  */
 function gie_innovation_taxonomy_default_vocabularies() {
   return array(
-    'assitance_type' => array(
-      'name' => 'Assitance Type',
-      'machine_name' => 'assitance_type',
+    'assistance_type' => array(
+      'name' => 'Assistance Type',
+      'machine_name' => 'assistance_type',
       'description' => '',
       'hierarchy' => 0,
       'module' => 'taxonomy',
