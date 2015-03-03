@@ -1542,9 +1542,9 @@ function gie_innovation_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'taxonomy_term-assitance_type-description_field'
-  $field_instances['taxonomy_term-assitance_type-description_field'] = array(
-    'bundle' => 'assitance_type',
+  // Exported field_instance: 'taxonomy_term-assistance_type-description_field'
+  $field_instances['taxonomy_term-assistance_type-description_field'] = array(
+    'bundle' => 'assistance_type',
     'default_value' => NULL,
     'deleted' => 0,
     'description' => '',
@@ -1580,9 +1580,9 @@ function gie_innovation_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'taxonomy_term-assitance_type-name_field'
-  $field_instances['taxonomy_term-assitance_type-name_field'] = array(
-    'bundle' => 'assitance_type',
+  // Exported field_instance: 'taxonomy_term-assistance_type-name_field'
+  $field_instances['taxonomy_term-assistance_type-name_field'] = array(
+    'bundle' => 'assistance_type',
     'default_value' => NULL,
     'deleted' => 0,
     'description' => '',

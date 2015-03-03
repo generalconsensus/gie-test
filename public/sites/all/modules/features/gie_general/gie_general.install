@@ -72,3 +72,12 @@ function gie_general_update_7005() {
   );
   module_enable($modules, TRUE);
 }
+
+/**
+ * Delete 'Assitance Type' taxonomy.
+ */
+function gie_general_update_7006() {
+  $vocab = taxonomy_vocabulary_machine_name_load('assitance_type');
+  $vid = $vocab->vid;
+  taxonomy_vocabulary_delete($vid);
+}
