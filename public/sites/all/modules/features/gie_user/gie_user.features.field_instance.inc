@@ -301,8 +301,8 @@ function gie_user_field_default_field_instances() {
     'description' => '',
     'display' => array(
       'default' => array(
-        'label' => 'above',
-        'module' => 'taxonomy',
+        'label' => 'hidden',
+        'module' => 'ds',
         'settings' => array(
           'field_delimiter' => '',
           'linked_field' => array(
@@ -316,9 +316,11 @@ function gie_user_field_default_field_instances() {
             'destination' => '',
             'linked' => 0,
           ),
+          'taxonomy_term_reference_view_mode' => 'full',
+          'use_content_language' => TRUE,
         ),
-        'type' => 'taxonomy_term_reference_link',
-        'weight' => 17,
+        'type' => 'ds_taxonomy_view_mode',
+        'weight' => 3,
       ),
     ),
     'entity_type' => 'user',
@@ -336,7 +338,7 @@ function gie_user_field_default_field_instances() {
         'size' => 60,
       ),
       'type' => 'taxonomy_autocomplete',
-      'weight' => 8,
+      'weight' => 5,
     ),
   );
 
@@ -370,8 +372,8 @@ function gie_user_field_default_field_instances() {
       ),
     ),
     'entity_type' => 'user',
-    'entityconnect_unload_add' => 1,
-    'entityconnect_unload_edit' => 1,
+    'entityconnect_unload_add' => 0,
+    'entityconnect_unload_edit' => 0,
     'field_name' => 'field_user_connect',
     'label' => 'Connect',
     'required' => 0,
@@ -387,7 +389,7 @@ function gie_user_field_default_field_instances() {
         'size' => 60,
       ),
       'type' => 'entityreference_autocomplete',
-      'weight' => 20,
+      'weight' => 19,
     ),
   );
 
@@ -399,8 +401,8 @@ function gie_user_field_default_field_instances() {
     'description' => '',
     'display' => array(
       'default' => array(
-        'label' => 'above',
-        'module' => 'taxonomy',
+        'label' => 'hidden',
+        'module' => 'ds',
         'settings' => array(
           'field_delimiter' => '',
           'linked_field' => array(
@@ -414,9 +416,11 @@ function gie_user_field_default_field_instances() {
             'destination' => '',
             'linked' => 0,
           ),
+          'taxonomy_term_reference_view_mode' => 'full',
+          'use_content_language' => TRUE,
         ),
-        'type' => 'taxonomy_term_reference_link',
-        'weight' => 14,
+        'type' => 'ds_taxonomy_view_mode',
+        'weight' => 4,
       ),
     ),
     'entity_type' => 'user',
@@ -427,14 +431,13 @@ function gie_user_field_default_field_instances() {
       'user_register_form' => 1,
     ),
     'widget' => array(
-      'active' => 0,
-      'module' => 'taxonomy',
+      'active' => 1,
+      'module' => 'options',
       'settings' => array(
-        'autocomplete_path' => 'taxonomy/autocomplete',
-        'size' => 60,
+        'apply_chosen' => 1,
       ),
-      'type' => 'taxonomy_autocomplete',
-      'weight' => 19,
+      'type' => 'options_select',
+      'weight' => 6,
     ),
   );
 
@@ -463,7 +466,7 @@ function gie_user_field_default_field_instances() {
           ),
         ),
         'type' => 'text_default',
-        'weight' => 18,
+        'weight' => 10,
       ),
     ),
     'entity_type' => 'user',
@@ -515,7 +518,7 @@ function gie_user_field_default_field_instances() {
     'description' => '',
     'display' => array(
       'default' => array(
-        'label' => 'above',
+        'label' => 'hidden',
         'module' => 'text',
         'settings' => array(
           'field_delimiter' => '',
@@ -532,7 +535,7 @@ function gie_user_field_default_field_instances() {
           ),
         ),
         'type' => 'text_default',
-        'weight' => 5,
+        'weight' => 7,
       ),
     ),
     'entity_type' => 'user',
@@ -572,7 +575,7 @@ function gie_user_field_default_field_instances() {
         'size' => 60,
       ),
       'type' => 'text_textfield',
-      'weight' => 10,
+      'weight' => 9,
     ),
   );
 
@@ -584,7 +587,7 @@ function gie_user_field_default_field_instances() {
     'description' => '',
     'display' => array(
       'default' => array(
-        'label' => 'above',
+        'label' => 'hidden',
         'module' => 'text',
         'settings' => array(
           'field_delimiter' => '',
@@ -641,7 +644,7 @@ function gie_user_field_default_field_instances() {
         'size' => 60,
       ),
       'type' => 'text_textfield',
-      'weight' => 4,
+      'weight' => 2,
     ),
   );
 
@@ -654,7 +657,7 @@ function gie_user_field_default_field_instances() {
     'display' => array(
       'default' => array(
         'label' => 'above',
-        'module' => 'taxonomy',
+        'module' => 'ds',
         'settings' => array(
           'field_delimiter' => '',
           'linked_field' => array(
@@ -668,9 +671,11 @@ function gie_user_field_default_field_instances() {
             'destination' => '',
             'linked' => 0,
           ),
+          'taxonomy_term_reference_view_mode' => 'full',
+          'use_content_language' => TRUE,
         ),
-        'type' => 'taxonomy_term_reference_link',
-        'weight' => 9,
+        'type' => 'ds_taxonomy_view_mode',
+        'weight' => 11,
       ),
     ),
     'entity_type' => 'user',
@@ -681,13 +686,12 @@ function gie_user_field_default_field_instances() {
       'user_register_form' => 1,
     ),
     'widget' => array(
-      'active' => 0,
-      'module' => 'taxonomy',
+      'active' => 1,
+      'module' => 'options',
       'settings' => array(
-        'autocomplete_path' => 'taxonomy/autocomplete',
-        'size' => 60,
+        'apply_chosen' => 1,
       ),
-      'type' => 'taxonomy_autocomplete',
+      'type' => 'options_select',
       'weight' => 14,
     ),
   );
@@ -700,7 +704,7 @@ function gie_user_field_default_field_instances() {
     'description' => '',
     'display' => array(
       'default' => array(
-        'label' => 'above',
+        'label' => 'hidden',
         'module' => 'text',
         'settings' => array(
           'field_delimiter' => '',
@@ -757,7 +761,7 @@ function gie_user_field_default_field_instances() {
         'size' => 60,
       ),
       'type' => 'text_textfield',
-      'weight' => 5,
+      'weight' => 3,
     ),
   );
 
@@ -769,7 +773,7 @@ function gie_user_field_default_field_instances() {
     'description' => '',
     'display' => array(
       'default' => array(
-        'label' => 'above',
+        'label' => 'hidden',
         'module' => 'text',
         'settings' => array(
           'field_delimiter' => '',
@@ -786,7 +790,7 @@ function gie_user_field_default_field_instances() {
           ),
         ),
         'type' => 'text_default',
-        'weight' => 4,
+        'weight' => 6,
       ),
     ),
     'entity_type' => 'user',
@@ -826,7 +830,7 @@ function gie_user_field_default_field_instances() {
         'size' => 60,
       ),
       'type' => 'text_textfield',
-      'weight' => 9,
+      'weight' => 8,
     ),
   );
 
@@ -842,7 +846,6 @@ function gie_user_field_default_field_instances() {
         'module' => 'entityreference',
         'settings' => array(
           'field_delimiter' => '',
-          'link' => FALSE,
           'linked_field' => array(
             'advanced' => array(
               'class' => '',
@@ -854,9 +857,11 @@ function gie_user_field_default_field_instances() {
             'destination' => '',
             'linked' => 0,
           ),
+          'links' => TRUE,
+          'view_mode' => 'default',
         ),
-        'type' => 'entityreference_label',
-        'weight' => 10,
+        'type' => 'entityreference_entity_view',
+        'weight' => 13,
       ),
     ),
     'entity_type' => 'user',
@@ -890,7 +895,7 @@ function gie_user_field_default_field_instances() {
     'display' => array(
       'default' => array(
         'label' => 'above',
-        'module' => 'taxonomy',
+        'module' => 'ds',
         'settings' => array(
           'field_delimiter' => '',
           'linked_field' => array(
@@ -904,9 +909,11 @@ function gie_user_field_default_field_instances() {
             'destination' => '',
             'linked' => 0,
           ),
+          'taxonomy_term_reference_view_mode' => 'full',
+          'use_content_language' => TRUE,
         ),
-        'type' => 'taxonomy_term_reference_link',
-        'weight' => 11,
+        'type' => 'ds_taxonomy_view_mode',
+        'weight' => 12,
       ),
     ),
     'entity_type' => 'user',
@@ -917,13 +924,12 @@ function gie_user_field_default_field_instances() {
       'user_register_form' => 1,
     ),
     'widget' => array(
-      'active' => 0,
-      'module' => 'taxonomy',
+      'active' => 1,
+      'module' => 'options',
       'settings' => array(
-        'autocomplete_path' => 'taxonomy/autocomplete',
-        'size' => 60,
+        'apply_chosen' => 1,
       ),
-      'type' => 'taxonomy_autocomplete',
+      'type' => 'options_select',
       'weight' => 16,
     ),
   );
@@ -937,7 +943,7 @@ function gie_user_field_default_field_instances() {
     'display' => array(
       'default' => array(
         'label' => 'above',
-        'module' => 'taxonomy',
+        'module' => 'ds',
         'settings' => array(
           'field_delimiter' => '',
           'linked_field' => array(
@@ -951,9 +957,11 @@ function gie_user_field_default_field_instances() {
             'destination' => '',
             'linked' => 0,
           ),
+          'taxonomy_term_reference_view_mode' => 'full',
+          'use_content_language' => TRUE,
         ),
-        'type' => 'taxonomy_term_reference_link',
-        'weight' => 12,
+        'type' => 'ds_taxonomy_view_mode',
+        'weight' => 14,
       ),
     ),
     'entity_type' => 'user',
@@ -964,13 +972,12 @@ function gie_user_field_default_field_instances() {
       'user_register_form' => 1,
     ),
     'widget' => array(
-      'active' => 0,
-      'module' => 'taxonomy',
+      'active' => 1,
+      'module' => 'options',
       'settings' => array(
-        'autocomplete_path' => 'taxonomy/autocomplete',
-        'size' => 60,
+        'apply_chosen' => 1,
       ),
-      'type' => 'taxonomy_autocomplete',
+      'type' => 'options_select',
       'weight' => 17,
     ),
   );
@@ -1000,7 +1007,7 @@ function gie_user_field_default_field_instances() {
           ),
         ),
         'type' => 'text_default',
-        'weight' => 7,
+        'weight' => 9,
       ),
     ),
     'entity_type' => 'user',
@@ -1052,7 +1059,7 @@ function gie_user_field_default_field_instances() {
     'description' => '',
     'display' => array(
       'default' => array(
-        'label' => 'above',
+        'label' => 'hidden',
         'module' => 'text',
         'settings' => array(
           'field_delimiter' => '',
@@ -1069,7 +1076,7 @@ function gie_user_field_default_field_instances() {
           ),
         ),
         'type' => 'text_default',
-        'weight' => 3,
+        'weight' => 2,
       ),
     ),
     'entity_type' => 'user',
@@ -1109,7 +1116,7 @@ function gie_user_field_default_field_instances() {
         'size' => 60,
       ),
       'type' => 'text_textfield',
-      'weight' => 7,
+      'weight' => 4,
     ),
   );
 
@@ -1121,7 +1128,7 @@ function gie_user_field_default_field_instances() {
     'description' => '',
     'display' => array(
       'default' => array(
-        'label' => 'above',
+        'label' => 'hidden',
         'module' => 'text',
         'settings' => array(
           'field_delimiter' => '',
@@ -1138,7 +1145,7 @@ function gie_user_field_default_field_instances() {
           ),
         ),
         'type' => 'text_default',
-        'weight' => 6,
+        'weight' => 8,
       ),
     ),
     'entity_type' => 'user',
@@ -1190,8 +1197,8 @@ function gie_user_field_default_field_instances() {
     'description' => '',
     'display' => array(
       'default' => array(
-        'label' => 'above',
-        'module' => 'taxonomy',
+        'label' => 'hidden',
+        'module' => 'ds',
         'settings' => array(
           'field_delimiter' => '',
           'linked_field' => array(
@@ -1205,9 +1212,11 @@ function gie_user_field_default_field_instances() {
             'destination' => '',
             'linked' => 0,
           ),
+          'taxonomy_term_reference_view_mode' => 'full',
+          'use_content_language' => TRUE,
         ),
-        'type' => 'taxonomy_term_reference_link',
-        'weight' => 2,
+        'type' => 'ds_taxonomy_view_mode',
+        'weight' => 5,
       ),
     ),
     'entity_type' => 'user',
@@ -1218,14 +1227,13 @@ function gie_user_field_default_field_instances() {
       'user_register_form' => 1,
     ),
     'widget' => array(
-      'active' => 0,
-      'module' => 'taxonomy',
+      'active' => 1,
+      'module' => 'options',
       'settings' => array(
-        'autocomplete_path' => 'taxonomy/autocomplete',
-        'size' => 60,
+        'apply_chosen' => 1,
       ),
-      'type' => 'taxonomy_autocomplete',
-      'weight' => 6,
+      'type' => 'options_select',
+      'weight' => 7,
     ),
   );
 
