@@ -12,6 +12,7 @@ dependencies[] = gie_taxonomies
 dependencies[] = html5_tools
 dependencies[] = link
 dependencies[] = text
+dependencies[] = title
 features[ctools][] = strongarm:strongarm:1
 features[features_api][] = api:2
 features[field_base][] = field_resource_assets
