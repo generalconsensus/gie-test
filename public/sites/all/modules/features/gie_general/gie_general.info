@@ -77,6 +77,7 @@ dependencies[] = views_content
 features[ctools][] = strongarm:strongarm:1
 features[features_api][] = api:2
 features[menu_custom][] = main-menu
+features[menu_custom][] = menu-footer-menu
 features[variable][] = admin_menu_cache_client
 features[variable][] = admin_menu_components
 features[variable][] = admin_menu_margin_top
