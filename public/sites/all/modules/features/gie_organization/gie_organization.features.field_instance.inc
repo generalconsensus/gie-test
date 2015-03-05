@@ -93,7 +93,7 @@ function gie_organization_field_default_field_instances() {
     'description' => 'Enter your organization\'s mission, value, history and size.',
     'display' => array(
       'default' => array(
-        'label' => 'above',
+        'label' => 'hidden',
         'module' => 'text',
         'settings' => array(
           'field_delimiter' => '',
@@ -185,7 +185,7 @@ function gie_organization_field_default_field_instances() {
           ),
         ),
         'type' => 'email_default',
-        'weight' => 12,
+        'weight' => 10,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -255,7 +255,7 @@ function gie_organization_field_default_field_instances() {
       'active' => 1,
       'module' => 'options',
       'settings' => array(
-        'apply_chosen' => '',
+        'apply_chosen' => 1,
       ),
       'type' => 'options_select',
       'weight' => 7,
@@ -345,7 +345,7 @@ function gie_organization_field_default_field_instances() {
     'description' => '',
     'display' => array(
       'default' => array(
-        'label' => 'above',
+        'label' => 'hidden',
         'module' => 'link',
         'settings' => array(
           'field_delimiter' => '',
@@ -415,11 +415,10 @@ function gie_organization_field_default_field_instances() {
     'description' => '',
     'display' => array(
       'default' => array(
-        'label' => 'above',
+        'label' => 'hidden',
         'module' => 'entityreference',
         'settings' => array(
           'field_delimiter' => '',
-          'link' => FALSE,
           'linked_field' => array(
             'advanced' => array(
               'class' => '',
@@ -431,8 +430,10 @@ function gie_organization_field_default_field_instances() {
             'destination' => '',
             'linked' => 0,
           ),
+          'links' => TRUE,
+          'view_mode' => 'default',
         ),
-        'type' => 'entityreference_label',
+        'type' => 'entityreference_entity_view',
         'weight' => 1,
       ),
       'teaser' => array(
@@ -551,7 +552,6 @@ function gie_organization_field_default_field_instances() {
         'module' => 'entityreference',
         'settings' => array(
           'field_delimiter' => '',
-          'link' => FALSE,
           'linked_field' => array(
             'advanced' => array(
               'class' => '',
@@ -563,9 +563,11 @@ function gie_organization_field_default_field_instances() {
             'destination' => '',
             'linked' => 0,
           ),
+          'links' => TRUE,
+          'view_mode' => 'default',
         ),
-        'type' => 'entityreference_label',
-        'weight' => 10,
+        'type' => 'entityreference_entity_view',
+        'weight' => 12,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -575,8 +577,8 @@ function gie_organization_field_default_field_instances() {
       ),
     ),
     'entity_type' => 'node',
-    'entityconnect_unload_add' => 1,
-    'entityconnect_unload_edit' => 1,
+    'entityconnect_unload_add' => 0,
+    'entityconnect_unload_edit' => 0,
     'field_name' => 'field_org_partners',
     'label' => 'Partners',
     'required' => 0,
@@ -621,7 +623,7 @@ function gie_organization_field_default_field_instances() {
           ),
         ),
         'type' => 'phone',
-        'weight' => 11,
+        'weight' => 9,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -687,8 +689,8 @@ function gie_organization_field_default_field_instances() {
       ),
     ),
     'entity_type' => 'node',
-    'entityconnect_unload_add' => 1,
-    'entityconnect_unload_edit' => 1,
+    'entityconnect_unload_add' => 0,
+    'entityconnect_unload_edit' => 0,
     'field_name' => 'field_org_poc',
     'label' => 'Point of Contact',
     'required' => 1,
@@ -717,7 +719,7 @@ function gie_organization_field_default_field_instances() {
     'display' => array(
       'default' => array(
         'label' => 'above',
-        'module' => 'taxonomy',
+        'module' => 'ds',
         'settings' => array(
           'field_delimiter' => '',
           'linked_field' => array(
@@ -731,9 +733,11 @@ function gie_organization_field_default_field_instances() {
             'destination' => '',
             'linked' => 0,
           ),
+          'taxonomy_term_reference_view_mode' => 'full',
+          'use_content_language' => TRUE,
         ),
-        'type' => 'taxonomy_term_reference_link',
-        'weight' => 9,
+        'type' => 'ds_taxonomy_view_mode',
+        'weight' => 11,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -750,13 +754,12 @@ function gie_organization_field_default_field_instances() {
       'user_register_form' => FALSE,
     ),
     'widget' => array(
-      'active' => 0,
-      'module' => 'taxonomy',
+      'active' => 1,
+      'module' => 'options',
       'settings' => array(
-        'autocomplete_path' => 'taxonomy/autocomplete',
-        'size' => 60,
+        'apply_chosen' => 1,
       ),
-      'type' => 'taxonomy_autocomplete',
+      'type' => 'options_select',
       'weight' => 12,
     ),
   );
@@ -769,9 +772,26 @@ function gie_organization_field_default_field_instances() {
     'description' => '',
     'display' => array(
       'default' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
+        'label' => 'hidden',
+        'module' => 'title',
+        'settings' => array(
+          'field_delimiter' => '',
+          'linked_field' => array(
+            'advanced' => array(
+              'class' => '',
+              'rel' => '',
+              'target' => '',
+              'text' => '',
+              'title' => '',
+            ),
+            'destination' => '',
+            'linked' => 0,
+          ),
+          'title_class' => '',
+          'title_link' => '',
+          'title_style' => '',
+        ),
+        'type' => 'title_linked',
         'weight' => 0,
       ),
       'teaser' => array(
