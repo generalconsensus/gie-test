@@ -712,19 +712,49 @@ class pane_entity_reference extends pane_base {
 
     return $entities;
   }
+  
+  /**
+   * Returns the name of the field to use as the title
+   * 
+   * @param string $entity_type
+   */
+  protected function get_title_field($entity_type) {
+    $entity_info = entity_get_info($entity_type);
+    $title_field = NULL;
+    
+    // If the label is defined for the entity
+    if (TRUE === isset($entity_info['entity keys']['label'])) {
+      $title_field = $entity_info['entity keys']['label'];
+    }
+    // Otherwise check to see if it's integrated with the Title module
+    else if (TRUE === isset($entity_info['field replacement'])) {
+      $title_field = array_shift(array_keys($entity_info['field replacement']));
+    }
+    
+    return $title_field;
+  }
 
   public function bundle_find_entities_by_title($match = NULL, $match_operator = 'CONTAINS', $limit = 0) {
     $entity_type = $this->configuration['entity'];
     $entity_info = entity_get_info($entity_type);
-    $title_field = $entity_info['entity keys']['label'];
+    $title_field = $this->get_title_field($entity_type);
+    
+    // If we have a title field use it
+    if ($title_field) {
 
-    $query = $this->build_entity_query();
-
-    $query->propertyCondition($title_field, $match, $match_operator);
-
-    $results = $query->execute();
-
-    return $results[$entity_type];
+      $query = $this->build_entity_query();
+  
+      $query->propertyCondition($title_field, $match, $match_operator);
+  
+      $results = $query->execute();
+  
+      return $results[$entity_type];
+    }
+    // Otherwise log an error since we can't find by title
+    else {
+      watchdog(WATCHDOG_ERROR, 'Unable to determine title field to use for %entity_type', array('%entity_type' => $entity_type));
+      return array();
+    }
   }
 
   public function view_find_entities_by_title($match = NULL, $match_operator = 'CONTAINS', $limit = 0) {
