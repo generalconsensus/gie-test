@@ -22,7 +22,6 @@ function gie_funding_field_default_field_instances() {
         'module' => 'entityreference',
         'settings' => array(
           'field_delimiter' => '',
-          'link' => FALSE,
           'linked_field' => array(
             'advanced' => array(
               'class' => '',
@@ -34,8 +33,10 @@ function gie_funding_field_default_field_instances() {
             'destination' => '',
             'linked' => 0,
           ),
+          'links' => TRUE,
+          'view_mode' => 'default',
         ),
-        'type' => 'entityreference_label',
+        'type' => 'entityreference_entity_view',
         'weight' => 2,
       ),
       'teaser' => array(
@@ -46,8 +47,8 @@ function gie_funding_field_default_field_instances() {
       ),
     ),
     'entity_type' => 'node',
-    'entityconnect_unload_add' => 1,
-    'entityconnect_unload_edit' => 1,
+    'entityconnect_unload_add' => 0,
+    'entityconnect_unload_edit' => 0,
     'field_name' => 'field_funding_author',
     'label' => 'Funding Author',
     'required' => 0,
@@ -63,7 +64,7 @@ function gie_funding_field_default_field_instances() {
         'size' => 60,
       ),
       'type' => 'entityreference_autocomplete',
-      'weight' => 32,
+      'weight' => 2,
     ),
   );
 
@@ -128,7 +129,7 @@ function gie_funding_field_default_field_instances() {
         'year_range' => '-3:+3',
       ),
       'type' => 'date_popup',
-      'weight' => 37,
+      'weight' => 7,
     ),
   );
 
@@ -203,7 +204,7 @@ function gie_funding_field_default_field_instances() {
         'rows' => 5,
       ),
       'type' => 'text_textarea',
-      'weight' => 33,
+      'weight' => 3,
     ),
   );
 
@@ -278,7 +279,7 @@ function gie_funding_field_default_field_instances() {
         'size' => 60,
       ),
       'type' => 'text_textfield',
-      'weight' => 43,
+      'weight' => 13,
     ),
   );
 
@@ -291,7 +292,7 @@ function gie_funding_field_default_field_instances() {
     'display' => array(
       'default' => array(
         'label' => 'above',
-        'module' => 'taxonomy',
+        'module' => 'ds',
         'settings' => array(
           'field_delimiter' => '',
           'linked_field' => array(
@@ -305,8 +306,10 @@ function gie_funding_field_default_field_instances() {
             'destination' => '',
             'linked' => 0,
           ),
+          'taxonomy_term_reference_view_mode' => 'full',
+          'use_content_language' => TRUE,
         ),
-        'type' => 'taxonomy_term_reference_link',
+        'type' => 'ds_taxonomy_view_mode',
         'weight' => 14,
       ),
       'teaser' => array(
@@ -327,10 +330,10 @@ function gie_funding_field_default_field_instances() {
       'active' => 1,
       'module' => 'options',
       'settings' => array(
-        'apply_chosen' => '',
+        'apply_chosen' => 1,
       ),
       'type' => 'options_select',
-      'weight' => 44,
+      'weight' => 14,
     ),
   );
 
@@ -405,7 +408,7 @@ function gie_funding_field_default_field_instances() {
         'rows' => 5,
       ),
       'type' => 'text_textarea',
-      'weight' => 34,
+      'weight' => 4,
     ),
   );
 
@@ -480,7 +483,7 @@ function gie_funding_field_default_field_instances() {
         'size' => 60,
       ),
       'type' => 'text_textfield',
-      'weight' => 40,
+      'weight' => 10,
     ),
   );
 
@@ -555,7 +558,7 @@ function gie_funding_field_default_field_instances() {
         'rows' => 5,
       ),
       'type' => 'text_textarea',
-      'weight' => 35,
+      'weight' => 5,
     ),
   );
 
@@ -567,7 +570,7 @@ function gie_funding_field_default_field_instances() {
     'description' => '',
     'display' => array(
       'default' => array(
-        'label' => 'above',
+        'label' => 'hidden',
         'module' => 'link',
         'settings' => array(
           'field_delimiter' => '',
@@ -625,7 +628,7 @@ function gie_funding_field_default_field_instances() {
       'module' => 'html5_tools',
       'settings' => array(),
       'type' => 'urlwidget',
-      'weight' => 36,
+      'weight' => 6,
     ),
   );
 
@@ -641,7 +644,6 @@ function gie_funding_field_default_field_instances() {
         'module' => 'entityreference',
         'settings' => array(
           'field_delimiter' => '',
-          'link' => FALSE,
           'linked_field' => array(
             'advanced' => array(
               'class' => '',
@@ -653,8 +655,10 @@ function gie_funding_field_default_field_instances() {
             'destination' => '',
             'linked' => 0,
           ),
+          'links' => TRUE,
+          'view_mode' => 'default',
         ),
-        'type' => 'entityreference_label',
+        'type' => 'entityreference_entity_view',
         'weight' => 15,
       ),
       'teaser' => array(
@@ -665,8 +669,8 @@ function gie_funding_field_default_field_instances() {
       ),
     ),
     'entity_type' => 'node',
-    'entityconnect_unload_add' => 1,
-    'entityconnect_unload_edit' => 1,
+    'entityconnect_unload_add' => 0,
+    'entityconnect_unload_edit' => 0,
     'field_name' => 'field_funding_organization',
     'label' => 'Organization',
     'required' => 0,
@@ -682,7 +686,7 @@ function gie_funding_field_default_field_instances() {
         'size' => 60,
       ),
       'type' => 'entityreference_autocomplete',
-      'weight' => 45,
+      'weight' => 15,
     ),
   );
 
@@ -732,7 +736,7 @@ function gie_funding_field_default_field_instances() {
       'module' => 'html5_tools',
       'settings' => array(),
       'type' => 'emailwidget',
-      'weight' => 38,
+      'weight' => 8,
     ),
   );
 
@@ -745,7 +749,7 @@ function gie_funding_field_default_field_instances() {
     'display' => array(
       'default' => array(
         'label' => 'above',
-        'module' => 'taxonomy',
+        'module' => 'ds',
         'settings' => array(
           'field_delimiter' => '',
           'linked_field' => array(
@@ -759,8 +763,10 @@ function gie_funding_field_default_field_instances() {
             'destination' => '',
             'linked' => 0,
           ),
+          'taxonomy_term_reference_view_mode' => 'full',
+          'use_content_language' => TRUE,
         ),
-        'type' => 'taxonomy_term_reference_link',
+        'type' => 'ds_taxonomy_view_mode',
         'weight' => 11,
       ),
       'teaser' => array(
@@ -778,14 +784,13 @@ function gie_funding_field_default_field_instances() {
       'user_register_form' => FALSE,
     ),
     'widget' => array(
-      'active' => 0,
-      'module' => 'taxonomy',
+      'active' => 1,
+      'module' => 'options',
       'settings' => array(
-        'autocomplete_path' => 'taxonomy/autocomplete',
-        'size' => 60,
+        'apply_chosen' => 1,
       ),
-      'type' => 'taxonomy_autocomplete',
-      'weight' => 41,
+      'type' => 'options_select',
+      'weight' => 11,
     ),
   );
 
@@ -855,7 +860,7 @@ function gie_funding_field_default_field_instances() {
       'module' => 'link',
       'settings' => array(),
       'type' => 'link_field',
-      'weight' => 31,
+      'weight' => 1,
     ),
   );
 
@@ -868,7 +873,7 @@ function gie_funding_field_default_field_instances() {
     'display' => array(
       'default' => array(
         'label' => 'above',
-        'module' => 'taxonomy',
+        'module' => 'ds',
         'settings' => array(
           'field_delimiter' => '',
           'linked_field' => array(
@@ -882,8 +887,10 @@ function gie_funding_field_default_field_instances() {
             'destination' => '',
             'linked' => 0,
           ),
+          'taxonomy_term_reference_view_mode' => 'full',
+          'use_content_language' => TRUE,
         ),
-        'type' => 'taxonomy_term_reference_link',
+        'type' => 'ds_taxonomy_view_mode',
         'weight' => 12,
       ),
       'teaser' => array(
@@ -901,14 +908,13 @@ function gie_funding_field_default_field_instances() {
       'user_register_form' => FALSE,
     ),
     'widget' => array(
-      'active' => 0,
-      'module' => 'taxonomy',
+      'active' => 1,
+      'module' => 'options',
       'settings' => array(
-        'autocomplete_path' => 'taxonomy/autocomplete',
-        'size' => 60,
+        'apply_chosen' => 1,
       ),
-      'type' => 'taxonomy_autocomplete',
-      'weight' => 42,
+      'type' => 'options_select',
+      'weight' => 12,
     ),
   );
 
@@ -954,14 +960,13 @@ function gie_funding_field_default_field_instances() {
       'user_register_form' => FALSE,
     ),
     'widget' => array(
-      'active' => 0,
-      'module' => 'taxonomy',
+      'active' => 1,
+      'module' => 'options',
       'settings' => array(
-        'autocomplete_path' => 'taxonomy/autocomplete',
-        'size' => 60,
+        'apply_chosen' => 1,
       ),
-      'type' => 'taxonomy_autocomplete',
-      'weight' => 39,
+      'type' => 'options_select',
+      'weight' => 9,
     ),
   );
 
@@ -973,9 +978,26 @@ function gie_funding_field_default_field_instances() {
     'description' => '',
     'display' => array(
       'default' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
+        'label' => 'hidden',
+        'module' => 'title',
+        'settings' => array(
+          'field_delimiter' => '',
+          'linked_field' => array(
+            'advanced' => array(
+              'class' => '',
+              'rel' => '',
+              'target' => '',
+              'text' => '',
+              'title' => '',
+            ),
+            'destination' => '',
+            'linked' => 0,
+          ),
+          'title_class' => '',
+          'title_link' => '',
+          'title_style' => '',
+        ),
+        'type' => 'title_linked',
         'weight' => 0,
       ),
       'teaser' => array(
@@ -1003,7 +1025,7 @@ function gie_funding_field_default_field_instances() {
         'size' => 60,
       ),
       'type' => 'text_textfield',
-      'weight' => -5,
+      'weight' => 0,
     ),
   );
 
