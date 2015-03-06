@@ -69,6 +69,7 @@ dependencies[] = simplify
 dependencies[] = smart_trim
 dependencies[] = strongarm
 dependencies[] = taxonomy
+dependencies[] = tb_megamenu
 dependencies[] = title
 dependencies[] = token
 dependencies[] = views
