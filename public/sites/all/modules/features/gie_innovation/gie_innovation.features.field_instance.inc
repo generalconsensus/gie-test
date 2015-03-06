@@ -10,6 +10,188 @@
 function gie_innovation_field_default_field_instances() {
   $field_instances = array();
 
+  // Exported field_instance: 'field_collection_item-field_innovation_non_references-field_non_ref_email'
+  $field_instances['field_collection_item-field_innovation_non_references-field_non_ref_email'] = array(
+    'bundle' => 'field_innovation_non_references',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'email',
+        'settings' => array(
+          'field_delimiter' => '',
+          'linked_field' => array(
+            'advanced' => array(
+              'class' => '',
+              'rel' => '',
+              'target' => '',
+              'text' => '',
+              'title' => '',
+            ),
+            'destination' => '',
+            'linked' => 0,
+          ),
+        ),
+        'type' => 'email_default',
+        'weight' => 2,
+      ),
+    ),
+    'entity_type' => 'field_collection_item',
+    'field_name' => 'field_non_ref_email',
+    'label' => 'Emai',
+    'required' => 0,
+    'settings' => array(
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 0,
+      'module' => 'html5_tools',
+      'settings' => array(),
+      'type' => 'emailwidget',
+      'weight' => 3,
+    ),
+  );
+
+  // Exported field_instance: 'field_collection_item-field_innovation_non_references-field_non_ref_first_name'
+  $field_instances['field_collection_item-field_innovation_non_references-field_non_ref_first_name'] = array(
+    'bundle' => 'field_innovation_non_references',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'text',
+        'settings' => array(
+          'field_delimiter' => '',
+          'linked_field' => array(
+            'advanced' => array(
+              'class' => '',
+              'rel' => '',
+              'target' => '',
+              'text' => '',
+              'title' => '',
+            ),
+            'destination' => '',
+            'linked' => 0,
+          ),
+        ),
+        'type' => 'text_default',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'field_collection_item',
+    'field_name' => 'field_non_ref_first_name',
+    'label' => 'First Name',
+    'required' => 1,
+    'settings' => array(
+      'better_formats' => array(
+        'allowed_formats' => array(
+          'filtered_html' => 'filtered_html',
+          'full_html' => 'full_html',
+          'plain_text' => 'plain_text',
+        ),
+        'allowed_formats_toggle' => 0,
+        'default_order_toggle' => 0,
+        'default_order_wrapper' => array(
+          'formats' => array(
+            'filtered_html' => array(
+              'weight' => 0,
+            ),
+            'full_html' => array(
+              'weight' => 1,
+            ),
+            'plain_text' => array(
+              'weight' => 10,
+            ),
+          ),
+        ),
+      ),
+      'text_processing' => 0,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'text',
+      'settings' => array(
+        'size' => 60,
+      ),
+      'type' => 'text_textfield',
+      'weight' => 1,
+    ),
+  );
+
+  // Exported field_instance: 'field_collection_item-field_innovation_non_references-field_non_ref_last_name'
+  $field_instances['field_collection_item-field_innovation_non_references-field_non_ref_last_name'] = array(
+    'bundle' => 'field_innovation_non_references',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'text',
+        'settings' => array(
+          'field_delimiter' => '',
+          'linked_field' => array(
+            'advanced' => array(
+              'class' => '',
+              'rel' => '',
+              'target' => '',
+              'text' => '',
+              'title' => '',
+            ),
+            'destination' => '',
+            'linked' => 0,
+          ),
+        ),
+        'type' => 'text_default',
+        'weight' => 1,
+      ),
+    ),
+    'entity_type' => 'field_collection_item',
+    'field_name' => 'field_non_ref_last_name',
+    'label' => 'Last Name',
+    'required' => 1,
+    'settings' => array(
+      'better_formats' => array(
+        'allowed_formats' => array(
+          'filtered_html' => 'filtered_html',
+          'full_html' => 'full_html',
+          'plain_text' => 'plain_text',
+        ),
+        'allowed_formats_toggle' => 0,
+        'default_order_toggle' => 0,
+        'default_order_wrapper' => array(
+          'formats' => array(
+            'filtered_html' => array(
+              'weight' => 0,
+            ),
+            'full_html' => array(
+              'weight' => 1,
+            ),
+            'plain_text' => array(
+              'weight' => 10,
+            ),
+          ),
+        ),
+      ),
+      'text_processing' => 0,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'text',
+      'settings' => array(
+        'size' => 60,
+      ),
+      'type' => 'text_textfield',
+      'weight' => 2,
+    ),
+  );
+
   // Exported field_instance: 'node-innovation-field_innovation_assets'
   $field_instances['node-innovation-field_innovation_assets'] = array(
     'bundle' => 'innovation',
@@ -63,7 +245,7 @@ function gie_innovation_field_default_field_instances() {
         'size' => 60,
       ),
       'type' => 'entityreference_autocomplete',
-      'weight' => 33,
+      'weight' => 4,
     ),
   );
 
@@ -113,7 +295,65 @@ function gie_innovation_field_default_field_instances() {
       'module' => 'options',
       'settings' => array(),
       'type' => 'options_buttons',
-      'weight' => 34,
+      'weight' => 5,
+    ),
+  );
+
+  // Exported field_instance: 'node-innovation-field_innovation_cost_bene'
+  $field_instances['node-innovation-field_innovation_cost_bene'] = array(
+    'bundle' => 'innovation',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'number',
+        'settings' => array(
+          'decimal_separator' => '.',
+          'field_delimiter' => '',
+          'linked_field' => array(
+            'advanced' => array(
+              'class' => '',
+              'rel' => '',
+              'target' => '',
+              'text' => '',
+              'title' => '',
+            ),
+            'destination' => '',
+            'linked' => 0,
+          ),
+          'prefix_suffix' => TRUE,
+          'scale' => 0,
+          'thousand_separator' => ' ',
+        ),
+        'type' => 'number_integer',
+        'weight' => 27,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'field_name' => 'field_innovation_cost_bene',
+    'label' => 'Cost per Beneficiary',
+    'required' => 0,
+    'settings' => array(
+      'max' => '',
+      'min' => '',
+      'prefix' => '',
+      'suffix' => '',
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 0,
+      'module' => 'html5_tools',
+      'settings' => array(),
+      'type' => 'numberfield',
+      'weight' => 10,
     ),
   );
 
@@ -188,7 +428,7 @@ function gie_innovation_field_default_field_instances() {
         'size' => 60,
       ),
       'type' => 'text_textfield',
-      'weight' => 39,
+      'weight' => 13,
     ),
   );
 
@@ -241,7 +481,7 @@ function gie_innovation_field_default_field_instances() {
         'size' => 60,
       ),
       'type' => 'taxonomy_autocomplete',
-      'weight' => 41,
+      'weight' => 15,
     ),
   );
 
@@ -316,7 +556,7 @@ function gie_innovation_field_default_field_instances() {
         'rows' => 5,
       ),
       'type' => 'text_textarea',
-      'weight' => 31,
+      'weight' => 2,
     ),
   );
 
@@ -391,7 +631,63 @@ function gie_innovation_field_default_field_instances() {
         'rows' => 5,
       ),
       'type' => 'text_textarea',
-      'weight' => 47,
+      'weight' => 22,
+    ),
+  );
+
+  // Exported field_instance: 'node-innovation-field_innovation_evidence_avail'
+  $field_instances['node-innovation-field_innovation_evidence_avail'] = array(
+    'bundle' => 'innovation',
+    'default_value' => array(
+      0 => array(
+        'value' => 0,
+      ),
+    ),
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'list',
+        'settings' => array(
+          'field_delimiter' => '',
+          'linked_field' => array(
+            'advanced' => array(
+              'class' => '',
+              'rel' => '',
+              'target' => '',
+              'text' => '',
+              'title' => '',
+            ),
+            'destination' => '',
+            'linked' => 0,
+          ),
+        ),
+        'type' => 'list_default',
+        'weight' => 29,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'field_name' => 'field_innovation_evidence_avail',
+    'label' => 'Evidence Available?',
+    'required' => 0,
+    'settings' => array(
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'options',
+      'settings' => array(
+        'display_label' => 1,
+      ),
+      'type' => 'options_onoff',
+      'weight' => 21,
     ),
   );
 
@@ -448,12 +744,12 @@ function gie_innovation_field_default_field_instances() {
         'size' => 60,
       ),
       'type' => 'entityreference_autocomplete',
-      'weight' => 53,
+      'weight' => 31,
     ),
   );
 
-  // Exported field_instance: 'node-innovation-field_innovation_goal'
-  $field_instances['node-innovation-field_innovation_goal'] = array(
+  // Exported field_instance: 'node-innovation-field_innovation_funding_goal'
+  $field_instances['node-innovation-field_innovation_funding_goal'] = array(
     'bundle' => 'innovation',
     'default_value' => NULL,
     'deleted' => 0,
@@ -461,8 +757,9 @@ function gie_innovation_field_default_field_instances() {
     'display' => array(
       'default' => array(
         'label' => 'above',
-        'module' => 'text',
+        'module' => 'number',
         'settings' => array(
+          'decimal_separator' => '.',
           'field_delimiter' => '',
           'linked_field' => array(
             'advanced' => array(
@@ -475,9 +772,12 @@ function gie_innovation_field_default_field_instances() {
             'destination' => '',
             'linked' => 0,
           ),
+          'prefix_suffix' => TRUE,
+          'scale' => 0,
+          'thousand_separator' => ' ',
         ),
-        'type' => 'text_default',
-        'weight' => 6,
+        'type' => 'number_integer',
+        'weight' => 33,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -487,43 +787,22 @@ function gie_innovation_field_default_field_instances() {
       ),
     ),
     'entity_type' => 'node',
-    'field_name' => 'field_innovation_goal',
+    'field_name' => 'field_innovation_funding_goal',
     'label' => 'Funding Goal',
     'required' => 0,
     'settings' => array(
-      'better_formats' => array(
-        'allowed_formats' => array(
-          'filtered_html' => 'filtered_html',
-          'full_html' => 'full_html',
-          'plain_text' => 'plain_text',
-        ),
-        'allowed_formats_toggle' => 0,
-        'default_order_toggle' => 0,
-        'default_order_wrapper' => array(
-          'formats' => array(
-            'filtered_html' => array(
-              'weight' => 0,
-            ),
-            'full_html' => array(
-              'weight' => 1,
-            ),
-            'plain_text' => array(
-              'weight' => 10,
-            ),
-          ),
-        ),
-      ),
-      'text_processing' => 0,
+      'max' => '',
+      'min' => '',
+      'prefix' => '',
+      'suffix' => '',
       'user_register_form' => FALSE,
     ),
     'widget' => array(
-      'active' => 1,
-      'module' => 'text',
-      'settings' => array(
-        'size' => 60,
-      ),
-      'type' => 'text_textfield',
-      'weight' => 36,
+      'active' => 0,
+      'module' => 'html5_tools',
+      'settings' => array(),
+      'type' => 'numberfield',
+      'weight' => 8,
     ),
   );
 
@@ -580,7 +859,7 @@ function gie_innovation_field_default_field_instances() {
         'size' => 60,
       ),
       'type' => 'entityreference_autocomplete',
-      'weight' => 32,
+      'weight' => 3,
     ),
   );
 
@@ -655,7 +934,7 @@ function gie_innovation_field_default_field_instances() {
         'rows' => 5,
       ),
       'type' => 'text_textarea',
-      'weight' => 49,
+      'weight' => 26,
     ),
   );
 
@@ -708,7 +987,7 @@ function gie_innovation_field_default_field_instances() {
         'size' => 60,
       ),
       'type' => 'taxonomy_autocomplete',
-      'weight' => 42,
+      'weight' => 16,
     ),
   );
 
@@ -778,7 +1057,62 @@ function gie_innovation_field_default_field_instances() {
       'module' => 'link',
       'settings' => array(),
       'type' => 'link_field',
-      'weight' => 50,
+      'weight' => 28,
+    ),
+  );
+
+  // Exported field_instance: 'node-innovation-field_innovation_non_references'
+  $field_instances['node-innovation-field_innovation_non_references'] = array(
+    'bundle' => 'innovation',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'field_collection',
+        'settings' => array(
+          'add' => 'Add',
+          'delete' => 'Delete',
+          'description' => TRUE,
+          'edit' => 'Edit',
+          'field_delimiter' => '',
+          'linked_field' => array(
+            'advanced' => array(
+              'class' => '',
+              'rel' => '',
+              'target' => '',
+              'text' => '',
+              'title' => '',
+            ),
+            'destination' => '',
+            'linked' => 0,
+          ),
+          'view_mode' => 'full',
+        ),
+        'type' => 'field_collection_view',
+        'weight' => 28,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'field_name' => 'field_innovation_non_references',
+    'label' => 'Non-Exchange References',
+    'required' => 0,
+    'settings' => array(
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 0,
+      'module' => 'field_collection',
+      'settings' => array(),
+      'type' => 'field_collection_embed',
+      'weight' => 34,
     ),
   );
 
@@ -835,7 +1169,7 @@ function gie_innovation_field_default_field_instances() {
         'size' => 60,
       ),
       'type' => 'entityreference_autocomplete',
-      'weight' => 35,
+      'weight' => 6,
     ),
   );
 
@@ -892,7 +1226,234 @@ function gie_innovation_field_default_field_instances() {
         'size' => 60,
       ),
       'type' => 'entityreference_autocomplete',
-      'weight' => 44,
+      'weight' => 18,
+    ),
+  );
+
+  // Exported field_instance: 'node-innovation-field_innovation_proof_avail'
+  $field_instances['node-innovation-field_innovation_proof_avail'] = array(
+    'bundle' => 'innovation',
+    'default_value' => array(
+      0 => array(
+        'value' => 0,
+      ),
+    ),
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'list',
+        'settings' => array(
+          'field_delimiter' => '',
+          'linked_field' => array(
+            'advanced' => array(
+              'class' => '',
+              'rel' => '',
+              'target' => '',
+              'text' => '',
+              'title' => '',
+            ),
+            'destination' => '',
+            'linked' => 0,
+          ),
+        ),
+        'type' => 'list_default',
+        'weight' => 31,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'field_name' => 'field_innovation_proof_avail',
+    'label' => 'Proof Available?',
+    'required' => 0,
+    'settings' => array(
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'options',
+      'settings' => array(
+        'display_label' => 1,
+      ),
+      'type' => 'options_onoff',
+      'weight' => 23,
+    ),
+  );
+
+  // Exported field_instance: 'node-innovation-field_innovation_proof_evidence'
+  $field_instances['node-innovation-field_innovation_proof_evidence'] = array(
+    'bundle' => 'innovation',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'entityreference',
+        'settings' => array(
+          'field_delimiter' => '',
+          'link' => FALSE,
+          'linked_field' => array(
+            'advanced' => array(
+              'class' => '',
+              'rel' => '',
+              'target' => '',
+              'text' => '',
+              'title' => '',
+            ),
+            'destination' => '',
+            'linked' => 0,
+          ),
+        ),
+        'type' => 'entityreference_label',
+        'weight' => 30,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'entityconnect_unload_add' => 0,
+    'entityconnect_unload_edit' => 0,
+    'field_name' => 'field_innovation_proof_evidence',
+    'label' => 'Proof of Evidence',
+    'required' => 0,
+    'settings' => array(
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'entityreference',
+      'settings' => array(
+        'match_operator' => 'CONTAINS',
+        'path' => '',
+        'size' => 60,
+      ),
+      'type' => 'entityreference_autocomplete',
+      'weight' => 24,
+    ),
+  );
+
+  // Exported field_instance: 'node-innovation-field_innovation_raised'
+  $field_instances['node-innovation-field_innovation_raised'] = array(
+    'bundle' => 'innovation',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'number',
+        'settings' => array(
+          'decimal_separator' => '.',
+          'field_delimiter' => '',
+          'linked_field' => array(
+            'advanced' => array(
+              'class' => '',
+              'rel' => '',
+              'target' => '',
+              'text' => '',
+              'title' => '',
+            ),
+            'destination' => '',
+            'linked' => 0,
+          ),
+          'prefix_suffix' => TRUE,
+          'scale' => 0,
+          'thousand_separator' => ' ',
+        ),
+        'type' => 'number_integer',
+        'weight' => 26,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'field_name' => 'field_innovation_raised',
+    'label' => 'Funding Raised',
+    'required' => 0,
+    'settings' => array(
+      'max' => '',
+      'min' => '',
+      'prefix' => '',
+      'suffix' => '',
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 0,
+      'module' => 'html5_tools',
+      'settings' => array(),
+      'type' => 'numberfield',
+      'weight' => 9,
+    ),
+  );
+
+  // Exported field_instance: 'node-innovation-field_innovation_ref_avail'
+  $field_instances['node-innovation-field_innovation_ref_avail'] = array(
+    'bundle' => 'innovation',
+    'default_value' => array(
+      0 => array(
+        'value' => 0,
+      ),
+    ),
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'list',
+        'settings' => array(
+          'field_delimiter' => '',
+          'linked_field' => array(
+            'advanced' => array(
+              'class' => '',
+              'rel' => '',
+              'target' => '',
+              'text' => '',
+              'title' => '',
+            ),
+            'destination' => '',
+            'linked' => 0,
+          ),
+        ),
+        'type' => 'list_default',
+        'weight' => 32,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'field_name' => 'field_innovation_ref_avail',
+    'label' => 'References Available?',
+    'required' => 0,
+    'settings' => array(
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'options',
+      'settings' => array(
+        'display_label' => 1,
+      ),
+      'type' => 'options_onoff',
+      'weight' => 32,
     ),
   );
 
@@ -935,7 +1496,7 @@ function gie_innovation_field_default_field_instances() {
     'entityconnect_unload_add' => 1,
     'entityconnect_unload_edit' => 1,
     'field_name' => 'field_innovation_references',
-    'label' => 'References',
+    'label' => 'Exchange References',
     'required' => 0,
     'settings' => array(
       'user_register_form' => FALSE,
@@ -949,7 +1510,7 @@ function gie_innovation_field_default_field_instances() {
         'size' => 60,
       ),
       'type' => 'entityreference_autocomplete',
-      'weight' => 54,
+      'weight' => 33,
     ),
   );
 
@@ -1006,7 +1567,7 @@ function gie_innovation_field_default_field_instances() {
         'size' => 60,
       ),
       'type' => 'entityreference_autocomplete',
-      'weight' => 51,
+      'weight' => 29,
     ),
   );
 
@@ -1058,7 +1619,82 @@ function gie_innovation_field_default_field_instances() {
         'apply_chosen' => '',
       ),
       'type' => 'options_select',
-      'weight' => 38,
+      'weight' => 12,
+    ),
+  );
+
+  // Exported field_instance: 'node-innovation-field_innovation_status_update'
+  $field_instances['node-innovation-field_innovation_status_update'] = array(
+    'bundle' => 'innovation',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'text',
+        'settings' => array(
+          'field_delimiter' => '',
+          'linked_field' => array(
+            'advanced' => array(
+              'class' => '',
+              'rel' => '',
+              'target' => '',
+              'text' => '',
+              'title' => '',
+            ),
+            'destination' => '',
+            'linked' => 0,
+          ),
+        ),
+        'type' => 'text_default',
+        'weight' => 25,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'field_name' => 'field_innovation_status_update',
+    'label' => 'Status Update',
+    'required' => 0,
+    'settings' => array(
+      'better_formats' => array(
+        'allowed_formats' => array(
+          'filtered_html' => 'filtered_html',
+          'full_html' => 'full_html',
+          'plain_text' => 'plain_text',
+        ),
+        'allowed_formats_toggle' => 0,
+        'default_order_toggle' => 0,
+        'default_order_wrapper' => array(
+          'formats' => array(
+            'filtered_html' => array(
+              'weight' => 0,
+            ),
+            'full_html' => array(
+              'weight' => 1,
+            ),
+            'plain_text' => array(
+              'weight' => 10,
+            ),
+          ),
+        ),
+      ),
+      'text_processing' => 1,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'text',
+      'settings' => array(
+        'rows' => 5,
+      ),
+      'type' => 'text_textarea',
+      'weight' => 19,
     ),
   );
 
@@ -1133,7 +1769,7 @@ function gie_innovation_field_default_field_instances() {
         'rows' => 5,
       ),
       'type' => 'text_textarea',
-      'weight' => 45,
+      'weight' => 27,
     ),
   );
 
@@ -1190,7 +1826,7 @@ function gie_innovation_field_default_field_instances() {
         'size' => 60,
       ),
       'type' => 'entityreference_autocomplete',
-      'weight' => 52,
+      'weight' => 30,
     ),
   );
 
@@ -1265,7 +1901,7 @@ function gie_innovation_field_default_field_instances() {
         'rows' => 5,
       ),
       'type' => 'text_textarea',
-      'weight' => 48,
+      'weight' => 25,
     ),
   );
 
@@ -1318,7 +1954,7 @@ function gie_innovation_field_default_field_instances() {
         'size' => 60,
       ),
       'type' => 'taxonomy_autocomplete',
-      'weight' => 43,
+      'weight' => 17,
     ),
   );
 
@@ -1369,7 +2005,7 @@ function gie_innovation_field_default_field_instances() {
         'apply_chosen' => '',
       ),
       'type' => 'options_select',
-      'weight' => 37,
+      'weight' => 11,
     ),
   );
 
@@ -1444,7 +2080,7 @@ function gie_innovation_field_default_field_instances() {
         'rows' => 5,
       ),
       'type' => 'text_textarea',
-      'weight' => 46,
+      'weight' => 20,
     ),
   );
 
@@ -1496,7 +2132,7 @@ function gie_innovation_field_default_field_instances() {
         'apply_chosen' => '',
       ),
       'type' => 'options_select',
-      'weight' => 40,
+      'weight' => 14,
     ),
   );
 
@@ -1538,7 +2174,7 @@ function gie_innovation_field_default_field_instances() {
         'size' => 60,
       ),
       'type' => 'text_textfield',
-      'weight' => -5,
+      'weight' => 0,
     ),
   );
 
@@ -1842,27 +2478,38 @@ function gie_innovation_field_default_field_instances() {
   // Included for use with string extractors like potx.
   t('Assistance Type');
   t('Cost Per Unit');
+  t('Cost per Beneficiary');
   t('Created In');
   t('Current Users / Testers Include');
   t('Description');
+  t('Emai');
+  t('Evidence Available?');
   t('Evidence it Works');
+  t('Exchange References');
   t('Featured Assets');
   t('Featured Image');
+  t('First Name');
   t('Funded By');
   t('Funding Goal');
+  t('Funding Raised');
   t('How it Works');
   t('Implemented In');
   t('In the News');
   t('Innovation Team');
+  t('Last Name');
   t('Name');
   t('Next Steps');
+  t('Non-Exchange References');
   t('Path and Impact of Scale');
   t('Point of Contact');
   t('Project Stage');
-  t('References');
+  t('Proof Available?');
+  t('Proof of Evidence');
+  t('References Available?');
   t('Related Programs');
   t('Resources');
   t('Solution Type');
+  t('Status Update');
   t('Testing Phase');
   t('Title');
   t('Topic');
