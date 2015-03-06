@@ -22,10 +22,17 @@ function gie_general_menu_default_menu_custom() {
     'title' => 'Footer menu',
     'description' => 'Footer menu',
   );
+  // Exported menu: menu-sub-footer-menu.
+  $menus['menu-sub-footer-menu'] = array(
+    'menu_name' => 'menu-sub-footer-menu',
+    'title' => 'Sub Footer menu',
+    'description' => 'Sub Footer menu',
+  );
   // Translatables
   // Included for use with string extractors like potx.
   t('Footer menu');
   t('Main menu');
+  t('Sub Footer menu');
   t('The <em>Main</em> menu is used on many sites to show the major sections of the site, often in a top navigation bar.');
 
 
