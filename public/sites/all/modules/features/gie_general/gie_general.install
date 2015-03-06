@@ -81,3 +81,10 @@ function gie_general_update_7006() {
   $vid = $vocab->vid;
   taxonomy_vocabulary_delete($vid);
 }
+
+/**
+ * Delete 'Funding Goal' text field.
+ */
+function gie_general_update_7007() {
+  field_delete_field('field_innovation_goal');
+}
