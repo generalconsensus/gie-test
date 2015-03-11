@@ -289,7 +289,7 @@ function gie_user_field_default_field_instances() {
         ),
       ),
       'type' => 'addressfield_standard',
-      'weight' => 18,
+      'weight' => 20,
     ),
   );
 
@@ -389,7 +389,7 @@ function gie_user_field_default_field_instances() {
         'size' => 60,
       ),
       'type' => 'entityreference_autocomplete',
-      'weight' => 19,
+      'weight' => 21,
     ),
   );
 
@@ -437,7 +437,7 @@ function gie_user_field_default_field_instances() {
         'apply_chosen' => 1,
       ),
       'type' => 'options_select',
-      'weight' => 6,
+      'weight' => 8,
     ),
   );
 
@@ -506,7 +506,7 @@ function gie_user_field_default_field_instances() {
         'rows' => 5,
       ),
       'type' => 'text_textarea',
-      'weight' => 13,
+      'weight' => 15,
     ),
   );
 
@@ -575,7 +575,7 @@ function gie_user_field_default_field_instances() {
         'size' => 60,
       ),
       'type' => 'text_textfield',
-      'weight' => 9,
+      'weight' => 11,
     ),
   );
 
@@ -692,7 +692,7 @@ function gie_user_field_default_field_instances() {
         'apply_chosen' => 1,
       ),
       'type' => 'options_select',
-      'weight' => 14,
+      'weight' => 16,
     ),
   );
 
@@ -830,7 +830,7 @@ function gie_user_field_default_field_instances() {
         'size' => 60,
       ),
       'type' => 'text_textfield',
-      'weight' => 8,
+      'weight' => 10,
     ),
   );
 
@@ -882,7 +882,65 @@ function gie_user_field_default_field_instances() {
         'size' => 60,
       ),
       'type' => 'entityreference_autocomplete',
-      'weight' => 15,
+      'weight' => 17,
+    ),
+  );
+
+  // Exported field_instance: 'user-user-field_user_photo'
+  $field_instances['user-user-field_user_photo'] = array(
+    'bundle' => 'user',
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'image',
+        'settings' => array(
+          'field_delimiter' => '',
+          'image_link' => '',
+          'image_style' => '',
+          'linked_field' => array(
+            'advanced' => array(
+              'class' => '',
+              'rel' => '',
+              'target' => '',
+              'text' => '',
+              'title' => '',
+            ),
+            'destination' => '',
+            'linked' => 0,
+          ),
+        ),
+        'type' => 'image',
+        'weight' => 17,
+      ),
+    ),
+    'entity_type' => 'user',
+    'field_name' => 'field_user_photo',
+    'label' => 'Photo',
+    'required' => 0,
+    'settings' => array(
+      'alt_field' => 0,
+      'default_image' => 0,
+      'file_directory' => 'images',
+      'file_extensions' => 'png gif jpg jpeg',
+      'max_filesize' => '',
+      'max_resolution' => '',
+      'min_resolution' => '',
+      'random_default' => 1,
+      'random_default_path' => 'random',
+      'title_field' => 0,
+      'user_register_form' => 1,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'image',
+      'settings' => array(
+        'preview_image_style' => 'thumbnail',
+        'progress_indicator' => 'throbber',
+      ),
+      'type' => 'image_image',
+      'weight' => 1,
     ),
   );
 
@@ -930,7 +988,7 @@ function gie_user_field_default_field_instances() {
         'apply_chosen' => 1,
       ),
       'type' => 'options_select',
-      'weight' => 16,
+      'weight' => 18,
     ),
   );
 
@@ -978,7 +1036,7 @@ function gie_user_field_default_field_instances() {
         'apply_chosen' => 1,
       ),
       'type' => 'options_select',
-      'weight' => 17,
+      'weight' => 19,
     ),
   );
 
@@ -1047,7 +1105,7 @@ function gie_user_field_default_field_instances() {
         'rows' => 5,
       ),
       'type' => 'text_textarea',
-      'weight' => 12,
+      'weight' => 14,
     ),
   );
 
@@ -1185,7 +1243,7 @@ function gie_user_field_default_field_instances() {
         'size' => 60,
       ),
       'type' => 'text_textfield',
-      'weight' => 11,
+      'weight' => 13,
     ),
   );
 
@@ -1233,7 +1291,7 @@ function gie_user_field_default_field_instances() {
         'apply_chosen' => 1,
       ),
       'type' => 'options_select',
-      'weight' => 7,
+      'weight' => 9,
     ),
   );
 
@@ -1252,6 +1310,7 @@ function gie_user_field_default_field_instances() {
   t('My Company / Institution');
   t('Name');
   t('Organizational Affiliations');
+  t('Photo');
   t('Region');
   t('Skills');
   t('Summary');
