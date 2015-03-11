@@ -2,13 +2,13 @@
 /**
  * Implements hook_panels_layouts().
  */
-function gesso_sidebar_panels_layouts() {
-  $items['sidebar'] = array(
+function gesso_sidebar_right_panels_layouts() {
+  $items['sidebar_right'] = array(
     'title' => t('Preface and right sidebar'),
     'category' => t('Responsive'),
-    'icon' => 'sidebar.png',
-    'theme' => 'sidebar',
-    'admin css' => '../../../css/panels-admin/sidebar.css',
+    'icon' => 'sidebar_right.png',
+    'theme' => 'sidebar_right',
+    'admin css' => '../../../css/panels-admin/sidebar-right.css',
     'regions' => array(
       'preface' => t('Preface'),
       'main' => t('Main column'),
