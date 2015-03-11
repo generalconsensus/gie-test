@@ -2,12 +2,18 @@
 // Color variables
 // http://sass-lang.com/docs/yardoc/file.SASS_REFERENCE.html#variables_
 
-$primary-text-color: #333;
+$blue: #003359;
+$lightblue: #7090b7;
+$orange: #dc5606;
+$lightorange: #ed7d3a;
+$red: #b71234;
+
+$primary-text-color: #565a5c;
 $secondary-text-color: #555;
-$heading-text-color: #333;
+$heading-text-color: $blue;
 $body-color: #fff;
-$link-color: blue;
-$link-hover-color: green;
+$link-color: $orange;
+$link-hover-color: darken($orange,10%);
 $selection-background: blue;
 $selection-foreground: #fff;
 $status-color: #4d8e4d;
@@ -18,8 +24,8 @@ $gradient-light: rgba(255, 255, 255, 0.2);
 $gradient-dark: rgba(0, 0, 0, 0.2);
 
 // Buttons
-$button-bg-color: #f9f9f9;
-$button-text-color: #333;
+$button-bg-color: $blue;
+$button-text-color: #fff;
 
 // Forms
 $form-bg-color: #eee; // Used for fieldsets and vertical-tabs.

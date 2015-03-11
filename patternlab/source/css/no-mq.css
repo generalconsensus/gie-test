@@ -752,113 +752,105 @@ ul.panels-ipe-linkbar li {
   padding-right: 0;
 }
 
-/* line 13, ../sass/partials/layout/panels/_sidebar.scss */
-.layout-panels-sidebar.main.sidebar .layout-main {
+/* line 14, ../sass/partials/layout/panels/_detail.scss */
+.l-panels-detail.main.main-sidebar .l-main {
   width: 65.21739%;
   float: left;
   margin-right: -100%;
   margin-left: 0%;
   clear: none;
 }
-/* line 16, ../sass/partials/layout/panels/_sidebar.scss */
-.layout-panels-sidebar.main.sidebar .layout-sidebar {
+/* line 15, ../sass/partials/layout/panels/_detail.scss */
+.l-panels-detail.main.main-sidebar .l-main-sidebar {
   width: 30.43478%;
   float: right;
   margin-left: 0;
   margin-right: 0;
   clear: none;
 }
-
-/* line 9, ../sass/partials/global/helpers/_clearfix.scss */
-.layout-panels-sidebar:after {
-  display: table;
-  content: "";
-}
-/* line 14, ../sass/partials/global/helpers/_clearfix.scss */
-.layout-panels-sidebar:after {
-  clear: both;
-}
-/* line 9, ../sass/partials/global/helpers/_clearfix.scss */
-.layout-panels-sidebar .layout-preface:after,
-.layout-panels-sidebar .layout-main:after,
-.layout-panels-sidebar .layout-sidebar:after {
-  display: table;
-  content: "";
-}
-/* line 14, ../sass/partials/global/helpers/_clearfix.scss */
-.layout-panels-sidebar .layout-preface:after,
-.layout-panels-sidebar .layout-main:after,
-.layout-panels-sidebar .layout-sidebar:after {
-  clear: both;
-}
-
-/* line 15, ../sass/partials/layout/panels/_three-column.scss */
-.layout-panels-three-column.first.second.third .layout-first {
+/* line 21, ../sass/partials/layout/panels/_detail.scss */
+.l-panels-detail.box-first.box-second.box-third .l-box-first {
   width: 30.43478%;
   float: left;
   margin-right: -100%;
   margin-left: 0%;
   clear: none;
 }
-/* line 16, ../sass/partials/layout/panels/_three-column.scss */
-.layout-panels-three-column.first.second.third .layout-second {
+/* line 22, ../sass/partials/layout/panels/_detail.scss */
+.l-panels-detail.box-first.box-second.box-third .l-box-second {
   width: 30.43478%;
   float: left;
   margin-right: -100%;
   margin-left: 34.78261%;
   clear: none;
 }
-/* line 17, ../sass/partials/layout/panels/_three-column.scss */
-.layout-panels-three-column.first.second.third .layout-third {
+/* line 23, ../sass/partials/layout/panels/_detail.scss */
+.l-panels-detail.box-first.box-second.box-third .l-box-third {
   width: 30.43478%;
   float: right;
   margin-left: 0;
   margin-right: 0;
   clear: none;
 }
-/* line 20, ../sass/partials/layout/panels/_three-column.scss */
-.layout-panels-three-column.first.second.third-empty .layout-first {
+/* line 26, ../sass/partials/layout/panels/_detail.scss */
+.l-panels-detail.box-first.box-second.box-third-empty .l-box-first {
   width: 47.82609%;
   float: left;
   margin-right: -100%;
   margin-left: 0%;
   clear: none;
 }
-/* line 21, ../sass/partials/layout/panels/_three-column.scss */
-.layout-panels-three-column.first.second.third-empty .layout-second {
+/* line 27, ../sass/partials/layout/panels/_detail.scss */
+.l-panels-detail.box-first.box-second.box-third-empty .l-box-second {
   width: 47.82609%;
   float: right;
   margin-left: 0;
   margin-right: 0;
   clear: none;
 }
-/* line 25, ../sass/partials/layout/panels/_three-column.scss */
-.layout-panels-three-column.first.second-empty.third .layout-first {
+/* line 31, ../sass/partials/layout/panels/_detail.scss */
+.l-panels-detail.box-first.box-second-empty.box-third .l-box-first {
   width: 47.82609%;
   float: left;
   margin-right: -100%;
   margin-left: 0%;
   clear: none;
 }
-/* line 26, ../sass/partials/layout/panels/_three-column.scss */
-.layout-panels-three-column.first.second-empty.third .layout-third {
+/* line 32, ../sass/partials/layout/panels/_detail.scss */
+.l-panels-detail.box-first.box-second-empty.box-third .l-box-third {
   width: 47.82609%;
   float: right;
   margin-left: 0;
   margin-right: 0;
   clear: none;
 }
-/* line 30, ../sass/partials/layout/panels/_three-column.scss */
-.layout-panels-three-column.first-empty.second.third .layout-second {
+/* line 36, ../sass/partials/layout/panels/_detail.scss */
+.l-panels-detail.box-first-empty.box-second.box-third .l-box-second {
   width: 47.82609%;
   float: left;
   margin-right: -100%;
   margin-left: 0%;
   clear: none;
 }
-/* line 31, ../sass/partials/layout/panels/_three-column.scss */
-.layout-panels-three-column.first-empty.second.third .layout-third {
+/* line 37, ../sass/partials/layout/panels/_detail.scss */
+.l-panels-detail.box-first-empty.box-second.box-third .l-box-third {
   width: 47.82609%;
+  float: right;
+  margin-left: 0;
+  margin-right: 0;
+  clear: none;
+}
+/* line 41, ../sass/partials/layout/panels/_detail.scss */
+.l-panels-detail.bottom.bottom-sidebar .l-bottom {
+  width: 65.21739%;
+  float: left;
+  margin-right: -100%;
+  margin-left: 0%;
+  clear: none;
+}
+/* line 42, ../sass/partials/layout/panels/_detail.scss */
+.l-panels-detail.bottom.bottom-sidebar .l-bottom-sidebar {
+  width: 30.43478%;
   float: right;
   margin-left: 0;
   margin-right: 0;
@@ -866,27 +858,119 @@ ul.panels-ipe-linkbar li {
 }
 
 /* line 9, ../sass/partials/global/helpers/_clearfix.scss */
-.layout-panels-three-column:after {
+.l-panels-detail:after {
   display: table;
   content: "";
 }
 /* line 14, ../sass/partials/global/helpers/_clearfix.scss */
-.layout-panels-three-column:after {
+.l-panels-detail:after {
   clear: both;
 }
 /* line 9, ../sass/partials/global/helpers/_clearfix.scss */
-.layout-panels-three-column .layout-preface:after,
-.layout-panels-three-column .layout-first:after,
-.layout-panels-three-column .layout-second:after,
-.layout-panels-three-column .layout-third:after {
+.l-panels-detail .l-wrapper:after,
+.l-panels-detail .l-hero:after,
+.l-panels-detail .l-main:after,
+.l-panels-detail .l-main-sidebar:after,
+.l-panels-detail .l-center:after,
+.l-panels-detail .l-box-first:after,
+.l-panels-detail .l-box-second:after,
+.l-panels-detail .l-box-third:after,
+.l-panels-detail .l-bottom-sidebar:after,
+.l-panels-detail .l-bottom:after {
   display: table;
   content: "";
 }
 /* line 14, ../sass/partials/global/helpers/_clearfix.scss */
-.layout-panels-three-column .layout-preface:after,
-.layout-panels-three-column .layout-first:after,
-.layout-panels-three-column .layout-second:after,
-.layout-panels-three-column .layout-third:after {
+.l-panels-detail .l-wrapper:after,
+.l-panels-detail .l-hero:after,
+.l-panels-detail .l-main:after,
+.l-panels-detail .l-main-sidebar:after,
+.l-panels-detail .l-center:after,
+.l-panels-detail .l-box-first:after,
+.l-panels-detail .l-box-second:after,
+.l-panels-detail .l-box-third:after,
+.l-panels-detail .l-bottom-sidebar:after,
+.l-panels-detail .l-bottom:after {
+  clear: both;
+}
+
+/* line 13, ../sass/partials/layout/panels/_sidebar-left.scss */
+.l-panels-sidebar-left.main.sidebar .l-sidebar {
+  width: 30.43478%;
+  float: left;
+  margin-right: -100%;
+  margin-left: 0%;
+  clear: none;
+}
+/* line 16, ../sass/partials/layout/panels/_sidebar-left.scss */
+.l-panels-sidebar-left.main.sidebar .l-main {
+  width: 65.21739%;
+  float: right;
+  margin-left: 0;
+  margin-right: 0;
+  clear: none;
+}
+
+/* line 9, ../sass/partials/global/helpers/_clearfix.scss */
+.l-panels-sidebar-left:after {
+  display: table;
+  content: "";
+}
+/* line 14, ../sass/partials/global/helpers/_clearfix.scss */
+.l-panels-sidebar-left:after {
+  clear: both;
+}
+/* line 9, ../sass/partials/global/helpers/_clearfix.scss */
+.l-panels-sidebar-left .l-preface:after,
+.l-panels-sidebar-left .l-main:after,
+.l-panels-sidebar-left .l-sidebar:after {
+  display: table;
+  content: "";
+}
+/* line 14, ../sass/partials/global/helpers/_clearfix.scss */
+.l-panels-sidebar-left .l-preface:after,
+.l-panels-sidebar-left .l-main:after,
+.l-panels-sidebar-left .l-sidebar:after {
+  clear: both;
+}
+
+/* line 13, ../sass/partials/layout/panels/_sidebar-right.scss */
+.l-panels-sidebar-right.main.sidebar .l-main {
+  width: 65.21739%;
+  float: left;
+  margin-right: -100%;
+  margin-left: 0%;
+  clear: none;
+}
+/* line 16, ../sass/partials/layout/panels/_sidebar-right.scss */
+.l-panels-sidebar-right.main.sidebar .l-sidebar {
+  width: 30.43478%;
+  float: right;
+  margin-left: 0;
+  margin-right: 0;
+  clear: none;
+}
+
+/* line 9, ../sass/partials/global/helpers/_clearfix.scss */
+.l-panels-sidebar-right:after {
+  display: table;
+  content: "";
+}
+/* line 14, ../sass/partials/global/helpers/_clearfix.scss */
+.l-panels-sidebar-right:after {
+  clear: both;
+}
+/* line 9, ../sass/partials/global/helpers/_clearfix.scss */
+.l-panels-sidebar-right .l-preface:after,
+.l-panels-sidebar-right .l-main:after,
+.l-panels-sidebar-right .l-sidebar:after {
+  display: table;
+  content: "";
+}
+/* line 14, ../sass/partials/global/helpers/_clearfix.scss */
+.l-panels-sidebar-right .l-preface:after,
+.l-panels-sidebar-right .l-main:after,
+.l-panels-sidebar-right .l-sidebar:after {
   clear: both;
 }
 
