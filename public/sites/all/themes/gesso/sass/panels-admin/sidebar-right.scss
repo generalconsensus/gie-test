@@ -1,5 +1,5 @@
 // @file
-// Admin syles for Panels layout: three-column
+// Admin syles for Panels layout: sidebar right
 
 $panels-admin: true;
 
@@ -10,4 +10,4 @@ $legacy-support-for-ie8: false;
 $legacy-support-for-mozilla: false;
 
 @import '../partials/global';
-@import '../partials/layout/panels/three-column';
+@import '../partials/layout/panels/sidebar-right';
