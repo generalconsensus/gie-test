@@ -353,7 +353,7 @@ function gie_innovation_field_default_field_instances() {
       'module' => 'html5_tools',
       'settings' => array(),
       'type' => 'numberfield',
-      'weight' => 10,
+      'weight' => 9,
     ),
   );
 
@@ -428,7 +428,7 @@ function gie_innovation_field_default_field_instances() {
         'size' => 60,
       ),
       'type' => 'text_textfield',
-      'weight' => 13,
+      'weight' => 12,
     ),
   );
 
@@ -481,7 +481,7 @@ function gie_innovation_field_default_field_instances() {
         'size' => 60,
       ),
       'type' => 'taxonomy_autocomplete',
-      'weight' => 15,
+      'weight' => 14,
     ),
   );
 
@@ -802,7 +802,7 @@ function gie_innovation_field_default_field_instances() {
       'module' => 'html5_tools',
       'settings' => array(),
       'type' => 'numberfield',
-      'weight' => 8,
+      'weight' => 7,
     ),
   );
 
@@ -987,7 +987,7 @@ function gie_innovation_field_default_field_instances() {
         'size' => 60,
       ),
       'type' => 'taxonomy_autocomplete',
-      'weight' => 16,
+      'weight' => 15,
     ),
   );
 
@@ -1397,7 +1397,7 @@ function gie_innovation_field_default_field_instances() {
       'module' => 'html5_tools',
       'settings' => array(),
       'type' => 'numberfield',
-      'weight' => 9,
+      'weight' => 8,
     ),
   );
 
@@ -1571,6 +1571,59 @@ function gie_innovation_field_default_field_instances() {
     ),
   );
 
+  // Exported field_instance: 'node-innovation-field_innovation_sector'
+  $field_instances['node-innovation-field_innovation_sector'] = array(
+    'bundle' => 'innovation',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'taxonomy',
+        'settings' => array(
+          'field_delimiter' => '',
+          'linked_field' => array(
+            'advanced' => array(
+              'class' => '',
+              'rel' => '',
+              'target' => '',
+              'text' => '',
+              'title' => '',
+            ),
+            'destination' => '',
+            'linked' => 0,
+          ),
+        ),
+        'type' => 'taxonomy_term_reference_link',
+        'weight' => 34,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'field_name' => 'field_innovation_sector',
+    'label' => 'Sector',
+    'required' => 0,
+    'settings' => array(
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 0,
+      'module' => 'taxonomy',
+      'settings' => array(
+        'autocomplete_path' => 'taxonomy/autocomplete',
+        'size' => 60,
+      ),
+      'type' => 'taxonomy_autocomplete',
+      'weight' => 17,
+    ),
+  );
+
   // Exported field_instance: 'node-innovation-field_innovation_stage'
   $field_instances['node-innovation-field_innovation_stage'] = array(
     'bundle' => 'innovation',
@@ -1619,7 +1672,7 @@ function gie_innovation_field_default_field_instances() {
         'apply_chosen' => '',
       ),
       'type' => 'options_select',
-      'weight' => 12,
+      'weight' => 11,
     ),
   );
 
@@ -1954,7 +2007,7 @@ function gie_innovation_field_default_field_instances() {
         'size' => 60,
       ),
       'type' => 'taxonomy_autocomplete',
-      'weight' => 17,
+      'weight' => 16,
     ),
   );
 
@@ -2005,7 +2058,7 @@ function gie_innovation_field_default_field_instances() {
         'apply_chosen' => '',
       ),
       'type' => 'options_select',
-      'weight' => 11,
+      'weight' => 10,
     ),
   );
 
@@ -2132,7 +2185,7 @@ function gie_innovation_field_default_field_instances() {
         'apply_chosen' => '',
       ),
       'type' => 'options_select',
-      'weight' => 14,
+      'weight' => 13,
     ),
   );
 
@@ -2508,6 +2561,7 @@ function gie_innovation_field_default_field_instances() {
   t('References Available?');
   t('Related Programs');
   t('Resources');
+  t('Sector');
   t('Solution Type');
   t('Status Update');
   t('Testing Phase');

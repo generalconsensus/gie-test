@@ -279,7 +279,7 @@ function gie_funding_field_default_field_instances() {
         'size' => 60,
       ),
       'type' => 'text_textfield',
-      'weight' => 13,
+      'weight' => 14,
     ),
   );
 
@@ -333,7 +333,7 @@ function gie_funding_field_default_field_instances() {
         'apply_chosen' => 1,
       ),
       'type' => 'options_select',
-      'weight' => 14,
+      'weight' => 15,
     ),
   );
 
@@ -686,7 +686,7 @@ function gie_funding_field_default_field_instances() {
         'size' => 60,
       ),
       'type' => 'entityreference_autocomplete',
-      'weight' => 15,
+      'weight' => 16,
     ),
   );
 
@@ -791,6 +791,58 @@ function gie_funding_field_default_field_instances() {
       ),
       'type' => 'options_select',
       'weight' => 11,
+    ),
+  );
+
+  // Exported field_instance: 'node-funding-field_funding_sector'
+  $field_instances['node-funding-field_funding_sector'] = array(
+    'bundle' => 'funding',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'taxonomy',
+        'settings' => array(
+          'field_delimiter' => '',
+          'linked_field' => array(
+            'advanced' => array(
+              'class' => '',
+              'rel' => '',
+              'target' => '',
+              'text' => '',
+              'title' => '',
+            ),
+            'destination' => '',
+            'linked' => 0,
+          ),
+        ),
+        'type' => 'taxonomy_term_reference_link',
+        'weight' => 16,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'field_name' => 'field_funding_sector',
+    'label' => 'Sector',
+    'required' => 0,
+    'settings' => array(
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'options',
+      'settings' => array(
+        'apply_chosen' => '',
+      ),
+      'type' => 'options_select',
+      'weight' => 13,
     ),
   );
 
@@ -1193,6 +1245,7 @@ function gie_funding_field_default_field_instances() {
   t('Organization');
   t('Point of Contact');
   t('Region');
+  t('Sector');
   t('Source');
   t('Title');
   t('Topic');
