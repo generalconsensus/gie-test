@@ -19,7 +19,7 @@ function gie_program_ctools_plugin_api($module = NULL, $api = NULL) {
 function gie_program_node_info() {
   $items = array(
     'program' => array(
-      'name' => t('Project (Program)'),
+      'name' => t('Program'),
       'base' => 'node_content',
       'description' => '',
       'has_title' => '1',
