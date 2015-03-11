@@ -1,0 +1,18 @@
+<?php
+/**
+ * @file
+ * Upate hooks for gie_user.
+ */
+
+/**
+ * Create directory for random images called 'random'.
+ */
+function gie_user_update_7000() {
+  // Set directory where random images will be saved
+  $directory = 'public://random';
+
+  // Create directory if it doesn't exist yet
+  if (!file_prepare_directory($directory)) {
+    drupal_mkdir($directory);
+  }
+}
