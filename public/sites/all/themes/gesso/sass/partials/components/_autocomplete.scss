@@ -5,14 +5,14 @@ $icon-horizontal-offset: em(8px, $form-text-size);
 $icon-vertical-offset: 12px;
 $icon-throbbing-vertical-offset: -47px;
 
-#autocomplete {
-  border: 1px solid $form-border-color;
+#autocomplete { 
+  border: 1px solid $form-border-color; 
   overflow: hidden;
   position: absolute;
   z-index: 100;
 
   ul {
-    list-style: none;
+    list-style: none; 
     margin: 0;
     padding: 0;
   }
