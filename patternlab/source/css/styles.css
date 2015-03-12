@@ -1142,6 +1142,15 @@ input.throbbing {
   display: none;
 }
 
+/* line 1, ../sass/partials/components/_footer.scss */
+.footer__menu-bar {
+  background: #565a5c;
+}
+/* line 3, ../sass/partials/components/_footer.scss */
+.footer__menu-bar a {
+  color: #fff;
+}
+
 /* line 4, ../sass/partials/components/_form-item.scss */
 .form-item {
   margin: 1.625em 0;
@@ -1525,7 +1534,7 @@ input.throbbing {
 }
 
 /* line 11, ../sass/partials/components/_nav.scss */
-.nav--main-menu > .nav__item {
+.nav--footer-menu > .nav__item, .nav--main-menu > .nav__item {
   display: -moz-inline-stack;
   display: inline-block;
   vertical-align: middle;
@@ -1676,47 +1685,76 @@ input.throbbing {
 }
 
 /* line 9, ../sass/partials/global/helpers/_clearfix.scss */
-.nav--secondary-local-tasks:after {
+.nav--footer-utility-menu:after, .nav--secondary-local-tasks:after {
   display: table;
   content: "";
 }
 /* line 14, ../sass/partials/global/helpers/_clearfix.scss */
-.nav--secondary-local-tasks:after {
+.nav--footer-utility-menu:after, .nav--secondary-local-tasks:after {
   clear: both;
 }
 /* line 126, ../sass/partials/components/_nav.scss */
-.nav--secondary-local-tasks .nav__item {
-  border-right: 1px solid #cccccc;
+.nav--footer-utility-menu .nav__item, .nav--secondary-local-tasks .nav__item {
+  border-right: 1px solid #565a5c;
   display: block;
   float: left;
-  margin-right: 0.75em;
-  padding-right: 0.75em;
+  margin-right: 0.5em;
+  padding-right: 0.5em;
 }
 /* line 133, ../sass/partials/components/_nav.scss */
-[dir="rtl"] .nav--secondary-local-tasks .nav__item {
-  border-left: 1px solid #cccccc;
+[dir="rtl"] .nav--footer-utility-menu .nav__item, [dir="rtl"] .nav--secondary-local-tasks .nav__item {
+  border-left: 1px solid #565a5c;
   border-right: 0;
   float: right;
-  margin-left: 0.75em;
+  margin-left: 0.5em;
   margin-right: 0;
-  padding-left: 0.75em;
+  padding-left: 0.5em;
   padding-right: 0;
 }
 /* line 143, ../sass/partials/components/_nav.scss */
-.nav--secondary-local-tasks .nav__item:last-child {
+.nav--footer-utility-menu .nav__item:last-child, .nav--secondary-local-tasks .nav__item:last-child {
   border-right: 0;
   margin-right: 0;
   padding-right: 0;
 }
 /* line 148, ../sass/partials/components/_nav.scss */
-[dir="rtl"] .nav--secondary-local-tasks .nav__item:last-child {
+[dir="rtl"] .nav--footer-utility-menu .nav__item:last-child, [dir="rtl"] .nav--secondary-local-tasks .nav__item:last-child {
   border-left: 0;
   margin-left: 0;
   padding-left: 0;
 }
 /* line 156, ../sass/partials/components/_nav.scss */
-.nav--secondary-local-tasks .is-active > .nav__link {
+.nav--footer-utility-menu .is-active > .nav__link, .nav--secondary-local-tasks .is-active > .nav__link {
   font-weight: bold;
+}
+
+/* line 4, ../sass/partials/components/nav/_nav--footer-menu.scss */
+.nav--footer-menu .nav__item {
+  padding: 1.5em 2.5em 1.5em 0;
+}
+/* line 8, ../sass/partials/components/nav/_nav--footer-menu.scss */
+.nav--footer-menu .nav__link {
+  font-size: 0.875em;
+  text-decoration: none;
+}
+/* line 11, ../sass/partials/components/nav/_nav--footer-menu.scss */
+.nav--footer-menu .nav__link:hover, .nav--footer-menu .nav__link:focus {
+  text-decoration: underline;
+}
+
+/* line 4, ../sass/partials/components/nav/_nav--footer-utility-menu.scss */
+.nav--footer-utility-menu .nav__item {
+  line-height: 1;
+}
+/* line 8, ../sass/partials/components/nav/_nav--footer-utility-menu.scss */
+.nav--footer-utility-menu .nav__link {
+  color: #565a5c;
+  font-size: 0.875em;
+  text-decoration: none;
+}
+/* line 12, ../sass/partials/components/nav/_nav--footer-utility-menu.scss */
+.nav--footer-utility-menu .nav__link:hover, .nav--footer-utility-menu .nav__link:focus {
+  text-decoration: underline;
 }
 
 @media print {

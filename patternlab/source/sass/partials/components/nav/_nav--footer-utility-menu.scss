@@ -1,0 +1,17 @@
+.nav--footer-utility-menu {
+  @extend %nav--pipeline;
+
+  .nav__item {
+    line-height: 1;
+  }
+
+  .nav__link {
+    color: $primary-text-color;
+    font-size: em(14px);
+    text-decoration: none;
+    &:hover, &:focus {
+      text-decoration: underline; 
+    }
+  }
+
+}
