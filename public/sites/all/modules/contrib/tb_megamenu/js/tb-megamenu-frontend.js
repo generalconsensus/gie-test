@@ -85,7 +85,7 @@ Drupal.TBMegaMenu = Drupal.TBMegaMenu || {};
             }
           });
           var mm_timeout = mm_duration ? 100 + mm_duration : 500;
-          $('.nav > li, li.mega', context).bind('mouseenter', function(event) {
+          $('.nav > li, li.mega', context).bind('mouseenter focusin', function(event) {
             showMenu($(this), mm_timeout)
           });
           $('.nav > li > .dropdown-toggle, li.mega > .dropdown-toggle', context).bind('focus', function(event) {
@@ -103,7 +103,7 @@ Drupal.TBMegaMenu = Drupal.TBMegaMenu || {};
               hideMenu($subMenu, mm_timeout);
             });
           });
-          $('.nav > li, li.mega', context).bind('mouseleave', function(event) {
+          $('.nav > li, li.mega', context).bind('mouseleave focusout', function(event) {
             hideMenu($(this), mm_timeout);
           });
         });
