@@ -1,5 +1,48 @@
 <?php
 /**
  * @file
- * Drupal needs this blank file.
+ * Code for the GIE Profile feature.
  */
+
+include_once 'gie_user.features.inc';
+
+/**
+ * Implements hook_ds_fields_info().
+ * - Create Full Name display field, links to user page.
+ */
+function gie_user_ds_fields_info($entity_type) {
+  $fields = array();
+
+  if ($entity_type == 'user') {
+    $fields['user_full_name_linked'] = array(
+      'title' => t('Full Name (linked)'),
+      'field_type' => DS_FIELD_TYPE_FUNCTION,
+      'ui_limit' => array('user|*'),
+      'function' => '_gie_user_user_full_name_linked'
+    );
+    return array($entity_type => $fields);
+  }
+
+  return;
+}
+
+/**
+ * Render function for Full Name (linked) field.
+ */
+function _gie_user_user_full_name_linked($field) {
+  // wrap user entity, set first / last name and user ID variables
+  $wrapper = entity_metadata_wrapper('user', $field['entity']);
+  $first_name = $wrapper->field_user_firstname->value();
+  $last_name = $wrapper->field_user_lastname->value();
+  $uid = $wrapper->uid->value();
+
+  // set name text
+  if (!empty($first_name) && !empty($last_name)) {
+    $full_name = $first_name . ' ' . $last_name;
+  } else {
+    $full_name = $wrapper->name->value();
+  }
+
+  $link = l($full_name, 'user/' . $uid);
+  return $link;
+}
