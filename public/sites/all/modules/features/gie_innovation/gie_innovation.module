@@ -17,7 +17,7 @@ function gie_innovation_ds_fields_info($entity_type) {
     $fields['non_ref_display'] = array(
       'title' => t('Full name (non-ref)'),
       'field_type' => DS_FIELD_TYPE_FUNCTION,
-      'ui_limit' => array('field_innovation_non_references|*'),
+      // 'ui_limit' => array('field_innovation_non_references|*'),
       'function' => '_gie_innovation_non_ref_display'
     );
     return array($entity_type => $fields);
