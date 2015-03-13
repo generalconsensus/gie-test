@@ -93,6 +93,44 @@ function gie_innovation_default_page_manager_handlers() {
     $display->content['new-a8a41907-3329-4826-acc5-7dc222c71592'] = $pane;
     $display->panels['bottom'][0] = 'new-a8a41907-3329-4826-acc5-7dc222c71592';
     $pane = new stdClass();
+    $pane->pid = 'new-9447d5e9-e6ee-4807-8065-d94701887346';
+    $pane->panel = 'bottom_sidebar';
+    $pane->type = 'views';
+    $pane->subtype = 'innovation_team';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array(
+      'override_pager_settings' => 0,
+      'use_pager' => 0,
+      'nodes_per_page' => '0',
+      'pager_id' => '0',
+      'offset' => '0',
+      'more_link' => 0,
+      'feed_icons' => 0,
+      'panel_args' => 0,
+      'link_to_view' => 0,
+      'args' => '',
+      'url' => '',
+      'display' => 'default',
+      'context' => array(
+        0 => '',
+      ),
+      'override_title' => 1,
+      'override_title_text' => 'Innovation Team',
+      'override_title_heading' => 'h2',
+    );
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
+    $pane->css = array();
+    $pane->extras = array();
+    $pane->position = 0;
+    $pane->locks = array();
+    $pane->uuid = '9447d5e9-e6ee-4807-8065-d94701887346';
+    $display->content['new-9447d5e9-e6ee-4807-8065-d94701887346'] = $pane;
+    $display->panels['bottom_sidebar'][0] = 'new-9447d5e9-e6ee-4807-8065-d94701887346';
+    $pane = new stdClass();
     $pane->pid = 'new-64f4772c-3c94-430a-9ffd-5bd25b4cc8cb';
     $pane->panel = 'bottom_sidebar';
     $pane->type = 'views';
@@ -125,11 +163,11 @@ function gie_innovation_default_page_manager_handlers() {
     );
     $pane->css = array();
     $pane->extras = array();
-    $pane->position = 0;
+    $pane->position = 1;
     $pane->locks = array();
     $pane->uuid = '64f4772c-3c94-430a-9ffd-5bd25b4cc8cb';
     $display->content['new-64f4772c-3c94-430a-9ffd-5bd25b4cc8cb'] = $pane;
-    $display->panels['bottom_sidebar'][0] = 'new-64f4772c-3c94-430a-9ffd-5bd25b4cc8cb';
+    $display->panels['bottom_sidebar'][1] = 'new-64f4772c-3c94-430a-9ffd-5bd25b4cc8cb';
     $pane = new stdClass();
     $pane->pid = 'new-2bbcfb02-7033-40f6-a308-04f008fc1e75';
     $pane->panel = 'box_third';
