@@ -134,6 +134,7 @@ features[variable][] = menu_parent_innovation
 features[variable][] = node_options_innovation
 features[variable][] = node_preview_innovation
 features[variable][] = node_submitted_innovation
+features[views_view][] = exchange_references
 features[views_view][] = funded_by
 features[views_view][] = innovation_team
 features_exclude[dependencies][email] = email
