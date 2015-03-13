@@ -5,3 +5,35 @@
  */
 
 include_once 'gie_innovation.features.inc';
+
+/**
+ * Implements hook_ds_fields_info().
+ * - Custom display for non exchange references: display full name of user.
+ */
+function gie_innovation_ds_fields_info($entity_type) {
+  $fields = array();
+
+  if ($entity_type == 'field_collection_item') {
+    $fields['non_ref_display'] = array(
+      'title' => t('Full name (non-ref)'),
+      'field_type' => DS_FIELD_TYPE_FUNCTION,
+      'ui_limit' => array('field_innovation_non_references|*'),
+      'function' => '_gie_innovation_non_ref_display'
+    );
+    return array($entity_type => $fields);
+  }
+
+  return;
+}
+
+/**
+ * Render function for Non-ref user field collection.
+ */
+function _gie_innovation_non_ref_display($field) {
+  $wrapper = entity_metadata_wrapper('field_collection_item', $field['entity']);
+  $first_name = $wrapper->field_non_ref_first_name->value();
+  $last_name = $wrapper->field_non_ref_last_name->value();
+  $full_name = $first_name . ' ' . $last_name;
+
+  return check_plain($full_name);
+}

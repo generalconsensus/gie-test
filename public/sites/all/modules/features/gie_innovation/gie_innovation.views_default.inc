@@ -212,5 +212,52 @@ function gie_innovation_views_default_views() {
   $handler->display->display_options['filters']['status']['expose']['operator'] = FALSE;
   $export['innovation_team'] = $view;
 
+  $view = new view();
+  $view->name = 'non_exchange_references';
+  $view->description = '';
+  $view->tag = 'default';
+  $view->base_table = 'field_collection_item';
+  $view->human_name = 'Non-Exchange References';
+  $view->core = 7;
+  $view->api_version = '3.0';
+  $view->disabled = FALSE; /* Edit this to true to make a default view disabled initially */
+
+  /* Display: Master */
+  $handler = $view->new_display('default', 'Master', 'default');
+  $handler->display->display_options['use_more_always'] = FALSE;
+  $handler->display->display_options['access']['type'] = 'none';
+  $handler->display->display_options['cache']['type'] = 'none';
+  $handler->display->display_options['query']['type'] = 'views_query';
+  $handler->display->display_options['exposed_form']['type'] = 'basic';
+  $handler->display->display_options['pager']['type'] = 'none';
+  $handler->display->display_options['pager']['options']['offset'] = '0';
+  $handler->display->display_options['style_plugin'] = 'grid';
+  $handler->display->display_options['style_options']['columns'] = '3';
+  $handler->display->display_options['row_plugin'] = 'entity';
+  /* Relationship: Field collection item: Entity with the Non-Exchange References (field_innovation_non_references) */
+  $handler->display->display_options['relationships']['field_innovation_non_references_node']['id'] = 'field_innovation_non_references_node';
+  $handler->display->display_options['relationships']['field_innovation_non_references_node']['table'] = 'field_collection_item';
+  $handler->display->display_options['relationships']['field_innovation_non_references_node']['field'] = 'field_innovation_non_references_node';
+  $handler->display->display_options['relationships']['field_innovation_non_references_node']['required'] = TRUE;
+  /* Field: Field collection item: Field collection item ID */
+  $handler->display->display_options['fields']['item_id']['id'] = 'item_id';
+  $handler->display->display_options['fields']['item_id']['table'] = 'field_collection_item';
+  $handler->display->display_options['fields']['item_id']['field'] = 'item_id';
+  /* Sort criterion: Field collection item: Last Name (field_non_ref_last_name) */
+  $handler->display->display_options['sorts']['field_non_ref_last_name_value']['id'] = 'field_non_ref_last_name_value';
+  $handler->display->display_options['sorts']['field_non_ref_last_name_value']['table'] = 'field_data_field_non_ref_last_name';
+  $handler->display->display_options['sorts']['field_non_ref_last_name_value']['field'] = 'field_non_ref_last_name_value';
+  /* Contextual filter: Content: Nid */
+  $handler->display->display_options['arguments']['nid']['id'] = 'nid';
+  $handler->display->display_options['arguments']['nid']['table'] = 'node';
+  $handler->display->display_options['arguments']['nid']['field'] = 'nid';
+  $handler->display->display_options['arguments']['nid']['relationship'] = 'field_innovation_non_references_node';
+  $handler->display->display_options['arguments']['nid']['default_action'] = 'default';
+  $handler->display->display_options['arguments']['nid']['default_argument_type'] = 'node';
+  $handler->display->display_options['arguments']['nid']['summary']['number_of_records'] = '0';
+  $handler->display->display_options['arguments']['nid']['summary']['format'] = 'default_summary';
+  $handler->display->display_options['arguments']['nid']['summary_options']['items_per_page'] = '25';
+  $export['non_exchange_references'] = $view;
+
   return $export;
 }

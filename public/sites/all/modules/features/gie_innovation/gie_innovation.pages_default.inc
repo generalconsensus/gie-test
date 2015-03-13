@@ -207,6 +207,44 @@ function gie_innovation_default_page_manager_handlers() {
     $display->content['new-3a979e5c-0f89-4bbe-9a49-c8d1e1a8a21b'] = $pane;
     $display->panels['bottom_sidebar'][2] = 'new-3a979e5c-0f89-4bbe-9a49-c8d1e1a8a21b';
     $pane = new stdClass();
+    $pane->pid = 'new-1c1439b4-4e93-4c9d-b7d3-694587985c57';
+    $pane->panel = 'bottom_sidebar';
+    $pane->type = 'views';
+    $pane->subtype = 'non_exchange_references';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array(
+      'override_pager_settings' => 0,
+      'use_pager' => 0,
+      'nodes_per_page' => '0',
+      'pager_id' => '0',
+      'offset' => '0',
+      'more_link' => 0,
+      'feed_icons' => 0,
+      'panel_args' => 0,
+      'link_to_view' => 0,
+      'args' => '',
+      'url' => '',
+      'display' => 'default',
+      'context' => array(
+        0 => '',
+      ),
+      'override_title' => 1,
+      'override_title_text' => 'Other References',
+      'override_title_heading' => 'h2',
+    );
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
+    $pane->css = array();
+    $pane->extras = array();
+    $pane->position = 3;
+    $pane->locks = array();
+    $pane->uuid = '1c1439b4-4e93-4c9d-b7d3-694587985c57';
+    $display->content['new-1c1439b4-4e93-4c9d-b7d3-694587985c57'] = $pane;
+    $display->panels['bottom_sidebar'][3] = 'new-1c1439b4-4e93-4c9d-b7d3-694587985c57';
+    $pane = new stdClass();
     $pane->pid = 'new-2bbcfb02-7033-40f6-a308-04f008fc1e75';
     $pane->panel = 'box_third';
     $pane->type = 'entity_field';

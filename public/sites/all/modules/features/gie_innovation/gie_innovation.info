@@ -137,5 +137,6 @@ features[variable][] = node_submitted_innovation
 features[views_view][] = exchange_references
 features[views_view][] = funded_by
 features[views_view][] = innovation_team
+features[views_view][] = non_exchange_references
 features_exclude[dependencies][email] = email
 features_exclude[dependencies][html5_tools] = html5_tools
