@@ -87,25 +87,19 @@ function gie_innovation_field_default_field_bases() {
     'type' => 'number_integer',
   );
 
-  // Exported field_base: 'field_innovation_cpu'
-  $field_bases['field_innovation_cpu'] = array(
+  // Exported field_base: 'field_innovation_cost_per_unit'
+  $field_bases['field_innovation_cost_per_unit'] = array(
     'active' => 1,
     'cardinality' => 1,
     'deleted' => 0,
     'entity_types' => array(),
-    'field_name' => 'field_innovation_cpu',
-    'indexes' => array(
-      'format' => array(
-        0 => 'format',
-      ),
-    ),
+    'field_name' => 'field_innovation_cost_per_unit',
+    'indexes' => array(),
     'locked' => 0,
-    'module' => 'text',
-    'settings' => array(
-      'max_length' => 255,
-    ),
+    'module' => 'number',
+    'settings' => array(),
     'translatable' => 0,
-    'type' => 'text',
+    'type' => 'number_integer',
   );
 
   // Exported field_base: 'field_innovation_created'

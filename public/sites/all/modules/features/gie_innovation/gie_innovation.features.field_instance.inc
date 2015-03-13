@@ -333,8 +333,8 @@ function gie_innovation_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-innovation-field_innovation_cpu'
-  $field_instances['node-innovation-field_innovation_cpu'] = array(
+  // Exported field_instance: 'node-innovation-field_innovation_cost_per_unit'
+  $field_instances['node-innovation-field_innovation_cost_per_unit'] = array(
     'bundle' => 'innovation',
     'default_value' => NULL,
     'deleted' => 0,
@@ -342,8 +342,9 @@ function gie_innovation_field_default_field_instances() {
     'display' => array(
       'default' => array(
         'label' => 'above',
-        'module' => 'text',
+        'module' => 'number',
         'settings' => array(
+          'decimal_separator' => '.',
           'field_delimiter' => '',
           'linked_field' => array(
             'advanced' => array(
@@ -356,14 +357,18 @@ function gie_innovation_field_default_field_instances() {
             'destination' => '',
             'linked' => 0,
           ),
+          'prefix_suffix' => TRUE,
+          'scale' => 0,
+          'thousand_separator' => ' ',
         ),
-        'type' => 'text_default',
-        'weight' => 9,
+        'type' => 'number_integer',
+        'weight' => 35,
       ),
       'full' => array(
         'label' => 'inline',
-        'module' => 'text',
+        'module' => 'number',
         'settings' => array(
+          'decimal_separator' => '.',
           'field_delimiter' => '',
           'linked_field' => array(
             'advanced' => array(
@@ -376,8 +381,11 @@ function gie_innovation_field_default_field_instances() {
             'destination' => '',
             'linked' => 0,
           ),
+          'prefix_suffix' => 1,
+          'scale' => 0,
+          'thousand_separator' => ',',
         ),
-        'type' => 'text_default',
+        'type' => 'number_integer',
         'weight' => 37,
       ),
       'teaser' => array(
@@ -388,42 +396,21 @@ function gie_innovation_field_default_field_instances() {
       ),
     ),
     'entity_type' => 'node',
-    'field_name' => 'field_innovation_cpu',
+    'field_name' => 'field_innovation_cost_per_unit',
     'label' => 'Cost Per Unit',
     'required' => 0,
     'settings' => array(
-      'better_formats' => array(
-        'allowed_formats' => array(
-          'filtered_html' => 'filtered_html',
-          'full_html' => 'full_html',
-          'plain_text' => 'plain_text',
-        ),
-        'allowed_formats_toggle' => 0,
-        'default_order_toggle' => 0,
-        'default_order_wrapper' => array(
-          'formats' => array(
-            'filtered_html' => array(
-              'weight' => 0,
-            ),
-            'full_html' => array(
-              'weight' => 1,
-            ),
-            'plain_text' => array(
-              'weight' => 10,
-            ),
-          ),
-        ),
-      ),
-      'text_processing' => 0,
+      'max' => '',
+      'min' => '',
+      'prefix' => '',
+      'suffix' => '',
       'user_register_form' => FALSE,
     ),
     'widget' => array(
-      'active' => 1,
-      'module' => 'text',
-      'settings' => array(
-        'size' => 60,
-      ),
-      'type' => 'text_textfield',
+      'active' => 0,
+      'module' => 'html5_tools',
+      'settings' => array(),
+      'type' => 'numberfield',
       'weight' => 12,
     ),
   );
