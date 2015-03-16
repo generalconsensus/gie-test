@@ -1,0 +1,13 @@
+.block--view-partners {
+  .region-footer & {
+    margin-bottom: 2em;
+    @include breakpoint(700px, $no-query: true) {
+      border-left: 1px solid $border-color;
+      float: left;
+      margin-bottom: 0;
+      margin-left: -1px;
+      padding-left: 2em;
+      width: percentage(7/10);
+    }
+  }
+}

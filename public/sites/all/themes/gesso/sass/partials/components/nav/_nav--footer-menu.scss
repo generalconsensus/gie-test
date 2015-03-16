@@ -1,0 +1,36 @@
+.nav--footer-menu {
+  @extend %nav--inline;
+  padding: 1.25em 0;
+  @include breakpoint(max-width 600px) {
+    padding: 0.5em 0;
+  }
+  .nav__item {
+    line-height: 1;
+    padding: 0 2.5em 0.25em 0;
+    @include breakpoint(max-width 600px) {
+      display: block;
+      padding: 0.25em 0;
+    }
+  }
+
+  .nav__link {
+    font-size: em(14px);
+    text-decoration: none;
+    &:hover, &:focus {
+      text-decoration: underline; 
+    }
+    @include breakpoint(max-width 600px) {
+      background: $blue;
+      border: 1px solid #fff;
+      display: block;
+      padding: 0.5em 1em;
+      text-align: center;
+      text-decoration: none;
+      &:hover, &:focus {
+        background: darken($blue,20%);
+        text-decoration: none;
+      }
+    }
+  }
+
+}

@@ -1,0 +1,12 @@
+.block--about-the-exchange { 
+  .region-footer & {
+    margin-bottom: 2em;
+    @include breakpoint(700px, $no-query: true) {
+      border-right: 1px solid $border-color;
+      float: left;
+      margin-bottom: 0;
+      padding-right: 2em;
+      width: percentage(3/10);
+    }
+  }
+}

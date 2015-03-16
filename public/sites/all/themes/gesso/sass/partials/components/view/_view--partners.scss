@@ -1,0 +1,21 @@
+.view--partners {
+  .view__content {
+    overflow: hidden;
+  }
+  .views-row {
+    padding: 0 0 1em 0;
+    @include breakpoint(400px, $no-query: true) {
+      float: left;
+      width: percentage(1/2);
+    }
+    @include breakpoint(600px) {
+      width: percentage(1/3);
+    }
+    @include breakpoint(900px, $no-query: true) {
+      width: percentage(1/4);
+    }
+  }
+  .view__all {
+    padding: 0 0 1.5em 0;
+  }
+}
