@@ -3,6 +3,16 @@
 
 .nav--main-menu {
   @extend %nav--inline;
+  margin: 0;
+  padding: 0;
+
+  .nav__link {
+    line-height: 44px;
+    margin: 0;
+    padding: 0 2em;
+    text-decoration: none;
+    text-transform: uppercase;
+  }
 
   @media print {
     display: none;

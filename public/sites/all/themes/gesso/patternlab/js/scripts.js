@@ -5,6 +5,23 @@
 
   'use strict';
 
+  Drupal.behaviors.mainSearch = {
+    attach: function (context) {
+      var $button = $('<button class="block--search__button">Open Search</button>'),
+          $block = $('.region-navigation .block--search').eq(0),
+          $form = $block.find('form').eq(0);
+      $block.prepend($button).wrapInner('<div class="block--search__inner"></div>');
+      $button.click(function(){
+        $block.toggleClass('is-open');
+      }).mouseleave(function(){
+        $(this).blur();
+      });
+      
+
+    }
+  }
+ 
+
   // Generic function that runs on window resize.
   function resizeStuff() {
   }

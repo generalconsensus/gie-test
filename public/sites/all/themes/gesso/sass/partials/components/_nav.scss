@@ -6,6 +6,14 @@
   padding: 0;
 }
 
+.nav__link {
+  color: $primary-text-color;
+  text-decoration: none;
+  &:hover, &:focus {
+    text-decoration: underline;
+  }
+}
+
 // Extendable inline nav style.
 %nav--inline {
   > .nav__item {

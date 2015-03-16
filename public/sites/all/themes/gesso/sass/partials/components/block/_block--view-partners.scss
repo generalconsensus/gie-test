@@ -1,5 +1,5 @@
 .block--view-partners {
-  .region-footer & {
+  .region-footer & { // layout when in footer
     margin-bottom: 2em;
     @include breakpoint(700px, $no-query: true) {
       border-left: 1px solid $border-color;

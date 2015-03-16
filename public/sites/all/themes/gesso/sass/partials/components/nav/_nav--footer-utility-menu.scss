@@ -7,15 +7,10 @@
   }
 
   .nav__link {
-    color: $primary-text-color;
     font-size: em(14px);
-    text-decoration: none;
-    &:hover, &:focus {
-      text-decoration: underline; 
-    }
   }
 
-  .region-footer & {
+  .region-footer & { // layout when in footer
     @include breakpoint(max-width 699px) {
       text-align: center;
       .nav__item {

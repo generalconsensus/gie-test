@@ -1,5 +1,5 @@
 .block--about-the-exchange { 
-  .region-footer & {
+  .region-footer & { // layout when in footer
     margin-bottom: 2em;
     @include breakpoint(700px, $no-query: true) {
       border-right: 1px solid $border-color;
