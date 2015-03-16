@@ -28,6 +28,9 @@ function gie_user_strongarm() {
       'user_teaser' => array(
         'custom_settings' => TRUE,
       ),
+      'user_teaser_summary' => array(
+        'custom_settings' => TRUE,
+      ),
     ),
     'extra_fields' => array(
       'form' => array(),
@@ -39,6 +42,10 @@ function gie_user_strongarm() {
           ),
           'user_teaser' => array(
             'weight' => '9',
+            'visible' => FALSE,
+          ),
+          'user_teaser_summary' => array(
+            'weight' => '10',
             'visible' => FALSE,
           ),
         ),
