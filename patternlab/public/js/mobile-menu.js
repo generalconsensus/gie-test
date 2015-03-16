@@ -10,7 +10,7 @@
       // Create mobile menu container, create mobile bar, and clone the main
       // menu in the navigation region.
       var $mobileNav = $('<nav class="mobile-nav" role="navigation"></nav>'),
-          $mobileBar = $('<div class="mobile-nav__bar"><a class="mobile-nav__button mobile-nav__button--home" href="/" rel="home"><span class="mobile-nav__icon mobile-nav__icon--home">Home</span></a><button class="mobile-nav__button js-mobile-menu-button mobile-nav__button--menu"><span class="mobile-nav__icon mobile-nav__icon--menu">Menu</span></button></div>'),
+          $mobileBar = $('<div class="mobile-nav__bar"><a class="mobile-nav__button mobile-nav__button--home" href="/" rel="home"><span class="mobile-nav__icon mobile-nav__icon--home">Home</span></a><button class="mobile-nav__button js-mobile-menu-button mobile-nav__button--menu"><span class="mobile-nav__icon mobile-nav__icon--menu">Menu</span></button><button class="mobile-nav__button js-mobile-search-button mobile-nav__button--search"><span class="mobile-nav__icon mobile-nav__icon--search">Search</span></button></div>'),
           $mobileLinks = $('<div class="mobile-nav__links element-hidden"></div>'),
           $mainMenu = $('.region-navigation', context).find('.nav--main-menu, .block--system-main-menu .nav').not('.contextual-links').first().clone(),
           $isSuperfish = ($mainMenu.hasClass('sf-menu')) ? true : false;
@@ -46,6 +46,9 @@
         // Remove third level menu items.
         $mainMenu.find('ul ul').remove();
 
+        // add utility links
+        $('.nav--utility-menu .nav__item').clone().appendTo($mainMenu);
+
         // Insert the cloned menus into the mobile menu container.
         $mainMenu.appendTo($mobileLinks);
 
@@ -68,6 +71,12 @@
         $('.js-mobile-menu-button', context).click(function (e) {
           $(this).toggleClass('is-active');
           $mobileMenuWrapper.toggleClass('element-hidden');
+
+            // Close searchbar if open
+          if ($('.js-mobile-search-button').hasClass('is-active')) {
+            $('.js-mobile-search-button').removeClass('is-active');
+            $('.mobile-nav .mobile-nav__search').hide();
+          }
 
           // Remove focus for mouse clicks after closing the menu.
           $(this).not('.is-active').mouseleave(function () {
@@ -96,6 +105,32 @@
 
           e.preventDefault();
         });
+
+        // Show/Hide search bar
+        $('.js-mobile-search-button', context).click(function (e) {
+          $(this).toggleClass('is-active');
+
+          if (!($('.mobile-nav .mobile-nav__search').length > 0)) {
+            $('.block--search').clone().addClass('mobile-nav__search').find('.block--search__button').remove().end().appendTo('.mobile-nav');
+          }
+
+          // Close menu if open
+          if ($('.js-mobile-menu-button').hasClass('is-active')) {
+            $('.js-mobile-menu-button').removeClass('is-active');
+            $mobileMenuWrapper.hide();
+            $mobileMenuLinks.attr('tabindex', -1);
+          }
+           
+          // Remove focus for mouse clicks after closing the menu.
+          $(this).not('.is-active').mouseleave(function () {
+            $(this).blur();
+          });
+
+         $('.mobile-nav .mobile-nav__search').slideToggle();
+          e.preventDefault();
+
+        });
+
 
         // Set the height of the menu.
         $mobileMenuWrapper.height($(document).height());

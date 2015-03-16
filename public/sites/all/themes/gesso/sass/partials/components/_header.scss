@@ -1,0 +1,9 @@
+header.header {
+  background: #f8f8f8;
+  border-bottom: 1px solid #f4f4f4;
+  display: none;
+  @include breakpoint(700px, $no-query: true) {
+    display: block;
+  }
+  padding: 0.5em 0;
+}
