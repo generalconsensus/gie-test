@@ -245,6 +245,82 @@ function gie_innovation_default_page_manager_handlers() {
     $display->content['new-1c1439b4-4e93-4c9d-b7d3-694587985c57'] = $pane;
     $display->panels['bottom_sidebar'][3] = 'new-1c1439b4-4e93-4c9d-b7d3-694587985c57';
     $pane = new stdClass();
+    $pane->pid = 'new-8d37daf8-220f-480e-ad83-59fdbf646796';
+    $pane->panel = 'box_first';
+    $pane->type = 'views';
+    $pane->subtype = 'innovation_counters';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array(
+      'override_pager_settings' => 0,
+      'use_pager' => 0,
+      'nodes_per_page' => '1',
+      'pager_id' => '0',
+      'offset' => '0',
+      'more_link' => 0,
+      'feed_icons' => 0,
+      'panel_args' => 0,
+      'link_to_view' => 0,
+      'args' => '',
+      'url' => '',
+      'display' => 'default',
+      'context' => array(
+        0 => '',
+      ),
+      'override_title' => 1,
+      'override_title_text' => 'At a Glance',
+      'override_title_heading' => 'h2',
+    );
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
+    $pane->css = array();
+    $pane->extras = array();
+    $pane->position = 0;
+    $pane->locks = array();
+    $pane->uuid = '8d37daf8-220f-480e-ad83-59fdbf646796';
+    $display->content['new-8d37daf8-220f-480e-ad83-59fdbf646796'] = $pane;
+    $display->panels['box_first'][0] = 'new-8d37daf8-220f-480e-ad83-59fdbf646796';
+    $pane = new stdClass();
+    $pane->pid = 'new-79b4cabe-dd04-40d9-aca7-86dc42dd72cd';
+    $pane->panel = 'box_second';
+    $pane->type = 'views';
+    $pane->subtype = 'innovation_assistance';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array(
+      'override_pager_settings' => 0,
+      'use_pager' => 0,
+      'nodes_per_page' => '0',
+      'pager_id' => '0',
+      'offset' => '0',
+      'more_link' => 0,
+      'feed_icons' => 0,
+      'panel_args' => 0,
+      'link_to_view' => 0,
+      'args' => '',
+      'url' => '',
+      'display' => 'default',
+      'context' => array(
+        0 => '',
+      ),
+      'override_title' => 1,
+      'override_title_text' => 'How Can You Help This Innovation?',
+      'override_title_heading' => 'h2',
+    );
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
+    $pane->css = array();
+    $pane->extras = array();
+    $pane->position = 0;
+    $pane->locks = array();
+    $pane->uuid = '79b4cabe-dd04-40d9-aca7-86dc42dd72cd';
+    $display->content['new-79b4cabe-dd04-40d9-aca7-86dc42dd72cd'] = $pane;
+    $display->panels['box_second'][0] = 'new-79b4cabe-dd04-40d9-aca7-86dc42dd72cd';
+    $pane = new stdClass();
     $pane->pid = 'new-2bbcfb02-7033-40f6-a308-04f008fc1e75';
     $pane->panel = 'box_third';
     $pane->type = 'entity_field';
@@ -253,7 +329,7 @@ function gie_innovation_default_page_manager_handlers() {
     $pane->access = array();
     $pane->configuration = array(
       'label' => 'title',
-      'formatter' => 'entityreference_label',
+      'formatter' => 'entityreference_entity_view',
       'delta_limit' => 0,
       'delta_offset' => '0',
       'delta_reversed' => FALSE,
@@ -270,6 +346,8 @@ function gie_innovation_default_page_manager_handlers() {
             'text' => '',
           ),
         ),
+        'view_mode' => 'user_teaser_summary',
+        'links' => 0,
       ),
       'context' => 'argument_entity_id:node_1',
       'override_title' => 0,
