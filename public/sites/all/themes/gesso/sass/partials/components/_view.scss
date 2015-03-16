@@ -6,3 +6,11 @@
 .view__filters {
   margin-bottom: rhythm(1);
 }
+
+.view__all {
+   
+}
+
+
+// Custom view styles imported via sass globbing.
+@import 'view/*.*';

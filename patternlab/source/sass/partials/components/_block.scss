@@ -1,0 +1,13 @@
+.block {}
+
+.block__title {
+  border-bottom: 1px solid $border-color;
+  color: $primary-text-color;
+  font-weight: normal;
+  margin: 0 0 1em 0;
+  padding: 0 0 0.5em 0;
+  text-transform: uppercase;
+}
+
+// Custom block styles imported via sass globbing.
+@import 'block/*.*';

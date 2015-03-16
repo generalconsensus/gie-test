@@ -1035,6 +1035,16 @@ input.throbbing {
   background-position: 0 -47px;
 }
 
+/* line 3, ../sass/partials/components/_block.scss */
+.block__title {
+  border-bottom: 1px solid #cecfcb;
+  color: #565a5c;
+  font-weight: normal;
+  margin: 0 0 1em 0;
+  padding: 0 0 0.5em 0;
+  text-transform: uppercase;
+}
+
 /* line 4, ../sass/partials/components/_breadcrumb.scss */
 .breadcrumb {
   margin: 1.625em 0;
@@ -1528,7 +1538,7 @@ input.throbbing {
 }
 
 /* line 11, ../sass/partials/components/_nav.scss */
-.nav--main-menu > .nav__item, .nav--menu-footer > .nav__item {
+.nav--footer-menu > .nav__item, .nav--main-menu > .nav__item {
   display: -moz-inline-stack;
   display: inline-block;
   vertical-align: middle;
@@ -1622,47 +1632,76 @@ input.throbbing {
 }
 
 /* line 9, ../sass/partials/global/helpers/_clearfix.scss */
-.nav--secondary-local-tasks:after {
+.nav--footer-utility-menu:after, .nav--secondary-local-tasks:after {
   display: table;
   content: "";
 }
 /* line 14, ../sass/partials/global/helpers/_clearfix.scss */
-.nav--secondary-local-tasks:after {
+.nav--footer-utility-menu:after, .nav--secondary-local-tasks:after {
   clear: both;
 }
 /* line 126, ../sass/partials/components/_nav.scss */
-.nav--secondary-local-tasks .nav__item {
-  border-right: 1px solid #cccccc;
+.nav--footer-utility-menu .nav__item, .nav--secondary-local-tasks .nav__item {
+  border-right: 1px solid #565a5c;
   display: block;
   float: left;
-  margin-right: 0.75em;
-  padding-right: 0.75em;
+  margin-right: 0.5em;
+  padding-right: 0.5em;
 }
 /* line 133, ../sass/partials/components/_nav.scss */
-[dir="rtl"] .nav--secondary-local-tasks .nav__item {
-  border-left: 1px solid #cccccc;
+[dir="rtl"] .nav--footer-utility-menu .nav__item, [dir="rtl"] .nav--secondary-local-tasks .nav__item {
+  border-left: 1px solid #565a5c;
   border-right: 0;
   float: right;
-  margin-left: 0.75em;
+  margin-left: 0.5em;
   margin-right: 0;
-  padding-left: 0.75em;
+  padding-left: 0.5em;
   padding-right: 0;
 }
 /* line 143, ../sass/partials/components/_nav.scss */
-.nav--secondary-local-tasks .nav__item:last-child {
+.nav--footer-utility-menu .nav__item:last-child, .nav--secondary-local-tasks .nav__item:last-child {
   border-right: 0;
   margin-right: 0;
   padding-right: 0;
 }
 /* line 148, ../sass/partials/components/_nav.scss */
-[dir="rtl"] .nav--secondary-local-tasks .nav__item:last-child {
+[dir="rtl"] .nav--footer-utility-menu .nav__item:last-child, [dir="rtl"] .nav--secondary-local-tasks .nav__item:last-child {
   border-left: 0;
   margin-left: 0;
   padding-left: 0;
 }
 /* line 156, ../sass/partials/components/_nav.scss */
-.nav--secondary-local-tasks .is-active > .nav__link {
+.nav--footer-utility-menu .is-active > .nav__link, .nav--secondary-local-tasks .is-active > .nav__link {
   font-weight: bold;
+}
+
+/* line 4, ../sass/partials/components/nav/_nav--footer-menu.scss */
+.nav--footer-menu .nav__item {
+  padding: 1.25em 2.5em 1.25em 0;
+}
+/* line 8, ../sass/partials/components/nav/_nav--footer-menu.scss */
+.nav--footer-menu .nav__link {
+  font-size: 0.875em;
+  text-decoration: none;
+}
+/* line 11, ../sass/partials/components/nav/_nav--footer-menu.scss */
+.nav--footer-menu .nav__link:hover, .nav--footer-menu .nav__link:focus {
+  text-decoration: underline;
+}
+
+/* line 4, ../sass/partials/components/nav/_nav--footer-utility-menu.scss */
+.nav--footer-utility-menu .nav__item {
+  line-height: 1;
+}
+/* line 8, ../sass/partials/components/nav/_nav--footer-utility-menu.scss */
+.nav--footer-utility-menu .nav__link {
+  color: #565a5c;
+  font-size: 0.875em;
+  text-decoration: none;
+}
+/* line 12, ../sass/partials/components/nav/_nav--footer-utility-menu.scss */
+.nav--footer-utility-menu .nav__link:hover, .nav--footer-utility-menu .nav__link:focus {
+  text-decoration: underline;
 }
 
 @media print {
@@ -1670,19 +1709,6 @@ input.throbbing {
   .nav--main-menu {
     display: none;
   }
-}
-
-/* line 4, ../sass/partials/components/nav/_nav--menu-footer.scss */
-.nav--menu-footer .nav__item {
-  padding: 1em 2em 1em 0;
-}
-/* line 8, ../sass/partials/components/nav/_nav--menu-footer.scss */
-.nav--menu-footer .nav__link {
-  text-decoration: none;
-}
-/* line 10, ../sass/partials/components/nav/_nav--menu-footer.scss */
-.nav--menu-footer .nav__link:hover, .nav--menu-footer .nav__link:focus {
-  text-decoration: underline;
 }
 
 @media print {
@@ -2036,9 +2062,29 @@ tr.drag-previous {
   width: 100%;
 }
 
+/* line 2, ../sass/partials/components/_view--partners.scss */
+.view--partners .view__content {
+  overflow: hidden;
+}
+/* line 5, ../sass/partials/components/_view--partners.scss */
+.view--partners .views-row {
+  float: left;
+  width: 25%;
+}
+
 /* line 6, ../sass/partials/components/_view.scss */
 .view__filters {
   margin-bottom: 1.625em;
+}
+
+/* line 10, ../sass/partials/components/_view.scss */
+.view__all-link {
+  text-align: right;
+}
+
+/* line 1, ../sass/partials/components/_views-row.scss */
+.views-row {
+  padding: 0 0 2em 0;
 }
 
 /* line 4, ../sass/partials/components/_views-widget.scss */
