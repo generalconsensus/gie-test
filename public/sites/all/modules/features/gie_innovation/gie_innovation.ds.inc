@@ -12,6 +12,21 @@ function gie_innovation_ds_field_settings_info() {
 
   $ds_fieldsetting = new stdClass();
   $ds_fieldsetting->api_version = 1;
+  $ds_fieldsetting->id = 'field_collection_item|field_innovation_non_references|default';
+  $ds_fieldsetting->entity_type = 'field_collection_item';
+  $ds_fieldsetting->bundle = 'field_innovation_non_references';
+  $ds_fieldsetting->view_mode = 'default';
+  $ds_fieldsetting->settings = array(
+    'non_ref_display' => array(
+      'weight' => '1',
+      'label' => 'hidden',
+      'format' => 'default',
+    ),
+  );
+  $export['field_collection_item|field_innovation_non_references|default'] = $ds_fieldsetting;
+
+  $ds_fieldsetting = new stdClass();
+  $ds_fieldsetting->api_version = 1;
   $ds_fieldsetting->id = 'node|innovation|full';
   $ds_fieldsetting->entity_type = 'node';
   $ds_fieldsetting->bundle = 'innovation';
@@ -33,6 +48,74 @@ function gie_innovation_ds_field_settings_info() {
  */
 function gie_innovation_ds_layout_settings_info() {
   $export = array();
+
+  $ds_layout = new stdClass();
+  $ds_layout->api_version = 1;
+  $ds_layout->id = 'field_collection_item|field_innovation_non_references|default';
+  $ds_layout->entity_type = 'field_collection_item';
+  $ds_layout->bundle = 'field_innovation_non_references';
+  $ds_layout->view_mode = 'default';
+  $ds_layout->layout = 'ds_1col';
+  $ds_layout->settings = array(
+    'regions' => array(
+      'ds_content' => array(
+        0 => 'field_non_ref_photo',
+        1 => 'non_ref_display',
+      ),
+    ),
+    'fields' => array(
+      'field_non_ref_photo' => 'ds_content',
+      'non_ref_display' => 'ds_content',
+    ),
+    'classes' => array(),
+    'wrappers' => array(
+      'ds_content' => 'div',
+    ),
+    'layout_wrapper' => 'div',
+    'layout_attributes' => '',
+    'layout_attributes_merge' => 1,
+    'layout_link_attribute' => '',
+    'layout_link_custom' => '',
+  );
+  $export['field_collection_item|field_innovation_non_references|default'] = $ds_layout;
+
+  $ds_layout = new stdClass();
+  $ds_layout->api_version = 1;
+  $ds_layout->id = 'field_collection_item|field_innovation_non_references|form';
+  $ds_layout->entity_type = 'field_collection_item';
+  $ds_layout->bundle = 'field_innovation_non_references';
+  $ds_layout->view_mode = 'form';
+  $ds_layout->layout = 'ds_1col';
+  $ds_layout->settings = array(
+    'regions' => array(
+      'ds_content' => array(
+        0 => 'field_non_ref_first_name',
+        1 => 'field_non_ref_last_name',
+        2 => 'field_non_ref_email',
+      ),
+      'hidden' => array(
+        3 => 'field_non_ref_photo',
+        4 => '_add_existing_field',
+      ),
+    ),
+    'fields' => array(
+      'field_non_ref_first_name' => 'ds_content',
+      'field_non_ref_last_name' => 'ds_content',
+      'field_non_ref_email' => 'ds_content',
+      'field_non_ref_photo' => 'hidden',
+      '_add_existing_field' => 'hidden',
+    ),
+    'classes' => array(),
+    'wrappers' => array(
+      'ds_content' => 'div',
+    ),
+    'layout_wrapper' => 'div',
+    'layout_attributes' => '',
+    'layout_attributes_merge' => 1,
+    'layout_link_attribute' => '',
+    'layout_link_custom' => '',
+  );
+  $export['field_collection_item|field_innovation_non_references|form'] = $ds_layout;
 
   $ds_layout = new stdClass();
   $ds_layout->api_version = 1;
