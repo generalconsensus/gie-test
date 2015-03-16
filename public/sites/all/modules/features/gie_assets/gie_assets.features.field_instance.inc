@@ -218,6 +218,28 @@ function gie_assets_field_default_field_instances() {
         'type' => 'image',
         'weight' => 0,
       ),
+      'image_teaser' => array(
+        'label' => 'hidden',
+        'module' => 'image',
+        'settings' => array(
+          'field_delimiter' => '',
+          'image_link' => '',
+          'image_style' => 'thumbnail',
+          'linked_field' => array(
+            'advanced' => array(
+              'class' => '',
+              'rel' => '',
+              'target' => '',
+              'text' => '',
+              'title' => '',
+            ),
+            'destination' => '[asset:field-asset-image-link:url]',
+            'linked' => 0,
+          ),
+        ),
+        'type' => 'image',
+        'weight' => 0,
+      ),
       'small' => array(
         'label' => 'hidden',
         'module' => 'image',
@@ -253,6 +275,8 @@ function gie_assets_field_default_field_instances() {
       'max_filesize' => '',
       'max_resolution' => '',
       'min_resolution' => '',
+      'random_default' => 0,
+      'random_default_path' => '',
       'title_field' => 0,
       'user_register_form' => FALSE,
     ),
@@ -314,6 +338,12 @@ function gie_assets_field_default_field_instances() {
         ),
         'type' => 'text_default',
         'weight' => 2,
+      ),
+      'image_teaser' => array(
+        'label' => 'hidden',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 1,
       ),
       'small' => array(
         'label' => 'hidden',
@@ -386,8 +416,22 @@ function gie_assets_field_default_field_instances() {
     'display' => array(
       'default' => array(
         'label' => 'inline',
-        'settings' => array(),
-        'type' => 'hidden',
+        'module' => 'link',
+        'settings' => array(
+          'field_delimiter' => '',
+          'linked_field' => array(
+            'advanced' => array(
+              'class' => '',
+              'rel' => '',
+              'target' => '',
+              'text' => '',
+              'title' => '',
+            ),
+            'destination' => '',
+            'linked' => 0,
+          ),
+        ),
+        'type' => 'link_default',
         'weight' => 2,
       ),
       'full' => array(
@@ -395,6 +439,12 @@ function gie_assets_field_default_field_instances() {
         'settings' => array(),
         'type' => 'hidden',
         'weight' => 0,
+      ),
+      'image_teaser' => array(
+        'label' => 'inline',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 2,
       ),
       'small' => array(
         'label' => 'above',

@@ -88,3 +88,10 @@ function gie_general_update_7006() {
 function gie_general_update_7007() {
   field_delete_field('field_innovation_goal');
 }
+
+/**
+ * Delete field_innovation_cpu text field.
+ */
+function gie_general_update_7008() {
+  field_delete_field('field_innovation_cpu');
+}

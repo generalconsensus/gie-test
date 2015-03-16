@@ -100,6 +100,9 @@ function gie_assets_strongarm() {
       'token' => array(
         'custom_settings' => FALSE,
       ),
+      'image_teaser' => array(
+        'custom_settings' => TRUE,
+      ),
     ),
     'extra_fields' => array(
       'form' => array(

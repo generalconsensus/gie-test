@@ -1,13 +1,13 @@
 <?php
 /**
  * @file
- * gie_assets.features.inc
+ * gie_user.features.inc
  */
 
 /**
  * Implements hook_ctools_plugin_api().
  */
-function gie_assets_ctools_plugin_api($module = NULL, $api = NULL) {
+function gie_user_ctools_plugin_api($module = NULL, $api = NULL) {
   if ($module == "ds" && $api == "ds") {
     return array("version" => "1");
   }
