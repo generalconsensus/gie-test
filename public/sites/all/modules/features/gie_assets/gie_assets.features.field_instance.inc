@@ -196,6 +196,28 @@ function gie_assets_field_default_field_instances() {
         'type' => 'image',
         'weight' => 0,
       ),
+      'featured' => array(
+        'label' => 'hidden',
+        'module' => 'image',
+        'settings' => array(
+          'field_delimiter' => '',
+          'image_link' => '',
+          'image_style' => 'flexslider_full',
+          'linked_field' => array(
+            'advanced' => array(
+              'class' => '',
+              'rel' => '',
+              'target' => '',
+              'text' => '',
+              'title' => '',
+            ),
+            'destination' => '[asset:field-asset-image-link:url]',
+            'linked' => 0,
+          ),
+        ),
+        'type' => 'image',
+        'weight' => 0,
+      ),
       'full' => array(
         'label' => 'hidden',
         'module' => 'image',
@@ -319,6 +341,12 @@ function gie_assets_field_default_field_instances() {
         'type' => 'text_default',
         'weight' => 1,
       ),
+      'featured' => array(
+        'label' => 'hidden',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 1,
+      ),
       'full' => array(
         'label' => 'hidden',
         'module' => 'text',
@@ -434,6 +462,12 @@ function gie_assets_field_default_field_instances() {
         'type' => 'link_default',
         'weight' => 2,
       ),
+      'featured' => array(
+        'label' => 'inline',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 2,
+      ),
       'full' => array(
         'label' => 'above',
         'settings' => array(),
@@ -514,6 +548,12 @@ function gie_assets_field_default_field_instances() {
           ),
         ),
         'type' => 'text_default',
+        'weight' => 1,
+      ),
+      'featured' => array(
+        'label' => 'hidden',
+        'settings' => array(),
+        'type' => 'hidden',
         'weight' => 1,
       ),
       'full' => array(
@@ -626,6 +666,28 @@ function gie_assets_field_default_field_instances() {
     'description' => '',
     'display' => array(
       'default' => array(
+        'label' => 'hidden',
+        'module' => 'emvideo',
+        'settings' => array(
+          'field_delimiter' => '',
+          'height' => 360,
+          'linked_field' => array(
+            'advanced' => array(
+              'class' => '',
+              'rel' => '',
+              'target' => '',
+              'text' => '',
+              'title' => '',
+            ),
+            'destination' => '',
+            'linked' => 0,
+          ),
+          'width' => 640,
+        ),
+        'type' => 'emvideo_video',
+        'weight' => 0,
+      ),
+      'featured' => array(
         'label' => 'hidden',
         'module' => 'emvideo',
         'settings' => array(
