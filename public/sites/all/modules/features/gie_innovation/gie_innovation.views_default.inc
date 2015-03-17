@@ -410,6 +410,11 @@ function gie_innovation_views_default_views() {
   $handler->display->display_options['arguments']['nid']['summary']['number_of_records'] = '0';
   $handler->display->display_options['arguments']['nid']['summary']['format'] = 'default_summary';
   $handler->display->display_options['arguments']['nid']['summary_options']['items_per_page'] = '25';
+  /* Filter criterion: Field collection item: First Name (field_non_ref_first_name) */
+  $handler->display->display_options['filters']['field_non_ref_first_name_value']['id'] = 'field_non_ref_first_name_value';
+  $handler->display->display_options['filters']['field_non_ref_first_name_value']['table'] = 'field_data_field_non_ref_first_name';
+  $handler->display->display_options['filters']['field_non_ref_first_name_value']['field'] = 'field_non_ref_first_name_value';
+  $handler->display->display_options['filters']['field_non_ref_first_name_value']['operator'] = 'not empty';
   $export['non_exchange_references'] = $view;
 
   return $export;
