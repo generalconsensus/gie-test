@@ -85,7 +85,7 @@ function gie_innovation_views_default_views() {
   $view->name = 'featured_assets';
   $view->description = 'Featured Image / Video browser on innovations page.';
   $view->tag = 'default';
-  $view->base_table = 'asset';
+  $view->base_table = 'node';
   $view->human_name = 'Featured Assets';
   $view->core = 7;
   $view->api_version = '3.0';
@@ -103,14 +103,16 @@ function gie_innovation_views_default_views() {
   $handler->display->display_options['style_plugin'] = 'flexslider';
   $handler->display->display_options['style_options']['optionset'] = 'featured_assets_settings';
   $handler->display->display_options['row_plugin'] = 'fields';
-  /* Relationship: Entity Reference: Referencing entity */
-  $handler->display->display_options['relationships']['reverse_field_innovation_assets_node']['id'] = 'reverse_field_innovation_assets_node';
-  $handler->display->display_options['relationships']['reverse_field_innovation_assets_node']['table'] = 'asset';
-  $handler->display->display_options['relationships']['reverse_field_innovation_assets_node']['field'] = 'reverse_field_innovation_assets_node';
+  /* Relationship: Entity Reference: Referenced Entity */
+  $handler->display->display_options['relationships']['field_innovation_assets_target_id']['id'] = 'field_innovation_assets_target_id';
+  $handler->display->display_options['relationships']['field_innovation_assets_target_id']['table'] = 'field_data_field_innovation_assets';
+  $handler->display->display_options['relationships']['field_innovation_assets_target_id']['field'] = 'field_innovation_assets_target_id';
+  $handler->display->display_options['relationships']['field_innovation_assets_target_id']['required'] = TRUE;
   /* Field: Media Asset: Rendered Media Asset */
   $handler->display->display_options['fields']['rendered_entity']['id'] = 'rendered_entity';
   $handler->display->display_options['fields']['rendered_entity']['table'] = 'views_entity_asset';
   $handler->display->display_options['fields']['rendered_entity']['field'] = 'rendered_entity';
+  $handler->display->display_options['fields']['rendered_entity']['relationship'] = 'field_innovation_assets_target_id';
   $handler->display->display_options['fields']['rendered_entity']['label'] = '';
   $handler->display->display_options['fields']['rendered_entity']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['rendered_entity']['link_to_entity'] = 1;
@@ -127,9 +129,31 @@ function gie_innovation_views_default_views() {
   $handler->display->display_options['arguments']['nid']['summary']['number_of_records'] = '0';
   $handler->display->display_options['arguments']['nid']['summary']['format'] = 'default_summary';
   $handler->display->display_options['arguments']['nid']['summary_options']['items_per_page'] = '25';
+  /* Filter criterion: Content: Published */
+  $handler->display->display_options['filters']['status']['id'] = 'status';
+  $handler->display->display_options['filters']['status']['table'] = 'node';
+  $handler->display->display_options['filters']['status']['field'] = 'status';
+  $handler->display->display_options['filters']['status']['value'] = '1';
 
   /* Display: Content pane */
   $handler = $view->new_display('panel_pane', 'Content pane', 'featured_assets_browser');
+  $handler->display->display_options['defaults']['fields'] = FALSE;
+  /* Field: Media Asset: Rendered Media Asset */
+  $handler->display->display_options['fields']['rendered_entity']['id'] = 'rendered_entity';
+  $handler->display->display_options['fields']['rendered_entity']['table'] = 'views_entity_asset';
+  $handler->display->display_options['fields']['rendered_entity']['field'] = 'rendered_entity';
+  $handler->display->display_options['fields']['rendered_entity']['relationship'] = 'field_innovation_assets_target_id';
+  $handler->display->display_options['fields']['rendered_entity']['label'] = '';
+  $handler->display->display_options['fields']['rendered_entity']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['rendered_entity']['link_to_entity'] = 1;
+  $handler->display->display_options['fields']['rendered_entity']['display'] = 'view';
+  $handler->display->display_options['fields']['rendered_entity']['view_mode'] = 'featured';
+  $handler->display->display_options['fields']['rendered_entity']['bypass_access'] = 0;
+  $handler->display->display_options['defaults']['sorts'] = FALSE;
+  /* Sort criterion: Content: Featured Assets (field_innovation_assets:delta) */
+  $handler->display->display_options['sorts']['delta']['id'] = 'delta';
+  $handler->display->display_options['sorts']['delta']['table'] = 'field_data_field_innovation_assets';
+  $handler->display->display_options['sorts']['delta']['field'] = 'delta';
   $handler->display->display_options['allow']['use_pager'] = 0;
   $handler->display->display_options['allow']['items_per_page'] = 0;
   $handler->display->display_options['allow']['offset'] = 0;
@@ -157,6 +181,7 @@ function gie_innovation_views_default_views() {
   $handler->display->display_options['fields']['aid']['id'] = 'aid';
   $handler->display->display_options['fields']['aid']['table'] = 'asset';
   $handler->display->display_options['fields']['aid']['field'] = 'aid';
+  $handler->display->display_options['fields']['aid']['relationship'] = 'field_innovation_assets_target_id';
   $handler->display->display_options['fields']['aid']['group_type'] = 'count';
   $handler->display->display_options['fields']['aid']['label'] = '';
   $handler->display->display_options['fields']['aid']['element_label_colon'] = FALSE;
@@ -166,6 +191,7 @@ function gie_innovation_views_default_views() {
   $handler->display->display_options['filters']['type']['id'] = 'type';
   $handler->display->display_options['filters']['type']['table'] = 'asset';
   $handler->display->display_options['filters']['type']['field'] = 'type';
+  $handler->display->display_options['filters']['type']['relationship'] = 'field_innovation_assets_target_id';
   $handler->display->display_options['filters']['type']['value'] = array(
     'image' => 'image',
   );
@@ -192,6 +218,7 @@ function gie_innovation_views_default_views() {
   $handler->display->display_options['fields']['aid']['id'] = 'aid';
   $handler->display->display_options['fields']['aid']['table'] = 'asset';
   $handler->display->display_options['fields']['aid']['field'] = 'aid';
+  $handler->display->display_options['fields']['aid']['relationship'] = 'field_innovation_assets_target_id';
   $handler->display->display_options['fields']['aid']['group_type'] = 'count';
   $handler->display->display_options['fields']['aid']['label'] = '';
   $handler->display->display_options['fields']['aid']['element_label_colon'] = FALSE;
@@ -201,6 +228,7 @@ function gie_innovation_views_default_views() {
   $handler->display->display_options['filters']['type']['id'] = 'type';
   $handler->display->display_options['filters']['type']['table'] = 'asset';
   $handler->display->display_options['filters']['type']['field'] = 'type';
+  $handler->display->display_options['filters']['type']['relationship'] = 'field_innovation_assets_target_id';
   $handler->display->display_options['filters']['type']['value'] = array(
     'video' => 'video',
   );
