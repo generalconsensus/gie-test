@@ -16,6 +16,7 @@ function gie_assets_strongarm() {
   $strongarm->name = 'assets_default_wysiwyg_modes';
   $strongarm->value = array(
     'image' => array(),
+    'video' => array(),
   );
   $export['assets_default_wysiwyg_modes'] = $strongarm;
 
@@ -103,6 +104,9 @@ function gie_assets_strongarm() {
       'image_teaser' => array(
         'custom_settings' => TRUE,
       ),
+      'featured' => array(
+        'custom_settings' => TRUE,
+      ),
     ),
     'extra_fields' => array(
       'form' => array(
@@ -129,6 +133,18 @@ function gie_assets_strongarm() {
       ),
       'tooltip' => array(
         'custom_settings' => TRUE,
+      ),
+      'featured' => array(
+        'custom_settings' => TRUE,
+      ),
+      'diff_standard' => array(
+        'custom_settings' => FALSE,
+      ),
+      'token' => array(
+        'custom_settings' => FALSE,
+      ),
+      'image_teaser' => array(
+        'custom_settings' => FALSE,
       ),
     ),
     'extra_fields' => array(

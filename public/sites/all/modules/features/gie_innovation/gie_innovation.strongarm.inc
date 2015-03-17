@@ -126,7 +126,7 @@ function gie_innovation_strongarm() {
             'visible' => TRUE,
           ),
           'full' => array(
-            'weight' => '13',
+            'weight' => '23',
             'visible' => FALSE,
           ),
         ),
