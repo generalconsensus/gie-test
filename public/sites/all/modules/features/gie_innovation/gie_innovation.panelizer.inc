@@ -1,58 +1,44 @@
 <?php
 /**
  * @file
- * gie_innovation.pages_default.inc
+ * gie_innovation.panelizer.inc
  */
 
 /**
- * Implements hook_default_page_manager_handlers().
+ * Implements hook_panelizer_defaults().
  */
-function gie_innovation_default_page_manager_handlers() {
+function gie_innovation_panelizer_defaults() {
   $export = array();
 
-  $handler = new stdClass();
-  $handler->disabled = FALSE; /* Edit this to true to make a default handler disabled initially */
-  $handler->api_version = 1;
-  $handler->name = 'node_view__innovation';
-  $handler->task = 'node_view';
-  $handler->subtask = '';
-  $handler->handler = 'panel_context';
-  $handler->weight = -30;
-  $handler->conf = array(
-    'title' => 'Innovation',
-    'no_blocks' => 0,
-    'pipeline' => 'standard',
-    'body_classes_to_remove' => '',
-    'body_classes_to_add' => '',
-    'css_id' => '',
-    'css' => '',
-    'contexts' => array(),
-    'relationships' => array(),
-    'name' => 'innovation',
-    'access' => array(
-      'plugins' => array(
-        0 => array(
-          'name' => 'node_type',
-          'settings' => array(
-            'type' => array(
-              'innovation' => 'innovation',
-            ),
-          ),
-          'context' => 'argument_entity_id:node_1',
-          'not' => FALSE,
-        ),
-      ),
-      'logic' => 'and',
-    ),
-  );
+  $panelizer = new stdClass();
+  $panelizer->disabled = FALSE; /* Edit this to true to make a default panelizer disabled initially */
+  $panelizer->api_version = 1;
+  $panelizer->name = 'node:innovation:default';
+  $panelizer->title = 'Default';
+  $panelizer->panelizer_type = 'node';
+  $panelizer->panelizer_key = 'innovation';
+  $panelizer->no_blocks = FALSE;
+  $panelizer->css_id = '';
+  $panelizer->css = '';
+  $panelizer->pipeline = 'standard';
+  $panelizer->contexts = array();
+  $panelizer->relationships = array();
+  $panelizer->access = array();
+  $panelizer->view_mode = 'page_manager';
+  $panelizer->css_class = '';
+  $panelizer->title_element = 'H2';
+  $panelizer->link_to_entity = TRUE;
+  $panelizer->extra = array();
   $display = new panels_display();
   $display->layout = 'detail';
   $display->layout_settings = array();
   $display->panel_settings = array(
     'style_settings' => array(
       'default' => NULL,
-      'hero' => NULL,
+      'preface' => NULL,
       'main' => NULL,
+      'sidebar' => NULL,
+      'hero' => NULL,
       'main_sidebar' => NULL,
       'center' => NULL,
       'box_first' => NULL,
@@ -64,11 +50,11 @@ function gie_innovation_default_page_manager_handlers() {
   );
   $display->cache = array();
   $display->title = '';
-  $display->uuid = '220a60e6-90f9-4227-a1e8-d053f38d0fb8';
+  $display->uuid = '32c9fb80-dbca-45c3-90b1-028ef814b87f';
   $display->content = array();
   $display->panels = array();
     $pane = new stdClass();
-    $pane->pid = 'new-a8a41907-3329-4826-acc5-7dc222c71592';
+    $pane->pid = 'new-7e291865-1f33-430c-911d-d14b0fb41ceb';
     $pane->panel = 'bottom';
     $pane->type = 'entity_view';
     $pane->subtype = 'node';
@@ -76,7 +62,7 @@ function gie_innovation_default_page_manager_handlers() {
     $pane->access = array();
     $pane->configuration = array(
       'view_mode' => 'full',
-      'context' => 'argument_entity_id:node_1',
+      'context' => 'panelizer',
       'override_title' => 1,
       'override_title_text' => 'About This Innovation',
       'override_title_heading' => 'h2',
@@ -89,32 +75,17 @@ function gie_innovation_default_page_manager_handlers() {
     $pane->extras = array();
     $pane->position = 0;
     $pane->locks = array();
-    $pane->uuid = 'a8a41907-3329-4826-acc5-7dc222c71592';
-    $display->content['new-a8a41907-3329-4826-acc5-7dc222c71592'] = $pane;
-    $display->panels['bottom'][0] = 'new-a8a41907-3329-4826-acc5-7dc222c71592';
+    $pane->uuid = '7e291865-1f33-430c-911d-d14b0fb41ceb';
+    $display->content['new-7e291865-1f33-430c-911d-d14b0fb41ceb'] = $pane;
+    $display->panels['bottom'][0] = 'new-7e291865-1f33-430c-911d-d14b0fb41ceb';
     $pane = new stdClass();
-    $pane->pid = 'new-9447d5e9-e6ee-4807-8065-d94701887346';
+    $pane->pid = 'new-305a3ae5-8b8e-4b33-8939-d83a904813c4';
     $pane->panel = 'bottom_sidebar';
-    $pane->type = 'views';
-    $pane->subtype = 'innovation_team';
+    $pane->type = 'views_panes';
+    $pane->subtype = 'innovation_team-innovation_team';
     $pane->shown = TRUE;
     $pane->access = array();
     $pane->configuration = array(
-      'override_pager_settings' => 0,
-      'use_pager' => 0,
-      'nodes_per_page' => '0',
-      'pager_id' => '0',
-      'offset' => '0',
-      'more_link' => 0,
-      'feed_icons' => 0,
-      'panel_args' => 0,
-      'link_to_view' => 0,
-      'args' => '',
-      'url' => '',
-      'display' => 'default',
-      'context' => array(
-        0 => '',
-      ),
       'override_title' => 1,
       'override_title_text' => 'Innovation Team',
       'override_title_heading' => 'h2',
@@ -127,32 +98,17 @@ function gie_innovation_default_page_manager_handlers() {
     $pane->extras = array();
     $pane->position = 0;
     $pane->locks = array();
-    $pane->uuid = '9447d5e9-e6ee-4807-8065-d94701887346';
-    $display->content['new-9447d5e9-e6ee-4807-8065-d94701887346'] = $pane;
-    $display->panels['bottom_sidebar'][0] = 'new-9447d5e9-e6ee-4807-8065-d94701887346';
+    $pane->uuid = '305a3ae5-8b8e-4b33-8939-d83a904813c4';
+    $display->content['new-305a3ae5-8b8e-4b33-8939-d83a904813c4'] = $pane;
+    $display->panels['bottom_sidebar'][0] = 'new-305a3ae5-8b8e-4b33-8939-d83a904813c4';
     $pane = new stdClass();
-    $pane->pid = 'new-64f4772c-3c94-430a-9ffd-5bd25b4cc8cb';
+    $pane->pid = 'new-35885984-ee94-43e0-bbdb-a1eb73e7c59a';
     $pane->panel = 'bottom_sidebar';
-    $pane->type = 'views';
-    $pane->subtype = 'funded_by';
+    $pane->type = 'views_panes';
+    $pane->subtype = 'funded_by-funded_by';
     $pane->shown = TRUE;
     $pane->access = array();
     $pane->configuration = array(
-      'override_pager_settings' => 0,
-      'use_pager' => 0,
-      'nodes_per_page' => '0',
-      'pager_id' => '0',
-      'offset' => '0',
-      'more_link' => 0,
-      'feed_icons' => 0,
-      'panel_args' => 0,
-      'link_to_view' => 0,
-      'args' => '',
-      'url' => '',
-      'display' => 'block_1',
-      'context' => array(
-        0 => '',
-      ),
       'override_title' => 1,
       'override_title_text' => 'Funded By',
       'override_title_heading' => 'h2',
@@ -165,32 +121,17 @@ function gie_innovation_default_page_manager_handlers() {
     $pane->extras = array();
     $pane->position = 1;
     $pane->locks = array();
-    $pane->uuid = '64f4772c-3c94-430a-9ffd-5bd25b4cc8cb';
-    $display->content['new-64f4772c-3c94-430a-9ffd-5bd25b4cc8cb'] = $pane;
-    $display->panels['bottom_sidebar'][1] = 'new-64f4772c-3c94-430a-9ffd-5bd25b4cc8cb';
+    $pane->uuid = '35885984-ee94-43e0-bbdb-a1eb73e7c59a';
+    $display->content['new-35885984-ee94-43e0-bbdb-a1eb73e7c59a'] = $pane;
+    $display->panels['bottom_sidebar'][1] = 'new-35885984-ee94-43e0-bbdb-a1eb73e7c59a';
     $pane = new stdClass();
-    $pane->pid = 'new-3a979e5c-0f89-4bbe-9a49-c8d1e1a8a21b';
+    $pane->pid = 'new-c16741b7-4c97-4105-ba41-3df027e5ae24';
     $pane->panel = 'bottom_sidebar';
-    $pane->type = 'views';
-    $pane->subtype = 'exchange_references';
+    $pane->type = 'views_panes';
+    $pane->subtype = 'exchange_references-exchange_ref';
     $pane->shown = TRUE;
     $pane->access = array();
     $pane->configuration = array(
-      'override_pager_settings' => 0,
-      'use_pager' => 0,
-      'nodes_per_page' => '0',
-      'pager_id' => '0',
-      'offset' => '0',
-      'more_link' => 0,
-      'feed_icons' => 0,
-      'panel_args' => 0,
-      'link_to_view' => 0,
-      'args' => '',
-      'url' => '',
-      'display' => 'default',
-      'context' => array(
-        0 => '',
-      ),
       'override_title' => 1,
       'override_title_text' => 'Exchange References',
       'override_title_heading' => 'h2',
@@ -203,32 +144,17 @@ function gie_innovation_default_page_manager_handlers() {
     $pane->extras = array();
     $pane->position = 2;
     $pane->locks = array();
-    $pane->uuid = '3a979e5c-0f89-4bbe-9a49-c8d1e1a8a21b';
-    $display->content['new-3a979e5c-0f89-4bbe-9a49-c8d1e1a8a21b'] = $pane;
-    $display->panels['bottom_sidebar'][2] = 'new-3a979e5c-0f89-4bbe-9a49-c8d1e1a8a21b';
+    $pane->uuid = 'c16741b7-4c97-4105-ba41-3df027e5ae24';
+    $display->content['new-c16741b7-4c97-4105-ba41-3df027e5ae24'] = $pane;
+    $display->panels['bottom_sidebar'][2] = 'new-c16741b7-4c97-4105-ba41-3df027e5ae24';
     $pane = new stdClass();
-    $pane->pid = 'new-1c1439b4-4e93-4c9d-b7d3-694587985c57';
+    $pane->pid = 'new-c0f9ba84-3f85-4c22-9501-c3bac83312fd';
     $pane->panel = 'bottom_sidebar';
-    $pane->type = 'views';
-    $pane->subtype = 'non_exchange_references';
+    $pane->type = 'views_panes';
+    $pane->subtype = 'non_exchange_references-non_ref';
     $pane->shown = TRUE;
     $pane->access = array();
     $pane->configuration = array(
-      'override_pager_settings' => 0,
-      'use_pager' => 0,
-      'nodes_per_page' => '0',
-      'pager_id' => '0',
-      'offset' => '0',
-      'more_link' => 0,
-      'feed_icons' => 0,
-      'panel_args' => 0,
-      'link_to_view' => 0,
-      'args' => '',
-      'url' => '',
-      'display' => 'default',
-      'context' => array(
-        0 => '',
-      ),
       'override_title' => 1,
       'override_title_text' => 'Other References',
       'override_title_heading' => 'h2',
@@ -241,32 +167,17 @@ function gie_innovation_default_page_manager_handlers() {
     $pane->extras = array();
     $pane->position = 3;
     $pane->locks = array();
-    $pane->uuid = '1c1439b4-4e93-4c9d-b7d3-694587985c57';
-    $display->content['new-1c1439b4-4e93-4c9d-b7d3-694587985c57'] = $pane;
-    $display->panels['bottom_sidebar'][3] = 'new-1c1439b4-4e93-4c9d-b7d3-694587985c57';
+    $pane->uuid = 'c0f9ba84-3f85-4c22-9501-c3bac83312fd';
+    $display->content['new-c0f9ba84-3f85-4c22-9501-c3bac83312fd'] = $pane;
+    $display->panels['bottom_sidebar'][3] = 'new-c0f9ba84-3f85-4c22-9501-c3bac83312fd';
     $pane = new stdClass();
-    $pane->pid = 'new-8d37daf8-220f-480e-ad83-59fdbf646796';
+    $pane->pid = 'new-a03c6f7b-63c1-4694-91e5-51dadb90ed56';
     $pane->panel = 'box_first';
-    $pane->type = 'views';
-    $pane->subtype = 'innovation_counters';
+    $pane->type = 'views_panes';
+    $pane->subtype = 'innovation_counters-at_a_glance';
     $pane->shown = TRUE;
     $pane->access = array();
     $pane->configuration = array(
-      'override_pager_settings' => 0,
-      'use_pager' => 0,
-      'nodes_per_page' => '1',
-      'pager_id' => '0',
-      'offset' => '0',
-      'more_link' => 0,
-      'feed_icons' => 0,
-      'panel_args' => 0,
-      'link_to_view' => 0,
-      'args' => '',
-      'url' => '',
-      'display' => 'default',
-      'context' => array(
-        0 => '',
-      ),
       'override_title' => 1,
       'override_title_text' => 'At a Glance',
       'override_title_heading' => 'h2',
@@ -279,32 +190,17 @@ function gie_innovation_default_page_manager_handlers() {
     $pane->extras = array();
     $pane->position = 0;
     $pane->locks = array();
-    $pane->uuid = '8d37daf8-220f-480e-ad83-59fdbf646796';
-    $display->content['new-8d37daf8-220f-480e-ad83-59fdbf646796'] = $pane;
-    $display->panels['box_first'][0] = 'new-8d37daf8-220f-480e-ad83-59fdbf646796';
+    $pane->uuid = 'a03c6f7b-63c1-4694-91e5-51dadb90ed56';
+    $display->content['new-a03c6f7b-63c1-4694-91e5-51dadb90ed56'] = $pane;
+    $display->panels['box_first'][0] = 'new-a03c6f7b-63c1-4694-91e5-51dadb90ed56';
     $pane = new stdClass();
-    $pane->pid = 'new-79b4cabe-dd04-40d9-aca7-86dc42dd72cd';
+    $pane->pid = 'new-6391e8db-3962-4f56-8a16-7ce005541a52';
     $pane->panel = 'box_second';
-    $pane->type = 'views';
-    $pane->subtype = 'innovation_assistance';
+    $pane->type = 'views_panes';
+    $pane->subtype = 'innovation_assistance-innovation_assistance';
     $pane->shown = TRUE;
     $pane->access = array();
     $pane->configuration = array(
-      'override_pager_settings' => 0,
-      'use_pager' => 0,
-      'nodes_per_page' => '0',
-      'pager_id' => '0',
-      'offset' => '0',
-      'more_link' => 0,
-      'feed_icons' => 0,
-      'panel_args' => 0,
-      'link_to_view' => 0,
-      'args' => '',
-      'url' => '',
-      'display' => 'default',
-      'context' => array(
-        0 => '',
-      ),
       'override_title' => 1,
       'override_title_text' => 'How Can You Help This Innovation?',
       'override_title_heading' => 'h2',
@@ -317,11 +213,11 @@ function gie_innovation_default_page_manager_handlers() {
     $pane->extras = array();
     $pane->position = 0;
     $pane->locks = array();
-    $pane->uuid = '79b4cabe-dd04-40d9-aca7-86dc42dd72cd';
-    $display->content['new-79b4cabe-dd04-40d9-aca7-86dc42dd72cd'] = $pane;
-    $display->panels['box_second'][0] = 'new-79b4cabe-dd04-40d9-aca7-86dc42dd72cd';
+    $pane->uuid = '6391e8db-3962-4f56-8a16-7ce005541a52';
+    $display->content['new-6391e8db-3962-4f56-8a16-7ce005541a52'] = $pane;
+    $display->panels['box_second'][0] = 'new-6391e8db-3962-4f56-8a16-7ce005541a52';
     $pane = new stdClass();
-    $pane->pid = 'new-2bbcfb02-7033-40f6-a308-04f008fc1e75';
+    $pane->pid = 'new-3e73f49a-e0db-40e7-ac69-8faf6d05f390';
     $pane->panel = 'box_third';
     $pane->type = 'entity_field';
     $pane->subtype = 'node:field_innovation_poc';
@@ -334,7 +230,6 @@ function gie_innovation_default_page_manager_handlers() {
       'delta_offset' => '0',
       'delta_reversed' => FALSE,
       'formatter_settings' => array(
-        'link' => 0,
         'linked_field' => array(
           'linked' => 0,
           'destination' => '',
@@ -349,7 +244,7 @@ function gie_innovation_default_page_manager_handlers() {
         'view_mode' => 'user_teaser_summary',
         'links' => 0,
       ),
-      'context' => 'argument_entity_id:node_1',
+      'context' => 'panelizer',
       'override_title' => 0,
       'override_title_text' => '',
       'override_title_heading' => 'h2',
@@ -362,11 +257,11 @@ function gie_innovation_default_page_manager_handlers() {
     $pane->extras = array();
     $pane->position = 0;
     $pane->locks = array();
-    $pane->uuid = '2bbcfb02-7033-40f6-a308-04f008fc1e75';
-    $display->content['new-2bbcfb02-7033-40f6-a308-04f008fc1e75'] = $pane;
-    $display->panels['box_third'][0] = 'new-2bbcfb02-7033-40f6-a308-04f008fc1e75';
+    $pane->uuid = '3e73f49a-e0db-40e7-ac69-8faf6d05f390';
+    $display->content['new-3e73f49a-e0db-40e7-ac69-8faf6d05f390'] = $pane;
+    $display->panels['box_third'][0] = 'new-3e73f49a-e0db-40e7-ac69-8faf6d05f390';
     $pane = new stdClass();
-    $pane->pid = 'new-c4f688c1-cf27-4da4-9c17-9ff2a08c5d8a';
+    $pane->pid = 'new-0e937fae-e386-4013-b4de-b7fa635c8c2e';
     $pane->panel = 'hero';
     $pane->type = 'page_title';
     $pane->subtype = 'page_title';
@@ -388,11 +283,11 @@ function gie_innovation_default_page_manager_handlers() {
     $pane->extras = array();
     $pane->position = 0;
     $pane->locks = array();
-    $pane->uuid = 'c4f688c1-cf27-4da4-9c17-9ff2a08c5d8a';
-    $display->content['new-c4f688c1-cf27-4da4-9c17-9ff2a08c5d8a'] = $pane;
-    $display->panels['hero'][0] = 'new-c4f688c1-cf27-4da4-9c17-9ff2a08c5d8a';
+    $pane->uuid = '0e937fae-e386-4013-b4de-b7fa635c8c2e';
+    $display->content['new-0e937fae-e386-4013-b4de-b7fa635c8c2e'] = $pane;
+    $display->panels['hero'][0] = 'new-0e937fae-e386-4013-b4de-b7fa635c8c2e';
     $pane = new stdClass();
-    $pane->pid = 'new-b72e37c3-6f00-42c3-9258-f3f408dc1baf';
+    $pane->pid = 'new-31ffa00a-68cb-4c7d-a416-1155d8232587';
     $pane->panel = 'main';
     $pane->type = 'entity_field';
     $pane->subtype = 'node:field_innovation_desc';
@@ -405,7 +300,7 @@ function gie_innovation_default_page_manager_handlers() {
       'delta_offset' => '0',
       'delta_reversed' => FALSE,
       'formatter_settings' => array(),
-      'context' => 'argument_entity_id:node_1',
+      'context' => 'panelizer',
       'override_title' => 0,
       'override_title_text' => '',
       'override_title_heading' => 'h2',
@@ -418,11 +313,11 @@ function gie_innovation_default_page_manager_handlers() {
     $pane->extras = array();
     $pane->position = 0;
     $pane->locks = array();
-    $pane->uuid = 'b72e37c3-6f00-42c3-9258-f3f408dc1baf';
-    $display->content['new-b72e37c3-6f00-42c3-9258-f3f408dc1baf'] = $pane;
-    $display->panels['main'][0] = 'new-b72e37c3-6f00-42c3-9258-f3f408dc1baf';
+    $pane->uuid = '31ffa00a-68cb-4c7d-a416-1155d8232587';
+    $display->content['new-31ffa00a-68cb-4c7d-a416-1155d8232587'] = $pane;
+    $display->panels['main'][0] = 'new-31ffa00a-68cb-4c7d-a416-1155d8232587';
     $pane = new stdClass();
-    $pane->pid = 'new-e19a3bc4-c1d8-4aa9-b073-018e556fcd5d';
+    $pane->pid = 'new-af1e2794-970b-47bf-ad8d-117071bb144e';
     $pane->panel = 'main';
     $pane->type = 'entity_field_extra';
     $pane->subtype = 'node:sharethis';
@@ -430,7 +325,7 @@ function gie_innovation_default_page_manager_handlers() {
     $pane->access = array();
     $pane->configuration = array(
       'view_mode' => 'full',
-      'context' => 'argument_entity_id:node_1',
+      'context' => 'panelizer',
       'override_title' => 0,
       'override_title_text' => '',
       'override_title_heading' => 'h2',
@@ -443,11 +338,11 @@ function gie_innovation_default_page_manager_handlers() {
     $pane->extras = array();
     $pane->position = 1;
     $pane->locks = array();
-    $pane->uuid = 'e19a3bc4-c1d8-4aa9-b073-018e556fcd5d';
-    $display->content['new-e19a3bc4-c1d8-4aa9-b073-018e556fcd5d'] = $pane;
-    $display->panels['main'][1] = 'new-e19a3bc4-c1d8-4aa9-b073-018e556fcd5d';
+    $pane->uuid = 'af1e2794-970b-47bf-ad8d-117071bb144e';
+    $display->content['new-af1e2794-970b-47bf-ad8d-117071bb144e'] = $pane;
+    $display->panels['main'][1] = 'new-af1e2794-970b-47bf-ad8d-117071bb144e';
     $pane = new stdClass();
-    $pane->pid = 'new-6dc12d37-9183-494e-98d7-6d409bd07649';
+    $pane->pid = 'new-ec63f124-5bc7-44f1-8a82-5ad0ac118efb';
     $pane->panel = 'main_sidebar';
     $pane->type = 'flag_link';
     $pane->subtype = 'node';
@@ -455,7 +350,7 @@ function gie_innovation_default_page_manager_handlers() {
     $pane->access = array();
     $pane->configuration = array(
       'flag_name' => 'favorite',
-      'context' => 'argument_entity_id:node_1',
+      'context' => 'panelizer',
       'override_title' => 1,
       'override_title_text' => '',
       'override_title_heading' => 'h2',
@@ -468,13 +363,13 @@ function gie_innovation_default_page_manager_handlers() {
     $pane->extras = array();
     $pane->position = 0;
     $pane->locks = array();
-    $pane->uuid = '6dc12d37-9183-494e-98d7-6d409bd07649';
-    $display->content['new-6dc12d37-9183-494e-98d7-6d409bd07649'] = $pane;
-    $display->panels['main_sidebar'][0] = 'new-6dc12d37-9183-494e-98d7-6d409bd07649';
+    $pane->uuid = 'ec63f124-5bc7-44f1-8a82-5ad0ac118efb';
+    $display->content['new-ec63f124-5bc7-44f1-8a82-5ad0ac118efb'] = $pane;
+    $display->panels['main_sidebar'][0] = 'new-ec63f124-5bc7-44f1-8a82-5ad0ac118efb';
   $display->hide_title = PANELS_TITLE_FIXED;
-  $display->title_pane = 'new-64f4772c-3c94-430a-9ffd-5bd25b4cc8cb';
-  $handler->conf['display'] = $display;
-  $export['node_view__innovation'] = $handler;
+  $display->title_pane = '0';
+  $panelizer->display = $display;
+  $export['node:innovation:default'] = $panelizer;
 
   return $export;
 }
