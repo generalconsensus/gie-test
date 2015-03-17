@@ -33,7 +33,7 @@ function gie_innovation_ds_field_settings_info() {
   $ds_fieldsetting->view_mode = 'full';
   $ds_fieldsetting->settings = array(
     'comments' => array(
-      'weight' => '24',
+      'weight' => '10',
       'label' => 'hidden',
       'format' => 'default',
     ),

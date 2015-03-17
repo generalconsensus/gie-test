@@ -261,6 +261,29 @@ function gie_innovation_panelizer_defaults() {
     $display->content['new-3e73f49a-e0db-40e7-ac69-8faf6d05f390'] = $pane;
     $display->panels['box_third'][0] = 'new-3e73f49a-e0db-40e7-ac69-8faf6d05f390';
     $pane = new stdClass();
+    $pane->pid = 'new-dfeacb8d-a2a7-420e-9b58-3eccf1d0dedf';
+    $pane->panel = 'center';
+    $pane->type = 'views_panes';
+    $pane->subtype = 'featured_assets-featured_assets_browser';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array(
+      'override_title' => 1,
+      'override_title_text' => '',
+      'override_title_heading' => 'h2',
+    );
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
+    $pane->css = array();
+    $pane->extras = array();
+    $pane->position = 0;
+    $pane->locks = array();
+    $pane->uuid = 'dfeacb8d-a2a7-420e-9b58-3eccf1d0dedf';
+    $display->content['new-dfeacb8d-a2a7-420e-9b58-3eccf1d0dedf'] = $pane;
+    $display->panels['center'][0] = 'new-dfeacb8d-a2a7-420e-9b58-3eccf1d0dedf';
+    $pane = new stdClass();
     $pane->pid = 'new-0e937fae-e386-4013-b4de-b7fa635c8c2e';
     $pane->panel = 'hero';
     $pane->type = 'page_title';
