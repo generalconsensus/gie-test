@@ -18,15 +18,19 @@ function gie_general_menu_alter(&$items) {
  * Callback to generate dynamic Welcome text.
  */
 function _gie_general_welcome() {
-  $user = entity_metadata_wrapper('user', $GLOBALS['user']);
-  $first_name = $user->field_user_firstname->value();
+  if (user_is_logged_in()) {
+    $user = entity_metadata_wrapper('user', $GLOBALS['user']);
+    $first_name = $user->field_user_firstname->value();
 
-  // Temporary if statement to place filled in name
-  // TODO: remove this statement if first name becomes required
-  if (!empty($first_name)) {
-    $name = $first_name;
+    // Temporary if statement to place filled in name
+    // TODO: remove this statement if first name becomes required
+    if (!empty($first_name)) {
+      $name = $first_name;
+    } else {
+      $name = $user->name->value();
+    }
+    return t('Welcome, ') . $name . '!';
   } else {
-    $name = $user->name->value();
+    return t('User account');
   }
-  return t('Welcome') . ', ' . $name . '!';
 }
