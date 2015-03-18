@@ -67,6 +67,7 @@ dependencies[] = pathologic
 dependencies[] = phone
 dependencies[] = pm_existing_pages
 dependencies[] = rdf
+dependencies[] = search
 dependencies[] = sharethis
 dependencies[] = simplify
 dependencies[] = smart_trim
