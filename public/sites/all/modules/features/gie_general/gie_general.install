@@ -95,3 +95,13 @@ function gie_general_update_7007() {
 function gie_general_update_7008() {
   field_delete_field('field_innovation_cpu');
 }
+
+/**
+ * Enable GIE Search feature.
+ */
+function gie_general_update_7009() {
+    $modules = array(
+        'gie_search'
+    );
+    module_enable($modules, TRUE);
+}
