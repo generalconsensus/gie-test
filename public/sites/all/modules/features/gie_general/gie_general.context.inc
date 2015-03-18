@@ -44,6 +44,18 @@ function gie_general_context_default_contexts() {
           'region' => 'navigation',
           'weight' => '-10',
         ),
+        'search-form' => array(
+          'module' => 'search',
+          'delta' => 'form',
+          'region' => 'navigation',
+          'weight' => '-9',
+        ),
+        'blockify-blockify-messages' => array(
+          'module' => 'blockify',
+          'delta' => 'blockify-messages',
+          'region' => 'preface',
+          'weight' => '-10',
+        ),
       ),
     ),
   );
