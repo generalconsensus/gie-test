@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the GIE Search feature.
+ */
+
+include_once 'gie_search.features.inc';
