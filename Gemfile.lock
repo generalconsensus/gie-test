@@ -23,6 +23,8 @@ GEM
     net-ssh (2.9.1)
     rake (10.3.2)
     sass (3.2.19)
+    sass-globbing (1.1.0)
+      sass (>= 3.1)
     sassy-math (1.5)
       compass (~> 0.11)
     singularity-extras (0.0.3)
@@ -40,11 +42,13 @@ GEM
 
 PLATFORMS
   ruby
+  x64-mingw32
 
 DEPENDENCIES
-  breakpoint
+  breakpoint (~> 2.0.7)
   capistrano (~> 3.1)
-  compass
-  rake
-  singularity-extras
-  singularitygs
+  compass (~> 0.12.3)
+  rake (~> 10.3)
+  sass-globbing (= 1.1.0)
+  singularity-extras (~> 0.0.3)
+  singularitygs (~> 1.1.2)
