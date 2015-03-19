@@ -57,6 +57,13 @@ function gie_user_strongarm() {
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
+  $strongarm->name = 'page_manager_user_view_disabled';
+  $strongarm->value = FALSE;
+  $export['page_manager_user_view_disabled'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
   $strongarm->name = 'panelizer_defaults_user_user';
   $strongarm->value = array(
     'status' => 1,
@@ -95,6 +102,13 @@ function gie_user_strongarm() {
   $strongarm->name = 'panelizer_user:user:page_manager_selection';
   $strongarm->value = 'user:user:default';
   $export['panelizer_user:user:page_manager_selection'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'pm_existing_pages_disabled_user_registration';
+  $strongarm->value = FALSE;
+  $export['pm_existing_pages_disabled_user_registration'] = $strongarm;
 
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
