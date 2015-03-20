@@ -509,7 +509,7 @@ function gie_organization_field_default_field_instances() {
             'linked' => 1,
           ),
           'links' => 1,
-          'view_mode' => 'default',
+          'view_mode' => 'org_teaser',
         ),
         'type' => 'entityreference_entity_view',
         'weight' => 0,

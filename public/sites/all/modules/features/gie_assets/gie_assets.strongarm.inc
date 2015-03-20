@@ -107,6 +107,9 @@ function gie_assets_strongarm() {
       'featured' => array(
         'custom_settings' => TRUE,
       ),
+      'org_teaser' => array(
+        'custom_settings' => TRUE,
+      ),
     ),
     'extra_fields' => array(
       'form' => array(
