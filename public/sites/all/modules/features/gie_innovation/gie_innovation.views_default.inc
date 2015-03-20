@@ -498,6 +498,20 @@ function gie_innovation_views_default_views() {
 
   /* Display: Content pane */
   $handler = $view->new_display('panel_pane', 'Content pane', 'at_a_glance');
+  $handler->display->display_options['defaults']['fields'] = FALSE;
+  /* Field: Content: Comment count */
+  $handler->display->display_options['fields']['comment_count']['id'] = 'comment_count';
+  $handler->display->display_options['fields']['comment_count']['table'] = 'node_comment_statistics';
+  $handler->display->display_options['fields']['comment_count']['field'] = 'comment_count';
+  $handler->display->display_options['fields']['comment_count']['label'] = 'Comments';
+  $handler->display->display_options['fields']['comment_count']['element_label_colon'] = FALSE;
+  /* Field: Flags: Flag counter */
+  $handler->display->display_options['fields']['count']['id'] = 'count';
+  $handler->display->display_options['fields']['count']['table'] = 'flag_counts';
+  $handler->display->display_options['fields']['count']['field'] = 'count';
+  $handler->display->display_options['fields']['count']['relationship'] = 'flag_count_rel';
+  $handler->display->display_options['fields']['count']['label'] = 'Favorites';
+  $handler->display->display_options['fields']['count']['element_label_colon'] = FALSE;
   $handler->display->display_options['allow']['use_pager'] = 0;
   $handler->display->display_options['allow']['items_per_page'] = 0;
   $handler->display->display_options['allow']['offset'] = 0;
@@ -507,6 +521,49 @@ function gie_innovation_views_default_views() {
   $handler->display->display_options['allow']['title_override'] = 'title_override';
   $handler->display->display_options['allow']['exposed_form'] = 0;
   $handler->display->display_options['allow']['fields_override'] = 0;
+
+  /* Display: Attachment */
+  $handler = $view->new_display('attachment', 'Attachment', 'attachment_1');
+  $handler->display->display_options['defaults']['group_by'] = FALSE;
+  $handler->display->display_options['group_by'] = TRUE;
+  $handler->display->display_options['pager']['type'] = 'none';
+  $handler->display->display_options['pager']['options']['offset'] = '0';
+  $handler->display->display_options['defaults']['relationships'] = FALSE;
+  $handler->display->display_options['defaults']['fields'] = FALSE;
+  /* Field: Content: Proof of Evidence (field_innovation_proof_evidence:delta) */
+  $handler->display->display_options['fields']['delta']['id'] = 'delta';
+  $handler->display->display_options['fields']['delta']['table'] = 'field_data_field_innovation_proof_evidence';
+  $handler->display->display_options['fields']['delta']['field'] = 'delta';
+  $handler->display->display_options['fields']['delta']['group_type'] = 'count';
+  $handler->display->display_options['fields']['delta']['label'] = 'Evidence';
+  $handler->display->display_options['fields']['delta']['element_label_colon'] = FALSE;
+  /* Field: Content: Website */
+  $handler->display->display_options['fields']['field_innovation_website']['id'] = 'field_innovation_website';
+  $handler->display->display_options['fields']['field_innovation_website']['table'] = 'field_data_field_innovation_website';
+  $handler->display->display_options['fields']['field_innovation_website']['field'] = 'field_innovation_website';
+  $handler->display->display_options['fields']['field_innovation_website']['label'] = '';
+  $handler->display->display_options['fields']['field_innovation_website']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_innovation_website']['click_sort_column'] = 'url';
+  $handler->display->display_options['fields']['field_innovation_website']['type'] = 'link_url';
+  $handler->display->display_options['fields']['field_innovation_website']['settings'] = array(
+    'linked_field' => array(
+      'linked' => 0,
+      'destination' => '',
+      'advanced' => array(
+        'title' => '',
+        'target' => '',
+        'class' => '',
+        'rel' => '',
+        'text' => '',
+      ),
+    ),
+  );
+  $handler->display->display_options['fields']['field_innovation_website']['group_column'] = 'entity_id';
+  $handler->display->display_options['displays'] = array(
+    'at_a_glance' => 'at_a_glance',
+    'default' => 0,
+  );
+  $handler->display->display_options['attachment_position'] = 'after';
   $export['innovation_counters'] = $view;
 
   $view = new view();
