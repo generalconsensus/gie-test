@@ -56,6 +56,30 @@ function gie_general_context_default_contexts() {
           'region' => 'preface',
           'weight' => '-10',
         ),
+        'menu-menu-footer-menu' => array(
+          'module' => 'menu',
+          'delta' => 'menu-footer-menu',
+          'region' => 'footer',
+          'weight' => '-19',
+        ),
+        'pane-about_the_exchange' => array(
+          'module' => 'pane',
+          'delta' => 'about_the_exchange',
+          'region' => 'footer',
+          'weight' => '-18',
+        ),
+        'views-partners-partners' => array(
+          'module' => 'views',
+          'delta' => 'partners-partners',
+          'region' => 'footer',
+          'weight' => '-17',
+        ),
+        'menu-menu-sub-footer-menu' => array(
+          'module' => 'menu',
+          'delta' => 'menu-sub-footer-menu',
+          'region' => 'footer',
+          'weight' => '-16',
+        ),
       ),
     ),
   );
