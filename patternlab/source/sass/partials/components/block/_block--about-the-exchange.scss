@@ -1,8 +1,12 @@
 .block--about-the-exchange { 
+  .block__content p {
+    font-size: em(14px);
+    line-height: 1.6;
+  }
   .region-footer & { // layout when in footer
     margin-bottom: 2em;
     @include breakpoint(700px, $no-query: true) {
-      border-right: 1px solid $border-color;
+      //border-right: 1px solid $border-color;
       float: left;
       margin-bottom: 0;
       padding-right: 2em;

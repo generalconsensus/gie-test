@@ -1,5 +1,5 @@
 /* line 65, ../../../../../../../../Ruby21-x64/lib/ruby/gems/2.1.0/gems/singularitygs-1.1.2/stylesheets/singularitygs/helpers/_clearfix.scss */
-.clearfix:after, .layout-grid__row:after {
+.clearfix:after, .layout-grid__row:after, .region-footer:after {
   content: "";
   display: table;
   clear: both;
@@ -29,12 +29,12 @@
 }
 
 /* line 9, ../sass/partials/global/helpers/_clearfix.scss */
-.clearfix:after, .layout-grid__row:after {
+.clearfix:after, .layout-grid__row:after, .region-footer:after {
   display: table;
   content: "";
 }
 /* line 14, ../sass/partials/global/helpers/_clearfix.scss */
-.clearfix:after, .layout-grid__row:after {
+.clearfix:after, .layout-grid__row:after, .region-footer:after {
   clear: both;
 }
 
@@ -1045,9 +1045,13 @@ input.throbbing {
 }
 
 /* line 2, ../sass/partials/components/block/_block--about-the-exchange.scss */
+.block--about-the-exchange .block__content p {
+  font-size: 0.875em;
+  line-height: 1.6;
+}
+/* line 6, ../sass/partials/components/block/_block--about-the-exchange.scss */
 .region-footer .block--about-the-exchange {
   margin-bottom: 2em;
-  border-right: 1px solid #cecfcb;
   float: left;
   margin-bottom: 0;
   padding-right: 2em;
@@ -1865,27 +1869,25 @@ header.header {
 
 /* line 1, ../sass/partials/components/nav/_nav--footer-menu.scss */
 .nav--footer-menu {
+  margin: 0;
   padding: 1.25em 0;
 }
-/* line 7, ../sass/partials/components/nav/_nav--footer-menu.scss */
+/* line 8, ../sass/partials/components/nav/_nav--footer-menu.scss */
 .nav--footer-menu .nav__item {
   line-height: 1;
   padding: 0 2.5em 0.25em 0;
 }
-/* line 16, ../sass/partials/components/nav/_nav--footer-menu.scss */
+/* line 17, ../sass/partials/components/nav/_nav--footer-menu.scss */
 .nav--footer-menu .nav__link {
   font-size: 0.875em;
 }
 
-/* line 5, ../sass/partials/components/nav/_nav--footer-utility-menu.scss */
-.nav--footer-utility-menu .nav__item {
+/* line 1, ../sass/partials/components/nav/_nav--footer-utility-menu.scss */
+.nav--footer-utility-menu {
+  font-size: 0.75em;
   line-height: 1;
 }
-/* line 9, ../sass/partials/components/nav/_nav--footer-utility-menu.scss */
-.nav--footer-utility-menu .nav__link {
-  font-size: 0.875em;
-}
-/* line 13, ../sass/partials/components/nav/_nav--footer-utility-menu.scss */
+/* line 10, ../sass/partials/components/nav/_nav--footer-utility-menu.scss */
 .region-footer .nav--footer-utility-menu {
   float: right;
 }
@@ -2074,9 +2076,14 @@ header.header {
   height: 0.5em;
 }
 
-/* line 3, ../sass/partials/components/_region-footer.scss */
+/* line 1, ../sass/partials/components/_region-footer.scss */
+.region-footer {
+  padding: 2em 0 0 0;
+}
+/* line 5, ../sass/partials/components/_region-footer.scss */
 .region-footer .pane__title,
 .region-footer .block__title {
+  font-size: 1.125em;
   text-transform: uppercase;
 }
 
@@ -2338,6 +2345,12 @@ tr.drag-previous {
   margin-bottom: 1.625em;
 }
 
+/* line 10, ../sass/partials/components/_view.scss */
+.view__all {
+  font-size: 0.875em;
+  font-weight: bold;
+}
+
 /* line 2, ../sass/partials/components/view/_view--partners.scss */
 .view--partners .view__content {
   overflow: hidden;
@@ -2349,9 +2362,9 @@ tr.drag-previous {
   width: 50%;
   width: 25%;
 }
-/* line 18, ../sass/partials/components/view/_view--partners.scss */
-.view--partners .view__all {
-  padding: 0 0 1.5em 0;
+/* line 19, ../sass/partials/components/view/_view--partners.scss */
+.view--partners .view__footer .button {
+  margin-right: 1em;
 }
 
 /* line 1, ../sass/partials/components/_views-row.scss */

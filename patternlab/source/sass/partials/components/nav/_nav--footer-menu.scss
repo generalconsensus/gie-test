@@ -1,5 +1,6 @@
 .nav--footer-menu {
   @extend %nav--inline;
+  margin: 0;
   padding: 1.25em 0;
   @include breakpoint(max-width 600px) { // for mobile button style links
     padding: 0.5em 0;

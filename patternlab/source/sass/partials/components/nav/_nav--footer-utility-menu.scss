@@ -1,14 +1,11 @@
 .nav--footer-utility-menu {
   @extend %nav--pipeline;
+  font-size: em(12px);
+  line-height: 1;
 
+  .nav__item {}
 
-  .nav__item {
-    line-height: 1;
-  }
-
-  .nav__link {
-    font-size: em(14px);
-  }
+  .nav__link {}
 
   .region-footer & { // layout when in footer
     @include breakpoint(max-width 699px) {

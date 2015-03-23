@@ -15,7 +15,9 @@
       width: percentage(1/4);
     }
   }
-  .view__all {
-    padding: 0 0 1.5em 0;
+  .view__footer {
+    .button {
+      margin-right: 1em;
+    }
   }
 }
