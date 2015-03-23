@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the GIE Dev feature.
+ */
+
+include_once 'gie_dev.features.inc';
