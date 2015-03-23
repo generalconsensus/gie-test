@@ -105,3 +105,12 @@ function gie_general_update_7009() {
     );
     module_enable($modules, TRUE);
 }
+
+/**
+ * Delete funding fields text field.
+ */
+function gie_general_update_7010() {
+  field_delete_field('field_funding_source');
+  field_delete_field('field_funding_grant');
+}
+
