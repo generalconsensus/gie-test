@@ -1213,10 +1213,8 @@ input.throbbing {
 @media (min-width: 43.75em) {
   /* line 2, ../sass/partials/components/block/_block--view-partners.scss */
   .region-footer .block--view-partners {
-    border-left: 1px solid #cecfcb;
     float: left;
     margin-bottom: 0;
-    margin-left: -1px;
     padding-left: 2em;
     width: 70%;
   }
