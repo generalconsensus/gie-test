@@ -39,6 +39,7 @@ features[ds_field_settings][] = comment|comment_node_innovation|default
 features[ds_field_settings][] = field_collection_item|field_innovation_non_references|default
 features[ds_field_settings][] = node|innovation|full
 features[ds_layout_settings][] = comment|comment_node_innovation|default
+features[ds_layout_settings][] = comment|comment_node_innovation|form
 features[ds_layout_settings][] = field_collection_item|field_innovation_non_references|default
 features[ds_layout_settings][] = field_collection_item|field_innovation_non_references|form
 features[ds_layout_settings][] = node|innovation|full

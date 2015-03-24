@@ -79,7 +79,7 @@ function gie_innovation_field_default_field_instances() {
         'rows' => 5,
       ),
       'type' => 'text_textarea',
-      'weight' => 2,
+      'weight' => 1,
     ),
   );
 
@@ -156,7 +156,7 @@ function gie_innovation_field_default_field_instances() {
         'size' => 60,
       ),
       'type' => 'text_textfield',
-      'weight' => 1,
+      'weight' => 2,
     ),
   );
 
