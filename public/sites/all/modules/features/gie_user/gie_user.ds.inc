@@ -12,15 +12,40 @@ function gie_user_ds_field_settings_info() {
 
   $ds_fieldsetting = new stdClass();
   $ds_fieldsetting->api_version = 1;
+  $ds_fieldsetting->id = 'user|user|full';
+  $ds_fieldsetting->entity_type = 'user';
+  $ds_fieldsetting->bundle = 'user';
+  $ds_fieldsetting->view_mode = 'full';
+  $ds_fieldsetting->settings = array(
+    'user_full_name' => array(
+      'weight' => '1',
+      'label' => 'hidden',
+      'format' => 'plain_text_name',
+    ),
+    'user_member_since' => array(
+      'weight' => '5',
+      'label' => 'hidden',
+      'format' => 'default',
+    ),
+    'user_email' => array(
+      'weight' => '8',
+      'label' => 'hidden',
+      'format' => 'default',
+    ),
+  );
+  $export['user|user|full'] = $ds_fieldsetting;
+
+  $ds_fieldsetting = new stdClass();
+  $ds_fieldsetting->api_version = 1;
   $ds_fieldsetting->id = 'user|user|user_teaser';
   $ds_fieldsetting->entity_type = 'user';
   $ds_fieldsetting->bundle = 'user';
   $ds_fieldsetting->view_mode = 'user_teaser';
   $ds_fieldsetting->settings = array(
-    'user_full_name_linked' => array(
-      'weight' => '3',
+    'user_full_name' => array(
+      'weight' => '1',
       'label' => 'hidden',
-      'format' => 'default',
+      'format' => 'linked_name',
     ),
   );
   $export['user|user|user_teaser'] = $ds_fieldsetting;
@@ -32,10 +57,10 @@ function gie_user_ds_field_settings_info() {
   $ds_fieldsetting->bundle = 'user';
   $ds_fieldsetting->view_mode = 'user_teaser_summary';
   $ds_fieldsetting->settings = array(
-    'user_full_name_linked' => array(
+    'user_full_name' => array(
       'weight' => '1',
       'label' => 'hidden',
-      'format' => 'default',
+      'format' => 'linked_name',
     ),
   );
   $export['user|user|user_teaser_summary'] = $ds_fieldsetting;
@@ -51,6 +76,58 @@ function gie_user_ds_layout_settings_info() {
 
   $ds_layout = new stdClass();
   $ds_layout->api_version = 1;
+  $ds_layout->id = 'user|user|full';
+  $ds_layout->entity_type = 'user';
+  $ds_layout->bundle = 'user';
+  $ds_layout->view_mode = 'full';
+  $ds_layout->layout = 'ds_3col_equal_width';
+  $ds_layout->settings = array(
+    'regions' => array(
+      'left' => array(
+        0 => 'field_user_photo',
+      ),
+      'middle' => array(
+        1 => 'user_full_name',
+        2 => 'field_user_company',
+        3 => 'field_user_title',
+        4 => 'field_user_address',
+        5 => 'user_member_since',
+        6 => 'field_user_type',
+        7 => 'flag_follow',
+        8 => 'user_email',
+      ),
+      'right' => array(
+        9 => 'field_user_motto',
+      ),
+    ),
+    'fields' => array(
+      'field_user_photo' => 'left',
+      'user_full_name' => 'middle',
+      'field_user_company' => 'middle',
+      'field_user_title' => 'middle',
+      'field_user_address' => 'middle',
+      'user_member_since' => 'middle',
+      'field_user_type' => 'middle',
+      'flag_follow' => 'middle',
+      'user_email' => 'middle',
+      'field_user_motto' => 'right',
+    ),
+    'classes' => array(),
+    'wrappers' => array(
+      'left' => 'div',
+      'middle' => 'div',
+      'right' => 'div',
+    ),
+    'layout_wrapper' => 'div',
+    'layout_attributes' => '',
+    'layout_attributes_merge' => 1,
+    'layout_link_attribute' => '',
+    'layout_link_custom' => '',
+  );
+  $export['user|user|full'] = $ds_layout;
+
+  $ds_layout = new stdClass();
+  $ds_layout->api_version = 1;
   $ds_layout->id = 'user|user|user_teaser';
   $ds_layout->entity_type = 'user';
   $ds_layout->bundle = 'user';
@@ -60,12 +137,12 @@ function gie_user_ds_layout_settings_info() {
     'regions' => array(
       'ds_content' => array(
         0 => 'field_user_photo',
-        1 => 'user_full_name_linked',
+        1 => 'user_full_name',
       ),
     ),
     'fields' => array(
       'field_user_photo' => 'ds_content',
-      'user_full_name_linked' => 'ds_content',
+      'user_full_name' => 'ds_content',
     ),
     'classes' => array(),
     'wrappers' => array(
@@ -90,7 +167,7 @@ function gie_user_ds_layout_settings_info() {
     'regions' => array(
       'left' => array(
         0 => 'field_user_photo',
-        1 => 'user_full_name_linked',
+        1 => 'user_full_name',
       ),
       'right' => array(
         2 => 'field_user_summary',
@@ -98,7 +175,7 @@ function gie_user_ds_layout_settings_info() {
     ),
     'fields' => array(
       'field_user_photo' => 'left',
-      'user_full_name_linked' => 'left',
+      'user_full_name' => 'left',
       'field_user_summary' => 'right',
     ),
     'classes' => array(),
