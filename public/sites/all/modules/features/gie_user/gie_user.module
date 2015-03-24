@@ -8,18 +8,41 @@ include_once 'gie_user.features.inc';
 
 /**
  * Implements hook_ds_fields_info().
- * - Create Full Name display field, links to user page.
+ * - Create Full Name display field.
+ * - Create Member Since display field.
+ * - Create Send Note (email) field.
  */
 function gie_user_ds_fields_info($entity_type) {
   $fields = array();
 
   if ($entity_type == 'user') {
-    $fields['user_full_name_linked'] = array(
-      'title' => t('Full Name (linked)'),
+    $fields['user_full_name'] = array(
+      'title' => t('Full Name'),
       'field_type' => DS_FIELD_TYPE_FUNCTION,
       'ui_limit' => array('user|*'),
-      'function' => '_gie_user_user_full_name_linked'
+      'function' => '_gie_user_user_full_name',
+      'properties' => array(
+        'formatters' => array(
+          'linked_name' => 'Linked',
+          'plain_text_name' => 'Plain text',
+        ),
+      ),
     );
+
+    $fields['user_member_since'] = array(
+      'title' => t('Member since'),
+      'field_type' => DS_FIELD_TYPE_FUNCTION,
+      'ui_limit' => array('user|*'),
+      'function' => '_gie_user_user_member_since',
+    );
+
+    $fields['user_email'] = array(
+      'title' => t('Send Note'),
+      'field_type' => DS_FIELD_TYPE_FUNCTION,
+      'ui_limit' => array('user|*'),
+      'function' => '_gie_user_user_email',
+    );
+
     return array($entity_type => $fields);
   }
 
@@ -27,22 +50,67 @@ function gie_user_ds_fields_info($entity_type) {
 }
 
 /**
- * Render function for Full Name (linked) field.
+ * Render function for Full Name field.
  */
-function _gie_user_user_full_name_linked($field) {
-  // wrap user entity, set first / last name and user ID variables
+function _gie_user_user_full_name($field) {
+  // set formatter variable
+  $formatter = $field['formatter'];
+
+  // wrap user entity, set first / last name
   $wrapper = entity_metadata_wrapper('user', $field['entity']);
   $first_name = $wrapper->field_user_firstname->value();
   $last_name = $wrapper->field_user_lastname->value();
-  $uid = $wrapper->uid->value();
 
-  // set name text
-  if (!empty($first_name) && !empty($last_name)) {
+  // Initialize output
+  $output = '';
+
+  // Check formatter
+  if ($formatter == 'linked_name') {
+    $uid = $wrapper->uid->value();
+
+    // set name text
+    if (!empty($first_name) && !empty($last_name)) {
+      $full_name = $first_name . ' ' . $last_name;
+    } else {
+      $full_name = $wrapper->name->value();
+    }
+
+    // Render name linked to the user's profile
+    $output = l($full_name, 'user/' . $uid);
+  } elseif ($formatter == 'plain_text_name') {
     $full_name = $first_name . ' ' . $last_name;
-  } else {
-    $full_name = $wrapper->name->value();
+
+    // Render plain text name
+    $output = check_plain($full_name);
   }
 
-  $link = l($full_name, 'user/' . $uid);
+  return $output;
+}
+
+/**
+ * Render function for Member since field.
+ */
+function _gie_user_user_member_since($field) {
+  // Get and format Account creation date
+  $wrapper = entity_metadata_wrapper('user', $field['entity']);
+  $created = $wrapper->created->value();
+  $formatted = date('M j, Y', $created);
+
+  return 'Member since ' . $formatted;
+}
+
+/**
+ * Render function for Send Note (email) field
+ */
+function _gie_user_user_email($field) {
+  $wrapper = entity_metadata_wrapper('user', $field['entity']);
+
+  $email = $wrapper->mail->value();
+  $link = l(t('Send Note'), 'mailto:' . $email, array(
+    'attributes' => array(
+      'class' => array('button')
+    ),
+  ));
+
   return $link;
 }
