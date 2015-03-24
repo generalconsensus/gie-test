@@ -10,6 +10,7 @@ include_once 'gie_user.features.inc';
  * Implements hook_ds_fields_info().
  * - Create Full Name display field.
  * - Create Member Since display field.
+ * - Create Send Note (email) field.
  */
 function gie_user_ds_fields_info($entity_type) {
   $fields = array();
@@ -33,6 +34,13 @@ function gie_user_ds_fields_info($entity_type) {
       'field_type' => DS_FIELD_TYPE_FUNCTION,
       'ui_limit' => array('user|*'),
       'function' => '_gie_user_user_member_since',
+    );
+
+    $fields['user_email'] = array(
+      'title' => t('Send Note'),
+      'field_type' => DS_FIELD_TYPE_FUNCTION,
+      'ui_limit' => array('user|*'),
+      'function' => '_gie_user_user_email',
     );
 
     return array($entity_type => $fields);
@@ -89,4 +97,20 @@ function _gie_user_user_member_since($field) {
   $formatted = date('M j, Y', $created);
 
   return 'Member since ' . $formatted;
+}
+
+/**
+ * Render function for Send Note (email) field
+ */
+function _gie_user_user_email($field) {
+  $wrapper = entity_metadata_wrapper('user', $field['entity']);
+
+  $email = $wrapper->mail->value();
+  $link = l(t('Send Note'), 'mailto:' . $email, array(
+    'attributes' => array(
+      'class' => array('button')
+    ),
+  ));
+
+  return $link;
 }
