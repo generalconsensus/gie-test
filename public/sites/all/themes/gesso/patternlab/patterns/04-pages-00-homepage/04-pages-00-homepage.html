@@ -15,22 +15,22 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <link href='http://fonts.googleapis.com/css?family=Lato:400,400italic,700,700italic,300italic,300' rel='stylesheet' type='text/css'>
     <!--[if gte IE 9]><!-->
-    <link rel="stylesheet" href="../../css/styles.css?1427140644" media="all">
+    <link rel="stylesheet" href="../../css/styles.css?1427222192" media="all">
     <!--<![endif]-->
 
     <!--[if lt IE 9]>
-    <link rel="stylesheet" href="../../css/no-mq.css?1427140644" media="all">
+    <link rel="stylesheet" href="../../css/no-mq.css?1427222192" media="all">
     <![endif]-->
 
-    <link rel="stylesheet" href="../../css/pattern-lab.css?1427140644" media="all"> 
+    <link rel="stylesheet" href="../../css/pattern-lab.css?1427222192" media="all"> 
 
     <script src="../../drupal/misc/jquery.js?v=1.4.4"></script>
     <script src="../../drupal/misc/jquery.once.js?v=1.2"></script>
     <script src="../../drupal/misc/drupal.js?v=7.33"></script>
 
-    <script src="../../js/mobile-menu.js?1427140644"></script>
-    <script src="../../js/skiplinks.js?1427140644"></script>
-    <script src="../../js/scripts.js?1427140644"></script>
+    <script src="../../js/mobile-menu.js?1427222192"></script>
+    <script src="../../js/skiplinks.js?1427222192"></script>
+    <script src="../../js/scripts.js?1427222192"></script>
     <!-- Begin Pattern Lab (Required for Pattern Lab to run properly) -->
     		<!-- never cache patterns -->
 		<meta http-equiv="cache-control" content="max-age=0" />
@@ -39,8 +39,8 @@
 		<meta http-equiv="expires" content="Tue, 01 Jan 1980 1:00:00 GMT" />
 		<meta http-equiv="pragma" content="no-cache" />
 		
-		<link rel="stylesheet" href="../../styleguide/css/styleguide.css?1427140644" media="all">
-		<link rel="stylesheet" href="../../styleguide/css/styleguide-specific.css?1427140644" media="all" />
+		<link rel="stylesheet" href="../../styleguide/css/styleguide.css?1427222192" media="all">
+		<link rel="stylesheet" href="../../styleguide/css/styleguide-specific.css?1427222192" media="all" />
 		
 
     <!-- End Pattern Lab -->
@@ -52,13 +52,13 @@
     </div>
 <header class="header" role="banner">
   <div class="region-header layout-constrain">
-    <nav class="block  block--menu-block" role="navigation">
+    <div class="block block--system-user-menu" role="navigation">
       <h2 class="element-invisible block__title">Utility menu</h2>
       <ul class="nav nav--utility-menu">
         <li class="nav__item"><a class="nav__link" href="#">Join the Exchange</a></li>
         <li class="nav__item"><a class="nav__link" href="#">Log In</a></li>
       </ul>
-    </nav>
+    </block>
   </div>
 </header>
 <div class="region-navigation layout-constrain">
@@ -67,15 +67,17 @@
       <h1 class="site-name__text">Global Innovation Exchange</h1>
     </a>
   </span>
-  <nav class="block block--menu-block block--main-menu" role="navigation">
+  <nav class="block block--menu-block block--main-menu block--tb-megamenu-main-menu" role="navigation">
     <h2 class="element-invisible block__title">Main menu</h2>
-    <ul class="nav nav--main-menu">
-      <li class="nav__item"><a class="nav__link" href="#">Innovations</a></li>
-      <li class="nav__item"><a class="nav__link" href="#">Funding</a></li>
-      <li class="nav__item"><a class="nav__link" href="#">Resources</a></li>
-      <li class="nav__item"><a class="nav__link" href="#">More</a></li>
-      <li class="nav__item"><a class="nav__link" href="#">Communities</a></li>
-    </ul>
+    <div class="tb-megamenu-main-menu">
+      <ul class="nav tb-megamenu-nav">
+        <li class="tb-megamenu-item dropdown"><a class="" href="#">Innovations</a></li>
+        <li class="tb-megamenu-item"><a class="" href="#">Funding</a></li>
+        <li class="tb-megamenu-item"><a class="" href="#">Resources</a></li>
+        <li class="tb-megamenu-item"><a class="" href="#">More</a></li>
+        <li class="tb-megamenu-item"><a class="" href="#">Communities</a></li>
+      </ul>
+    </div>
   </nav>
   <div class="block block-search-form block--search block--search-form">      
     <form accept-charset="UTF-8">
@@ -111,9 +113,9 @@
 <footer class="footer" role="contentinfo">
   <div class="footer__menu-bar">
     <div class="layout-constrain">
-      <nav class="block  block--menu-block" role="navigation">
+      <div class="block block--menu-menu-footer-menu" role="navigation">
         <h2 class="element-invisible block__title">Footer menu</h2>
-        <ul class="nav nav--footer-menu">
+        <ul class="nav">
           <li class="nav__item"><a class="nav__link" href="#">Organizations</a></li>
           <li class="nav__item"><a class="nav__link" href="#">Programs</a></li>
           <li class="nav__item"><a class="nav__link" href="#">Members</a></li>
@@ -124,11 +126,11 @@
           <li class="nav__item"><a class="nav__link" href="#">Support</a></li>
           <li class="nav__item"><a class="nav__link" href="#">FAQs</a></li>
         </ul>
-      </nav>
+      </div>
     </div>
   </div>
   <div class="region-footer layout-constrain">
-    <div class="block block--about-the-exchange">
+    <div class="block block--pane-about-the-exchange">
       <h2 class="block__title">About The Exchange</h2>
       <div class="block__content">
         <p>
@@ -137,7 +139,7 @@
         <a class="button button--alt" href="#">Join the Community</a>
       </div>
     </div>
-    <div class="block block--view-partners">
+    <div class="block block--views-partners-partners">
       <div class="view view--partners">
         <div class="view__header"><h2 class="block__title">Partners</h2></div>
         <div class="view__content">
@@ -156,14 +158,14 @@
         </div>
       </div>
     </div>
-    <nav class="block  block--menu-block" role="navigation">
+    <div class="block block--menu-menu-sub-footer-menu" role="navigation">
       <h2 class="element-invisible block__title">Footer Utility menu</h2>
-      <ul class="nav nav--footer-utility-menu">
+      <ul class="nav">
         <li class="nav__item"><a class="nav__link" href="#">Credits</a></li>
         <li class="nav__item"><a class="nav__link" href="#">Privacy Policy</a></li>
         <li class="nav__item"><a class="nav__link" href="#">Terms of Use</a></li>
       </ul>
-    </nav>
+    </div>
   </div>
 </footer>
 
@@ -211,10 +213,10 @@
 			
 		}
 	</script>
-	<script id="pl-js-polyfill-insert-1427140644">
+	<script id="pl-js-polyfill-insert-1427222192">
 		(function() {
 			if (self != top) {
-				var cb = '1427140644';
+				var cb = '1427222192';
 				var js = [];
 				if (typeof document !== "undefined" && !("classList" in document.documentElement)) {
 					js.push("styleguide/js/vendor/classlist-polyfill.js");
@@ -223,10 +225,10 @@
 			}
 		})();
 	</script>
-	<script id="pl-js-insert-1427140644">
+	<script id="pl-js-insert-1427222192">
 		(function() {
 			if (self != top) {
-				var cb = '1427140644';
+				var cb = '1427222192';
 				var js = [ { "src": "styleguide/js/vendor/jwerty.js", "dep": [ "styleguide/js/postmessage.js", { "src": "data/annotations.js", "dep": [ "styleguide/js/annotations-pattern.js" ] }, "styleguide/js/code-pattern.js" ] } ];
 				scriptLoader.run(js,cb,'pl-js-insert');
 			}

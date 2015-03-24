@@ -49,7 +49,7 @@
     height: 50px;
     overflow: hidden;
     position: absolute;
-    right: 0;
+    right: 1em; // offset layout-constrain padding
     top: 0;
     width: 50px;
     @include transition(width 0.2s linear);

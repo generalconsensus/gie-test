@@ -32,8 +32,17 @@
   <?php print render($page['postscript']); ?>
 <?php endif; ?>
 
-<?php if ($page['footer']): ?>
+<?php if ($page['footer'] || $page['footerbar']): ?>
   <footer class="footer" role="contentinfo">
-    <?php print render($page['footer']); ?>
+    <?php if ($page['footerbar']): ?>
+      <div class="footer__menu-bar">
+        <div class="layout-constrain">
+          <?php print render($page['footerbar']); ?>
+        </div>
+      <?php endif; ?>
+    </div>
+    <?php if ($page['footer']): ?>
+      <?php print render($page['footer']); ?>
+    <?php endif; ?>
   </footer>
 <?php endif; ?>

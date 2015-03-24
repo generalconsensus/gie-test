@@ -9,6 +9,10 @@
   @extend %button--large;
 }
 
-.button--alt {
-  @extend %button--alt;
+.button--highlight {
+  @extend %button--highlight;
+}
+
+.button--light {
+  @extend %button--light;
 }

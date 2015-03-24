@@ -7,10 +7,11 @@ $lightblue: #7090b7;
 $orange: #dc5606;
 $lightorange: #ed7d3a;
 $red: #b71234;
+$gray: #f8f8f8;
 
 $primary-text-color: #565a5c;
 $secondary-text-color: #555;
-$heading-text-color: $blue;
+$heading-text-color: $primary-text-color;
 $body-color: #fff;
 $link-color: $orange;
 $link-hover-color: darken($orange,10%);
