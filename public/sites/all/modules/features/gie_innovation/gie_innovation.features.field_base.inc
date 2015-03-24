@@ -10,6 +10,27 @@
 function gie_innovation_field_default_field_bases() {
   $field_bases = array();
 
+  // Exported field_base: 'comment_body'
+  $field_bases['comment_body'] = array(
+    'active' => 1,
+    'cardinality' => 1,
+    'deleted' => 0,
+    'entity_types' => array(
+      0 => 'comment',
+    ),
+    'field_name' => 'comment_body',
+    'indexes' => array(
+      'format' => array(
+        0 => 'format',
+      ),
+    ),
+    'locked' => 0,
+    'module' => 'text',
+    'settings' => array(),
+    'translatable' => 0,
+    'type' => 'text_long',
+  );
+
   // Exported field_base: 'field_innovation_assets'
   $field_bases['field_innovation_assets'] = array(
     'active' => 1,
@@ -952,6 +973,27 @@ function gie_innovation_field_default_field_bases() {
     ),
     'translatable' => 0,
     'type' => 'taxonomy_term_reference',
+  );
+
+  // Exported field_base: 'subject_field'
+  $field_bases['subject_field'] = array(
+    'active' => 1,
+    'cardinality' => 1,
+    'deleted' => 0,
+    'entity_types' => array(),
+    'field_name' => 'subject_field',
+    'indexes' => array(
+      'format' => array(
+        0 => 'format',
+      ),
+    ),
+    'locked' => 0,
+    'module' => 'text',
+    'settings' => array(
+      'max_length' => 255,
+    ),
+    'translatable' => 1,
+    'type' => 'text',
   );
 
   return $field_bases;

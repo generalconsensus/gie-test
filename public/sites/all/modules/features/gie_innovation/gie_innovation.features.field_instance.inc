@@ -10,6 +10,156 @@
 function gie_innovation_field_default_field_instances() {
   $field_instances = array();
 
+  // Exported field_instance: 'comment-comment_node_innovation-comment_body'
+  $field_instances['comment-comment_node_innovation-comment_body'] = array(
+    'bundle' => 'comment_node_innovation',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'hidden',
+        'module' => 'text',
+        'settings' => array(
+          'field_delimiter' => '',
+          'linked_field' => array(
+            'advanced' => array(
+              'class' => '',
+              'rel' => '',
+              'target' => '',
+              'text' => '',
+              'title' => '',
+            ),
+            'destination' => '',
+            'linked' => 0,
+          ),
+        ),
+        'type' => 'text_default',
+        'weight' => 3,
+      ),
+    ),
+    'entity_type' => 'comment',
+    'field_name' => 'comment_body',
+    'label' => 'Comment',
+    'required' => 1,
+    'settings' => array(
+      'better_formats' => array(
+        'allowed_formats' => array(
+          'comments_filtered' => 'comments_filtered',
+          'filtered_html' => 0,
+          'full_html' => 0,
+          'plain_text' => 0,
+        ),
+        'allowed_formats_toggle' => 1,
+        'default_order_toggle' => 0,
+        'default_order_wrapper' => array(
+          'formats' => array(
+            'comments_filtered' => array(
+              'weight' => 0,
+            ),
+            'filtered_html' => array(
+              'weight' => 0,
+            ),
+            'full_html' => array(
+              'weight' => 1,
+            ),
+            'plain_text' => array(
+              'weight' => 10,
+            ),
+          ),
+        ),
+      ),
+      'text_processing' => 1,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'text',
+      'settings' => array(
+        'rows' => 5,
+      ),
+      'type' => 'text_textarea',
+      'weight' => 2,
+    ),
+  );
+
+  // Exported field_instance: 'comment-comment_node_innovation-subject_field'
+  $field_instances['comment-comment_node_innovation-subject_field'] = array(
+    'bundle' => 'comment_node_innovation',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'hidden',
+        'module' => 'text',
+        'settings' => array(
+          'field_delimiter' => '',
+          'linked_field' => array(
+            'advanced' => array(
+              'class' => '',
+              'rel' => '',
+              'target' => '',
+              'text' => '',
+              'title' => '',
+            ),
+            'destination' => '',
+            'linked' => 0,
+          ),
+        ),
+        'type' => 'text_plain',
+        'weight' => 2,
+      ),
+    ),
+    'entity_type' => 'comment',
+    'field_name' => 'subject_field',
+    'label' => 'Subject',
+    'required' => 0,
+    'settings' => array(
+      'better_formats' => array(
+        'allowed_formats' => array(
+          'comments_filtered' => 'comments_filtered',
+          'filtered_html' => 'filtered_html',
+          'full_html' => 'full_html',
+          'plain_text' => 'plain_text',
+        ),
+        'allowed_formats_toggle' => 0,
+        'default_order_toggle' => 0,
+        'default_order_wrapper' => array(
+          'formats' => array(
+            'comments_filtered' => array(
+              'weight' => 0,
+            ),
+            'filtered_html' => array(
+              'weight' => 0,
+            ),
+            'full_html' => array(
+              'weight' => 1,
+            ),
+            'plain_text' => array(
+              'weight' => 10,
+            ),
+          ),
+        ),
+      ),
+      'hide_label' => array(
+        'entity' => 'entity',
+        'page' => 0,
+      ),
+      'text_processing' => 0,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'text',
+      'settings' => array(
+        'size' => 60,
+      ),
+      'type' => 'text_textfield',
+      'weight' => 1,
+    ),
+  );
+
   // Exported field_instance: 'field_collection_item-field_innovation_non_references-field_non_ref_email'
   $field_instances['field_collection_item-field_innovation_non_references-field_non_ref_email'] = array(
     'bundle' => 'field_innovation_non_references',
@@ -3072,6 +3222,7 @@ function gie_innovation_field_default_field_instances() {
   // Translatables
   // Included for use with string extractors like potx.
   t('Assistance Type');
+  t('Comment');
   t('Cost Per Unit');
   t('Cost per Beneficiary');
   t('Created In');
@@ -3107,6 +3258,7 @@ function gie_innovation_field_default_field_instances() {
   t('Sector');
   t('Solution Type');
   t('Status Update');
+  t('Subject');
   t('Testing Phase');
   t('Title');
   t('Topic');
