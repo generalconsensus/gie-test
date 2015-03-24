@@ -26,11 +26,14 @@
 a {
   color: $link-color;
   // Improves readability when focused.
+  font-weight: bold;
   outline-offset: em(2px);
+  text-decoration: none;
 
   &:hover,
   &:focus {
     color: $link-hover-color;
+    text-decoration: underline;
   }
 }
 
@@ -120,38 +123,40 @@ form {}
 
 h1 {
   @extend %hN;
-  font-size: em($font-size-xxl);
-  margin: 0 0 rhythm(1, $font-size-xxl);
+  font-size: em($font-size-xxxl);
+  margin: 0 0 rhythm(1, $font-size-xxxl);
 }
 
 h2 {
   @extend %hN;
+  color: $blue;
+  font-size: em($font-size-xxl);
+  margin: 0 0 rhythm(1, $font-size-xxl);
+}
+
+h3 {
+  @extend %hN;
+  color: $lightblue;
   font-size: em($font-size-xl);
   margin: 0 0 rhythm(1, $font-size-xl);
 }
 
-h3 {
+h4 {
   @extend %hN;
   font-size: em($font-size-lg);
   margin: 0 0 rhythm(1, $font-size-lg);
 }
 
-h4 {
+h5 {
   @extend %hN;
   font-size: em($font-size-normal);
   margin: 0 0 rhythm(1, $font-size-normal);
 }
 
-h5 {
+h6 {
   @extend %hN;
   font-size: em($font-size-md);
   margin: 0 0 rhythm(1, $font-size-md);
-}
-
-h6 {
-  @extend %hN;
-  font-size: em($font-size-sm);
-  margin: 0 0 rhythm(1, $font-size-sm);
 }
 
 header {}

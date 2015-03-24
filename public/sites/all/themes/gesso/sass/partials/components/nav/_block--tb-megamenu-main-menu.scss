@@ -1,0 +1,55 @@
+.block--tb-megamenu-main-menu {
+  //layout for main menu wrapper when in navigation region
+  .region-navigation & {
+    display: none;
+    @include breakpoint($mobile-menu-bp, $no-query: true) {
+      display: block;
+    }
+    left: 240px;
+    position: absolute;
+    top: 0;
+    @media print {
+      display: none;
+    }
+  }
+  .tb-megamenu-main-menu {
+    background: none;
+    color: $primary-text-color;
+    .tb-megamenu-nav {
+      margin: 0;
+      padding: 0;
+      > .tb-megamenu-item {
+        float: left;
+        margin: 0;
+        padding: 0;
+        &.dropdown {
+          position: relative;
+        }
+        &.active-trail
+        &.open {
+          background: $orange !important;
+          color: #fff !important;
+        }
+        > a {
+          background: none;
+          border: 0;
+          color: $primary-text-color;
+          display: block;
+          height: 50px;
+          line-height: 50px;
+          margin: 0;
+          padding: 0 20px;
+          text-decoration: none;
+          &:hover, &:focus {
+            background: $orange !important;
+            color: #fff !important;
+          }
+        }
+        // the dropdown
+        .dropdown-menu {
+
+        }
+      }
+    }
+  }
+}
