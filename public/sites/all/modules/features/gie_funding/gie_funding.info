@@ -82,3 +82,4 @@ features[variable][] = menu_parent_funding
 features[variable][] = node_options_funding
 features[variable][] = node_preview_funding
 features[variable][] = node_submitted_funding
+features[variable][] = simplify_comments_funding
