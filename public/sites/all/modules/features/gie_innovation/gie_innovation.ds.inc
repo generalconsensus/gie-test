@@ -116,6 +116,42 @@ function gie_innovation_ds_layout_settings_info() {
 
   $ds_layout = new stdClass();
   $ds_layout->api_version = 1;
+  $ds_layout->id = 'comment|comment_node_innovation|form';
+  $ds_layout->entity_type = 'comment';
+  $ds_layout->bundle = 'comment_node_innovation';
+  $ds_layout->view_mode = 'form';
+  $ds_layout->layout = 'ds_reset';
+  $ds_layout->settings = array(
+    'regions' => array(
+      'ds_content' => array(
+        0 => 'author',
+        1 => 'comment_body',
+      ),
+      'hidden' => array(
+        2 => 'subject_field',
+        3 => '_add_existing_field',
+      ),
+    ),
+    'fields' => array(
+      'author' => 'ds_content',
+      'comment_body' => 'ds_content',
+      'subject_field' => 'hidden',
+      '_add_existing_field' => 'hidden',
+    ),
+    'classes' => array(),
+    'wrappers' => array(
+      'ds_content' => 'div',
+    ),
+    'layout_wrapper' => 'div',
+    'layout_attributes' => '',
+    'layout_attributes_merge' => TRUE,
+    'layout_link_attribute' => FALSE,
+    'layout_link_custom' => '',
+  );
+  $export['comment|comment_node_innovation|form'] = $ds_layout;
+
+  $ds_layout = new stdClass();
+  $ds_layout->api_version = 1;
   $ds_layout->id = 'field_collection_item|field_innovation_non_references|default';
   $ds_layout->entity_type = 'field_collection_item';
   $ds_layout->bundle = 'field_innovation_non_references';
