@@ -18,7 +18,7 @@ function gie_innovation_ds_field_settings_info() {
   $ds_fieldsetting->view_mode = 'default';
   $ds_fieldsetting->settings = array(
     'links' => array(
-      'weight' => '4',
+      'weight' => '3',
       'label' => 'hidden',
       'format' => 'default',
     ),
@@ -88,15 +88,13 @@ function gie_innovation_ds_layout_settings_info() {
       ),
       'main_content' => array(
         1 => 'post_date',
-        2 => 'subject_field',
-        3 => 'comment_body',
-        4 => 'links',
+        2 => 'comment_body',
+        3 => 'links',
       ),
     ),
     'fields' => array(
       'author' => 'media',
       'post_date' => 'main_content',
-      'subject_field' => 'main_content',
       'comment_body' => 'main_content',
       'links' => 'main_content',
     ),
