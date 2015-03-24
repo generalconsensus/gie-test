@@ -11,12 +11,12 @@ $comment_form = render($content['comment_form']);
 <section<?php print $attributes; ?>>
   <?php if ($comments && $node->type != 'forum'): ?>
     <?php print render($title_prefix); ?>
-    <!--<h2<?php print $title_attributes ?>><?php print t('Discuss'); ?></h2>-->
+    <h2<?php print $title_attributes ?>><?php print t('Discuss'); ?></h2>
     <?php print render($title_suffix); ?>
   <?php endif; ?>
 
   <?php if ($comment_form): ?>
-    <h2<?php print $form_title_attributes ?>><?php print t('Discuss'); ?></h2>
+    <!--<h2<?php print $form_title_attributes ?>><?php print t('Discuss'); ?></h2>-->
     <?php print $comment_form; ?>
   <?php endif; ?>
 
