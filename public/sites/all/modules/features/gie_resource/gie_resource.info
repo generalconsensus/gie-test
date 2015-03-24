@@ -69,6 +69,7 @@ features[variable][] = menu_parent_resource
 features[variable][] = node_options_resource
 features[variable][] = node_preview_resource
 features[variable][] = node_submitted_resource
+features[variable][] = simplify_comments_resource
 features_exclude[dependencies][features] = features
 features_exclude[dependencies][options] = options
 features_exclude[dependencies][strongarm] = strongarm
