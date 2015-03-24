@@ -114,3 +114,45 @@ function _gie_user_user_email($field) {
 
   return $link;
 }
+
+/**
+ * Implements hook_field_formatter_info().
+ * - Create formatter for 'City, State, Country'
+ */
+function gie_user_field_formatter_info() {
+  return array(
+    'city_state_country' => array(
+      'label' => t('City, State, Country'),
+      'field types' => array('addressfield'),
+    ),
+  );
+}
+
+/**
+ * Implements hook_field_formatter_view().
+ * - Display for 'City, State, Country' formatter
+ */
+function gie_user_field_formatter_view($entity_type, $entity, $field, $instance, $langcode, $items, $display) {
+  $settings = $display['settings'];
+  $element = array();
+
+  if ($display['type'] == 'city_state_country') {
+    foreach ($items as $delta => $item) {
+      // Get city, state, and country ISO code from Address field
+      $city = $item['locality'];
+      $state = $item['administrative_area'];
+      $country_iso = $item['country'];
+
+      // Get list of countries
+      $countries = _addressfield_country_options_list();
+
+      // Get full name of country based on country code
+      $country = $countries[$country_iso];
+
+      // Output for field: City, State, Country
+      $element[$delta] = array('#markup' => $city . ', ' . $state . ', ' . $country);
+    }
+  }
+
+  return $element;
+}
