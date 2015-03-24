@@ -1,6 +1,6 @@
 .region-footer {
   @extend %clearfix;
-  padding: 2em 0 0 0;
+  padding-top: 2em;
   .pane__title,
   .block__title {
     font-size: em(18px);
