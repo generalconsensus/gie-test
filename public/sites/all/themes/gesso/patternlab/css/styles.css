@@ -2264,7 +2264,7 @@ header.header {
 
 /* line 1, ../sass/partials/components/_region-footer.scss */
 .region-footer {
-  padding: 2em 0 0 0;
+  padding-top: 2em;
 }
 /* line 5, ../sass/partials/components/_region-footer.scss */
 .region-footer .pane__title,
@@ -2564,9 +2564,21 @@ tr.drag-previous {
     width: 25%;
   }
 }
-/* line 19, ../sass/partials/components/view/_view--partners.scss */
+/* line 18, ../sass/partials/components/view/_view--partners.scss */
+.view--partners .view__footer {
+  clear: both;
+}
+/* line 20, ../sass/partials/components/view/_view--partners.scss */
 .view--partners .view__footer .button {
   margin-right: 1em;
+}
+@media (max-width: 31.25em) {
+  /* line 23, ../sass/partials/components/view/_view--partners.scss */
+  .view--partners .view__footer .view__all {
+    display: block;
+    margin-bottom: 1em;
+    margin-top: 1em;
+  }
 }
 
 /* line 1, ../sass/partials/components/_views-row.scss */

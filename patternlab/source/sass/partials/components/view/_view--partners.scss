@@ -16,8 +16,16 @@
     }
   }
   .view__footer {
+    clear: both;
     .button {
       margin-right: 1em;
+    }
+    .view__all {
+      @include breakpoint(max-width 500px) {
+        display: block;
+        margin-bottom: 1em;
+        margin-top: 1em;
+      }
     }
   }
 }
