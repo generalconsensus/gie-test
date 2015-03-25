@@ -17,7 +17,13 @@ function gie_user_ctools_plugin_api($module = NULL, $api = NULL) {
   if ($module == "panelizer" && $api == "panelizer") {
     return array("version" => "1");
   }
+  if ($module == "panels_mini" && $api == "panels_default") {
+    return array("version" => "1");
+  }
   if ($module == "pm_existing_pages" && $api == "pm_existing_pages") {
+    return array("version" => "1");
+  }
+  if ($module == "quicktabs" && $api == "quicktabs") {
     return array("version" => "1");
   }
   if ($module == "strongarm" && $api == "strongarm") {
