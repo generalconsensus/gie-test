@@ -162,7 +162,7 @@ function gie_user_field_formatter_view($entity_type, $entity, $field, $instance,
  * - Sort 'Recently posted' view by combined date.
  */
 Function gie_user_views_query_alter(&$view, &$query) {
-  if ($view->name == 'recently_posted' && $view->current_display == 'panel_pane_1') {
+  if ($view->name == 'recently_posted' && $view->current_display == 'recently_posted') {
     // Add the fields we need
     $fields = array(
       'field_data_field_resource_date' => 'field_resource_date_value',
