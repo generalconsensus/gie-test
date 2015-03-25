@@ -97,6 +97,7 @@ features[variable][] = panelizer_user:user:page_manager_selection
 features[variable][] = pm_existing_pages_disabled_user_registration
 features[variable][] = user_pictures
 features[variable][] = user_register
+features[views_view][] = communities
 features[views_view][] = recent_conversations
 features[views_view][] = recently_posted
 features_exclude[dependencies][gie_taxonomies] = gie_taxonomies

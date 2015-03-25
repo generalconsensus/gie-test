@@ -90,6 +90,25 @@ function gie_user_panelizer_defaults() {
     $display->content['new-90e97b98-2e97-47f4-bff0-220e25e022ff'] = $pane;
     $display->panels['bottom_sidebar'][1] = 'new-90e97b98-2e97-47f4-bff0-220e25e022ff';
     $pane = new stdClass();
+    $pane->pid = 'new-d545e49f-bd22-4040-855a-b13cd7d4104f';
+    $pane->panel = 'bottom_sidebar';
+    $pane->type = 'views_panes';
+    $pane->subtype = 'communities-communities_pane';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array();
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
+    $pane->css = array();
+    $pane->extras = array();
+    $pane->position = 2;
+    $pane->locks = array();
+    $pane->uuid = 'd545e49f-bd22-4040-855a-b13cd7d4104f';
+    $display->content['new-d545e49f-bd22-4040-855a-b13cd7d4104f'] = $pane;
+    $display->panels['bottom_sidebar'][2] = 'new-d545e49f-bd22-4040-855a-b13cd7d4104f';
+    $pane = new stdClass();
     $pane->pid = 'new-7da35083-36e5-4daf-8502-4544b81b0101';
     $pane->panel = 'hero';
     $pane->type = 'page_title';
