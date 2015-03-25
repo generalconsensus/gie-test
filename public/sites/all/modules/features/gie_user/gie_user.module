@@ -156,3 +156,30 @@ function gie_user_field_formatter_view($entity_type, $entity, $field, $instance,
 
   return $element;
 }
+
+/**
+ * Implements hook_views_query_alter().
+ * - Sort 'Recently posted' view by combined date.
+ */
+Function gie_user_views_query_alter(&$view, &$query) {
+  if ($view->name == 'recently_posted' && $view->current_display == 'panel_pane_1') {
+    // Add the fields we need
+    $fields = array(
+      'field_data_field_resource_date' => 'field_resource_date_value',
+      'node' => 'created',
+    );
+    foreach ($fields as $table => $field) {
+      $query->add_field($table, $field);
+    }
+
+    // Add our custom ORDER BY CASE. Note that we convert all the datefields to timestamps.
+    $query->orderby = array(
+      array(
+        'field' => 'CASE
+          WHEN field_data_field_resource_date.field_resource_date_value THEN unix_timestamp(field_data_field_resource_date.field_resource_date_value)
+          ELSE node.created END',
+        'direction' => 'DESC',
+      )
+    );
+  }
+}

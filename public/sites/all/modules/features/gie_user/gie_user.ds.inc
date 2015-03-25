@@ -80,13 +80,13 @@ function gie_user_ds_layout_settings_info() {
   $ds_layout->entity_type = 'user';
   $ds_layout->bundle = 'user';
   $ds_layout->view_mode = 'full';
-  $ds_layout->layout = 'ds_3col_equal_width';
+  $ds_layout->layout = 'ds_2col';
   $ds_layout->settings = array(
     'regions' => array(
       'left' => array(
         0 => 'field_user_photo',
       ),
-      'middle' => array(
+      'right' => array(
         1 => 'user_full_name',
         2 => 'field_user_company',
         3 => 'field_user_title',
@@ -96,26 +96,21 @@ function gie_user_ds_layout_settings_info() {
         7 => 'flag_follow',
         8 => 'user_email',
       ),
-      'right' => array(
-        9 => 'field_user_motto',
-      ),
     ),
     'fields' => array(
       'field_user_photo' => 'left',
-      'user_full_name' => 'middle',
-      'field_user_company' => 'middle',
-      'field_user_title' => 'middle',
-      'field_user_address' => 'middle',
-      'user_member_since' => 'middle',
-      'field_user_type' => 'middle',
-      'flag_follow' => 'middle',
-      'user_email' => 'middle',
-      'field_user_motto' => 'right',
+      'user_full_name' => 'right',
+      'field_user_company' => 'right',
+      'field_user_title' => 'right',
+      'field_user_address' => 'right',
+      'user_member_since' => 'right',
+      'field_user_type' => 'right',
+      'flag_follow' => 'right',
+      'user_email' => 'right',
     ),
     'classes' => array(),
     'wrappers' => array(
       'left' => 'div',
-      'middle' => 'div',
       'right' => 'div',
     ),
     'layout_wrapper' => 'div',
