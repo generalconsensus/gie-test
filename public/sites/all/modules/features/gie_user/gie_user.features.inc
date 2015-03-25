@@ -26,6 +26,13 @@ function gie_user_ctools_plugin_api($module = NULL, $api = NULL) {
 }
 
 /**
+ * Implements hook_views_api().
+ */
+function gie_user_views_api($module = NULL, $api = NULL) {
+  return array("api" => "3.0");
+}
+
+/**
  * Implements hook_flag_default_flags().
  */
 function gie_user_flag_default_flags() {
@@ -57,11 +64,11 @@ function gie_user_flag_default_flags() {
     'show_contextual_link' => 0,
     'show_on_profile' => 1,
     'access_uid' => 'others',
-    'api_version' => 3,
     'module' => 'gie_user',
     'locked' => array(
       0 => 'name',
     ),
+    'api_version' => 3,
   );
   return $flags;
 
