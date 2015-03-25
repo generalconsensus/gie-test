@@ -128,3 +128,11 @@ function gie_general_update_7010() {
 
   variable_set('date_format_gie_general_slash_no_time', 'n/j/Y');
 }
+
+/**
+ * Delete funding fields text field.
+ */
+function gie_general_update_7011() {
+  field_delete_field('field_funding_source');
+  field_delete_field('field_funding_grant');
+}
