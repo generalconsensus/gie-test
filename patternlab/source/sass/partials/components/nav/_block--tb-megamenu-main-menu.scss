@@ -24,11 +24,41 @@
         padding: 0;
         &.dropdown {
           position: relative;
+          > a {
+            &:after {
+              @include svg-background(chevron-thin-down);
+              content: "";
+              display: inline-block;
+              height: 10px;
+              margin-left: 8px;
+              width: 10px;
+            }
+            &:hover:after, &:focus:after {
+              @include svg-background(chevron-thin-down-white);
+            }
+          }
         }
-        &.active-trail
+        &:first-child {
+          > a:before {
+            @include svg-background(circle-plus);
+            content: "";
+            display: inline-block;
+            height: 22px;
+            margin-right: 8px;
+            position: relative;
+            top: 5px;
+            width: 22px;
+          }
+        }
+        &.active-trail,
         &.open {
-          background: $orange !important;
-          color: #fff !important;
+          > a {
+            background: $orange !important;
+            color: #fff !important;
+            &:after {
+              @include svg-background(chevron-thin-down-white);
+            }
+          }
         }
         > a {
           background: none;
@@ -40,13 +70,34 @@
           margin: 0;
           padding: 0 20px;
           text-decoration: none;
+          text-transform: uppercase;
           &:hover, &:focus {
             background: $orange !important;
             color: #fff !important;
           }
         }
         // the dropdown
-        .dropdown-menu {
+        .tb-megamenu-submenu {
+          border: 0;
+          border-top: 8px solid $orange;
+          .lt-ie9 & {
+            border: 1px solid $gray;
+          }
+          @include box-shadow(0 2px 2px rgba(0,0,0,0.2));
+          padding: 1em;
+          .tb-megamenu-column-inner {
+            padding: 0;
+          }
+          .tb-megamenu-subnav {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            > .tb-megamenu-item {
+              a {
+                border: 0;
+              }
+            }
+          }
 
         }
       }
