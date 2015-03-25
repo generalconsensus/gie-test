@@ -35,10 +35,10 @@ function gie_user_strongarm() {
     'extra_fields' => array(
       'form' => array(
         'ckeditor' => array(
-          'weight' => '10',
+          'weight' => '9',
         ),
         'account' => array(
-          'weight' => '-10',
+          'weight' => '0',
         ),
         'timezone' => array(
           'weight' => '6',
