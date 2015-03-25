@@ -116,6 +116,9 @@ function gie_resource_strongarm() {
       'revision' => array(
         'custom_settings' => FALSE,
       ),
+      'teaser_date' => array(
+        'custom_settings' => TRUE,
+      ),
     ),
     'extra_fields' => array(
       'form' => array(
@@ -123,7 +126,18 @@ function gie_resource_strongarm() {
           'weight' => '14',
         ),
       ),
-      'display' => array(),
+      'display' => array(
+        'sharethis' => array(
+          'default' => array(
+            'weight' => '10',
+            'visible' => TRUE,
+          ),
+          'teaser_date' => array(
+            'weight' => '18',
+            'visible' => FALSE,
+          ),
+        ),
+      ),
     ),
   );
   $export['field_bundle_settings_node__resource'] = $strongarm;
