@@ -17,7 +17,7 @@ function gie_user_strongarm() {
   $strongarm->value = array(
     'view_modes' => array(
       'full' => array(
-        'custom_settings' => FALSE,
+        'custom_settings' => TRUE,
       ),
       'diff_standard' => array(
         'custom_settings' => FALSE,
@@ -33,7 +33,17 @@ function gie_user_strongarm() {
       ),
     ),
     'extra_fields' => array(
-      'form' => array(),
+      'form' => array(
+        'ckeditor' => array(
+          'weight' => '10',
+        ),
+        'account' => array(
+          'weight' => '-10',
+        ),
+        'timezone' => array(
+          'weight' => '6',
+        ),
+      ),
       'display' => array(
         'summary' => array(
           'default' => array(
@@ -41,12 +51,22 @@ function gie_user_strongarm() {
             'visible' => TRUE,
           ),
           'user_teaser' => array(
-            'weight' => '9',
+            'weight' => '10',
             'visible' => FALSE,
           ),
           'user_teaser_summary' => array(
-            'weight' => '10',
+            'weight' => '11',
             'visible' => FALSE,
+          ),
+          'full' => array(
+            'weight' => '11',
+            'visible' => FALSE,
+          ),
+        ),
+        'flag_follow' => array(
+          'full' => array(
+            'weight' => '7',
+            'visible' => TRUE,
           ),
         ),
       ),

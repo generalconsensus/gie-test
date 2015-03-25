@@ -107,10 +107,32 @@ function gie_general_update_7009() {
 }
 
 /**
- * Delete funding fields text field.
+ * Set 'gie_general_short_no_time' date format and date type.
  */
 function gie_general_update_7010() {
+  db_insert('date_formats')
+    ->fields(array(
+        'format' => 'n/j/Y',
+        'type' => 'custom',
+        'locked' => 0,
+      ))
+    ->execute();
+
+  db_insert('date_format_type')
+    ->fields(array(
+        'type' => 'gie_general_slash_no_time',
+        'title' => 'Slash (no time)',
+        'locked' => 0,
+      ))
+    ->execute();
+
+  variable_set('date_format_gie_general_slash_no_time', 'n/j/Y');
+}
+
+/**
+ * Delete funding fields text field.
+ */
+function gie_general_update_7011() {
   field_delete_field('field_funding_source');
   field_delete_field('field_funding_grant');
 }
-

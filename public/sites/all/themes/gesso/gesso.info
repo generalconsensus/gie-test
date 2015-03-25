@@ -27,6 +27,7 @@ regions[navigation] = 'Navigation'
 regions[preface] = 'Preface'
 regions[content] = 'Content'
 regions[postscript] = 'Postscript'
+regions[footerbar] = 'Footer bar'
 regions[footer] = 'Footer'
 regions[page_bottom] = 'Page bottom'
 
@@ -36,7 +37,7 @@ regions[page_bottom] = 'Page bottom'
 
 scripts[] = 'js/mobile-menu.js'
 scripts[] = 'js/skiplinks.js'
-;scripts[] = 'js/scripts.js'
+scripts[] = 'js/scripts.js'
 
 ; ========================================
 ; Plugins

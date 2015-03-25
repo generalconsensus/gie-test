@@ -26,29 +26,29 @@ function gie_general_context_default_contexts() {
   $context->reactions = array(
     'block' => array(
       'blocks' => array(
-        'blockify-blockify-site-name' => array(
-          'module' => 'blockify',
-          'delta' => 'blockify-site-name',
-          'region' => 'utility',
-          'weight' => '-10',
-        ),
         'system-user-menu' => array(
           'module' => 'system',
           'delta' => 'user-menu',
           'region' => 'header',
           'weight' => '-10',
         ),
+        'blockify-blockify-site-name' => array(
+          'module' => 'blockify',
+          'delta' => 'blockify-site-name',
+          'region' => 'navigation',
+          'weight' => '-10',
+        ),
         'tb_megamenu-main-menu' => array(
           'module' => 'tb_megamenu',
           'delta' => 'main-menu',
           'region' => 'navigation',
-          'weight' => '-10',
+          'weight' => '-9',
         ),
         'search-form' => array(
           'module' => 'search',
           'delta' => 'form',
           'region' => 'navigation',
-          'weight' => '-9',
+          'weight' => '-8',
         ),
         'blockify-blockify-messages' => array(
           'module' => 'blockify',
@@ -59,8 +59,8 @@ function gie_general_context_default_contexts() {
         'menu-menu-footer-menu' => array(
           'module' => 'menu',
           'delta' => 'menu-footer-menu',
-          'region' => 'footer',
-          'weight' => '-19',
+          'region' => 'footerbar',
+          'weight' => '-10',
         ),
         'pane-about_the_exchange' => array(
           'module' => 'pane',

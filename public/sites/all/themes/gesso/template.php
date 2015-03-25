@@ -30,3 +30,11 @@ require_once dirname(__FILE__) . '/includes/progress-bar.inc';
 require_once dirname(__FILE__) . '/includes/region.inc';
 require_once dirname(__FILE__) . '/includes/user.inc';
 require_once dirname(__FILE__) . '/includes/views.inc';
+
+/*
+ * Comment form alter
+ * Change submit button to say comment
+ */
+function gesso_form_comment_form_alter(&$form, &$form_state) {
+    $form['actions']['submit']['#value'] = t('Comment');
+}
