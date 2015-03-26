@@ -120,5 +120,6 @@ features[views_view][] = recently_posted
 features[views_view][] = user_organizations
 features[views_view][] = user_programs
 features[views_view][] = user_regions
+features[views_view][] = user_resources
 features_exclude[dependencies][gie_taxonomies] = gie_taxonomies
 features_exclude[dependencies][gie_user] = gie_user

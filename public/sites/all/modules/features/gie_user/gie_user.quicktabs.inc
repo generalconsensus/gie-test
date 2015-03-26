@@ -27,11 +27,12 @@ function gie_user_quicktabs_default_quicktabs() {
       'type' => 'block',
     ),
     1 => array(
-      'bid' => 'blockify_delta_blockify-logo',
-      'hide_title' => 1,
-      'title' => 'Test',
+      'vid' => 'user_resources',
+      'display' => 'resources',
+      'args' => '',
+      'title' => 'Resources',
       'weight' => '-99',
-      'type' => 'block',
+      'type' => 'view',
     ),
   );
   $quicktabs->renderer = 'quicktabs';
@@ -41,7 +42,7 @@ function gie_user_quicktabs_default_quicktabs() {
   // Translatables
   // Included for use with string extractors like potx.
   t('Overview');
-  t('Test');
+  t('Resources');
   t('User profile tabs');
 
   $export['user_profile_tabs'] = $quicktabs;
