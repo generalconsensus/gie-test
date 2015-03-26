@@ -53,7 +53,7 @@ module.exports = function(grunt) {
           patternlab: {
             tasks: [
               'shell:patternlabWatchReload',
-              'watch:patternlabSass'
+              'simple-watch:patternlabSass'
             ],
             options: {
               logConcurrentOutput: true

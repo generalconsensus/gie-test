@@ -12,15 +12,15 @@
       var $mobileNav = $('<nav class="mobile-nav" role="navigation"></nav>'),
           $mobileBar = $('<div class="mobile-nav__bar"><a class="mobile-nav__button mobile-nav__button--home" href="/" rel="home"><span class="mobile-nav__icon mobile-nav__icon--home">Home</span></a><button class="mobile-nav__button js-mobile-menu-button mobile-nav__button--menu"><span class="mobile-nav__icon mobile-nav__icon--menu">Menu</span></button><button class="mobile-nav__button js-mobile-search-button mobile-nav__button--search"><span class="mobile-nav__icon mobile-nav__icon--search">Search</span></button></div>'),
           $mobileLinks = $('<div class="mobile-nav__links element-hidden"></div>'),
-          $mainMenu = $('.region-navigation', context).find('.nav--main-menu, .block--system-main-menu .nav').not('.contextual-links').first().clone(),
-          $isSuperfish = ($mainMenu.hasClass('sf-menu')) ? true : false;
-
+          $mainMenu = $('.region-navigation', context).find('.nav--main-menu, .block--system-main-menu .nav, .block-tb-megamenu-main-menu .nav').not('.contextual-links').first().clone(),
+          $isSuperfish = ($mainMenu.hasClass('sf-menu')) ? true : false,
+          $isMegaMenu = ($mainMenu.hasClass('tb-megamenu-nav')) ? true : false;
       // Only create mobile menu if there is a main menu.
       if ($mainMenu.length > 0) {
 
         // Remove menu id, add class, and format subnav menus.
         $mainMenu.removeAttr('id').attr('class', 'nav nav--mobile').find('ul').each(function () {
-          var $parentLink = $(this).prev('a');
+          var $parentLink = $(this).closest('a');
 
           // Copy parent link to subnav list.
           $parentLink.clone().prependTo(this).wrap('<li class="nav__item"></li>');
@@ -31,13 +31,13 @@
           });
 
           // Remove inline styles from Superfish.
-          if ($isSuperfish) {
+          if ($isSuperfish || $isMegaMenu) {
             $(this).removeAttr('style').addClass('nav--subnav').find('ul, li, a').removeAttr('style');
           }
         });
 
         // Set classes on superfish items.
-        if ($isSuperfish) {
+        if ($isSuperfish || $isMegaMenu) {
           $mainMenu.find('li').each(function(){
             $(this).attr('class', 'nav__item').find('a').attr('class', 'nav__link');
           });
@@ -47,7 +47,7 @@
         $mainMenu.find('ul ul').remove();
 
         // add utility links
-        $('.nav--utility-menu .nav__item').clone().appendTo($mainMenu);
+        $('.block--system-user-menu > ul.nav .nav__item').clone().appendTo($mainMenu);
 
         // Insert the cloned menus into the mobile menu container.
         $mainMenu.appendTo($mobileLinks);

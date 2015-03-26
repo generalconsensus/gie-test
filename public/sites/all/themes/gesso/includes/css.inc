@@ -45,4 +45,25 @@ function gesso_css_alter(&$css) {
       $css[$css_path]['data'] = $theme_path . '/css/overrides/toolbar.css';
     }
   }
+
+  // Replace tb_megamenu css.
+  if (module_exists('tb_megamenu')) {
+
+    $css_path = drupal_get_path('module', 'tb_megamenu') . '/css/bootstrap.css';
+    if (isset($css[$css_path])) {
+      $css[$css_path]['data'] = $theme_path . '/css/overrides/tb_megamenu/bootstrap.css';
+    }
+    $css_path = drupal_get_path('module', 'tb_megamenu') . '/css/base.css';
+    if (isset($css[$css_path])) {
+      $css[$css_path]['data'] = $theme_path . '/css/overrides/tb_megamenu/base.css';
+    }
+    $css_path = drupal_get_path('module', 'tb_megamenu') . '/css/default.css';
+    if (isset($css[$css_path])) {
+      $css[$css_path]['data'] = $theme_path . '/css/overrides/tb_megamenu/default.css';
+    }
+    $css_path = drupal_get_path('module', 'tb_megamenu') . '/css/compatibility.css';
+    if (isset($css[$css_path])) {
+      $css[$css_path]['data'] = $theme_path . '/css/overrides/tb_megamenu/compatibility.css';
+    }
+  }
 }
