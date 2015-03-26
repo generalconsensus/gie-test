@@ -1,5 +1,52 @@
+%view--innovation-counters__icon-field {
+  font-size: em(14px);
+  padding: 0 0 1em 35px;
+  position: relative;
+  &:before {
+    content: "";
+    display: block;
+    left: 0;
+    position: absolute;
+    top: 5px;
+  }
+}
+
 .view--innovation-counters {
-  .views-label-comment-count {
-  
+  padding-left: 1.5em;
+  .views-field {
+    clear: both;
+    display: inline-block;
+    float: left;
+    .views-label {
+      float: right;
+      padding-left: 1em;
+    }
+    .field-content {
+
+    }
+  }
+  .views-field-comment-count {
+    @extend %view--innovation-counters__icon-field;
+    &:before {
+      @include svg-background(icon-comment);
+      height: 17px;
+      width: 20px;
+    }
+  }
+  .views-field-count {
+    @extend %view--innovation-counters__icon-field;
+    &:before {
+      @include svg-background(icon-favorite);
+      height: 17px;
+      width: 18px;
+    }
+  }
+  .views-field-delta {
+    @extend %view--innovation-counters__icon-field;
+    &:before {
+      @include svg-background(icon-member);
+      height: 17px;
+      width: 17px;
+    }
   }
 }
