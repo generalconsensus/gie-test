@@ -119,6 +119,9 @@ function gie_resource_strongarm() {
       'teaser_date' => array(
         'custom_settings' => TRUE,
       ),
+      'listing' => array(
+        'custom_settings' => TRUE,
+      ),
     ),
     'extra_fields' => array(
       'form' => array(
@@ -134,6 +137,10 @@ function gie_resource_strongarm() {
           ),
           'teaser_date' => array(
             'weight' => '18',
+            'visible' => FALSE,
+          ),
+          'listing' => array(
+            'weight' => '7',
             'visible' => FALSE,
           ),
         ),
