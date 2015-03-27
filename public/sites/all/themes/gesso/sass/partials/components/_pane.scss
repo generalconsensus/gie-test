@@ -1,6 +1,11 @@
+.pane {
+  padding: 0 0 2em 0;
+}
+
 .pane__title {
   border-bottom: 1px solid $border-color;
   color: $primary-text-color;
+  font-size: em($font-size-xl);
   font-weight: normal;
   margin: 0 0 1em 0;
   padding: 0 0 0.5em 0;
