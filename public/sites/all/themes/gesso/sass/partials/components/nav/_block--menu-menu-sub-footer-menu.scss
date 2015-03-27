@@ -6,7 +6,9 @@
 
     .nav__item {}
 
-    .nav__link {}
+    .nav__link {
+      font-weight: normal;
+    }
 
     .region-footer & { // layout when in footer
       @include breakpoint(max-width 699px) {

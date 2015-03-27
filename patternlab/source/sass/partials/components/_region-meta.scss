@@ -8,4 +8,11 @@
     border-color: #fff;
     color: #fff;
   }
+
+  a {
+    color: $lightorange;
+    &:hover, &:focus {
+      color: $gray;
+    }
+  }
 }
