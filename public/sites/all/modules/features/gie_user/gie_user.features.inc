@@ -79,3 +79,27 @@ function gie_user_flag_default_flags() {
   return $flags;
 
 }
+
+/**
+ * Implements hook_image_default_styles().
+ */
+function gie_user_image_default_styles() {
+  $styles = array();
+
+  // Exported image style: user-small.
+  $styles['user-small'] = array(
+    'label' => 'user-small',
+    'effects' => array(
+      1 => array(
+        'name' => 'image_scale_and_crop',
+        'data' => array(
+          'width' => 78,
+          'height' => 78,
+        ),
+        'weight' => 1,
+      ),
+    ),
+  );
+
+  return $styles;
+}
