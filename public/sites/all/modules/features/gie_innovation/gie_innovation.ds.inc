@@ -299,6 +299,38 @@ function gie_innovation_ds_layout_settings_info() {
 
   $ds_layout = new stdClass();
   $ds_layout->api_version = 1;
+  $ds_layout->id = 'node|innovation|listing';
+  $ds_layout->entity_type = 'node';
+  $ds_layout->bundle = 'innovation';
+  $ds_layout->view_mode = 'listing';
+  $ds_layout->layout = 'ds_reset';
+  $ds_layout->settings = array(
+    'regions' => array(
+      'ds_content' => array(
+        0 => 'field_innovation_image',
+        1 => 'title_field',
+        2 => 'field_innovation_desc',
+      ),
+    ),
+    'fields' => array(
+      'field_innovation_image' => 'ds_content',
+      'title_field' => 'ds_content',
+      'field_innovation_desc' => 'ds_content',
+    ),
+    'classes' => array(),
+    'wrappers' => array(
+      'ds_content' => 'div',
+    ),
+    'layout_wrapper' => 'div',
+    'layout_attributes' => '',
+    'layout_attributes_merge' => TRUE,
+    'layout_link_attribute' => FALSE,
+    'layout_link_custom' => '',
+  );
+  $export['node|innovation|listing'] = $ds_layout;
+
+  $ds_layout = new stdClass();
+  $ds_layout->api_version = 1;
   $ds_layout->id = 'node|innovation|teaser_date';
   $ds_layout->entity_type = 'node';
   $ds_layout->bundle = 'innovation';
