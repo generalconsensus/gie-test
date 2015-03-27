@@ -157,26 +157,27 @@ function gie_user_ds_layout_settings_info() {
   $ds_layout->entity_type = 'user';
   $ds_layout->bundle = 'user';
   $ds_layout->view_mode = 'user_teaser_summary';
-  $ds_layout->layout = 'ds_2col';
+  $ds_layout->layout = 'slat';
   $ds_layout->settings = array(
     'regions' => array(
-      'left' => array(
+      'media' => array(
         0 => 'field_user_photo',
         1 => 'user_full_name',
       ),
-      'right' => array(
+      'main_content' => array(
         2 => 'field_user_summary',
       ),
     ),
     'fields' => array(
-      'field_user_photo' => 'left',
-      'user_full_name' => 'left',
-      'field_user_summary' => 'right',
+      'field_user_photo' => 'media',
+      'user_full_name' => 'media',
+      'field_user_summary' => 'main_content',
     ),
     'classes' => array(),
     'wrappers' => array(
-      'left' => 'div',
-      'right' => 'div',
+      'header' => 'div',
+      'media' => 'div',
+      'main_content' => 'div',
     ),
     'layout_wrapper' => 'div',
     'layout_attributes' => '',

@@ -6,7 +6,7 @@
 #admin-menu {
   background: #000;
   color: #fff;
-  font-size: em($font-size-sm);
+  font-size: em($font-size-md);
   left: 0;
   line-height: 1.75;
   padding: 0.5em 1em;
@@ -43,6 +43,7 @@
       border: 2px solid transparent;
       color: #fff;
       display: block;
+      font-weight: normal;
       margin: 0;
       outline: 0;
       padding: 0 0.75em;
@@ -78,6 +79,7 @@
     span {
       color: #fff;
       display: block;
+      font-weight: normal;
       margin: 0;
       padding: 0 0.5em;
       text-decoration: none;

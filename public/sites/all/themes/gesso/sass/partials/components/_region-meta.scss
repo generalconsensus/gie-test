@@ -8,4 +8,12 @@
     border-color: #fff;
     color: #fff;
   }
+
+  a {
+    color: $lightorange;
+    font-weight: normal;
+    &:hover, &:focus {
+      color: $gray;
+    }
+  }
 }

@@ -68,6 +68,10 @@ function gie_user_strongarm() {
             'weight' => '7',
             'visible' => TRUE,
           ),
+          'user_teaser_summary' => array(
+            'weight' => '10',
+            'visible' => FALSE,
+          ),
         ),
       ),
     ),

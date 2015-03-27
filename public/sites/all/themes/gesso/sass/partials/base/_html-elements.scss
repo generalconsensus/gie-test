@@ -332,6 +332,53 @@ ul {
   }
 }
 
+ul {
+  .pane__content & { // lists inside content
+    padding: 0;
+    > li {
+      list-style: none;
+      list-style-position: outside;
+      margin: 0;
+      padding-left: 17px;
+      position: relative;
+      &:before {
+        color: $orange;
+        content: "\2022\a0\a0";
+        font-size: 14px;
+        left: 0;
+        position: absolute;
+        top: -1px;
+        width: 17px;
+      }
+      ul {
+        padding: 0 0 0 1em; // LTR
+        [dir="rtl"] & {
+          padding: 0 1em 0 0;
+        }
+        > li { // reset child list items
+          list-style: square;
+          padding-left: 0;
+          position: static;
+          &:before {
+            content: "";
+            position: static;
+            width: auto;
+          }
+          ul > li {
+            list-style: disc;
+            ul > li {
+              list-style: circle;
+              ul > li {
+                list-style: square;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
 var {}
 
 video {}
