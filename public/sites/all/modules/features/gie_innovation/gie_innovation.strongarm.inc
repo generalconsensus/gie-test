@@ -142,6 +142,9 @@ function gie_innovation_strongarm() {
       'teaser_date' => array(
         'custom_settings' => TRUE,
       ),
+      'listing' => array(
+        'custom_settings' => TRUE,
+      ),
     ),
     'extra_fields' => array(
       'form' => array(
@@ -161,6 +164,10 @@ function gie_innovation_strongarm() {
           ),
           'teaser_date' => array(
             'weight' => '15',
+            'visible' => FALSE,
+          ),
+          'listing' => array(
+            'weight' => '9',
             'visible' => FALSE,
           ),
         ),

@@ -34,6 +34,14 @@ function gie_user_quicktabs_default_quicktabs() {
       'weight' => '-99',
       'type' => 'view',
     ),
+    2 => array(
+      'vid' => 'user_innovations',
+      'display' => 'innovations',
+      'args' => '',
+      'title' => 'Innovations',
+      'weight' => '-98',
+      'type' => 'view',
+    ),
   );
   $quicktabs->renderer = 'quicktabs';
   $quicktabs->style = 'nostyle';
@@ -41,6 +49,7 @@ function gie_user_quicktabs_default_quicktabs() {
 
   // Translatables
   // Included for use with string extractors like potx.
+  t('Innovations');
   t('Overview');
   t('Resources');
   t('User profile tabs');
