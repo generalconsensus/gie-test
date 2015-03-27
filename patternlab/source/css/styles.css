@@ -868,7 +868,7 @@ ul.panels-ipe-linkbar li {
   }
 }
 @media (min-width: 56.25em) {
-  /* line 32, ../sass/partials/layout/panels/_detail.scss */
+  /* line 29, ../sass/partials/layout/panels/_detail.scss */
   .l-panels-detail.box-first.box-second.box-third .l-box-first {
     width: 30.43478%;
     float: left;
@@ -876,7 +876,7 @@ ul.panels-ipe-linkbar li {
     margin-left: 0%;
     clear: none;
   }
-  /* line 33, ../sass/partials/layout/panels/_detail.scss */
+  /* line 30, ../sass/partials/layout/panels/_detail.scss */
   .l-panels-detail.box-first.box-second.box-third .l-box-second {
     width: 30.43478%;
     float: left;
@@ -884,7 +884,7 @@ ul.panels-ipe-linkbar li {
     margin-left: 34.78261%;
     clear: none;
   }
-  /* line 34, ../sass/partials/layout/panels/_detail.scss */
+  /* line 31, ../sass/partials/layout/panels/_detail.scss */
   .l-panels-detail.box-first.box-second.box-third .l-box-third {
     width: 30.43478%;
     float: right;
@@ -894,7 +894,7 @@ ul.panels-ipe-linkbar li {
   }
 }
 @media (min-width: 43.75em) {
-  /* line 39, ../sass/partials/layout/panels/_detail.scss */
+  /* line 36, ../sass/partials/layout/panels/_detail.scss */
   .l-panels-detail.box-first.box-second.box-third-empty .l-box-first {
     width: 47.82609%;
     float: left;
@@ -902,7 +902,7 @@ ul.panels-ipe-linkbar li {
     margin-left: 0%;
     clear: none;
   }
-  /* line 40, ../sass/partials/layout/panels/_detail.scss */
+  /* line 37, ../sass/partials/layout/panels/_detail.scss */
   .l-panels-detail.box-first.box-second.box-third-empty .l-box-second {
     width: 47.82609%;
     float: right;
@@ -912,7 +912,7 @@ ul.panels-ipe-linkbar li {
   }
 }
 @media (min-width: 43.75em) {
-  /* line 46, ../sass/partials/layout/panels/_detail.scss */
+  /* line 43, ../sass/partials/layout/panels/_detail.scss */
   .l-panels-detail.box-first.box-second-empty.box-third .l-box-first {
     width: 47.82609%;
     float: left;
@@ -920,7 +920,7 @@ ul.panels-ipe-linkbar li {
     margin-left: 0%;
     clear: none;
   }
-  /* line 47, ../sass/partials/layout/panels/_detail.scss */
+  /* line 44, ../sass/partials/layout/panels/_detail.scss */
   .l-panels-detail.box-first.box-second-empty.box-third .l-box-third {
     width: 47.82609%;
     float: right;
@@ -930,7 +930,7 @@ ul.panels-ipe-linkbar li {
   }
 }
 @media (min-width: 43.75em) {
-  /* line 53, ../sass/partials/layout/panels/_detail.scss */
+  /* line 50, ../sass/partials/layout/panels/_detail.scss */
   .l-panels-detail.box-first-empty.box-second.box-third .l-box-second {
     width: 47.82609%;
     float: left;
@@ -938,7 +938,7 @@ ul.panels-ipe-linkbar li {
     margin-left: 0%;
     clear: none;
   }
-  /* line 54, ../sass/partials/layout/panels/_detail.scss */
+  /* line 51, ../sass/partials/layout/panels/_detail.scss */
   .l-panels-detail.box-first-empty.box-second.box-third .l-box-third {
     width: 47.82609%;
     float: right;
@@ -2750,20 +2750,21 @@ tr.drag-previous {
 }
 /* line 18, ../sass/partials/components/view/_view--innovation-counters.scss */
 .view--innovation-counters .view__attachment-after .view {
+  clear: both;
   padding-left: 0;
 }
-/* line 22, ../sass/partials/components/view/_view--innovation-counters.scss */
+/* line 23, ../sass/partials/components/view/_view--innovation-counters.scss */
 .view--innovation-counters .views-field {
   clear: both;
   display: inline-block;
   float: left;
 }
-/* line 26, ../sass/partials/components/view/_view--innovation-counters.scss */
+/* line 27, ../sass/partials/components/view/_view--innovation-counters.scss */
 .view--innovation-counters .views-field .views-label {
   float: right;
   padding-left: 1em;
 }
-/* line 36, ../sass/partials/components/view/_view--innovation-counters.scss */
+/* line 37, ../sass/partials/components/view/_view--innovation-counters.scss */
 .view--innovation-counters .views-field-comment-count:before {
   background-image: url('../images/bg/icon-comment.png');
   background-image: -webkit-linear-gradient(transparent, transparent), url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4NCjwhLS0gR2VuZXJhdGVkIGJ5IEljb01vb24uaW8gLS0+DQo8IURPQ1RZUEUgc3ZnIFBVQkxJQyAiLS8vVzNDLy9EVEQgU1ZHIDEuMS8vRU4iICJodHRwOi8vd3d3LnczLm9yZy9HcmFwaGljcy9TVkcvMS4xL0RURC9zdmcxMS5kdGQiPg0KPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHdpZHRoPSIyMCIgaGVpZ2h0PSIxNyIgdmlld0JveD0iMCAwIDIwIDE3Ij4NCjxwYXRoIGQ9Ik0xOS42NCAwaC0xOS4wMDZjLTAuMzE3IDAtMC42MzQgMC4zMTctMC42MzQgMC42MzR2MTMuMDkzYzAgMC4zMTcgMC4zMTcgMC42MzQgMC42MzQgMC42MzRoMi4zMjN2MS45MDFjMCAwLjIxMSAwLjIxMSAwLjUyOCAwLjQyMiAwLjYzNCAwLjEwNiAwIDAuMjExIDAgMC4yMTEgMCAwLjIxMSAwIDAuMzE3LTAuMTA2IDAuNDIyLTAuMjExbDIuMzIzLTIuMzIzaDEzLjE5OWMwLjMxNyAwIDAuNjM0LTAuMzE3IDAuNjM0LTAuNjM0di0xMy4wOTNjMC4xMDYtMC4zMTctMC4yMTEtMC42MzQtMC41MjgtMC42MzR6TTE4LjkwMSAxMi45ODhoLTEyLjc3NmMtMC4yMTEgMC0wLjMxNyAwLjEwNi0wLjQyMiAwLjIxMWwtMS40NzggMS40Nzh2LTAuOTVjMC0wLjMxNy0wLjMxNy0wLjYzNC0wLjYzNC0wLjYzNGgtMi4zMjN2LTExLjgyNmgxNy42MzR2MTEuNzIxeiIgZmlsbD0iIzY5OGJiMSI+PC9wYXRoPg0KPC9zdmc+DQo=');
@@ -2771,7 +2772,7 @@ tr.drag-previous {
   height: 17px;
   width: 20px;
 }
-/* line 44, ../sass/partials/components/view/_view--innovation-counters.scss */
+/* line 45, ../sass/partials/components/view/_view--innovation-counters.scss */
 .view--innovation-counters .views-field-count:before {
   background-image: url('../images/bg/icon-favorite.png');
   background-image: -webkit-linear-gradient(transparent, transparent), url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4NCjwhLS0gR2VuZXJhdGVkIGJ5IEljb01vb24uaW8gLS0+DQo8IURPQ1RZUEUgc3ZnIFBVQkxJQyAiLS8vVzNDLy9EVEQgU1ZHIDEuMS8vRU4iICJodHRwOi8vd3d3LnczLm9yZy9HcmFwaGljcy9TVkcvMS4xL0RURC9zdmcxMS5kdGQiPg0KPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHdpZHRoPSIxOCIgaGVpZ2h0PSIxNyIgdmlld0JveD0iMCAwIDE4IDE3Ij4NCjxwYXRoIGQ9Ik0xMy4yIDBjLTEuOCAwLTMuMyAxLTQuMiAyLjQtMC44LTEuNC0yLjQtMi40LTQuMS0yLjQtMi43IDAtNC45IDIuMi00LjkgNC45IDAgMC43IDAuMSAxLjMgMC40IDEuOSAxLjMgMy42IDggOS45IDguMiAxMC4xIDAuMSAwIDAuMyAwLjEgMC40IDAuMSAwLjIgMCAwLjMtMC4xIDAuNC0wLjIgMC4zLTAuMyA2LjktNi41IDguMi0xMC4xIDAuMy0wLjYgMC40LTEuMiAwLjQtMS45IDAuMS0yLjYtMi4xLTQuOC00LjgtNC44ek0xNi41IDYuM2MtMSAyLjgtNS45IDcuNy03LjQgOS4yLTEuNi0xLjUtNi41LTYuNC03LjUtOS4zLTAuMi0wLjQtMC4zLTAuOS0wLjMtMS4zIDAtMiAxLjYtMy41IDMuNS0zLjVzMy41IDEuNSAzLjUgMy41YzAgMC40IDAuMyAwLjYgMC43IDAuNnMwLjYtMC4zIDAuNy0wLjZjMC0xLjkgMS42LTMuNCAzLjUtMy40IDIgMCAzLjUgMS42IDMuNSAzLjUgMC4xIDAuMyAwIDAuOC0wLjIgMS4zeiIgZmlsbD0iIzY5OGJiMSI+PC9wYXRoPg0KPC9zdmc+DQo=');
@@ -2779,7 +2780,7 @@ tr.drag-previous {
   height: 17px;
   width: 18px;
 }
-/* line 52, ../sass/partials/components/view/_view--innovation-counters.scss */
+/* line 53, ../sass/partials/components/view/_view--innovation-counters.scss */
 .view--innovation-counters .views-field-delta:before {
   background-image: url('../images/bg/icon-member.png');
   background-image: -webkit-linear-gradient(transparent, transparent), url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4NCjwhLS0gR2VuZXJhdGVkIGJ5IEljb01vb24uaW8gLS0+DQo8IURPQ1RZUEUgc3ZnIFBVQkxJQyAiLS8vVzNDLy9EVEQgU1ZHIDEuMS8vRU4iICJodHRwOi8vd3d3LnczLm9yZy9HcmFwaGljcy9TVkcvMS4xL0RURC9zdmcxMS5kdGQiPg0KPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHdpZHRoPSIxNyIgaGVpZ2h0PSIxNyIgdmlld0JveD0iMCAwIDE3IDE3Ij4NCjxwYXRoIGQ9Ik04LjYgMTBjMi44IDAgNS0yLjMgNS01IDAtMi44LTIuMy01LTUtNS0yLjggMC01IDIuMy01IDUgMCAyLjggMi4yIDUgNSA1ek04LjYgMS4zYzIgMCAzLjcgMS43IDMuNyAzLjdzLTEuNyAzLjctMy43IDMuN2MtMiAwLTMuNy0xLjctMy43LTMuN3MxLjYtMy43IDMuNy0zLjd6IiBmaWxsPSIjNjk4YmIxIj48L3BhdGg+DQo8cGF0aCBkPSJNMTcuMiAxMi40YzAtMS4zLTEuMS0yLjQtMi40LTIuNGgtMTIuNGMtMS4zIDAtMi40IDEuMS0yLjQgMi40IDAgMCAwIDAuMiAwIDAuM3YzLjZjMCAwLjQgMC4zIDAuNyAwLjcgMC43aDE1LjljMC40IDAgMC43LTAuMyAwLjctMC43di0zLjZjMCAwIDAtMC4xIDAtMC4xLTAuMS0wLjEtMC4xLTAuMS0wLjEtMC4yek0xNS45IDE1LjdoLTE0LjZjMCAwIDAtMy4xIDAtMy4xczAtMC4yIDAtMC4yYzAtMC42IDAuNS0xLjEgMS4xLTEuMWgxMi41YzAuNiAwIDEuMSAwLjUgMS4xIDEuMS0wLjEgMC4yLTAuMSAzLjMtMC4xIDMuM3oiIGZpbGw9IiM2OThiYjEiPjwvcGF0aD4NCjwvc3ZnPg0K');
