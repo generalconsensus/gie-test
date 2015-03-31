@@ -1476,6 +1476,12 @@ header.header {
   padding: 0.5em 0;
 }
 
+/* line 1, ../sass/partials/components/_innovation-stats.scss */
+.innovation-stats {
+  background: #f8f8f8;
+  border: 0;
+}
+
 /* line 4, ../sass/partials/components/_messages.scss */
 .messages {
   -webkit-border-radius: 5px;
