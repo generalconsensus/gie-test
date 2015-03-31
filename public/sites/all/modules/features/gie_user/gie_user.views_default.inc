@@ -916,5 +916,162 @@ function gie_user_views_default_views() {
   $handler = $view->new_display('panel_pane', 'Content pane', 'resources');
   $export['user_resources'] = $view;
 
+  $view = new view();
+  $view->name = 'user_social';
+  $view->description = '';
+  $view->tag = 'default';
+  $view->base_table = 'users';
+  $view->human_name = 'User Social';
+  $view->core = 7;
+  $view->api_version = '3.0';
+  $view->disabled = FALSE; /* Edit this to true to make a default view disabled initially */
+
+  /* Display: Master */
+  $handler = $view->new_display('default', 'Master', 'default');
+  $handler->display->display_options['use_more_always'] = FALSE;
+  $handler->display->display_options['access']['type'] = 'perm';
+  $handler->display->display_options['access']['perm'] = 'access user profiles';
+  $handler->display->display_options['cache']['type'] = 'none';
+  $handler->display->display_options['query']['type'] = 'views_query';
+  $handler->display->display_options['exposed_form']['type'] = 'basic';
+  $handler->display->display_options['pager']['type'] = 'none';
+  $handler->display->display_options['pager']['options']['offset'] = '0';
+  $handler->display->display_options['style_plugin'] = 'default';
+  $handler->display->display_options['style_options']['default_row_class'] = FALSE;
+  $handler->display->display_options['style_options']['row_class_special'] = FALSE;
+  $handler->display->display_options['row_plugin'] = 'fields';
+  $handler->display->display_options['row_options']['hide_empty'] = TRUE;
+  $handler->display->display_options['row_options']['default_field_elements'] = FALSE;
+  /* Header: Global: Text area */
+  $handler->display->display_options['header']['area']['id'] = 'area';
+  $handler->display->display_options['header']['area']['table'] = 'views';
+  $handler->display->display_options['header']['area']['field'] = 'area';
+  $handler->display->display_options['header']['area']['content'] = '<h4>Connect with me on</h4>';
+  $handler->display->display_options['header']['area']['format'] = 'full_html';
+  /* Field: User: Facebook */
+  $handler->display->display_options['fields']['field_user_facebook']['id'] = 'field_user_facebook';
+  $handler->display->display_options['fields']['field_user_facebook']['table'] = 'field_data_field_user_facebook';
+  $handler->display->display_options['fields']['field_user_facebook']['field'] = 'field_user_facebook';
+  $handler->display->display_options['fields']['field_user_facebook']['label'] = '';
+  $handler->display->display_options['fields']['field_user_facebook']['alter']['alter_text'] = TRUE;
+  $handler->display->display_options['fields']['field_user_facebook']['alter']['text'] = '<a href="[field_user_facebook]">Facebook</a>';
+  $handler->display->display_options['fields']['field_user_facebook']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_user_facebook']['element_default_classes'] = FALSE;
+  $handler->display->display_options['fields']['field_user_facebook']['hide_empty'] = TRUE;
+  $handler->display->display_options['fields']['field_user_facebook']['empty_zero'] = TRUE;
+  $handler->display->display_options['fields']['field_user_facebook']['settings'] = array(
+    'linked_field' => array(
+      'linked' => 0,
+      'destination' => '',
+      'advanced' => array(
+        'title' => '',
+        'target' => '',
+        'class' => '',
+        'rel' => '',
+        'text' => '',
+      ),
+    ),
+  );
+  /* Field: User: Twitter */
+  $handler->display->display_options['fields']['field_user_twitter']['id'] = 'field_user_twitter';
+  $handler->display->display_options['fields']['field_user_twitter']['table'] = 'field_data_field_user_twitter';
+  $handler->display->display_options['fields']['field_user_twitter']['field'] = 'field_user_twitter';
+  $handler->display->display_options['fields']['field_user_twitter']['label'] = '';
+  $handler->display->display_options['fields']['field_user_twitter']['alter']['alter_text'] = TRUE;
+  $handler->display->display_options['fields']['field_user_twitter']['alter']['text'] = '<a href="[field_user_twitter]">Twitter</a>';
+  $handler->display->display_options['fields']['field_user_twitter']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_user_twitter']['element_default_classes'] = FALSE;
+  $handler->display->display_options['fields']['field_user_twitter']['hide_empty'] = TRUE;
+  $handler->display->display_options['fields']['field_user_twitter']['empty_zero'] = TRUE;
+  $handler->display->display_options['fields']['field_user_twitter']['settings'] = array(
+    'linked_field' => array(
+      'linked' => 0,
+      'destination' => '',
+      'advanced' => array(
+        'title' => '',
+        'target' => '',
+        'class' => '',
+        'rel' => '',
+        'text' => '',
+      ),
+    ),
+  );
+  /* Field: User: LinkedIn */
+  $handler->display->display_options['fields']['field_user_linkedin']['id'] = 'field_user_linkedin';
+  $handler->display->display_options['fields']['field_user_linkedin']['table'] = 'field_data_field_user_linkedin';
+  $handler->display->display_options['fields']['field_user_linkedin']['field'] = 'field_user_linkedin';
+  $handler->display->display_options['fields']['field_user_linkedin']['label'] = '';
+  $handler->display->display_options['fields']['field_user_linkedin']['alter']['alter_text'] = TRUE;
+  $handler->display->display_options['fields']['field_user_linkedin']['alter']['text'] = '<a href="[field_user_linkedin]">Linked In</a>';
+  $handler->display->display_options['fields']['field_user_linkedin']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_user_linkedin']['element_default_classes'] = FALSE;
+  $handler->display->display_options['fields']['field_user_linkedin']['hide_empty'] = TRUE;
+  $handler->display->display_options['fields']['field_user_linkedin']['empty_zero'] = TRUE;
+  $handler->display->display_options['fields']['field_user_linkedin']['settings'] = array(
+    'linked_field' => array(
+      'linked' => 0,
+      'destination' => '',
+      'advanced' => array(
+        'title' => '',
+        'target' => '',
+        'class' => '',
+        'rel' => '',
+        'text' => '',
+      ),
+    ),
+  );
+  /* Contextual filter: User: Uid */
+  $handler->display->display_options['arguments']['uid']['id'] = 'uid';
+  $handler->display->display_options['arguments']['uid']['table'] = 'users';
+  $handler->display->display_options['arguments']['uid']['field'] = 'uid';
+  $handler->display->display_options['arguments']['uid']['default_action'] = 'default';
+  $handler->display->display_options['arguments']['uid']['default_argument_type'] = 'user';
+  $handler->display->display_options['arguments']['uid']['default_argument_options']['user'] = FALSE;
+  $handler->display->display_options['arguments']['uid']['summary']['number_of_records'] = '0';
+  $handler->display->display_options['arguments']['uid']['summary']['format'] = 'default_summary';
+  $handler->display->display_options['arguments']['uid']['summary_options']['items_per_page'] = '25';
+  $handler->display->display_options['filter_groups']['groups'] = array(
+    1 => 'AND',
+    2 => 'OR',
+  );
+  /* Filter criterion: User: Active */
+  $handler->display->display_options['filters']['status']['id'] = 'status';
+  $handler->display->display_options['filters']['status']['table'] = 'users';
+  $handler->display->display_options['filters']['status']['field'] = 'status';
+  $handler->display->display_options['filters']['status']['value'] = '1';
+  $handler->display->display_options['filters']['status']['group'] = 1;
+  $handler->display->display_options['filters']['status']['expose']['operator'] = FALSE;
+  /* Filter criterion: User: Facebook (field_user_facebook) */
+  $handler->display->display_options['filters']['field_user_facebook_value']['id'] = 'field_user_facebook_value';
+  $handler->display->display_options['filters']['field_user_facebook_value']['table'] = 'field_data_field_user_facebook';
+  $handler->display->display_options['filters']['field_user_facebook_value']['field'] = 'field_user_facebook_value';
+  $handler->display->display_options['filters']['field_user_facebook_value']['operator'] = 'not empty';
+  $handler->display->display_options['filters']['field_user_facebook_value']['group'] = 2;
+  /* Filter criterion: User: LinkedIn (field_user_linkedin) */
+  $handler->display->display_options['filters']['field_user_linkedin_value']['id'] = 'field_user_linkedin_value';
+  $handler->display->display_options['filters']['field_user_linkedin_value']['table'] = 'field_data_field_user_linkedin';
+  $handler->display->display_options['filters']['field_user_linkedin_value']['field'] = 'field_user_linkedin_value';
+  $handler->display->display_options['filters']['field_user_linkedin_value']['operator'] = 'not empty';
+  $handler->display->display_options['filters']['field_user_linkedin_value']['group'] = 2;
+  /* Filter criterion: User: Twitter (field_user_twitter) */
+  $handler->display->display_options['filters']['field_user_twitter_value']['id'] = 'field_user_twitter_value';
+  $handler->display->display_options['filters']['field_user_twitter_value']['table'] = 'field_data_field_user_twitter';
+  $handler->display->display_options['filters']['field_user_twitter_value']['field'] = 'field_user_twitter_value';
+  $handler->display->display_options['filters']['field_user_twitter_value']['operator'] = 'not empty';
+  $handler->display->display_options['filters']['field_user_twitter_value']['group'] = 2;
+
+  /* Display: Content pane */
+  $handler = $view->new_display('panel_pane', 'Content pane', 'connect_with_me');
+  $handler->display->display_options['allow']['use_pager'] = 0;
+  $handler->display->display_options['allow']['items_per_page'] = 0;
+  $handler->display->display_options['allow']['offset'] = 0;
+  $handler->display->display_options['allow']['link_to_view'] = 0;
+  $handler->display->display_options['allow']['more_link'] = 0;
+  $handler->display->display_options['allow']['path_override'] = 0;
+  $handler->display->display_options['allow']['title_override'] = 0;
+  $handler->display->display_options['allow']['exposed_form'] = 0;
+  $handler->display->display_options['allow']['fields_override'] = 0;
+  $export['user_social'] = $view;
+
   return $export;
 }
