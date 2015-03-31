@@ -259,6 +259,7 @@ function gie_innovation_views_default_views() {
   $handler->display->display_options['pager']['type'] = 'none';
   $handler->display->display_options['pager']['options']['offset'] = '0';
   $handler->display->display_options['style_plugin'] = 'grid';
+  $handler->display->display_options['style_options']['row_class'] = 'profile-thumb';
   $handler->display->display_options['style_options']['columns'] = '3';
   $handler->display->display_options['row_plugin'] = 'fields';
   /* Relationship: Entity Reference: Referenced Entity */
@@ -273,6 +274,9 @@ function gie_innovation_views_default_views() {
   $handler->display->display_options['fields']['field_org_logo']['relationship'] = 'field_innovation_funders_target_id';
   $handler->display->display_options['fields']['field_org_logo']['label'] = '';
   $handler->display->display_options['fields']['field_org_logo']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_org_logo']['element_wrapper_type'] = 'div';
+  $handler->display->display_options['fields']['field_org_logo']['element_wrapper_class'] = 'profile-thumb__image';
+  $handler->display->display_options['fields']['field_org_logo']['element_default_classes'] = FALSE;
   $handler->display->display_options['fields']['field_org_logo']['type'] = 'entityreference_entity_view';
   $handler->display->display_options['fields']['field_org_logo']['settings'] = array(
     'view_mode' => 'image_teaser',
@@ -295,7 +299,10 @@ function gie_innovation_views_default_views() {
   $handler->display->display_options['fields']['title']['field'] = 'title';
   $handler->display->display_options['fields']['title']['relationship'] = 'field_innovation_funders_target_id';
   $handler->display->display_options['fields']['title']['label'] = '';
+  $handler->display->display_options['fields']['title']['element_type'] = 'div';
+  $handler->display->display_options['fields']['title']['element_class'] = 'profile-thumb__name';
   $handler->display->display_options['fields']['title']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['title']['element_default_classes'] = FALSE;
   /* Sort criterion: Content: Title */
   $handler->display->display_options['sorts']['title']['id'] = 'title';
   $handler->display->display_options['sorts']['title']['table'] = 'node';

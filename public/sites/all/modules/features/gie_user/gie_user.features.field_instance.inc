@@ -1394,7 +1394,7 @@ function gie_user_field_default_field_instances() {
         'settings' => array(
           'field_delimiter' => '',
           'image_link' => 'content',
-          'image_style' => 'thumbnail',
+          'image_style' => 'thumb-78x78',
           'linked_field' => array(
             'advanced' => array(
               'class' => '',
@@ -1416,7 +1416,7 @@ function gie_user_field_default_field_instances() {
         'settings' => array(
           'field_delimiter' => '',
           'image_link' => 'content',
-          'image_style' => 'user-small',
+          'image_style' => 'thumb-78x78',
           'linked_field' => array(
             'advanced' => array(
               'class' => '',

@@ -68,9 +68,9 @@
         </div>
       <?php endif; ?>
        <?php if (!empty($content['bottom_sidebar'])): ?>
-        <div class="l-bottom-sidebar">
+        <aside class="l-bottom-sidebar">
           <?php print $content['bottom_sidebar']; ?>
-        </div>
+        </aside>
       <?php endif; ?>
     </div>
   <?php endif; ?>

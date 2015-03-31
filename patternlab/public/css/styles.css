@@ -741,14 +741,14 @@ ul.panels-ipe-linkbar li {
 
 /* line 11, ../sass/partials/layout/_grid.scss */
 .layout-grid__row {
-  margin-left: -1em;
-  margin-right: -1em;
+  margin-left: -0.5em;
+  margin-right: -0.5em;
 }
 
 /* line 17, ../sass/partials/layout/_grid.scss */
 .layout-grid__column {
   float: left;
-  padding: 0 1em;
+  padding: 0 0.5em 0.5em 0.5em;
   width: 100%;
 }
 
@@ -1329,6 +1329,7 @@ input.throbbing {
   margin-left: 0;
 }
 
+/* No files to import found in field/*.* */
 /* line 4, ../sass/partials/components/_fieldset.scss */
 .fieldset {
   background: #fff;
@@ -2318,8 +2319,48 @@ header.header {
   margin: 0 0 1em 0;
   padding: 0 0 0.5em 0;
 }
+/* line 13, ../sass/partials/components/_pane.scss */
+aside .pane__title {
+  color: #7090b7;
+}
 
 /* No files to import found in pane/*.* */
+/* line 2, ../sass/partials/components/_profile-thumb.scss */
+.profile-thumb .layout-slat__media {
+  max-width: 40%;
+}
+
+/* line 7, ../sass/partials/components/_profile-thumb.scss */
+.profile-thumb__image {
+  text-align: center;
+}
+/* line 9, ../sass/partials/components/_profile-thumb.scss */
+.profile-thumb__image a {
+  display: block;
+  line-height: 1;
+}
+/* line 13, ../sass/partials/components/_profile-thumb.scss */
+.profile-thumb__image img {
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+  border-radius: 50%;
+  border: 2px solid #cecfcb;
+  display: inline-block;
+}
+
+/* line 20, ../sass/partials/components/_profile-thumb.scss */
+.profile-thumb__name {
+  -webkit-hyphens: none;
+  -moz-hyphens: none;
+  hyphens: none;
+  font-size: 0.8125em;
+  line-height: 1.3;
+  padding-top: 0.2em;
+  text-align: center;
+}
+
 /* line 4, ../sass/partials/components/_progress-bar.scss */
 .progress {
   position: relative;
@@ -2428,19 +2469,20 @@ header.header {
 .region-meta {
   background: #003359 url(../images/geometricshape.png) no-repeat 100% 0;
   color: #fff;
-  padding: 2em 0;
+  margin: 2em 0;
+  padding: 2em 0 0 0;
 }
-/* line 7, ../sass/partials/components/_region-meta.scss */
+/* line 8, ../sass/partials/components/_region-meta.scss */
 .region-meta .pane__title,
 .region-meta .block__title {
   border-color: #fff;
   color: #fff;
 }
-/* line 12, ../sass/partials/components/_region-meta.scss */
+/* line 13, ../sass/partials/components/_region-meta.scss */
 .region-meta a {
   color: #ed7d3a;
 }
-/* line 14, ../sass/partials/components/_region-meta.scss */
+/* line 15, ../sass/partials/components/_region-meta.scss */
 .region-meta a:hover, .region-meta a:focus {
   color: #f8f8f8;
 }
@@ -2685,39 +2727,7 @@ tr.drag-previous {
   width: 100%;
 }
 
-/* line 2, ../sass/partials/components/view-mode/_view-mode-user_teaser_summary.scss */
-.view-mode-user_teaser_summary .field--user-photo {
-  text-align: center;
-}
-/* line 4, ../sass/partials/components/view-mode/_view-mode-user_teaser_summary.scss */
-.view-mode-user_teaser_summary .field--user-photo a {
-  display: block;
-  line-height: 1;
-}
-/* line 8, ../sass/partials/components/view-mode/_view-mode-user_teaser_summary.scss */
-.view-mode-user_teaser_summary .field--user-photo img {
-  -webkit-border-radius: 50%;
-  -moz-border-radius: 50%;
-  -ms-border-radius: 50%;
-  -o-border-radius: 50%;
-  border-radius: 50%;
-  border: 2px solid #f8f8f8;
-  display: inline-block;
-}
-/* line 14, ../sass/partials/components/view-mode/_view-mode-user_teaser_summary.scss */
-.view-mode-user_teaser_summary .field--user-full-name {
-  font-size: 0.8125em;
-  line-height: 1.3;
-  padding-top: 0.2em;
-  text-align: center;
-}
-@media (min-width: 37.5em) {
-  /* line 14, ../sass/partials/components/view-mode/_view-mode-user_teaser_summary.scss */
-  .view-mode-user_teaser_summary .field--user-full-name {
-    max-width: 100px;
-  }
-}
-
+/* No files to import found in view-mode/*.* */
 /* line 6, ../sass/partials/components/_view.scss */
 .view__filters {
   margin-bottom: 1.625em;
