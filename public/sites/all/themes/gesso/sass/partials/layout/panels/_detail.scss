@@ -8,20 +8,27 @@
   $grids: 1;
   $grids: add-grid(12 at 700px);
   $gutters: 1;
-  @include breakpoint(700px, $no-query: true) {
-    &.main {
-      &.main-sidebar { // 1, 2 have content
+  &.main {
+    &.main-sidebar { // 1, 2 have content
+      @include breakpoint(700px) {
         .l-main { @include grid-span(8,1);}
         .l-main-sidebar { @include grid-span (4,9)}
       }
     }
-    &.bottom {
-      &.bottom-sidebar { // 1, 2 have content
+  }
+
+  &.bottom {
+    &.bottom-sidebar { // 1, 2 have content
+      @include breakpoint(700px) {
+        .l-bottom { @include grid-span(7,1);}
+        .l-bottom-sidebar { @include grid-span (5,8); }
+      }
+      @include breakpoint(900px, $no-query: true) {
         .l-bottom { @include grid-span(8,1);}
         .l-bottom-sidebar { @include grid-span (4,9); }
       }
     }
-  }  
+  }
   &.box-first {
     &.box-second {
       &.box-third { // 1, 2, 3 have content
