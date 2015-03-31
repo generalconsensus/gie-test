@@ -132,6 +132,30 @@ function gie_user_panelizer_defaults() {
     $display->content['new-d545e49f-bd22-4040-855a-b13cd7d4104f'] = $pane;
     $display->panels['bottom_sidebar'][2] = 'new-d545e49f-bd22-4040-855a-b13cd7d4104f';
     $pane = new stdClass();
+    $pane->pid = 'new-7a08a4e3-c89e-41e1-8cc4-df75f14330f7';
+    $pane->panel = 'bottom_sidebar';
+    $pane->type = 'views_panes';
+    $pane->subtype = 'user_funded_by-funded_by';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array(
+      'exposed' => array(
+        'field_innovation_poc_target_id' => '%user:uid',
+        'field_innovation_team_target_id' => '%user:uid',
+      ),
+    );
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
+    $pane->css = array();
+    $pane->extras = array();
+    $pane->position = 3;
+    $pane->locks = array();
+    $pane->uuid = '7a08a4e3-c89e-41e1-8cc4-df75f14330f7';
+    $display->content['new-7a08a4e3-c89e-41e1-8cc4-df75f14330f7'] = $pane;
+    $display->panels['bottom_sidebar'][3] = 'new-7a08a4e3-c89e-41e1-8cc4-df75f14330f7';
+    $pane = new stdClass();
     $pane->pid = 'new-7da35083-36e5-4daf-8502-4544b81b0101';
     $pane->panel = 'hero';
     $pane->type = 'page_title';
