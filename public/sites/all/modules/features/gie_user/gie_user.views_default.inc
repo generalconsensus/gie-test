@@ -494,6 +494,111 @@ function gie_user_views_default_views() {
   $export['user_connections'] = $view;
 
   $view = new view();
+  $view->name = 'user_funded_by';
+  $view->description = 'Resource listing for User display';
+  $view->tag = 'default';
+  $view->base_table = 'node';
+  $view->human_name = 'User Funded By';
+  $view->core = 7;
+  $view->api_version = '3.0';
+  $view->disabled = FALSE; /* Edit this to true to make a default view disabled initially */
+
+  /* Display: Master */
+  $handler = $view->new_display('default', 'Master', 'default');
+  $handler->display->display_options['title'] = 'Funded By';
+  $handler->display->display_options['use_more_always'] = FALSE;
+  $handler->display->display_options['access']['type'] = 'perm';
+  $handler->display->display_options['cache']['type'] = 'none';
+  $handler->display->display_options['query']['type'] = 'views_query';
+  $handler->display->display_options['query']['options']['distinct'] = TRUE;
+  $handler->display->display_options['exposed_form']['type'] = 'basic';
+  $handler->display->display_options['pager']['type'] = 'full';
+  $handler->display->display_options['pager']['options']['items_per_page'] = '9';
+  $handler->display->display_options['pager']['options']['offset'] = '0';
+  $handler->display->display_options['pager']['options']['id'] = '0';
+  $handler->display->display_options['pager']['options']['quantity'] = '9';
+  $handler->display->display_options['style_plugin'] = 'default';
+  $handler->display->display_options['row_plugin'] = 'entity';
+  $handler->display->display_options['row_options']['view_mode'] = 'teaser';
+  /* Relationship: Entity Reference: Referencing entity */
+  $handler->display->display_options['relationships']['reverse_field_innovation_funders_node']['id'] = 'reverse_field_innovation_funders_node';
+  $handler->display->display_options['relationships']['reverse_field_innovation_funders_node']['table'] = 'node';
+  $handler->display->display_options['relationships']['reverse_field_innovation_funders_node']['field'] = 'reverse_field_innovation_funders_node';
+  $handler->display->display_options['relationships']['reverse_field_innovation_funders_node']['label'] = 'field_innovation_funders';
+  $handler->display->display_options['relationships']['reverse_field_innovation_funders_node']['required'] = TRUE;
+  /* Field: Content: Title */
+  $handler->display->display_options['fields']['title']['id'] = 'title';
+  $handler->display->display_options['fields']['title']['table'] = 'node';
+  $handler->display->display_options['fields']['title']['field'] = 'title';
+  $handler->display->display_options['fields']['title']['label'] = '';
+  $handler->display->display_options['fields']['title']['alter']['word_boundary'] = FALSE;
+  $handler->display->display_options['fields']['title']['alter']['ellipsis'] = FALSE;
+  $handler->display->display_options['filter_groups']['groups'] = array(
+    1 => 'AND',
+    2 => 'OR',
+  );
+  /* Filter criterion: Content: Published */
+  $handler->display->display_options['filters']['status']['id'] = 'status';
+  $handler->display->display_options['filters']['status']['table'] = 'node';
+  $handler->display->display_options['filters']['status']['field'] = 'status';
+  $handler->display->display_options['filters']['status']['value'] = 1;
+  $handler->display->display_options['filters']['status']['group'] = 1;
+  $handler->display->display_options['filters']['status']['expose']['operator'] = FALSE;
+  /* Filter criterion: Content: Type */
+  $handler->display->display_options['filters']['type']['id'] = 'type';
+  $handler->display->display_options['filters']['type']['table'] = 'node';
+  $handler->display->display_options['filters']['type']['field'] = 'type';
+  $handler->display->display_options['filters']['type']['value'] = array(
+    'organization' => 'organization',
+  );
+  $handler->display->display_options['filters']['type']['group'] = 1;
+  /* Filter criterion: Content: Point of Contact (field_innovation_poc) */
+  $handler->display->display_options['filters']['field_innovation_poc_target_id']['id'] = 'field_innovation_poc_target_id';
+  $handler->display->display_options['filters']['field_innovation_poc_target_id']['table'] = 'field_data_field_innovation_poc';
+  $handler->display->display_options['filters']['field_innovation_poc_target_id']['field'] = 'field_innovation_poc_target_id';
+  $handler->display->display_options['filters']['field_innovation_poc_target_id']['relationship'] = 'reverse_field_innovation_funders_node';
+  $handler->display->display_options['filters']['field_innovation_poc_target_id']['group'] = 2;
+  $handler->display->display_options['filters']['field_innovation_poc_target_id']['exposed'] = TRUE;
+  $handler->display->display_options['filters']['field_innovation_poc_target_id']['expose']['operator_id'] = 'field_innovation_poc_target_id_op';
+  $handler->display->display_options['filters']['field_innovation_poc_target_id']['expose']['label'] = 'Point of Contact (field_innovation_poc)';
+  $handler->display->display_options['filters']['field_innovation_poc_target_id']['expose']['operator'] = 'field_innovation_poc_target_id_op';
+  $handler->display->display_options['filters']['field_innovation_poc_target_id']['expose']['identifier'] = 'field_innovation_poc_target_id';
+  $handler->display->display_options['filters']['field_innovation_poc_target_id']['expose']['remember_roles'] = array(
+    2 => '2',
+    1 => 0,
+    3 => 0,
+  );
+  /* Filter criterion: Content: Innovation Team (field_innovation_team) */
+  $handler->display->display_options['filters']['field_innovation_team_target_id']['id'] = 'field_innovation_team_target_id';
+  $handler->display->display_options['filters']['field_innovation_team_target_id']['table'] = 'field_data_field_innovation_team';
+  $handler->display->display_options['filters']['field_innovation_team_target_id']['field'] = 'field_innovation_team_target_id';
+  $handler->display->display_options['filters']['field_innovation_team_target_id']['relationship'] = 'reverse_field_innovation_funders_node';
+  $handler->display->display_options['filters']['field_innovation_team_target_id']['group'] = 2;
+  $handler->display->display_options['filters']['field_innovation_team_target_id']['exposed'] = TRUE;
+  $handler->display->display_options['filters']['field_innovation_team_target_id']['expose']['operator_id'] = 'field_innovation_team_target_id_op';
+  $handler->display->display_options['filters']['field_innovation_team_target_id']['expose']['label'] = 'Innovation Team (field_innovation_team)';
+  $handler->display->display_options['filters']['field_innovation_team_target_id']['expose']['operator'] = 'field_innovation_team_target_id_op';
+  $handler->display->display_options['filters']['field_innovation_team_target_id']['expose']['identifier'] = 'field_innovation_team_target_id';
+  $handler->display->display_options['filters']['field_innovation_team_target_id']['expose']['remember_roles'] = array(
+    2 => '2',
+    1 => 0,
+    3 => 0,
+  );
+
+  /* Display: Content pane */
+  $handler = $view->new_display('panel_pane', 'Content pane', 'funded_by');
+  $handler->display->display_options['allow']['use_pager'] = 0;
+  $handler->display->display_options['allow']['items_per_page'] = 0;
+  $handler->display->display_options['allow']['offset'] = 0;
+  $handler->display->display_options['allow']['link_to_view'] = 0;
+  $handler->display->display_options['allow']['more_link'] = 0;
+  $handler->display->display_options['allow']['path_override'] = 0;
+  $handler->display->display_options['allow']['title_override'] = 0;
+  $handler->display->display_options['allow']['exposed_form'] = 'exposed_form';
+  $handler->display->display_options['allow']['fields_override'] = 0;
+  $export['user_funded_by'] = $view;
+
+  $view = new view();
   $view->name = 'user_innovations';
   $view->description = 'Resource listing for User display';
   $view->tag = 'default';
