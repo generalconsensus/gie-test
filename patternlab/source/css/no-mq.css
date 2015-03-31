@@ -830,23 +830,7 @@ ul.panels-ipe-linkbar li {
   padding-right: 0;
 }
 
-/* line 14, ../sass/partials/layout/panels/_detail.scss */
-.l-panels-detail.main.main-sidebar .l-main {
-  width: 65.21739%;
-  float: left;
-  margin-right: -100%;
-  margin-left: 0%;
-  clear: none;
-}
-/* line 15, ../sass/partials/layout/panels/_detail.scss */
-.l-panels-detail.main.main-sidebar .l-main-sidebar {
-  width: 30.43478%;
-  float: right;
-  margin-left: 0;
-  margin-right: 0;
-  clear: none;
-}
-/* line 20, ../sass/partials/layout/panels/_detail.scss */
+/* line 27, ../sass/partials/layout/panels/_detail.scss */
 .l-panels-detail.bottom.bottom-sidebar .l-bottom {
   width: 65.21739%;
   float: left;
@@ -854,7 +838,7 @@ ul.panels-ipe-linkbar li {
   margin-left: 0%;
   clear: none;
 }
-/* line 21, ../sass/partials/layout/panels/_detail.scss */
+/* line 28, ../sass/partials/layout/panels/_detail.scss */
 .l-panels-detail.bottom.bottom-sidebar .l-bottom-sidebar {
   width: 30.43478%;
   float: right;
@@ -862,7 +846,7 @@ ul.panels-ipe-linkbar li {
   margin-right: 0;
   clear: none;
 }
-/* line 29, ../sass/partials/layout/panels/_detail.scss */
+/* line 36, ../sass/partials/layout/panels/_detail.scss */
 .l-panels-detail.box-first.box-second.box-third .l-box-first {
   width: 30.43478%;
   float: left;
@@ -870,7 +854,7 @@ ul.panels-ipe-linkbar li {
   margin-left: 0%;
   clear: none;
 }
-/* line 30, ../sass/partials/layout/panels/_detail.scss */
+/* line 37, ../sass/partials/layout/panels/_detail.scss */
 .l-panels-detail.box-first.box-second.box-third .l-box-second {
   width: 30.43478%;
   float: left;
@@ -878,7 +862,7 @@ ul.panels-ipe-linkbar li {
   margin-left: 34.78261%;
   clear: none;
 }
-/* line 31, ../sass/partials/layout/panels/_detail.scss */
+/* line 38, ../sass/partials/layout/panels/_detail.scss */
 .l-panels-detail.box-first.box-second.box-third .l-box-third {
   width: 30.43478%;
   float: right;
@@ -886,7 +870,7 @@ ul.panels-ipe-linkbar li {
   margin-right: 0;
   clear: none;
 }
-/* line 36, ../sass/partials/layout/panels/_detail.scss */
+/* line 43, ../sass/partials/layout/panels/_detail.scss */
 .l-panels-detail.box-first.box-second.box-third-empty .l-box-first {
   width: 47.82609%;
   float: left;
@@ -894,7 +878,7 @@ ul.panels-ipe-linkbar li {
   margin-left: 0%;
   clear: none;
 }
-/* line 37, ../sass/partials/layout/panels/_detail.scss */
+/* line 44, ../sass/partials/layout/panels/_detail.scss */
 .l-panels-detail.box-first.box-second.box-third-empty .l-box-second {
   width: 47.82609%;
   float: right;
@@ -902,7 +886,7 @@ ul.panels-ipe-linkbar li {
   margin-right: 0;
   clear: none;
 }
-/* line 43, ../sass/partials/layout/panels/_detail.scss */
+/* line 50, ../sass/partials/layout/panels/_detail.scss */
 .l-panels-detail.box-first.box-second-empty.box-third .l-box-first {
   width: 47.82609%;
   float: left;
@@ -910,7 +894,7 @@ ul.panels-ipe-linkbar li {
   margin-left: 0%;
   clear: none;
 }
-/* line 44, ../sass/partials/layout/panels/_detail.scss */
+/* line 51, ../sass/partials/layout/panels/_detail.scss */
 .l-panels-detail.box-first.box-second-empty.box-third .l-box-third {
   width: 47.82609%;
   float: right;
@@ -918,7 +902,7 @@ ul.panels-ipe-linkbar li {
   margin-right: 0;
   clear: none;
 }
-/* line 50, ../sass/partials/layout/panels/_detail.scss */
+/* line 57, ../sass/partials/layout/panels/_detail.scss */
 .l-panels-detail.box-first-empty.box-second.box-third .l-box-second {
   width: 47.82609%;
   float: left;
@@ -926,7 +910,7 @@ ul.panels-ipe-linkbar li {
   margin-left: 0%;
   clear: none;
 }
-/* line 51, ../sass/partials/layout/panels/_detail.scss */
+/* line 58, ../sass/partials/layout/panels/_detail.scss */
 .l-panels-detail.box-first-empty.box-second.box-third .l-box-third {
   width: 47.82609%;
   float: right;
@@ -2191,26 +2175,30 @@ aside .pane__title {
 }
 
 /* line 7, ../sass/partials/components/_profile-thumb.scss */
-.profile-thumb__image {
+.profile-thumb__image, .profile-thumb__image--rounded {
   text-align: center;
 }
 /* line 9, ../sass/partials/components/_profile-thumb.scss */
-.profile-thumb__image a {
+.profile-thumb__image a, .profile-thumb__image--rounded a {
   display: block;
   line-height: 1;
 }
 /* line 13, ../sass/partials/components/_profile-thumb.scss */
-.profile-thumb__image img {
+.profile-thumb__image img, .profile-thumb__image--rounded img {
+  display: inline-block;
+}
+
+/* line 20, ../sass/partials/components/_profile-thumb.scss */
+.profile-thumb__image--rounded img {
   -webkit-border-radius: 50%;
   -moz-border-radius: 50%;
   -ms-border-radius: 50%;
   -o-border-radius: 50%;
   border-radius: 50%;
   border: 2px solid #cecfcb;
-  display: inline-block;
 }
 
-/* line 20, ../sass/partials/components/_profile-thumb.scss */
+/* line 26, ../sass/partials/components/_profile-thumb.scss */
 .profile-thumb__name {
   -webkit-hyphens: none;
   -moz-hyphens: none;

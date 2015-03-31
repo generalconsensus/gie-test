@@ -11,9 +11,15 @@
     line-height: 1;
   }
   img {
+    display: inline-block;
+  }
+}
+
+.profile-thumb__image--rounded {
+  @extend .profile-thumb__image;
+  img {
     @include border-radius(50%);
     border: 2px solid $border-color;
-    display: inline-block;
   }
 }
 
@@ -27,4 +33,3 @@
     //max-width: 100px;
   }
 }
- 

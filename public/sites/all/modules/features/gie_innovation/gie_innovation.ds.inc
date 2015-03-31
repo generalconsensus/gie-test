@@ -76,7 +76,7 @@ function gie_innovation_ds_field_settings_info() {
           'func' => 'theme_ds_field_expert',
           'ow' => TRUE,
           'ow-el' => 'div',
-          'ow-cl' => 'profile-thumb__image',
+          'ow-cl' => 'profile-thumb__image--rounded',
           'ow-def-cl' => FALSE,
           'ow-at' => '',
           'ow-def-at' => FALSE,
