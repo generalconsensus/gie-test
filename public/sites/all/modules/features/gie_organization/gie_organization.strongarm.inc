@@ -69,7 +69,7 @@ function gie_organization_strongarm() {
         'custom_settings' => TRUE,
       ),
       'full' => array(
-        'custom_settings' => FALSE,
+        'custom_settings' => TRUE,
       ),
       'rss' => array(
         'custom_settings' => FALSE,
@@ -89,6 +89,12 @@ function gie_organization_strongarm() {
       'revision' => array(
         'custom_settings' => FALSE,
       ),
+      'listing' => array(
+        'custom_settings' => FALSE,
+      ),
+      'teaser_date' => array(
+        'custom_settings' => FALSE,
+      ),
     ),
     'extra_fields' => array(
       'form' => array(
@@ -100,6 +106,14 @@ function gie_organization_strongarm() {
         'sharethis' => array(
           'teaser' => array(
             'weight' => '1',
+            'visible' => FALSE,
+          ),
+          'default' => array(
+            'weight' => '10',
+            'visible' => TRUE,
+          ),
+          'full' => array(
+            'weight' => '7',
             'visible' => FALSE,
           ),
         ),
@@ -146,6 +160,66 @@ function gie_organization_strongarm() {
   $strongarm->name = 'node_submitted_organization';
   $strongarm->value = 0;
   $export['node_submitted_organization'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'panelizer_defaults_comment_comment_node_organization';
+  $strongarm->value = array(
+    'status' => 0,
+    'view modes' => array(),
+  );
+  $export['panelizer_defaults_comment_comment_node_organization'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'panelizer_defaults_node_organization';
+  $strongarm->value = array(
+    'status' => 1,
+    'view modes' => array(
+      'page_manager' => array(
+        'status' => 1,
+        'substitute' => '',
+        'default' => 1,
+        'choice' => 0,
+      ),
+      'default' => array(
+        'status' => 0,
+        'substitute' => 0,
+        'default' => 0,
+        'choice' => 0,
+      ),
+      'teaser' => array(
+        'status' => 0,
+        'substitute' => 0,
+        'default' => 0,
+        'choice' => 0,
+      ),
+    ),
+  );
+  $export['panelizer_defaults_node_organization'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'panelizer_node:organization:default_selection';
+  $strongarm->value = 0;
+  $export['panelizer_node:organization:default_selection'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'panelizer_node:organization:page_manager_selection';
+  $strongarm->value = 'node:organization:default';
+  $export['panelizer_node:organization:page_manager_selection'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'panelizer_node:organization:teaser_selection';
+  $strongarm->value = 0;
+  $export['panelizer_node:organization:teaser_selection'] = $strongarm;
 
   return $export;
 }
