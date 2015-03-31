@@ -12,6 +12,38 @@ function gie_organization_ds_layout_settings_info() {
 
   $ds_layout = new stdClass();
   $ds_layout->api_version = 1;
+  $ds_layout->id = 'node|organization|full';
+  $ds_layout->entity_type = 'node';
+  $ds_layout->bundle = 'organization';
+  $ds_layout->view_mode = 'full';
+  $ds_layout->layout = 'ds_reset';
+  $ds_layout->settings = array(
+    'regions' => array(
+      'ds_content' => array(
+        0 => 'field_org_mission',
+        1 => 'field_org_focus',
+        2 => 'field_org_expertise',
+      ),
+    ),
+    'fields' => array(
+      'field_org_mission' => 'ds_content',
+      'field_org_focus' => 'ds_content',
+      'field_org_expertise' => 'ds_content',
+    ),
+    'classes' => array(),
+    'wrappers' => array(
+      'ds_content' => 'div',
+    ),
+    'layout_wrapper' => 'div',
+    'layout_attributes' => '',
+    'layout_attributes_merge' => TRUE,
+    'layout_link_attribute' => FALSE,
+    'layout_link_custom' => '',
+  );
+  $export['node|organization|full'] = $ds_layout;
+
+  $ds_layout = new stdClass();
+  $ds_layout->api_version = 1;
   $ds_layout->id = 'node|organization|teaser';
   $ds_layout->entity_type = 'node';
   $ds_layout->bundle = 'organization';
