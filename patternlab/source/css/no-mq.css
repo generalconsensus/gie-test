@@ -1480,6 +1480,44 @@ header.header {
 .innovation-stats {
   background: #f8f8f8;
   border: 0;
+  overflow: hidden;
+  padding: 1em;
+}
+/* line 7, ../sass/partials/components/_innovation-stats.scss */
+.innovation-stats > h2 {
+  font-weight: normal;
+}
+/* line 11, ../sass/partials/components/_innovation-stats.scss */
+.innovation-stats .field {
+  -webkit-hyphens: none;
+  -moz-hyphens: none;
+  hyphens: none;
+  padding: 0 0 1em 0;
+}
+/* line 14, ../sass/partials/components/_innovation-stats.scss */
+.innovation-stats .field .field-label {
+  float: left;
+  width: 45%;
+}
+/* line 18, ../sass/partials/components/_innovation-stats.scss */
+.innovation-stats .field .field-items {
+  float: left;
+  font-weight: bold;
+  width: 55%;
+}
+
+/* line 27, ../sass/partials/components/_innovation-stats.scss */
+.innovation-stats__first {
+  float: left;
+  padding-right: 5%;
+  width: 50%;
+}
+
+/* line 35, ../sass/partials/components/_innovation-stats.scss */
+.innovation-stats__second {
+  float: left;
+  padding-left: 5%;
+  width: 50%;
 }
 
 /* line 4, ../sass/partials/components/_messages.scss */
