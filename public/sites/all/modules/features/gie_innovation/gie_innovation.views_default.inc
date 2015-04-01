@@ -576,6 +576,112 @@ function gie_innovation_views_default_views() {
   $export['innovation_counters'] = $view;
 
   $view = new view();
+  $view->name = 'innovation_listing_counts';
+  $view->description = 'counts for Innovation listing display mode.';
+  $view->tag = 'default';
+  $view->base_table = 'node';
+  $view->human_name = 'Innovation listing counts';
+  $view->core = 7;
+  $view->api_version = '3.0';
+  $view->disabled = FALSE; /* Edit this to true to make a default view disabled initially */
+
+  /* Display: Master */
+  $handler = $view->new_display('default', 'Master', 'default');
+  $handler->display->display_options['use_more_always'] = FALSE;
+  $handler->display->display_options['group_by'] = TRUE;
+  $handler->display->display_options['access']['type'] = 'perm';
+  $handler->display->display_options['cache']['type'] = 'none';
+  $handler->display->display_options['query']['type'] = 'views_query';
+  $handler->display->display_options['exposed_form']['type'] = 'basic';
+  $handler->display->display_options['pager']['type'] = 'none';
+  $handler->display->display_options['pager']['options']['offset'] = '0';
+  $handler->display->display_options['style_plugin'] = 'default';
+  $handler->display->display_options['row_plugin'] = 'fields';
+  /* Field: COUNT(Content: Proof of Evidence) */
+  $handler->display->display_options['fields']['field_innovation_proof_evidence']['id'] = 'field_innovation_proof_evidence';
+  $handler->display->display_options['fields']['field_innovation_proof_evidence']['table'] = 'field_data_field_innovation_proof_evidence';
+  $handler->display->display_options['fields']['field_innovation_proof_evidence']['field'] = 'field_innovation_proof_evidence';
+  $handler->display->display_options['fields']['field_innovation_proof_evidence']['group_type'] = 'count';
+  $handler->display->display_options['fields']['field_innovation_proof_evidence']['label'] = '';
+  $handler->display->display_options['fields']['field_innovation_proof_evidence']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_innovation_proof_evidence']['separator'] = ', ';
+  /* Contextual filter: Content: Nid */
+  $handler->display->display_options['arguments']['nid']['id'] = 'nid';
+  $handler->display->display_options['arguments']['nid']['table'] = 'node';
+  $handler->display->display_options['arguments']['nid']['field'] = 'nid';
+  $handler->display->display_options['arguments']['nid']['default_argument_type'] = 'fixed';
+  $handler->display->display_options['arguments']['nid']['summary']['number_of_records'] = '0';
+  $handler->display->display_options['arguments']['nid']['summary']['format'] = 'default_summary';
+  $handler->display->display_options['arguments']['nid']['summary_options']['items_per_page'] = '25';
+  /* Filter criterion: Content: Published */
+  $handler->display->display_options['filters']['status']['id'] = 'status';
+  $handler->display->display_options['filters']['status']['table'] = 'node';
+  $handler->display->display_options['filters']['status']['field'] = 'status';
+  $handler->display->display_options['filters']['status']['value'] = 1;
+  $handler->display->display_options['filters']['status']['group'] = 1;
+  $handler->display->display_options['filters']['status']['expose']['operator'] = FALSE;
+
+  /* Display: Evidence */
+  $handler = $view->new_display('entity_view', 'Evidence', 'evidence');
+  $handler->display->display_options['entity_type'] = 'node';
+  $handler->display->display_options['bundles'] = array(
+    0 => 'innovation',
+  );
+
+  /* Display: Comments */
+  $handler = $view->new_display('entity_view', 'Comments', 'comments');
+  $handler->display->display_options['defaults']['fields'] = FALSE;
+  /* Field: Content: Comment count */
+  $handler->display->display_options['fields']['comment_count']['id'] = 'comment_count';
+  $handler->display->display_options['fields']['comment_count']['table'] = 'node_comment_statistics';
+  $handler->display->display_options['fields']['comment_count']['field'] = 'comment_count';
+  $handler->display->display_options['fields']['comment_count']['label'] = '';
+  $handler->display->display_options['fields']['comment_count']['element_label_colon'] = FALSE;
+  $handler->display->display_options['entity_type'] = 'node';
+  $handler->display->display_options['bundles'] = array(
+    0 => 'innovation',
+  );
+
+  /* Display: Funding orgs */
+  $handler = $view->new_display('entity_view', 'Funding orgs', 'orgs');
+  $handler->display->display_options['defaults']['fields'] = FALSE;
+  /* Field: COUNT(Content: Funded By) */
+  $handler->display->display_options['fields']['field_innovation_funders']['id'] = 'field_innovation_funders';
+  $handler->display->display_options['fields']['field_innovation_funders']['table'] = 'field_data_field_innovation_funders';
+  $handler->display->display_options['fields']['field_innovation_funders']['field'] = 'field_innovation_funders';
+  $handler->display->display_options['fields']['field_innovation_funders']['group_type'] = 'count';
+  $handler->display->display_options['fields']['field_innovation_funders']['label'] = '';
+  $handler->display->display_options['fields']['field_innovation_funders']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_innovation_funders']['separator'] = ', ';
+  $handler->display->display_options['entity_type'] = 'node';
+  $handler->display->display_options['bundles'] = array(
+    0 => 'innovation',
+  );
+
+  /* Display: Favorites */
+  $handler = $view->new_display('entity_view', 'Favorites', 'favorites');
+  $handler->display->display_options['defaults']['relationships'] = FALSE;
+  /* Relationship: Flags: favorite counter */
+  $handler->display->display_options['relationships']['flag_count_rel']['id'] = 'flag_count_rel';
+  $handler->display->display_options['relationships']['flag_count_rel']['table'] = 'node';
+  $handler->display->display_options['relationships']['flag_count_rel']['field'] = 'flag_count_rel';
+  $handler->display->display_options['relationships']['flag_count_rel']['required'] = 0;
+  $handler->display->display_options['relationships']['flag_count_rel']['flag'] = 'favorite';
+  $handler->display->display_options['defaults']['fields'] = FALSE;
+  /* Field: Flags: Flag counter */
+  $handler->display->display_options['fields']['count']['id'] = 'count';
+  $handler->display->display_options['fields']['count']['table'] = 'flag_counts';
+  $handler->display->display_options['fields']['count']['field'] = 'count';
+  $handler->display->display_options['fields']['count']['relationship'] = 'flag_count_rel';
+  $handler->display->display_options['fields']['count']['label'] = '';
+  $handler->display->display_options['fields']['count']['element_label_colon'] = FALSE;
+  $handler->display->display_options['entity_type'] = 'node';
+  $handler->display->display_options['bundles'] = array(
+    0 => 'innovation',
+  );
+  $export['innovation_listing_counts'] = $view;
+
+  $view = new view();
   $view->name = 'innovation_team';
   $view->description = '';
   $view->tag = 'default';
