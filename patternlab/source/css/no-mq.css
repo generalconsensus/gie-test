@@ -744,14 +744,14 @@ ul.panels-ipe-linkbar li {
 
 /* line 11, ../sass/partials/layout/_grid.scss */
 .layout-grid__row {
-  margin-left: -1em;
-  margin-right: -1em;
+  margin-left: -0.5em;
+  margin-right: -0.5em;
 }
 
 /* line 17, ../sass/partials/layout/_grid.scss */
 .layout-grid__column {
   float: left;
-  padding: 0 1em;
+  padding: 0 0.5em 0.5em 0.5em;
   width: 100%;
 }
 
@@ -830,23 +830,7 @@ ul.panels-ipe-linkbar li {
   padding-right: 0;
 }
 
-/* line 14, ../sass/partials/layout/panels/_detail.scss */
-.l-panels-detail.main.main-sidebar .l-main {
-  width: 65.21739%;
-  float: left;
-  margin-right: -100%;
-  margin-left: 0%;
-  clear: none;
-}
-/* line 15, ../sass/partials/layout/panels/_detail.scss */
-.l-panels-detail.main.main-sidebar .l-main-sidebar {
-  width: 30.43478%;
-  float: right;
-  margin-left: 0;
-  margin-right: 0;
-  clear: none;
-}
-/* line 20, ../sass/partials/layout/panels/_detail.scss */
+/* line 27, ../sass/partials/layout/panels/_detail.scss */
 .l-panels-detail.bottom.bottom-sidebar .l-bottom {
   width: 65.21739%;
   float: left;
@@ -854,7 +838,7 @@ ul.panels-ipe-linkbar li {
   margin-left: 0%;
   clear: none;
 }
-/* line 21, ../sass/partials/layout/panels/_detail.scss */
+/* line 28, ../sass/partials/layout/panels/_detail.scss */
 .l-panels-detail.bottom.bottom-sidebar .l-bottom-sidebar {
   width: 30.43478%;
   float: right;
@@ -862,7 +846,7 @@ ul.panels-ipe-linkbar li {
   margin-right: 0;
   clear: none;
 }
-/* line 29, ../sass/partials/layout/panels/_detail.scss */
+/* line 36, ../sass/partials/layout/panels/_detail.scss */
 .l-panels-detail.box-first.box-second.box-third .l-box-first {
   width: 30.43478%;
   float: left;
@@ -870,7 +854,7 @@ ul.panels-ipe-linkbar li {
   margin-left: 0%;
   clear: none;
 }
-/* line 30, ../sass/partials/layout/panels/_detail.scss */
+/* line 37, ../sass/partials/layout/panels/_detail.scss */
 .l-panels-detail.box-first.box-second.box-third .l-box-second {
   width: 30.43478%;
   float: left;
@@ -878,7 +862,7 @@ ul.panels-ipe-linkbar li {
   margin-left: 34.78261%;
   clear: none;
 }
-/* line 31, ../sass/partials/layout/panels/_detail.scss */
+/* line 38, ../sass/partials/layout/panels/_detail.scss */
 .l-panels-detail.box-first.box-second.box-third .l-box-third {
   width: 30.43478%;
   float: right;
@@ -886,7 +870,7 @@ ul.panels-ipe-linkbar li {
   margin-right: 0;
   clear: none;
 }
-/* line 36, ../sass/partials/layout/panels/_detail.scss */
+/* line 43, ../sass/partials/layout/panels/_detail.scss */
 .l-panels-detail.box-first.box-second.box-third-empty .l-box-first {
   width: 47.82609%;
   float: left;
@@ -894,7 +878,7 @@ ul.panels-ipe-linkbar li {
   margin-left: 0%;
   clear: none;
 }
-/* line 37, ../sass/partials/layout/panels/_detail.scss */
+/* line 44, ../sass/partials/layout/panels/_detail.scss */
 .l-panels-detail.box-first.box-second.box-third-empty .l-box-second {
   width: 47.82609%;
   float: right;
@@ -902,7 +886,7 @@ ul.panels-ipe-linkbar li {
   margin-right: 0;
   clear: none;
 }
-/* line 43, ../sass/partials/layout/panels/_detail.scss */
+/* line 50, ../sass/partials/layout/panels/_detail.scss */
 .l-panels-detail.box-first.box-second-empty.box-third .l-box-first {
   width: 47.82609%;
   float: left;
@@ -910,7 +894,7 @@ ul.panels-ipe-linkbar li {
   margin-left: 0%;
   clear: none;
 }
-/* line 44, ../sass/partials/layout/panels/_detail.scss */
+/* line 51, ../sass/partials/layout/panels/_detail.scss */
 .l-panels-detail.box-first.box-second-empty.box-third .l-box-third {
   width: 47.82609%;
   float: right;
@@ -918,7 +902,7 @@ ul.panels-ipe-linkbar li {
   margin-right: 0;
   clear: none;
 }
-/* line 50, ../sass/partials/layout/panels/_detail.scss */
+/* line 57, ../sass/partials/layout/panels/_detail.scss */
 .l-panels-detail.box-first-empty.box-second.box-third .l-box-second {
   width: 47.82609%;
   float: left;
@@ -926,7 +910,7 @@ ul.panels-ipe-linkbar li {
   margin-left: 0%;
   clear: none;
 }
-/* line 51, ../sass/partials/layout/panels/_detail.scss */
+/* line 58, ../sass/partials/layout/panels/_detail.scss */
 .l-panels-detail.box-first-empty.box-second.box-third .l-box-third {
   width: 47.82609%;
   float: right;
@@ -1306,6 +1290,7 @@ input.throbbing {
   margin-left: 0;
 }
 
+/* No files to import found in field/*.* */
 /* line 4, ../sass/partials/components/_fieldset.scss */
 .fieldset {
   background: #fff;
@@ -1489,6 +1474,50 @@ header.header {
   display: none;
   display: block;
   padding: 0.5em 0;
+}
+
+/* line 1, ../sass/partials/components/_innovation-stats.scss */
+.innovation-stats {
+  background: #f8f8f8;
+  border: 0;
+  overflow: hidden;
+  padding: 1em;
+}
+/* line 7, ../sass/partials/components/_innovation-stats.scss */
+.innovation-stats > h2 {
+  font-weight: normal;
+}
+/* line 11, ../sass/partials/components/_innovation-stats.scss */
+.innovation-stats .field {
+  -webkit-hyphens: none;
+  -moz-hyphens: none;
+  hyphens: none;
+  padding: 0 0 1em 0;
+}
+/* line 14, ../sass/partials/components/_innovation-stats.scss */
+.innovation-stats .field .field-label {
+  float: left;
+  width: 45%;
+}
+/* line 18, ../sass/partials/components/_innovation-stats.scss */
+.innovation-stats .field .field-items {
+  float: left;
+  font-weight: bold;
+  width: 55%;
+}
+
+/* line 27, ../sass/partials/components/_innovation-stats.scss */
+.innovation-stats__first {
+  float: left;
+  padding-right: 5%;
+  width: 50%;
+}
+
+/* line 35, ../sass/partials/components/_innovation-stats.scss */
+.innovation-stats__second {
+  float: left;
+  padding-left: 5%;
+  width: 50%;
 }
 
 /* line 4, ../sass/partials/components/_messages.scss */
@@ -2178,8 +2207,52 @@ header.header {
   margin: 0 0 1em 0;
   padding: 0 0 0.5em 0;
 }
+/* line 13, ../sass/partials/components/_pane.scss */
+aside .pane__title {
+  color: #7090b7;
+}
 
 /* No files to import found in pane/*.* */
+/* line 2, ../sass/partials/components/_profile-thumb.scss */
+.profile-thumb .layout-slat__media {
+  max-width: 40%;
+}
+
+/* line 7, ../sass/partials/components/_profile-thumb.scss */
+.profile-thumb__image, .profile-thumb__image--rounded {
+  text-align: center;
+}
+/* line 9, ../sass/partials/components/_profile-thumb.scss */
+.profile-thumb__image a, .profile-thumb__image--rounded a {
+  display: block;
+  line-height: 1;
+}
+/* line 13, ../sass/partials/components/_profile-thumb.scss */
+.profile-thumb__image img, .profile-thumb__image--rounded img {
+  display: inline-block;
+}
+
+/* line 20, ../sass/partials/components/_profile-thumb.scss */
+.profile-thumb__image--rounded img {
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+  border-radius: 50%;
+  border: 2px solid #cecfcb;
+}
+
+/* line 26, ../sass/partials/components/_profile-thumb.scss */
+.profile-thumb__name {
+  -webkit-hyphens: none;
+  -moz-hyphens: none;
+  hyphens: none;
+  font-size: 0.8125em;
+  line-height: 1.3;
+  padding-top: 0.2em;
+  text-align: center;
+}
+
 /* line 4, ../sass/partials/components/_progress-bar.scss */
 .progress {
   position: relative;
@@ -2288,19 +2361,20 @@ header.header {
 .region-meta {
   background: #003359 url(../images/geometricshape.png) no-repeat 100% 0;
   color: #fff;
-  padding: 2em 0;
+  margin: 2em 0;
+  padding: 2em 0 0 0;
 }
-/* line 7, ../sass/partials/components/_region-meta.scss */
+/* line 8, ../sass/partials/components/_region-meta.scss */
 .region-meta .pane__title,
 .region-meta .block__title {
   border-color: #fff;
   color: #fff;
 }
-/* line 12, ../sass/partials/components/_region-meta.scss */
+/* line 13, ../sass/partials/components/_region-meta.scss */
 .region-meta a {
   color: #ed7d3a;
 }
-/* line 14, ../sass/partials/components/_region-meta.scss */
+/* line 15, ../sass/partials/components/_region-meta.scss */
 .region-meta a:hover, .region-meta a:focus {
   color: #f8f8f8;
 }
@@ -2545,34 +2619,7 @@ tr.drag-previous {
   width: 100%;
 }
 
-/* line 2, ../sass/partials/components/view-mode/_view-mode-user_teaser_summary.scss */
-.view-mode-user_teaser_summary .field--user-photo {
-  text-align: center;
-}
-/* line 4, ../sass/partials/components/view-mode/_view-mode-user_teaser_summary.scss */
-.view-mode-user_teaser_summary .field--user-photo a {
-  display: block;
-  line-height: 1;
-}
-/* line 8, ../sass/partials/components/view-mode/_view-mode-user_teaser_summary.scss */
-.view-mode-user_teaser_summary .field--user-photo img {
-  -webkit-border-radius: 50%;
-  -moz-border-radius: 50%;
-  -ms-border-radius: 50%;
-  -o-border-radius: 50%;
-  border-radius: 50%;
-  border: 2px solid #f8f8f8;
-  display: inline-block;
-}
-/* line 14, ../sass/partials/components/view-mode/_view-mode-user_teaser_summary.scss */
-.view-mode-user_teaser_summary .field--user-full-name {
-  font-size: 0.8125em;
-  line-height: 1.3;
-  padding-top: 0.2em;
-  text-align: center;
-  max-width: 100px;
-}
-
+/* No files to import found in view-mode/*.* */
 /* line 6, ../sass/partials/components/_view.scss */
 .view__filters {
   margin-bottom: 1.625em;
@@ -2582,6 +2629,40 @@ tr.drag-previous {
 .view__all {
   font-size: 0.875em;
   font-weight: bold;
+}
+
+/* line 5, ../sass/partials/components/view/_view--featured-assets.scss */
+.view--featured-assets .flexslider ul.slides {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+/* line 9, ../sass/partials/components/view/_view--featured-assets.scss */
+.view--featured-assets .flexslider ul.slides li {
+  margin: 0;
+  padding: 0;
+}
+/* line 15, ../sass/partials/components/view/_view--featured-assets.scss */
+.view--featured-assets .flexslider ol.flex-control-nav {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+/* line 19, ../sass/partials/components/view/_view--featured-assets.scss */
+.view--featured-assets .flexslider ol.flex-control-nav li {
+  margin: 0;
+  padding: 0;
+}
+/* line 25, ../sass/partials/components/view/_view--featured-assets.scss */
+.view--featured-assets .flexslider ul.flex-direction-nav {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+/* line 29, ../sass/partials/components/view/_view--featured-assets.scss */
+.view--featured-assets .flexslider ul.flex-direction-nav li {
+  margin: 0;
+  padding: 0;
 }
 
 /* line 1, ../sass/partials/components/view/_view--innovation-counters.scss */

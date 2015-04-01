@@ -46,6 +46,42 @@ function gie_user_ds_field_settings_info() {
       'weight' => '1',
       'label' => 'hidden',
       'format' => 'linked_name',
+      'formatter_settings' => array(
+        'ft' => array(
+          'func' => 'theme_ds_field_expert',
+          'ow' => TRUE,
+          'ow-el' => 'div',
+          'ow-cl' => 'profile-thumb__name',
+          'ow-def-cl' => FALSE,
+          'ow-at' => '',
+          'ow-def-at' => FALSE,
+        ),
+        'field_delimiter' => '',
+        'linked_field' => array(
+          'linked' => 0,
+          'destination' => '',
+          'advanced' => array(
+            'title' => '',
+            'target' => '',
+            'class' => '',
+            'rel' => '',
+            'text' => '',
+          ),
+        ),
+      ),
+    ),
+    'field_user_photo' => array(
+      'formatter_settings' => array(
+        'ft' => array(
+          'func' => 'theme_ds_field_expert',
+          'ow' => TRUE,
+          'ow-el' => 'div',
+          'ow-cl' => 'profile-thumb__image--rounded',
+          'ow-def-cl' => FALSE,
+          'ow-at' => '',
+          'ow-def-at' => FALSE,
+        ),
+      ),
     ),
   );
   $export['user|user|user_teaser'] = $ds_fieldsetting;
@@ -61,6 +97,55 @@ function gie_user_ds_field_settings_info() {
       'weight' => '1',
       'label' => 'hidden',
       'format' => 'linked_name',
+      'formatter_settings' => array(
+        'ft' => array(
+          'func' => 'theme_ds_field_expert',
+          'ow' => TRUE,
+          'ow-el' => 'div',
+          'ow-cl' => 'profile-thumb__name',
+          'ow-def-cl' => FALSE,
+          'ow-at' => '',
+          'ow-def-at' => FALSE,
+        ),
+        'field_delimiter' => '',
+        'linked_field' => array(
+          'linked' => 0,
+          'destination' => '',
+          'advanced' => array(
+            'title' => '',
+            'target' => '',
+            'class' => '',
+            'rel' => '',
+            'text' => '',
+          ),
+        ),
+      ),
+    ),
+    'field_user_summary' => array(
+      'formatter_settings' => array(
+        'ft' => array(
+          'func' => 'theme_ds_field_expert',
+          'ow' => TRUE,
+          'ow-el' => 'div',
+          'ow-cl' => 'profile-thumb__summary',
+          'ow-def-cl' => FALSE,
+          'ow-at' => '',
+          'ow-def-at' => FALSE,
+        ),
+      ),
+    ),
+    'field_user_photo' => array(
+      'formatter_settings' => array(
+        'ft' => array(
+          'func' => 'theme_ds_field_expert',
+          'ow' => TRUE,
+          'ow-el' => 'div',
+          'ow-cl' => 'profile-thumb__image--rounded',
+          'ow-def-cl' => FALSE,
+          'ow-at' => '',
+          'ow-def-at' => FALSE,
+        ),
+      ),
     ),
   );
   $export['user|user|user_teaser_summary'] = $ds_fieldsetting;
@@ -139,7 +224,11 @@ function gie_user_ds_layout_settings_info() {
       'field_user_photo' => 'ds_content',
       'user_full_name' => 'ds_content',
     ),
-    'classes' => array(),
+    'classes' => array(
+      'layout_class' => array(
+        'profile-thumb' => 'profile-thumb',
+      ),
+    ),
     'wrappers' => array(
       'ds_content' => 'div',
     ),
@@ -173,7 +262,11 @@ function gie_user_ds_layout_settings_info() {
       'user_full_name' => 'media',
       'field_user_summary' => 'main_content',
     ),
-    'classes' => array(),
+    'classes' => array(
+      'layout_class' => array(
+        'profile-thumb' => 'profile-thumb',
+      ),
+    ),
     'wrappers' => array(
       'header' => 'div',
       'media' => 'div',

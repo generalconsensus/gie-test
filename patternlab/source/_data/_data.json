@@ -1,5 +1,5 @@
 {
-  "siteName": "Site Name",
+  "siteName": "Global Innovation Exchange",
   "htmlClass": "",
   "bodyClass": "",
   "pageTitle": "Page Title",
@@ -22,6 +22,10 @@
     "landscape": {
       "src": "http://fpoimg.com/800x450?text=Landscape 16:9",
       "alt": "Landscape 16:9"
+    },
+    "profile": {
+      "src": "http://fpoimg.com/78x78?text=Square 1:1",
+      "alt": "Square 1:1"
     }
   },
   "year": {

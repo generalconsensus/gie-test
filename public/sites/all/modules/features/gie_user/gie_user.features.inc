@@ -86,11 +86,11 @@ function gie_user_flag_default_flags() {
 function gie_user_image_default_styles() {
   $styles = array();
 
-  // Exported image style: user-small.
-  $styles['user-small'] = array(
-    'label' => 'user-small',
+  // Exported image style: thumb-78x78.
+  $styles['thumb-78x78'] = array(
+    'label' => 'thumb-78x78',
     'effects' => array(
-      1 => array(
+      4 => array(
         'name' => 'image_scale_and_crop',
         'data' => array(
           'width' => 78,

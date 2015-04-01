@@ -15,7 +15,27 @@
     margin-right: 0;
     clear: none;
   }
-  /* line 20, ../../sass/partials/layout/panels/_detail.scss */
+}
+@media (min-width: 43.75em) {
+  /* line 23, ../../sass/partials/layout/panels/_detail.scss */
+  .l-panels-detail.bottom.bottom-sidebar .l-bottom {
+    width: 56.52174%;
+    float: left;
+    margin-right: -100%;
+    margin-left: 0%;
+    clear: none;
+  }
+  /* line 24, ../../sass/partials/layout/panels/_detail.scss */
+  .l-panels-detail.bottom.bottom-sidebar .l-bottom-sidebar {
+    width: 39.13043%;
+    float: right;
+    margin-left: 0;
+    margin-right: 0;
+    clear: none;
+  }
+}
+@media (min-width: 56.25em) {
+  /* line 27, ../../sass/partials/layout/panels/_detail.scss */
   .l-panels-detail.bottom.bottom-sidebar .l-bottom {
     width: 65.21739%;
     float: left;
@@ -23,7 +43,7 @@
     margin-left: 0%;
     clear: none;
   }
-  /* line 21, ../../sass/partials/layout/panels/_detail.scss */
+  /* line 28, ../../sass/partials/layout/panels/_detail.scss */
   .l-panels-detail.bottom.bottom-sidebar .l-bottom-sidebar {
     width: 30.43478%;
     float: right;
@@ -33,7 +53,7 @@
   }
 }
 @media (min-width: 56.25em) {
-  /* line 32, ../../sass/partials/layout/panels/_detail.scss */
+  /* line 36, ../../sass/partials/layout/panels/_detail.scss */
   .l-panels-detail.box-first.box-second.box-third .l-box-first {
     width: 30.43478%;
     float: left;
@@ -41,7 +61,7 @@
     margin-left: 0%;
     clear: none;
   }
-  /* line 33, ../../sass/partials/layout/panels/_detail.scss */
+  /* line 37, ../../sass/partials/layout/panels/_detail.scss */
   .l-panels-detail.box-first.box-second.box-third .l-box-second {
     width: 30.43478%;
     float: left;
@@ -49,7 +69,7 @@
     margin-left: 34.78261%;
     clear: none;
   }
-  /* line 34, ../../sass/partials/layout/panels/_detail.scss */
+  /* line 38, ../../sass/partials/layout/panels/_detail.scss */
   .l-panels-detail.box-first.box-second.box-third .l-box-third {
     width: 30.43478%;
     float: right;
@@ -59,7 +79,7 @@
   }
 }
 @media (min-width: 43.75em) {
-  /* line 39, ../../sass/partials/layout/panels/_detail.scss */
+  /* line 43, ../../sass/partials/layout/panels/_detail.scss */
   .l-panels-detail.box-first.box-second.box-third-empty .l-box-first {
     width: 47.82609%;
     float: left;
@@ -67,7 +87,7 @@
     margin-left: 0%;
     clear: none;
   }
-  /* line 40, ../../sass/partials/layout/panels/_detail.scss */
+  /* line 44, ../../sass/partials/layout/panels/_detail.scss */
   .l-panels-detail.box-first.box-second.box-third-empty .l-box-second {
     width: 47.82609%;
     float: right;
@@ -77,7 +97,7 @@
   }
 }
 @media (min-width: 43.75em) {
-  /* line 46, ../../sass/partials/layout/panels/_detail.scss */
+  /* line 50, ../../sass/partials/layout/panels/_detail.scss */
   .l-panels-detail.box-first.box-second-empty.box-third .l-box-first {
     width: 47.82609%;
     float: left;
@@ -85,7 +105,7 @@
     margin-left: 0%;
     clear: none;
   }
-  /* line 47, ../../sass/partials/layout/panels/_detail.scss */
+  /* line 51, ../../sass/partials/layout/panels/_detail.scss */
   .l-panels-detail.box-first.box-second-empty.box-third .l-box-third {
     width: 47.82609%;
     float: right;
@@ -95,7 +115,7 @@
   }
 }
 @media (min-width: 43.75em) {
-  /* line 53, ../../sass/partials/layout/panels/_detail.scss */
+  /* line 57, ../../sass/partials/layout/panels/_detail.scss */
   .l-panels-detail.box-first-empty.box-second.box-third .l-box-second {
     width: 47.82609%;
     float: left;
@@ -103,7 +123,7 @@
     margin-left: 0%;
     clear: none;
   }
-  /* line 54, ../../sass/partials/layout/panels/_detail.scss */
+  /* line 58, ../../sass/partials/layout/panels/_detail.scss */
   .l-panels-detail.box-first-empty.box-second.box-third .l-box-third {
     width: 47.82609%;
     float: right;
@@ -122,7 +142,7 @@
 .l-panels-detail:after {
   clear: both;
 }
-/* line 70, ../../sass/partials/layout/panels/_detail.scss */
+/* line 74, ../../sass/partials/layout/panels/_detail.scss */
 .l-panels-detail .l-wrapper,
 .l-panels-detail .l-hero,
 .l-panels-detail .l-main,

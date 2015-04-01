@@ -1,0 +1,41 @@
+.innovation-stats {
+  background: $gray;
+  border: 0;
+  overflow: hidden;
+  padding: 1em;
+ 
+  > h2 {
+    font-weight: normal;
+  }
+
+  .field {
+    @include hyphens(none);
+    padding: 0 0 1em 0;
+    .field-label {
+      float: left;
+      width: 45%;
+    }
+    .field-items {
+      float: left;
+      font-weight: bold;
+      width: 55%;
+    }
+  }
+   
+}
+
+.innovation-stats__first {
+  @include breakpoint(900px, $no-query: true) {
+    float: left;
+    padding-right: 5%;
+    width: 50%;
+  }
+}
+
+.innovation-stats__second {
+  @include breakpoint(900px, $no-query: true) {
+    float: left;
+    padding-left: 5%;
+    width: 50%;    
+  }   
+}

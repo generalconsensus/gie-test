@@ -1,0 +1,35 @@
+.profile-thumb {
+  .layout-slat__media {
+    max-width: 40%;
+  }
+}
+
+.profile-thumb__image {
+  text-align: center;
+  a {
+    display: block;
+    line-height: 1;
+  }
+  img {
+    display: inline-block;
+  }
+}
+
+.profile-thumb__image--rounded {
+  @extend .profile-thumb__image;
+  img {
+    @include border-radius(50%);
+    border: 2px solid $border-color;
+  }
+}
+
+.profile-thumb__name {
+  @include hyphens(none);
+  font-size: em(13px);
+  line-height: 1.3;
+  padding-top: 0.2em;
+  text-align: center;
+  @include breakpoint(600px, $no-query: true) { // same as breakpoing in _slat.scss
+    //max-width: 100px;
+  }
+}
