@@ -186,7 +186,7 @@ function gie_taxonomies_views_default_views() {
   $handler->display->display_options['defaults']['style_options'] = FALSE;
   $handler->display->display_options['defaults']['row_plugin'] = FALSE;
   $handler->display->display_options['row_plugin'] = 'entity';
-  $handler->display->display_options['row_options']['view_mode'] = 'teaser';
+  $handler->display->display_options['row_options']['view_mode'] = 'listing';
   $handler->display->display_options['defaults']['row_options'] = FALSE;
   $handler->display->display_options['defaults']['relationships'] = FALSE;
   /* Relationship: Entity Reference: Referencing entity */
@@ -336,7 +336,7 @@ function gie_taxonomies_views_default_views() {
   $handler->display->display_options['style_plugin'] = 'grid';
   $handler->display->display_options['style_options']['columns'] = '3';
   $handler->display->display_options['row_plugin'] = 'entity';
-  $handler->display->display_options['row_options']['view_mode'] = 'teaser';
+  $handler->display->display_options['row_options']['view_mode'] = 'listing';
   /* Relationship: Content: Topic (field_innovation_topic) */
   $handler->display->display_options['relationships']['field_innovation_topic_tid']['id'] = 'field_innovation_topic_tid';
   $handler->display->display_options['relationships']['field_innovation_topic_tid']['table'] = 'field_data_field_innovation_topic';
