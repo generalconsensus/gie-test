@@ -5,6 +5,28 @@
  */
 
 /**
+ * Implements hook_ctools_plugin_api().
+ */
+function gie_taxonomies_ctools_plugin_api($module = NULL, $api = NULL) {
+  if ($module == "ds" && $api == "ds") {
+    return array("version" => "1");
+  }
+  if ($module == "panelizer" && $api == "panelizer") {
+    return array("version" => "1");
+  }
+  if ($module == "strongarm" && $api == "strongarm") {
+    return array("version" => "1");
+  }
+}
+
+/**
+ * Implements hook_views_api().
+ */
+function gie_taxonomies_views_api($module = NULL, $api = NULL) {
+  return array("api" => "3.0");
+}
+
+/**
  * Implements hook_flag_default_flags().
  */
 function gie_taxonomies_flag_default_flags() {
@@ -36,11 +58,11 @@ function gie_taxonomies_flag_default_flags() {
     'show_on_form' => 0,
     'access_author' => '',
     'show_contextual_link' => 0,
-    'api_version' => 3,
     'module' => 'gie_taxonomies',
     'locked' => array(
       0 => 'name',
     ),
+    'api_version' => 3,
   );
   return $flags;
 

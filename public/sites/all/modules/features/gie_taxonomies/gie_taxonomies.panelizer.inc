@@ -1,0 +1,340 @@
+<?php
+/**
+ * @file
+ * gie_taxonomies.panelizer.inc
+ */
+
+/**
+ * Implements hook_panelizer_defaults().
+ */
+function gie_taxonomies_panelizer_defaults() {
+  $export = array();
+
+  $panelizer = new stdClass();
+  $panelizer->disabled = FALSE; /* Edit this to true to make a default panelizer disabled initially */
+  $panelizer->api_version = 1;
+  $panelizer->name = 'taxonomy_term:topic:default';
+  $panelizer->title = 'Default';
+  $panelizer->panelizer_type = 'taxonomy_term';
+  $panelizer->panelizer_key = 'topic';
+  $panelizer->no_blocks = FALSE;
+  $panelizer->css_id = '';
+  $panelizer->css = '';
+  $panelizer->pipeline = 'standard';
+  $panelizer->contexts = array();
+  $panelizer->relationships = array();
+  $panelizer->access = array();
+  $panelizer->view_mode = 'page_manager';
+  $panelizer->css_class = '';
+  $panelizer->title_element = 'H2';
+  $panelizer->link_to_entity = TRUE;
+  $panelizer->extra = array();
+  $display = new panels_display();
+  $display->layout = 'detail';
+  $display->layout_settings = array();
+  $display->panel_settings = array(
+    'style_settings' => array(
+      'default' => NULL,
+      'preface' => NULL,
+      'main' => NULL,
+      'sidebar' => NULL,
+      'hero' => NULL,
+      'main_sidebar' => NULL,
+      'center' => NULL,
+      'box_first' => NULL,
+      'box_second' => NULL,
+      'box_third' => NULL,
+      'bottom_sidebar' => NULL,
+      'bottom' => NULL,
+    ),
+  );
+  $display->cache = array();
+  $display->title = '';
+  $display->uuid = '85a68ad7-d463-4314-b289-b0c8d935685b';
+  $display->content = array();
+  $display->panels = array();
+    $pane = new stdClass();
+    $pane->pid = 'new-e1c3a8e7-b766-4652-8c13-3243565a09fb';
+    $pane->panel = 'bottom';
+    $pane->type = 'views_panes';
+    $pane->subtype = 'topic_recent_content-innovations_pane';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array();
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
+    $pane->css = array();
+    $pane->extras = array();
+    $pane->position = 0;
+    $pane->locks = array();
+    $pane->uuid = 'e1c3a8e7-b766-4652-8c13-3243565a09fb';
+    $display->content['new-e1c3a8e7-b766-4652-8c13-3243565a09fb'] = $pane;
+    $display->panels['bottom'][0] = 'new-e1c3a8e7-b766-4652-8c13-3243565a09fb';
+    $pane = new stdClass();
+    $pane->pid = 'new-a4232807-5f5c-4ac3-a825-f53568c1f053';
+    $pane->panel = 'bottom';
+    $pane->type = 'views_panes';
+    $pane->subtype = 'topic_recent_content-resources_pane';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array();
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
+    $pane->css = array();
+    $pane->extras = array();
+    $pane->position = 1;
+    $pane->locks = array();
+    $pane->uuid = 'a4232807-5f5c-4ac3-a825-f53568c1f053';
+    $display->content['new-a4232807-5f5c-4ac3-a825-f53568c1f053'] = $pane;
+    $display->panels['bottom'][1] = 'new-a4232807-5f5c-4ac3-a825-f53568c1f053';
+    $pane = new stdClass();
+    $pane->pid = 'new-91c009c3-7498-4b70-8044-366bfd113a2c';
+    $pane->panel = 'bottom';
+    $pane->type = 'views_panes';
+    $pane->subtype = 'topic_recent_content-funding_pane';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array();
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
+    $pane->css = array();
+    $pane->extras = array();
+    $pane->position = 2;
+    $pane->locks = array();
+    $pane->uuid = '91c009c3-7498-4b70-8044-366bfd113a2c';
+    $display->content['new-91c009c3-7498-4b70-8044-366bfd113a2c'] = $pane;
+    $display->panels['bottom'][2] = 'new-91c009c3-7498-4b70-8044-366bfd113a2c';
+    $pane = new stdClass();
+    $pane->pid = 'new-74a01b03-eb34-4bd5-bfa6-bd8a4f0399a4';
+    $pane->panel = 'bottom_sidebar';
+    $pane->type = 'flag_link';
+    $pane->subtype = 'taxonomy_term';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array(
+      'flag_name' => 'follow_taxonomy',
+      'context' => 'panelizer',
+      'override_title' => 1,
+      'override_title_text' => '',
+      'override_title_heading' => 'h2',
+    );
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
+    $pane->css = array();
+    $pane->extras = array();
+    $pane->position = 0;
+    $pane->locks = array();
+    $pane->uuid = '74a01b03-eb34-4bd5-bfa6-bd8a4f0399a4';
+    $display->content['new-74a01b03-eb34-4bd5-bfa6-bd8a4f0399a4'] = $pane;
+    $display->panels['bottom_sidebar'][0] = 'new-74a01b03-eb34-4bd5-bfa6-bd8a4f0399a4';
+    $pane = new stdClass();
+    $pane->pid = 'new-271fa48a-fa5b-4e35-a62d-d2c33863d30d';
+    $pane->panel = 'bottom_sidebar';
+    $pane->type = 'entity_field';
+    $pane->subtype = 'taxonomy_term:field_topic_contact';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array(
+      'label' => 'title',
+      'formatter' => 'entityreference_entity_view',
+      'delta_limit' => 0,
+      'delta_offset' => '0',
+      'delta_reversed' => FALSE,
+      'formatter_settings' => array(
+        'linked_field' => array(
+          'linked' => 0,
+          'destination' => '',
+          'advanced' => array(
+            'title' => '',
+            'target' => '',
+            'class' => '',
+            'rel' => '',
+            'text' => '',
+          ),
+        ),
+        'view_mode' => 'user_teaser',
+        'links' => 0,
+      ),
+      'context' => 'panelizer',
+      'override_title' => 1,
+      'override_title_text' => 'Topic Contact',
+      'override_title_heading' => 'h2',
+    );
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
+    $pane->css = array();
+    $pane->extras = array();
+    $pane->position = 1;
+    $pane->locks = array();
+    $pane->uuid = '271fa48a-fa5b-4e35-a62d-d2c33863d30d';
+    $display->content['new-271fa48a-fa5b-4e35-a62d-d2c33863d30d'] = $pane;
+    $display->panels['bottom_sidebar'][1] = 'new-271fa48a-fa5b-4e35-a62d-d2c33863d30d';
+    $pane = new stdClass();
+    $pane->pid = 'new-68f2ec14-0276-483b-84e7-08170494efa6';
+    $pane->panel = 'bottom_sidebar';
+    $pane->type = 'views_panes';
+    $pane->subtype = 'followers-topic_pane';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array();
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
+    $pane->css = array();
+    $pane->extras = array();
+    $pane->position = 2;
+    $pane->locks = array();
+    $pane->uuid = '68f2ec14-0276-483b-84e7-08170494efa6';
+    $display->content['new-68f2ec14-0276-483b-84e7-08170494efa6'] = $pane;
+    $display->panels['bottom_sidebar'][2] = 'new-68f2ec14-0276-483b-84e7-08170494efa6';
+    $pane = new stdClass();
+    $pane->pid = 'new-d99284fd-3874-4cf3-a3cf-552b3f564732';
+    $pane->panel = 'bottom_sidebar';
+    $pane->type = 'views_panes';
+    $pane->subtype = 'term_organizations-topic_pane';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array();
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
+    $pane->css = array();
+    $pane->extras = array();
+    $pane->position = 3;
+    $pane->locks = array();
+    $pane->uuid = 'd99284fd-3874-4cf3-a3cf-552b3f564732';
+    $display->content['new-d99284fd-3874-4cf3-a3cf-552b3f564732'] = $pane;
+    $display->panels['bottom_sidebar'][3] = 'new-d99284fd-3874-4cf3-a3cf-552b3f564732';
+    $pane = new stdClass();
+    $pane->pid = 'new-35f44122-8699-44e6-a12c-65f07f4ae31e';
+    $pane->panel = 'center';
+    $pane->type = 'views_panes';
+    $pane->subtype = 'highlights-topics_pane';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array();
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
+    $pane->css = array();
+    $pane->extras = array();
+    $pane->position = 0;
+    $pane->locks = array();
+    $pane->uuid = '35f44122-8699-44e6-a12c-65f07f4ae31e';
+    $display->content['new-35f44122-8699-44e6-a12c-65f07f4ae31e'] = $pane;
+    $display->panels['center'][0] = 'new-35f44122-8699-44e6-a12c-65f07f4ae31e';
+    $pane = new stdClass();
+    $pane->pid = 'new-f6bd4884-7d7e-420f-823b-1048e0380d4e';
+    $pane->panel = 'hero';
+    $pane->type = 'page_title';
+    $pane->subtype = 'page_title';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array(
+      'markup' => 'h1',
+      'class' => '',
+      'id' => '',
+      'override_title' => 0,
+      'override_title_text' => '',
+      'override_title_heading' => 'h2',
+    );
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
+    $pane->css = array();
+    $pane->extras = array();
+    $pane->position = 0;
+    $pane->locks = array();
+    $pane->uuid = 'f6bd4884-7d7e-420f-823b-1048e0380d4e';
+    $display->content['new-f6bd4884-7d7e-420f-823b-1048e0380d4e'] = $pane;
+    $display->panels['hero'][0] = 'new-f6bd4884-7d7e-420f-823b-1048e0380d4e';
+    $pane = new stdClass();
+    $pane->pid = 'new-c3f02837-dd49-4689-a6d4-657e84ce3d50';
+    $pane->panel = 'main';
+    $pane->type = 'entity_view';
+    $pane->subtype = 'taxonomy_term';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array(
+      'view_mode' => 'full',
+      'context' => 'panelizer',
+      'override_title' => 0,
+      'override_title_text' => '',
+      'override_title_heading' => 'h2',
+    );
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
+    $pane->css = array();
+    $pane->extras = array();
+    $pane->position = 0;
+    $pane->locks = array();
+    $pane->uuid = 'c3f02837-dd49-4689-a6d4-657e84ce3d50';
+    $display->content['new-c3f02837-dd49-4689-a6d4-657e84ce3d50'] = $pane;
+    $display->panels['main'][0] = 'new-c3f02837-dd49-4689-a6d4-657e84ce3d50';
+    $pane = new stdClass();
+    $pane->pid = 'new-593732b6-444a-40dd-a6d3-3f205e2595cf';
+    $pane->panel = 'main';
+    $pane->type = 'sharethis';
+    $pane->subtype = 'sharethis';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array(
+      'path' => 'current',
+      'path-external' => '',
+      'override_title' => 0,
+      'override_title_text' => '',
+      'override_title_heading' => 'h2',
+    );
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
+    $pane->css = array();
+    $pane->extras = array();
+    $pane->position = 1;
+    $pane->locks = array();
+    $pane->uuid = '593732b6-444a-40dd-a6d3-3f205e2595cf';
+    $display->content['new-593732b6-444a-40dd-a6d3-3f205e2595cf'] = $pane;
+    $display->panels['main'][1] = 'new-593732b6-444a-40dd-a6d3-3f205e2595cf';
+    $pane = new stdClass();
+    $pane->pid = 'new-7e3b4787-c509-4475-9d4c-b336c36b1ed8';
+    $pane->panel = 'main_sidebar';
+    $pane->type = 'views_panes';
+    $pane->subtype = 'subterms-topics_pane';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array();
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
+    $pane->css = array();
+    $pane->extras = array();
+    $pane->position = 0;
+    $pane->locks = array();
+    $pane->uuid = '7e3b4787-c509-4475-9d4c-b336c36b1ed8';
+    $display->content['new-7e3b4787-c509-4475-9d4c-b336c36b1ed8'] = $pane;
+    $display->panels['main_sidebar'][0] = 'new-7e3b4787-c509-4475-9d4c-b336c36b1ed8';
+  $display->hide_title = PANELS_TITLE_FIXED;
+  $display->title_pane = '0';
+  $panelizer->display = $display;
+  $export['taxonomy_term:topic:default'] = $panelizer;
+
+  return $export;
+}
