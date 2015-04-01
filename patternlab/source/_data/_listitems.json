@@ -19,6 +19,10 @@
       "landscape": {
         "src": "http://lorempixel.com/800/450/animals/2/",
         "alt": "Landscape 16:9"
+      },
+      "profile": {
+        "src": "http://lorempixel.com/78/78/animals/4/",
+        "alt": "Square 1:1"
       }
     },
     "year": {
@@ -71,6 +75,10 @@
       "landscape": {
         "src": "http://lorempixel.com/800/450/food/7/",
         "alt": "Landscape 16:9"
+      },
+      "profile": {
+        "src": "http://lorempixel.com/78/78/food/5/",
+        "alt": "Square 1:1"
       }
     },
     "year": {
@@ -123,6 +131,10 @@
       "landscape": {
         "src": "http://lorempixel.com/800/450/city/9/",
         "alt": "Landscape 16:9"
+      },
+      "profile": {
+        "src": "http://lorempixel.com/78/78/city/7/",
+        "alt": "Square 1:1"
       }
     },
     "year": {
@@ -175,6 +187,10 @@
       "landscape": {
         "src": "http://lorempixel.com/800/450/business/8/",
         "alt": "Landscape 16:9"
+      },
+      "profile": {
+        "src": "http://lorempixel.com/78/78/business/10/",
+        "alt": "Square 1:1"
       }
     },
     "year": {
@@ -227,6 +243,10 @@
       "landscape": {
         "src": "http://lorempixel.com/800/450/nature/1/",
         "alt": "Landscape 16:9"
+      },
+      "profile": {
+        "src": "http://lorempixel.com/78/78/nature/3/",
+        "alt": "Square 1:1"
       }
     },
     "year": {
@@ -279,6 +299,10 @@
       "landscape": {
         "src": "http://lorempixel.com/800/450/sports/6/",
         "alt": "Landscape 16:9"
+      },
+      "profile": {
+        "src": "http://lorempixel.com/78/78/sports/4/",
+        "alt": "Square 1:1"
       }
     },
     "year": {
@@ -331,6 +355,10 @@
       "landscape": {
         "src": "http://lorempixel.com/800/450/people/2/",
         "alt": "Landscape 16:9"
+      },
+      "profile": {
+        "src": "http://lorempixel.com/78/78/people/4/",
+        "alt": "Square 1:1"
       }
     },
     "year": {
@@ -383,6 +411,10 @@
       "landscape": {
         "src": "http://lorempixel.com/800/450/technics/7/",
         "alt": "Landscape 16:9"
+      },
+      "profile": {
+        "src": "http://lorempixel.com/78/78/technics/2/",
+        "alt": "Square 1:1"
       }
     },
     "year": {
@@ -435,6 +467,10 @@
       "landscape": {
         "src": "http://lorempixel.com/800/450/transport/5/",
         "alt": "Landscape 16:9"
+      },
+      "profile": {
+        "src": "http://lorempixel.com/78/78/transport/7/",
+        "alt": "Square 1:1"
       }
     },
     "year": {
@@ -487,6 +523,10 @@
       "landscape": {
         "src": "http://lorempixel.com/800/450/cats/4/",
         "alt": "Landscape 16:9"
+      },
+      "profile": {
+        "src": "http://lorempixel.com/78/78/cats/3/",
+        "alt": "Square 1:1"
       }
     },
     "year": {
@@ -539,6 +579,10 @@
       "landscape": {
         "src": "http://lorempixel.com/800/450/nightlife/4/",
         "alt": "Landscape 16:9"
+      },
+      "profile": {
+        "src": "http://lorempixel.com/78/78/nightlife/5/",
+        "alt": "Square 1:1"
       }
     },
     "year": {
@@ -591,6 +635,10 @@
       "landscape": {
         "src": "http://lorempixel.com/800/450/abstract/1/",
         "alt": "Landscape 16:9"
+      },
+      "profile": {
+        "src": "http://lorempixel.com/78/78/abstract/6/",
+        "alt": "Square 1:1"
       }
     },
     "year": {

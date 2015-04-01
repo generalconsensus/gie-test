@@ -2811,6 +2811,40 @@ tr.drag-previous {
   font-weight: bold;
 }
 
+/* line 5, ../sass/partials/components/view/_view--featured-assets.scss */
+.view--featured-assets .flexslider ul.slides {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+/* line 9, ../sass/partials/components/view/_view--featured-assets.scss */
+.view--featured-assets .flexslider ul.slides li {
+  margin: 0;
+  padding: 0;
+}
+/* line 15, ../sass/partials/components/view/_view--featured-assets.scss */
+.view--featured-assets .flexslider ol.flex-control-nav {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+/* line 19, ../sass/partials/components/view/_view--featured-assets.scss */
+.view--featured-assets .flexslider ol.flex-control-nav li {
+  margin: 0;
+  padding: 0;
+}
+/* line 25, ../sass/partials/components/view/_view--featured-assets.scss */
+.view--featured-assets .flexslider ul.flex-direction-nav {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+/* line 29, ../sass/partials/components/view/_view--featured-assets.scss */
+.view--featured-assets .flexslider ul.flex-direction-nav li {
+  margin: 0;
+  padding: 0;
+}
+
 /* line 1, ../sass/partials/components/view/_view--innovation-counters.scss */
 .view--innovation-counters .views-field-comment-count, .view--innovation-counters .views-field-count, .view--innovation-counters .views-field-delta {
   padding: 0 0 1em 35px;
