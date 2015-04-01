@@ -382,7 +382,7 @@ function gie_innovation_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 3,
+        'weight' => 14,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -456,7 +456,7 @@ function gie_innovation_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 4,
+        'weight' => 15,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -528,7 +528,7 @@ function gie_innovation_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 26,
+        'weight' => 37,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -622,7 +622,7 @@ function gie_innovation_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 34,
+        'weight' => 45,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -708,7 +708,7 @@ function gie_innovation_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 10,
+        'weight' => 21,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -777,7 +777,7 @@ function gie_innovation_field_default_field_instances() {
       ),
       'listing' => array(
         'label' => 'hidden',
-        'module' => 'text',
+        'module' => 'smart_trim',
         'settings' => array(
           'field_delimiter' => '',
           'linked_field' => array(
@@ -791,8 +791,17 @@ function gie_innovation_field_default_field_instances() {
             'destination' => '',
             'linked' => 0,
           ),
+          'more_link' => 0,
+          'more_text' => 'Read more',
+          'summary_handler' => 'full',
+          'trim_length' => 100,
+          'trim_options' => array(
+            'text' => 0,
+          ),
+          'trim_suffix' => '...',
+          'trim_type' => 'chars',
         ),
-        'type' => 'text_default',
+        'type' => 'smart_trim_format',
         'weight' => 2,
       ),
       'teaser' => array(
@@ -900,7 +909,7 @@ function gie_innovation_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 16,
+        'weight' => 27,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -997,7 +1006,7 @@ function gie_innovation_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 28,
+        'weight' => 39,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -1068,7 +1077,7 @@ function gie_innovation_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 22,
+        'weight' => 33,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -1164,7 +1173,7 @@ function gie_innovation_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 32,
+        'weight' => 43,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -1357,7 +1366,7 @@ function gie_innovation_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 18,
+        'weight' => 29,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -1464,7 +1473,7 @@ function gie_innovation_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 11,
+        'weight' => 22,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -1549,7 +1558,7 @@ function gie_innovation_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 19,
+        'weight' => 30,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -1642,7 +1651,7 @@ function gie_innovation_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 27,
+        'weight' => 38,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -1711,7 +1720,7 @@ function gie_innovation_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 5,
+        'weight' => 16,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -1801,7 +1810,7 @@ function gie_innovation_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 13,
+        'weight' => 24,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -1879,7 +1888,7 @@ function gie_innovation_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 30,
+        'weight' => 41,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -1965,7 +1974,7 @@ function gie_innovation_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 29,
+        'weight' => 40,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -2043,7 +2052,7 @@ function gie_innovation_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 25,
+        'weight' => 36,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -2119,7 +2128,7 @@ function gie_innovation_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 31,
+        'weight' => 42,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -2190,7 +2199,7 @@ function gie_innovation_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 23,
+        'weight' => 34,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -2280,7 +2289,7 @@ function gie_innovation_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 20,
+        'weight' => 31,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -2368,7 +2377,7 @@ function gie_innovation_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 33,
+        'weight' => 44,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -2453,7 +2462,7 @@ function gie_innovation_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 7,
+        'weight' => 18,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -2537,7 +2546,7 @@ function gie_innovation_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 24,
+        'weight' => 35,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -2644,7 +2653,7 @@ function gie_innovation_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 14,
+        'weight' => 25,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -2738,7 +2747,7 @@ function gie_innovation_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 21,
+        'weight' => 32,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -2826,7 +2835,7 @@ function gie_innovation_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 17,
+        'weight' => 28,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -2919,7 +2928,7 @@ function gie_innovation_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 12,
+        'weight' => 23,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -3004,7 +3013,7 @@ function gie_innovation_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 6,
+        'weight' => 17,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -3073,7 +3082,7 @@ function gie_innovation_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 35,
+        'weight' => 46,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -3175,7 +3184,7 @@ function gie_innovation_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 15,
+        'weight' => 26,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -3282,7 +3291,7 @@ function gie_innovation_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 8,
+        'weight' => 19,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -3351,8 +3360,8 @@ function gie_innovation_field_default_field_instances() {
             'linked' => 0,
           ),
           'title_class' => '',
-          'title_link' => '',
-          'title_style' => '',
+          'title_link' => 'content',
+          'title_style' => '_none',
         ),
         'type' => 'title_linked',
         'weight' => 1,

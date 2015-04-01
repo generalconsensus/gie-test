@@ -167,8 +167,32 @@ function gie_innovation_strongarm() {
             'visible' => FALSE,
           ),
           'listing' => array(
-            'weight' => '9',
+            'weight' => '20',
             'visible' => FALSE,
+          ),
+        ),
+        'innovation_listing_counts_evidence' => array(
+          'listing' => array(
+            'weight' => '3',
+            'visible' => TRUE,
+          ),
+        ),
+        'innovation_listing_counts_comments' => array(
+          'listing' => array(
+            'weight' => '4',
+            'visible' => TRUE,
+          ),
+        ),
+        'innovation_listing_counts_orgs' => array(
+          'listing' => array(
+            'weight' => '5',
+            'visible' => TRUE,
+          ),
+        ),
+        'innovation_listing_counts_favorites' => array(
+          'listing' => array(
+            'weight' => '6',
+            'visible' => TRUE,
           ),
         ),
       ),
