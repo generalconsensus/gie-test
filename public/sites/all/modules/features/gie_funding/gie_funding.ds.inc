@@ -37,6 +37,21 @@ function gie_funding_ds_field_settings_info() {
 
   $ds_fieldsetting = new stdClass();
   $ds_fieldsetting->api_version = 1;
+  $ds_fieldsetting->id = 'node|funding|listing';
+  $ds_fieldsetting->entity_type = 'node';
+  $ds_fieldsetting->bundle = 'funding';
+  $ds_fieldsetting->view_mode = 'listing';
+  $ds_fieldsetting->settings = array(
+    'field_funding_topic' => array(
+      'formatter_settings' => array(
+        'ft' => array(),
+      ),
+    ),
+  );
+  $export['node|funding|listing'] = $ds_fieldsetting;
+
+  $ds_fieldsetting = new stdClass();
+  $ds_fieldsetting->api_version = 1;
   $ds_fieldsetting->id = 'node|funding|teaser_date';
   $ds_fieldsetting->entity_type = 'node';
   $ds_fieldsetting->bundle = 'funding';
@@ -132,6 +147,42 @@ function gie_funding_ds_layout_settings_info() {
     'layout_link_custom' => '',
   );
   $export['comment|comment_node_funding|form'] = $ds_layout;
+
+  $ds_layout = new stdClass();
+  $ds_layout->api_version = 1;
+  $ds_layout->id = 'node|funding|listing';
+  $ds_layout->entity_type = 'node';
+  $ds_layout->bundle = 'funding';
+  $ds_layout->view_mode = 'listing';
+  $ds_layout->layout = 'ds_reset';
+  $ds_layout->settings = array(
+    'regions' => array(
+      'ds_content' => array(
+        0 => 'title_field',
+        1 => 'field_funding_eligibility',
+        2 => 'field_funding_deadline',
+        3 => 'field_funding_grant_award_value',
+        4 => 'field_funding_topic',
+      ),
+    ),
+    'fields' => array(
+      'title_field' => 'ds_content',
+      'field_funding_eligibility' => 'ds_content',
+      'field_funding_deadline' => 'ds_content',
+      'field_funding_grant_award_value' => 'ds_content',
+      'field_funding_topic' => 'ds_content',
+    ),
+    'classes' => array(),
+    'wrappers' => array(
+      'ds_content' => 'div',
+    ),
+    'layout_wrapper' => 'div',
+    'layout_attributes' => '',
+    'layout_attributes_merge' => TRUE,
+    'layout_link_attribute' => FALSE,
+    'layout_link_custom' => '',
+  );
+  $export['node|funding|listing'] = $ds_layout;
 
   $ds_layout = new stdClass();
   $ds_layout->api_version = 1;
