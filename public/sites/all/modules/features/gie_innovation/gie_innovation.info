@@ -144,6 +144,7 @@ features[field_instance][] = taxonomy_term-solution_type-name_field
 features[field_instance][] = taxonomy_term-testing_phase-description_field
 features[field_instance][] = taxonomy_term-testing_phase-name_field
 features[flexslider_optionset][] = featured_assets_settings
+features[image][] = featured-asset
 features[node][] = innovation
 features[panelizer_defaults][] = node:innovation:default
 features[taxonomy][] = assistance_type

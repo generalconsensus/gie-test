@@ -20,6 +20,18 @@
       font-weight: bold;
       width: 55%;
     }
+    &.field--innovation-created a,
+    &.field--innovation-implemented a { // location icon
+      &:before {
+        @include image-replace(12px,16px);
+        @include svg-background(map-pin);
+        content: "";
+        display: inline-block;
+        margin-right: 8px;
+        position: relative;
+        top: 2px;
+      }
+    }
   }
    
 }
