@@ -96,7 +96,7 @@ function gie_resource_strongarm() {
         'custom_settings' => TRUE,
       ),
       'full' => array(
-        'custom_settings' => FALSE,
+        'custom_settings' => TRUE,
       ),
       'rss' => array(
         'custom_settings' => FALSE,
@@ -140,8 +140,24 @@ function gie_resource_strongarm() {
             'visible' => FALSE,
           ),
           'listing' => array(
-            'weight' => '7',
+            'weight' => '17',
             'visible' => FALSE,
+          ),
+          'full' => array(
+            'weight' => '3',
+            'visible' => TRUE,
+          ),
+        ),
+        'resource_counters_comment_count' => array(
+          'listing' => array(
+            'weight' => '6',
+            'visible' => TRUE,
+          ),
+        ),
+        'resource_counters_favorite_count' => array(
+          'listing' => array(
+            'weight' => '7',
+            'visible' => TRUE,
           ),
         ),
       ),
@@ -187,6 +203,102 @@ function gie_resource_strongarm() {
   $strongarm->name = 'node_submitted_resource';
   $strongarm->value = 0;
   $export['node_submitted_resource'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'panelizer_defaults_comment_comment_node_resource';
+  $strongarm->value = array(
+    'status' => 0,
+    'view modes' => array(),
+  );
+  $export['panelizer_defaults_comment_comment_node_resource'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'panelizer_defaults_node_resource';
+  $strongarm->value = array(
+    'status' => 1,
+    'view modes' => array(
+      'page_manager' => array(
+        'status' => 1,
+        'substitute' => '',
+        'default' => 1,
+        'choice' => 0,
+      ),
+      'default' => array(
+        'status' => 0,
+        'substitute' => 0,
+        'default' => 0,
+        'choice' => 0,
+      ),
+      'teaser' => array(
+        'status' => 0,
+        'substitute' => 0,
+        'default' => 0,
+        'choice' => 0,
+      ),
+      'listing' => array(
+        'status' => 0,
+        'substitute' => 0,
+        'default' => 0,
+        'choice' => 0,
+      ),
+      'teaser_date' => array(
+        'status' => 0,
+        'substitute' => 0,
+        'default' => 0,
+        'choice' => 0,
+      ),
+    ),
+  );
+  $export['panelizer_defaults_node_resource'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'panelizer_defaults_taxonomy_term_resource_type';
+  $strongarm->value = array(
+    'status' => 0,
+    'view modes' => array(),
+  );
+  $export['panelizer_defaults_taxonomy_term_resource_type'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'panelizer_node:resource:default_selection';
+  $strongarm->value = 0;
+  $export['panelizer_node:resource:default_selection'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'panelizer_node:resource:listing_selection';
+  $strongarm->value = 0;
+  $export['panelizer_node:resource:listing_selection'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'panelizer_node:resource:page_manager_selection';
+  $strongarm->value = 'node:resource:default';
+  $export['panelizer_node:resource:page_manager_selection'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'panelizer_node:resource:teaser_date_selection';
+  $strongarm->value = 0;
+  $export['panelizer_node:resource:teaser_date_selection'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'panelizer_node:resource:teaser_selection';
+  $strongarm->value = 0;
+  $export['panelizer_node:resource:teaser_selection'] = $strongarm;
 
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */

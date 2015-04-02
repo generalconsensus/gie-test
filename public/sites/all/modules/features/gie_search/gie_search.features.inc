@@ -8,6 +8,9 @@
  * Implements hook_ctools_plugin_api().
  */
 function gie_search_ctools_plugin_api($module = NULL, $api = NULL) {
+  if ($module == "facetapi" && $api == "facetapi_defaults") {
+    return array("version" => "1");
+  }
   if ($module == "strongarm" && $api == "strongarm") {
     return array("version" => "1");
   }
@@ -49,11 +52,18 @@ function gie_search_default_search_api_index() {
         "author" : { "type" : "integer", "entity_type" : "user" },
         "body:value" : { "type" : "text" },
         "changed" : { "type" : "date" },
-        "comment_count" : { "type" : "integer" },
         "created" : { "type" : "date" },
-        "promote" : { "type" : "boolean" },
+        "field_resource_assets" : { "type" : "list\\u003Cinteger\\u003E", "entity_type" : "asset" },
+        "field_resource_author" : { "type" : "list\\u003Cinteger\\u003E", "entity_type" : "user" },
+        "field_resource_country" : { "type" : "list\\u003Cinteger\\u003E", "entity_type" : "taxonomy_term" },
+        "field_resource_date" : { "type" : "date" },
+        "field_resource_org" : { "type" : "list\\u003Cinteger\\u003E", "entity_type" : "node" },
+        "field_resource_program" : { "type" : "list\\u003Cinteger\\u003E", "entity_type" : "node" },
+        "field_resource_region" : { "type" : "list\\u003Cinteger\\u003E", "entity_type" : "taxonomy_term" },
+        "field_resource_sector" : { "type" : "list\\u003Cinteger\\u003E", "entity_type" : "taxonomy_term" },
+        "field_resource_topic" : { "type" : "list\\u003Cinteger\\u003E", "entity_type" : "taxonomy_term" },
+        "field_resource_type" : { "type" : "integer", "entity_type" : "taxonomy_term" },
         "search_api_language" : { "type" : "string" },
-        "sticky" : { "type" : "boolean" },
         "title" : { "type" : "text", "boost" : "5.0" },
         "type" : { "type" : "string" }
       }
