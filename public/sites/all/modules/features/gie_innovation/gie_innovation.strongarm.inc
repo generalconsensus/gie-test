@@ -176,11 +176,19 @@ function gie_innovation_strongarm() {
             'weight' => '3',
             'visible' => TRUE,
           ),
+          'full' => array(
+            'weight' => '10',
+            'visible' => FALSE,
+          ),
         ),
         'innovation_listing_counts_comments' => array(
           'listing' => array(
             'weight' => '4',
             'visible' => TRUE,
+          ),
+          'full' => array(
+            'weight' => '10',
+            'visible' => FALSE,
           ),
         ),
         'innovation_listing_counts_orgs' => array(
@@ -188,11 +196,19 @@ function gie_innovation_strongarm() {
             'weight' => '5',
             'visible' => TRUE,
           ),
+          'full' => array(
+            'weight' => '10',
+            'visible' => FALSE,
+          ),
         ),
         'innovation_listing_counts_favorites' => array(
           'listing' => array(
             'weight' => '6',
             'visible' => TRUE,
+          ),
+          'full' => array(
+            'weight' => '10',
+            'visible' => FALSE,
           ),
         ),
       ),
