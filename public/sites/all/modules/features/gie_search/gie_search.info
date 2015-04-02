@@ -45,5 +45,7 @@ features[user_permission][] = administer search
 features[user_permission][] = administer search_api
 features[user_permission][] = search content
 features[user_permission][] = use advanced search
+features[variable][] = facetapi_pretty_paths_searcher_search_api@default_node_index
+features[variable][] = facetapi_pretty_paths_searcher_search_api@default_node_index_options
 features[variable][] = search_api_solr_site_hash
 project path = sites/all/modules/features
