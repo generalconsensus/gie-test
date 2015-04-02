@@ -784,10 +784,10 @@ ul.panels-ipe-linkbar li {
 .layout-constrain {
   margin-left: auto;
   margin-right: auto;
-  max-width: 75em;
-  padding-left: 1em;
-  padding-right: 1em;
-  width: 75em;
+  max-width: 70em;
+  padding-left: 10px;
+  padding-right: 10px;
+  width: 70em;
 }
 
 /* line 9, ../sass/partials/global/helpers/_clearfix.scss */
@@ -1126,7 +1126,7 @@ input.throbbing {
   float: left;
   margin-bottom: 0;
   padding-right: 2em;
-  width: 30%;
+  width: 40%;
 }
 
 /* line 1, ../sass/partials/components/block/_block--search.scss */
@@ -1259,7 +1259,7 @@ input.throbbing {
   float: left;
   margin-bottom: 0;
   padding-left: 2em;
-  width: 70%;
+  width: 60%;
 }
 
 /* line 4, ../sass/partials/components/_breadcrumb.scss */
