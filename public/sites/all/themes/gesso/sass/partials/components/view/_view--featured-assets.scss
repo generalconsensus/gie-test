@@ -48,23 +48,35 @@
         }
       }
       a {
-        @include image-replace(40px,40px);
+        @include image-replace(20px,20px);
         background-color: #fff;
         background-repeat: no-repeat;
         background-position: 50% 50%;
-        background-size: 40px 40px;
+        background-size: 20px 20px;
         display: block;
-        margin-top: -20px;
+        margin-top: -10px;
         position: absolute;
         top: 50%;
+        @include breakpoint(500px, $no-query: true) {
+          background-size: 40px 40px;
+          height: 40px;
+          margin-top: -20px;
+          width: 40px;          
+        }
 
         &.flex-prev {
           @include svg-background(flexslider-prev);
-          left: -2px;
+          left: 0;
+          @include breakpoint(500px, $no-query: true) {
+            left: -2px;
+          }
         }
         &.flex-next {
           @include svg-background(flexslider-next); 
-          right: -2px;
+          right: 0;
+          @include breakpoint(500px, $no-query: true) {
+            right: -2px;
+          }
         }
       }
     }
