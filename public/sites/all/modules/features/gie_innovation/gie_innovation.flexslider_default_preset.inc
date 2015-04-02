@@ -16,7 +16,7 @@ function gie_innovation_flexslider_default_presets() {
   $preset->name = 'featured_assets_settings';
   $preset->title = 'Featured Assets settings';
   $preset->theme = 'classic';
-  $preset->imagestyle_normal = 'flexslider_full';
+  $preset->imagestyle_normal = 'featured-asset';
   $preset->imagestyle_thumbnail = 'flexslider_thumbnail';
   $preset->options = array(
     'namespace' => 'flex-',
@@ -46,7 +46,7 @@ function gie_innovation_flexslider_default_presets() {
     'slideshow' => 0,
     'slideshowSpeed' => '7000',
     'directionNav' => 1,
-    'controlNav' => '1',
+    'controlNav' => '0',
     'prevText' => '',
     'nextText' => '',
     'pausePlay' => 0,

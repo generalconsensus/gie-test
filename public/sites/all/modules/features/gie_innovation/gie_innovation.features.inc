@@ -36,6 +36,30 @@ function gie_innovation_views_api($module = NULL, $api = NULL) {
 }
 
 /**
+ * Implements hook_image_default_styles().
+ */
+function gie_innovation_image_default_styles() {
+  $styles = array();
+
+  // Exported image style: featured-asset.
+  $styles['featured-asset'] = array(
+    'label' => 'Featured asset (1280x720)',
+    'effects' => array(
+      2 => array(
+        'name' => 'image_scale_and_crop',
+        'data' => array(
+          'width' => 1280,
+          'height' => 720,
+        ),
+        'weight' => 1,
+      ),
+    ),
+  );
+
+  return $styles;
+}
+
+/**
  * Implements hook_node_info().
  */
 function gie_innovation_node_info() {
