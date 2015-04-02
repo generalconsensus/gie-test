@@ -91,6 +91,11 @@ function gie_taxonomies_views_default_views() {
   $handler = $view->new_display('panel_pane', 'Sector', 'sector_pane');
   $handler->display->display_options['defaults']['title'] = FALSE;
   $handler->display->display_options['title'] = 'Following this Sector';
+
+  /* Display: Region */
+  $handler = $view->new_display('panel_pane', 'Region', 'region_pane');
+  $handler->display->display_options['defaults']['title'] = FALSE;
+  $handler->display->display_options['title'] = 'Following this Region';
   $export['followers'] = $view;
 
   $view = new view();
@@ -180,6 +185,24 @@ function gie_taxonomies_views_default_views() {
   $handler->display->display_options['defaults']['row_plugin'] = FALSE;
   $handler->display->display_options['row_plugin'] = 'entityreference_fields';
   $handler->display->display_options['defaults']['row_options'] = FALSE;
+  $handler->display->display_options['defaults']['filter_groups'] = FALSE;
+  $handler->display->display_options['defaults']['filters'] = FALSE;
+  /* Filter criterion: Content: Published */
+  $handler->display->display_options['filters']['status']['id'] = 'status';
+  $handler->display->display_options['filters']['status']['table'] = 'node';
+  $handler->display->display_options['filters']['status']['field'] = 'status';
+  $handler->display->display_options['filters']['status']['value'] = 1;
+  $handler->display->display_options['filters']['status']['group'] = 1;
+  $handler->display->display_options['filters']['status']['expose']['operator'] = FALSE;
+  /* Filter criterion: Content: Type */
+  $handler->display->display_options['filters']['type']['id'] = 'type';
+  $handler->display->display_options['filters']['type']['table'] = 'node';
+  $handler->display->display_options['filters']['type']['field'] = 'type';
+  $handler->display->display_options['filters']['type']['value'] = array(
+    'funding' => 'funding',
+    'innovation' => 'innovation',
+    'resource' => 'resource',
+  );
 
   /* Display: Topics pane */
   $handler = $view->new_display('panel_pane', 'Topics pane', 'topics_pane');
@@ -216,7 +239,7 @@ function gie_taxonomies_views_default_views() {
   $handler->display->display_options['arguments']['tid']['summary_options']['items_per_page'] = '25';
 
   /* Display: Sectors pane */
-  $handler = $view->new_display('panel_pane', 'Sectors pane', 'panel_pane_1');
+  $handler = $view->new_display('panel_pane', 'Sectors pane', 'sectors_pane');
   $handler->display->display_options['defaults']['pager'] = FALSE;
   $handler->display->display_options['pager']['type'] = 'some';
   $handler->display->display_options['pager']['options']['items_per_page'] = '3';
@@ -248,7 +271,156 @@ function gie_taxonomies_views_default_views() {
   $handler->display->display_options['arguments']['tid']['summary']['number_of_records'] = '0';
   $handler->display->display_options['arguments']['tid']['summary']['format'] = 'default_summary';
   $handler->display->display_options['arguments']['tid']['summary_options']['items_per_page'] = '25';
+
+  /* Display: Regions pane */
+  $handler = $view->new_display('panel_pane', 'Regions pane', 'regions_pane');
+  $handler->display->display_options['defaults']['pager'] = FALSE;
+  $handler->display->display_options['pager']['type'] = 'some';
+  $handler->display->display_options['pager']['options']['items_per_page'] = '3';
+  $handler->display->display_options['pager']['options']['offset'] = '0';
+  $handler->display->display_options['defaults']['style_plugin'] = FALSE;
+  $handler->display->display_options['style_plugin'] = 'grid';
+  $handler->display->display_options['style_options']['default_row_class'] = FALSE;
+  $handler->display->display_options['style_options']['row_class_special'] = FALSE;
+  $handler->display->display_options['style_options']['columns'] = '3';
+  $handler->display->display_options['defaults']['style_options'] = FALSE;
+  $handler->display->display_options['defaults']['row_plugin'] = FALSE;
+  $handler->display->display_options['row_plugin'] = 'entity';
+  $handler->display->display_options['row_options']['view_mode'] = 'listing';
+  $handler->display->display_options['defaults']['row_options'] = FALSE;
+  $handler->display->display_options['defaults']['relationships'] = FALSE;
+  /* Relationship: Entity Reference: Referencing entity */
+  $handler->display->display_options['relationships']['reverse_field_region_highlights_taxonomy_term']['id'] = 'reverse_field_region_highlights_taxonomy_term';
+  $handler->display->display_options['relationships']['reverse_field_region_highlights_taxonomy_term']['table'] = 'node';
+  $handler->display->display_options['relationships']['reverse_field_region_highlights_taxonomy_term']['field'] = 'reverse_field_region_highlights_taxonomy_term';
+  $handler->display->display_options['defaults']['sorts'] = FALSE;
+  $handler->display->display_options['defaults']['arguments'] = FALSE;
+  /* Contextual filter: Taxonomy term: Term ID */
+  $handler->display->display_options['arguments']['tid']['id'] = 'tid';
+  $handler->display->display_options['arguments']['tid']['table'] = 'taxonomy_term_data';
+  $handler->display->display_options['arguments']['tid']['field'] = 'tid';
+  $handler->display->display_options['arguments']['tid']['relationship'] = 'reverse_field_region_highlights_taxonomy_term';
+  $handler->display->display_options['arguments']['tid']['default_action'] = 'default';
+  $handler->display->display_options['arguments']['tid']['default_argument_type'] = 'taxonomy_tid';
+  $handler->display->display_options['arguments']['tid']['summary']['number_of_records'] = '0';
+  $handler->display->display_options['arguments']['tid']['summary']['format'] = 'default_summary';
+  $handler->display->display_options['arguments']['tid']['summary_options']['items_per_page'] = '25';
   $export['highlights'] = $view;
+
+  $view = new view();
+  $view->name = 'region_recent_content';
+  $view->description = '';
+  $view->tag = 'default';
+  $view->base_table = 'node';
+  $view->human_name = 'Region: Recent content';
+  $view->core = 7;
+  $view->api_version = '3.0';
+  $view->disabled = FALSE; /* Edit this to true to make a default view disabled initially */
+
+  /* Display: Master */
+  $handler = $view->new_display('default', 'Master', 'default');
+  $handler->display->display_options['title'] = 'Resources';
+  $handler->display->display_options['use_more_always'] = FALSE;
+  $handler->display->display_options['access']['type'] = 'perm';
+  $handler->display->display_options['cache']['type'] = 'none';
+  $handler->display->display_options['query']['type'] = 'views_query';
+  $handler->display->display_options['exposed_form']['type'] = 'basic';
+  $handler->display->display_options['pager']['type'] = 'some';
+  $handler->display->display_options['pager']['options']['items_per_page'] = '3';
+  $handler->display->display_options['pager']['options']['offset'] = '0';
+  $handler->display->display_options['style_plugin'] = 'grid';
+  $handler->display->display_options['style_options']['default_row_class'] = FALSE;
+  $handler->display->display_options['style_options']['row_class_special'] = FALSE;
+  $handler->display->display_options['style_options']['columns'] = '3';
+  $handler->display->display_options['row_plugin'] = 'entity';
+  $handler->display->display_options['row_options']['view_mode'] = 'listing';
+  /* Relationship: Content: Region (field_resource_region) */
+  $handler->display->display_options['relationships']['field_resource_region_tid']['id'] = 'field_resource_region_tid';
+  $handler->display->display_options['relationships']['field_resource_region_tid']['table'] = 'field_data_field_resource_region';
+  $handler->display->display_options['relationships']['field_resource_region_tid']['field'] = 'field_resource_region_tid';
+  /* Field: Content: Title */
+  $handler->display->display_options['fields']['title']['id'] = 'title';
+  $handler->display->display_options['fields']['title']['table'] = 'node';
+  $handler->display->display_options['fields']['title']['field'] = 'title';
+  $handler->display->display_options['fields']['title']['label'] = '';
+  $handler->display->display_options['fields']['title']['alter']['word_boundary'] = FALSE;
+  $handler->display->display_options['fields']['title']['alter']['ellipsis'] = FALSE;
+  /* Sort criterion: Content: Post date */
+  $handler->display->display_options['sorts']['created']['id'] = 'created';
+  $handler->display->display_options['sorts']['created']['table'] = 'node';
+  $handler->display->display_options['sorts']['created']['field'] = 'created';
+  $handler->display->display_options['sorts']['created']['order'] = 'DESC';
+  /* Contextual filter: Taxonomy term: Term ID */
+  $handler->display->display_options['arguments']['tid']['id'] = 'tid';
+  $handler->display->display_options['arguments']['tid']['table'] = 'taxonomy_term_data';
+  $handler->display->display_options['arguments']['tid']['field'] = 'tid';
+  $handler->display->display_options['arguments']['tid']['relationship'] = 'field_resource_region_tid';
+  $handler->display->display_options['arguments']['tid']['default_action'] = 'default';
+  $handler->display->display_options['arguments']['tid']['default_argument_type'] = 'taxonomy_tid';
+  $handler->display->display_options['arguments']['tid']['summary']['number_of_records'] = '0';
+  $handler->display->display_options['arguments']['tid']['summary']['format'] = 'default_summary';
+  $handler->display->display_options['arguments']['tid']['summary_options']['items_per_page'] = '25';
+  /* Filter criterion: Content: Published */
+  $handler->display->display_options['filters']['status']['id'] = 'status';
+  $handler->display->display_options['filters']['status']['table'] = 'node';
+  $handler->display->display_options['filters']['status']['field'] = 'status';
+  $handler->display->display_options['filters']['status']['value'] = 1;
+  $handler->display->display_options['filters']['status']['group'] = 1;
+  $handler->display->display_options['filters']['status']['expose']['operator'] = FALSE;
+  /* Filter criterion: Content: Type */
+  $handler->display->display_options['filters']['type']['id'] = 'type';
+  $handler->display->display_options['filters']['type']['table'] = 'node';
+  $handler->display->display_options['filters']['type']['field'] = 'type';
+  $handler->display->display_options['filters']['type']['value'] = array(
+    'resource' => 'resource',
+  );
+
+  /* Display: Resources */
+  $handler = $view->new_display('panel_pane', 'Resources', 'resource_pane');
+  $handler->display->display_options['defaults']['sorts'] = FALSE;
+  /* Sort criterion: Content: Date Added (field_resource_date) */
+  $handler->display->display_options['sorts']['field_resource_date_value']['id'] = 'field_resource_date_value';
+  $handler->display->display_options['sorts']['field_resource_date_value']['table'] = 'field_data_field_resource_date';
+  $handler->display->display_options['sorts']['field_resource_date_value']['field'] = 'field_resource_date_value';
+  $handler->display->display_options['sorts']['field_resource_date_value']['order'] = 'DESC';
+
+  /* Display: Funding ops */
+  $handler = $view->new_display('panel_pane', 'Funding ops', 'funding_pane');
+  $handler->display->display_options['defaults']['title'] = FALSE;
+  $handler->display->display_options['title'] = 'Funding Opportunities';
+  $handler->display->display_options['defaults']['relationships'] = FALSE;
+  /* Relationship: Content: Region (field_funding_region) */
+  $handler->display->display_options['relationships']['field_funding_region_tid']['id'] = 'field_funding_region_tid';
+  $handler->display->display_options['relationships']['field_funding_region_tid']['table'] = 'field_data_field_funding_region';
+  $handler->display->display_options['relationships']['field_funding_region_tid']['field'] = 'field_funding_region_tid';
+  $handler->display->display_options['defaults']['arguments'] = FALSE;
+  /* Contextual filter: Taxonomy term: Term ID */
+  $handler->display->display_options['arguments']['tid']['id'] = 'tid';
+  $handler->display->display_options['arguments']['tid']['table'] = 'taxonomy_term_data';
+  $handler->display->display_options['arguments']['tid']['field'] = 'tid';
+  $handler->display->display_options['arguments']['tid']['relationship'] = 'field_funding_region_tid';
+  $handler->display->display_options['arguments']['tid']['default_action'] = 'default';
+  $handler->display->display_options['arguments']['tid']['default_argument_type'] = 'taxonomy_tid';
+  $handler->display->display_options['arguments']['tid']['summary']['number_of_records'] = '0';
+  $handler->display->display_options['arguments']['tid']['summary']['format'] = 'default_summary';
+  $handler->display->display_options['arguments']['tid']['summary_options']['items_per_page'] = '25';
+  $handler->display->display_options['defaults']['filter_groups'] = FALSE;
+  $handler->display->display_options['defaults']['filters'] = FALSE;
+  /* Filter criterion: Content: Published */
+  $handler->display->display_options['filters']['status']['id'] = 'status';
+  $handler->display->display_options['filters']['status']['table'] = 'node';
+  $handler->display->display_options['filters']['status']['field'] = 'status';
+  $handler->display->display_options['filters']['status']['value'] = 1;
+  $handler->display->display_options['filters']['status']['group'] = 1;
+  $handler->display->display_options['filters']['status']['expose']['operator'] = FALSE;
+  /* Filter criterion: Content: Type */
+  $handler->display->display_options['filters']['type']['id'] = 'type';
+  $handler->display->display_options['filters']['type']['table'] = 'node';
+  $handler->display->display_options['filters']['type']['field'] = 'type';
+  $handler->display->display_options['filters']['type']['value'] = array(
+    'funding' => 'funding',
+  );
+  $export['region_recent_content'] = $view;
 
   $view = new view();
   $view->name = 'sector_recent_content';
@@ -330,6 +502,12 @@ function gie_taxonomies_views_default_views() {
   $handler->display->display_options['relationships']['field_resource_sector_tid']['id'] = 'field_resource_sector_tid';
   $handler->display->display_options['relationships']['field_resource_sector_tid']['table'] = 'field_data_field_resource_sector';
   $handler->display->display_options['relationships']['field_resource_sector_tid']['field'] = 'field_resource_sector_tid';
+  $handler->display->display_options['defaults']['sorts'] = FALSE;
+  /* Sort criterion: Content: Date Added (field_resource_date) */
+  $handler->display->display_options['sorts']['field_resource_date_value']['id'] = 'field_resource_date_value';
+  $handler->display->display_options['sorts']['field_resource_date_value']['table'] = 'field_data_field_resource_date';
+  $handler->display->display_options['sorts']['field_resource_date_value']['field'] = 'field_resource_date_value';
+  $handler->display->display_options['sorts']['field_resource_date_value']['order'] = 'DESC';
   $handler->display->display_options['defaults']['arguments'] = FALSE;
   /* Contextual filter: Taxonomy term: Term ID */
   $handler->display->display_options['arguments']['tid']['id'] = 'tid';
@@ -443,6 +621,11 @@ function gie_taxonomies_views_default_views() {
   $handler = $view->new_display('panel_pane', 'Sectors', 'sectors_pane');
   $handler->display->display_options['defaults']['title'] = FALSE;
   $handler->display->display_options['title'] = 'Related Subsectors';
+
+  /* Display: Regions */
+  $handler = $view->new_display('panel_pane', 'Regions', 'regions_pane');
+  $handler->display->display_options['defaults']['title'] = FALSE;
+  $handler->display->display_options['title'] = 'Related Subregions';
   $export['subterms'] = $view;
 
   $view = new view();
@@ -509,6 +692,27 @@ function gie_taxonomies_views_default_views() {
 
   /* Display: Sector */
   $handler = $view->new_display('panel_pane', 'Sector', 'sector_pane');
+
+  /* Display: Region */
+  $handler = $view->new_display('panel_pane', 'Region', 'region_pane');
+  $handler->display->display_options['defaults']['title'] = FALSE;
+  $handler->display->display_options['title'] = 'Organization work on this Region';
+  $handler->display->display_options['defaults']['relationships'] = FALSE;
+  /* Relationship: Content: Where We Work (field_org_region) */
+  $handler->display->display_options['relationships']['field_org_region_tid']['id'] = 'field_org_region_tid';
+  $handler->display->display_options['relationships']['field_org_region_tid']['table'] = 'field_data_field_org_region';
+  $handler->display->display_options['relationships']['field_org_region_tid']['field'] = 'field_org_region_tid';
+  $handler->display->display_options['defaults']['arguments'] = FALSE;
+  /* Contextual filter: Taxonomy term: Term ID */
+  $handler->display->display_options['arguments']['tid']['id'] = 'tid';
+  $handler->display->display_options['arguments']['tid']['table'] = 'taxonomy_term_data';
+  $handler->display->display_options['arguments']['tid']['field'] = 'tid';
+  $handler->display->display_options['arguments']['tid']['relationship'] = 'field_org_region_tid';
+  $handler->display->display_options['arguments']['tid']['default_action'] = 'default';
+  $handler->display->display_options['arguments']['tid']['default_argument_type'] = 'taxonomy_tid';
+  $handler->display->display_options['arguments']['tid']['summary']['number_of_records'] = '0';
+  $handler->display->display_options['arguments']['tid']['summary']['format'] = 'default_summary';
+  $handler->display->display_options['arguments']['tid']['summary_options']['items_per_page'] = '25';
   $export['term_organizations'] = $view;
 
   $view = new view();
@@ -590,6 +794,12 @@ function gie_taxonomies_views_default_views() {
   $handler->display->display_options['relationships']['field_resource_topic_tid']['id'] = 'field_resource_topic_tid';
   $handler->display->display_options['relationships']['field_resource_topic_tid']['table'] = 'field_data_field_resource_topic';
   $handler->display->display_options['relationships']['field_resource_topic_tid']['field'] = 'field_resource_topic_tid';
+  $handler->display->display_options['defaults']['sorts'] = FALSE;
+  /* Sort criterion: Content: Date Added (field_resource_date) */
+  $handler->display->display_options['sorts']['field_resource_date_value']['id'] = 'field_resource_date_value';
+  $handler->display->display_options['sorts']['field_resource_date_value']['table'] = 'field_data_field_resource_date';
+  $handler->display->display_options['sorts']['field_resource_date_value']['field'] = 'field_resource_date_value';
+  $handler->display->display_options['sorts']['field_resource_date_value']['order'] = 'DESC';
   $handler->display->display_options['defaults']['arguments'] = FALSE;
   /* Contextual filter: Taxonomy term: Term ID */
   $handler->display->display_options['arguments']['tid']['id'] = 'tid';
