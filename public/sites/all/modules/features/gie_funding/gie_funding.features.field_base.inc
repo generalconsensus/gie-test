@@ -374,32 +374,6 @@ function gie_funding_field_default_field_bases() {
     'type' => 'email',
   );
 
-  // Exported field_base: 'field_funding_region'
-  $field_bases['field_funding_region'] = array(
-    'active' => 1,
-    'cardinality' => -1,
-    'deleted' => 0,
-    'entity_types' => array(),
-    'field_name' => 'field_funding_region',
-    'indexes' => array(
-      'tid' => array(
-        0 => 'tid',
-      ),
-    ),
-    'locked' => 0,
-    'module' => 'taxonomy',
-    'settings' => array(
-      'allowed_values' => array(
-        0 => array(
-          'vocabulary' => 'region',
-          'parent' => 0,
-        ),
-      ),
-    ),
-    'translatable' => 0,
-    'type' => 'taxonomy_term_reference',
-  );
-
   // Exported field_base: 'field_funding_type'
   $field_bases['field_funding_type'] = array(
     'active' => 1,
@@ -418,6 +392,32 @@ function gie_funding_field_default_field_bases() {
       'allowed_values' => array(
         0 => array(
           'vocabulary' => 'funding_type',
+          'parent' => 0,
+        ),
+      ),
+    ),
+    'translatable' => 0,
+    'type' => 'taxonomy_term_reference',
+  );
+
+  // Exported field_base: 'field_term_region'
+  $field_bases['field_term_region'] = array(
+    'active' => 1,
+    'cardinality' => -1,
+    'deleted' => 0,
+    'entity_types' => array(),
+    'field_name' => 'field_term_region',
+    'indexes' => array(
+      'tid' => array(
+        0 => 'tid',
+      ),
+    ),
+    'locked' => 0,
+    'module' => 'taxonomy',
+    'settings' => array(
+      'allowed_values' => array(
+        0 => array(
+          'vocabulary' => 'region',
           'parent' => 0,
         ),
       ),

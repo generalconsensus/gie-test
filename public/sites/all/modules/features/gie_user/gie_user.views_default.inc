@@ -814,7 +814,7 @@ function gie_user_views_default_views() {
   $handler->display->display_options['pager']['type'] = 'full';
   $handler->display->display_options['style_plugin'] = 'default';
   $handler->display->display_options['row_plugin'] = 'fields';
-  /* Relationship: Taxonomy term: User using Region */
+  /* Relationship: Broken/missing handler */
   $handler->display->display_options['relationships']['reverse_field_user_region_user']['id'] = 'reverse_field_user_region_user';
   $handler->display->display_options['relationships']['reverse_field_user_region_user']['table'] = 'taxonomy_term_data';
   $handler->display->display_options['relationships']['reverse_field_user_region_user']['field'] = 'reverse_field_user_region_user';

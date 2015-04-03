@@ -162,3 +162,21 @@ function gie_general_update_7014() {
     field_delete_field('field_innovation_topic');
     field_delete_field('field_resource_topic');
 }
+
+/**
+ * Delete 'Region term field so I can readd it since its not showing.
+ */
+function gie_general_update_7015() {
+    field_delete_field('field_term_region');
+}
+
+/**
+ * Delete 'Region fields shared across content types in favor of shared field' term field.
+ */
+function gie_general_update_7016() {
+    field_delete_field('field_funding_region');
+    field_delete_field('field_innovation_region');
+    field_delete_field('field_org_region');
+    field_delete_field('field_resource_region');
+    field_delete_field('field_user_region');
+}
