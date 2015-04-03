@@ -180,3 +180,12 @@ function gie_general_update_7016() {
     field_delete_field('field_resource_region');
     field_delete_field('field_user_region');
 }
+
+/**
+ * Delete 'Country fields shared across content types in favor of shared field' term field.
+ */
+function gie_general_update_7017() {
+    field_delete_field('field_funding_countries');
+    field_delete_field('field_resource_country');
+    field_delete_field('field_user_country');
+}

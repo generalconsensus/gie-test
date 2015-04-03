@@ -35,7 +35,7 @@ function gie_user_strongarm() {
     'extra_fields' => array(
       'form' => array(
         'ckeditor' => array(
-          'weight' => '9',
+          'weight' => '10',
         ),
         'account' => array(
           'weight' => '0',
