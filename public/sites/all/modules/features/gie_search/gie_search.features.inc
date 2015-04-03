@@ -157,7 +157,7 @@ function gie_search_default_search_api_index() {
 function gie_search_default_search_api_server() {
   $items = array();
   $items['solr'] = entity_import('search_api_server', '{
-    "name" : "Solr",
+    "name" : "Solr Server (Overridden)",
     "machine_name" : "solr",
     "description" : "",
     "class" : "search_api_solr_service",
@@ -166,7 +166,7 @@ function gie_search_default_search_api_server() {
       "site_hash" : true,
       "scheme" : "http",
       "host" : "localhost",
-      "port" : "8983",
+      "port" : 8983,
       "path" : "\\/solr\\/drupal",
       "http_user" : "",
       "http_pass" : "",
