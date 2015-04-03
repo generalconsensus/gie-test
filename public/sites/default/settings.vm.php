@@ -586,7 +586,7 @@ $conf['404_fast_html'] = '<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML+RDFa 1.0//EN"
  * Configuration setting per Solr instance
  */
 $conf['search_api_solr_overrides'] = array(
-  'solr_server' => array(
+  'solr' => array(
     'name' => t('Solr Server (Overridden)'),
     'options' => array(
       'host' => 'localhost',
