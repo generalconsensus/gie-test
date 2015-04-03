@@ -12,7 +12,7 @@ function gie_funding_views_default_views() {
 
   $view = new view();
   $view->name = 'funding_opp_listing';
-  $view->description = 'Resources Listing Solr View';
+  $view->description = 'Funding Listing Solr View';
   $view->tag = 'default';
   $view->base_table = 'search_api_index_default_node_index';
   $view->human_name = 'Funding Opp Listing';

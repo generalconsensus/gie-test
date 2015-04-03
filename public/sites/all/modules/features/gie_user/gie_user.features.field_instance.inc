@@ -306,6 +306,71 @@ function gie_user_field_default_field_instances() {
     ),
   );
 
+  // Exported field_instance: 'user-user-field_term_sector'
+  $field_instances['user-user-field_term_sector'] = array(
+    'bundle' => 'user',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'taxonomy',
+        'settings' => array(
+          'field_delimiter' => '',
+          'linked_field' => array(
+            'advanced' => array(
+              'class' => '',
+              'rel' => '',
+              'target' => '',
+              'text' => '',
+              'title' => '',
+            ),
+            'destination' => '',
+            'linked' => 0,
+          ),
+        ),
+        'type' => 'taxonomy_term_reference_link',
+        'weight' => 22,
+      ),
+      'full' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'user_teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'user_teaser_summary' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'ds_extras_field_template' => '',
+    'entity_type' => 'user',
+    'field_name' => 'field_term_sector',
+    'label' => 'Sectors of Interest',
+    'required' => 0,
+    'settings' => array(
+      'user_register_form' => 0,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'options',
+      'settings' => array(
+        'apply_chosen' => '',
+      ),
+      'type' => 'options_select',
+      'weight' => 16,
+    ),
+  );
+
   // Exported field_instance: 'user-user-field_user_address'
   $field_instances['user-user-field_user_address'] = array(
     'bundle' => 'user',
@@ -395,7 +460,7 @@ function gie_user_field_default_field_instances() {
         ),
       ),
       'type' => 'addressfield_standard',
-      'weight' => 22,
+      'weight' => 23,
     ),
   );
 
@@ -542,10 +607,14 @@ function gie_user_field_default_field_instances() {
       'settings' => array(
         'match_operator' => 'CONTAINS',
         'path' => '',
+        'references_dialog_add' => 0,
+        'references_dialog_edit' => 0,
+        'references_dialog_search' => 0,
+        'references_dialog_search_view' => '',
         'size' => 60,
       ),
       'type' => 'entityreference_autocomplete',
-      'weight' => 23,
+      'weight' => 24,
     ),
   );
 
@@ -938,7 +1007,7 @@ function gie_user_field_default_field_instances() {
         'apply_chosen' => 1,
       ),
       'type' => 'options_select',
-      'weight' => 16,
+      'weight' => 17,
     ),
   );
 
@@ -1199,7 +1268,7 @@ function gie_user_field_default_field_instances() {
         'size' => 60,
       ),
       'type' => 'text_textfield',
-      'weight' => 24,
+      'weight' => 25,
     ),
   );
 
@@ -1266,10 +1335,14 @@ function gie_user_field_default_field_instances() {
       'settings' => array(
         'match_operator' => 'CONTAINS',
         'path' => '',
+        'references_dialog_add' => 0,
+        'references_dialog_edit' => 0,
+        'references_dialog_search' => 0,
+        'references_dialog_search_view' => '',
         'size' => 60,
       ),
       'type' => 'entityreference_autocomplete',
-      'weight' => 19,
+      'weight' => 20,
     ),
   );
 
@@ -1334,7 +1407,7 @@ function gie_user_field_default_field_instances() {
         'size' => 60,
       ),
       'type' => 'taxonomy_autocomplete',
-      'weight' => 17,
+      'weight' => 18,
     ),
   );
 
@@ -1524,10 +1597,14 @@ function gie_user_field_default_field_instances() {
       'settings' => array(
         'match_operator' => 'CONTAINS',
         'path' => '',
+        'references_dialog_add' => 0,
+        'references_dialog_edit' => 0,
+        'references_dialog_search' => 0,
+        'references_dialog_search_view' => '',
         'size' => 60,
       ),
       'type' => 'entityreference_autocomplete',
-      'weight' => 18,
+      'weight' => 19,
     ),
   );
 
@@ -1593,71 +1670,7 @@ function gie_user_field_default_field_instances() {
         'apply_chosen' => 1,
       ),
       'type' => 'options_select',
-      'weight' => 20,
-    ),
-  );
-
-  // Exported field_instance: 'user-user-field_user_sector'
-  $field_instances['user-user-field_user_sector'] = array(
-    'bundle' => 'user',
-    'default_value' => NULL,
-    'deleted' => 0,
-    'description' => '',
-    'display' => array(
-      'default' => array(
-        'label' => 'above',
-        'module' => 'taxonomy',
-        'settings' => array(
-          'field_delimiter' => '',
-          'linked_field' => array(
-            'advanced' => array(
-              'class' => '',
-              'rel' => '',
-              'target' => '',
-              'text' => '',
-              'title' => '',
-            ),
-            'destination' => '',
-            'linked' => 0,
-          ),
-        ),
-        'type' => 'taxonomy_term_reference_link',
-        'weight' => 19,
-      ),
-      'full' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 0,
-      ),
-      'user_teaser' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 0,
-      ),
-      'user_teaser_summary' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 0,
-      ),
-    ),
-    'entity_type' => 'user',
-    'field_name' => 'field_user_sector',
-    'label' => 'Sectors of Interest',
-    'required' => 0,
-    'settings' => array(
-      'user_register_form' => 1,
-    ),
-    'widget' => array(
-      'active' => 1,
-      'module' => 'options',
-      'settings' => array(
-        'apply_chosen' => 1,
-      ),
-      'type' => 'options_select',
-      'weight' => 15,
+      'weight' => 21,
     ),
   );
 
@@ -1723,7 +1736,7 @@ function gie_user_field_default_field_instances() {
         'apply_chosen' => 1,
       ),
       'type' => 'options_select',
-      'weight' => 21,
+      'weight' => 22,
     ),
   );
 
