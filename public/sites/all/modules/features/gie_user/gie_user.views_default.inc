@@ -76,17 +76,16 @@ function gie_user_views_default_views() {
   $handler->display->display_options['defaults']['title'] = FALSE;
   $handler->display->display_options['title'] = 'Sectors  of Interest';
   $handler->display->display_options['defaults']['relationships'] = FALSE;
-  /* Relationship: Broken/missing handler */
-  $handler->display->display_options['relationships']['reverse_field_user_sector_user']['id'] = 'reverse_field_user_sector_user';
-  $handler->display->display_options['relationships']['reverse_field_user_sector_user']['table'] = 'taxonomy_term_data';
-  $handler->display->display_options['relationships']['reverse_field_user_sector_user']['field'] = 'reverse_field_user_sector_user';
-  $handler->display->display_options['relationships']['reverse_field_user_sector_user']['required'] = TRUE;
+  /* Relationship: Taxonomy term: User using Sector */
+  $handler->display->display_options['relationships']['reverse_field_term_sector_user']['id'] = 'reverse_field_term_sector_user';
+  $handler->display->display_options['relationships']['reverse_field_term_sector_user']['table'] = 'taxonomy_term_data';
+  $handler->display->display_options['relationships']['reverse_field_term_sector_user']['field'] = 'reverse_field_term_sector_user';
   $handler->display->display_options['defaults']['arguments'] = FALSE;
   /* Contextual filter: User: Uid */
   $handler->display->display_options['arguments']['uid']['id'] = 'uid';
   $handler->display->display_options['arguments']['uid']['table'] = 'users';
   $handler->display->display_options['arguments']['uid']['field'] = 'uid';
-  $handler->display->display_options['arguments']['uid']['relationship'] = 'reverse_field_user_sector_user';
+  $handler->display->display_options['arguments']['uid']['relationship'] = 'reverse_field_term_sector_user';
   $handler->display->display_options['arguments']['uid']['default_action'] = 'default';
   $handler->display->display_options['arguments']['uid']['default_argument_type'] = 'user';
   $handler->display->display_options['arguments']['uid']['default_argument_options']['user'] = FALSE;
