@@ -126,7 +126,7 @@ function gie_resource_strongarm() {
     'extra_fields' => array(
       'form' => array(
         'path' => array(
-          'weight' => '14',
+          'weight' => '15',
         ),
       ),
       'display' => array(

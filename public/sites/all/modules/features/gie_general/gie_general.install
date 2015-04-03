@@ -136,3 +136,20 @@ function gie_general_update_7011() {
   field_delete_field('field_funding_source');
   field_delete_field('field_funding_grant');
 }
+
+/**
+ * Delete 'Funding Sector' term field.
+ */
+function gie_general_update_7012() {
+    field_delete_field('field_funding_sector');
+}
+
+/**
+ * Delete 'Sector fields shared across content types in favor of shared field' term field.
+ */
+function gie_general_update_7013() {
+    field_delete_field('field_innovation_sector');
+    field_delete_field('field_org_focus_work');
+    field_delete_field('field_resource_sector');
+    field_delete_field('field_user_sector');
+}

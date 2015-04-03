@@ -76,7 +76,7 @@ function gie_user_views_default_views() {
   $handler->display->display_options['defaults']['title'] = FALSE;
   $handler->display->display_options['title'] = 'Sectors  of Interest';
   $handler->display->display_options['defaults']['relationships'] = FALSE;
-  /* Relationship: Taxonomy term: User using Sectors of Interest */
+  /* Relationship: Broken/missing handler */
   $handler->display->display_options['relationships']['reverse_field_user_sector_user']['id'] = 'reverse_field_user_sector_user';
   $handler->display->display_options['relationships']['reverse_field_user_sector_user']['table'] = 'taxonomy_term_data';
   $handler->display->display_options['relationships']['reverse_field_user_sector_user']['field'] = 'reverse_field_user_sector_user';

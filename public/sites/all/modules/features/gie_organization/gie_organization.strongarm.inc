@@ -99,7 +99,7 @@ function gie_organization_strongarm() {
     'extra_fields' => array(
       'form' => array(
         'path' => array(
-          'weight' => '15',
+          'weight' => '16',
         ),
       ),
       'display' => array(
