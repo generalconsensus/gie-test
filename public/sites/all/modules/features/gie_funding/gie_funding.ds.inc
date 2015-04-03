@@ -42,9 +42,107 @@ function gie_funding_ds_field_settings_info() {
   $ds_fieldsetting->bundle = 'funding';
   $ds_fieldsetting->view_mode = 'listing';
   $ds_fieldsetting->settings = array(
+    'node_link' => array(
+      'weight' => '6',
+      'label' => 'hidden',
+      'format' => 'default',
+      'formatter_settings' => array(
+        'link text' => 'View',
+        'wrapper' => '',
+        'class' => '',
+        'ft' => array(),
+        'field_delimiter' => '',
+        'linked_field' => array(
+          'linked' => 0,
+          'destination' => '',
+          'advanced' => array(
+            'title' => '',
+            'target' => '',
+            'class' => '',
+            'rel' => '',
+            'text' => '',
+          ),
+        ),
+      ),
+    ),
+    'field_funding_deadline' => array(
+      'formatter_settings' => array(
+        'ft' => array(
+          'func' => 'theme_ds_field_expert',
+          'lb' => 'Due by',
+          'lb-el' => 'span',
+          'fi' => TRUE,
+          'fi-el' => 'span',
+          'fi-cl' => '',
+          'fi-at' => '',
+          'fi-def-at' => FALSE,
+          'fi-odd-even' => FALSE,
+        ),
+      ),
+    ),
+    'field_funding_effort' => array(
+      'formatter_settings' => array(
+        'ft' => array(
+          'func' => 'theme_ds_field_expert',
+          'lb' => 'Time to Apply',
+          'lb-el' => 'span',
+          'ow' => TRUE,
+          'ow-el' => 'div',
+          'ow-cl' => '',
+          'ow-def-cl' => FALSE,
+          'ow-at' => '',
+          'ow-def-at' => FALSE,
+        ),
+      ),
+    ),
+    'field_funding_eligibility' => array(
+      'formatter_settings' => array(
+        'ft' => array(
+          'func' => 'theme_ds_field_expert',
+          'lb' => 'Eligibility',
+          'lb-el' => 'span',
+          'ow' => TRUE,
+          'ow-el' => 'div',
+          'ow-cl' => '',
+          'ow-def-cl' => FALSE,
+          'ow-at' => '',
+          'ow-def-at' => FALSE,
+        ),
+      ),
+    ),
     'field_funding_topic' => array(
       'formatter_settings' => array(
-        'ft' => array(),
+        'ft' => array(
+          'func' => 'theme_ds_field_expert',
+          'lb' => 'Topics',
+          'lb-el' => 'span',
+          'ow' => TRUE,
+          'ow-el' => 'div',
+          'ow-cl' => '',
+          'ow-def-cl' => FALSE,
+          'ow-at' => '',
+          'ow-def-at' => FALSE,
+          'fi' => TRUE,
+          'fi-el' => 'span',
+          'fi-cl' => '',
+          'fi-at' => '',
+          'fi-def-at' => FALSE,
+          'fi-odd-even' => FALSE,
+        ),
+      ),
+    ),
+    'field_funding_grant_award_value' => array(
+      'formatter_settings' => array(
+        'ft' => array(
+          'func' => 'theme_ds_field_expert',
+          'suffix' => ' | ',
+          'fi' => TRUE,
+          'fi-el' => 'span',
+          'fi-cl' => '',
+          'fi-at' => '',
+          'fi-def-at' => FALSE,
+          'fi-odd-even' => FALSE,
+        ),
       ),
     ),
   );
@@ -159,18 +257,22 @@ function gie_funding_ds_layout_settings_info() {
     'regions' => array(
       'ds_content' => array(
         0 => 'title_field',
-        1 => 'field_funding_eligibility',
+        1 => 'field_funding_grant_award_value',
         2 => 'field_funding_deadline',
-        3 => 'field_funding_grant_award_value',
-        4 => 'field_funding_topic',
+        3 => 'field_funding_eligibility',
+        4 => 'field_funding_effort',
+        5 => 'field_funding_topic',
+        6 => 'node_link',
       ),
     ),
     'fields' => array(
       'title_field' => 'ds_content',
-      'field_funding_eligibility' => 'ds_content',
-      'field_funding_deadline' => 'ds_content',
       'field_funding_grant_award_value' => 'ds_content',
+      'field_funding_deadline' => 'ds_content',
+      'field_funding_eligibility' => 'ds_content',
+      'field_funding_effort' => 'ds_content',
       'field_funding_topic' => 'ds_content',
+      'node_link' => 'ds_content',
     ),
     'classes' => array(),
     'wrappers' => array(

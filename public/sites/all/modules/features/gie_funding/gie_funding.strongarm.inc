@@ -144,7 +144,7 @@ function gie_funding_strongarm() {
             'visible' => TRUE,
           ),
           'listing' => array(
-            'weight' => '18',
+            'weight' => '19',
             'visible' => FALSE,
           ),
         ),
