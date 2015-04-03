@@ -153,3 +153,12 @@ function gie_general_update_7013() {
     field_delete_field('field_resource_sector');
     field_delete_field('field_user_sector');
 }
+
+/**
+ * Delete 'Topic fields shared across content types in favor of shared field' term field.
+ */
+function gie_general_update_7014() {
+    field_delete_field('field_funding_topic');
+    field_delete_field('field_innovation_topic');
+    field_delete_field('field_resource_topic');
+}
