@@ -110,27 +110,6 @@ function gie_funding_ds_field_settings_info() {
         ),
       ),
     ),
-    'field_funding_topic' => array(
-      'formatter_settings' => array(
-        'ft' => array(
-          'func' => 'theme_ds_field_expert',
-          'lb' => 'Topics',
-          'lb-el' => 'span',
-          'ow' => TRUE,
-          'ow-el' => 'div',
-          'ow-cl' => '',
-          'ow-def-cl' => FALSE,
-          'ow-at' => '',
-          'ow-def-at' => FALSE,
-          'fi' => TRUE,
-          'fi-el' => 'span',
-          'fi-cl' => '',
-          'fi-at' => '',
-          'fi-def-at' => FALSE,
-          'fi-odd-even' => FALSE,
-        ),
-      ),
-    ),
     'field_funding_grant_award_value' => array(
       'formatter_settings' => array(
         'ft' => array(
@@ -261,8 +240,7 @@ function gie_funding_ds_layout_settings_info() {
         2 => 'field_funding_deadline',
         3 => 'field_funding_eligibility',
         4 => 'field_funding_effort',
-        5 => 'field_funding_topic',
-        6 => 'node_link',
+        5 => 'node_link',
       ),
     ),
     'fields' => array(
@@ -271,7 +249,6 @@ function gie_funding_ds_layout_settings_info() {
       'field_funding_deadline' => 'ds_content',
       'field_funding_eligibility' => 'ds_content',
       'field_funding_effort' => 'ds_content',
-      'field_funding_topic' => 'ds_content',
       'node_link' => 'ds_content',
     ),
     'classes' => array(),
