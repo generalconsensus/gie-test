@@ -126,7 +126,7 @@ function gie_funding_strongarm() {
     'extra_fields' => array(
       'form' => array(
         'path' => array(
-          'weight' => '20',
+          'weight' => '21',
         ),
       ),
       'display' => array(
