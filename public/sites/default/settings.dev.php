@@ -579,3 +579,20 @@ $conf['404_fast_html'] = '<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML+RDFa 1.0//EN"
  * Remove the leading hash signs to disable.
  */
 # $conf['allow_authorize_operations'] = FALSE;
+
+/**
+ * Solr Search API overrides
+ *
+ * Configuration setting per Solr instance
+ */
+$conf['search_api_solr_overrides'] = array(
+  'solr_server' => array(
+    'name' => t('Solr Server (Overridden)'),
+    'options' => array(
+      'host' => 'localhost',
+      'port' => 8984,
+      'path' => '/solr/drupal'
+    )
+  )
+);
+
