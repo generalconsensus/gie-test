@@ -179,7 +179,7 @@ function gie_funding_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 23,
+        'weight' => 25,
       ),
       'listing' => array(
         'label' => 'above',
@@ -261,7 +261,7 @@ function gie_funding_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 13,
+        'weight' => 15,
       ),
       'listing' => array(
         'label' => 'inline',
@@ -466,7 +466,7 @@ function gie_funding_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 16,
+        'weight' => 18,
       ),
       'listing' => array(
         'label' => 'above',
@@ -561,7 +561,7 @@ function gie_funding_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 17,
+        'weight' => 19,
       ),
       'listing' => array(
         'label' => 'inline',
@@ -775,7 +775,7 @@ function gie_funding_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 19,
+        'weight' => 21,
       ),
       'listing' => array(
         'label' => 'above',
@@ -850,7 +850,7 @@ function gie_funding_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 22,
+        'weight' => 24,
       ),
       'listing' => array(
         'label' => 'hidden',
@@ -1048,7 +1048,7 @@ function gie_funding_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 20,
+        'weight' => 22,
       ),
       'listing' => array(
         'label' => 'above',
@@ -1119,7 +1119,7 @@ function gie_funding_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 21,
+        'weight' => 23,
       ),
       'listing' => array(
         'label' => 'above',
@@ -1188,26 +1188,9 @@ function gie_funding_field_default_field_instances() {
       ),
       'full' => array(
         'label' => 'hidden',
-        'module' => 'title',
-        'settings' => array(
-          'field_delimiter' => '',
-          'linked_field' => array(
-            'advanced' => array(
-              'class' => '',
-              'rel' => '',
-              'target' => '',
-              'text' => 'Apply',
-              'title' => '',
-            ),
-            'destination' => '[node:field_funding_link]',
-            'linked' => 1,
-          ),
-          'title_class' => '',
-          'title_link' => '',
-          'title_style' => '_none',
-        ),
-        'type' => 'title_linked',
-        'weight' => 3,
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 4,
       ),
       'listing' => array(
         'label' => 'above',
@@ -1305,7 +1288,7 @@ function gie_funding_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 18,
+        'weight' => 20,
       ),
       'listing' => array(
         'label' => 'above',
@@ -1381,26 +1364,9 @@ function gie_funding_field_default_field_instances() {
       ),
       'full' => array(
         'label' => 'hidden',
-        'module' => 'title',
-        'settings' => array(
-          'field_delimiter' => '',
-          'linked_field' => array(
-            'advanced' => array(
-              'class' => '',
-              'rel' => '',
-              'target' => '',
-              'text' => '',
-              'title' => '',
-            ),
-            'destination' => '[node:field-funding-poc]',
-            'linked' => 1,
-          ),
-          'title_class' => '',
-          'title_link' => '',
-          'title_style' => '_none',
-        ),
-        'type' => 'title_linked',
-        'weight' => 4,
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 5,
       ),
       'listing' => array(
         'label' => 'above',
@@ -1496,7 +1462,7 @@ function gie_funding_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 14,
+        'weight' => 16,
       ),
       'listing' => array(
         'label' => 'above',
@@ -1566,7 +1532,7 @@ function gie_funding_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 25,
+        'weight' => 27,
       ),
       'listing' => array(
         'label' => 'above',
@@ -1637,7 +1603,7 @@ function gie_funding_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 26,
+        'weight' => 28,
       ),
       'listing' => array(
         'label' => 'above',
@@ -1708,7 +1674,7 @@ function gie_funding_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 28,
+        'weight' => 30,
       ),
       'listing' => array(
         'label' => 'above',
@@ -1779,7 +1745,7 @@ function gie_funding_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 27,
+        'weight' => 29,
       ),
       'listing' => array(
         'label' => 'above',
@@ -1853,7 +1819,7 @@ function gie_funding_field_default_field_instances() {
         'label' => 'hidden',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 24,
+        'weight' => 26,
       ),
       'listing' => array(
         'label' => 'hidden',
