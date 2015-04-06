@@ -2,7 +2,7 @@
 // Display Suite slat layout style
 
 $bp-first: 600px, 'no-query' true;
-$gutter: 1em;
+$gutter: 1.5em;
 
 .layout-slat {
   @include clearfix;
