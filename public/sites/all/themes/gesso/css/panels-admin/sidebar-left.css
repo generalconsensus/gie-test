@@ -1,7 +1,7 @@
 @media (min-width: 43.75em) {
   /* line 13, ../../sass/partials/layout/panels/_sidebar-left.scss */
   .l-panels-sidebar-left.main.sidebar .l-sidebar {
-    width: 30.43478%;
+    width: 29.41176%;
     float: left;
     margin-right: -100%;
     margin-left: 0%;
@@ -9,7 +9,7 @@
   }
   /* line 16, ../../sass/partials/layout/panels/_sidebar-left.scss */
   .l-panels-sidebar-left.main.sidebar .l-main {
-    width: 65.21739%;
+    width: 64.70588%;
     float: right;
     margin-left: 0;
     margin-right: 0;
