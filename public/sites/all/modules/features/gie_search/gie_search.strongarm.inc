@@ -42,6 +42,7 @@ function gie_search_strongarm() {
     'default_node_index' => array(
       'search_api_views:resources_listing:resource_listing' => 'search_api_views:resources_listing:resource_listing',
       'search_api_views:funding_opp_listing:funding_listing' => 'search_api_views:funding_opp_listing:funding_listing',
+      'search_api_views:innovations_listing:resource_listing' => 'search_api_views:innovations_listing:resource_listing',
     ),
   );
   $export['search_api_facets_search_ids'] = $strongarm;
