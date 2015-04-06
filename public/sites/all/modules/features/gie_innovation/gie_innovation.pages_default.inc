@@ -173,79 +173,10 @@ function gie_innovation_default_page_manager_pages() {
     $display->content['new-ed2f3642-990d-4f6d-a82c-c1d4762f3cf2'] = $pane;
     $display->panels['sidebar'][2] = 'new-ed2f3642-990d-4f6d-a82c-c1d4762f3cf2';
     $pane = new stdClass();
-    $pane->pid = 'new-19c26c2c-edab-42d3-8d6c-330cbbe8b14f';
+    $pane->pid = 'new-f9cae62e-59b4-4c37-beda-27190ba4a359';
     $pane->panel = 'sidebar';
     $pane->type = 'block';
-    $pane->subtype = 'facetapi-OW2xuL11GfSOR8Lt2V2k1VJlbtJrQZWK';
-    $pane->shown = TRUE;
-    $pane->access = array();
-    $pane->configuration = array(
-      'override_title' => 1,
-      'override_title_text' => 'Program',
-      'override_title_heading' => 'h2',
-    );
-    $pane->cache = array();
-    $pane->style = array(
-      'settings' => NULL,
-    );
-    $pane->css = array();
-    $pane->extras = array();
-    $pane->position = 3;
-    $pane->locks = array();
-    $pane->uuid = '19c26c2c-edab-42d3-8d6c-330cbbe8b14f';
-    $display->content['new-19c26c2c-edab-42d3-8d6c-330cbbe8b14f'] = $pane;
-    $display->panels['sidebar'][3] = 'new-19c26c2c-edab-42d3-8d6c-330cbbe8b14f';
-    $pane = new stdClass();
-    $pane->pid = 'new-ca6a2666-e6ae-489d-a2ff-c6baf1d75ce9';
-    $pane->panel = 'sidebar';
-    $pane->type = 'block';
-    $pane->subtype = 'facetapi-DWXXyf4Sf7KbO6qt5tvdO201sGvEOwbE';
-    $pane->shown = TRUE;
-    $pane->access = array();
-    $pane->configuration = array(
-      'override_title' => 1,
-      'override_title_text' => 'Region',
-      'override_title_heading' => 'h2',
-    );
-    $pane->cache = array();
-    $pane->style = array(
-      'settings' => NULL,
-    );
-    $pane->css = array();
-    $pane->extras = array();
-    $pane->position = 4;
-    $pane->locks = array();
-    $pane->uuid = 'ca6a2666-e6ae-489d-a2ff-c6baf1d75ce9';
-    $display->content['new-ca6a2666-e6ae-489d-a2ff-c6baf1d75ce9'] = $pane;
-    $display->panels['sidebar'][4] = 'new-ca6a2666-e6ae-489d-a2ff-c6baf1d75ce9';
-    $pane = new stdClass();
-    $pane->pid = 'new-bc2720c5-a09e-4775-a9d3-425ad79d404d';
-    $pane->panel = 'sidebar';
-    $pane->type = 'block';
-    $pane->subtype = 'facetapi-Rlds3Jh70LgzU8nlQV9wQyf1Nzi83k9g';
-    $pane->shown = TRUE;
-    $pane->access = array();
-    $pane->configuration = array(
-      'override_title' => 1,
-      'override_title_text' => 'Country',
-      'override_title_heading' => 'h2',
-    );
-    $pane->cache = array();
-    $pane->style = array(
-      'settings' => NULL,
-    );
-    $pane->css = array();
-    $pane->extras = array();
-    $pane->position = 5;
-    $pane->locks = array();
-    $pane->uuid = 'bc2720c5-a09e-4775-a9d3-425ad79d404d';
-    $display->content['new-bc2720c5-a09e-4775-a9d3-425ad79d404d'] = $pane;
-    $display->panels['sidebar'][5] = 'new-bc2720c5-a09e-4775-a9d3-425ad79d404d';
-    $pane = new stdClass();
-    $pane->pid = 'new-04cc4700-b985-44c1-9010-fcffd5cf3875';
-    $pane->panel = 'sidebar';
-    $pane->type = 'block';
-    $pane->subtype = 'facetapi-I5DY0l6p1FWwEzoigB84GCwJpVN3jjFn';
+    $pane->subtype = 'facetapi-jWOrowuJcP6z1XdY0q08kJJiGa7o50Ot';
     $pane->shown = TRUE;
     $pane->access = array();
     $pane->configuration = array(
@@ -259,11 +190,11 @@ function gie_innovation_default_page_manager_pages() {
     );
     $pane->css = array();
     $pane->extras = array();
-    $pane->position = 6;
+    $pane->position = 3;
     $pane->locks = array();
-    $pane->uuid = '04cc4700-b985-44c1-9010-fcffd5cf3875';
-    $display->content['new-04cc4700-b985-44c1-9010-fcffd5cf3875'] = $pane;
-    $display->panels['sidebar'][6] = 'new-04cc4700-b985-44c1-9010-fcffd5cf3875';
+    $pane->uuid = 'f9cae62e-59b4-4c37-beda-27190ba4a359';
+    $display->content['new-f9cae62e-59b4-4c37-beda-27190ba4a359'] = $pane;
+    $display->panels['sidebar'][3] = 'new-f9cae62e-59b4-4c37-beda-27190ba4a359';
     $pane = new stdClass();
     $pane->pid = 'new-dde6d9da-6317-4494-9c5c-081473d3f486';
     $pane->panel = 'sidebar';
@@ -282,13 +213,13 @@ function gie_innovation_default_page_manager_pages() {
     );
     $pane->css = array();
     $pane->extras = array();
-    $pane->position = 7;
+    $pane->position = 4;
     $pane->locks = array();
     $pane->uuid = 'dde6d9da-6317-4494-9c5c-081473d3f486';
     $display->content['new-dde6d9da-6317-4494-9c5c-081473d3f486'] = $pane;
-    $display->panels['sidebar'][7] = 'new-dde6d9da-6317-4494-9c5c-081473d3f486';
+    $display->panels['sidebar'][4] = 'new-dde6d9da-6317-4494-9c5c-081473d3f486';
     $pane = new stdClass();
-    $pane->pid = 'new-4fc13182-76a5-4e44-8ff7-d8ecd458dcf4';
+    $pane->pid = 'new-75197a9f-736c-444a-a7c0-7395ab594d76';
     $pane->panel = 'sidebar';
     $pane->type = 'block';
     $pane->subtype = 'facetapi-pzIdAjEwyyn4wyhOsDVQbjEGiyDhivpx';
@@ -305,11 +236,34 @@ function gie_innovation_default_page_manager_pages() {
     );
     $pane->css = array();
     $pane->extras = array();
-    $pane->position = 8;
+    $pane->position = 5;
     $pane->locks = array();
-    $pane->uuid = '4fc13182-76a5-4e44-8ff7-d8ecd458dcf4';
-    $display->content['new-4fc13182-76a5-4e44-8ff7-d8ecd458dcf4'] = $pane;
-    $display->panels['sidebar'][8] = 'new-4fc13182-76a5-4e44-8ff7-d8ecd458dcf4';
+    $pane->uuid = '75197a9f-736c-444a-a7c0-7395ab594d76';
+    $display->content['new-75197a9f-736c-444a-a7c0-7395ab594d76'] = $pane;
+    $display->panels['sidebar'][5] = 'new-75197a9f-736c-444a-a7c0-7395ab594d76';
+    $pane = new stdClass();
+    $pane->pid = 'new-ca6a2666-e6ae-489d-a2ff-c6baf1d75ce9';
+    $pane->panel = 'sidebar';
+    $pane->type = 'block';
+    $pane->subtype = 'facetapi-DWXXyf4Sf7KbO6qt5tvdO201sGvEOwbE';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array(
+      'override_title' => 1,
+      'override_title_text' => 'Region',
+      'override_title_heading' => 'h2',
+    );
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
+    $pane->css = array();
+    $pane->extras = array();
+    $pane->position = 6;
+    $pane->locks = array();
+    $pane->uuid = 'ca6a2666-e6ae-489d-a2ff-c6baf1d75ce9';
+    $display->content['new-ca6a2666-e6ae-489d-a2ff-c6baf1d75ce9'] = $pane;
+    $display->panels['sidebar'][6] = 'new-ca6a2666-e6ae-489d-a2ff-c6baf1d75ce9';
     $pane = new stdClass();
     $pane->pid = 'new-bb6ecbdd-e27b-4f56-864e-ffd6e175f1b9';
     $pane->panel = 'sidebar';
@@ -328,11 +282,11 @@ function gie_innovation_default_page_manager_pages() {
     );
     $pane->css = array();
     $pane->extras = array();
-    $pane->position = 9;
+    $pane->position = 7;
     $pane->locks = array();
     $pane->uuid = 'bb6ecbdd-e27b-4f56-864e-ffd6e175f1b9';
     $display->content['new-bb6ecbdd-e27b-4f56-864e-ffd6e175f1b9'] = $pane;
-    $display->panels['sidebar'][9] = 'new-bb6ecbdd-e27b-4f56-864e-ffd6e175f1b9';
+    $display->panels['sidebar'][7] = 'new-bb6ecbdd-e27b-4f56-864e-ffd6e175f1b9';
     $pane = new stdClass();
     $pane->pid = 'new-ce29e549-8755-4c18-9033-f98f0cd47f2a';
     $pane->panel = 'sidebar';
@@ -351,11 +305,11 @@ function gie_innovation_default_page_manager_pages() {
     );
     $pane->css = array();
     $pane->extras = array();
-    $pane->position = 10;
+    $pane->position = 8;
     $pane->locks = array();
     $pane->uuid = 'ce29e549-8755-4c18-9033-f98f0cd47f2a';
     $display->content['new-ce29e549-8755-4c18-9033-f98f0cd47f2a'] = $pane;
-    $display->panels['sidebar'][10] = 'new-ce29e549-8755-4c18-9033-f98f0cd47f2a';
+    $display->panels['sidebar'][8] = 'new-ce29e549-8755-4c18-9033-f98f0cd47f2a';
     $pane = new stdClass();
     $pane->pid = 'new-c27c810a-8dce-4fba-97cd-a8b635847479';
     $pane->panel = 'sidebar';
@@ -364,8 +318,54 @@ function gie_innovation_default_page_manager_pages() {
     $pane->shown = TRUE;
     $pane->access = array();
     $pane->configuration = array(
-      'override_title' => 0,
-      'override_title_text' => '',
+      'override_title' => 1,
+      'override_title_text' => 'Evidence Available?',
+      'override_title_heading' => 'h2',
+    );
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
+    $pane->css = array();
+    $pane->extras = array();
+    $pane->position = 9;
+    $pane->locks = array();
+    $pane->uuid = 'c27c810a-8dce-4fba-97cd-a8b635847479';
+    $display->content['new-c27c810a-8dce-4fba-97cd-a8b635847479'] = $pane;
+    $display->panels['sidebar'][9] = 'new-c27c810a-8dce-4fba-97cd-a8b635847479';
+    $pane = new stdClass();
+    $pane->pid = 'new-8a3c01b2-fdd7-4299-af0c-bca75da789e7';
+    $pane->panel = 'sidebar';
+    $pane->type = 'block';
+    $pane->subtype = 'facetapi-I8HfvJeK0DfBGyCDWBxx7z5sby7VftjQ';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array(
+      'override_title' => 1,
+      'override_title_text' => 'References Available?',
+      'override_title_heading' => 'h2',
+    );
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
+    $pane->css = array();
+    $pane->extras = array();
+    $pane->position = 10;
+    $pane->locks = array();
+    $pane->uuid = '8a3c01b2-fdd7-4299-af0c-bca75da789e7';
+    $display->content['new-8a3c01b2-fdd7-4299-af0c-bca75da789e7'] = $pane;
+    $display->panels['sidebar'][10] = 'new-8a3c01b2-fdd7-4299-af0c-bca75da789e7';
+    $pane = new stdClass();
+    $pane->pid = 'new-61563eaa-c02f-4320-ac92-8944481ea192';
+    $pane->panel = 'sidebar';
+    $pane->type = 'block';
+    $pane->subtype = 'facetapi-RIvy9Ez5fCrFPD0MdyV8Pg8p5XHEdXHD';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array(
+      'override_title' => 1,
+      'override_title_text' => 'Funding Partners',
       'override_title_heading' => 'h2',
     );
     $pane->cache = array();
@@ -376,9 +376,9 @@ function gie_innovation_default_page_manager_pages() {
     $pane->extras = array();
     $pane->position = 11;
     $pane->locks = array();
-    $pane->uuid = 'c27c810a-8dce-4fba-97cd-a8b635847479';
-    $display->content['new-c27c810a-8dce-4fba-97cd-a8b635847479'] = $pane;
-    $display->panels['sidebar'][11] = 'new-c27c810a-8dce-4fba-97cd-a8b635847479';
+    $pane->uuid = '61563eaa-c02f-4320-ac92-8944481ea192';
+    $display->content['new-61563eaa-c02f-4320-ac92-8944481ea192'] = $pane;
+    $display->panels['sidebar'][11] = 'new-61563eaa-c02f-4320-ac92-8944481ea192';
     $pane = new stdClass();
     $pane->pid = 'new-b238a7f8-d02f-4da1-81a5-4fc9d4c12dcf';
     $pane->panel = 'sidebar';
@@ -387,8 +387,8 @@ function gie_innovation_default_page_manager_pages() {
     $pane->shown = TRUE;
     $pane->access = array();
     $pane->configuration = array(
-      'override_title' => 0,
-      'override_title_text' => '',
+      'override_title' => 1,
+      'override_title_text' => 'Cost Per Unit',
       'override_title_heading' => 'h2',
     );
     $pane->cache = array();
@@ -403,15 +403,15 @@ function gie_innovation_default_page_manager_pages() {
     $display->content['new-b238a7f8-d02f-4da1-81a5-4fc9d4c12dcf'] = $pane;
     $display->panels['sidebar'][12] = 'new-b238a7f8-d02f-4da1-81a5-4fc9d4c12dcf';
     $pane = new stdClass();
-    $pane->pid = 'new-8a3c01b2-fdd7-4299-af0c-bca75da789e7';
+    $pane->pid = 'new-bf505105-577e-4151-a08d-a3f15bfc8c92';
     $pane->panel = 'sidebar';
     $pane->type = 'block';
-    $pane->subtype = 'facetapi-I8HfvJeK0DfBGyCDWBxx7z5sby7VftjQ';
+    $pane->subtype = 'facetapi-h1bU0yba646Lz9zjcyTa95EJUuZ98J17';
     $pane->shown = TRUE;
     $pane->access = array();
     $pane->configuration = array(
-      'override_title' => 0,
-      'override_title_text' => '',
+      'override_title' => 1,
+      'override_title_text' => 'Funding Raised',
       'override_title_heading' => 'h2',
     );
     $pane->cache = array();
@@ -422,19 +422,19 @@ function gie_innovation_default_page_manager_pages() {
     $pane->extras = array();
     $pane->position = 13;
     $pane->locks = array();
-    $pane->uuid = '8a3c01b2-fdd7-4299-af0c-bca75da789e7';
-    $display->content['new-8a3c01b2-fdd7-4299-af0c-bca75da789e7'] = $pane;
-    $display->panels['sidebar'][13] = 'new-8a3c01b2-fdd7-4299-af0c-bca75da789e7';
+    $pane->uuid = 'bf505105-577e-4151-a08d-a3f15bfc8c92';
+    $display->content['new-bf505105-577e-4151-a08d-a3f15bfc8c92'] = $pane;
+    $display->panels['sidebar'][13] = 'new-bf505105-577e-4151-a08d-a3f15bfc8c92';
     $pane = new stdClass();
-    $pane->pid = 'new-46dc186a-7224-409d-85a7-78fa890e928c';
+    $pane->pid = 'new-69861551-e0fa-4eb0-a86e-f8b3ce27b104';
     $pane->panel = 'sidebar';
     $pane->type = 'block';
-    $pane->subtype = 'facetapi-XOeivkvBVTbxICo7cyJltVj0N4gWGBIA';
+    $pane->subtype = 'facetapi-Yxpyh7CA8sktr00XrjyNkkBXpxjXVBD1';
     $pane->shown = TRUE;
     $pane->access = array();
     $pane->configuration = array(
-      'override_title' => 0,
-      'override_title_text' => '',
+      'override_title' => 1,
+      'override_title_text' => 'Funding Goal',
       'override_title_heading' => 'h2',
     );
     $pane->cache = array();
@@ -445,55 +445,9 @@ function gie_innovation_default_page_manager_pages() {
     $pane->extras = array();
     $pane->position = 14;
     $pane->locks = array();
-    $pane->uuid = '46dc186a-7224-409d-85a7-78fa890e928c';
-    $display->content['new-46dc186a-7224-409d-85a7-78fa890e928c'] = $pane;
-    $display->panels['sidebar'][14] = 'new-46dc186a-7224-409d-85a7-78fa890e928c';
-    $pane = new stdClass();
-    $pane->pid = 'new-bf505105-577e-4151-a08d-a3f15bfc8c92';
-    $pane->panel = 'sidebar';
-    $pane->type = 'block';
-    $pane->subtype = 'facetapi-h1bU0yba646Lz9zjcyTa95EJUuZ98J17';
-    $pane->shown = TRUE;
-    $pane->access = array();
-    $pane->configuration = array(
-      'override_title' => 0,
-      'override_title_text' => '',
-      'override_title_heading' => 'h2',
-    );
-    $pane->cache = array();
-    $pane->style = array(
-      'settings' => NULL,
-    );
-    $pane->css = array();
-    $pane->extras = array();
-    $pane->position = 15;
-    $pane->locks = array();
-    $pane->uuid = 'bf505105-577e-4151-a08d-a3f15bfc8c92';
-    $display->content['new-bf505105-577e-4151-a08d-a3f15bfc8c92'] = $pane;
-    $display->panels['sidebar'][15] = 'new-bf505105-577e-4151-a08d-a3f15bfc8c92';
-    $pane = new stdClass();
-    $pane->pid = 'new-69861551-e0fa-4eb0-a86e-f8b3ce27b104';
-    $pane->panel = 'sidebar';
-    $pane->type = 'block';
-    $pane->subtype = 'facetapi-Yxpyh7CA8sktr00XrjyNkkBXpxjXVBD1';
-    $pane->shown = TRUE;
-    $pane->access = array();
-    $pane->configuration = array(
-      'override_title' => 0,
-      'override_title_text' => '',
-      'override_title_heading' => 'h2',
-    );
-    $pane->cache = array();
-    $pane->style = array(
-      'settings' => NULL,
-    );
-    $pane->css = array();
-    $pane->extras = array();
-    $pane->position = 16;
-    $pane->locks = array();
     $pane->uuid = '69861551-e0fa-4eb0-a86e-f8b3ce27b104';
     $display->content['new-69861551-e0fa-4eb0-a86e-f8b3ce27b104'] = $pane;
-    $display->panels['sidebar'][16] = 'new-69861551-e0fa-4eb0-a86e-f8b3ce27b104';
+    $display->panels['sidebar'][14] = 'new-69861551-e0fa-4eb0-a86e-f8b3ce27b104';
   $display->hide_title = PANELS_TITLE_FIXED;
   $display->title_pane = '0';
   $handler->conf['display'] = $display;
