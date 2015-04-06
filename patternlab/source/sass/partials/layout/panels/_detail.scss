@@ -11,6 +11,7 @@
   &.main {
     &.main-sidebar { // 1, 2 have content
       @include breakpoint(700px) {
+        $gutters: 2;
         .l-main { @include grid-span(8,1);}
         .l-main-sidebar { @include grid-span (4,9)}
       }
@@ -20,10 +21,12 @@
   &.bottom {
     &.bottom-sidebar { // 1, 2 have content
       @include breakpoint(700px) {
+        $gutters: 2;
         .l-bottom { @include grid-span(7,1);}
         .l-bottom-sidebar { @include grid-span (5,8); }
       }
       @include breakpoint(900px, $no-query: true) {
+        $gutters: 2;
         .l-bottom { @include grid-span(8,1);}
         .l-bottom-sidebar { @include grid-span (4,9); }
       }
@@ -33,6 +36,7 @@
     &.box-second {
       &.box-third { // 1, 2, 3 have content
         @include breakpoint(900px, $no-query: true) {
+          $gutters: 1;
           .l-box-first { @include grid-span(4,1); }
           .l-box-second { @include grid-span(4,5); }
           .l-box-third { @include grid-span(4,9); }
@@ -40,6 +44,7 @@
       }
       &.box-third-empty { // 1, 2 have content
         @include breakpoint(700px, $no-query: true) {
+          $gutters: 2;
           .l-box-first { @include grid-span(6,1); }
           .l-box-second { @include grid-span(6,7); }
         }
@@ -47,6 +52,7 @@
     }
     &.box-second-empty.box-third { // 1, 3 have content
       @include breakpoint(700px, $no-query: true) {
+        $gutters: 2;
         .l-box-first { @include grid-span(6,1); }
         .l-box-third { @include grid-span(6,7); }
       }
@@ -54,6 +60,7 @@
   }
   &.box-first-empty.box-second.box-third { // 2, 3 have content
     @include breakpoint(700px, $no-query: true) {
+      $gutters: 2;
       .l-box-second { @include grid-span(6,1); }
       .l-box-third { @include grid-span(6,7); }
     }

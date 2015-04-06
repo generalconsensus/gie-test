@@ -10,6 +10,7 @@
 
   .field {
     @include hyphens(none);
+    font-size: em(14px);
     padding: 0 0 1em 0;
     .field-label {
       float: left;
@@ -39,7 +40,7 @@
 .innovation-stats__first {
   @include breakpoint(900px, $no-query: true) {
     float: left;
-    padding-right: 5%;
+    padding-right: 4%;
     width: 50%;
   }
 }
@@ -47,7 +48,7 @@
 .innovation-stats__second {
   @include breakpoint(900px, $no-query: true) {
     float: left;
-    padding-left: 5%;
+    padding-left: 4%;
     width: 50%;    
   }   
 }
