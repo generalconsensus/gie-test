@@ -95,6 +95,9 @@ function gie_organization_strongarm() {
       'teaser_date' => array(
         'custom_settings' => FALSE,
       ),
+      'contact' => array(
+        'custom_settings' => TRUE,
+      ),
     ),
     'extra_fields' => array(
       'form' => array(
@@ -114,6 +117,10 @@ function gie_organization_strongarm() {
           ),
           'full' => array(
             'weight' => '7',
+            'visible' => FALSE,
+          ),
+          'contact' => array(
+            'weight' => '18',
             'visible' => FALSE,
           ),
         ),
