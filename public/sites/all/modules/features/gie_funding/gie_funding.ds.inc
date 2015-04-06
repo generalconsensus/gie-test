@@ -43,7 +43,7 @@ function gie_funding_ds_field_settings_info() {
   $ds_fieldsetting->view_mode = 'full';
   $ds_fieldsetting->settings = array(
     'comments' => array(
-      'weight' => '3',
+      'weight' => '5',
       'label' => 'hidden',
       'format' => 'default',
     ),
@@ -72,6 +72,18 @@ function gie_funding_ds_field_settings_info() {
           'func' => 'theme_ds_field_expert',
           'lb-el' => 'h2',
           'lb-col' => TRUE,
+        ),
+      ),
+    ),
+    'field_funding_poc' => array(
+      'formatter_settings' => array(
+        'ft' => array(),
+      ),
+    ),
+    'field_funding_link' => array(
+      'formatter_settings' => array(
+        'ft' => array(
+          'func' => 'theme_ds_field_expert',
         ),
       ),
     ),
@@ -281,13 +293,17 @@ function gie_funding_ds_layout_settings_info() {
         0 => 'field_funding_desc',
         1 => 'field_funding_eligibility',
         2 => 'field_funding_guidance',
-        3 => 'comments',
+        3 => 'field_funding_link',
+        4 => 'field_funding_poc',
+        5 => 'comments',
       ),
     ),
     'fields' => array(
       'field_funding_desc' => 'ds_content',
       'field_funding_eligibility' => 'ds_content',
       'field_funding_guidance' => 'ds_content',
+      'field_funding_link' => 'ds_content',
+      'field_funding_poc' => 'ds_content',
       'comments' => 'ds_content',
     ),
     'classes' => array(),
