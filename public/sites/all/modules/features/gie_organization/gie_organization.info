@@ -86,6 +86,7 @@ features[variable][] = panelizer_defaults_node_organization
 features[variable][] = panelizer_node:organization:default_selection
 features[variable][] = panelizer_node:organization:page_manager_selection
 features[variable][] = panelizer_node:organization:teaser_selection
+features[views_view][] = organization_recent_content
 features[views_view][] = organization_taxonomies
 features[views_view][] = partners
 features_exclude[dependencies][email] = email
