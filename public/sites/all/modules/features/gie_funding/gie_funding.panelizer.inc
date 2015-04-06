@@ -79,13 +79,13 @@ function gie_funding_panelizer_defaults() {
     $pane->shown = TRUE;
     $pane->access = array();
     $pane->configuration = array(
-      'label' => 'title',
-      'formatter' => 'entityreference_entity_view',
+      'label' => 'inline',
+      'formatter' => 'entityreference_label',
       'delta_limit' => '0',
       'delta_offset' => '0',
       'delta_reversed' => 0,
       'formatter_settings' => array(
-        'link' => 0,
+        'link' => 1,
         'field_delimiter' => '',
         'linked_field' => array(
           'linked' => 0,
