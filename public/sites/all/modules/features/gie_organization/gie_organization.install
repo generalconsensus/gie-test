@@ -1,0 +1,13 @@
+<?php
+/**
+ * @file
+ * Upate hooks for gie_organization.
+ */
+
+/**
+ * Delete Organization Telephone and Email fields.
+ */
+function gie_organization_update_7000() {
+  field_delete_field('field_org_phone');
+  field_delete_field('field_org_email');
+}
