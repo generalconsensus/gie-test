@@ -126,6 +126,20 @@ function gie_funding_views_default_views() {
       ),
     ),
   );
+  $handler->display->display_options['defaults']['filter_groups'] = FALSE;
+  $handler->display->display_options['defaults']['filters'] = FALSE;
+  /* Filter criterion: Content: Published */
+  $handler->display->display_options['filters']['status']['id'] = 'status';
+  $handler->display->display_options['filters']['status']['table'] = 'node';
+  $handler->display->display_options['filters']['status']['field'] = 'status';
+  $handler->display->display_options['filters']['status']['value'] = 1;
+  $handler->display->display_options['filters']['status']['group'] = 1;
+  $handler->display->display_options['filters']['status']['expose']['operator'] = FALSE;
+  /* Filter criterion: Content: Point of Contact (field_funding_poc) */
+  $handler->display->display_options['filters']['field_funding_poc_value']['id'] = 'field_funding_poc_value';
+  $handler->display->display_options['filters']['field_funding_poc_value']['table'] = 'field_data_field_funding_poc';
+  $handler->display->display_options['filters']['field_funding_poc_value']['field'] = 'field_funding_poc_value';
+  $handler->display->display_options['filters']['field_funding_poc_value']['operator'] = 'not empty';
   $handler->display->display_options['entity_type'] = 'node';
   $handler->display->display_options['bundles'] = array(
     0 => 'funding',

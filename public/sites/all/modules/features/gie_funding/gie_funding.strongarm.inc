@@ -140,11 +140,23 @@ function gie_funding_strongarm() {
             'visible' => FALSE,
           ),
           'full' => array(
-            'weight' => '15',
+            'weight' => '17',
             'visible' => FALSE,
           ),
           'listing' => array(
             'weight' => '19',
+            'visible' => FALSE,
+          ),
+        ),
+        'funding_fields_link_url' => array(
+          'full' => array(
+            'weight' => '13',
+            'visible' => FALSE,
+          ),
+        ),
+        'funding_fields_contact' => array(
+          'full' => array(
+            'weight' => '14',
             'visible' => FALSE,
           ),
         ),
