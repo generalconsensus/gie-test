@@ -1,0 +1,12 @@
+<?php
+
+/**
+ * Implements hook_update_n
+ * run any updates here
+ */
+
+function gie_funding_update_7000() {
+    field_delete_field('field_funding_poc');
+    field_delete_field('field_funding_link');
+    field_purge_batch(1);
+}
