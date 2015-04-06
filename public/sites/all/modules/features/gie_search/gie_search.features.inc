@@ -134,6 +134,7 @@ function gie_search_default_search_api_index() {
         "field_innovation_cost_per_unit" : { "type" : "integer" },
         "field_innovation_created" : { "type" : "list\\u003Cinteger\\u003E", "entity_type" : "taxonomy_term" },
         "field_innovation_evidence_avail" : { "type" : "boolean" },
+        "field_innovation_funders" : { "type" : "list\\u003Cinteger\\u003E", "entity_type" : "node" },
         "field_innovation_funding_goal" : { "type" : "integer" },
         "field_innovation_implemented" : { "type" : "list\\u003Cinteger\\u003E", "entity_type" : "taxonomy_term" },
         "field_innovation_program" : { "type" : "list\\u003Cinteger\\u003E", "entity_type" : "node" },

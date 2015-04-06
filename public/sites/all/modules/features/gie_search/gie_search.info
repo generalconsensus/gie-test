@@ -45,6 +45,7 @@ features[facetapi][] = search_api@default_node_index:block:field_innovation_cost
 features[facetapi][] = search_api@default_node_index:block:field_innovation_cost_per_unit
 features[facetapi][] = search_api@default_node_index:block:field_innovation_created
 features[facetapi][] = search_api@default_node_index:block:field_innovation_evidence_avail
+features[facetapi][] = search_api@default_node_index:block:field_innovation_funders
 features[facetapi][] = search_api@default_node_index:block:field_innovation_funding_goal
 features[facetapi][] = search_api@default_node_index:block:field_innovation_implemented
 features[facetapi][] = search_api@default_node_index:block:field_innovation_program
