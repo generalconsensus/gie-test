@@ -31,6 +31,9 @@ function gie_user_strongarm() {
       'user_teaser_summary' => array(
         'custom_settings' => TRUE,
       ),
+      'title' => array(
+        'custom_settings' => TRUE,
+      ),
     ),
     'extra_fields' => array(
       'form' => array(
@@ -62,6 +65,10 @@ function gie_user_strongarm() {
             'weight' => '11',
             'visible' => FALSE,
           ),
+          'title' => array(
+            'weight' => '9',
+            'visible' => FALSE,
+          ),
         ),
         'flag_follow' => array(
           'full' => array(
@@ -74,6 +81,14 @@ function gie_user_strongarm() {
           ),
           'user_teaser' => array(
             'weight' => '10',
+            'visible' => FALSE,
+          ),
+          'default' => array(
+            'weight' => '10',
+            'visible' => TRUE,
+          ),
+          'title' => array(
+            'weight' => '14',
             'visible' => FALSE,
           ),
         ),
