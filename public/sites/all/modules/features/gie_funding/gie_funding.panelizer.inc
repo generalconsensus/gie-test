@@ -143,6 +143,76 @@ function gie_funding_panelizer_defaults() {
     $display->content['new-9e478168-8a94-4f2f-8154-abd91607296c'] = $pane;
     $display->panels['main'][2] = 'new-9e478168-8a94-4f2f-8154-abd91607296c';
     $pane = new stdClass();
+    $pane->pid = 'new-5da7a63f-86ef-4a67-8513-5fbb970c977b';
+    $pane->panel = 'main';
+    $pane->type = 'views_panes';
+    $pane->subtype = 'funding_ops_counters-at_a_glance';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array(
+      'override_title' => 1,
+      'override_title_text' => 'At a Glance',
+      'override_title_heading' => 'h2',
+    );
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
+    $pane->css = array();
+    $pane->extras = array();
+    $pane->position = 3;
+    $pane->locks = array();
+    $pane->uuid = '5da7a63f-86ef-4a67-8513-5fbb970c977b';
+    $display->content['new-5da7a63f-86ef-4a67-8513-5fbb970c977b'] = $pane;
+    $display->panels['main'][3] = 'new-5da7a63f-86ef-4a67-8513-5fbb970c977b';
+    $pane = new stdClass();
+    $pane->pid = 'new-b38765c1-b94c-49ec-811a-13590f3f3e02';
+    $pane->panel = 'main';
+    $pane->type = 'entity_field';
+    $pane->subtype = 'node:field_funding_deadline';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array(
+      'label' => 'hidden',
+      'formatter' => 'date_default',
+      'delta_limit' => 0,
+      'delta_offset' => '0',
+      'delta_reversed' => FALSE,
+      'formatter_settings' => array(
+        'format_type' => 'gie_general_slash_no_time',
+        'multiple_number' => '',
+        'multiple_from' => '',
+        'multiple_to' => '',
+        'fromto' => 'both',
+        'linked_field' => array(
+          'linked' => 0,
+          'destination' => '',
+          'advanced' => array(
+            'title' => '',
+            'target' => '',
+            'class' => '',
+            'rel' => '',
+            'text' => '',
+          ),
+        ),
+      ),
+      'context' => 'panelizer',
+      'override_title' => 1,
+      'override_title_text' => 'Deadline',
+      'override_title_heading' => 'h2',
+    );
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
+    $pane->css = array();
+    $pane->extras = array();
+    $pane->position = 4;
+    $pane->locks = array();
+    $pane->uuid = 'b38765c1-b94c-49ec-811a-13590f3f3e02';
+    $display->content['new-b38765c1-b94c-49ec-811a-13590f3f3e02'] = $pane;
+    $display->panels['main'][4] = 'new-b38765c1-b94c-49ec-811a-13590f3f3e02';
+    $pane = new stdClass();
     $pane->pid = 'new-6a0ba570-85c6-4226-a676-02d29e816467';
     $pane->panel = 'main';
     $pane->type = 'entity_view';
@@ -162,11 +232,11 @@ function gie_funding_panelizer_defaults() {
     );
     $pane->css = array();
     $pane->extras = array();
-    $pane->position = 3;
+    $pane->position = 5;
     $pane->locks = array();
     $pane->uuid = '6a0ba570-85c6-4226-a676-02d29e816467';
     $display->content['new-6a0ba570-85c6-4226-a676-02d29e816467'] = $pane;
-    $display->panels['main'][3] = 'new-6a0ba570-85c6-4226-a676-02d29e816467';
+    $display->panels['main'][5] = 'new-6a0ba570-85c6-4226-a676-02d29e816467';
     $pane = new stdClass();
     $pane->pid = 'new-79698f57-9ad4-49d0-b14a-be615f249c98';
     $pane->panel = 'sidebar';
