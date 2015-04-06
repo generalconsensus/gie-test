@@ -17,6 +17,7 @@
 
     .nav__link {
       font-size: em(14px);
+      font-weight: normal;
 
       @include breakpoint(max-width 600px) { // mobile button style links
         background: $blue;

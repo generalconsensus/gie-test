@@ -18,6 +18,20 @@
         img {
           display: block;
         }
+        .asset--video .field-item { // from http://embedresponsively.com/
+          height: 0;
+          max-width: 100%; 
+          padding-bottom: 56.25%; 
+          position: relative; 
+          overflow: hidden; 
+          iframe, embed, object {
+             height: 100%;
+             left: 0; 
+             position: absolute;              
+             top: 0; 
+             width: 100%; 
+          }
+        }
       }
     }
 
@@ -83,16 +97,18 @@
   }
 
   .view__attachment-after {
+    font-size: em(12px);
+    font-weight: bold;
     padding-top: 0.5em;
     text-align: right;
     .view--display-id-image_count {
       display: inline-block;
-      padding-right: 10px;
+      padding-right: 15px;
       .views-field {
         line-height: 17px;
         &:after {
-          @include image-replace(20px,17px);
-          @include svg-background(icon-comment);
+          @include image-replace(23px,17px);
+          @include svg-background(photo-icon);
           content: "";
           display: inline-block;
           position: relative;
@@ -106,8 +122,8 @@
       .views-field {
         line-height: 17px;
         &:after {
-          @include image-replace(18px,17px);
-          @include svg-background(icon-favorite);
+          @include image-replace(24px,17px);
+          @include svg-background(video-icon);
           content: "";
           display: inline-block;
           position: relative;

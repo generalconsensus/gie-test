@@ -7,7 +7,7 @@
 .l-panels-sidebar-left {
   $grids: 1;
   $grids: add-grid(12 at 700px);
-  $gutters: 1;
+  $gutters: 2;
   @include breakpoint(700px, $no-query: true) {
     &.main.sidebar {
       .l-sidebar {

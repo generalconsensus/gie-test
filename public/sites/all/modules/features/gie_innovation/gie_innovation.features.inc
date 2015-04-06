@@ -20,6 +20,9 @@ function gie_innovation_ctools_plugin_api($module = NULL, $api = NULL) {
   if ($module == "page_manager" && $api == "pages_default") {
     return array("version" => "1");
   }
+  if ($module == "pane" && $api == "pane") {
+    return array("version" => "2");
+  }
   if ($module == "panelizer" && $api == "panelizer") {
     return array("version" => "1");
   }
@@ -43,13 +46,13 @@ function gie_innovation_image_default_styles() {
 
   // Exported image style: featured-asset.
   $styles['featured-asset'] = array(
-    'label' => 'Featured asset (1280x720)',
+    'label' => 'Featured asset (1100x620)',
     'effects' => array(
-      2 => array(
+      3 => array(
         'name' => 'image_scale_and_crop',
         'data' => array(
-          'width' => 1280,
-          'height' => 720,
+          'width' => 1100,
+          'height' => 620,
         ),
         'weight' => 1,
       ),
