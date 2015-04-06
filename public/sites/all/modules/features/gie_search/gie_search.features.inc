@@ -152,6 +152,7 @@ function gie_search_default_search_api_index() {
         "field_term_sector" : { "type" : "list\\u003Cinteger\\u003E", "entity_type" : "taxonomy_term" },
         "field_term_topic" : { "type" : "list\\u003Cinteger\\u003E", "entity_type" : "taxonomy_term" },
         "search_api_language" : { "type" : "string" },
+        "status" : { "type" : "integer" },
         "title" : { "type" : "text", "boost" : "5.0" },
         "type" : { "type" : "string" }
       }

@@ -16,7 +16,10 @@ function gie_innovation_default_page_manager_pages() {
   $page->admin_title = 'Innovations';
   $page->admin_description = 'Resources Landing Page';
   $page->path = 'innovations';
-  $page->access = array();
+  $page->access = array(
+    'type' => 'none',
+    'settings' => NULL,
+  );
   $page->menu = array();
   $page->arguments = array();
   $page->conf = array(
