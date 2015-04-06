@@ -12,6 +12,35 @@ function gie_organization_ds_field_settings_info() {
 
   $ds_fieldsetting = new stdClass();
   $ds_fieldsetting->api_version = 1;
+  $ds_fieldsetting->id = 'node|organization|contact';
+  $ds_fieldsetting->entity_type = 'node';
+  $ds_fieldsetting->bundle = 'organization';
+  $ds_fieldsetting->view_mode = 'contact';
+  $ds_fieldsetting->settings = array(
+    'field_org_poc' => array(
+      'formatter_settings' => array(
+        'ft' => array(),
+      ),
+    ),
+    'field_org_telephone' => array(
+      'formatter_settings' => array(
+        'ft' => array(
+          'lb' => 'T',
+        ),
+      ),
+    ),
+    'field_org_text_email' => array(
+      'formatter_settings' => array(
+        'ft' => array(
+          'lb' => 'E',
+        ),
+      ),
+    ),
+  );
+  $export['node|organization|contact'] = $ds_fieldsetting;
+
+  $ds_fieldsetting = new stdClass();
+  $ds_fieldsetting->api_version = 1;
   $ds_fieldsetting->id = 'node|organization|full';
   $ds_fieldsetting->entity_type = 'node';
   $ds_fieldsetting->bundle = 'organization';
@@ -55,6 +84,43 @@ function gie_organization_ds_field_settings_info() {
  */
 function gie_organization_ds_layout_settings_info() {
   $export = array();
+
+  $ds_layout = new stdClass();
+  $ds_layout->api_version = 1;
+  $ds_layout->id = 'node|organization|contact';
+  $ds_layout->entity_type = 'node';
+  $ds_layout->bundle = 'organization';
+  $ds_layout->view_mode = 'contact';
+  $ds_layout->layout = 'ds_2col';
+  $ds_layout->settings = array(
+    'regions' => array(
+      'left' => array(
+        0 => 'field_org_address',
+      ),
+      'right' => array(
+        1 => 'field_org_poc',
+        2 => 'field_org_telephone',
+        3 => 'field_org_text_email',
+      ),
+    ),
+    'fields' => array(
+      'field_org_address' => 'left',
+      'field_org_poc' => 'right',
+      'field_org_telephone' => 'right',
+      'field_org_text_email' => 'right',
+    ),
+    'classes' => array(),
+    'wrappers' => array(
+      'left' => 'div',
+      'right' => 'div',
+    ),
+    'layout_wrapper' => 'div',
+    'layout_attributes' => '',
+    'layout_attributes_merge' => 1,
+    'layout_link_attribute' => '',
+    'layout_link_custom' => '',
+  );
+  $export['node|organization|contact'] = $ds_layout;
 
   $ds_layout = new stdClass();
   $ds_layout->api_version = 1;
@@ -115,6 +181,24 @@ function gie_organization_ds_layout_settings_info() {
     'layout_link_custom' => '',
   );
   $export['node|organization|teaser'] = $ds_layout;
+
+  return $export;
+}
+
+/**
+ * Implements hook_ds_view_modes_info().
+ */
+function gie_organization_ds_view_modes_info() {
+  $export = array();
+
+  $ds_view_mode = new stdClass();
+  $ds_view_mode->api_version = 1;
+  $ds_view_mode->view_mode = 'contact';
+  $ds_view_mode->label = 'Contact';
+  $ds_view_mode->entities = array(
+    'node' => 'node',
+  );
+  $export['contact'] = $ds_view_mode;
 
   return $export;
 }
