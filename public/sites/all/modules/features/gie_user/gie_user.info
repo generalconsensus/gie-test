@@ -74,6 +74,7 @@ features[field_instance][] = taxonomy_term-user_skills-description_field
 features[field_instance][] = taxonomy_term-user_skills-name_field
 features[field_instance][] = taxonomy_term-user_type-description_field
 features[field_instance][] = taxonomy_term-user_type-name_field
+features[field_instance][] = user-user-field_term_region
 features[field_instance][] = user-user-field_term_sector
 features[field_instance][] = user-user-field_user_address
 features[field_instance][] = user-user-field_user_company
