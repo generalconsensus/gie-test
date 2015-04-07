@@ -2300,7 +2300,7 @@ function gie_innovation_field_default_field_instances() {
         'module' => 'entityreference',
         'settings' => array(
           'field_delimiter' => '',
-          'link' => FALSE,
+          'link' => 0,
           'linked_field' => array(
             'advanced' => array(
               'class' => '',

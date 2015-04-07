@@ -124,6 +124,7 @@ form {}
 h1, %h1 {
   @extend %hN;
   font-size: em($font-size-xxxl);
+  font-weight: normal;
   margin: 0 0 rhythm(1, $font-size-xxxl);
 }
 
@@ -131,6 +132,7 @@ h2, %h2 {
   @extend %hN;
   color: $blue;
   font-size: em($font-size-xxl);
+  font-weight: normal;
   margin: 0 0 rhythm(1, $font-size-xxl);
 }
 
@@ -138,6 +140,7 @@ h3, %h3 {
   @extend %hN;
   color: $lightblue;
   font-size: em($font-size-xl);
+  font-weight: normal;
   margin: 0 0 rhythm(1, $font-size-xl);
 }
 
