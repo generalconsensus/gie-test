@@ -124,13 +124,25 @@ function gie_organization_strongarm() {
             'visible' => FALSE,
           ),
           'listing' => array(
-            'weight' => '17',
+            'weight' => '19',
             'visible' => FALSE,
           ),
         ),
         'organization_counters_favorite_count' => array(
           'listing' => array(
+            'weight' => '6',
+            'visible' => TRUE,
+          ),
+        ),
+        'organization_counters_innovation_count' => array(
+          'listing' => array(
             'weight' => '4',
+            'visible' => TRUE,
+          ),
+        ),
+        'organization_counters_member_count' => array(
+          'listing' => array(
+            'weight' => '5',
             'visible' => TRUE,
           ),
         ),
