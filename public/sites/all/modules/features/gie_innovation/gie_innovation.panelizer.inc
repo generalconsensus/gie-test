@@ -375,7 +375,7 @@ function gie_innovation_panelizer_defaults() {
       'flag_name' => 'favorite',
       'context' => 'panelizer',
       'override_title' => 1,
-      'override_title_text' => '',
+      'override_title_text' => 'Like This Innovation?',
       'override_title_heading' => 'h2',
     );
     $pane->cache = array();
