@@ -46,7 +46,7 @@ function gie_user_quicktabs_default_quicktabs() {
       'vid' => 'user_connections',
       'display' => 'connections',
       'args' => '',
-      'title' => 'Conections',
+      'title' => 'Connections',
       'weight' => '-97',
       'type' => 'view',
     ),
@@ -57,7 +57,7 @@ function gie_user_quicktabs_default_quicktabs() {
 
   // Translatables
   // Included for use with string extractors like potx.
-  t('Conections');
+  t('Connections');
   t('Innovations');
   t('Overview');
   t('Resources');
