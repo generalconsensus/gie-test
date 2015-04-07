@@ -373,7 +373,7 @@ function gie_user_field_default_field_instances() {
         'apply_chosen' => 1,
       ),
       'type' => 'options_select',
-      'weight' => 16,
+      'weight' => 14,
     ),
   );
 
@@ -472,7 +472,7 @@ function gie_user_field_default_field_instances() {
         ),
       ),
       'type' => 'addressfield_standard',
-      'weight' => 23,
+      'weight' => 21,
     ),
   );
 
@@ -638,7 +638,7 @@ function gie_user_field_default_field_instances() {
         'size' => 60,
       ),
       'type' => 'entityreference_autocomplete',
-      'weight' => 24,
+      'weight' => 22,
     ),
   );
 
@@ -731,7 +731,7 @@ function gie_user_field_default_field_instances() {
         'rows' => 5,
       ),
       'type' => 'text_textarea',
-      'weight' => 15,
+      'weight' => 13,
     ),
   );
 
@@ -824,7 +824,7 @@ function gie_user_field_default_field_instances() {
         'size' => 60,
       ),
       'type' => 'text_textfield',
-      'weight' => 12,
+      'weight' => 10,
     ),
   );
 
@@ -989,7 +989,7 @@ function gie_user_field_default_field_instances() {
         'apply_chosen' => 1,
       ),
       'type' => 'options_select',
-      'weight' => 17,
+      'weight' => 15,
     ),
   );
 
@@ -1175,7 +1175,7 @@ function gie_user_field_default_field_instances() {
         'size' => 60,
       ),
       'type' => 'text_textfield',
-      'weight' => 11,
+      'weight' => 9,
     ),
   );
 
@@ -1268,7 +1268,7 @@ function gie_user_field_default_field_instances() {
         'size' => 60,
       ),
       'type' => 'text_textfield',
-      'weight' => 25,
+      'weight' => 23,
     ),
   );
 
@@ -1348,7 +1348,7 @@ function gie_user_field_default_field_instances() {
         'size' => 60,
       ),
       'type' => 'entityreference_autocomplete',
-      'weight' => 20,
+      'weight' => 18,
     ),
   );
 
@@ -1419,7 +1419,7 @@ function gie_user_field_default_field_instances() {
         'size' => 60,
       ),
       'type' => 'taxonomy_autocomplete',
-      'weight' => 18,
+      'weight' => 16,
     ),
   );
 
@@ -1628,7 +1628,7 @@ function gie_user_field_default_field_instances() {
         'size' => 60,
       ),
       'type' => 'entityreference_autocomplete',
-      'weight' => 19,
+      'weight' => 17,
     ),
   );
 
@@ -1700,7 +1700,7 @@ function gie_user_field_default_field_instances() {
         'apply_chosen' => 1,
       ),
       'type' => 'options_select',
-      'weight' => 22,
+      'weight' => 20,
     ),
   );
 
@@ -1807,7 +1807,7 @@ function gie_user_field_default_field_instances() {
         'rows' => 5,
       ),
       'type' => 'text_textarea',
-      'weight' => 14,
+      'weight' => 12,
     ),
   );
 
@@ -2007,7 +2007,7 @@ function gie_user_field_default_field_instances() {
         'size' => 60,
       ),
       'type' => 'text_textfield',
-      'weight' => 13,
+      'weight' => 11,
     ),
   );
 
@@ -2095,7 +2095,7 @@ function gie_user_field_default_field_instances() {
         'apply_chosen' => 1,
       ),
       'type' => 'options_select',
-      'weight' => 9,
+      'weight' => 7,
     ),
   );
 
