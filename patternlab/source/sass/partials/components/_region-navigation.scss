@@ -3,7 +3,8 @@
   height: 50px;
   position: relative;
   z-index: 2;
-  > .layout-constrain {
-    position: relative;
+  > .region__inner {
+    @extend .layout-constrain;
+    position: relative;    
   }
 }

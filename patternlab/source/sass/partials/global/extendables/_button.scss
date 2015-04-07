@@ -82,3 +82,17 @@
     top: 0.65em;
   }
 }
+
+%button--share {
+  @extend %button--icon;
+  &:before {
+    @include svg-background(circle-plus);
+  }
+}
+
+%button--favorite {
+  @extend %button--icon;
+  &:before {
+    @include svg-background(circle-plus);
+  }
+}

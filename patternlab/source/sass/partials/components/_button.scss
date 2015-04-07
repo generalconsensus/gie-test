@@ -17,16 +17,4 @@
   @extend %button--light;
 }
 
-.button--share {
-  @extend %button--icon;
-  &:before {
-    @include svg-background(circle-plus);
-  }
-}
 
-.button--favorites {
-  @extend %button--icon;
-  &:before {
-    @include svg-background(circle-plus);
-  }
-}

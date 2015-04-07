@@ -17,7 +17,14 @@
         $(this).blur();
       });
       
+      
 
+    }
+  }
+
+  Drupal.behaviors.shareThis = {
+    attach: function (context) {
+      $('.sharethis-buttons .st_sharethis_custom').text('share');
     }
   }
  

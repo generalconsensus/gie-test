@@ -15,7 +15,7 @@ function gesso_preprocess_region(&$vars) {
     // Add layout-constrain class to certain regions.
     case 'utility':
     case 'header':
-    case 'navigation':
+    //case 'navigation':
     case 'preface':
     //case 'content':
     case 'postscript':
@@ -40,7 +40,7 @@ function gesso_process_region(&$vars) {
   $vars['region_close'] = '';
 
   if ($vars['classes'] !== '') {
-    $vars['region_open'] = '<div class="' . $vars['classes'] . '">';
-    $vars['region_close'] = '</div>';
+    $vars['region_open'] = '<div class="' . $vars['classes'] . '"><div class="region__inner">';
+    $vars['region_close'] = '</div></div>';
   }
 }

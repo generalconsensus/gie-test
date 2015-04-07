@@ -382,7 +382,10 @@ function gie_innovation_panelizer_defaults() {
     $pane->style = array(
       'settings' => NULL,
     );
-    $pane->css = array();
+    $pane->css = array(
+      'css_id' => '',
+      'css_class' => 'pane--like-this-innovation',
+    );
     $pane->extras = array();
     $pane->position = 0;
     $pane->locks = array();

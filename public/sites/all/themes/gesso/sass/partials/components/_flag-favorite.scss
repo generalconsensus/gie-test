@@ -1,0 +1,7 @@
+// custom favorite button from flag module
+.flag-favorite {
+  a {
+    @extend %button;
+    @extend %button--favorite;
+  }
+}
