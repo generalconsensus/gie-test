@@ -62,8 +62,6 @@ function gie_innovation_field_group_info() {
       0 => 'field_innovation_created',
       1 => 'field_innovation_implemented',
       2 => 'field_innovation_program',
-      3 => 'field_innovation_sector',
-      4 => 'field_innovation_region',
     ),
     'format_type' => 'div',
     'format_settings' => array(

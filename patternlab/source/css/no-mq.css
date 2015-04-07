@@ -503,49 +503,52 @@ h1, h2, h3, h4, h5, h6 {
 /* line 124, ../sass/partials/base/_html-elements.scss */
 h1 {
   font-size: 2em;
+  font-weight: normal;
   margin: 0 0 0.8125em;
 }
 
-/* line 130, ../sass/partials/base/_html-elements.scss */
+/* line 131, ../sass/partials/base/_html-elements.scss */
 h2 {
   color: #003359;
   font-size: 1.5em;
+  font-weight: normal;
   margin: 0 0 1.08333em;
 }
 
-/* line 137, ../sass/partials/base/_html-elements.scss */
+/* line 139, ../sass/partials/base/_html-elements.scss */
 h3 {
   color: #7090b7;
   font-size: 1.3125em;
+  font-weight: normal;
   margin: 0 0 1.2381em;
 }
 
-/* line 144, ../sass/partials/base/_html-elements.scss */
+/* line 147, ../sass/partials/base/_html-elements.scss */
 h4 {
   font-size: 1.125em;
   margin: 0 0 1.44444em;
 }
 
-/* line 150, ../sass/partials/base/_html-elements.scss */
+/* line 153, ../sass/partials/base/_html-elements.scss */
 h5 {
   font-size: 1em;
   margin: 0 0 1.625em;
 }
 
-/* line 156, ../sass/partials/base/_html-elements.scss */
+/* line 159, ../sass/partials/base/_html-elements.scss */
 h6 {
   font-size: 0.875em;
   margin: 0 0 1.85714em;
 }
 
-/* line 164, ../sass/partials/base/_html-elements.scss */
+/* line 167, ../sass/partials/base/_html-elements.scss */
 hr {
   border: 1px solid #cccccc;
   margin: 1.625em 0;
   padding-bottom: -1px;
 }
 
-/* line 170, ../sass/partials/base/_html-elements.scss */
+/* line 173, ../sass/partials/base/_html-elements.scss */
 html {
   line-height: 1.625em;
   -webkit-hyphens: auto;
@@ -555,68 +558,68 @@ html {
   font-size: 100%;
 }
 
-/* line 216, ../sass/partials/base/_html-elements.scss */
+/* line 219, ../sass/partials/base/_html-elements.scss */
 legend {
   margin: 0;
 }
 
-/* line 232, ../sass/partials/base/_html-elements.scss */
+/* line 235, ../sass/partials/base/_html-elements.scss */
 mark {
   background: #ff0;
   color: #000;
 }
 
-/* line 247, ../sass/partials/base/_html-elements.scss */
+/* line 250, ../sass/partials/base/_html-elements.scss */
 ol {
   margin: 0 0 1.625em;
   padding: 0 0 0 1.5em;
 }
-/* line 251, ../sass/partials/base/_html-elements.scss */
+/* line 254, ../sass/partials/base/_html-elements.scss */
 [dir="rtl"] ol {
   padding: 0 1.5em 0 0;
 }
-/* line 256, ../sass/partials/base/_html-elements.scss */
+/* line 259, ../sass/partials/base/_html-elements.scss */
 ol ol,
 ol ul {
   margin: 0;
 }
 
-/* line 267, ../sass/partials/base/_html-elements.scss */
+/* line 270, ../sass/partials/base/_html-elements.scss */
 p {
   margin: 0 0 1.625em;
 }
 
-/* line 273, ../sass/partials/base/_html-elements.scss */
+/* line 276, ../sass/partials/base/_html-elements.scss */
 pre {
   margin: 0 0 1.625em;
 }
 
-/* line 289, ../sass/partials/base/_html-elements.scss */
+/* line 292, ../sass/partials/base/_html-elements.scss */
 small {
   font-size: 0.875em;
   line-height: 1.85714em;
 }
 
-/* line 321, ../sass/partials/base/_html-elements.scss */
+/* line 324, ../sass/partials/base/_html-elements.scss */
 ul {
   margin: 0 0 1.625em;
   padding: 0 0 0 1.2em;
 }
-/* line 325, ../sass/partials/base/_html-elements.scss */
+/* line 328, ../sass/partials/base/_html-elements.scss */
 [dir="rtl"] ul {
   padding: 0 1.2em 0 0;
 }
-/* line 330, ../sass/partials/base/_html-elements.scss */
+/* line 333, ../sass/partials/base/_html-elements.scss */
 ul ol,
 ul ul {
   margin: 0;
 }
 
-/* line 336, ../sass/partials/base/_html-elements.scss */
+/* line 339, ../sass/partials/base/_html-elements.scss */
 .pane__content ul {
   padding: 0;
 }
-/* line 338, ../sass/partials/base/_html-elements.scss */
+/* line 341, ../sass/partials/base/_html-elements.scss */
 .pane__content ul > li {
   list-style: none;
   list-style-position: outside;
@@ -625,7 +628,7 @@ ul ul {
   padding-left: 17px;
   position: relative;
 }
-/* line 345, ../sass/partials/base/_html-elements.scss */
+/* line 348, ../sass/partials/base/_html-elements.scss */
 .pane__content ul > li:before {
   color: #ed7d3a;
   content: "\2022\a0\a0";
@@ -635,41 +638,41 @@ ul ul {
   top: -1px;
   width: 17px;
 }
-/* line 354, ../sass/partials/base/_html-elements.scss */
+/* line 357, ../sass/partials/base/_html-elements.scss */
 .pane__content ul > li ul {
   padding: 0 0 0 1em;
 }
-/* line 356, ../sass/partials/base/_html-elements.scss */
+/* line 359, ../sass/partials/base/_html-elements.scss */
 [dir="rtl"] .pane__content ul > li ul {
   padding: 0 1em 0 0;
 }
-/* line 359, ../sass/partials/base/_html-elements.scss */
+/* line 362, ../sass/partials/base/_html-elements.scss */
 .pane__content ul > li ul > li {
   list-style: square;
   padding-left: 0;
   position: static;
 }
-/* line 363, ../sass/partials/base/_html-elements.scss */
+/* line 366, ../sass/partials/base/_html-elements.scss */
 .pane__content ul > li ul > li:before {
   content: "";
   position: static;
   width: auto;
 }
-/* line 368, ../sass/partials/base/_html-elements.scss */
+/* line 371, ../sass/partials/base/_html-elements.scss */
 .pane__content ul > li ul > li ul > li {
   list-style: disc;
 }
-/* line 370, ../sass/partials/base/_html-elements.scss */
+/* line 373, ../sass/partials/base/_html-elements.scss */
 .pane__content ul > li ul > li ul > li ul > li {
   list-style: circle;
 }
-/* line 372, ../sass/partials/base/_html-elements.scss */
+/* line 375, ../sass/partials/base/_html-elements.scss */
 .pane__content ul > li ul > li ul > li ul > li ul > li {
   list-style: square;
 }
 
 @media print {
-  /* line 389, ../sass/partials/base/_html-elements.scss */
+  /* line 392, ../sass/partials/base/_html-elements.scss */
   * {
     background: transparent !important;
     box-shadow: none !important;
@@ -679,19 +682,19 @@ ul ul {
     text-shadow: none !important;
   }
 
-  /* line 401, ../sass/partials/base/_html-elements.scss */
+  /* line 404, ../sass/partials/base/_html-elements.scss */
   iframe,
   nav {
     display: none;
   }
 
-  /* line 406, ../sass/partials/base/_html-elements.scss */
+  /* line 409, ../sass/partials/base/_html-elements.scss */
   a,
   a:visited {
     text-decoration: none;
   }
 
-  /* line 410, ../sass/partials/base/_html-elements.scss */
+  /* line 413, ../sass/partials/base/_html-elements.scss */
   a[href]:after {
     content: " <" attr(href) ">";
     font-family: Lato, "Helvetica Neue", Helvetica, Arial, sans-serif;
@@ -700,7 +703,7 @@ ul ul {
     text-transform: lowercase;
   }
 
-  /* line 426, ../sass/partials/base/_html-elements.scss */
+  /* line 429, ../sass/partials/base/_html-elements.scss */
   a[href^="javascript:"]:after,
   a[href^="mailto:"]:after,
   a[href^="tel:"]:after,
@@ -708,36 +711,36 @@ ul ul {
     content: "";
   }
 
-  /* line 430, ../sass/partials/base/_html-elements.scss */
+  /* line 433, ../sass/partials/base/_html-elements.scss */
   abbr[title]:after {
     content: " (" attr(title) ")";
   }
 
-  /* line 435, ../sass/partials/base/_html-elements.scss */
+  /* line 438, ../sass/partials/base/_html-elements.scss */
   blockquote,
   pre {
     border: 1px solid #999;
     page-break-inside: avoid;
   }
 
-  /* line 440, ../sass/partials/base/_html-elements.scss */
+  /* line 443, ../sass/partials/base/_html-elements.scss */
   thead {
     display: table-header-group;
   }
 
-  /* line 446, ../sass/partials/base/_html-elements.scss */
+  /* line 449, ../sass/partials/base/_html-elements.scss */
   img,
   tr,
   ul {
     page-break-inside: avoid;
   }
 
-  /* line 450, ../sass/partials/base/_html-elements.scss */
+  /* line 453, ../sass/partials/base/_html-elements.scss */
   img {
     max-width: 100% !important;
   }
 
-  /* line 459, ../sass/partials/base/_html-elements.scss */
+  /* line 462, ../sass/partials/base/_html-elements.scss */
   h1 a:after,
   h2 a:after,
   h3 a:after,
@@ -747,7 +750,7 @@ ul ul {
     display: inline-block;
   }
 
-  /* line 466, ../sass/partials/base/_html-elements.scss */
+  /* line 469, ../sass/partials/base/_html-elements.scss */
   h2,
   h3,
   h4,
@@ -756,7 +759,7 @@ ul ul {
     widows: 3;
   }
 
-  /* line 473, ../sass/partials/base/_html-elements.scss */
+  /* line 476, ../sass/partials/base/_html-elements.scss */
   h2,
   h3,
   h4 {
@@ -2546,6 +2549,12 @@ aside .pane__title {
   position: absolute;
   top: 0;
   width: 0;
+}
+
+/* line 1, ../sass/partials/components/_simple-list.scss */
+.simple-list {
+  list-style: none;
+  padding: 0;
 }
 
 /* line 1, ../sass/partials/components/_site-name.scss */
