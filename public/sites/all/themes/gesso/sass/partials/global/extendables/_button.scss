@@ -68,3 +68,31 @@
     color: #fff;
   }
 }
+
+%button--icon {
+  padding-left: 3.5em;
+  position: relative;
+  text-transform: uppercase;
+  &:before {
+    @include image-replace(22px,22px);
+    content: "";
+    display: block;
+    left: 1em;
+    position: absolute;
+    top: 0.65em;
+  }
+}
+
+%button--share {
+  @extend %button--icon;
+  &:before {
+    @include svg-background(circle-plus);
+  }
+}
+
+%button--favorite {
+  @extend %button--icon;
+  &:before {
+    @include svg-background(circle-plus);
+  }
+}
