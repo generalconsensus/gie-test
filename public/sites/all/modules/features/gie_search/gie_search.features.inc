@@ -162,6 +162,7 @@ function gie_search_default_search_api_index() {
         "search_api_language" : { "type" : "string" },
         "status" : { "type" : "integer" },
         "title" : { "type" : "text", "boost" : "5.0" },
+        "title_field" : { "type" : "string" },
         "type" : { "type" : "string" }
       }
     },
