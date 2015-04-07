@@ -334,10 +334,10 @@ function gie_taxonomies_views_default_views() {
   $handler->display->display_options['style_options']['columns'] = '3';
   $handler->display->display_options['row_plugin'] = 'entity';
   $handler->display->display_options['row_options']['view_mode'] = 'listing';
-  /* Relationship: Content: Region (field_resource_region) */
-  $handler->display->display_options['relationships']['field_resource_region_tid']['id'] = 'field_resource_region_tid';
-  $handler->display->display_options['relationships']['field_resource_region_tid']['table'] = 'field_data_field_resource_region';
-  $handler->display->display_options['relationships']['field_resource_region_tid']['field'] = 'field_resource_region_tid';
+  /* Relationship: Content: Taxonomy terms on node */
+  $handler->display->display_options['relationships']['term_node_tid']['id'] = 'term_node_tid';
+  $handler->display->display_options['relationships']['term_node_tid']['table'] = 'node';
+  $handler->display->display_options['relationships']['term_node_tid']['field'] = 'term_node_tid';
   /* Field: Content: Title */
   $handler->display->display_options['fields']['title']['id'] = 'title';
   $handler->display->display_options['fields']['title']['table'] = 'node';
@@ -354,7 +354,7 @@ function gie_taxonomies_views_default_views() {
   $handler->display->display_options['arguments']['tid']['id'] = 'tid';
   $handler->display->display_options['arguments']['tid']['table'] = 'taxonomy_term_data';
   $handler->display->display_options['arguments']['tid']['field'] = 'tid';
-  $handler->display->display_options['arguments']['tid']['relationship'] = 'field_resource_region_tid';
+  $handler->display->display_options['arguments']['tid']['relationship'] = 'term_node_tid';
   $handler->display->display_options['arguments']['tid']['default_action'] = 'default';
   $handler->display->display_options['arguments']['tid']['default_argument_type'] = 'taxonomy_tid';
   $handler->display->display_options['arguments']['tid']['summary']['number_of_records'] = '0';
@@ -389,16 +389,16 @@ function gie_taxonomies_views_default_views() {
   $handler->display->display_options['defaults']['title'] = FALSE;
   $handler->display->display_options['title'] = 'Funding Opportunities';
   $handler->display->display_options['defaults']['relationships'] = FALSE;
-  /* Relationship: Content: Region (field_funding_region) */
-  $handler->display->display_options['relationships']['field_funding_region_tid']['id'] = 'field_funding_region_tid';
-  $handler->display->display_options['relationships']['field_funding_region_tid']['table'] = 'field_data_field_funding_region';
-  $handler->display->display_options['relationships']['field_funding_region_tid']['field'] = 'field_funding_region_tid';
+  /* Relationship: Content: Taxonomy terms on node */
+  $handler->display->display_options['relationships']['term_node_tid']['id'] = 'term_node_tid';
+  $handler->display->display_options['relationships']['term_node_tid']['table'] = 'node';
+  $handler->display->display_options['relationships']['term_node_tid']['field'] = 'term_node_tid';
   $handler->display->display_options['defaults']['arguments'] = FALSE;
   /* Contextual filter: Taxonomy term: Term ID */
   $handler->display->display_options['arguments']['tid']['id'] = 'tid';
   $handler->display->display_options['arguments']['tid']['table'] = 'taxonomy_term_data';
   $handler->display->display_options['arguments']['tid']['field'] = 'tid';
-  $handler->display->display_options['arguments']['tid']['relationship'] = 'field_funding_region_tid';
+  $handler->display->display_options['arguments']['tid']['relationship'] = 'term_node_tid';
   $handler->display->display_options['arguments']['tid']['default_action'] = 'default';
   $handler->display->display_options['arguments']['tid']['default_argument_type'] = 'taxonomy_tid';
   $handler->display->display_options['arguments']['tid']['summary']['number_of_records'] = '0';
@@ -426,16 +426,16 @@ function gie_taxonomies_views_default_views() {
   $handler->display->display_options['defaults']['title'] = FALSE;
   $handler->display->display_options['title'] = 'Innovations';
   $handler->display->display_options['defaults']['relationships'] = FALSE;
-  /* Relationship: Content: Region (field_innovation_region) */
-  $handler->display->display_options['relationships']['field_innovation_region_tid']['id'] = 'field_innovation_region_tid';
-  $handler->display->display_options['relationships']['field_innovation_region_tid']['table'] = 'field_data_field_innovation_region';
-  $handler->display->display_options['relationships']['field_innovation_region_tid']['field'] = 'field_innovation_region_tid';
+  /* Relationship: Content: Taxonomy terms on node */
+  $handler->display->display_options['relationships']['term_node_tid']['id'] = 'term_node_tid';
+  $handler->display->display_options['relationships']['term_node_tid']['table'] = 'node';
+  $handler->display->display_options['relationships']['term_node_tid']['field'] = 'term_node_tid';
   $handler->display->display_options['defaults']['arguments'] = FALSE;
   /* Contextual filter: Taxonomy term: Term ID */
   $handler->display->display_options['arguments']['tid']['id'] = 'tid';
   $handler->display->display_options['arguments']['tid']['table'] = 'taxonomy_term_data';
   $handler->display->display_options['arguments']['tid']['field'] = 'tid';
-  $handler->display->display_options['arguments']['tid']['relationship'] = 'field_innovation_region_tid';
+  $handler->display->display_options['arguments']['tid']['relationship'] = 'term_node_tid';
   $handler->display->display_options['arguments']['tid']['default_action'] = 'default';
   $handler->display->display_options['arguments']['tid']['default_argument_type'] = 'taxonomy_tid';
   $handler->display->display_options['arguments']['tid']['summary']['number_of_records'] = '0';
@@ -486,10 +486,10 @@ function gie_taxonomies_views_default_views() {
   $handler->display->display_options['style_options']['columns'] = '3';
   $handler->display->display_options['row_plugin'] = 'entity';
   $handler->display->display_options['row_options']['view_mode'] = 'listing';
-  /* Relationship: Content: Sector (field_innovation_sector) */
-  $handler->display->display_options['relationships']['field_innovation_sector_tid']['id'] = 'field_innovation_sector_tid';
-  $handler->display->display_options['relationships']['field_innovation_sector_tid']['table'] = 'field_data_field_innovation_sector';
-  $handler->display->display_options['relationships']['field_innovation_sector_tid']['field'] = 'field_innovation_sector_tid';
+  /* Relationship: Content: Taxonomy terms on node */
+  $handler->display->display_options['relationships']['term_node_tid']['id'] = 'term_node_tid';
+  $handler->display->display_options['relationships']['term_node_tid']['table'] = 'node';
+  $handler->display->display_options['relationships']['term_node_tid']['field'] = 'term_node_tid';
   /* Field: Content: Title */
   $handler->display->display_options['fields']['title']['id'] = 'title';
   $handler->display->display_options['fields']['title']['table'] = 'node';
@@ -506,7 +506,7 @@ function gie_taxonomies_views_default_views() {
   $handler->display->display_options['arguments']['tid']['id'] = 'tid';
   $handler->display->display_options['arguments']['tid']['table'] = 'taxonomy_term_data';
   $handler->display->display_options['arguments']['tid']['field'] = 'tid';
-  $handler->display->display_options['arguments']['tid']['relationship'] = 'field_innovation_sector_tid';
+  $handler->display->display_options['arguments']['tid']['relationship'] = 'term_node_tid';
   $handler->display->display_options['arguments']['tid']['default_action'] = 'default';
   $handler->display->display_options['arguments']['tid']['default_argument_type'] = 'taxonomy_tid';
   $handler->display->display_options['arguments']['tid']['summary']['number_of_records'] = '0';
@@ -535,10 +535,10 @@ function gie_taxonomies_views_default_views() {
   /* Display: Resources */
   $handler = $view->new_display('panel_pane', 'Resources', 'resources_pane');
   $handler->display->display_options['defaults']['relationships'] = FALSE;
-  /* Relationship: Content: Sector (field_resource_sector) */
-  $handler->display->display_options['relationships']['field_resource_sector_tid']['id'] = 'field_resource_sector_tid';
-  $handler->display->display_options['relationships']['field_resource_sector_tid']['table'] = 'field_data_field_resource_sector';
-  $handler->display->display_options['relationships']['field_resource_sector_tid']['field'] = 'field_resource_sector_tid';
+  /* Relationship: Content: Taxonomy terms on node */
+  $handler->display->display_options['relationships']['term_node_tid']['id'] = 'term_node_tid';
+  $handler->display->display_options['relationships']['term_node_tid']['table'] = 'node';
+  $handler->display->display_options['relationships']['term_node_tid']['field'] = 'term_node_tid';
   $handler->display->display_options['defaults']['sorts'] = FALSE;
   /* Sort criterion: Content: Date Added (field_resource_date) */
   $handler->display->display_options['sorts']['field_resource_date_value']['id'] = 'field_resource_date_value';
@@ -550,7 +550,7 @@ function gie_taxonomies_views_default_views() {
   $handler->display->display_options['arguments']['tid']['id'] = 'tid';
   $handler->display->display_options['arguments']['tid']['table'] = 'taxonomy_term_data';
   $handler->display->display_options['arguments']['tid']['field'] = 'tid';
-  $handler->display->display_options['arguments']['tid']['relationship'] = 'field_resource_sector_tid';
+  $handler->display->display_options['arguments']['tid']['relationship'] = 'term_node_tid';
   $handler->display->display_options['arguments']['tid']['default_action'] = 'default';
   $handler->display->display_options['arguments']['tid']['default_argument_type'] = 'taxonomy_tid';
   $handler->display->display_options['arguments']['tid']['summary']['number_of_records'] = '0';
@@ -578,16 +578,16 @@ function gie_taxonomies_views_default_views() {
   $handler->display->display_options['defaults']['title'] = FALSE;
   $handler->display->display_options['title'] = 'Funding Opportunities';
   $handler->display->display_options['defaults']['relationships'] = FALSE;
-  /* Relationship: Content: Sector (field_funding_sector) */
-  $handler->display->display_options['relationships']['field_funding_sector_tid']['id'] = 'field_funding_sector_tid';
-  $handler->display->display_options['relationships']['field_funding_sector_tid']['table'] = 'field_data_field_funding_sector';
-  $handler->display->display_options['relationships']['field_funding_sector_tid']['field'] = 'field_funding_sector_tid';
+  /* Relationship: Content: Taxonomy terms on node */
+  $handler->display->display_options['relationships']['term_node_tid']['id'] = 'term_node_tid';
+  $handler->display->display_options['relationships']['term_node_tid']['table'] = 'node';
+  $handler->display->display_options['relationships']['term_node_tid']['field'] = 'term_node_tid';
   $handler->display->display_options['defaults']['arguments'] = FALSE;
   /* Contextual filter: Taxonomy term: Term ID */
   $handler->display->display_options['arguments']['tid']['id'] = 'tid';
   $handler->display->display_options['arguments']['tid']['table'] = 'taxonomy_term_data';
   $handler->display->display_options['arguments']['tid']['field'] = 'tid';
-  $handler->display->display_options['arguments']['tid']['relationship'] = 'field_funding_sector_tid';
+  $handler->display->display_options['arguments']['tid']['relationship'] = 'term_node_tid';
   $handler->display->display_options['arguments']['tid']['default_action'] = 'default';
   $handler->display->display_options['arguments']['tid']['default_argument_type'] = 'taxonomy_tid';
   $handler->display->display_options['arguments']['tid']['summary']['number_of_records'] = '0';
@@ -689,10 +689,10 @@ function gie_taxonomies_views_default_views() {
   $handler->display->display_options['style_options']['columns'] = '3';
   $handler->display->display_options['row_plugin'] = 'entity';
   $handler->display->display_options['row_options']['view_mode'] = 'teaser';
-  /* Relationship: Content: Focus of Work (field_org_focus_work) */
-  $handler->display->display_options['relationships']['field_org_focus_work_tid']['id'] = 'field_org_focus_work_tid';
-  $handler->display->display_options['relationships']['field_org_focus_work_tid']['table'] = 'field_data_field_org_focus_work';
-  $handler->display->display_options['relationships']['field_org_focus_work_tid']['field'] = 'field_org_focus_work_tid';
+  /* Relationship: Content: Taxonomy terms on node */
+  $handler->display->display_options['relationships']['term_node_tid']['id'] = 'term_node_tid';
+  $handler->display->display_options['relationships']['term_node_tid']['table'] = 'node';
+  $handler->display->display_options['relationships']['term_node_tid']['field'] = 'term_node_tid';
   /* Field: Content: Title */
   $handler->display->display_options['fields']['title']['id'] = 'title';
   $handler->display->display_options['fields']['title']['table'] = 'node';
@@ -708,7 +708,7 @@ function gie_taxonomies_views_default_views() {
   $handler->display->display_options['arguments']['tid']['id'] = 'tid';
   $handler->display->display_options['arguments']['tid']['table'] = 'taxonomy_term_data';
   $handler->display->display_options['arguments']['tid']['field'] = 'tid';
-  $handler->display->display_options['arguments']['tid']['relationship'] = 'field_org_focus_work_tid';
+  $handler->display->display_options['arguments']['tid']['relationship'] = 'term_node_tid';
   $handler->display->display_options['arguments']['tid']['default_action'] = 'default';
   $handler->display->display_options['arguments']['tid']['default_argument_type'] = 'taxonomy_tid';
   $handler->display->display_options['arguments']['tid']['summary']['number_of_records'] = '0';
@@ -721,6 +721,13 @@ function gie_taxonomies_views_default_views() {
   $handler->display->display_options['filters']['status']['value'] = 1;
   $handler->display->display_options['filters']['status']['group'] = 1;
   $handler->display->display_options['filters']['status']['expose']['operator'] = FALSE;
+  /* Filter criterion: Content: Type */
+  $handler->display->display_options['filters']['type']['id'] = 'type';
+  $handler->display->display_options['filters']['type']['table'] = 'node';
+  $handler->display->display_options['filters']['type']['field'] = 'type';
+  $handler->display->display_options['filters']['type']['value'] = array(
+    'organization' => 'organization',
+  );
 
   /* Display: Topic */
   $handler = $view->new_display('panel_pane', 'Topic', 'topic_pane');
@@ -735,16 +742,16 @@ function gie_taxonomies_views_default_views() {
   $handler->display->display_options['defaults']['title'] = FALSE;
   $handler->display->display_options['title'] = 'Organization work on this Region';
   $handler->display->display_options['defaults']['relationships'] = FALSE;
-  /* Relationship: Content: Where We Work (field_org_region) */
-  $handler->display->display_options['relationships']['field_org_region_tid']['id'] = 'field_org_region_tid';
-  $handler->display->display_options['relationships']['field_org_region_tid']['table'] = 'field_data_field_org_region';
-  $handler->display->display_options['relationships']['field_org_region_tid']['field'] = 'field_org_region_tid';
+  /* Relationship: Content: Taxonomy terms on node */
+  $handler->display->display_options['relationships']['term_node_tid']['id'] = 'term_node_tid';
+  $handler->display->display_options['relationships']['term_node_tid']['table'] = 'node';
+  $handler->display->display_options['relationships']['term_node_tid']['field'] = 'term_node_tid';
   $handler->display->display_options['defaults']['arguments'] = FALSE;
   /* Contextual filter: Taxonomy term: Term ID */
   $handler->display->display_options['arguments']['tid']['id'] = 'tid';
   $handler->display->display_options['arguments']['tid']['table'] = 'taxonomy_term_data';
   $handler->display->display_options['arguments']['tid']['field'] = 'tid';
-  $handler->display->display_options['arguments']['tid']['relationship'] = 'field_org_region_tid';
+  $handler->display->display_options['arguments']['tid']['relationship'] = 'term_node_tid';
   $handler->display->display_options['arguments']['tid']['default_action'] = 'default';
   $handler->display->display_options['arguments']['tid']['default_argument_type'] = 'taxonomy_tid';
   $handler->display->display_options['arguments']['tid']['summary']['number_of_records'] = '0';
@@ -777,11 +784,10 @@ function gie_taxonomies_views_default_views() {
   $handler->display->display_options['style_options']['columns'] = '3';
   $handler->display->display_options['row_plugin'] = 'entity';
   $handler->display->display_options['row_options']['view_mode'] = 'listing';
-  /* Relationship: Content: Topic (field_innovation_topic) */
-  $handler->display->display_options['relationships']['field_innovation_topic_tid']['id'] = 'field_innovation_topic_tid';
-  $handler->display->display_options['relationships']['field_innovation_topic_tid']['table'] = 'field_data_field_innovation_topic';
-  $handler->display->display_options['relationships']['field_innovation_topic_tid']['field'] = 'field_innovation_topic_tid';
-  $handler->display->display_options['relationships']['field_innovation_topic_tid']['required'] = TRUE;
+  /* Relationship: Content: Taxonomy terms on node */
+  $handler->display->display_options['relationships']['term_node_tid']['id'] = 'term_node_tid';
+  $handler->display->display_options['relationships']['term_node_tid']['table'] = 'node';
+  $handler->display->display_options['relationships']['term_node_tid']['field'] = 'term_node_tid';
   /* Field: Content: Title */
   $handler->display->display_options['fields']['title']['id'] = 'title';
   $handler->display->display_options['fields']['title']['table'] = 'node';
@@ -798,7 +804,7 @@ function gie_taxonomies_views_default_views() {
   $handler->display->display_options['arguments']['tid']['id'] = 'tid';
   $handler->display->display_options['arguments']['tid']['table'] = 'taxonomy_term_data';
   $handler->display->display_options['arguments']['tid']['field'] = 'tid';
-  $handler->display->display_options['arguments']['tid']['relationship'] = 'field_innovation_topic_tid';
+  $handler->display->display_options['arguments']['tid']['relationship'] = 'term_node_tid';
   $handler->display->display_options['arguments']['tid']['default_action'] = 'default';
   $handler->display->display_options['arguments']['tid']['default_argument_type'] = 'taxonomy_tid';
   $handler->display->display_options['arguments']['tid']['summary']['number_of_records'] = '0';
@@ -827,10 +833,10 @@ function gie_taxonomies_views_default_views() {
   $handler->display->display_options['defaults']['title'] = FALSE;
   $handler->display->display_options['title'] = 'Resources';
   $handler->display->display_options['defaults']['relationships'] = FALSE;
-  /* Relationship: Content: Topic (field_resource_topic) */
-  $handler->display->display_options['relationships']['field_resource_topic_tid']['id'] = 'field_resource_topic_tid';
-  $handler->display->display_options['relationships']['field_resource_topic_tid']['table'] = 'field_data_field_resource_topic';
-  $handler->display->display_options['relationships']['field_resource_topic_tid']['field'] = 'field_resource_topic_tid';
+  /* Relationship: Content: Taxonomy terms on node */
+  $handler->display->display_options['relationships']['term_node_tid']['id'] = 'term_node_tid';
+  $handler->display->display_options['relationships']['term_node_tid']['table'] = 'node';
+  $handler->display->display_options['relationships']['term_node_tid']['field'] = 'term_node_tid';
   $handler->display->display_options['defaults']['sorts'] = FALSE;
   /* Sort criterion: Content: Date Added (field_resource_date) */
   $handler->display->display_options['sorts']['field_resource_date_value']['id'] = 'field_resource_date_value';
@@ -842,7 +848,7 @@ function gie_taxonomies_views_default_views() {
   $handler->display->display_options['arguments']['tid']['id'] = 'tid';
   $handler->display->display_options['arguments']['tid']['table'] = 'taxonomy_term_data';
   $handler->display->display_options['arguments']['tid']['field'] = 'tid';
-  $handler->display->display_options['arguments']['tid']['relationship'] = 'field_resource_topic_tid';
+  $handler->display->display_options['arguments']['tid']['relationship'] = 'term_node_tid';
   $handler->display->display_options['arguments']['tid']['default_action'] = 'default';
   $handler->display->display_options['arguments']['tid']['default_argument_type'] = 'taxonomy_tid';
   $handler->display->display_options['arguments']['tid']['summary']['number_of_records'] = '0';
@@ -870,16 +876,16 @@ function gie_taxonomies_views_default_views() {
   $handler->display->display_options['defaults']['title'] = FALSE;
   $handler->display->display_options['title'] = 'Funding Opportunities';
   $handler->display->display_options['defaults']['relationships'] = FALSE;
-  /* Relationship: Content: Topic (field_funding_topic) */
-  $handler->display->display_options['relationships']['field_funding_topic_tid']['id'] = 'field_funding_topic_tid';
-  $handler->display->display_options['relationships']['field_funding_topic_tid']['table'] = 'field_data_field_funding_topic';
-  $handler->display->display_options['relationships']['field_funding_topic_tid']['field'] = 'field_funding_topic_tid';
+  /* Relationship: Content: Taxonomy terms on node */
+  $handler->display->display_options['relationships']['term_node_tid']['id'] = 'term_node_tid';
+  $handler->display->display_options['relationships']['term_node_tid']['table'] = 'node';
+  $handler->display->display_options['relationships']['term_node_tid']['field'] = 'term_node_tid';
   $handler->display->display_options['defaults']['arguments'] = FALSE;
   /* Contextual filter: Taxonomy term: Term ID */
   $handler->display->display_options['arguments']['tid']['id'] = 'tid';
   $handler->display->display_options['arguments']['tid']['table'] = 'taxonomy_term_data';
   $handler->display->display_options['arguments']['tid']['field'] = 'tid';
-  $handler->display->display_options['arguments']['tid']['relationship'] = 'field_funding_topic_tid';
+  $handler->display->display_options['arguments']['tid']['relationship'] = 'term_node_tid';
   $handler->display->display_options['arguments']['tid']['default_action'] = 'default';
   $handler->display->display_options['arguments']['tid']['default_argument_type'] = 'taxonomy_tid';
   $handler->display->display_options['arguments']['tid']['summary']['number_of_records'] = '0';
