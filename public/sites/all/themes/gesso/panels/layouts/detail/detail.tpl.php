@@ -14,7 +14,7 @@
 
 <div<?php if (!empty($css_id)): ?> id="<?php print $css_id; ?>"<?php endif; ?> class="l-panels-detail <?php print $classes; ?>">
   <?php if (!empty($content['hero'])): ?>
-    <div class="l-hero">
+    <div class="l-hero region-title">
       <div class="layout-constrain">
         <?php print $content['hero']; ?>
       </div>
