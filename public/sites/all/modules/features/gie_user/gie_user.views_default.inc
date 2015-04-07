@@ -818,7 +818,8 @@ function gie_user_views_default_views() {
   $handler->display->display_options['cache']['type'] = 'none';
   $handler->display->display_options['query']['type'] = 'views_query';
   $handler->display->display_options['exposed_form']['type'] = 'basic';
-  $handler->display->display_options['pager']['type'] = 'full';
+  $handler->display->display_options['pager']['type'] = 'none';
+  $handler->display->display_options['pager']['options']['offset'] = '0';
   $handler->display->display_options['style_plugin'] = 'default';
   $handler->display->display_options['row_plugin'] = 'fields';
   /* Relationship: Broken/missing handler */
@@ -842,7 +843,7 @@ function gie_user_views_default_views() {
   $handler->display->display_options['arguments']['uid']['id'] = 'uid';
   $handler->display->display_options['arguments']['uid']['table'] = 'users';
   $handler->display->display_options['arguments']['uid']['field'] = 'uid';
-  $handler->display->display_options['arguments']['uid']['relationship'] = 'reverse_field_user_region_user';
+  $handler->display->display_options['arguments']['uid']['relationship'] = 'reverse_field_term_region_user';
   $handler->display->display_options['arguments']['uid']['default_action'] = 'default';
   $handler->display->display_options['arguments']['uid']['default_argument_type'] = 'user';
   $handler->display->display_options['arguments']['uid']['default_argument_options']['user'] = FALSE;
@@ -852,6 +853,11 @@ function gie_user_views_default_views() {
 
   /* Display: Content pane */
   $handler = $view->new_display('panel_pane', 'Content pane', 'regions');
+  $handler->display->display_options['defaults']['relationships'] = FALSE;
+  /* Relationship: Taxonomy term: User using Region */
+  $handler->display->display_options['relationships']['reverse_field_term_region_user']['id'] = 'reverse_field_term_region_user';
+  $handler->display->display_options['relationships']['reverse_field_term_region_user']['table'] = 'taxonomy_term_data';
+  $handler->display->display_options['relationships']['reverse_field_term_region_user']['field'] = 'reverse_field_term_region_user';
   $export['user_regions'] = $view;
 
   $view = new view();
