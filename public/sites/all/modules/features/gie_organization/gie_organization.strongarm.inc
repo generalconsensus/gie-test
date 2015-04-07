@@ -90,7 +90,7 @@ function gie_organization_strongarm() {
         'custom_settings' => FALSE,
       ),
       'listing' => array(
-        'custom_settings' => FALSE,
+        'custom_settings' => TRUE,
       ),
       'teaser_date' => array(
         'custom_settings' => FALSE,
@@ -122,6 +122,16 @@ function gie_organization_strongarm() {
           'contact' => array(
             'weight' => '18',
             'visible' => FALSE,
+          ),
+          'listing' => array(
+            'weight' => '17',
+            'visible' => FALSE,
+          ),
+        ),
+        'organization_counters_favorite_count' => array(
+          'listing' => array(
+            'weight' => '4',
+            'visible' => TRUE,
           ),
         ),
       ),
