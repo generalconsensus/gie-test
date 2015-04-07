@@ -2457,6 +2457,25 @@ aside .pane__title {
 /* line 1, ../sass/partials/components/pane/_pane--like-this-innovation.scss */
 .pane--like-this-innovation {
   background: #f8f8f8 url(../images/background--lightbulb.png) no-repeat 100% 0;
+  padding: 1em;
+}
+/* line 4, ../sass/partials/components/pane/_pane--like-this-innovation.scss */
+.pane--like-this-innovation .pane__title {
+  border: 0;
+  color: #565a5c;
+  font-size: 1em;
+  font-weight: bold;
+  margin: 0;
+  padding: 0;
+  text-transform: uppercase;
+}
+/* line 13, ../sass/partials/components/pane/_pane--like-this-innovation.scss */
+.pane--like-this-innovation .pane__content {
+  padding: 0;
+}
+/* line 15, ../sass/partials/components/pane/_pane--like-this-innovation.scss */
+.pane--like-this-innovation .pane__content p {
+  font-size: 0.875em;
 }
 
 /* line 1, ../sass/partials/components/pane/_pane--page-title.scss */
