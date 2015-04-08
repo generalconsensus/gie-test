@@ -1391,6 +1391,34 @@ input.throbbing {
   margin-left: 0;
 }
 
+/* line 1, ../sass/partials/components/_comments.scss */
+.comments {
+  border-top: 1px solid #cecfcb;
+  margin: 1.625em 0 0 0;
+  padding: 2.4375em 0 0 0;
+}
+
+/* line 2, ../sass/partials/components/_field.scss */
+.node--full > .field {
+  margin: 0 0 1.625em 0;
+  padding: 0 0 0.8125em 0;
+}
+/* line 5, ../sass/partials/components/_field.scss */
+.node--full > .field > h2.field__label {
+  margin: 0 0 0.8125em 0;
+}
+/* line 8, ../sass/partials/components/_field.scss */
+.node--full > .field p:last-child, .node--full > .field ul:last-child, .node--full > .field ol:last-child {
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+
+/* line 16, ../sass/partials/components/_field.scss */
+.node--full > .field--border {
+  border-top: 1px solid #cecfcb;
+  padding-top: 2.4375em;
+}
+
 /* No files to import found in field/*.* */
 /* line 4, ../sass/partials/components/_fieldset.scss */
 .fieldset {
@@ -1587,13 +1615,14 @@ header.header {
   background: #f8f8f8;
   border: 0;
   overflow: hidden;
+  margin: 0 0 3.25em 0;
   padding: 1em;
 }
-/* line 7, ../sass/partials/components/_innovation-stats.scss */
+/* line 8, ../sass/partials/components/_innovation-stats.scss */
 .innovation-stats > h2 {
   font-weight: normal;
 }
-/* line 11, ../sass/partials/components/_innovation-stats.scss */
+/* line 12, ../sass/partials/components/_innovation-stats.scss */
 .innovation-stats .field {
   -webkit-hyphens: none;
   -moz-hyphens: none;
@@ -1601,18 +1630,18 @@ header.header {
   font-size: 0.875em;
   padding: 0 0 1em 0;
 }
-/* line 15, ../sass/partials/components/_innovation-stats.scss */
+/* line 16, ../sass/partials/components/_innovation-stats.scss */
 .innovation-stats .field .field-label {
   float: left;
   width: 45%;
 }
-/* line 19, ../sass/partials/components/_innovation-stats.scss */
+/* line 20, ../sass/partials/components/_innovation-stats.scss */
 .innovation-stats .field .field-items {
   float: left;
   font-weight: bold;
   width: 55%;
 }
-/* line 26, ../sass/partials/components/_innovation-stats.scss */
+/* line 27, ../sass/partials/components/_innovation-stats.scss */
 .innovation-stats .field.field--innovation-created a:before, .innovation-stats .field.field--innovation-implemented a:before {
   height: 16px;
   overflow: hidden;
@@ -1635,7 +1664,7 @@ header.header {
 }
 
 @media (min-width: 56.25em) {
-  /* line 40, ../sass/partials/components/_innovation-stats.scss */
+  /* line 41, ../sass/partials/components/_innovation-stats.scss */
   .innovation-stats__first {
     float: left;
     padding-right: 4%;
@@ -1644,7 +1673,7 @@ header.header {
 }
 
 @media (min-width: 56.25em) {
-  /* line 48, ../sass/partials/components/_innovation-stats.scss */
+  /* line 49, ../sass/partials/components/_innovation-stats.scss */
   .innovation-stats__second {
     float: left;
     padding-left: 4%;
@@ -1966,17 +1995,26 @@ header.header {
   padding: 0;
 }
 
-/* line 9, ../sass/partials/components/_nav.scss */
+/* line 10, ../sass/partials/components/_nav.scss */
+.pane__content .nav__item {
+  padding-left: 0;
+}
+/* line 12, ../sass/partials/components/_nav.scss */
+.pane__content .nav__item:before {
+  display: none;
+}
+
+/* line 18, ../sass/partials/components/_nav.scss */
 .nav__link {
   color: #565a5c;
   text-decoration: none;
 }
-/* line 12, ../sass/partials/components/_nav.scss */
+/* line 21, ../sass/partials/components/_nav.scss */
 .nav__link:hover, .nav__link:focus {
   text-decoration: underline;
 }
 
-/* line 19, ../sass/partials/components/_nav.scss */
+/* line 28, ../sass/partials/components/_nav.scss */
 .block--menu-menu-footer-menu > ul.nav > .nav__item {
   display: -moz-inline-stack;
   display: inline-block;
@@ -1993,23 +2031,23 @@ header.header {
 .nav--primary-local-tasks:after {
   clear: both;
 }
-/* line 31, ../sass/partials/components/_nav.scss */
+/* line 40, ../sass/partials/components/_nav.scss */
 .nav--primary-local-tasks .nav__item {
   display: block;
   margin: 0;
 }
 @media (min-width: 30em) {
-  /* line 31, ../sass/partials/components/_nav.scss */
+  /* line 40, ../sass/partials/components/_nav.scss */
   .nav--primary-local-tasks .nav__item {
     float: left;
     margin: 0 0 0.1em 0;
   }
-  /* line 39, ../sass/partials/components/_nav.scss */
+  /* line 48, ../sass/partials/components/_nav.scss */
   [dir="rtl"] .nav--primary-local-tasks .nav__item {
     float: right;
   }
 }
-/* line 45, ../sass/partials/components/_nav.scss */
+/* line 54, ../sass/partials/components/_nav.scss */
 .nav--primary-local-tasks .nav__link {
   background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, rgba(255, 255, 255, 0.2)), color-stop(100%, rgba(0, 0, 0, 0.2)));
   background-image: -webkit-linear-gradient(top, rgba(255, 255, 255, 0.2) 0%, rgba(0, 0, 0, 0.2) 100%);
@@ -2027,36 +2065,36 @@ header.header {
   padding: 0.5em;
   text-decoration: none;
 }
-/* line 65, ../sass/partials/components/_nav.scss */
+/* line 74, ../sass/partials/components/_nav.scss */
 .nav--primary-local-tasks .nav__link:focus, .nav--primary-local-tasks .nav__link:hover {
   border-color: #797979;
   outline: 0;
 }
-/* line 70, ../sass/partials/components/_nav.scss */
+/* line 79, ../sass/partials/components/_nav.scss */
 .nav--primary-local-tasks .nav__link:active {
   background-color: #e0e0e0;
   border-color: #acacac;
 }
-/* line 76, ../sass/partials/components/_nav.scss */
+/* line 85, ../sass/partials/components/_nav.scss */
 .nav--primary-local-tasks .is-active > .nav__link {
   background-color: #797979;
   border-color: #939393;
   color: white;
   font-weight: bold;
 }
-/* line 82, ../sass/partials/components/_nav.scss */
+/* line 91, ../sass/partials/components/_nav.scss */
 .nav--primary-local-tasks .is-active > .nav__link:focus {
   background-color: #464646;
 }
-/* line 86, ../sass/partials/components/_nav.scss */
+/* line 95, ../sass/partials/components/_nav.scss */
 .nav--primary-local-tasks .is-active > .nav__link:hover {
   border-color: #606060;
 }
-/* line 90, ../sass/partials/components/_nav.scss */
+/* line 99, ../sass/partials/components/_nav.scss */
 .nav--primary-local-tasks .is-active > .nav__link:active {
   background-color: #2d2d2d;
 }
-/* line 95, ../sass/partials/components/_nav.scss */
+/* line 104, ../sass/partials/components/_nav.scss */
 .nav--primary-local-tasks > .nav__item:first-child > .nav__link {
   -moz-border-radius-topleft: 5px;
   -webkit-border-top-left-radius: 5px;
@@ -2066,7 +2104,7 @@ header.header {
   border-top-right-radius: 5px;
 }
 @media (min-width: 30em) {
-  /* line 95, ../sass/partials/components/_nav.scss */
+  /* line 104, ../sass/partials/components/_nav.scss */
   .nav--primary-local-tasks > .nav__item:first-child > .nav__link {
     -moz-border-radius-bottomleft: 5px;
     -webkit-border-bottom-left-radius: 5px;
@@ -2075,7 +2113,7 @@ header.header {
     -webkit-border-top-right-radius: 0;
     border-top-right-radius: 0;
   }
-  /* line 103, ../sass/partials/components/_nav.scss */
+  /* line 112, ../sass/partials/components/_nav.scss */
   [dir="rtl"] .nav--primary-local-tasks > .nav__item:first-child > .nav__link {
     -moz-border-radius-bottomleft: 0;
     -webkit-border-bottom-left-radius: 0;
@@ -2091,7 +2129,7 @@ header.header {
     border-top-right-radius: 5px;
   }
 }
-/* line 112, ../sass/partials/components/_nav.scss */
+/* line 121, ../sass/partials/components/_nav.scss */
 .nav--primary-local-tasks > .nav__item:last-child > .nav__link {
   -moz-border-radius-bottomleft: 5px;
   -webkit-border-bottom-left-radius: 5px;
@@ -2101,7 +2139,7 @@ header.header {
   border-bottom-right-radius: 5px;
 }
 @media (min-width: 30em) {
-  /* line 112, ../sass/partials/components/_nav.scss */
+  /* line 121, ../sass/partials/components/_nav.scss */
   .nav--primary-local-tasks > .nav__item:last-child > .nav__link {
     -moz-border-radius-bottomleft: 0;
     -webkit-border-bottom-left-radius: 0;
@@ -2110,7 +2148,7 @@ header.header {
     -webkit-border-top-right-radius: 5px;
     border-top-right-radius: 5px;
   }
-  /* line 120, ../sass/partials/components/_nav.scss */
+  /* line 129, ../sass/partials/components/_nav.scss */
   [dir="rtl"] .nav--primary-local-tasks > .nav__item:last-child > .nav__link {
     -moz-border-radius-bottomleft: 5px;
     -webkit-border-bottom-left-radius: 5px;
@@ -2136,7 +2174,7 @@ header.header {
 .block--menu-menu-sub-footer-menu > ul.nav:after, .nav--secondary-local-tasks:after {
   clear: both;
 }
-/* line 134, ../sass/partials/components/_nav.scss */
+/* line 143, ../sass/partials/components/_nav.scss */
 .block--menu-menu-sub-footer-menu > ul.nav .nav__item, .nav--secondary-local-tasks .nav__item {
   border-right: 1px solid #565a5c;
   display: block;
@@ -2144,7 +2182,7 @@ header.header {
   margin-right: 0.5em;
   padding-right: 0.5em;
 }
-/* line 141, ../sass/partials/components/_nav.scss */
+/* line 150, ../sass/partials/components/_nav.scss */
 [dir="rtl"] .block--menu-menu-sub-footer-menu > ul.nav .nav__item, [dir="rtl"] .nav--secondary-local-tasks .nav__item {
   border-left: 1px solid #565a5c;
   border-right: 0;
@@ -2154,19 +2192,19 @@ header.header {
   padding-left: 0.5em;
   padding-right: 0;
 }
-/* line 151, ../sass/partials/components/_nav.scss */
+/* line 160, ../sass/partials/components/_nav.scss */
 .block--menu-menu-sub-footer-menu > ul.nav .nav__item:last-child, .nav--secondary-local-tasks .nav__item:last-child {
   border-right: 0;
   margin-right: 0;
   padding-right: 0;
 }
-/* line 156, ../sass/partials/components/_nav.scss */
+/* line 165, ../sass/partials/components/_nav.scss */
 [dir="rtl"] .block--menu-menu-sub-footer-menu > ul.nav .nav__item:last-child, [dir="rtl"] .nav--secondary-local-tasks .nav__item:last-child {
   border-left: 0;
   margin-left: 0;
   padding-left: 0;
 }
-/* line 164, ../sass/partials/components/_nav.scss */
+/* line 173, ../sass/partials/components/_nav.scss */
 .block--menu-menu-sub-footer-menu > ul.nav .is-active > .nav__link, .nav--secondary-local-tasks .is-active > .nav__link {
   font-weight: bold;
 }
@@ -2455,6 +2493,12 @@ header.header {
 /* line 13, ../sass/partials/components/_pane.scss */
 aside .pane__title {
   color: #7090b7;
+}
+/* line 17, ../sass/partials/components/_pane.scss */
+.pane--node > .pane__title {
+  color: #dc5606;
+  font-size: 2em;
+  text-transform: uppercase;
 }
 
 /* line 1, ../sass/partials/components/pane/_pane--like-this-innovation.scss */
@@ -2765,10 +2809,23 @@ aside .pane__title {
   }
 }
 
+/* line 3, ../sass/partials/components/_sharethis-buttons.scss */
+.sharethis-buttons .st_sharethis_custom {
+  white-space: nowrap;
+}
+
 /* line 1, ../sass/partials/components/_simple-list.scss */
 .simple-list {
   list-style: none;
   padding: 0;
+}
+/* line 5, ../sass/partials/components/_simple-list.scss */
+.pane__content .simple-list > li {
+  padding-left: 0;
+}
+/* line 7, ../sass/partials/components/_simple-list.scss */
+.pane__content .simple-list > li:before {
+  display: none;
 }
 
 /* line 1, ../sass/partials/components/_site-name.scss */

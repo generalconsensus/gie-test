@@ -13,6 +13,12 @@
   aside & {
     color: $lightblue;
   }
+
+  .pane--node > & {
+    color: $orange;
+    font-size: em($font-size-xxxl);
+    text-transform: uppercase;
+  }
 }
 
 
