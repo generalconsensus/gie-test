@@ -1,4 +1,12 @@
 .simple-list {
   list-style: none;
   padding: 0;
+  > li {
+    .pane__content & { // undo bullet from _html-elements
+      padding-left: 0;
+      &:before {
+        display: none;
+      }
+    }
+  }
 }

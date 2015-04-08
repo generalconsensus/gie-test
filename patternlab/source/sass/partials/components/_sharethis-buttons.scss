@@ -4,5 +4,6 @@
     @extend %button;
     @extend %button--highlight;
     @extend %button--share;
+    white-space: nowrap;
   }
 }
