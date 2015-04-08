@@ -202,7 +202,7 @@ function gie_innovation_panelizer_defaults() {
     $pane->access = array();
     $pane->configuration = array(
       'override_title' => 1,
-      'override_title_text' => 'How Can You Help This Innovation?',
+      'override_title_text' => 'How Can You Help?',
       'override_title_heading' => 'h2',
     );
     $pane->cache = array();
@@ -375,7 +375,7 @@ function gie_innovation_panelizer_defaults() {
       'flag_name' => 'favorite',
       'context' => 'panelizer',
       'override_title' => 1,
-      'override_title_text' => 'Like This Innovation?',
+      'override_title_text' => 'Like This Innovation? <p>Add it to your favorites.</p>',
       'override_title_heading' => 'h2',
     );
     $pane->cache = array();

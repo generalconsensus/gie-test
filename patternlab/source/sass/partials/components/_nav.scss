@@ -8,6 +8,7 @@
 
 .nav__item {
   .pane__content & { // undo bullet from _html-elements
+    padding-bottom: 0;
     padding-left: 0;
     &:before {
       display: none;
@@ -173,6 +174,10 @@
   .is-active > .nav__link {
     font-weight: bold;
   }
+}
+
+.nav--inline {
+  @extend %nav--pipeline;
 }
 
 // Custom nav styles imported via sass globbing.

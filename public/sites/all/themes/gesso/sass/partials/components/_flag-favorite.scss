@@ -3,5 +3,9 @@
   a {
     @extend %button;
     @extend %button--favorite;
+    margin-bottom: 0.5em;
+    &.unflag-action {
+      // needs unfavorite icon
+    }
   }
 }

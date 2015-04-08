@@ -16,7 +16,10 @@
 
   .pane--node > & {
     color: $orange;
-    font-size: em($font-size-xxxl);
+    font-size: em($font-size-xxl);
+    @include breakpoint(550px, $no-query: true) {
+      font-size: em($font-size-xxxl);
+    }
     text-transform: uppercase;
   }
 }
