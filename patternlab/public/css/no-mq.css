@@ -1,5 +1,5 @@
 /* line 65, ../../../../../../../../Ruby21-x64/lib/ruby/gems/2.1.0/gems/singularitygs-1.1.2/stylesheets/singularitygs/helpers/_clearfix.scss */
-.clearfix:after, .layout-grid__row:after, .region-footer:after {
+.clearfix:after, .layout-grid__row:after, .pane--landing-intro:after, .region-footer:after {
   content: "";
   display: table;
   clear: both;
@@ -29,12 +29,12 @@
 }
 
 /* line 9, ../sass/partials/global/helpers/_clearfix.scss */
-.clearfix:after, .layout-grid__row:after, .region-footer:after {
+.clearfix:after, .layout-grid__row:after, .pane--landing-intro:after, .region-footer:after {
   display: table;
   content: "";
 }
 /* line 14, ../sass/partials/global/helpers/_clearfix.scss */
-.clearfix:after, .layout-grid__row:after, .region-footer:after {
+.clearfix:after, .layout-grid__row:after, .pane--landing-intro:after, .region-footer:after {
   clear: both;
 }
 
@@ -108,13 +108,13 @@
 }
 
 /* line 72, ../sass/partials/global/extendables/_button.scss */
-.sharethis-buttons .st_sharethis_custom, .flag-favorite a {
+.sharethis-buttons .st_sharethis_custom, .flag-favorite a, .button--add {
   padding-left: 3.5em;
   position: relative;
   text-transform: uppercase;
 }
 /* line 76, ../sass/partials/global/extendables/_button.scss */
-.sharethis-buttons .st_sharethis_custom:before, .flag-favorite a:before {
+.sharethis-buttons .st_sharethis_custom:before, .flag-favorite a:before, .button--add:before {
   height: 22px;
   overflow: hidden;
   width: 22px;
@@ -125,7 +125,7 @@
   top: 0.65em;
 }
 /* line 14, ../sass/partials/global/helpers/_image-replace.scss */
-.sharethis-buttons .st_sharethis_custom:before:before, .flag-favorite a:before:before {
+.sharethis-buttons .st_sharethis_custom:before:before, .flag-favorite a:before:before, .button--add:before:before {
   content: "";
   display: block;
   height: 150%;
@@ -141,6 +141,13 @@
 
 /* line 95, ../sass/partials/global/extendables/_button.scss */
 .flag-favorite a:before {
+  background-image: url('../images/bg/circle-plus.png');
+  background-image: -webkit-linear-gradient(transparent, transparent), url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4NCjwhLS0gR2VuZXJhdGVkIGJ5IEljb01vb24uaW8gLS0+DQo8IURPQ1RZUEUgc3ZnIFBVQkxJQyAiLS8vVzNDLy9EVEQgU1ZHIDEuMS8vRU4iICJodHRwOi8vd3d3LnczLm9yZy9HcmFwaGljcy9TVkcvMS4xL0RURC9zdmcxMS5kdGQiPg0KPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHdpZHRoPSIyMiIgaGVpZ2h0PSIyMiIgdmlld0JveD0iMCAwIDIyIDIyIj4NCjxwYXRoIGQ9Ik0xMSAwLjkxN3EyLjA1NSAwIDMuOTIxIDAuNzk5dDMuMjE2IDIuMTQ4IDIuMTQ4IDMuMjE2IDAuNzk5IDMuOTIxLTAuNzk5IDMuOTIxLTIuMTQ4IDMuMjE2LTMuMjE2IDIuMTQ4LTMuOTIxIDAuNzk5LTMuOTIxLTAuNzk5LTMuMjE2LTIuMTQ4LTIuMTQ4LTMuMjE2LTAuNzk5LTMuOTIxIDAuNzk5LTMuOTIxIDIuMTQ4LTMuMjE2IDMuMjE2LTIuMTQ4IDMuOTIxLTAuNzk5ek0xMSAyLjc1cS0xLjY3NiAwLTMuMjA1IDAuNjU1dC0yLjYzMiAxLjc1OC0xLjc1OCAyLjYzMi0wLjY1NSAzLjIwNSAwLjY1NSAzLjIwNSAxLjc1OCAyLjYzMiAyLjYzMiAxLjc1OCAzLjIwNSAwLjY1NSAzLjIwNS0wLjY1NSAyLjYzMi0xLjc1OCAxLjc1OC0yLjYzMiAwLjY1NS0zLjIwNS0wLjY1NS0zLjIwNS0xLjc1OC0yLjYzMi0yLjYzMi0xLjc1OC0zLjIwNS0wLjY1NXpNMTEgNi40MTdxMC4zOCAwIDAuNjQ4IDAuMjY5dDAuMjY5IDAuNjQ4djIuNzVoMi43NXEwLjM4IDAgMC42NDggMC4yNjl0MC4yNjkgMC42NDgtMC4yNjkgMC42NDgtMC42NDggMC4yNjloLTIuNzV2Mi43NXEwIDAuMzgtMC4yNjkgMC42NDh0LTAuNjQ4IDAuMjY5LTAuNjQ4LTAuMjY5LTAuMjY5LTAuNjQ4di0yLjc1aC0yLjc1cS0wLjM4IDAtMC42NDgtMC4yNjl0LTAuMjY5LTAuNjQ4IDAuMjY5LTAuNjQ4IDAuNjQ4LTAuMjY5aDIuNzV2LTIuNzVxMC0wLjM4IDAuMjY5LTAuNjQ4dDAuNjQ4LTAuMjY5eiIgZmlsbD0iI2ZmZmZmZiI+PC9wYXRoPg0KPC9zdmc+DQo=');
+  background-image: linear-gradient(transparent, transparent), url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4NCjwhLS0gR2VuZXJhdGVkIGJ5IEljb01vb24uaW8gLS0+DQo8IURPQ1RZUEUgc3ZnIFBVQkxJQyAiLS8vVzNDLy9EVEQgU1ZHIDEuMS8vRU4iICJodHRwOi8vd3d3LnczLm9yZy9HcmFwaGljcy9TVkcvMS4xL0RURC9zdmcxMS5kdGQiPg0KPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHdpZHRoPSIyMiIgaGVpZ2h0PSIyMiIgdmlld0JveD0iMCAwIDIyIDIyIj4NCjxwYXRoIGQ9Ik0xMSAwLjkxN3EyLjA1NSAwIDMuOTIxIDAuNzk5dDMuMjE2IDIuMTQ4IDIuMTQ4IDMuMjE2IDAuNzk5IDMuOTIxLTAuNzk5IDMuOTIxLTIuMTQ4IDMuMjE2LTMuMjE2IDIuMTQ4LTMuOTIxIDAuNzk5LTMuOTIxLTAuNzk5LTMuMjE2LTIuMTQ4LTIuMTQ4LTMuMjE2LTAuNzk5LTMuOTIxIDAuNzk5LTMuOTIxIDIuMTQ4LTMuMjE2IDMuMjE2LTIuMTQ4IDMuOTIxLTAuNzk5ek0xMSAyLjc1cS0xLjY3NiAwLTMuMjA1IDAuNjU1dC0yLjYzMiAxLjc1OC0xLjc1OCAyLjYzMi0wLjY1NSAzLjIwNSAwLjY1NSAzLjIwNSAxLjc1OCAyLjYzMiAyLjYzMiAxLjc1OCAzLjIwNSAwLjY1NSAzLjIwNS0wLjY1NSAyLjYzMi0xLjc1OCAxLjc1OC0yLjYzMiAwLjY1NS0zLjIwNS0wLjY1NS0zLjIwNS0xLjc1OC0yLjYzMi0yLjYzMi0xLjc1OC0zLjIwNS0wLjY1NXpNMTEgNi40MTdxMC4zOCAwIDAuNjQ4IDAuMjY5dDAuMjY5IDAuNjQ4djIuNzVoMi43NXEwLjM4IDAgMC42NDggMC4yNjl0MC4yNjkgMC42NDgtMC4yNjkgMC42NDgtMC42NDggMC4yNjloLTIuNzV2Mi43NXEwIDAuMzgtMC4yNjkgMC42NDh0LTAuNjQ4IDAuMjY5LTAuNjQ4LTAuMjY5LTAuMjY5LTAuNjQ4di0yLjc1aC0yLjc1cS0wLjM4IDAtMC42NDgtMC4yNjl0LTAuMjY5LTAuNjQ4IDAuMjY5LTAuNjQ4IDAuNjQ4LTAuMjY5aDIuNzV2LTIuNzVxMC0wLjM4IDAuMjY5LTAuNjQ4dDAuNjQ4LTAuMjY5eiIgZmlsbD0iI2ZmZmZmZiI+PC9wYXRoPg0KPC9zdmc+DQo=');
+}
+
+/* line 102, ../sass/partials/global/extendables/_button.scss */
+.button--add:before {
   background-image: url('../images/bg/circle-plus.png');
   background-image: -webkit-linear-gradient(transparent, transparent), url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4NCjwhLS0gR2VuZXJhdGVkIGJ5IEljb01vb24uaW8gLS0+DQo8IURPQ1RZUEUgc3ZnIFBVQkxJQyAiLS8vVzNDLy9EVEQgU1ZHIDEuMS8vRU4iICJodHRwOi8vd3d3LnczLm9yZy9HcmFwaGljcy9TVkcvMS4xL0RURC9zdmcxMS5kdGQiPg0KPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHdpZHRoPSIyMiIgaGVpZ2h0PSIyMiIgdmlld0JveD0iMCAwIDIyIDIyIj4NCjxwYXRoIGQ9Ik0xMSAwLjkxN3EyLjA1NSAwIDMuOTIxIDAuNzk5dDMuMjE2IDIuMTQ4IDIuMTQ4IDMuMjE2IDAuNzk5IDMuOTIxLTAuNzk5IDMuOTIxLTIuMTQ4IDMuMjE2LTMuMjE2IDIuMTQ4LTMuOTIxIDAuNzk5LTMuOTIxLTAuNzk5LTMuMjE2LTIuMTQ4LTIuMTQ4LTMuMjE2LTAuNzk5LTMuOTIxIDAuNzk5LTMuOTIxIDIuMTQ4LTMuMjE2IDMuMjE2LTIuMTQ4IDMuOTIxLTAuNzk5ek0xMSAyLjc1cS0xLjY3NiAwLTMuMjA1IDAuNjU1dC0yLjYzMiAxLjc1OC0xLjc1OCAyLjYzMi0wLjY1NSAzLjIwNSAwLjY1NSAzLjIwNSAxLjc1OCAyLjYzMiAyLjYzMiAxLjc1OCAzLjIwNSAwLjY1NSAzLjIwNS0wLjY1NSAyLjYzMi0xLjc1OCAxLjc1OC0yLjYzMiAwLjY1NS0zLjIwNS0wLjY1NS0zLjIwNS0xLjc1OC0yLjYzMi0yLjYzMi0xLjc1OC0zLjIwNS0wLjY1NXpNMTEgNi40MTdxMC4zOCAwIDAuNjQ4IDAuMjY5dDAuMjY5IDAuNjQ4djIuNzVoMi43NXEwLjM4IDAgMC42NDggMC4yNjl0MC4yNjkgMC42NDgtMC4yNjkgMC42NDgtMC42NDggMC4yNjloLTIuNzV2Mi43NXEwIDAuMzgtMC4yNjkgMC42NDh0LTAuNjQ4IDAuMjY5LTAuNjQ4LTAuMjY5LTAuMjY5LTAuNjQ4di0yLjc1aC0yLjc1cS0wLjM4IDAtMC42NDgtMC4yNjl0LTAuMjY5LTAuNjQ4IDAuMjY5LTAuNjQ4IDAuNjQ4LTAuMjY5aDIuNzV2LTIuNzVxMC0wLjM4IDAuMjY5LTAuNjQ4dDAuNjQ4LTAuMjY5eiIgZmlsbD0iI2ZmZmZmZiI+PC9wYXRoPg0KPC9zdmc+DQo=');
   background-image: linear-gradient(transparent, transparent), url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4NCjwhLS0gR2VuZXJhdGVkIGJ5IEljb01vb24uaW8gLS0+DQo8IURPQ1RZUEUgc3ZnIFBVQkxJQyAiLS8vVzNDLy9EVEQgU1ZHIDEuMS8vRU4iICJodHRwOi8vd3d3LnczLm9yZy9HcmFwaGljcy9TVkcvMS4xL0RURC9zdmcxMS5kdGQiPg0KPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHdpZHRoPSIyMiIgaGVpZ2h0PSIyMiIgdmlld0JveD0iMCAwIDIyIDIyIj4NCjxwYXRoIGQ9Ik0xMSAwLjkxN3EyLjA1NSAwIDMuOTIxIDAuNzk5dDMuMjE2IDIuMTQ4IDIuMTQ4IDMuMjE2IDAuNzk5IDMuOTIxLTAuNzk5IDMuOTIxLTIuMTQ4IDMuMjE2LTMuMjE2IDIuMTQ4LTMuOTIxIDAuNzk5LTMuOTIxLTAuNzk5LTMuMjE2LTIuMTQ4LTIuMTQ4LTMuMjE2LTAuNzk5LTMuOTIxIDAuNzk5LTMuOTIxIDIuMTQ4LTMuMjE2IDMuMjE2LTIuMTQ4IDMuOTIxLTAuNzk5ek0xMSAyLjc1cS0xLjY3NiAwLTMuMjA1IDAuNjU1dC0yLjYzMiAxLjc1OC0xLjc1OCAyLjYzMi0wLjY1NSAzLjIwNSAwLjY1NSAzLjIwNSAxLjc1OCAyLjYzMiAyLjYzMiAxLjc1OCAzLjIwNSAwLjY1NSAzLjIwNS0wLjY1NSAyLjYzMi0xLjc1OCAxLjc1OC0yLjYzMiAwLjY1NS0zLjIwNS0wLjY1NS0zLjIwNS0xLjc1OC0yLjYzMi0yLjYzMi0xLjc1OC0zLjIwNS0wLjY1NXpNMTEgNi40MTdxMC4zOCAwIDAuNjQ4IDAuMjY5dDAuMjY5IDAuNjQ4djIuNzVoMi43NXEwLjM4IDAgMC42NDggMC4yNjl0MC4yNjkgMC42NDgtMC4yNjkgMC42NDgtMC42NDggMC4yNjloLTIuNzV2Mi43NXEwIDAuMzgtMC4yNjkgMC42NDh0LTAuNjQ4IDAuMjY5LTAuNjQ4LTAuMjY5LTAuMjY5LTAuNjQ4di0yLjc1aC0yLjc1cS0wLjM4IDAtMC42NDgtMC4yNjl0LTAuMjY5LTAuNjQ4IDAuMjY5LTAuNjQ4IDAuNjQ4LTAuMjY5aDIuNzV2LTIuNzVxMC0wLjM4IDAuMjY5LTAuNjQ4dDAuNjQ4LTAuMjY5eiIgZmlsbD0iI2ZmZmZmZiI+PC9wYXRoPg0KPC9zdmc+DQo=');
@@ -2496,6 +2503,43 @@ aside .pane__title {
   font-size: 0.875em;
 }
 
+/* line 1, ../sass/partials/components/pane/_pane--landing-intro.scss */
+.pane--landing-intro {
+  background: url(../images/background--path.png) no-repeat 100% 0;
+  margin: 0;
+  min-height: 288px;
+  min-height: 300px;
+  padding: 25px 0 0 0;
+  padding: 50px 0 20px 0;
+  position: relative;
+  z-index: 2;
+}
+/* line 16, ../sass/partials/components/pane/_pane--landing-intro.scss */
+.pane--landing-intro h1 {
+  color: #fff;
+  font-size: 1.875em;
+  font-size: 3em;
+  font-weight: 400;
+  line-height: 1.2;
+  margin: 0;
+  padding: 0 0 0.4em 0;
+  text-transform: uppercase;
+}
+
+/* line 33, ../sass/partials/components/pane/_pane--landing-intro.scss */
+.pane--landing-intro__left {
+  float: left;
+  padding: 0 5% 0 0;
+  width: 60%;
+}
+
+/* line 41, ../sass/partials/components/pane/_pane--landing-intro.scss */
+.pane--landing-intro__right {
+  float: left;
+  padding: 10px 0 0 0;
+  width: 40%;
+}
+
 /* line 1, ../sass/partials/components/pane/_pane--nodefield-innovation-desc.scss */
 .pane--nodefield-innovation-desc {
   padding-bottom: 1em;
@@ -2695,20 +2739,40 @@ aside .pane__title {
   background: #ed7d3a;
   color: #fff;
   margin: 0 0 3em 0;
+  min-height: 288px;
+  min-height: 300px;
   position: relative;
+  z-index: 1;
 }
-/* line 9, ../sass/partials/components/_region-landing-title.scss */
+/* line 11, ../sass/partials/components/_region-landing-title.scss */
 .region-landing-title:after {
   content: "";
   display: block;
   border-style: solid;
-  border-width: 105px 70px 0 0;
+  border-width: 300px 180px 0 0;
   border-color: #dc5606 transparent transparent transparent;
   height: 0;
   left: 0;
   position: absolute;
   top: 0;
   width: 0;
+}
+/* line 23, ../sass/partials/components/_region-landing-title.scss */
+.region-landing-title:before {
+  content: "";
+  display: block;
+  border-style: solid;
+  border-width: 14px 14px 0 14px;
+  bottom: -14px;
+  border-color: #ed7d3a transparent transparent transparent;
+  height: 0;
+  left: 50%;
+  margin-left: -7px;
+  position: absolute;
+  width: 0;
+  border-width: 28px 28px 0 28px;
+  bottom: -28px;
+  margin-left: -14px;
 }
 
 /* line 1, ../sass/partials/components/_region-meta.scss */

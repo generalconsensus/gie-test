@@ -96,3 +96,10 @@
     @include svg-background(circle-plus);
   }
 }
+
+%button--add {
+  @extend %button--icon;
+  &:before {
+    @include svg-background(circle-plus);
+  }
+}

@@ -17,4 +17,8 @@
   @extend %button--light;
 }
 
+.button--add { // has plus icon
+  @extend %button--add;
+}
+
 
