@@ -1,0 +1,27 @@
+.view--card-view {
+  .views-row {
+    @include breakpoint(500px, $no-query: true) {
+      float: left;
+      width: percentage(1/2);
+    }
+    @include breakpoint(800px, $no-query: true) {
+      width: percentage(1/3);
+    }
+    &.even {
+      padding-left: 0.5em;
+    }
+    &.odd {
+      padding-right: 0.5em;
+    }
+    &.first {
+      padding-right: 0.5em;
+    }
+    &.second {
+      padding-left: 0.5em;
+      padding-right: 0.5em;
+    }
+    &.third {
+      padding-left: 0.5em;
+    }
+  }
+}

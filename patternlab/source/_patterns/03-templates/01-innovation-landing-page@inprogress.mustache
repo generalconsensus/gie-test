@@ -2,15 +2,37 @@
 {{> organisms-navigation }}
 
 <main id="main" class="main" role="main">
-  <div class="region-content layout-constrain">
+  <div class="region-content">
 
-    {{> atoms-page-title }}
+    <div class="l-panels-sidebar-left preface-empty title sidebar main">
+      <div class="l-preface layout-constrain">
+ 
+      </div>
+      <div class="l-title region-landing-title">
+        <div class="layout-constrain">
+          {{> atoms-landing-page-intro-title }}
+        </div>
+      </div>
+      <div class="l-wrapper layout-constrain">
+        <aside class="l-sidebar">
+          <div style="background: #ccc; color: #fff; font-weight: bold; text-align: center;">
+            FEELTARS<br>
+            GO<br>
+            HERE<br>
+          </div>
+        </aside>
+        <div class="l-main">
+          <div class="view--innovations-listing view--card-view">
+            {{# listItems.nine }}
+              <div class="views-row">
+                {{> organisms-innovation-teaser }}
+              </div>
+            {{/ listItems.nine }}
+          </div>
 
-    {{# listItems.nine }}
-      {{> organisms-innovation-teaser }}
-    {{/ listItems.nine }}
-
-    {{> molecules-pager }}
+        </div>
+      </div>
+    </div>
 
   </div>
 </main>

@@ -26,24 +26,30 @@
 .l-panels-sidebar-right:after {
   clear: both;
 }
-/* line 27, ../../sass/partials/layout/panels/_sidebar-right.scss */
+/* line 29, ../../sass/partials/layout/panels/_sidebar-right.scss */
 .l-panels-sidebar-right .l-preface,
+.l-panels-sidebar-right .l-title,
 .l-panels-sidebar-right .l-main,
-.l-panels-sidebar-right .l-sidebar {
+.l-panels-sidebar-right .l-sidebar,
+.l-panels-sidebar-right .l-wrapper {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
 }
 /* line 9, ../../sass/partials/global/helpers/_clearfix.scss */
 .l-panels-sidebar-right .l-preface:after,
+.l-panels-sidebar-right .l-title:after,
 .l-panels-sidebar-right .l-main:after,
-.l-panels-sidebar-right .l-sidebar:after {
+.l-panels-sidebar-right .l-sidebar:after,
+.l-panels-sidebar-right .l-wrapper:after {
   display: table;
   content: "";
 }
 /* line 14, ../../sass/partials/global/helpers/_clearfix.scss */
 .l-panels-sidebar-right .l-preface:after,
+.l-panels-sidebar-right .l-title:after,
 .l-panels-sidebar-right .l-main:after,
-.l-panels-sidebar-right .l-sidebar:after {
+.l-panels-sidebar-right .l-sidebar:after,
+.l-panels-sidebar-right .l-wrapper:after {
   clear: both;
 }
