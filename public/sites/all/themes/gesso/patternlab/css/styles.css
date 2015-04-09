@@ -2650,13 +2650,13 @@ aside .pane__title {
   }
 }
 
-/* line 1, ../sass/partials/components/pane/_pane--like-this-innovation.scss */
-.pane--like-this-innovation {
+/* line 1, ../sass/partials/components/pane/_pane--favorite-this.scss */
+.pane--favorite-this {
   background: #f8f8f8 url(../images/background--lightbulb.png) no-repeat 100% 0;
   padding: 1em;
 }
-/* line 4, ../sass/partials/components/pane/_pane--like-this-innovation.scss */
-.pane--like-this-innovation .pane__title {
+/* line 4, ../sass/partials/components/pane/_pane--favorite-this.scss */
+.pane--favorite-this .pane__title {
   border: 0;
   color: #565a5c;
   font-size: 1em;
@@ -2665,19 +2665,19 @@ aside .pane__title {
   padding: 0;
   text-transform: uppercase;
 }
-/* line 12, ../sass/partials/components/pane/_pane--like-this-innovation.scss */
-.pane--like-this-innovation .pane__title p {
+/* line 12, ../sass/partials/components/pane/_pane--favorite-this.scss */
+.pane--favorite-this .pane__title p {
   font-size: 0.875em;
   font-weight: normal;
   margin: 0.5em 0 1em 0;
   text-transform: none;
 }
-/* line 19, ../sass/partials/components/pane/_pane--like-this-innovation.scss */
-.pane--like-this-innovation .pane__content {
+/* line 19, ../sass/partials/components/pane/_pane--favorite-this.scss */
+.pane--favorite-this .pane__content {
   padding: 0;
 }
-/* line 21, ../sass/partials/components/pane/_pane--like-this-innovation.scss */
-.pane--like-this-innovation .pane__content p {
+/* line 21, ../sass/partials/components/pane/_pane--favorite-this.scss */
+.pane--favorite-this .pane__content p {
   font-size: 0.875em;
 }
 
