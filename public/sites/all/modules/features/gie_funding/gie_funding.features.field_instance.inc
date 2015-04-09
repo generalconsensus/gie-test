@@ -357,23 +357,9 @@ function gie_funding_field_default_field_instances() {
       ),
       'full' => array(
         'label' => 'above',
-        'module' => 'text',
-        'settings' => array(
-          'field_delimiter' => '',
-          'linked_field' => array(
-            'advanced' => array(
-              'class' => '',
-              'rel' => '',
-              'target' => '',
-              'text' => '',
-              'title' => '',
-            ),
-            'destination' => '',
-            'linked' => 0,
-          ),
-        ),
-        'type' => 'text_default',
-        'weight' => 0,
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 12,
       ),
       'listing' => array(
         'label' => 'above',
@@ -463,10 +449,24 @@ function gie_funding_field_default_field_instances() {
         'weight' => 13,
       ),
       'full' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 18,
+        'label' => 'inline',
+        'module' => 'text',
+        'settings' => array(
+          'field_delimiter' => '',
+          'linked_field' => array(
+            'advanced' => array(
+              'class' => '',
+              'rel' => '',
+              'target' => '',
+              'text' => '',
+              'title' => '',
+            ),
+            'destination' => '',
+            'linked' => 0,
+          ),
+        ),
+        'type' => 'text_plain',
+        'weight' => 30,
       ),
       'listing' => array(
         'label' => 'above',
@@ -558,10 +558,24 @@ function gie_funding_field_default_field_instances() {
         'weight' => 14,
       ),
       'full' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 19,
+        'label' => 'inline',
+        'module' => 'taxonomy',
+        'settings' => array(
+          'field_delimiter' => '',
+          'linked_field' => array(
+            'advanced' => array(
+              'class' => '',
+              'rel' => '',
+              'target' => '',
+              'text' => '',
+              'title' => '',
+            ),
+            'destination' => '',
+            'linked' => 0,
+          ),
+        ),
+        'type' => 'taxonomy_term_reference_plain',
+        'weight' => 31,
       ),
       'listing' => array(
         'label' => 'inline',
@@ -772,10 +786,24 @@ function gie_funding_field_default_field_instances() {
         'weight' => 19,
       ),
       'full' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 21,
+        'label' => 'inline',
+        'module' => 'taxonomy',
+        'settings' => array(
+          'field_delimiter' => '',
+          'linked_field' => array(
+            'advanced' => array(
+              'class' => '',
+              'rel' => '',
+              'target' => '',
+              'text' => '',
+              'title' => '',
+            ),
+            'destination' => '',
+            'linked' => 0,
+          ),
+        ),
+        'type' => 'taxonomy_term_reference_plain',
+        'weight' => 16,
       ),
       'listing' => array(
         'label' => 'above',
@@ -847,10 +875,28 @@ function gie_funding_field_default_field_instances() {
         'weight' => 22,
       ),
       'full' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 24,
+        'label' => 'inline',
+        'module' => 'number',
+        'settings' => array(
+          'decimal_separator' => '.',
+          'field_delimiter' => '',
+          'linked_field' => array(
+            'advanced' => array(
+              'class' => '',
+              'rel' => '',
+              'target' => '',
+              'text' => '',
+              'title' => '',
+            ),
+            'destination' => '',
+            'linked' => 0,
+          ),
+          'prefix_suffix' => 1,
+          'scale' => 0,
+          'thousand_separator' => ',',
+        ),
+        'type' => 'number_integer',
+        'weight' => 15,
       ),
       'listing' => array(
         'label' => 'hidden',
@@ -1190,7 +1236,7 @@ function gie_funding_field_default_field_instances() {
         'label' => 'hidden',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 4,
+        'weight' => 13,
       ),
       'listing' => array(
         'label' => 'above',
@@ -1363,10 +1409,27 @@ function gie_funding_field_default_field_instances() {
         'weight' => 27,
       ),
       'full' => array(
-        'label' => 'hidden',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 5,
+        'label' => 'inline',
+        'module' => 'title',
+        'settings' => array(
+          'field_delimiter' => '',
+          'linked_field' => array(
+            'advanced' => array(
+              'class' => '',
+              'rel' => '',
+              'target' => '',
+              'text' => '',
+              'title' => '',
+            ),
+            'destination' => '',
+            'linked' => 0,
+          ),
+          'title_class' => '',
+          'title_link' => '',
+          'title_style' => '_none',
+        ),
+        'type' => 'title_linked',
+        'weight' => 14,
       ),
       'listing' => array(
         'label' => 'above',
@@ -1600,9 +1663,23 @@ function gie_funding_field_default_field_instances() {
         'weight' => 25,
       ),
       'full' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
+        'label' => 'inline',
+        'module' => 'taxonomy',
+        'settings' => array(
+          'field_delimiter' => '',
+          'linked_field' => array(
+            'advanced' => array(
+              'class' => '',
+              'rel' => '',
+              'target' => '',
+              'text' => '',
+              'title' => '',
+            ),
+            'destination' => '',
+            'linked' => 0,
+          ),
+        ),
+        'type' => 'taxonomy_term_reference_link',
         'weight' => 28,
       ),
       'listing' => array(
@@ -1671,10 +1748,24 @@ function gie_funding_field_default_field_instances() {
         'weight' => 23,
       ),
       'full' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 30,
+        'label' => 'inline',
+        'module' => 'taxonomy',
+        'settings' => array(
+          'field_delimiter' => '',
+          'linked_field' => array(
+            'advanced' => array(
+              'class' => '',
+              'rel' => '',
+              'target' => '',
+              'text' => '',
+              'title' => '',
+            ),
+            'destination' => '',
+            'linked' => 0,
+          ),
+        ),
+        'type' => 'taxonomy_term_reference_link',
+        'weight' => 29,
       ),
       'listing' => array(
         'label' => 'above',
