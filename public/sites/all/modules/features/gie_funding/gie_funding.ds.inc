@@ -47,16 +47,6 @@ function gie_funding_ds_field_settings_info() {
       'label' => 'hidden',
       'format' => 'default',
     ),
-    'field_funding_desc' => array(
-      'formatter_settings' => array(
-        'ft' => array(
-          'func' => 'theme_ds_field_expert',
-          'lb' => 'Introduction',
-          'lb-el' => 'h2',
-          'lb-col' => TRUE,
-        ),
-      ),
-    ),
     'field_funding_eligibility' => array(
       'formatter_settings' => array(
         'ft' => array(
@@ -72,6 +62,20 @@ function gie_funding_ds_field_settings_info() {
           'func' => 'theme_ds_field_expert',
           'lb-el' => 'h2',
           'lb-col' => TRUE,
+        ),
+      ),
+    ),
+    'field_funding_grant_award_value' => array(
+      'formatter_settings' => array(
+        'ft' => array(
+          'func' => 'theme_ds_field_minimal',
+        ),
+      ),
+    ),
+    'field_funding_poc' => array(
+      'formatter_settings' => array(
+        'ft' => array(
+          'func' => 'theme_ds_field_minimal',
         ),
       ),
     ),
@@ -278,17 +282,35 @@ function gie_funding_ds_layout_settings_info() {
   $ds_layout->settings = array(
     'regions' => array(
       'ds_content' => array(
-        0 => 'field_funding_desc',
+        0 => 'group_funding_stats',
         1 => 'field_funding_eligibility',
-        2 => 'field_funding_guidance',
-        3 => 'comments',
+        2 => 'group_funding_stats_first',
+        3 => 'field_funding_guidance',
+        4 => 'group_funding_stats_second',
+        5 => 'comments',
+        6 => 'field_funding_poc',
+        7 => 'field_funding_grant_award_value',
+        8 => 'field_funding_eligibility_type',
+        9 => 'field_term_region',
+        10 => 'field_term_sector',
+        11 => 'field_funding_duration',
+        12 => 'field_funding_effort',
       ),
     ),
     'fields' => array(
-      'field_funding_desc' => 'ds_content',
+      'group_funding_stats' => 'ds_content',
       'field_funding_eligibility' => 'ds_content',
+      'group_funding_stats_first' => 'ds_content',
       'field_funding_guidance' => 'ds_content',
+      'group_funding_stats_second' => 'ds_content',
       'comments' => 'ds_content',
+      'field_funding_poc' => 'ds_content',
+      'field_funding_grant_award_value' => 'ds_content',
+      'field_funding_eligibility_type' => 'ds_content',
+      'field_term_region' => 'ds_content',
+      'field_term_sector' => 'ds_content',
+      'field_funding_duration' => 'ds_content',
+      'field_funding_effort' => 'ds_content',
     ),
     'classes' => array(),
     'wrappers' => array(

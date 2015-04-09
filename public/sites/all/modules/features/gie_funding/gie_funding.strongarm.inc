@@ -150,13 +150,13 @@ function gie_funding_strongarm() {
         ),
         'funding_fields_link_url' => array(
           'full' => array(
-            'weight' => '13',
+            'weight' => '14',
             'visible' => FALSE,
           ),
         ),
         'funding_fields_contact' => array(
           'full' => array(
-            'weight' => '14',
+            'weight' => '4',
             'visible' => FALSE,
           ),
         ),
