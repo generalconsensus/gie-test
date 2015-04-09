@@ -54,6 +54,7 @@ function gie_innovation_default_page_manager_pages() {
       'preface' => NULL,
       'sidebar' => NULL,
       'main' => NULL,
+      'title' => NULL,
     ),
   );
   $display->cache = array();
@@ -96,7 +97,10 @@ function gie_innovation_default_page_manager_pages() {
     $pane->style = array(
       'settings' => NULL,
     );
-    $pane->css = array();
+    $pane->css = array(
+      'css_id' => '',
+      'css_class' => 'pane pane--landing-intro',
+    );
     $pane->extras = array();
     $pane->position = 0;
     $pane->locks = array();
