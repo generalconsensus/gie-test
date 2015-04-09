@@ -1,0 +1,47 @@
+.pane--landing-intro {
+  @extend %clearfix;
+  background: url(../images/background--path.png) no-repeat 100% 0;
+  margin: 0;
+  min-height: 288px;
+  @include breakpoint(900px, $no-query: true) {
+    min-height: 300px;
+  }
+  padding: 25px 0 0 0;
+  @include breakpoint(900px, $no-query: true) {
+    padding: 50px 0 20px 0;
+  }
+  position: relative;
+  z-index: 2;
+  
+  h1 {
+    color: #fff;
+    font-size: em(30px);
+    @include breakpoint(700px 1199px) {
+      font-size: em(42px);
+    }
+    @include breakpoint(1200px, $no-query: true) {
+      font-size: em(48px); 
+    }
+    font-weight: 400;
+    line-height: 1.2;
+    margin: 0;
+    padding: 0 0 0.4em 0;
+    text-transform: uppercase;
+  }
+}
+
+.pane--landing-intro__left {
+  @include breakpoint(900px, $no-query: true) {
+    float: left;
+    padding: 0 5% 0 0;
+    width: 60%;
+  }
+}
+
+.pane--landing-intro__right {
+  @include breakpoint(900px, $no-query: true) {
+    float: left;
+    padding: 10px 0 0 0;
+   width: 40%;
+  }
+}

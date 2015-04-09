@@ -1,0 +1,41 @@
+{{&gt; organisms-header }}
+{{&gt; organisms-navigation }}
+
+&lt;main id=&quot;main&quot; class=&quot;main&quot; role=&quot;main&quot;&gt;
+  &lt;div class=&quot;region-content&quot;&gt;
+
+    &lt;div class=&quot;l-panels-sidebar-left preface-empty title sidebar main&quot;&gt;
+      &lt;div class=&quot;l-preface layout-constrain&quot;&gt;
+ 
+      &lt;/div&gt;
+      &lt;div class=&quot;l-title region-landing-title&quot;&gt;
+        &lt;div class=&quot;layout-constrain&quot;&gt;
+          {{&gt; atoms-landing-page-intro }}
+        &lt;/div&gt;
+      &lt;/div&gt;
+      &lt;div class=&quot;l-wrapper layout-constrain&quot;&gt;
+        &lt;aside class=&quot;l-sidebar&quot;&gt;
+          &lt;div style=&quot;background: #ccc; color: #fff; font-weight: bold; text-align: center;&quot;&gt;
+            FEELTARS&lt;br&gt;
+            GO&lt;br&gt;
+            HERE&lt;br&gt;
+          &lt;/div&gt;
+        &lt;/aside&gt;
+        &lt;div class=&quot;l-main&quot;&gt;
+          &lt;div class=&quot;view--innovations-listing view--card-view&quot;&gt;
+            {{# listItems.nine }}
+              &lt;div class=&quot;views-row&quot;&gt;
+                {{&gt; organisms-innovation-teaser }}
+              &lt;/div&gt;
+            {{/ listItems.nine }}
+          &lt;/div&gt;
+
+        &lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+
+  &lt;/div&gt;
+&lt;/main&gt;
+
+{{&gt; organisms-postscript }}
+{{&gt; organisms-footer }}
