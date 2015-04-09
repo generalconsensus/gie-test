@@ -1,4 +1,4 @@
-<div class="l-panels-sidebar-left preface-empty title sidebar main">
+<div class="l-panels-sidebar-right preface-empty title sidebar main">
   <div class="l-preface layout-constrain">
 
   </div>
@@ -12,22 +12,13 @@
     </div>
   </div>
   <div class="l-wrapper layout-constrain">
-    <aside class="l-sidebar">
-      <div style="background: #ccc; color: #fff; font-weight: bold; text-align: center;">
-        FEELTARS<br>
-        GO<br>
-        HERE<br>
-      </div>
-    </aside>
     <div class="l-main">
-      <div class="view--innovations-listing view--card-view">
-        {{# listItems.nine }}
-          <div class="views-row">
-            {{> organisms-innovation-teaser }}
-          </div>
-        {{/ listItems.nine }}
-      </div>
+      
 
     </div>
+    <aside class="l-sidebar">
+      {{> molecules-recently-posted }}
+      {{> molecules-funded-by }} 
+    </aside>
   </div>
 </div>
