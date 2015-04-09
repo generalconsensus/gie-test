@@ -22,6 +22,7 @@
   }
 
   function cardView() {
+    
     $('.view--card-view').each(function(){
       var items = $(this).find('.views-row');
       items.removeClass('first second third even odd');
@@ -91,5 +92,9 @@
     // 200 is time in miliseconds.
     TO = setTimeout(resizeStuff, 200);
   }).resize();
+
+  $(window).load(function() {
+    cardView();
+  });
 
 })(jQuery);
