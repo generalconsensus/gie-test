@@ -345,7 +345,7 @@ function gie_funding_panelizer_defaults() {
       'flag_name' => 'favorite',
       'context' => 'panelizer',
       'override_title' => 1,
-      'override_title_text' => '',
+      'override_title_text' => 'Like This Funding Op? <p>Add it to your favorites.</p>',
       'override_title_heading' => 'h2',
     );
     $pane->cache = array();
