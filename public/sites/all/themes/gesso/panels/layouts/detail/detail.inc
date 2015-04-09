@@ -10,7 +10,7 @@ function gesso_detail_panels_layouts() {
     'theme' => 'detail',
     'admin css' => '../../../css/panels-admin/detail.css',
     'regions' => array(
-      'hero' => t('Hero'),
+      'title' => t('Title'),
       'main' => t('Main'),
       'main_sidebar' => t('Main sidebar'),
       'center' => t('Center'),

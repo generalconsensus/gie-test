@@ -1,0 +1,33 @@
+<div class="l-panels-sidebar-left preface-empty title sidebar main">
+  <div class="l-preface layout-constrain">
+
+  </div>
+  <div class="l-title region-title">
+    <div class="layout-constrain">
+      <div class="pane pane--page-title">
+        <div class="pane__content">
+          <h1>{{ pageTitle }}</h1>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="l-wrapper layout-constrain">
+    <aside class="l-sidebar">
+      <div style="background: #ccc; color: #fff; font-weight: bold; text-align: center;">
+        FEELTARS<br>
+        GO<br>
+        HERE<br>
+      </div>
+    </aside>
+    <div class="l-main">
+      <div class="view--innovations-listing view--card-view">
+        {{# listItems.nine }}
+          <div class="views-row">
+            {{> organisms-innovation-teaser }}
+          </div>
+        {{/ listItems.nine }}
+      </div>
+
+    </div>
+  </div>
+</div>

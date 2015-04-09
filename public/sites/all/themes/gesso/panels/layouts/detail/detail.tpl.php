@@ -1,5 +1,5 @@
 <?php
-  $hero = (empty($content['hero']) ? 'hero-empty' : 'hero');
+  $title = (empty($content['title']) ? 'title-empty' : 'title');
   $main = (empty($content['main']) ? 'main-empty' : 'main');
   $main_sidebar = (empty($content['main_sidebar']) ? 'main-sidebar-empty' : 'main-sidebar');
   $center = (empty($content['center']) ? 'center-empty' : 'center');
@@ -9,14 +9,14 @@
   $bottom_sidebar = (empty($content['bottom_sidebar']) ? 'bottom-sidebar-empty' : 'bottom-sidebar');
   $bottom = (empty($content['bottom']) ? 'bottom-empty' : 'bottom');
 
-  $classes = "$hero $main $main_sidebar $center $box_first $box_second $box_third $bottom_sidebar $bottom";
+  $classes = "$title $main $main_sidebar $center $box_first $box_second $box_third $bottom_sidebar $bottom";
 ?>
 
 <div<?php if (!empty($css_id)): ?> id="<?php print $css_id; ?>"<?php endif; ?> class="l-panels-detail <?php print $classes; ?>">
-  <?php if (!empty($content['hero'])): ?>
-    <div class="l-hero region-title">
+  <?php if (!empty($content['title'])): ?>
+    <div class="l-title region-title">
       <div class="layout-constrain">
-        <?php print $content['hero']; ?>
+        <?php print $content['title']; ?>
       </div>
     </div>
   <?php endif; ?>

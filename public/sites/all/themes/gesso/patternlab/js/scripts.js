@@ -21,6 +21,12 @@
     }
   }
 
+  Drupal.behaviors.shareThis = {
+    attach: function (context) {
+      $('.sharethis-buttons .st_sharethis_custom').text('share');
+    }
+  }
+
   function cardView() {
     
     $('.view--card-view').each(function(){
