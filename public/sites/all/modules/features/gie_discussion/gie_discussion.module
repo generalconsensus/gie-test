@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the GIE Discussion feature.
+ */
+
+include_once 'gie_discussion.features.inc';
