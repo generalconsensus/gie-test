@@ -1028,7 +1028,7 @@ ul.panels-ipe-linkbar li {
 }
 /* line 9, ../sass/partials/global/helpers/_clearfix.scss */
 .l-panels-detail .l-wrapper:after,
-.l-panels-detail .l-hero:after,
+.l-panels-detail .l-title:after,
 .l-panels-detail .l-main:after,
 .l-panels-detail .l-main-sidebar:after,
 .l-panels-detail .l-center:after,
@@ -1042,7 +1042,7 @@ ul.panels-ipe-linkbar li {
 }
 /* line 14, ../sass/partials/global/helpers/_clearfix.scss */
 .l-panels-detail .l-wrapper:after,
-.l-panels-detail .l-hero:after,
+.l-panels-detail .l-title:after,
 .l-panels-detail .l-main:after,
 .l-panels-detail .l-main-sidebar:after,
 .l-panels-detail .l-center:after,
@@ -1051,6 +1051,52 @@ ul.panels-ipe-linkbar li {
 .l-panels-detail .l-box-third:after,
 .l-panels-detail .l-bottom-sidebar:after,
 .l-panels-detail .l-bottom:after {
+  clear: both;
+}
+
+@media (min-width: 43.75em) {
+  /* line 13, ../sass/partials/layout/panels/_landing.scss */
+  .l-panels-landing.main.sidebar .l-sidebar {
+    width: 20.58824%;
+    float: left;
+    margin-right: -100%;
+    margin-left: 0%;
+    clear: none;
+  }
+  /* line 16, ../sass/partials/layout/panels/_landing.scss */
+  .l-panels-landing.main.sidebar .l-main {
+    width: 73.52941%;
+    float: right;
+    margin-left: 0;
+    margin-right: 0;
+    clear: none;
+  }
+}
+
+/* line 9, ../sass/partials/global/helpers/_clearfix.scss */
+.l-panels-landing:after {
+  display: table;
+  content: "";
+}
+/* line 14, ../sass/partials/global/helpers/_clearfix.scss */
+.l-panels-landing:after {
+  clear: both;
+}
+/* line 9, ../sass/partials/global/helpers/_clearfix.scss */
+.l-panels-landing .l-preface:after,
+.l-panels-landing .l-title:after,
+.l-panels-landing .l-main:after,
+.l-panels-landing .l-sidebar:after,
+.l-panels-landing .l-wrapper:after {
+  display: table;
+  content: "";
+}
+/* line 14, ../sass/partials/global/helpers/_clearfix.scss */
+.l-panels-landing .l-preface:after,
+.l-panels-landing .l-title:after,
+.l-panels-landing .l-main:after,
+.l-panels-landing .l-sidebar:after,
+.l-panels-landing .l-wrapper:after {
   clear: both;
 }
 

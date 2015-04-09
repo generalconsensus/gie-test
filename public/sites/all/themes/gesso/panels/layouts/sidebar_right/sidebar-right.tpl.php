@@ -13,7 +13,7 @@
     </div>
   <?php endif; ?>
   <?php if (!empty($content['title'])): ?>
-    <div class="l-title region-landing-title">
+    <div class="l-title region-title">
       <div class="layout-constrain">
         <?php print $content['title']; ?>
       </div>
