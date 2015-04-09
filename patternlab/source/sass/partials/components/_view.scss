@@ -13,6 +13,9 @@
   text-decoration: underline;
 }
 
+.views-row {
+  padding: 0 0 2em 0;
+}
 
 // Custom view styles imported via sass globbing.
 @import 'view/*.*';

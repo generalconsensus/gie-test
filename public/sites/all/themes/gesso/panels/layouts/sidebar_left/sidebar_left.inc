@@ -11,6 +11,7 @@ function gesso_sidebar_left_panels_layouts() {
     'admin css' => '../../../css/panels-admin/sidebar-left.css',
     'regions' => array(
       'preface' => t('Preface'),
+      'title' => t('Title'),
       'sidebar' => t('Sidebar'),
       'main' => t('Main column'),
     ),

@@ -23,8 +23,10 @@
 .l-panels-sidebar-right {
   @include clearfix;
   .l-preface,
+  .l-title,
   .l-main,
-  .l-sidebar {
+  .l-sidebar,
+  .l-wrapper {
     @include clearfix;
     
     @if $panels-admin {

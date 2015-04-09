@@ -26,6 +26,10 @@
     "profile": {
       "src": "http://fpoimg.com/78x78?text=Square 1:1",
       "alt": "Square 1:1"
+    },
+    "card": {
+      "src": "http://fpoimg.com/500x300?text=Card 5:3",
+      "alt": "Card 5:3"
     }
   },
   "year": {
