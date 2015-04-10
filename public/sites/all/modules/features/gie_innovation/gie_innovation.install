@@ -31,7 +31,7 @@ function gie_innovation_add_default_image() {
         'status' => FILE_STATUS_PERMANENT,
     );
     $file = file_copy($file, $uri, FILE_EXISTS_REPLACE);
-    variable_set('gie_featured_image_fid', $file->fid);
+    variable_set('gie_innovation_image_fid', $file->fid);
 
 }
 
@@ -41,9 +41,9 @@ function gie_innovation_add_default_image() {
  * Set the default image.
  */
 function gie_innovation_field_default_field_instances_alter(&$fields) {
-    if (isset($fields['node-innovation-field_featured_image']['settings']['default_image'])) {
-        $fid = $fields['node-innovation-field_featured_image']['settings']['default_image'];
-        $fields['node-innovation-field_featured_image']['settings']['default_image'] = variable_get('gie_featured_image_fid', $fid);
+    if (isset($fields['node-innovation-field_innovation_image']['settings']['default_image'])) {
+        $fid = $fields['node-innovation-field_innovation_image']['settings']['default_image'];
+        $fields['node-innovation-field_innovation_image']['settings']['default_image'] = variable_get('gie_innovation_image_fid', $fid);
     }
 }
 
@@ -55,5 +55,10 @@ function gie_innovation_update_7000() {
 
 // Replace innovation image fieldtype
 function gie_innovation_update_7001() {
+    gie_innovation_add_default_image();
+}
+
+// Replace innovation image fieldtype
+function gie_innovation_update_7002() {
     gie_innovation_add_default_image();
 }
