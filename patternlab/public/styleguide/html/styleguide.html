@@ -15,23 +15,23 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <link href='http://fonts.googleapis.com/css?family=Lato:400,400italic,700,700italic,300italic,300' rel='stylesheet' type='text/css'>
     <!--[if gte IE 9]><!-->
-    <link rel="stylesheet" href="../../css/styles.css?1428684356" media="all">
+    <link rel="stylesheet" href="../../css/styles.css?1428695249" media="all">
     <!--<![endif]-->
 
     <!--[if lt IE 9]>
-    <link rel="stylesheet" href="../../css/no-mq.css?1428684356" media="all">
+    <link rel="stylesheet" href="../../css/no-mq.css?1428695249" media="all">
     <![endif]-->
 
-    <link rel="stylesheet" href="../../css/pattern-lab.css?1428684356" media="all"> 
+    <link rel="stylesheet" href="../../css/pattern-lab.css?1428695249" media="all"> 
 
     <script src="../../drupal/misc/jquery.js?v=1.4.4"></script>
     <script src="../../drupal/misc/jquery.once.js?v=1.2"></script>
     <script src="../../drupal/misc/drupal.js?v=7.33"></script>
-    <script src="../../js/modernizr.latest.js?1428684356"></script>
+    <script src="../../js/modernizr.latest.js?1428695249"></script>
 
-    <script src="../../js/mobile-menu.js?1428684356"></script>
-    <script src="../../js/skiplinks.js?1428684356"></script>
-    <script src="../../js/scripts.js?1428684356"></script>
+    <script src="../../js/mobile-menu.js?1428695249"></script>
+    <script src="../../js/skiplinks.js?1428695249"></script>
+    <script src="../../js/scripts.js?1428695249"></script>
     <!-- Begin Pattern Lab (Required for Pattern Lab to run properly) -->
     		<!-- never cache patterns -->
 		<meta http-equiv="cache-control" content="max-age=0" />
@@ -40,8 +40,8 @@
 		<meta http-equiv="expires" content="Tue, 01 Jan 1980 1:00:00 GMT" />
 		<meta http-equiv="pragma" content="no-cache" />
 		
-		<link rel="stylesheet" href="../../styleguide/css/styleguide.css?1428684356" media="all">
-		<link rel="stylesheet" href="../../styleguide/css/styleguide-specific.css?1428684356" media="all" />
+		<link rel="stylesheet" href="../../styleguide/css/styleguide.css?1428695249" media="all">
+		<link rel="stylesheet" href="../../styleguide/css/styleguide-specific.css?1428695249" media="all" />
 		
 
     <!-- End Pattern Lab -->
@@ -4499,7 +4499,7 @@ p q r s t u v w x y z { | } ~
 						<h2 class="sg-pattern-head" ><a href="../../patterns/02-organisms-02-view-modes-01-innovation-teaser/02-organisms-02-view-modes-01-innovation-teaser.html" class="patternLink" data-patternpartial="organisms-innovation-teaser">Innovation Teaser</a></h2>
 						<div class="sg-pattern-body">
 							<article class="card">
-  <div>
+  <div class="card__image">
     <a href="#"><img src="http://fpoimg.com/500x300?text=Card 5:3" alt="Card 5:3" height="300" width="500">
 </a>
   </div>
@@ -4532,7 +4532,7 @@ p q r s t u v w x y z { | } ~
 								<pre class="sg-code-html">
 									<code>
 										&lt;article class=&quot;card&quot;&gt;
-  &lt;div&gt;
+  &lt;div class=&quot;card__image&quot;&gt;
     &lt;a href=&quot;#&quot;&gt;&lt;img src=&quot;http://fpoimg.com/500x300?text=Card 5:3&quot; alt=&quot;Card 5:3&quot; height=&quot;300&quot; width=&quot;500&quot;&gt;
 &lt;/a&gt;
   &lt;/div&gt;
@@ -4568,17 +4568,15 @@ p q r s t u v w x y z { | } ~
   <div class="card__content">
     <h3 class="card__primary-title"><a href="#">Title</a></h3>
     <div class="card__number">$30,000,000</div>
-    <div class="card__due-date">Due by: 3/21/2015</div>
+    <div class="card__due-date">Due by: 3/21/2015</div> 
     <div class="card__list">
-      <div class="card__list-item">
-        <label>Eligibility:</label> Lorem ipsum sit amet, cons ectetur adipiscing elit.
-      </div>
-      <div class="card__list-item">
-        <label>Level of Effort:</label> Lorem ipsum
-      </div>
-      <div class="card__list-item">
-        <label>Topics:</label> <a href="#">Agriculture</a>, <a href="#">Irrigation</a>
-      </div>
+      <div class="card__list-label">Eligibility:</div> Lorem ipsum sit amet, cons ectetur adipiscing elit.
+    </div>
+    <div class="card__list">
+      <div class="card__list-label">Level of Effort:</div> Lorem ipsum
+    </div>
+    <div class="card__list">
+      <div class="card__list-label">Topics:</div> <a href="#">Agriculture</a>, <a href="#">Irrigation</a>
     </div>
     <div class="card__counts">
       <div class="view">
@@ -4605,17 +4603,15 @@ p q r s t u v w x y z { | } ~
   &lt;div class=&quot;card__content&quot;&gt;
     &lt;h3 class=&quot;card__primary-title&quot;&gt;&lt;a href=&quot;#&quot;&gt;Title&lt;/a&gt;&lt;/h3&gt;
     &lt;div class=&quot;card__number&quot;&gt;$30,000,000&lt;/div&gt;
-    &lt;div class=&quot;card__due-date&quot;&gt;Due by: 3/21/2015&lt;/div&gt;
+    &lt;div class=&quot;card__due-date&quot;&gt;Due by: 3/21/2015&lt;/div&gt; 
     &lt;div class=&quot;card__list&quot;&gt;
-      &lt;div class=&quot;card__list-item&quot;&gt;
-        &lt;label&gt;Eligibility:&lt;/label&gt; Lorem ipsum sit amet, cons ectetur adipiscing elit.
-      &lt;/div&gt;
-      &lt;div class=&quot;card__list-item&quot;&gt;
-        &lt;label&gt;Level of Effort:&lt;/label&gt; Lorem ipsum
-      &lt;/div&gt;
-      &lt;div class=&quot;card__list-item&quot;&gt;
-        &lt;label&gt;Topics:&lt;/label&gt; &lt;a href=&quot;#&quot;&gt;Agriculture&lt;/a&gt;, &lt;a href=&quot;#&quot;&gt;Irrigation&lt;/a&gt;
-      &lt;/div&gt;
+      &lt;div class=&quot;card__list-label&quot;&gt;Eligibility:&lt;/div&gt; Lorem ipsum sit amet, cons ectetur adipiscing elit.
+    &lt;/div&gt;
+    &lt;div class=&quot;card__list&quot;&gt;
+      &lt;div class=&quot;card__list-label&quot;&gt;Level of Effort:&lt;/div&gt; Lorem ipsum
+    &lt;/div&gt;
+    &lt;div class=&quot;card__list&quot;&gt;
+      &lt;div class=&quot;card__list-label&quot;&gt;Topics:&lt;/div&gt; &lt;a href=&quot;#&quot;&gt;Agriculture&lt;/a&gt;, &lt;a href=&quot;#&quot;&gt;Irrigation&lt;/a&gt;
     &lt;/div&gt;
     &lt;div class=&quot;card__counts&quot;&gt;
       &lt;div class=&quot;view&quot;&gt;
@@ -4643,7 +4639,7 @@ p q r s t u v w x y z { | } ~
 						<h2 class="sg-pattern-head" ><a href="../../patterns/02-organisms-02-view-modes-03-organization-teaser/02-organisms-02-view-modes-03-organization-teaser.html" class="patternLink" data-patternpartial="organisms-organization-teaser">Organization Teaser</a></h2>
 						<div class="sg-pattern-body">
 							<article class="card">
-  <div>
+  <div class="card__image">
     <a href="#"><img src="http://fpoimg.com/500x300?text=Card 5:3" alt="Card 5:3" height="300" width="500">
 </a>
   </div>
@@ -4673,7 +4669,7 @@ p q r s t u v w x y z { | } ~
 								<pre class="sg-code-html">
 									<code>
 										&lt;article class=&quot;card&quot;&gt;
-  &lt;div&gt;
+  &lt;div class=&quot;card__image&quot;&gt;
     &lt;a href=&quot;#&quot;&gt;&lt;img src=&quot;http://fpoimg.com/500x300?text=Card 5:3&quot; alt=&quot;Card 5:3&quot; height=&quot;300&quot; width=&quot;500&quot;&gt;
 &lt;/a&gt;
   &lt;/div&gt;
@@ -4712,9 +4708,7 @@ p q r s t u v w x y z { | } ~
       <div class="card__author-date">03/15/2015</div>    
     </div>
     <div class="card__list">
-      <div class="card__list-item">
-        <label>Sectors:</label> <a href="#">Health</a>, <a href="#">Education</a>, <a href="#">Economic Growth</a>, <a href="#">Housing and Transportation</a>
-      </div>
+      <div class="card__list-label">Sectors:</div> <a href="#">Health</a>, <a href="#">Education</a>, <a href="#">Economic Growth</a>, <a href="#">Housing and Transportation</a>
     </div>
     <div class="card__counts">
       <div class="view">
@@ -4747,9 +4741,7 @@ p q r s t u v w x y z { | } ~
       &lt;div class=&quot;card__author-date&quot;&gt;03/15/2015&lt;/div&gt;    
     &lt;/div&gt;
     &lt;div class=&quot;card__list&quot;&gt;
-      &lt;div class=&quot;card__list-item&quot;&gt;
-        &lt;label&gt;Sectors:&lt;/label&gt; &lt;a href=&quot;#&quot;&gt;Health&lt;/a&gt;, &lt;a href=&quot;#&quot;&gt;Education&lt;/a&gt;, &lt;a href=&quot;#&quot;&gt;Economic Growth&lt;/a&gt;, &lt;a href=&quot;#&quot;&gt;Housing and Transportation&lt;/a&gt;
-      &lt;/div&gt;
+      &lt;div class=&quot;card__list-label&quot;&gt;Sectors:&lt;/div&gt; &lt;a href=&quot;#&quot;&gt;Health&lt;/a&gt;, &lt;a href=&quot;#&quot;&gt;Education&lt;/a&gt;, &lt;a href=&quot;#&quot;&gt;Economic Growth&lt;/a&gt;, &lt;a href=&quot;#&quot;&gt;Housing and Transportation&lt;/a&gt;
     &lt;/div&gt;
     &lt;div class=&quot;card__counts&quot;&gt;
       &lt;div class=&quot;view&quot;&gt;
@@ -4907,10 +4899,10 @@ p q r s t u v w x y z { | } ~
 			
 		}
 	</script>
-	<script id="pl-js-polyfill-insert-1428684356">
+	<script id="pl-js-polyfill-insert-1428695249">
 		(function() {
 			if (self != top) {
-				var cb = '1428684356';
+				var cb = '1428695249';
 				var js = [];
 				if (typeof document !== "undefined" && !("classList" in document.documentElement)) {
 					js.push("styleguide/js/vendor/classlist-polyfill.js");
@@ -4919,10 +4911,10 @@ p q r s t u v w x y z { | } ~
 			}
 		})();
 	</script>
-	<script id="pl-js-insert-1428684356">
+	<script id="pl-js-insert-1428695249">
 		(function() {
 			if (self != top) {
-				var cb = '1428684356';
+				var cb = '1428695249';
 				var js = [ { "src": "styleguide/js/vendor/jwerty.js", "dep": [ "styleguide/js/postmessage.js", { "src": "data/annotations.js", "dep": [ "styleguide/js/annotations-pattern.js" ] }, "styleguide/js/code-pattern.js" ] } ];
 				scriptLoader.run(js,cb,'pl-js-insert');
 			}
