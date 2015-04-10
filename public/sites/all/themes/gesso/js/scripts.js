@@ -64,13 +64,13 @@
           var tallest;
           var second = $(this).nextAll('.second').eq(0);
           var third = $(this).nextAll('.third').eq(0);
-          if (second.find('.card').height() < third.find('.card').height()) {
+          if (second.find('.card').height() <= third.find('.card').height()) {
             tallest = third.find('.card').height();
           }
-          if (second.find('.card').height() > third.find('.card').height()) {
+          if (second.find('.card').height() >= third.find('.card').height()) {
             tallest = second.find('.card').height();
           }
-          if (myheight > tallest) {
+          if (myheight >= tallest) {
             tallest = myheight;
           }
           $(this).find('.card').height(tallest);
