@@ -1,0 +1,12 @@
+<?php
+
+/**
+ * Implements hook_update_n
+ * run any updates here
+ */
+
+// Replace innovation image fieldtype
+function gie_innovation_update_7000() {
+    field_delete_field('field_innovation_image');
+    field_purge_batch(1);
+}
