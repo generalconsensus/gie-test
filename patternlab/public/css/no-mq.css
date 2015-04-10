@@ -2457,6 +2457,11 @@ header.header {
   }
 }
 
+/* line 4, ../sass/partials/components/_node.scss */
+.node--teaser-date h5 {
+  margin: 0;
+}
+
 /* line 4, ../sass/partials/components/_pager.scss */
 .pager {
   list-style: none;
