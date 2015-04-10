@@ -58,6 +58,69 @@ function gie_discussion_ds_field_settings_info() {
   );
   $export['node|discussion|full'] = $ds_fieldsetting;
 
+  $ds_fieldsetting = new stdClass();
+  $ds_fieldsetting->api_version = 1;
+  $ds_fieldsetting->id = 'node|discussion|listing';
+  $ds_fieldsetting->entity_type = 'node';
+  $ds_fieldsetting->bundle = 'discussion';
+  $ds_fieldsetting->view_mode = 'listing';
+  $ds_fieldsetting->settings = array(
+    'discussion_posted_by' => array(
+      'weight' => '3',
+      'label' => 'hidden',
+      'format' => 'default',
+    ),
+    'title_field' => array(
+      'formatter_settings' => array(
+        'ft' => array(),
+      ),
+    ),
+    'field_term_topic' => array(
+      'formatter_settings' => array(
+        'ft' => array(),
+      ),
+    ),
+  );
+  $export['node|discussion|listing'] = $ds_fieldsetting;
+
+  $ds_fieldsetting = new stdClass();
+  $ds_fieldsetting->api_version = 1;
+  $ds_fieldsetting->id = 'node|discussion|teaser';
+  $ds_fieldsetting->entity_type = 'node';
+  $ds_fieldsetting->bundle = 'discussion';
+  $ds_fieldsetting->view_mode = 'teaser';
+  $ds_fieldsetting->settings = array(
+    'node_link' => array(
+      'weight' => '1',
+      'label' => 'hidden',
+      'format' => 'default',
+      'formatter_settings' => array(
+        'link text' => 'View Discussion',
+        'wrapper' => '',
+        'class' => '',
+        'ft' => array(),
+        'field_delimiter' => '',
+        'linked_field' => array(
+          'linked' => 0,
+          'destination' => '',
+          'advanced' => array(
+            'title' => '',
+            'target' => '',
+            'class' => '',
+            'rel' => '',
+            'text' => '',
+          ),
+        ),
+      ),
+    ),
+    'field_discussion_desc' => array(
+      'formatter_settings' => array(
+        'ft' => array(),
+      ),
+    ),
+  );
+  $export['node|discussion|teaser'] = $ds_fieldsetting;
+
   return $export;
 }
 
@@ -177,6 +240,73 @@ function gie_discussion_ds_layout_settings_info() {
     'layout_link_custom' => '',
   );
   $export['node|discussion|full'] = $ds_layout;
+
+  $ds_layout = new stdClass();
+  $ds_layout->api_version = 1;
+  $ds_layout->id = 'node|discussion|listing';
+  $ds_layout->entity_type = 'node';
+  $ds_layout->bundle = 'discussion';
+  $ds_layout->view_mode = 'listing';
+  $ds_layout->layout = 'ds_2col';
+  $ds_layout->settings = array(
+    'regions' => array(
+      'left' => array(
+        0 => 'content_author_author_photo_display',
+      ),
+      'right' => array(
+        1 => 'title_field',
+        2 => 'field_term_topic',
+        3 => 'discussion_posted_by',
+      ),
+    ),
+    'fields' => array(
+      'content_author_author_photo_display' => 'left',
+      'title_field' => 'right',
+      'field_term_topic' => 'right',
+      'discussion_posted_by' => 'right',
+    ),
+    'classes' => array(),
+    'wrappers' => array(
+      'left' => 'div',
+      'right' => 'div',
+    ),
+    'layout_wrapper' => 'div',
+    'layout_attributes' => '',
+    'layout_attributes_merge' => 1,
+    'layout_link_attribute' => '',
+    'layout_link_custom' => '',
+  );
+  $export['node|discussion|listing'] = $ds_layout;
+
+  $ds_layout = new stdClass();
+  $ds_layout->api_version = 1;
+  $ds_layout->id = 'node|discussion|teaser';
+  $ds_layout->entity_type = 'node';
+  $ds_layout->bundle = 'discussion';
+  $ds_layout->view_mode = 'teaser';
+  $ds_layout->layout = 'ds_1col';
+  $ds_layout->settings = array(
+    'regions' => array(
+      'ds_content' => array(
+        0 => 'field_discussion_desc',
+        1 => 'node_link',
+      ),
+    ),
+    'fields' => array(
+      'field_discussion_desc' => 'ds_content',
+      'node_link' => 'ds_content',
+    ),
+    'classes' => array(),
+    'wrappers' => array(
+      'ds_content' => 'div',
+    ),
+    'layout_wrapper' => 'div',
+    'layout_attributes' => '',
+    'layout_attributes_merge' => 1,
+    'layout_link_attribute' => '',
+    'layout_link_custom' => '',
+  );
+  $export['node|discussion|teaser'] = $ds_layout;
 
   return $export;
 }
