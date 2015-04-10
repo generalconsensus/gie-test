@@ -1,0 +1,48 @@
+.connect {
+	background-color: $gray;
+	background-image: url(../images/members-icon.png);
+	background-position: 100% 100%;
+	background-repeat: no-repeat;
+	border-color: transparent #f2f2f2 #e6e6e6 #f2f2f2;
+	border-style: solid;
+	border-width: 1px;
+	box-shadow: #f2f2f2 0px 1px 5px 1px;
+	overflow: hidden;
+	padding: 20px;
+	position: relative;
+}
+
+.connect__title {
+	font-size: $font-size-md + 2px;
+	margin: 0 0 20px 0;
+	padding: 0;
+	text-transform: uppercase;
+}
+
+.connect__link {
+	@include image-replace(50px, 50px);
+	background-position: center center;
+	background-repeat: no-repeat;
+	
+  display: inline-block;
+	float: left;
+	margin: 0 10px 0 0;
+}
+
+.connect__link--facebook {
+		@include svg-background(facebook-icon);
+		background-color: #355f9f;
+		background-size: 12px 23px;
+}
+
+.connect__link--twitter {
+		@include svg-background(twitter-icon);
+		background-color: #2ba9e1;
+		background-size: 24px 20px;
+}
+
+.connect__link--linkedin {
+		@include svg-background(linkedin-icon);
+		background-color: #096b9b;
+		background-size: 23px 23px;
+}
