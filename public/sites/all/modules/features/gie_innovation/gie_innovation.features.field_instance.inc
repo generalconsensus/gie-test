@@ -1270,7 +1270,7 @@ function gie_innovation_field_default_field_instances() {
         'settings' => array(
           'field_delimiter' => '',
           'image_link' => '',
-          'image_style' => '',
+          'image_style' => 'card__500x300_',
           'linked_field' => array(
             'advanced' => array(
               'class' => '',
