@@ -5,9 +5,7 @@
   &lt;div class=&quot;region-content&quot;&gt;
 
     &lt;div class=&quot;l-panels-landing preface-empty title sidebar main&quot;&gt;
-      &lt;div class=&quot;l-preface layout-constrain&quot;&gt;
- 
-      &lt;/div&gt;
+      &lt;div class=&quot;l-preface layout-constrain&quot;&gt;&lt;/div&gt;
       &lt;div class=&quot;l-title region-landing-title&quot;&gt;
         &lt;div class=&quot;layout-constrain&quot;&gt;
           {{&gt; atoms-landing-page-intro }}
@@ -22,12 +20,36 @@
           &lt;/div&gt;
         &lt;/aside&gt;
         &lt;div class=&quot;l-main&quot;&gt;
-          &lt;div class=&quot;view--innovations-listing view--card-view&quot;&gt;
+          &lt;div class=&quot;view--card-view&quot;&gt;
             {{# listItems.nine }}
               &lt;div class=&quot;views-row&quot;&gt;
                 {{&gt; organisms-innovation-teaser }}
               &lt;/div&gt;
             {{/ listItems.nine }}
+          &lt;/div&gt;
+
+           &lt;div class=&quot;view--card-view&quot;&gt;
+            {{# listItems.three }}
+              &lt;div class=&quot;views-row&quot;&gt;
+                {{&gt; organisms-resource-teaser }}
+              &lt;/div&gt;
+            {{/ listItems.three }}
+          &lt;/div&gt;
+
+           &lt;div class=&quot;view--card-view&quot;&gt;
+            {{# listItems.three }}
+              &lt;div class=&quot;views-row&quot;&gt;
+                {{&gt; organisms-organization-teaser }}
+              &lt;/div&gt;
+            {{/ listItems.three }}
+          &lt;/div&gt;
+
+           &lt;div class=&quot;view--card-view&quot;&gt;
+            {{# listItems.three }}
+              &lt;div class=&quot;views-row&quot;&gt;
+                {{&gt; organisms-funding-op-teaser }}
+              &lt;/div&gt;
+            {{/ listItems.three }}
           &lt;/div&gt;
 
         &lt;/div&gt;

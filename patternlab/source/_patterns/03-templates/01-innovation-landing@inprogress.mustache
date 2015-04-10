@@ -5,9 +5,7 @@
   <div class="region-content">
 
     <div class="l-panels-landing preface-empty title sidebar main">
-      <div class="l-preface layout-constrain">
- 
-      </div>
+      <div class="l-preface layout-constrain"></div>
       <div class="l-title region-landing-title">
         <div class="layout-constrain">
           {{> atoms-landing-page-intro }}
@@ -22,12 +20,36 @@
           </div>
         </aside>
         <div class="l-main">
-          <div class="view--innovations-listing view--card-view">
+          <div class="view--card-view">
             {{# listItems.nine }}
               <div class="views-row">
                 {{> organisms-innovation-teaser }}
               </div>
             {{/ listItems.nine }}
+          </div>
+
+           <div class="view--card-view">
+            {{# listItems.three }}
+              <div class="views-row">
+                {{> organisms-resource-teaser }}
+              </div>
+            {{/ listItems.three }}
+          </div>
+
+           <div class="view--card-view">
+            {{# listItems.three }}
+              <div class="views-row">
+                {{> organisms-organization-teaser }}
+              </div>
+            {{/ listItems.three }}
+          </div>
+
+           <div class="view--card-view">
+            {{# listItems.three }}
+              <div class="views-row">
+                {{> organisms-funding-op-teaser }}
+              </div>
+            {{/ listItems.three }}
           </div>
 
         </div>

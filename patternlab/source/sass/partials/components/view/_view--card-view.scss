@@ -1,4 +1,5 @@
 .view--card-view {
+  overflow: hidden;
   .views-row {
     @include breakpoint(500px, $no-query: true) {
       float: left;
@@ -17,8 +18,8 @@
       padding-right: 0.5em;
     }
     &.second {
-      padding-left: 0.5em;
-      padding-right: 0.5em;
+      padding-left: 0.25em;
+      padding-right: 0.25em;
     }
     &.third {
       padding-left: 0.5em;
