@@ -14,7 +14,7 @@ function gie_discussion_strongarm() {
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'additional_settings__active_tab_discussion';
-  $strongarm->value = 'edit-comment';
+  $strongarm->value = 'edit-panelizer';
   $export['additional_settings__active_tab_discussion'] = $strongarm;
 
   $strongarm = new stdClass();
@@ -124,7 +124,7 @@ function gie_discussion_strongarm() {
         'custom_settings' => FALSE,
       ),
       'listing' => array(
-        'custom_settings' => FALSE,
+        'custom_settings' => TRUE,
       ),
       'teaser_date' => array(
         'custom_settings' => FALSE,
@@ -149,9 +149,29 @@ function gie_discussion_strongarm() {
             'weight' => '16',
             'visible' => FALSE,
           ),
+          'teaser' => array(
+            'weight' => '15',
+            'visible' => FALSE,
+          ),
+          'listing' => array(
+            'weight' => '16',
+            'visible' => FALSE,
+          ),
         ),
         'content_author_author_photo_display' => array(
           'full' => array(
+            'weight' => '0',
+            'visible' => TRUE,
+          ),
+          'teaser' => array(
+            'weight' => '8',
+            'visible' => FALSE,
+          ),
+          'default' => array(
+            'weight' => '10',
+            'visible' => TRUE,
+          ),
+          'listing' => array(
             'weight' => '0',
             'visible' => TRUE,
           ),
@@ -226,9 +246,9 @@ function gie_discussion_strongarm() {
         'choice' => 0,
       ),
       'teaser' => array(
-        'status' => 0,
-        'substitute' => 0,
-        'default' => 0,
+        'status' => 1,
+        'substitute' => '',
+        'default' => 1,
         'choice' => 0,
       ),
     ),
