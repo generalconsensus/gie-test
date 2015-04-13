@@ -36,10 +36,15 @@ function gie_funding_default_pane_data() {
   $template->container = 'funding_introduction';
   $template->lang = 'und';
   $template->data = array(
-    'value' => '<h1>Funding Opportunities</h1>
+    'value' => '<div class="pane--landing-intro__left">
+<h1>Funding Opportunities</h1>
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam at porttitor sem. Aliquam erat volutpat. Donec placerat nisl magna, et faucibus arcu condimentum sed. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam at porttitor sem. Aliquam erat volutpat. Donec placerat nisl magna, et faucibus arcu condimentum sed</p>
+</div>
+<div class="pane--landing-intro__right">
+<p><a href="/node/add/funding" class="button button--add">Add Funding Opp</a></p>
+</div>
 
-<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam at porttitor sem. Aliquam erat volutpat. Donec placerat nisl magna, et faucibus arcu condimentum sed. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam at porttitor sem. Aliquam erat volutpat. Donec placerat nisl magna, et faucibus arcu condimentum sed.</p>
-<a class="button button--alt" href="/node/add/funding">Add Funding Opp</a>',
+',
     'format' => 'full_html',
     'title' => NULL,
   );
