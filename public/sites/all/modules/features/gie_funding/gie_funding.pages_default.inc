@@ -43,7 +43,7 @@ function gie_funding_default_page_manager_pages() {
     'relationships' => array(),
   );
   $display = new panels_display();
-  $display->layout = 'sidebar_left';
+  $display->layout = 'landing';
   $display->layout_settings = array();
   $display->panel_settings = array(
     'style_settings' => array(
@@ -51,6 +51,7 @@ function gie_funding_default_page_manager_pages() {
       'preface' => NULL,
       'sidebar' => NULL,
       'main' => NULL,
+      'title' => NULL,
     ),
   );
   $display->cache = array();
@@ -77,29 +78,6 @@ function gie_funding_default_page_manager_pages() {
     $pane->uuid = '37707f0a-0209-4a3c-80b3-384fe53763cb';
     $display->content['new-37707f0a-0209-4a3c-80b3-384fe53763cb'] = $pane;
     $display->panels['main'][0] = 'new-37707f0a-0209-4a3c-80b3-384fe53763cb';
-    $pane = new stdClass();
-    $pane->pid = 'new-283689d1-f32d-4123-b3d7-4e87f1c362a8';
-    $pane->panel = 'preface';
-    $pane->type = 'pane';
-    $pane->subtype = 'funding_introduction';
-    $pane->shown = TRUE;
-    $pane->access = array();
-    $pane->configuration = array(
-      'override_title' => 1,
-      'override_title_text' => '',
-      'override_title_heading' => 'h2',
-    );
-    $pane->cache = array();
-    $pane->style = array(
-      'settings' => NULL,
-    );
-    $pane->css = array();
-    $pane->extras = array();
-    $pane->position = 0;
-    $pane->locks = array();
-    $pane->uuid = '283689d1-f32d-4123-b3d7-4e87f1c362a8';
-    $display->content['new-283689d1-f32d-4123-b3d7-4e87f1c362a8'] = $pane;
-    $display->panels['preface'][0] = 'new-283689d1-f32d-4123-b3d7-4e87f1c362a8';
     $pane = new stdClass();
     $pane->pid = 'new-84e5e390-844b-40ce-9f02-150757d0083a';
     $pane->panel = 'sidebar';
@@ -284,6 +262,32 @@ function gie_funding_default_page_manager_pages() {
     $pane->uuid = 'd02736c2-f8b9-4ef4-b9f0-4cd88089eed1';
     $display->content['new-d02736c2-f8b9-4ef4-b9f0-4cd88089eed1'] = $pane;
     $display->panels['sidebar'][7] = 'new-d02736c2-f8b9-4ef4-b9f0-4cd88089eed1';
+    $pane = new stdClass();
+    $pane->pid = 'new-283689d1-f32d-4123-b3d7-4e87f1c362a8';
+    $pane->panel = 'title';
+    $pane->type = 'pane';
+    $pane->subtype = 'funding_introduction';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array(
+      'override_title' => 1,
+      'override_title_text' => '',
+      'override_title_heading' => 'h2',
+    );
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
+    $pane->css = array(
+      'css_id' => '',
+      'css_class' => 'pane pane--landing-intro',
+    );
+    $pane->extras = array();
+    $pane->position = 0;
+    $pane->locks = array();
+    $pane->uuid = '283689d1-f32d-4123-b3d7-4e87f1c362a8';
+    $display->content['new-283689d1-f32d-4123-b3d7-4e87f1c362a8'] = $pane;
+    $display->panels['title'][0] = 'new-283689d1-f32d-4123-b3d7-4e87f1c362a8';
   $display->hide_title = PANELS_TITLE_FIXED;
   $display->title_pane = '0';
   $handler->conf['display'] = $display;
