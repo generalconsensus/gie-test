@@ -5,8 +5,60 @@
  * run any updates here
  */
 
+/**
+ * Imlpements hook_install().
+ */
+function gie_innovation_install() {
+
+
+}
+
+/**
+ * Add default image
+ */
+function gie_innovation_add_default_image() {
+
+    // Create the innovation.featured_image field's default file reference.
+    $filename = 'innovation-default-image.jpg';
+    $origfile = drupal_get_path('module', 'gie_innovation') . '/images/' . $filename;
+    $uri = 'public://default_images/' . $filename;
+    $file = (object) array(
+        'uid' => 1,
+        'filename' => $filename,
+        'uri' => $origfile,
+        'filemime' => 'image/jpg',
+        'filesize' => filesize($origfile),
+        'status' => FILE_STATUS_PERMANENT,
+    );
+    $file = file_copy($file, $uri, FILE_EXISTS_REPLACE);
+    variable_set('gie_innovation_image_fid', $file->fid);
+
+}
+
+/**
+ * Implements hook_field_default_field_instances_alter().
+ *
+ * Set the default image.
+ */
+function gie_innovation_field_default_field_instances_alter(&$fields) {
+    if (isset($fields['node-innovation-field_innovation_image']['settings']['default_image'])) {
+        $fid = $fields['node-innovation-field_innovation_image']['settings']['default_image'];
+        $fields['node-innovation-field_innovation_image']['settings']['default_image'] = variable_get('gie_innovation_image_fid', $fid);
+    }
+}
+
 // Replace innovation image fieldtype
 function gie_innovation_update_7000() {
     field_delete_field('field_innovation_image');
     field_purge_batch(1);
+}
+
+// Replace innovation image fieldtype
+function gie_innovation_update_7001() {
+    gie_innovation_add_default_image();
+}
+
+// Replace innovation image fieldtype
+function gie_innovation_update_7002() {
+    gie_innovation_add_default_image();
 }

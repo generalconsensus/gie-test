@@ -37,12 +37,14 @@ function gie_innovation_default_pane_data() {
   $template->lang = 'und';
   $template->data = array(
     'value' => '<div class="pane--landing-intro__left">
-  <h1>Innovations / Ideas</h1>
-  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam at porttitor sem. Aliquam erat volutpat. Donec placerat nisl magna, et faucibus arcu condimentum sed. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam at porttitor sem. Aliquam erat volutpat. Donec placerat nisl magna, et faucibus arcu condimentum sed</p>
+<h1>Innovations / Ideas</h1>
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam at porttitor sem. Aliquam erat volutpat. Donec placerat nisl magna, et faucibus arcu condimentum sed. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam at porttitor sem. Aliquam erat volutpat. Donec placerat nisl magna, et faucibus arcu condimentum sed</p>
 </div>
+
 <div class="pane--landing-intro__right">
-  <p><a href="/node/add/innovation" class="button button--add">Add An Innovation</a></p>
-</div>',
+<p><a href="/node/add/innovation" class="button button--add">Add An Innovation</a></p>
+</div>
+',
     'format' => 'full_html',
     'title' => NULL,
   );
