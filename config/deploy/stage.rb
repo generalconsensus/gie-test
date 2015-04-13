@@ -1,5 +1,5 @@
 # The stage to use
-set :stage, :dev
+set :stage, :stage
 
 # An array containing site URL, used for Varnish bans
 set :site_url, %w{stage.giexchange.forumone.com}
