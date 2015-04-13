@@ -46,7 +46,7 @@ function gie_innovation_default_page_manager_pages() {
     'relationships' => array(),
   );
   $display = new panels_display();
-  $display->layout = 'sidebar_left';
+  $display->layout = 'landing';
   $display->layout_settings = array();
   $display->panel_settings = array(
     'style_settings' => array(
@@ -81,32 +81,6 @@ function gie_innovation_default_page_manager_pages() {
     $pane->uuid = '60e54368-d1e2-4601-b729-207dc5ad91da';
     $display->content['new-60e54368-d1e2-4601-b729-207dc5ad91da'] = $pane;
     $display->panels['main'][0] = 'new-60e54368-d1e2-4601-b729-207dc5ad91da';
-    $pane = new stdClass();
-    $pane->pid = 'new-ab129232-d653-4beb-81ff-207733b5da27';
-    $pane->panel = 'preface';
-    $pane->type = 'pane';
-    $pane->subtype = 'innovations_introduction';
-    $pane->shown = TRUE;
-    $pane->access = array();
-    $pane->configuration = array(
-      'override_title' => 1,
-      'override_title_text' => '',
-      'override_title_heading' => 'h2',
-    );
-    $pane->cache = array();
-    $pane->style = array(
-      'settings' => NULL,
-    );
-    $pane->css = array(
-      'css_id' => '',
-      'css_class' => 'pane pane--landing-intro',
-    );
-    $pane->extras = array();
-    $pane->position = 0;
-    $pane->locks = array();
-    $pane->uuid = 'ab129232-d653-4beb-81ff-207733b5da27';
-    $display->content['new-ab129232-d653-4beb-81ff-207733b5da27'] = $pane;
-    $display->panels['preface'][0] = 'new-ab129232-d653-4beb-81ff-207733b5da27';
     $pane = new stdClass();
     $pane->pid = 'new-10c3ab0c-cb27-48c7-8059-bf5e19685bee';
     $pane->panel = 'sidebar';
@@ -452,6 +426,32 @@ function gie_innovation_default_page_manager_pages() {
     $pane->uuid = '69861551-e0fa-4eb0-a86e-f8b3ce27b104';
     $display->content['new-69861551-e0fa-4eb0-a86e-f8b3ce27b104'] = $pane;
     $display->panels['sidebar'][14] = 'new-69861551-e0fa-4eb0-a86e-f8b3ce27b104';
+    $pane = new stdClass();
+    $pane->pid = 'new-ab129232-d653-4beb-81ff-207733b5da27';
+    $pane->panel = 'title';
+    $pane->type = 'pane';
+    $pane->subtype = 'innovations_introduction';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array(
+      'override_title' => 1,
+      'override_title_text' => '',
+      'override_title_heading' => 'h2',
+    );
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
+    $pane->css = array(
+      'css_id' => '',
+      'css_class' => 'pane pane--landing-intro',
+    );
+    $pane->extras = array();
+    $pane->position = 0;
+    $pane->locks = array();
+    $pane->uuid = 'ab129232-d653-4beb-81ff-207733b5da27';
+    $display->content['new-ab129232-d653-4beb-81ff-207733b5da27'] = $pane;
+    $display->panels['title'][0] = 'new-ab129232-d653-4beb-81ff-207733b5da27';
   $display->hide_title = PANELS_TITLE_FIXED;
   $display->title_pane = '0';
   $handler->conf['display'] = $display;
