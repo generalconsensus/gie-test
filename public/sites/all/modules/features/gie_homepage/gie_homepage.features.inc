@@ -28,6 +28,14 @@ function gie_homepage_views_api($module = NULL, $api = NULL) {
  */
 function gie_homepage_node_info() {
   $items = array(
+    'action_card' => array(
+      'name' => t('Action card'),
+      'base' => 'node_content',
+      'description' => '',
+      'has_title' => '1',
+      'title_label' => t('Title'),
+      'help' => '',
+    ),
     'homepage' => array(
       'name' => t('Homepage'),
       'base' => 'node_content',

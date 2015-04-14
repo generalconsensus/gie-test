@@ -68,6 +68,21 @@ function gie_homepage_views_default_views() {
 
   /* Display: Personas */
   $handler = $view->new_display('panel_pane', 'Personas', 'personas_pane');
+
+  /* Display: Action cards */
+  $handler = $view->new_display('panel_pane', 'Action cards', 'action_card_panes');
+  $handler->display->display_options['defaults']['title'] = FALSE;
+  $handler->display->display_options['title'] = 'Find your place on the Exchange';
+  $handler->display->display_options['defaults']['pager'] = FALSE;
+  $handler->display->display_options['pager']['type'] = 'some';
+  $handler->display->display_options['pager']['options']['items_per_page'] = '8';
+  $handler->display->display_options['pager']['options']['offset'] = '0';
+  $handler->display->display_options['defaults']['relationships'] = FALSE;
+  /* Relationship: Entity Reference: Referencing entity */
+  $handler->display->display_options['relationships']['reverse_field_homepage_action_cards_node']['id'] = 'reverse_field_homepage_action_cards_node';
+  $handler->display->display_options['relationships']['reverse_field_homepage_action_cards_node']['table'] = 'node';
+  $handler->display->display_options['relationships']['reverse_field_homepage_action_cards_node']['field'] = 'reverse_field_homepage_action_cards_node';
+  $handler->display->display_options['relationships']['reverse_field_homepage_action_cards_node']['required'] = TRUE;
   $export['homepage_views'] = $view;
 
   return $export;
