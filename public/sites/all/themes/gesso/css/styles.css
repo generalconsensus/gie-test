@@ -3260,7 +3260,7 @@ aside .pane__title {
 .region-meta {
   background: #003359 url(../images/geometricshape.png) no-repeat 100% 0;
   color: #fff;
-  margin: 2em 0;
+  margin: 0 0 2em 0;
   padding: 2em 0 0 0;
 }
 /* line 8, ../sass/partials/components/_region-meta.scss */
