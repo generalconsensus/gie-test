@@ -38,6 +38,7 @@ function gie_resource_panelizer_defaults() {
       'preface' => NULL,
       'main' => NULL,
       'sidebar' => NULL,
+      'title' => NULL,
     ),
   );
   $display->cache = array();
@@ -71,8 +72,36 @@ function gie_resource_panelizer_defaults() {
     $display->content['new-43d05cb5-1838-4796-9a66-1218bf202f4a'] = $pane;
     $display->panels['main'][0] = 'new-43d05cb5-1838-4796-9a66-1218bf202f4a';
     $pane = new stdClass();
+    $pane->pid = 'new-19840ee3-2761-402f-bdfc-14e8cd0a00ea';
+    $pane->panel = 'sidebar';
+    $pane->type = 'flag_link';
+    $pane->subtype = 'node';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array(
+      'flag_name' => 'favorite',
+      'context' => 'panelizer',
+      'override_title' => 1,
+      'override_title_text' => 'Like This Resource? <p>Add it to your favorites.</p>',
+      'override_title_heading' => 'h2',
+    );
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
+    $pane->css = array(
+      'css_id' => '',
+      'css_class' => 'pane--favorite-this',
+    );
+    $pane->extras = array();
+    $pane->position = 0;
+    $pane->locks = array();
+    $pane->uuid = '19840ee3-2761-402f-bdfc-14e8cd0a00ea';
+    $display->content['new-19840ee3-2761-402f-bdfc-14e8cd0a00ea'] = $pane;
+    $display->panels['sidebar'][0] = 'new-19840ee3-2761-402f-bdfc-14e8cd0a00ea';
+    $pane = new stdClass();
     $pane->pid = 'new-b1cf1f05-c093-4e33-8887-6e9086db3345';
-    $pane->panel = 'preface';
+    $pane->panel = 'title';
     $pane->type = 'page_title';
     $pane->subtype = 'page_title';
     $pane->shown = TRUE;
@@ -95,32 +124,7 @@ function gie_resource_panelizer_defaults() {
     $pane->locks = array();
     $pane->uuid = 'b1cf1f05-c093-4e33-8887-6e9086db3345';
     $display->content['new-b1cf1f05-c093-4e33-8887-6e9086db3345'] = $pane;
-    $display->panels['preface'][0] = 'new-b1cf1f05-c093-4e33-8887-6e9086db3345';
-    $pane = new stdClass();
-    $pane->pid = 'new-19840ee3-2761-402f-bdfc-14e8cd0a00ea';
-    $pane->panel = 'sidebar';
-    $pane->type = 'flag_link';
-    $pane->subtype = 'node';
-    $pane->shown = TRUE;
-    $pane->access = array();
-    $pane->configuration = array(
-      'flag_name' => 'favorite',
-      'context' => 'panelizer',
-      'override_title' => 1,
-      'override_title_text' => '',
-      'override_title_heading' => 'h2',
-    );
-    $pane->cache = array();
-    $pane->style = array(
-      'settings' => NULL,
-    );
-    $pane->css = array();
-    $pane->extras = array();
-    $pane->position = 0;
-    $pane->locks = array();
-    $pane->uuid = '19840ee3-2761-402f-bdfc-14e8cd0a00ea';
-    $display->content['new-19840ee3-2761-402f-bdfc-14e8cd0a00ea'] = $pane;
-    $display->panels['sidebar'][0] = 'new-19840ee3-2761-402f-bdfc-14e8cd0a00ea';
+    $display->panels['title'][0] = 'new-b1cf1f05-c093-4e33-8887-6e9086db3345';
   $display->hide_title = PANELS_TITLE_FIXED;
   $display->title_pane = '0';
   $panelizer->display = $display;
