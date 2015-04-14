@@ -234,32 +234,6 @@ function gie_funding_panelizer_defaults() {
     $display->content['new-d587f839-0603-4f2e-af0a-8a1ad1ad9414'] = $pane;
     $display->panels['box_third'][0] = 'new-d587f839-0603-4f2e-af0a-8a1ad1ad9414';
     $pane = new stdClass();
-    $pane->pid = 'new-bac8ccb6-7fb6-4d7b-b082-194d45b24273';
-    $pane->panel = 'hero';
-    $pane->type = 'page_title';
-    $pane->subtype = 'page_title';
-    $pane->shown = TRUE;
-    $pane->access = array();
-    $pane->configuration = array(
-      'markup' => 'h1',
-      'class' => '',
-      'id' => '',
-      'override_title' => 0,
-      'override_title_text' => '',
-      'override_title_heading' => 'h2',
-    );
-    $pane->cache = array();
-    $pane->style = array(
-      'settings' => NULL,
-    );
-    $pane->css = array();
-    $pane->extras = array();
-    $pane->position = 0;
-    $pane->locks = array();
-    $pane->uuid = 'bac8ccb6-7fb6-4d7b-b082-194d45b24273';
-    $display->content['new-bac8ccb6-7fb6-4d7b-b082-194d45b24273'] = $pane;
-    $display->panels['hero'][0] = 'new-bac8ccb6-7fb6-4d7b-b082-194d45b24273';
-    $pane = new stdClass();
     $pane->pid = 'new-4fd1d3e2-1aef-404b-9b63-e30162602a2f';
     $pane->panel = 'main';
     $pane->type = 'entity_field';
@@ -362,6 +336,32 @@ function gie_funding_panelizer_defaults() {
     $pane->uuid = '79698f57-9ad4-49d0-b14a-be615f249c98';
     $display->content['new-79698f57-9ad4-49d0-b14a-be615f249c98'] = $pane;
     $display->panels['main_sidebar'][0] = 'new-79698f57-9ad4-49d0-b14a-be615f249c98';
+    $pane = new stdClass();
+    $pane->pid = 'new-c9d2b405-c0d2-409f-92d2-16b36dfbfad8';
+    $pane->panel = 'title';
+    $pane->type = 'page_title';
+    $pane->subtype = 'page_title';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array(
+      'markup' => 'h1',
+      'class' => '',
+      'id' => '',
+      'override_title' => 0,
+      'override_title_text' => '',
+      'override_title_heading' => 'h2',
+    );
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
+    $pane->css = array();
+    $pane->extras = array();
+    $pane->position = 0;
+    $pane->locks = array();
+    $pane->uuid = 'c9d2b405-c0d2-409f-92d2-16b36dfbfad8';
+    $display->content['new-c9d2b405-c0d2-409f-92d2-16b36dfbfad8'] = $pane;
+    $display->panels['title'][0] = 'new-c9d2b405-c0d2-409f-92d2-16b36dfbfad8';
   $display->hide_title = PANELS_TITLE_FIXED;
   $display->title_pane = '0';
   $panelizer->display = $display;
