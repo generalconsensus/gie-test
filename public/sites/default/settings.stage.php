@@ -590,8 +590,8 @@ $conf['search_api_solr_overrides'] = array(
     'name' => t('Solr Server (Overridden)'),
     'options' => array(
       'host' => 'localhost',
-      'port' => 8983,
-      'path' => '/solr/drupal'
+      'port' => 8984,
+      'path' => '/solr/stage'
     )
   )
 );
