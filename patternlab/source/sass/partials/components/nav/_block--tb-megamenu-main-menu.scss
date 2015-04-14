@@ -2,7 +2,7 @@
   content: "";
   display: inline-block;
   height: 22px;
-  margin-right: 8px;
+  margin-right: 5px;
   position: relative;
   top: 5px;
   width: 22px;
@@ -15,9 +15,15 @@
     @include breakpoint($mobile-menu-bp, $no-query: true) {
       display: block;
     }
-    left: 200px;
+    left: 0;
+    @include breakpoint(1140px, $no-query: true) {
+      left: 200px;
+    }
     position: absolute;
-    top: 0;
+    top: 51px;
+    @include breakpoint(1140px, $no-query: true) {
+      top: 0;
+    }
     @media print {
       display: none;
     }
