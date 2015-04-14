@@ -34,6 +34,9 @@ function gie_user_strongarm() {
       'title' => array(
         'custom_settings' => TRUE,
       ),
+      'resource_user' => array(
+        'custom_settings' => TRUE,
+      ),
     ),
     'extra_fields' => array(
       'form' => array(
@@ -69,6 +72,10 @@ function gie_user_strongarm() {
             'weight' => '9',
             'visible' => FALSE,
           ),
+          'resource_user' => array(
+            'weight' => '9',
+            'visible' => FALSE,
+          ),
         ),
         'flag_follow' => array(
           'full' => array(
@@ -89,6 +96,10 @@ function gie_user_strongarm() {
           ),
           'title' => array(
             'weight' => '14',
+            'visible' => FALSE,
+          ),
+          'resource_user' => array(
+            'weight' => '16',
             'visible' => FALSE,
           ),
         ),
