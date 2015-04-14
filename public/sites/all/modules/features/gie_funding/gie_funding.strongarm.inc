@@ -153,11 +153,43 @@ function gie_funding_strongarm() {
             'weight' => '14',
             'visible' => FALSE,
           ),
+          'listing' => array(
+            'weight' => '14',
+            'visible' => FALSE,
+          ),
         ),
         'funding_fields_contact' => array(
           'full' => array(
             'weight' => '4',
             'visible' => FALSE,
+          ),
+          'listing' => array(
+            'weight' => '13',
+            'visible' => FALSE,
+          ),
+        ),
+        'funding_listing_counts_comments' => array(
+          'listing' => array(
+            'weight' => '7',
+            'visible' => TRUE,
+          ),
+        ),
+        'funding_listing_counts_favorites' => array(
+          'listing' => array(
+            'weight' => '8',
+            'visible' => TRUE,
+          ),
+        ),
+        'funding_counters_comment_count' => array(
+          'listing' => array(
+            'weight' => '7',
+            'visible' => TRUE,
+          ),
+        ),
+        'funding_counters_favorite_count' => array(
+          'listing' => array(
+            'weight' => '8',
+            'visible' => TRUE,
           ),
         ),
       ),
@@ -276,6 +308,25 @@ function gie_funding_strongarm() {
   $strongarm->name = 'panelizer_node:funding:teaser_selection';
   $strongarm->value = 0;
   $export['panelizer_node:funding:teaser_selection'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'sharethis_funding_options';
+  $strongarm->value = array(
+    'full' => 0,
+    'teaser' => 0,
+    'rss' => 0,
+    'search_index' => 0,
+    'search_result' => 0,
+    'diff_standard' => 0,
+    'token' => 0,
+    'listing' => 0,
+    'teaser_date' => 0,
+    'contact' => 0,
+    'revision' => 0,
+  );
+  $export['sharethis_funding_options'] = $strongarm;
 
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */

@@ -86,6 +86,15 @@ function gie_funding_user_default_permissions() {
     'module' => 'node',
   );
 
+  // Exported permission: 'delete terms in funding_type'.
+  $permissions['delete terms in funding_type'] = array(
+    'name' => 'delete terms in funding_type',
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
+    'module' => 'taxonomy',
+  );
+
   // Exported permission: 'edit any funding content'.
   $permissions['edit any funding content'] = array(
     'name' => 'edit any funding content',
@@ -102,6 +111,15 @@ function gie_funding_user_default_permissions() {
       'administrator' => 'administrator',
     ),
     'module' => 'node',
+  );
+
+  // Exported permission: 'edit terms in funding_type'.
+  $permissions['edit terms in funding_type'] = array(
+    'name' => 'edit terms in funding_type',
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
+    'module' => 'taxonomy',
   );
 
   return $permissions;
