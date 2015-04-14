@@ -4,6 +4,11 @@
   position: relative;
 }
 
+.card__type {
+  font-size: em($font-size-sm);
+  text-transform: uppercase;
+}
+
 .card__image {
   line-height: 0;
 }
@@ -15,17 +20,47 @@
 .card__title {
   font-weight: normal;
   margin: 0 0 0.75em 0;
+  a {
+    font-weight: normal;
+  }
 }
 
 .card__primary-title {
+  @extend .card__title;
   border-bottom: 1px solid $card-border-color;
-  font-weight: normal;
-  margin: 0 0 0.75em 0;
   padding: 0 0 0.75em 0;
 }
 
-.card__list {
+.card__author {
+  font-size: em($font-size-sm);
+  line-height: 1.3;
+  overflow: hidden;
+  .card__author-image {
+    float: left;
+    margin: 0 0.5em 0 0;
+    img {
+      @include border-radius(50%);
+      border: 1px solid $border-color;
+    }
+  }
+  .card__author-name {
+    font-weight: bold;
+  }
+  .card__author-date {
+     
+  }
+}
+
+.card__number {
+  font-size: em($font-size-xl);
+}
+
+.card__due-date {
   font-size: em($font-size-md);
+}
+
+.card__list {
+  font-size: em($font-size-sm);
   line-height: 1.3;
   margin: 1em 0;
 }

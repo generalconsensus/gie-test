@@ -1,11 +1,11 @@
 .site-name {
   left: 10px; // offset layout-constrain padding
   position: absolute;
-  top: 3px;
+  top: 7px;
 }
 
 .site-name__link {
-  @include image-replace(180px,44px);
-  background: url(../images/logo.png) no-repeat 0 0;
+  @include image-replace(179px,36px);
+  @include svg-background(logo);
   display: block;
 }
