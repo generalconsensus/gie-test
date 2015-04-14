@@ -56,6 +56,7 @@ features[filter][] = full_html
 features[filter][] = plain_text
 features[image][] = card__500x300_
 features[image][] = org_teaser
+features[image][] = resource_author__35x35_
 features[user_permission][] = access assets overview
 features[user_permission][] = administer asset types
 features[user_permission][] = administer assets

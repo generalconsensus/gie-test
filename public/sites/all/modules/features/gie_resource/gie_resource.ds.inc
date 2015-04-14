@@ -57,35 +57,59 @@ function gie_resource_ds_field_settings_info() {
   $ds_fieldsetting->bundle = 'resource';
   $ds_fieldsetting->view_mode = 'listing';
   $ds_fieldsetting->settings = array(
-    'node_link' => array(
-      'weight' => '5',
-      'label' => 'hidden',
-      'format' => 'default',
+    'title_field' => array(
       'formatter_settings' => array(
-        'link text' => 'View',
-        'wrapper' => '',
-        'class' => '',
-        'ft' => array(),
-        'field_delimiter' => '',
-        'linked_field' => array(
-          'linked' => 0,
-          'destination' => '',
-          'advanced' => array(
-            'title' => '',
-            'target' => '',
-            'class' => '',
-            'rel' => '',
-            'text' => '',
-          ),
+        'ft' => array(
+          'func' => 'theme_ds_field_expert',
+          'fi' => TRUE,
+          'fi-el' => 'h3',
+          'fi-cl' => 'card__primary-title',
+          'fi-at' => '',
+          'fi-def-at' => FALSE,
+          'fi-odd-even' => FALSE,
         ),
       ),
     ),
-    'author' => array(
-      'weight' => '2',
-      'label' => 'hidden',
-      'format' => 'author',
+    'field_resource_date' => array(
       'formatter_settings' => array(
-        'ft' => array(),
+        'ft' => array(
+          'func' => 'theme_ds_field_expert',
+          'fi' => TRUE,
+          'fi-el' => 'div',
+          'fi-cl' => 'card__author-date',
+          'fi-at' => '',
+          'fi-def-at' => FALSE,
+          'fi-odd-even' => FALSE,
+        ),
+      ),
+    ),
+    'field_resource_type' => array(
+      'formatter_settings' => array(
+        'ft' => array(
+          'func' => 'theme_ds_field_expert',
+          'fi' => TRUE,
+          'fi-el' => 'h2',
+          'fi-cl' => 'card__type',
+          'fi-at' => '',
+          'fi-def-at' => FALSE,
+          'fi-odd-even' => FALSE,
+        ),
+      ),
+    ),
+    'field_term_sector' => array(
+      'formatter_settings' => array(
+        'ft' => array(
+          'func' => 'theme_ds_field_expert',
+          'lb' => 'Sectors',
+          'lb-el' => 'div',
+          'lb-cl' => 'card__list-label',
+          'ow' => TRUE,
+          'ow-el' => 'div',
+          'ow-cl' => 'card__list',
+          'ow-def-cl' => FALSE,
+          'ow-at' => '',
+          'ow-def-at' => FALSE,
+        ),
       ),
     ),
   );
@@ -222,33 +246,43 @@ function gie_resource_ds_layout_settings_info() {
   $ds_layout->entity_type = 'node';
   $ds_layout->bundle = 'resource';
   $ds_layout->view_mode = 'listing';
-  $ds_layout->layout = 'ds_1col';
+  $ds_layout->layout = 'article';
   $ds_layout->settings = array(
     'regions' => array(
-      'ds_content' => array(
-        0 => 'field_resource_type',
-        1 => 'title_field',
-        2 => 'author',
-        3 => 'field_resource_date',
-        4 => 'field_resource_sector',
-        5 => 'node_link',
-        6 => 'resource_counters_comment_count',
-        7 => 'resource_counters_favorite_count',
+      'main_content' => array(
+        0 => 'group_card_content',
+        1 => 'field_resource_type',
+        2 => 'title_field',
+        3 => 'group_card_author',
+        4 => 'field_resource_author',
+        5 => 'field_term_sector',
+        6 => 'group_card_counts',
+        7 => 'field_resource_date',
+        8 => 'resource_counters_comment_count',
+        9 => 'resource_counters_favorite_count',
       ),
     ),
     'fields' => array(
-      'field_resource_type' => 'ds_content',
-      'title_field' => 'ds_content',
-      'author' => 'ds_content',
-      'field_resource_date' => 'ds_content',
-      'field_resource_sector' => 'ds_content',
-      'node_link' => 'ds_content',
-      'resource_counters_comment_count' => 'ds_content',
-      'resource_counters_favorite_count' => 'ds_content',
+      'group_card_content' => 'main_content',
+      'field_resource_type' => 'main_content',
+      'title_field' => 'main_content',
+      'group_card_author' => 'main_content',
+      'field_resource_author' => 'main_content',
+      'field_term_sector' => 'main_content',
+      'group_card_counts' => 'main_content',
+      'field_resource_date' => 'main_content',
+      'resource_counters_comment_count' => 'main_content',
+      'resource_counters_favorite_count' => 'main_content',
     ),
-    'classes' => array(),
+    'classes' => array(
+      'layout_class' => array(
+        'card' => 'card',
+      ),
+    ),
     'wrappers' => array(
-      'ds_content' => 'div',
+      'header' => 'div',
+      'main_content' => 'div',
+      'footer' => 'div',
     ),
     'layout_wrapper' => 'div',
     'layout_attributes' => '',
