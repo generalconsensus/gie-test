@@ -156,6 +156,29 @@ function gie_general_default_page_manager_pages() {
     $display->content['new-3cc603b0-9dd3-45db-a074-2d9b550fa747'] = $pane;
     $display->panels['middle'][4] = 'new-3cc603b0-9dd3-45db-a074-2d9b550fa747';
     $pane = new stdClass();
+    $pane->pid = 'new-a6c7b280-264f-43ef-824a-4a382941bc5b';
+    $pane->panel = 'middle';
+    $pane->type = 'pane';
+    $pane->subtype = 'homepage_footer_callout';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array(
+      'override_title' => 1,
+      'override_title_text' => '',
+      'override_title_heading' => 'h2',
+    );
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
+    $pane->css = array();
+    $pane->extras = array();
+    $pane->position = 5;
+    $pane->locks = array();
+    $pane->uuid = 'a6c7b280-264f-43ef-824a-4a382941bc5b';
+    $display->content['new-a6c7b280-264f-43ef-824a-4a382941bc5b'] = $pane;
+    $display->panels['middle'][5] = 'new-a6c7b280-264f-43ef-824a-4a382941bc5b';
+    $pane = new stdClass();
     $pane->pid = 'new-50980e06-fd50-4032-8cfd-b39d9df3f239';
     $pane->panel = 'middle';
     $pane->type = 'pane';
@@ -173,11 +196,11 @@ function gie_general_default_page_manager_pages() {
     );
     $pane->css = array();
     $pane->extras = array();
-    $pane->position = 5;
+    $pane->position = 6;
     $pane->locks = array();
     $pane->uuid = '50980e06-fd50-4032-8cfd-b39d9df3f239';
     $display->content['new-50980e06-fd50-4032-8cfd-b39d9df3f239'] = $pane;
-    $display->panels['middle'][5] = 'new-50980e06-fd50-4032-8cfd-b39d9df3f239';
+    $display->panels['middle'][6] = 'new-50980e06-fd50-4032-8cfd-b39d9df3f239';
   $display->hide_title = PANELS_TITLE_FIXED;
   $display->title_pane = '0';
   $handler->conf['display'] = $display;
