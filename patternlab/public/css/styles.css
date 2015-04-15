@@ -1727,6 +1727,20 @@ input.throbbing {
   width: 0;
 }
 
+/* line 1, ../sass/partials/components/_cardflip.scss */
+.cardflip {
+  background: #ed7d3a;
+  -webkit-box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.15);
+  -moz-box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.15);
+  box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.15);
+  color: #fff;
+}
+
+/* line 9, ../sass/partials/components/_cardflip.scss */
+.cardflip--b {
+  background: #dc5606;
+}
+
 /* line 1, ../sass/partials/components/_comments.scss */
 .comments {
   border-top: 1px solid #cecfcb;
