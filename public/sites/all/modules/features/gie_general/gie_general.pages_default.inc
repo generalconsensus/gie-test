@@ -117,6 +117,25 @@ function gie_general_default_page_manager_pages() {
     $pane->uuid = 'dfaebac8-8ecd-42ec-90a5-d1433717aecb';
     $display->content['new-dfaebac8-8ecd-42ec-90a5-d1433717aecb'] = $pane;
     $display->panels['middle'][2] = 'new-dfaebac8-8ecd-42ec-90a5-d1433717aecb';
+    $pane = new stdClass();
+    $pane->pid = 'new-ca876c6f-f629-4daa-984b-611347570cf5';
+    $pane->panel = 'middle';
+    $pane->type = 'views_panes';
+    $pane->subtype = 'homepage_views-staff_picks_pane';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array();
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
+    $pane->css = array();
+    $pane->extras = array();
+    $pane->position = 3;
+    $pane->locks = array();
+    $pane->uuid = 'ca876c6f-f629-4daa-984b-611347570cf5';
+    $display->content['new-ca876c6f-f629-4daa-984b-611347570cf5'] = $pane;
+    $display->panels['middle'][3] = 'new-ca876c6f-f629-4daa-984b-611347570cf5';
   $display->hide_title = PANELS_TITLE_FIXED;
   $display->title_pane = '0';
   $handler->conf['display'] = $display;

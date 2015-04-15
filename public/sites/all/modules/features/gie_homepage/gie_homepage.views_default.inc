@@ -83,6 +83,30 @@ function gie_homepage_views_default_views() {
   $handler->display->display_options['relationships']['reverse_field_homepage_action_cards_node']['table'] = 'node';
   $handler->display->display_options['relationships']['reverse_field_homepage_action_cards_node']['field'] = 'reverse_field_homepage_action_cards_node';
   $handler->display->display_options['relationships']['reverse_field_homepage_action_cards_node']['required'] = TRUE;
+
+  /* Display: Staff Picks */
+  $handler = $view->new_display('panel_pane', 'Staff Picks', 'staff_picks_pane');
+  $handler->display->display_options['defaults']['title'] = FALSE;
+  $handler->display->display_options['defaults']['css_class'] = FALSE;
+  $handler->display->display_options['defaults']['pager'] = FALSE;
+  $handler->display->display_options['pager']['type'] = 'some';
+  $handler->display->display_options['pager']['options']['items_per_page'] = '4';
+  $handler->display->display_options['pager']['options']['offset'] = '0';
+  $handler->display->display_options['defaults']['header'] = FALSE;
+  /* Header: Global: Text area */
+  $handler->display->display_options['header']['area']['id'] = 'area';
+  $handler->display->display_options['header']['area']['table'] = 'views';
+  $handler->display->display_options['header']['area']['field'] = 'area';
+  $handler->display->display_options['header']['area']['content'] = '<h1>Staff Picks</h1>
+<a href="innovations">View All Innovations</a>
+<a href="node/add/innovation" class="button">Add Innovation</a>';
+  $handler->display->display_options['header']['area']['format'] = 'full_html';
+  $handler->display->display_options['defaults']['relationships'] = FALSE;
+  /* Relationship: Entity Reference: Referencing entity */
+  $handler->display->display_options['relationships']['reverse_field_homepage_staff_picks_node']['id'] = 'reverse_field_homepage_staff_picks_node';
+  $handler->display->display_options['relationships']['reverse_field_homepage_staff_picks_node']['table'] = 'node';
+  $handler->display->display_options['relationships']['reverse_field_homepage_staff_picks_node']['field'] = 'reverse_field_homepage_staff_picks_node';
+  $handler->display->display_options['relationships']['reverse_field_homepage_staff_picks_node']['required'] = TRUE;
   $export['homepage_views'] = $view;
 
   return $export;
