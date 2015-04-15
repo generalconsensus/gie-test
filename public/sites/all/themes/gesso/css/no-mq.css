@@ -1912,73 +1912,6 @@ header.header {
   padding: 0.5em 0;
 }
 
-/* line 1, ../sass/partials/components/_innovation-stats.scss */
-.innovation-stats {
-  background: #f8f8f8;
-  border: 0;
-  overflow: hidden;
-  margin: 0 0 3.25em 0;
-  padding: 1em;
-}
-/* line 8, ../sass/partials/components/_innovation-stats.scss */
-.innovation-stats > h2 {
-  font-weight: normal;
-}
-/* line 12, ../sass/partials/components/_innovation-stats.scss */
-.innovation-stats .field {
-  -webkit-hyphens: none;
-  -moz-hyphens: none;
-  hyphens: none;
-  font-size: 0.875em;
-  padding: 0 0 1em 0;
-}
-/* line 16, ../sass/partials/components/_innovation-stats.scss */
-.innovation-stats .field .field-label {
-  float: left;
-  width: 45%;
-}
-/* line 20, ../sass/partials/components/_innovation-stats.scss */
-.innovation-stats .field .field-items {
-  float: left;
-  font-weight: bold;
-  width: 55%;
-}
-/* line 27, ../sass/partials/components/_innovation-stats.scss */
-.innovation-stats .field.field--innovation-created a:before, .innovation-stats .field.field--innovation-implemented a:before {
-  height: 16px;
-  overflow: hidden;
-  width: 12px;
-  background-image: url('../images/bg/map-pin.png');
-  background-image: -webkit-linear-gradient(transparent, transparent), url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4NCjwhLS0gR2VuZXJhdGVkIGJ5IEljb01vb24uaW8gLS0+DQo8IURPQ1RZUEUgc3ZnIFBVQkxJQyAiLS8vVzNDLy9EVEQgU1ZHIDEuMS8vRU4iICJodHRwOi8vd3d3LnczLm9yZy9HcmFwaGljcy9TVkcvMS4xL0RURC9zdmcxMS5kdGQiPg0KPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHdpZHRoPSIxMiIgaGVpZ2h0PSIxNiIgdmlld0JveD0iMCAwIDEyIDE2Ij4NCjxwYXRoIGZpbGw9IiNkYzU2MDYiIGQ9Ik02LjA0NyAxNmMtMC4xODYgMC0wLjM3Mi0wLjA5My0wLjQ2NS0wLjI3OWwtNC42NTEtNi45NzdjLTAuNjUxLTAuODM3LTAuOTMtMS44Ni0wLjkzLTIuODg0IDAtMy4yNTYgMi42OTgtNS44NiA2LjA0Ny01Ljg2czYuMDQ3IDIuNjA1IDYuMDQ3IDUuODZjMCAxLjAyMy0wLjI3OSAyLjE0LTAuODM3IDIuOTc3bC00Ljc0NCA2Ljk3N2MtMC4wOTMgMC4wOTMtMC4yNzkgMC4xODYtMC40NjUgMC4xODYgMCAwIDAgMCAwIDB6TTYuMDQ3IDEuMTE2Yy0yLjY5OCAwLTQuODM3IDIuMDQ3LTQuODM3IDQuNjUxIDAgMC44MzcgMC4yNzkgMS42NzQgMC42NTEgMi40MTlsNC4xODYgNi4yMzMgNC4xODYtNi4yMzNjMC40NjUtMC43NDQgMC42NTEtMS40ODggMC42NTEtMi40MTkgMC0yLjUxMi0yLjE0LTQuNjUxLTQuODM3LTQuNjUxeiI+PC9wYXRoPg0KPHBhdGggZmlsbD0iI2RjNTYwNiIgZD0iTTYuMDQ3IDguNjUxYy0xLjU4MSAwLTIuODg0LTEuMzAyLTIuODg0LTIuNzkxczEuMzAyLTIuNzkxIDIuODg0LTIuNzkxIDIuODg0IDEuMzAyIDIuODg0IDIuNzkxLTEuMzAyIDIuNzkxLTIuODg0IDIuNzkxek02LjA0NyA0LjE4NmMtMC45MyAwLTEuNzY3IDAuNzQ0LTEuNzY3IDEuNjc0czAuNzQ0IDEuNjc0IDEuNzY3IDEuNjc0IDEuNzY3LTAuNzQ0IDEuNzY3LTEuNjc0YzAtMC45My0wLjgzNy0xLjY3NC0xLjc2Ny0xLjY3NHoiPjwvcGF0aD4NCjwvc3ZnPg0K');
-  background-image: linear-gradient(transparent, transparent), url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4NCjwhLS0gR2VuZXJhdGVkIGJ5IEljb01vb24uaW8gLS0+DQo8IURPQ1RZUEUgc3ZnIFBVQkxJQyAiLS8vVzNDLy9EVEQgU1ZHIDEuMS8vRU4iICJodHRwOi8vd3d3LnczLm9yZy9HcmFwaGljcy9TVkcvMS4xL0RURC9zdmcxMS5kdGQiPg0KPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHdpZHRoPSIxMiIgaGVpZ2h0PSIxNiIgdmlld0JveD0iMCAwIDEyIDE2Ij4NCjxwYXRoIGZpbGw9IiNkYzU2MDYiIGQ9Ik02LjA0NyAxNmMtMC4xODYgMC0wLjM3Mi0wLjA5My0wLjQ2NS0wLjI3OWwtNC42NTEtNi45NzdjLTAuNjUxLTAuODM3LTAuOTMtMS44Ni0wLjkzLTIuODg0IDAtMy4yNTYgMi42OTgtNS44NiA2LjA0Ny01Ljg2czYuMDQ3IDIuNjA1IDYuMDQ3IDUuODZjMCAxLjAyMy0wLjI3OSAyLjE0LTAuODM3IDIuOTc3bC00Ljc0NCA2Ljk3N2MtMC4wOTMgMC4wOTMtMC4yNzkgMC4xODYtMC40NjUgMC4xODYgMCAwIDAgMCAwIDB6TTYuMDQ3IDEuMTE2Yy0yLjY5OCAwLTQuODM3IDIuMDQ3LTQuODM3IDQuNjUxIDAgMC44MzcgMC4yNzkgMS42NzQgMC42NTEgMi40MTlsNC4xODYgNi4yMzMgNC4xODYtNi4yMzNjMC40NjUtMC43NDQgMC42NTEtMS40ODggMC42NTEtMi40MTkgMC0yLjUxMi0yLjE0LTQuNjUxLTQuODM3LTQuNjUxeiI+PC9wYXRoPg0KPHBhdGggZmlsbD0iI2RjNTYwNiIgZD0iTTYuMDQ3IDguNjUxYy0xLjU4MSAwLTIuODg0LTEuMzAyLTIuODg0LTIuNzkxczEuMzAyLTIuNzkxIDIuODg0LTIuNzkxIDIuODg0IDEuMzAyIDIuODg0IDIuNzkxLTEuMzAyIDIuNzkxLTIuODg0IDIuNzkxek02LjA0NyA0LjE4NmMtMC45MyAwLTEuNzY3IDAuNzQ0LTEuNzY3IDEuNjc0czAuNzQ0IDEuNjc0IDEuNzY3IDEuNjc0IDEuNzY3LTAuNzQ0IDEuNzY3LTEuNjc0YzAtMC45My0wLjgzNy0xLjY3NC0xLjc2Ny0xLjY3NHoiPjwvcGF0aD4NCjwvc3ZnPg0K');
-  content: "";
-  display: inline-block;
-  margin-right: 8px;
-  position: relative;
-  top: 2px;
-}
-/* line 14, ../sass/partials/global/helpers/_image-replace.scss */
-.innovation-stats .field.field--innovation-created a:before:before, .innovation-stats .field.field--innovation-implemented a:before:before {
-  content: "";
-  display: block;
-  height: 150%;
-  width: 0;
-}
-
-/* line 41, ../sass/partials/components/_innovation-stats.scss */
-.innovation-stats__first {
-  float: left;
-  padding-right: 4%;
-  width: 50%;
-}
-
-/* line 49, ../sass/partials/components/_innovation-stats.scss */
-.innovation-stats__second {
-  float: left;
-  padding-left: 4%;
-  width: 50%;
-}
-
 /* line 4, ../sass/partials/components/_messages.scss */
 .messages {
   -webkit-border-radius: 5px;
@@ -3236,6 +3169,75 @@ aside .pane__title {
 /* line 34, ../sass/partials/components/_skiplinks.scss */
 #main:focus {
   outline: 0;
+}
+
+/* line 1, ../sass/partials/components/_stats.scss */
+.stats {
+  background: #f8f8f8;
+  border: 0;
+  overflow: hidden;
+  margin: 0 0 3.25em 0;
+  padding: 1em;
+}
+/* line 8, ../sass/partials/components/_stats.scss */
+.stats > h2 {
+  font-weight: normal;
+}
+/* line 12, ../sass/partials/components/_stats.scss */
+.stats .field {
+  -webkit-hyphens: none;
+  -moz-hyphens: none;
+  hyphens: none;
+  font-size: 0.875em;
+  padding: 0 0 1em 0;
+}
+/* line 16, ../sass/partials/components/_stats.scss */
+.stats .field .field-label {
+  float: left;
+  font-weight: normal;
+  max-width: 13em;
+  width: 45%;
+}
+/* line 22, ../sass/partials/components/_stats.scss */
+.stats .field .field-items {
+  float: left;
+  font-weight: bold;
+  width: 55%;
+}
+/* line 29, ../sass/partials/components/_stats.scss */
+.stats .field.field--innovation-created a:before, .stats .field.field--innovation-implemented a:before {
+  height: 16px;
+  overflow: hidden;
+  width: 12px;
+  background-image: url('../images/bg/map-pin.png');
+  background-image: -webkit-linear-gradient(transparent, transparent), url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4NCjwhLS0gR2VuZXJhdGVkIGJ5IEljb01vb24uaW8gLS0+DQo8IURPQ1RZUEUgc3ZnIFBVQkxJQyAiLS8vVzNDLy9EVEQgU1ZHIDEuMS8vRU4iICJodHRwOi8vd3d3LnczLm9yZy9HcmFwaGljcy9TVkcvMS4xL0RURC9zdmcxMS5kdGQiPg0KPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHdpZHRoPSIxMiIgaGVpZ2h0PSIxNiIgdmlld0JveD0iMCAwIDEyIDE2Ij4NCjxwYXRoIGZpbGw9IiNkYzU2MDYiIGQ9Ik02LjA0NyAxNmMtMC4xODYgMC0wLjM3Mi0wLjA5My0wLjQ2NS0wLjI3OWwtNC42NTEtNi45NzdjLTAuNjUxLTAuODM3LTAuOTMtMS44Ni0wLjkzLTIuODg0IDAtMy4yNTYgMi42OTgtNS44NiA2LjA0Ny01Ljg2czYuMDQ3IDIuNjA1IDYuMDQ3IDUuODZjMCAxLjAyMy0wLjI3OSAyLjE0LTAuODM3IDIuOTc3bC00Ljc0NCA2Ljk3N2MtMC4wOTMgMC4wOTMtMC4yNzkgMC4xODYtMC40NjUgMC4xODYgMCAwIDAgMCAwIDB6TTYuMDQ3IDEuMTE2Yy0yLjY5OCAwLTQuODM3IDIuMDQ3LTQuODM3IDQuNjUxIDAgMC44MzcgMC4yNzkgMS42NzQgMC42NTEgMi40MTlsNC4xODYgNi4yMzMgNC4xODYtNi4yMzNjMC40NjUtMC43NDQgMC42NTEtMS40ODggMC42NTEtMi40MTkgMC0yLjUxMi0yLjE0LTQuNjUxLTQuODM3LTQuNjUxeiI+PC9wYXRoPg0KPHBhdGggZmlsbD0iI2RjNTYwNiIgZD0iTTYuMDQ3IDguNjUxYy0xLjU4MSAwLTIuODg0LTEuMzAyLTIuODg0LTIuNzkxczEuMzAyLTIuNzkxIDIuODg0LTIuNzkxIDIuODg0IDEuMzAyIDIuODg0IDIuNzkxLTEuMzAyIDIuNzkxLTIuODg0IDIuNzkxek02LjA0NyA0LjE4NmMtMC45MyAwLTEuNzY3IDAuNzQ0LTEuNzY3IDEuNjc0czAuNzQ0IDEuNjc0IDEuNzY3IDEuNjc0IDEuNzY3LTAuNzQ0IDEuNzY3LTEuNjc0YzAtMC45My0wLjgzNy0xLjY3NC0xLjc2Ny0xLjY3NHoiPjwvcGF0aD4NCjwvc3ZnPg0K');
+  background-image: linear-gradient(transparent, transparent), url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4NCjwhLS0gR2VuZXJhdGVkIGJ5IEljb01vb24uaW8gLS0+DQo8IURPQ1RZUEUgc3ZnIFBVQkxJQyAiLS8vVzNDLy9EVEQgU1ZHIDEuMS8vRU4iICJodHRwOi8vd3d3LnczLm9yZy9HcmFwaGljcy9TVkcvMS4xL0RURC9zdmcxMS5kdGQiPg0KPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHdpZHRoPSIxMiIgaGVpZ2h0PSIxNiIgdmlld0JveD0iMCAwIDEyIDE2Ij4NCjxwYXRoIGZpbGw9IiNkYzU2MDYiIGQ9Ik02LjA0NyAxNmMtMC4xODYgMC0wLjM3Mi0wLjA5My0wLjQ2NS0wLjI3OWwtNC42NTEtNi45NzdjLTAuNjUxLTAuODM3LTAuOTMtMS44Ni0wLjkzLTIuODg0IDAtMy4yNTYgMi42OTgtNS44NiA2LjA0Ny01Ljg2czYuMDQ3IDIuNjA1IDYuMDQ3IDUuODZjMCAxLjAyMy0wLjI3OSAyLjE0LTAuODM3IDIuOTc3bC00Ljc0NCA2Ljk3N2MtMC4wOTMgMC4wOTMtMC4yNzkgMC4xODYtMC40NjUgMC4xODYgMCAwIDAgMCAwIDB6TTYuMDQ3IDEuMTE2Yy0yLjY5OCAwLTQuODM3IDIuMDQ3LTQuODM3IDQuNjUxIDAgMC44MzcgMC4yNzkgMS42NzQgMC42NTEgMi40MTlsNC4xODYgNi4yMzMgNC4xODYtNi4yMzNjMC40NjUtMC43NDQgMC42NTEtMS40ODggMC42NTEtMi40MTkgMC0yLjUxMi0yLjE0LTQuNjUxLTQuODM3LTQuNjUxeiI+PC9wYXRoPg0KPHBhdGggZmlsbD0iI2RjNTYwNiIgZD0iTTYuMDQ3IDguNjUxYy0xLjU4MSAwLTIuODg0LTEuMzAyLTIuODg0LTIuNzkxczEuMzAyLTIuNzkxIDIuODg0LTIuNzkxIDIuODg0IDEuMzAyIDIuODg0IDIuNzkxLTEuMzAyIDIuNzkxLTIuODg0IDIuNzkxek02LjA0NyA0LjE4NmMtMC45MyAwLTEuNzY3IDAuNzQ0LTEuNzY3IDEuNjc0czAuNzQ0IDEuNjc0IDEuNzY3IDEuNjc0IDEuNzY3LTAuNzQ0IDEuNzY3LTEuNjc0YzAtMC45My0wLjgzNy0xLjY3NC0xLjc2Ny0xLjY3NHoiPjwvcGF0aD4NCjwvc3ZnPg0K');
+  content: "";
+  display: inline-block;
+  margin-right: 8px;
+  position: relative;
+  top: 2px;
+}
+/* line 14, ../sass/partials/global/helpers/_image-replace.scss */
+.stats .field.field--innovation-created a:before:before, .stats .field.field--innovation-implemented a:before:before {
+  content: "";
+  display: block;
+  height: 150%;
+  width: 0;
+}
+
+/* line 43, ../sass/partials/components/_stats.scss */
+.stats__first {
+  float: left;
+  padding-right: 4%;
+  width: 50%;
+}
+
+/* line 51, ../sass/partials/components/_stats.scss */
+.stats__second {
+  float: left;
+  padding-left: 4%;
+  width: 50%;
 }
 
 /* line 4, ../sass/partials/components/_tabledrag.scss */
