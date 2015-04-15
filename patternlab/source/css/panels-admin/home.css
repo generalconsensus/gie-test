@@ -1,0 +1,33 @@
+/* line 9, ../../sass/partials/global/helpers/_clearfix.scss */
+.l-panels-home:after {
+  display: table;
+  content: "";
+}
+/* line 14, ../../sass/partials/global/helpers/_clearfix.scss */
+.l-panels-home:after {
+  clear: both;
+}
+/* line 16, ../../sass/partials/layout/panels/_home.scss */
+.l-panels-home .l-hero,
+.l-panels-home .l-content,
+.l-panels-home .l-villain,
+.l-panels-home .l-postscript {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+/* line 9, ../../sass/partials/global/helpers/_clearfix.scss */
+.l-panels-home .l-hero:after,
+.l-panels-home .l-content:after,
+.l-panels-home .l-villain:after,
+.l-panels-home .l-postscript:after {
+  display: table;
+  content: "";
+}
+/* line 14, ../../sass/partials/global/helpers/_clearfix.scss */
+.l-panels-home .l-hero:after,
+.l-panels-home .l-content:after,
+.l-panels-home .l-villain:after,
+.l-panels-home .l-postscript:after {
+  clear: both;
+}

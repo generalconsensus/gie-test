@@ -1026,6 +1026,31 @@ ul.panels-ipe-linkbar li {
   clear: both;
 }
 
+/* line 9, ../sass/partials/global/helpers/_clearfix.scss */
+.l-panels-home:after {
+  display: table;
+  content: "";
+}
+/* line 14, ../sass/partials/global/helpers/_clearfix.scss */
+.l-panels-home:after {
+  clear: both;
+}
+/* line 9, ../sass/partials/global/helpers/_clearfix.scss */
+.l-panels-home .l-hero:after,
+.l-panels-home .l-content:after,
+.l-panels-home .l-villain:after,
+.l-panels-home .l-postscript:after {
+  display: table;
+  content: "";
+}
+/* line 14, ../sass/partials/global/helpers/_clearfix.scss */
+.l-panels-home .l-hero:after,
+.l-panels-home .l-content:after,
+.l-panels-home .l-villain:after,
+.l-panels-home .l-postscript:after {
+  clear: both;
+}
+
 /* line 13, ../sass/partials/layout/panels/_landing.scss */
 .l-panels-landing.main.sidebar .l-sidebar {
   width: 20.58824%;
@@ -1419,53 +1444,54 @@ input.throbbing {
   -webkit-box-shadow: 0 2px 0 0 #f0f0f0;
   -moz-box-shadow: 0 2px 0 0 #f0f0f0;
   box-shadow: 0 2px 0 0 #f0f0f0;
+  max-width: 500px;
   position: relative;
 }
 
-/* line 7, ../sass/partials/components/_card.scss */
+/* line 8, ../sass/partials/components/_card.scss */
 .card__type {
   font-size: 0.75em;
   text-transform: uppercase;
 }
 
-/* line 12, ../sass/partials/components/_card.scss */
+/* line 13, ../sass/partials/components/_card.scss */
 .card__image {
   line-height: 0;
 }
 
-/* line 16, ../sass/partials/components/_card.scss */
+/* line 17, ../sass/partials/components/_card.scss */
 .card__content {
   padding: 16px 16px 66px 16px;
 }
 
-/* line 20, ../sass/partials/components/_card.scss */
+/* line 21, ../sass/partials/components/_card.scss */
 .card__title, .card__primary-title {
   font-weight: normal;
   margin: 0 0 0.75em 0;
 }
-/* line 23, ../sass/partials/components/_card.scss */
+/* line 24, ../sass/partials/components/_card.scss */
 .card__title a, .card__primary-title a {
   font-weight: normal;
 }
 
-/* line 28, ../sass/partials/components/_card.scss */
+/* line 29, ../sass/partials/components/_card.scss */
 .card__primary-title {
   border-bottom: 1px solid #f0f0f0;
   padding: 0 0 0.75em 0;
 }
 
-/* line 34, ../sass/partials/components/_card.scss */
+/* line 35, ../sass/partials/components/_card.scss */
 .card__author {
   font-size: 0.75em;
   line-height: 1.3;
   overflow: hidden;
 }
-/* line 38, ../sass/partials/components/_card.scss */
+/* line 39, ../sass/partials/components/_card.scss */
 .card__author .card__author-image {
   float: left;
   margin: 0 0.5em 0 0;
 }
-/* line 41, ../sass/partials/components/_card.scss */
+/* line 42, ../sass/partials/components/_card.scss */
 .card__author .card__author-image img {
   -webkit-border-radius: 50%;
   -moz-border-radius: 50%;
@@ -1474,35 +1500,35 @@ input.throbbing {
   border-radius: 50%;
   border: 1px solid #cecfcb;
 }
-/* line 46, ../sass/partials/components/_card.scss */
+/* line 47, ../sass/partials/components/_card.scss */
 .card__author .card__author-name {
   font-weight: bold;
 }
 
-/* line 54, ../sass/partials/components/_card.scss */
+/* line 55, ../sass/partials/components/_card.scss */
 .card__number {
   font-size: 1.3125em;
 }
 
-/* line 58, ../sass/partials/components/_card.scss */
+/* line 59, ../sass/partials/components/_card.scss */
 .card__due-date {
   font-size: 0.875em;
 }
 
-/* line 62, ../sass/partials/components/_card.scss */
+/* line 63, ../sass/partials/components/_card.scss */
 .card__list {
   font-size: 0.75em;
   line-height: 1.3;
   margin: 1em 0;
 }
 
-/* line 68, ../sass/partials/components/_card.scss */
+/* line 69, ../sass/partials/components/_card.scss */
 .card__list-label {
   display: inline;
   font-weight: bold;
 }
 
-/* line 73, ../sass/partials/components/_card.scss */
+/* line 74, ../sass/partials/components/_card.scss */
 .card__counts > .view .has-icon--comment:before, .card__counts > .view .has-icon--camera:before, .card__counts > .view .has-icon--favorite:before, .card__counts > .view .has-icon--member:before {
   content: "";
   display: block;
@@ -1512,7 +1538,7 @@ input.throbbing {
   left: 50%;
 }
 
-/* line 82, ../sass/partials/components/_card.scss */
+/* line 83, ../sass/partials/components/_card.scss */
 .card__counts {
   left: 0;
   bottom: 10px;
@@ -1522,7 +1548,7 @@ input.throbbing {
   text-align: center;
   width: 100%;
 }
-/* line 90, ../sass/partials/components/_card.scss */
+/* line 91, ../sass/partials/components/_card.scss */
 .card__counts > .view {
   display: inline-block;
   font-size: 0.75em;
@@ -1532,7 +1558,7 @@ input.throbbing {
   padding: 0 6%;
   text-align: center;
 }
-/* line 99, ../sass/partials/components/_card.scss */
+/* line 100, ../sass/partials/components/_card.scss */
 .card__counts > .view .has-icon--comment:before {
   height: 17px;
   overflow: hidden;
@@ -1549,7 +1575,7 @@ input.throbbing {
   height: 150%;
   width: 0;
 }
-/* line 107, ../sass/partials/components/_card.scss */
+/* line 108, ../sass/partials/components/_card.scss */
 .card__counts > .view .has-icon--camera:before {
   height: 17px;
   overflow: hidden;
@@ -1566,7 +1592,7 @@ input.throbbing {
   height: 150%;
   width: 0;
 }
-/* line 115, ../sass/partials/components/_card.scss */
+/* line 116, ../sass/partials/components/_card.scss */
 .card__counts > .view .has-icon--favorite:before {
   height: 17px;
   overflow: hidden;
@@ -1583,7 +1609,7 @@ input.throbbing {
   height: 150%;
   width: 0;
 }
-/* line 123, ../sass/partials/components/_card.scss */
+/* line 124, ../sass/partials/components/_card.scss */
 .card__counts > .view .has-icon--member:before {
   height: 17px;
   overflow: hidden;
