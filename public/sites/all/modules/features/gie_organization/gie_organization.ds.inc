@@ -17,22 +17,52 @@ function gie_organization_ds_field_settings_info() {
   $ds_fieldsetting->bundle = 'organization';
   $ds_fieldsetting->view_mode = 'contact';
   $ds_fieldsetting->settings = array(
-    'field_org_poc' => array(
+    'field_org_address' => array(
       'formatter_settings' => array(
-        'ft' => array(),
+        'ft' => array(
+          'func' => 'theme_ds_field_expert',
+        ),
       ),
     ),
     'field_org_telephone' => array(
       'formatter_settings' => array(
         'ft' => array(
-          'lb' => 'T',
+          'func' => 'theme_ds_field_expert',
+          'lb' => 'T ',
+          'lb-el' => 'span',
+          'ow' => TRUE,
+          'ow-el' => 'div',
+          'ow-cl' => '',
+          'ow-def-cl' => FALSE,
+          'ow-at' => '',
+          'ow-def-at' => FALSE,
+          'fi' => TRUE,
+          'fi-el' => 'span',
+          'fi-cl' => '',
+          'fi-at' => '',
+          'fi-def-at' => FALSE,
+          'fi-odd-even' => FALSE,
         ),
       ),
     ),
     'field_org_text_email' => array(
       'formatter_settings' => array(
         'ft' => array(
-          'lb' => 'E',
+          'func' => 'theme_ds_field_expert',
+          'lb' => 'E ',
+          'lb-el' => 'span',
+          'ow' => TRUE,
+          'ow-el' => 'div',
+          'ow-cl' => '',
+          'ow-def-cl' => FALSE,
+          'ow-at' => '',
+          'ow-def-at' => FALSE,
+          'fi' => TRUE,
+          'fi-el' => 'span',
+          'fi-cl' => '',
+          'fi-at' => '',
+          'fi-def-at' => FALSE,
+          'fi-odd-even' => FALSE,
         ),
       ),
     ),
@@ -206,32 +236,67 @@ function gie_organization_ds_layout_settings_info() {
 
   $ds_layout = new stdClass();
   $ds_layout->api_version = 1;
+  $ds_layout->id = 'node|organization|at_a_glance';
+  $ds_layout->entity_type = 'node';
+  $ds_layout->bundle = 'organization';
+  $ds_layout->view_mode = 'at_a_glance';
+  $ds_layout->layout = 'ds_reset';
+  $ds_layout->settings = array(
+    'regions' => array(
+      'ds_content' => array(
+        0 => 'organization_at_a_glance_innovation_count',
+        1 => 'organization_at_a_glance_member_count',
+        2 => 'organization_at_a_glance_partner_count',
+        3 => 'field_org_link',
+      ),
+    ),
+    'fields' => array(
+      'organization_at_a_glance_innovation_count' => 'ds_content',
+      'organization_at_a_glance_member_count' => 'ds_content',
+      'organization_at_a_glance_partner_count' => 'ds_content',
+      'field_org_link' => 'ds_content',
+    ),
+    'classes' => array(),
+    'wrappers' => array(
+      'ds_content' => 'div',
+    ),
+    'layout_wrapper' => 'div',
+    'layout_attributes' => '',
+    'layout_attributes_merge' => TRUE,
+    'layout_link_attribute' => FALSE,
+    'layout_link_custom' => '',
+  );
+  $export['node|organization|at_a_glance'] = $ds_layout;
+
+  $ds_layout = new stdClass();
+  $ds_layout->api_version = 1;
   $ds_layout->id = 'node|organization|contact';
   $ds_layout->entity_type = 'node';
   $ds_layout->bundle = 'organization';
   $ds_layout->view_mode = 'contact';
-  $ds_layout->layout = 'ds_2col';
+  $ds_layout->layout = 'slat';
   $ds_layout->settings = array(
     'regions' => array(
-      'left' => array(
-        0 => 'field_org_address',
+      'media' => array(
+        0 => 'field_org_poc',
       ),
-      'right' => array(
-        1 => 'field_org_poc',
+      'main_content' => array(
+        1 => 'field_org_address',
         2 => 'field_org_telephone',
         3 => 'field_org_text_email',
       ),
     ),
     'fields' => array(
-      'field_org_address' => 'left',
-      'field_org_poc' => 'right',
-      'field_org_telephone' => 'right',
-      'field_org_text_email' => 'right',
+      'field_org_poc' => 'media',
+      'field_org_address' => 'main_content',
+      'field_org_telephone' => 'main_content',
+      'field_org_text_email' => 'main_content',
     ),
     'classes' => array(),
     'wrappers' => array(
-      'left' => 'div',
-      'right' => 'div',
+      'header' => 'div',
+      'media' => 'div',
+      'main_content' => 'div',
     ),
     'layout_wrapper' => 'div',
     'layout_attributes' => '',
@@ -387,6 +452,15 @@ function gie_organization_ds_layout_settings_info() {
  */
 function gie_organization_ds_view_modes_info() {
   $export = array();
+
+  $ds_view_mode = new stdClass();
+  $ds_view_mode->api_version = 1;
+  $ds_view_mode->view_mode = 'at_a_glance';
+  $ds_view_mode->label = 'At a Glance';
+  $ds_view_mode->entities = array(
+    'node' => 'node',
+  );
+  $export['at_a_glance'] = $ds_view_mode;
 
   $ds_view_mode = new stdClass();
   $ds_view_mode->api_version = 1;
