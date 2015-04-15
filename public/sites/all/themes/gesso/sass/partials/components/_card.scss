@@ -128,5 +128,21 @@
         margin-left: -8px; // half of width
       }
     }
+    .has-icon--organization {
+      &:before {
+        @extend %cardicon;
+        @include image-replace(17px,17px);
+        @include svg-background(icon-organization-17-17-blue);
+        margin-left: -8px; // half of width
+      }
+    }
+    .has-icon--evidence {
+      &:before {
+        @extend %cardicon;
+        @include image-replace(15px,17px);
+        @include svg-background(icon-evidence-15-17-blue);
+        margin-left: -8px; // half of width
+      }
+    }
   }
 }

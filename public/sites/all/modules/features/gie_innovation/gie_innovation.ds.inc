@@ -326,7 +326,7 @@ function gie_innovation_ds_field_settings_info() {
   $ds_fieldsetting->view_mode = 'teaser_date';
   $ds_fieldsetting->settings = array(
     'post_date' => array(
-      'weight' => '2',
+      'weight' => '1',
       'label' => 'hidden',
       'format' => 'ds_post_date_gie_general_slash_no_time',
     ),
@@ -616,13 +616,11 @@ function gie_innovation_ds_layout_settings_info() {
   $ds_layout->settings = array(
     'regions' => array(
       'ds_content' => array(
-        0 => 'field_innovation_image',
-        1 => 'title_field',
-        2 => 'post_date',
+        0 => 'title_field',
+        1 => 'post_date',
       ),
     ),
     'fields' => array(
-      'field_innovation_image' => 'ds_content',
       'title_field' => 'ds_content',
       'post_date' => 'ds_content',
     ),
