@@ -19,7 +19,7 @@
     @include breakpoint(1200px, $no-query: true) {
       font-size: em(48px); 
     }
-    font-weight: 400;
+    font-weight: 700;
     line-height: 1.2;
     margin: 0;
     padding: 0 0 0.4em 0;
@@ -27,30 +27,36 @@
     text-transform: uppercase;
     &:before {
       @include image-replace(46px,46px);
-      @include svg-background(icon-innovations-46);
       content: "";
       display: block;
-      left: -50px;
+      left: -61px; // width + 15
       position: absolute;
       top: 6px;
     }
   }
   &.pane--about-introduction h1:before {
-    @include svg-background(icon-about-46);
+    @include svg-background(icon-about-46-46-white);
   }
   &.pane--innovations-introduction h1:before {
-    @include svg-background(icon-innovations-46);
+    @include svg-background(icon-innovations-34-46-white);
+    left: -49px; // width + 15
     width: 34px;
   }
   &.pane--funding-introduction h1:before {
-    @include svg-background(icon-funding-46);
+    @include svg-background(icon-funding-46-46-white);
+  }
+  &.pane--resources-introduction h1:before {
+    @include svg-background(icon-resources-50-46-white);
+    left: -65px; // width + 15
+    width: 50px; 
   }
   &.pane--communities-introduction h1:before {
-    @include svg-background(icon-communities-46);
+    @include svg-background(icon-communities-54-46-white);
+    left: -69px; // width + 15
     width: 54px;
   }
   &.pane--more-introduction h1:before {
-    @include svg-background(icon-more-46);
+    @include svg-background(icon-more-46-46-white);
   }
 }
 
@@ -66,6 +72,6 @@
   @include breakpoint(900px, $no-query: true) {
     float: left;
     padding: 10px 0 0 0;
-   width: 40%;
+    width: 40%;
   }
 }

@@ -1,6 +1,12 @@
 .region-navigation {
   @include box-shadow(0 8px 8px -6px rgba(0,0,0,0.15));
   height: 50px;
+  @include breakpoint($mobile-menu-bp 1139px) {
+    height: 100px;
+  }
+  @include breakpoint(1140px, $no-query: true) {
+    height: 50px;
+  }
   position: relative;
   z-index: 2;
   > .region__inner {

@@ -99,7 +99,7 @@
       &:before {
         @extend %cardicon;
         @include image-replace(20px,17px);
-        @include svg-background(icon-comment); 
+        @include svg-background(icon-comment-20-17-blue); 
         margin-left: -10px; // half of width
       }
     }
@@ -107,7 +107,7 @@
       &:before {
         @extend %cardicon;
         @include image-replace(23px,17px);
-        @include svg-background(icon-photo);
+        @include svg-background(icon-photo-23-17-blue);
         margin-left: -11px; // half of width
       }
     }
@@ -115,7 +115,7 @@
       &:before {
         @extend %cardicon;
         @include image-replace(18px,17px);
-        @include svg-background(icon-favorite);
+        @include svg-background(icon-favorite-18-17-blue);
         margin-left: -9px; // half of width
       }
     }
@@ -123,7 +123,7 @@
       &:before {
         @extend %cardicon;
         @include image-replace(17px,17px);
-        @include svg-background(icon-member);
+        @include svg-background(icon-member-17-17-blue);
         margin-left: -8px; // half of width
       }
     }

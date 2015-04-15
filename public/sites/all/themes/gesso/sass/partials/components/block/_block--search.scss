@@ -50,7 +50,10 @@
     overflow: hidden;
     position: absolute;
     right: 10px; // offset layout-constrain padding
-    top: 0;
+    top: 51px;
+    @include breakpoint(1140px, $no-query: true) {
+      top: 0;
+    }
     width: 50px;
     @include transition(width 0.2s linear);
     &.is-open {
