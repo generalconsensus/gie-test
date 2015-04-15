@@ -27,11 +27,18 @@
     text-transform: uppercase;
     &:before {
       @include image-replace(46px,46px);
-      content: "";
-      display: block;
-      left: -61px; // width + 15
-      position: absolute;
+      @include breakpoint(500px, $no-query: true) { // don't show until 500px
+        content: "";
+        display: inline-block;
+      }
+      margin-right: 10px;
+      position: relative;
       top: 6px;
+      @include breakpoint(1260px, $no-query: true) {
+        left: -61px; // width + 15
+        margin-right: 0;
+        position: absolute;
+      }
     }
   }
   &.pane--about-introduction h1:before {
@@ -39,21 +46,27 @@
   }
   &.pane--innovations-introduction h1:before {
     @include svg-background(icon-innovations-34-46-white);
-    left: -49px; // width + 15
     width: 34px;
+    @include breakpoint(1260px, $no-query: true) {
+      left: -49px; // width + 15
+    }
   }
   &.pane--funding-introduction h1:before {
     @include svg-background(icon-funding-46-46-white);
   }
   &.pane--resources-introduction h1:before {
     @include svg-background(icon-resources-50-46-white);
-    left: -65px; // width + 15
     width: 50px; 
+    @include breakpoint(1260px, $no-query: true) {
+      left: -65px; // width + 15
+    }
   }
   &.pane--communities-introduction h1:before {
     @include svg-background(icon-communities-54-46-white);
-    left: -69px; // width + 15
     width: 54px;
+    @include breakpoint(1260px, $no-query: true) {
+      left: -69px; // width + 15
+    }
   }
   &.pane--more-introduction h1:before {
     @include svg-background(icon-more-46-46-white);
