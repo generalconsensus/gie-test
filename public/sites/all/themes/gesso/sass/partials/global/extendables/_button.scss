@@ -70,36 +70,48 @@
 }
 
 %button--icon {
-  padding-left: 3.5em;
+  padding-left: 50px;
   position: relative;
   text-transform: uppercase;
   &:before {
-    @include image-replace(22px,22px);
+    @include image-replace(20px,20px);
     content: "";
     display: block;
-    left: 1em;
+    left: 15px;
     position: absolute;
-    top: 0.65em;
+    top: 10px;
   }
 }
 
 %button--share {
   @extend %button--icon;
+  padding-right: 2em;
   &:before {
-    @include svg-background(circle-plus);
+    @include svg-background(icon-share-18-21-white);
+    height: 21px;
+    width: 18px;
   }
 }
 
 %button--favorite {
   @extend %button--icon;
+  padding-right: 2em;
   &:before {
-    @include svg-background(circle-plus);
+    @include svg-background(icon-favorite-19-18-white);
+    height: 18px;
+    left: 18px;
+    width: 19px;
+    top: 12px;
   }
 }
 
 %button--add {
   @extend %button--icon;
+  padding-left: 40px;
   &:before {
-    @include svg-background(circle-plus);
+    @include svg-background(icon-plus-12-12-white);
+    height: 12px;
+    top: 13px;
+    width: 12px;
   }
 }

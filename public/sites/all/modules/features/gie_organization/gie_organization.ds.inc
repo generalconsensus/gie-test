@@ -108,8 +108,38 @@ function gie_organization_ds_field_settings_info() {
         ),
       ),
     ),
+    'field_org_logo' => array(
+      'formatter_settings' => array(
+        'ft' => array(
+          'func' => 'theme_ds_field_expert',
+          'fi' => TRUE,
+          'fi-el' => 'div',
+          'fi-cl' => 'card__image',
+          'fi-at' => '',
+          'fi-def-at' => FALSE,
+          'fi-odd-even' => FALSE,
+        ),
+      ),
+    ),
   );
   $export['node|organization|listing'] = $ds_fieldsetting;
+
+  $ds_fieldsetting = new stdClass();
+  $ds_fieldsetting->api_version = 1;
+  $ds_fieldsetting->id = 'node|organization|teaser';
+  $ds_fieldsetting->entity_type = 'node';
+  $ds_fieldsetting->bundle = 'organization';
+  $ds_fieldsetting->view_mode = 'teaser';
+  $ds_fieldsetting->settings = array(
+    'field_org_logo' => array(
+      'formatter_settings' => array(
+        'ft' => array(
+          'func' => 'theme_ds_field_expert',
+        ),
+      ),
+    ),
+  );
+  $export['node|organization|teaser'] = $ds_fieldsetting;
 
   return $export;
 }
@@ -203,10 +233,10 @@ function gie_organization_ds_layout_settings_info() {
         1 => 'group_card_content',
         2 => 'organization_counters_innovation_count',
         3 => 'title_field',
-        4 => 'field_org_desc',
-        5 => 'organization_counters_member_count',
-        6 => 'organization_counters_favorite_count',
-        7 => 'group_card_counts',
+        4 => 'organization_counters_member_count',
+        5 => 'field_org_desc',
+        6 => 'group_card_counts',
+        7 => 'organization_counters_favorite_count',
       ),
     ),
     'fields' => array(
@@ -214,10 +244,10 @@ function gie_organization_ds_layout_settings_info() {
       'group_card_content' => 'main_content',
       'organization_counters_innovation_count' => 'main_content',
       'title_field' => 'main_content',
-      'field_org_desc' => 'main_content',
       'organization_counters_member_count' => 'main_content',
-      'organization_counters_favorite_count' => 'main_content',
+      'field_org_desc' => 'main_content',
       'group_card_counts' => 'main_content',
+      'organization_counters_favorite_count' => 'main_content',
     ),
     'classes' => array(
       'layout_class' => array(
@@ -253,7 +283,11 @@ function gie_organization_ds_layout_settings_info() {
     'fields' => array(
       'field_org_logo' => 'ds_content',
     ),
-    'classes' => array(),
+    'classes' => array(
+      'layout_class' => array(
+        '' => '',
+      ),
+    ),
     'wrappers' => array(
       'ds_content' => 'div',
     ),
