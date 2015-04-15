@@ -36,10 +36,14 @@ function gie_organization_default_pane_data() {
   $template->container = 'organizations_introduction';
   $template->lang = 'und';
   $template->data = array(
-    'value' => '<h1>Organizations</h1>
+    'value' => '<div>
+<h1>Organizations</h1>
 
 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam at porttitor sem. Aliquam erat volutpat. Donec placerat nisl magna, et faucibus arcu condimentum sed. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam at porttitor sem. Aliquam erat volutpat. Donec placerat nisl magna, et faucibus arcu condimentum sed</p>
-<a class="button button--alt" href="/node/add/organization">Add Organization</a>',
+</div>
+<div>
+<a class="button button--add" href="/node/add/organization">Add Organization</a>
+</div>',
     'format' => 'full_html',
     'title' => NULL,
   );

@@ -46,7 +46,7 @@ function gie_organization_default_page_manager_pages() {
     'relationships' => array(),
   );
   $display = new panels_display();
-  $display->layout = 'sidebar_left';
+  $display->layout = 'landing';
   $display->layout_settings = array();
   $display->panel_settings = array(
     'style_settings' => array(
@@ -54,6 +54,7 @@ function gie_organization_default_page_manager_pages() {
       'preface' => NULL,
       'sidebar' => NULL,
       'main' => NULL,
+      'title' => NULL,
     ),
   );
   $display->cache = array();
@@ -80,29 +81,6 @@ function gie_organization_default_page_manager_pages() {
     $pane->uuid = '7b0cfe70-b7f4-43ff-9d35-0ce835c58609';
     $display->content['new-7b0cfe70-b7f4-43ff-9d35-0ce835c58609'] = $pane;
     $display->panels['main'][0] = 'new-7b0cfe70-b7f4-43ff-9d35-0ce835c58609';
-    $pane = new stdClass();
-    $pane->pid = 'new-cdc4ae87-c5dd-4a1f-9c0a-2d5771d3c8da';
-    $pane->panel = 'preface';
-    $pane->type = 'pane';
-    $pane->subtype = 'organizations_introduction';
-    $pane->shown = TRUE;
-    $pane->access = array();
-    $pane->configuration = array(
-      'override_title' => 1,
-      'override_title_text' => '',
-      'override_title_heading' => 'h1',
-    );
-    $pane->cache = array();
-    $pane->style = array(
-      'settings' => NULL,
-    );
-    $pane->css = array();
-    $pane->extras = array();
-    $pane->position = 0;
-    $pane->locks = array();
-    $pane->uuid = 'cdc4ae87-c5dd-4a1f-9c0a-2d5771d3c8da';
-    $display->content['new-cdc4ae87-c5dd-4a1f-9c0a-2d5771d3c8da'] = $pane;
-    $display->panels['preface'][0] = 'new-cdc4ae87-c5dd-4a1f-9c0a-2d5771d3c8da';
     $pane = new stdClass();
     $pane->pid = 'new-7abc168b-9a5f-4217-b799-2c999f6f86f1';
     $pane->panel = 'sidebar';
@@ -172,6 +150,32 @@ function gie_organization_default_page_manager_pages() {
     $pane->uuid = '7551e06a-8e6e-4348-b14e-b6923ff5cc79';
     $display->content['new-7551e06a-8e6e-4348-b14e-b6923ff5cc79'] = $pane;
     $display->panels['sidebar'][2] = 'new-7551e06a-8e6e-4348-b14e-b6923ff5cc79';
+    $pane = new stdClass();
+    $pane->pid = 'new-cdc4ae87-c5dd-4a1f-9c0a-2d5771d3c8da';
+    $pane->panel = 'title';
+    $pane->type = 'pane';
+    $pane->subtype = 'organizations_introduction';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array(
+      'override_title' => 1,
+      'override_title_text' => '',
+      'override_title_heading' => 'h1',
+    );
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
+    $pane->css = array(
+      'css_id' => '',
+      'css_class' => 'pane pane--landing-intro',
+    );
+    $pane->extras = array();
+    $pane->position = 0;
+    $pane->locks = array();
+    $pane->uuid = 'cdc4ae87-c5dd-4a1f-9c0a-2d5771d3c8da';
+    $display->content['new-cdc4ae87-c5dd-4a1f-9c0a-2d5771d3c8da'] = $pane;
+    $display->panels['title'][0] = 'new-cdc4ae87-c5dd-4a1f-9c0a-2d5771d3c8da';
   $display->hide_title = PANELS_TITLE_FIXED;
   $display->title_pane = '0';
   $handler->conf['display'] = $display;
