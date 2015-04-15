@@ -133,17 +133,29 @@ function gie_organization_strongarm() {
             'weight' => '4',
             'visible' => TRUE,
           ),
+          'teaser' => array(
+            'weight' => '10',
+            'visible' => FALSE,
+          ),
         ),
         'organization_counters_innovation_count' => array(
           'listing' => array(
             'weight' => '2',
             'visible' => TRUE,
           ),
+          'teaser' => array(
+            'weight' => '10',
+            'visible' => FALSE,
+          ),
         ),
         'organization_counters_member_count' => array(
           'listing' => array(
             'weight' => '3',
             'visible' => TRUE,
+          ),
+          'teaser' => array(
+            'weight' => '10',
+            'visible' => FALSE,
           ),
         ),
       ),
