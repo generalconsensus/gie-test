@@ -39,10 +39,10 @@ $aliases['dev'] = array(
 
 
 $aliases['stage'] = array(
-  'uri' => 'stage.giexchange.forumon.com',
+  'uri' => 'stage.giexchange.forumone.com',
   'root' => '/var/www/vhosts/giexchange.stage/public',
   'remote-host' => 'stage.giexchange.forumone.com',
-  'remote-user' => 'gixechange',
+  'remote-user' => 'giexchange',
   'command-specific' => array(
     'rsync' => array (
       'mode' => 'rzv'
