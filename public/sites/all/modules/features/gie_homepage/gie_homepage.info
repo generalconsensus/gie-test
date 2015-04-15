@@ -51,6 +51,7 @@ features[node][] = action_card
 features[node][] = homepage
 features[node][] = persona
 features[pane_container][] = homepage_header
+features[pane_container][] = homepage_join_callout
 features[user_permission][] = create homepage content
 features[user_permission][] = create persona content
 features[user_permission][] = delete any homepage content
