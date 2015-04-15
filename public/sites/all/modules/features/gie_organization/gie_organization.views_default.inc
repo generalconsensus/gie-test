@@ -357,6 +357,160 @@ function gie_organization_views_default_views() {
   $export['organization_recent_content'] = $view;
 
   $view = new view();
+  $view->name = 'organization_social';
+  $view->description = 'Social links for the organization';
+  $view->tag = 'default';
+  $view->base_table = 'node';
+  $view->human_name = 'Organization Social';
+  $view->core = 7;
+  $view->api_version = '3.0';
+  $view->disabled = FALSE; /* Edit this to true to make a default view disabled initially */
+
+  /* Display: Master */
+  $handler = $view->new_display('default', 'Master', 'default');
+  $handler->display->display_options['css_class'] = 'connect';
+  $handler->display->display_options['use_more_always'] = FALSE;
+  $handler->display->display_options['access']['type'] = 'perm';
+  $handler->display->display_options['cache']['type'] = 'none';
+  $handler->display->display_options['query']['type'] = 'views_query';
+  $handler->display->display_options['exposed_form']['type'] = 'basic';
+  $handler->display->display_options['pager']['type'] = 'full';
+  $handler->display->display_options['style_plugin'] = 'default';
+  $handler->display->display_options['style_options']['default_row_class'] = FALSE;
+  $handler->display->display_options['style_options']['row_class_special'] = FALSE;
+  $handler->display->display_options['row_plugin'] = 'fields';
+  $handler->display->display_options['row_options']['hide_empty'] = TRUE;
+  $handler->display->display_options['row_options']['default_field_elements'] = FALSE;
+  /* Header: Global: Text area */
+  $handler->display->display_options['header']['area']['id'] = 'area';
+  $handler->display->display_options['header']['area']['table'] = 'views';
+  $handler->display->display_options['header']['area']['field'] = 'area';
+  $handler->display->display_options['header']['area']['content'] = '<h4 class="connect__title">Connect with us on</h4>';
+  $handler->display->display_options['header']['area']['format'] = 'full_html';
+  /* Field: Content: Facebook */
+  $handler->display->display_options['fields']['field_organization_facebook']['id'] = 'field_organization_facebook';
+  $handler->display->display_options['fields']['field_organization_facebook']['table'] = 'field_data_field_organization_facebook';
+  $handler->display->display_options['fields']['field_organization_facebook']['field'] = 'field_organization_facebook';
+  $handler->display->display_options['fields']['field_organization_facebook']['label'] = '';
+  $handler->display->display_options['fields']['field_organization_facebook']['alter']['make_link'] = TRUE;
+  $handler->display->display_options['fields']['field_organization_facebook']['alter']['path'] = '[field_organization_facebook]';
+  $handler->display->display_options['fields']['field_organization_facebook']['alter']['link_class'] = 'connect__link connect__link--facebook';
+  $handler->display->display_options['fields']['field_organization_facebook']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_organization_facebook']['element_default_classes'] = FALSE;
+  $handler->display->display_options['fields']['field_organization_facebook']['hide_empty'] = TRUE;
+  $handler->display->display_options['fields']['field_organization_facebook']['empty_zero'] = TRUE;
+  $handler->display->display_options['fields']['field_organization_facebook']['settings'] = array(
+    'linked_field' => array(
+      'linked' => 0,
+      'destination' => '',
+      'advanced' => array(
+        'title' => '',
+        'target' => '',
+        'class' => '',
+        'rel' => '',
+        'text' => '',
+      ),
+    ),
+  );
+  /* Field: Content: Twitter */
+  $handler->display->display_options['fields']['field_organization_twitter']['id'] = 'field_organization_twitter';
+  $handler->display->display_options['fields']['field_organization_twitter']['table'] = 'field_data_field_organization_twitter';
+  $handler->display->display_options['fields']['field_organization_twitter']['field'] = 'field_organization_twitter';
+  $handler->display->display_options['fields']['field_organization_twitter']['label'] = '';
+  $handler->display->display_options['fields']['field_organization_twitter']['alter']['make_link'] = TRUE;
+  $handler->display->display_options['fields']['field_organization_twitter']['alter']['path'] = '[field_organization_twitter]';
+  $handler->display->display_options['fields']['field_organization_twitter']['alter']['link_class'] = 'connect__link connect__link--twitter';
+  $handler->display->display_options['fields']['field_organization_twitter']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_organization_twitter']['element_default_classes'] = FALSE;
+  $handler->display->display_options['fields']['field_organization_twitter']['hide_empty'] = TRUE;
+  $handler->display->display_options['fields']['field_organization_twitter']['empty_zero'] = TRUE;
+  $handler->display->display_options['fields']['field_organization_twitter']['settings'] = array(
+    'linked_field' => array(
+      'linked' => 0,
+      'destination' => '',
+      'advanced' => array(
+        'title' => '',
+        'target' => '',
+        'class' => '',
+        'rel' => '',
+        'text' => '',
+      ),
+    ),
+  );
+  /* Field: Content: LinkedIn */
+  $handler->display->display_options['fields']['field_organization_linkedin']['id'] = 'field_organization_linkedin';
+  $handler->display->display_options['fields']['field_organization_linkedin']['table'] = 'field_data_field_organization_linkedin';
+  $handler->display->display_options['fields']['field_organization_linkedin']['field'] = 'field_organization_linkedin';
+  $handler->display->display_options['fields']['field_organization_linkedin']['label'] = '';
+  $handler->display->display_options['fields']['field_organization_linkedin']['alter']['make_link'] = TRUE;
+  $handler->display->display_options['fields']['field_organization_linkedin']['alter']['path'] = '[field_organization_linkedin]';
+  $handler->display->display_options['fields']['field_organization_linkedin']['alter']['link_class'] = 'connect__link connect__link--linkedin';
+  $handler->display->display_options['fields']['field_organization_linkedin']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_organization_linkedin']['element_default_classes'] = FALSE;
+  $handler->display->display_options['fields']['field_organization_linkedin']['hide_empty'] = TRUE;
+  $handler->display->display_options['fields']['field_organization_linkedin']['empty_zero'] = TRUE;
+  $handler->display->display_options['fields']['field_organization_linkedin']['settings'] = array(
+    'linked_field' => array(
+      'linked' => 0,
+      'destination' => '',
+      'advanced' => array(
+        'title' => '',
+        'target' => '',
+        'class' => '',
+        'rel' => '',
+        'text' => '',
+      ),
+    ),
+  );
+  /* Sort criterion: Content: Post date */
+  $handler->display->display_options['sorts']['created']['id'] = 'created';
+  $handler->display->display_options['sorts']['created']['table'] = 'node';
+  $handler->display->display_options['sorts']['created']['field'] = 'created';
+  $handler->display->display_options['sorts']['created']['order'] = 'DESC';
+  /* Contextual filter: Content: Nid */
+  $handler->display->display_options['arguments']['nid']['id'] = 'nid';
+  $handler->display->display_options['arguments']['nid']['table'] = 'node';
+  $handler->display->display_options['arguments']['nid']['field'] = 'nid';
+  $handler->display->display_options['arguments']['nid']['default_action'] = 'default';
+  $handler->display->display_options['arguments']['nid']['default_argument_type'] = 'node';
+  $handler->display->display_options['arguments']['nid']['summary']['number_of_records'] = '0';
+  $handler->display->display_options['arguments']['nid']['summary']['format'] = 'default_summary';
+  $handler->display->display_options['arguments']['nid']['summary_options']['items_per_page'] = '25';
+  $handler->display->display_options['filter_groups']['groups'] = array(
+    1 => 'AND',
+    2 => 'OR',
+  );
+  /* Filter criterion: Content: Published */
+  $handler->display->display_options['filters']['status']['id'] = 'status';
+  $handler->display->display_options['filters']['status']['table'] = 'node';
+  $handler->display->display_options['filters']['status']['field'] = 'status';
+  $handler->display->display_options['filters']['status']['value'] = 1;
+  $handler->display->display_options['filters']['status']['group'] = 1;
+  $handler->display->display_options['filters']['status']['expose']['operator'] = FALSE;
+  /* Filter criterion: Content: Facebook (field_organization_facebook) */
+  $handler->display->display_options['filters']['field_organization_facebook_value']['id'] = 'field_organization_facebook_value';
+  $handler->display->display_options['filters']['field_organization_facebook_value']['table'] = 'field_data_field_organization_facebook';
+  $handler->display->display_options['filters']['field_organization_facebook_value']['field'] = 'field_organization_facebook_value';
+  $handler->display->display_options['filters']['field_organization_facebook_value']['operator'] = 'not empty';
+  $handler->display->display_options['filters']['field_organization_facebook_value']['group'] = 2;
+  /* Filter criterion: Content: Twitter (field_organization_twitter) */
+  $handler->display->display_options['filters']['field_organization_twitter_value']['id'] = 'field_organization_twitter_value';
+  $handler->display->display_options['filters']['field_organization_twitter_value']['table'] = 'field_data_field_organization_twitter';
+  $handler->display->display_options['filters']['field_organization_twitter_value']['field'] = 'field_organization_twitter_value';
+  $handler->display->display_options['filters']['field_organization_twitter_value']['operator'] = 'not empty';
+  $handler->display->display_options['filters']['field_organization_twitter_value']['group'] = 2;
+  /* Filter criterion: Content: Twitter (field_organization_twitter) */
+  $handler->display->display_options['filters']['field_organization_twitter_value_1']['id'] = 'field_organization_twitter_value_1';
+  $handler->display->display_options['filters']['field_organization_twitter_value_1']['table'] = 'field_data_field_organization_twitter';
+  $handler->display->display_options['filters']['field_organization_twitter_value_1']['field'] = 'field_organization_twitter_value';
+  $handler->display->display_options['filters']['field_organization_twitter_value_1']['operator'] = 'not empty';
+  $handler->display->display_options['filters']['field_organization_twitter_value_1']['group'] = 2;
+
+  /* Display: Content pane */
+  $handler = $view->new_display('panel_pane', 'Content pane', 'org_connect_with_me');
+  $export['organization_social'] = $view;
+
+  $view = new view();
   $view->name = 'organization_taxonomies';
   $view->description = 'Lists of various taxonomies for Organization page';
   $view->tag = 'default';
@@ -435,6 +589,72 @@ function gie_organization_views_default_views() {
   $handler->display->display_options['arguments']['nid']['summary']['format'] = 'default_summary';
   $handler->display->display_options['arguments']['nid']['summary_options']['items_per_page'] = '25';
   $export['organization_taxonomies'] = $view;
+
+  $view = new view();
+  $view->name = 'organization_type_view';
+  $view->description = '';
+  $view->tag = 'default';
+  $view->base_table = 'taxonomy_term_data';
+  $view->human_name = 'Organization Type View';
+  $view->core = 7;
+  $view->api_version = '3.0';
+  $view->disabled = FALSE; /* Edit this to true to make a default view disabled initially */
+
+  /* Display: Master */
+  $handler = $view->new_display('default', 'Master', 'default');
+  $handler->display->display_options['title'] = 'Organization Type';
+  $handler->display->display_options['use_more_always'] = FALSE;
+  $handler->display->display_options['access']['type'] = 'perm';
+  $handler->display->display_options['cache']['type'] = 'none';
+  $handler->display->display_options['query']['type'] = 'views_query';
+  $handler->display->display_options['exposed_form']['type'] = 'basic';
+  $handler->display->display_options['pager']['type'] = 'none';
+  $handler->display->display_options['pager']['options']['offset'] = '0';
+  $handler->display->display_options['style_plugin'] = 'list';
+  $handler->display->display_options['style_options']['default_row_class'] = FALSE;
+  $handler->display->display_options['style_options']['row_class_special'] = FALSE;
+  $handler->display->display_options['row_plugin'] = 'fields';
+  /* No results behavior: Global: Text area */
+  $handler->display->display_options['empty']['area']['id'] = 'area';
+  $handler->display->display_options['empty']['area']['table'] = 'views';
+  $handler->display->display_options['empty']['area']['field'] = 'area';
+  $handler->display->display_options['empty']['area']['empty'] = TRUE;
+  $handler->display->display_options['empty']['area']['content'] = 'There is no Organization Type selected.';
+  $handler->display->display_options['empty']['area']['format'] = 'filtered_html';
+  /* Relationship: Taxonomy term: Content using Organization Type */
+  $handler->display->display_options['relationships']['reverse_field_organization_type_node']['id'] = 'reverse_field_organization_type_node';
+  $handler->display->display_options['relationships']['reverse_field_organization_type_node']['table'] = 'taxonomy_term_data';
+  $handler->display->display_options['relationships']['reverse_field_organization_type_node']['field'] = 'reverse_field_organization_type_node';
+  $handler->display->display_options['relationships']['reverse_field_organization_type_node']['required'] = TRUE;
+  /* Field: Taxonomy term: Name */
+  $handler->display->display_options['fields']['name']['id'] = 'name';
+  $handler->display->display_options['fields']['name']['table'] = 'taxonomy_term_data';
+  $handler->display->display_options['fields']['name']['field'] = 'name';
+  $handler->display->display_options['fields']['name']['label'] = '';
+  $handler->display->display_options['fields']['name']['alter']['word_boundary'] = FALSE;
+  $handler->display->display_options['fields']['name']['alter']['ellipsis'] = FALSE;
+  $handler->display->display_options['fields']['name']['element_label_colon'] = FALSE;
+  /* Contextual filter: Content: Nid */
+  $handler->display->display_options['arguments']['nid']['id'] = 'nid';
+  $handler->display->display_options['arguments']['nid']['table'] = 'node';
+  $handler->display->display_options['arguments']['nid']['field'] = 'nid';
+  $handler->display->display_options['arguments']['nid']['relationship'] = 'reverse_field_organization_type_node';
+  $handler->display->display_options['arguments']['nid']['default_action'] = 'default';
+  $handler->display->display_options['arguments']['nid']['default_argument_type'] = 'node';
+  $handler->display->display_options['arguments']['nid']['summary']['number_of_records'] = '0';
+  $handler->display->display_options['arguments']['nid']['summary']['format'] = 'default_summary';
+  $handler->display->display_options['arguments']['nid']['summary_options']['items_per_page'] = '25';
+  /* Filter criterion: Taxonomy vocabulary: Machine name */
+  $handler->display->display_options['filters']['machine_name']['id'] = 'machine_name';
+  $handler->display->display_options['filters']['machine_name']['table'] = 'taxonomy_vocabulary';
+  $handler->display->display_options['filters']['machine_name']['field'] = 'machine_name';
+  $handler->display->display_options['filters']['machine_name']['value'] = array(
+    'organization_type' => 'organization_type',
+  );
+
+  /* Display: Content pane */
+  $handler = $view->new_display('panel_pane', 'Content pane', 'organization_type_view');
+  $export['organization_type_view'] = $view;
 
   $view = new view();
   $view->name = 'partners';
