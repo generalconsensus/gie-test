@@ -50,6 +50,7 @@ features[field_instance][] = node-persona-title_field
 features[node][] = action_card
 features[node][] = homepage
 features[node][] = persona
+features[pane_container][] = homepage_footer_callout
 features[pane_container][] = homepage_header
 features[pane_container][] = homepage_join_callout
 features[user_permission][] = create homepage content
