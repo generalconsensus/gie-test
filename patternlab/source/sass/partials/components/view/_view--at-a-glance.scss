@@ -1,5 +1,6 @@
-%view--innovation-counters__icon-field {
-  //font-size: em(14px);
+%view--at-a-glance__icon-field {
+  display: inline-block;
+  float: left;
   padding: 0 0 1em 35px;
   position: relative;
   &:before {
@@ -9,9 +10,14 @@
     position: absolute;
     top: 5px;
   }
+  .views-label {
+    float: right;
+    margin-right: 0;
+    padding-left: 1em;
+  }
 }
 
-.view--innovation-counters {
+.view--at-a-glance {
   overflow: hidden;
   padding-left: 1.5em;
   .view__attachment-after {
@@ -22,18 +28,9 @@
   }
   .views-field {
     clear: both;
-    display: inline-block;
-    float: left;
-    .views-label {
-      float: right;
-      padding-left: 1em;
-    }
-    .field-content {
-
-    }
   }
   .views-field-comment-count {
-    @extend %view--innovation-counters__icon-field;
+    @extend %view--at-a-glance__icon-field;
     &:before {
       @include svg-background(icon-comment-20-17-blue);
       height: 17px;
@@ -41,7 +38,7 @@
     }
   }
   .views-field-count {
-    @extend %view--innovation-counters__icon-field;
+    @extend %view--at-a-glance__icon-field;
     &:before {
       @include svg-background(icon-favorite-18-17-blue);
       height: 17px;
@@ -49,7 +46,7 @@
     }
   }
   .views-field-delta {
-    @extend %view--innovation-counters__icon-field;
+    @extend %view--at-a-glance__icon-field;
     &:before {
       @include svg-background(icon-member-17-17-blue);
       height: 17px;

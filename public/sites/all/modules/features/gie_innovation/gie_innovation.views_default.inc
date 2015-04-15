@@ -547,6 +547,8 @@ function gie_innovation_views_default_views() {
 
   /* Display: Content pane */
   $handler = $view->new_display('panel_pane', 'Content pane', 'at_a_glance');
+  $handler->display->display_options['defaults']['css_class'] = FALSE;
+  $handler->display->display_options['css_class'] = 'view--at-a-glance';
   $handler->display->display_options['defaults']['fields'] = FALSE;
   /* Field: Content: Comment count */
   $handler->display->display_options['fields']['comment_count']['id'] = 'comment_count';
@@ -681,7 +683,7 @@ function gie_innovation_views_default_views() {
   $handler->display->display_options['fields']['field_innovation_proof_evidence']['group_type'] = 'count';
   $handler->display->display_options['fields']['field_innovation_proof_evidence']['label'] = '';
   $handler->display->display_options['fields']['field_innovation_proof_evidence']['element_type'] = 'div';
-  $handler->display->display_options['fields']['field_innovation_proof_evidence']['element_class'] = 'has-icon--camera';
+  $handler->display->display_options['fields']['field_innovation_proof_evidence']['element_class'] = 'has-icon--evidence';
   $handler->display->display_options['fields']['field_innovation_proof_evidence']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['field_innovation_proof_evidence']['element_default_classes'] = FALSE;
   $handler->display->display_options['fields']['field_innovation_proof_evidence']['separator'] = ', ';
@@ -735,7 +737,7 @@ function gie_innovation_views_default_views() {
   $handler->display->display_options['fields']['field_innovation_funders']['group_type'] = 'count';
   $handler->display->display_options['fields']['field_innovation_funders']['label'] = '';
   $handler->display->display_options['fields']['field_innovation_funders']['element_type'] = 'div';
-  $handler->display->display_options['fields']['field_innovation_funders']['element_class'] = 'has-icon--member';
+  $handler->display->display_options['fields']['field_innovation_funders']['element_class'] = 'has-icon--organization';
   $handler->display->display_options['fields']['field_innovation_funders']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['field_innovation_funders']['element_default_classes'] = FALSE;
   $handler->display->display_options['fields']['field_innovation_funders']['separator'] = ', ';
