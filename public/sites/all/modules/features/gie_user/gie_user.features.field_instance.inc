@@ -1707,6 +1707,10 @@ function gie_user_field_default_field_instances() {
     'required' => 0,
     'settings' => array(
       'alt_field' => 0,
+      'alt_field_default' => '',
+      'alt_field_hide' => 0,
+      'alt_field_sync_title' => 0,
+      'alt_field_update_on_edit' => 0,
       'default_image' => 0,
       'file_directory' => 'images',
       'file_extensions' => 'png gif jpg jpeg',
@@ -1716,6 +1720,9 @@ function gie_user_field_default_field_instances() {
       'random_default' => 1,
       'random_default_path' => 'random',
       'title_field' => 0,
+      'title_field_default' => '',
+      'title_field_hide' => 0,
+      'title_field_update_on_edit' => 0,
       'user_register_form' => 1,
     ),
     'widget' => array(

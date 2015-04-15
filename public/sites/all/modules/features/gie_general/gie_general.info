@@ -42,6 +42,7 @@ dependencies[] = file
 dependencies[] = flag
 dependencies[] = html5_tools
 dependencies[] = image
+dependencies[] = imagefield_tokens
 dependencies[] = jquery_update
 dependencies[] = libraries
 dependencies[] = link

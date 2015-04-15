@@ -98,6 +98,9 @@ function gie_organization_strongarm() {
       'contact' => array(
         'custom_settings' => TRUE,
       ),
+      'teaser_image' => array(
+        'custom_settings' => TRUE,
+      ),
     ),
     'extra_fields' => array(
       'form' => array(
@@ -108,7 +111,7 @@ function gie_organization_strongarm() {
       'display' => array(
         'sharethis' => array(
           'teaser' => array(
-            'weight' => '1',
+            'weight' => '17',
             'visible' => FALSE,
           ),
           'default' => array(
@@ -127,6 +130,10 @@ function gie_organization_strongarm() {
             'weight' => '23',
             'visible' => FALSE,
           ),
+          'teaser_image' => array(
+            'weight' => '11',
+            'visible' => FALSE,
+          ),
         ),
         'organization_counters_favorite_count' => array(
           'listing' => array(
@@ -134,6 +141,14 @@ function gie_organization_strongarm() {
             'visible' => TRUE,
           ),
           'teaser' => array(
+            'weight' => '26',
+            'visible' => FALSE,
+          ),
+          'default' => array(
+            'weight' => '10',
+            'visible' => TRUE,
+          ),
+          'teaser_image' => array(
             'weight' => '10',
             'visible' => FALSE,
           ),
@@ -144,7 +159,15 @@ function gie_organization_strongarm() {
             'visible' => TRUE,
           ),
           'teaser' => array(
+            'weight' => '27',
+            'visible' => FALSE,
+          ),
+          'default' => array(
             'weight' => '10',
+            'visible' => TRUE,
+          ),
+          'teaser_image' => array(
+            'weight' => '12',
             'visible' => FALSE,
           ),
         ),
@@ -154,7 +177,15 @@ function gie_organization_strongarm() {
             'visible' => TRUE,
           ),
           'teaser' => array(
+            'weight' => '25',
+            'visible' => FALSE,
+          ),
+          'default' => array(
             'weight' => '10',
+            'visible' => TRUE,
+          ),
+          'teaser_image' => array(
+            'weight' => '9',
             'visible' => FALSE,
           ),
         ),
