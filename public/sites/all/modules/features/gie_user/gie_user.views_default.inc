@@ -150,6 +150,7 @@ function gie_user_views_default_views() {
   /* Display: Master */
   $handler = $view->new_display('default', 'Master', 'default');
   $handler->display->display_options['title'] = 'Communities';
+  $handler->display->display_options['hide_admin_links'] = TRUE;
   $handler->display->display_options['use_more_always'] = FALSE;
   $handler->display->display_options['access']['type'] = 'perm';
   $handler->display->display_options['cache']['type'] = 'none';
@@ -158,7 +159,9 @@ function gie_user_views_default_views() {
   $handler->display->display_options['pager']['type'] = 'none';
   $handler->display->display_options['pager']['options']['offset'] = '0';
   $handler->display->display_options['style_plugin'] = 'default';
+  $handler->display->display_options['style_options']['row_class_special'] = FALSE;
   $handler->display->display_options['row_plugin'] = 'fields';
+  $handler->display->display_options['row_options']['default_field_elements'] = FALSE;
   /* Relationship: Flags: follow_taxonomy */
   $handler->display->display_options['relationships']['flag_content_rel']['id'] = 'flag_content_rel';
   $handler->display->display_options['relationships']['flag_content_rel']['table'] = 'taxonomy_term_data';
@@ -172,6 +175,9 @@ function gie_user_views_default_views() {
   $handler->display->display_options['fields']['name']['label'] = '';
   $handler->display->display_options['fields']['name']['alter']['word_boundary'] = FALSE;
   $handler->display->display_options['fields']['name']['alter']['ellipsis'] = FALSE;
+  $handler->display->display_options['fields']['name']['element_type'] = 'div';
+  $handler->display->display_options['fields']['name']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['name']['element_default_classes'] = FALSE;
   $handler->display->display_options['fields']['name']['link_to_taxonomy'] = TRUE;
   /* Sort criterion: Taxonomy term: Name */
   $handler->display->display_options['sorts']['name']['id'] = 'name';
@@ -268,6 +274,7 @@ function gie_user_views_default_views() {
   /* Display: Master */
   $handler = $view->new_display('default', 'Master', 'default');
   $handler->display->display_options['title'] = 'Recent Conversations';
+  $handler->display->display_options['hide_admin_links'] = TRUE;
   $handler->display->display_options['use_more_always'] = FALSE;
   $handler->display->display_options['access']['type'] = 'perm';
   $handler->display->display_options['access']['perm'] = 'access comments';
@@ -278,7 +285,9 @@ function gie_user_views_default_views() {
   $handler->display->display_options['pager']['options']['items_per_page'] = '4';
   $handler->display->display_options['pager']['options']['offset'] = '0';
   $handler->display->display_options['style_plugin'] = 'default';
+  $handler->display->display_options['style_options']['row_class_special'] = FALSE;
   $handler->display->display_options['row_plugin'] = 'fields';
+  $handler->display->display_options['row_options']['default_field_elements'] = FALSE;
   /* Relationship: Comment: Content */
   $handler->display->display_options['relationships']['nid']['id'] = 'nid';
   $handler->display->display_options['relationships']['nid']['table'] = 'comment';
@@ -291,12 +300,15 @@ function gie_user_views_default_views() {
   $handler->display->display_options['fields']['title']['relationship'] = 'nid';
   $handler->display->display_options['fields']['title']['label'] = '';
   $handler->display->display_options['fields']['title']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['title']['element_default_classes'] = FALSE;
   /* Field: Comment: Post date */
   $handler->display->display_options['fields']['created']['id'] = 'created';
   $handler->display->display_options['fields']['created']['table'] = 'comment';
   $handler->display->display_options['fields']['created']['field'] = 'created';
   $handler->display->display_options['fields']['created']['label'] = '';
+  $handler->display->display_options['fields']['created']['element_type'] = 'div';
   $handler->display->display_options['fields']['created']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['created']['element_default_classes'] = FALSE;
   $handler->display->display_options['fields']['created']['date_format'] = 'today time ago';
   $handler->display->display_options['fields']['created']['second_date_format'] = 'short';
   /* Field: Comment: Comment */
@@ -304,7 +316,9 @@ function gie_user_views_default_views() {
   $handler->display->display_options['fields']['comment_body']['table'] = 'field_data_comment_body';
   $handler->display->display_options['fields']['comment_body']['field'] = 'comment_body';
   $handler->display->display_options['fields']['comment_body']['label'] = '';
+  $handler->display->display_options['fields']['comment_body']['element_type'] = 'div';
   $handler->display->display_options['fields']['comment_body']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['comment_body']['element_default_classes'] = FALSE;
   $handler->display->display_options['fields']['comment_body']['type'] = 'smart_trim_format';
   $handler->display->display_options['fields']['comment_body']['settings'] = array(
     'trim_length' => '100',
@@ -375,14 +389,16 @@ function gie_user_views_default_views() {
   /* Display: Master */
   $handler = $view->new_display('default', 'Master', 'default');
   $handler->display->display_options['title'] = 'Recently Posted';
+  $handler->display->display_options['css_class'] = 'view--recently-posted';
+  $handler->display->display_options['hide_admin_links'] = TRUE;
   $handler->display->display_options['use_more_always'] = FALSE;
   $handler->display->display_options['access']['type'] = 'perm';
   $handler->display->display_options['cache']['type'] = 'none';
   $handler->display->display_options['query']['type'] = 'views_query';
   $handler->display->display_options['exposed_form']['type'] = 'basic';
   $handler->display->display_options['pager']['type'] = 'full';
-  $handler->display->display_options['style_plugin'] = 'grid';
-  $handler->display->display_options['style_options']['columns'] = '2';
+  $handler->display->display_options['style_plugin'] = 'default';
+  $handler->display->display_options['style_options']['row_class_special'] = FALSE;
   $handler->display->display_options['row_plugin'] = 'entity';
   $handler->display->display_options['row_options']['view_mode'] = 'teaser_date';
   /* Field: Content: Title */
@@ -505,6 +521,7 @@ function gie_user_views_default_views() {
   /* Display: Master */
   $handler = $view->new_display('default', 'Master', 'default');
   $handler->display->display_options['title'] = 'Funded By';
+  $handler->display->display_options['hide_admin_links'] = TRUE;
   $handler->display->display_options['use_more_always'] = FALSE;
   $handler->display->display_options['access']['type'] = 'perm';
   $handler->display->display_options['cache']['type'] = 'none';
@@ -516,7 +533,10 @@ function gie_user_views_default_views() {
   $handler->display->display_options['pager']['options']['offset'] = '0';
   $handler->display->display_options['pager']['options']['id'] = '0';
   $handler->display->display_options['pager']['options']['quantity'] = '9';
-  $handler->display->display_options['style_plugin'] = 'default';
+  $handler->display->display_options['style_plugin'] = 'grid';
+  $handler->display->display_options['style_options']['default_row_class'] = FALSE;
+  $handler->display->display_options['style_options']['row_class_special'] = FALSE;
+  $handler->display->display_options['style_options']['columns'] = '3';
   $handler->display->display_options['row_plugin'] = 'entity';
   $handler->display->display_options['row_options']['view_mode'] = 'teaser';
   /* Relationship: Entity Reference: Referencing entity */
@@ -941,6 +961,7 @@ function gie_user_views_default_views() {
 
   /* Display: Master */
   $handler = $view->new_display('default', 'Master', 'default');
+  $handler->display->display_options['css_class'] = 'view connect';
   $handler->display->display_options['use_more_always'] = FALSE;
   $handler->display->display_options['access']['type'] = 'perm';
   $handler->display->display_options['access']['perm'] = 'access user profiles';
@@ -959,7 +980,7 @@ function gie_user_views_default_views() {
   $handler->display->display_options['header']['area']['id'] = 'area';
   $handler->display->display_options['header']['area']['table'] = 'views';
   $handler->display->display_options['header']['area']['field'] = 'area';
-  $handler->display->display_options['header']['area']['content'] = '<h4>Connect with me on</h4>';
+  $handler->display->display_options['header']['area']['content'] = '<h4 class="connect__title">Connect with me on</h4>';
   $handler->display->display_options['header']['area']['format'] = 'full_html';
   /* Field: User: Facebook */
   $handler->display->display_options['fields']['field_user_facebook']['id'] = 'field_user_facebook';
@@ -1075,6 +1096,79 @@ function gie_user_views_default_views() {
 
   /* Display: Content pane */
   $handler = $view->new_display('panel_pane', 'Content pane', 'connect_with_me');
+  $handler->display->display_options['defaults']['fields'] = FALSE;
+  /* Field: User: Facebook */
+  $handler->display->display_options['fields']['field_user_facebook']['id'] = 'field_user_facebook';
+  $handler->display->display_options['fields']['field_user_facebook']['table'] = 'field_data_field_user_facebook';
+  $handler->display->display_options['fields']['field_user_facebook']['field'] = 'field_user_facebook';
+  $handler->display->display_options['fields']['field_user_facebook']['label'] = '';
+  $handler->display->display_options['fields']['field_user_facebook']['alter']['alter_text'] = TRUE;
+  $handler->display->display_options['fields']['field_user_facebook']['alter']['text'] = '<a href="[field_user_facebook]" class="connect__link connect__link--facebook" title="Facebook">Facebook</a>';
+  $handler->display->display_options['fields']['field_user_facebook']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_user_facebook']['element_default_classes'] = FALSE;
+  $handler->display->display_options['fields']['field_user_facebook']['hide_empty'] = TRUE;
+  $handler->display->display_options['fields']['field_user_facebook']['empty_zero'] = TRUE;
+  $handler->display->display_options['fields']['field_user_facebook']['settings'] = array(
+    'linked_field' => array(
+      'linked' => 0,
+      'destination' => '',
+      'advanced' => array(
+        'title' => '',
+        'target' => '',
+        'class' => '',
+        'rel' => '',
+        'text' => '',
+      ),
+    ),
+  );
+  /* Field: User: Twitter */
+  $handler->display->display_options['fields']['field_user_twitter']['id'] = 'field_user_twitter';
+  $handler->display->display_options['fields']['field_user_twitter']['table'] = 'field_data_field_user_twitter';
+  $handler->display->display_options['fields']['field_user_twitter']['field'] = 'field_user_twitter';
+  $handler->display->display_options['fields']['field_user_twitter']['label'] = '';
+  $handler->display->display_options['fields']['field_user_twitter']['alter']['alter_text'] = TRUE;
+  $handler->display->display_options['fields']['field_user_twitter']['alter']['text'] = '<a href="[field_user_twitter]" class="connect__link connect__link--twitter" title="Twitter">Twitter</a>';
+  $handler->display->display_options['fields']['field_user_twitter']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_user_twitter']['element_default_classes'] = FALSE;
+  $handler->display->display_options['fields']['field_user_twitter']['hide_empty'] = TRUE;
+  $handler->display->display_options['fields']['field_user_twitter']['empty_zero'] = TRUE;
+  $handler->display->display_options['fields']['field_user_twitter']['settings'] = array(
+    'linked_field' => array(
+      'linked' => 0,
+      'destination' => '',
+      'advanced' => array(
+        'title' => '',
+        'target' => '',
+        'class' => '',
+        'rel' => '',
+        'text' => '',
+      ),
+    ),
+  );
+  /* Field: User: LinkedIn */
+  $handler->display->display_options['fields']['field_user_linkedin']['id'] = 'field_user_linkedin';
+  $handler->display->display_options['fields']['field_user_linkedin']['table'] = 'field_data_field_user_linkedin';
+  $handler->display->display_options['fields']['field_user_linkedin']['field'] = 'field_user_linkedin';
+  $handler->display->display_options['fields']['field_user_linkedin']['label'] = '';
+  $handler->display->display_options['fields']['field_user_linkedin']['alter']['alter_text'] = TRUE;
+  $handler->display->display_options['fields']['field_user_linkedin']['alter']['text'] = '<a href="[field_user_linkedin]" title="Linked In" class="connect__link connect__link--linkedin">Linked In</a>';
+  $handler->display->display_options['fields']['field_user_linkedin']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_user_linkedin']['element_default_classes'] = FALSE;
+  $handler->display->display_options['fields']['field_user_linkedin']['hide_empty'] = TRUE;
+  $handler->display->display_options['fields']['field_user_linkedin']['empty_zero'] = TRUE;
+  $handler->display->display_options['fields']['field_user_linkedin']['settings'] = array(
+    'linked_field' => array(
+      'linked' => 0,
+      'destination' => '',
+      'advanced' => array(
+        'title' => '',
+        'target' => '',
+        'class' => '',
+        'rel' => '',
+        'text' => '',
+      ),
+    ),
+  );
   $handler->display->display_options['allow']['use_pager'] = 0;
   $handler->display->display_options['allow']['items_per_page'] = 0;
   $handler->display->display_options['allow']['offset'] = 0;

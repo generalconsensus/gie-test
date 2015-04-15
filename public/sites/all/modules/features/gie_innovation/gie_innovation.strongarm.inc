@@ -163,7 +163,7 @@ function gie_innovation_strongarm() {
             'visible' => FALSE,
           ),
           'teaser_date' => array(
-            'weight' => '15',
+            'weight' => '22',
             'visible' => FALSE,
           ),
           'listing' => array(
@@ -180,6 +180,10 @@ function gie_innovation_strongarm() {
             'weight' => '10',
             'visible' => FALSE,
           ),
+          'teaser_date' => array(
+            'weight' => '15',
+            'visible' => FALSE,
+          ),
         ),
         'innovation_listing_counts_comments' => array(
           'listing' => array(
@@ -188,6 +192,10 @@ function gie_innovation_strongarm() {
           ),
           'full' => array(
             'weight' => '10',
+            'visible' => FALSE,
+          ),
+          'teaser_date' => array(
+            'weight' => '14',
             'visible' => FALSE,
           ),
         ),
@@ -200,6 +208,10 @@ function gie_innovation_strongarm() {
             'weight' => '10',
             'visible' => FALSE,
           ),
+          'teaser_date' => array(
+            'weight' => '16',
+            'visible' => FALSE,
+          ),
         ),
         'innovation_listing_counts_favorites' => array(
           'listing' => array(
@@ -208,6 +220,10 @@ function gie_innovation_strongarm() {
           ),
           'full' => array(
             'weight' => '10',
+            'visible' => FALSE,
+          ),
+          'teaser_date' => array(
+            'weight' => '13',
             'visible' => FALSE,
           ),
         ),
