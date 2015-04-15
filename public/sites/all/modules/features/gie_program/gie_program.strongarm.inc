@@ -90,7 +90,7 @@ function gie_program_strongarm() {
         'custom_settings' => FALSE,
       ),
       'listing' => array(
-        'custom_settings' => FALSE,
+        'custom_settings' => TRUE,
       ),
       'teaser_date' => array(
         'custom_settings' => FALSE,
@@ -112,11 +112,27 @@ function gie_program_strongarm() {
             'visible' => TRUE,
           ),
           'full' => array(
-            'weight' => '18',
+            'weight' => '20',
             'visible' => FALSE,
           ),
           'contact' => array(
             'weight' => '10',
+            'visible' => FALSE,
+          ),
+          'listing' => array(
+            'weight' => '9',
+            'visible' => FALSE,
+          ),
+        ),
+        'program_counters_favorite_count' => array(
+          'full' => array(
+            'weight' => '12',
+            'visible' => FALSE,
+          ),
+        ),
+        'program_counters_innovation_count' => array(
+          'full' => array(
+            'weight' => '13',
             'visible' => FALSE,
           ),
         ),

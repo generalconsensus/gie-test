@@ -32,7 +32,7 @@ function gie_program_ds_field_settings_info() {
   $ds_fieldsetting->bundle = 'program';
   $ds_fieldsetting->view_mode = 'full';
   $ds_fieldsetting->settings = array(
-    'title_field' => array(
+    'field_program_logo' => array(
       'formatter_settings' => array(
         'ft' => array(),
       ),
@@ -96,14 +96,12 @@ function gie_program_ds_layout_settings_info() {
       ),
       'right' => array(
         1 => 'title_field',
-        2 => 'field_program_link',
-        3 => 'field_program_desc',
+        2 => 'field_program_desc',
       ),
     ),
     'fields' => array(
       'field_program_logo' => 'left',
       'title_field' => 'right',
-      'field_program_link' => 'right',
       'field_program_desc' => 'right',
     ),
     'classes' => array(),
