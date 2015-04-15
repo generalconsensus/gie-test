@@ -14,14 +14,14 @@ function gie_homepage_strongarm() {
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'additional_settings__active_tab_homepage';
-  $strongarm->value = 'edit-panelizer';
+  $strongarm->value = 'edit-rabbit-hole';
   $export['additional_settings__active_tab_homepage'] = $strongarm;
 
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'additional_settings__active_tab_persona';
-  $strongarm->value = 'edit-submission';
+  $strongarm->value = 'edit-rabbit-hole';
   $export['additional_settings__active_tab_persona'] = $strongarm;
 
   $strongarm = new stdClass();
@@ -422,6 +422,111 @@ function gie_homepage_strongarm() {
   $strongarm->name = 'node_submitted_persona';
   $strongarm->value = 0;
   $export['node_submitted_persona'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'rh_module_action_card';
+  $strongarm->value = 'rh_node';
+  $export['rh_module_action_card'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'rh_module_homepage';
+  $strongarm->value = 'rh_node';
+  $export['rh_module_homepage'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'rh_module_persona';
+  $strongarm->value = 'rh_node';
+  $export['rh_module_persona'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'rh_node_action_action_card';
+  $strongarm->value = '3';
+  $export['rh_node_action_action_card'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'rh_node_action_homepage';
+  $strongarm->value = '3';
+  $export['rh_node_action_homepage'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'rh_node_action_persona';
+  $strongarm->value = '3';
+  $export['rh_node_action_persona'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'rh_node_override_action_card';
+  $strongarm->value = 0;
+  $export['rh_node_override_action_card'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'rh_node_override_homepage';
+  $strongarm->value = 0;
+  $export['rh_node_override_homepage'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'rh_node_override_persona';
+  $strongarm->value = 0;
+  $export['rh_node_override_persona'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'rh_node_redirect_action_card';
+  $strongarm->value = 'home';
+  $export['rh_node_redirect_action_card'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'rh_node_redirect_homepage';
+  $strongarm->value = 'home';
+  $export['rh_node_redirect_homepage'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'rh_node_redirect_persona';
+  $strongarm->value = 'home';
+  $export['rh_node_redirect_persona'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'rh_node_redirect_response_action_card';
+  $strongarm->value = '301';
+  $export['rh_node_redirect_response_action_card'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'rh_node_redirect_response_homepage';
+  $strongarm->value = '301';
+  $export['rh_node_redirect_response_homepage'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'rh_node_redirect_response_persona';
+  $strongarm->value = '301';
+  $export['rh_node_redirect_response_persona'] = $strongarm;
 
   return $export;
 }
