@@ -67,16 +67,12 @@ function gie_funding_ds_field_settings_info() {
     ),
     'field_funding_grant_award_value' => array(
       'formatter_settings' => array(
-        'ft' => array(
-          'func' => 'theme_ds_field_minimal',
-        ),
+        'ft' => array(),
       ),
     ),
     'field_funding_poc' => array(
       'formatter_settings' => array(
-        'ft' => array(
-          'func' => 'theme_ds_field_minimal',
-        ),
+        'ft' => array(),
       ),
     ),
   );

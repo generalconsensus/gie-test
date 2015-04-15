@@ -102,7 +102,7 @@ function gie_funding_field_group_info() {
       'label' => 'Funding Stats First',
       'instance_settings' => array(
         'id' => '',
-        'classes' => 'innovation-stats__first',
+        'classes' => 'stats__first',
         'description' => '',
         'show_label' => '0',
         'label_element' => 'h3',
@@ -137,7 +137,7 @@ function gie_funding_field_group_info() {
       'label' => 'Funding Stats Second',
       'instance_settings' => array(
         'id' => '',
-        'classes' => 'innovation-stats__second',
+        'classes' => 'stats__second',
         'description' => '',
         'show_label' => '0',
         'label_element' => 'h3',
@@ -170,7 +170,7 @@ function gie_funding_field_group_info() {
       'label' => 'Funding Stats',
       'instance_settings' => array(
         'id' => '',
-        'classes' => 'innovation-stats',
+        'classes' => 'stats',
         'description' => '',
         'show_label' => '1',
         'label_element' => 'h2',

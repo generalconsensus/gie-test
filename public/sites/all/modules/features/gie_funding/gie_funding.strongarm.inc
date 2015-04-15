@@ -185,11 +185,19 @@ function gie_funding_strongarm() {
             'weight' => '7',
             'visible' => TRUE,
           ),
+          'full' => array(
+            'weight' => '10',
+            'visible' => FALSE,
+          ),
         ),
         'funding_counters_favorite_count' => array(
           'listing' => array(
             'weight' => '8',
             'visible' => TRUE,
+          ),
+          'full' => array(
+            'weight' => '10',
+            'visible' => FALSE,
           ),
         ),
       ),
