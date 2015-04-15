@@ -37,18 +37,20 @@ $aliases['dev'] = array(
   ),  
 );
 
-/*
+
 $aliases['stage'] = array(
-  'uri' => 'sage.example.com',
-  'root' => '/var/www/vhosts/example.stage/public',
-  'remote-host' => 'stage.example.com',
-  'remote-user' => 'example',
+  'uri' => 'stage.giexchange.forumone.com',
+  'root' => '/var/www/vhosts/giexchange.stage/public',
+  'remote-host' => 'stage.giexchange.forumone.com',
+  'remote-user' => 'giexchange',
   'command-specific' => array(
     'rsync' => array (
       'mode' => 'rzv'
     ),
   ),
 );
+
+/*
 
 $aliases['prod'] = array(
   'uri' => 'www.example.com',

@@ -271,6 +271,55 @@ function gie_innovation_ds_field_settings_info() {
 
   $ds_fieldsetting = new stdClass();
   $ds_fieldsetting->api_version = 1;
+  $ds_fieldsetting->id = 'node|innovation|listing';
+  $ds_fieldsetting->entity_type = 'node';
+  $ds_fieldsetting->bundle = 'innovation';
+  $ds_fieldsetting->view_mode = 'listing';
+  $ds_fieldsetting->settings = array(
+    'title_field' => array(
+      'formatter_settings' => array(
+        'ft' => array(
+          'func' => 'theme_ds_field_expert',
+          'fi' => TRUE,
+          'fi-el' => 'h3',
+          'fi-cl' => 'field field--title-field card__title',
+          'fi-at' => '',
+          'fi-def-at' => FALSE,
+          'fi-odd-even' => FALSE,
+        ),
+      ),
+    ),
+    'field_innovation_desc' => array(
+      'formatter_settings' => array(
+        'ft' => array(
+          'func' => 'theme_ds_field_expert',
+          'fi' => TRUE,
+          'fi-el' => 'div',
+          'fi-cl' => 'field field--innovation-desc',
+          'fi-at' => '',
+          'fi-def-at' => FALSE,
+          'fi-odd-even' => FALSE,
+        ),
+      ),
+    ),
+    'field_innovation_image' => array(
+      'formatter_settings' => array(
+        'ft' => array(
+          'func' => 'theme_ds_field_expert',
+          'fi' => TRUE,
+          'fi-el' => 'div',
+          'fi-cl' => 'field field--innovation-image',
+          'fi-at' => '',
+          'fi-def-at' => FALSE,
+          'fi-odd-even' => FALSE,
+        ),
+      ),
+    ),
+  );
+  $export['node|innovation|listing'] = $ds_fieldsetting;
+
+  $ds_fieldsetting = new stdClass();
+  $ds_fieldsetting->api_version = 1;
   $ds_fieldsetting->id = 'node|innovation|teaser_date';
   $ds_fieldsetting->entity_type = 'node';
   $ds_fieldsetting->bundle = 'innovation';
@@ -513,36 +562,46 @@ function gie_innovation_ds_layout_settings_info() {
   $ds_layout->entity_type = 'node';
   $ds_layout->bundle = 'innovation';
   $ds_layout->view_mode = 'listing';
-  $ds_layout->layout = 'ds_reset';
+  $ds_layout->layout = 'article';
   $ds_layout->settings = array(
     'regions' => array(
-      'ds_content' => array(
+      'main_content' => array(
         0 => 'field_innovation_image',
-        1 => 'title_field',
-        2 => 'field_innovation_desc',
-        3 => 'innovation_listing_counts_evidence',
-        4 => 'innovation_listing_counts_comments',
-        5 => 'innovation_listing_counts_orgs',
-        6 => 'innovation_listing_counts_favorites',
+        1 => 'group_card_content',
+        2 => 'title_field',
+        3 => 'field_innovation_desc',
+        4 => 'innovation_listing_counts_evidence',
+        5 => 'group_card_counts',
+        6 => 'innovation_listing_counts_comments',
+        7 => 'innovation_listing_counts_orgs',
+        8 => 'innovation_listing_counts_favorites',
       ),
     ),
     'fields' => array(
-      'field_innovation_image' => 'ds_content',
-      'title_field' => 'ds_content',
-      'field_innovation_desc' => 'ds_content',
-      'innovation_listing_counts_evidence' => 'ds_content',
-      'innovation_listing_counts_comments' => 'ds_content',
-      'innovation_listing_counts_orgs' => 'ds_content',
-      'innovation_listing_counts_favorites' => 'ds_content',
+      'field_innovation_image' => 'main_content',
+      'group_card_content' => 'main_content',
+      'title_field' => 'main_content',
+      'field_innovation_desc' => 'main_content',
+      'innovation_listing_counts_evidence' => 'main_content',
+      'group_card_counts' => 'main_content',
+      'innovation_listing_counts_comments' => 'main_content',
+      'innovation_listing_counts_orgs' => 'main_content',
+      'innovation_listing_counts_favorites' => 'main_content',
     ),
-    'classes' => array(),
+    'classes' => array(
+      'layout_class' => array(
+        'card' => 'card',
+      ),
+    ),
     'wrappers' => array(
-      'ds_content' => 'div',
+      'header' => 'div',
+      'main_content' => 'div',
+      'footer' => 'div',
     ),
     'layout_wrapper' => 'div',
     'layout_attributes' => '',
-    'layout_attributes_merge' => TRUE,
-    'layout_link_attribute' => FALSE,
+    'layout_attributes_merge' => 1,
+    'layout_link_attribute' => '',
     'layout_link_custom' => '',
   );
   $export['node|innovation|listing'] = $ds_layout;

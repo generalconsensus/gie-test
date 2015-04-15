@@ -11,10 +11,10 @@
   @include breakpoint(700px, $no-query: true) {
     &.main.sidebar {
       .l-sidebar {
-        @include grid-span(4,1);
+        @include grid-span(3,1);
       }
       .l-main {
-        @include grid-span(8,5);
+        @include grid-span(9,4);
       }
     }
   }
@@ -23,8 +23,10 @@
 .l-panels-sidebar-left {
   @include clearfix;
   .l-preface,
+  .l-title,
   .l-main,
-  .l-sidebar {
+  .l-sidebar,
+  .l-wrapper {
     @include clearfix;
 
     @if $panels-admin {

@@ -382,7 +382,7 @@ function gie_innovation_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 14,
+        'weight' => 18,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -420,7 +420,7 @@ function gie_innovation_field_default_field_instances() {
         'size' => 60,
       ),
       'type' => 'entityreference_autocomplete',
-      'weight' => 4,
+      'weight' => 3,
     ),
   );
 
@@ -461,7 +461,7 @@ function gie_innovation_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 15,
+        'weight' => 19,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -476,6 +476,7 @@ function gie_innovation_field_default_field_instances() {
         'weight' => 11,
       ),
     ),
+    'ds_extras_field_template' => '',
     'entity_type' => 'node',
     'field_name' => 'field_innovation_assistance',
     'label' => 'Assistance Type',
@@ -486,9 +487,11 @@ function gie_innovation_field_default_field_instances() {
     'widget' => array(
       'active' => 1,
       'module' => 'options',
-      'settings' => array(),
-      'type' => 'options_buttons',
-      'weight' => 5,
+      'settings' => array(
+        'apply_chosen' => 1,
+      ),
+      'type' => 'options_select',
+      'weight' => 4,
     ),
   );
 
@@ -533,7 +536,7 @@ function gie_innovation_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 37,
+        'weight' => 40,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -564,7 +567,7 @@ function gie_innovation_field_default_field_instances() {
       'module' => 'html5_tools',
       'settings' => array(),
       'type' => 'numberfield',
-      'weight' => 9,
+      'weight' => 8,
     ),
   );
 
@@ -627,7 +630,7 @@ function gie_innovation_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 45,
+        'weight' => 47,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -658,7 +661,7 @@ function gie_innovation_field_default_field_instances() {
       'module' => 'html5_tools',
       'settings' => array(),
       'type' => 'numberfield',
-      'weight' => 12,
+      'weight' => 11,
     ),
   );
 
@@ -713,7 +716,7 @@ function gie_innovation_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 21,
+        'weight' => 25,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -728,6 +731,7 @@ function gie_innovation_field_default_field_instances() {
         'weight' => 17,
       ),
     ),
+    'ds_extras_field_template' => '',
     'entity_type' => 'node',
     'field_name' => 'field_innovation_created',
     'label' => 'Created In',
@@ -736,14 +740,13 @@ function gie_innovation_field_default_field_instances() {
       'user_register_form' => FALSE,
     ),
     'widget' => array(
-      'active' => 0,
-      'module' => 'taxonomy',
+      'active' => 1,
+      'module' => 'options',
       'settings' => array(
-        'autocomplete_path' => 'taxonomy/autocomplete',
-        'size' => 60,
+        'apply_chosen' => 1,
       ),
-      'type' => 'taxonomy_autocomplete',
-      'weight' => 14,
+      'type' => 'options_select',
+      'weight' => 13,
     ),
   );
 
@@ -807,7 +810,7 @@ function gie_innovation_field_default_field_instances() {
           'trim_type' => 'chars',
         ),
         'type' => 'smart_trim_format',
-        'weight' => 2,
+        'weight' => 3,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -822,6 +825,7 @@ function gie_innovation_field_default_field_instances() {
         'weight' => 9,
       ),
     ),
+    'ds_extras_field_template' => '',
     'entity_type' => 'node',
     'field_name' => 'field_innovation_desc',
     'label' => 'Description',
@@ -829,14 +833,18 @@ function gie_innovation_field_default_field_instances() {
     'settings' => array(
       'better_formats' => array(
         'allowed_formats' => array(
+          'comments_filtered' => 0,
           'filtered_html' => 'filtered_html',
-          'full_html' => 'full_html',
-          'plain_text' => 'plain_text',
+          'full_html' => 0,
+          'plain_text' => 0,
         ),
-        'allowed_formats_toggle' => 0,
+        'allowed_formats_toggle' => 1,
         'default_order_toggle' => 0,
         'default_order_wrapper' => array(
           'formats' => array(
+            'comments_filtered' => array(
+              'weight' => 0,
+            ),
             'filtered_html' => array(
               'weight' => 0,
             ),
@@ -859,7 +867,7 @@ function gie_innovation_field_default_field_instances() {
         'rows' => 5,
       ),
       'type' => 'text_textarea',
-      'weight' => 2,
+      'weight' => 1,
     ),
   );
 
@@ -914,7 +922,7 @@ function gie_innovation_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 27,
+        'weight' => 30,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -929,6 +937,7 @@ function gie_innovation_field_default_field_instances() {
         'weight' => 23,
       ),
     ),
+    'ds_extras_field_template' => '',
     'entity_type' => 'node',
     'field_name' => 'field_innovation_evidence',
     'label' => 'Evidence it Works',
@@ -936,14 +945,18 @@ function gie_innovation_field_default_field_instances() {
     'settings' => array(
       'better_formats' => array(
         'allowed_formats' => array(
+          'comments_filtered' => 0,
           'filtered_html' => 'filtered_html',
-          'full_html' => 'full_html',
-          'plain_text' => 'plain_text',
+          'full_html' => 0,
+          'plain_text' => 0,
         ),
-        'allowed_formats_toggle' => 0,
+        'allowed_formats_toggle' => 1,
         'default_order_toggle' => 0,
         'default_order_wrapper' => array(
           'formats' => array(
+            'comments_filtered' => array(
+              'weight' => 0,
+            ),
             'filtered_html' => array(
               'weight' => 0,
             ),
@@ -966,7 +979,7 @@ function gie_innovation_field_default_field_instances() {
         'rows' => 5,
       ),
       'type' => 'text_textarea',
-      'weight' => 24,
+      'weight' => 22,
     ),
   );
 
@@ -1011,7 +1024,7 @@ function gie_innovation_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 39,
+        'weight' => 42,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -1040,7 +1053,7 @@ function gie_innovation_field_default_field_instances() {
         'display_label' => 1,
       ),
       'type' => 'options_onoff',
-      'weight' => 23,
+      'weight' => 21,
     ),
   );
 
@@ -1082,7 +1095,7 @@ function gie_innovation_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 33,
+        'weight' => 36,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -1119,7 +1132,7 @@ function gie_innovation_field_default_field_instances() {
         'size' => 60,
       ),
       'type' => 'entityreference_autocomplete',
-      'weight' => 33,
+      'weight' => 31,
     ),
   );
 
@@ -1182,7 +1195,7 @@ function gie_innovation_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 43,
+        'weight' => 46,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -1213,23 +1226,23 @@ function gie_innovation_field_default_field_instances() {
       'module' => 'html5_tools',
       'settings' => array(),
       'type' => 'numberfield',
-      'weight' => 7,
+      'weight' => 6,
     ),
   );
 
   // Exported field_instance: 'node-innovation-field_innovation_image'
   $field_instances['node-innovation-field_innovation_image'] = array(
     'bundle' => 'innovation',
-    'default_value' => NULL,
     'deleted' => 0,
     'description' => '',
     'display' => array(
       'default' => array(
         'label' => 'above',
-        'module' => 'entityreference',
+        'module' => 'image',
         'settings' => array(
           'field_delimiter' => '',
-          'link' => FALSE,
+          'image_link' => '',
+          'image_style' => '',
           'linked_field' => array(
             'advanced' => array(
               'class' => '',
@@ -1242,20 +1255,22 @@ function gie_innovation_field_default_field_instances() {
             'linked' => 0,
           ),
         ),
-        'type' => 'entityreference_label',
-        'weight' => 2,
+        'type' => 'image',
+        'weight' => 41,
       ),
       'full' => array(
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 34,
+        'weight' => 0,
       ),
       'listing' => array(
         'label' => 'hidden',
-        'module' => 'entityreference',
+        'module' => 'image',
         'settings' => array(
           'field_delimiter' => '',
+          'image_link' => '',
+          'image_style' => 'card__500x300_',
           'linked_field' => array(
             'advanced' => array(
               'class' => '',
@@ -1264,13 +1279,11 @@ function gie_innovation_field_default_field_instances() {
               'text' => '',
               'title' => '',
             ),
-            'destination' => '',
-            'linked' => 0,
+            'destination' => '[node:url]',
+            'linked' => 1,
           ),
-          'links' => 0,
-          'view_mode' => 'image_teaser',
         ),
-        'type' => 'entityreference_entity_view',
+        'type' => 'image',
         'weight' => 0,
       ),
       'teaser' => array(
@@ -1280,52 +1293,39 @@ function gie_innovation_field_default_field_instances() {
         'weight' => 0,
       ),
       'teaser_date' => array(
-        'label' => 'hidden',
-        'module' => 'entityreference',
-        'settings' => array(
-          'field_delimiter' => '',
-          'linked_field' => array(
-            'advanced' => array(
-              'class' => '',
-              'rel' => '',
-              'target' => '',
-              'text' => '',
-              'title' => '',
-            ),
-            'destination' => '',
-            'linked' => 0,
-          ),
-          'links' => 0,
-          'view_mode' => 'image_teaser',
-        ),
-        'type' => 'entityreference_entity_view',
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
         'weight' => 0,
       ),
     ),
     'ds_extras_field_template' => '',
     'entity_type' => 'node',
-    'entityconnect_unload_add' => 0,
-    'entityconnect_unload_edit' => 0,
     'field_name' => 'field_innovation_image',
     'label' => 'Featured Image',
     'required' => 0,
     'settings' => array(
+      'alt_field' => 1,
+      'default_image' => 0,
+      'file_directory' => '',
+      'file_extensions' => 'png gif jpg jpeg',
+      'max_filesize' => '',
+      'max_resolution' => '',
+      'min_resolution' => '500x300',
+      'random_default' => 0,
+      'random_default_path' => '',
+      'title_field' => 1,
       'user_register_form' => FALSE,
     ),
     'widget' => array(
       'active' => 1,
-      'module' => 'entityreference',
+      'module' => 'image',
       'settings' => array(
-        'match_operator' => 'CONTAINS',
-        'path' => '',
-        'references_dialog_add' => 1,
-        'references_dialog_edit' => 1,
-        'references_dialog_search' => 1,
-        'references_dialog_search_view' => '',
-        'size' => 60,
+        'preview_image_style' => 'thumbnail',
+        'progress_indicator' => 'throbber',
       ),
-      'type' => 'entityreference_autocomplete',
-      'weight' => 3,
+      'type' => 'image_image',
+      'weight' => 2,
     ),
   );
 
@@ -1380,7 +1380,7 @@ function gie_innovation_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 29,
+        'weight' => 32,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -1395,6 +1395,7 @@ function gie_innovation_field_default_field_instances() {
         'weight' => 25,
       ),
     ),
+    'ds_extras_field_template' => '',
     'entity_type' => 'node',
     'field_name' => 'field_innovation_impact',
     'label' => 'Path and Impact of Scale',
@@ -1402,14 +1403,18 @@ function gie_innovation_field_default_field_instances() {
     'settings' => array(
       'better_formats' => array(
         'allowed_formats' => array(
+          'comments_filtered' => 0,
           'filtered_html' => 'filtered_html',
-          'full_html' => 'full_html',
-          'plain_text' => 'plain_text',
+          'full_html' => 0,
+          'plain_text' => 0,
         ),
-        'allowed_formats_toggle' => 0,
+        'allowed_formats_toggle' => 1,
         'default_order_toggle' => 0,
         'default_order_wrapper' => array(
           'formats' => array(
+            'comments_filtered' => array(
+              'weight' => 0,
+            ),
             'filtered_html' => array(
               'weight' => 0,
             ),
@@ -1432,7 +1437,7 @@ function gie_innovation_field_default_field_instances() {
         'rows' => 5,
       ),
       'type' => 'text_textarea',
-      'weight' => 28,
+      'weight' => 26,
     ),
   );
 
@@ -1487,7 +1492,7 @@ function gie_innovation_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 22,
+        'weight' => 26,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -1502,6 +1507,7 @@ function gie_innovation_field_default_field_instances() {
         'weight' => 18,
       ),
     ),
+    'ds_extras_field_template' => '',
     'entity_type' => 'node',
     'field_name' => 'field_innovation_implemented',
     'label' => 'Implemented In',
@@ -1510,14 +1516,13 @@ function gie_innovation_field_default_field_instances() {
       'user_register_form' => FALSE,
     ),
     'widget' => array(
-      'active' => 0,
-      'module' => 'taxonomy',
+      'active' => 1,
+      'module' => 'options',
       'settings' => array(
-        'autocomplete_path' => 'taxonomy/autocomplete',
-        'size' => 60,
+        'apply_chosen' => 1,
       ),
-      'type' => 'taxonomy_autocomplete',
-      'weight' => 15,
+      'type' => 'options_select',
+      'weight' => 14,
     ),
   );
 
@@ -1572,7 +1577,7 @@ function gie_innovation_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 30,
+        'weight' => 33,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -1619,7 +1624,7 @@ function gie_innovation_field_default_field_instances() {
       'module' => 'link',
       'settings' => array(),
       'type' => 'link_field',
-      'weight' => 30,
+      'weight' => 28,
     ),
   );
 
@@ -1665,7 +1670,7 @@ function gie_innovation_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 38,
+        'weight' => 41,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -1692,7 +1697,7 @@ function gie_innovation_field_default_field_instances() {
       'module' => 'field_collection',
       'settings' => array(),
       'type' => 'field_collection_embed',
-      'weight' => 36,
+      'weight' => 34,
     ),
   );
 
@@ -1734,7 +1739,7 @@ function gie_innovation_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 16,
+        'weight' => 20,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -1771,7 +1776,7 @@ function gie_innovation_field_default_field_instances() {
         'size' => 60,
       ),
       'type' => 'entityreference_autocomplete',
-      'weight' => 6,
+      'weight' => 5,
     ),
   );
 
@@ -1828,7 +1833,7 @@ function gie_innovation_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 24,
+        'weight' => 27,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -1865,7 +1870,7 @@ function gie_innovation_field_default_field_instances() {
         'size' => 60,
       ),
       'type' => 'entityreference_autocomplete',
-      'weight' => 20,
+      'weight' => 18,
     ),
   );
 
@@ -1910,7 +1915,7 @@ function gie_innovation_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 41,
+        'weight' => 44,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -1939,7 +1944,7 @@ function gie_innovation_field_default_field_instances() {
         'display_label' => 1,
       ),
       'type' => 'options_onoff',
-      'weight' => 25,
+      'weight' => 23,
     ),
   );
 
@@ -1996,7 +2001,7 @@ function gie_innovation_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 40,
+        'weight' => 43,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -2034,7 +2039,7 @@ function gie_innovation_field_default_field_instances() {
         'size' => 60,
       ),
       'type' => 'entityreference_autocomplete',
-      'weight' => 26,
+      'weight' => 24,
     ),
   );
 
@@ -2079,7 +2084,7 @@ function gie_innovation_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 36,
+        'weight' => 39,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -2110,7 +2115,7 @@ function gie_innovation_field_default_field_instances() {
       'module' => 'html5_tools',
       'settings' => array(),
       'type' => 'numberfield',
-      'weight' => 8,
+      'weight' => 7,
     ),
   );
 
@@ -2155,7 +2160,7 @@ function gie_innovation_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 42,
+        'weight' => 45,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -2184,7 +2189,7 @@ function gie_innovation_field_default_field_instances() {
         'display_label' => 1,
       ),
       'type' => 'options_onoff',
-      'weight' => 34,
+      'weight' => 32,
     ),
   );
 
@@ -2226,7 +2231,7 @@ function gie_innovation_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 34,
+        'weight' => 37,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -2263,7 +2268,7 @@ function gie_innovation_field_default_field_instances() {
         'size' => 60,
       ),
       'type' => 'entityreference_autocomplete',
-      'weight' => 35,
+      'weight' => 33,
     ),
   );
 
@@ -2320,7 +2325,7 @@ function gie_innovation_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 31,
+        'weight' => 34,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -2358,7 +2363,7 @@ function gie_innovation_field_default_field_instances() {
         'size' => 60,
       ),
       'type' => 'entityreference_autocomplete',
-      'weight' => 31,
+      'weight' => 29,
     ),
   );
 
@@ -2413,7 +2418,7 @@ function gie_innovation_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 18,
+        'weight' => 22,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -2428,6 +2433,7 @@ function gie_innovation_field_default_field_instances() {
         'weight' => 14,
       ),
     ),
+    'ds_extras_field_template' => '',
     'entity_type' => 'node',
     'field_name' => 'field_innovation_stage',
     'label' => 'Project Stage',
@@ -2439,10 +2445,10 @@ function gie_innovation_field_default_field_instances() {
       'active' => 1,
       'module' => 'options',
       'settings' => array(
-        'apply_chosen' => '',
+        'apply_chosen' => 1,
       ),
       'type' => 'options_select',
-      'weight' => 11,
+      'weight' => 10,
     ),
   );
 
@@ -2497,7 +2503,7 @@ function gie_innovation_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 35,
+        'weight' => 38,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -2512,6 +2518,7 @@ function gie_innovation_field_default_field_instances() {
         'weight' => 31,
       ),
     ),
+    'ds_extras_field_template' => '',
     'entity_type' => 'node',
     'field_name' => 'field_innovation_status_update',
     'label' => 'Status Update',
@@ -2519,14 +2526,18 @@ function gie_innovation_field_default_field_instances() {
     'settings' => array(
       'better_formats' => array(
         'allowed_formats' => array(
+          'comments_filtered' => 0,
           'filtered_html' => 'filtered_html',
-          'full_html' => 'full_html',
-          'plain_text' => 'plain_text',
+          'full_html' => 0,
+          'plain_text' => 0,
         ),
-        'allowed_formats_toggle' => 0,
+        'allowed_formats_toggle' => 1,
         'default_order_toggle' => 0,
         'default_order_wrapper' => array(
           'formats' => array(
+            'comments_filtered' => array(
+              'weight' => 0,
+            ),
             'filtered_html' => array(
               'weight' => 0,
             ),
@@ -2549,7 +2560,7 @@ function gie_innovation_field_default_field_instances() {
         'rows' => 5,
       ),
       'type' => 'text_textarea',
-      'weight' => 21,
+      'weight' => 19,
     ),
   );
 
@@ -2604,7 +2615,7 @@ function gie_innovation_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 25,
+        'weight' => 28,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -2619,6 +2630,7 @@ function gie_innovation_field_default_field_instances() {
         'weight' => 21,
       ),
     ),
+    'ds_extras_field_template' => '',
     'entity_type' => 'node',
     'field_name' => 'field_innovation_steps',
     'label' => 'Next Steps',
@@ -2626,14 +2638,18 @@ function gie_innovation_field_default_field_instances() {
     'settings' => array(
       'better_formats' => array(
         'allowed_formats' => array(
+          'comments_filtered' => 0,
           'filtered_html' => 'filtered_html',
-          'full_html' => 'full_html',
-          'plain_text' => 'plain_text',
+          'full_html' => 0,
+          'plain_text' => 0,
         ),
-        'allowed_formats_toggle' => 0,
+        'allowed_formats_toggle' => 1,
         'default_order_toggle' => 0,
         'default_order_wrapper' => array(
           'formats' => array(
+            'comments_filtered' => array(
+              'weight' => 0,
+            ),
             'filtered_html' => array(
               'weight' => 0,
             ),
@@ -2656,7 +2672,7 @@ function gie_innovation_field_default_field_instances() {
         'rows' => 5,
       ),
       'type' => 'text_textarea',
-      'weight' => 29,
+      'weight' => 27,
     ),
   );
 
@@ -2698,7 +2714,7 @@ function gie_innovation_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 32,
+        'weight' => 35,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -2735,7 +2751,7 @@ function gie_innovation_field_default_field_instances() {
         'size' => 60,
       ),
       'type' => 'entityreference_autocomplete',
-      'weight' => 32,
+      'weight' => 30,
     ),
   );
 
@@ -2790,7 +2806,7 @@ function gie_innovation_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 28,
+        'weight' => 31,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -2805,6 +2821,7 @@ function gie_innovation_field_default_field_instances() {
         'weight' => 24,
       ),
     ),
+    'ds_extras_field_template' => '',
     'entity_type' => 'node',
     'field_name' => 'field_innovation_testers',
     'label' => 'Current Users / Testers Include',
@@ -2812,14 +2829,18 @@ function gie_innovation_field_default_field_instances() {
     'settings' => array(
       'better_formats' => array(
         'allowed_formats' => array(
+          'comments_filtered' => 0,
           'filtered_html' => 'filtered_html',
-          'full_html' => 'full_html',
-          'plain_text' => 'plain_text',
+          'full_html' => 0,
+          'plain_text' => 0,
         ),
-        'allowed_formats_toggle' => 0,
+        'allowed_formats_toggle' => 1,
         'default_order_toggle' => 0,
         'default_order_wrapper' => array(
           'formats' => array(
+            'comments_filtered' => array(
+              'weight' => 0,
+            ),
             'filtered_html' => array(
               'weight' => 0,
             ),
@@ -2842,7 +2863,7 @@ function gie_innovation_field_default_field_instances() {
         'rows' => 5,
       ),
       'type' => 'text_textarea',
-      'weight' => 27,
+      'weight' => 25,
     ),
   );
 
@@ -2897,7 +2918,7 @@ function gie_innovation_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 17,
+        'weight' => 21,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -2912,20 +2933,22 @@ function gie_innovation_field_default_field_instances() {
         'weight' => 13,
       ),
     ),
+    'ds_extras_field_template' => '',
     'entity_type' => 'node',
     'field_name' => 'field_innovation_type',
     'label' => 'Solution Type',
-    'required' => FALSE,
+    'required' => 0,
     'settings' => array(
       'user_register_form' => FALSE,
     ),
     'widget' => array(
+      'active' => 1,
       'module' => 'options',
       'settings' => array(
-        'apply_chosen' => '',
+        'apply_chosen' => 1,
       ),
       'type' => 'options_select',
-      'weight' => 10,
+      'weight' => 9,
     ),
   );
 
@@ -2966,7 +2989,7 @@ function gie_innovation_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 46,
+        'weight' => 48,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -3013,7 +3036,7 @@ function gie_innovation_field_default_field_instances() {
       'module' => 'html5_tools',
       'settings' => array(),
       'type' => 'urlwidget',
-      'weight' => 37,
+      'weight' => 35,
     ),
   );
 
@@ -3068,7 +3091,7 @@ function gie_innovation_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 26,
+        'weight' => 29,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -3083,6 +3106,7 @@ function gie_innovation_field_default_field_instances() {
         'weight' => 22,
       ),
     ),
+    'ds_extras_field_template' => '',
     'entity_type' => 'node',
     'field_name' => 'field_innovation_works',
     'label' => 'How it Works',
@@ -3090,14 +3114,18 @@ function gie_innovation_field_default_field_instances() {
     'settings' => array(
       'better_formats' => array(
         'allowed_formats' => array(
+          'comments_filtered' => 0,
           'filtered_html' => 'filtered_html',
-          'full_html' => 'full_html',
-          'plain_text' => 'plain_text',
+          'full_html' => 0,
+          'plain_text' => 0,
         ),
-        'allowed_formats_toggle' => 0,
+        'allowed_formats_toggle' => 1,
         'default_order_toggle' => 0,
         'default_order_wrapper' => array(
           'formats' => array(
+            'comments_filtered' => array(
+              'weight' => 0,
+            ),
             'filtered_html' => array(
               'weight' => 0,
             ),
@@ -3120,7 +3148,7 @@ function gie_innovation_field_default_field_instances() {
         'rows' => 5,
       ),
       'type' => 'text_textarea',
-      'weight' => 22,
+      'weight' => 20,
     ),
   );
 
@@ -3161,7 +3189,7 @@ function gie_innovation_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 0,
+        'weight' => 15,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -3191,7 +3219,7 @@ function gie_innovation_field_default_field_instances() {
         'apply_chosen' => 1,
       ),
       'type' => 'options_select',
-      'weight' => 17,
+      'weight' => 15,
     ),
   );
 
@@ -3232,7 +3260,7 @@ function gie_innovation_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 0,
+        'weight' => 16,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -3262,7 +3290,7 @@ function gie_innovation_field_default_field_instances() {
         'apply_chosen' => 1,
       ),
       'type' => 'options_select',
-      'weight' => 19,
+      'weight' => 17,
     ),
   );
 
@@ -3303,7 +3331,7 @@ function gie_innovation_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 0,
+        'weight' => 17,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -3333,7 +3361,7 @@ function gie_innovation_field_default_field_instances() {
         'apply_chosen' => 1,
       ),
       'type' => 'options_select',
-      'weight' => 18,
+      'weight' => 16,
     ),
   );
 
@@ -3388,7 +3416,7 @@ function gie_innovation_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 19,
+        'weight' => 23,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -3403,6 +3431,7 @@ function gie_innovation_field_default_field_instances() {
         'weight' => 16,
       ),
     ),
+    'ds_extras_field_template' => '',
     'entity_type' => 'node',
     'field_name' => 'field_testing_phase',
     'label' => 'Testing Phase',
@@ -3414,10 +3443,10 @@ function gie_innovation_field_default_field_instances() {
       'active' => 1,
       'module' => 'options',
       'settings' => array(
-        'apply_chosen' => '',
+        'apply_chosen' => 1,
       ),
       'type' => 'options_select',
-      'weight' => 13,
+      'weight' => 12,
     ),
   );
 
@@ -3461,7 +3490,7 @@ function gie_innovation_field_default_field_instances() {
           'title_style' => '_none',
         ),
         'type' => 'title_linked',
-        'weight' => 1,
+        'weight' => 2,
       ),
       'teaser' => array(
         'label' => 'above',

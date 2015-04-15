@@ -22,6 +22,21 @@ function gie_assets_ctools_plugin_api($module = NULL, $api = NULL) {
 function gie_assets_image_default_styles() {
   $styles = array();
 
+  // Exported image style: card__500x300_.
+  $styles['card__500x300_'] = array(
+    'label' => 'Card (500x300)',
+    'effects' => array(
+      4 => array(
+        'name' => 'image_scale_and_crop',
+        'data' => array(
+          'width' => 500,
+          'height' => 300,
+        ),
+        'weight' => 1,
+      ),
+    ),
+  );
+
   // Exported image style: org_teaser.
   $styles['org_teaser'] = array(
     'label' => 'Org Teaser',
@@ -32,6 +47,21 @@ function gie_assets_image_default_styles() {
           'width' => '',
           'height' => 50,
           'upscale' => 0,
+        ),
+        'weight' => 1,
+      ),
+    ),
+  );
+
+  // Exported image style: resource_author__35x35_.
+  $styles['resource_author__35x35_'] = array(
+    'label' => 'Resource Author (35x35)',
+    'effects' => array(
+      4 => array(
+        'name' => 'image_scale_and_crop',
+        'data' => array(
+          'width' => 35,
+          'height' => 35,
         ),
         'weight' => 1,
       ),

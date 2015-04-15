@@ -108,7 +108,7 @@
         line-height: 17px;
         &:after {
           @include image-replace(23px,17px);
-          @include svg-background(photo-icon);
+          @include svg-background(icon-photo);
           content: "";
           display: inline-block;
           position: relative;
@@ -123,7 +123,7 @@
         line-height: 17px;
         &:after {
           @include image-replace(24px,17px);
-          @include svg-background(video-icon);
+          @include svg-background(icon-video);
           content: "";
           display: inline-block;
           position: relative;

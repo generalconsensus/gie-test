@@ -587,6 +587,7 @@ function gie_innovation_views_default_views() {
 
   /* Display: Master */
   $handler = $view->new_display('default', 'Master', 'default');
+  $handler->display->display_options['hide_admin_links'] = TRUE;
   $handler->display->display_options['use_more_always'] = FALSE;
   $handler->display->display_options['group_by'] = TRUE;
   $handler->display->display_options['access']['type'] = 'perm';
@@ -623,6 +624,27 @@ function gie_innovation_views_default_views() {
 
   /* Display: Evidence */
   $handler = $view->new_display('entity_view', 'Evidence', 'evidence');
+  $handler->display->display_options['defaults']['style_plugin'] = FALSE;
+  $handler->display->display_options['style_plugin'] = 'default';
+  $handler->display->display_options['style_options']['default_row_class'] = FALSE;
+  $handler->display->display_options['style_options']['row_class_special'] = FALSE;
+  $handler->display->display_options['defaults']['style_options'] = FALSE;
+  $handler->display->display_options['defaults']['row_plugin'] = FALSE;
+  $handler->display->display_options['row_plugin'] = 'fields';
+  $handler->display->display_options['row_options']['default_field_elements'] = FALSE;
+  $handler->display->display_options['defaults']['row_options'] = FALSE;
+  $handler->display->display_options['defaults']['fields'] = FALSE;
+  /* Field: COUNT(Content: Proof of Evidence) */
+  $handler->display->display_options['fields']['field_innovation_proof_evidence']['id'] = 'field_innovation_proof_evidence';
+  $handler->display->display_options['fields']['field_innovation_proof_evidence']['table'] = 'field_data_field_innovation_proof_evidence';
+  $handler->display->display_options['fields']['field_innovation_proof_evidence']['field'] = 'field_innovation_proof_evidence';
+  $handler->display->display_options['fields']['field_innovation_proof_evidence']['group_type'] = 'count';
+  $handler->display->display_options['fields']['field_innovation_proof_evidence']['label'] = '';
+  $handler->display->display_options['fields']['field_innovation_proof_evidence']['element_type'] = 'div';
+  $handler->display->display_options['fields']['field_innovation_proof_evidence']['element_class'] = 'has-icon--camera';
+  $handler->display->display_options['fields']['field_innovation_proof_evidence']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_innovation_proof_evidence']['element_default_classes'] = FALSE;
+  $handler->display->display_options['fields']['field_innovation_proof_evidence']['separator'] = ', ';
   $handler->display->display_options['entity_type'] = 'node';
   $handler->display->display_options['bundles'] = array(
     0 => 'innovation',
@@ -630,13 +652,25 @@ function gie_innovation_views_default_views() {
 
   /* Display: Comments */
   $handler = $view->new_display('entity_view', 'Comments', 'comments');
+  $handler->display->display_options['defaults']['style_plugin'] = FALSE;
+  $handler->display->display_options['style_plugin'] = 'default';
+  $handler->display->display_options['style_options']['default_row_class'] = FALSE;
+  $handler->display->display_options['style_options']['row_class_special'] = FALSE;
+  $handler->display->display_options['defaults']['style_options'] = FALSE;
+  $handler->display->display_options['defaults']['row_plugin'] = FALSE;
+  $handler->display->display_options['row_plugin'] = 'fields';
+  $handler->display->display_options['row_options']['default_field_elements'] = FALSE;
+  $handler->display->display_options['defaults']['row_options'] = FALSE;
   $handler->display->display_options['defaults']['fields'] = FALSE;
   /* Field: Content: Comment count */
   $handler->display->display_options['fields']['comment_count']['id'] = 'comment_count';
   $handler->display->display_options['fields']['comment_count']['table'] = 'node_comment_statistics';
   $handler->display->display_options['fields']['comment_count']['field'] = 'comment_count';
   $handler->display->display_options['fields']['comment_count']['label'] = '';
+  $handler->display->display_options['fields']['comment_count']['element_type'] = 'div';
+  $handler->display->display_options['fields']['comment_count']['element_class'] = 'has-icon--comment';
   $handler->display->display_options['fields']['comment_count']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['comment_count']['element_default_classes'] = FALSE;
   $handler->display->display_options['entity_type'] = 'node';
   $handler->display->display_options['bundles'] = array(
     0 => 'innovation',
@@ -644,6 +678,15 @@ function gie_innovation_views_default_views() {
 
   /* Display: Funding orgs */
   $handler = $view->new_display('entity_view', 'Funding orgs', 'orgs');
+  $handler->display->display_options['defaults']['style_plugin'] = FALSE;
+  $handler->display->display_options['style_plugin'] = 'default';
+  $handler->display->display_options['style_options']['default_row_class'] = FALSE;
+  $handler->display->display_options['style_options']['row_class_special'] = FALSE;
+  $handler->display->display_options['defaults']['style_options'] = FALSE;
+  $handler->display->display_options['defaults']['row_plugin'] = FALSE;
+  $handler->display->display_options['row_plugin'] = 'fields';
+  $handler->display->display_options['row_options']['default_field_elements'] = FALSE;
+  $handler->display->display_options['defaults']['row_options'] = FALSE;
   $handler->display->display_options['defaults']['fields'] = FALSE;
   /* Field: COUNT(Content: Funded By) */
   $handler->display->display_options['fields']['field_innovation_funders']['id'] = 'field_innovation_funders';
@@ -651,7 +694,10 @@ function gie_innovation_views_default_views() {
   $handler->display->display_options['fields']['field_innovation_funders']['field'] = 'field_innovation_funders';
   $handler->display->display_options['fields']['field_innovation_funders']['group_type'] = 'count';
   $handler->display->display_options['fields']['field_innovation_funders']['label'] = '';
+  $handler->display->display_options['fields']['field_innovation_funders']['element_type'] = 'div';
+  $handler->display->display_options['fields']['field_innovation_funders']['element_class'] = 'has-icon--member';
   $handler->display->display_options['fields']['field_innovation_funders']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_innovation_funders']['element_default_classes'] = FALSE;
   $handler->display->display_options['fields']['field_innovation_funders']['separator'] = ', ';
   $handler->display->display_options['entity_type'] = 'node';
   $handler->display->display_options['bundles'] = array(
@@ -660,6 +706,15 @@ function gie_innovation_views_default_views() {
 
   /* Display: Favorites */
   $handler = $view->new_display('entity_view', 'Favorites', 'favorites');
+  $handler->display->display_options['defaults']['style_plugin'] = FALSE;
+  $handler->display->display_options['style_plugin'] = 'default';
+  $handler->display->display_options['style_options']['default_row_class'] = FALSE;
+  $handler->display->display_options['style_options']['row_class_special'] = FALSE;
+  $handler->display->display_options['defaults']['style_options'] = FALSE;
+  $handler->display->display_options['defaults']['row_plugin'] = FALSE;
+  $handler->display->display_options['row_plugin'] = 'fields';
+  $handler->display->display_options['row_options']['default_field_elements'] = FALSE;
+  $handler->display->display_options['defaults']['row_options'] = FALSE;
   $handler->display->display_options['defaults']['relationships'] = FALSE;
   /* Relationship: Flags: favorite counter */
   $handler->display->display_options['relationships']['flag_count_rel']['id'] = 'flag_count_rel';
@@ -674,7 +729,10 @@ function gie_innovation_views_default_views() {
   $handler->display->display_options['fields']['count']['field'] = 'count';
   $handler->display->display_options['fields']['count']['relationship'] = 'flag_count_rel';
   $handler->display->display_options['fields']['count']['label'] = '';
+  $handler->display->display_options['fields']['count']['element_type'] = 'div';
+  $handler->display->display_options['fields']['count']['element_class'] = 'has-icon--favorite';
   $handler->display->display_options['fields']['count']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['count']['element_default_classes'] = FALSE;
   $handler->display->display_options['entity_type'] = 'node';
   $handler->display->display_options['bundles'] = array(
     0 => 'innovation',
@@ -805,11 +863,11 @@ function gie_innovation_views_default_views() {
 
   /* Display: Innovations */
   $handler = $view->new_display('panel_pane', 'Innovations', 'resource_listing');
+  $handler->display->display_options['defaults']['css_class'] = FALSE;
+  $handler->display->display_options['css_class'] = 'view--card-view';
   $handler->display->display_options['defaults']['style_plugin'] = FALSE;
-  $handler->display->display_options['style_plugin'] = 'grid';
-  $handler->display->display_options['style_options']['default_row_class'] = FALSE;
+  $handler->display->display_options['style_plugin'] = 'default';
   $handler->display->display_options['style_options']['row_class_special'] = FALSE;
-  $handler->display->display_options['style_options']['columns'] = '3';
   $handler->display->display_options['defaults']['style_options'] = FALSE;
   $handler->display->display_options['defaults']['row_plugin'] = FALSE;
   $handler->display->display_options['row_plugin'] = 'entity';

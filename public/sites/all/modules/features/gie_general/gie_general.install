@@ -189,3 +189,23 @@ function gie_general_update_7017() {
     field_delete_field('field_resource_country');
     field_delete_field('field_user_country');
 }
+
+/**
+ * Enable GIE Discussion feature.
+ */
+function gie_general_update_7018() {
+  $modules = array(
+      'gie_discussion'
+  );
+  module_enable($modules, TRUE);
+}
+
+/**
+ * Enable GIE Homepage feature.
+ */
+function gie_general_update_7019() {
+  $modules = array(
+    'gie_homepage'
+  );
+  module_enable($modules, TRUE);
+}

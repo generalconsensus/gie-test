@@ -1,0 +1,131 @@
+.card {
+  border: 1px solid $card-border-color;
+  @include box-shadow(0 2px 0 0 $card-border-color);
+  position: relative;
+}
+
+.card__type {
+  font-size: em($font-size-sm);
+  text-transform: uppercase;
+}
+
+.card__image {
+  line-height: 0;
+}
+
+.card__content {
+  padding: 16px 16px 66px 16px; // extra bottom space for icons
+}
+
+.card__title {
+  font-weight: normal;
+  margin: 0 0 0.75em 0;
+  a {
+    font-weight: normal;
+  }
+}
+
+.card__primary-title {
+  @extend .card__title;
+  border-bottom: 1px solid $card-border-color;
+  padding: 0 0 0.75em 0;
+}
+
+.card__author {
+  font-size: em($font-size-sm);
+  line-height: 1.3;
+  overflow: hidden;
+  .card__author-image {
+    float: left;
+    margin: 0 0.5em 0 0;
+    img {
+      @include border-radius(50%);
+      border: 1px solid $border-color;
+    }
+  }
+  .card__author-name {
+    font-weight: bold;
+  }
+  .card__author-date {
+     
+  }
+}
+
+.card__number {
+  font-size: em($font-size-xl);
+}
+
+.card__due-date {
+  font-size: em($font-size-md);
+}
+
+.card__list {
+  font-size: em($font-size-sm);
+  line-height: 1.3;
+  margin: 1em 0;
+}
+
+.card__list-label {
+  display: inline;
+  font-weight: bold;
+}
+
+%cardicon {
+  content: "";
+  display: block;
+  margin-bottom: 3px;
+  position: relative;
+  top: 0;
+  left: 50%;
+}
+
+.card__counts {
+  left: 0;
+  bottom: 10px;
+  overflow: hidden;
+  padding: 0 8%;
+  position: absolute;
+  text-align: center;
+  width: 100%;
+  > .view {
+    display: inline-block;
+    font-size: em(12px);
+    font-weight: normal;
+    line-height: 1.3;
+    min-width: 25px;
+    padding: 0 6%;
+    text-align: center;
+    .has-icon--comment {
+      &:before {
+        @extend %cardicon;
+        @include image-replace(20px,17px);
+        @include svg-background(icon-comment); 
+        margin-left: -10px; // half of width
+      }
+    }
+    .has-icon--camera {
+      &:before {
+        @extend %cardicon;
+        @include image-replace(23px,17px);
+        @include svg-background(icon-photo);
+        margin-left: -11px; // half of width
+      }
+    }
+    .has-icon--favorite {
+      &:before {
+        @extend %cardicon;
+        @include image-replace(18px,17px);
+        @include svg-background(icon-favorite);
+        margin-left: -9px; // half of width
+      }
+    }
+    .has-icon--member {
+      &:before {
+        @extend %cardicon;
+        @include image-replace(17px,17px);
+        @include svg-background(icon-member);
+        margin-left: -8px; // half of width
+      }
+    }
+  }
+}

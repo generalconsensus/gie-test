@@ -83,14 +83,20 @@ function gie_organization_ds_field_settings_info() {
   $ds_fieldsetting->bundle = 'organization';
   $ds_fieldsetting->view_mode = 'listing';
   $ds_fieldsetting->settings = array(
-    'node_link' => array(
-      'weight' => '3',
-      'label' => 'hidden',
-      'format' => 'default',
+    'title_field' => array(
       'formatter_settings' => array(
-        'link text' => 'View',
-        'wrapper' => '',
-        'class' => '',
+        'ft' => array(
+          'func' => 'theme_ds_field_expert',
+          'fis' => TRUE,
+          'fis-el' => 'h3',
+          'fis-cl' => 'card__title',
+          'fis-at' => '',
+          'fis-def-at' => FALSE,
+        ),
+      ),
+    ),
+    'field_org_desc' => array(
+      'formatter_settings' => array(
         'ft' => array(
           'func' => 'theme_ds_field_expert',
           'fi' => TRUE,
@@ -99,18 +105,6 @@ function gie_organization_ds_field_settings_info() {
           'fi-at' => '',
           'fi-def-at' => FALSE,
           'fi-odd-even' => FALSE,
-        ),
-        'field_delimiter' => '',
-        'linked_field' => array(
-          'linked' => 0,
-          'destination' => '',
-          'advanced' => array(
-            'title' => '',
-            'target' => '',
-            'class' => '',
-            'rel' => '',
-            'text' => '',
-          ),
         ),
       ),
     ),
@@ -201,36 +195,44 @@ function gie_organization_ds_layout_settings_info() {
   $ds_layout->entity_type = 'node';
   $ds_layout->bundle = 'organization';
   $ds_layout->view_mode = 'listing';
-  $ds_layout->layout = 'ds_reset';
+  $ds_layout->layout = 'article';
   $ds_layout->settings = array(
     'regions' => array(
-      'ds_content' => array(
+      'main_content' => array(
         0 => 'field_org_logo',
-        1 => 'title_field',
-        2 => 'field_org_desc',
-        3 => 'node_link',
-        4 => 'organization_counters_innovation_count',
+        1 => 'group_card_content',
+        2 => 'organization_counters_innovation_count',
+        3 => 'title_field',
+        4 => 'field_org_desc',
         5 => 'organization_counters_member_count',
         6 => 'organization_counters_favorite_count',
+        7 => 'group_card_counts',
       ),
     ),
     'fields' => array(
-      'field_org_logo' => 'ds_content',
-      'title_field' => 'ds_content',
-      'field_org_desc' => 'ds_content',
-      'node_link' => 'ds_content',
-      'organization_counters_innovation_count' => 'ds_content',
-      'organization_counters_member_count' => 'ds_content',
-      'organization_counters_favorite_count' => 'ds_content',
+      'field_org_logo' => 'main_content',
+      'group_card_content' => 'main_content',
+      'organization_counters_innovation_count' => 'main_content',
+      'title_field' => 'main_content',
+      'field_org_desc' => 'main_content',
+      'organization_counters_member_count' => 'main_content',
+      'organization_counters_favorite_count' => 'main_content',
+      'group_card_counts' => 'main_content',
     ),
-    'classes' => array(),
+    'classes' => array(
+      'layout_class' => array(
+        'card' => 'card',
+      ),
+    ),
     'wrappers' => array(
-      'ds_content' => 'div',
+      'header' => 'div',
+      'main_content' => 'div',
+      'footer' => 'div',
     ),
     'layout_wrapper' => 'div',
     'layout_attributes' => '',
-    'layout_attributes_merge' => TRUE,
-    'layout_link_attribute' => FALSE,
+    'layout_attributes_merge' => 1,
+    'layout_link_attribute' => '',
     'layout_link_custom' => '',
   );
   $export['node|organization|listing'] = $ds_layout;

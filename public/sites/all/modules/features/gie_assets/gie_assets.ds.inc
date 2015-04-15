@@ -5,6 +5,30 @@
  */
 
 /**
+ * Implements hook_ds_field_settings_info().
+ */
+function gie_assets_ds_field_settings_info() {
+  $export = array();
+
+  $ds_fieldsetting = new stdClass();
+  $ds_fieldsetting->api_version = 1;
+  $ds_fieldsetting->id = 'asset|image|image_teaser';
+  $ds_fieldsetting->entity_type = 'asset';
+  $ds_fieldsetting->bundle = 'image';
+  $ds_fieldsetting->view_mode = 'image_teaser';
+  $ds_fieldsetting->settings = array(
+    'field_asset_image' => array(
+      'formatter_settings' => array(
+        'ft' => array(),
+      ),
+    ),
+  );
+  $export['asset|image|image_teaser'] = $ds_fieldsetting;
+
+  return $export;
+}
+
+/**
  * Implements hook_ds_layout_settings_info().
  */
 function gie_assets_ds_layout_settings_info() {
@@ -82,7 +106,11 @@ function gie_assets_ds_layout_settings_info() {
     'fields' => array(
       'field_asset_image' => 'ds_content',
     ),
-    'classes' => array(),
+    'classes' => array(
+      'layout_class' => array(
+        '' => '',
+      ),
+    ),
     'wrappers' => array(
       'ds_content' => 'div',
     ),

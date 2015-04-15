@@ -1,0 +1,62 @@
+<?php
+/**
+ * @file
+ * Code for the GIE Discussion feature.
+ */
+
+include_once 'gie_discussion.features.inc';
+
+/**
+ * Implements hook_ds_fields_info().
+ * - Create custom Posted By field.
+ */
+function gie_discussion_ds_fields_info($entity_type) {
+  $fields = array();
+
+  if ($entity_type == 'node') {
+    $fields['discussion_posted_by'] = array(
+      'title' => t('Posted by (custom)'),
+      'field_type' => DS_FIELD_TYPE_FUNCTION,
+      'ui_limit' => array('discussion|*'),
+      'function' => '_gie_discussion_posted_by',
+    );
+
+    return array($entity_type => $fields);
+  }
+
+  return;
+}
+
+/**
+ * Render function for custom Posted by field.
+ */
+function _gie_discussion_posted_by($field) {
+  $wrapper = entity_metadata_wrapper('node', $field['entity']);
+
+  // Set author info
+  $uid = $wrapper->author->uid->value();
+  $username = $wrapper->author->name->value();
+  $first_name = $wrapper->author->field_user_firstname->value();
+  $last_name = $wrapper->author->field_user_lastname->value();
+
+  // Set author display name
+  if (!empty($first_name)) { $author[] = $first_name; }
+  if (!empty($last_name)) { $author[] = $last_name; }
+  if (empty($author)) { $author[] = $username; }
+  $author_name = implode(' ', $author);
+
+  if ($uid != '0') {
+    // Link authenticated users to their pages
+    $author_display = l($author_name, 'user/' . $uid);
+  } else {
+    $author_display = check_plain($author_name);
+  }
+
+  // Set date/time of node creation to display as "April 9, 2015 at 4:50pm"
+  $date_time = format_date($field['entity']->created, 'custom', 'F j, Y \a\t g:ia');
+
+  // Set output display
+  $output = t('Posted by ' . $author_display . ' on ' . $date_time);
+
+  return $output;
+}

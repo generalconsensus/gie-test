@@ -36,10 +36,13 @@ function gie_resource_default_pane_data() {
   $template->container = 'resources_introduction';
   $template->lang = 'und';
   $template->data = array(
-    'value' => '<h1>Resources</h1>
-
+    'value' => '<div class="pane--landing-intro__left">
+<h1>Resources</h1>
 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam at porttitor sem. Aliquam erat volutpat. Donec placerat nisl magna, et faucibus arcu condimentum sed. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam at porttitor sem. Aliquam erat volutpat. Donec placerat nisl magna, et faucibus arcu condimentum sed</p>
-<a class="button button--alt" href="/node/add/resource">Add Resource</a>',
+</div>
+<div class="pane--landing-intro__right">
+<p><a href="/node/add/resource" class="button button--add">Add Resource</a></p>
+</div>',
     'format' => 'full_html',
     'title' => NULL,
   );

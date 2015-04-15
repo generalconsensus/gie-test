@@ -1,3 +1,13 @@
+%tb-megamenu-item-icon {
+  content: "";
+  display: inline-block;
+  height: 22px;
+  margin-right: 8px;
+  position: relative;
+  top: 5px;
+  width: 22px;
+}
+
 .block--tb-megamenu-main-menu {
   //layout for main menu wrapper when in navigation region
   .region-navigation & {
@@ -5,7 +15,7 @@
     @include breakpoint($mobile-menu-bp, $no-query: true) {
       display: block;
     }
-    left: 240px;
+    left: 200px;
     position: absolute;
     top: 0;
     @media print {
@@ -56,7 +66,7 @@
           height: 50px;
           line-height: 50px;
           margin: 0;
-          padding: 0 20px;
+          padding: 0 15px 0 10px;
           text-decoration: none;
           text-transform: uppercase;
           &:hover, &:focus {
@@ -64,17 +74,49 @@
             color: #fff !important;
           }
         }
+        // about icon
+        &.tb-megamenu-item--about {
+          > a:before {
+            @extend %tb-megamenu-item-icon;
+            @include svg-background(icon-about);
+          }
+        }
+        // innovations icon
+        &.tb-megamenu-item--innovations {
+          > a:before {
+            @extend %tb-megamenu-item-icon;
+            @include svg-background(icon-innovations);
+            width: 16px;
+          }
+        }
+        // funding icon
+        &.tb-megamenu-item--funding {
+          > a:before {
+            @extend %tb-megamenu-item-icon;
+            @include svg-background(icon-funding);
+          }
+        }
+        // resources icon
+        &.tb-megamenu-item--resources {
+          > a:before {
+            @extend %tb-megamenu-item-icon;
+            @include svg-background(icon-resources);
+            width: 24px;
+          }
+        }
+        // communities icon
+        &.tb-megamenu-item--communities {
+          > a:before {
+            @extend %tb-megamenu-item-icon;
+            @include svg-background(icon-communities);
+            width: 26px;
+          }
+        }
         // more icon
         &.tb-megamenu-item--more {
           > a:before {
-            @include svg-background(circle-plus);
-            content: "";
-            display: inline-block;
-            height: 22px;
-            margin-right: 8px;
-            position: relative;
-            top: 5px;
-            width: 22px;
+            @extend %tb-megamenu-item-icon;
+            @include svg-background(icon-more);
           }
         }
         // the dropdown

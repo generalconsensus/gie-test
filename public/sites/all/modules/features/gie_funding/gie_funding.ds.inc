@@ -47,16 +47,6 @@ function gie_funding_ds_field_settings_info() {
       'label' => 'hidden',
       'format' => 'default',
     ),
-    'field_funding_desc' => array(
-      'formatter_settings' => array(
-        'ft' => array(
-          'func' => 'theme_ds_field_expert',
-          'lb' => 'Introduction',
-          'lb-el' => 'h2',
-          'lb-col' => TRUE,
-        ),
-      ),
-    ),
     'field_funding_eligibility' => array(
       'formatter_settings' => array(
         'ft' => array(
@@ -75,6 +65,20 @@ function gie_funding_ds_field_settings_info() {
         ),
       ),
     ),
+    'field_funding_grant_award_value' => array(
+      'formatter_settings' => array(
+        'ft' => array(
+          'func' => 'theme_ds_field_minimal',
+        ),
+      ),
+    ),
+    'field_funding_poc' => array(
+      'formatter_settings' => array(
+        'ft' => array(
+          'func' => 'theme_ds_field_minimal',
+        ),
+      ),
+    ),
   );
   $export['node|funding|full'] = $ds_fieldsetting;
 
@@ -85,26 +89,16 @@ function gie_funding_ds_field_settings_info() {
   $ds_fieldsetting->bundle = 'funding';
   $ds_fieldsetting->view_mode = 'listing';
   $ds_fieldsetting->settings = array(
-    'node_link' => array(
-      'weight' => '6',
-      'label' => 'hidden',
-      'format' => 'default',
+    'title_field' => array(
       'formatter_settings' => array(
-        'link text' => 'View',
-        'wrapper' => '',
-        'class' => '',
-        'ft' => array(),
-        'field_delimiter' => '',
-        'linked_field' => array(
-          'linked' => 0,
-          'destination' => '',
-          'advanced' => array(
-            'title' => '',
-            'target' => '',
-            'class' => '',
-            'rel' => '',
-            'text' => '',
-          ),
+        'ft' => array(
+          'func' => 'theme_ds_field_expert',
+          'fi' => TRUE,
+          'fi-el' => 'h3',
+          'fi-cl' => 'card__primary-title',
+          'fi-at' => '',
+          'fi-def-at' => FALSE,
+          'fi-odd-even' => FALSE,
         ),
       ),
     ),
@@ -114,12 +108,12 @@ function gie_funding_ds_field_settings_info() {
           'func' => 'theme_ds_field_expert',
           'lb' => 'Due by',
           'lb-el' => 'span',
-          'fi' => TRUE,
-          'fi-el' => 'span',
-          'fi-cl' => '',
-          'fi-at' => '',
-          'fi-def-at' => FALSE,
-          'fi-odd-even' => FALSE,
+          'ow' => TRUE,
+          'ow-el' => 'div',
+          'ow-cl' => 'card__due-date',
+          'ow-def-cl' => FALSE,
+          'ow-at' => '',
+          'ow-def-at' => FALSE,
         ),
       ),
     ),
@@ -128,10 +122,11 @@ function gie_funding_ds_field_settings_info() {
         'ft' => array(
           'func' => 'theme_ds_field_expert',
           'lb' => 'Time to Apply',
-          'lb-el' => 'span',
+          'lb-el' => 'div',
+          'lb-cl' => 'card__list-label',
           'ow' => TRUE,
           'ow-el' => 'div',
-          'ow-cl' => '',
+          'ow-cl' => 'card__list',
           'ow-def-cl' => FALSE,
           'ow-at' => '',
           'ow-def-at' => FALSE,
@@ -143,10 +138,11 @@ function gie_funding_ds_field_settings_info() {
         'ft' => array(
           'func' => 'theme_ds_field_expert',
           'lb' => 'Eligibility',
-          'lb-el' => 'span',
+          'lb-el' => 'div',
+          'lb-cl' => 'card__list-label',
           'ow' => TRUE,
           'ow-el' => 'div',
-          'ow-cl' => '',
+          'ow-cl' => 'card__list',
           'ow-def-cl' => FALSE,
           'ow-at' => '',
           'ow-def-at' => FALSE,
@@ -159,11 +155,27 @@ function gie_funding_ds_field_settings_info() {
           'func' => 'theme_ds_field_expert',
           'suffix' => ' | ',
           'fi' => TRUE,
-          'fi-el' => 'span',
-          'fi-cl' => '',
+          'fi-el' => 'div',
+          'fi-cl' => 'card__number',
           'fi-at' => '',
           'fi-def-at' => FALSE,
           'fi-odd-even' => FALSE,
+        ),
+      ),
+    ),
+    'field_term_topic' => array(
+      'formatter_settings' => array(
+        'ft' => array(
+          'func' => 'theme_ds_field_expert',
+          'lb' => 'Topics',
+          'lb-el' => 'div',
+          'lb-cl' => 'card__list-label',
+          'ow' => TRUE,
+          'ow-el' => 'div',
+          'ow-cl' => 'card__list',
+          'ow-def-cl' => FALSE,
+          'ow-at' => '',
+          'ow-def-at' => FALSE,
         ),
       ),
     ),
@@ -278,17 +290,35 @@ function gie_funding_ds_layout_settings_info() {
   $ds_layout->settings = array(
     'regions' => array(
       'ds_content' => array(
-        0 => 'field_funding_desc',
+        0 => 'group_funding_stats',
         1 => 'field_funding_eligibility',
-        2 => 'field_funding_guidance',
-        3 => 'comments',
+        2 => 'group_funding_stats_first',
+        3 => 'field_funding_guidance',
+        4 => 'group_funding_stats_second',
+        5 => 'comments',
+        6 => 'field_funding_poc',
+        7 => 'field_funding_grant_award_value',
+        8 => 'field_funding_eligibility_type',
+        9 => 'field_term_region',
+        10 => 'field_term_sector',
+        11 => 'field_funding_duration',
+        12 => 'field_funding_effort',
       ),
     ),
     'fields' => array(
-      'field_funding_desc' => 'ds_content',
+      'group_funding_stats' => 'ds_content',
       'field_funding_eligibility' => 'ds_content',
+      'group_funding_stats_first' => 'ds_content',
       'field_funding_guidance' => 'ds_content',
+      'group_funding_stats_second' => 'ds_content',
       'comments' => 'ds_content',
+      'field_funding_poc' => 'ds_content',
+      'field_funding_grant_award_value' => 'ds_content',
+      'field_funding_eligibility_type' => 'ds_content',
+      'field_term_region' => 'ds_content',
+      'field_term_sector' => 'ds_content',
+      'field_funding_duration' => 'ds_content',
+      'field_funding_effort' => 'ds_content',
     ),
     'classes' => array(),
     'wrappers' => array(
@@ -308,34 +338,48 @@ function gie_funding_ds_layout_settings_info() {
   $ds_layout->entity_type = 'node';
   $ds_layout->bundle = 'funding';
   $ds_layout->view_mode = 'listing';
-  $ds_layout->layout = 'ds_reset';
+  $ds_layout->layout = 'article';
   $ds_layout->settings = array(
     'regions' => array(
-      'ds_content' => array(
-        0 => 'title_field',
-        1 => 'field_funding_grant_award_value',
-        2 => 'field_funding_deadline',
-        3 => 'field_funding_eligibility',
-        4 => 'field_funding_effort',
-        5 => 'node_link',
+      'main_content' => array(
+        0 => 'group_card_content',
+        1 => 'title_field',
+        2 => 'field_funding_grant_award_value',
+        3 => 'field_funding_deadline',
+        4 => 'field_funding_eligibility',
+        5 => 'field_funding_effort',
+        6 => 'field_term_topic',
+        7 => 'funding_counters_comment_count',
+        8 => 'funding_counters_favorite_count',
+        9 => 'group_card_counts',
       ),
     ),
     'fields' => array(
-      'title_field' => 'ds_content',
-      'field_funding_grant_award_value' => 'ds_content',
-      'field_funding_deadline' => 'ds_content',
-      'field_funding_eligibility' => 'ds_content',
-      'field_funding_effort' => 'ds_content',
-      'node_link' => 'ds_content',
+      'group_card_content' => 'main_content',
+      'title_field' => 'main_content',
+      'field_funding_grant_award_value' => 'main_content',
+      'field_funding_deadline' => 'main_content',
+      'field_funding_eligibility' => 'main_content',
+      'field_funding_effort' => 'main_content',
+      'field_term_topic' => 'main_content',
+      'funding_counters_comment_count' => 'main_content',
+      'funding_counters_favorite_count' => 'main_content',
+      'group_card_counts' => 'main_content',
     ),
-    'classes' => array(),
+    'classes' => array(
+      'layout_class' => array(
+        'card' => 'card',
+      ),
+    ),
     'wrappers' => array(
-      'ds_content' => 'div',
+      'header' => 'div',
+      'main_content' => 'div',
+      'footer' => 'div',
     ),
     'layout_wrapper' => 'div',
     'layout_attributes' => '',
-    'layout_attributes_merge' => TRUE,
-    'layout_link_attribute' => FALSE,
+    'layout_attributes_merge' => 1,
+    'layout_link_attribute' => '',
     'layout_link_custom' => '',
   );
   $export['node|funding|listing'] = $ds_layout;

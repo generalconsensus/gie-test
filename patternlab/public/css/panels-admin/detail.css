@@ -144,7 +144,7 @@
 }
 /* line 74, ../../sass/partials/layout/panels/_detail.scss */
 .l-panels-detail .l-wrapper,
-.l-panels-detail .l-hero,
+.l-panels-detail .l-title,
 .l-panels-detail .l-main,
 .l-panels-detail .l-main-sidebar,
 .l-panels-detail .l-center,
@@ -159,7 +159,7 @@
 }
 /* line 9, ../../sass/partials/global/helpers/_clearfix.scss */
 .l-panels-detail .l-wrapper:after,
-.l-panels-detail .l-hero:after,
+.l-panels-detail .l-title:after,
 .l-panels-detail .l-main:after,
 .l-panels-detail .l-main-sidebar:after,
 .l-panels-detail .l-center:after,
@@ -173,7 +173,7 @@
 }
 /* line 14, ../../sass/partials/global/helpers/_clearfix.scss */
 .l-panels-detail .l-wrapper:after,
-.l-panels-detail .l-hero:after,
+.l-panels-detail .l-title:after,
 .l-panels-detail .l-main:after,
 .l-panels-detail .l-main-sidebar:after,
 .l-panels-detail .l-center:after,
