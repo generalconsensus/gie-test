@@ -1,6 +1,7 @@
 .card {
   border: 1px solid $card-border-color;
   @include box-shadow(0 2px 0 0 $card-border-color);
+  max-width: 500px;
   position: relative;
 }
 

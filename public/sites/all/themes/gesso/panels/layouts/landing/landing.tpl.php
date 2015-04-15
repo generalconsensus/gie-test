@@ -6,7 +6,7 @@
   $classes = "$preface $title $main $sidebar";
 ?>
 
-<div<?php if (!empty($css_id)): ?> id="<?php print $css_id; ?>"<?php endif; ?> class="l-panels-sidebar-left <?php print $classes; ?>">
+<div<?php if (!empty($css_id)): ?> id="<?php print $css_id; ?>"<?php endif; ?> class="l-panels-landing <?php print $classes; ?>">
   <?php if (!empty($content['preface'])): ?>
     <div class="l-preface layout-constrain">
       <?php print $content['preface']; ?>

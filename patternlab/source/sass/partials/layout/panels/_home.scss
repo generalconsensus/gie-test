@@ -1,0 +1,23 @@
+// @file
+// Panels layout: home
+// Media queries use: http://breakpoint-sass.com
+// Media queries use: github.com/Team-Sass/breakpoint/wiki/No-Query-Fallbacks
+// Grid via: singularity.gs
+
+.l-panels-home {
+
+}
+
+.l-panels-home {
+  @include clearfix;
+  .l-hero,
+  .l-content,
+  .l-villain,
+  .l-postscript {
+    @include clearfix;
+
+    @if $panels-admin {
+      @include border-box;
+    }
+  }
+}
