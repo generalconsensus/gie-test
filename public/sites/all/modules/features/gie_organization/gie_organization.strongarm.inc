@@ -124,25 +124,25 @@ function gie_organization_strongarm() {
             'visible' => FALSE,
           ),
           'listing' => array(
-            'weight' => '19',
+            'weight' => '23',
             'visible' => FALSE,
           ),
         ),
         'organization_counters_favorite_count' => array(
           'listing' => array(
-            'weight' => '6',
+            'weight' => '4',
             'visible' => TRUE,
           ),
         ),
         'organization_counters_innovation_count' => array(
           'listing' => array(
-            'weight' => '4',
+            'weight' => '2',
             'visible' => TRUE,
           ),
         ),
         'organization_counters_member_count' => array(
           'listing' => array(
-            'weight' => '5',
+            'weight' => '3',
             'visible' => TRUE,
           ),
         ),
@@ -249,6 +249,25 @@ function gie_organization_strongarm() {
   $strongarm->name = 'panelizer_node:organization:teaser_selection';
   $strongarm->value = 0;
   $export['panelizer_node:organization:teaser_selection'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'sharethis_organization_options';
+  $strongarm->value = array(
+    'full' => 0,
+    'teaser' => 0,
+    'rss' => 0,
+    'search_index' => 0,
+    'search_result' => 0,
+    'diff_standard' => 0,
+    'token' => 0,
+    'listing' => 0,
+    'teaser_date' => 0,
+    'contact' => 0,
+    'revision' => 0,
+  );
+  $export['sharethis_organization_options'] = $strongarm;
 
   return $export;
 }
