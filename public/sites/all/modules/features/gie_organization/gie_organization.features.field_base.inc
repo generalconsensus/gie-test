@@ -155,31 +155,18 @@ function gie_organization_field_default_field_bases() {
     'entity_types' => array(),
     'field_name' => 'field_org_logo',
     'indexes' => array(
-      'target_id' => array(
-        0 => 'target_id',
+      'fid' => array(
+        0 => 'fid',
       ),
     ),
     'locked' => 0,
-    'module' => 'entityreference',
+    'module' => 'image',
     'settings' => array(
-      'handler' => 'base',
-      'handler_settings' => array(
-        'behaviors' => array(
-          'views-select-list' => array(
-            'status' => 0,
-          ),
-        ),
-        'sort' => array(
-          'type' => 'none',
-        ),
-        'target_bundles' => array(
-          'image' => 'image',
-        ),
-      ),
-      'target_type' => 'asset',
+      'default_image' => 38,
+      'uri_scheme' => 'public',
     ),
     'translatable' => 0,
-    'type' => 'entityreference',
+    'type' => 'image',
   );
 
   // Exported field_base: 'field_org_mission'

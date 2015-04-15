@@ -372,7 +372,7 @@ function gie_organization_panelizer_defaults() {
     $pane->access = array();
     $pane->configuration = array(
       'label' => 'hidden',
-      'formatter' => 'entityreference_entity_view',
+      'formatter' => 'image',
       'delta_limit' => 0,
       'delta_offset' => '0',
       'delta_reversed' => FALSE,
@@ -390,6 +390,8 @@ function gie_organization_panelizer_defaults() {
         ),
         'view_mode' => 'org_teaser',
         'links' => 1,
+        'image_style' => '',
+        'image_link' => '',
       ),
       'context' => 'panelizer',
       'override_title' => 0,

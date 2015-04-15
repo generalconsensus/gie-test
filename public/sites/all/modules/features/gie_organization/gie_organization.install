@@ -5,9 +5,38 @@
  */
 
 /**
+ * Add default image
+ */
+function gie_organization_add_default_image() {
+
+    file_unmanaged_copy(drupal_realpath(drupal_get_path('module', 'gdpc_organization') . '/images/organization-default-image.jpg'), 'public://default_user.png', FILE_EXISTS_REPLACE);
+
+    $file = new stdClass;
+    $file->uid = 1;
+    $file->filename = 'image.png';
+    $file->uri = 'public://default_images/organization-default-image.jpg';
+    $file->status = 1;
+    $file->filemime = 'image/jpg';
+
+    file_save($file);
+    file_usage_add($file, 'gdpc_organization', 'user', 1);
+
+}
+
+
+
+/**
  * Delete Organization Telephone and Email fields.
  */
 function gie_organization_update_7000() {
   field_delete_field('field_org_phone');
   field_delete_field('field_org_email');
+}
+
+/**
+ * Delete Organization Logo field.
+ */
+function gie_organization_update_7001() {
+    field_delete_field('field_org_logo');
+    field_purge_batch(1);
 }
