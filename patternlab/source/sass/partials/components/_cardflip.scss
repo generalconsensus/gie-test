@@ -1,5 +1,4 @@
 $cardheight: 200px;
-$cardwidth: 200px;
 
 .cardflip {
   cursor: pointer;
@@ -8,11 +7,7 @@ $cardwidth: 200px;
   position: relative;
   width: 100%;
   z-index: 0;
-  &:hover, &:focus {
-    .cardflip__a {
-      @include transform(rotateY(20deg));
-    }
-  }
+  &:hover, &:focus,
   &.is-flipped {
     z-index: 2;
   }
@@ -25,11 +20,14 @@ $cardwidth: 200px;
   position: absolute;
   text-align: center;
   top: 0;
+  @include transition(transform 0.5s linear);
   @include transform(translate3d(0px, 0px, 0px));
   @include transform-style(preserve-3d);
   width: 100%;
   z-index: 1;
-  .is-flipped & {
+  .cardflip:hover &,
+  .cardflip:focus &,
+  .cardflip.is-flipped & {
     @include transform(rotateY(180deg));
     z-index: 2;
   }
@@ -77,13 +75,9 @@ $cardwidth: 200px;
   }
 }
 
-.cardflip__image {
+.cardflip__image {}
 
-}
-
-.cardflip__description {
-
-}
+.cardflip__description {}
 
 .cardflip__link {
   font-size: em(14px);
