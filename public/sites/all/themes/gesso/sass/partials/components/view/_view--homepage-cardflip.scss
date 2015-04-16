@@ -1,0 +1,16 @@
+.view--homepage-cardflip {
+  @extend %clearfix;
+  margin: 0 -0.5em;
+  .views-row {
+    padding: 0 0.5em 1em 0.5em;
+    @include perspective(800px);
+    @include transform(translate3d(0px, 0px, 0px));
+    @include breakpoint(500px, $no-query: true) {
+      float: left;
+      width: percentage(1/2);
+    }
+    @include breakpoint(830px, $no-query: true) {
+      width: percentage(1/4);
+    }
+  }
+}

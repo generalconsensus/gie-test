@@ -27,6 +27,33 @@
     }
   }
 
+  Drupal.behaviors.cardflipClick = {
+    attach: function (context) {
+      $('.cardflip').click(function(){
+        $(this).toggleClass('is-flipped');
+      });
+    }
+  }
+
+  function cardFlip() {
+    $('.view--homepage-cardflip').each(function(){
+      var items = $(this).find('.cardflip,.cardflip__card,.cardflip__a,.cardflip__b');
+      items.css("height","auto");
+      var tallest = 0;
+      items.each(function(){
+        var height = $(this).height();
+        if (height >= tallest) { 
+          tallest = height;
+        }
+      });
+      //if (Modernizr.mq('(min-width: 500px)')) { 
+        if (tallest > 0) {
+          items.height(tallest+40); // add 40 for the 20px padding  
+        }
+      //}
+    });
+  }
+
   function cardView() {
     
     $('.view--card-view').each(function(){
@@ -51,10 +78,10 @@
         if ($(this).is('.odd')) {
           var tallest;
           var evenheight = $(this).next('.even').find('.card').height();
-          if (myheight > evenheight) { 
+          if (myheight >= evenheight) { 
             tallest = myheight;
           }
-          if (myheight < evenheight) { 
+          if (myheight <= evenheight) { 
             tallest = evenheight;
           }
           $(this).find('.card').height(tallest);
@@ -86,6 +113,7 @@
   // Generic function that runs on window resize.
   function resizeStuff() {
     cardView();
+    cardFlip();
   }
 
   // Runs function once on window resize.
@@ -101,6 +129,7 @@
 
   $(window).load(function() {
     cardView();
+    cardFlip();
   });
 
 })(jQuery);
