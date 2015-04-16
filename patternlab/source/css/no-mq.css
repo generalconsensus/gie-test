@@ -1,5 +1,5 @@
 /* line 65, c:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/singularitygs-1.1.2/stylesheets/singularitygs/helpers/_clearfix.scss */
-.clearfix:after, .layout-grid__row:after, .pane--landing-intro:after, .region-footer:after {
+.clearfix:after, .layout-grid__row:after, .pane--landing-intro:after, .region-footer:after, .view--homepage-cardflip:after {
   content: "";
   display: table;
   clear: both;
@@ -29,12 +29,12 @@
 }
 
 /* line 9, ../sass/partials/global/helpers/_clearfix.scss */
-.clearfix:after, .layout-grid__row:after, .pane--landing-intro:after, .region-footer:after {
+.clearfix:after, .layout-grid__row:after, .pane--landing-intro:after, .region-footer:after, .view--homepage-cardflip:after {
   display: table;
   content: "";
 }
 /* line 14, ../sass/partials/global/helpers/_clearfix.scss */
-.clearfix:after, .layout-grid__row:after, .pane--landing-intro:after, .region-footer:after {
+.clearfix:after, .layout-grid__row:after, .pane--landing-intro:after, .region-footer:after, .view--homepage-cardflip:after {
   clear: both;
 }
 
@@ -1663,16 +1663,96 @@ input.throbbing {
 
 /* line 1, ../sass/partials/components/_cardflip.scss */
 .cardflip {
-  background: #ed7d3a;
+  cursor: pointer;
+  -webkit-perspective: 800px;
+  -moz-perspective: 800px;
+  -ms-perspective: 800px;
+  -o-perspective: 800px;
+  perspective: 800px;
+  position: relative;
+  width: 100%;
+  z-index: 0;
+}
+/* line 8, ../sass/partials/components/_cardflip.scss */
+.cardflip:hover .cardflip__a, .cardflip:focus .cardflip__a {
+  -webkit-transform: rotateY(10deg);
+  -moz-transform: rotateY(10deg);
+  -ms-transform: rotateY(10deg);
+  -o-transform: rotateY(10deg);
+  transform: rotateY(10deg);
+}
+/* line 12, ../sass/partials/components/_cardflip.scss */
+.cardflip.is-flipped {
+  z-index: 2;
+}
+
+/* line 17, ../sass/partials/components/_cardflip.scss */
+.cardflip__card {
   -webkit-box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.15);
   -moz-box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.15);
   box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.15);
   color: #fff;
+  height: 100%;
+  left: 0;
+  position: absolute;
+  top: 0;
+  -webkit-transform: translate3d(0px, 0px, 0px);
+  -moz-transform: translate3d(0px, 0px, 0px);
+  -ms-transform: translate3d(0px, 0px, 0px);
+  -o-transform: translate3d(0px, 0px, 0px);
+  transform: translate3d(0px, 0px, 0px);
+  -webkit-transform-style: preserve-3d;
+  -moz-transform-style: preserve-3d;
+  -ms-transform-style: preserve-3d;
+  -o-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+  width: 100%;
+  z-index: 1;
+}
+/* line 28, ../sass/partials/components/_cardflip.scss */
+.is-flipped .cardflip__card {
+  -webkit-transform: rotateY(180deg);
+  -moz-transform: rotateY(180deg);
+  -ms-transform: rotateY(180deg);
+  -o-transform: rotateY(180deg);
+  transform: rotateY(180deg);
+  z-index: 2;
 }
 
-/* line 9, ../sass/partials/components/_cardflip.scss */
-.cardflip--b {
+/* line 34, ../sass/partials/components/_cardflip.scss */
+.cardflip__a, .cardflip__b {
+  -webkit-backface-visibility: hidden;
+  -moz-backface-visibility: hidden;
+  -ms-backface-visibility: hidden;
+  -o-backface-visibility: hidden;
+  backface-visibility: hidden;
+  height: 200px;
+  left: 0;
+  position: absolute;
+  top: 0;
+  -webkit-transform: translate3d(0px, 0px, 0px);
+  -moz-transform: translate3d(0px, 0px, 0px);
+  -ms-transform: translate3d(0px, 0px, 0px);
+  -o-transform: translate3d(0px, 0px, 0px);
+  transform: translate3d(0px, 0px, 0px);
+  width: 100%;
+}
+
+/* line 44, ../sass/partials/components/_cardflip.scss */
+.cardflip__a {
+  background: #ed7d3a;
+  z-index: 0;
+}
+
+/* line 50, ../sass/partials/components/_cardflip.scss */
+.cardflip__b {
   background: #dc5606;
+  -webkit-transform: rotateY(180deg);
+  -moz-transform: rotateY(180deg);
+  -ms-transform: rotateY(180deg);
+  -o-transform: rotateY(180deg);
+  transform: rotateY(180deg);
+  z-index: 1;
 }
 
 /* line 1, ../sass/partials/components/_comments.scss */
@@ -3781,6 +3861,22 @@ tr.drag-previous {
   display: block;
   height: 150%;
   width: 0;
+}
+
+/* line 3, ../sass/partials/components/view/_view--homepage-cardflip.scss */
+.view--homepage-cardflip .views-row {
+  float: left;
+  -webkit-perspective: 800px;
+  -moz-perspective: 800px;
+  -ms-perspective: 800px;
+  -o-perspective: 800px;
+  perspective: 800px;
+  -webkit-transform: translate3d(0px, 0px, 0px);
+  -moz-transform: translate3d(0px, 0px, 0px);
+  -ms-transform: translate3d(0px, 0px, 0px);
+  -o-transform: translate3d(0px, 0px, 0px);
+  transform: translate3d(0px, 0px, 0px);
+  width: 25%;
 }
 
 /* line 2, ../sass/partials/components/view/_view--partners.scss */

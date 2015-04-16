@@ -1,0 +1,9 @@
+.view--homepage-cardflip {
+  @extend %clearfix;
+  .views-row {
+    float: left;
+    @include perspective(800px);
+    @include transform(translate3d(0px, 0px, 0px));
+    width: percentage(1/4);
+  }
+}

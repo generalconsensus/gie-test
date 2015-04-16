@@ -27,6 +27,14 @@
     }
   }
 
+  Drupal.behaviors.cardFlip = {
+    attach: function (context) {
+      $('.cardflip').click(function(){
+        $(this).toggleClass('is-flipped');
+      });
+    }
+  }
+
   function cardView() {
     
     $('.view--card-view').each(function(){

@@ -1663,30 +1663,23 @@ input.throbbing {
 
 /* line 1, ../sass/partials/components/_cardflip.scss */
 .cardflip {
-  cursor: pointer;
-  -webkit-perspective: 800px;
-  -moz-perspective: 800px;
-  -ms-perspective: 800px;
-  -o-perspective: 800px;
-  perspective: 800px;
   position: relative;
-  width: 100%;
   z-index: 0;
 }
-/* line 8, ../sass/partials/components/_cardflip.scss */
-.cardflip:hover .cardflip__a, .cardflip:focus .cardflip__a {
+/* line 4, ../sass/partials/components/_cardflip.scss */
+.cardflip:hover .cardflip__card, .cardflip:focus .cardflip__card {
   -webkit-transform: rotateY(10deg);
   -moz-transform: rotateY(10deg);
   -ms-transform: rotateY(10deg);
   -o-transform: rotateY(10deg);
   transform: rotateY(10deg);
 }
-/* line 12, ../sass/partials/components/_cardflip.scss */
+/* line 9, ../sass/partials/components/_cardflip.scss */
 .cardflip.is-flipped {
   z-index: 2;
 }
 
-/* line 17, ../sass/partials/components/_cardflip.scss */
+/* line 14, ../sass/partials/components/_cardflip.scss */
 .cardflip__card {
   -webkit-box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.15);
   -moz-box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.15);
@@ -1709,7 +1702,7 @@ input.throbbing {
   width: 100%;
   z-index: 1;
 }
-/* line 28, ../sass/partials/components/_cardflip.scss */
+/* line 25, ../sass/partials/components/_cardflip.scss */
 .is-flipped .cardflip__card {
   -webkit-transform: rotateY(180deg);
   -moz-transform: rotateY(180deg);
@@ -1719,7 +1712,7 @@ input.throbbing {
   z-index: 2;
 }
 
-/* line 34, ../sass/partials/components/_cardflip.scss */
+/* line 31, ../sass/partials/components/_cardflip.scss */
 .cardflip__a, .cardflip__b {
   -webkit-backface-visibility: hidden;
   -moz-backface-visibility: hidden;
@@ -1735,16 +1728,15 @@ input.throbbing {
   -ms-transform: translate3d(0px, 0px, 0px);
   -o-transform: translate3d(0px, 0px, 0px);
   transform: translate3d(0px, 0px, 0px);
-  width: 100%;
 }
 
-/* line 44, ../sass/partials/components/_cardflip.scss */
+/* line 40, ../sass/partials/components/_cardflip.scss */
 .cardflip__a {
   background: #ed7d3a;
   z-index: 0;
 }
 
-/* line 50, ../sass/partials/components/_cardflip.scss */
+/* line 46, ../sass/partials/components/_cardflip.scss */
 .cardflip__b {
   background: #dc5606;
   -webkit-transform: rotateY(180deg);

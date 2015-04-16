@@ -1,13 +1,57 @@
 .cardflip {
-  background: $lightorange;
-  @include box-shadow(0 1px 1px 0 rgba(0,0,0,0.15));
-  color: #fff;
+  cursor: pointer;
+  @include perspective(800px);
+  position: relative;
+  width: 100%;
+  z-index: 0;
+  &:hover, &:focus {
+    .cardflip__a {
+      @include transform(rotateY(10deg));
+    }
+  }
+  &.is-flipped {
+    z-index: 2;
+  }
 }
 
-.cardflip--a {}
+.cardflip__card {
+  @include box-shadow(0 1px 1px 0 rgba(0,0,0,0.15));
+  color: #fff;
+  height: 100%;
+  left: 0;
+  position: absolute;
+  top: 0;
+  @include transform(translate3d(0px, 0px, 0px));
+  @include transform-style(preserve-3d);
+  width: 100%;
+  z-index: 1;
+  .is-flipped & {
+    @include transform(rotateY(180deg));
+    z-index: 2;
+  }
+}
 
-.cardflip--b {
-  background: $orange
+%cardside {
+  @include backface-visibility(hidden);
+  height: 200px;
+  left: 0;
+  position: absolute;
+  top: 0;
+  @include transform(translate3d(0px, 0px, 0px));
+  width: 100%;
+}
+
+.cardflip__a {
+  @extend %cardside;
+  background: $lightorange;
+  z-index: 0;
+}
+
+.cardflip__b {
+  @extend %cardside;
+  background: $orange;
+  @include transform(rotateY(180deg));
+  z-index: 1;
 }
 
 .cardflip__title {}
