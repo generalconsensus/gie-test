@@ -1,19 +1,94 @@
+$cardheight: 200px;
+$cardwidth: 200px;
+
 .cardflip {
-  background: $lightorange;
-  @include box-shadow(0 1px 1px 0 rgba(0,0,0,0.15));
+  cursor: pointer;
+  @include perspective(800px);
+  min-height: $cardheight;
+  position: relative;
+  width: 100%;
+  z-index: 0;
+  &:hover, &:focus {
+    .cardflip__a {
+      @include transform(rotateY(20deg));
+    }
+  }
+  &.is-flipped {
+    z-index: 2;
+  }
+}
+
+.cardflip__card {
   color: #fff;
+  min-height: $cardheight;
+  left: 0;
+  position: absolute;
+  text-align: center;
+  top: 0;
+  @include transform(translate3d(0px, 0px, 0px));
+  @include transform-style(preserve-3d);
+  width: 100%;
+  z-index: 1;
+  .is-flipped & {
+    @include transform(rotateY(180deg));
+    z-index: 2;
+  }
+  a {
+    color: #fff;
+  }
 }
 
-.cardflip--a {}
-
-.cardflip--b {
-  background: $orange
+%cardside {
+  @include backface-visibility(hidden);
+  border: 1px solid #eee;
+  @include box-shadow(0 1px 1px 0 rgba(0,0,0,0.1));
+  min-height: $cardheight;
+  left: 0;
+  padding: 20px;
+  position: absolute;
+  top: 0;
+  @include transform(translate3d(0px, 0px, 0px));
+  width: 100%;
 }
 
-.cardflip__title {}
+.cardflip__a {
+  @extend %cardside;
+  background: $lightorange;
+  z-index: 0;
+}
 
-.cardflip__image {}
+.cardflip__b {
+  @extend %cardside;
+  background: $orange;
+  @include transform(rotateY(180deg));
+  z-index: 1;
+}
 
-.cardflip__description {}
+.cardflip__title {
+  @include hyphens(none);
+  font-size: em(21px);
+  .cardflip__a & {
+    min-height: 80px;
+  }
+  .cardflip__b & {
+    border-bottom: 1px solid #fff;
+    margin-bottom: 1em;
+    padding-bottom: 1em;
+  }
+}
 
-.cardflip__link {}
+.cardflip__image {
+
+}
+
+.cardflip__description {
+
+}
+
+.cardflip__link {
+  font-size: em(14px);
+  padding-top: 1em;
+  a {
+    text-decoration: underline;
+  }
+}
