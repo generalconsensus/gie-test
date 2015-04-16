@@ -126,6 +126,7 @@ features[variable][] = comment_organization
 features[variable][] = comment_preview_organization
 features[variable][] = comment_subject_field_organization
 features[variable][] = field_bundle_settings_node__organization
+features[variable][] = gie_organization_image_fid
 features[variable][] = menu_options_organization
 features[variable][] = menu_parent_organization
 features[variable][] = node_options_organization
