@@ -1,4 +1,4 @@
-/* line 65, ../../../../../../../../Ruby21-x64/lib/ruby/gems/2.1.0/gems/singularitygs-1.1.2/stylesheets/singularitygs/helpers/_clearfix.scss */
+/* line 65, c:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/singularitygs-1.1.2/stylesheets/singularitygs/helpers/_clearfix.scss */
 .clearfix:after, .layout-grid__row:after, .pane--landing-intro:after, .region-footer:after {
   content: "";
   display: table;
@@ -1661,6 +1661,20 @@ input.throbbing {
   width: 0;
 }
 
+/* line 1, ../sass/partials/components/_cardflip.scss */
+.cardflip {
+  background: #ed7d3a;
+  -webkit-box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.15);
+  -moz-box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.15);
+  box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.15);
+  color: #fff;
+}
+
+/* line 9, ../sass/partials/components/_cardflip.scss */
+.cardflip--b {
+  background: #dc5606;
+}
+
 /* line 1, ../sass/partials/components/_comments.scss */
 .comments {
   border-top: 1px solid #cecfcb;
@@ -2700,10 +2714,11 @@ header.header {
 
 /* line 1, ../sass/partials/components/_pane.scss */
 .pane {
-  padding: 0 0 2em 0;
+  margin: 0 0 2em 0;
+  padding: 0;
 }
 
-/* line 5, ../sass/partials/components/_pane.scss */
+/* line 6, ../sass/partials/components/_pane.scss */
 .pane__title {
   border-bottom: 1px solid #cecfcb;
   color: #565a5c;
@@ -2712,12 +2727,12 @@ header.header {
   margin: 0 0 1em 0;
   padding: 0 0 0.5em 0;
 }
-/* line 13, ../sass/partials/components/_pane.scss */
+/* line 14, ../sass/partials/components/_pane.scss */
 aside .pane__title {
   color: #7090b7;
 }
-/* line 17, ../sass/partials/components/_pane.scss */
-.pane--node > .pane__title {
+/* line 18, ../sass/partials/components/_pane.scss */
+.pane--full-content > .pane__title {
   color: #dc5606;
   font-size: 1.5em;
   font-size: 2em;
@@ -2857,12 +2872,12 @@ aside .pane__title {
 
 /* line 2, ../sass/partials/components/pane/_pane--nodefield-funding-desc.scss */
 .pane--nodefield-funding-desc {
-  padding-bottom: 1em;
+  margin-bottom: 1em;
 }
 
 /* line 2, ../sass/partials/components/pane/_pane--nodefield-innovation-desc.scss */
 .pane--nodefield-innovation-desc {
-  padding-bottom: 1em;
+  margin-bottom: 1em;
 }
 
 /* line 1, ../sass/partials/components/pane/_pane--page-title.scss */
