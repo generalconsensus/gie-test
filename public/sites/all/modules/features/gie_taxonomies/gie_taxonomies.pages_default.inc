@@ -52,7 +52,7 @@ function gie_taxonomies_default_page_manager_pages() {
     ),
   );
   $display->cache = array();
-  $display->title = '';
+  $display->title = 'Locations';
   $display->uuid = 'e3d0e9d8-243d-4b17-9cb3-03dd04761c85';
   $display->content = array();
   $display->panels = array();
