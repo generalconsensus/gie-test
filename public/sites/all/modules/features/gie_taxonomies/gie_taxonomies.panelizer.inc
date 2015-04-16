@@ -1448,5 +1448,93 @@ function gie_taxonomies_panelizer_defaults() {
   $panelizer->display = $display;
   $export['taxonomy_term:topic:default'] = $panelizer;
 
+  $panelizer = new stdClass();
+  $panelizer->disabled = FALSE; /* Edit this to true to make a default panelizer disabled initially */
+  $panelizer->api_version = 1;
+  $panelizer->name = 'taxonomy_term:topic:default:listing';
+  $panelizer->title = 'Default';
+  $panelizer->panelizer_type = 'taxonomy_term';
+  $panelizer->panelizer_key = 'topic';
+  $panelizer->no_blocks = FALSE;
+  $panelizer->css_id = '';
+  $panelizer->css = '';
+  $panelizer->pipeline = 'standard';
+  $panelizer->contexts = array();
+  $panelizer->relationships = array();
+  $panelizer->access = array();
+  $panelizer->view_mode = 'listing';
+  $panelizer->css_class = '';
+  $panelizer->title_element = 'H2';
+  $panelizer->link_to_entity = TRUE;
+  $panelizer->extra = array();
+  $display = new panels_display();
+  $display->layout = 'onecol';
+  $display->layout_settings = array();
+  $display->panel_settings = array(
+    'style_settings' => array(
+      'default' => NULL,
+      'middle' => NULL,
+    ),
+  );
+  $display->cache = array();
+  $display->title = '';
+  $display->uuid = 'c24b2568-804f-4481-bf46-293ad6c39d67';
+  $display->content = array();
+  $display->panels = array();
+    $pane = new stdClass();
+    $pane->pid = 'new-f248aa76-b462-43f9-b907-e8a67ad87a68';
+    $pane->panel = 'middle';
+    $pane->type = 'entity_view';
+    $pane->subtype = 'taxonomy_term';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array(
+      'view_mode' => 'listing',
+      'context' => 'panelizer',
+      'override_title' => 0,
+      'override_title_text' => '',
+      'override_title_heading' => 'h2',
+    );
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
+    $pane->css = array();
+    $pane->extras = array();
+    $pane->position = 0;
+    $pane->locks = array();
+    $pane->uuid = 'f248aa76-b462-43f9-b907-e8a67ad87a68';
+    $display->content['new-f248aa76-b462-43f9-b907-e8a67ad87a68'] = $pane;
+    $display->panels['middle'][0] = 'new-f248aa76-b462-43f9-b907-e8a67ad87a68';
+    $pane = new stdClass();
+    $pane->pid = 'new-f52b3ca8-89cb-41eb-b022-5df329db20cd';
+    $pane->panel = 'middle';
+    $pane->type = 'flag_link';
+    $pane->subtype = 'taxonomy_term';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array(
+      'flag_name' => 'follow_taxonomy',
+      'context' => 'panelizer',
+      'override_title' => 1,
+      'override_title_text' => '',
+      'override_title_heading' => 'h2',
+    );
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
+    $pane->css = array();
+    $pane->extras = array();
+    $pane->position = 1;
+    $pane->locks = array();
+    $pane->uuid = 'f52b3ca8-89cb-41eb-b022-5df329db20cd';
+    $display->content['new-f52b3ca8-89cb-41eb-b022-5df329db20cd'] = $pane;
+    $display->panels['middle'][1] = 'new-f52b3ca8-89cb-41eb-b022-5df329db20cd';
+  $display->hide_title = PANELS_TITLE_FIXED;
+  $display->title_pane = '0';
+  $panelizer->display = $display;
+  $export['taxonomy_term:topic:default:listing'] = $panelizer;
+
   return $export;
 }
