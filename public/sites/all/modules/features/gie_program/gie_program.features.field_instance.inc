@@ -17,6 +17,12 @@ function gie_program_field_default_field_instances() {
     'deleted' => 0,
     'description' => '',
     'display' => array(
+      'at_a_glance' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 19,
+      ),
       'contact' => array(
         'label' => 'above',
         'settings' => array(),
@@ -88,6 +94,12 @@ function gie_program_field_default_field_instances() {
     'deleted' => 0,
     'description' => '',
     'display' => array(
+      'at_a_glance' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 1,
+      ),
       'contact' => array(
         'label' => 'hidden',
         'module' => 'text',
@@ -132,7 +144,7 @@ function gie_program_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 14,
+        'weight' => 17,
       ),
       'listing' => array(
         'label' => 'above',
@@ -200,6 +212,30 @@ function gie_program_field_default_field_instances() {
     'deleted' => 0,
     'description' => '',
     'display' => array(
+      'at_a_glance' => array(
+        'label' => 'inline',
+        'module' => 'number',
+        'settings' => array(
+          'decimal_separator' => '.',
+          'field_delimiter' => '',
+          'linked_field' => array(
+            'advanced' => array(
+              'class' => '',
+              'rel' => '',
+              'target' => '',
+              'text' => '',
+              'title' => '',
+            ),
+            'destination' => '',
+            'linked' => 0,
+          ),
+          'prefix_suffix' => 1,
+          'scale' => 0,
+          'thousand_separator' => ',',
+        ),
+        'type' => 'number_integer',
+        'weight' => 18,
+      ),
       'contact' => array(
         'label' => 'above',
         'settings' => array(),
@@ -277,6 +313,12 @@ function gie_program_field_default_field_instances() {
     'deleted' => 0,
     'description' => '',
     'display' => array(
+      'at_a_glance' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 5,
+      ),
       'contact' => array(
         'label' => 'above',
         'settings' => array(),
@@ -305,23 +347,9 @@ function gie_program_field_default_field_instances() {
       ),
       'full' => array(
         'label' => 'hidden',
-        'module' => 'text',
-        'settings' => array(
-          'field_delimiter' => '',
-          'linked_field' => array(
-            'advanced' => array(
-              'class' => '',
-              'rel' => '',
-              'target' => '',
-              'text' => '',
-              'title' => '',
-            ),
-            'destination' => '',
-            'linked' => 0,
-          ),
-        ),
-        'type' => 'text_default',
-        'weight' => 2,
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 13,
       ),
       'listing' => array(
         'label' => 'hidden',
@@ -402,6 +430,12 @@ function gie_program_field_default_field_instances() {
     'deleted' => 0,
     'description' => '',
     'display' => array(
+      'at_a_glance' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 13,
+      ),
       'contact' => array(
         'label' => 'above',
         'settings' => array(),
@@ -437,7 +471,7 @@ function gie_program_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 22,
+        'weight' => 24,
       ),
       'listing' => array(
         'label' => 'above',
@@ -487,6 +521,12 @@ function gie_program_field_default_field_instances() {
     'deleted' => 0,
     'description' => '',
     'display' => array(
+      'at_a_glance' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 20,
+      ),
       'contact' => array(
         'label' => 'above',
         'settings' => array(),
@@ -567,6 +607,12 @@ function gie_program_field_default_field_instances() {
     'deleted' => 0,
     'description' => '',
     'display' => array(
+      'at_a_glance' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 4,
+      ),
       'contact' => array(
         'label' => 'above',
         'settings' => array(),
@@ -597,7 +643,7 @@ function gie_program_field_default_field_instances() {
         'label' => 'hidden',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 3,
+        'weight' => 14,
       ),
       'listing' => array(
         'label' => 'above',
@@ -656,6 +702,12 @@ function gie_program_field_default_field_instances() {
     'deleted' => 0,
     'description' => '',
     'display' => array(
+      'at_a_glance' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
       'contact' => array(
         'label' => 'above',
         'settings' => array(),
@@ -685,25 +737,9 @@ function gie_program_field_default_field_instances() {
       ),
       'full' => array(
         'label' => 'hidden',
-        'module' => 'entityreference',
-        'settings' => array(
-          'field_delimiter' => '',
-          'linked_field' => array(
-            'advanced' => array(
-              'class' => '',
-              'rel' => '',
-              'target' => '',
-              'text' => '',
-              'title' => '',
-            ),
-            'destination' => '',
-            'linked' => 0,
-          ),
-          'links' => 1,
-          'view_mode' => 'default',
-        ),
-        'type' => 'entityreference_entity_view',
-        'weight' => 0,
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 5,
       ),
       'listing' => array(
         'label' => 'hidden',
@@ -767,6 +803,12 @@ function gie_program_field_default_field_instances() {
     'deleted' => 0,
     'description' => '',
     'display' => array(
+      'at_a_glance' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 6,
+      ),
       'contact' => array(
         'label' => 'above',
         'settings' => array(),
@@ -795,9 +837,23 @@ function gie_program_field_default_field_instances() {
       ),
       'full' => array(
         'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 17,
+        'module' => 'text',
+        'settings' => array(
+          'field_delimiter' => '',
+          'linked_field' => array(
+            'advanced' => array(
+              'class' => '',
+              'rel' => '',
+              'target' => '',
+              'text' => '',
+              'title' => '',
+            ),
+            'destination' => '',
+            'linked' => 0,
+          ),
+        ),
+        'type' => 'text_default',
+        'weight' => 2,
       ),
       'listing' => array(
         'label' => 'above',
@@ -865,6 +921,12 @@ function gie_program_field_default_field_instances() {
     'deleted' => 0,
     'description' => '',
     'display' => array(
+      'at_a_glance' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 3,
+      ),
       'contact' => array(
         'label' => 'above',
         'settings' => array(),
@@ -896,7 +958,7 @@ function gie_program_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 16,
+        'weight' => 19,
       ),
       'listing' => array(
         'label' => 'above',
@@ -945,6 +1007,12 @@ function gie_program_field_default_field_instances() {
     'deleted' => 0,
     'description' => '',
     'display' => array(
+      'at_a_glance' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 2,
+      ),
       'contact' => array(
         'label' => 'hidden',
         'module' => 'entityreference',
@@ -992,7 +1060,7 @@ function gie_program_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 15,
+        'weight' => 18,
       ),
       'listing' => array(
         'label' => 'above',
@@ -1041,6 +1109,12 @@ function gie_program_field_default_field_instances() {
     'deleted' => 0,
     'description' => '',
     'display' => array(
+      'at_a_glance' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 17,
+      ),
       'contact' => array(
         'label' => 'above',
         'settings' => array(),
@@ -1069,9 +1143,23 @@ function gie_program_field_default_field_instances() {
       ),
       'full' => array(
         'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 26,
+        'module' => 'text',
+        'settings' => array(
+          'field_delimiter' => '',
+          'linked_field' => array(
+            'advanced' => array(
+              'class' => '',
+              'rel' => '',
+              'target' => '',
+              'text' => '',
+              'title' => '',
+            ),
+            'destination' => '',
+            'linked' => 0,
+          ),
+        ),
+        'type' => 'text_default',
+        'weight' => 1,
       ),
       'listing' => array(
         'label' => 'above',
@@ -1138,6 +1226,12 @@ function gie_program_field_default_field_instances() {
     'deleted' => 0,
     'description' => '',
     'display' => array(
+      'at_a_glance' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 10,
+      ),
       'contact' => array(
         'label' => 'above',
         'settings' => array(),
@@ -1173,7 +1267,7 @@ function gie_program_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 21,
+        'weight' => 23,
       ),
       'listing' => array(
         'label' => 'above',
@@ -1223,6 +1317,12 @@ function gie_program_field_default_field_instances() {
     'deleted' => 0,
     'description' => '',
     'display' => array(
+      'at_a_glance' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 14,
+      ),
       'contact' => array(
         'label' => 'above',
         'settings' => array(),
@@ -1251,9 +1351,23 @@ function gie_program_field_default_field_instances() {
       ),
       'full' => array(
         'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 23,
+        'module' => 'text',
+        'settings' => array(
+          'field_delimiter' => '',
+          'linked_field' => array(
+            'advanced' => array(
+              'class' => '',
+              'rel' => '',
+              'target' => '',
+              'text' => '',
+              'title' => '',
+            ),
+            'destination' => '',
+            'linked' => 0,
+          ),
+        ),
+        'type' => 'text_default',
+        'weight' => 0,
       ),
       'listing' => array(
         'label' => 'above',
@@ -1321,6 +1435,12 @@ function gie_program_field_default_field_instances() {
     'deleted' => 0,
     'description' => '',
     'display' => array(
+      'at_a_glance' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 15,
+      ),
       'contact' => array(
         'label' => 'above',
         'settings' => array(),
@@ -1351,7 +1471,7 @@ function gie_program_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 24,
+        'weight' => 25,
       ),
       'listing' => array(
         'label' => 'above',
@@ -1392,6 +1512,12 @@ function gie_program_field_default_field_instances() {
     'deleted' => 0,
     'description' => '',
     'display' => array(
+      'at_a_glance' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 16,
+      ),
       'contact' => array(
         'label' => 'above',
         'settings' => array(),
@@ -1422,7 +1548,7 @@ function gie_program_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 25,
+        'weight' => 26,
       ),
       'listing' => array(
         'label' => 'above',
@@ -1463,6 +1589,12 @@ function gie_program_field_default_field_instances() {
     'deleted' => 0,
     'description' => '',
     'display' => array(
+      'at_a_glance' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 8,
+      ),
       'contact' => array(
         'label' => 'above',
         'settings' => array(),
@@ -1493,7 +1625,7 @@ function gie_program_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 19,
+        'weight' => 21,
       ),
       'listing' => array(
         'label' => 'above',
@@ -1534,6 +1666,12 @@ function gie_program_field_default_field_instances() {
     'deleted' => 0,
     'description' => '',
     'display' => array(
+      'at_a_glance' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 7,
+      ),
       'contact' => array(
         'label' => 'above',
         'settings' => array(),
@@ -1564,7 +1702,7 @@ function gie_program_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 18,
+        'weight' => 20,
       ),
       'listing' => array(
         'label' => 'above',
@@ -1605,6 +1743,12 @@ function gie_program_field_default_field_instances() {
     'deleted' => 0,
     'description' => '',
     'display' => array(
+      'at_a_glance' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 21,
+      ),
       'contact' => array(
         'label' => 'above',
         'settings' => array(),
@@ -1619,26 +1763,9 @@ function gie_program_field_default_field_instances() {
       ),
       'full' => array(
         'label' => 'hidden',
-        'module' => 'title',
-        'settings' => array(
-          'field_delimiter' => '',
-          'linked_field' => array(
-            'advanced' => array(
-              'class' => '',
-              'rel' => '',
-              'target' => '',
-              'text' => '',
-              'title' => '',
-            ),
-            'destination' => '',
-            'linked' => 0,
-          ),
-          'title_class' => '',
-          'title_link' => '',
-          'title_style' => 'h2',
-        ),
-        'type' => 'title_linked',
-        'weight' => 1,
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 12,
       ),
       'listing' => array(
         'label' => 'hidden',
