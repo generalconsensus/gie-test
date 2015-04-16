@@ -15,7 +15,7 @@ function gie_taxonomies_default_page_manager_pages() {
   $page->task = 'page';
   $page->admin_title = 'Region';
   $page->admin_description = 'region listing page';
-  $page->path = 'region';
+  $page->path = 'locations';
   $page->access = array();
   $page->menu = array();
   $page->arguments = array();
@@ -52,7 +52,7 @@ function gie_taxonomies_default_page_manager_pages() {
     ),
   );
   $display->cache = array();
-  $display->title = '';
+  $display->title = 'Locations';
   $display->uuid = 'e3d0e9d8-243d-4b17-9cb3-03dd04761c85';
   $display->content = array();
   $display->panels = array();
