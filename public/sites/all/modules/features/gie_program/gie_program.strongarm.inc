@@ -98,6 +98,12 @@ function gie_program_strongarm() {
       'revision' => array(
         'custom_settings' => FALSE,
       ),
+      'at_a_glance' => array(
+        'custom_settings' => TRUE,
+      ),
+      'logo' => array(
+        'custom_settings' => FALSE,
+      ),
     ),
     'extra_fields' => array(
       'form' => array(
@@ -112,7 +118,7 @@ function gie_program_strongarm() {
             'visible' => TRUE,
           ),
           'full' => array(
-            'weight' => '20',
+            'weight' => '22',
             'visible' => FALSE,
           ),
           'contact' => array(
@@ -123,17 +129,44 @@ function gie_program_strongarm() {
             'weight' => '9',
             'visible' => FALSE,
           ),
+          'at_a_glance' => array(
+            'weight' => '9',
+            'visible' => FALSE,
+          ),
         ),
         'program_counters_favorite_count' => array(
           'full' => array(
             'weight' => '12',
             'visible' => FALSE,
           ),
+          'at_a_glance' => NULL,
         ),
         'program_counters_innovation_count' => array(
           'full' => array(
-            'weight' => '13',
+            'weight' => '16',
             'visible' => FALSE,
+          ),
+          'default' => array(
+            'weight' => '10',
+            'visible' => TRUE,
+          ),
+          'at_a_glance' => array(
+            'weight' => '11',
+            'visible' => TRUE,
+          ),
+        ),
+        'program_counters_program_count' => array(
+          'full' => array(
+            'weight' => '15',
+            'visible' => FALSE,
+          ),
+          'default' => array(
+            'weight' => '10',
+            'visible' => TRUE,
+          ),
+          'at_a_glance' => array(
+            'weight' => '12',
+            'visible' => TRUE,
           ),
         ),
       ),
