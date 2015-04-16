@@ -17,6 +17,10 @@
   @extend %button--light;
 }
 
+.button--white {
+  @extend %button-white;
+}
+
 .button--add { // has plus icon
   @extend %button--add;
 }

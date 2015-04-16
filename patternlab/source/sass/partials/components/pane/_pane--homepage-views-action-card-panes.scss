@@ -1,5 +1,6 @@
 .pane--homepage-views-action-card-panes {
   .pane__title {
     @extend %pane__title--homepage;
+    text-align: center;
   }
 }

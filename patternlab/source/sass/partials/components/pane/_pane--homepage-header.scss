@@ -1,0 +1,61 @@
+.pane--homepage-header {
+  background: url(../images/homepage-hero_people.jpg) repeat 50% 50%;
+  min-height: 385px;
+  color: #fff;
+  position: relative;
+  text-align: center;
+  z-index: 1;
+  &:after {
+    content: "";
+    display: block;
+    border-style: solid;
+    border-width: 11px 11px 0 11px;
+    bottom: -11px;
+    @include breakpoint(700px, $no-query: true) {
+      border-width: 25px 25px 0 25px;
+      bottom: -25px;
+    }
+    border-color: $orange transparent transparent transparent;
+    height: 0;
+    left: 50%;
+    margin-left: -25px;
+    position: absolute;
+    width: 0;
+  }
+  &:before {
+    @include breakpoint(1200px, $no-query: true) {
+      background: url(../images/homepage-hero_big-triangle.png) no-repeat 50% 0;
+      bottom: 0;
+      content: "";
+      height: 100%;
+      left: 0;
+      position: absolute;
+      right: 0;
+      top: 0;
+      width: 100%;
+      z-index: 2;
+    }
+  }
+  .pane__content {
+    position: relative;
+    z-index: 2;
+    h1 {
+      color: #fff;
+      font-size: em(48px);
+      font-weight: bold;
+      margin: 0 auto;
+      max-width: 600px;
+      padding: 1em 0;
+      text-transform: uppercase;
+    }
+    p {
+      font-size: em(32px);
+      font-weight: 300;
+      margin: 0;
+      padding: 0 0 1em 0;
+    }
+    .button {
+      @extend %button--white;
+    }
+  }
+}

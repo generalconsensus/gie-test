@@ -3217,8 +3217,8 @@ aside .pane__title {
 
 /* line 1, ../sass/partials/components/pane/_pane--homepage-header.scss */
 .pane--homepage-header {
-  background: url(../images/homepage-hero_people.jpg) repeat 50% 50%;
-  min-height: 385px;
+  background: url(../images/homepage-hero_people.jpg) repeat-x 50% 50%;
+  height: 385px;
   color: #fff;
   position: relative;
   text-align: center;
@@ -3268,19 +3268,13 @@ aside .pane__title {
 /* line 42, ../sass/partials/components/pane/_pane--homepage-header.scss */
 .pane--homepage-header .pane__content h1 {
   color: #fff;
-  font-size: 3em;
-  font-weight: bold;
-  margin: 0 auto;
-  max-width: 600px;
-  padding: 1em 0;
+  margin: 2em 0;
   text-transform: uppercase;
 }
-/* line 51, ../sass/partials/components/pane/_pane--homepage-header.scss */
+/* line 47, ../sass/partials/components/pane/_pane--homepage-header.scss */
 .pane--homepage-header .pane__content p {
-  font-size: 2em;
+  font-size: 1.875em;
   font-weight: 300;
-  margin: 0;
-  padding: 0 0 1em 0;
 }
 
 /* line 2, ../sass/partials/components/pane/_pane--homepage-join-callout.scss */
