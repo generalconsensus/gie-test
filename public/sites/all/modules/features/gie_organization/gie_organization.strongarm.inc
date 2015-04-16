@@ -326,6 +326,13 @@ function gie_organization_strongarm() {
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
+  $strongarm->name = 'gie_organization_image_fid';
+  $strongarm->value = '44';
+  $export['gie_organization_image_fid'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
   $strongarm->name = 'menu_options_organization';
   $strongarm->value = array(
     0 => 'main-menu',
