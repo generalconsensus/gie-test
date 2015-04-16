@@ -71,6 +71,13 @@
   &.pane--more-introduction h1:before {
     @include svg-background(icon-more-46-46-white);
   }
+  &.pane--organizations-introduction h1:before {
+    @include svg-background(icon-organization-45-46-white);
+    width: 45px;
+     @include breakpoint(1260px, $no-query: true) {
+      left: -60px; // width + 15
+    }
+  }
 }
 
 .pane--landing-intro__left {
