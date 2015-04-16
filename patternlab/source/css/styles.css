@@ -1340,12 +1340,12 @@ input.throbbing {
 .block--search form {
   background: #fff;
   border: 3px solid #7090b7;
-  height: 50px;
+  height: 60px;
   width: 375px;
 }
 /* line 11, ../sass/partials/components/block/_block--search.scss */
 .block--search form .container-inline {
-  height: 44px;
+  height: 54px;
   position: relative;
   width: 369px;
 }
@@ -1356,9 +1356,9 @@ input.throbbing {
 /* line 19, ../sass/partials/components/block/_block--search.scss */
 .block--search form .form-text {
   border: 0;
-  height: 44px;
+  height: 54px;
   left: 0;
-  line-height: 44px;
+  line-height: 54px;
   padding: 0 0 0 10px;
   position: absolute;
   top: 0;
@@ -1368,9 +1368,9 @@ input.throbbing {
 .block--search form .button--submit {
   color: transparent;
   font: 0/0 a;
-  height: 44px;
+  height: 54px;
   text-shadow: none;
-  width: 44px;
+  width: 54px;
   background-image: url('../images/bg/search--active.png');
   background-image: -webkit-linear-gradient(transparent, transparent), url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4NCjwhLS0gR2VuZXJhdGVkIGJ5IEljb01vb24uaW8gLS0+DQo8IURPQ1RZUEUgc3ZnIFBVQkxJQyAiLS8vVzNDLy9EVEQgU1ZHIDEuMS8vRU4iICJodHRwOi8vd3d3LnczLm9yZy9HcmFwaGljcy9TVkcvMS4xL0RURC9zdmcxMS5kdGQiPg0KPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHdpZHRoPSIxNyIgaGVpZ2h0PSIxNyIgdmlld0JveD0iMCAwIDE3IDE3Ij4NCjxwYXRoIGQ9Ik03LjA4MyAwLjcwOHExLjI5NSAwIDIuNDc2IDAuNTA2dDIuMDM0IDEuMzU5IDEuMzU5IDIuMDM0IDAuNTA2IDIuNDc2cTAgMS4xMTItMC4zNjIgMi4xMzF0LTEuMDMyIDEuODQ4bDQuMDIzIDQuMDE4cTAuMjA1IDAuMjA1IDAuMjA1IDAuNTA0IDAgMC4zMDQtMC4yMDIgMC41MDZ0LTAuNTA2IDAuMjAycS0wLjI5OSAwLTAuNTA0LTAuMjA1bC00LjAxOC00LjAyM3EtMC44MyAwLjY3LTEuODQ4IDEuMDMydC0yLjEzMSAwLjM2MnEtMS4yOTUgMC0yLjQ3Ni0wLjUwNnQtMi4wMzQtMS4zNTktMS4zNTktMi4wMzQtMC41MDYtMi40NzYgMC41MDYtMi40NzYgMS4zNTktMi4wMzQgMi4wMzQtMS4zNTkgMi40NzYtMC41MDZ6TTcuMDgzIDIuMTI1cS0xLjAwNyAwLTEuOTI2IDAuMzkzdC0xLjU4MyAxLjA1Ny0xLjA1NyAxLjU4My0wLjM5MyAxLjkyNiAwLjM5MyAxLjkyNiAxLjA1NyAxLjU4MyAxLjU4MyAxLjA1NyAxLjkyNiAwLjM5MyAxLjkyNi0wLjM5MyAxLjU4My0xLjA1NyAxLjA1Ny0xLjU4MyAwLjM5My0xLjkyNi0wLjM5My0xLjkyNi0xLjA1Ny0xLjU4My0xLjU4My0xLjA1Ny0xLjkyNi0wLjM5M3oiIGZpbGw9IiM3MDkwYjciPjwvcGF0aD4NCjwvc3ZnPg0K');
   background-image: linear-gradient(transparent, transparent), url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4NCjwhLS0gR2VuZXJhdGVkIGJ5IEljb01vb24uaW8gLS0+DQo8IURPQ1RZUEUgc3ZnIFBVQkxJQyAiLS8vVzNDLy9EVEQgU1ZHIDEuMS8vRU4iICJodHRwOi8vd3d3LnczLm9yZy9HcmFwaGljcy9TVkcvMS4xL0RURC9zdmcxMS5kdGQiPg0KPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHdpZHRoPSIxNyIgaGVpZ2h0PSIxNyIgdmlld0JveD0iMCAwIDE3IDE3Ij4NCjxwYXRoIGQ9Ik03LjA4MyAwLjcwOHExLjI5NSAwIDIuNDc2IDAuNTA2dDIuMDM0IDEuMzU5IDEuMzU5IDIuMDM0IDAuNTA2IDIuNDc2cTAgMS4xMTItMC4zNjIgMi4xMzF0LTEuMDMyIDEuODQ4bDQuMDIzIDQuMDE4cTAuMjA1IDAuMjA1IDAuMjA1IDAuNTA0IDAgMC4zMDQtMC4yMDIgMC41MDZ0LTAuNTA2IDAuMjAycS0wLjI5OSAwLTAuNTA0LTAuMjA1bC00LjAxOC00LjAyM3EtMC44MyAwLjY3LTEuODQ4IDEuMDMydC0yLjEzMSAwLjM2MnEtMS4yOTUgMC0yLjQ3Ni0wLjUwNnQtMi4wMzQtMS4zNTktMS4zNTktMi4wMzQtMC41MDYtMi40NzYgMC41MDYtMi40NzYgMS4zNTktMi4wMzQgMi4wMzQtMS4zNTkgMi40NzYtMC41MDZ6TTcuMDgzIDIuMTI1cS0xLjAwNyAwLTEuOTI2IDAuMzkzdC0xLjU4MyAxLjA1Ny0xLjA1NyAxLjU4My0wLjM5MyAxLjkyNiAwLjM5MyAxLjkyNiAxLjA1NyAxLjU4MyAxLjU4MyAxLjA1NyAxLjkyNiAwLjM5MyAxLjkyNi0wLjM5MyAxLjU4My0xLjA1NyAxLjA1Ny0xLjU4MyAwLjM5My0xLjkyNi0wLjM5My0xLjkyNi0xLjA1Ny0xLjU4My0xLjU4My0xLjA1Ny0xLjkyNi0wLjM5M3oiIGZpbGw9IiM3MDkwYjciPjwvcGF0aD4NCjwvc3ZnPg0K');
@@ -1392,12 +1392,12 @@ input.throbbing {
 }
 /* line 48, ../sass/partials/components/block/_block--search.scss */
 .region-navigation .block--search {
-  height: 50px;
+  height: 60px;
   overflow: hidden;
   position: absolute;
   right: 10px;
-  top: 51px;
-  width: 50px;
+  top: 61px;
+  width: 60px;
   -webkit-transition: width 0.2s linear;
   -moz-transition: width 0.2s linear;
   -o-transition: width 0.2s linear;
@@ -1411,12 +1411,12 @@ input.throbbing {
 }
 /* line 59, ../sass/partials/components/block/_block--search.scss */
 .region-navigation .block--search.is-open {
-  width: 425px;
+  width: 435px;
 }
 /* line 62, ../sass/partials/components/block/_block--search.scss */
 .region-navigation .block--search form {
   position: absolute;
-  right: 50px;
+  right: 60px;
   top: 0;
 }
 
@@ -1427,9 +1427,9 @@ input.throbbing {
 
 /* line 74, ../sass/partials/components/block/_block--search.scss */
 .block--search__button {
-  height: 50px;
+  height: 60px;
   overflow: hidden;
-  width: 50px;
+  width: 60px;
   background-image: url('../images/bg/search.png');
   background-image: -webkit-linear-gradient(transparent, transparent), url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4NCjwhLS0gR2VuZXJhdGVkIGJ5IEljb01vb24uaW8gLS0+DQo8IURPQ1RZUEUgc3ZnIFBVQkxJQyAiLS8vVzNDLy9EVEQgU1ZHIDEuMS8vRU4iICJodHRwOi8vd3d3LnczLm9yZy9HcmFwaGljcy9TVkcvMS4xL0RURC9zdmcxMS5kdGQiPg0KPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHdpZHRoPSIxNyIgaGVpZ2h0PSIxNyIgdmlld0JveD0iMCAwIDE3IDE3Ij4NCjxwYXRoIGQ9Ik03LjA4MyAwLjcwOHExLjI5NSAwIDIuNDc2IDAuNTA2dDIuMDM0IDEuMzU5IDEuMzU5IDIuMDM0IDAuNTA2IDIuNDc2cTAgMS4xMTItMC4zNjIgMi4xMzF0LTEuMDMyIDEuODQ4bDQuMDIzIDQuMDE4cTAuMjA1IDAuMjA1IDAuMjA1IDAuNTA0IDAgMC4zMDQtMC4yMDIgMC41MDZ0LTAuNTA2IDAuMjAycS0wLjI5OSAwLTAuNTA0LTAuMjA1bC00LjAxOC00LjAyM3EtMC44MyAwLjY3LTEuODQ4IDEuMDMydC0yLjEzMSAwLjM2MnEtMS4yOTUgMC0yLjQ3Ni0wLjUwNnQtMi4wMzQtMS4zNTktMS4zNTktMi4wMzQtMC41MDYtMi40NzYgMC41MDYtMi40NzYgMS4zNTktMi4wMzQgMi4wMzQtMS4zNTkgMi40NzYtMC41MDZ6TTcuMDgzIDIuMTI1cS0xLjAwNyAwLTEuOTI2IDAuMzkzdC0xLjU4MyAxLjA1Ny0xLjA1NyAxLjU4My0wLjM5MyAxLjkyNiAwLjM5MyAxLjkyNiAxLjA1NyAxLjU4MyAxLjU4MyAxLjA1NyAxLjkyNiAwLjM5MyAxLjkyNi0wLjM5MyAxLjU4My0xLjA1NyAxLjA1Ny0xLjU4MyAwLjM5My0xLjkyNi0wLjM5My0xLjkyNi0xLjA1Ny0xLjU4My0xLjU4My0xLjA1Ny0xLjkyNi0wLjM5M3oiIGZpbGw9IiNmZmZmZmYiPjwvcGF0aD4NCjwvc3ZnPg0K');
   background-image: linear-gradient(transparent, transparent), url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4NCjwhLS0gR2VuZXJhdGVkIGJ5IEljb01vb24uaW8gLS0+DQo8IURPQ1RZUEUgc3ZnIFBVQkxJQyAiLS8vVzNDLy9EVEQgU1ZHIDEuMS8vRU4iICJodHRwOi8vd3d3LnczLm9yZy9HcmFwaGljcy9TVkcvMS4xL0RURC9zdmcxMS5kdGQiPg0KPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHdpZHRoPSIxNyIgaGVpZ2h0PSIxNyIgdmlld0JveD0iMCAwIDE3IDE3Ij4NCjxwYXRoIGQ9Ik03LjA4MyAwLjcwOHExLjI5NSAwIDIuNDc2IDAuNTA2dDIuMDM0IDEuMzU5IDEuMzU5IDIuMDM0IDAuNTA2IDIuNDc2cTAgMS4xMTItMC4zNjIgMi4xMzF0LTEuMDMyIDEuODQ4bDQuMDIzIDQuMDE4cTAuMjA1IDAuMjA1IDAuMjA1IDAuNTA0IDAgMC4zMDQtMC4yMDIgMC41MDZ0LTAuNTA2IDAuMjAycS0wLjI5OSAwLTAuNTA0LTAuMjA1bC00LjAxOC00LjAyM3EtMC44MyAwLjY3LTEuODQ4IDEuMDMydC0yLjEzMSAwLjM2MnEtMS4yOTUgMC0yLjQ3Ni0wLjUwNnQtMi4wMzQtMS4zNTktMS4zNTktMi4wMzQtMC41MDYtMi40NzYgMC41MDYtMi40NzYgMS4zNTktMi4wMzQgMi4wMzQtMS4zNTkgMi40NzYtMC41MDZ6TTcuMDgzIDIuMTI1cS0xLjAwNyAwLTEuOTI2IDAuMzkzdC0xLjU4MyAxLjA1Ny0xLjA1NyAxLjU4My0wLjM5MyAxLjkyNiAwLjM5MyAxLjkyNiAxLjA1NyAxLjU4MyAxLjU4MyAxLjA1NyAxLjkyNiAwLjM5MyAxLjkyNi0wLjM5MyAxLjU4My0xLjA1NyAxLjA1Ny0xLjU4MyAwLjM5My0xLjkyNi0wLjM5My0xLjkyNi0xLjA1Ny0xLjU4My0xLjU4My0xLjA1Ny0xLjkyNi0wLjM5M3oiIGZpbGw9IiNmZmZmZmYiPjwvcGF0aD4NCjwvc3ZnPg0K');
@@ -1727,7 +1727,7 @@ input.throbbing {
   width: 0;
 }
 
-/* line 1, ../sass/partials/components/_cardflip.scss */
+/* line 4, ../sass/partials/components/_cardflip.scss */
 .cardflip {
   cursor: pointer;
   -webkit-perspective: 800px;
@@ -1735,32 +1735,31 @@ input.throbbing {
   -ms-perspective: 800px;
   -o-perspective: 800px;
   perspective: 800px;
+  min-height: 200px;
   position: relative;
   width: 100%;
   z-index: 0;
 }
-/* line 8, ../sass/partials/components/_cardflip.scss */
-.cardflip:hover .cardflip__a, .cardflip:focus .cardflip__a {
-  -webkit-transform: rotateY(10deg);
-  -moz-transform: rotateY(10deg);
-  -ms-transform: rotateY(10deg);
-  -o-transform: rotateY(10deg);
-  transform: rotateY(10deg);
-}
 /* line 12, ../sass/partials/components/_cardflip.scss */
+.cardflip:hover .cardflip__a, .cardflip:focus .cardflip__a {
+  -webkit-transform: rotateY(20deg);
+  -moz-transform: rotateY(20deg);
+  -ms-transform: rotateY(20deg);
+  -o-transform: rotateY(20deg);
+  transform: rotateY(20deg);
+}
+/* line 16, ../sass/partials/components/_cardflip.scss */
 .cardflip.is-flipped {
   z-index: 2;
 }
 
-/* line 17, ../sass/partials/components/_cardflip.scss */
+/* line 21, ../sass/partials/components/_cardflip.scss */
 .cardflip__card {
-  -webkit-box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.15);
-  -moz-box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.15);
-  box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.15);
   color: #fff;
-  height: 100%;
+  min-height: 200px;
   left: 0;
   position: absolute;
+  text-align: center;
   top: 0;
   -webkit-transform: translate3d(0px, 0px, 0px);
   -moz-transform: translate3d(0px, 0px, 0px);
@@ -1775,7 +1774,7 @@ input.throbbing {
   width: 100%;
   z-index: 1;
 }
-/* line 28, ../sass/partials/components/_cardflip.scss */
+/* line 32, ../sass/partials/components/_cardflip.scss */
 .is-flipped .cardflip__card {
   -webkit-transform: rotateY(180deg);
   -moz-transform: rotateY(180deg);
@@ -1784,16 +1783,25 @@ input.throbbing {
   transform: rotateY(180deg);
   z-index: 2;
 }
+/* line 36, ../sass/partials/components/_cardflip.scss */
+.cardflip__card a {
+  color: #fff;
+}
 
-/* line 34, ../sass/partials/components/_cardflip.scss */
+/* line 41, ../sass/partials/components/_cardflip.scss */
 .cardflip__a, .cardflip__b {
   -webkit-backface-visibility: hidden;
   -moz-backface-visibility: hidden;
   -ms-backface-visibility: hidden;
   -o-backface-visibility: hidden;
   backface-visibility: hidden;
-  height: 200px;
+  border: 1px solid #eee;
+  -webkit-box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.1);
+  -moz-box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.1);
+  box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.1);
+  min-height: 200px;
   left: 0;
+  padding: 20px;
   position: absolute;
   top: 0;
   -webkit-transform: translate3d(0px, 0px, 0px);
@@ -1804,13 +1812,13 @@ input.throbbing {
   width: 100%;
 }
 
-/* line 44, ../sass/partials/components/_cardflip.scss */
+/* line 54, ../sass/partials/components/_cardflip.scss */
 .cardflip__a {
   background: #ed7d3a;
   z-index: 0;
 }
 
-/* line 50, ../sass/partials/components/_cardflip.scss */
+/* line 60, ../sass/partials/components/_cardflip.scss */
 .cardflip__b {
   background: #dc5606;
   -webkit-transform: rotateY(180deg);
@@ -1819,6 +1827,34 @@ input.throbbing {
   -o-transform: rotateY(180deg);
   transform: rotateY(180deg);
   z-index: 1;
+}
+
+/* line 67, ../sass/partials/components/_cardflip.scss */
+.cardflip__title {
+  -webkit-hyphens: none;
+  -moz-hyphens: none;
+  hyphens: none;
+  font-size: 1.3125em;
+}
+/* line 70, ../sass/partials/components/_cardflip.scss */
+.cardflip__a .cardflip__title {
+  min-height: 80px;
+}
+/* line 73, ../sass/partials/components/_cardflip.scss */
+.cardflip__b .cardflip__title {
+  border-bottom: 1px solid #fff;
+  margin-bottom: 1em;
+  padding-bottom: 1em;
+}
+
+/* line 88, ../sass/partials/components/_cardflip.scss */
+.cardflip__link {
+  font-size: 0.875em;
+  padding-top: 1em;
+}
+/* line 91, ../sass/partials/components/_cardflip.scss */
+.cardflip__link a {
+  text-decoration: underline;
 }
 
 /* line 1, ../sass/partials/components/_comments.scss */
@@ -2777,7 +2813,7 @@ header.header {
   display: none;
   left: 0;
   position: absolute;
-  top: 51px;
+  top: 61px;
 }
 @media (min-width: 54.375em) {
   /* line 13, ../sass/partials/components/nav/_block--tb-megamenu-main-menu.scss */
@@ -2859,8 +2895,8 @@ header.header {
   display: block;
   font-size: 0.75em;
   font-weight: bold;
-  height: 50px;
-  line-height: 50px;
+  height: 60px;
+  line-height: 60px;
   margin: 0;
   padding: 0 18px 0 14px;
   text-decoration: none;
@@ -3046,6 +3082,16 @@ aside .pane__title {
 /* line 21, ../sass/partials/components/pane/_pane--favorite-this.scss */
 .pane--favorite-this .pane__content p {
   font-size: 0.875em;
+}
+
+/* line 2, ../sass/partials/components/pane/_pane--homepage-views-action-card-panes.scss */
+.pane--homepage-views-action-card-panes .pane__title {
+  border: 0;
+  font-size: 2.5em;
+  font-weight: 300;
+  margin: 0 0 1em 0;
+  padding: 0;
+  text-align: center;
 }
 
 /* line 1, ../sass/partials/components/pane/_pane--landing-intro.scss */
@@ -3497,20 +3543,20 @@ aside .pane__title {
   -webkit-box-shadow: 0 8px 8px -6px rgba(0, 0, 0, 0.15);
   -moz-box-shadow: 0 8px 8px -6px rgba(0, 0, 0, 0.15);
   box-shadow: 0 8px 8px -6px rgba(0, 0, 0, 0.15);
-  height: 50px;
+  height: 60px;
   position: relative;
   z-index: 2;
 }
 @media (min-width: 54.375em) and (max-width: 71.1875em) {
   /* line 1, ../sass/partials/components/_region-navigation.scss */
   .region-navigation {
-    height: 100px;
+    height: 120px;
   }
 }
 @media (min-width: 71.25em) {
   /* line 1, ../sass/partials/components/_region-navigation.scss */
   .region-navigation {
-    height: 50px;
+    height: 60px;
   }
 }
 /* line 12, ../sass/partials/components/_region-navigation.scss */
@@ -3568,7 +3614,7 @@ aside .pane__title {
 .site-name {
   left: 10px;
   position: absolute;
-  top: 7px;
+  top: 12px;
 }
 
 /* line 7, ../sass/partials/components/_site-name.scss */
@@ -3647,22 +3693,23 @@ aside .pane__title {
   -moz-hyphens: none;
   hyphens: none;
   font-size: 0.875em;
-  padding: 0 0 1em 0;
+  line-height: 1.3;
+  padding: 0 0 1.5em 0;
 }
-/* line 16, ../sass/partials/components/_stats.scss */
+/* line 17, ../sass/partials/components/_stats.scss */
 .stats .field .field-label {
   float: left;
   font-weight: normal;
   max-width: 13em;
   width: 40%;
 }
-/* line 22, ../sass/partials/components/_stats.scss */
+/* line 23, ../sass/partials/components/_stats.scss */
 .stats .field .field-items {
   float: left;
   font-weight: bold;
   width: 60%;
 }
-/* line 29, ../sass/partials/components/_stats.scss */
+/* line 30, ../sass/partials/components/_stats.scss */
 .stats .field.field--innovation-created a:before, .stats .field.field--innovation-implemented a:before {
   height: 16px;
   overflow: hidden;
@@ -3685,7 +3732,7 @@ aside .pane__title {
 }
 
 @media (min-width: 56.25em) {
-  /* line 43, ../sass/partials/components/_stats.scss */
+  /* line 44, ../sass/partials/components/_stats.scss */
   .stats__first {
     float: left;
     padding-right: 4%;
@@ -3694,7 +3741,7 @@ aside .pane__title {
 }
 
 @media (min-width: 56.25em) {
-  /* line 51, ../sass/partials/components/_stats.scss */
+  /* line 52, ../sass/partials/components/_stats.scss */
   .stats__second {
     float: left;
     padding-left: 4%;
@@ -4187,9 +4234,13 @@ tr.drag-previous {
   width: 0;
 }
 
-/* line 3, ../sass/partials/components/view/_view--homepage-cardflip.scss */
+/* line 1, ../sass/partials/components/view/_view--homepage-cardflip.scss */
+.view--homepage-cardflip {
+  margin: 0 -0.5em;
+}
+/* line 4, ../sass/partials/components/view/_view--homepage-cardflip.scss */
 .view--homepage-cardflip .views-row {
-  float: left;
+  padding: 0 0.5em 1em 0.5em;
   -webkit-perspective: 800px;
   -moz-perspective: 800px;
   -ms-perspective: 800px;
@@ -4200,7 +4251,19 @@ tr.drag-previous {
   -ms-transform: translate3d(0px, 0px, 0px);
   -o-transform: translate3d(0px, 0px, 0px);
   transform: translate3d(0px, 0px, 0px);
-  width: 25%;
+}
+@media (min-width: 31.25em) {
+  /* line 4, ../sass/partials/components/view/_view--homepage-cardflip.scss */
+  .view--homepage-cardflip .views-row {
+    float: left;
+    width: 50%;
+  }
+}
+@media (min-width: 51.875em) {
+  /* line 4, ../sass/partials/components/view/_view--homepage-cardflip.scss */
+  .view--homepage-cardflip .views-row {
+    width: 25%;
+  }
 }
 
 /* line 2, ../sass/partials/components/view/_view--partners.scss */

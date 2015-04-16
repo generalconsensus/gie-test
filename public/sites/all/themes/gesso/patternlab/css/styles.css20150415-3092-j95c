@@ -1729,88 +1729,29 @@ input.throbbing {
 
 /* line 1, ../sass/partials/components/_cardflip.scss */
 .cardflip {
-  position: relative;
-  z-index: 0;
+  background: #ed7d3a;
+  -webkit-box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.15);
+  -moz-box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.15);
+  box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.15);
+  color: #fff;
+  -webkit-transform: translate3d(0px, 0px, 0px);
+  -moz-transform: translate3d(0px, 0px, 0px);
+  -ms-transform: translate3d(0px, 0px, 0px);
+  -o-transform: translate3d(0px, 0px, 0px);
+  transform: translate3d(0px, 0px, 0px);
 }
-/* line 4, ../sass/partials/components/_cardflip.scss */
-.cardflip:hover .cardflip__card, .cardflip:focus .cardflip__card {
+/* line 6, ../sass/partials/components/_cardflip.scss */
+.cardflip:hover, .cardflip:focus {
   -webkit-transform: rotateY(10deg);
   -moz-transform: rotateY(10deg);
   -ms-transform: rotateY(10deg);
   -o-transform: rotateY(10deg);
   transform: rotateY(10deg);
 }
-/* line 9, ../sass/partials/components/_cardflip.scss */
-.cardflip.is-flipped {
-  z-index: 2;
-}
 
-/* line 14, ../sass/partials/components/_cardflip.scss */
-.cardflip__card {
-  -webkit-box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.15);
-  -moz-box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.15);
-  box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.15);
-  color: #fff;
-  height: 100%;
-  left: 0;
-  position: absolute;
-  top: 0;
-  -webkit-transform: translate3d(0px, 0px, 0px);
-  -moz-transform: translate3d(0px, 0px, 0px);
-  -ms-transform: translate3d(0px, 0px, 0px);
-  -o-transform: translate3d(0px, 0px, 0px);
-  transform: translate3d(0px, 0px, 0px);
-  -webkit-transform-style: preserve-3d;
-  -moz-transform-style: preserve-3d;
-  -ms-transform-style: preserve-3d;
-  -o-transform-style: preserve-3d;
-  transform-style: preserve-3d;
-  width: 100%;
-  z-index: 1;
-}
-/* line 25, ../sass/partials/components/_cardflip.scss */
-.is-flipped .cardflip__card {
-  -webkit-transform: rotateY(180deg);
-  -moz-transform: rotateY(180deg);
-  -ms-transform: rotateY(180deg);
-  -o-transform: rotateY(180deg);
-  transform: rotateY(180deg);
-  z-index: 2;
-}
-
-/* line 31, ../sass/partials/components/_cardflip.scss */
-.cardflip__a, .cardflip__b {
-  -webkit-backface-visibility: hidden;
-  -moz-backface-visibility: hidden;
-  -ms-backface-visibility: hidden;
-  -o-backface-visibility: hidden;
-  backface-visibility: hidden;
-  height: 200px;
-  left: 0;
-  position: absolute;
-  top: 0;
-  -webkit-transform: translate3d(0px, 0px, 0px);
-  -moz-transform: translate3d(0px, 0px, 0px);
-  -ms-transform: translate3d(0px, 0px, 0px);
-  -o-transform: translate3d(0px, 0px, 0px);
-  transform: translate3d(0px, 0px, 0px);
-}
-
-/* line 40, ../sass/partials/components/_cardflip.scss */
-.cardflip__a {
-  background: #ed7d3a;
-  z-index: 0;
-}
-
-/* line 46, ../sass/partials/components/_cardflip.scss */
-.cardflip__b {
+/* line 13, ../sass/partials/components/_cardflip.scss */
+.cardflip--b {
   background: #dc5606;
-  -webkit-transform: rotateY(180deg);
-  -moz-transform: rotateY(180deg);
-  -ms-transform: rotateY(180deg);
-  -o-transform: rotateY(180deg);
-  transform: rotateY(180deg);
-  z-index: 1;
 }
 
 /* line 1, ../sass/partials/components/_comments.scss */

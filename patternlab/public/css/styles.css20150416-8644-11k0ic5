@@ -1340,12 +1340,12 @@ input.throbbing {
 .block--search form {
   background: #fff;
   border: 3px solid #7090b7;
-  height: 50px;
+  height: 60px;
   width: 375px;
 }
 /* line 11, ../sass/partials/components/block/_block--search.scss */
 .block--search form .container-inline {
-  height: 44px;
+  height: 54px;
   position: relative;
   width: 369px;
 }
@@ -1356,9 +1356,9 @@ input.throbbing {
 /* line 19, ../sass/partials/components/block/_block--search.scss */
 .block--search form .form-text {
   border: 0;
-  height: 44px;
+  height: 54px;
   left: 0;
-  line-height: 44px;
+  line-height: 54px;
   padding: 0 0 0 10px;
   position: absolute;
   top: 0;
@@ -1368,7 +1368,7 @@ input.throbbing {
 .block--search form .button--submit {
   color: transparent;
   font: 0/0 a;
-  height: 44px;
+  height: 54px;
   text-shadow: none;
   width: 44px;
   background-image: url('../images/bg/search--active.png');
@@ -1392,11 +1392,11 @@ input.throbbing {
 }
 /* line 48, ../sass/partials/components/block/_block--search.scss */
 .region-navigation .block--search {
-  height: 50px;
+  height: 60px;
   overflow: hidden;
   position: absolute;
   right: 10px;
-  top: 51px;
+  top: 61px;
   width: 50px;
   -webkit-transition: width 0.2s linear;
   -moz-transition: width 0.2s linear;
@@ -1427,7 +1427,7 @@ input.throbbing {
 
 /* line 74, ../sass/partials/components/block/_block--search.scss */
 .block--search__button {
-  height: 50px;
+  height: 60px;
   overflow: hidden;
   width: 50px;
   background-image: url('../images/bg/search.png');
@@ -1727,7 +1727,7 @@ input.throbbing {
   width: 0;
 }
 
-/* line 1, ../sass/partials/components/_cardflip.scss */
+/* line 4, ../sass/partials/components/_cardflip.scss */
 .cardflip {
   cursor: pointer;
   -webkit-perspective: 800px;
@@ -1735,30 +1735,31 @@ input.throbbing {
   -ms-perspective: 800px;
   -o-perspective: 800px;
   perspective: 800px;
+  height: 200px;
   position: relative;
   width: 100%;
   z-index: 0;
 }
-/* line 8, ../sass/partials/components/_cardflip.scss */
-.cardflip:hover .cardflip__card, .cardflip:focus .cardflip__card {
+/* line 12, ../sass/partials/components/_cardflip.scss */
+.cardflip:hover .cardflip__a, .cardflip:focus .cardflip__a {
   -webkit-transform: rotateY(10deg);
   -moz-transform: rotateY(10deg);
   -ms-transform: rotateY(10deg);
   -o-transform: rotateY(10deg);
   transform: rotateY(10deg);
 }
-/* line 12, ../sass/partials/components/_cardflip.scss */
+/* line 16, ../sass/partials/components/_cardflip.scss */
 .cardflip.is-flipped {
   z-index: 2;
 }
 
-/* line 17, ../sass/partials/components/_cardflip.scss */
+/* line 21, ../sass/partials/components/_cardflip.scss */
 .cardflip__card {
   -webkit-box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.15);
   -moz-box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.15);
   box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.15);
   color: #fff;
-  height: 100%;
+  height: 200px;
   left: 0;
   position: absolute;
   top: 0;
@@ -1775,7 +1776,7 @@ input.throbbing {
   width: 100%;
   z-index: 1;
 }
-/* line 28, ../sass/partials/components/_cardflip.scss */
+/* line 32, ../sass/partials/components/_cardflip.scss */
 .is-flipped .cardflip__card {
   -webkit-transform: rotateY(180deg);
   -moz-transform: rotateY(180deg);
@@ -1785,7 +1786,7 @@ input.throbbing {
   z-index: 2;
 }
 
-/* line 34, ../sass/partials/components/_cardflip.scss */
+/* line 38, ../sass/partials/components/_cardflip.scss */
 .cardflip__a, .cardflip__b {
   -webkit-backface-visibility: hidden;
   -moz-backface-visibility: hidden;
@@ -1804,13 +1805,13 @@ input.throbbing {
   width: 100%;
 }
 
-/* line 44, ../sass/partials/components/_cardflip.scss */
+/* line 48, ../sass/partials/components/_cardflip.scss */
 .cardflip__a {
   background: #ed7d3a;
   z-index: 0;
 }
 
-/* line 50, ../sass/partials/components/_cardflip.scss */
+/* line 54, ../sass/partials/components/_cardflip.scss */
 .cardflip__b {
   background: #dc5606;
   -webkit-transform: rotateY(180deg);
@@ -2777,7 +2778,7 @@ header.header {
   display: none;
   left: 0;
   position: absolute;
-  top: 51px;
+  top: 61px;
 }
 @media (min-width: 54.375em) {
   /* line 13, ../sass/partials/components/nav/_block--tb-megamenu-main-menu.scss */
@@ -2859,8 +2860,8 @@ header.header {
   display: block;
   font-size: 0.75em;
   font-weight: bold;
-  height: 50px;
-  line-height: 50px;
+  height: 60px;
+  line-height: 60px;
   margin: 0;
   padding: 0 18px 0 14px;
   text-decoration: none;
@@ -3497,20 +3498,20 @@ aside .pane__title {
   -webkit-box-shadow: 0 8px 8px -6px rgba(0, 0, 0, 0.15);
   -moz-box-shadow: 0 8px 8px -6px rgba(0, 0, 0, 0.15);
   box-shadow: 0 8px 8px -6px rgba(0, 0, 0, 0.15);
-  height: 50px;
+  height: 60px;
   position: relative;
   z-index: 2;
 }
 @media (min-width: 54.375em) and (max-width: 71.1875em) {
   /* line 1, ../sass/partials/components/_region-navigation.scss */
   .region-navigation {
-    height: 100px;
+    height: 120px;
   }
 }
 @media (min-width: 71.25em) {
   /* line 1, ../sass/partials/components/_region-navigation.scss */
   .region-navigation {
-    height: 50px;
+    height: 60px;
   }
 }
 /* line 12, ../sass/partials/components/_region-navigation.scss */
@@ -3568,7 +3569,7 @@ aside .pane__title {
 .site-name {
   left: 10px;
   position: absolute;
-  top: 7px;
+  top: 12px;
 }
 
 /* line 7, ../sass/partials/components/_site-name.scss */
@@ -3647,22 +3648,23 @@ aside .pane__title {
   -moz-hyphens: none;
   hyphens: none;
   font-size: 0.875em;
-  padding: 0 0 1em 0;
+  line-height: 1.3;
+  padding: 0 0 1.5em 0;
 }
-/* line 16, ../sass/partials/components/_stats.scss */
+/* line 17, ../sass/partials/components/_stats.scss */
 .stats .field .field-label {
   float: left;
   font-weight: normal;
   max-width: 13em;
   width: 40%;
 }
-/* line 22, ../sass/partials/components/_stats.scss */
+/* line 23, ../sass/partials/components/_stats.scss */
 .stats .field .field-items {
   float: left;
   font-weight: bold;
   width: 60%;
 }
-/* line 29, ../sass/partials/components/_stats.scss */
+/* line 30, ../sass/partials/components/_stats.scss */
 .stats .field.field--innovation-created a:before, .stats .field.field--innovation-implemented a:before {
   height: 16px;
   overflow: hidden;
@@ -3685,7 +3687,7 @@ aside .pane__title {
 }
 
 @media (min-width: 56.25em) {
-  /* line 43, ../sass/partials/components/_stats.scss */
+  /* line 44, ../sass/partials/components/_stats.scss */
   .stats__first {
     float: left;
     padding-right: 4%;
@@ -3694,7 +3696,7 @@ aside .pane__title {
 }
 
 @media (min-width: 56.25em) {
-  /* line 51, ../sass/partials/components/_stats.scss */
+  /* line 52, ../sass/partials/components/_stats.scss */
   .stats__second {
     float: left;
     padding-left: 4%;
