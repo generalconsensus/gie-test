@@ -144,5 +144,13 @@
         margin-left: -8px; // half of width
       }
     }
+    .has-icon--innovation {
+      &:before {
+        @extend %cardicon;
+        @include image-replace(15px,20px);
+        @include svg-background(icon-innovations-15-20-blue);
+        margin-left: -8px; // half of width
+      }
+    }
   }
 }
