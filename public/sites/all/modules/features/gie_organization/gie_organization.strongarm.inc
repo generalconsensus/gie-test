@@ -101,6 +101,9 @@ function gie_organization_strongarm() {
       'teaser_image' => array(
         'custom_settings' => TRUE,
       ),
+      'at_a_glance' => array(
+        'custom_settings' => TRUE,
+      ),
     ),
     'extra_fields' => array(
       'form' => array(
@@ -123,7 +126,7 @@ function gie_organization_strongarm() {
             'visible' => FALSE,
           ),
           'contact' => array(
-            'weight' => '18',
+            'weight' => '30',
             'visible' => FALSE,
           ),
           'listing' => array(
@@ -132,6 +135,10 @@ function gie_organization_strongarm() {
           ),
           'teaser_image' => array(
             'weight' => '11',
+            'visible' => FALSE,
+          ),
+          'at_a_glance' => array(
+            'weight' => '22',
             'visible' => FALSE,
           ),
         ),
@@ -152,6 +159,14 @@ function gie_organization_strongarm() {
             'weight' => '10',
             'visible' => FALSE,
           ),
+          'at_a_glance' => array(
+            'weight' => '21',
+            'visible' => FALSE,
+          ),
+          'contact' => array(
+            'weight' => '18',
+            'visible' => FALSE,
+          ),
         ),
         'organization_counters_innovation_count' => array(
           'listing' => array(
@@ -170,6 +185,14 @@ function gie_organization_strongarm() {
             'weight' => '12',
             'visible' => FALSE,
           ),
+          'at_a_glance' => array(
+            'weight' => '5',
+            'visible' => FALSE,
+          ),
+          'contact' => array(
+            'weight' => '19',
+            'visible' => FALSE,
+          ),
         ),
         'organization_counters_member_count' => array(
           'listing' => array(
@@ -186,6 +209,60 @@ function gie_organization_strongarm() {
           ),
           'teaser_image' => array(
             'weight' => '9',
+            'visible' => FALSE,
+          ),
+          'at_a_glance' => array(
+            'weight' => '4',
+            'visible' => FALSE,
+          ),
+          'contact' => array(
+            'weight' => '22',
+            'visible' => FALSE,
+          ),
+        ),
+        'organization_at_a_glance_innovation_count' => array(
+          'at_a_glance' => array(
+            'weight' => '0',
+            'visible' => TRUE,
+          ),
+          'contact' => array(
+            'weight' => '23',
+            'visible' => FALSE,
+          ),
+        ),
+        'organization_at_a_glance_member_count' => array(
+          'at_a_glance' => array(
+            'weight' => '1',
+            'visible' => TRUE,
+          ),
+          'contact' => array(
+            'weight' => '24',
+            'visible' => FALSE,
+          ),
+        ),
+        'organization_at_a_glance_entity_view_1' => array(
+          'at_a_glance' => array(
+            'weight' => '12',
+            'visible' => FALSE,
+          ),
+        ),
+        'organization_counters_partner_count' => array(
+          'at_a_glance' => array(
+            'weight' => '6',
+            'visible' => FALSE,
+          ),
+          'contact' => array(
+            'weight' => '20',
+            'visible' => FALSE,
+          ),
+        ),
+        'organization_at_a_glance_partner_count' => array(
+          'at_a_glance' => array(
+            'weight' => '2',
+            'visible' => TRUE,
+          ),
+          'contact' => array(
+            'weight' => '21',
             'visible' => FALSE,
           ),
         ),
