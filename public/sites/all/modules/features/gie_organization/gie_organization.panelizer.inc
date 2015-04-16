@@ -291,7 +291,7 @@ function gie_organization_panelizer_defaults() {
         ),
         'view_mode' => 'org_teaser',
         'links' => 1,
-        'image_style' => '',
+        'image_style' => 'card__500x300_',
         'image_link' => '',
       ),
       'context' => 'panelizer',

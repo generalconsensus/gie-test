@@ -156,6 +156,21 @@ function gie_organization_ds_field_settings_info() {
 
   $ds_fieldsetting = new stdClass();
   $ds_fieldsetting->api_version = 1;
+  $ds_fieldsetting->id = 'node|organization|logo';
+  $ds_fieldsetting->entity_type = 'node';
+  $ds_fieldsetting->bundle = 'organization';
+  $ds_fieldsetting->view_mode = 'logo';
+  $ds_fieldsetting->settings = array(
+    'field_org_logo' => array(
+      'formatter_settings' => array(
+        'ft' => array(),
+      ),
+    ),
+  );
+  $export['node|organization|logo'] = $ds_fieldsetting;
+
+  $ds_fieldsetting = new stdClass();
+  $ds_fieldsetting->api_version = 1;
   $ds_fieldsetting->id = 'node|organization|teaser';
   $ds_fieldsetting->entity_type = 'node';
   $ds_fieldsetting->bundle = 'organization';
@@ -207,23 +222,6 @@ function gie_organization_ds_field_settings_info() {
     ),
   );
   $export['node|organization|teaser'] = $ds_fieldsetting;
-
-  $ds_fieldsetting = new stdClass();
-  $ds_fieldsetting->api_version = 1;
-  $ds_fieldsetting->id = 'node|organization|teaser_image';
-  $ds_fieldsetting->entity_type = 'node';
-  $ds_fieldsetting->bundle = 'organization';
-  $ds_fieldsetting->view_mode = 'teaser_image';
-  $ds_fieldsetting->settings = array(
-    'field_org_logo' => array(
-      'formatter_settings' => array(
-        'ft' => array(
-          'func' => 'theme_ds_field_expert',
-        ),
-      ),
-    ),
-  );
-  $export['node|organization|teaser_image'] = $ds_fieldsetting;
 
   return $export;
 }
@@ -388,6 +386,34 @@ function gie_organization_ds_layout_settings_info() {
 
   $ds_layout = new stdClass();
   $ds_layout->api_version = 1;
+  $ds_layout->id = 'node|organization|logo';
+  $ds_layout->entity_type = 'node';
+  $ds_layout->bundle = 'organization';
+  $ds_layout->view_mode = 'logo';
+  $ds_layout->layout = 'ds_reset';
+  $ds_layout->settings = array(
+    'regions' => array(
+      'ds_content' => array(
+        0 => 'field_org_logo',
+      ),
+    ),
+    'fields' => array(
+      'field_org_logo' => 'ds_content',
+    ),
+    'classes' => array(),
+    'wrappers' => array(
+      'ds_content' => 'div',
+    ),
+    'layout_wrapper' => 'div',
+    'layout_attributes' => '',
+    'layout_attributes_merge' => TRUE,
+    'layout_link_attribute' => FALSE,
+    'layout_link_custom' => '',
+  );
+  $export['node|organization|logo'] = $ds_layout;
+
+  $ds_layout = new stdClass();
+  $ds_layout->api_version = 1;
   $ds_layout->id = 'node|organization|teaser';
   $ds_layout->entity_type = 'node';
   $ds_layout->bundle = 'organization';
@@ -416,34 +442,6 @@ function gie_organization_ds_layout_settings_info() {
   );
   $export['node|organization|teaser'] = $ds_layout;
 
-  $ds_layout = new stdClass();
-  $ds_layout->api_version = 1;
-  $ds_layout->id = 'node|organization|teaser_image';
-  $ds_layout->entity_type = 'node';
-  $ds_layout->bundle = 'organization';
-  $ds_layout->view_mode = 'teaser_image';
-  $ds_layout->layout = 'ds_reset';
-  $ds_layout->settings = array(
-    'regions' => array(
-      'ds_content' => array(
-        0 => 'field_org_logo',
-      ),
-    ),
-    'fields' => array(
-      'field_org_logo' => 'ds_content',
-    ),
-    'classes' => array(),
-    'wrappers' => array(
-      'ds_content' => 'div',
-    ),
-    'layout_wrapper' => 'div',
-    'layout_attributes' => '',
-    'layout_attributes_merge' => TRUE,
-    'layout_link_attribute' => FALSE,
-    'layout_link_custom' => '',
-  );
-  $export['node|organization|teaser_image'] = $ds_layout;
-
   return $export;
 }
 
@@ -470,6 +468,15 @@ function gie_organization_ds_view_modes_info() {
     'node' => 'node',
   );
   $export['contact'] = $ds_view_mode;
+
+  $ds_view_mode = new stdClass();
+  $ds_view_mode->api_version = 1;
+  $ds_view_mode->view_mode = 'logo';
+  $ds_view_mode->label = 'Logo';
+  $ds_view_mode->entities = array(
+    'node' => 'node',
+  );
+  $export['logo'] = $ds_view_mode;
 
   return $export;
 }
