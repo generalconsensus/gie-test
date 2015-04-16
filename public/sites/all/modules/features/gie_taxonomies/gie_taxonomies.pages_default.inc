@@ -15,7 +15,7 @@ function gie_taxonomies_default_page_manager_pages() {
   $page->task = 'page';
   $page->admin_title = 'Region';
   $page->admin_description = 'region listing page';
-  $page->path = 'region';
+  $page->path = 'locations';
   $page->access = array();
   $page->menu = array();
   $page->arguments = array();
