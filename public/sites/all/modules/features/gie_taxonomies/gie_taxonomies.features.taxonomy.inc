@@ -82,7 +82,7 @@ function gie_taxonomies_taxonomy_default_vocabularies() {
       'name' => 'Sector',
       'machine_name' => 'sector',
       'description' => '',
-      'hierarchy' => 1,
+      'hierarchy' => 0,
       'module' => 'taxonomy',
       'weight' => 0,
       'rdf_mapping' => array(
