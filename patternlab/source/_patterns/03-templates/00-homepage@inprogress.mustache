@@ -2,8 +2,28 @@
 {{> organisms-navigation }}
 
 <main id="main" class="main" role="main">
-	<div class="region-content layout-constrain">
-  	<p>Homepage content goes here&hellip;</p>
+	<div class="region-content">
+    <div class="l-panels-home hero content villain postscript">
+      <div class="l-hero">
+         {{> molecules-homepage-header }}
+      </div>
+      <div class="l-content">
+        <div class="layout-constrain">
+          {{> molecules-homepage-views-personas-pane }}
+          {{> molecules-homepage-views-action-card-panes }}
+          {{> molecules-homepage-views-staff-picks-pane }}
+          {{> molecules-homepage-views-funding-pane }}
+        </div>
+      </div>
+      <div class="l-villain">
+         {{> molecules-homepage-footer-callout }}
+      </div>
+      <div class="l-postscript">
+        <div class="layout-constrain">
+          {{> molecules-homepage-join-callout }}
+        </div>
+      </div>
+    </div>
   </div>
 </main>
 
