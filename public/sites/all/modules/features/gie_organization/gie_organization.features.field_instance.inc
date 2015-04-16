@@ -99,6 +99,12 @@ function gie_organization_field_default_field_instances() {
     'deleted' => 0,
     'description' => '',
     'display' => array(
+      'at_a_glance' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 19,
+      ),
       'contact' => array(
         'label' => 'hidden',
         'module' => 'text',
@@ -117,7 +123,7 @@ function gie_organization_field_default_field_instances() {
           ),
         ),
         'type' => 'text_default',
-        'weight' => 0,
+        'weight' => 1,
       ),
       'default' => array(
         'label' => 'above',
@@ -212,11 +218,17 @@ function gie_organization_field_default_field_instances() {
     'deleted' => 0,
     'description' => 'Enter your organization\'s mission, value, history and size.',
     'display' => array(
+      'at_a_glance' => array(
+        'label' => 'hidden',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 15,
+      ),
       'contact' => array(
         'label' => 'hidden',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 13,
+        'weight' => 25,
       ),
       'default' => array(
         'label' => 'hidden',
@@ -334,11 +346,17 @@ function gie_organization_field_default_field_instances() {
     'deleted' => 0,
     'description' => '',
     'display' => array(
+      'at_a_glance' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 18,
+      ),
       'contact' => array(
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 17,
+        'weight' => 29,
       ),
       'default' => array(
         'label' => 'above',
@@ -428,11 +446,17 @@ function gie_organization_field_default_field_instances() {
     'deleted' => 0,
     'description' => '',
     'display' => array(
+      'at_a_glance' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 24,
+      ),
       'contact' => array(
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 20,
+        'weight' => 32,
       ),
       'default' => array(
         'label' => 'above',
@@ -504,11 +528,17 @@ function gie_organization_field_default_field_instances() {
     'deleted' => 0,
     'description' => '',
     'display' => array(
+      'at_a_glance' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 17,
+      ),
       'contact' => array(
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 16,
+        'weight' => 28,
       ),
       'default' => array(
         'label' => 'above',
@@ -617,11 +647,31 @@ function gie_organization_field_default_field_instances() {
     'deleted' => 0,
     'description' => '',
     'display' => array(
+      'at_a_glance' => array(
+        'label' => 'hidden',
+        'module' => 'link',
+        'settings' => array(
+          'field_delimiter' => '',
+          'linked_field' => array(
+            'advanced' => array(
+              'class' => '',
+              'rel' => '',
+              'target' => '',
+              'text' => '',
+              'title' => '',
+            ),
+            'destination' => '',
+            'linked' => 0,
+          ),
+        ),
+        'type' => 'link_url',
+        'weight' => 3,
+      ),
       'contact' => array(
         'label' => 'hidden',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 14,
+        'weight' => 26,
       ),
       'default' => array(
         'label' => 'hidden',
@@ -710,11 +760,17 @@ function gie_organization_field_default_field_instances() {
     'deleted' => 0,
     'description' => '',
     'display' => array(
+      'at_a_glance' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 34,
+      ),
       'contact' => array(
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 0,
+        'weight' => 15,
       ),
       'default' => array(
         'label' => 'above',
@@ -855,11 +911,17 @@ function gie_organization_field_default_field_instances() {
     'deleted' => 0,
     'description' => '',
     'display' => array(
+      'at_a_glance' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 16,
+      ),
       'contact' => array(
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 15,
+        'weight' => 27,
       ),
       'default' => array(
         'label' => 'above',
@@ -968,11 +1030,17 @@ function gie_organization_field_default_field_instances() {
     'deleted' => 0,
     'description' => '',
     'display' => array(
+      'at_a_glance' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 23,
+      ),
       'contact' => array(
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 19,
+        'weight' => 31,
       ),
       'default' => array(
         'label' => 'above',
@@ -1054,6 +1122,12 @@ function gie_organization_field_default_field_instances() {
     'deleted' => 0,
     'description' => '',
     'display' => array(
+      'at_a_glance' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 20,
+      ),
       'contact' => array(
         'label' => 'hidden',
         'module' => 'entityreference',
@@ -1071,10 +1145,10 @@ function gie_organization_field_default_field_instances() {
             'linked' => 0,
           ),
           'links' => 0,
-          'view_mode' => 'title',
+          'view_mode' => 'user_teaser',
         ),
         'type' => 'entityreference_entity_view',
-        'weight' => 1,
+        'weight' => 0,
       ),
       'default' => array(
         'label' => 'above',
@@ -1155,6 +1229,12 @@ function gie_organization_field_default_field_instances() {
     'deleted' => 0,
     'description' => '',
     'display' => array(
+      'at_a_glance' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 27,
+      ),
       'contact' => array(
         'label' => 'inline',
         'module' => 'text',
@@ -1172,7 +1252,7 @@ function gie_organization_field_default_field_instances() {
             'linked' => 0,
           ),
         ),
-        'type' => 'text_default',
+        'type' => 'text_plain',
         'weight' => 2,
       ),
       'default' => array(
@@ -1271,6 +1351,12 @@ function gie_organization_field_default_field_instances() {
     'deleted' => 0,
     'description' => '',
     'display' => array(
+      'at_a_glance' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 28,
+      ),
       'contact' => array(
         'label' => 'inline',
         'module' => 'text',
@@ -1288,7 +1374,7 @@ function gie_organization_field_default_field_instances() {
             'linked' => 0,
           ),
         ),
-        'type' => 'text_default',
+        'type' => 'text_plain',
         'weight' => 3,
       ),
       'default' => array(
@@ -1387,11 +1473,17 @@ function gie_organization_field_default_field_instances() {
     'deleted' => 0,
     'description' => '',
     'display' => array(
+      'at_a_glance' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 31,
+      ),
       'contact' => array(
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 0,
+        'weight' => 16,
       ),
       'default' => array(
         'label' => 'above',
@@ -1463,11 +1555,17 @@ function gie_organization_field_default_field_instances() {
     'deleted' => 0,
     'description' => 'Provide the LinkedIn URL for your Organization. ',
     'display' => array(
+      'at_a_glance' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 32,
+      ),
       'contact' => array(
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 0,
+        'weight' => 14,
       ),
       'default' => array(
         'label' => 'above',
@@ -1565,11 +1663,17 @@ function gie_organization_field_default_field_instances() {
     'deleted' => 0,
     'description' => '',
     'display' => array(
+      'at_a_glance' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 33,
+      ),
       'contact' => array(
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 0,
+        'weight' => 13,
       ),
       'default' => array(
         'label' => 'above',
@@ -1667,11 +1771,17 @@ function gie_organization_field_default_field_instances() {
     'deleted' => 0,
     'description' => '',
     'display' => array(
+      'at_a_glance' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 29,
+      ),
       'contact' => array(
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 0,
+        'weight' => 12,
       ),
       'default' => array(
         'label' => 'above',
@@ -1744,11 +1854,17 @@ function gie_organization_field_default_field_instances() {
     'deleted' => 0,
     'description' => '',
     'display' => array(
+      'at_a_glance' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 30,
+      ),
       'contact' => array(
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 0,
+        'weight' => 11,
       ),
       'default' => array(
         'label' => 'above',
@@ -1821,11 +1937,17 @@ function gie_organization_field_default_field_instances() {
     'deleted' => 0,
     'description' => '',
     'display' => array(
+      'at_a_glance' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 26,
+      ),
       'contact' => array(
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 22,
+        'weight' => 34,
       ),
       'default' => array(
         'label' => 'above',
@@ -1898,11 +2020,17 @@ function gie_organization_field_default_field_instances() {
     'deleted' => 0,
     'description' => '',
     'display' => array(
+      'at_a_glance' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 25,
+      ),
       'contact' => array(
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 21,
+        'weight' => 33,
       ),
       'default' => array(
         'label' => 'above',
@@ -1975,11 +2103,17 @@ function gie_organization_field_default_field_instances() {
     'deleted' => 0,
     'description' => '',
     'display' => array(
+      'at_a_glance' => array(
+        'label' => 'hidden',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 14,
+      ),
       'contact' => array(
         'label' => 'hidden',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 6,
+        'weight' => 17,
       ),
       'default' => array(
         'label' => 'hidden',
