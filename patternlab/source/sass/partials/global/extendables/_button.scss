@@ -46,7 +46,6 @@
 }
 
 %button--large {
-  @include adjust-font-size-to($font-size-lg);
   text-transform: uppercase;
 }
 

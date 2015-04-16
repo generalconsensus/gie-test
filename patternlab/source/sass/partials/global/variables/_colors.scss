@@ -12,7 +12,7 @@ $gray: #f8f8f8;
 $primary-text-color: #565a5c;
 $secondary-text-color: #555;
 $heading-text-color: $primary-text-color;
-$body-color: #fff;
+$body-color: $gray;
 $link-color: $orange;
 $link-hover-color: darken($orange,10%);
 $selection-background: blue;

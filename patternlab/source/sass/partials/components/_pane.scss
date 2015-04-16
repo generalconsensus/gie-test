@@ -25,6 +25,14 @@
   }
 }
 
+%pane__title--homepage {
+  border: 0;
+  font-size: em(40px);
+  font-weight: 300;
+  margin: 0 0 1em 0;
+  padding: 0;
+}
+
 
 // Custom pane styles imported via sass globbing.
 @import 'pane/*.*';
