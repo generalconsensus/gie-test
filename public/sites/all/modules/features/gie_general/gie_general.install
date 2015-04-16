@@ -209,3 +209,14 @@ function gie_general_update_7019() {
   );
   module_enable($modules, TRUE);
 }
+
+
+/**
+ * Enable GIE Basic Page feature.
+ */
+function gie_general_update_7020() {
+  $modules = array(
+    'gie_basic_page'
+  );
+  module_enable($modules, TRUE);
+}
