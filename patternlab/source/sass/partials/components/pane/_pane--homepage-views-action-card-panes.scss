@@ -1,10 +1,5 @@
 .pane--homepage-views-action-card-panes {
   .pane__title {
-    border: 0;
-    font-size: em(40px);
-    font-weight: 300;
-    margin: 0 0 1em 0;
-    padding: 0;
-    text-align: center;
+    @extend %pane__title--homepage;
   }
 }
