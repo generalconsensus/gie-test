@@ -699,6 +699,51 @@ function gie_user_views_default_views() {
   $export['user_innovations'] = $view;
 
   $view = new view();
+  $view->name = 'user_listing';
+  $view->description = '';
+  $view->tag = 'default';
+  $view->base_table = 'search_api_index_default_user_index';
+  $view->human_name = 'User listing';
+  $view->core = 7;
+  $view->api_version = '3.0';
+  $view->disabled = FALSE; /* Edit this to true to make a default view disabled initially */
+
+  /* Display: Master */
+  $handler = $view->new_display('default', 'Master', 'default');
+  $handler->display->display_options['use_more_always'] = FALSE;
+  $handler->display->display_options['access']['type'] = 'none';
+  $handler->display->display_options['cache']['type'] = 'none';
+  $handler->display->display_options['query']['type'] = 'views_query';
+  $handler->display->display_options['exposed_form']['type'] = 'basic';
+  $handler->display->display_options['pager']['type'] = 'full';
+  $handler->display->display_options['pager']['options']['items_per_page'] = '9';
+  $handler->display->display_options['pager']['options']['offset'] = '0';
+  $handler->display->display_options['pager']['options']['id'] = '0';
+  $handler->display->display_options['pager']['options']['quantity'] = '9';
+  $handler->display->display_options['style_plugin'] = 'default';
+  $handler->display->display_options['row_plugin'] = 'entity';
+  $handler->display->display_options['row_options']['view_mode'] = 'listing';
+  /* Field: Indexed User: User ID */
+  $handler->display->display_options['fields']['uid']['id'] = 'uid';
+  $handler->display->display_options['fields']['uid']['table'] = 'search_api_index_default_user_index';
+  $handler->display->display_options['fields']['uid']['field'] = 'uid';
+  /* Sort criterion: Indexed User: Last Name */
+  $handler->display->display_options['sorts']['field_user_lastname']['id'] = 'field_user_lastname';
+  $handler->display->display_options['sorts']['field_user_lastname']['table'] = 'search_api_index_default_user_index';
+  $handler->display->display_options['sorts']['field_user_lastname']['field'] = 'field_user_lastname';
+  /* Filter criterion: Indexed User: Status */
+  $handler->display->display_options['filters']['status']['id'] = 'status';
+  $handler->display->display_options['filters']['status']['table'] = 'search_api_index_default_user_index';
+  $handler->display->display_options['filters']['status']['field'] = 'status';
+  $handler->display->display_options['filters']['status']['value'] = array(
+    1 => '1',
+  );
+
+  /* Display: Listing */
+  $handler = $view->new_display('panel_pane', 'Listing', 'listing_pane');
+  $export['user_listing'] = $view;
+
+  $view = new view();
   $view->name = 'user_organizations';
   $view->description = 'Organization listing for User display';
   $view->tag = 'default';
