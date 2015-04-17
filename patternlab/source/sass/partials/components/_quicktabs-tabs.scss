@@ -1,0 +1,16 @@
+.quicktabs-tabs {
+  margin-top: 0;
+  li {
+    .pane__content & { // undo bullet from _html-elements
+      padding-bottom: 0;
+      padding-left: 0;
+      &:before {
+        display: none;
+      }
+    }
+    background: none;
+    display: inline;
+    white-space: nowrap;
+    
+  }
+}

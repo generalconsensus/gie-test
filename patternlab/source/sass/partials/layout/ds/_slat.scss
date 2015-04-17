@@ -15,6 +15,9 @@ $gutter: 1.5em;
   @include breakpoint($bp-first) {
     float: left;
     padding-right: $gutter;
+    .layout-slat--small & {
+      padding-right: 0.5em;
+    }
   }
 
   &:empty {

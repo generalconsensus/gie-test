@@ -1,25 +1,31 @@
-<div class="l-panels-sidebar-right preface-empty title sidebar main">
-  <div class="l-preface layout-constrain">
-
-  </div>
-  <div class="l-title region-title">
-    <div class="layout-constrain">
-      <div class="pane pane--page-title">
-        <div class="pane__content">
-          <h1>{{ pageTitle }}</h1>
+<div class="l-panels-detail title main main-sidebar center-empty meta-empty box-first-empty box-second-empty box-third-empty bottom bottom-sidebar">
+    <div class="l-title region-title">
+      <div class="layout-constrain">
+        <div class="pane pane--page-title">
+          <div class="pane__content">
+            <h1>{{ pageTitle }}</h1>
+          </div>
         </div>
       </div>
     </div>
-  </div>
-  <div class="l-wrapper layout-constrain">
-    <div class="l-main">
-      
-
+    <div class="l-wrapper layout-constrain">
+        <div class="l-main">
+          {{> molecules-user-header }}
+        </div>
+        <aside class="l-main-sidebar">
+          {{> molecules-user-motto }}
+        </aside>
     </div>
-    <aside class="l-sidebar">
-      {{> molecules-recently-posted }}
-      {{> molecules-funded-by }} 
-      {{> molecules-connect-with-me }}
-    </aside>
-  </div>
+    <div class="l-center layout-constrain"></div>
+    <div class="l-wrapper layout-constrain">
+        <div class="l-bottom">
+          {{> molecules-user-tabs }}
+        </div>
+        <aside class="l-bottom-sidebar">
+          {{> molecules-recently-posted }}
+          {{> molecules-recent-conversations }} 
+          {{> molecules-funded-by }} 
+          {{> molecules-connect-with-me }}
+        </aside>
+    </div>
 </div>
