@@ -294,6 +294,13 @@ function gie_taxonomies_strongarm() {
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
+  $strongarm->name = 'panelizer_taxonomy_term:sector:listing_selection';
+  $strongarm->value = 'taxonomy_term:sector:default:listing';
+  $export['panelizer_taxonomy_term:sector:listing_selection'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
   $strongarm->name = 'panelizer_taxonomy_term:sector:page_manager_selection';
   $strongarm->value = 'taxonomy_term:sector:default';
   $export['panelizer_taxonomy_term:sector:page_manager_selection'] = $strongarm;
@@ -311,6 +318,13 @@ function gie_taxonomies_strongarm() {
   $strongarm->name = 'panelizer_taxonomy_term:topic:full_selection';
   $strongarm->value = 0;
   $export['panelizer_taxonomy_term:topic:full_selection'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'panelizer_taxonomy_term:topic:listing_selection';
+  $strongarm->value = 'taxonomy_term:topic:default:listing';
+  $export['panelizer_taxonomy_term:topic:listing_selection'] = $strongarm;
 
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
