@@ -167,7 +167,7 @@ function gie_innovation_strongarm() {
             'visible' => FALSE,
           ),
           'listing' => array(
-            'weight' => '24',
+            'weight' => '19',
             'visible' => FALSE,
           ),
         ),

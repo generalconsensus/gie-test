@@ -269,8 +269,8 @@ function gie_discussion_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-discussion-field_discussion_program'
-  $field_instances['node-discussion-field_discussion_program'] = array(
+  // Exported field_instance: 'node-discussion-field_discussion_program_disc'
+  $field_instances['node-discussion-field_discussion_program_disc'] = array(
     'bundle' => 'discussion',
     'default_value' => NULL,
     'deleted' => 0,
@@ -278,10 +278,9 @@ function gie_discussion_field_default_field_instances() {
     'display' => array(
       'default' => array(
         'label' => 'above',
-        'module' => 'entityreference',
+        'module' => 'taxonomy',
         'settings' => array(
           'field_delimiter' => '',
-          'link' => FALSE,
           'linked_field' => array(
             'advanced' => array(
               'class' => '',
@@ -294,39 +293,37 @@ function gie_discussion_field_default_field_instances() {
             'linked' => 0,
           ),
         ),
-        'type' => 'entityreference_label',
+        'type' => 'taxonomy_term_reference_link',
         'weight' => 6,
       ),
       'full' => array(
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 15,
+        'weight' => 0,
       ),
       'listing' => array(
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 14,
+        'weight' => 0,
       ),
       'teaser' => array(
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 14,
+        'weight' => 0,
       ),
       'teaser_date' => array(
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 6,
+        'weight' => 0,
       ),
     ),
     'ds_extras_field_template' => '',
     'entity_type' => 'node',
-    'entityconnect_unload_add' => 1,
-    'entityconnect_unload_edit' => 1,
-    'field_name' => 'field_discussion_program',
+    'field_name' => 'field_discussion_program_disc',
     'label' => 'Program',
     'required' => 0,
     'settings' => array(

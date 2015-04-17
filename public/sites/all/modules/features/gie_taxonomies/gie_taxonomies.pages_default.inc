@@ -16,7 +16,10 @@ function gie_taxonomies_default_page_manager_pages() {
   $page->admin_title = 'Region';
   $page->admin_description = 'region listing page';
   $page->path = 'locations';
-  $page->access = array();
+  $page->access = array(
+    'type' => 'none',
+    'settings' => NULL,
+  );
   $page->menu = array();
   $page->arguments = array();
   $page->conf = array(
@@ -119,7 +122,10 @@ function gie_taxonomies_default_page_manager_pages() {
   $page->admin_title = 'Sectors';
   $page->admin_description = 'Sectors listing page panel.';
   $page->path = 'sectors';
-  $page->access = array();
+  $page->access = array(
+    'type' => 'none',
+    'settings' => NULL,
+  );
   $page->menu = array();
   $page->arguments = array();
   $page->conf = array(
@@ -222,7 +228,10 @@ function gie_taxonomies_default_page_manager_pages() {
   $page->admin_title = 'Topics';
   $page->admin_description = 'Topics listing page';
   $page->path = 'topics';
-  $page->access = array();
+  $page->access = array(
+    'type' => 'none',
+    'settings' => NULL,
+  );
   $page->menu = array();
   $page->arguments = array();
   $page->conf = array(
