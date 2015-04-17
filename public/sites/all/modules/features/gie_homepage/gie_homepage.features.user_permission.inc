@@ -10,6 +10,13 @@
 function gie_homepage_user_default_permissions() {
   $permissions = array();
 
+  // Exported permission: 'create action_card content'.
+  $permissions['create action_card content'] = array(
+    'name' => 'create action_card content',
+    'roles' => array(),
+    'module' => 'node',
+  );
+
   // Exported permission: 'create homepage content'.
   $permissions['create homepage content'] = array(
     'name' => 'create homepage content',
@@ -23,6 +30,13 @@ function gie_homepage_user_default_permissions() {
     'roles' => array(
       'administrator' => 'administrator',
     ),
+    'module' => 'node',
+  );
+
+  // Exported permission: 'delete any action_card content'.
+  $permissions['delete any action_card content'] = array(
+    'name' => 'delete any action_card content',
+    'roles' => array(),
     'module' => 'node',
   );
 
@@ -42,6 +56,13 @@ function gie_homepage_user_default_permissions() {
     'module' => 'node',
   );
 
+  // Exported permission: 'delete own action_card content'.
+  $permissions['delete own action_card content'] = array(
+    'name' => 'delete own action_card content',
+    'roles' => array(),
+    'module' => 'node',
+  );
+
   // Exported permission: 'delete own homepage content'.
   $permissions['delete own homepage content'] = array(
     'name' => 'delete own homepage content',
@@ -55,6 +76,13 @@ function gie_homepage_user_default_permissions() {
     'roles' => array(
       'administrator' => 'administrator',
     ),
+    'module' => 'node',
+  );
+
+  // Exported permission: 'edit any action_card content'.
+  $permissions['edit any action_card content'] = array(
+    'name' => 'edit any action_card content',
+    'roles' => array(),
     'module' => 'node',
   );
 
@@ -73,6 +101,13 @@ function gie_homepage_user_default_permissions() {
     'roles' => array(
       'administrator' => 'administrator',
     ),
+    'module' => 'node',
+  );
+
+  // Exported permission: 'edit own action_card content'.
+  $permissions['edit own action_card content'] = array(
+    'name' => 'edit own action_card content',
+    'roles' => array(),
     'module' => 'node',
   );
 
