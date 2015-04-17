@@ -1,0 +1,9 @@
+// custom follow button from flag module
+.flag-follow {
+  a {
+    @extend %button;
+    @extend %button--highlight;
+    @extend %button--member;
+    margin-bottom: 0.5em;
+  }
+}
