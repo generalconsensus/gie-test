@@ -17,6 +17,7 @@ function gie_general_ds_view_modes_info() {
   $ds_view_mode->entities = array(
     'node' => 'node',
     'taxonomy_term' => 'taxonomy_term',
+    'user' => 'user',
   );
   $export['listing'] = $ds_view_mode;
 

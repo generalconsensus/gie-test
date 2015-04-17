@@ -50,6 +50,10 @@ function gie_search_strongarm() {
       'search_api_views:discussion_listing:default' => 'search_api_views:discussion_listing:default',
       'search_api_views:discussion_listing:panel_pane_1' => 'search_api_views:discussion_listing:panel_pane_1',
       'search_api_views:discussion_listing:discussion_listing' => 'search_api_views:discussion_listing:discussion_listing',
+      'search_api_views:user_listing:default' => 'search_api_views:user_listing:default',
+    ),
+    'default_user_index' => array(
+      'search_api_views:user_listing:listing_pane' => 'search_api_views:user_listing:listing_pane',
     ),
   );
   $export['search_api_facets_search_ids'] = $strongarm;
@@ -58,7 +62,7 @@ function gie_search_strongarm() {
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'search_api_solr_last_optimize';
-  $strongarm->value = 1428689935;
+  $strongarm->value = 1429302642;
   $export['search_api_solr_last_optimize'] = $strongarm;
 
   $strongarm = new stdClass();
