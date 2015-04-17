@@ -238,6 +238,41 @@ function gie_taxonomies_strongarm() {
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
+  $strongarm->name = 'panelizer_taxonomy_term:program_discussions:default_selection';
+  $strongarm->value = 0;
+  $export['panelizer_taxonomy_term:program_discussions:default_selection'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'panelizer_taxonomy_term:program_discussions:page_manager_selection';
+  $strongarm->value = 'taxonomy_term:program_discussions:default';
+  $export['panelizer_taxonomy_term:program_discussions:page_manager_selection'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'panelizer_taxonomy_term:region:default_selection';
+  $strongarm->value = 0;
+  $export['panelizer_taxonomy_term:region:default_selection'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'panelizer_taxonomy_term:region:full_selection';
+  $strongarm->value = 0;
+  $export['panelizer_taxonomy_term:region:full_selection'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'panelizer_taxonomy_term:region:listing_selection';
+  $strongarm->value = 'taxonomy_term:region:default:listing';
+  $export['panelizer_taxonomy_term:region:listing_selection'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
   $strongarm->name = 'panelizer_taxonomy_term:region:page_manager_selection';
   $strongarm->value = 'taxonomy_term:region:default';
   $export['panelizer_taxonomy_term:region:page_manager_selection'] = $strongarm;
@@ -245,9 +280,37 @@ function gie_taxonomies_strongarm() {
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
+  $strongarm->name = 'panelizer_taxonomy_term:sector:default_selection';
+  $strongarm->value = 0;
+  $export['panelizer_taxonomy_term:sector:default_selection'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'panelizer_taxonomy_term:sector:full_selection';
+  $strongarm->value = 0;
+  $export['panelizer_taxonomy_term:sector:full_selection'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
   $strongarm->name = 'panelizer_taxonomy_term:sector:page_manager_selection';
   $strongarm->value = 'taxonomy_term:sector:default';
   $export['panelizer_taxonomy_term:sector:page_manager_selection'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'panelizer_taxonomy_term:topic:default_selection';
+  $strongarm->value = 0;
+  $export['panelizer_taxonomy_term:topic:default_selection'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'panelizer_taxonomy_term:topic:full_selection';
+  $strongarm->value = 0;
+  $export['panelizer_taxonomy_term:topic:full_selection'] = $strongarm;
 
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
