@@ -47,6 +47,13 @@
   }
 }
 
+.view__author-image {
+  img {
+    @include border-radius(50%);
+    border: 1px solid $border-color;
+  }
+}
+
 .views-row {
   padding: 0 0 2em 0;
 }
