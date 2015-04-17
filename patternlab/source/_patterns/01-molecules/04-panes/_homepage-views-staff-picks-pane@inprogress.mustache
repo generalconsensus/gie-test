@@ -1,5 +1,19 @@
 <div class="pane pane--homepage-views-staff-picks-pane">
-  <h2 class="pane__title"></h2>  
   <div class="pane__content">
+    <div class="view view--homepage-views view--card-view-four-columns">
+      <div class="view__header">
+        <h1 class="view__header-title">Staff Picks</h1>
+        <a href="#" class="view__header-link">View All Innovations</a>
+        <a class="button button--highlight button--large button--add view__header-button" href="#">Add Innovation</a> 
+      </div>    
+      <div class="view__content">   
+        {{# listItems.four }}
+          <div class="views-row">
+            {{> organisms-innovation-teaser }}
+          </div>
+        {{/ listItems.four }}
+      </div>
+    </div>
   </div>
 </div>
+       

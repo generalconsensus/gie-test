@@ -44,34 +44,44 @@
           tallest = height;
         }
       });
-      //if (Modernizr.mq('(min-width: 500px)')) { 
-        if (tallest > 0) {
-          items.height(tallest+40); // add 40 for the 20px padding  
-        }
-      //}
+      if (tallest > 0) {
+        items.height(tallest+40); // add 40 for the 20px padding  
+      }
     });
   }
 
 
   function cardView() {
     
-    $('.view--card-view').each(function(){
+    $('.view--card-view,.view--card-view-four-columns').each(function(){
+      if ($(this).is('.view--card-view-four-columns')) {
+        var columns = 4;
+      } else {
+        var columns = 3;
+      }
+
       var items = $(this).find('.views-row');
-      items.removeClass('first second third even odd');
+      items.removeClass('first second third fourth even odd');
       items.find('.card').css("height","auto");
 
-      if (Modernizr.mq('(max-width: 499px)')) { 
-
-      }
       if (Modernizr.mq('(min-width: 500px) and (max-width: 799px)')) { 
         items.filter(":nth-child(2n-1)").addClass('odd');
         items.filter(":nth-child(2n)").addClass('even');
       }
       if (Modernizr.mq('(min-width: 800px)')) { 
-        items.filter(":nth-child(3n-2)").addClass('first');
-        items.filter(":nth-child(3n-1)").addClass('second');
-        items.filter(":nth-child(3n)").addClass('third');
-      }  
+        if (columns == 3) {
+          items.filter(":nth-child(3n-2)").addClass('first');
+          items.filter(":nth-child(3n-1)").addClass('second');
+          items.filter(":nth-child(3n)").addClass('third');
+        } 
+        if (columns == 4) {
+          items.filter(":nth-child(4n-3)").addClass('first');
+          items.filter(":nth-child(4n-2)").addClass('second');
+          items.filter(":nth-child(4n-1)").addClass('third');
+          items.filter(":nth-child(4n)").addClass('fourth');
+        }
+      } 
+
       items.each(function(){
         var myheight = $(this).find('.card').height();
         if ($(this).is('.odd')) {
@@ -90,11 +100,19 @@
           var tallest;
           var second = $(this).nextAll('.second').eq(0);
           var third = $(this).nextAll('.third').eq(0);
+          if (columns == 4) {
+            var fourth = $(this).nextAll('.fourth').eq(0);
+          }
           if (second.find('.card').height() <= third.find('.card').height()) {
             tallest = third.find('.card').height();
           }
           if (second.find('.card').height() >= third.find('.card').height()) {
             tallest = second.find('.card').height();
+          }
+          if (columns == 4) {
+            if (fourth.find('.card').height() >= tallest) {
+              tallest = fourth.find('.card').height();
+            }
           }
           if (myheight >= tallest) {
             tallest = myheight;
@@ -102,11 +120,15 @@
           $(this).find('.card').height(tallest);
           second.find('.card').height(tallest);
           third.find('.card').height(tallest);
+          if (columns == 4) {
+            fourth.find('.card').height(tallest);
+          }
         }
       });
            
     });
   }
+
 
   function homepageFooterCallout() {
     $('.pane--homepage-footer-callout .pane__content').each(function(){
