@@ -1053,7 +1053,7 @@ ul.panels-ipe-linkbar li {
 }
 /* line 9, ../sass/partials/global/helpers/_clearfix.scss */
 .l-panels-home .l-hero:after,
-.l-panels-home .l-content:after,
+.l-panels-home .l-main:after,
 .l-panels-home .l-villain:after,
 .l-panels-home .l-postscript:after {
   display: table;
@@ -1061,7 +1061,7 @@ ul.panels-ipe-linkbar li {
 }
 /* line 14, ../sass/partials/global/helpers/_clearfix.scss */
 .l-panels-home .l-hero:after,
-.l-panels-home .l-content:after,
+.l-panels-home .l-main:after,
 .l-panels-home .l-villain:after,
 .l-panels-home .l-postscript:after {
   clear: both;
