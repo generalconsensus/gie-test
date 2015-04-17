@@ -56,32 +56,14 @@ function gie_taxonomies_ds_field_settings_info() {
   $ds_fieldsetting->view_mode = 'listing';
   $ds_fieldsetting->settings = array(
     'title' => array(
-      'weight' => '1',
+      'weight' => '0',
       'label' => 'hidden',
       'format' => 'default',
-      'formatter_settings' => array(
-        'link' => '1',
-        'wrapper' => 'h2',
-        'class' => '',
-        'ft' => array(),
-        'field_delimiter' => '',
-        'linked_field' => array(
-          'linked' => 0,
-          'destination' => '',
-          'advanced' => array(
-            'title' => '',
-            'target' => '',
-            'class' => '',
-            'rel' => '',
-            'text' => '',
-          ),
-        ),
-      ),
     ),
-    'field_sector_image' => array(
-      'formatter_settings' => array(
-        'ft' => array(),
-      ),
+    'more_link' => array(
+      'weight' => '2',
+      'label' => 'hidden',
+      'format' => 'default',
     ),
   );
   $export['taxonomy_term|sector|listing'] = $ds_fieldsetting;
@@ -225,21 +207,25 @@ function gie_taxonomies_ds_layout_settings_info() {
   $ds_layout->entity_type = 'taxonomy_term';
   $ds_layout->bundle = 'sector';
   $ds_layout->view_mode = 'listing';
-  $ds_layout->layout = 'ds_1col';
+  $ds_layout->layout = 'article';
   $ds_layout->settings = array(
     'regions' => array(
-      'ds_content' => array(
-        0 => 'field_sector_image',
-        1 => 'title',
+      'main_content' => array(
+        0 => 'title',
+        1 => 'description_field',
+        2 => 'more_link',
       ),
     ),
     'fields' => array(
-      'field_sector_image' => 'ds_content',
-      'title' => 'ds_content',
+      'title' => 'main_content',
+      'description_field' => 'main_content',
+      'more_link' => 'main_content',
     ),
     'classes' => array(),
     'wrappers' => array(
-      'ds_content' => 'div',
+      'header' => 'div',
+      'main_content' => 'div',
+      'footer' => 'div',
     ),
     'layout_wrapper' => 'div',
     'layout_attributes' => '',

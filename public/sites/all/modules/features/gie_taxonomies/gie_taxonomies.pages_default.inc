@@ -116,12 +116,16 @@ function gie_taxonomies_default_page_manager_pages() {
     'relationships' => array(),
   );
   $display = new panels_display();
-  $display->layout = 'onecol';
+  $display->layout = 'landing';
   $display->layout_settings = array();
   $display->panel_settings = array(
     'style_settings' => array(
       'default' => NULL,
       'middle' => NULL,
+      'preface' => NULL,
+      'title' => NULL,
+      'sidebar' => NULL,
+      'main' => NULL,
     ),
   );
   $display->cache = array();
@@ -131,7 +135,7 @@ function gie_taxonomies_default_page_manager_pages() {
   $display->panels = array();
     $pane = new stdClass();
     $pane->pid = 'new-b20ee272-a4b9-4458-93b1-e006457c3764';
-    $pane->panel = 'middle';
+    $pane->panel = 'main';
     $pane->type = 'views_panes';
     $pane->subtype = 'sector_listing-sectors_pane';
     $pane->shown = TRUE;
@@ -147,7 +151,33 @@ function gie_taxonomies_default_page_manager_pages() {
     $pane->locks = array();
     $pane->uuid = 'b20ee272-a4b9-4458-93b1-e006457c3764';
     $display->content['new-b20ee272-a4b9-4458-93b1-e006457c3764'] = $pane;
-    $display->panels['middle'][0] = 'new-b20ee272-a4b9-4458-93b1-e006457c3764';
+    $display->panels['main'][0] = 'new-b20ee272-a4b9-4458-93b1-e006457c3764';
+    $pane = new stdClass();
+    $pane->pid = 'new-4feb4cd2-88e7-42dc-b581-11987c665969';
+    $pane->panel = 'title';
+    $pane->type = 'pane';
+    $pane->subtype = 'sectors_introduction';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array(
+      'override_title' => 1,
+      'override_title_text' => '',
+      'override_title_heading' => 'h2',
+    );
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
+    $pane->css = array(
+      'css_id' => '',
+      'css_class' => 'pane pane--landing-intro',
+    );
+    $pane->extras = array();
+    $pane->position = 0;
+    $pane->locks = array();
+    $pane->uuid = '4feb4cd2-88e7-42dc-b581-11987c665969';
+    $display->content['new-4feb4cd2-88e7-42dc-b581-11987c665969'] = $pane;
+    $display->panels['title'][0] = 'new-4feb4cd2-88e7-42dc-b581-11987c665969';
   $display->hide_title = PANELS_TITLE_FIXED;
   $display->title_pane = 'new-b20ee272-a4b9-4458-93b1-e006457c3764';
   $handler->conf['display'] = $display;
