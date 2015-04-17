@@ -1,4 +1,4 @@
-.view--card-view {
+.view--card-view-four-columns {
   overflow: hidden;
   .views-row {
     @include breakpoint(500px, $no-query: true) {
@@ -6,7 +6,7 @@
       width: percentage(1/2);
     }
     @include breakpoint(800px, $no-query: true) {
-      width: percentage(1/3);
+      width: percentage(1/4);
     }
     &.even {
       padding-left: 0.5em;
@@ -17,11 +17,12 @@
     &.first {
       padding-right: 0.5em;
     }
-    &.second {
+    &.second, 
+    &.third {
       padding-left: 0.25em;
       padding-right: 0.25em;
     }
-    &.third {
+    &.fourth {
       padding-left: 0.5em;
     }
   }

@@ -1,5 +1,5 @@
 /* line 65, c:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/singularitygs-1.1.2/stylesheets/singularitygs/helpers/_clearfix.scss */
-.clearfix:after, .layout-grid__row:after, .pane--homepage-views-personas-pane .pane__content .view--homepage-views:after, .pane--landing-intro:after, .region-footer:after, .view--homepage-cardflip:after {
+.clearfix:after, .layout-grid__row:after, .pane--homepage-views-personas-pane .pane__content .view--homepage-views:after, .pane--landing-intro:after, .region-footer:after, .view__header:after, .view--homepage-cardflip:after {
   content: "";
   display: table;
   clear: both;
@@ -29,12 +29,12 @@
 }
 
 /* line 9, ../sass/partials/global/helpers/_clearfix.scss */
-.clearfix:after, .layout-grid__row:after, .pane--homepage-views-personas-pane .pane__content .view--homepage-views:after, .pane--landing-intro:after, .region-footer:after, .view--homepage-cardflip:after {
+.clearfix:after, .layout-grid__row:after, .pane--homepage-views-personas-pane .pane__content .view--homepage-views:after, .pane--landing-intro:after, .region-footer:after, .view__header:after, .view--homepage-cardflip:after {
   display: table;
   content: "";
 }
 /* line 14, ../sass/partials/global/helpers/_clearfix.scss */
-.clearfix:after, .layout-grid__row:after, .pane--homepage-views-personas-pane .pane__content .view--homepage-views:after, .pane--landing-intro:after, .region-footer:after, .view--homepage-cardflip:after {
+.clearfix:after, .layout-grid__row:after, .pane--homepage-views-personas-pane .pane__content .view--homepage-views:after, .pane--landing-intro:after, .region-footer:after, .view__header:after, .view--homepage-cardflip:after {
   clear: both;
 }
 
@@ -3855,7 +3855,31 @@ tr.drag-previous {
   text-decoration: underline;
 }
 
-/* line 16, ../sass/partials/components/_view.scss */
+/* line 20, ../sass/partials/components/_view.scss */
+.view__header-title {
+  color: #dc5606;
+  float: left;
+  line-height: 32px;
+  text-transform: uppercase;
+}
+
+/* line 32, ../sass/partials/components/_view.scss */
+.view__header-link {
+  display: block;
+  font-size: 0.875em;
+  padding: 0 0 1em 0;
+  text-decoration: underline;
+  float: left;
+  line-height: 32px;
+  padding: 0 0 0 3em;
+}
+
+/* line 44, ../sass/partials/components/_view.scss */
+.view__header-button {
+  float: right;
+}
+
+/* line 50, ../sass/partials/components/_view.scss */
 .views-row {
   padding: 0 0 2em 0;
 }
@@ -3919,6 +3943,38 @@ tr.drag-previous {
   background-image: linear-gradient(transparent, transparent), url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4NCjwhLS0gR2VuZXJhdGVkIGJ5IEljb01vb24uaW8gLS0+DQo8IURPQ1RZUEUgc3ZnIFBVQkxJQyAiLS8vVzNDLy9EVEQgU1ZHIDEuMS8vRU4iICJodHRwOi8vd3d3LnczLm9yZy9HcmFwaGljcy9TVkcvMS4xL0RURC9zdmcxMS5kdGQiPg0KPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHdpZHRoPSIxNyIgaGVpZ2h0PSIxNyIgdmlld0JveD0iMCAwIDE3IDE3Ij4NCjxwYXRoIGQ9Ik04LjYgMTBjMi44IDAgNS0yLjMgNS01IDAtMi44LTIuMy01LTUtNS0yLjggMC01IDIuMy01IDUgMCAyLjggMi4yIDUgNSA1ek04LjYgMS4zYzIgMCAzLjcgMS43IDMuNyAzLjdzLTEuNyAzLjctMy43IDMuN2MtMiAwLTMuNy0xLjctMy43LTMuN3MxLjYtMy43IDMuNy0zLjd6IiBmaWxsPSIjNjk4YmIxIj48L3BhdGg+DQo8cGF0aCBkPSJNMTcuMiAxMi40YzAtMS4zLTEuMS0yLjQtMi40LTIuNGgtMTIuNGMtMS4zIDAtMi40IDEuMS0yLjQgMi40IDAgMCAwIDAuMiAwIDAuM3YzLjZjMCAwLjQgMC4zIDAuNyAwLjcgMC43aDE1LjljMC40IDAgMC43LTAuMyAwLjctMC43di0zLjZjMCAwIDAtMC4xIDAtMC4xLTAuMS0wLjEtMC4xLTAuMS0wLjEtMC4yek0xNS45IDE1LjdoLTE0LjZjMCAwIDAtMy4xIDAtMy4xczAtMC4yIDAtMC4yYzAtMC42IDAuNS0xLjEgMS4xLTEuMWgxMi41YzAuNiAwIDEuMSAwLjUgMS4xIDEuMS0wLjEgMC4yLTAuMSAzLjMtMC4xIDMuM3oiIGZpbGw9IiM2OThiYjEiPjwvcGF0aD4NCjwvc3ZnPg0K');
   height: 17px;
   width: 17px;
+}
+
+/* line 1, ../sass/partials/components/view/_view--card-view-four-columns.scss */
+.view--card-view-four-columns {
+  overflow: hidden;
+}
+/* line 3, ../sass/partials/components/view/_view--card-view-four-columns.scss */
+.view--card-view-four-columns .views-row {
+  float: left;
+  width: 50%;
+  width: 25%;
+}
+/* line 11, ../sass/partials/components/view/_view--card-view-four-columns.scss */
+.view--card-view-four-columns .views-row.even {
+  padding-left: 0.5em;
+}
+/* line 14, ../sass/partials/components/view/_view--card-view-four-columns.scss */
+.view--card-view-four-columns .views-row.odd {
+  padding-right: 0.5em;
+}
+/* line 17, ../sass/partials/components/view/_view--card-view-four-columns.scss */
+.view--card-view-four-columns .views-row.first {
+  padding-right: 0.5em;
+}
+/* line 21, ../sass/partials/components/view/_view--card-view-four-columns.scss */
+.view--card-view-four-columns .views-row.second, .view--card-view-four-columns .views-row.third {
+  padding-left: 0.25em;
+  padding-right: 0.25em;
+}
+/* line 25, ../sass/partials/components/view/_view--card-view-four-columns.scss */
+.view--card-view-four-columns .views-row.fourth {
+  padding-left: 0.5em;
 }
 
 /* line 1, ../sass/partials/components/view/_view--card-view.scss */
