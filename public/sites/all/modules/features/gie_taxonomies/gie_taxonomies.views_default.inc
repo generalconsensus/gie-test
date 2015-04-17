@@ -38,7 +38,7 @@ function gie_taxonomies_views_default_views() {
   $handler->display->display_options['relationships']['flag_user_content_rel']['table'] = 'users';
   $handler->display->display_options['relationships']['flag_user_content_rel']['field'] = 'flag_user_content_rel';
   $handler->display->display_options['relationships']['flag_user_content_rel']['flag'] = 'follow_taxonomy';
-  /* Field: User: Photo */
+  /* Field: User: Profile Photo */
   $handler->display->display_options['fields']['field_user_photo']['id'] = 'field_user_photo';
   $handler->display->display_options['fields']['field_user_photo']['table'] = 'field_data_field_user_photo';
   $handler->display->display_options['fields']['field_user_photo']['field'] = 'field_user_photo';

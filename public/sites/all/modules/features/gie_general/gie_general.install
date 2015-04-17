@@ -220,3 +220,10 @@ function gie_general_update_7020() {
   );
   module_enable($modules, TRUE);
 }
+
+/**
+ * Delete Programs entity reference field on discussion.
+ */
+function gie_general_update_7021() {
+  field_delete_field('field_discussion_program');
+}
