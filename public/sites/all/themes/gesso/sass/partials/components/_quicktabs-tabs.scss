@@ -28,8 +28,7 @@
       padding: 1em 0;
       text-align: center;
       text-decoration: none;
-      &:hover, &:focus,
-      &.active {
+      &:hover, &:focus {
         background: $orange;
         color: #fff;
         text-decoration: none;
