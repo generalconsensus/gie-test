@@ -13,6 +13,40 @@
   text-decoration: underline;
 }
 
+.view__header {
+  @extend %clearfix;
+}
+
+.view__header-title {
+  color: $orange;
+  @include breakpoint(max-width 849px) {
+    margin-bottom: 0.5em;
+  }
+  @include breakpoint(850px, $no-query: true) {
+    float: left;
+    line-height: 32px;
+  }
+  text-transform: uppercase;
+}
+
+.view__header-link {
+  display: block;
+  font-size: em(14px);
+  padding: 0 0 1em 0;
+  text-decoration: underline;
+  @include breakpoint(850px, $no-query: true) {
+    float: left;
+    line-height: 32px;
+    padding: 0 0 0 3em;
+  }
+}
+
+.view__header-button {
+  @include breakpoint(850px, $no-query: true) {
+    float: right;
+  }
+}
+
 .views-row {
   padding: 0 0 2em 0;
 }
