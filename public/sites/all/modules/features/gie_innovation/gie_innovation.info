@@ -96,6 +96,7 @@ features[field_base][] = field_testing_phase
 features[field_base][] = subject_field
 features[field_group][] = group_card_content|node|innovation|listing
 features[field_group][] = group_card_counts|node|innovation|listing
+features[field_group][] = group_card_image|node|innovation|listing
 features[field_group][] = group_innovation_stats_first|node|innovation|full
 features[field_group][] = group_innovation_stats_second|node|innovation|full
 features[field_group][] = group_innovation_stats|node|innovation|full
