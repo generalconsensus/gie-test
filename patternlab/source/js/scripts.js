@@ -43,9 +43,10 @@
         if (height >= tallest) { 
           tallest = height;
         }
+        return tallest;
       });
       if (tallest > 0) {
-        items.height(tallest+40); // add 40 for the 20px padding  
+        items.css("height",tallest+40+"px"); // add 40 for the 20px padding  
       }
     });
   }
@@ -93,8 +94,8 @@
           if (myheight <= evenheight) { 
             tallest = evenheight;
           }
-          $(this).find('.card').height(tallest);
-          $(this).next('.even').find('.card').height(tallest);
+          $(this).find('.card').css("height",tallest+"px");
+          $(this).next('.even').find('.card').css("height",tallest+"px");
         }
         if ($(this).is('.first')) {
           var tallest;
@@ -117,11 +118,11 @@
           if (myheight >= tallest) {
             tallest = myheight;
           }
-          $(this).find('.card').height(tallest);
-          second.find('.card').height(tallest);
-          third.find('.card').height(tallest);
+          $(this).find('.card').css("height",tallest+"px");
+          second.find('.card').css("height",tallest+"px");
+          third.find('.card').css("height",tallest+"px");
           if (columns == 4) {
-            fourth.find('.card').height(tallest);
+            fourth.find('.card').css("height",tallest+"px");
           }
         }
       });
@@ -158,7 +159,7 @@
       });
       if (Modernizr.mq('(min-width: 800px)')) { 
         if (tallest > 0) {
-          items.height(tallest); 
+          items.css("height",tallest+"px");
         }
       }
     });
