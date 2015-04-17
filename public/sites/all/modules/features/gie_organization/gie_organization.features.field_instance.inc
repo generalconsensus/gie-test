@@ -2276,7 +2276,8 @@ function gie_organization_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'taxonomy_term-organization_role-description_field'
+  // Exported field_instance:
+  // 'taxonomy_term-organization_role-description_field'
   $field_instances['taxonomy_term-organization_role-description_field'] = array(
     'bundle' => 'organization_role',
     'default_value' => NULL,
@@ -2350,7 +2351,8 @@ function gie_organization_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'taxonomy_term-organization_type-description_field'
+  // Exported field_instance:
+  // 'taxonomy_term-organization_type-description_field'
   $field_instances['taxonomy_term-organization_type-description_field'] = array(
     'bundle' => 'organization_type',
     'default_value' => NULL,

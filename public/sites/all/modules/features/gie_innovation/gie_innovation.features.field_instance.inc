@@ -146,7 +146,8 @@ function gie_innovation_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'field_collection_item-field_innovation_non_references-field_non_ref_email'
+  // Exported field_instance:
+  // 'field_collection_item-field_innovation_non_references-field_non_ref_email'
   $field_instances['field_collection_item-field_innovation_non_references-field_non_ref_email'] = array(
     'bundle' => 'field_innovation_non_references',
     'default_value' => NULL,
@@ -176,7 +177,8 @@ function gie_innovation_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'field_collection_item-field_innovation_non_references-field_non_ref_first_name'
+  // Exported field_instance:
+  // 'field_collection_item-field_innovation_non_references-field_non_ref_first_name'
   $field_instances['field_collection_item-field_innovation_non_references-field_non_ref_first_name'] = array(
     'bundle' => 'field_innovation_non_references',
     'default_value' => NULL,
@@ -231,7 +233,8 @@ function gie_innovation_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'field_collection_item-field_innovation_non_references-field_non_ref_last_name'
+  // Exported field_instance:
+  // 'field_collection_item-field_innovation_non_references-field_non_ref_last_name'
   $field_instances['field_collection_item-field_innovation_non_references-field_non_ref_last_name'] = array(
     'bundle' => 'field_innovation_non_references',
     'default_value' => NULL,
@@ -286,7 +289,8 @@ function gie_innovation_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'field_collection_item-field_innovation_non_references-field_non_ref_photo'
+  // Exported field_instance:
+  // 'field_collection_item-field_innovation_non_references-field_non_ref_photo'
   $field_instances['field_collection_item-field_innovation_non_references-field_non_ref_photo'] = array(
     'bundle' => 'field_innovation_non_references',
     'deleted' => 0,

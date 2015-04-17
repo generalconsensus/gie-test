@@ -313,6 +313,10 @@ function gie_assets_field_default_field_instances() {
     'required' => 1,
     'settings' => array(
       'alt_field' => 0,
+      'alt_field_default' => '',
+      'alt_field_hide' => 0,
+      'alt_field_sync_title' => 0,
+      'alt_field_update_on_edit' => 0,
       'default_image' => 0,
       'file_directory' => 'assets/images',
       'file_extensions' => 'png gif jpg jpeg',
@@ -322,6 +326,9 @@ function gie_assets_field_default_field_instances() {
       'random_default' => 0,
       'random_default_path' => '',
       'title_field' => 0,
+      'title_field_default' => '',
+      'title_field_hide' => 0,
+      'title_field_update_on_edit' => 0,
       'user_register_form' => FALSE,
     ),
     'widget' => array(

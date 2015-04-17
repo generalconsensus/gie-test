@@ -64,6 +64,7 @@ function gie_funding_user_default_permissions() {
     'name' => 'create funding content',
     'roles' => array(
       'administrator' => 'administrator',
+      'authenticated user' => 'authenticated user',
     ),
     'module' => 'node',
   );
@@ -82,6 +83,7 @@ function gie_funding_user_default_permissions() {
     'name' => 'delete own funding content',
     'roles' => array(
       'administrator' => 'administrator',
+      'authenticated user' => 'authenticated user',
     ),
     'module' => 'node',
   );
@@ -109,6 +111,7 @@ function gie_funding_user_default_permissions() {
     'name' => 'edit own funding content',
     'roles' => array(
       'administrator' => 'administrator',
+      'authenticated user' => 'authenticated user',
     ),
     'module' => 'node',
   );
