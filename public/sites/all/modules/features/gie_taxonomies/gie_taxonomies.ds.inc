@@ -55,52 +55,15 @@ function gie_taxonomies_ds_field_settings_info() {
   $ds_fieldsetting->bundle = 'sector';
   $ds_fieldsetting->view_mode = 'listing';
   $ds_fieldsetting->settings = array(
-    'more_link' => array(
-      'weight' => '4',
+    'title' => array(
+      'weight' => '0',
       'label' => 'hidden',
       'format' => 'default',
-      'formatter_settings' => array(
-        'ft' => array(),
-      ),
     ),
-    'description_field' => array(
-      'formatter_settings' => array(
-        'ft' => array(
-          'func' => 'theme_ds_field_expert',
-          'fi' => TRUE,
-          'fi-el' => 'div',
-          'fi-cl' => '',
-          'fi-at' => '',
-          'fi-def-at' => FALSE,
-          'fi-odd-even' => FALSE,
-        ),
-      ),
-    ),
-    'name_field' => array(
-      'formatter_settings' => array(
-        'ft' => array(
-          'func' => 'theme_ds_field_expert',
-          'fi' => TRUE,
-          'fi-el' => 'h3',
-          'fi-cl' => 'card__title',
-          'fi-at' => '',
-          'fi-def-at' => FALSE,
-          'fi-odd-even' => FALSE,
-        ),
-      ),
-    ),
-    'field_sector_image' => array(
-      'formatter_settings' => array(
-        'ft' => array(
-          'func' => 'theme_ds_field_expert',
-          'fi' => TRUE,
-          'fi-el' => 'div',
-          'fi-cl' => 'card__image',
-          'fi-at' => '',
-          'fi-def-at' => FALSE,
-          'fi-odd-even' => FALSE,
-        ),
-      ),
+    'more_link' => array(
+      'weight' => '2',
+      'label' => 'hidden',
+      'format' => 'default',
     ),
   );
   $export['taxonomy_term|sector|listing'] = $ds_fieldsetting;
@@ -248,19 +211,15 @@ function gie_taxonomies_ds_layout_settings_info() {
   $ds_layout->settings = array(
     'regions' => array(
       'main_content' => array(
-        0 => 'field_sector_image',
-        1 => 'name_field',
-        2 => 'description_field',
-        3 => 'more_link',
-        4 => 'group_card_content',
+        0 => 'title',
+        1 => 'description_field',
+        2 => 'more_link',
       ),
     ),
     'fields' => array(
-      'field_sector_image' => 'main_content',
-      'name_field' => 'main_content',
+      'title' => 'main_content',
       'description_field' => 'main_content',
       'more_link' => 'main_content',
-      'group_card_content' => 'main_content',
     ),
     'classes' => array(),
     'wrappers' => array(
