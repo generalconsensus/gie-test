@@ -11,7 +11,7 @@ function gesso_home_panels_layouts() {
     'admin css' => '../../../css/panels-admin/home.css',
     'regions' => array(
       'hero' => t('Hero'),
-      'content' => t('Content'),
+      'main' => t('Main'),
       'villain' => t('Villain'),
       'postscript' => t('Postscript'),
     ),
