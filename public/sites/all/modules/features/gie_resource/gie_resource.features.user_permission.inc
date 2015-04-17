@@ -71,6 +71,7 @@ function gie_resource_user_default_permissions() {
     'name' => 'create resource content',
     'roles' => array(
       'administrator' => 'administrator',
+      'authenticated user' => 'authenticated user',
     ),
     'module' => 'node',
   );
@@ -89,6 +90,7 @@ function gie_resource_user_default_permissions() {
     'name' => 'delete own resource content',
     'roles' => array(
       'administrator' => 'administrator',
+      'authenticated user' => 'authenticated user',
     ),
     'module' => 'node',
   );
@@ -116,6 +118,7 @@ function gie_resource_user_default_permissions() {
     'name' => 'edit own resource content',
     'roles' => array(
       'administrator' => 'administrator',
+      'authenticated user' => 'authenticated user',
     ),
     'module' => 'node',
   );

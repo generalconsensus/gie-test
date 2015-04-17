@@ -51,6 +51,7 @@ function gie_assets_user_default_permissions() {
     'name' => 'create asset with type document',
     'roles' => array(
       'administrator' => 'administrator',
+      'authenticated user' => 'authenticated user',
     ),
     'module' => 'asset',
   );
@@ -60,6 +61,7 @@ function gie_assets_user_default_permissions() {
     'name' => 'create asset with type image',
     'roles' => array(
       'administrator' => 'administrator',
+      'authenticated user' => 'authenticated user',
     ),
     'module' => 'asset',
   );
@@ -69,6 +71,7 @@ function gie_assets_user_default_permissions() {
     'name' => 'create asset with type video',
     'roles' => array(
       'administrator' => 'administrator',
+      'authenticated user' => 'authenticated user',
     ),
     'module' => 'asset',
   );

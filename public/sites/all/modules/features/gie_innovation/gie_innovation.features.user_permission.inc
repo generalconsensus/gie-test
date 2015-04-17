@@ -69,6 +69,7 @@ function gie_innovation_user_default_permissions() {
     'name' => 'create innovation content',
     'roles' => array(
       'administrator' => 'administrator',
+      'authenticated user' => 'authenticated user',
     ),
     'module' => 'node',
   );
@@ -87,6 +88,7 @@ function gie_innovation_user_default_permissions() {
     'name' => 'delete own innovation content',
     'roles' => array(
       'administrator' => 'administrator',
+      'authenticated user' => 'authenticated user',
     ),
     'module' => 'node',
   );
@@ -105,6 +107,7 @@ function gie_innovation_user_default_permissions() {
     'name' => 'edit own innovation content',
     'roles' => array(
       'administrator' => 'administrator',
+      'authenticated user' => 'authenticated user',
     ),
     'module' => 'node',
   );
