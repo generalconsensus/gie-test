@@ -241,12 +241,14 @@ function gie_taxonomies_ds_layout_settings_info() {
         0 => 'title',
         1 => 'description_field',
         2 => 'more_link',
+        3 => 'group_card_content',
       ),
     ),
     'fields' => array(
       'title' => 'main_content',
       'description_field' => 'main_content',
       'more_link' => 'main_content',
+      'group_card_content' => 'main_content',
     ),
     'classes' => array(),
     'wrappers' => array(

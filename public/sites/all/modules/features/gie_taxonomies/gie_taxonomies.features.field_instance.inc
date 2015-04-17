@@ -810,7 +810,7 @@ function gie_taxonomies_field_default_field_instances() {
         'weight' => 1,
       ),
       'listing' => array(
-        'label' => 'above',
+        'label' => 'hidden',
         'module' => 'smart_trim',
         'settings' => array(
           'field_delimiter' => '',
@@ -1089,7 +1089,7 @@ function gie_taxonomies_field_default_field_instances() {
         'weight' => 0,
       ),
       'listing' => array(
-        'label' => 'above',
+        'label' => 'hidden',
         'settings' => array(),
         'type' => 'hidden',
         'weight' => 3,

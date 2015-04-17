@@ -24,16 +24,15 @@ function gie_taxonomies_field_group_info() {
     'weight' => '7',
     'children' => array(
       0 => 'description_field',
-      1 => 'name_field',
-      2 => 'title',
-      3 => 'more_link',
+      1 => 'title',
+      2 => 'more_link',
     ),
     'format_type' => 'div',
     'format_settings' => array(
       'label' => 'Card Content',
       'instance_settings' => array(
         'id' => '',
-        'classes' => 'card__content',
+        'classes' => '',
         'description' => '',
         'show_label' => '0',
         'label_element' => 'h3',
