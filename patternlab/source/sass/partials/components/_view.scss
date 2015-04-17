@@ -56,7 +56,11 @@
 
 .views-row {
   padding: 0 0 2em 0;
+  .view--simple-list & {
+    padding: 0 0 0.25em 0;
+  }
 }
+
 
 // Custom view styles imported via sass globbing.
 @import 'view/*.*';

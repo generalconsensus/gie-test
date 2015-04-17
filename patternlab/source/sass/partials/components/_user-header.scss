@@ -1,0 +1,64 @@
+.user-header {
+  .flag-outer-follow {
+    float: left;
+    margin-right: 0.5em;
+  }
+}
+
+.user-header__photo {
+  padding-right: 1em;
+  img {
+    @include border-radius(50%);
+    border: 2px solid $border-color;
+  }
+}
+
+.user-header__name {
+  @include hyphens(none);
+  color: $orange;
+  font-size: em($font-size-xxl);
+  @include breakpoint(500px, $no-query: true) {
+    font-size: em($font-size-xxxl);
+  }
+  margin: 0 0 0.5em 0;
+  text-transform: uppercase;
+}
+
+.user-header__organization {
+  font-size: em(18px);
+  font-weight: bold;
+}
+
+.user-header__title {
+  font-size: em(18px);
+  font-style: italic; 
+}
+
+.user-header__meta {
+  padding: 1em 0;
+}
+
+.user-header__address {
+  font-size: em(14px);
+  &:before {
+    @include image-replace(12px,16px);
+    @include svg-background(map-pin);
+    content: "";
+    display: inline-block;
+    margin-right: 8px;
+    position: relative;
+    top: 2px;
+  }
+}
+
+.user-header__member-since {
+  font-size: em(14px);
+  line-height: 1.5;
+}
+
+.user-header__type {
+  font-size: em(14px);
+  line-height: 1.5;
+}
+
+.user-header__email {}

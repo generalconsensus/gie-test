@@ -25,4 +25,7 @@
   @extend %button--add;
 }
 
+.button--member { // has member icon
+  @extend %button--member;
+}
 
