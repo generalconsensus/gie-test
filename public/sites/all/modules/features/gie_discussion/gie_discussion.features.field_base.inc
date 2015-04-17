@@ -29,39 +29,30 @@ function gie_discussion_field_default_field_bases() {
     'type' => 'text_long',
   );
 
-  // Exported field_base: 'field_discussion_program'
-  $field_bases['field_discussion_program'] = array(
+  // Exported field_base: 'field_discussion_program_disc'
+  $field_bases['field_discussion_program_disc'] = array(
     'active' => 1,
     'cardinality' => -1,
     'deleted' => 0,
     'entity_types' => array(),
-    'field_name' => 'field_discussion_program',
+    'field_name' => 'field_discussion_program_disc',
     'indexes' => array(
-      'target_id' => array(
-        0 => 'target_id',
+      'tid' => array(
+        0 => 'tid',
       ),
     ),
     'locked' => 0,
-    'module' => 'entityreference',
+    'module' => 'taxonomy',
     'settings' => array(
-      'handler' => 'base',
-      'handler_settings' => array(
-        'behaviors' => array(
-          'views-select-list' => array(
-            'status' => 0,
-          ),
-        ),
-        'sort' => array(
-          'type' => 'none',
-        ),
-        'target_bundles' => array(
-          'program' => 'program',
+      'allowed_values' => array(
+        0 => array(
+          'vocabulary' => 'program_discussions',
+          'parent' => 0,
         ),
       ),
-      'target_type' => 'node',
     ),
     'translatable' => 0,
-    'type' => 'entityreference',
+    'type' => 'taxonomy_term_reference',
   );
 
   return $field_bases;
