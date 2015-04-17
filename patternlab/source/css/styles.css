@@ -1,5 +1,5 @@
 /* line 65, c:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/singularitygs-1.1.2/stylesheets/singularitygs/helpers/_clearfix.scss */
-.clearfix:after, .layout-grid__row:after, .pane--homepage-views-personas-pane .pane__content .view--homepage-views:after, .pane--landing-intro:after, .region-footer:after, .view__header:after, .view--homepage-cardflip:after {
+.clearfix:after, .layout-grid__row:after, .pane--homepage-views-personas-pane .pane__content .view--homepage-views:after, .pane--landing-intro:after, .quicktabs-tabs.quicktabs-style-nostyle:after, .region-footer:after, .view__header:after, .view--homepage-cardflip:after {
   content: "";
   display: table;
   clear: both;
@@ -29,17 +29,17 @@
 }
 
 /* line 9, ../sass/partials/global/helpers/_clearfix.scss */
-.clearfix:after, .layout-grid__row:after, .pane--homepage-views-personas-pane .pane__content .view--homepage-views:after, .pane--landing-intro:after, .region-footer:after, .view__header:after, .view--homepage-cardflip:after {
+.clearfix:after, .layout-grid__row:after, .pane--homepage-views-personas-pane .pane__content .view--homepage-views:after, .pane--landing-intro:after, .quicktabs-tabs.quicktabs-style-nostyle:after, .region-footer:after, .view__header:after, .view--homepage-cardflip:after {
   display: table;
   content: "";
 }
 /* line 14, ../sass/partials/global/helpers/_clearfix.scss */
-.clearfix:after, .layout-grid__row:after, .pane--homepage-views-personas-pane .pane__content .view--homepage-views:after, .pane--landing-intro:after, .region-footer:after, .view__header:after, .view--homepage-cardflip:after {
+.clearfix:after, .layout-grid__row:after, .pane--homepage-views-personas-pane .pane__content .view--homepage-views:after, .pane--landing-intro:after, .quicktabs-tabs.quicktabs-style-nostyle:after, .region-footer:after, .view__header:after, .view--homepage-cardflip:after {
   clear: both;
 }
 
 /* line 35, ../sass/partials/global/extendables/_button.scss */
-.button, .card__button a, .flag-favorite a, .sharethis-buttons .st_sharethis_custom {
+.button, .card__button a, .flag-favorite a, .flag-follow a, .sharethis-buttons .st_sharethis_custom {
   font-size: 0.875em;
   line-height: 1.85714em;
   -webkit-border-radius: 0;
@@ -54,13 +54,13 @@
   display: inline-block;
   font-family: Lato, "Helvetica Neue", Helvetica, Arial, sans-serif;
   margin: 0 0 1.625em;
-  padding: 0.5em 1.5em;
+  padding: 0.5em 1.75em;
   text-align: center;
   text-decoration: none;
   vertical-align: baseline;
 }
 /* line 25, ../sass/partials/global/extendables/_button.scss */
-.button:focus, .card__button a:focus, .flag-favorite a:focus, .sharethis-buttons .st_sharethis_custom:focus, .button:hover, .card__button a:hover, .flag-favorite a:hover, .sharethis-buttons .st_sharethis_custom:hover {
+.button:focus, .card__button a:focus, .flag-favorite a:focus, .flag-follow a:focus, .sharethis-buttons .st_sharethis_custom:focus, .button:hover, .card__button a:hover, .flag-favorite a:hover, .flag-follow a:hover, .sharethis-buttons .st_sharethis_custom:hover {
   background-color: #001f36;
   border-color: #001f36;
   color: white;
@@ -68,11 +68,11 @@
   text-decoration: none;
 }
 /* line 38, ../sass/partials/global/extendables/_button.scss */
-.button + .button, .card__button a + .button, .flag-favorite a + .button, .sharethis-buttons .st_sharethis_custom + .button, .card__button .button + a, .card__button a + a, .sharethis-buttons .card__button .st_sharethis_custom + a, .card__button .sharethis-buttons .st_sharethis_custom + a, .flag-favorite .button + a, .flag-favorite a + a, .sharethis-buttons .flag-favorite .st_sharethis_custom + a, .flag-favorite .sharethis-buttons .st_sharethis_custom + a, .sharethis-buttons .button + .st_sharethis_custom, .card__button .sharethis-buttons a + .st_sharethis_custom, .sharethis-buttons .card__button a + .st_sharethis_custom, .flag-favorite .sharethis-buttons a + .st_sharethis_custom, .sharethis-buttons .flag-favorite a + .st_sharethis_custom, .sharethis-buttons .st_sharethis_custom + .st_sharethis_custom {
+.button + .button, .card__button a + .button, .flag-favorite a + .button, .flag-follow a + .button, .sharethis-buttons .st_sharethis_custom + .button, .card__button .button + a, .card__button a + a, .sharethis-buttons .card__button .st_sharethis_custom + a, .card__button .sharethis-buttons .st_sharethis_custom + a, .flag-favorite .button + a, .flag-favorite a + a, .sharethis-buttons .flag-favorite .st_sharethis_custom + a, .flag-favorite .sharethis-buttons .st_sharethis_custom + a, .flag-follow .button + a, .flag-follow a + a, .sharethis-buttons .flag-follow .st_sharethis_custom + a, .flag-follow .sharethis-buttons .st_sharethis_custom + a, .sharethis-buttons .button + .st_sharethis_custom, .card__button .sharethis-buttons a + .st_sharethis_custom, .sharethis-buttons .card__button a + .st_sharethis_custom, .flag-favorite .sharethis-buttons a + .st_sharethis_custom, .sharethis-buttons .flag-favorite a + .st_sharethis_custom, .flag-follow .sharethis-buttons a + .st_sharethis_custom, .sharethis-buttons .flag-follow a + .st_sharethis_custom, .sharethis-buttons .st_sharethis_custom + .st_sharethis_custom {
   margin-left: 1em;
 }
 /* line 41, ../sass/partials/global/extendables/_button.scss */
-[dir="rtl"] .button + .button, [dir="rtl"] .card__button a + .button, .card__button [dir="rtl"] a + .button, [dir="rtl"] .flag-favorite a + .button, .flag-favorite [dir="rtl"] a + .button, [dir="rtl"] .sharethis-buttons .st_sharethis_custom + .button, .sharethis-buttons [dir="rtl"] .st_sharethis_custom + .button, [dir="rtl"] .card__button .button + a, .card__button [dir="rtl"] .button + a, [dir="rtl"] .card__button a + a, .card__button [dir="rtl"] a + a, [dir="rtl"] .sharethis-buttons .card__button .st_sharethis_custom + a, .card__button [dir="rtl"] .sharethis-buttons .st_sharethis_custom + a, .sharethis-buttons [dir="rtl"] .card__button .st_sharethis_custom + a, .card__button .sharethis-buttons [dir="rtl"] .st_sharethis_custom + a, [dir="rtl"] .flag-favorite .button + a, .flag-favorite [dir="rtl"] .button + a, [dir="rtl"] .flag-favorite a + a, .flag-favorite [dir="rtl"] a + a, [dir="rtl"] .sharethis-buttons .flag-favorite .st_sharethis_custom + a, .flag-favorite [dir="rtl"] .sharethis-buttons .st_sharethis_custom + a, .sharethis-buttons [dir="rtl"] .flag-favorite .st_sharethis_custom + a, .flag-favorite .sharethis-buttons [dir="rtl"] .st_sharethis_custom + a, [dir="rtl"] .sharethis-buttons .button + .st_sharethis_custom, .sharethis-buttons [dir="rtl"] .button + .st_sharethis_custom, [dir="rtl"] .card__button .sharethis-buttons a + .st_sharethis_custom, .sharethis-buttons [dir="rtl"] .card__button a + .st_sharethis_custom, .card__button [dir="rtl"] .sharethis-buttons a + .st_sharethis_custom, .sharethis-buttons .card__button [dir="rtl"] a + .st_sharethis_custom, [dir="rtl"] .flag-favorite .sharethis-buttons a + .st_sharethis_custom, .sharethis-buttons [dir="rtl"] .flag-favorite a + .st_sharethis_custom, .flag-favorite [dir="rtl"] .sharethis-buttons a + .st_sharethis_custom, .sharethis-buttons .flag-favorite [dir="rtl"] a + .st_sharethis_custom, [dir="rtl"] .sharethis-buttons .st_sharethis_custom + .st_sharethis_custom, .sharethis-buttons [dir="rtl"] .st_sharethis_custom + .st_sharethis_custom {
+[dir="rtl"] .button + .button, [dir="rtl"] .card__button a + .button, .card__button [dir="rtl"] a + .button, [dir="rtl"] .flag-favorite a + .button, .flag-favorite [dir="rtl"] a + .button, [dir="rtl"] .flag-follow a + .button, .flag-follow [dir="rtl"] a + .button, [dir="rtl"] .sharethis-buttons .st_sharethis_custom + .button, .sharethis-buttons [dir="rtl"] .st_sharethis_custom + .button, [dir="rtl"] .card__button .button + a, .card__button [dir="rtl"] .button + a, [dir="rtl"] .card__button a + a, .card__button [dir="rtl"] a + a, [dir="rtl"] .sharethis-buttons .card__button .st_sharethis_custom + a, .card__button [dir="rtl"] .sharethis-buttons .st_sharethis_custom + a, .sharethis-buttons [dir="rtl"] .card__button .st_sharethis_custom + a, .card__button .sharethis-buttons [dir="rtl"] .st_sharethis_custom + a, [dir="rtl"] .flag-favorite .button + a, .flag-favorite [dir="rtl"] .button + a, [dir="rtl"] .flag-favorite a + a, .flag-favorite [dir="rtl"] a + a, [dir="rtl"] .sharethis-buttons .flag-favorite .st_sharethis_custom + a, .flag-favorite [dir="rtl"] .sharethis-buttons .st_sharethis_custom + a, .sharethis-buttons [dir="rtl"] .flag-favorite .st_sharethis_custom + a, .flag-favorite .sharethis-buttons [dir="rtl"] .st_sharethis_custom + a, [dir="rtl"] .flag-follow .button + a, .flag-follow [dir="rtl"] .button + a, [dir="rtl"] .flag-follow a + a, .flag-follow [dir="rtl"] a + a, [dir="rtl"] .sharethis-buttons .flag-follow .st_sharethis_custom + a, .flag-follow [dir="rtl"] .sharethis-buttons .st_sharethis_custom + a, .sharethis-buttons [dir="rtl"] .flag-follow .st_sharethis_custom + a, .flag-follow .sharethis-buttons [dir="rtl"] .st_sharethis_custom + a, [dir="rtl"] .sharethis-buttons .button + .st_sharethis_custom, .sharethis-buttons [dir="rtl"] .button + .st_sharethis_custom, [dir="rtl"] .card__button .sharethis-buttons a + .st_sharethis_custom, .sharethis-buttons [dir="rtl"] .card__button a + .st_sharethis_custom, .card__button [dir="rtl"] .sharethis-buttons a + .st_sharethis_custom, .sharethis-buttons .card__button [dir="rtl"] a + .st_sharethis_custom, [dir="rtl"] .flag-favorite .sharethis-buttons a + .st_sharethis_custom, .sharethis-buttons [dir="rtl"] .flag-favorite a + .st_sharethis_custom, .flag-favorite [dir="rtl"] .sharethis-buttons a + .st_sharethis_custom, .sharethis-buttons .flag-favorite [dir="rtl"] a + .st_sharethis_custom, [dir="rtl"] .flag-follow .sharethis-buttons a + .st_sharethis_custom, .sharethis-buttons [dir="rtl"] .flag-follow a + .st_sharethis_custom, .flag-follow [dir="rtl"] .sharethis-buttons a + .st_sharethis_custom, .sharethis-buttons .flag-follow [dir="rtl"] a + .st_sharethis_custom, [dir="rtl"] .sharethis-buttons .st_sharethis_custom + .st_sharethis_custom, .sharethis-buttons [dir="rtl"] .st_sharethis_custom + .st_sharethis_custom {
   margin-left: 0;
   margin-right: 1em;
 }
@@ -83,12 +83,12 @@
 }
 
 /* line 52, ../sass/partials/global/extendables/_button.scss */
-.button--highlight, .card__button a, .sharethis-buttons .st_sharethis_custom {
+.button--highlight, .card__button a, .flag-follow a, .sharethis-buttons .st_sharethis_custom {
   background-color: #b71234;
   border-color: #b71234;
 }
 /* line 55, ../sass/partials/global/extendables/_button.scss */
-.button--highlight:hover, .card__button a:hover, .sharethis-buttons .st_sharethis_custom:hover, .button--highlight:focus, .card__button a:focus, .sharethis-buttons .st_sharethis_custom:focus {
+.button--highlight:hover, .card__button a:hover, .flag-follow a:hover, .sharethis-buttons .st_sharethis_custom:hover, .button--highlight:focus, .card__button a:focus, .flag-follow a:focus, .sharethis-buttons .st_sharethis_custom:focus {
   background-color: #822433;
   border-color: #822433;
 }
@@ -120,13 +120,14 @@
 }
 
 /* line 83, ../sass/partials/global/extendables/_button.scss */
-.sharethis-buttons .st_sharethis_custom, .flag-favorite a, .button--add {
+.sharethis-buttons .st_sharethis_custom, .flag-favorite a, .button--add, .button--member, .flag-follow a {
   padding-left: 50px;
+  padding-right: 2em;
   position: relative;
   text-transform: uppercase;
 }
-/* line 87, ../sass/partials/global/extendables/_button.scss */
-.sharethis-buttons .st_sharethis_custom:before, .flag-favorite a:before, .button--add:before {
+/* line 88, ../sass/partials/global/extendables/_button.scss */
+.sharethis-buttons .st_sharethis_custom:before, .flag-favorite a:before, .button--add:before, .button--member:before, .flag-follow a:before {
   height: 20px;
   overflow: hidden;
   width: 20px;
@@ -137,17 +138,13 @@
   top: 10px;
 }
 /* line 14, ../sass/partials/global/helpers/_image-replace.scss */
-.sharethis-buttons .st_sharethis_custom:before:before, .flag-favorite a:before:before, .button--add:before:before {
+.sharethis-buttons .st_sharethis_custom:before:before, .flag-favorite a:before:before, .button--add:before:before, .button--member:before:before, .flag-follow a:before:before {
   content: "";
   display: block;
   height: 150%;
   width: 0;
 }
 
-/* line 97, ../sass/partials/global/extendables/_button.scss */
-.sharethis-buttons .st_sharethis_custom {
-  padding-right: 2em;
-}
 /* line 100, ../sass/partials/global/extendables/_button.scss */
 .sharethis-buttons .st_sharethis_custom:before {
   background-image: url('../images/bg/icon-share-18-21-white.png');
@@ -157,11 +154,7 @@
   width: 18px;
 }
 
-/* line 107, ../sass/partials/global/extendables/_button.scss */
-.flag-favorite a {
-  padding-right: 2em;
-}
-/* line 110, ../sass/partials/global/extendables/_button.scss */
+/* line 109, ../sass/partials/global/extendables/_button.scss */
 .flag-favorite a:before {
   background-image: url('../images/bg/icon-favorite-19-18-white.png');
   background-image: -webkit-linear-gradient(transparent, transparent), url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4NCjwhLS0gR2VuZXJhdGVkIGJ5IEljb01vb24uaW8gLS0+DQo8IURPQ1RZUEUgc3ZnIFBVQkxJQyAiLS8vVzNDLy9EVEQgU1ZHIDEuMS8vRU4iICJodHRwOi8vd3d3LnczLm9yZy9HcmFwaGljcy9TVkcvMS4xL0RURC9zdmcxMS5kdGQiPg0KPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHdpZHRoPSIxOSIgaGVpZ2h0PSIxOCIgdmlld0JveD0iMCAwIDE5IDE4Ij4NCjxwYXRoIGZpbGw9IiNmZmZmZmYiIGQ9Ik05LjU4NiAxOGMtMC4xMDcgMC0wLjMyLTAuMTA3LTAuNDI2LTAuMjEzLTAuMzItMC4zMi03LjM0OS02LjkyMy04LjczNC0xMC43NTctMC4zMi0wLjUzMy0wLjQyNi0xLjI3OC0wLjQyNi0xLjkxNyAwLTIuODc2IDIuMzQzLTUuMTEyIDUuMTEyLTUuMTEyIDEuOTE3IDAgMy42MjEgMS4wNjUgNC40NzMgMi42NjMgMC44NTItMS41OTggMi41NTYtMi42NjMgNC40NzMtMi42NjMgMi44NzYgMCA1LjExMiAyLjIzNyA1LjExMiA1LjExMiAwIDAuNjM5LTAuMTA3IDEuMzg1LTAuNDI2IDIuMDI0LTEuMzg1IDMuODM0LTguNDE0IDEwLjQzOC04LjczNCAxMC43NTctMC4xMDcgMC0wLjMyIDAuMTA3LTAuNDI2IDAuMTA3ek01LjExMiAxLjI3OGMtMi4xMyAwLTMuODM0IDEuNzA0LTMuODM0IDMuODM0IDAgMC41MzMgMC4xMDcgMS4wNjUgMC4zMiAxLjQ5MSAxLjE3MiAzLjA4OSA2LjQ5NyA4LjQxNCA3Ljk4OCA5LjkwNSAxLjU5OC0xLjQ5MSA2LjkyMy02LjgxNyA3Ljk4OC05LjkwNSAwLjIxMy0wLjUzMyAwLjMyLTEuMDY1IDAuMzItMS40OTEgMC0yLjEzLTEuNzA0LTMuODM0LTMuODM0LTMuODM0LTIuMDI0IDAtMy44MzQgMS43MDQtMy44MzQgMy43MjggMCAwLjMyLTAuMzIgMC42MzktMC42MzkgMC42MzlzLTAuNjM5LTAuMzItMC42MzktMC42MzljMC0yLjAyNC0xLjgxMS0zLjcyOC0zLjgzNC0zLjcyOHoiPjwvcGF0aD4NCjwvc3ZnPg0K');
@@ -172,11 +165,11 @@
   top: 12px;
 }
 
-/* line 119, ../sass/partials/global/extendables/_button.scss */
+/* line 118, ../sass/partials/global/extendables/_button.scss */
 .button--add {
   padding-left: 40px;
 }
-/* line 122, ../sass/partials/global/extendables/_button.scss */
+/* line 121, ../sass/partials/global/extendables/_button.scss */
 .button--add:before {
   background-image: url('../images/bg/icon-plus-12-12-white.png');
   background-image: -webkit-linear-gradient(transparent, transparent), url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4NCjwhLS0gR2VuZXJhdGVkIGJ5IEljb01vb24uaW8gLS0+DQo8IURPQ1RZUEUgc3ZnIFBVQkxJQyAiLS8vVzNDLy9EVEQgU1ZHIDEuMS8vRU4iICJodHRwOi8vd3d3LnczLm9yZy9HcmFwaGljcy9TVkcvMS4xL0RURC9zdmcxMS5kdGQiPg0KPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHdpZHRoPSIxMiIgaGVpZ2h0PSIxMiIgdmlld0JveD0iMCAwIDEyIDEyIj4NCjxwYXRoIGZpbGw9IiNmZmZmZmYiIGQ9Ik0xMS40IDUuNGgtNC44di00LjhjMC0wLjMtMC4zLTAuNi0wLjYtMC42cy0wLjYgMC4zLTAuNiAwLjZ2NC45aC00LjhjLTAuMy0wLjEtMC42IDAuMi0wLjYgMC41czAuMyAwLjYgMC42IDAuNmg0Ljl2NC45Yy0wLjEgMC4yIDAuMiAwLjUgMC41IDAuNXMwLjYtMC4zIDAuNi0wLjZ2LTQuOGg0LjljMC4yIDAgMC41LTAuMyAwLjUtMC42cy0wLjMtMC42LTAuNi0wLjZ6Ij48L3BhdGg+DQo8L3N2Zz4NCg==');
@@ -184,6 +177,20 @@
   height: 12px;
   top: 13px;
   width: 12px;
+}
+
+/* line 129, ../sass/partials/global/extendables/_button.scss */
+.button--member, .flag-follow a {
+  padding-left: 40px;
+}
+/* line 132, ../sass/partials/global/extendables/_button.scss */
+.button--member:before, .flag-follow a:before {
+  background-image: url('../images/bg/icon-member-18-18-white.png');
+  background-image: -webkit-linear-gradient(transparent, transparent), url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4KPCEtLSBHZW5lcmF0ZWQgYnkgSWNvTW9vbi5pbyAtLT4KPCFET0NUWVBFIHN2ZyBQVUJMSUMgIi0vL1czQy8vRFREIFNWRyAxLjEvL0VOIiAiaHR0cDovL3d3dy53My5vcmcvR3JhcGhpY3MvU1ZHLzEuMS9EVEQvc3ZnMTEuZHRkIj4KPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHdpZHRoPSIxOCIgaGVpZ2h0PSIxOCIgdmlld0JveD0iMCAwIDE4IDE4Ij4KPHBhdGggZmlsbD0iI2ZmZmZmZiIgZD0iTTkuMDk2IDEwLjUzMmMtMi44NzIgMC01LjI2Ni0yLjM5NC01LjI2Ni01LjI2NnMyLjM5NC01LjI2NiA1LjI2Ni01LjI2NmMyLjg3MiAwIDUuMjY2IDIuMzk0IDUuMjY2IDUuMjY2cy0yLjM5NCA1LjI2Ni01LjI2NiA1LjI2NnpNOS4wOTYgMS4xNDljLTIuMjk4IDAtNC4xMTcgMS44MTktNC4xMTcgNC4xMTdzMS44MTkgNC4xMTcgNC4xMTcgNC4xMTcgNC4xMTctMS44MTkgNC4xMTctNC4xMTdjMC0yLjI5OC0xLjgxOS00LjExNy00LjExNy00LjExN3oiPjwvcGF0aD4KPHBhdGggZmlsbD0iI2ZmZmZmZiIgZD0iTTE3LjYxNyAxOGgtMTcuMDQzYy0wLjI4NyAwLTAuNTc0LTAuMjg3LTAuNTc0LTAuNTc0di0zLjgzYzAtMC4wOTYgMC0wLjE5MSAwLTAuMTkxczAgMCAwLTAuMDk2YzAtMS4zNCAxLjA1My0yLjM5NCAyLjM5NC0yLjM5NGgxMy40MDRjMS4zNCAwIDIuMzk0IDEuMDUzIDIuMzk0IDIuMzk0IDAgMC4wOTYgMCAwLjE5MSAwIDAuMTkxczAgMCAwIDAuMDk2djMuOTI2YzAgMC4xOTEtMC4yODcgMC40NzktMC41NzQgMC40Nzl6TTEuMTQ5IDE2Ljg1MWgxNS45ODl2LTMuMjU1YzAgMCAwLTAuMTkxIDAtMC4xOTFzMC0wLjA5NiAwLTAuMDk2YzAtMC42Ny0wLjU3NC0xLjI0NS0xLjI0NS0xLjI0NWgtMTMuNDA0Yy0wLjY3IDAtMS4yNDUgMC41NzQtMS4yNDUgMS4yNDV2MC4wOTZjMCAwIDAgMC4xOTEgMCAwLjE5MWwtMC4wOTYgMy4yNTV6Ij48L3BhdGg+Cjwvc3ZnPgo=');
+  background-image: linear-gradient(transparent, transparent), url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4KPCEtLSBHZW5lcmF0ZWQgYnkgSWNvTW9vbi5pbyAtLT4KPCFET0NUWVBFIHN2ZyBQVUJMSUMgIi0vL1czQy8vRFREIFNWRyAxLjEvL0VOIiAiaHR0cDovL3d3dy53My5vcmcvR3JhcGhpY3MvU1ZHLzEuMS9EVEQvc3ZnMTEuZHRkIj4KPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHdpZHRoPSIxOCIgaGVpZ2h0PSIxOCIgdmlld0JveD0iMCAwIDE4IDE4Ij4KPHBhdGggZmlsbD0iI2ZmZmZmZiIgZD0iTTkuMDk2IDEwLjUzMmMtMi44NzIgMC01LjI2Ni0yLjM5NC01LjI2Ni01LjI2NnMyLjM5NC01LjI2NiA1LjI2Ni01LjI2NmMyLjg3MiAwIDUuMjY2IDIuMzk0IDUuMjY2IDUuMjY2cy0yLjM5NCA1LjI2Ni01LjI2NiA1LjI2NnpNOS4wOTYgMS4xNDljLTIuMjk4IDAtNC4xMTcgMS44MTktNC4xMTcgNC4xMTdzMS44MTkgNC4xMTcgNC4xMTcgNC4xMTcgNC4xMTctMS44MTkgNC4xMTctNC4xMTdjMC0yLjI5OC0xLjgxOS00LjExNy00LjExNy00LjExN3oiPjwvcGF0aD4KPHBhdGggZmlsbD0iI2ZmZmZmZiIgZD0iTTE3LjYxNyAxOGgtMTcuMDQzYy0wLjI4NyAwLTAuNTc0LTAuMjg3LTAuNTc0LTAuNTc0di0zLjgzYzAtMC4wOTYgMC0wLjE5MSAwLTAuMTkxczAgMCAwLTAuMDk2YzAtMS4zNCAxLjA1My0yLjM5NCAyLjM5NC0yLjM5NGgxMy40MDRjMS4zNCAwIDIuMzk0IDEuMDUzIDIuMzk0IDIuMzk0IDAgMC4wOTYgMCAwLjE5MSAwIDAuMTkxczAgMCAwIDAuMDk2djMuOTI2YzAgMC4xOTEtMC4yODcgMC40NzktMC41NzQgMC40Nzl6TTEuMTQ5IDE2Ljg1MWgxNS45ODl2LTMuMjU1YzAgMCAwLTAuMTkxIDAtMC4xOTFzMC0wLjA5NiAwLTAuMDk2YzAtMC42Ny0wLjU3NC0xLjI0NS0xLjI0NS0xLjI0NWgtMTMuNDA0Yy0wLjY3IDAtMS4yNDUgMC41NzQtMS4yNDUgMS4yNDV2MC4wOTZjMCAwIDAgMC4xOTEgMCAwLjE5MWwtMC4wOTYgMy4yNTV6Ij48L3BhdGg+Cjwvc3ZnPgo=');
+  height: 18px;
+  top: 11px;
+  width: 18px;
 }
 
 /* line 15, ../sass/partials/base/_normalize.scss */
@@ -1106,7 +1113,7 @@ ul.panels-ipe-linkbar li {
 }
 /* line 9, ../sass/partials/global/helpers/_clearfix.scss */
 .l-panels-home .l-hero:after,
-.l-panels-home .l-content:after,
+.l-panels-home .l-main:after,
 .l-panels-home .l-villain:after,
 .l-panels-home .l-postscript:after {
   display: table;
@@ -1114,7 +1121,7 @@ ul.panels-ipe-linkbar li {
 }
 /* line 14, ../sass/partials/global/helpers/_clearfix.scss */
 .l-panels-home .l-hero:after,
-.l-panels-home .l-content:after,
+.l-panels-home .l-main:after,
 .l-panels-home .l-villain:after,
 .l-panels-home .l-postscript:after {
   clear: both;
@@ -2114,6 +2121,11 @@ input.throbbing {
 
 /* line 3, ../sass/partials/components/_flag-favorite.scss */
 .flag-favorite a {
+  margin-bottom: 0.5em;
+}
+
+/* line 3, ../sass/partials/components/_flag-follow.scss */
+.flag-follow a {
   margin-bottom: 0.5em;
 }
 
@@ -3271,8 +3283,8 @@ aside .pane__title {
     content: "";
     display: block;
     border-style: solid;
-    border-width: 11px 11px 0 11px;
-    bottom: -11px;
+    border-width: 25px 25px 0 25px;
+    bottom: -25px;
     border-color: #dc5606 transparent transparent transparent;
     height: 0;
     left: 50%;
@@ -3281,15 +3293,8 @@ aside .pane__title {
     width: 0;
   }
 }
-@media (min-width: 50em) and (min-width: 43.75em) {
-  /* line 13, ../sass/partials/components/pane/_pane--homepage-header.scss */
-  .pane--homepage-header:after {
-    border-width: 25px 25px 0 25px;
-    bottom: -25px;
-  }
-}
 @media (min-width: 50em) {
-  /* line 32, ../sass/partials/components/pane/_pane--homepage-header.scss */
+  /* line 28, ../sass/partials/components/pane/_pane--homepage-header.scss */
   .pane--homepage-header:before {
     background: url(../images/homepage-hero_big-triangle.png) no-repeat 50% 0;
     bottom: 0;
@@ -3303,12 +3308,12 @@ aside .pane__title {
     z-index: 2;
   }
 }
-/* line 46, ../sass/partials/components/pane/_pane--homepage-header.scss */
+/* line 42, ../sass/partials/components/pane/_pane--homepage-header.scss */
 .pane--homepage-header .pane__content {
   position: relative;
   z-index: 2;
 }
-/* line 49, ../sass/partials/components/pane/_pane--homepage-header.scss */
+/* line 45, ../sass/partials/components/pane/_pane--homepage-header.scss */
 .pane--homepage-header .pane__content h1 {
   color: #fff;
   font-size: 2.1875em;
@@ -3319,12 +3324,12 @@ aside .pane__title {
   text-transform: uppercase;
 }
 @media (min-width: 50em) {
-  /* line 49, ../sass/partials/components/pane/_pane--homepage-header.scss */
+  /* line 45, ../sass/partials/components/pane/_pane--homepage-header.scss */
   .pane--homepage-header .pane__content h1 {
     font-size: 3em;
   }
 }
-/* line 61, ../sass/partials/components/pane/_pane--homepage-header.scss */
+/* line 57, ../sass/partials/components/pane/_pane--homepage-header.scss */
 .pane--homepage-header .pane__content p {
   font-size: 1.25em;
   font-weight: 300;
@@ -3332,7 +3337,7 @@ aside .pane__title {
   padding: 0 0 1em 0;
 }
 @media (min-width: 50em) {
-  /* line 61, ../sass/partials/components/pane/_pane--homepage-header.scss */
+  /* line 57, ../sass/partials/components/pane/_pane--homepage-header.scss */
   .pane--homepage-header .pane__content p {
     font-size: 2em;
     padding: 0 0 2em 0;
@@ -3610,6 +3615,44 @@ aside .pane__title {
   }
 }
 
+/* line 1, ../sass/partials/components/pane/_pane--user-field.scss */
+.pane--user-field {
+  border-bottom: 1px solid #cecfcb;
+  margin: 0;
+  padding: 2em 0 2em 0;
+}
+/* line 5, ../sass/partials/components/pane/_pane--user-field.scss */
+.pane--user-field:last-child {
+  border: 0;
+}
+/* line 8, ../sass/partials/components/pane/_pane--user-field.scss */
+.pane--user-field .pane__title {
+  border: 0;
+  color: #003359;
+  font-size: 1.5em;
+  margin: 0 0 1em 0;
+  padding: 0;
+}
+
+/* line 1, ../sass/partials/components/pane/_pane--userfield-user-motto.scss */
+.pane--userfield-user-motto {
+  border-left: 4px solid #dc5606;
+  padding: 0.5em 0 0.5em 2em;
+}
+/* line 4, ../sass/partials/components/pane/_pane--userfield-user-motto.scss */
+.pane--userfield-user-motto .pane__title {
+  border: 0;
+  color: #ed7d3a;
+  font-size: 0.75em;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+/* line 11, ../sass/partials/components/pane/_pane--userfield-user-motto.scss */
+.pane--userfield-user-motto .pane__content {
+  font-size: 1.125em;
+  font-style: italic;
+}
+
 /* line 1, ../sass/partials/components/_profile-thumb.scss */
 .profile-thumb {
   padding-bottom: 0.5em;
@@ -3754,23 +3797,65 @@ aside .pane__title {
 }
 
 /* line 1, ../sass/partials/components/_quicktabs-tabs.scss */
-.quicktabs-tabs {
+.quicktabs-tabs.quicktabs-style-nostyle {
+  display: table;
   margin-top: 0;
+  width: 100%;
 }
-/* line 3, ../sass/partials/components/_quicktabs-tabs.scss */
-.quicktabs-tabs li {
-  background: none;
-  display: inline;
+/* line 6, ../sass/partials/components/_quicktabs-tabs.scss */
+.quicktabs-tabs.quicktabs-style-nostyle li {
+  border: 0;
+  border-right: 1px solid #fff;
+  display: table-cell;
+  line-height: 1;
   white-space: nowrap;
 }
-/* line 4, ../sass/partials/components/_quicktabs-tabs.scss */
-.pane__content .quicktabs-tabs li {
+/* line 7, ../sass/partials/components/_quicktabs-tabs.scss */
+.pane__content .quicktabs-tabs.quicktabs-style-nostyle li {
   padding-bottom: 0;
   padding-left: 0;
 }
-/* line 7, ../sass/partials/components/_quicktabs-tabs.scss */
-.pane__content .quicktabs-tabs li:before {
+/* line 10, ../sass/partials/components/_quicktabs-tabs.scss */
+.pane__content .quicktabs-tabs.quicktabs-style-nostyle li:before {
   display: none;
+}
+/* line 20, ../sass/partials/components/_quicktabs-tabs.scss */
+.quicktabs-tabs.quicktabs-style-nostyle li a {
+  color: #565a5c;
+  font-weight: normal;
+  background: #f8f8f8;
+  color: #565a5c;
+  display: block;
+  line-height: 1;
+  padding: 1em 0;
+  text-align: center;
+  text-decoration: none;
+}
+/* line 32, ../sass/partials/components/_quicktabs-tabs.scss */
+.quicktabs-tabs.quicktabs-style-nostyle li a:hover, .quicktabs-tabs.quicktabs-style-nostyle li a:focus, .quicktabs-tabs.quicktabs-style-nostyle li a.active {
+  background: #dc5606;
+  color: #fff;
+  text-decoration: none;
+}
+/* line 39, ../sass/partials/components/_quicktabs-tabs.scss */
+.quicktabs-tabs.quicktabs-style-nostyle li.active a {
+  background: #dc5606;
+  color: #fff;
+  position: relative;
+}
+/* line 43, ../sass/partials/components/_quicktabs-tabs.scss */
+.quicktabs-tabs.quicktabs-style-nostyle li.active a:after {
+  content: "";
+  display: block;
+  border-style: solid;
+  border-width: 11px 11px 0 11px;
+  bottom: -11px;
+  border-color: #dc5606 transparent transparent transparent;
+  height: 0;
+  left: 50%;
+  margin-left: -11px;
+  position: absolute;
+  width: 0;
 }
 
 /* line 1, ../sass/partials/components/_region-footer.scss */
@@ -4113,6 +4198,98 @@ tr.drag-previous {
   display: inline-block;
 }
 
+/* line 2, ../sass/partials/components/_user-header.scss */
+.user-header .flag-outer-follow {
+  float: left;
+  margin-right: 0.5em;
+}
+
+/* line 8, ../sass/partials/components/_user-header.scss */
+.user-header__photo {
+  padding-right: 1em;
+}
+/* line 10, ../sass/partials/components/_user-header.scss */
+.user-header__photo img {
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+  border-radius: 50%;
+  border: 2px solid #cecfcb;
+}
+
+/* line 16, ../sass/partials/components/_user-header.scss */
+.user-header__name {
+  -webkit-hyphens: none;
+  -moz-hyphens: none;
+  hyphens: none;
+  color: #dc5606;
+  font-size: 1.5em;
+  margin: 0 0 0.5em 0;
+  text-transform: uppercase;
+}
+@media (min-width: 31.25em) {
+  /* line 16, ../sass/partials/components/_user-header.scss */
+  .user-header__name {
+    font-size: 2em;
+  }
+}
+
+/* line 27, ../sass/partials/components/_user-header.scss */
+.user-header__organization {
+  font-size: 1.125em;
+  font-weight: bold;
+}
+
+/* line 32, ../sass/partials/components/_user-header.scss */
+.user-header__title {
+  font-size: 1.125em;
+  font-style: italic;
+}
+
+/* line 37, ../sass/partials/components/_user-header.scss */
+.user-header__meta {
+  padding: 1em 0;
+}
+
+/* line 41, ../sass/partials/components/_user-header.scss */
+.user-header__address {
+  font-size: 0.875em;
+}
+/* line 43, ../sass/partials/components/_user-header.scss */
+.user-header__address:before {
+  height: 16px;
+  overflow: hidden;
+  width: 12px;
+  background-image: url('../images/bg/map-pin.png');
+  background-image: -webkit-linear-gradient(transparent, transparent), url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4NCjwhLS0gR2VuZXJhdGVkIGJ5IEljb01vb24uaW8gLS0+DQo8IURPQ1RZUEUgc3ZnIFBVQkxJQyAiLS8vVzNDLy9EVEQgU1ZHIDEuMS8vRU4iICJodHRwOi8vd3d3LnczLm9yZy9HcmFwaGljcy9TVkcvMS4xL0RURC9zdmcxMS5kdGQiPg0KPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHdpZHRoPSIxMiIgaGVpZ2h0PSIxNiIgdmlld0JveD0iMCAwIDEyIDE2Ij4NCjxwYXRoIGZpbGw9IiNkYzU2MDYiIGQ9Ik02LjA0NyAxNmMtMC4xODYgMC0wLjM3Mi0wLjA5My0wLjQ2NS0wLjI3OWwtNC42NTEtNi45NzdjLTAuNjUxLTAuODM3LTAuOTMtMS44Ni0wLjkzLTIuODg0IDAtMy4yNTYgMi42OTgtNS44NiA2LjA0Ny01Ljg2czYuMDQ3IDIuNjA1IDYuMDQ3IDUuODZjMCAxLjAyMy0wLjI3OSAyLjE0LTAuODM3IDIuOTc3bC00Ljc0NCA2Ljk3N2MtMC4wOTMgMC4wOTMtMC4yNzkgMC4xODYtMC40NjUgMC4xODYgMCAwIDAgMCAwIDB6TTYuMDQ3IDEuMTE2Yy0yLjY5OCAwLTQuODM3IDIuMDQ3LTQuODM3IDQuNjUxIDAgMC44MzcgMC4yNzkgMS42NzQgMC42NTEgMi40MTlsNC4xODYgNi4yMzMgNC4xODYtNi4yMzNjMC40NjUtMC43NDQgMC42NTEtMS40ODggMC42NTEtMi40MTkgMC0yLjUxMi0yLjE0LTQuNjUxLTQuODM3LTQuNjUxeiI+PC9wYXRoPg0KPHBhdGggZmlsbD0iI2RjNTYwNiIgZD0iTTYuMDQ3IDguNjUxYy0xLjU4MSAwLTIuODg0LTEuMzAyLTIuODg0LTIuNzkxczEuMzAyLTIuNzkxIDIuODg0LTIuNzkxIDIuODg0IDEuMzAyIDIuODg0IDIuNzkxLTEuMzAyIDIuNzkxLTIuODg0IDIuNzkxek02LjA0NyA0LjE4NmMtMC45MyAwLTEuNzY3IDAuNzQ0LTEuNzY3IDEuNjc0czAuNzQ0IDEuNjc0IDEuNzY3IDEuNjc0IDEuNzY3LTAuNzQ0IDEuNzY3LTEuNjc0YzAtMC45My0wLjgzNy0xLjY3NC0xLjc2Ny0xLjY3NHoiPjwvcGF0aD4NCjwvc3ZnPg0K');
+  background-image: linear-gradient(transparent, transparent), url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4NCjwhLS0gR2VuZXJhdGVkIGJ5IEljb01vb24uaW8gLS0+DQo8IURPQ1RZUEUgc3ZnIFBVQkxJQyAiLS8vVzNDLy9EVEQgU1ZHIDEuMS8vRU4iICJodHRwOi8vd3d3LnczLm9yZy9HcmFwaGljcy9TVkcvMS4xL0RURC9zdmcxMS5kdGQiPg0KPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHdpZHRoPSIxMiIgaGVpZ2h0PSIxNiIgdmlld0JveD0iMCAwIDEyIDE2Ij4NCjxwYXRoIGZpbGw9IiNkYzU2MDYiIGQ9Ik02LjA0NyAxNmMtMC4xODYgMC0wLjM3Mi0wLjA5My0wLjQ2NS0wLjI3OWwtNC42NTEtNi45NzdjLTAuNjUxLTAuODM3LTAuOTMtMS44Ni0wLjkzLTIuODg0IDAtMy4yNTYgMi42OTgtNS44NiA2LjA0Ny01Ljg2czYuMDQ3IDIuNjA1IDYuMDQ3IDUuODZjMCAxLjAyMy0wLjI3OSAyLjE0LTAuODM3IDIuOTc3bC00Ljc0NCA2Ljk3N2MtMC4wOTMgMC4wOTMtMC4yNzkgMC4xODYtMC40NjUgMC4xODYgMCAwIDAgMCAwIDB6TTYuMDQ3IDEuMTE2Yy0yLjY5OCAwLTQuODM3IDIuMDQ3LTQuODM3IDQuNjUxIDAgMC44MzcgMC4yNzkgMS42NzQgMC42NTEgMi40MTlsNC4xODYgNi4yMzMgNC4xODYtNi4yMzNjMC40NjUtMC43NDQgMC42NTEtMS40ODggMC42NTEtMi40MTkgMC0yLjUxMi0yLjE0LTQuNjUxLTQuODM3LTQuNjUxeiI+PC9wYXRoPg0KPHBhdGggZmlsbD0iI2RjNTYwNiIgZD0iTTYuMDQ3IDguNjUxYy0xLjU4MSAwLTIuODg0LTEuMzAyLTIuODg0LTIuNzkxczEuMzAyLTIuNzkxIDIuODg0LTIuNzkxIDIuODg0IDEuMzAyIDIuODg0IDIuNzkxLTEuMzAyIDIuNzkxLTIuODg0IDIuNzkxek02LjA0NyA0LjE4NmMtMC45MyAwLTEuNzY3IDAuNzQ0LTEuNzY3IDEuNjc0czAuNzQ0IDEuNjc0IDEuNzY3IDEuNjc0IDEuNzY3LTAuNzQ0IDEuNzY3LTEuNjc0YzAtMC45My0wLjgzNy0xLjY3NC0xLjc2Ny0xLjY3NHoiPjwvcGF0aD4NCjwvc3ZnPg0K');
+  content: "";
+  display: inline-block;
+  margin-right: 8px;
+  position: relative;
+  top: 2px;
+}
+/* line 14, ../sass/partials/global/helpers/_image-replace.scss */
+.user-header__address:before:before {
+  content: "";
+  display: block;
+  height: 150%;
+  width: 0;
+}
+
+/* line 54, ../sass/partials/components/_user-header.scss */
+.user-header__member-since {
+  font-size: 0.875em;
+  line-height: 1.5;
+}
+
+/* line 59, ../sass/partials/components/_user-header.scss */
+.user-header__type {
+  font-size: 0.875em;
+  line-height: 1.5;
+}
+
 /* line 4, ../sass/partials/components/_vertical-tabs.scss */
 .vertical-tabs {
   background: white;
@@ -4307,6 +4484,10 @@ tr.drag-previous {
 /* line 57, ../sass/partials/components/_view.scss */
 .views-row {
   padding: 0 0 2em 0;
+}
+/* line 59, ../sass/partials/components/_view.scss */
+.view--simple-list .views-row {
+  padding: 0 0 0.25em 0;
 }
 
 /* line 1, ../sass/partials/components/view/_view--at-a-glance.scss */

@@ -1,0 +1,15 @@
+.pane--userfield-user-motto {
+  border-left: 4px solid $orange;
+  padding: 0.5em 0 0.5em 2em;
+  .pane__title {
+    border: 0;
+    color: $lightorange;
+    font-size: em(12px);
+    font-weight: bold;
+    text-transform: uppercase;
+  }
+  .pane__content {
+    font-size: em(18px);
+    font-style: italic;
+  }
+}

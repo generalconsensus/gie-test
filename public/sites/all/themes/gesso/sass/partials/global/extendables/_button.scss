@@ -11,7 +11,7 @@
   display: inline-block;
   font-family: $font-family;
   margin: 0 0 rhythm(1);
-  padding: 0.5em 1.5em;
+  padding: 0.5em 1.75em;
   text-align: center;
   text-decoration: none;
   vertical-align: baseline;
@@ -82,6 +82,7 @@
 
 %button--icon {
   padding-left: 50px;
+  padding-right: 2em;
   position: relative;
   text-transform: uppercase;
   &:before {
@@ -96,8 +97,7 @@
 
 %button--share {
   @extend %button--icon;
-  padding-right: 2em;
-  &:before {
+ &:before {
     @include svg-background(icon-share-18-21-white);
     height: 21px;
     width: 18px;
@@ -106,7 +106,6 @@
 
 %button--favorite {
   @extend %button--icon;
-  padding-right: 2em;
   &:before {
     @include svg-background(icon-favorite-19-18-white);
     height: 18px;
@@ -124,5 +123,16 @@
     height: 12px;
     top: 13px;
     width: 12px;
+  }
+}
+
+%button--member {
+  @extend %button--icon;
+  padding-left: 40px;
+  &:before {
+    @include svg-background(icon-member-18-18-white);
+    height: 18px;
+    top: 11px;
+    width: 18px;
   }
 }
