@@ -1527,64 +1527,63 @@ input.throbbing {
   -webkit-box-shadow: 0 2px 0 0 #f0f0f0;
   -moz-box-shadow: 0 2px 0 0 #f0f0f0;
   box-shadow: 0 2px 0 0 #f0f0f0;
-  margin: 0 auto;
   max-width: 500px;
   position: relative;
 }
 
-/* line 10, ../sass/partials/components/_card.scss */
+/* line 9, ../sass/partials/components/_card.scss */
 .card--button {
   text-align: center;
 }
 
-/* line 14, ../sass/partials/components/_card.scss */
+/* line 13, ../sass/partials/components/_card.scss */
 .card__type {
   font-size: 0.75em;
   text-transform: uppercase;
 }
 
-/* line 19, ../sass/partials/components/_card.scss */
+/* line 18, ../sass/partials/components/_card.scss */
 .card__image {
   line-height: 0;
 }
 
-/* line 23, ../sass/partials/components/_card.scss */
+/* line 22, ../sass/partials/components/_card.scss */
 .card__content {
   padding: 16px 16px 66px 16px;
 }
-/* line 25, ../sass/partials/components/_card.scss */
+/* line 24, ../sass/partials/components/_card.scss */
 .card--button .card__content {
   padding-bottom: 100px;
 }
 
-/* line 30, ../sass/partials/components/_card.scss */
+/* line 29, ../sass/partials/components/_card.scss */
 .card__title, .card__primary-title {
   font-weight: normal;
   margin: 0 0 0.75em 0;
 }
-/* line 33, ../sass/partials/components/_card.scss */
+/* line 32, ../sass/partials/components/_card.scss */
 .card__title a, .card__primary-title a {
   font-weight: normal;
 }
 
-/* line 38, ../sass/partials/components/_card.scss */
+/* line 37, ../sass/partials/components/_card.scss */
 .card__primary-title {
   border-bottom: 1px solid #f0f0f0;
   padding: 0 0 0.75em 0;
 }
 
-/* line 44, ../sass/partials/components/_card.scss */
+/* line 43, ../sass/partials/components/_card.scss */
 .card__author {
   font-size: 0.75em;
   line-height: 1.3;
   overflow: hidden;
 }
-/* line 48, ../sass/partials/components/_card.scss */
+/* line 47, ../sass/partials/components/_card.scss */
 .card__author .card__author-image {
   float: left;
   margin: 0 0.5em 0 0;
 }
-/* line 51, ../sass/partials/components/_card.scss */
+/* line 50, ../sass/partials/components/_card.scss */
 .card__author .card__author-image img {
   -webkit-border-radius: 50%;
   -moz-border-radius: 50%;
@@ -1593,35 +1592,35 @@ input.throbbing {
   border-radius: 50%;
   border: 1px solid #cecfcb;
 }
-/* line 56, ../sass/partials/components/_card.scss */
+/* line 55, ../sass/partials/components/_card.scss */
 .card__author .card__author-name {
   font-weight: bold;
 }
 
-/* line 64, ../sass/partials/components/_card.scss */
+/* line 63, ../sass/partials/components/_card.scss */
 .card__number {
   font-size: 1.3125em;
 }
 
-/* line 68, ../sass/partials/components/_card.scss */
+/* line 67, ../sass/partials/components/_card.scss */
 .card__due-date {
   font-size: 0.875em;
 }
 
-/* line 72, ../sass/partials/components/_card.scss */
+/* line 71, ../sass/partials/components/_card.scss */
 .card__list {
   font-size: 0.75em;
   line-height: 1.3;
   margin: 1em 0;
 }
 
-/* line 78, ../sass/partials/components/_card.scss */
+/* line 77, ../sass/partials/components/_card.scss */
 .card__list-label {
   display: inline;
   font-weight: bold;
 }
 
-/* line 83, ../sass/partials/components/_card.scss */
+/* line 82, ../sass/partials/components/_card.scss */
 .card__button {
   bottom: 10px;
   left: 0;
@@ -1631,7 +1630,7 @@ input.throbbing {
   width: 100%;
 }
 
-/* line 97, ../sass/partials/components/_card.scss */
+/* line 96, ../sass/partials/components/_card.scss */
 .card__counts > .view .has-icon--comment:before, .card__counts > .view .has-icon--camera:before, .card__counts > .view .has-icon--favorite:before, .card__counts > .view .has-icon--member:before, .card__counts > .view .has-icon--organization:before, .card__counts > .view .has-icon--evidence:before, .card__counts > .view .has-icon--innovation:before {
   content: "";
   display: block;
@@ -1641,7 +1640,7 @@ input.throbbing {
   left: 50%;
 }
 
-/* line 106, ../sass/partials/components/_card.scss */
+/* line 105, ../sass/partials/components/_card.scss */
 .card__counts {
   bottom: 10px;
   left: 0;
@@ -1651,7 +1650,7 @@ input.throbbing {
   text-align: center;
   width: 100%;
 }
-/* line 114, ../sass/partials/components/_card.scss */
+/* line 113, ../sass/partials/components/_card.scss */
 .card__counts > .view {
   display: inline-block;
   font-size: 0.75em;
@@ -1661,7 +1660,7 @@ input.throbbing {
   padding: 0 6%;
   text-align: center;
 }
-/* line 123, ../sass/partials/components/_card.scss */
+/* line 122, ../sass/partials/components/_card.scss */
 .card__counts > .view .has-icon--comment:before {
   height: 17px;
   overflow: hidden;
@@ -1678,7 +1677,7 @@ input.throbbing {
   height: 150%;
   width: 0;
 }
-/* line 131, ../sass/partials/components/_card.scss */
+/* line 130, ../sass/partials/components/_card.scss */
 .card__counts > .view .has-icon--camera:before {
   height: 17px;
   overflow: hidden;
@@ -1695,7 +1694,7 @@ input.throbbing {
   height: 150%;
   width: 0;
 }
-/* line 139, ../sass/partials/components/_card.scss */
+/* line 138, ../sass/partials/components/_card.scss */
 .card__counts > .view .has-icon--favorite:before {
   height: 17px;
   overflow: hidden;
@@ -1712,7 +1711,7 @@ input.throbbing {
   height: 150%;
   width: 0;
 }
-/* line 147, ../sass/partials/components/_card.scss */
+/* line 146, ../sass/partials/components/_card.scss */
 .card__counts > .view .has-icon--member:before {
   height: 17px;
   overflow: hidden;
@@ -1729,7 +1728,7 @@ input.throbbing {
   height: 150%;
   width: 0;
 }
-/* line 155, ../sass/partials/components/_card.scss */
+/* line 154, ../sass/partials/components/_card.scss */
 .card__counts > .view .has-icon--organization:before {
   height: 17px;
   overflow: hidden;
@@ -1746,7 +1745,7 @@ input.throbbing {
   height: 150%;
   width: 0;
 }
-/* line 163, ../sass/partials/components/_card.scss */
+/* line 162, ../sass/partials/components/_card.scss */
 .card__counts > .view .has-icon--evidence:before {
   height: 17px;
   overflow: hidden;
@@ -1763,7 +1762,7 @@ input.throbbing {
   height: 150%;
   width: 0;
 }
-/* line 171, ../sass/partials/components/_card.scss */
+/* line 170, ../sass/partials/components/_card.scss */
 .card__counts > .view .has-icon--innovation:before {
   height: 20px;
   overflow: hidden;
