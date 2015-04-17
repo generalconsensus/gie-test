@@ -52,6 +52,7 @@
     });
   }
 
+
   function cardView() {
     
     $('.view--card-view').each(function(){
@@ -120,6 +121,26 @@
       background.css("min-height",Math.floor(width*ratio));
     })
   }
+
+
+  function homepagePersonasCards() {
+    $('.pane--homepage-views-personas-pane .view--homepage-views').each(function(){
+      var items = $(this).find('.card');
+      items.css("height","auto");
+      var tallest = 0;
+      items.each(function(){
+        var height = $(this).height();
+        if (height >= tallest) { 
+          tallest = height;
+        }
+      });
+      if (Modernizr.mq('(min-width: 800px)')) { 
+        if (tallest > 0) {
+          items.height(tallest); 
+        }
+      }
+    });
+  }
  
 
   // Generic function that runs on window resize.
@@ -127,6 +148,7 @@
     cardView();
     cardFlip();
     homepageFooterCallout();
+    homepagePersonasCards();
   }
 
   // Runs function once on window resize.

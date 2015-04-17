@@ -68,6 +68,18 @@
   }
 }
 
+%button--white {
+  background: #fff;
+  border: 0;
+  color: $orange;
+  margin-bottom: 0;
+  opacity: 0.75;
+  text-transform: uppercase;
+  &:hover, &:focus {
+    opacity: 1;
+  }
+}
+
 %button--icon {
   padding-left: 50px;
   position: relative;
