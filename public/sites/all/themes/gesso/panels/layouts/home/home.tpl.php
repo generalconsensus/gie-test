@@ -1,9 +1,9 @@
 <?php
   $hero = (empty($content['hero']) ? 'hero-empty' : 'hero');
-  $content = (empty($content['content']) ? 'content-empty' : 'content');
+  $main = (empty($content['main']) ? 'main-empty' : 'main');
   $villain = (empty($content['villain']) ? 'villain-empty' : 'villain');
   $postscript = (empty($content['postscript']) ? 'postscript-empty' : 'postscript');
-  $classes = "$hero $content $villain $postscript";
+  $classes = "$hero $main $villain $postscript";
 ?>
 
 <div<?php if (!empty($css_id)): ?> id="<?php print $css_id; ?>"<?php endif; ?> class="l-panels-home <?php print $classes; ?>">
@@ -12,10 +12,10 @@
       <?php print $content['hero']; ?>
     </div>
   <?php endif; ?>
-  <?php if (!empty($content['content'])): ?>
-    <div class="l-content">
+  <?php if (!empty($content['main'])): ?>
+    <div class="l-main">
       <div class="layout-constrain">
-        <?php print $content['content']; ?>
+        <?php print $content['main']; ?>
       </div>
     </div>
   <?php endif; ?>
