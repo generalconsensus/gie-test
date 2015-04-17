@@ -272,9 +272,23 @@ function gie_discussion_strongarm() {
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
+  $strongarm->name = 'panelizer_node:discussion:default_selection';
+  $strongarm->value = 0;
+  $export['panelizer_node:discussion:default_selection'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
   $strongarm->name = 'panelizer_node:discussion:page_manager_selection';
   $strongarm->value = 'node:discussion:default';
   $export['panelizer_node:discussion:page_manager_selection'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'panelizer_node:discussion:teaser_selection';
+  $strongarm->value = 'node:discussion:default:teaser';
+  $export['panelizer_node:discussion:teaser_selection'] = $strongarm;
 
   return $export;
 }

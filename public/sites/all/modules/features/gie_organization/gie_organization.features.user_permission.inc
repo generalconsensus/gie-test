@@ -78,6 +78,7 @@ function gie_organization_user_default_permissions() {
     'name' => 'create organization content',
     'roles' => array(
       'administrator' => 'administrator',
+      'authenticated user' => 'authenticated user',
     ),
     'module' => 'node',
   );
@@ -96,6 +97,7 @@ function gie_organization_user_default_permissions() {
     'name' => 'delete own organization content',
     'roles' => array(
       'administrator' => 'administrator',
+      'authenticated user' => 'authenticated user',
     ),
     'module' => 'node',
   );
@@ -114,6 +116,7 @@ function gie_organization_user_default_permissions() {
     'name' => 'edit own organization content',
     'roles' => array(
       'administrator' => 'administrator',
+      'authenticated user' => 'authenticated user',
     ),
     'module' => 'node',
   );

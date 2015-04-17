@@ -41,13 +41,13 @@ function gie_user_strongarm() {
     'extra_fields' => array(
       'form' => array(
         'ckeditor' => array(
-          'weight' => '8',
+          'weight' => '5',
         ),
         'account' => array(
-          'weight' => '0',
+          'weight' => '3',
         ),
         'timezone' => array(
-          'weight' => '6',
+          'weight' => '18',
         ),
       ),
       'display' => array(
@@ -134,6 +134,24 @@ function gie_user_strongarm() {
         'default' => 0,
         'choice' => 0,
       ),
+      'full' => array(
+        'status' => 0,
+        'substitute' => 0,
+        'default' => 0,
+        'choice' => 0,
+      ),
+      'resource_user' => array(
+        'status' => 0,
+        'substitute' => 0,
+        'default' => 0,
+        'choice' => 0,
+      ),
+      'title' => array(
+        'status' => 0,
+        'substitute' => 0,
+        'default' => 0,
+        'choice' => 0,
+      ),
       'user_teaser' => array(
         'status' => 0,
         'substitute' => 0,
@@ -149,6 +167,20 @@ function gie_user_strongarm() {
     ),
   );
   $export['panelizer_defaults_user_user'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'panelizer_user:user:default_selection';
+  $strongarm->value = 0;
+  $export['panelizer_user:user:default_selection'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'panelizer_user:user:full_selection';
+  $strongarm->value = 'user:user:default:full';
+  $export['panelizer_user:user:full_selection'] = $strongarm;
 
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */

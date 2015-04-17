@@ -303,7 +303,7 @@ function gie_homepage_strongarm() {
             'visible' => TRUE,
           ),
           'listing' => array(
-            'weight' => '10',
+            'weight' => '12',
             'visible' => FALSE,
           ),
         ),
