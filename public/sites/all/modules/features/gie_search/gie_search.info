@@ -30,6 +30,7 @@ features[facetapi][] = search_api@default_node_index:block:body:value
 features[facetapi][] = search_api@default_node_index:block:changed
 features[facetapi][] = search_api@default_node_index:block:created
 features[facetapi][] = search_api@default_node_index:block:field_discussion_program
+features[facetapi][] = search_api@default_node_index:block:field_discussion_program_disc
 features[facetapi][] = search_api@default_node_index:block:field_funding_author
 features[facetapi][] = search_api@default_node_index:block:field_funding_deadline
 features[facetapi][] = search_api@default_node_index:block:field_funding_duration
