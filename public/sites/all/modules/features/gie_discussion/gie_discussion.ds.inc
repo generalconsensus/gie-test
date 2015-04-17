@@ -121,6 +121,21 @@ function gie_discussion_ds_field_settings_info() {
   );
   $export['node|discussion|teaser'] = $ds_fieldsetting;
 
+  $ds_fieldsetting = new stdClass();
+  $ds_fieldsetting->api_version = 1;
+  $ds_fieldsetting->id = 'node|discussion|teaser_date';
+  $ds_fieldsetting->entity_type = 'node';
+  $ds_fieldsetting->bundle = 'discussion';
+  $ds_fieldsetting->view_mode = 'teaser_date';
+  $ds_fieldsetting->settings = array(
+    'discussion_posted_by' => array(
+      'weight' => '2',
+      'label' => 'hidden',
+      'format' => 'default',
+    ),
+  );
+  $export['node|discussion|teaser_date'] = $ds_fieldsetting;
+
   return $export;
 }
 
@@ -307,6 +322,41 @@ function gie_discussion_ds_layout_settings_info() {
     'layout_link_custom' => '',
   );
   $export['node|discussion|teaser'] = $ds_layout;
+
+  $ds_layout = new stdClass();
+  $ds_layout->api_version = 1;
+  $ds_layout->id = 'node|discussion|teaser_date';
+  $ds_layout->entity_type = 'node';
+  $ds_layout->bundle = 'discussion';
+  $ds_layout->view_mode = 'teaser_date';
+  $ds_layout->layout = 'ds_2col';
+  $ds_layout->settings = array(
+    'regions' => array(
+      'right' => array(
+        0 => 'title_field',
+        1 => 'discussion_posted_by',
+      ),
+      'left' => array(
+        2 => 'content_author_author_photo_display',
+      ),
+    ),
+    'fields' => array(
+      'title_field' => 'right',
+      'discussion_posted_by' => 'right',
+      'content_author_author_photo_display' => 'left',
+    ),
+    'classes' => array(),
+    'wrappers' => array(
+      'left' => 'div',
+      'right' => 'div',
+    ),
+    'layout_wrapper' => 'div',
+    'layout_attributes' => '',
+    'layout_attributes_merge' => 1,
+    'layout_link_attribute' => '',
+    'layout_link_custom' => '',
+  );
+  $export['node|discussion|teaser_date'] = $ds_layout;
 
   return $export;
 }
