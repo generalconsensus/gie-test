@@ -22,11 +22,6 @@ function gie_homepage_ds_field_settings_info() {
       'label' => 'hidden',
       'format' => 'default',
     ),
-    'field_action_image' => array(
-      'formatter_settings' => array(
-        'ft' => array(),
-      ),
-    ),
   );
   $export['node|action_card|listing'] = $ds_fieldsetting;
 
@@ -38,17 +33,57 @@ function gie_homepage_ds_field_settings_info() {
   $ds_fieldsetting->view_mode = 'listing';
   $ds_fieldsetting->settings = array(
     'title' => array(
-      'weight' => '1',
+      'weight' => '3',
       'label' => 'hidden',
       'format' => 'default',
+      'formatter_settings' => array(
+        'link' => '0',
+        'wrapper' => 'h1',
+        'class' => 'card__title',
+        'ft' => array(
+          'func' => 'theme_ds_field_expert',
+        ),
+        'field_delimiter' => '',
+        'linked_field' => array(
+          'linked' => 1,
+          'destination' => '[node:field-persona-link:url]',
+          'advanced' => array(
+            'title' => '',
+            'target' => '',
+            'class' => '',
+            'rel' => '',
+            'text' => '',
+          ),
+        ),
+      ),
+    ),
+    'field_persona_description' => array(
+      'formatter_settings' => array(
+        'ft' => array(
+          'func' => 'theme_ds_field_expert',
+          'fi' => TRUE,
+          'fi-el' => 'div',
+          'fi-cl' => '',
+          'fi-at' => '',
+          'fi-def-at' => FALSE,
+          'fi-odd-even' => FALSE,
+        ),
+      ),
+    ),
+    'field_persona_image' => array(
+      'formatter_settings' => array(
+        'ft' => array(
+          'func' => 'theme_ds_field_expert',
+        ),
+      ),
     ),
     'field_persona_link' => array(
       'formatter_settings' => array(
         'ft' => array(
           'func' => 'theme_ds_field_expert',
           'fi' => TRUE,
-          'fi-el' => 'button',
-          'fi-cl' => '',
+          'fi-el' => 'div',
+          'fi-cl' => 'card__button',
           'fi-at' => '',
           'fi-def-at' => FALSE,
           'fi-odd-even' => FALSE,
@@ -89,7 +124,11 @@ function gie_homepage_ds_layout_settings_info() {
       'field_action_description' => 'ds_content',
       'field_action_link' => 'ds_content',
     ),
-    'classes' => array(),
+    'classes' => array(
+      'layout_class' => array(
+        '' => '',
+      ),
+    ),
     'wrappers' => array(
       'ds_content' => 'div',
     ),
@@ -107,25 +146,36 @@ function gie_homepage_ds_layout_settings_info() {
   $ds_layout->entity_type = 'node';
   $ds_layout->bundle = 'persona';
   $ds_layout->view_mode = 'listing';
-  $ds_layout->layout = 'ds_1col';
+  $ds_layout->layout = 'article';
   $ds_layout->settings = array(
     'regions' => array(
-      'ds_content' => array(
-        0 => 'field_persona_image',
-        1 => 'title',
-        2 => 'field_persona_description',
-        3 => 'field_persona_link',
+      'main_content' => array(
+        0 => 'group_card_image',
+        1 => 'field_persona_image',
+        2 => 'group_card_content',
+        3 => 'title',
+        4 => 'field_persona_description',
+        5 => 'field_persona_link',
       ),
     ),
     'fields' => array(
-      'field_persona_image' => 'ds_content',
-      'title' => 'ds_content',
-      'field_persona_description' => 'ds_content',
-      'field_persona_link' => 'ds_content',
+      'group_card_image' => 'main_content',
+      'field_persona_image' => 'main_content',
+      'group_card_content' => 'main_content',
+      'title' => 'main_content',
+      'field_persona_description' => 'main_content',
+      'field_persona_link' => 'main_content',
     ),
-    'classes' => array(),
+    'classes' => array(
+      'layout_class' => array(
+        'card' => 'card',
+        'card--button' => 'card--button',
+      ),
+    ),
     'wrappers' => array(
-      'ds_content' => 'div',
+      'header' => 'div',
+      'main_content' => 'div',
+      'footer' => 'div',
     ),
     'layout_wrapper' => 'div',
     'layout_attributes' => '',
