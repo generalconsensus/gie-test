@@ -138,7 +138,7 @@ function gie_homepage_views_default_views() {
   $handler->display->display_options['fields']['field_action_image']['element_default_classes'] = FALSE;
   $handler->display->display_options['fields']['field_action_image']['click_sort_column'] = 'fid';
   $handler->display->display_options['fields']['field_action_image']['settings'] = array(
-    'image_style' => 'card__500x300_',
+    'image_style' => 'card__175x175_',
     'image_link' => '',
     'linked_field' => array(
       'linked' => 0,
@@ -219,18 +219,27 @@ function gie_homepage_views_default_views() {
   $handler = $view->new_display('panel_pane', 'Staff Picks', 'staff_picks_pane');
   $handler->display->display_options['defaults']['title'] = FALSE;
   $handler->display->display_options['defaults']['css_class'] = FALSE;
+  $handler->display->display_options['css_class'] = 'view--card-view-four-columns';
+  $handler->display->display_options['defaults']['hide_admin_links'] = FALSE;
+  $handler->display->display_options['hide_admin_links'] = TRUE;
   $handler->display->display_options['defaults']['pager'] = FALSE;
   $handler->display->display_options['pager']['type'] = 'some';
   $handler->display->display_options['pager']['options']['items_per_page'] = '4';
   $handler->display->display_options['pager']['options']['offset'] = '0';
+  $handler->display->display_options['defaults']['style_plugin'] = FALSE;
+  $handler->display->display_options['style_plugin'] = 'default';
+  $handler->display->display_options['style_options']['row_class_special'] = FALSE;
+  $handler->display->display_options['defaults']['style_options'] = FALSE;
+  $handler->display->display_options['defaults']['row_plugin'] = FALSE;
+  $handler->display->display_options['row_plugin'] = 'entity';
+  $handler->display->display_options['row_options']['view_mode'] = 'listing';
+  $handler->display->display_options['defaults']['row_options'] = FALSE;
   $handler->display->display_options['defaults']['header'] = FALSE;
   /* Header: Global: Text area */
   $handler->display->display_options['header']['area']['id'] = 'area';
   $handler->display->display_options['header']['area']['table'] = 'views';
   $handler->display->display_options['header']['area']['field'] = 'area';
-  $handler->display->display_options['header']['area']['content'] = '<h1>Staff Picks</h1>
-<a href="innovations">View All Innovations</a>
-<a href="node/add/innovation" class="button">Add Innovation</a>';
+  $handler->display->display_options['header']['area']['content'] = '<h1 class="view__header-title">Staff Picks</h1><div><a href="innovations" class="view__header-link">View All Innovations</a><a class="button button--highlight button--large button--add view__header-button" href="node/add/innovation">Add Innovation</a></div>';
   $handler->display->display_options['header']['area']['format'] = 'full_html';
   $handler->display->display_options['defaults']['relationships'] = FALSE;
   /* Relationship: Entity Reference: Referencing entity */
@@ -243,18 +252,27 @@ function gie_homepage_views_default_views() {
   $handler = $view->new_display('panel_pane', 'Funding', 'funding_pane');
   $handler->display->display_options['defaults']['title'] = FALSE;
   $handler->display->display_options['defaults']['css_class'] = FALSE;
+  $handler->display->display_options['css_class'] = 'view--card-view-four-columns';
+  $handler->display->display_options['defaults']['hide_admin_links'] = FALSE;
+  $handler->display->display_options['hide_admin_links'] = TRUE;
   $handler->display->display_options['defaults']['pager'] = FALSE;
   $handler->display->display_options['pager']['type'] = 'some';
   $handler->display->display_options['pager']['options']['items_per_page'] = '4';
   $handler->display->display_options['pager']['options']['offset'] = '0';
+  $handler->display->display_options['defaults']['style_plugin'] = FALSE;
+  $handler->display->display_options['style_plugin'] = 'default';
+  $handler->display->display_options['style_options']['row_class_special'] = FALSE;
+  $handler->display->display_options['defaults']['style_options'] = FALSE;
+  $handler->display->display_options['defaults']['row_plugin'] = FALSE;
+  $handler->display->display_options['row_plugin'] = 'entity';
+  $handler->display->display_options['row_options']['view_mode'] = 'listing';
+  $handler->display->display_options['defaults']['row_options'] = FALSE;
   $handler->display->display_options['defaults']['header'] = FALSE;
   /* Header: Global: Text area */
   $handler->display->display_options['header']['area']['id'] = 'area';
   $handler->display->display_options['header']['area']['table'] = 'views';
   $handler->display->display_options['header']['area']['field'] = 'area';
-  $handler->display->display_options['header']['area']['content'] = '<h1>Funding Opportunities</h1>
-<a href="funding">View All Funding</a>
-<a href="node/add/funding" class="button">Add Funding</a>';
+  $handler->display->display_options['header']['area']['content'] = '<h1 class="view__header-title">Funding Opportunities</h1><a href="funding" class="view__header-link">View All Funding</a><a class="button button--highlight button--large button--add view__header-button" href="node/add/funding">Add Funding</a>';
   $handler->display->display_options['header']['area']['format'] = 'full_html';
   $handler->display->display_options['defaults']['relationships'] = FALSE;
   $handler->display->display_options['defaults']['sorts'] = FALSE;
