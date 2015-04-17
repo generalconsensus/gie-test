@@ -84,7 +84,8 @@ function gie_taxonomies_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'taxonomy_term-program_discussions-description_field'
+  // Exported field_instance:
+  // 'taxonomy_term-program_discussions-description_field'
   $field_instances['taxonomy_term-program_discussions-description_field'] = array(
     'bundle' => 'program_discussions',
     'default_value' => NULL,
@@ -122,7 +123,8 @@ function gie_taxonomies_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'taxonomy_term-program_discussions-field_program_contact'
+  // Exported field_instance:
+  // 'taxonomy_term-program_discussions-field_program_contact'
   $field_instances['taxonomy_term-program_discussions-field_program_contact'] = array(
     'bundle' => 'program_discussions',
     'default_value' => NULL,
@@ -178,7 +180,8 @@ function gie_taxonomies_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'taxonomy_term-program_discussions-field_program_highlights'
+  // Exported field_instance:
+  // 'taxonomy_term-program_discussions-field_program_highlights'
   $field_instances['taxonomy_term-program_discussions-field_program_highlights'] = array(
     'bundle' => 'program_discussions',
     'default_value' => NULL,
@@ -226,7 +229,8 @@ function gie_taxonomies_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'taxonomy_term-program_discussions-field_program_name'
+  // Exported field_instance:
+  // 'taxonomy_term-program_discussions-field_program_name'
   $field_instances['taxonomy_term-program_discussions-field_program_name'] = array(
     'bundle' => 'program_discussions',
     'default_value' => NULL,
@@ -300,7 +304,8 @@ function gie_taxonomies_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'taxonomy_term-program_discussions-field_program_related_program'
+  // Exported field_instance:
+  // 'taxonomy_term-program_discussions-field_program_related_program'
   $field_instances['taxonomy_term-program_discussions-field_program_related_program'] = array(
     'bundle' => 'program_discussions',
     'default_value' => NULL,
@@ -448,9 +453,32 @@ function gie_taxonomies_field_default_field_instances() {
       ),
       'listing' => array(
         'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 6,
+        'module' => 'smart_trim',
+        'settings' => array(
+          'field_delimiter' => '',
+          'linked_field' => array(
+            'advanced' => array(
+              'class' => '',
+              'rel' => '',
+              'target' => '',
+              'text' => '',
+              'title' => '',
+            ),
+            'destination' => '',
+            'linked' => 0,
+          ),
+          'more_link' => 0,
+          'more_text' => 'Read more',
+          'summary_handler' => 'full',
+          'trim_length' => 150,
+          'trim_options' => array(
+            'text' => 'text',
+          ),
+          'trim_suffix' => '...',
+          'trim_type' => 'chars',
+        ),
+        'type' => 'smart_trim_format',
+        'weight' => 1,
       ),
     ),
     'entity_type' => 'taxonomy_term',
@@ -641,24 +669,8 @@ function gie_taxonomies_field_default_field_instances() {
       ),
       'listing' => array(
         'label' => 'hidden',
-        'module' => 'image',
-        'settings' => array(
-          'field_delimiter' => '',
-          'image_link' => '',
-          'image_style' => 'card__500x300_',
-          'linked_field' => array(
-            'advanced' => array(
-              'class' => '',
-              'rel' => '',
-              'target' => '',
-              'text' => '',
-              'title' => '',
-            ),
-            'destination' => '',
-            'linked' => 0,
-          ),
-        ),
-        'type' => 'image',
+        'settings' => array(),
+        'type' => 'hidden',
         'weight' => 0,
       ),
     ),
@@ -1017,7 +1029,7 @@ function gie_taxonomies_field_default_field_instances() {
         'label' => 'hidden',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 4,
+        'weight' => 0,
       ),
     ),
     'ds_extras_field_template' => '',
@@ -1140,9 +1152,30 @@ function gie_taxonomies_field_default_field_instances() {
       ),
       'listing' => array(
         'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 6,
+        'module' => 'smart_trim',
+        'settings' => array(
+          'field_delimiter' => '',
+          'linked_field' => array(
+            'advanced' => array(
+              'class' => '',
+              'rel' => '',
+              'target' => '',
+              'text' => '',
+              'title' => '',
+            ),
+            'destination' => '',
+            'linked' => 0,
+          ),
+          'more_link' => FALSE,
+          'more_text' => 'Read more',
+          'summary_handler' => 'full',
+          'trim_length' => 300,
+          'trim_options' => array(),
+          'trim_suffix' => '...',
+          'trim_type' => 'chars',
+        ),
+        'type' => 'smart_trim_format',
+        'weight' => 2,
       ),
     ),
     'entity_type' => 'taxonomy_term',
@@ -1335,24 +1368,8 @@ function gie_taxonomies_field_default_field_instances() {
       ),
       'listing' => array(
         'label' => 'hidden',
-        'module' => 'image',
-        'settings' => array(
-          'field_delimiter' => '',
-          'image_link' => '',
-          'image_style' => 'card__500x300_',
-          'linked_field' => array(
-            'advanced' => array(
-              'class' => '',
-              'rel' => '',
-              'target' => '',
-              'text' => '',
-              'title' => '',
-            ),
-            'destination' => '',
-            'linked' => 0,
-          ),
-        ),
-        'type' => 'image',
+        'settings' => array(),
+        'type' => 'hidden',
         'weight' => 0,
       ),
     ),
