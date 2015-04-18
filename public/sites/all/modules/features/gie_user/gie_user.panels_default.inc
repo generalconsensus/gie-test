@@ -66,7 +66,10 @@ function gie_user_default_panels_mini() {
     $pane->style = array(
       'settings' => NULL,
     );
-    $pane->css = array();
+    $pane->css = array(
+      'css_id' => '',
+      'css_class' => 'pane--user-field',
+    );
     $pane->extras = array();
     $pane->position = 0;
     $pane->locks = array();
@@ -85,7 +88,10 @@ function gie_user_default_panels_mini() {
     $pane->style = array(
       'settings' => NULL,
     );
-    $pane->css = array();
+    $pane->css = array(
+      'css_id' => '',
+      'css_class' => 'pane--user-field',
+    );
     $pane->extras = array();
     $pane->position = 1;
     $pane->locks = array();
@@ -104,7 +110,10 @@ function gie_user_default_panels_mini() {
     $pane->style = array(
       'settings' => NULL,
     );
-    $pane->css = array();
+    $pane->css = array(
+      'css_id' => '',
+      'css_class' => 'pane--user-field',
+    );
     $pane->extras = array();
     $pane->position = 2;
     $pane->locks = array();
@@ -123,7 +132,10 @@ function gie_user_default_panels_mini() {
     $pane->style = array(
       'settings' => NULL,
     );
-    $pane->css = array();
+    $pane->css = array(
+      'css_id' => '',
+      'css_class' => 'pane--user-field',
+    );
     $pane->extras = array();
     $pane->position = 3;
     $pane->locks = array();
@@ -142,7 +154,10 @@ function gie_user_default_panels_mini() {
     $pane->style = array(
       'settings' => NULL,
     );
-    $pane->css = array();
+    $pane->css = array(
+      'css_id' => '',
+      'css_class' => 'pane--user-field',
+    );
     $pane->extras = array();
     $pane->position = 4;
     $pane->locks = array();
@@ -161,7 +176,10 @@ function gie_user_default_panels_mini() {
     $pane->style = array(
       'settings' => NULL,
     );
-    $pane->css = array();
+    $pane->css = array(
+      'css_id' => '',
+      'css_class' => 'pane--user-field',
+    );
     $pane->extras = array();
     $pane->position = 5;
     $pane->locks = array();
@@ -180,7 +198,10 @@ function gie_user_default_panels_mini() {
     $pane->style = array(
       'settings' => NULL,
     );
-    $pane->css = array();
+    $pane->css = array(
+      'css_id' => '',
+      'css_class' => 'pane--user-field',
+    );
     $pane->extras = array();
     $pane->position = 6;
     $pane->locks = array();
@@ -199,7 +220,10 @@ function gie_user_default_panels_mini() {
     $pane->style = array(
       'settings' => NULL,
     );
-    $pane->css = array();
+    $pane->css = array(
+      'css_id' => '',
+      'css_class' => 'pane--user-field',
+    );
     $pane->extras = array();
     $pane->position = 7;
     $pane->locks = array();
@@ -229,7 +253,10 @@ function gie_user_default_panels_mini() {
     $pane->style = array(
       'settings' => NULL,
     );
-    $pane->css = array();
+    $pane->css = array(
+      'css_id' => '',
+      'css_class' => 'pane--user-field',
+    );
     $pane->extras = array();
     $pane->position = 8;
     $pane->locks = array();
