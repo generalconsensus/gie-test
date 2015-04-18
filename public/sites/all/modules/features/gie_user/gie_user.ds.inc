@@ -21,16 +21,150 @@ function gie_user_ds_field_settings_info() {
       'weight' => '1',
       'label' => 'hidden',
       'format' => 'plain_text_name',
+      'formatter_settings' => array(
+        'ft' => array(
+          'func' => 'theme_ds_field_expert',
+          'fi' => TRUE,
+          'fi-el' => 'div',
+          'fi-cl' => 'user-header__name',
+          'fi-at' => '',
+          'fi-def-at' => FALSE,
+          'fi-odd-even' => FALSE,
+        ),
+        'field_delimiter' => '',
+        'linked_field' => array(
+          'linked' => 0,
+          'destination' => '',
+          'advanced' => array(
+            'title' => '',
+            'target' => '',
+            'class' => '',
+            'rel' => '',
+            'text' => '',
+          ),
+        ),
+      ),
     ),
     'user_member_since' => array(
-      'weight' => '5',
+      'weight' => '6',
       'label' => 'hidden',
       'format' => 'default',
+      'formatter_settings' => array(
+        'ft' => array(
+          'func' => 'theme_ds_field_expert',
+          'fi' => TRUE,
+          'fi-el' => 'div',
+          'fi-cl' => 'user-header__member-since',
+          'fi-at' => '',
+          'fi-def-at' => FALSE,
+          'fi-odd-even' => FALSE,
+        ),
+        'field_delimiter' => '',
+        'linked_field' => array(
+          'linked' => 0,
+          'destination' => '',
+          'advanced' => array(
+            'title' => '',
+            'target' => '',
+            'class' => '',
+            'rel' => '',
+            'text' => '',
+          ),
+        ),
+      ),
     ),
     'user_email' => array(
-      'weight' => '8',
+      'weight' => '6',
       'label' => 'hidden',
       'format' => 'default',
+      'formatter_settings' => array(
+        'ft' => array(
+          'func' => 'theme_ds_field_expert',
+          'fi' => TRUE,
+          'fi-el' => 'div',
+          'fi-cl' => 'user-header__email',
+          'fi-at' => '',
+          'fi-def-at' => FALSE,
+          'fi-odd-even' => FALSE,
+        ),
+        'field_delimiter' => '',
+        'linked_field' => array(
+          'linked' => 0,
+          'destination' => '',
+          'advanced' => array(
+            'title' => '',
+            'target' => '',
+            'class' => '',
+            'rel' => '',
+            'text' => '',
+          ),
+        ),
+      ),
+    ),
+    'field_user_address' => array(
+      'formatter_settings' => array(
+        'ft' => array(
+          'func' => 'theme_ds_field_expert',
+          'fi' => TRUE,
+          'fi-el' => 'div',
+          'fi-cl' => 'user-header__address',
+          'fi-at' => '',
+          'fi-def-at' => FALSE,
+          'fi-odd-even' => FALSE,
+        ),
+      ),
+    ),
+    'field_user_company' => array(
+      'formatter_settings' => array(
+        'ft' => array(
+          'func' => 'theme_ds_field_expert',
+          'fi' => TRUE,
+          'fi-el' => 'div',
+          'fi-cl' => 'user-header__organization',
+          'fi-at' => '',
+          'fi-def-at' => FALSE,
+          'fi-odd-even' => FALSE,
+        ),
+      ),
+    ),
+    'field_user_title' => array(
+      'formatter_settings' => array(
+        'ft' => array(
+          'func' => 'theme_ds_field_expert',
+          'fi' => TRUE,
+          'fi-el' => 'div',
+          'fi-cl' => 'user-header__title',
+          'fi-at' => '',
+          'fi-def-at' => FALSE,
+          'fi-odd-even' => FALSE,
+        ),
+      ),
+    ),
+    'field_user_type' => array(
+      'formatter_settings' => array(
+        'ft' => array(
+          'func' => 'theme_ds_field_expert',
+          'fi' => TRUE,
+          'fi-el' => 'div',
+          'fi-cl' => 'user-header__type',
+          'fi-at' => '',
+          'fi-def-at' => FALSE,
+          'fi-odd-even' => FALSE,
+        ),
+      ),
+    ),
+    'field_user_photo' => array(
+      'formatter_settings' => array(
+        'ft' => array(
+          'func' => 'theme_ds_field_expert',
+          'fi' => TRUE,
+          'fi-el' => 'div',
+          'fi-cl' => 'user-header__photo',
+          'fi-at' => '',
+          'fi-def-at' => FALSE,
+          'fi-odd-even' => FALSE,
+        ),
+      ),
     ),
   );
   $export['user|user|full'] = $ds_fieldsetting;
@@ -43,14 +177,9 @@ function gie_user_ds_field_settings_info() {
   $ds_fieldsetting->view_mode = 'listing';
   $ds_fieldsetting->settings = array(
     'user_full_name' => array(
-      'weight' => '1',
+      'weight' => '3',
       'label' => 'hidden',
       'format' => 'linked_name',
-      'formatter_settings' => array(
-        'ft' => array(),
-      ),
-    ),
-    'field_user_photo' => array(
       'formatter_settings' => array(
         'ft' => array(),
       ),
@@ -254,38 +383,45 @@ function gie_user_ds_layout_settings_info() {
   $ds_layout->entity_type = 'user';
   $ds_layout->bundle = 'user';
   $ds_layout->view_mode = 'full';
-  $ds_layout->layout = 'ds_2col';
+  $ds_layout->layout = 'slat';
   $ds_layout->settings = array(
     'regions' => array(
-      'left' => array(
+      'media' => array(
         0 => 'field_user_photo',
       ),
-      'right' => array(
+      'main_content' => array(
         1 => 'user_full_name',
         2 => 'field_user_company',
         3 => 'field_user_title',
-        4 => 'field_user_address',
-        5 => 'user_member_since',
-        6 => 'field_user_type',
-        7 => 'flag_follow',
+        4 => 'group_user_meta',
+        5 => 'field_user_address',
+        6 => 'flag_follow',
+        7 => 'user_member_since',
         8 => 'user_email',
+        9 => 'field_user_type',
       ),
     ),
     'fields' => array(
-      'field_user_photo' => 'left',
-      'user_full_name' => 'right',
-      'field_user_company' => 'right',
-      'field_user_title' => 'right',
-      'field_user_address' => 'right',
-      'user_member_since' => 'right',
-      'field_user_type' => 'right',
-      'flag_follow' => 'right',
-      'user_email' => 'right',
+      'field_user_photo' => 'media',
+      'user_full_name' => 'main_content',
+      'field_user_company' => 'main_content',
+      'field_user_title' => 'main_content',
+      'group_user_meta' => 'main_content',
+      'field_user_address' => 'main_content',
+      'flag_follow' => 'main_content',
+      'user_member_since' => 'main_content',
+      'user_email' => 'main_content',
+      'field_user_type' => 'main_content',
     ),
-    'classes' => array(),
+    'classes' => array(
+      'layout_class' => array(
+        '' => '',
+      ),
+    ),
     'wrappers' => array(
-      'left' => 'div',
-      'right' => 'div',
+      'header' => 'div',
+      'media' => 'div',
+      'main_content' => 'div',
     ),
     'layout_wrapper' => 'div',
     'layout_attributes' => '',
@@ -301,25 +437,35 @@ function gie_user_ds_layout_settings_info() {
   $ds_layout->entity_type = 'user';
   $ds_layout->bundle = 'user';
   $ds_layout->view_mode = 'listing';
-  $ds_layout->layout = 'ds_1col';
+  $ds_layout->layout = 'article';
   $ds_layout->settings = array(
     'regions' => array(
-      'ds_content' => array(
-        0 => 'field_user_photo',
-        1 => 'user_full_name',
-        2 => 'field_user_title',
-        3 => 'field_user_company',
+      'main_content' => array(
+        0 => 'group_card_image',
+        1 => 'field_user_photo',
+        2 => 'group_card_content',
+        3 => 'user_full_name',
+        4 => 'field_user_title',
+        5 => 'field_user_company',
       ),
     ),
     'fields' => array(
-      'field_user_photo' => 'ds_content',
-      'user_full_name' => 'ds_content',
-      'field_user_title' => 'ds_content',
-      'field_user_company' => 'ds_content',
+      'group_card_image' => 'main_content',
+      'field_user_photo' => 'main_content',
+      'group_card_content' => 'main_content',
+      'user_full_name' => 'main_content',
+      'field_user_title' => 'main_content',
+      'field_user_company' => 'main_content',
     ),
-    'classes' => array(),
+    'classes' => array(
+      'layout_class' => array(
+        'card' => 'card',
+      ),
+    ),
     'wrappers' => array(
-      'ds_content' => 'div',
+      'header' => 'div',
+      'main_content' => 'div',
+      'footer' => 'div',
     ),
     'layout_wrapper' => 'div',
     'layout_attributes' => '',
