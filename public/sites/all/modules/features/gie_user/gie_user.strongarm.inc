@@ -68,7 +68,7 @@ function gie_user_strongarm() {
             'visible' => FALSE,
           ),
           'full' => array(
-            'weight' => '11',
+            'weight' => '13',
             'visible' => FALSE,
           ),
           'title' => array(
@@ -80,13 +80,13 @@ function gie_user_strongarm() {
             'visible' => FALSE,
           ),
           'listing' => array(
-            'weight' => '7',
+            'weight' => '10',
             'visible' => FALSE,
           ),
         ),
         'flag_follow' => array(
           'full' => array(
-            'weight' => '7',
+            'weight' => '5',
             'visible' => TRUE,
           ),
           'user_teaser_summary' => array(
@@ -110,7 +110,7 @@ function gie_user_strongarm() {
             'visible' => FALSE,
           ),
           'listing' => array(
-            'weight' => '13',
+            'weight' => '15',
             'visible' => FALSE,
           ),
         ),

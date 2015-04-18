@@ -149,7 +149,7 @@ function gie_user_default_page_manager_pages() {
     'relationships' => array(),
   );
   $display = new panels_display();
-  $display->layout = 'sidebar_left';
+  $display->layout = 'landing';
   $display->layout_settings = array();
   $display->panel_settings = array(
     'style_settings' => array(
@@ -338,7 +338,10 @@ function gie_user_default_page_manager_pages() {
     $pane->style = array(
       'settings' => NULL,
     );
-    $pane->css = array();
+    $pane->css = array(
+      'css_id' => '',
+      'css_class' => 'pane--landing-intro',
+    );
     $pane->extras = array();
     $pane->position = 0;
     $pane->locks = array();
