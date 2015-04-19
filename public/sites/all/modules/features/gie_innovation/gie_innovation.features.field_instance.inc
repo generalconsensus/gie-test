@@ -360,7 +360,7 @@ function gie_innovation_field_default_field_instances() {
     'bundle' => 'innovation',
     'default_value' => NULL,
     'deleted' => 0,
-    'description' => '',
+    'description' => 'Upload high-resolution photos and videos of your innovation. These will appear at the top of your innovation profile page.',
     'display' => array(
       'default' => array(
         'label' => 'above',
@@ -413,7 +413,7 @@ function gie_innovation_field_default_field_instances() {
     'entityconnect_unload_add' => 0,
     'entityconnect_unload_edit' => 0,
     'field_name' => 'field_innovation_assets',
-    'label' => 'Featured Assets',
+    'label' => 'Innovation Photos and Videos',
     'required' => 0,
     'settings' => array(
       'user_register_form' => FALSE,
@@ -431,7 +431,7 @@ function gie_innovation_field_default_field_instances() {
         'size' => 60,
       ),
       'type' => 'entityreference_autocomplete',
-      'weight' => 3,
+      'weight' => 10,
     ),
   );
 
@@ -440,7 +440,7 @@ function gie_innovation_field_default_field_instances() {
     'bundle' => 'innovation',
     'default_value' => NULL,
     'deleted' => 0,
-    'description' => '',
+    'description' => 'What type of assistance do you need to grow your innovation? If you don\'t select any assistance your profile will say "No Assistance Needed at this Time"',
     'display' => array(
       'default' => array(
         'label' => 'above',
@@ -502,7 +502,7 @@ function gie_innovation_field_default_field_instances() {
         'apply_chosen' => 1,
       ),
       'type' => 'options_select',
-      'weight' => 4,
+      'weight' => 11,
     ),
   );
 
@@ -511,7 +511,7 @@ function gie_innovation_field_default_field_instances() {
     'bundle' => 'innovation',
     'default_value' => NULL,
     'deleted' => 0,
-    'description' => '',
+    'description' => 'Have you calculated how much your innovation costs per person that it benefits? This is a great way to show the value of your innovation.',
     'display' => array(
       'default' => array(
         'label' => 'above',
@@ -562,6 +562,7 @@ function gie_innovation_field_default_field_instances() {
         'weight' => 39,
       ),
     ),
+    'ds_extras_field_template' => '',
     'entity_type' => 'node',
     'field_name' => 'field_innovation_cost_bene',
     'label' => 'Cost per Beneficiary',
@@ -578,7 +579,7 @@ function gie_innovation_field_default_field_instances() {
       'module' => 'html5_tools',
       'settings' => array(),
       'type' => 'numberfield',
-      'weight' => 8,
+      'weight' => 31,
     ),
   );
 
@@ -587,7 +588,7 @@ function gie_innovation_field_default_field_instances() {
     'bundle' => 'innovation',
     'default_value' => NULL,
     'deleted' => 0,
-    'description' => '',
+    'description' => 'If you have a cost per unit for your innovation, share it here!',
     'display' => array(
       'default' => array(
         'label' => 'above',
@@ -656,6 +657,7 @@ function gie_innovation_field_default_field_instances() {
         'weight' => 46,
       ),
     ),
+    'ds_extras_field_template' => '',
     'entity_type' => 'node',
     'field_name' => 'field_innovation_cost_per_unit',
     'label' => 'Cost Per Unit',
@@ -672,7 +674,7 @@ function gie_innovation_field_default_field_instances() {
       'module' => 'html5_tools',
       'settings' => array(),
       'type' => 'numberfield',
-      'weight' => 11,
+      'weight' => 32,
     ),
   );
 
@@ -681,7 +683,7 @@ function gie_innovation_field_default_field_instances() {
     'bundle' => 'innovation',
     'default_value' => NULL,
     'deleted' => 0,
-    'description' => '',
+    'description' => 'Select the countries where your innovation was created',
     'display' => array(
       'default' => array(
         'label' => 'above',
@@ -745,8 +747,8 @@ function gie_innovation_field_default_field_instances() {
     'ds_extras_field_template' => '',
     'entity_type' => 'node',
     'field_name' => 'field_innovation_created',
-    'label' => 'Created In',
-    'required' => 0,
+    'label' => 'Country Created In',
+    'required' => 1,
     'settings' => array(
       'user_register_form' => FALSE,
     ),
@@ -757,7 +759,7 @@ function gie_innovation_field_default_field_instances() {
         'apply_chosen' => 1,
       ),
       'type' => 'options_select',
-      'weight' => 13,
+      'weight' => 34,
     ),
   );
 
@@ -766,7 +768,7 @@ function gie_innovation_field_default_field_instances() {
     'bundle' => 'innovation',
     'default_value' => NULL,
     'deleted' => 0,
-    'description' => '',
+    'description' => 'Enter a short description of your innovation. What does it do?',
     'display' => array(
       'default' => array(
         'label' => 'above',
@@ -840,7 +842,7 @@ function gie_innovation_field_default_field_instances() {
     'entity_type' => 'node',
     'field_name' => 'field_innovation_desc',
     'label' => 'Description',
-    'required' => 0,
+    'required' => 1,
     'settings' => array(
       'better_formats' => array(
         'allowed_formats' => array(
@@ -878,7 +880,7 @@ function gie_innovation_field_default_field_instances() {
         'rows' => 5,
       ),
       'type' => 'text_textarea',
-      'weight' => 1,
+      'weight' => 8,
     ),
   );
 
@@ -990,7 +992,7 @@ function gie_innovation_field_default_field_instances() {
         'rows' => 5,
       ),
       'type' => 'text_textarea',
-      'weight' => 22,
+      'weight' => 29,
     ),
   );
 
@@ -1003,7 +1005,7 @@ function gie_innovation_field_default_field_instances() {
       ),
     ),
     'deleted' => 0,
-    'description' => '',
+    'description' => 'Is there evidence that your innovation works or has the desired impact?',
     'display' => array(
       'default' => array(
         'label' => 'above',
@@ -1050,6 +1052,7 @@ function gie_innovation_field_default_field_instances() {
         'weight' => 41,
       ),
     ),
+    'ds_extras_field_template' => '',
     'entity_type' => 'node',
     'field_name' => 'field_innovation_evidence_avail',
     'label' => 'Evidence Available?',
@@ -1064,7 +1067,7 @@ function gie_innovation_field_default_field_instances() {
         'display_label' => 1,
       ),
       'type' => 'options_onoff',
-      'weight' => 21,
+      'weight' => 28,
     ),
   );
 
@@ -1073,7 +1076,7 @@ function gie_innovation_field_default_field_instances() {
     'bundle' => 'innovation',
     'default_value' => NULL,
     'deleted' => 0,
-    'description' => '',
+    'description' => 'Type the organizations or programs that you are funded by. They must have an organization or program profile to appear on your page. Please encourage your funders to create organization/program profiles and user profiles on the Exchange if they don\'t appear.',
     'display' => array(
       'default' => array(
         'label' => 'above',
@@ -1121,6 +1124,7 @@ function gie_innovation_field_default_field_instances() {
         'weight' => 35,
       ),
     ),
+    'ds_extras_field_template' => '',
     'entity_type' => 'node',
     'entityconnect_unload_add' => 1,
     'entityconnect_unload_edit' => 1,
@@ -1143,7 +1147,7 @@ function gie_innovation_field_default_field_instances() {
         'size' => 60,
       ),
       'type' => 'entityreference_autocomplete',
-      'weight' => 31,
+      'weight' => 10,
     ),
   );
 
@@ -1152,7 +1156,7 @@ function gie_innovation_field_default_field_instances() {
     'bundle' => 'innovation',
     'default_value' => NULL,
     'deleted' => 0,
-    'description' => '',
+    'description' => 'Do you have a funding goal (in US Dollars) that you would like to raise? Please enter a whole number, like 590000  No symbols, commas, or periods/decimals allowed',
     'display' => array(
       'default' => array(
         'label' => 'above',
@@ -1221,6 +1225,7 @@ function gie_innovation_field_default_field_instances() {
         'weight' => 45,
       ),
     ),
+    'ds_extras_field_template' => '',
     'entity_type' => 'node',
     'field_name' => 'field_innovation_funding_goal',
     'label' => 'Funding Goal',
@@ -1237,7 +1242,7 @@ function gie_innovation_field_default_field_instances() {
       'module' => 'html5_tools',
       'settings' => array(),
       'type' => 'numberfield',
-      'weight' => 6,
+      'weight' => 29,
     ),
   );
 
@@ -1245,7 +1250,7 @@ function gie_innovation_field_default_field_instances() {
   $field_instances['node-innovation-field_innovation_image'] = array(
     'bundle' => 'innovation',
     'deleted' => 0,
-    'description' => '',
+    'description' => 'Upload an image that will represent your innovation in other areas of the Exchange like sectors, communities, etc.',
     'display' => array(
       'default' => array(
         'label' => 'above',
@@ -1343,7 +1348,7 @@ function gie_innovation_field_default_field_instances() {
         'progress_indicator' => 'throbber',
       ),
       'type' => 'image_image',
-      'weight' => 2,
+      'weight' => 9,
     ),
   );
 
@@ -1352,7 +1357,7 @@ function gie_innovation_field_default_field_instances() {
     'bundle' => 'innovation',
     'default_value' => NULL,
     'deleted' => 0,
-    'description' => '',
+    'description' => 'What is your plan for increasing sales or use of your innovation?',
     'display' => array(
       'default' => array(
         'label' => 'above',
@@ -1416,7 +1421,7 @@ function gie_innovation_field_default_field_instances() {
     'ds_extras_field_template' => '',
     'entity_type' => 'node',
     'field_name' => 'field_innovation_impact',
-    'label' => 'Path and Impact of Scale',
+    'label' => 'Strategy for expanding use of your innovation',
     'required' => 0,
     'settings' => array(
       'better_formats' => array(
@@ -1455,7 +1460,7 @@ function gie_innovation_field_default_field_instances() {
         'rows' => 5,
       ),
       'type' => 'text_textarea',
-      'weight' => 26,
+      'weight' => 31,
     ),
   );
 
@@ -1464,7 +1469,7 @@ function gie_innovation_field_default_field_instances() {
     'bundle' => 'innovation',
     'default_value' => NULL,
     'deleted' => 0,
-    'description' => '',
+    'description' => 'Select the countries where your innovation is being tested/used',
     'display' => array(
       'default' => array(
         'label' => 'above',
@@ -1528,8 +1533,8 @@ function gie_innovation_field_default_field_instances() {
     'ds_extras_field_template' => '',
     'entity_type' => 'node',
     'field_name' => 'field_innovation_implemented',
-    'label' => 'Implemented In',
-    'required' => 0,
+    'label' => 'Country Implemented In',
+    'required' => 1,
     'settings' => array(
       'user_register_form' => FALSE,
     ),
@@ -1540,7 +1545,7 @@ function gie_innovation_field_default_field_instances() {
         'apply_chosen' => 1,
       ),
       'type' => 'options_select',
-      'weight' => 14,
+      'weight' => 35,
     ),
   );
 
@@ -1549,7 +1554,7 @@ function gie_innovation_field_default_field_instances() {
     'bundle' => 'innovation',
     'default_value' => NULL,
     'deleted' => 0,
-    'description' => '',
+    'description' => 'Share any articles, blogs, or other news items that showcase your innovation',
     'display' => array(
       'default' => array(
         'label' => 'above',
@@ -1610,6 +1615,7 @@ function gie_innovation_field_default_field_instances() {
         'weight' => 32,
       ),
     ),
+    'ds_extras_field_template' => '',
     'entity_type' => 'node',
     'field_name' => 'field_innovation_news',
     'label' => 'In the News',
@@ -1642,7 +1648,7 @@ function gie_innovation_field_default_field_instances() {
       'module' => 'link',
       'settings' => array(),
       'type' => 'link_field',
-      'weight' => 28,
+      'weight' => 33,
     ),
   );
 
@@ -1715,7 +1721,7 @@ function gie_innovation_field_default_field_instances() {
       'module' => 'field_collection',
       'settings' => array(),
       'type' => 'field_collection_embed',
-      'weight' => 34,
+      'weight' => 12,
     ),
   );
 
@@ -1724,7 +1730,7 @@ function gie_innovation_field_default_field_instances() {
     'bundle' => 'innovation',
     'default_value' => NULL,
     'deleted' => 0,
-    'description' => '',
+    'description' => 'The point of contact must be someone with a user profile in the Exchange. Start writing a name to see if it comes up in the Exchange member directory. If not, create a profile or email the person to invite them to create a profile. If no point of contact is listed, there will be no point of contact listed on the innovation profile.',
     'display' => array(
       'default' => array(
         'label' => 'above',
@@ -1772,6 +1778,7 @@ function gie_innovation_field_default_field_instances() {
         'weight' => 19,
       ),
     ),
+    'ds_extras_field_template' => '',
     'entity_type' => 'node',
     'entityconnect_unload_add' => 1,
     'entityconnect_unload_edit' => 1,
@@ -1794,7 +1801,7 @@ function gie_innovation_field_default_field_instances() {
         'size' => 60,
       ),
       'type' => 'entityreference_autocomplete',
-      'weight' => 5,
+      'weight' => 12,
     ),
   );
 
@@ -1803,7 +1810,7 @@ function gie_innovation_field_default_field_instances() {
     'bundle' => 'innovation',
     'default_value' => NULL,
     'deleted' => 0,
-    'description' => '',
+    'description' => 'Please type in any programs/projects related to this innovation. The program must have a profile on the Exchange before you can include it. If the program is not there, please contact the program and ask them to add a profile on the Exchange. Then you can come back and tag it. Programs are often funded or implemented by organizations, have a set budget, and a start and end date.',
     'display' => array(
       'default' => array(
         'label' => 'above',
@@ -1866,6 +1873,7 @@ function gie_innovation_field_default_field_instances() {
         'weight' => 26,
       ),
     ),
+    'ds_extras_field_template' => '',
     'entity_type' => 'node',
     'entityconnect_unload_add' => 1,
     'entityconnect_unload_edit' => 1,
@@ -1888,7 +1896,7 @@ function gie_innovation_field_default_field_instances() {
         'size' => 60,
       ),
       'type' => 'entityreference_autocomplete',
-      'weight' => 18,
+      'weight' => 12,
     ),
   );
 
@@ -1901,7 +1909,7 @@ function gie_innovation_field_default_field_instances() {
       ),
     ),
     'deleted' => 0,
-    'description' => '',
+    'description' => 'Is there documentation that your innovation works and has the desired impact? Upload an evaluation, test results, or other documents, photos, or videos that prove your innovation works.',
     'display' => array(
       'default' => array(
         'label' => 'above',
@@ -1948,6 +1956,7 @@ function gie_innovation_field_default_field_instances() {
         'weight' => 43,
       ),
     ),
+    'ds_extras_field_template' => '',
     'entity_type' => 'node',
     'field_name' => 'field_innovation_proof_avail',
     'label' => 'Proof Available?',
@@ -1962,7 +1971,7 @@ function gie_innovation_field_default_field_instances() {
         'display_label' => 1,
       ),
       'type' => 'options_onoff',
-      'weight' => 23,
+      'weight' => 7,
     ),
   );
 
@@ -2057,7 +2066,7 @@ function gie_innovation_field_default_field_instances() {
         'size' => 60,
       ),
       'type' => 'entityreference_autocomplete',
-      'weight' => 24,
+      'weight' => 8,
     ),
   );
 
@@ -2066,7 +2075,7 @@ function gie_innovation_field_default_field_instances() {
     'bundle' => 'innovation',
     'default_value' => NULL,
     'deleted' => 0,
-    'description' => '',
+    'description' => 'Have you already raised funding for your innovation? Share your successes here! In whole numbes like 9999 no commas, periods, or symbols please',
     'display' => array(
       'default' => array(
         'label' => 'above',
@@ -2117,6 +2126,7 @@ function gie_innovation_field_default_field_instances() {
         'weight' => 38,
       ),
     ),
+    'ds_extras_field_template' => '',
     'entity_type' => 'node',
     'field_name' => 'field_innovation_raised',
     'label' => 'Funding Raised',
@@ -2133,7 +2143,7 @@ function gie_innovation_field_default_field_instances() {
       'module' => 'html5_tools',
       'settings' => array(),
       'type' => 'numberfield',
-      'weight' => 7,
+      'weight' => 30,
     ),
   );
 
@@ -2207,7 +2217,7 @@ function gie_innovation_field_default_field_instances() {
         'display_label' => 1,
       ),
       'type' => 'options_onoff',
-      'weight' => 32,
+      'weight' => 10,
     ),
   );
 
@@ -2286,7 +2296,7 @@ function gie_innovation_field_default_field_instances() {
         'size' => 60,
       ),
       'type' => 'entityreference_autocomplete',
-      'weight' => 33,
+      'weight' => 11,
     ),
   );
 
@@ -2295,7 +2305,7 @@ function gie_innovation_field_default_field_instances() {
     'bundle' => 'innovation',
     'default_value' => NULL,
     'deleted' => 0,
-    'description' => '',
+    'description' => 'If you have a handbook, marketing materials, toolkit or other files that you would like to share on the Exchange, upload them here!',
     'display' => array(
       'default' => array(
         'label' => 'above',
@@ -2381,7 +2391,7 @@ function gie_innovation_field_default_field_instances() {
         'size' => 60,
       ),
       'type' => 'entityreference_autocomplete',
-      'weight' => 29,
+      'weight' => 34,
     ),
   );
 
@@ -2390,7 +2400,7 @@ function gie_innovation_field_default_field_instances() {
     'bundle' => 'innovation',
     'default_value' => NULL,
     'deleted' => 0,
-    'description' => '',
+    'description' => 'Select the stage that best describes where the innovation current is',
     'display' => array(
       'default' => array(
         'label' => 'above',
@@ -2454,7 +2464,7 @@ function gie_innovation_field_default_field_instances() {
     'ds_extras_field_template' => '',
     'entity_type' => 'node',
     'field_name' => 'field_innovation_stage',
-    'label' => 'Project Stage',
+    'label' => 'Innovation Stage',
     'required' => 0,
     'settings' => array(
       'user_register_form' => FALSE,
@@ -2466,7 +2476,7 @@ function gie_innovation_field_default_field_instances() {
         'apply_chosen' => 1,
       ),
       'type' => 'options_select',
-      'weight' => 10,
+      'weight' => 28,
     ),
   );
 
@@ -2475,7 +2485,7 @@ function gie_innovation_field_default_field_instances() {
     'bundle' => 'innovation',
     'default_value' => NULL,
     'deleted' => 0,
-    'description' => '',
+    'description' => 'Share the latest status and activities of your innovation ',
     'display' => array(
       'default' => array(
         'label' => 'above',
@@ -2578,7 +2588,7 @@ function gie_innovation_field_default_field_instances() {
         'rows' => 5,
       ),
       'type' => 'text_textarea',
-      'weight' => 19,
+      'weight' => 26,
     ),
   );
 
@@ -2587,7 +2597,7 @@ function gie_innovation_field_default_field_instances() {
     'bundle' => 'innovation',
     'default_value' => NULL,
     'deleted' => 0,
-    'description' => '',
+    'description' => 'Share your next steps for growing your innovation',
     'display' => array(
       'default' => array(
         'label' => 'above',
@@ -2690,7 +2700,7 @@ function gie_innovation_field_default_field_instances() {
         'rows' => 5,
       ),
       'type' => 'text_textarea',
-      'weight' => 27,
+      'weight' => 32,
     ),
   );
 
@@ -2699,7 +2709,7 @@ function gie_innovation_field_default_field_instances() {
     'bundle' => 'innovation',
     'default_value' => NULL,
     'deleted' => 0,
-    'description' => '',
+    'description' => 'Type in team members\' names to connect those who are developing the innovation to your innovation profile. Team members must have user profiles on the Exchange to come up. If they have not created profiles yet, please encourage them to do so. ',
     'display' => array(
       'default' => array(
         'label' => 'above',
@@ -2747,6 +2757,7 @@ function gie_innovation_field_default_field_instances() {
         'weight' => 34,
       ),
     ),
+    'ds_extras_field_template' => '',
     'entity_type' => 'node',
     'entityconnect_unload_add' => 1,
     'entityconnect_unload_edit' => 1,
@@ -2769,7 +2780,7 @@ function gie_innovation_field_default_field_instances() {
         'size' => 60,
       ),
       'type' => 'entityreference_autocomplete',
-      'weight' => 30,
+      'weight' => 9,
     ),
   );
 
@@ -2778,7 +2789,7 @@ function gie_innovation_field_default_field_instances() {
     'bundle' => 'innovation',
     'default_value' => NULL,
     'deleted' => 0,
-    'description' => '',
+    'description' => 'Tell us who is using and/or testing your innovation right now',
     'display' => array(
       'default' => array(
         'label' => 'above',
@@ -2881,7 +2892,7 @@ function gie_innovation_field_default_field_instances() {
         'rows' => 5,
       ),
       'type' => 'text_textarea',
-      'weight' => 25,
+      'weight' => 30,
     ),
   );
 
@@ -2890,7 +2901,7 @@ function gie_innovation_field_default_field_instances() {
     'bundle' => 'innovation',
     'default_value' => NULL,
     'deleted' => 0,
-    'description' => '',
+    'description' => 'From the drop down list, pick as many types as apply to your innovation.',
     'display' => array(
       'default' => array(
         'label' => 'above',
@@ -2954,7 +2965,7 @@ function gie_innovation_field_default_field_instances() {
     'ds_extras_field_template' => '',
     'entity_type' => 'node',
     'field_name' => 'field_innovation_type',
-    'label' => 'Solution Type',
+    'label' => 'Innovation Type',
     'required' => 0,
     'settings' => array(
       'user_register_form' => FALSE,
@@ -2966,7 +2977,7 @@ function gie_innovation_field_default_field_instances() {
         'apply_chosen' => 1,
       ),
       'type' => 'options_select',
-      'weight' => 9,
+      'weight' => 27,
     ),
   );
 
@@ -2975,7 +2986,7 @@ function gie_innovation_field_default_field_instances() {
     'bundle' => 'innovation',
     'default_value' => NULL,
     'deleted' => 0,
-    'description' => '',
+    'description' => 'Share the URL for your innovation website ',
     'display' => array(
       'default' => array(
         'label' => 'above',
@@ -3022,6 +3033,7 @@ function gie_innovation_field_default_field_instances() {
         'weight' => 47,
       ),
     ),
+    'ds_extras_field_template' => '',
     'entity_type' => 'node',
     'field_name' => 'field_innovation_website',
     'label' => 'Website',
@@ -3054,7 +3066,7 @@ function gie_innovation_field_default_field_instances() {
       'module' => 'html5_tools',
       'settings' => array(),
       'type' => 'urlwidget',
-      'weight' => 35,
+      'weight' => 36,
     ),
   );
 
@@ -3063,7 +3075,7 @@ function gie_innovation_field_default_field_instances() {
     'bundle' => 'innovation',
     'default_value' => NULL,
     'deleted' => 0,
-    'description' => '',
+    'description' => 'Share more details about how the innovation works',
     'display' => array(
       'default' => array(
         'label' => 'above',
@@ -3166,7 +3178,7 @@ function gie_innovation_field_default_field_instances() {
         'rows' => 5,
       ),
       'type' => 'text_textarea',
-      'weight' => 20,
+      'weight' => 27,
     ),
   );
 
@@ -3175,7 +3187,7 @@ function gie_innovation_field_default_field_instances() {
     'bundle' => 'innovation',
     'default_value' => NULL,
     'deleted' => 0,
-    'description' => '',
+    'description' => 'Select the regions that include the above countries',
     'display' => array(
       'default' => array(
         'label' => 'above',
@@ -3226,7 +3238,7 @@ function gie_innovation_field_default_field_instances() {
     'entity_type' => 'node',
     'field_name' => 'field_term_region',
     'label' => 'Region',
-    'required' => 0,
+    'required' => 1,
     'settings' => array(
       'user_register_form' => FALSE,
     ),
@@ -3237,7 +3249,7 @@ function gie_innovation_field_default_field_instances() {
         'apply_chosen' => 1,
       ),
       'type' => 'options_select',
-      'weight' => 15,
+      'weight' => 26,
     ),
   );
 
@@ -3246,7 +3258,7 @@ function gie_innovation_field_default_field_instances() {
     'bundle' => 'innovation',
     'default_value' => NULL,
     'deleted' => 0,
-    'description' => '',
+    'description' => 'Please select the sectors and sub-sectors related to your innovation. You will notice that the overall sectors are listed with their sub-sectors nested with a dash )(-) symbol. Be sure to select the sectors and subsectors that apply. Do not select a sub-sector without also selecting the corresponding sector. Be sure to scroll to the bottom, there are a lot of sectors. We know this isn\'t so easy to use right now, but as we get feedback from users we\'ll be improving this selection process.',
     'display' => array(
       'default' => array(
         'label' => 'above',
@@ -3297,7 +3309,7 @@ function gie_innovation_field_default_field_instances() {
     'entity_type' => 'node',
     'field_name' => 'field_term_sector',
     'label' => 'Sector',
-    'required' => 0,
+    'required' => 1,
     'settings' => array(
       'user_register_form' => FALSE,
     ),
@@ -3308,7 +3320,7 @@ function gie_innovation_field_default_field_instances() {
         'apply_chosen' => 1,
       ),
       'type' => 'options_select',
-      'weight' => 17,
+      'weight' => 24,
     ),
   );
 
@@ -3317,7 +3329,7 @@ function gie_innovation_field_default_field_instances() {
     'bundle' => 'innovation',
     'default_value' => NULL,
     'deleted' => 0,
-    'description' => '',
+    'description' => 'Topics include issue that may be of interest to Exchange users. Select any (or none) topics that you think apply to your innovation (i.e. social impact investing)',
     'display' => array(
       'default' => array(
         'label' => 'above',
@@ -3379,7 +3391,7 @@ function gie_innovation_field_default_field_instances() {
         'apply_chosen' => 1,
       ),
       'type' => 'options_select',
-      'weight' => 16,
+      'weight' => 25,
     ),
   );
 
@@ -3464,7 +3476,7 @@ function gie_innovation_field_default_field_instances() {
         'apply_chosen' => 1,
       ),
       'type' => 'options_select',
-      'weight' => 12,
+      'weight' => 33,
     ),
   );
 
@@ -3473,7 +3485,7 @@ function gie_innovation_field_default_field_instances() {
     'bundle' => 'innovation',
     'default_value' => NULL,
     'deleted' => 0,
-    'description' => '',
+    'description' => 'Whats your innovation called (hint: shorter is better)',
     'display' => array(
       'default' => array(
         'label' => 'above',
@@ -3540,11 +3552,38 @@ function gie_innovation_field_default_field_instances() {
         'weight' => 0,
       ),
     ),
+    'ds_extras_field_template' => '',
     'entity_type' => 'node',
     'field_name' => 'title_field',
     'label' => 'Title',
-    'required' => TRUE,
+    'required' => 1,
     'settings' => array(
+      'better_formats' => array(
+        'allowed_formats' => array(
+          'comments_filtered' => 'comments_filtered',
+          'filtered_html' => 'filtered_html',
+          'full_html' => 'full_html',
+          'plain_text' => 'plain_text',
+        ),
+        'allowed_formats_toggle' => 0,
+        'default_order_toggle' => 0,
+        'default_order_wrapper' => array(
+          'formats' => array(
+            'comments_filtered' => array(
+              'weight' => 0,
+            ),
+            'filtered_html' => array(
+              'weight' => 0,
+            ),
+            'full_html' => array(
+              'weight' => 1,
+            ),
+            'plain_text' => array(
+              'weight' => 10,
+            ),
+          ),
+        ),
+      ),
       'hide_label' => array(
         'entity' => 0,
         'page' => 0,
@@ -3553,12 +3592,13 @@ function gie_innovation_field_default_field_instances() {
       'user_register_form' => FALSE,
     ),
     'widget' => array(
+      'active' => 1,
       'module' => 'text',
       'settings' => array(
         'size' => 60,
       ),
       'type' => 'text_textfield',
-      'weight' => 0,
+      'weight' => 7,
     ),
   );
 
@@ -3864,31 +3904,42 @@ function gie_innovation_field_default_field_instances() {
   t('Comment');
   t('Cost Per Unit');
   t('Cost per Beneficiary');
-  t('Created In');
+  t('Country Created In');
+  t('Country Implemented In');
   t('Current Users / Testers Include');
   t('Description');
+  t('Do you have a funding goal (in US Dollars) that you would like to raise? Please enter a whole number, like 590000  No symbols, commas, or periods/decimals allowed');
   t('Email');
+  t('Enter a short description of your innovation. What does it do?');
   t('Evidence Available?');
   t('Evidence it Works');
   t('Exchange References');
-  t('Featured Assets');
   t('Featured Image');
   t('First Name');
+  t('From the drop down list, pick as many types as apply to your innovation.');
   t('Funded By');
   t('Funding Goal');
   t('Funding Raised');
+  t('Have you already raised funding for your innovation? Share your successes here! In whole numbes like 9999 no commas, periods, or symbols please');
+  t('Have you calculated how much your innovation costs per person that it benefits? This is a great way to show the value of your innovation.');
   t('How it Works');
-  t('Implemented In');
+  t('If you have a cost per unit for your innovation, share it here!');
+  t('If you have a handbook, marketing materials, toolkit or other files that you would like to share on the Exchange, upload them here!');
   t('In the News');
+  t('Innovation Photos and Videos');
+  t('Innovation Stage');
   t('Innovation Team');
+  t('Innovation Type');
+  t('Is there documentation that your innovation works and has the desired impact? Upload an evaluation, test results, or other documents, photos, or videos that prove your innovation works.');
+  t('Is there evidence that your innovation works or has the desired impact?');
   t('Last Name');
   t('Name');
   t('Next Steps');
   t('Non-Exchange References');
-  t('Path and Impact of Scale');
   t('Photo');
+  t('Please select the sectors and sub-sectors related to your innovation. You will notice that the overall sectors are listed with their sub-sectors nested with a dash )(-) symbol. Be sure to select the sectors and subsectors that apply. Do not select a sub-sector without also selecting the corresponding sector. Be sure to scroll to the bottom, there are a lot of sectors. We know this isn\'t so easy to use right now, but as we get feedback from users we\'ll be improving this selection process.');
+  t('Please type in any programs/projects related to this innovation. The program must have a profile on the Exchange before you can include it. If the program is not there, please contact the program and ask them to add a profile on the Exchange. Then you can come back and tag it. Programs are often funded or implemented by organizations, have a set budget, and a start and end date.');
   t('Point of Contact');
-  t('Project Stage');
   t('Proof Available?');
   t('Proof of Evidence');
   t('References Available?');
@@ -3896,13 +3947,32 @@ function gie_innovation_field_default_field_instances() {
   t('Related Programs');
   t('Resources');
   t('Sector');
-  t('Solution Type');
+  t('Select the countries where your innovation is being tested/used');
+  t('Select the countries where your innovation was created');
+  t('Select the regions that include the above countries');
+  t('Select the stage that best describes where the innovation current is');
+  t('Share any articles, blogs, or other news items that showcase your innovation');
+  t('Share more details about how the innovation works');
+  t('Share the URL for your innovation website ');
+  t('Share the latest status and activities of your innovation ');
+  t('Share your next steps for growing your innovation');
   t('Status Update');
+  t('Strategy for expanding use of your innovation');
   t('Subject');
+  t('Tell us who is using and/or testing your innovation right now');
   t('Testing Phase');
+  t('The point of contact must be someone with a user profile in the Exchange. Start writing a name to see if it comes up in the Exchange member directory. If not, create a profile or email the person to invite them to create a profile. If no point of contact is listed, there will be no point of contact listed on the innovation profile.');
   t('Title');
   t('Topic');
+  t('Topics include issue that may be of interest to Exchange users. Select any (or none) topics that you think apply to your innovation (i.e. social impact investing)');
+  t('Type in team members\' names to connect those who are developing the innovation to your innovation profile. Team members must have user profiles on the Exchange to come up. If they have not created profiles yet, please encourage them to do so. ');
+  t('Type the organizations or programs that you are funded by. They must have an organization or program profile to appear on your page. Please encourage your funders to create organization/program profiles and user profiles on the Exchange if they don\'t appear.');
+  t('Upload an image that will represent your innovation in other areas of the Exchange like sectors, communities, etc.');
+  t('Upload high-resolution photos and videos of your innovation. These will appear at the top of your innovation profile page.');
   t('Website');
+  t('What is your plan for increasing sales or use of your innovation?');
+  t('What type of assistance do you need to grow your innovation? If you don\'t select any assistance your profile will say "No Assistance Needed at this Time"');
+  t('Whats your innovation called (hint: shorter is better)');
 
   return $field_instances;
 }
