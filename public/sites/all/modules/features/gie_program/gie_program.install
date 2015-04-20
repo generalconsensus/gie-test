@@ -47,8 +47,7 @@ function gie_program_update_7000() {
 
 /**
  * Add default Organization Logo field.
-
+ */
 function gie_program_update_7001() {
     gie_program_add_default_image();
 }
- */
