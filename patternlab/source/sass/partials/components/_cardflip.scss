@@ -66,7 +66,7 @@ $cardheight: 200px;
   @include hyphens(none);
   font-size: em(21px);
   .cardflip__a & {
-    min-height: 80px;
+    min-height: 60px;
   }
   .cardflip__b & {
     border-bottom: 1px solid #fff;
