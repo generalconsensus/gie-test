@@ -39,8 +39,7 @@
 }
 
 /* line 35, ../sass/partials/global/extendables/_button.scss */
-.button, .card__button a, .flag-favorite a, .flag-follow a,
-.flag-follow-taxonomy a, .sharethis-buttons .st_sharethis_custom {
+.button, .card__button a, .flag-favorite a, .flag-follow a, .sharethis-buttons .st_sharethis_custom {
   font-size: 0.875em;
   line-height: 1.85714em;
   -webkit-border-radius: 0;
@@ -61,9 +60,7 @@
   vertical-align: baseline;
 }
 /* line 25, ../sass/partials/global/extendables/_button.scss */
-.button:focus, .card__button a:focus, .flag-favorite a:focus, .flag-follow a:focus,
-.flag-follow-taxonomy a:focus, .sharethis-buttons .st_sharethis_custom:focus, .button:hover, .card__button a:hover, .flag-favorite a:hover, .flag-follow a:hover,
-.flag-follow-taxonomy a:hover, .sharethis-buttons .st_sharethis_custom:hover {
+.button:focus, .card__button a:focus, .flag-favorite a:focus, .flag-follow a:focus, .sharethis-buttons .st_sharethis_custom:focus, .button:hover, .card__button a:hover, .flag-favorite a:hover, .flag-follow a:hover, .sharethis-buttons .st_sharethis_custom:hover {
   background-color: #001f36;
   border-color: #001f36;
   color: white;
@@ -71,32 +68,11 @@
   text-decoration: none;
 }
 /* line 38, ../sass/partials/global/extendables/_button.scss */
-.button + .button, .card__button a + .button, .flag-favorite a + .button, .flag-follow a + .button,
-.flag-follow-taxonomy a + .button, .sharethis-buttons .st_sharethis_custom + .button, .card__button .button + a, .card__button a + a, .sharethis-buttons .card__button .st_sharethis_custom + a, .card__button .sharethis-buttons .st_sharethis_custom + a, .flag-favorite .button + a, .flag-favorite a + a, .sharethis-buttons .flag-favorite .st_sharethis_custom + a, .flag-favorite .sharethis-buttons .st_sharethis_custom + a, .flag-follow .button + a, .flag-follow a + a, .sharethis-buttons .flag-follow .st_sharethis_custom + a, .flag-follow .sharethis-buttons .st_sharethis_custom + a,
-.flag-follow-taxonomy .button + a,
-.flag-follow-taxonomy a + a,
-.sharethis-buttons .flag-follow-taxonomy .st_sharethis_custom + a,
-.flag-follow-taxonomy .sharethis-buttons .st_sharethis_custom + a, .sharethis-buttons .button + .st_sharethis_custom, .card__button .sharethis-buttons a + .st_sharethis_custom, .sharethis-buttons .card__button a + .st_sharethis_custom, .flag-favorite .sharethis-buttons a + .st_sharethis_custom, .sharethis-buttons .flag-favorite a + .st_sharethis_custom, .flag-follow .sharethis-buttons a + .st_sharethis_custom, .sharethis-buttons .flag-follow a + .st_sharethis_custom,
-.flag-follow-taxonomy .sharethis-buttons a + .st_sharethis_custom,
-.sharethis-buttons .flag-follow-taxonomy a + .st_sharethis_custom, .sharethis-buttons .st_sharethis_custom + .st_sharethis_custom {
+.button + .button, .card__button a + .button, .flag-favorite a + .button, .flag-follow a + .button, .sharethis-buttons .st_sharethis_custom + .button, .card__button .button + a, .card__button a + a, .sharethis-buttons .card__button .st_sharethis_custom + a, .card__button .sharethis-buttons .st_sharethis_custom + a, .flag-favorite .button + a, .flag-favorite a + a, .sharethis-buttons .flag-favorite .st_sharethis_custom + a, .flag-favorite .sharethis-buttons .st_sharethis_custom + a, .flag-follow .button + a, .flag-follow a + a, .sharethis-buttons .flag-follow .st_sharethis_custom + a, .flag-follow .sharethis-buttons .st_sharethis_custom + a, .sharethis-buttons .button + .st_sharethis_custom, .card__button .sharethis-buttons a + .st_sharethis_custom, .sharethis-buttons .card__button a + .st_sharethis_custom, .flag-favorite .sharethis-buttons a + .st_sharethis_custom, .sharethis-buttons .flag-favorite a + .st_sharethis_custom, .flag-follow .sharethis-buttons a + .st_sharethis_custom, .sharethis-buttons .flag-follow a + .st_sharethis_custom, .sharethis-buttons .st_sharethis_custom + .st_sharethis_custom {
   margin-left: 1em;
 }
 /* line 41, ../sass/partials/global/extendables/_button.scss */
-[dir="rtl"] .button + .button, [dir="rtl"] .card__button a + .button, .card__button [dir="rtl"] a + .button, [dir="rtl"] .flag-favorite a + .button, .flag-favorite [dir="rtl"] a + .button, [dir="rtl"] .flag-follow a + .button, .flag-follow [dir="rtl"] a + .button,
-[dir="rtl"] .flag-follow-taxonomy a + .button,
-.flag-follow-taxonomy [dir="rtl"] a + .button, [dir="rtl"] .sharethis-buttons .st_sharethis_custom + .button, .sharethis-buttons [dir="rtl"] .st_sharethis_custom + .button, [dir="rtl"] .card__button .button + a, .card__button [dir="rtl"] .button + a, [dir="rtl"] .card__button a + a, .card__button [dir="rtl"] a + a, [dir="rtl"] .sharethis-buttons .card__button .st_sharethis_custom + a, .card__button [dir="rtl"] .sharethis-buttons .st_sharethis_custom + a, .sharethis-buttons [dir="rtl"] .card__button .st_sharethis_custom + a, .card__button .sharethis-buttons [dir="rtl"] .st_sharethis_custom + a, [dir="rtl"] .flag-favorite .button + a, .flag-favorite [dir="rtl"] .button + a, [dir="rtl"] .flag-favorite a + a, .flag-favorite [dir="rtl"] a + a, [dir="rtl"] .sharethis-buttons .flag-favorite .st_sharethis_custom + a, .flag-favorite [dir="rtl"] .sharethis-buttons .st_sharethis_custom + a, .sharethis-buttons [dir="rtl"] .flag-favorite .st_sharethis_custom + a, .flag-favorite .sharethis-buttons [dir="rtl"] .st_sharethis_custom + a, [dir="rtl"] .flag-follow .button + a, .flag-follow [dir="rtl"] .button + a, [dir="rtl"] .flag-follow a + a, .flag-follow [dir="rtl"] a + a, [dir="rtl"] .sharethis-buttons .flag-follow .st_sharethis_custom + a, .flag-follow [dir="rtl"] .sharethis-buttons .st_sharethis_custom + a, .sharethis-buttons [dir="rtl"] .flag-follow .st_sharethis_custom + a, .flag-follow .sharethis-buttons [dir="rtl"] .st_sharethis_custom + a,
-[dir="rtl"] .flag-follow-taxonomy .button + a,
-.flag-follow-taxonomy [dir="rtl"] .button + a,
-[dir="rtl"] .flag-follow-taxonomy a + a,
-.flag-follow-taxonomy [dir="rtl"] a + a,
-[dir="rtl"] .sharethis-buttons .flag-follow-taxonomy .st_sharethis_custom + a,
-.flag-follow-taxonomy [dir="rtl"] .sharethis-buttons .st_sharethis_custom + a,
-.sharethis-buttons [dir="rtl"] .flag-follow-taxonomy .st_sharethis_custom + a,
-.flag-follow-taxonomy .sharethis-buttons [dir="rtl"] .st_sharethis_custom + a, [dir="rtl"] .sharethis-buttons .button + .st_sharethis_custom, .sharethis-buttons [dir="rtl"] .button + .st_sharethis_custom, [dir="rtl"] .card__button .sharethis-buttons a + .st_sharethis_custom, .sharethis-buttons [dir="rtl"] .card__button a + .st_sharethis_custom, .card__button [dir="rtl"] .sharethis-buttons a + .st_sharethis_custom, .sharethis-buttons .card__button [dir="rtl"] a + .st_sharethis_custom, [dir="rtl"] .flag-favorite .sharethis-buttons a + .st_sharethis_custom, .sharethis-buttons [dir="rtl"] .flag-favorite a + .st_sharethis_custom, .flag-favorite [dir="rtl"] .sharethis-buttons a + .st_sharethis_custom, .sharethis-buttons .flag-favorite [dir="rtl"] a + .st_sharethis_custom, [dir="rtl"] .flag-follow .sharethis-buttons a + .st_sharethis_custom, .sharethis-buttons [dir="rtl"] .flag-follow a + .st_sharethis_custom, .flag-follow [dir="rtl"] .sharethis-buttons a + .st_sharethis_custom, .sharethis-buttons .flag-follow [dir="rtl"] a + .st_sharethis_custom,
-[dir="rtl"] .flag-follow-taxonomy .sharethis-buttons a + .st_sharethis_custom,
-.sharethis-buttons [dir="rtl"] .flag-follow-taxonomy a + .st_sharethis_custom,
-.flag-follow-taxonomy [dir="rtl"] .sharethis-buttons a + .st_sharethis_custom,
-.sharethis-buttons .flag-follow-taxonomy [dir="rtl"] a + .st_sharethis_custom, [dir="rtl"] .sharethis-buttons .st_sharethis_custom + .st_sharethis_custom, .sharethis-buttons [dir="rtl"] .st_sharethis_custom + .st_sharethis_custom {
+[dir="rtl"] .button + .button, [dir="rtl"] .card__button a + .button, .card__button [dir="rtl"] a + .button, [dir="rtl"] .flag-favorite a + .button, .flag-favorite [dir="rtl"] a + .button, [dir="rtl"] .flag-follow a + .button, .flag-follow [dir="rtl"] a + .button, [dir="rtl"] .sharethis-buttons .st_sharethis_custom + .button, .sharethis-buttons [dir="rtl"] .st_sharethis_custom + .button, [dir="rtl"] .card__button .button + a, .card__button [dir="rtl"] .button + a, [dir="rtl"] .card__button a + a, .card__button [dir="rtl"] a + a, [dir="rtl"] .sharethis-buttons .card__button .st_sharethis_custom + a, .card__button [dir="rtl"] .sharethis-buttons .st_sharethis_custom + a, .sharethis-buttons [dir="rtl"] .card__button .st_sharethis_custom + a, .card__button .sharethis-buttons [dir="rtl"] .st_sharethis_custom + a, [dir="rtl"] .flag-favorite .button + a, .flag-favorite [dir="rtl"] .button + a, [dir="rtl"] .flag-favorite a + a, .flag-favorite [dir="rtl"] a + a, [dir="rtl"] .sharethis-buttons .flag-favorite .st_sharethis_custom + a, .flag-favorite [dir="rtl"] .sharethis-buttons .st_sharethis_custom + a, .sharethis-buttons [dir="rtl"] .flag-favorite .st_sharethis_custom + a, .flag-favorite .sharethis-buttons [dir="rtl"] .st_sharethis_custom + a, [dir="rtl"] .flag-follow .button + a, .flag-follow [dir="rtl"] .button + a, [dir="rtl"] .flag-follow a + a, .flag-follow [dir="rtl"] a + a, [dir="rtl"] .sharethis-buttons .flag-follow .st_sharethis_custom + a, .flag-follow [dir="rtl"] .sharethis-buttons .st_sharethis_custom + a, .sharethis-buttons [dir="rtl"] .flag-follow .st_sharethis_custom + a, .flag-follow .sharethis-buttons [dir="rtl"] .st_sharethis_custom + a, [dir="rtl"] .sharethis-buttons .button + .st_sharethis_custom, .sharethis-buttons [dir="rtl"] .button + .st_sharethis_custom, [dir="rtl"] .card__button .sharethis-buttons a + .st_sharethis_custom, .sharethis-buttons [dir="rtl"] .card__button a + .st_sharethis_custom, .card__button [dir="rtl"] .sharethis-buttons a + .st_sharethis_custom, .sharethis-buttons .card__button [dir="rtl"] a + .st_sharethis_custom, [dir="rtl"] .flag-favorite .sharethis-buttons a + .st_sharethis_custom, .sharethis-buttons [dir="rtl"] .flag-favorite a + .st_sharethis_custom, .flag-favorite [dir="rtl"] .sharethis-buttons a + .st_sharethis_custom, .sharethis-buttons .flag-favorite [dir="rtl"] a + .st_sharethis_custom, [dir="rtl"] .flag-follow .sharethis-buttons a + .st_sharethis_custom, .sharethis-buttons [dir="rtl"] .flag-follow a + .st_sharethis_custom, .flag-follow [dir="rtl"] .sharethis-buttons a + .st_sharethis_custom, .sharethis-buttons .flag-follow [dir="rtl"] a + .st_sharethis_custom, [dir="rtl"] .sharethis-buttons .st_sharethis_custom + .st_sharethis_custom, .sharethis-buttons [dir="rtl"] .st_sharethis_custom + .st_sharethis_custom {
   margin-left: 0;
   margin-right: 1em;
 }
@@ -107,15 +83,12 @@
 }
 
 /* line 52, ../sass/partials/global/extendables/_button.scss */
-.button--highlight, .card__button a, .flag-follow a,
-.flag-follow-taxonomy a, .sharethis-buttons .st_sharethis_custom {
+.button--highlight, .card__button a, .flag-follow a, .sharethis-buttons .st_sharethis_custom {
   background-color: #b71234;
   border-color: #b71234;
 }
 /* line 55, ../sass/partials/global/extendables/_button.scss */
-.button--highlight:hover, .card__button a:hover, .flag-follow a:hover,
-.flag-follow-taxonomy a:hover, .sharethis-buttons .st_sharethis_custom:hover, .button--highlight:focus, .card__button a:focus, .flag-follow a:focus,
-.flag-follow-taxonomy a:focus, .sharethis-buttons .st_sharethis_custom:focus {
+.button--highlight:hover, .card__button a:hover, .flag-follow a:hover, .sharethis-buttons .st_sharethis_custom:hover, .button--highlight:focus, .card__button a:focus, .flag-follow a:focus, .sharethis-buttons .st_sharethis_custom:focus {
   background-color: #822433;
   border-color: #822433;
 }
@@ -147,16 +120,14 @@
 }
 
 /* line 83, ../sass/partials/global/extendables/_button.scss */
-.sharethis-buttons .st_sharethis_custom, .flag-favorite a, .button--add, .button--member, .flag-follow a,
-.flag-follow-taxonomy a {
+.sharethis-buttons .st_sharethis_custom, .flag-favorite a, .button--add, .button--member, .flag-follow a {
   padding-left: 50px;
   padding-right: 2em;
   position: relative;
   text-transform: uppercase;
 }
 /* line 88, ../sass/partials/global/extendables/_button.scss */
-.sharethis-buttons .st_sharethis_custom:before, .flag-favorite a:before, .button--add:before, .button--member:before, .flag-follow a:before,
-.flag-follow-taxonomy a:before {
+.sharethis-buttons .st_sharethis_custom:before, .flag-favorite a:before, .button--add:before, .button--member:before, .flag-follow a:before {
   height: 20px;
   overflow: hidden;
   width: 20px;
@@ -167,8 +138,7 @@
   top: 10px;
 }
 /* line 14, ../sass/partials/global/helpers/_image-replace.scss */
-.sharethis-buttons .st_sharethis_custom:before:before, .flag-favorite a:before:before, .button--add:before:before, .button--member:before:before, .flag-follow a:before:before,
-.flag-follow-taxonomy a:before:before {
+.sharethis-buttons .st_sharethis_custom:before:before, .flag-favorite a:before:before, .button--add:before:before, .button--member:before:before, .flag-follow a:before:before {
   content: "";
   display: block;
   height: 150%;
@@ -210,13 +180,11 @@
 }
 
 /* line 129, ../sass/partials/global/extendables/_button.scss */
-.button--member, .flag-follow a,
-.flag-follow-taxonomy a {
+.button--member, .flag-follow a {
   padding-left: 40px;
 }
 /* line 132, ../sass/partials/global/extendables/_button.scss */
-.button--member:before, .flag-follow a:before,
-.flag-follow-taxonomy a:before {
+.button--member:before, .flag-follow a:before {
   background-image: url('../images/bg/icon-member-18-18-white.png');
   background-image: -webkit-linear-gradient(transparent, transparent), url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4NCjwhLS0gR2VuZXJhdGVkIGJ5IEljb01vb24uaW8gLS0+DQo8IURPQ1RZUEUgc3ZnIFBVQkxJQyAiLS8vVzNDLy9EVEQgU1ZHIDEuMS8vRU4iICJodHRwOi8vd3d3LnczLm9yZy9HcmFwaGljcy9TVkcvMS4xL0RURC9zdmcxMS5kdGQiPg0KPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHdpZHRoPSIxOCIgaGVpZ2h0PSIxOCIgdmlld0JveD0iMCAwIDE4IDE4Ij4NCjxwYXRoIGZpbGw9IiNmZmZmZmYiIGQ9Ik05LjA5NiAxMC41MzJjLTIuODcyIDAtNS4yNjYtMi4zOTQtNS4yNjYtNS4yNjZzMi4zOTQtNS4yNjYgNS4yNjYtNS4yNjZjMi44NzIgMCA1LjI2NiAyLjM5NCA1LjI2NiA1LjI2NnMtMi4zOTQgNS4yNjYtNS4yNjYgNS4yNjZ6TTkuMDk2IDEuMTQ5Yy0yLjI5OCAwLTQuMTE3IDEuODE5LTQuMTE3IDQuMTE3czEuODE5IDQuMTE3IDQuMTE3IDQuMTE3IDQuMTE3LTEuODE5IDQuMTE3LTQuMTE3YzAtMi4yOTgtMS44MTktNC4xMTctNC4xMTctNC4xMTd6Ij48L3BhdGg+DQo8cGF0aCBmaWxsPSIjZmZmZmZmIiBkPSJNMTcuNjE3IDE4aC0xNy4wNDNjLTAuMjg3IDAtMC41NzQtMC4yODctMC41NzQtMC41NzR2LTMuODNjMC0wLjA5NiAwLTAuMTkxIDAtMC4xOTFzMCAwIDAtMC4wOTZjMC0xLjM0IDEuMDUzLTIuMzk0IDIuMzk0LTIuMzk0aDEzLjQwNGMxLjM0IDAgMi4zOTQgMS4wNTMgMi4zOTQgMi4zOTQgMCAwLjA5NiAwIDAuMTkxIDAgMC4xOTFzMCAwIDAgMC4wOTZ2My45MjZjMCAwLjE5MS0wLjI4NyAwLjQ3OS0wLjU3NCAwLjQ3OXpNMS4xNDkgMTYuODUxaDE1Ljk4OXYtMy4yNTVjMCAwIDAtMC4xOTEgMC0wLjE5MXMwLTAuMDk2IDAtMC4wOTZjMC0wLjY3LTAuNTc0LTEuMjQ1LTEuMjQ1LTEuMjQ1aC0xMy40MDRjLTAuNjcgMC0xLjI0NSAwLjU3NC0xLjI0NSAxLjI0NXYwLjA5NmMwIDAgMCAwLjE5MSAwIDAuMTkxbC0wLjA5NiAzLjI1NXoiPjwvcGF0aD4NCjwvc3ZnPg0K');
   background-image: linear-gradient(transparent, transparent), url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4NCjwhLS0gR2VuZXJhdGVkIGJ5IEljb01vb24uaW8gLS0+DQo8IURPQ1RZUEUgc3ZnIFBVQkxJQyAiLS8vVzNDLy9EVEQgU1ZHIDEuMS8vRU4iICJodHRwOi8vd3d3LnczLm9yZy9HcmFwaGljcy9TVkcvMS4xL0RURC9zdmcxMS5kdGQiPg0KPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHdpZHRoPSIxOCIgaGVpZ2h0PSIxOCIgdmlld0JveD0iMCAwIDE4IDE4Ij4NCjxwYXRoIGZpbGw9IiNmZmZmZmYiIGQ9Ik05LjA5NiAxMC41MzJjLTIuODcyIDAtNS4yNjYtMi4zOTQtNS4yNjYtNS4yNjZzMi4zOTQtNS4yNjYgNS4yNjYtNS4yNjZjMi44NzIgMCA1LjI2NiAyLjM5NCA1LjI2NiA1LjI2NnMtMi4zOTQgNS4yNjYtNS4yNjYgNS4yNjZ6TTkuMDk2IDEuMTQ5Yy0yLjI5OCAwLTQuMTE3IDEuODE5LTQuMTE3IDQuMTE3czEuODE5IDQuMTE3IDQuMTE3IDQuMTE3IDQuMTE3LTEuODE5IDQuMTE3LTQuMTE3YzAtMi4yOTgtMS44MTktNC4xMTctNC4xMTctNC4xMTd6Ij48L3BhdGg+DQo8cGF0aCBmaWxsPSIjZmZmZmZmIiBkPSJNMTcuNjE3IDE4aC0xNy4wNDNjLTAuMjg3IDAtMC41NzQtMC4yODctMC41NzQtMC41NzR2LTMuODNjMC0wLjA5NiAwLTAuMTkxIDAtMC4xOTFzMCAwIDAtMC4wOTZjMC0xLjM0IDEuMDUzLTIuMzk0IDIuMzk0LTIuMzk0aDEzLjQwNGMxLjM0IDAgMi4zOTQgMS4wNTMgMi4zOTQgMi4zOTQgMCAwLjA5NiAwIDAuMTkxIDAgMC4xOTFzMCAwIDAgMC4wOTZ2My45MjZjMCAwLjE5MS0wLjI4NyAwLjQ3OS0wLjU3NCAwLjQ3OXpNMS4xNDkgMTYuODUxaDE1Ljk4OXYtMy4yNTVjMCAwIDAtMC4xOTEgMC0wLjE5MXMwLTAuMDk2IDAtMC4wOTZjMC0wLjY3LTAuNTc0LTEuMjQ1LTEuMjQ1LTEuMjQ1aC0xMy40MDRjLTAuNjcgMC0xLjI0NSAwLjU3NC0xLjI0NSAxLjI0NXYwLjA5NmMwIDAgMCAwLjE5MSAwIDAuMTkxbC0wLjA5NiAzLjI1NXoiPjwvcGF0aD4NCjwvc3ZnPg0K');
@@ -2156,9 +2124,8 @@ input.throbbing {
   margin-bottom: 0.5em;
 }
 
-/* line 4, ../sass/partials/components/_flag-follow.scss */
-.flag-follow a,
-.flag-follow-taxonomy a {
+/* line 3, ../sass/partials/components/_flag-follow.scss */
+.flag-follow a {
   margin-bottom: 0.5em;
 }
 

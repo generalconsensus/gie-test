@@ -1,5 +1,6 @@
 // custom follow button from flag module
-.flag-follow {
+.flag-follow,
+.flag-follow-taxonomy {
   a {
     @extend %button;
     @extend %button--highlight;
