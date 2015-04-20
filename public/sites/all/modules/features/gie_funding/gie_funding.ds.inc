@@ -180,6 +180,21 @@ function gie_funding_ds_field_settings_info() {
 
   $ds_fieldsetting = new stdClass();
   $ds_fieldsetting->api_version = 1;
+  $ds_fieldsetting->id = 'node|funding|search_listing';
+  $ds_fieldsetting->entity_type = 'node';
+  $ds_fieldsetting->bundle = 'funding';
+  $ds_fieldsetting->view_mode = 'search_listing';
+  $ds_fieldsetting->settings = array(
+    'title_field' => array(
+      'formatter_settings' => array(
+        'ft' => array(),
+      ),
+    ),
+  );
+  $export['node|funding|search_listing'] = $ds_fieldsetting;
+
+  $ds_fieldsetting = new stdClass();
+  $ds_fieldsetting->api_version = 1;
   $ds_fieldsetting->id = 'node|funding|teaser_date';
   $ds_fieldsetting->entity_type = 'node';
   $ds_fieldsetting->bundle = 'funding';
@@ -379,6 +394,36 @@ function gie_funding_ds_layout_settings_info() {
     'layout_link_custom' => '',
   );
   $export['node|funding|listing'] = $ds_layout;
+
+  $ds_layout = new stdClass();
+  $ds_layout->api_version = 1;
+  $ds_layout->id = 'node|funding|search_listing';
+  $ds_layout->entity_type = 'node';
+  $ds_layout->bundle = 'funding';
+  $ds_layout->view_mode = 'search_listing';
+  $ds_layout->layout = 'ds_1col';
+  $ds_layout->settings = array(
+    'regions' => array(
+      'ds_content' => array(
+        0 => 'title_field',
+        1 => 'field_funding_desc',
+      ),
+    ),
+    'fields' => array(
+      'title_field' => 'ds_content',
+      'field_funding_desc' => 'ds_content',
+    ),
+    'classes' => array(),
+    'wrappers' => array(
+      'ds_content' => 'div',
+    ),
+    'layout_wrapper' => 'div',
+    'layout_attributes' => '',
+    'layout_attributes_merge' => 1,
+    'layout_link_attribute' => '',
+    'layout_link_custom' => '',
+  );
+  $export['node|funding|search_listing'] = $ds_layout;
 
   $ds_layout = new stdClass();
   $ds_layout->api_version = 1;
