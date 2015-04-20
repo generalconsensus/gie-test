@@ -164,6 +164,19 @@
       }
     });
   }
+
+  function filters() {
+    $('div[class*="pane--facetapi"]').each(function(){
+      var moi = $(this);
+      var title = $(this).find('.pane__title').eq(0);
+      var content = $(this).find('.pane__content').eq(0);
+      moi.addClass('is-open');
+      title.click(function(){
+        moi.toggleClass('is-open').toggleClass('is-closed');
+        content.slideToggle();
+      });
+    });
+  }
  
 
   // Generic function that runs on window resize.
@@ -187,6 +200,7 @@
 
   $(window).load(function() {
     resizeStuff();
+    filters();
   });
 
 })(jQuery);

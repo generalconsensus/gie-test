@@ -1,6 +1,6 @@
 div[class*="pane--facetapi"] {
   background: #fff;
-  border: 1px solid #f2f2f2;
+  border: 1px solid #f1f1f1;
   border-top: 0;
   margin: 0;
   .pane__title {
@@ -11,6 +11,34 @@ div[class*="pane--facetapi"] {
     font-weight: normal;
     margin: 0;
     padding: 1em 0.75em;
+  }
+  &.is-open .pane__title,
+  &.is-closed .pane__title {
+    cursor: pointer;
+    padding-right: 40px;
+    position: relative;
+    &:after {
+      background-size: contain;
+      content: "";
+      display: block;
+      height: 15px;
+      position: absolute;
+      right: 0.75em;
+      top: 1em;
+      width: 15px;
+    }
+  }
+  &.is-open .pane__title {
+    &:after {
+      @include svg-background(icon-minus-15-15-white);
+    }
+  }
+  &.is-closed .pane__title {
+    background: #f1f1f1;
+    color: $primary-text-color;
+    &:after {
+      @include svg-background(icon-plus-15-15-orange);
+    }
   }
   .pane__content {
     ul {
