@@ -111,6 +111,13 @@ function gie_program_ds_field_settings_info() {
         ),
       ),
     ),
+    'field_program_logo' => array(
+      'formatter_settings' => array(
+        'ft' => array(
+          'func' => 'theme_ds_field_expert',
+        ),
+      ),
+    ),
   );
   $export['node|program|listing'] = $ds_fieldsetting;
 
@@ -230,21 +237,21 @@ function gie_program_ds_layout_settings_info() {
   $ds_layout->settings = array(
     'regions' => array(
       'main_content' => array(
-        0 => 'title_field',
-        1 => 'field_program_desc',
-        2 => 'program_counters_innovation_count',
-        3 => 'program_counters_program_count',
-        4 => 'field_program_logo',
+        0 => 'field_program_logo',
+        1 => 'title_field',
+        2 => 'field_program_desc',
+        3 => 'program_counters_innovation_count',
+        4 => 'program_counters_program_count',
         5 => 'group_card_content',
         6 => 'group_card_counts',
       ),
     ),
     'fields' => array(
+      'field_program_logo' => 'main_content',
       'title_field' => 'main_content',
       'field_program_desc' => 'main_content',
       'program_counters_innovation_count' => 'main_content',
       'program_counters_program_count' => 'main_content',
-      'field_program_logo' => 'main_content',
       'group_card_content' => 'main_content',
       'group_card_counts' => 'main_content',
     ),
