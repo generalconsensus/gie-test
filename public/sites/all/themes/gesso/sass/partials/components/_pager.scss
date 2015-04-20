@@ -2,6 +2,7 @@
 // Styles for pagers.
 
 .pager {
+  clear: both;
   list-style: none;
   padding: 0;
 }
@@ -9,7 +10,14 @@
 .pager__item {
   display: inline-block;
   margin: 0;
-  padding: 0;
+  padding: 0 0.25em 0 0;
+  .pane__content & { // undo bullet from _html-elements
+    padding-bottom: 0;
+    padding-left: 0;
+    &:before {
+      display: none;
+    }
+  }
 }
 
 .pager__link--first:before {

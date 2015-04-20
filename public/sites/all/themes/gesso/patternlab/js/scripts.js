@@ -66,20 +66,38 @@
       items.find('.card').css("height","auto");
 
       if (Modernizr.mq('(min-width: 500px) and (max-width: 799px)')) { 
-        items.filter(":nth-child(2n-1)").addClass('odd');
-        items.filter(":nth-child(2n)").addClass('even');
+        items.filter(function(index) {
+          return (index + 1) % 1 == 0;    
+        }).addClass('odd');
+        items.filter(function(index) {
+          return (index + 1) % 2 == 0;    
+        }).addClass('even');
       }
       if (Modernizr.mq('(min-width: 800px)')) { 
         if (columns == 3) {
-          items.filter(":nth-child(3n-2)").addClass('first');
-          items.filter(":nth-child(3n-1)").addClass('second');
-          items.filter(":nth-child(3n)").addClass('third');
+          items.filter(function(index) {
+            return (index + 1) % 1 == 0;    
+          }).addClass('first').removeClass('second third');
+          items.filter(function(index) {
+            return (index + 1) % 2 == 0;    
+          }).addClass('second').removeClass('first third');
+          items.filter(function(index) {
+            return (index + 1) % 3 == 0;    
+          }).addClass('third').removeClass('first second');
         } 
         if (columns == 4) {
-          items.filter(":nth-child(4n-3)").addClass('first');
-          items.filter(":nth-child(4n-2)").addClass('second');
-          items.filter(":nth-child(4n-1)").addClass('third');
-          items.filter(":nth-child(4n)").addClass('fourth');
+          items.filter(function(index) {
+            return (index + 1) % 1 == 0;    
+          }).addClass('first').removeClass('second third fourth');
+          items.filter(function(index) {
+            return (index + 1) % 2 == 0;    
+          }).addClass('second').removeClass('first third fourth');
+          items.filter(function(index) {
+            return (index + 1) % 3 == 0;    
+          }).addClass('third').removeClass('first second fourth');
+          items.filter(function(index) {
+            return (index + 1) % 4 == 0;    
+          }).addClass('fourth').removeClass('first second third');
         }
       } 
 
@@ -164,6 +182,21 @@
       }
     });
   }
+
+  function filters() {
+    $('div[class*="pane--facetapi-"]').each(function(){
+      var moi = $(this);
+      var title = $(this).find('.pane__title').eq(0);
+      var content = $(this).find('.pane__content').eq(0);
+      moi.addClass('is-closed');
+      content.hide();
+      title.click(function(){
+        moi.toggleClass('is-open').toggleClass('is-closed');
+        content.slideToggle();
+      });
+    });
+    $('div[class*="pane--facetapi-"]').first().addClass('is-open').removeClass('is-closed').find('.pane__content').show();
+  }
  
 
   // Generic function that runs on window resize.
@@ -187,6 +220,7 @@
 
   $(window).load(function() {
     resizeStuff();
+    filters();
   });
 
 })(jQuery);
