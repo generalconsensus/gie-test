@@ -126,7 +126,7 @@ function gie_program_strongarm() {
             'visible' => FALSE,
           ),
           'listing' => array(
-            'weight' => '9',
+            'weight' => '20',
             'visible' => FALSE,
           ),
           'at_a_glance' => array(
@@ -154,6 +154,10 @@ function gie_program_strongarm() {
             'weight' => '11',
             'visible' => TRUE,
           ),
+          'listing' => array(
+            'weight' => '2',
+            'visible' => TRUE,
+          ),
         ),
         'program_counters_program_count' => array(
           'full' => array(
@@ -166,6 +170,10 @@ function gie_program_strongarm() {
           ),
           'at_a_glance' => array(
             'weight' => '12',
+            'visible' => TRUE,
+          ),
+          'listing' => array(
+            'weight' => '3',
             'visible' => TRUE,
           ),
         ),
