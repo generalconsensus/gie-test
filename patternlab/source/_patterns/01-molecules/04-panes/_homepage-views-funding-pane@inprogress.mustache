@@ -5,14 +5,12 @@
         <h1 class="view__header-title">Funding Opportunities</h1>
         <a href="#" class="view__header-link">View All Funding</a>
         <a class="button button--highlight button--large button--add view__header-button" href="#">Add Funding</a> 
-      </div>    
-      <div class="view__content">   
-        {{# listItems.four }}
-          <div class="views-row">
-            {{> organisms-funding-op-teaser }}
-          </div>
-        {{/ listItems.four }}
-      </div>
+      </div>       
+      {{# listItems.four }}
+        <div class="views-row">
+          {{> organisms-funding-op-teaser }}
+        </div>
+      {{/ listItems.four }}
     </div>
   </div>
 </div>
