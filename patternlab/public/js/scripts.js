@@ -166,16 +166,18 @@
   }
 
   function filters() {
-    $('div[class*="pane--facetapi"]').each(function(){
+    $('div[class*="pane--facetapi-"]').each(function(){
       var moi = $(this);
       var title = $(this).find('.pane__title').eq(0);
       var content = $(this).find('.pane__content').eq(0);
-      moi.addClass('is-open');
+      moi.addClass('is-closed');
+      content.hide();
       title.click(function(){
         moi.toggleClass('is-open').toggleClass('is-closed');
         content.slideToggle();
       });
     });
+    $('div[class*="pane--facetapi-"]').first().addClass('is-open').removeClass('is-closed').find('.pane__content').show();
   }
  
 
