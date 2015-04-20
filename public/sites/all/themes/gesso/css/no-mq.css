@@ -1833,7 +1833,7 @@ input.throbbing {
 }
 /* line 68, ../sass/partials/components/_cardflip.scss */
 .cardflip__a .cardflip__title {
-  min-height: 80px;
+  min-height: 60px;
 }
 /* line 71, ../sass/partials/components/_cardflip.scss */
 .cardflip__b .cardflip__title {
@@ -3312,9 +3312,10 @@ aside .pane__title {
   color: #ed7d3a;
   font-size: 0.75em;
   font-weight: bold;
+  margin: 0;
   text-transform: uppercase;
 }
-/* line 11, ../sass/partials/components/pane/_pane--userfield-user-motto.scss */
+/* line 12, ../sass/partials/components/pane/_pane--userfield-user-motto.scss */
 .pane--userfield-user-motto .pane__content {
   font-size: 1.125em;
   font-style: italic;
@@ -3833,17 +3834,21 @@ tr.drag-previous {
   display: inline-block;
 }
 
-/* line 2, ../sass/partials/components/_user-header.scss */
+/* line 1, ../sass/partials/components/_user-header.scss */
+.user-header {
+  margin: 0 0 2.5em 0;
+}
+/* line 3, ../sass/partials/components/_user-header.scss */
 .user-header .flag-outer-follow {
   float: left;
   margin-right: 0.5em;
 }
 
-/* line 8, ../sass/partials/components/_user-header.scss */
+/* line 9, ../sass/partials/components/_user-header.scss */
 .user-header__photo {
   padding-right: 1em;
 }
-/* line 10, ../sass/partials/components/_user-header.scss */
+/* line 11, ../sass/partials/components/_user-header.scss */
 .user-header__photo img {
   -webkit-border-radius: 50%;
   -moz-border-radius: 50%;
@@ -3853,7 +3858,7 @@ tr.drag-previous {
   border: 2px solid #cecfcb;
 }
 
-/* line 16, ../sass/partials/components/_user-header.scss */
+/* line 17, ../sass/partials/components/_user-header.scss */
 .user-header__name {
   -webkit-hyphens: none;
   -moz-hyphens: none;
@@ -3865,28 +3870,28 @@ tr.drag-previous {
   text-transform: uppercase;
 }
 
-/* line 27, ../sass/partials/components/_user-header.scss */
+/* line 28, ../sass/partials/components/_user-header.scss */
 .user-header__organization {
   font-size: 1.125em;
   font-weight: bold;
 }
 
-/* line 32, ../sass/partials/components/_user-header.scss */
+/* line 33, ../sass/partials/components/_user-header.scss */
 .user-header__title {
   font-size: 1.125em;
   font-style: italic;
 }
 
-/* line 37, ../sass/partials/components/_user-header.scss */
+/* line 38, ../sass/partials/components/_user-header.scss */
 .user-header__meta {
-  padding: 1em 0;
+  padding: 1em 0 1.5em 0;
 }
 
-/* line 41, ../sass/partials/components/_user-header.scss */
+/* line 42, ../sass/partials/components/_user-header.scss */
 .user-header__address {
   font-size: 0.875em;
 }
-/* line 43, ../sass/partials/components/_user-header.scss */
+/* line 44, ../sass/partials/components/_user-header.scss */
 .user-header__address:before {
   height: 16px;
   overflow: hidden;
@@ -3908,13 +3913,13 @@ tr.drag-previous {
   width: 0;
 }
 
-/* line 54, ../sass/partials/components/_user-header.scss */
+/* line 55, ../sass/partials/components/_user-header.scss */
 .user-header__member-since {
   font-size: 0.875em;
   line-height: 1.5;
 }
 
-/* line 59, ../sass/partials/components/_user-header.scss */
+/* line 60, ../sass/partials/components/_user-header.scss */
 .user-header__type {
   font-size: 0.875em;
   line-height: 1.5;
