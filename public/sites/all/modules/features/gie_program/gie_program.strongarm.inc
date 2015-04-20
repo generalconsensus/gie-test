@@ -161,6 +161,10 @@ function gie_program_strongarm() {
             'weight' => '2',
             'visible' => TRUE,
           ),
+          'contact' => array(
+            'weight' => '10',
+            'visible' => FALSE,
+          ),
         ),
         'program_counters_program_count' => array(
           'full' => array(
@@ -178,6 +182,10 @@ function gie_program_strongarm() {
           'listing' => array(
             'weight' => '3',
             'visible' => TRUE,
+          ),
+          'contact' => array(
+            'weight' => '10',
+            'visible' => FALSE,
           ),
         ),
       ),

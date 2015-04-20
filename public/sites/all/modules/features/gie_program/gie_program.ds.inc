@@ -34,9 +34,11 @@ function gie_program_ds_field_settings_info() {
   $ds_fieldsetting->bundle = 'program';
   $ds_fieldsetting->view_mode = 'contact';
   $ds_fieldsetting->settings = array(
-    'field_program_poc' => array(
+    'field_program_address' => array(
       'formatter_settings' => array(
-        'ft' => array(),
+        'ft' => array(
+          'func' => 'theme_ds_field_expert',
+        ),
       ),
     ),
   );
@@ -168,24 +170,29 @@ function gie_program_ds_layout_settings_info() {
   $ds_layout->entity_type = 'node';
   $ds_layout->bundle = 'program';
   $ds_layout->view_mode = 'contact';
-  $ds_layout->layout = 'ds_2col';
+  $ds_layout->layout = 'slat';
   $ds_layout->settings = array(
     'regions' => array(
-      'left' => array(
+      'main_content' => array(
         0 => 'field_program_address',
       ),
-      'right' => array(
+      'media' => array(
         1 => 'field_program_poc',
       ),
     ),
     'fields' => array(
-      'field_program_address' => 'left',
-      'field_program_poc' => 'right',
+      'field_program_address' => 'main_content',
+      'field_program_poc' => 'media',
     ),
-    'classes' => array(),
+    'classes' => array(
+      'layout_class' => array(
+        '' => '',
+      ),
+    ),
     'wrappers' => array(
-      'left' => 'div',
-      'right' => 'div',
+      'header' => 'div',
+      'media' => 'div',
+      'main_content' => 'div',
     ),
     'layout_wrapper' => 'div',
     'layout_attributes' => '',
