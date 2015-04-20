@@ -108,7 +108,10 @@ function gie_program_strongarm() {
     'extra_fields' => array(
       'form' => array(
         'path' => array(
-          'weight' => '30',
+          'weight' => '3',
+        ),
+        'rabbit_hole' => array(
+          'weight' => '2',
         ),
       ),
       'display' => array(
