@@ -83,7 +83,7 @@ function gie_program_field_default_field_instances() {
         'apply_chosen' => 1,
       ),
       'type' => 'options_select',
-      'weight' => 52,
+      'weight' => 19,
     ),
   );
 
@@ -201,7 +201,7 @@ function gie_program_field_default_field_instances() {
         'rows' => 5,
       ),
       'type' => 'text_textarea',
-      'weight' => 32,
+      'weight' => 4,
     ),
   );
 
@@ -302,7 +302,7 @@ function gie_program_field_default_field_instances() {
       'module' => 'html5_tools',
       'settings' => array(),
       'type' => 'numberfield',
-      'weight' => 50,
+      'weight' => 18,
     ),
   );
 
@@ -429,7 +429,7 @@ function gie_program_field_default_field_instances() {
         'rows' => 5,
       ),
       'type' => 'text_textarea',
-      'weight' => 36,
+      'weight' => 8,
     ),
   );
 
@@ -519,7 +519,7 @@ function gie_program_field_default_field_instances() {
         'year_range' => '-3:+3',
       ),
       'type' => 'date_popup',
-      'weight' => 43,
+      'weight' => 13,
     ),
   );
 
@@ -605,7 +605,7 @@ function gie_program_field_default_field_instances() {
         'size' => 60,
       ),
       'type' => 'entityreference_autocomplete',
-      'weight' => 53,
+      'weight' => 20,
     ),
   );
 
@@ -700,14 +700,13 @@ function gie_program_field_default_field_instances() {
       'module' => 'html5_tools',
       'settings' => array(),
       'type' => 'urlwidget',
-      'weight' => 35,
+      'weight' => 7,
     ),
   );
 
   // Exported field_instance: 'node-program-field_program_logo'
   $field_instances['node-program-field_program_logo'] = array(
     'bundle' => 'program',
-    'default_value' => NULL,
     'deleted' => 0,
     'description' => '',
     'display' => array(
@@ -721,14 +720,15 @@ function gie_program_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 1,
+        'weight' => 0,
       ),
       'default' => array(
         'label' => 'above',
-        'module' => 'entityreference',
+        'module' => 'image',
         'settings' => array(
           'field_delimiter' => '',
-          'link' => FALSE,
+          'image_link' => '',
+          'image_style' => '',
           'linked_field' => array(
             'advanced' => array(
               'class' => '',
@@ -741,35 +741,20 @@ function gie_program_field_default_field_instances() {
             'linked' => 0,
           ),
         ),
-        'type' => 'entityreference_label',
-        'weight' => 1,
+        'type' => 'image',
+        'weight' => 19,
       ),
       'full' => array(
-        'label' => 'hidden',
+        'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 5,
+        'weight' => 0,
       ),
       'listing' => array(
-        'label' => 'hidden',
-        'module' => 'entityreference',
-        'settings' => array(
-          'field_delimiter' => '',
-          'link' => FALSE,
-          'linked_field' => array(
-            'advanced' => array(
-              'class' => '',
-              'rel' => '',
-              'target' => '',
-              'text' => '',
-              'title' => '',
-            ),
-            'destination' => '',
-            'linked' => 0,
-          ),
-        ),
-        'type' => 'entityreference_label',
-        'weight' => 4,
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -780,28 +765,38 @@ function gie_program_field_default_field_instances() {
     ),
     'ds_extras_field_template' => '',
     'entity_type' => 'node',
-    'entityconnect_unload_add' => 1,
-    'entityconnect_unload_edit' => 1,
     'field_name' => 'field_program_logo',
     'label' => 'Logo',
-    'required' => 1,
+    'required' => 0,
     'settings' => array(
+      'alt_field' => 1,
+      'alt_field_default' => '[node:title-field]',
+      'alt_field_hide' => 0,
+      'alt_field_sync_title' => 1,
+      'alt_field_update_on_edit' => 1,
+      'default_image' => 0,
+      'file_directory' => '',
+      'file_extensions' => 'png gif jpg jpeg',
+      'max_filesize' => '',
+      'max_resolution' => '',
+      'min_resolution' => '500x300',
+      'random_default' => 0,
+      'random_default_path' => '',
+      'title_field' => 1,
+      'title_field_default' => '[node:title-field]',
+      'title_field_hide' => 0,
+      'title_field_update_on_edit' => 1,
       'user_register_form' => FALSE,
     ),
     'widget' => array(
       'active' => 1,
-      'module' => 'entityreference',
+      'module' => 'image',
       'settings' => array(
-        'match_operator' => 'CONTAINS',
-        'path' => '',
-        'references_dialog_add' => 1,
-        'references_dialog_edit' => 1,
-        'references_dialog_search' => 1,
-        'references_dialog_search_view' => '',
-        'size' => 60,
+        'preview_image_style' => 'thumbnail',
+        'progress_indicator' => 'throbber',
       ),
-      'type' => 'entityreference_autocomplete',
-      'weight' => 31,
+      'type' => 'image_image',
+      'weight' => 1,
     ),
   );
 
@@ -919,7 +914,7 @@ function gie_program_field_default_field_instances() {
         'rows' => 5,
       ),
       'type' => 'text_textarea',
-      'weight' => 37,
+      'weight' => 9,
     ),
   );
 
@@ -1005,7 +1000,7 @@ function gie_program_field_default_field_instances() {
         'size' => 60,
       ),
       'type' => 'entityreference_autocomplete',
-      'weight' => 34,
+      'weight' => 6,
     ),
   );
 
@@ -1107,7 +1102,7 @@ function gie_program_field_default_field_instances() {
         'size' => 60,
       ),
       'type' => 'entityreference_autocomplete',
-      'weight' => 33,
+      'weight' => 5,
     ),
   );
 
@@ -1225,7 +1220,7 @@ function gie_program_field_default_field_instances() {
         'rows' => 5,
       ),
       'type' => 'text_textarea',
-      'weight' => 49,
+      'weight' => 17,
     ),
   );
 
@@ -1315,7 +1310,7 @@ function gie_program_field_default_field_instances() {
         'year_range' => '-3:+3',
       ),
       'type' => 'date_popup',
-      'weight' => 42,
+      'weight' => 12,
     ),
   );
 
@@ -1433,7 +1428,7 @@ function gie_program_field_default_field_instances() {
         'rows' => 5,
       ),
       'type' => 'text_textarea',
-      'weight' => 44,
+      'weight' => 14,
     ),
   );
 
@@ -1510,7 +1505,7 @@ function gie_program_field_default_field_instances() {
         'apply_chosen' => 1,
       ),
       'type' => 'options_select',
-      'weight' => 46,
+      'weight' => 15,
     ),
   );
 
@@ -1587,7 +1582,7 @@ function gie_program_field_default_field_instances() {
         'apply_chosen' => 1,
       ),
       'type' => 'options_select',
-      'weight' => 48,
+      'weight' => 16,
     ),
   );
 
@@ -1664,7 +1659,7 @@ function gie_program_field_default_field_instances() {
         'apply_chosen' => 1,
       ),
       'type' => 'options_select',
-      'weight' => 41,
+      'weight' => 11,
     ),
   );
 
@@ -1741,7 +1736,7 @@ function gie_program_field_default_field_instances() {
         'apply_chosen' => 1,
       ),
       'type' => 'options_select',
-      'weight' => 39,
+      'weight' => 10,
     ),
   );
 
@@ -1824,7 +1819,7 @@ function gie_program_field_default_field_instances() {
         'size' => 60,
       ),
       'type' => 'text_textfield',
-      'weight' => -5,
+      'weight' => 0,
     ),
   );
 
