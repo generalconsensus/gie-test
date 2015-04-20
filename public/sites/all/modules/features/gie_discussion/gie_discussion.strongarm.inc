@@ -138,6 +138,9 @@ function gie_discussion_strongarm() {
       'logo' => array(
         'custom_settings' => FALSE,
       ),
+      'search_listing' => array(
+        'custom_settings' => TRUE,
+      ),
     ),
     'extra_fields' => array(
       'form' => array(
@@ -170,6 +173,10 @@ function gie_discussion_strongarm() {
             'weight' => '10',
             'visible' => FALSE,
           ),
+          'search_listing' => array(
+            'weight' => '16',
+            'visible' => FALSE,
+          ),
         ),
         'content_author_author_photo_display' => array(
           'full' => array(
@@ -191,6 +198,10 @@ function gie_discussion_strongarm() {
           'teaser_date' => array(
             'weight' => '10',
             'visible' => TRUE,
+          ),
+          'search_listing' => array(
+            'weight' => '15',
+            'visible' => FALSE,
           ),
         ),
       ),

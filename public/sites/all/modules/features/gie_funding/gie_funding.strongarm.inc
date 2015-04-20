@@ -122,6 +122,18 @@ function gie_funding_strongarm() {
       'listing' => array(
         'custom_settings' => TRUE,
       ),
+      'search_listing' => array(
+        'custom_settings' => TRUE,
+      ),
+      'at_a_glance' => array(
+        'custom_settings' => FALSE,
+      ),
+      'contact' => array(
+        'custom_settings' => FALSE,
+      ),
+      'logo' => array(
+        'custom_settings' => FALSE,
+      ),
     ),
     'extra_fields' => array(
       'form' => array(
@@ -147,6 +159,10 @@ function gie_funding_strongarm() {
             'weight' => '19',
             'visible' => FALSE,
           ),
+          'search_listing' => array(
+            'weight' => '17',
+            'visible' => FALSE,
+          ),
         ),
         'funding_fields_link_url' => array(
           'full' => array(
@@ -155,6 +171,14 @@ function gie_funding_strongarm() {
           ),
           'listing' => array(
             'weight' => '14',
+            'visible' => FALSE,
+          ),
+          'default' => array(
+            'weight' => '10',
+            'visible' => TRUE,
+          ),
+          'search_listing' => array(
+            'weight' => '18',
             'visible' => FALSE,
           ),
         ),
@@ -167,18 +191,28 @@ function gie_funding_strongarm() {
             'weight' => '13',
             'visible' => FALSE,
           ),
+          'default' => array(
+            'weight' => '10',
+            'visible' => TRUE,
+          ),
+          'search_listing' => array(
+            'weight' => '14',
+            'visible' => FALSE,
+          ),
         ),
         'funding_listing_counts_comments' => array(
           'listing' => array(
             'weight' => '7',
             'visible' => TRUE,
           ),
+          'search_listing' => NULL,
         ),
         'funding_listing_counts_favorites' => array(
           'listing' => array(
             'weight' => '8',
             'visible' => TRUE,
           ),
+          'search_listing' => NULL,
         ),
         'funding_counters_comment_count' => array(
           'listing' => array(
@@ -189,6 +223,14 @@ function gie_funding_strongarm() {
             'weight' => '10',
             'visible' => FALSE,
           ),
+          'default' => array(
+            'weight' => '10',
+            'visible' => TRUE,
+          ),
+          'search_listing' => array(
+            'weight' => '16',
+            'visible' => FALSE,
+          ),
         ),
         'funding_counters_favorite_count' => array(
           'listing' => array(
@@ -197,6 +239,14 @@ function gie_funding_strongarm() {
           ),
           'full' => array(
             'weight' => '10',
+            'visible' => FALSE,
+          ),
+          'default' => array(
+            'weight' => '10',
+            'visible' => TRUE,
+          ),
+          'search_listing' => array(
+            'weight' => '15',
             'visible' => FALSE,
           ),
         ),
