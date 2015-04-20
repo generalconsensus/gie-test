@@ -29,28 +29,60 @@
   .views-field {
     clear: both;
   }
-  .views-field-comment-count {
+  .has-icon--comment {
     @extend %view--at-a-glance__icon-field;
     &:before {
-      @include svg-background(icon-comment-20-17-blue);
-      height: 17px;
-      width: 20px;
+      @extend %cardicon;
+      @include image-replace(20px,17px);
+      @include svg-background(icon-comment-20-17-blue); 
     }
   }
-  .views-field-count {
+  .has-icon--camera {
     @extend %view--at-a-glance__icon-field;
     &:before {
+      @extend %cardicon;
+      @include image-replace(23px,17px);
+      @include svg-background(icon-photo-23-17-blue);
+    }
+  }
+  .has-icon--favorite {
+    @extend %view--at-a-glance__icon-field;
+    &:before {
+      @extend %cardicon;
+      @include image-replace(18px,17px);
       @include svg-background(icon-favorite-18-17-blue);
-      height: 17px;
-      width: 18px;
     }
   }
-  .views-field-delta {
+  .has-icon--member {
     @extend %view--at-a-glance__icon-field;
     &:before {
+      @extend %cardicon;
+      @include image-replace(17px,17px);
       @include svg-background(icon-member-17-17-blue);
-      height: 17px;
-      width: 17px;
+    }
+  }
+  .has-icon--organization {
+    @extend %view--at-a-glance__icon-field;
+    &:before {
+      @extend %cardicon;
+      @include image-replace(17px,17px);
+      @include svg-background(icon-organization-17-17-blue);
+    }
+  }
+  .has-icon--evidence {
+    @extend %view--at-a-glance__icon-field;
+    &:before {
+      @extend %cardicon;
+      @include image-replace(15px,17px);
+      @include svg-background(icon-evidence-15-17-blue);
+    }
+  }
+  .has-icon--innovation {
+    @extend %view--at-a-glance__icon-field;
+    &:before {
+      @extend %cardicon;
+      @include image-replace(15px,20px);
+      @include svg-background(icon-innovations-15-20-blue);
     }
   }
 }

@@ -4648,7 +4648,7 @@ tr.drag-previous {
   height: 150%;
   width: 0;
 }
-/* line 42, ../sass/partials/components/view/_view--at-a-glance.scss */
+/* line 43, ../sass/partials/components/view/_view--at-a-glance.scss */
 .view--at-a-glance .has-icon--camera:before {
   height: 17px;
   overflow: hidden;
@@ -4664,7 +4664,7 @@ tr.drag-previous {
   height: 150%;
   width: 0;
 }
-/* line 50, ../sass/partials/components/view/_view--at-a-glance.scss */
+/* line 52, ../sass/partials/components/view/_view--at-a-glance.scss */
 .view--at-a-glance .has-icon--favorite:before {
   height: 17px;
   overflow: hidden;
@@ -4680,7 +4680,7 @@ tr.drag-previous {
   height: 150%;
   width: 0;
 }
-/* line 58, ../sass/partials/components/view/_view--at-a-glance.scss */
+/* line 61, ../sass/partials/components/view/_view--at-a-glance.scss */
 .view--at-a-glance .has-icon--member:before {
   height: 17px;
   overflow: hidden;
@@ -4696,7 +4696,7 @@ tr.drag-previous {
   height: 150%;
   width: 0;
 }
-/* line 66, ../sass/partials/components/view/_view--at-a-glance.scss */
+/* line 70, ../sass/partials/components/view/_view--at-a-glance.scss */
 .view--at-a-glance .has-icon--organization:before {
   height: 17px;
   overflow: hidden;
@@ -4712,7 +4712,7 @@ tr.drag-previous {
   height: 150%;
   width: 0;
 }
-/* line 74, ../sass/partials/components/view/_view--at-a-glance.scss */
+/* line 79, ../sass/partials/components/view/_view--at-a-glance.scss */
 .view--at-a-glance .has-icon--evidence:before {
   height: 17px;
   overflow: hidden;
@@ -4728,7 +4728,7 @@ tr.drag-previous {
   height: 150%;
   width: 0;
 }
-/* line 82, ../sass/partials/components/view/_view--at-a-glance.scss */
+/* line 88, ../sass/partials/components/view/_view--at-a-glance.scss */
 .view--at-a-glance .has-icon--innovation:before {
   height: 20px;
   overflow: hidden;
