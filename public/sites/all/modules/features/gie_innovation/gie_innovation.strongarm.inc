@@ -149,7 +149,10 @@ function gie_innovation_strongarm() {
     'extra_fields' => array(
       'form' => array(
         'path' => array(
-          'weight' => '36',
+          'weight' => '14',
+        ),
+        'rabbit_hole' => array(
+          'weight' => '11',
         ),
       ),
       'display' => array(

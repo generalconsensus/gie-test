@@ -95,6 +95,7 @@ features[menu_custom][] = main-menu
 features[menu_custom][] = menu-footer-menu
 features[menu_custom][] = menu-sub-footer-menu
 features[menu_custom][] = user-menu
+features[page_manager_handlers][] = node_edit__add_edit_forms
 features[page_manager_pages][] = homepage
 features[pane_container][] = about_the_exchange
 features[variable][] = admin_menu_cache_client
