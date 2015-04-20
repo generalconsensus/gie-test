@@ -9,6 +9,7 @@ dependencies[] = entity
 dependencies[] = eva
 dependencies[] = features
 dependencies[] = field_group
+dependencies[] = image
 dependencies[] = link
 dependencies[] = node
 dependencies[] = panelizer
