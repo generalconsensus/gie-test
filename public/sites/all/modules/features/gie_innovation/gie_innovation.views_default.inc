@@ -150,7 +150,7 @@ function gie_innovation_views_default_views() {
   $handler->display->display_options['fields']['rendered_entity']['view_mode'] = 'featured';
   $handler->display->display_options['fields']['rendered_entity']['bypass_access'] = 0;
   $handler->display->display_options['defaults']['sorts'] = FALSE;
-  /* Sort criterion: Content: Featured Assets (field_innovation_assets:delta) */
+  /* Sort criterion: Content: Innovation Photos and Videos (field_innovation_assets:delta) */
   $handler->display->display_options['sorts']['delta']['id'] = 'delta';
   $handler->display->display_options['sorts']['delta']['table'] = 'field_data_field_innovation_assets';
   $handler->display->display_options['sorts']['delta']['field'] = 'delta';
