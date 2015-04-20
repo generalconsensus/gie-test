@@ -1050,7 +1050,7 @@ function gie_program_field_default_field_instances() {
             'linked' => 0,
           ),
           'links' => 0,
-          'view_mode' => 'title',
+          'view_mode' => 'user_teaser',
         ),
         'type' => 'entityreference_entity_view',
         'weight' => 3,
