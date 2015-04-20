@@ -6,13 +6,11 @@
         <a href="#" class="view__header-link">View All Innovations</a>
         <a class="button button--highlight button--large button--add view__header-button" href="#">Add Innovation</a> 
       </div>    
-      <div class="view__content">   
-        {{# listItems.four }}
-          <div class="views-row">
-            {{> organisms-innovation-teaser }}
-          </div>
-        {{/ listItems.four }}
-      </div>
+      {{# listItems.four }}
+        <div class="views-row">
+          {{> organisms-innovation-teaser }}
+        </div>
+      {{/ listItems.four }}
     </div>
   </div>
 </div>
