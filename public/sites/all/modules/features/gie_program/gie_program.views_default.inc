@@ -95,7 +95,6 @@ function gie_program_views_default_views() {
   $handler->display->display_options['fields']['count']['element_class'] = 'has-icon--favorite';
   $handler->display->display_options['fields']['count']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['count']['element_default_classes'] = FALSE;
-  $handler->display->display_options['fields']['count']['suffix'] = ' Favorites';
   $handler->display->display_options['defaults']['filter_groups'] = FALSE;
   $handler->display->display_options['defaults']['filters'] = FALSE;
   /* Filter criterion: Content: Published */
@@ -138,7 +137,6 @@ function gie_program_views_default_views() {
   $handler->display->display_options['fields']['nid']['element_class'] = 'has-icon--innovation';
   $handler->display->display_options['fields']['nid']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['nid']['element_default_classes'] = FALSE;
-  $handler->display->display_options['fields']['nid']['suffix'] = ' Innovations';
   $handler->display->display_options['defaults']['arguments'] = FALSE;
   /* Contextual filter: Content: Nid */
   $handler->display->display_options['arguments']['nid']['id'] = 'nid';
