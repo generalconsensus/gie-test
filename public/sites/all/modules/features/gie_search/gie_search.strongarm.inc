@@ -37,6 +37,13 @@ function gie_search_strongarm() {
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
+  $strongarm->name = 'pm_existing_pages_disabled_solr_search';
+  $strongarm->value = FALSE;
+  $export['pm_existing_pages_disabled_solr_search'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
   $strongarm->name = 'search_api_facets_search_ids';
   $strongarm->value = array(
     'default_node_index' => array(
@@ -51,9 +58,16 @@ function gie_search_strongarm() {
       'search_api_views:discussion_listing:panel_pane_1' => 'search_api_views:discussion_listing:panel_pane_1',
       'search_api_views:discussion_listing:discussion_listing' => 'search_api_views:discussion_listing:discussion_listing',
       'search_api_views:user_listing:default' => 'search_api_views:user_listing:default',
+      'search_api_views:solr_search_node:default' => 'search_api_views:solr_search_node:default',
+      'search_api_views:solr_search_node:panel_pane_1' => 'search_api_views:solr_search_node:panel_pane_1',
+      'search_api_views:solr_search_node:node_pane' => 'search_api_views:solr_search_node:node_pane',
+      'search_api_page:search' => 'search_api_page:search',
     ),
     'default_user_index' => array(
       'search_api_views:user_listing:listing_pane' => 'search_api_views:user_listing:listing_pane',
+    ),
+    'search_node_index' => array(
+      'search_api_page:search' => 'search_api_page:search',
     ),
   );
   $export['search_api_facets_search_ids'] = $strongarm;
@@ -62,7 +76,7 @@ function gie_search_strongarm() {
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'search_api_solr_last_optimize';
-  $strongarm->value = 1429302642;
+  $strongarm->value = 1429559195;
   $export['search_api_solr_last_optimize'] = $strongarm;
 
   $strongarm = new stdClass();
