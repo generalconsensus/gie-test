@@ -1,4 +1,4 @@
-/* line 65, c:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/singularitygs-1.1.2/stylesheets/singularitygs/helpers/_clearfix.scss */
+/* line 65, ../../../../home/vagrant/.rbenv/versions/1.9.3-p484/lib/ruby/gems/1.9.1/gems/singularitygs-1.1.2/stylesheets/singularitygs/helpers/_clearfix.scss */
 .clearfix:after, .layout-grid__row:after, .pane--homepage-views-personas-pane .pane__content .view--homepage-views:after, .pane--landing-intro:after, .quicktabs-tabs.quicktabs-style-nostyle:after, .region-footer:after, .view__header:after, .view--homepage-cardflip:after {
   content: "";
   display: table;
@@ -3131,7 +3131,7 @@ aside .pane__title {
 /* line 1, ../sass/partials/components/pane/_pane--facetapi.scss */
 div[class*="pane--facetapi"] {
   background: #fff;
-  border: 1px solid #f2f2f2;
+  border: 1px solid #f1f1f1;
   border-top: 0;
   margin: 0;
 }
@@ -3146,12 +3146,46 @@ div[class*="pane--facetapi"] .pane__title {
   padding: 1em 0.75em;
 }
 /* line 16, ../sass/partials/components/pane/_pane--facetapi.scss */
+div[class*="pane--facetapi"].is-open .pane__title, div[class*="pane--facetapi"].is-closed .pane__title {
+  cursor: pointer;
+  padding-right: 40px;
+  position: relative;
+}
+/* line 20, ../sass/partials/components/pane/_pane--facetapi.scss */
+div[class*="pane--facetapi"].is-open .pane__title:after, div[class*="pane--facetapi"].is-closed .pane__title:after {
+  background-size: contain;
+  content: "";
+  display: block;
+  height: 15px;
+  position: absolute;
+  right: 0.75em;
+  top: 1em;
+  width: 15px;
+}
+/* line 32, ../sass/partials/components/pane/_pane--facetapi.scss */
+div[class*="pane--facetapi"].is-open .pane__title:after {
+  background-image: url('../images/bg/icon-minus-15-15-white.png');
+  background-image: -webkit-linear-gradient(transparent, transparent), url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4KPCEtLSBHZW5lcmF0ZWQgYnkgSWNvTW9vbi5pbyAtLT4KPCFET0NUWVBFIHN2ZyBQVUJMSUMgIi0vL1czQy8vRFREIFNWRyAxLjEvL0VOIiAiaHR0cDovL3d3dy53My5vcmcvR3JhcGhpY3MvU1ZHLzEuMS9EVEQvc3ZnMTEuZHRkIj4KPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHdpZHRoPSIxNSIgaGVpZ2h0PSIxNSIgdmlld0JveD0iMCAwIDE1IDE1Ij4KPHBhdGggZmlsbD0iI2ZmZmZmZiIgZD0iTTE0LjI1IDguMjVoLTEzLjVjLTAuMzc1IDAtMC43NS0wLjI1LTAuNzUtMC42MjVzMC4zNzUtMC43NSAwLjc1LTAuNzVoMTMuNjI1YzAuMjUgMCAwLjYyNSAwLjM3NSAwLjYyNSAwLjc1cy0wLjM3NSAwLjYyNS0wLjc1IDAuNjI1eiI+PC9wYXRoPgo8L3N2Zz4K');
+  background-image: linear-gradient(transparent, transparent), url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4KPCEtLSBHZW5lcmF0ZWQgYnkgSWNvTW9vbi5pbyAtLT4KPCFET0NUWVBFIHN2ZyBQVUJMSUMgIi0vL1czQy8vRFREIFNWRyAxLjEvL0VOIiAiaHR0cDovL3d3dy53My5vcmcvR3JhcGhpY3MvU1ZHLzEuMS9EVEQvc3ZnMTEuZHRkIj4KPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHdpZHRoPSIxNSIgaGVpZ2h0PSIxNSIgdmlld0JveD0iMCAwIDE1IDE1Ij4KPHBhdGggZmlsbD0iI2ZmZmZmZiIgZD0iTTE0LjI1IDguMjVoLTEzLjVjLTAuMzc1IDAtMC43NS0wLjI1LTAuNzUtMC42MjVzMC4zNzUtMC43NSAwLjc1LTAuNzVoMTMuNjI1YzAuMjUgMCAwLjYyNSAwLjM3NSAwLjYyNSAwLjc1cy0wLjM3NSAwLjYyNS0wLjc1IDAuNjI1eiI+PC9wYXRoPgo8L3N2Zz4K');
+}
+/* line 36, ../sass/partials/components/pane/_pane--facetapi.scss */
+div[class*="pane--facetapi"].is-closed .pane__title {
+  background: #f1f1f1;
+  color: #565a5c;
+}
+/* line 39, ../sass/partials/components/pane/_pane--facetapi.scss */
+div[class*="pane--facetapi"].is-closed .pane__title:after {
+  background-image: url('../images/bg/icon-plus-15-15-orange.png');
+  background-image: -webkit-linear-gradient(transparent, transparent), url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4KPCEtLSBHZW5lcmF0ZWQgYnkgSWNvTW9vbi5pbyAtLT4KPCFET0NUWVBFIHN2ZyBQVUJMSUMgIi0vL1czQy8vRFREIFNWRyAxLjEvL0VOIiAiaHR0cDovL3d3dy53My5vcmcvR3JhcGhpY3MvU1ZHLzEuMS9EVEQvc3ZnMTEuZHRkIj4KPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHdpZHRoPSIxNSIgaGVpZ2h0PSIxNSIgdmlld0JveD0iMCAwIDE1IDE1Ij4KPHBhdGggZmlsbD0iI2RjNTYwNiIgZD0iTTE0LjI1IDYuNzVoLTZ2LTZjMC0wLjM3NS0wLjM3NS0wLjc1LTAuNzUtMC43NXMtMC43NSAwLjM3NS0wLjc1IDAuNzV2Ni4xMjVoLTZjLTAuMzc1LTAuMTI1LTAuNzUgMC4yNS0wLjc1IDAuNjI1czAuMzc1IDAuNzUgMC43NSAwLjc1aDYuMTI1djYuMTI1Yy0wLjEyNSAwLjI1IDAuMjUgMC42MjUgMC42MjUgMC42MjVzMC43NS0wLjM3NSAwLjc1LTAuNzV2LTZoNi4xMjVjMC4yNSAwIDAuNjI1LTAuMzc1IDAuNjI1LTAuNzVzLTAuMzc1LTAuNzUtMC43NS0wLjc1eiI+PC9wYXRoPgo8L3N2Zz4K');
+  background-image: linear-gradient(transparent, transparent), url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4KPCEtLSBHZW5lcmF0ZWQgYnkgSWNvTW9vbi5pbyAtLT4KPCFET0NUWVBFIHN2ZyBQVUJMSUMgIi0vL1czQy8vRFREIFNWRyAxLjEvL0VOIiAiaHR0cDovL3d3dy53My5vcmcvR3JhcGhpY3MvU1ZHLzEuMS9EVEQvc3ZnMTEuZHRkIj4KPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHdpZHRoPSIxNSIgaGVpZ2h0PSIxNSIgdmlld0JveD0iMCAwIDE1IDE1Ij4KPHBhdGggZmlsbD0iI2RjNTYwNiIgZD0iTTE0LjI1IDYuNzVoLTZ2LTZjMC0wLjM3NS0wLjM3NS0wLjc1LTAuNzUtMC43NXMtMC43NSAwLjM3NS0wLjc1IDAuNzV2Ni4xMjVoLTZjLTAuMzc1LTAuMTI1LTAuNzUgMC4yNS0wLjc1IDAuNjI1czAuMzc1IDAuNzUgMC43NSAwLjc1aDYuMTI1djYuMTI1Yy0wLjEyNSAwLjI1IDAuMjUgMC42MjUgMC42MjUgMC42MjVzMC43NS0wLjM3NSAwLjc1LTAuNzV2LTZoNi4xMjVjMC4yNSAwIDAuNjI1LTAuMzc1IDAuNjI1LTAuNzVzLTAuMzc1LTAuNzUtMC43NS0wLjc1eiI+PC9wYXRoPgo8L3N2Zz4K');
+}
+/* line 44, ../sass/partials/components/pane/_pane--facetapi.scss */
 div[class*="pane--facetapi"] .pane__content ul {
   list-style: none;
   margin: 0 0.75em;
   padding: 0;
 }
-/* line 20, ../sass/partials/components/pane/_pane--facetapi.scss */
+/* line 48, ../sass/partials/components/pane/_pane--facetapi.scss */
 div[class*="pane--facetapi"] .pane__content ul li {
   border-bottom: 1px solid #f2f2f2;
   font-size: 0.875em;
@@ -3160,21 +3194,21 @@ div[class*="pane--facetapi"] .pane__content ul li {
   padding: 0.75em 0;
   text-indent: -22px;
 }
-/* line 27, ../sass/partials/components/pane/_pane--facetapi.scss */
+/* line 55, ../sass/partials/components/pane/_pane--facetapi.scss */
 div[class*="pane--facetapi"] .pane__content ul li:last-child {
   border-bottom: 0;
 }
-/* line 30, ../sass/partials/components/pane/_pane--facetapi.scss */
+/* line 58, ../sass/partials/components/pane/_pane--facetapi.scss */
 div[class*="pane--facetapi"] .pane__content ul li:before {
   display: none;
 }
-/* line 33, ../sass/partials/components/pane/_pane--facetapi.scss */
+/* line 61, ../sass/partials/components/pane/_pane--facetapi.scss */
 div[class*="pane--facetapi"] .pane__content ul li input {
   bottom: -1px;
   margin-right: 8px;
   position: relative;
 }
-/* line 38, ../sass/partials/components/pane/_pane--facetapi.scss */
+/* line 66, ../sass/partials/components/pane/_pane--facetapi.scss */
 div[class*="pane--facetapi"] .pane__content ul li a {
   -webkit-hyphens: none;
   -moz-hyphens: none;
@@ -3184,11 +3218,11 @@ div[class*="pane--facetapi"] .pane__content ul li a {
   overflow: hidden;
 }
 
-/* line 49, ../sass/partials/components/pane/_pane--facetapi.scss */
+/* line 77, ../sass/partials/components/pane/_pane--facetapi.scss */
 .pane--facetapi__main-title {
   border: 0 !important;
 }
-/* line 52, ../sass/partials/components/pane/_pane--facetapi.scss */
+/* line 80, ../sass/partials/components/pane/_pane--facetapi.scss */
 .pane--facetapi__main-title .pane__content h2 {
   margin: 0 0 0.5em 0;
   padding: 0;
