@@ -145,6 +145,18 @@ function gie_innovation_strongarm() {
       'listing' => array(
         'custom_settings' => TRUE,
       ),
+      'search_listing' => array(
+        'custom_settings' => TRUE,
+      ),
+      'at_a_glance' => array(
+        'custom_settings' => FALSE,
+      ),
+      'contact' => array(
+        'custom_settings' => FALSE,
+      ),
+      'logo' => array(
+        'custom_settings' => FALSE,
+      ),
     ),
     'extra_fields' => array(
       'form' => array(
@@ -173,6 +185,10 @@ function gie_innovation_strongarm() {
             'weight' => '19',
             'visible' => FALSE,
           ),
+          'search_listing' => array(
+            'weight' => '15',
+            'visible' => FALSE,
+          ),
         ),
         'innovation_listing_counts_evidence' => array(
           'listing' => array(
@@ -185,6 +201,14 @@ function gie_innovation_strongarm() {
           ),
           'teaser_date' => array(
             'weight' => '15',
+            'visible' => FALSE,
+          ),
+          'default' => array(
+            'weight' => '10',
+            'visible' => TRUE,
+          ),
+          'search_listing' => array(
+            'weight' => '18',
             'visible' => FALSE,
           ),
         ),
@@ -201,6 +225,14 @@ function gie_innovation_strongarm() {
             'weight' => '14',
             'visible' => FALSE,
           ),
+          'default' => array(
+            'weight' => '10',
+            'visible' => TRUE,
+          ),
+          'search_listing' => array(
+            'weight' => '19',
+            'visible' => FALSE,
+          ),
         ),
         'innovation_listing_counts_orgs' => array(
           'listing' => array(
@@ -215,6 +247,14 @@ function gie_innovation_strongarm() {
             'weight' => '16',
             'visible' => FALSE,
           ),
+          'default' => array(
+            'weight' => '10',
+            'visible' => TRUE,
+          ),
+          'search_listing' => array(
+            'weight' => '17',
+            'visible' => FALSE,
+          ),
         ),
         'innovation_listing_counts_favorites' => array(
           'listing' => array(
@@ -227,6 +267,14 @@ function gie_innovation_strongarm() {
           ),
           'teaser_date' => array(
             'weight' => '13',
+            'visible' => FALSE,
+          ),
+          'default' => array(
+            'weight' => '10',
+            'visible' => TRUE,
+          ),
+          'search_listing' => array(
+            'weight' => '14',
             'visible' => FALSE,
           ),
         ),

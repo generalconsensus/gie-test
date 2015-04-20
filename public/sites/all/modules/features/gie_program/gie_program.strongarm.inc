@@ -104,6 +104,9 @@ function gie_program_strongarm() {
       'logo' => array(
         'custom_settings' => FALSE,
       ),
+      'search_listing' => array(
+        'custom_settings' => TRUE,
+      ),
     ),
     'extra_fields' => array(
       'form' => array(
@@ -136,6 +139,10 @@ function gie_program_strongarm() {
             'weight' => '9',
             'visible' => FALSE,
           ),
+          'search_listing' => array(
+            'weight' => '16',
+            'visible' => FALSE,
+          ),
         ),
         'program_counters_favorite_count' => array(
           'full' => array(
@@ -143,6 +150,7 @@ function gie_program_strongarm() {
             'visible' => FALSE,
           ),
           'at_a_glance' => NULL,
+          'search_listing' => NULL,
         ),
         'program_counters_innovation_count' => array(
           'full' => array(
@@ -165,6 +173,10 @@ function gie_program_strongarm() {
             'weight' => '10',
             'visible' => FALSE,
           ),
+          'search_listing' => array(
+            'weight' => '17',
+            'visible' => FALSE,
+          ),
         ),
         'program_counters_program_count' => array(
           'full' => array(
@@ -185,6 +197,10 @@ function gie_program_strongarm() {
           ),
           'contact' => array(
             'weight' => '10',
+            'visible' => FALSE,
+          ),
+          'search_listing' => array(
+            'weight' => '18',
             'visible' => FALSE,
           ),
         ),
@@ -260,6 +276,13 @@ function gie_program_strongarm() {
     ),
   );
   $export['panelizer_defaults_node_program'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'panelizer_node:program:default_selection';
+  $strongarm->value = 0;
+  $export['panelizer_node:program:default_selection'] = $strongarm;
 
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */

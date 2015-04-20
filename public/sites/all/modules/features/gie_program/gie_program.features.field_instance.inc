@@ -61,6 +61,12 @@ function gie_program_field_default_field_instances() {
         'type' => 'hidden',
         'weight' => 15,
       ),
+      'search_listing' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 26,
+      ),
       'teaser' => array(
         'label' => 'above',
         'settings' => array(),
@@ -151,6 +157,12 @@ function gie_program_field_default_field_instances() {
         'settings' => array(),
         'type' => 'hidden',
         'weight' => 30,
+      ),
+      'search_listing' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 9,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -278,6 +290,12 @@ function gie_program_field_default_field_instances() {
         'type' => 'hidden',
         'weight' => 16,
       ),
+      'search_listing' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 25,
+      ),
       'teaser' => array(
         'label' => 'above',
         'settings' => array(),
@@ -374,6 +392,33 @@ function gie_program_field_default_field_instances() {
           'trim_options' => array(
             'text' => 0,
           ),
+          'trim_suffix' => '...',
+          'trim_type' => 'chars',
+        ),
+        'type' => 'smart_trim_format',
+        'weight' => 1,
+      ),
+      'search_listing' => array(
+        'label' => 'hidden',
+        'module' => 'smart_trim',
+        'settings' => array(
+          'field_delimiter' => '',
+          'linked_field' => array(
+            'advanced' => array(
+              'class' => '',
+              'rel' => '',
+              'target' => '',
+              'text' => '',
+              'title' => '',
+            ),
+            'destination' => '',
+            'linked' => 0,
+          ),
+          'more_link' => FALSE,
+          'more_text' => 'Read more',
+          'summary_handler' => 'full',
+          'trim_length' => 300,
+          'trim_options' => array(),
           'trim_suffix' => '...',
           'trim_type' => 'chars',
         ),
@@ -488,6 +533,12 @@ function gie_program_field_default_field_instances() {
         'type' => 'hidden',
         'weight' => 22,
       ),
+      'search_listing' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 20,
+      ),
       'teaser' => array(
         'label' => 'above',
         'settings' => array(),
@@ -575,6 +626,12 @@ function gie_program_field_default_field_instances() {
         'type' => 'hidden',
         'weight' => 14,
       ),
+      'search_listing' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 27,
+      ),
       'teaser' => array(
         'label' => 'above',
         'settings' => array(),
@@ -659,6 +716,12 @@ function gie_program_field_default_field_instances() {
         'settings' => array(),
         'type' => 'hidden',
         'weight' => 27,
+      ),
+      'search_listing' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 12,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -772,6 +835,12 @@ function gie_program_field_default_field_instances() {
         'type' => 'image',
         'weight' => 0,
       ),
+      'search_listing' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 28,
+      ),
       'teaser' => array(
         'label' => 'above',
         'settings' => array(),
@@ -881,6 +950,12 @@ function gie_program_field_default_field_instances() {
         'type' => 'hidden',
         'weight' => 26,
       ),
+      'search_listing' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 13,
+      ),
       'teaser' => array(
         'label' => 'above',
         'settings' => array(),
@@ -986,6 +1061,12 @@ function gie_program_field_default_field_instances() {
         'type' => 'hidden',
         'weight' => 28,
       ),
+      'search_listing' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 11,
+      ),
       'teaser' => array(
         'label' => 'above',
         'settings' => array(),
@@ -1088,6 +1169,12 @@ function gie_program_field_default_field_instances() {
         'type' => 'hidden',
         'weight' => 29,
       ),
+      'search_listing' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 10,
+      ),
       'teaser' => array(
         'label' => 'above',
         'settings' => array(),
@@ -1186,6 +1273,12 @@ function gie_program_field_default_field_instances() {
         'settings' => array(),
         'type' => 'hidden',
         'weight' => 17,
+      ),
+      'search_listing' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 24,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -1295,6 +1388,12 @@ function gie_program_field_default_field_instances() {
         'type' => 'hidden',
         'weight' => 23,
       ),
+      'search_listing' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 19,
+      ),
       'teaser' => array(
         'label' => 'above',
         'settings' => array(),
@@ -1390,6 +1489,12 @@ function gie_program_field_default_field_instances() {
         'weight' => 0,
       ),
       'listing' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 21,
+      ),
+      'search_listing' => array(
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
@@ -1499,6 +1604,12 @@ function gie_program_field_default_field_instances() {
         'type' => 'hidden',
         'weight' => 19,
       ),
+      'search_listing' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 22,
+      ),
       'teaser' => array(
         'label' => 'above',
         'settings' => array(),
@@ -1575,6 +1686,12 @@ function gie_program_field_default_field_instances() {
         'settings' => array(),
         'type' => 'hidden',
         'weight' => 18,
+      ),
+      'search_listing' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 23,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -1653,6 +1770,12 @@ function gie_program_field_default_field_instances() {
         'type' => 'hidden',
         'weight' => 24,
       ),
+      'search_listing' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 15,
+      ),
       'teaser' => array(
         'label' => 'above',
         'settings' => array(),
@@ -1730,6 +1853,12 @@ function gie_program_field_default_field_instances() {
         'type' => 'hidden',
         'weight' => 25,
       ),
+      'search_listing' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 14,
+      ),
       'teaser' => array(
         'label' => 'above',
         'settings' => array(),
@@ -1806,6 +1935,29 @@ function gie_program_field_default_field_instances() {
           'title_class' => '',
           'title_link' => 'content',
           'title_style' => '_none',
+        ),
+        'type' => 'title_linked',
+        'weight' => 0,
+      ),
+      'search_listing' => array(
+        'label' => 'hidden',
+        'module' => 'title',
+        'settings' => array(
+          'field_delimiter' => '',
+          'linked_field' => array(
+            'advanced' => array(
+              'class' => '',
+              'rel' => '',
+              'target' => '',
+              'text' => '',
+              'title' => '',
+            ),
+            'destination' => '',
+            'linked' => 0,
+          ),
+          'title_class' => '',
+          'title_link' => 'content',
+          'title_style' => 'h4',
         ),
         'type' => 'title_linked',
         'weight' => 0,

@@ -8,7 +8,16 @@
  * Implements hook_ctools_plugin_api().
  */
 function gie_search_ctools_plugin_api($module = NULL, $api = NULL) {
+  if ($module == "ds" && $api == "ds") {
+    return array("version" => "1");
+  }
   if ($module == "facetapi" && $api == "facetapi_defaults") {
+    return array("version" => "1");
+  }
+  if ($module == "page_manager" && $api == "pages_default") {
+    return array("version" => "1");
+  }
+  if ($module == "pm_existing_pages" && $api == "pm_existing_pages") {
     return array("version" => "1");
   }
   if ($module == "strongarm" && $api == "strongarm") {
@@ -245,6 +254,121 @@ function gie_search_default_search_api_index() {
     },
     "enabled" : "1",
     "read_only" : "0",
+    "rdf_mapping" : []
+  }');
+  $items['search_node_index'] = entity_import('search_api_index', '{
+    "name" : "Search node index",
+    "machine_name" : "search_node_index",
+    "description" : null,
+    "server" : "solr",
+    "item_type" : "node",
+    "options" : {
+      "index_directly" : 1,
+      "cron_limit" : "50",
+      "data_alter_callbacks" : {
+        "search_api_ranges_alter" : { "status" : 0, "weight" : "-50", "settings" : [] },
+        "search_api_alter_bundle_filter" : {
+          "status" : 1,
+          "weight" : "-10",
+          "settings" : {
+            "default" : "1",
+            "bundles" : {
+              "action_card" : "action_card",
+              "homepage" : "homepage",
+              "persona" : "persona"
+            }
+          }
+        },
+        "search_api_alter_node_status" : { "status" : 0, "weight" : "0", "settings" : [] },
+        "search_api_alter_node_access" : { "status" : 0, "weight" : "0", "settings" : [] },
+        "panelizer" : { "status" : 0, "weight" : "0", "settings" : [] },
+        "search_api_alter_add_hierarchy" : { "status" : 0, "weight" : "0", "settings" : { "fields" : [] } },
+        "search_api_alter_add_url" : { "status" : 0, "weight" : "0", "settings" : [] },
+        "search_api_alter_add_aggregation" : { "status" : 0, "weight" : "0", "settings" : [] },
+        "search_api_alter_add_viewed_entity" : { "status" : 0, "weight" : "0", "settings" : { "mode" : "full" } }
+      },
+      "processors" : {
+        "search_api_case_ignore" : { "status" : 0, "weight" : "0", "settings" : { "fields" : [] } },
+        "search_api_html_filter" : {
+          "status" : 0,
+          "weight" : "10",
+          "settings" : {
+            "fields" : [],
+            "title" : 0,
+            "alt" : 1,
+            "tags" : "h1 = 5\\r\\nh2 = 3\\r\\nh3 = 2\\r\\nstrong = 2\\r\\nb = 2\\r\\nem = 1.5\\r\\nu = 1.5"
+          }
+        },
+        "search_api_tokenizer" : {
+          "status" : 0,
+          "weight" : "20",
+          "settings" : { "fields" : [], "spaces" : "[^[:alnum:]]", "ignorable" : "[\\u0027]" }
+        },
+        "search_api_stopwords" : {
+          "status" : 0,
+          "weight" : "30",
+          "settings" : {
+            "fields" : [],
+            "file" : "",
+            "stopwords" : "but\\r\\ndid\\r\\nthe this that those\\r\\netc"
+          }
+        },
+        "search_api_highlighting" : {
+          "status" : 0,
+          "weight" : "35",
+          "settings" : {
+            "prefix" : "\\u003Cstrong\\u003E",
+            "suffix" : "\\u003C\\/strong\\u003E",
+            "excerpt" : 1,
+            "excerpt_length" : "256",
+            "exclude_fields" : [],
+            "highlight" : "always"
+          }
+        }
+      },
+      "fields" : {
+        "body:value" : { "type" : "text" },
+        "field_discussion_desc:value" : { "type" : "text" },
+        "field_funding_desc:value" : { "type" : "text" },
+        "field_innovation_desc:value" : { "type" : "text" },
+        "field_org_desc:value" : { "type" : "text" },
+        "field_program_desc:value" : { "type" : "text" },
+        "field_resource_desc:value" : { "type" : "text" },
+        "field_term_country" : { "type" : "list\\u003Cinteger\\u003E", "entity_type" : "taxonomy_term" },
+        "field_term_region" : { "type" : "list\\u003Cinteger\\u003E", "entity_type" : "taxonomy_term" },
+        "field_term_sector" : { "type" : "list\\u003Cinteger\\u003E", "entity_type" : "taxonomy_term" },
+        "field_term_topic" : { "type" : "list\\u003Cinteger\\u003E", "entity_type" : "taxonomy_term" },
+        "search_api_language" : { "type" : "string" },
+        "title" : { "type" : "text" }
+      }
+    },
+    "enabled" : "1",
+    "read_only" : "0",
+    "rdf_mapping" : []
+  }');
+  return $items;
+}
+
+/**
+ * Implements hook_default_search_api_page().
+ */
+function gie_search_default_search_api_page() {
+  $items = array();
+  $items['node_search'] = entity_import('search_api_page', '{
+    "index_id" : "search_node_index",
+    "path" : "search",
+    "name" : "Node Search",
+    "machine_name" : "node_search",
+    "description" : null,
+    "options" : {
+      "mode" : "terms",
+      "fields" : [],
+      "per_page" : "10",
+      "get_per_page" : 0,
+      "result_page_search_form" : 1,
+      "view_mode" : "search_listing"
+    },
+    "enabled" : "1",
     "rdf_mapping" : []
   }');
   return $items;
