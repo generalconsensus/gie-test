@@ -20,6 +20,9 @@ function gie_general_ctools_plugin_api($module = NULL, $api = NULL) {
   if ($module == "pane" && $api == "pane") {
     return array("version" => "2");
   }
+  if ($module == "panelizer" && $api == "panelizer") {
+    return array("version" => "1");
+  }
   if ($module == "strongarm" && $api == "strongarm") {
     return array("version" => "1");
   }
@@ -77,4 +80,22 @@ function gie_general_flag_default_flags() {
   );
   return $flags;
 
+}
+
+/**
+ * Implements hook_node_info().
+ */
+function gie_general_node_info() {
+  $items = array(
+    'error_page' => array(
+      'name' => t('Error page'),
+      'base' => 'node_content',
+      'description' => '',
+      'has_title' => '1',
+      'title_label' => t('Title'),
+      'help' => '',
+    ),
+  );
+  drupal_alter('node_info', $items);
+  return $items;
 }

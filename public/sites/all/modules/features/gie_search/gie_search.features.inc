@@ -274,6 +274,7 @@ function gie_search_default_search_api_index() {
             "default" : "1",
             "bundles" : {
               "action_card" : "action_card",
+              "error_page" : "error_page",
               "homepage" : "homepage",
               "persona" : "persona"
             }
