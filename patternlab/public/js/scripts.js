@@ -66,39 +66,21 @@
       items.find('.card').css("height","auto");
 
       if (Modernizr.mq('(min-width: 500px) and (max-width: 799px)')) { 
-        items.filter(function(index) {
-          return (index + 1) % 1 == 0;    
-        }).addClass('odd');
-        items.filter(function(index) {
-          return (index + 1) % 2 == 0;    
-        }).addClass('even');
+        var classes = ['odd', 'even'];
+        items.addClass(function(i, c) {
+          return classes[i % classes.length];
+        });
       }
       if (Modernizr.mq('(min-width: 800px)')) { 
         if (columns == 3) {
-          items.filter(function(index) {
-            return (index + 1) % 1 == 0;    
-          }).addClass('first').removeClass('second third');
-          items.filter(function(index) {
-            return (index + 1) % 2 == 0;    
-          }).addClass('second').removeClass('first third');
-          items.filter(function(index) {
-            return (index + 1) % 3 == 0;    
-          }).addClass('third').removeClass('first second');
+          var classes = ['first', 'second', 'third'];
         } 
         if (columns == 4) {
-          items.filter(function(index) {
-            return (index + 1) % 1 == 0;    
-          }).addClass('first').removeClass('second third fourth');
-          items.filter(function(index) {
-            return (index + 1) % 2 == 0;    
-          }).addClass('second').removeClass('first third fourth');
-          items.filter(function(index) {
-            return (index + 1) % 3 == 0;    
-          }).addClass('third').removeClass('first second fourth');
-          items.filter(function(index) {
-            return (index + 1) % 4 == 0;    
-          }).addClass('fourth').removeClass('first second third');
+          var classes = ['first', 'second', 'third', 'fourth'];
         }
+        items.addClass(function(i, c) {
+          return classes[i % classes.length];
+        });
       } 
 
       items.each(function(){
