@@ -149,12 +149,15 @@ function gie_innovation_strongarm() {
         'custom_settings' => TRUE,
       ),
       'at_a_glance' => array(
-        'custom_settings' => FALSE,
+        'custom_settings' => TRUE,
       ),
       'contact' => array(
-        'custom_settings' => FALSE,
+        'custom_settings' => TRUE,
       ),
       'logo' => array(
+        'custom_settings' => FALSE,
+      ),
+      'page_header' => array(
         'custom_settings' => FALSE,
       ),
     ),
@@ -189,6 +192,14 @@ function gie_innovation_strongarm() {
             'weight' => '15',
             'visible' => FALSE,
           ),
+          'at_a_glance' => array(
+            'weight' => '21',
+            'visible' => FALSE,
+          ),
+          'contact' => array(
+            'weight' => '17',
+            'visible' => FALSE,
+          ),
         ),
         'innovation_listing_counts_evidence' => array(
           'listing' => array(
@@ -209,6 +220,14 @@ function gie_innovation_strongarm() {
           ),
           'search_listing' => array(
             'weight' => '18',
+            'visible' => FALSE,
+          ),
+          'at_a_glance' => array(
+            'weight' => '20',
+            'visible' => FALSE,
+          ),
+          'contact' => array(
+            'weight' => '20',
             'visible' => FALSE,
           ),
         ),
@@ -233,6 +252,14 @@ function gie_innovation_strongarm() {
             'weight' => '19',
             'visible' => FALSE,
           ),
+          'at_a_glance' => array(
+            'weight' => '18',
+            'visible' => FALSE,
+          ),
+          'contact' => array(
+            'weight' => '21',
+            'visible' => FALSE,
+          ),
         ),
         'innovation_listing_counts_orgs' => array(
           'listing' => array(
@@ -253,6 +280,14 @@ function gie_innovation_strongarm() {
           ),
           'search_listing' => array(
             'weight' => '17',
+            'visible' => FALSE,
+          ),
+          'at_a_glance' => array(
+            'weight' => '19',
+            'visible' => FALSE,
+          ),
+          'contact' => array(
+            'weight' => '18',
             'visible' => FALSE,
           ),
         ),
@@ -277,11 +312,68 @@ function gie_innovation_strongarm() {
             'weight' => '14',
             'visible' => FALSE,
           ),
+          'at_a_glance' => array(
+            'weight' => '23',
+            'visible' => FALSE,
+          ),
+          'contact' => array(
+            'weight' => '16',
+            'visible' => FALSE,
+          ),
+        ),
+        'innovation_at_a_glance_comments' => array(
+          'at_a_glance' => array(
+            'weight' => '0',
+            'visible' => TRUE,
+          ),
+          'default' => array(
+            'weight' => '10',
+            'visible' => TRUE,
+          ),
+          'contact' => array(
+            'weight' => '19',
+            'visible' => FALSE,
+          ),
+        ),
+        'innovation_at_a_glance_favorites' => array(
+          'at_a_glance' => array(
+            'weight' => '1',
+            'visible' => TRUE,
+          ),
+          'default' => array(
+            'weight' => '10',
+            'visible' => TRUE,
+          ),
+          'contact' => array(
+            'weight' => '14',
+            'visible' => FALSE,
+          ),
+        ),
+        'innovation_at_a_glance_evidence' => array(
+          'at_a_glance' => array(
+            'weight' => '2',
+            'visible' => TRUE,
+          ),
+          'default' => array(
+            'weight' => '10',
+            'visible' => TRUE,
+          ),
+          'contact' => array(
+            'weight' => '15',
+            'visible' => FALSE,
+          ),
         ),
       ),
     ),
   );
   $export['field_bundle_settings_node__innovation'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'gie_innovation_image_fid';
+  $strongarm->value = '35';
+  $export['gie_innovation_image_fid'] = $strongarm;
 
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */

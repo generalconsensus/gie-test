@@ -368,6 +368,57 @@ function gie_user_ds_field_settings_info() {
   );
   $export['user|user|user_teaser_summary'] = $ds_fieldsetting;
 
+  $ds_fieldsetting = new stdClass();
+  $ds_fieldsetting->api_version = 1;
+  $ds_fieldsetting->id = 'user|user|user_teaser_with_motto';
+  $ds_fieldsetting->entity_type = 'user';
+  $ds_fieldsetting->bundle = 'user';
+  $ds_fieldsetting->view_mode = 'user_teaser_with_motto';
+  $ds_fieldsetting->settings = array(
+    'user_full_name' => array(
+      'weight' => '1',
+      'label' => 'hidden',
+      'format' => 'linked_name',
+      'formatter_settings' => array(
+        'ft' => array(
+          'func' => 'theme_ds_field_expert',
+          'ow' => TRUE,
+          'ow-el' => 'div',
+          'ow-cl' => 'profile-thumb__name',
+          'ow-def-cl' => FALSE,
+          'ow-at' => '',
+          'ow-def-at' => FALSE,
+        ),
+        'field_delimiter' => '',
+        'linked_field' => array(
+          'linked' => 0,
+          'destination' => '',
+          'advanced' => array(
+            'title' => '',
+            'target' => '',
+            'class' => '',
+            'rel' => '',
+            'text' => '',
+          ),
+        ),
+      ),
+    ),
+    'field_user_photo' => array(
+      'formatter_settings' => array(
+        'ft' => array(
+          'func' => 'theme_ds_field_expert',
+          'ow' => TRUE,
+          'ow-el' => 'div',
+          'ow-cl' => 'profile-thumb__image--rounded',
+          'ow-def-cl' => FALSE,
+          'ow-at' => '',
+          'ow-def-at' => FALSE,
+        ),
+      ),
+    ),
+  );
+  $export['user|user|user_teaser_with_motto'] = $ds_fieldsetting;
+
   return $export;
 }
 
@@ -610,6 +661,42 @@ function gie_user_ds_layout_settings_info() {
     'layout_link_custom' => '',
   );
   $export['user|user|user_teaser_summary'] = $ds_layout;
+
+  $ds_layout = new stdClass();
+  $ds_layout->api_version = 1;
+  $ds_layout->id = 'user|user|user_teaser_with_motto';
+  $ds_layout->entity_type = 'user';
+  $ds_layout->bundle = 'user';
+  $ds_layout->view_mode = 'user_teaser_with_motto';
+  $ds_layout->layout = 'slat';
+  $ds_layout->settings = array(
+    'regions' => array(
+      'media' => array(
+        0 => 'field_user_photo',
+        1 => 'user_full_name',
+      ),
+      'main_content' => array(
+        2 => 'field_user_motto',
+      ),
+    ),
+    'fields' => array(
+      'field_user_photo' => 'media',
+      'user_full_name' => 'media',
+      'field_user_motto' => 'main_content',
+    ),
+    'classes' => array(),
+    'wrappers' => array(
+      'header' => 'div',
+      'media' => 'div',
+      'main_content' => 'div',
+    ),
+    'layout_wrapper' => 'div',
+    'layout_attributes' => '',
+    'layout_attributes_merge' => 1,
+    'layout_link_attribute' => '',
+    'layout_link_custom' => '',
+  );
+  $export['user|user|user_teaser_with_motto'] = $ds_layout;
 
   return $export;
 }
