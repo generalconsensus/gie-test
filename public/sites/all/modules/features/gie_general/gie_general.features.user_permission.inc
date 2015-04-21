@@ -10,6 +10,42 @@
 function gie_general_user_default_permissions() {
   $permissions = array();
 
+  // Exported permission: 'create error_page content'.
+  $permissions['create error_page content'] = array(
+    'name' => 'create error_page content',
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
+    'module' => 'node',
+  );
+
+  // Exported permission: 'delete any error_page content'.
+  $permissions['delete any error_page content'] = array(
+    'name' => 'delete any error_page content',
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
+    'module' => 'node',
+  );
+
+  // Exported permission: 'delete own error_page content'.
+  $permissions['delete own error_page content'] = array(
+    'name' => 'delete own error_page content',
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
+    'module' => 'node',
+  );
+
+  // Exported permission: 'edit any error_page content'.
+  $permissions['edit any error_page content'] = array(
+    'name' => 'edit any error_page content',
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
+    'module' => 'node',
+  );
+
   // Exported permission: 'edit own comments'.
   $permissions['edit own comments'] = array(
     'name' => 'edit own comments',
@@ -18,6 +54,15 @@ function gie_general_user_default_permissions() {
       'authenticated user' => 'authenticated user',
     ),
     'module' => 'comment',
+  );
+
+  // Exported permission: 'edit own error_page content'.
+  $permissions['edit own error_page content'] = array(
+    'name' => 'edit own error_page content',
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
+    'module' => 'node',
   );
 
   // Exported permission: 'entityconnect add button'.
