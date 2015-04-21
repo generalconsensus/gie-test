@@ -644,11 +644,7 @@ function gie_user_ds_layout_settings_info() {
       'user_full_name' => 'media',
       'field_user_summary' => 'main_content',
     ),
-    'classes' => array(
-      'layout_class' => array(
-        'profile-thumb' => 'profile-thumb',
-      ),
-    ),
+    'classes' => array(),
     'wrappers' => array(
       'header' => 'div',
       'media' => 'div',
