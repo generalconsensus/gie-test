@@ -126,13 +126,19 @@ function gie_resource_strongarm() {
         'custom_settings' => TRUE,
       ),
       'at_a_glance' => array(
-        'custom_settings' => FALSE,
+        'custom_settings' => TRUE,
       ),
       'contact' => array(
         'custom_settings' => FALSE,
       ),
       'logo' => array(
         'custom_settings' => FALSE,
+      ),
+      'page_header' => array(
+        'custom_settings' => FALSE,
+      ),
+      'details' => array(
+        'custom_settings' => TRUE,
       ),
     ),
     'extra_fields' => array(
@@ -163,6 +169,14 @@ function gie_resource_strongarm() {
             'weight' => '17',
             'visible' => FALSE,
           ),
+          'at_a_glance' => array(
+            'weight' => '17',
+            'visible' => FALSE,
+          ),
+          'details' => array(
+            'weight' => '23',
+            'visible' => FALSE,
+          ),
         ),
         'resource_counters_comment_count' => array(
           'listing' => array(
@@ -177,6 +191,18 @@ function gie_resource_strongarm() {
             'weight' => '16',
             'visible' => FALSE,
           ),
+          'full' => array(
+            'weight' => '20',
+            'visible' => FALSE,
+          ),
+          'at_a_glance' => array(
+            'weight' => '0',
+            'visible' => TRUE,
+          ),
+          'details' => array(
+            'weight' => '22',
+            'visible' => FALSE,
+          ),
         ),
         'resource_counters_favorite_count' => array(
           'listing' => array(
@@ -189,6 +215,18 @@ function gie_resource_strongarm() {
           ),
           'search_listing' => array(
             'weight' => '15',
+            'visible' => FALSE,
+          ),
+          'full' => array(
+            'weight' => '22',
+            'visible' => FALSE,
+          ),
+          'at_a_glance' => array(
+            'weight' => '1',
+            'visible' => TRUE,
+          ),
+          'details' => array(
+            'weight' => '21',
             'visible' => FALSE,
           ),
         ),
