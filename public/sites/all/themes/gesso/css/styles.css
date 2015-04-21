@@ -1356,6 +1356,81 @@ input.throbbing {
   background-position: left 0.5em top -47px;
 }
 
+/* line 1, ../sass/partials/components/_beta-version.scss */
+.beta-version {
+  margin: 0;
+}
+/* line 3, ../sass/partials/components/_beta-version.scss */
+.beta-version h2 {
+  font-size: 0.75em;
+  font-weight: 900;
+  margin: 0;
+  padding: 0;
+}
+/* line 10, ../sass/partials/components/_beta-version.scss */
+.region-header .beta-version {
+  float: left;
+}
+/* line 12, ../sass/partials/components/_beta-version.scss */
+.region-header .beta-version h2 {
+  color: #aaa;
+  line-height: 2.5em;
+}
+/* line 17, ../sass/partials/components/_beta-version.scss */
+.site-name .beta-version {
+  position: absolute;
+  right: -80px;
+  top: 0;
+  width: 70px;
+}
+/* line 22, ../sass/partials/components/_beta-version.scss */
+.site-name .beta-version h2 {
+  color: #aaa;
+}
+@media (min-width: 54.375em) {
+  /* line 17, ../sass/partials/components/_beta-version.scss */
+  .site-name .beta-version {
+    display: none;
+  }
+}
+/* line 29, ../sass/partials/components/_beta-version.scss */
+.pane--homepage-header .beta-version {
+  bottom: 0;
+  position: absolute;
+  right: 0;
+  text-align: right;
+  width: 70px;
+  z-index: 2;
+}
+@media (max-width: 25em) {
+  /* line 29, ../sass/partials/components/_beta-version.scss */
+  .pane--homepage-header .beta-version {
+    display: none;
+  }
+}
+/* line 39, ../sass/partials/components/_beta-version.scss */
+.pane--homepage-header .beta-version h2 {
+  color: #fff;
+  line-height: 1.4;
+  padding: 0 1em 1em 0;
+  position: relative;
+  z-index: 2;
+}
+/* line 46, ../sass/partials/components/_beta-version.scss */
+.pane--homepage-header .beta-version:after {
+  content: "";
+  display: block;
+  border-style: solid;
+  border-width: 0 0 157px 94px;
+  border-color: transparent transparent #003359 transparent;
+  bottom: 0;
+  height: 0;
+  position: absolute;
+  right: 0;
+  width: 0;
+  z-index: 1;
+}
+
 /* line 3, ../sass/partials/components/_block.scss */
 .block__title {
   border-bottom: 1px solid #cecfcb;
