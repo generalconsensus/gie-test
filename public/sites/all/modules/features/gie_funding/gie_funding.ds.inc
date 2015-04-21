@@ -37,6 +37,37 @@ function gie_funding_ds_field_settings_info() {
 
   $ds_fieldsetting = new stdClass();
   $ds_fieldsetting->api_version = 1;
+  $ds_fieldsetting->id = 'node|funding|at_a_glance';
+  $ds_fieldsetting->entity_type = 'node';
+  $ds_fieldsetting->bundle = 'funding';
+  $ds_fieldsetting->view_mode = 'at_a_glance';
+  $ds_fieldsetting->settings = array(
+    'field_funding_grant_award_value' => array(
+      'formatter_settings' => array(
+        'ft' => array(
+          'func' => 'theme_ds_field_expert',
+          'lb' => 'Award Amount',
+          'lb-el' => 'span',
+          'ow' => TRUE,
+          'ow-el' => 'div',
+          'ow-cl' => 'view--at-a-glance',
+          'ow-def-cl' => FALSE,
+          'ow-at' => '',
+          'ow-def-at' => FALSE,
+          'fi' => TRUE,
+          'fi-el' => 'span',
+          'fi-cl' => '',
+          'fi-at' => '',
+          'fi-def-at' => FALSE,
+          'fi-odd-even' => FALSE,
+        ),
+      ),
+    ),
+  );
+  $export['node|funding|at_a_glance'] = $ds_fieldsetting;
+
+  $ds_fieldsetting = new stdClass();
+  $ds_fieldsetting->api_version = 1;
   $ds_fieldsetting->id = 'node|funding|full';
   $ds_fieldsetting->entity_type = 'node';
   $ds_fieldsetting->bundle = 'funding';
@@ -290,6 +321,38 @@ function gie_funding_ds_layout_settings_info() {
     'layout_link_custom' => '',
   );
   $export['comment|comment_node_funding|form'] = $ds_layout;
+
+  $ds_layout = new stdClass();
+  $ds_layout->api_version = 1;
+  $ds_layout->id = 'node|funding|at_a_glance';
+  $ds_layout->entity_type = 'node';
+  $ds_layout->bundle = 'funding';
+  $ds_layout->view_mode = 'at_a_glance';
+  $ds_layout->layout = 'ds_reset';
+  $ds_layout->settings = array(
+    'regions' => array(
+      'ds_content' => array(
+        0 => 'funding_ops_counters_favorites',
+        1 => 'funding_ops_counters_comments',
+        2 => 'field_funding_grant_award_value',
+      ),
+    ),
+    'fields' => array(
+      'funding_ops_counters_favorites' => 'ds_content',
+      'funding_ops_counters_comments' => 'ds_content',
+      'field_funding_grant_award_value' => 'ds_content',
+    ),
+    'classes' => array(),
+    'wrappers' => array(
+      'ds_content' => 'div',
+    ),
+    'layout_wrapper' => 'div',
+    'layout_attributes' => '',
+    'layout_attributes_merge' => TRUE,
+    'layout_link_attribute' => FALSE,
+    'layout_link_custom' => '',
+  );
+  $export['node|funding|at_a_glance'] = $ds_layout;
 
   $ds_layout = new stdClass();
   $ds_layout->api_version = 1;
