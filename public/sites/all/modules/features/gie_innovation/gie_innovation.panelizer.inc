@@ -175,13 +175,15 @@ function gie_innovation_panelizer_defaults() {
     $display->content['new-c0f9ba84-3f85-4c22-9501-c3bac83312fd'] = $pane;
     $display->panels['bottom_sidebar'][3] = 'new-c0f9ba84-3f85-4c22-9501-c3bac83312fd';
     $pane = new stdClass();
-    $pane->pid = 'new-a03c6f7b-63c1-4694-91e5-51dadb90ed56';
+    $pane->pid = 'new-54114307-d06c-49a5-87e3-3c12ba7b744a';
     $pane->panel = 'box_first';
-    $pane->type = 'views_panes';
-    $pane->subtype = 'innovation_counters-at_a_glance';
+    $pane->type = 'entity_view';
+    $pane->subtype = 'node';
     $pane->shown = TRUE;
     $pane->access = array();
     $pane->configuration = array(
+      'view_mode' => 'at_a_glance',
+      'context' => 'panelizer',
       'override_title' => 1,
       'override_title_text' => 'At a Glance',
       'override_title_heading' => 'h2',
@@ -194,9 +196,9 @@ function gie_innovation_panelizer_defaults() {
     $pane->extras = array();
     $pane->position = 0;
     $pane->locks = array();
-    $pane->uuid = 'a03c6f7b-63c1-4694-91e5-51dadb90ed56';
-    $display->content['new-a03c6f7b-63c1-4694-91e5-51dadb90ed56'] = $pane;
-    $display->panels['box_first'][0] = 'new-a03c6f7b-63c1-4694-91e5-51dadb90ed56';
+    $pane->uuid = '54114307-d06c-49a5-87e3-3c12ba7b744a';
+    $display->content['new-54114307-d06c-49a5-87e3-3c12ba7b744a'] = $pane;
+    $display->panels['box_first'][0] = 'new-54114307-d06c-49a5-87e3-3c12ba7b744a';
     $pane = new stdClass();
     $pane->pid = 'new-6391e8db-3962-4f56-8a16-7ce005541a52';
     $pane->panel = 'box_second';
@@ -221,36 +223,17 @@ function gie_innovation_panelizer_defaults() {
     $display->content['new-6391e8db-3962-4f56-8a16-7ce005541a52'] = $pane;
     $display->panels['box_second'][0] = 'new-6391e8db-3962-4f56-8a16-7ce005541a52';
     $pane = new stdClass();
-    $pane->pid = 'new-3e73f49a-e0db-40e7-ac69-8faf6d05f390';
+    $pane->pid = 'new-20fc4c4d-ae87-480d-8a1a-292e1c369c4b';
     $pane->panel = 'box_third';
-    $pane->type = 'entity_field';
-    $pane->subtype = 'node:field_innovation_poc';
+    $pane->type = 'entity_view';
+    $pane->subtype = 'node';
     $pane->shown = TRUE;
     $pane->access = array();
     $pane->configuration = array(
-      'label' => 'title',
-      'formatter' => 'entityreference_entity_view',
-      'delta_limit' => 0,
-      'delta_offset' => '0',
-      'delta_reversed' => FALSE,
-      'formatter_settings' => array(
-        'linked_field' => array(
-          'linked' => 0,
-          'destination' => '',
-          'advanced' => array(
-            'title' => '',
-            'target' => '',
-            'class' => '',
-            'rel' => '',
-            'text' => '',
-          ),
-        ),
-        'view_mode' => 'user_teaser_summary',
-        'links' => 0,
-      ),
+      'view_mode' => 'contact',
       'context' => 'panelizer',
-      'override_title' => 0,
-      'override_title_text' => '',
+      'override_title' => 1,
+      'override_title_text' => 'Point of Contact',
       'override_title_heading' => 'h2',
     );
     $pane->cache = array();
@@ -261,9 +244,9 @@ function gie_innovation_panelizer_defaults() {
     $pane->extras = array();
     $pane->position = 0;
     $pane->locks = array();
-    $pane->uuid = '3e73f49a-e0db-40e7-ac69-8faf6d05f390';
-    $display->content['new-3e73f49a-e0db-40e7-ac69-8faf6d05f390'] = $pane;
-    $display->panels['box_third'][0] = 'new-3e73f49a-e0db-40e7-ac69-8faf6d05f390';
+    $pane->uuid = '20fc4c4d-ae87-480d-8a1a-292e1c369c4b';
+    $display->content['new-20fc4c4d-ae87-480d-8a1a-292e1c369c4b'] = $pane;
+    $display->panels['box_third'][0] = 'new-20fc4c4d-ae87-480d-8a1a-292e1c369c4b';
     $pane = new stdClass();
     $pane->pid = 'new-dfeacb8d-a2a7-420e-9b58-3eccf1d0dedf';
     $pane->panel = 'center';

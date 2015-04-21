@@ -454,6 +454,180 @@ function gie_innovation_views_default_views() {
   $export['innovation_assistance'] = $view;
 
   $view = new view();
+  $view->name = 'innovation_at_a_glance';
+  $view->description = 'Innovation counters for At a Glance';
+  $view->tag = 'default';
+  $view->base_table = 'node';
+  $view->human_name = 'Innovation: At a Glance';
+  $view->core = 7;
+  $view->api_version = '3.0';
+  $view->disabled = FALSE; /* Edit this to true to make a default view disabled initially */
+
+  /* Display: Master */
+  $handler = $view->new_display('default', 'Master', 'default');
+  $handler->display->display_options['css_class'] = 'view--at-a-glance';
+  $handler->display->display_options['hide_admin_links'] = TRUE;
+  $handler->display->display_options['use_more_always'] = FALSE;
+  $handler->display->display_options['access']['type'] = 'perm';
+  $handler->display->display_options['cache']['type'] = 'none';
+  $handler->display->display_options['query']['type'] = 'views_query';
+  $handler->display->display_options['exposed_form']['type'] = 'basic';
+  $handler->display->display_options['pager']['type'] = 'some';
+  $handler->display->display_options['pager']['options']['items_per_page'] = '1';
+  $handler->display->display_options['pager']['options']['offset'] = '0';
+  $handler->display->display_options['style_plugin'] = 'default';
+  $handler->display->display_options['style_options']['default_row_class'] = FALSE;
+  $handler->display->display_options['style_options']['row_class_special'] = FALSE;
+  $handler->display->display_options['row_plugin'] = 'fields';
+  $handler->display->display_options['row_options']['default_field_elements'] = FALSE;
+  /* Relationship: Flags: favorite counter */
+  $handler->display->display_options['relationships']['flag_count_rel']['id'] = 'flag_count_rel';
+  $handler->display->display_options['relationships']['flag_count_rel']['table'] = 'node';
+  $handler->display->display_options['relationships']['flag_count_rel']['field'] = 'flag_count_rel';
+  $handler->display->display_options['relationships']['flag_count_rel']['required'] = 0;
+  $handler->display->display_options['relationships']['flag_count_rel']['flag'] = 'favorite';
+  /* Field: Content: Title */
+  $handler->display->display_options['fields']['title']['id'] = 'title';
+  $handler->display->display_options['fields']['title']['table'] = 'node';
+  $handler->display->display_options['fields']['title']['field'] = 'title';
+  $handler->display->display_options['fields']['title']['label'] = '';
+  $handler->display->display_options['fields']['title']['element_label_colon'] = FALSE;
+  /* Contextual filter: Content: Nid */
+  $handler->display->display_options['arguments']['nid']['id'] = 'nid';
+  $handler->display->display_options['arguments']['nid']['table'] = 'node';
+  $handler->display->display_options['arguments']['nid']['field'] = 'nid';
+  $handler->display->display_options['arguments']['nid']['default_action'] = 'default';
+  $handler->display->display_options['arguments']['nid']['default_argument_type'] = 'node';
+  $handler->display->display_options['arguments']['nid']['summary']['number_of_records'] = '0';
+  $handler->display->display_options['arguments']['nid']['summary']['format'] = 'default_summary';
+  $handler->display->display_options['arguments']['nid']['summary_options']['items_per_page'] = '25';
+  /* Filter criterion: Content: Published */
+  $handler->display->display_options['filters']['status']['id'] = 'status';
+  $handler->display->display_options['filters']['status']['table'] = 'node';
+  $handler->display->display_options['filters']['status']['field'] = 'status';
+  $handler->display->display_options['filters']['status']['value'] = 1;
+  $handler->display->display_options['filters']['status']['group'] = 1;
+  $handler->display->display_options['filters']['status']['expose']['operator'] = FALSE;
+
+  /* Display: Comments */
+  $handler = $view->new_display('entity_view', 'Comments', 'comments');
+  $handler->display->display_options['defaults']['relationships'] = FALSE;
+  $handler->display->display_options['defaults']['fields'] = FALSE;
+  /* Field: Content: Comment count */
+  $handler->display->display_options['fields']['comment_count']['id'] = 'comment_count';
+  $handler->display->display_options['fields']['comment_count']['table'] = 'node_comment_statistics';
+  $handler->display->display_options['fields']['comment_count']['field'] = 'comment_count';
+  $handler->display->display_options['fields']['comment_count']['label'] = 'Comments';
+  $handler->display->display_options['fields']['comment_count']['element_type'] = 'span';
+  $handler->display->display_options['fields']['comment_count']['element_label_type'] = 'span';
+  $handler->display->display_options['fields']['comment_count']['element_label_class'] = 'views-label';
+  $handler->display->display_options['fields']['comment_count']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['comment_count']['element_wrapper_type'] = 'div';
+  $handler->display->display_options['fields']['comment_count']['element_wrapper_class'] = 'views-field has-icon--comment';
+  $handler->display->display_options['fields']['comment_count']['element_default_classes'] = FALSE;
+  $handler->display->display_options['fields']['comment_count']['format_plural'] = TRUE;
+  $handler->display->display_options['defaults']['filter_groups'] = FALSE;
+  $handler->display->display_options['defaults']['filters'] = FALSE;
+  /* Filter criterion: Content: Published */
+  $handler->display->display_options['filters']['status']['id'] = 'status';
+  $handler->display->display_options['filters']['status']['table'] = 'node';
+  $handler->display->display_options['filters']['status']['field'] = 'status';
+  $handler->display->display_options['filters']['status']['value'] = 1;
+  $handler->display->display_options['filters']['status']['group'] = 1;
+  $handler->display->display_options['filters']['status']['expose']['operator'] = FALSE;
+  /* Filter criterion: Content: Type */
+  $handler->display->display_options['filters']['type']['id'] = 'type';
+  $handler->display->display_options['filters']['type']['table'] = 'node';
+  $handler->display->display_options['filters']['type']['field'] = 'type';
+  $handler->display->display_options['filters']['type']['value'] = array(
+    'innovation' => 'innovation',
+  );
+  $handler->display->display_options['entity_type'] = 'node';
+  $handler->display->display_options['bundles'] = array(
+    0 => 'innovation',
+  );
+
+  /* Display: Favorites */
+  $handler = $view->new_display('entity_view', 'Favorites', 'favorites');
+  $handler->display->display_options['defaults']['fields'] = FALSE;
+  /* Field: Flags: Flag counter */
+  $handler->display->display_options['fields']['count']['id'] = 'count';
+  $handler->display->display_options['fields']['count']['table'] = 'flag_counts';
+  $handler->display->display_options['fields']['count']['field'] = 'count';
+  $handler->display->display_options['fields']['count']['relationship'] = 'flag_count_rel';
+  $handler->display->display_options['fields']['count']['label'] = 'Favorites';
+  $handler->display->display_options['fields']['count']['element_type'] = 'span';
+  $handler->display->display_options['fields']['count']['element_label_type'] = 'span';
+  $handler->display->display_options['fields']['count']['element_label_class'] = 'views-label';
+  $handler->display->display_options['fields']['count']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['count']['element_wrapper_type'] = 'div';
+  $handler->display->display_options['fields']['count']['element_wrapper_class'] = 'views-field has-icon--favorite';
+  $handler->display->display_options['fields']['count']['element_default_classes'] = FALSE;
+  $handler->display->display_options['fields']['count']['format_plural'] = TRUE;
+  $handler->display->display_options['defaults']['filter_groups'] = FALSE;
+  $handler->display->display_options['defaults']['filters'] = FALSE;
+  /* Filter criterion: Content: Published */
+  $handler->display->display_options['filters']['status']['id'] = 'status';
+  $handler->display->display_options['filters']['status']['table'] = 'node';
+  $handler->display->display_options['filters']['status']['field'] = 'status';
+  $handler->display->display_options['filters']['status']['value'] = 1;
+  $handler->display->display_options['filters']['status']['group'] = 1;
+  $handler->display->display_options['filters']['status']['expose']['operator'] = FALSE;
+  /* Filter criterion: Content: Type */
+  $handler->display->display_options['filters']['type']['id'] = 'type';
+  $handler->display->display_options['filters']['type']['table'] = 'node';
+  $handler->display->display_options['filters']['type']['field'] = 'type';
+  $handler->display->display_options['filters']['type']['value'] = array(
+    'innovation' => 'innovation',
+  );
+  $handler->display->display_options['entity_type'] = 'node';
+  $handler->display->display_options['bundles'] = array(
+    0 => 'innovation',
+  );
+
+  /* Display: Evidence */
+  $handler = $view->new_display('entity_view', 'Evidence', 'evidence');
+  $handler->display->display_options['defaults']['group_by'] = FALSE;
+  $handler->display->display_options['group_by'] = TRUE;
+  $handler->display->display_options['defaults']['relationships'] = FALSE;
+  $handler->display->display_options['defaults']['fields'] = FALSE;
+  /* Field: Content: Proof of Evidence (field_innovation_proof_evidence:delta) */
+  $handler->display->display_options['fields']['delta']['id'] = 'delta';
+  $handler->display->display_options['fields']['delta']['table'] = 'field_data_field_innovation_proof_evidence';
+  $handler->display->display_options['fields']['delta']['field'] = 'delta';
+  $handler->display->display_options['fields']['delta']['group_type'] = 'count';
+  $handler->display->display_options['fields']['delta']['label'] = 'Evidence';
+  $handler->display->display_options['fields']['delta']['element_type'] = 'span';
+  $handler->display->display_options['fields']['delta']['element_label_type'] = 'span';
+  $handler->display->display_options['fields']['delta']['element_label_class'] = 'views-label';
+  $handler->display->display_options['fields']['delta']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['delta']['element_wrapper_type'] = 'div';
+  $handler->display->display_options['fields']['delta']['element_wrapper_class'] = 'views-field has-icon--evidence';
+  $handler->display->display_options['fields']['delta']['element_default_classes'] = FALSE;
+  $handler->display->display_options['fields']['delta']['format_plural'] = TRUE;
+  $handler->display->display_options['defaults']['filter_groups'] = FALSE;
+  $handler->display->display_options['defaults']['filters'] = FALSE;
+  /* Filter criterion: Content: Published */
+  $handler->display->display_options['filters']['status']['id'] = 'status';
+  $handler->display->display_options['filters']['status']['table'] = 'node';
+  $handler->display->display_options['filters']['status']['field'] = 'status';
+  $handler->display->display_options['filters']['status']['value'] = 1;
+  $handler->display->display_options['filters']['status']['group'] = 1;
+  $handler->display->display_options['filters']['status']['expose']['operator'] = FALSE;
+  /* Filter criterion: Content: Type */
+  $handler->display->display_options['filters']['type']['id'] = 'type';
+  $handler->display->display_options['filters']['type']['table'] = 'node';
+  $handler->display->display_options['filters']['type']['field'] = 'type';
+  $handler->display->display_options['filters']['type']['value'] = array(
+    'innovation' => 'innovation',
+  );
+  $handler->display->display_options['entity_type'] = 'node';
+  $handler->display->display_options['bundles'] = array(
+    0 => 'innovation',
+  );
+  $export['innovation_at_a_glance'] = $view;
+
+  $view = new view();
   $view->name = 'innovation_counters';
   $view->description = '"At a Glance" display on Innovation pages.';
   $view->tag = 'default';

@@ -362,6 +362,18 @@ function gie_innovation_field_default_field_instances() {
     'deleted' => 0,
     'description' => 'Upload high-resolution photos and videos of your innovation. These will appear at the top of your innovation profile page.',
     'display' => array(
+      'at_a_glance' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 13,
+      ),
+      'contact' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 10,
+      ),
       'default' => array(
         'label' => 'above',
         'module' => 'entityreference',
@@ -448,6 +460,18 @@ function gie_innovation_field_default_field_instances() {
     'deleted' => 0,
     'description' => 'What type of assistance do you need to grow your innovation? If you don\'t select any assistance your profile will say "No Assistance Needed at this Time"',
     'display' => array(
+      'at_a_glance' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 14,
+      ),
+      'contact' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 11,
+      ),
       'default' => array(
         'label' => 'above',
         'module' => 'taxonomy',
@@ -525,6 +549,18 @@ function gie_innovation_field_default_field_instances() {
     'deleted' => 0,
     'description' => 'Have you calculated how much your innovation costs per person that it benefits? This is a great way to show the value of your innovation.',
     'display' => array(
+      'at_a_glance' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 39,
+      ),
+      'contact' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 38,
+      ),
       'default' => array(
         'label' => 'above',
         'module' => 'number',
@@ -608,6 +644,18 @@ function gie_innovation_field_default_field_instances() {
     'deleted' => 0,
     'description' => 'If you have a cost per unit for your innovation, share it here!',
     'display' => array(
+      'at_a_glance' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 46,
+      ),
+      'contact' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 45,
+      ),
       'default' => array(
         'label' => 'above',
         'module' => 'number',
@@ -709,6 +757,18 @@ function gie_innovation_field_default_field_instances() {
     'deleted' => 0,
     'description' => 'Select the countries where your innovation was created',
     'display' => array(
+      'at_a_glance' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 24,
+      ),
+      'contact' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 23,
+      ),
       'default' => array(
         'label' => 'above',
         'module' => 'taxonomy',
@@ -800,6 +860,18 @@ function gie_innovation_field_default_field_instances() {
     'deleted' => 0,
     'description' => 'Enter a short description of your innovation. What does it do?',
     'display' => array(
+      'at_a_glance' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 12,
+      ),
+      'contact' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 9,
+      ),
       'default' => array(
         'label' => 'above',
         'module' => 'text',
@@ -948,6 +1020,18 @@ function gie_innovation_field_default_field_instances() {
     'deleted' => 0,
     'description' => '',
     'display' => array(
+      'at_a_glance' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 29,
+      ),
+      'contact' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 28,
+      ),
       'default' => array(
         'label' => 'above',
         'module' => 'text',
@@ -1070,6 +1154,18 @@ function gie_innovation_field_default_field_instances() {
     'deleted' => 0,
     'description' => 'Is there evidence that your innovation works or has the desired impact?',
     'display' => array(
+      'at_a_glance' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 41,
+      ),
+      'contact' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 40,
+      ),
       'default' => array(
         'label' => 'above',
         'module' => 'list',
@@ -1147,6 +1243,18 @@ function gie_innovation_field_default_field_instances() {
     'deleted' => 0,
     'description' => 'Type the organizations or programs that you are funded by. They must have an organization or program profile to appear on your page. Please encourage your funders to create organization/program profiles and user profiles on the Exchange if they don\'t appear.',
     'display' => array(
+      'at_a_glance' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 35,
+      ),
+      'contact' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 34,
+      ),
       'default' => array(
         'label' => 'above',
         'module' => 'entityreference',
@@ -1233,6 +1341,18 @@ function gie_innovation_field_default_field_instances() {
     'deleted' => 0,
     'description' => 'Do you have a funding goal (in US Dollars) that you would like to raise? Please enter a whole number, like 590000  No symbols, commas, or periods/decimals allowed',
     'display' => array(
+      'at_a_glance' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 45,
+      ),
+      'contact' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 44,
+      ),
       'default' => array(
         'label' => 'above',
         'module' => 'number',
@@ -1333,6 +1453,18 @@ function gie_innovation_field_default_field_instances() {
     'deleted' => 0,
     'description' => 'Upload an image that will represent your innovation in other areas of the Exchange like sectors, communities, etc.',
     'display' => array(
+      'at_a_glance' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 50,
+      ),
+      'contact' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 50,
+      ),
       'default' => array(
         'label' => 'above',
         'module' => 'image',
@@ -1446,6 +1578,18 @@ function gie_innovation_field_default_field_instances() {
     'deleted' => 0,
     'description' => 'What is your plan for increasing sales or use of your innovation?',
     'display' => array(
+      'at_a_glance' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 31,
+      ),
+      'contact' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 30,
+      ),
       'default' => array(
         'label' => 'above',
         'module' => 'text',
@@ -1564,6 +1708,18 @@ function gie_innovation_field_default_field_instances() {
     'deleted' => 0,
     'description' => 'Select the countries where your innovation is being tested/used',
     'display' => array(
+      'at_a_glance' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 25,
+      ),
+      'contact' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 24,
+      ),
       'default' => array(
         'label' => 'above',
         'module' => 'taxonomy',
@@ -1655,6 +1811,18 @@ function gie_innovation_field_default_field_instances() {
     'deleted' => 0,
     'description' => 'Share any articles, blogs, or other news items that showcase your innovation',
     'display' => array(
+      'at_a_glance' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 32,
+      ),
+      'contact' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 31,
+      ),
       'default' => array(
         'label' => 'above',
         'module' => 'link',
@@ -1764,6 +1932,18 @@ function gie_innovation_field_default_field_instances() {
     'deleted' => 0,
     'description' => '',
     'display' => array(
+      'at_a_glance' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 40,
+      ),
+      'contact' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 39,
+      ),
       'default' => array(
         'label' => 'above',
         'module' => 'field_collection',
@@ -1843,6 +2023,34 @@ function gie_innovation_field_default_field_instances() {
     'deleted' => 0,
     'description' => 'The point of contact must be someone with a user profile in the Exchange. Start writing a name to see if it comes up in the Exchange member directory. If not, create a profile or email the person to invite them to create a profile. If no point of contact is listed, there will be no point of contact listed on the innovation profile.',
     'display' => array(
+      'at_a_glance' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 15,
+      ),
+      'contact' => array(
+        'label' => 'hidden',
+        'module' => 'entityreference',
+        'settings' => array(
+          'field_delimiter' => '',
+          'linked_field' => array(
+            'advanced' => array(
+              'class' => '',
+              'rel' => '',
+              'target' => '',
+              'text' => '',
+              'title' => '',
+            ),
+            'destination' => '',
+            'linked' => 0,
+          ),
+          'links' => 1,
+          'view_mode' => 'user_teaser_with_motto',
+        ),
+        'type' => 'entityreference_entity_view',
+        'weight' => 0,
+      ),
       'default' => array(
         'label' => 'above',
         'module' => 'entityreference',
@@ -1929,6 +2137,18 @@ function gie_innovation_field_default_field_instances() {
     'deleted' => 0,
     'description' => 'Please type in any programs/projects related to this innovation. The program must have a profile on the Exchange before you can include it. If the program is not there, please contact the program and ask them to add a profile on the Exchange. Then you can come back and tag it. Programs are often funded or implemented by organizations, have a set budget, and a start and end date.',
     'display' => array(
+      'at_a_glance' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 26,
+      ),
+      'contact' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 25,
+      ),
       'default' => array(
         'label' => 'above',
         'module' => 'entityreference',
@@ -2034,6 +2254,18 @@ function gie_innovation_field_default_field_instances() {
     'deleted' => 0,
     'description' => 'Is there documentation that your innovation works and has the desired impact? Upload an evaluation, test results, or other documents, photos, or videos that prove your innovation works.',
     'display' => array(
+      'at_a_glance' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 43,
+      ),
+      'contact' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 42,
+      ),
       'default' => array(
         'label' => 'above',
         'module' => 'list',
@@ -2111,6 +2343,18 @@ function gie_innovation_field_default_field_instances() {
     'deleted' => 0,
     'description' => '',
     'display' => array(
+      'at_a_glance' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 42,
+      ),
+      'contact' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 41,
+      ),
       'default' => array(
         'label' => 'above',
         'module' => 'entityreference',
@@ -2212,6 +2456,18 @@ function gie_innovation_field_default_field_instances() {
     'deleted' => 0,
     'description' => 'Have you already raised funding for your innovation? Share your successes here! In whole numbes like 9999 no commas, periods, or symbols please',
     'display' => array(
+      'at_a_glance' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 38,
+      ),
+      'contact' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 37,
+      ),
       'default' => array(
         'label' => 'above',
         'module' => 'number',
@@ -2299,6 +2555,18 @@ function gie_innovation_field_default_field_instances() {
     'deleted' => 0,
     'description' => '',
     'display' => array(
+      'at_a_glance' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 44,
+      ),
+      'contact' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 43,
+      ),
       'default' => array(
         'label' => 'above',
         'module' => 'list',
@@ -2375,6 +2643,18 @@ function gie_innovation_field_default_field_instances() {
     'deleted' => 0,
     'description' => '',
     'display' => array(
+      'at_a_glance' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 36,
+      ),
+      'contact' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 35,
+      ),
       'default' => array(
         'label' => 'above',
         'module' => 'entityreference',
@@ -2460,6 +2740,18 @@ function gie_innovation_field_default_field_instances() {
     'deleted' => 0,
     'description' => 'If you have a handbook, marketing materials, toolkit or other files that you would like to share on the Exchange, upload them here!',
     'display' => array(
+      'at_a_glance' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 33,
+      ),
+      'contact' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 32,
+      ),
       'default' => array(
         'label' => 'above',
         'module' => 'entityreference',
@@ -2561,6 +2853,18 @@ function gie_innovation_field_default_field_instances() {
     'deleted' => 0,
     'description' => 'Select the stage that best describes where the innovation current is',
     'display' => array(
+      'at_a_glance' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 17,
+      ),
+      'contact' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 13,
+      ),
       'default' => array(
         'label' => 'above',
         'module' => 'taxonomy',
@@ -2652,6 +2956,18 @@ function gie_innovation_field_default_field_instances() {
     'deleted' => 0,
     'description' => 'Share the latest status and activities of your innovation ',
     'display' => array(
+      'at_a_glance' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 37,
+      ),
+      'contact' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 36,
+      ),
       'default' => array(
         'label' => 'above',
         'module' => 'text',
@@ -2770,6 +3086,18 @@ function gie_innovation_field_default_field_instances() {
     'deleted' => 0,
     'description' => 'Share your next steps for growing your innovation',
     'display' => array(
+      'at_a_glance' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 27,
+      ),
+      'contact' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 26,
+      ),
       'default' => array(
         'label' => 'above',
         'module' => 'text',
@@ -2888,6 +3216,18 @@ function gie_innovation_field_default_field_instances() {
     'deleted' => 0,
     'description' => 'Type in team members\' names to connect those who are developing the innovation to your innovation profile. Team members must have user profiles on the Exchange to come up. If they have not created profiles yet, please encourage them to do so. ',
     'display' => array(
+      'at_a_glance' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 34,
+      ),
+      'contact' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 33,
+      ),
       'default' => array(
         'label' => 'above',
         'module' => 'entityreference',
@@ -2974,6 +3314,18 @@ function gie_innovation_field_default_field_instances() {
     'deleted' => 0,
     'description' => 'Tell us who is using and/or testing your innovation right now',
     'display' => array(
+      'at_a_glance' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 30,
+      ),
+      'contact' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 29,
+      ),
       'default' => array(
         'label' => 'above',
         'module' => 'text',
@@ -3092,6 +3444,18 @@ function gie_innovation_field_default_field_instances() {
     'deleted' => 0,
     'description' => 'From the drop down list, pick as many types as apply to your innovation.',
     'display' => array(
+      'at_a_glance' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 16,
+      ),
+      'contact' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 12,
+      ),
       'default' => array(
         'label' => 'above',
         'module' => 'taxonomy',
@@ -3183,6 +3547,32 @@ function gie_innovation_field_default_field_instances() {
     'deleted' => 0,
     'description' => 'Share the URL for your innovation website ',
     'display' => array(
+      'at_a_glance' => array(
+        'label' => 'hidden',
+        'module' => 'link',
+        'settings' => array(
+          'field_delimiter' => '',
+          'linked_field' => array(
+            'advanced' => array(
+              'class' => '',
+              'rel' => '',
+              'target' => '',
+              'text' => '',
+              'title' => '',
+            ),
+            'destination' => '',
+            'linked' => 0,
+          ),
+        ),
+        'type' => 'link_default',
+        'weight' => 3,
+      ),
+      'contact' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 46,
+      ),
       'default' => array(
         'label' => 'above',
         'module' => 'link',
@@ -3278,6 +3668,18 @@ function gie_innovation_field_default_field_instances() {
     'deleted' => 0,
     'description' => 'Share more details about how the innovation works',
     'display' => array(
+      'at_a_glance' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 28,
+      ),
+      'contact' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 27,
+      ),
       'default' => array(
         'label' => 'above',
         'module' => 'text',
@@ -3396,6 +3798,18 @@ function gie_innovation_field_default_field_instances() {
     'deleted' => 0,
     'description' => 'Select the regions that include the above countries',
     'display' => array(
+      'at_a_glance' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 49,
+      ),
+      'contact' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 49,
+      ),
       'default' => array(
         'label' => 'above',
         'module' => 'taxonomy',
@@ -3473,6 +3887,18 @@ function gie_innovation_field_default_field_instances() {
     'deleted' => 0,
     'description' => 'Please select the sectors and sub-sectors related to your innovation. You will notice that the overall sectors are listed with their sub-sectors nested with a dash )(-) symbol. Be sure to select the sectors and subsectors that apply. Do not select a sub-sector without also selecting the corresponding sector. Be sure to scroll to the bottom, there are a lot of sectors. We know this isn\'t so easy to use right now, but as we get feedback from users we\'ll be improving this selection process.',
     'display' => array(
+      'at_a_glance' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 47,
+      ),
+      'contact' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 47,
+      ),
       'default' => array(
         'label' => 'above',
         'module' => 'taxonomy',
@@ -3550,6 +3976,18 @@ function gie_innovation_field_default_field_instances() {
     'deleted' => 0,
     'description' => 'Topics include issue that may be of interest to Exchange users. Select any (or none) topics that you think apply to your innovation (i.e. social impact investing)',
     'display' => array(
+      'at_a_glance' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 48,
+      ),
+      'contact' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 48,
+      ),
       'default' => array(
         'label' => 'above',
         'module' => 'taxonomy',
@@ -3627,6 +4065,18 @@ function gie_innovation_field_default_field_instances() {
     'deleted' => 0,
     'description' => '',
     'display' => array(
+      'at_a_glance' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 22,
+      ),
+      'contact' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 22,
+      ),
       'default' => array(
         'label' => 'above',
         'module' => 'taxonomy',
@@ -3718,6 +4168,18 @@ function gie_innovation_field_default_field_instances() {
     'deleted' => 0,
     'description' => 'Whats your innovation called (hint: shorter is better)',
     'display' => array(
+      'at_a_glance' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 11,
+      ),
+      'contact' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 3,
+      ),
       'default' => array(
         'label' => 'above',
         'settings' => array(),
