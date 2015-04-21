@@ -151,7 +151,7 @@ function gie_funding_field_default_field_instances() {
     'bundle' => 'funding',
     'default_value' => NULL,
     'deleted' => 0,
-    'description' => '',
+    'description' => 'This is the individual who is entering information into the form. This person can be different than the point of content. The funding author does need to have a profile on the Exchange.',
     'display' => array(
       'default' => array(
         'label' => 'above',
@@ -206,6 +206,7 @@ function gie_funding_field_default_field_instances() {
         'weight' => 9,
       ),
     ),
+    'ds_extras_field_template' => '',
     'entity_type' => 'node',
     'entityconnect_unload_add' => 0,
     'entityconnect_unload_edit' => 0,
@@ -228,7 +229,7 @@ function gie_funding_field_default_field_instances() {
         'size' => 60,
       ),
       'type' => 'entityreference_autocomplete',
-      'weight' => 2,
+      'weight' => 8,
     ),
   );
 
@@ -236,7 +237,7 @@ function gie_funding_field_default_field_instances() {
   $field_instances['node-funding-field_funding_deadline'] = array(
     'bundle' => 'funding',
     'deleted' => 0,
-    'description' => '',
+    'description' => 'The deadline for submission. If it is a rolling deadline, please leave blank.',
     'display' => array(
       'default' => array(
         'label' => 'above',
@@ -313,6 +314,7 @@ function gie_funding_field_default_field_instances() {
         'weight' => 14,
       ),
     ),
+    'ds_extras_field_template' => '',
     'entity_type' => 'node',
     'field_name' => 'field_funding_deadline',
     'label' => 'Deadlines',
@@ -336,7 +338,7 @@ function gie_funding_field_default_field_instances() {
         'year_range' => '-3:+3',
       ),
       'type' => 'date_popup',
-      'weight' => 8,
+      'weight' => 13,
     ),
   );
 
@@ -345,7 +347,7 @@ function gie_funding_field_default_field_instances() {
     'bundle' => 'funding',
     'default_value' => NULL,
     'deleted' => 0,
-    'description' => '',
+    'description' => 'A short description of the funding opportunity.',
     'display' => array(
       'default' => array(
         'label' => 'above',
@@ -419,13 +421,15 @@ function gie_funding_field_default_field_instances() {
         'weight' => 10,
       ),
     ),
+    'ds_extras_field_template' => '',
     'entity_type' => 'node',
     'field_name' => 'field_funding_desc',
     'label' => 'Description of Funding Opportunity ',
-    'required' => 0,
+    'required' => 1,
     'settings' => array(
       'better_formats' => array(
         'allowed_formats' => array(
+          'comments_filtered' => 0,
           'filtered_html' => 'filtered_html',
           'full_html' => 'full_html',
           'plain_text' => 'plain_text',
@@ -434,6 +438,9 @@ function gie_funding_field_default_field_instances() {
         'default_order_toggle' => 0,
         'default_order_wrapper' => array(
           'formats' => array(
+            'comments_filtered' => array(
+              'weight' => 0,
+            ),
             'filtered_html' => array(
               'weight' => 0,
             ),
@@ -456,7 +463,7 @@ function gie_funding_field_default_field_instances() {
         'rows' => 5,
       ),
       'type' => 'text_textarea',
-      'weight' => 3,
+      'weight' => 2,
     ),
   );
 
@@ -465,7 +472,7 @@ function gie_funding_field_default_field_instances() {
     'bundle' => 'funding',
     'default_value' => NULL,
     'deleted' => 0,
-    'description' => '',
+    'description' => 'If there is a timeframe for the award (i.e. a two-year grant) you can enter it here.',
     'display' => array(
       'default' => array(
         'label' => 'above',
@@ -532,6 +539,7 @@ function gie_funding_field_default_field_instances() {
         'weight' => 21,
       ),
     ),
+    'ds_extras_field_template' => '',
     'entity_type' => 'node',
     'field_name' => 'field_funding_duration',
     'label' => 'Duration of Award',
@@ -539,6 +547,7 @@ function gie_funding_field_default_field_instances() {
     'settings' => array(
       'better_formats' => array(
         'allowed_formats' => array(
+          'comments_filtered' => 0,
           'filtered_html' => 'filtered_html',
           'full_html' => 'full_html',
           'plain_text' => 'plain_text',
@@ -547,6 +556,9 @@ function gie_funding_field_default_field_instances() {
         'default_order_toggle' => 0,
         'default_order_wrapper' => array(
           'formats' => array(
+            'comments_filtered' => array(
+              'weight' => 0,
+            ),
             'filtered_html' => array(
               'weight' => 0,
             ),
@@ -569,7 +581,7 @@ function gie_funding_field_default_field_instances() {
         'size' => 60,
       ),
       'type' => 'text_textfield',
-      'weight' => 18,
+      'weight' => 22,
     ),
   );
 
@@ -578,7 +590,7 @@ function gie_funding_field_default_field_instances() {
     'bundle' => 'funding',
     'default_value' => NULL,
     'deleted' => 0,
-    'description' => '',
+    'description' => 'An estimate of how much time it will take an innovator to create an application (i.e. 2 weeks to write the proposal, etc.)',
     'display' => array(
       'default' => array(
         'label' => 'above',
@@ -661,6 +673,7 @@ function gie_funding_field_default_field_instances() {
         'weight' => 22,
       ),
     ),
+    'ds_extras_field_template' => '',
     'entity_type' => 'node',
     'field_name' => 'field_funding_effort',
     'label' => 'Time to Apply ',
@@ -675,7 +688,7 @@ function gie_funding_field_default_field_instances() {
         'apply_chosen' => 1,
       ),
       'type' => 'options_select',
-      'weight' => 19,
+      'weight' => 23,
     ),
   );
 
@@ -684,7 +697,7 @@ function gie_funding_field_default_field_instances() {
     'bundle' => 'funding',
     'default_value' => NULL,
     'deleted' => 0,
-    'description' => '',
+    'description' => 'Details about any eligibility requirements. This will help users determine whether they can apply to the funding opportunity.',
     'display' => array(
       'default' => array(
         'label' => 'above',
@@ -774,6 +787,7 @@ function gie_funding_field_default_field_instances() {
         'weight' => 11,
       ),
     ),
+    'ds_extras_field_template' => '',
     'entity_type' => 'node',
     'field_name' => 'field_funding_eligibility',
     'label' => 'Eligibility Details',
@@ -781,6 +795,7 @@ function gie_funding_field_default_field_instances() {
     'settings' => array(
       'better_formats' => array(
         'allowed_formats' => array(
+          'comments_filtered' => 0,
           'filtered_html' => 'filtered_html',
           'full_html' => 'full_html',
           'plain_text' => 'plain_text',
@@ -789,6 +804,9 @@ function gie_funding_field_default_field_instances() {
         'default_order_toggle' => 0,
         'default_order_wrapper' => array(
           'formats' => array(
+            'comments_filtered' => array(
+              'weight' => 0,
+            ),
             'filtered_html' => array(
               'weight' => 0,
             ),
@@ -811,7 +829,7 @@ function gie_funding_field_default_field_instances() {
         'rows' => 5,
       ),
       'type' => 'text_textarea',
-      'weight' => 6,
+      'weight' => 7,
     ),
   );
 
@@ -820,7 +838,7 @@ function gie_funding_field_default_field_instances() {
     'bundle' => 'funding',
     'default_value' => NULL,
     'deleted' => 0,
-    'description' => '',
+    'description' => 'Are organizations, individuals, teams, or anyone eligible to apply?',
     'display' => array(
       'default' => array(
         'label' => 'above',
@@ -891,7 +909,7 @@ function gie_funding_field_default_field_instances() {
     'entity_type' => 'node',
     'field_name' => 'field_funding_eligibility_type',
     'label' => 'Eligibility Type',
-    'required' => 0,
+    'required' => 1,
     'settings' => array(
       'user_register_form' => FALSE,
     ),
@@ -902,7 +920,7 @@ function gie_funding_field_default_field_instances() {
         'apply_chosen' => 1,
       ),
       'type' => 'options_select',
-      'weight' => 5,
+      'weight' => 14,
     ),
   );
 
@@ -911,7 +929,7 @@ function gie_funding_field_default_field_instances() {
     'bundle' => 'funding',
     'default_value' => NULL,
     'deleted' => 0,
-    'description' => '',
+    'description' => 'The value of the award. If the award is a range, enter the lowest amount in the range. If the amount is unknown, please leave blank.',
     'display' => array(
       'default' => array(
         'label' => 'above',
@@ -1030,7 +1048,7 @@ function gie_funding_field_default_field_instances() {
     'bundle' => 'funding',
     'default_value' => NULL,
     'deleted' => 0,
-    'description' => '',
+    'description' => 'Any guidance on the application: # of pages, type of content, how it should be transmitted, etc.',
     'display' => array(
       'default' => array(
         'label' => 'above',
@@ -1097,6 +1115,7 @@ function gie_funding_field_default_field_instances() {
         'weight' => 12,
       ),
     ),
+    'ds_extras_field_template' => '',
     'entity_type' => 'node',
     'field_name' => 'field_funding_guidance',
     'label' => 'Application Guidance',
@@ -1104,6 +1123,7 @@ function gie_funding_field_default_field_instances() {
     'settings' => array(
       'better_formats' => array(
         'allowed_formats' => array(
+          'comments_filtered' => 0,
           'filtered_html' => 'filtered_html',
           'full_html' => 'full_html',
           'plain_text' => 'plain_text',
@@ -1112,6 +1132,9 @@ function gie_funding_field_default_field_instances() {
         'default_order_toggle' => 0,
         'default_order_wrapper' => array(
           'formats' => array(
+            'comments_filtered' => array(
+              'weight' => 0,
+            ),
             'filtered_html' => array(
               'weight' => 0,
             ),
@@ -1134,7 +1157,7 @@ function gie_funding_field_default_field_instances() {
         'rows' => 5,
       ),
       'type' => 'text_textarea',
-      'weight' => 7,
+      'weight' => 6,
     ),
   );
 
@@ -1143,7 +1166,7 @@ function gie_funding_field_default_field_instances() {
     'bundle' => 'funding',
     'default_value' => NULL,
     'deleted' => 0,
-    'description' => '',
+    'description' => 'If the opportunity is only for innovations at a certain stage of development please select those that apply (early idea or late-stage prototype, etc.?)',
     'display' => array(
       'default' => array(
         'label' => 'above',
@@ -1211,7 +1234,7 @@ function gie_funding_field_default_field_instances() {
         'apply_chosen' => 1,
       ),
       'type' => 'options_select',
-      'weight' => 11,
+      'weight' => 16,
     ),
   );
 
@@ -1220,7 +1243,7 @@ function gie_funding_field_default_field_instances() {
     'bundle' => 'funding',
     'default_value' => NULL,
     'deleted' => 0,
-    'description' => '',
+    'description' => 'Are they specific types of innovations that can be funded by this opportunity? If it doesn\'t matter which type then leave blank.',
     'display' => array(
       'default' => array(
         'label' => 'above',
@@ -1288,7 +1311,7 @@ function gie_funding_field_default_field_instances() {
         'apply_chosen' => 1,
       ),
       'type' => 'options_select',
-      'weight' => 13,
+      'weight' => 17,
     ),
   );
 
@@ -1297,7 +1320,7 @@ function gie_funding_field_default_field_instances() {
     'bundle' => 'funding',
     'default_value' => NULL,
     'deleted' => 0,
-    'description' => '',
+    'description' => 'The URL to the application or additional information about the opportunity.',
     'display' => array(
       'default' => array(
         'label' => 'above',
@@ -1353,8 +1376,8 @@ function gie_funding_field_default_field_instances() {
     'ds_extras_field_template' => '',
     'entity_type' => 'node',
     'field_name' => 'field_funding_link',
-    'label' => 'Link URL',
-    'required' => 0,
+    'label' => 'Application URL',
+    'required' => 1,
     'settings' => array(
       'better_formats' => array(
         'allowed_formats' => array(
@@ -1390,7 +1413,7 @@ function gie_funding_field_default_field_instances() {
       'module' => 'html5_tools',
       'settings' => array(),
       'type' => 'urlwidget',
-      'weight' => 4,
+      'weight' => 14,
     ),
   );
 
@@ -1399,7 +1422,7 @@ function gie_funding_field_default_field_instances() {
     'bundle' => 'funding',
     'default_value' => NULL,
     'deleted' => 0,
-    'description' => '',
+    'description' => 'The organization that is sponsoring the funding opportunity. The organization must have profile on the Exchange to be included on this line. Start typing the organization name to see if it has a profile on the Exchange yet. If it doesn\'t appear, please contact the organization and encourage them to create an organization profile. ',
     'display' => array(
       'default' => array(
         'label' => 'above',
@@ -1454,6 +1477,7 @@ function gie_funding_field_default_field_instances() {
         'weight' => 23,
       ),
     ),
+    'ds_extras_field_template' => '',
     'entity_type' => 'node',
     'entityconnect_unload_add' => 0,
     'entityconnect_unload_edit' => 0,
@@ -1476,7 +1500,7 @@ function gie_funding_field_default_field_instances() {
         'size' => 60,
       ),
       'type' => 'entityreference_autocomplete',
-      'weight' => 1,
+      'weight' => 16,
     ),
   );
 
@@ -1485,7 +1509,7 @@ function gie_funding_field_default_field_instances() {
     'bundle' => 'funding',
     'default_value' => NULL,
     'deleted' => 0,
-    'description' => '',
+    'description' => 'A point of contact email address at the organization who is associated with the funding opportunity. ',
     'display' => array(
       'default' => array(
         'label' => 'above',
@@ -1558,7 +1582,7 @@ function gie_funding_field_default_field_instances() {
     'ds_extras_field_template' => '',
     'entity_type' => 'node',
     'field_name' => 'field_funding_poc',
-    'label' => 'Point of Contact',
+    'label' => 'Point of Contact Email',
     'required' => 0,
     'settings' => array(
       'better_formats' => array(
@@ -1595,7 +1619,7 @@ function gie_funding_field_default_field_instances() {
       'module' => 'html5_tools',
       'settings' => array(),
       'type' => 'emailwidget',
-      'weight' => 9,
+      'weight' => 15,
     ),
   );
 
@@ -1604,7 +1628,7 @@ function gie_funding_field_default_field_instances() {
     'bundle' => 'funding',
     'default_value' => NULL,
     'deleted' => 0,
-    'description' => '',
+    'description' => 'Choose which funding types best descibe this funding opportunity. Grant? Award? etc.',
     'display' => array(
       'default' => array(
         'label' => 'above',
@@ -1657,10 +1681,11 @@ function gie_funding_field_default_field_instances() {
         'weight' => 16,
       ),
     ),
+    'ds_extras_field_template' => '',
     'entity_type' => 'node',
     'field_name' => 'field_funding_type',
     'label' => 'Funding Type',
-    'required' => 0,
+    'required' => 1,
     'settings' => array(
       'user_register_form' => FALSE,
     ),
@@ -1671,7 +1696,7 @@ function gie_funding_field_default_field_instances() {
         'apply_chosen' => 1,
       ),
       'type' => 'options_select',
-      'weight' => 10,
+      'weight' => 15,
     ),
   );
 
@@ -1680,7 +1705,7 @@ function gie_funding_field_default_field_instances() {
     'bundle' => 'funding',
     'default_value' => NULL,
     'deleted' => 0,
-    'description' => '',
+    'description' => 'List the countries that are eligible. Choose global if all countries are eligible.',
     'display' => array(
       'default' => array(
         'label' => 'above',
@@ -1737,7 +1762,7 @@ function gie_funding_field_default_field_instances() {
     'entity_type' => 'node',
     'field_name' => 'field_term_country',
     'label' => 'Country',
-    'required' => 0,
+    'required' => 1,
     'settings' => array(
       'user_register_form' => FALSE,
     ),
@@ -1748,7 +1773,7 @@ function gie_funding_field_default_field_instances() {
         'apply_chosen' => 1,
       ),
       'type' => 'options_select',
-      'weight' => 14,
+      'weight' => 20,
     ),
   );
 
@@ -1757,7 +1782,7 @@ function gie_funding_field_default_field_instances() {
     'bundle' => 'funding',
     'default_value' => NULL,
     'deleted' => 0,
-    'description' => '',
+    'description' => 'Select the corresponding regions that apply for the selected countries.',
     'display' => array(
       'default' => array(
         'label' => 'above',
@@ -1828,7 +1853,7 @@ function gie_funding_field_default_field_instances() {
     'entity_type' => 'node',
     'field_name' => 'field_term_region',
     'label' => 'Region',
-    'required' => 0,
+    'required' => 1,
     'settings' => array(
       'user_register_form' => FALSE,
     ),
@@ -1839,7 +1864,7 @@ function gie_funding_field_default_field_instances() {
         'apply_chosen' => 1,
       ),
       'type' => 'options_select',
-      'weight' => 15,
+      'weight' => 21,
     ),
   );
 
@@ -1848,7 +1873,7 @@ function gie_funding_field_default_field_instances() {
     'bundle' => 'funding',
     'default_value' => NULL,
     'deleted' => 0,
-    'description' => '',
+    'description' => 'Please select the sectors and sub-sectors related to your funding opportunity. You will notice that the overall sectors are listed with their sub-sectors nested with a dash (-) symbol. Be sure to select the sectors and subsectors that apply. Do not select a sub-sector without also selecting the corresponding sector. Be sure to scroll to the bottom, there are a lot of sectors. We know this isn\'t so easy to use right now, but we will be improving this selection process.',
     'display' => array(
       'default' => array(
         'label' => 'above',
@@ -1919,7 +1944,7 @@ function gie_funding_field_default_field_instances() {
     'entity_type' => 'node',
     'field_name' => 'field_term_sector',
     'label' => 'Sector',
-    'required' => 0,
+    'required' => 1,
     'settings' => array(
       'user_register_form' => FALSE,
     ),
@@ -1930,7 +1955,7 @@ function gie_funding_field_default_field_instances() {
         'apply_chosen' => 1,
       ),
       'type' => 'options_select',
-      'weight' => 17,
+      'weight' => 18,
     ),
   );
 
@@ -1939,7 +1964,7 @@ function gie_funding_field_default_field_instances() {
     'bundle' => 'funding',
     'default_value' => NULL,
     'deleted' => 0,
-    'description' => '',
+    'description' => 'Topics are issues that may be of interest to Exchange users. Select any (or none) topics that you think apply to your funding opportunity.',
     'display' => array(
       'default' => array(
         'label' => 'above',
@@ -2021,7 +2046,7 @@ function gie_funding_field_default_field_instances() {
         'apply_chosen' => 1,
       ),
       'type' => 'options_select',
-      'weight' => 16,
+      'weight' => 19,
     ),
   );
 
@@ -2030,7 +2055,7 @@ function gie_funding_field_default_field_instances() {
     'bundle' => 'funding',
     'default_value' => NULL,
     'deleted' => 0,
-    'description' => '',
+    'description' => 'The title of the funding opportunity. ',
     'display' => array(
       'default' => array(
         'label' => 'hidden',
@@ -2137,11 +2162,38 @@ function gie_funding_field_default_field_instances() {
         'weight' => 0,
       ),
     ),
+    'ds_extras_field_template' => '',
     'entity_type' => 'node',
     'field_name' => 'title_field',
-    'label' => 'Title',
-    'required' => TRUE,
+    'label' => 'Funding Opportunity Title',
+    'required' => 1,
     'settings' => array(
+      'better_formats' => array(
+        'allowed_formats' => array(
+          'comments_filtered' => 'comments_filtered',
+          'filtered_html' => 'filtered_html',
+          'full_html' => 'full_html',
+          'plain_text' => 'plain_text',
+        ),
+        'allowed_formats_toggle' => 0,
+        'default_order_toggle' => 0,
+        'default_order_wrapper' => array(
+          'formats' => array(
+            'comments_filtered' => array(
+              'weight' => 0,
+            ),
+            'filtered_html' => array(
+              'weight' => 0,
+            ),
+            'full_html' => array(
+              'weight' => 1,
+            ),
+            'plain_text' => array(
+              'weight' => 10,
+            ),
+          ),
+        ),
+      ),
       'hide_label' => array(
         'entity' => 0,
         'page' => 0,
@@ -2150,12 +2202,13 @@ function gie_funding_field_default_field_instances() {
       'user_register_form' => FALSE,
     ),
     'widget' => array(
+      'active' => 1,
       'module' => 'text',
       'settings' => array(
         'size' => 60,
       ),
       'type' => 'text_textfield',
-      'weight' => 0,
+      'weight' => 1,
     ),
   );
 
@@ -2383,30 +2436,50 @@ function gie_funding_field_default_field_instances() {
 
   // Translatables
   // Included for use with string extractors like potx.
+  t('A point of contact email address at the organization who is associated with the funding opportunity. ');
+  t('A short description of the funding opportunity.');
+  t('An estimate of how much time it will take an innovator to create an application (i.e. 2 weeks to write the proposal, etc.)');
+  t('Any guidance on the application: # of pages, type of content, how it should be transmitted, etc.');
   t('Application Guidance');
+  t('Application URL');
+  t('Are organizations, individuals, teams, or anyone eligible to apply?');
+  t('Are they specific types of innovations that can be funded by this opportunity? If it doesn\'t matter which type then leave blank.');
+  t('Choose which funding types best descibe this funding opportunity. Grant? Award? etc.');
   t('Comment');
   t('Country');
   t('Deadlines');
   t('Description');
   t('Description of Funding Opportunity ');
+  t('Details about any eligibility requirements. This will help users determine whether they can apply to the funding opportunity.');
   t('Duration of Award');
   t('Eligibility Details');
   t('Eligibility Type');
   t('Funding Author');
+  t('Funding Opportunity Title');
   t('Funding Type');
   t('Grant / Award Value');
+  t('If the opportunity is only for innovations at a certain stage of development please select those that apply (early idea or late-stage prototype, etc.?)');
+  t('If there is a timeframe for the award (i.e. a two-year grant) you can enter it here.');
   t('Innovation Stage');
   t('Innovation Type');
-  t('Link URL');
+  t('List the countries that are eligible. Choose global if all countries are eligible.');
   t('Name');
   t('Organization');
-  t('Point of Contact');
+  t('Please select the sectors and sub-sectors related to your funding opportunity. You will notice that the overall sectors are listed with their sub-sectors nested with a dash (-) symbol. Be sure to select the sectors and subsectors that apply. Do not select a sub-sector without also selecting the corresponding sector. Be sure to scroll to the bottom, there are a lot of sectors. We know this isn\'t so easy to use right now, but we will be improving this selection process.');
+  t('Point of Contact Email');
   t('Region');
   t('Sector');
+  t('Select the corresponding regions that apply for the selected countries.');
   t('Subject');
+  t('The URL to the application or additional information about the opportunity.');
+  t('The deadline for submission. If it is a rolling deadline, please leave blank.');
+  t('The organization that is sponsoring the funding opportunity. The organization must have profile on the Exchange to be included on this line. Start typing the organization name to see if it has a profile on the Exchange yet. If it doesn\'t appear, please contact the organization and encourage them to create an organization profile. ');
+  t('The title of the funding opportunity. ');
+  t('The value of the award. If the award is a range, enter the lowest amount in the range. If the amount is unknown, please leave blank.');
+  t('This is the individual who is entering information into the form. This person can be different than the point of content. The funding author does need to have a profile on the Exchange.');
   t('Time to Apply ');
-  t('Title');
   t('Topic');
+  t('Topics are issues that may be of interest to Exchange users. Select any (or none) topics that you think apply to your funding opportunity.');
 
   return $field_instances;
 }
