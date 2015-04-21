@@ -30,6 +30,7 @@ dependencies[] = panelizer
 dependencies[] = smart_trim
 dependencies[] = strongarm
 dependencies[] = taxonomy
+dependencies[] = term_reference_tree
 dependencies[] = text
 dependencies[] = title
 dependencies[] = views
