@@ -110,6 +110,9 @@ function gie_organization_strongarm() {
       'search_listing' => array(
         'custom_settings' => TRUE,
       ),
+      'page_header' => array(
+        'custom_settings' => TRUE,
+      ),
     ),
     'extra_fields' => array(
       'form' => array(
@@ -155,6 +158,10 @@ function gie_organization_strongarm() {
             'weight' => '18',
             'visible' => FALSE,
           ),
+          'page_header' => array(
+            'weight' => '10',
+            'visible' => FALSE,
+          ),
         ),
         'organization_counters_favorite_count' => array(
           'listing' => array(
@@ -187,6 +194,14 @@ function gie_organization_strongarm() {
           ),
           'search_listing' => array(
             'weight' => '16',
+            'visible' => FALSE,
+          ),
+          'page_header' => array(
+            'weight' => '10',
+            'visible' => FALSE,
+          ),
+          'full' => array(
+            'weight' => '10',
             'visible' => FALSE,
           ),
         ),
@@ -223,6 +238,14 @@ function gie_organization_strongarm() {
             'weight' => '15',
             'visible' => FALSE,
           ),
+          'page_header' => array(
+            'weight' => '10',
+            'visible' => FALSE,
+          ),
+          'full' => array(
+            'weight' => '10',
+            'visible' => FALSE,
+          ),
         ),
         'organization_counters_member_count' => array(
           'listing' => array(
@@ -257,6 +280,14 @@ function gie_organization_strongarm() {
             'weight' => '20',
             'visible' => FALSE,
           ),
+          'page_header' => array(
+            'weight' => '10',
+            'visible' => FALSE,
+          ),
+          'full' => array(
+            'weight' => '10',
+            'visible' => FALSE,
+          ),
         ),
         'organization_at_a_glance_innovation_count' => array(
           'at_a_glance' => array(
@@ -277,6 +308,14 @@ function gie_organization_strongarm() {
           ),
           'search_listing' => array(
             'weight' => '21',
+            'visible' => FALSE,
+          ),
+          'page_header' => array(
+            'weight' => '10',
+            'visible' => FALSE,
+          ),
+          'full' => array(
+            'weight' => '10',
             'visible' => FALSE,
           ),
         ),
@@ -301,6 +340,14 @@ function gie_organization_strongarm() {
             'weight' => '22',
             'visible' => FALSE,
           ),
+          'page_header' => array(
+            'weight' => '10',
+            'visible' => FALSE,
+          ),
+          'full' => array(
+            'weight' => '10',
+            'visible' => FALSE,
+          ),
         ),
         'organization_at_a_glance_entity_view_1' => array(
           'at_a_glance' => array(
@@ -309,6 +356,7 @@ function gie_organization_strongarm() {
           ),
           'logo' => NULL,
           'search_listing' => NULL,
+          'page_header' => NULL,
         ),
         'organization_counters_partner_count' => array(
           'at_a_glance' => array(
@@ -331,6 +379,14 @@ function gie_organization_strongarm() {
             'weight' => '17',
             'visible' => FALSE,
           ),
+          'page_header' => array(
+            'weight' => '10',
+            'visible' => FALSE,
+          ),
+          'full' => array(
+            'weight' => '10',
+            'visible' => FALSE,
+          ),
         ),
         'organization_at_a_glance_partner_count' => array(
           'at_a_glance' => array(
@@ -351,6 +407,14 @@ function gie_organization_strongarm() {
           ),
           'search_listing' => array(
             'weight' => '19',
+            'visible' => FALSE,
+          ),
+          'page_header' => array(
+            'weight' => '10',
+            'visible' => FALSE,
+          ),
+          'full' => array(
+            'weight' => '10',
             'visible' => FALSE,
           ),
         ),
