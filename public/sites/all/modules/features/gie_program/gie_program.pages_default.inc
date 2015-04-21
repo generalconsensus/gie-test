@@ -82,6 +82,29 @@ function gie_program_default_page_manager_pages() {
     $display->content['new-94b779cf-e5d1-4b3a-bb72-e26fbcde0deb'] = $pane;
     $display->panels['main'][0] = 'new-94b779cf-e5d1-4b3a-bb72-e26fbcde0deb';
     $pane = new stdClass();
+    $pane->pid = 'new-6d9718a6-e60d-4afe-91b7-976c0b0203e8';
+    $pane->panel = 'sidebar';
+    $pane->type = 'pane';
+    $pane->subtype = 'facet_pane';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array(
+      'override_title' => 1,
+      'override_title_text' => '',
+      'override_title_heading' => 'h2',
+    );
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
+    $pane->css = array();
+    $pane->extras = array();
+    $pane->position = 0;
+    $pane->locks = array();
+    $pane->uuid = '6d9718a6-e60d-4afe-91b7-976c0b0203e8';
+    $display->content['new-6d9718a6-e60d-4afe-91b7-976c0b0203e8'] = $pane;
+    $display->panels['sidebar'][0] = 'new-6d9718a6-e60d-4afe-91b7-976c0b0203e8';
+    $pane = new stdClass();
     $pane->pid = 'new-7abc168b-9a5f-4217-b799-2c999f6f86f1';
     $pane->panel = 'sidebar';
     $pane->type = 'block';
@@ -99,11 +122,11 @@ function gie_program_default_page_manager_pages() {
     );
     $pane->css = array();
     $pane->extras = array();
-    $pane->position = 0;
+    $pane->position = 1;
     $pane->locks = array();
     $pane->uuid = '7abc168b-9a5f-4217-b799-2c999f6f86f1';
     $display->content['new-7abc168b-9a5f-4217-b799-2c999f6f86f1'] = $pane;
-    $display->panels['sidebar'][0] = 'new-7abc168b-9a5f-4217-b799-2c999f6f86f1';
+    $display->panels['sidebar'][1] = 'new-7abc168b-9a5f-4217-b799-2c999f6f86f1';
     $pane = new stdClass();
     $pane->pid = 'new-6b81d250-1cf6-4497-af22-a292c7b2ecaf';
     $pane->panel = 'sidebar';
@@ -122,11 +145,11 @@ function gie_program_default_page_manager_pages() {
     );
     $pane->css = array();
     $pane->extras = array();
-    $pane->position = 1;
+    $pane->position = 2;
     $pane->locks = array();
     $pane->uuid = '6b81d250-1cf6-4497-af22-a292c7b2ecaf';
     $display->content['new-6b81d250-1cf6-4497-af22-a292c7b2ecaf'] = $pane;
-    $display->panels['sidebar'][1] = 'new-6b81d250-1cf6-4497-af22-a292c7b2ecaf';
+    $display->panels['sidebar'][2] = 'new-6b81d250-1cf6-4497-af22-a292c7b2ecaf';
     $pane = new stdClass();
     $pane->pid = 'new-7551e06a-8e6e-4348-b14e-b6923ff5cc79';
     $pane->panel = 'sidebar';
@@ -145,11 +168,11 @@ function gie_program_default_page_manager_pages() {
     );
     $pane->css = array();
     $pane->extras = array();
-    $pane->position = 2;
+    $pane->position = 3;
     $pane->locks = array();
     $pane->uuid = '7551e06a-8e6e-4348-b14e-b6923ff5cc79';
     $display->content['new-7551e06a-8e6e-4348-b14e-b6923ff5cc79'] = $pane;
-    $display->panels['sidebar'][2] = 'new-7551e06a-8e6e-4348-b14e-b6923ff5cc79';
+    $display->panels['sidebar'][3] = 'new-7551e06a-8e6e-4348-b14e-b6923ff5cc79';
     $pane = new stdClass();
     $pane->pid = 'new-0e371f80-031d-4e12-8cae-6ebde23edc48';
     $pane->panel = 'title';

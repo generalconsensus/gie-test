@@ -107,6 +107,12 @@ function gie_program_strongarm() {
       'search_listing' => array(
         'custom_settings' => TRUE,
       ),
+      'page_header' => array(
+        'custom_settings' => TRUE,
+      ),
+      'details' => array(
+        'custom_settings' => FALSE,
+      ),
     ),
     'extra_fields' => array(
       'form' => array(
@@ -136,11 +142,15 @@ function gie_program_strongarm() {
             'visible' => FALSE,
           ),
           'at_a_glance' => array(
-            'weight' => '9',
+            'weight' => '21',
             'visible' => FALSE,
           ),
           'search_listing' => array(
             'weight' => '16',
+            'visible' => FALSE,
+          ),
+          'page_header' => array(
+            'weight' => '18',
             'visible' => FALSE,
           ),
         ),
@@ -151,6 +161,7 @@ function gie_program_strongarm() {
           ),
           'at_a_glance' => NULL,
           'search_listing' => NULL,
+          'page_header' => NULL,
         ),
         'program_counters_innovation_count' => array(
           'full' => array(
@@ -163,7 +174,7 @@ function gie_program_strongarm() {
           ),
           'at_a_glance' => array(
             'weight' => '11',
-            'visible' => TRUE,
+            'visible' => FALSE,
           ),
           'listing' => array(
             'weight' => '2',
@@ -177,6 +188,10 @@ function gie_program_strongarm() {
             'weight' => '17',
             'visible' => FALSE,
           ),
+          'page_header' => array(
+            'weight' => '19',
+            'visible' => FALSE,
+          ),
         ),
         'program_counters_program_count' => array(
           'full' => array(
@@ -188,8 +203,8 @@ function gie_program_strongarm() {
             'visible' => TRUE,
           ),
           'at_a_glance' => array(
-            'weight' => '12',
-            'visible' => TRUE,
+            'weight' => '4',
+            'visible' => FALSE,
           ),
           'listing' => array(
             'weight' => '3',
@@ -203,11 +218,34 @@ function gie_program_strongarm() {
             'weight' => '18',
             'visible' => FALSE,
           ),
+          'page_header' => array(
+            'weight' => '17',
+            'visible' => FALSE,
+          ),
+        ),
+        'program_at_a_glance_favorites' => array(
+          'at_a_glance' => array(
+            'weight' => '1',
+            'visible' => TRUE,
+          ),
+        ),
+        'program_at_a_glance_innovation' => array(
+          'at_a_glance' => array(
+            'weight' => '0',
+            'visible' => TRUE,
+          ),
         ),
       ),
     ),
   );
   $export['field_bundle_settings_node__program'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'gie_program_image_fid';
+  $strongarm->value = '109';
+  $export['gie_program_image_fid'] = $strongarm;
 
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
