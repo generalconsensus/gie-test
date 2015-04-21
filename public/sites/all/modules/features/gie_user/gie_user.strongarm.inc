@@ -40,6 +40,9 @@ function gie_user_strongarm() {
       'listing' => array(
         'custom_settings' => TRUE,
       ),
+      'user_teaser_with_motto' => array(
+        'custom_settings' => TRUE,
+      ),
     ),
     'extra_fields' => array(
       'form' => array(
@@ -83,6 +86,10 @@ function gie_user_strongarm() {
             'weight' => '10',
             'visible' => FALSE,
           ),
+          'user_teaser_with_motto' => array(
+            'weight' => '10',
+            'visible' => FALSE,
+          ),
         ),
         'flag_follow' => array(
           'full' => array(
@@ -111,6 +118,10 @@ function gie_user_strongarm() {
           ),
           'listing' => array(
             'weight' => '15',
+            'visible' => FALSE,
+          ),
+          'user_teaser_with_motto' => array(
+            'weight' => '16',
             'visible' => FALSE,
           ),
         ),

@@ -88,6 +88,46 @@ function gie_innovation_ds_field_settings_info() {
 
   $ds_fieldsetting = new stdClass();
   $ds_fieldsetting->api_version = 1;
+  $ds_fieldsetting->id = 'node|innovation|at_a_glance';
+  $ds_fieldsetting->entity_type = 'node';
+  $ds_fieldsetting->bundle = 'innovation';
+  $ds_fieldsetting->view_mode = 'at_a_glance';
+  $ds_fieldsetting->settings = array(
+    'field_innovation_website' => array(
+      'formatter_settings' => array(
+        'ft' => array(
+          'func' => 'theme_ds_field_expert',
+          'fi' => TRUE,
+          'fi-el' => 'div',
+          'fi-cl' => 'view--at-a-glance',
+          'fi-at' => '',
+          'fi-def-at' => FALSE,
+          'fi-odd-even' => FALSE,
+        ),
+      ),
+    ),
+  );
+  $export['node|innovation|at_a_glance'] = $ds_fieldsetting;
+
+  $ds_fieldsetting = new stdClass();
+  $ds_fieldsetting->api_version = 1;
+  $ds_fieldsetting->id = 'node|innovation|contact';
+  $ds_fieldsetting->entity_type = 'node';
+  $ds_fieldsetting->bundle = 'innovation';
+  $ds_fieldsetting->view_mode = 'contact';
+  $ds_fieldsetting->settings = array(
+    'field_innovation_poc' => array(
+      'formatter_settings' => array(
+        'ft' => array(
+          'func' => 'theme_ds_field_expert',
+        ),
+      ),
+    ),
+  );
+  $export['node|innovation|contact'] = $ds_fieldsetting;
+
+  $ds_fieldsetting = new stdClass();
+  $ds_fieldsetting->api_version = 1;
   $ds_fieldsetting->id = 'node|innovation|full';
   $ds_fieldsetting->entity_type = 'node';
   $ds_fieldsetting->bundle = 'innovation';
@@ -496,6 +536,70 @@ function gie_innovation_ds_layout_settings_info() {
     'layout_link_custom' => '',
   );
   $export['field_collection_item|field_innovation_non_references|form'] = $ds_layout;
+
+  $ds_layout = new stdClass();
+  $ds_layout->api_version = 1;
+  $ds_layout->id = 'node|innovation|at_a_glance';
+  $ds_layout->entity_type = 'node';
+  $ds_layout->bundle = 'innovation';
+  $ds_layout->view_mode = 'at_a_glance';
+  $ds_layout->layout = 'ds_reset';
+  $ds_layout->settings = array(
+    'regions' => array(
+      'ds_content' => array(
+        0 => 'innovation_at_a_glance_comments',
+        1 => 'innovation_at_a_glance_favorites',
+        2 => 'innovation_at_a_glance_evidence',
+        3 => 'field_innovation_website',
+      ),
+    ),
+    'fields' => array(
+      'innovation_at_a_glance_comments' => 'ds_content',
+      'innovation_at_a_glance_favorites' => 'ds_content',
+      'innovation_at_a_glance_evidence' => 'ds_content',
+      'field_innovation_website' => 'ds_content',
+    ),
+    'classes' => array(),
+    'wrappers' => array(
+      'ds_content' => 'div',
+    ),
+    'layout_wrapper' => 'div',
+    'layout_attributes' => '',
+    'layout_attributes_merge' => TRUE,
+    'layout_link_attribute' => FALSE,
+    'layout_link_custom' => '',
+  );
+  $export['node|innovation|at_a_glance'] = $ds_layout;
+
+  $ds_layout = new stdClass();
+  $ds_layout->api_version = 1;
+  $ds_layout->id = 'node|innovation|contact';
+  $ds_layout->entity_type = 'node';
+  $ds_layout->bundle = 'innovation';
+  $ds_layout->view_mode = 'contact';
+  $ds_layout->layout = 'slat';
+  $ds_layout->settings = array(
+    'regions' => array(
+      'media' => array(
+        0 => 'field_innovation_poc',
+      ),
+    ),
+    'fields' => array(
+      'field_innovation_poc' => 'media',
+    ),
+    'classes' => array(),
+    'wrappers' => array(
+      'header' => 'div',
+      'media' => 'div',
+      'main_content' => 'div',
+    ),
+    'layout_wrapper' => 'div',
+    'layout_attributes' => '',
+    'layout_attributes_merge' => 1,
+    'layout_link_attribute' => '',
+    'layout_link_custom' => '',
+  );
+  $export['node|innovation|contact'] = $ds_layout;
 
   $ds_layout = new stdClass();
   $ds_layout->api_version = 1;
