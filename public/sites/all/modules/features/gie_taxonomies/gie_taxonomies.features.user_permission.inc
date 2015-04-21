@@ -34,6 +34,7 @@ function gie_taxonomies_user_default_permissions() {
   $permissions['edit terms in sector'] = array(
     'name' => 'edit terms in sector',
     'roles' => array(
+      'Sector Manager' => 'Sector Manager',
       'administrator' => 'administrator',
     ),
     'module' => 'taxonomy',
