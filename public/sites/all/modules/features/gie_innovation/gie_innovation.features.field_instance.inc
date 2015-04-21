@@ -2046,7 +2046,7 @@ function gie_innovation_field_default_field_instances() {
             'linked' => 0,
           ),
           'links' => 1,
-          'view_mode' => 'user_teaser_with_motto',
+          'view_mode' => 'user_teaser_summary',
         ),
         'type' => 'entityreference_entity_view',
         'weight' => 0,
