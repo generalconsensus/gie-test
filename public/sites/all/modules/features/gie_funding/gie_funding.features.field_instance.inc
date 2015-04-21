@@ -153,6 +153,12 @@ function gie_funding_field_default_field_instances() {
     'deleted' => 0,
     'description' => 'This is the individual who is entering information into the form. This person can be different than the point of content. The funding author does need to have a profile on the Exchange.',
     'display' => array(
+      'at_a_glance' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 15,
+      ),
       'default' => array(
         'label' => 'above',
         'module' => 'entityreference',
@@ -239,6 +245,12 @@ function gie_funding_field_default_field_instances() {
     'deleted' => 0,
     'description' => 'The deadline for submission. If it is a rolling deadline, please leave blank.',
     'display' => array(
+      'at_a_glance' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 19,
+      ),
       'default' => array(
         'label' => 'above',
         'module' => 'date',
@@ -349,6 +361,12 @@ function gie_funding_field_default_field_instances() {
     'deleted' => 0,
     'description' => 'A short description of the funding opportunity.',
     'display' => array(
+      'at_a_glance' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 16,
+      ),
       'default' => array(
         'label' => 'above',
         'module' => 'text',
@@ -474,6 +492,12 @@ function gie_funding_field_default_field_instances() {
     'deleted' => 0,
     'description' => 'If there is a timeframe for the award (i.e. a two-year grant) you can enter it here.',
     'display' => array(
+      'at_a_glance' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 22,
+      ),
       'default' => array(
         'label' => 'above',
         'module' => 'text',
@@ -592,6 +616,12 @@ function gie_funding_field_default_field_instances() {
     'deleted' => 0,
     'description' => 'An estimate of how much time it will take an innovator to create an application (i.e. 2 weeks to write the proposal, etc.)',
     'display' => array(
+      'at_a_glance' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 23,
+      ),
       'default' => array(
         'label' => 'above',
         'module' => 'ds',
@@ -699,6 +729,12 @@ function gie_funding_field_default_field_instances() {
     'deleted' => 0,
     'description' => 'Details about any eligibility requirements. This will help users determine whether they can apply to the funding opportunity.',
     'display' => array(
+      'at_a_glance' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 17,
+      ),
       'default' => array(
         'label' => 'above',
         'module' => 'text',
@@ -840,6 +876,12 @@ function gie_funding_field_default_field_instances() {
     'deleted' => 0,
     'description' => 'Are organizations, individuals, teams, or anyone eligible to apply?',
     'display' => array(
+      'at_a_glance' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 25,
+      ),
       'default' => array(
         'label' => 'above',
         'module' => 'taxonomy',
@@ -931,6 +973,30 @@ function gie_funding_field_default_field_instances() {
     'deleted' => 0,
     'description' => 'The value of the award. If the award is a range, enter the lowest amount in the range. If the amount is unknown, please leave blank.',
     'display' => array(
+      'at_a_glance' => array(
+        'label' => 'above',
+        'module' => 'number',
+        'settings' => array(
+          'decimal_separator' => '.',
+          'field_delimiter' => '',
+          'linked_field' => array(
+            'advanced' => array(
+              'class' => '',
+              'rel' => '',
+              'target' => '',
+              'text' => '',
+              'title' => '',
+            ),
+            'destination' => '',
+            'linked' => 0,
+          ),
+          'prefix_suffix' => 1,
+          'scale' => 0,
+          'thousand_separator' => ',',
+        ),
+        'type' => 'number_integer',
+        'weight' => 4,
+      ),
       'default' => array(
         'label' => 'above',
         'module' => 'number',
@@ -1050,6 +1116,12 @@ function gie_funding_field_default_field_instances() {
     'deleted' => 0,
     'description' => 'Any guidance on the application: # of pages, type of content, how it should be transmitted, etc.',
     'display' => array(
+      'at_a_glance' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 18,
+      ),
       'default' => array(
         'label' => 'above',
         'module' => 'text',
@@ -1168,6 +1240,12 @@ function gie_funding_field_default_field_instances() {
     'deleted' => 0,
     'description' => 'If the opportunity is only for innovations at a certain stage of development please select those that apply (early idea or late-stage prototype, etc.?)',
     'display' => array(
+      'at_a_glance' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 26,
+      ),
       'default' => array(
         'label' => 'above',
         'module' => 'taxonomy',
@@ -1245,6 +1323,12 @@ function gie_funding_field_default_field_instances() {
     'deleted' => 0,
     'description' => 'Are they specific types of innovations that can be funded by this opportunity? If it doesn\'t matter which type then leave blank.',
     'display' => array(
+      'at_a_glance' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 27,
+      ),
       'default' => array(
         'label' => 'above',
         'module' => 'taxonomy',
@@ -1322,6 +1406,12 @@ function gie_funding_field_default_field_instances() {
     'deleted' => 0,
     'description' => 'The URL to the application or additional information about the opportunity.',
     'display' => array(
+      'at_a_glance' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 33,
+      ),
       'default' => array(
         'label' => 'above',
         'module' => 'text',
@@ -1424,6 +1514,12 @@ function gie_funding_field_default_field_instances() {
     'deleted' => 0,
     'description' => 'The organization that is sponsoring the funding opportunity. The organization must have profile on the Exchange to be included on this line. Start typing the organization name to see if it has a profile on the Exchange yet. If it doesn\'t appear, please contact the organization and encourage them to create an organization profile. ',
     'display' => array(
+      'at_a_glance' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 24,
+      ),
       'default' => array(
         'label' => 'above',
         'module' => 'entityreference',
@@ -1511,6 +1607,12 @@ function gie_funding_field_default_field_instances() {
     'deleted' => 0,
     'description' => 'A point of contact email address at the organization who is associated with the funding opportunity. ',
     'display' => array(
+      'at_a_glance' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 32,
+      ),
       'default' => array(
         'label' => 'above',
         'module' => 'text',
@@ -1630,6 +1732,12 @@ function gie_funding_field_default_field_instances() {
     'deleted' => 0,
     'description' => 'Choose which funding types best descibe this funding opportunity. Grant? Award? etc.',
     'display' => array(
+      'at_a_glance' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 20,
+      ),
       'default' => array(
         'label' => 'above',
         'module' => 'taxonomy',
@@ -1707,6 +1815,12 @@ function gie_funding_field_default_field_instances() {
     'deleted' => 0,
     'description' => 'List the countries that are eligible. Choose global if all countries are eligible.',
     'display' => array(
+      'at_a_glance' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 31,
+      ),
       'default' => array(
         'label' => 'above',
         'module' => 'taxonomy',
@@ -1784,6 +1898,12 @@ function gie_funding_field_default_field_instances() {
     'deleted' => 0,
     'description' => 'Select the corresponding regions that apply for the selected countries.',
     'display' => array(
+      'at_a_glance' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 30,
+      ),
       'default' => array(
         'label' => 'above',
         'module' => 'taxonomy',
@@ -1875,6 +1995,12 @@ function gie_funding_field_default_field_instances() {
     'deleted' => 0,
     'description' => 'Please select the sectors and sub-sectors related to your funding opportunity. You will notice that the overall sectors are listed with their sub-sectors nested with a dash (-) symbol. Be sure to select the sectors and subsectors that apply. Do not select a sub-sector without also selecting the corresponding sector. Be sure to scroll to the bottom, there are a lot of sectors. We know this isn\'t so easy to use right now, but we will be improving this selection process.',
     'display' => array(
+      'at_a_glance' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 28,
+      ),
       'default' => array(
         'label' => 'above',
         'module' => 'taxonomy',
@@ -1975,6 +2101,12 @@ function gie_funding_field_default_field_instances() {
     'deleted' => 0,
     'description' => 'Topics are issues that may be of interest to Exchange users. Select any (or none) topics that you think apply to your funding opportunity.',
     'display' => array(
+      'at_a_glance' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 29,
+      ),
       'default' => array(
         'label' => 'above',
         'module' => 'taxonomy',
@@ -2066,6 +2198,12 @@ function gie_funding_field_default_field_instances() {
     'deleted' => 0,
     'description' => 'The title of the funding opportunity. ',
     'display' => array(
+      'at_a_glance' => array(
+        'label' => 'hidden',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 14,
+      ),
       'default' => array(
         'label' => 'hidden',
         'module' => 'title',
