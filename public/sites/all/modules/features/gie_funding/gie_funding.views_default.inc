@@ -165,7 +165,7 @@ function gie_funding_views_default_views() {
   $handler->display->display_options['style_options']['row_class_special'] = FALSE;
   $handler->display->display_options['row_plugin'] = 'fields';
   $handler->display->display_options['row_options']['default_field_elements'] = FALSE;
-  /* Field: Content: Link URL */
+  /* Field: Content: Application URL */
   $handler->display->display_options['fields']['field_funding_link']['id'] = 'field_funding_link';
   $handler->display->display_options['fields']['field_funding_link']['table'] = 'field_data_field_funding_link';
   $handler->display->display_options['fields']['field_funding_link']['field'] = 'field_funding_link';
@@ -205,7 +205,7 @@ function gie_funding_views_default_views() {
   /* Display: Link URL */
   $handler = $view->new_display('entity_view', 'Link URL', 'link_url');
   $handler->display->display_options['defaults']['fields'] = FALSE;
-  /* Field: Content: Link URL */
+  /* Field: Content: Application URL */
   $handler->display->display_options['fields']['field_funding_link']['id'] = 'field_funding_link';
   $handler->display->display_options['fields']['field_funding_link']['table'] = 'field_data_field_funding_link';
   $handler->display->display_options['fields']['field_funding_link']['field'] = 'field_funding_link';
@@ -235,7 +235,7 @@ function gie_funding_views_default_views() {
   /* Display: Contact */
   $handler = $view->new_display('entity_view', 'Contact', 'contact');
   $handler->display->display_options['defaults']['fields'] = FALSE;
-  /* Field: Content: Point of Contact */
+  /* Field: Content: Point of Contact Email */
   $handler->display->display_options['fields']['field_funding_poc']['id'] = 'field_funding_poc';
   $handler->display->display_options['fields']['field_funding_poc']['table'] = 'field_data_field_funding_poc';
   $handler->display->display_options['fields']['field_funding_poc']['field'] = 'field_funding_poc';
@@ -266,7 +266,7 @@ function gie_funding_views_default_views() {
   $handler->display->display_options['filters']['status']['value'] = 1;
   $handler->display->display_options['filters']['status']['group'] = 1;
   $handler->display->display_options['filters']['status']['expose']['operator'] = FALSE;
-  /* Filter criterion: Content: Point of Contact (field_funding_poc) */
+  /* Filter criterion: Content: Point of Contact Email (field_funding_poc) */
   $handler->display->display_options['filters']['field_funding_poc_value']['id'] = 'field_funding_poc_value';
   $handler->display->display_options['filters']['field_funding_poc_value']['table'] = 'field_data_field_funding_poc';
   $handler->display->display_options['filters']['field_funding_poc_value']['field'] = 'field_funding_poc_value';
