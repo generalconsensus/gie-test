@@ -25,6 +25,19 @@
     }
   }
 
+  Drupal.behaviors.betaVersion = {
+    attach: function (context) {
+      function betaVersion(element) {
+        if ($(element).find('.beta-version').length < 1) {
+          $(element).prepend('<div class="beta-version"><h2>BETA VERSION</h2></div>');
+        }
+      }
+      betaVersion('.header .region-header');
+      betaVersion('.l-panels-home .pane--homepage-header');
+      betaVersion('.site-name');
+    }
+  }
+
   Drupal.behaviors.cardflipClick = {
     attach: function (context) {
       $('.cardflip').click(function(){

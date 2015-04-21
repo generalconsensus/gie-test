@@ -1,0 +1,60 @@
+.beta-version {
+  margin: 0;   
+  h2 {
+    font-size: em(12px);
+    font-weight: 900;
+    margin: 0;
+    padding: 0;
+  }
+ 
+  .region-header & { // header version
+    float: left;
+    h2 {
+      color: #aaa;
+      line-height: 2.5em;
+    }
+  }
+  .site-name & { // mobile header version
+    position: absolute;
+    right: -80px;
+    top: 0;
+    width: 70px;
+    h2 {
+      color: #aaa;
+    }
+    @include breakpoint($mobile-menu-bp, $no-query: true) {
+      display: none;
+    }
+  }
+  .pane--homepage-header & { // homepage version
+    bottom: 0;
+    position: absolute;
+    right: 0;
+    text-align: right;
+    width: 70px;
+    z-index: 2;
+    @include breakpoint(max-width 400px) {
+      display: none;
+    }
+    h2 {
+      color: #fff;
+      line-height: 1.4;
+      padding: 0 1em 1em 0;
+      position: relative;
+      z-index: 2;
+    }
+    &:after {
+      content: "";
+      display: block;
+      border-style: solid;
+      border-width: 0 0 157px 94px;
+      border-color: transparent transparent $blue transparent;
+      bottom: 0;
+      height: 0;
+      position: absolute;
+      right: 0;
+      width: 0;
+      z-index: 1;
+    }
+  }
+}
