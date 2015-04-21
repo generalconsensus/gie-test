@@ -95,11 +95,12 @@ function gie_organization_views_default_views() {
 
   /* Display: Innovations */
   $handler = $view->new_display('entity_view', 'Innovations', 'innovation_count');
+  $handler->display->display_options['defaults']['css_class'] = FALSE;
+  $handler->display->display_options['css_class'] = 'view--at-a-glance';
   $handler->display->display_options['defaults']['group_by'] = FALSE;
   $handler->display->display_options['group_by'] = TRUE;
   $handler->display->display_options['defaults']['style_plugin'] = FALSE;
   $handler->display->display_options['style_plugin'] = 'default';
-  $handler->display->display_options['style_options']['row_class'] = 'views-field-innovation-count';
   $handler->display->display_options['style_options']['default_row_class'] = FALSE;
   $handler->display->display_options['style_options']['row_class_special'] = FALSE;
   $handler->display->display_options['defaults']['style_options'] = FALSE;
@@ -123,7 +124,10 @@ function gie_organization_views_default_views() {
   $handler->display->display_options['fields']['nid']['element_label_type'] = 'span';
   $handler->display->display_options['fields']['nid']['element_label_class'] = 'views-label';
   $handler->display->display_options['fields']['nid']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['nid']['element_wrapper_type'] = 'div';
+  $handler->display->display_options['fields']['nid']['element_wrapper_class'] = 'views-field has-icon--innovation';
   $handler->display->display_options['fields']['nid']['element_default_classes'] = FALSE;
+  $handler->display->display_options['fields']['nid']['format_plural'] = TRUE;
   $handler->display->display_options['defaults']['arguments'] = FALSE;
   /* Contextual filter: Content: Nid */
   $handler->display->display_options['arguments']['nid']['id'] = 'nid';
@@ -149,11 +153,12 @@ function gie_organization_views_default_views() {
 
   /* Display: Members */
   $handler = $view->new_display('entity_view', 'Members', 'member_count');
+  $handler->display->display_options['defaults']['css_class'] = FALSE;
+  $handler->display->display_options['css_class'] = 'view--at-a-glance';
   $handler->display->display_options['defaults']['group_by'] = FALSE;
   $handler->display->display_options['group_by'] = TRUE;
   $handler->display->display_options['defaults']['style_plugin'] = FALSE;
   $handler->display->display_options['style_plugin'] = 'default';
-  $handler->display->display_options['style_options']['row_class'] = 'views-field-member-count';
   $handler->display->display_options['style_options']['default_row_class'] = FALSE;
   $handler->display->display_options['style_options']['row_class_special'] = FALSE;
   $handler->display->display_options['defaults']['style_options'] = FALSE;
@@ -178,7 +183,10 @@ function gie_organization_views_default_views() {
   $handler->display->display_options['fields']['uid']['element_label_type'] = 'span';
   $handler->display->display_options['fields']['uid']['element_label_class'] = 'views-label';
   $handler->display->display_options['fields']['uid']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['uid']['element_wrapper_type'] = 'div';
+  $handler->display->display_options['fields']['uid']['element_wrapper_class'] = 'views-field has-icon--member';
   $handler->display->display_options['fields']['uid']['element_default_classes'] = FALSE;
+  $handler->display->display_options['fields']['uid']['format_plural'] = TRUE;
   $handler->display->display_options['defaults']['filter_groups'] = FALSE;
   $handler->display->display_options['defaults']['filters'] = FALSE;
   /* Filter criterion: User: Active */
@@ -194,11 +202,12 @@ function gie_organization_views_default_views() {
 
   /* Display: Partners */
   $handler = $view->new_display('entity_view', 'Partners', 'partner_count');
+  $handler->display->display_options['defaults']['css_class'] = FALSE;
+  $handler->display->display_options['css_class'] = 'view--at-a-glance';
   $handler->display->display_options['defaults']['group_by'] = FALSE;
   $handler->display->display_options['group_by'] = TRUE;
   $handler->display->display_options['defaults']['style_plugin'] = FALSE;
   $handler->display->display_options['style_plugin'] = 'default';
-  $handler->display->display_options['style_options']['row_class'] = 'views-field-partner-count';
   $handler->display->display_options['style_options']['default_row_class'] = FALSE;
   $handler->display->display_options['style_options']['row_class_special'] = FALSE;
   $handler->display->display_options['defaults']['style_options'] = FALSE;
@@ -216,8 +225,11 @@ function gie_organization_views_default_views() {
   $handler->display->display_options['fields']['field_org_partners']['element_type'] = 'span';
   $handler->display->display_options['fields']['field_org_partners']['element_label_type'] = 'span';
   $handler->display->display_options['fields']['field_org_partners']['element_label_class'] = 'views-label';
+  $handler->display->display_options['fields']['field_org_partners']['element_wrapper_type'] = 'div';
+  $handler->display->display_options['fields']['field_org_partners']['element_wrapper_class'] = 'views-field has-icon--organization';
   $handler->display->display_options['fields']['field_org_partners']['element_default_classes'] = FALSE;
   $handler->display->display_options['fields']['field_org_partners']['separator'] = ', ';
+  $handler->display->display_options['fields']['field_org_partners']['format_plural'] = TRUE;
   $handler->display->display_options['entity_type'] = 'node';
   $handler->display->display_options['bundles'] = array(
     0 => 'organization',
@@ -777,6 +789,7 @@ function gie_organization_views_default_views() {
 
   /* Display: Master */
   $handler = $view->new_display('default', 'Master', 'default');
+  $handler->display->display_options['hide_admin_links'] = TRUE;
   $handler->display->display_options['use_more_always'] = FALSE;
   $handler->display->display_options['access']['type'] = 'perm';
   $handler->display->display_options['cache']['type'] = 'none';
@@ -806,6 +819,16 @@ function gie_organization_views_default_views() {
   $handler = $view->new_display('panel_pane', 'Regions', 'regions_pane');
   $handler->display->display_options['defaults']['title'] = FALSE;
   $handler->display->display_options['title'] = 'Where We Work';
+  $handler->display->display_options['defaults']['css_class'] = FALSE;
+  $handler->display->display_options['css_class'] = 'view--simple-list';
+  $handler->display->display_options['defaults']['style_plugin'] = FALSE;
+  $handler->display->display_options['style_plugin'] = 'default';
+  $handler->display->display_options['style_options']['row_class_special'] = FALSE;
+  $handler->display->display_options['defaults']['style_options'] = FALSE;
+  $handler->display->display_options['defaults']['row_plugin'] = FALSE;
+  $handler->display->display_options['row_plugin'] = 'fields';
+  $handler->display->display_options['row_options']['default_field_elements'] = FALSE;
+  $handler->display->display_options['defaults']['row_options'] = FALSE;
   $handler->display->display_options['defaults']['relationships'] = FALSE;
   /* Relationship: Taxonomy term: Content using Region */
   $handler->display->display_options['relationships']['reverse_field_term_region_node']['id'] = 'reverse_field_term_region_node';
@@ -827,6 +850,16 @@ function gie_organization_views_default_views() {
   $handler = $view->new_display('panel_pane', 'Sectors', 'sectors_pane');
   $handler->display->display_options['defaults']['title'] = FALSE;
   $handler->display->display_options['title'] = 'Focus of Work';
+  $handler->display->display_options['defaults']['css_class'] = FALSE;
+  $handler->display->display_options['css_class'] = 'view--simple-list';
+  $handler->display->display_options['defaults']['style_plugin'] = FALSE;
+  $handler->display->display_options['style_plugin'] = 'default';
+  $handler->display->display_options['style_options']['row_class_special'] = FALSE;
+  $handler->display->display_options['defaults']['style_options'] = FALSE;
+  $handler->display->display_options['defaults']['row_plugin'] = FALSE;
+  $handler->display->display_options['row_plugin'] = 'fields';
+  $handler->display->display_options['row_options']['default_field_elements'] = FALSE;
+  $handler->display->display_options['defaults']['row_options'] = FALSE;
   $handler->display->display_options['defaults']['relationships'] = FALSE;
   /* Relationship: Taxonomy term: Content using Sector */
   $handler->display->display_options['relationships']['reverse_field_term_sector_node']['id'] = 'reverse_field_term_sector_node';
