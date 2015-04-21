@@ -20,7 +20,21 @@ function gie_program_ds_field_settings_info() {
     'field_program_budget' => array(
       'formatter_settings' => array(
         'ft' => array(
-          'func' => 'theme_ds_field_reset',
+          'func' => 'theme_ds_field_expert',
+          'lb-el' => 'span',
+          'prefix' => '$',
+          'ow' => TRUE,
+          'ow-el' => 'div',
+          'ow-cl' => 'view--at-a-glance',
+          'ow-def-cl' => FALSE,
+          'ow-at' => '',
+          'ow-def-at' => FALSE,
+          'fi' => TRUE,
+          'fi-el' => 'span',
+          'fi-cl' => '',
+          'fi-at' => '',
+          'fi-def-at' => FALSE,
+          'fi-odd-even' => FALSE,
         ),
       ),
     ),
@@ -125,6 +139,30 @@ function gie_program_ds_field_settings_info() {
 
   $ds_fieldsetting = new stdClass();
   $ds_fieldsetting->api_version = 1;
+  $ds_fieldsetting->id = 'node|program|page_header';
+  $ds_fieldsetting->entity_type = 'node';
+  $ds_fieldsetting->bundle = 'program';
+  $ds_fieldsetting->view_mode = 'page_header';
+  $ds_fieldsetting->settings = array(
+    'field_program_desc' => array(
+      'formatter_settings' => array(
+        'ft' => array(
+          'func' => 'theme_ds_field_expert',
+        ),
+      ),
+    ),
+    'field_program_logo' => array(
+      'formatter_settings' => array(
+        'ft' => array(
+          'func' => 'theme_ds_field_expert',
+        ),
+      ),
+    ),
+  );
+  $export['node|program|page_header'] = $ds_fieldsetting;
+
+  $ds_fieldsetting = new stdClass();
+  $ds_fieldsetting->api_version = 1;
   $ds_fieldsetting->id = 'node|program|search_listing';
   $ds_fieldsetting->entity_type = 'node';
   $ds_fieldsetting->bundle = 'program';
@@ -157,14 +195,14 @@ function gie_program_ds_layout_settings_info() {
   $ds_layout->settings = array(
     'regions' => array(
       'ds_content' => array(
-        0 => 'program_counters_innovation_count',
-        1 => 'program_counters_program_count',
+        0 => 'program_at_a_glance_innovation',
+        1 => 'program_at_a_glance_favorites',
         2 => 'field_program_budget',
       ),
     ),
     'fields' => array(
-      'program_counters_innovation_count' => 'ds_content',
-      'program_counters_program_count' => 'ds_content',
+      'program_at_a_glance_innovation' => 'ds_content',
+      'program_at_a_glance_favorites' => 'ds_content',
       'field_program_budget' => 'ds_content',
     ),
     'classes' => array(),
@@ -294,6 +332,40 @@ function gie_program_ds_layout_settings_info() {
     'layout_link_custom' => '',
   );
   $export['node|program|listing'] = $ds_layout;
+
+  $ds_layout = new stdClass();
+  $ds_layout->api_version = 1;
+  $ds_layout->id = 'node|program|page_header';
+  $ds_layout->entity_type = 'node';
+  $ds_layout->bundle = 'program';
+  $ds_layout->view_mode = 'page_header';
+  $ds_layout->layout = 'slat';
+  $ds_layout->settings = array(
+    'regions' => array(
+      'media' => array(
+        0 => 'field_program_logo',
+      ),
+      'main_content' => array(
+        1 => 'field_program_desc',
+      ),
+    ),
+    'fields' => array(
+      'field_program_logo' => 'media',
+      'field_program_desc' => 'main_content',
+    ),
+    'classes' => array(),
+    'wrappers' => array(
+      'header' => 'div',
+      'media' => 'div',
+      'main_content' => 'div',
+    ),
+    'layout_wrapper' => 'div',
+    'layout_attributes' => '',
+    'layout_attributes_merge' => 1,
+    'layout_link_attribute' => '',
+    'layout_link_custom' => '',
+  );
+  $export['node|program|page_header'] = $ds_layout;
 
   $ds_layout = new stdClass();
   $ds_layout->api_version = 1;
