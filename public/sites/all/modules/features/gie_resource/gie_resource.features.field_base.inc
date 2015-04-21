@@ -35,7 +35,9 @@ function gie_resource_field_default_field_bases() {
         'sort' => array(
           'type' => 'none',
         ),
-        'target_bundles' => array(),
+        'target_bundles' => array(
+          'document' => 'document',
+        ),
       ),
       'target_type' => 'asset',
     ),

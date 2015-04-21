@@ -100,6 +100,56 @@ function gie_resource_panelizer_defaults() {
     $display->content['new-19840ee3-2761-402f-bdfc-14e8cd0a00ea'] = $pane;
     $display->panels['sidebar'][0] = 'new-19840ee3-2761-402f-bdfc-14e8cd0a00ea';
     $pane = new stdClass();
+    $pane->pid = 'new-36c0ee76-c6ae-4155-9833-97e3c7e49439';
+    $pane->panel = 'sidebar';
+    $pane->type = 'entity_view';
+    $pane->subtype = 'node';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array(
+      'view_mode' => 'at_a_glance',
+      'context' => 'panelizer',
+      'override_title' => 1,
+      'override_title_text' => 'At a Glance',
+      'override_title_heading' => 'h2',
+    );
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
+    $pane->css = array();
+    $pane->extras = array();
+    $pane->position = 1;
+    $pane->locks = array();
+    $pane->uuid = '36c0ee76-c6ae-4155-9833-97e3c7e49439';
+    $display->content['new-36c0ee76-c6ae-4155-9833-97e3c7e49439'] = $pane;
+    $display->panels['sidebar'][1] = 'new-36c0ee76-c6ae-4155-9833-97e3c7e49439';
+    $pane = new stdClass();
+    $pane->pid = 'new-75e583b9-94c1-41f0-ad16-da91fcfa40ba';
+    $pane->panel = 'sidebar';
+    $pane->type = 'entity_view';
+    $pane->subtype = 'node';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array(
+      'view_mode' => 'details',
+      'context' => 'panelizer',
+      'override_title' => 1,
+      'override_title_text' => 'Details',
+      'override_title_heading' => 'h2',
+    );
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
+    $pane->css = array();
+    $pane->extras = array();
+    $pane->position = 2;
+    $pane->locks = array();
+    $pane->uuid = '75e583b9-94c1-41f0-ad16-da91fcfa40ba';
+    $display->content['new-75e583b9-94c1-41f0-ad16-da91fcfa40ba'] = $pane;
+    $display->panels['sidebar'][2] = 'new-75e583b9-94c1-41f0-ad16-da91fcfa40ba';
+    $pane = new stdClass();
     $pane->pid = 'new-b1cf1f05-c093-4e33-8887-6e9086db3345';
     $pane->panel = 'title';
     $pane->type = 'page_title';
