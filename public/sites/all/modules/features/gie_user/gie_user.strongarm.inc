@@ -133,6 +133,13 @@ function gie_user_strongarm() {
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
+  $strongarm->name = 'mailchimp_api_key';
+  $strongarm->value = 'b6c2f74e5dae88e87e00d95bea1669c6-us10';
+  $export['mailchimp_api_key'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
   $strongarm->name = 'page_manager_user_view_disabled';
   $strongarm->value = FALSE;
   $export['page_manager_user_view_disabled'] = $strongarm;
