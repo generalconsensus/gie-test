@@ -37,6 +37,12 @@ function gie_assets_field_default_field_instances() {
         'type' => 'text_default',
         'weight' => 2,
       ),
+      'download' => array(
+        'label' => 'hidden',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 1,
+      ),
       'full' => array(
         'label' => 'hidden',
         'module' => 'text',
@@ -124,6 +130,26 @@ function gie_assets_field_default_field_instances() {
         ),
         'type' => 'file_default',
         'weight' => 1,
+      ),
+      'download' => array(
+        'label' => 'hidden',
+        'module' => 'file',
+        'settings' => array(
+          'field_delimiter' => '',
+          'linked_field' => array(
+            'advanced' => array(
+              'class' => '',
+              'rel' => '',
+              'target' => '',
+              'text' => '',
+              'title' => '',
+            ),
+            'destination' => '',
+            'linked' => 0,
+          ),
+        ),
+        'type' => 'file_default',
+        'weight' => 0,
       ),
       'full' => array(
         'label' => 'hidden',

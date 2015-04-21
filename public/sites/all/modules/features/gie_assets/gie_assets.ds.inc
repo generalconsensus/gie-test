@@ -36,6 +36,34 @@ function gie_assets_ds_layout_settings_info() {
 
   $ds_layout = new stdClass();
   $ds_layout->api_version = 1;
+  $ds_layout->id = 'asset|document|download';
+  $ds_layout->entity_type = 'asset';
+  $ds_layout->bundle = 'document';
+  $ds_layout->view_mode = 'download';
+  $ds_layout->layout = 'ds_1col';
+  $ds_layout->settings = array(
+    'regions' => array(
+      'ds_content' => array(
+        0 => 'field_asset_document_file',
+      ),
+    ),
+    'fields' => array(
+      'field_asset_document_file' => 'ds_content',
+    ),
+    'classes' => array(),
+    'wrappers' => array(
+      'ds_content' => 'div',
+    ),
+    'layout_wrapper' => 'div',
+    'layout_attributes' => '',
+    'layout_attributes_merge' => 1,
+    'layout_link_attribute' => '',
+    'layout_link_custom' => '',
+  );
+  $export['asset|document|download'] = $ds_layout;
+
+  $ds_layout = new stdClass();
+  $ds_layout->api_version = 1;
   $ds_layout->id = 'asset|image|default';
   $ds_layout->entity_type = 'asset';
   $ds_layout->bundle = 'image';
@@ -186,6 +214,15 @@ function gie_assets_ds_layout_settings_info() {
  */
 function gie_assets_ds_view_modes_info() {
   $export = array();
+
+  $ds_view_mode = new stdClass();
+  $ds_view_mode->api_version = 1;
+  $ds_view_mode->view_mode = 'download';
+  $ds_view_mode->label = 'Download';
+  $ds_view_mode->entities = array(
+    'asset' => 'asset',
+  );
+  $export['download'] = $ds_view_mode;
 
   $ds_view_mode = new stdClass();
   $ds_view_mode->api_version = 1;
