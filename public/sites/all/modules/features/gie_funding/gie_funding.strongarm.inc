@@ -126,12 +126,18 @@ function gie_funding_strongarm() {
         'custom_settings' => TRUE,
       ),
       'at_a_glance' => array(
-        'custom_settings' => FALSE,
+        'custom_settings' => TRUE,
       ),
       'contact' => array(
         'custom_settings' => FALSE,
       ),
       'logo' => array(
+        'custom_settings' => FALSE,
+      ),
+      'page_header' => array(
+        'custom_settings' => FALSE,
+      ),
+      'details' => array(
         'custom_settings' => FALSE,
       ),
     ),
@@ -166,6 +172,10 @@ function gie_funding_strongarm() {
             'weight' => '17',
             'visible' => FALSE,
           ),
+          'at_a_glance' => array(
+            'weight' => '21',
+            'visible' => FALSE,
+          ),
         ),
         'funding_fields_link_url' => array(
           'full' => array(
@@ -182,6 +192,10 @@ function gie_funding_strongarm() {
           ),
           'search_listing' => array(
             'weight' => '18',
+            'visible' => FALSE,
+          ),
+          'at_a_glance' => array(
+            'weight' => '13',
             'visible' => FALSE,
           ),
         ),
@@ -202,6 +216,10 @@ function gie_funding_strongarm() {
             'weight' => '14',
             'visible' => FALSE,
           ),
+          'at_a_glance' => array(
+            'weight' => '12',
+            'visible' => FALSE,
+          ),
         ),
         'funding_listing_counts_comments' => array(
           'listing' => array(
@@ -209,6 +227,7 @@ function gie_funding_strongarm() {
             'visible' => TRUE,
           ),
           'search_listing' => NULL,
+          'at_a_glance' => NULL,
         ),
         'funding_listing_counts_favorites' => array(
           'listing' => array(
@@ -216,6 +235,7 @@ function gie_funding_strongarm() {
             'visible' => TRUE,
           ),
           'search_listing' => NULL,
+          'at_a_glance' => NULL,
         ),
         'funding_counters_comment_count' => array(
           'listing' => array(
@@ -232,6 +252,10 @@ function gie_funding_strongarm() {
           ),
           'search_listing' => array(
             'weight' => '16',
+            'visible' => FALSE,
+          ),
+          'at_a_glance' => array(
+            'weight' => '3',
             'visible' => FALSE,
           ),
         ),
@@ -251,6 +275,22 @@ function gie_funding_strongarm() {
           'search_listing' => array(
             'weight' => '15',
             'visible' => FALSE,
+          ),
+          'at_a_glance' => array(
+            'weight' => '2',
+            'visible' => FALSE,
+          ),
+        ),
+        'funding_ops_counters_comments' => array(
+          'at_a_glance' => array(
+            'weight' => '1',
+            'visible' => TRUE,
+          ),
+        ),
+        'funding_ops_counters_favorites' => array(
+          'at_a_glance' => array(
+            'weight' => '0',
+            'visible' => TRUE,
           ),
         ),
       ),
