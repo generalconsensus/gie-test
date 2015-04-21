@@ -10,6 +10,22 @@
 function gie_search_user_default_permissions() {
   $permissions = array();
 
+  // Exported permission: 'access node_search search_api_page'.
+  $permissions['access node_search search_api_page'] = array(
+    'name' => 'access node_search search_api_page',
+    'roles' => array(),
+    'module' => 'search_api_page',
+  );
+
+  // Exported permission: 'access search_api_page'.
+  $permissions['access search_api_page'] = array(
+    'name' => 'access search_api_page',
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
+    'module' => 'search_api_page',
+  );
+
   // Exported permission: 'administer facetapi pretty paths'.
   $permissions['administer facetapi pretty paths'] = array(
     'name' => 'administer facetapi pretty paths',
