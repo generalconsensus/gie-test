@@ -103,6 +103,50 @@ function gie_resource_views_default_views() {
   /* Display: Comment count */
   $handler = $view->new_display('entity_view', 'Comment count', 'comment_count');
   $handler->display->display_options['defaults']['css_class'] = FALSE;
+  $handler->display->display_options['defaults']['hide_admin_links'] = FALSE;
+  $handler->display->display_options['hide_admin_links'] = TRUE;
+  $handler->display->display_options['defaults']['relationships'] = FALSE;
+  $handler->display->display_options['defaults']['fields'] = FALSE;
+  /* Field: Content: Comment count */
+  $handler->display->display_options['fields']['comment_count']['id'] = 'comment_count';
+  $handler->display->display_options['fields']['comment_count']['table'] = 'node_comment_statistics';
+  $handler->display->display_options['fields']['comment_count']['field'] = 'comment_count';
+  $handler->display->display_options['fields']['comment_count']['label'] = ' Comments ';
+  $handler->display->display_options['fields']['comment_count']['element_type'] = 'div';
+  $handler->display->display_options['fields']['comment_count']['element_class'] = 'has-icon--comment';
+  $handler->display->display_options['fields']['comment_count']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['comment_count']['element_default_classes'] = FALSE;
+  $handler->display->display_options['entity_type'] = 'node';
+  $handler->display->display_options['bundles'] = array(
+    0 => 'resource',
+  );
+
+  /* Display: Favorite count */
+  $handler = $view->new_display('entity_view', 'Favorite count', 'favorite_count');
+  $handler->display->display_options['defaults']['css_class'] = FALSE;
+  $handler->display->display_options['defaults']['hide_admin_links'] = FALSE;
+  $handler->display->display_options['hide_admin_links'] = TRUE;
+  $handler->display->display_options['defaults']['fields'] = FALSE;
+  /* Field: Flags: Flag counter */
+  $handler->display->display_options['fields']['count']['id'] = 'count';
+  $handler->display->display_options['fields']['count']['table'] = 'flag_counts';
+  $handler->display->display_options['fields']['count']['field'] = 'count';
+  $handler->display->display_options['fields']['count']['relationship'] = 'flag_count_rel';
+  $handler->display->display_options['fields']['count']['label'] = 'Favorites';
+  $handler->display->display_options['fields']['count']['element_type'] = 'div';
+  $handler->display->display_options['fields']['count']['element_class'] = 'has-icon--comment';
+  $handler->display->display_options['fields']['count']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['count']['element_default_classes'] = FALSE;
+  $handler->display->display_options['fields']['count']['prefix'] = '     ';
+  $handler->display->display_options['fields']['count']['suffix'] = '     ';
+  $handler->display->display_options['entity_type'] = 'node';
+  $handler->display->display_options['bundles'] = array(
+    0 => 'resource',
+  );
+
+  /* Display: Comment count detail */
+  $handler = $view->new_display('entity_view', 'Comment count detail', 'resource_comment_detail');
+  $handler->display->display_options['defaults']['css_class'] = FALSE;
   $handler->display->display_options['css_class'] = 'view--at-a-glance';
   $handler->display->display_options['defaults']['hide_admin_links'] = FALSE;
   $handler->display->display_options['hide_admin_links'] = TRUE;
@@ -125,8 +169,8 @@ function gie_resource_views_default_views() {
     0 => 'resource',
   );
 
-  /* Display: Favorite count */
-  $handler = $view->new_display('entity_view', 'Favorite count', 'favorite_count');
+  /* Display: Favorite count detail */
+  $handler = $view->new_display('entity_view', 'Favorite count detail', 'resource_favorite_count_detail');
   $handler->display->display_options['defaults']['css_class'] = FALSE;
   $handler->display->display_options['css_class'] = 'view--at-a-glance';
   $handler->display->display_options['defaults']['hide_admin_links'] = FALSE;

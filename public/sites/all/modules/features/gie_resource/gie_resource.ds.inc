@@ -269,15 +269,15 @@ function gie_resource_ds_layout_settings_info() {
     'regions' => array(
       'ds_content' => array(
         0 => 'group_resource_glance',
-        1 => 'resource_counters_comment_count',
-        2 => 'resource_counters_favorite_count',
+        1 => 'resource_counters_resource_comment_detail',
+        2 => 'resource_counters_resource_favorite_count_detail',
         3 => 'field_resource_source',
       ),
     ),
     'fields' => array(
       'group_resource_glance' => 'ds_content',
-      'resource_counters_comment_count' => 'ds_content',
-      'resource_counters_favorite_count' => 'ds_content',
+      'resource_counters_resource_comment_detail' => 'ds_content',
+      'resource_counters_resource_favorite_count_detail' => 'ds_content',
       'field_resource_source' => 'ds_content',
     ),
     'classes' => array(),
