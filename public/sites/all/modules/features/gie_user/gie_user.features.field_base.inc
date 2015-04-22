@@ -10,6 +10,25 @@
 function gie_user_field_default_field_bases() {
   $field_bases = array();
 
+  // Exported field_base: 'field_newsletter_sign_up'
+  $field_bases['field_newsletter_sign_up'] = array(
+    'active' => 1,
+    'cardinality' => 1,
+    'deleted' => 0,
+    'entity_types' => array(),
+    'field_name' => 'field_newsletter_sign_up',
+    'indexes' => array(),
+    'locked' => 0,
+    'module' => 'mailchimp_lists',
+    'settings' => array(
+      'double_opt_in' => 1,
+      'mc_list_id' => 'a16d0e8610',
+      'send_welcome' => 0,
+    ),
+    'translatable' => 0,
+    'type' => 'mailchimp_lists_subscription',
+  );
+
   // Exported field_base: 'field_user_address'
   $field_bases['field_user_address'] = array(
     'active' => 1,
