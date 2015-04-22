@@ -109,7 +109,7 @@ function gie_resource_panelizer_defaults() {
     $pane->configuration = array(
       'view_mode' => 'at_a_glance',
       'context' => 'panelizer',
-      'override_title' => 1,
+      'override_title' => 0,
       'override_title_text' => 'At a Glance',
       'override_title_heading' => 'h2',
     );
@@ -117,7 +117,10 @@ function gie_resource_panelizer_defaults() {
     $pane->style = array(
       'settings' => NULL,
     );
-    $pane->css = array();
+    $pane->css = array(
+      'css_id' => '',
+      'css_class' => '',
+    );
     $pane->extras = array();
     $pane->position = 1;
     $pane->locks = array();
@@ -134,7 +137,7 @@ function gie_resource_panelizer_defaults() {
     $pane->configuration = array(
       'view_mode' => 'details',
       'context' => 'panelizer',
-      'override_title' => 1,
+      'override_title' => 0,
       'override_title_text' => 'Details',
       'override_title_heading' => 'h2',
     );

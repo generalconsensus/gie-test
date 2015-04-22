@@ -112,5 +112,77 @@ function gie_resource_field_group_info() {
   );
   $export['group_card_counts|node|resource|listing'] = $field_group;
 
+  $field_group = new stdClass();
+  $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
+  $field_group->api_version = 1;
+  $field_group->identifier = 'group_resource_glance|node|resource|at_a_glance';
+  $field_group->group_name = 'group_resource_glance';
+  $field_group->entity_type = 'node';
+  $field_group->bundle = 'resource';
+  $field_group->mode = 'at_a_glance';
+  $field_group->parent_name = '';
+  $field_group->data = array(
+    'label' => 'At a Glance',
+    'weight' => '0',
+    'children' => array(
+      0 => 'field_resource_source',
+      1 => 'resource_counters_comment_count',
+      2 => 'resource_counters_favorite_count',
+    ),
+    'format_type' => 'div',
+    'format_settings' => array(
+      'label' => 'At a Glance',
+      'instance_settings' => array(
+        'id' => '',
+        'classes' => 'stats',
+        'description' => '',
+        'show_label' => '1',
+        'label_element' => 'h2',
+        'effect' => 'none',
+        'speed' => 'fast',
+      ),
+      'formatter' => 'open',
+    ),
+  );
+  $export['group_resource_glance|node|resource|at_a_glance'] = $field_group;
+
+  $field_group = new stdClass();
+  $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
+  $field_group->api_version = 1;
+  $field_group->identifier = 'group_resource_stats|node|resource|details';
+  $field_group->group_name = 'group_resource_stats';
+  $field_group->entity_type = 'node';
+  $field_group->bundle = 'resource';
+  $field_group->mode = 'details';
+  $field_group->parent_name = '';
+  $field_group->data = array(
+    'label' => 'Details',
+    'weight' => '0',
+    'children' => array(
+      0 => 'field_resource_org',
+      1 => 'field_resource_program',
+      2 => 'field_resource_type',
+      3 => 'field_term_sector',
+      4 => 'field_term_topic',
+      5 => 'field_term_region',
+      6 => 'field_term_country',
+    ),
+    'format_type' => 'div',
+    'format_settings' => array(
+      'label' => 'Details',
+      'instance_settings' => array(
+        'id' => '',
+        'classes' => 'stats',
+        'description' => '',
+        'show_label' => '1',
+        'label_element' => 'h2',
+        'effect' => 'none',
+        'speed' => 'none',
+      ),
+      'formatter' => 'open',
+    ),
+  );
+  $export['group_resource_stats|node|resource|details'] = $field_group;
+
   return $export;
 }
