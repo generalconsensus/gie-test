@@ -126,8 +126,8 @@ function gie_resource_field_group_info() {
     'weight' => '0',
     'children' => array(
       0 => 'field_resource_source',
-      1 => 'resource_counters_comment_count',
-      2 => 'resource_counters_favorite_count',
+      1 => 'resource_counters_resource_comment_detail',
+      2 => 'resource_counters_resource_favorite_count_detail',
     ),
     'format_type' => 'div',
     'format_settings' => array(

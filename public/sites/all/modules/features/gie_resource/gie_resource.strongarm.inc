@@ -196,8 +196,8 @@ function gie_resource_strongarm() {
             'visible' => FALSE,
           ),
           'at_a_glance' => array(
-            'weight' => '0',
-            'visible' => TRUE,
+            'weight' => '12',
+            'visible' => FALSE,
           ),
           'details' => array(
             'weight' => '22',
@@ -222,12 +222,24 @@ function gie_resource_strongarm() {
             'visible' => FALSE,
           ),
           'at_a_glance' => array(
-            'weight' => '1',
-            'visible' => TRUE,
+            'weight' => '13',
+            'visible' => FALSE,
           ),
           'details' => array(
             'weight' => '21',
             'visible' => FALSE,
+          ),
+        ),
+        'resource_counters_resource_comment_detail' => array(
+          'at_a_glance' => array(
+            'weight' => '11',
+            'visible' => TRUE,
+          ),
+        ),
+        'resource_counters_resource_favorite_count_detail' => array(
+          'at_a_glance' => array(
+            'weight' => '12',
+            'visible' => TRUE,
           ),
         ),
       ),
