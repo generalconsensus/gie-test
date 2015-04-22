@@ -74,7 +74,7 @@ function gie_resource_ds_field_settings_info() {
   $ds_fieldsetting->view_mode = 'full';
   $ds_fieldsetting->settings = array(
     'comments' => array(
-      'weight' => '7',
+      'weight' => '6',
       'label' => 'hidden',
       'format' => 'default',
     ),
@@ -268,13 +268,17 @@ function gie_resource_ds_layout_settings_info() {
   $ds_layout->settings = array(
     'regions' => array(
       'ds_content' => array(
-        0 => 'resource_counters_comment_count',
-        1 => 'resource_counters_favorite_count',
+        0 => 'group_resource_glance',
+        1 => 'resource_counters_comment_count',
+        2 => 'resource_counters_favorite_count',
+        3 => 'field_resource_source',
       ),
     ),
     'fields' => array(
+      'group_resource_glance' => 'ds_content',
       'resource_counters_comment_count' => 'ds_content',
       'resource_counters_favorite_count' => 'ds_content',
+      'field_resource_source' => 'ds_content',
     ),
     'classes' => array(),
     'wrappers' => array(
@@ -298,16 +302,18 @@ function gie_resource_ds_layout_settings_info() {
   $ds_layout->settings = array(
     'regions' => array(
       'ds_content' => array(
-        0 => 'field_resource_type',
-        1 => 'field_term_region',
-        2 => 'field_term_country',
-        3 => 'field_term_topic',
-        4 => 'field_term_sector',
-        5 => 'field_resource_program',
-        6 => 'field_resource_org',
+        0 => 'group_resource_stats',
+        1 => 'field_resource_type',
+        2 => 'field_term_region',
+        3 => 'field_term_country',
+        4 => 'field_term_topic',
+        5 => 'field_term_sector',
+        6 => 'field_resource_program',
+        7 => 'field_resource_org',
       ),
     ),
     'fields' => array(
+      'group_resource_stats' => 'ds_content',
       'field_resource_type' => 'ds_content',
       'field_term_region' => 'ds_content',
       'field_term_country' => 'ds_content',
@@ -339,23 +345,21 @@ function gie_resource_ds_layout_settings_info() {
     'regions' => array(
       'ds_content' => array(
         0 => 'field_resource_date',
-        1 => 'field_resource_source',
-        2 => 'field_resource_author',
-        3 => 'sharethis',
-        4 => 'field_resource_link',
-        5 => 'field_resource_desc',
-        6 => 'field_resource_assets',
-        7 => 'comments',
+        1 => 'field_resource_author',
+        2 => 'sharethis',
+        3 => 'field_resource_desc',
+        4 => 'field_resource_assets',
+        5 => 'field_resource_link',
+        6 => 'comments',
       ),
     ),
     'fields' => array(
       'field_resource_date' => 'ds_content',
-      'field_resource_source' => 'ds_content',
       'field_resource_author' => 'ds_content',
       'sharethis' => 'ds_content',
-      'field_resource_link' => 'ds_content',
       'field_resource_desc' => 'ds_content',
       'field_resource_assets' => 'ds_content',
+      'field_resource_link' => 'ds_content',
       'comments' => 'ds_content',
     ),
     'classes' => array(),
