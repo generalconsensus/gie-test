@@ -1062,7 +1062,7 @@ function gie_resource_field_default_field_instances() {
           ),
         ),
         'type' => 'link_default',
-        'weight' => 3,
+        'weight' => 13,
       ),
       'default' => array(
         'label' => 'above',
