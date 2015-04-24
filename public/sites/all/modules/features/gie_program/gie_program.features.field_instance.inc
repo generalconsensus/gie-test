@@ -95,7 +95,7 @@ function gie_program_field_default_field_instances() {
         'apply_chosen' => 1,
       ),
       'type' => 'options_select',
-      'weight' => 19,
+      'weight' => 27,
     ),
   );
 
@@ -104,7 +104,7 @@ function gie_program_field_default_field_instances() {
     'bundle' => 'program',
     'default_value' => NULL,
     'deleted' => 0,
-    'description' => '',
+    'description' => 'The mailing address of your program. ',
     'display' => array(
       'at_a_glance' => array(
         'label' => 'above',
@@ -225,7 +225,7 @@ function gie_program_field_default_field_instances() {
         'rows' => 5,
       ),
       'type' => 'text_textarea',
-      'weight' => 4,
+      'weight' => 3,
     ),
   );
 
@@ -234,7 +234,7 @@ function gie_program_field_default_field_instances() {
     'bundle' => 'program',
     'default_value' => NULL,
     'deleted' => 0,
-    'description' => '',
+    'description' => 'The total budget of your program, if applicable. ',
     'display' => array(
       'at_a_glance' => array(
         'label' => 'inline',
@@ -338,7 +338,7 @@ function gie_program_field_default_field_instances() {
       'module' => 'html5_tools',
       'settings' => array(),
       'type' => 'numberfield',
-      'weight' => 18,
+      'weight' => 26,
     ),
   );
 
@@ -347,7 +347,7 @@ function gie_program_field_default_field_instances() {
     'bundle' => 'program',
     'default_value' => NULL,
     'deleted' => 0,
-    'description' => '',
+    'description' => 'A short description of your program.',
     'display' => array(
       'at_a_glance' => array(
         'label' => 'above',
@@ -473,8 +473,8 @@ function gie_program_field_default_field_instances() {
     'ds_extras_field_template' => '',
     'entity_type' => 'node',
     'field_name' => 'field_program_desc',
-    'label' => 'Descripton',
-    'required' => 1,
+    'label' => 'Short Description',
+    'required' => 0,
     'settings' => array(
       'better_formats' => array(
         'allowed_formats' => array(
@@ -512,7 +512,7 @@ function gie_program_field_default_field_instances() {
         'rows' => 5,
       ),
       'type' => 'text_textarea',
-      'weight' => 8,
+      'weight' => 1,
     ),
   );
 
@@ -520,7 +520,7 @@ function gie_program_field_default_field_instances() {
   $field_instances['node-program-field_program_end'] = array(
     'bundle' => 'program',
     'deleted' => 0,
-    'description' => '',
+    'description' => 'The end date of your program, if applicable. ',
     'display' => array(
       'at_a_glance' => array(
         'label' => 'above',
@@ -614,105 +614,7 @@ function gie_program_field_default_field_instances() {
         'year_range' => '-3:+3',
       ),
       'type' => 'date_popup',
-      'weight' => 13,
-    ),
-  );
-
-  // Exported field_instance: 'node-program-field_program_image'
-  $field_instances['node-program-field_program_image'] = array(
-    'bundle' => 'program',
-    'default_value' => NULL,
-    'deleted' => 0,
-    'description' => '',
-    'display' => array(
-      'at_a_glance' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 29,
-      ),
-      'contact' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 18,
-      ),
-      'default' => array(
-        'label' => 'above',
-        'module' => 'entityreference',
-        'settings' => array(
-          'field_delimiter' => '',
-          'link' => FALSE,
-          'linked_field' => array(
-            'advanced' => array(
-              'class' => '',
-              'rel' => '',
-              'target' => '',
-              'text' => '',
-              'title' => '',
-            ),
-            'destination' => '',
-            'linked' => 0,
-          ),
-        ),
-        'type' => 'entityreference_label',
-        'weight' => 18,
-      ),
-      'full' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 29,
-      ),
-      'listing' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 14,
-      ),
-      'page_header' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 28,
-      ),
-      'search_listing' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 27,
-      ),
-      'teaser' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 0,
-      ),
-    ),
-    'ds_extras_field_template' => '',
-    'entity_type' => 'node',
-    'entityconnect_unload_add' => 1,
-    'entityconnect_unload_edit' => 1,
-    'field_name' => 'field_program_image',
-    'label' => 'Featured Image',
-    'required' => 0,
-    'settings' => array(
-      'user_register_form' => FALSE,
-    ),
-    'widget' => array(
-      'active' => 1,
-      'module' => 'entityreference',
-      'settings' => array(
-        'match_operator' => 'CONTAINS',
-        'path' => '',
-        'references_dialog_add' => 1,
-        'references_dialog_edit' => 1,
-        'references_dialog_search' => 1,
-        'references_dialog_search_view' => '',
-        'size' => 60,
-      ),
-      'type' => 'entityreference_autocomplete',
-      'weight' => 20,
+      'weight' => 29,
     ),
   );
 
@@ -721,7 +623,7 @@ function gie_program_field_default_field_instances() {
     'bundle' => 'program',
     'default_value' => NULL,
     'deleted' => 0,
-    'description' => '',
+    'description' => 'Link to your program\'s website.',
     'display' => array(
       'at_a_glance' => array(
         'label' => 'above',
@@ -827,7 +729,7 @@ function gie_program_field_default_field_instances() {
   $field_instances['node-program-field_program_logo'] = array(
     'bundle' => 'program',
     'deleted' => 0,
-    'description' => '',
+    'description' => 'Upload your program\'s hi-resolution logo.',
     'display' => array(
       'at_a_glance' => array(
         'label' => 'above',
@@ -959,7 +861,7 @@ function gie_program_field_default_field_instances() {
         'progress_indicator' => 'throbber',
       ),
       'type' => 'image_image',
-      'weight' => 1,
+      'weight' => 2,
     ),
   );
 
@@ -968,7 +870,7 @@ function gie_program_field_default_field_instances() {
     'bundle' => 'program',
     'default_value' => NULL,
     'deleted' => 0,
-    'description' => '',
+    'description' => 'The objectives of your program.',
     'display' => array(
       'at_a_glance' => array(
         'label' => 'above',
@@ -1089,7 +991,7 @@ function gie_program_field_default_field_instances() {
         'rows' => 5,
       ),
       'type' => 'text_textarea',
-      'weight' => 9,
+      'weight' => 24,
     ),
   );
 
@@ -1098,7 +1000,7 @@ function gie_program_field_default_field_instances() {
     'bundle' => 'program',
     'default_value' => NULL,
     'deleted' => 0,
-    'description' => '',
+    'description' => 'Type the organization or programs that this program is partnered with. They must have an organization profile in order to appear on your page. Please encourage your partners to create organization profiles and user profiles on the Exchange if they don\'t appear.',
     'display' => array(
       'at_a_glance' => array(
         'label' => 'above',
@@ -1187,7 +1089,7 @@ function gie_program_field_default_field_instances() {
         'size' => 60,
       ),
       'type' => 'entityreference_autocomplete',
-      'weight' => 6,
+      'weight' => 8,
     ),
   );
 
@@ -1196,7 +1098,7 @@ function gie_program_field_default_field_instances() {
     'bundle' => 'program',
     'default_value' => NULL,
     'deleted' => 0,
-    'description' => '',
+    'description' => 'The point of contact must be someone with a user profile in the Exchange. Start writing a name  (first name initial last name e.g. kshipley) to see if it comes up in the Exchange member directory. If not, create a profile or email the person to invite them to create a profile. If no point of contact is listed, there will be no point of contact listed on the program profile.',
     'display' => array(
       'at_a_glance' => array(
         'label' => 'above',
@@ -1301,7 +1203,7 @@ function gie_program_field_default_field_instances() {
         'size' => 60,
       ),
       'type' => 'entityreference_autocomplete',
-      'weight' => 5,
+      'weight' => 9,
     ),
   );
 
@@ -1310,7 +1212,7 @@ function gie_program_field_default_field_instances() {
     'bundle' => 'program',
     'default_value' => NULL,
     'deleted' => 0,
-    'description' => '',
+    'description' => 'What is the problem or challenge that your program is trying to address. ',
     'display' => array(
       'at_a_glance' => array(
         'label' => 'above',
@@ -1431,7 +1333,7 @@ function gie_program_field_default_field_instances() {
         'rows' => 5,
       ),
       'type' => 'text_textarea',
-      'weight' => 17,
+      'weight' => 25,
     ),
   );
 
@@ -1439,7 +1341,7 @@ function gie_program_field_default_field_instances() {
   $field_instances['node-program-field_program_start'] = array(
     'bundle' => 'program',
     'deleted' => 0,
-    'description' => '',
+    'description' => 'The start date of your program, if applicable. ',
     'display' => array(
       'at_a_glance' => array(
         'label' => 'above',
@@ -1533,7 +1435,7 @@ function gie_program_field_default_field_instances() {
         'year_range' => '-3:+3',
       ),
       'type' => 'date_popup',
-      'weight' => 12,
+      'weight' => 28,
     ),
   );
 
@@ -1542,7 +1444,7 @@ function gie_program_field_default_field_instances() {
     'bundle' => 'program',
     'default_value' => NULL,
     'deleted' => 0,
-    'description' => '',
+    'description' => 'The latest activities of your program. ',
     'display' => array(
       'at_a_glance' => array(
         'label' => 'above',
@@ -1663,7 +1565,7 @@ function gie_program_field_default_field_instances() {
         'rows' => 5,
       ),
       'type' => 'text_textarea',
-      'weight' => 14,
+      'weight' => 23,
     ),
   );
 
@@ -1672,7 +1574,7 @@ function gie_program_field_default_field_instances() {
     'bundle' => 'program',
     'default_value' => NULL,
     'deleted' => 0,
-    'description' => '',
+    'description' => 'Select the countries where your program is active. ',
     'display' => array(
       'at_a_glance' => array(
         'label' => 'above',
@@ -1741,7 +1643,7 @@ function gie_program_field_default_field_instances() {
     'entity_type' => 'node',
     'field_name' => 'field_term_country',
     'label' => 'Countries',
-    'required' => 0,
+    'required' => 1,
     'settings' => array(
       'user_register_form' => FALSE,
     ),
@@ -1752,7 +1654,7 @@ function gie_program_field_default_field_instances() {
         'apply_chosen' => 1,
       ),
       'type' => 'options_select',
-      'weight' => 15,
+      'weight' => 13,
     ),
   );
 
@@ -1761,7 +1663,7 @@ function gie_program_field_default_field_instances() {
     'bundle' => 'program',
     'default_value' => NULL,
     'deleted' => 0,
-    'description' => '',
+    'description' => 'Select the regions that apply to the countries above. ',
     'display' => array(
       'at_a_glance' => array(
         'label' => 'above',
@@ -1830,7 +1732,7 @@ function gie_program_field_default_field_instances() {
     'entity_type' => 'node',
     'field_name' => 'field_term_region',
     'label' => 'Region',
-    'required' => 0,
+    'required' => 1,
     'settings' => array(
       'user_register_form' => FALSE,
     ),
@@ -1841,7 +1743,7 @@ function gie_program_field_default_field_instances() {
         'apply_chosen' => 1,
       ),
       'type' => 'options_select',
-      'weight' => 16,
+      'weight' => 14,
     ),
   );
 
@@ -1850,7 +1752,7 @@ function gie_program_field_default_field_instances() {
     'bundle' => 'program',
     'default_value' => NULL,
     'deleted' => 0,
-    'description' => '',
+    'description' => 'Please select the sectors and sub-sectors related to your program. You will notice that the overall sectors are listed with their sub-sectors nested with a dash (-) symbol. Be sure to select the sectors and subsectors that apply. Do not select a sub-sector without also selecting the corresponding sector. Be sure to scroll to the bottom, there are a lot of sectors. We know this isn\'t so easy to use right now, but we will be improving this selection process.',
     'display' => array(
       'at_a_glance' => array(
         'label' => 'above',
@@ -1919,17 +1821,26 @@ function gie_program_field_default_field_instances() {
     'entity_type' => 'node',
     'field_name' => 'field_term_sector',
     'label' => 'Sector',
-    'required' => 0,
+    'required' => 1,
     'settings' => array(
       'user_register_form' => FALSE,
     ),
     'widget' => array(
       'active' => 1,
-      'module' => 'options',
+      'module' => 'term_reference_tree',
       'settings' => array(
         'apply_chosen' => 1,
+        'cascading_selection' => 0,
+        'filter_view' => '',
+        'leaves_only' => 0,
+        'max_depth' => '',
+        'parent_term_id' => '',
+        'select_parents' => 0,
+        'start_minimized' => 1,
+        'token_display' => '',
+        'track_list' => 0,
       ),
-      'type' => 'options_select',
+      'type' => 'term_reference_tree',
       'weight' => 11,
     ),
   );
@@ -1939,7 +1850,7 @@ function gie_program_field_default_field_instances() {
     'bundle' => 'program',
     'default_value' => NULL,
     'deleted' => 0,
-    'description' => '',
+    'description' => 'Select any (or none) topics that you think apply to your program. Topics include issues that we think may be of interest to Exchange users. ',
     'display' => array(
       'at_a_glance' => array(
         'label' => 'above',
@@ -2019,7 +1930,7 @@ function gie_program_field_default_field_instances() {
         'apply_chosen' => 1,
       ),
       'type' => 'options_select',
-      'weight' => 10,
+      'weight' => 12,
     ),
   );
 
@@ -2028,7 +1939,7 @@ function gie_program_field_default_field_instances() {
     'bundle' => 'program',
     'default_value' => NULL,
     'deleted' => 0,
-    'description' => '',
+    'description' => 'The title of the program.',
     'display' => array(
       'at_a_glance' => array(
         'label' => 'above',
@@ -2113,11 +2024,38 @@ function gie_program_field_default_field_instances() {
         'weight' => 0,
       ),
     ),
+    'ds_extras_field_template' => '',
     'entity_type' => 'node',
     'field_name' => 'title_field',
-    'label' => 'Title',
-    'required' => TRUE,
+    'label' => 'Program Title',
+    'required' => 1,
     'settings' => array(
+      'better_formats' => array(
+        'allowed_formats' => array(
+          'comments_filtered' => 'comments_filtered',
+          'filtered_html' => 'filtered_html',
+          'full_html' => 'full_html',
+          'plain_text' => 'plain_text',
+        ),
+        'allowed_formats_toggle' => 0,
+        'default_order_toggle' => 0,
+        'default_order_wrapper' => array(
+          'formats' => array(
+            'comments_filtered' => array(
+              'weight' => 0,
+            ),
+            'filtered_html' => array(
+              'weight' => 0,
+            ),
+            'full_html' => array(
+              'weight' => 1,
+            ),
+            'plain_text' => array(
+              'weight' => 10,
+            ),
+          ),
+        ),
+      ),
       'hide_label' => array(
         'entity' => 0,
         'page' => 0,
@@ -2126,6 +2064,7 @@ function gie_program_field_default_field_instances() {
       'user_register_form' => FALSE,
     ),
     'widget' => array(
+      'active' => 1,
       'module' => 'text',
       'settings' => array(
         'size' => 60,
@@ -2137,25 +2076,41 @@ function gie_program_field_default_field_instances() {
 
   // Translatables
   // Included for use with string extractors like potx.
+  t('A short description of your program.');
   t('Address');
   t('Budget');
   t('Countries');
-  t('Descripton');
   t('Expected End Date');
-  t('Featured Image');
   t('Funding Type');
   t('Link URL');
+  t('Link to your program\'s website.');
   t('Logo');
   t('Objectives');
   t('Partners');
+  t('Please select the sectors and sub-sectors related to your program. You will notice that the overall sectors are listed with their sub-sectors nested with a dash (-) symbol. Be sure to select the sectors and subsectors that apply. Do not select a sub-sector without also selecting the corresponding sector. Be sure to scroll to the bottom, there are a lot of sectors. We know this isn\'t so easy to use right now, but we will be improving this selection process.');
   t('Point of Contact');
   t('Problem');
   t('Program Start Date');
   t('Program Status Update');
+  t('Program Title');
   t('Region');
   t('Sector');
-  t('Title');
+  t('Select any (or none) topics that you think apply to your program. Topics include issues that we think may be of interest to Exchange users. ');
+  t('Select the countries where your program is active. ');
+  t('Select the regions that apply to the countries above. ');
+  t('Short Description');
+  t('The end date of your program, if applicable. ');
+  t('The latest activities of your program. ');
+  t('The mailing address of your program. ');
+  t('The objectives of your program.');
+  t('The point of contact must be someone with a user profile in the Exchange. Start writing a name  (first name initial last name e.g. kshipley) to see if it comes up in the Exchange member directory. If not, create a profile or email the person to invite them to create a profile. If no point of contact is listed, there will be no point of contact listed on the program profile.');
+  t('The start date of your program, if applicable. ');
+  t('The title of the program.');
+  t('The total budget of your program, if applicable. ');
   t('Topic');
+  t('Type the organization or programs that this program is partnered with. They must have an organization profile in order to appear on your page. Please encourage your partners to create organization profiles and user profiles on the Exchange if they don\'t appear.');
+  t('Upload your program\'s hi-resolution logo.');
+  t('What is the problem or challenge that your program is trying to address. ');
 
   return $field_instances;
 }
