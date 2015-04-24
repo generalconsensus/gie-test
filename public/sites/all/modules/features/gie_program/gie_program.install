@@ -51,3 +51,11 @@ function gie_program_update_7000() {
 function gie_program_update_7001() {
     gie_program_add_default_image();
 }
+
+/**
+ * Delete Featured Image field.
+ */
+function gie_program_update_7002() {
+    field_delete_field('field_program_image');
+    field_purge_batch(1);
+}

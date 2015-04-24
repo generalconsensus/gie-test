@@ -92,41 +92,6 @@ function gie_program_field_default_field_bases() {
     'type' => 'datetime',
   );
 
-  // Exported field_base: 'field_program_image'
-  $field_bases['field_program_image'] = array(
-    'active' => 1,
-    'cardinality' => 1,
-    'deleted' => 0,
-    'entity_types' => array(),
-    'field_name' => 'field_program_image',
-    'indexes' => array(
-      'target_id' => array(
-        0 => 'target_id',
-      ),
-    ),
-    'locked' => 0,
-    'module' => 'entityreference',
-    'settings' => array(
-      'handler' => 'base',
-      'handler_settings' => array(
-        'behaviors' => array(
-          'views-select-list' => array(
-            'status' => 0,
-          ),
-        ),
-        'sort' => array(
-          'type' => 'none',
-        ),
-        'target_bundles' => array(
-          'image' => 'image',
-        ),
-      ),
-      'target_type' => 'asset',
-    ),
-    'translatable' => 0,
-    'type' => 'entityreference',
-  );
-
   // Exported field_base: 'field_program_link'
   $field_bases['field_program_link'] = array(
     'active' => 1,
@@ -171,7 +136,7 @@ function gie_program_field_default_field_bases() {
     'locked' => 0,
     'module' => 'image',
     'settings' => array(
-      'default_image' => 109,
+      'default_image' => 0,
       'uri_scheme' => 'public',
     ),
     'translatable' => 0,
@@ -224,6 +189,7 @@ function gie_program_field_default_field_bases() {
         ),
         'target_bundles' => array(
           'organization' => 'organization',
+          'program' => 'program',
         ),
       ),
       'target_type' => 'node',
