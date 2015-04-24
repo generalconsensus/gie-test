@@ -1,0 +1,26 @@
+.view--subterms {}
+
+.views-field-name {
+	background-color: $blue;
+	border-bottom: 1px solid $border-color;
+	padding: 10px 25px 10px 10px;
+	position: relative;
+	a {
+		color: $button-text-color; 
+		font-weight: 400;
+		text-decoration: none;
+	}
+	&:hover {
+		background-color: darken($blue, 10%);
+	}
+	&:after {
+		color: $button-text-color;
+		content: '>';
+		display: inline-block;
+		font-size: $font-size-lg + 2px;
+		font-weight: 100;
+		position: absolute;
+		right: 10px;
+		top: 10px;
+	}
+}
