@@ -165,6 +165,7 @@ function gie_funding_field_group_info() {
       0 => 'field_funding_author',
       1 => 'field_funding_eligibility',
       2 => 'field_funding_guidance',
+      3 => 'field_related_programs',
     ),
     'format_type' => 'div',
     'format_settings' => array(
