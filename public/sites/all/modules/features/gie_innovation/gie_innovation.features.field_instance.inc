@@ -970,7 +970,7 @@ function gie_innovation_field_default_field_instances() {
     'ds_extras_field_template' => '',
     'entity_type' => 'node',
     'field_name' => 'field_innovation_desc',
-    'label' => 'Description',
+    'label' => 'Short Description',
     'required' => 1,
     'settings' => array(
       'better_formats' => array(
@@ -1006,7 +1006,7 @@ function gie_innovation_field_default_field_instances() {
       'active' => 1,
       'module' => 'text',
       'settings' => array(
-        'rows' => 5,
+        'rows' => 3,
       ),
       'type' => 'text_textarea',
       'weight' => 8,
@@ -4681,6 +4681,7 @@ function gie_innovation_field_default_field_instances() {
   t('Share the URL for your innovation website ');
   t('Share the latest status and activities of your innovation ');
   t('Share your next steps for growing your innovation');
+  t('Short Description');
   t('Status Update');
   t('Strategy for expanding use of your innovation');
   t('Subject');
