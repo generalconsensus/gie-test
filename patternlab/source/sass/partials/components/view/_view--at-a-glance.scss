@@ -24,10 +24,19 @@
     .view {
       clear: both;
       padding-left: 0;
-    }
+    } 
   }
   .views-field {
     clear: both;
+  }
+  .has-icon--amount {
+    @extend %view--at-a-glance__icon-field;
+    &:before {
+      @extend %cardicon;
+      @include image-replace(22px,22px);
+      @include svg-background(icon-funding-22-22-blue);
+      background-repeat: no-repeat; 
+    }
   }
   .has-icon--comment {
     @extend %view--at-a-glance__icon-field;
