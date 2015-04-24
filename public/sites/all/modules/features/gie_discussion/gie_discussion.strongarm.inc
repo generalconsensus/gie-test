@@ -141,6 +141,12 @@ function gie_discussion_strongarm() {
       'search_listing' => array(
         'custom_settings' => TRUE,
       ),
+      'page_header' => array(
+        'custom_settings' => TRUE,
+      ),
+      'details' => array(
+        'custom_settings' => FALSE,
+      ),
     ),
     'extra_fields' => array(
       'form' => array(
@@ -166,7 +172,7 @@ function gie_discussion_strongarm() {
             'visible' => FALSE,
           ),
           'listing' => array(
-            'weight' => '16',
+            'weight' => '15',
             'visible' => FALSE,
           ),
           'teaser_date' => array(
@@ -177,11 +183,15 @@ function gie_discussion_strongarm() {
             'weight' => '16',
             'visible' => FALSE,
           ),
+          'page_header' => array(
+            'weight' => '14',
+            'visible' => FALSE,
+          ),
         ),
         'content_author_author_photo_display' => array(
           'full' => array(
-            'weight' => '0',
-            'visible' => TRUE,
+            'weight' => '2',
+            'visible' => FALSE,
           ),
           'teaser' => array(
             'weight' => '8',
@@ -202,6 +212,10 @@ function gie_discussion_strongarm() {
           'search_listing' => array(
             'weight' => '15',
             'visible' => FALSE,
+          ),
+          'page_header' => array(
+            'weight' => '0',
+            'visible' => TRUE,
           ),
         ),
       ),
