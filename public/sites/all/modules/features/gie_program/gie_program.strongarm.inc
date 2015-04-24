@@ -117,10 +117,10 @@ function gie_program_strongarm() {
     'extra_fields' => array(
       'form' => array(
         'path' => array(
-          'weight' => '3',
+          'weight' => '5',
         ),
         'rabbit_hole' => array(
-          'weight' => '2',
+          'weight' => '4',
         ),
       ),
       'display' => array(
