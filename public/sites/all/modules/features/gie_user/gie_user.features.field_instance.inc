@@ -306,6 +306,111 @@ function gie_user_field_default_field_instances() {
     ),
   );
 
+  // Exported field_instance: 'user-user-field_newsletter_sign_up'
+  $field_instances['user-user-field_newsletter_sign_up'] = array(
+    'bundle' => 'user',
+    'default_value' => array(
+      0 => array(
+        'subscribe' => 0,
+      ),
+    ),
+    'deleted' => 0,
+    'description' => 'Join the Global Innovation Exchange mailing list! You will receive important updates about the Exchange, upcoming releases, and featured content. ',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'mailchimp_lists',
+        'settings' => array(
+          'field_delimiter' => '',
+          'interest_groups' => array(),
+          'linked_field' => array(
+            'advanced' => array(
+              'class' => '',
+              'rel' => '',
+              'target' => '',
+              'text' => '',
+              'title' => '',
+            ),
+            'destination' => '',
+            'linked' => 0,
+          ),
+          'show_interest_groups' => FALSE,
+        ),
+        'type' => 'mailchimp_lists_subscribe_default',
+        'weight' => 24,
+      ),
+      'full' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'listing' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'resource_user' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'title' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'user_teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'user_teaser_summary' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'user_teaser_with_motto' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'ds_extras_field_template' => '',
+    'entity_type' => 'user',
+    'field_name' => 'field_newsletter_sign_up',
+    'label' => 'Newsletter Sign Up',
+    'required' => 0,
+    'settings' => array(
+      'interest_groups_title' => 'Interest Groups',
+      'mergefields' => array(
+        'EMAIL' => 'mail',
+        'FNAME' => 'flag_follow_flagged:field_user_firstname',
+        'LNAME' => 'flag_follow_flagged:field_user_lastname',
+      ),
+      'options' => array(
+        'interest_groups' => array(),
+        'subscribe' => FALSE,
+      ),
+      'show_interest_groups' => 0,
+      'unsubscribe_on_delete' => 1,
+      'user_register_form' => 1,
+    ),
+    'widget' => array(
+      'active' => 0,
+      'module' => 'mailchimp_lists',
+      'settings' => array(),
+      'type' => 'mailchimp_lists_select',
+      'weight' => 19,
+    ),
+  );
+
   // Exported field_instance: 'user-user-field_term_region'
   $field_instances['user-user-field_term_region'] = array(
     'bundle' => 'user',
@@ -475,11 +580,20 @@ function gie_user_field_default_field_instances() {
     ),
     'widget' => array(
       'active' => 1,
-      'module' => 'options',
+      'module' => 'term_reference_tree',
       'settings' => array(
         'apply_chosen' => 1,
+        'cascading_selection' => 0,
+        'filter_view' => '',
+        'leaves_only' => 0,
+        'max_depth' => '',
+        'parent_term_id' => '',
+        'select_parents' => 0,
+        'start_minimized' => 0,
+        'token_display' => '',
+        'track_list' => 0,
       ),
-      'type' => 'options_select',
+      'type' => 'term_reference_tree',
       'weight' => 8,
     ),
   );
@@ -2720,12 +2834,14 @@ function gie_user_field_default_field_instances() {
   t('Facebook');
   t('First Name');
   t('Is there a motto, saying, or famous quote that inspires you?');
+  t('Join the Global Innovation Exchange mailing list! You will receive important updates about the Exchange, upcoming releases, and featured content. ');
   t('Last Name');
   t('LinkedIn');
   t('List any skills you have. If another user has previously entered a skill it will show up in a drop down list, if it is a new skill then it will be created. These will later be used to match you with innovations in need of your skills on the Exchange. ');
   t('Member Type');
   t('My Motto');
   t('Name');
+  t('Newsletter Sign Up');
   t('Organizational Affiliations');
   t('Other Interests');
   t('Please select the sectors and sub-sectors you are interested in. This will drive the Exchange to send you information that is relevant to you. You will notice that the overall sectors are listed with their sub-sectors nested with a dash )(-) symbol beneath. Be sure to select the sectors and subsectors that apply. If you select a sub-sector it will not automatically select its main sector. Be sure to scroll to the bottom, there are a lot of sectors/sub-sectors. We know this isn\'t so easy to use right now, but as we get feedback from users we\'ll be improving this selection process.');
