@@ -589,7 +589,7 @@ function gie_user_field_default_field_instances() {
         'max_depth' => '',
         'parent_term_id' => '',
         'select_parents' => 0,
-        'start_minimized' => 0,
+        'start_minimized' => 1,
         'token_display' => '',
         'track_list' => 0,
       ),
@@ -1159,7 +1159,7 @@ function gie_user_field_default_field_instances() {
       'active' => 1,
       'module' => 'text',
       'settings' => array(
-        'size' => 60,
+        'size' => 256,
       ),
       'type' => 'text_textfield',
       'weight' => 10,
@@ -1598,7 +1598,7 @@ function gie_user_field_default_field_instances() {
       'active' => 1,
       'module' => 'text',
       'settings' => array(
-        'size' => 60,
+        'size' => 256,
       ),
       'type' => 'text_textfield',
       'weight' => 9,
@@ -1920,7 +1920,7 @@ function gie_user_field_default_field_instances() {
         'size' => 60,
       ),
       'type' => 'taxonomy_autocomplete',
-      'weight' => 14,
+      'weight' => 15,
     ),
   );
 
@@ -2222,7 +2222,7 @@ function gie_user_field_default_field_instances() {
         'size' => 60,
       ),
       'type' => 'entityreference_autocomplete',
-      'weight' => 13,
+      'weight' => 14,
     ),
   );
 
@@ -2308,11 +2308,13 @@ function gie_user_field_default_field_instances() {
     ),
     'widget' => array(
       'active' => 1,
-      'module' => 'options',
+      'module' => 'taxonomy',
       'settings' => array(
         'apply_chosen' => 1,
+        'autocomplete_path' => 'taxonomy/autocomplete',
+        'size' => 60,
       ),
-      'type' => 'options_select',
+      'type' => 'taxonomy_autocomplete',
       'weight' => 11,
     ),
   );
@@ -2413,7 +2415,7 @@ function gie_user_field_default_field_instances() {
     'ds_extras_field_template' => '',
     'entity_type' => 'user',
     'field_name' => 'field_user_summary',
-    'label' => 'Summary',
+    'label' => 'About Me',
     'required' => 0,
     'settings' => array(
       'better_formats' => array(
@@ -2442,7 +2444,7 @@ function gie_user_field_default_field_instances() {
           ),
         ),
       ),
-      'text_processing' => 0,
+      'text_processing' => 1,
       'user_register_form' => 1,
     ),
     'widget' => array(
@@ -2709,7 +2711,7 @@ function gie_user_field_default_field_instances() {
       'active' => 1,
       'module' => 'text',
       'settings' => array(
-        'size' => 60,
+        'size' => 256,
       ),
       'type' => 'text_textfield',
       'weight' => 8,
@@ -2825,6 +2827,7 @@ function gie_user_field_default_field_instances() {
 
   // Translatables
   // Included for use with string extractors like potx.
+  t('About Me');
   t('About Me!');
   t('Address');
   t('Company / Institution');
@@ -2860,7 +2863,6 @@ function gie_user_field_default_field_instances() {
   t('Share your education background and degrees.');
   t('Share your mailing address');
   t('Skills');
-  t('Summary');
   t('The company you currently work for. This must be an organization with an organization profile on the Exchange. If it doesn\'t show up in the list as you start to type then create a new one!');
   t('Title');
   t('Topics include issue that may be of interest to Exchange users. Select any (or none) topics that you think apply to your innovation.');
