@@ -106,7 +106,6 @@ features[field_instance][] = taxonomy_term-organization_type-name_field
 features[node][] = organization
 features[page_manager_pages][] = organizations
 features[pane_container][] = organizations_introduction
-features[pane_data][] = organizations_introduction_und
 features[panelizer_defaults][] = node:organization:default
 features[taxonomy][] = expertise_type
 features[taxonomy][] = organization_role
