@@ -951,7 +951,7 @@ function gie_organization_field_default_field_instances() {
         'module' => 'image',
         'settings' => array(
           'field_delimiter' => '',
-          'image_link' => '',
+          'image_link' => 'content',
           'image_style' => 'org_teaser',
           'linked_field' => array(
             'advanced' => array(
