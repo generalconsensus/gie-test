@@ -5,3 +5,11 @@
  */
 
 include_once 'gie_search.features.inc';
+
+/**
+ * Implements hook_form_BASE_FORM_ID_alter().
+ */
+function gie_search_form_search_api_page_search_form_alter(&$form, &$form_state, $form_id) {
+  // Change the Search Page block's placeholder
+  $form['keys_1']['#attributes']['placeholder'] = 'START SEARCHING...';
+}
