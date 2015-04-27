@@ -21,11 +21,9 @@ function gie_taxonomies_field_group_info() {
   $field_group->parent_name = '';
   $field_group->data = array(
     'label' => 'Card Content',
-    'weight' => '7',
+    'weight' => '0',
     'children' => array(
-      0 => 'description_field',
-      1 => 'title',
-      2 => 'more_link',
+      0 => 'title',
     ),
     'format_type' => 'div',
     'format_settings' => array(
