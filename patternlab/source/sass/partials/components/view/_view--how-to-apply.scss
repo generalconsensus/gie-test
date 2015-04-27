@@ -1,20 +1,7 @@
 .view--how-to-apply {
+  color: white !important;
   overflow: hidden;
   padding-left: 1.5em;
-}
-
-.button--alt {
-  background-color: $red;
-  line-height: 35px;
   text-transform: uppercase;
-  &:before {
-    content: '';
-    background-image: url('../images/bg/edit.png');
-    display: inline-block;
-    height: 22px;
-    position: relative;
-    right: 5px;
-    top: 5px;
-    width: 22px;
-  }
+  
 }

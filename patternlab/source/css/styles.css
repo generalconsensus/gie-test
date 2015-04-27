@@ -148,7 +148,7 @@
 
 /* line 83, ../sass/partials/global/extendables/_button.scss */
 .sharethis-buttons .st_sharethis_custom, .flag-favorite a, .button--add, .button--member, .flag-follow a,
-.flag-follow-taxonomy a {
+.flag-follow-taxonomy a, .button--edit {
   padding-left: 50px;
   padding-right: 2em;
   position: relative;
@@ -156,7 +156,7 @@
 }
 /* line 88, ../sass/partials/global/extendables/_button.scss */
 .sharethis-buttons .st_sharethis_custom:before, .flag-favorite a:before, .button--add:before, .button--member:before, .flag-follow a:before,
-.flag-follow-taxonomy a:before {
+.flag-follow-taxonomy a:before, .button--edit:before {
   height: 20px;
   overflow: hidden;
   width: 20px;
@@ -168,7 +168,7 @@
 }
 /* line 14, ../sass/partials/global/helpers/_image-replace.scss */
 .sharethis-buttons .st_sharethis_custom:before:before, .flag-favorite a:before:before, .button--add:before:before, .button--member:before:before, .flag-follow a:before:before,
-.flag-follow-taxonomy a:before:before {
+.flag-follow-taxonomy a:before:before, .button--edit:before:before {
   content: "";
   display: block;
   height: 150%;
@@ -223,6 +223,21 @@
   height: 18px;
   top: 11px;
   width: 18px;
+}
+
+/* line 140, ../sass/partials/global/extendables/_button.scss */
+.button--edit {
+  color: white !important;
+  padding-left: 40px;
+}
+/* line 144, ../sass/partials/global/extendables/_button.scss */
+.button--edit:before {
+  background-image: url('../images/bg/edit.png');
+  background-image: -webkit-linear-gradient(transparent, transparent), url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4KPCEtLSBHZW5lcmF0ZWQgYnkgSWNvTW9vbi5pbyAtLT4KPCFET0NUWVBFIHN2ZyBQVUJMSUMgIi0vL1czQy8vRFREIFNWRyAxLjEvL0VOIiAiaHR0cDovL3d3dy53My5vcmcvR3JhcGhpY3MvU1ZHLzEuMS9EVEQvc3ZnMTEuZHRkIj4KPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHdpZHRoPSIyMiIgaGVpZ2h0PSIyMiIgdmlld0JveD0iMCAwIDIyIDIyIj4KPHBhdGggZmlsbD0iI2ZmZmZmZiIgZD0iTTcuMzQzIDEyLjUxN2wtMS41MTkgMy44OTggMy44MzEtMS41ODYtMi4zMTItMi4zMTJ6TTE4LjQ2MyA0LjE5MmwtMC40ODYtMC40ODZjLTAuNTM2LTAuNTM3LTEuNDA3LTAuNTM3LTEuOTQ0IDBsLTAuOTcyIDAuOTcyIDIuNDMgMi40MzEgMC45NzItMC45NzJjMC41MzgtMC41MzcgMC41MzgtMS40MDggMC0xLjk0NXpNNy40MiAxMi4zMTlsMC4zNDgtMC4zNDggMi40MyAyLjQzIDYuODA2LTYuODA2LTIuNDMtMi40MyAwLjQ4Ni0wLjQ4Ny03LjY0IDcuNjQxek0xNS44MTUgMTcuODc4bC0xMS43MDUgMC4wMDQgMC4wMDItMTEuNzA1IDguMTk2LTAuMDAzIDEuMjg0LTEuMzYxaC0xMC4xNzhjLTAuMzc5IDAtMC42ODggMC4zMDctMC42ODggMC42ODh2MTMuMDYzYzAgMC4zOCAwLjMwOCAwLjY4OCAwLjY4OCAwLjY4OGgxMy4wNjNjMC4zOCAwIDAuNjg4LTAuMzA3IDAuNjg4LTAuNjg4di05LjY2NWwtMS4zODUgMS4zNTkgMC4wMzcgNy42MjF6Ij48L3BhdGg+Cjwvc3ZnPgo=');
+  background-image: linear-gradient(transparent, transparent), url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4KPCEtLSBHZW5lcmF0ZWQgYnkgSWNvTW9vbi5pbyAtLT4KPCFET0NUWVBFIHN2ZyBQVUJMSUMgIi0vL1czQy8vRFREIFNWRyAxLjEvL0VOIiAiaHR0cDovL3d3dy53My5vcmcvR3JhcGhpY3MvU1ZHLzEuMS9EVEQvc3ZnMTEuZHRkIj4KPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHdpZHRoPSIyMiIgaGVpZ2h0PSIyMiIgdmlld0JveD0iMCAwIDIyIDIyIj4KPHBhdGggZmlsbD0iI2ZmZmZmZiIgZD0iTTcuMzQzIDEyLjUxN2wtMS41MTkgMy44OTggMy44MzEtMS41ODYtMi4zMTItMi4zMTJ6TTE4LjQ2MyA0LjE5MmwtMC40ODYtMC40ODZjLTAuNTM2LTAuNTM3LTEuNDA3LTAuNTM3LTEuOTQ0IDBsLTAuOTcyIDAuOTcyIDIuNDMgMi40MzEgMC45NzItMC45NzJjMC41MzgtMC41MzcgMC41MzgtMS40MDggMC0xLjk0NXpNNy40MiAxMi4zMTlsMC4zNDgtMC4zNDggMi40MyAyLjQzIDYuODA2LTYuODA2LTIuNDMtMi40MyAwLjQ4Ni0wLjQ4Ny03LjY0IDcuNjQxek0xNS44MTUgMTcuODc4bC0xMS43MDUgMC4wMDQgMC4wMDItMTEuNzA1IDguMTk2LTAuMDAzIDEuMjg0LTEuMzYxaC0xMC4xNzhjLTAuMzc5IDAtMC42ODggMC4zMDctMC42ODggMC42ODh2MTMuMDYzYzAgMC4zOCAwLjMwOCAwLjY4OCAwLjY4OCAwLjY4OGgxMy4wNjNjMC4zOCAwIDAuNjg4LTAuMzA3IDAuNjg4LTAuNjg4di05LjY2NWwtMS4zODUgMS4zNTkgMC4wMzcgNy42MjF6Ij48L3BhdGg+Cjwvc3ZnPgo=');
+  height: 20px;
+  top: 8px;
+  width: 20px;
 }
 
 /* line 15, ../sass/partials/base/_normalize.scss */
@@ -4756,13 +4771,12 @@ tr.drag-previous {
 }
 /* line 34, ../sass/partials/components/view/_view--at-a-glance.scss */
 .view--at-a-glance .has-icon--amount:before {
-  height: 22px;
+  height: 20px;
   overflow: hidden;
-  width: 22px;
-  background-image: url('../images/bg/icon-funding-22-22-blue.png');
+  width: 20px;
+  background-image: url('../images/bg/icon-funding-20-20-blue.png');
   background-image: -webkit-linear-gradient(transparent, transparent), url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4KPCEtLSBHZW5lcmF0ZWQgYnkgSWNvTW9vbi5pbyAtLT4KPCFET0NUWVBFIHN2ZyBQVUJMSUMgIi0vL1czQy8vRFREIFNWRyAxLjEvL0VOIiAiaHR0cDovL3d3dy53My5vcmcvR3JhcGhpY3MvU1ZHLzEuMS9EVEQvc3ZnMTEuZHRkIj4KPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHdpZHRoPSIyMCIgaGVpZ2h0PSIyMCIgdmlld0JveD0iMCAwIDIwIDIwIj4KPHBhdGggZmlsbD0iIzcwOTBiNyIgZD0iTTEwIDIwYy01LjUgMC0xMC00LjUtMTAtMTBzNC41LTEwIDEwLTEwYzUuNSAwIDEwIDQuNSAxMCAxMHMtNC41IDEwLTEwIDEwek0xMCAxLjJjLTQuOSAwLTguOCA0LTguOCA4LjggMCA0LjkgNCA4LjggOC44IDguOCA0LjkgMCA4LjgtNCA4LjgtOC44IDAtNC45LTMuOS04LjgtOC44LTguOHoiPjwvcGF0aD4KPHBhdGggZmlsbD0iIzcwOTBiNyIgZD0iTTEzLjEgMTAuOGMtMC4yLTAuNC0wLjQtMC43LTAuNy0wLjlzLTAuNi0wLjQtMS0wLjVjLTAuMy0wLjEtMC42LTAuMi0wLjktMC4zdi0zLjJjMC4xIDAgMC4zIDAgMC40IDAuMSAwLjIgMC4xIDAuNCAwLjIgMC41IDAuM3MwLjIgMC4zIDAuMyAwLjRjMC4xIDAuMiAwLjEgMC40IDAuMSAwLjZsMS4yLTAuMWMwLTAuNC0wLjEtMC44LTAuMi0xLjFzLTAuNC0wLjYtMC42LTAuOGMtMC4zLTAuMi0wLjYtMC40LTAuOS0wLjUtMC4yLTAuMS0wLjUtMC4xLTAuNy0wLjF2LTAuNmgtMS4ydjAuNmMtMC4zIDAtMC41IDAuMS0wLjcgMC4xLTAuNCAwLjItMC43IDAuMy0wLjkgMC42LTAuMyAwLjItMC41IDAuNS0wLjcgMC44LTAuMSAwLjQtMC4yIDAuNy0wLjIgMS4xczAuMSAwLjggMC4yIDEuMmMwLjIgMC4zIDAuNCAwLjYgMC42IDAuOCAwLjMgMC4yIDAuNiAwLjQgMSAwLjUgMC4yIDAuMSAwLjQgMC4yIDAuNyAwLjJ2My42Yy0wLjMtMC4xLTAuNy0wLjItMC45LTAuNC0wLjMtMC4yLTAuNS0wLjYtMC42LTEgMC0wLjEgMC0wLjIgMC0wLjJ2LTAuM2wtMS4yIDAuMXYwLjNjMCAwLjEgMCAwLjIgMCAwLjQgMC4yIDAuOCAwLjUgMS40IDEuMSAxLjggMC40IDAuMyAxIDAuNSAxLjYgMC42djEuMWgxLjJ2LTEuMWMwLjMgMCAwLjUtMC4xIDAuOC0wLjIgMC40LTAuMSAwLjctMC4zIDEtMC41czAuNS0wLjUgMC43LTAuOGMwLjItMC4zIDAuMy0wLjcgMC4zLTEuMi0wLjEtMC42LTAuMS0xLTAuMy0xLjR6TTkuMSA4LjdjLTAuMy0wLjEtMC40LTAuMi0wLjYtMC4zLTAuMS0wLjEtMC4yLTAuMy0wLjMtMC40LTAuMS0wLjItMC4xLTAuNC0wLjEtMC43IDAtMC4yIDAtMC40IDAuMS0wLjZzMC4yLTAuMyAwLjQtMC41YzAuMS0wLjEgMC4zLTAuMiAwLjUtMC4zIDAuMSAwIDAuMi0wLjEgMC4zLTAuMXYyLjljLTAuMSAwLjEtMC4yIDAtMC4zIDB6TTEyIDEyLjdjLTAuMSAwLjItMC4yIDAuNC0wLjQgMC41cy0wLjQgMC4yLTAuNiAwLjNjLTAuMSAwLTAuMyAwLjEtMC40IDAuMXYtMy4zYzAuMiAwIDAuNCAwLjEgMC41IDAuMSAwLjIgMC4xIDAuNCAwLjIgMC42IDAuMyAwLjEgMC4xIDAuMiAwLjMgMC4zIDAuNXMwLjEgMC41IDAuMSAwLjhjMC4xIDAuMyAwIDAuNS0wLjEgMC43eiI+PC9wYXRoPgo8L3N2Zz4K');
   background-image: linear-gradient(transparent, transparent), url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4KPCEtLSBHZW5lcmF0ZWQgYnkgSWNvTW9vbi5pbyAtLT4KPCFET0NUWVBFIHN2ZyBQVUJMSUMgIi0vL1czQy8vRFREIFNWRyAxLjEvL0VOIiAiaHR0cDovL3d3dy53My5vcmcvR3JhcGhpY3MvU1ZHLzEuMS9EVEQvc3ZnMTEuZHRkIj4KPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHdpZHRoPSIyMCIgaGVpZ2h0PSIyMCIgdmlld0JveD0iMCAwIDIwIDIwIj4KPHBhdGggZmlsbD0iIzcwOTBiNyIgZD0iTTEwIDIwYy01LjUgMC0xMC00LjUtMTAtMTBzNC41LTEwIDEwLTEwYzUuNSAwIDEwIDQuNSAxMCAxMHMtNC41IDEwLTEwIDEwek0xMCAxLjJjLTQuOSAwLTguOCA0LTguOCA4LjggMCA0LjkgNCA4LjggOC44IDguOCA0LjkgMCA4LjgtNCA4LjgtOC44IDAtNC45LTMuOS04LjgtOC44LTguOHoiPjwvcGF0aD4KPHBhdGggZmlsbD0iIzcwOTBiNyIgZD0iTTEzLjEgMTAuOGMtMC4yLTAuNC0wLjQtMC43LTAuNy0wLjlzLTAuNi0wLjQtMS0wLjVjLTAuMy0wLjEtMC42LTAuMi0wLjktMC4zdi0zLjJjMC4xIDAgMC4zIDAgMC40IDAuMSAwLjIgMC4xIDAuNCAwLjIgMC41IDAuM3MwLjIgMC4zIDAuMyAwLjRjMC4xIDAuMiAwLjEgMC40IDAuMSAwLjZsMS4yLTAuMWMwLTAuNC0wLjEtMC44LTAuMi0xLjFzLTAuNC0wLjYtMC42LTAuOGMtMC4zLTAuMi0wLjYtMC40LTAuOS0wLjUtMC4yLTAuMS0wLjUtMC4xLTAuNy0wLjF2LTAuNmgtMS4ydjAuNmMtMC4zIDAtMC41IDAuMS0wLjcgMC4xLTAuNCAwLjItMC43IDAuMy0wLjkgMC42LTAuMyAwLjItMC41IDAuNS0wLjcgMC44LTAuMSAwLjQtMC4yIDAuNy0wLjIgMS4xczAuMSAwLjggMC4yIDEuMmMwLjIgMC4zIDAuNCAwLjYgMC42IDAuOCAwLjMgMC4yIDAuNiAwLjQgMSAwLjUgMC4yIDAuMSAwLjQgMC4yIDAuNyAwLjJ2My42Yy0wLjMtMC4xLTAuNy0wLjItMC45LTAuNC0wLjMtMC4yLTAuNS0wLjYtMC42LTEgMC0wLjEgMC0wLjIgMC0wLjJ2LTAuM2wtMS4yIDAuMXYwLjNjMCAwLjEgMCAwLjIgMCAwLjQgMC4yIDAuOCAwLjUgMS40IDEuMSAxLjggMC40IDAuMyAxIDAuNSAxLjYgMC42djEuMWgxLjJ2LTEuMWMwLjMgMCAwLjUtMC4xIDAuOC0wLjIgMC40LTAuMSAwLjctMC4zIDEtMC41czAuNS0wLjUgMC43LTAuOGMwLjItMC4zIDAuMy0wLjcgMC4zLTEuMi0wLjEtMC42LTAuMS0xLTAuMy0xLjR6TTkuMSA4LjdjLTAuMy0wLjEtMC40LTAuMi0wLjYtMC4zLTAuMS0wLjEtMC4yLTAuMy0wLjMtMC40LTAuMS0wLjItMC4xLTAuNC0wLjEtMC43IDAtMC4yIDAtMC40IDAuMS0wLjZzMC4yLTAuMyAwLjQtMC41YzAuMS0wLjEgMC4zLTAuMiAwLjUtMC4zIDAuMSAwIDAuMi0wLjEgMC4zLTAuMXYyLjljLTAuMSAwLjEtMC4yIDAtMC4zIDB6TTEyIDEyLjdjLTAuMSAwLjItMC4yIDAuNC0wLjQgMC41cy0wLjQgMC4yLTAuNiAwLjNjLTAuMSAwLTAuMyAwLjEtMC40IDAuMXYtMy4zYzAuMiAwIDAuNCAwLjEgMC41IDAuMSAwLjIgMC4xIDAuNCAwLjIgMC42IDAuMyAwLjEgMC4xIDAuMiAwLjMgMC4zIDAuNXMwLjEgMC41IDAuMSAwLjhjMC4xIDAuMyAwIDAuNS0wLjEgMC43eiI+PC9wYXRoPgo8L3N2Zz4K');
-  background-repeat: no-repeat;
 }
 /* line 14, ../sass/partials/global/helpers/_image-replace.scss */
 .view--at-a-glance .has-icon--amount:before:before {
@@ -4771,7 +4785,7 @@ tr.drag-previous {
   height: 150%;
   width: 0;
 }
-/* line 43, ../sass/partials/components/view/_view--at-a-glance.scss */
+/* line 42, ../sass/partials/components/view/_view--at-a-glance.scss */
 .view--at-a-glance .has-icon--comment:before {
   height: 17px;
   overflow: hidden;
@@ -4787,7 +4801,7 @@ tr.drag-previous {
   height: 150%;
   width: 0;
 }
-/* line 51, ../sass/partials/components/view/_view--at-a-glance.scss */
+/* line 50, ../sass/partials/components/view/_view--at-a-glance.scss */
 .view--at-a-glance .has-icon--camera:before {
   height: 17px;
   overflow: hidden;
@@ -4803,7 +4817,7 @@ tr.drag-previous {
   height: 150%;
   width: 0;
 }
-/* line 59, ../sass/partials/components/view/_view--at-a-glance.scss */
+/* line 58, ../sass/partials/components/view/_view--at-a-glance.scss */
 .view--at-a-glance .has-icon--favorite:before {
   height: 17px;
   overflow: hidden;
@@ -4819,7 +4833,7 @@ tr.drag-previous {
   height: 150%;
   width: 0;
 }
-/* line 67, ../sass/partials/components/view/_view--at-a-glance.scss */
+/* line 66, ../sass/partials/components/view/_view--at-a-glance.scss */
 .view--at-a-glance .has-icon--member:before {
   height: 17px;
   overflow: hidden;
@@ -4835,7 +4849,7 @@ tr.drag-previous {
   height: 150%;
   width: 0;
 }
-/* line 75, ../sass/partials/components/view/_view--at-a-glance.scss */
+/* line 74, ../sass/partials/components/view/_view--at-a-glance.scss */
 .view--at-a-glance .has-icon--organization:before {
   height: 17px;
   overflow: hidden;
@@ -4851,7 +4865,7 @@ tr.drag-previous {
   height: 150%;
   width: 0;
 }
-/* line 83, ../sass/partials/components/view/_view--at-a-glance.scss */
+/* line 82, ../sass/partials/components/view/_view--at-a-glance.scss */
 .view--at-a-glance .has-icon--evidence:before {
   height: 17px;
   overflow: hidden;
@@ -4867,7 +4881,7 @@ tr.drag-previous {
   height: 150%;
   width: 0;
 }
-/* line 91, ../sass/partials/components/view/_view--at-a-glance.scss */
+/* line 90, ../sass/partials/components/view/_view--at-a-glance.scss */
 .view--at-a-glance .has-icon--innovation:before {
   height: 20px;
   overflow: hidden;
@@ -4960,6 +4974,25 @@ tr.drag-previous {
 /* line 24, ../sass/partials/components/view/_view--card-view.scss */
 .view--card-view .views-row.third {
   padding-left: 0.5em;
+}
+
+/* line 1, ../sass/partials/components/view/_view--deadline.scss */
+.date-display-single {
+  background-image: url(../images/bg/large-blank-event1.png);
+  background-repeat: no-repeat;
+  display: block;
+  height: 73px;
+  overflow: hidden;
+  width: 73px;
+}
+/* line 8, ../sass/partials/components/view/_view--deadline.scss */
+.date-display-single .date-display-single__number {
+  color: #ed7d3a;
+  display: block;
+  font-size: 32px;
+  line-height: 73px;
+  padding: 0;
+  text-align: center;
 }
 
 /* line 3, ../sass/partials/components/view/_view--featured-assets.scss */
@@ -5192,26 +5225,10 @@ tr.drag-previous {
 
 /* line 1, ../sass/partials/components/view/_view--how-to-apply.scss */
 .view--how-to-apply {
+  color: white !important;
   overflow: hidden;
   padding-left: 1.5em;
-}
-
-/* line 6, ../sass/partials/components/view/_view--how-to-apply.scss */
-.button--alt {
-  background-color: #b71234;
-  line-height: 35px;
   text-transform: uppercase;
-}
-/* line 10, ../sass/partials/components/view/_view--how-to-apply.scss */
-.button--alt:before {
-  content: '';
-  background-image: url("../images/bg/edit.png");
-  display: inline-block;
-  height: 22px;
-  position: relative;
-  right: 5px;
-  top: 5px;
-  width: 22px;
 }
 
 /* line 2, ../sass/partials/components/view/_view--partners.scss */
