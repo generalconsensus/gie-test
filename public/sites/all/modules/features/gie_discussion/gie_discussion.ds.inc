@@ -30,11 +30,6 @@ function gie_discussion_ds_field_settings_info() {
         'ft' => array(),
       ),
     ),
-    'author' => array(
-      'weight' => '0',
-      'label' => 'hidden',
-      'format' => 'default',
-    ),
   );
   $export['comment|comment_node_discussion|default'] = $ds_fieldsetting;
 
@@ -283,7 +278,7 @@ function gie_discussion_ds_layout_settings_info() {
   $ds_layout->settings = array(
     'regions' => array(
       'media' => array(
-        0 => 'author',
+        0 => 'comment_author_entity_view_1',
       ),
       'main_content' => array(
         1 => 'post_date',
@@ -292,7 +287,7 @@ function gie_discussion_ds_layout_settings_info() {
       ),
     ),
     'fields' => array(
-      'author' => 'media',
+      'comment_author_entity_view_1' => 'media',
       'post_date' => 'main_content',
       'comment_body' => 'main_content',
       'links' => 'main_content',
