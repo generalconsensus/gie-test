@@ -385,7 +385,7 @@ function gie_user_field_default_field_instances() {
     'ds_extras_field_template' => '',
     'entity_type' => 'user',
     'field_name' => 'field_newsletter_sign_up',
-    'label' => 'Newsletter Sign Up',
+    'label' => 'Sign Up for Updates',
     'required' => 0,
     'settings' => array(
       'interest_groups_title' => 'Interest Groups',
@@ -702,13 +702,13 @@ function gie_user_field_default_field_instances() {
         'default_country' => 'US',
         'format_handlers' => array(
           'address' => 'address',
+          'address-optional' => 'address-optional',
           'address-hide-postal-code' => 0,
           'address-hide-street' => 0,
           'address-hide-country' => 0,
           'organisation' => 0,
           'name-full' => 0,
           'name-oneline' => 0,
-          'address-optional' => 0,
         ),
       ),
       'type' => 'addressfield_standard',
@@ -2844,7 +2844,6 @@ function gie_user_field_default_field_instances() {
   t('Member Type');
   t('My Motto');
   t('Name');
-  t('Newsletter Sign Up');
   t('Organizational Affiliations');
   t('Other Interests');
   t('Please select the sectors and sub-sectors you are interested in. This will drive the Exchange to send you information that is relevant to you. You will notice that the overall sectors are listed with their sub-sectors nested with a dash )(-) symbol beneath. Be sure to select the sectors and subsectors that apply. If you select a sub-sector it will not automatically select its main sector. Be sure to scroll to the bottom, there are a lot of sectors/sub-sectors. We know this isn\'t so easy to use right now, but as we get feedback from users we\'ll be improving this selection process.');
@@ -2862,6 +2861,7 @@ function gie_user_field_default_field_instances() {
   t('Share a great photo of yourself. If you don\'t upload your photo, one will be automatically assigned to you!');
   t('Share your education background and degrees.');
   t('Share your mailing address');
+  t('Sign Up for Updates');
   t('Skills');
   t('The company you currently work for. This must be an organization with an organization profile on the Exchange. If it doesn\'t show up in the list as you start to type then create a new one!');
   t('Title');

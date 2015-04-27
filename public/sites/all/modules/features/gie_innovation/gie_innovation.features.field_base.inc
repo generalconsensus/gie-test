@@ -883,32 +883,6 @@ function gie_innovation_field_default_field_bases() {
     'type' => 'image',
   );
 
-  // Exported field_base: 'field_testing_phase'
-  $field_bases['field_testing_phase'] = array(
-    'active' => 1,
-    'cardinality' => 1,
-    'deleted' => 0,
-    'entity_types' => array(),
-    'field_name' => 'field_testing_phase',
-    'indexes' => array(
-      'tid' => array(
-        0 => 'tid',
-      ),
-    ),
-    'locked' => 0,
-    'module' => 'taxonomy',
-    'settings' => array(
-      'allowed_values' => array(
-        0 => array(
-          'vocabulary' => 'testing_phase',
-          'parent' => 0,
-        ),
-      ),
-    ),
-    'translatable' => 0,
-    'type' => 'taxonomy_term_reference',
-  );
-
   // Exported field_base: 'subject_field'
   $field_bases['subject_field'] = array(
     'active' => 1,
