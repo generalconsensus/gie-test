@@ -97,7 +97,7 @@ function gie_organization_field_default_field_instances() {
     'bundle' => 'organization',
     'default_value' => NULL,
     'deleted' => 0,
-    'description' => '',
+    'description' => 'The mailing address of your organization',
     'display' => array(
       'at_a_glance' => array(
         'label' => 'above',
@@ -182,6 +182,7 @@ function gie_organization_field_default_field_instances() {
         'weight' => 24,
       ),
     ),
+    'ds_extras_field_template' => '',
     'entity_type' => 'node',
     'field_name' => 'field_org_address',
     'label' => 'Address',
@@ -189,6 +190,7 @@ function gie_organization_field_default_field_instances() {
     'settings' => array(
       'better_formats' => array(
         'allowed_formats' => array(
+          'comments_filtered' => 0,
           'filtered_html' => 'filtered_html',
           'full_html' => 'full_html',
           'plain_text' => 'plain_text',
@@ -197,6 +199,9 @@ function gie_organization_field_default_field_instances() {
         'default_order_toggle' => 0,
         'default_order_wrapper' => array(
           'formats' => array(
+            'comments_filtered' => array(
+              'weight' => 0,
+            ),
             'filtered_html' => array(
               'weight' => 0,
             ),
@@ -219,7 +224,7 @@ function gie_organization_field_default_field_instances() {
         'rows' => 5,
       ),
       'type' => 'text_textarea',
-      'weight' => 11,
+      'weight' => 10,
     ),
   );
 
@@ -228,7 +233,7 @@ function gie_organization_field_default_field_instances() {
     'bundle' => 'organization',
     'default_value' => NULL,
     'deleted' => 0,
-    'description' => 'Enter your organization\'s mission, value, history and size.',
+    'description' => 'The mission of your organization',
     'display' => array(
       'at_a_glance' => array(
         'label' => 'hidden',
@@ -357,13 +362,15 @@ function gie_organization_field_default_field_instances() {
         'weight' => 23,
       ),
     ),
+    'ds_extras_field_template' => '',
     'entity_type' => 'node',
     'field_name' => 'field_org_desc',
     'label' => 'Description',
-    'required' => 1,
+    'required' => 0,
     'settings' => array(
       'better_formats' => array(
         'allowed_formats' => array(
+          'comments_filtered' => 0,
           'filtered_html' => 'filtered_html',
           'full_html' => 'full_html',
           'plain_text' => 'plain_text',
@@ -372,6 +379,9 @@ function gie_organization_field_default_field_instances() {
         'default_order_toggle' => 0,
         'default_order_wrapper' => array(
           'formats' => array(
+            'comments_filtered' => array(
+              'weight' => 0,
+            ),
             'filtered_html' => array(
               'weight' => 0,
             ),
@@ -403,7 +413,7 @@ function gie_organization_field_default_field_instances() {
     'bundle' => 'organization',
     'default_value' => NULL,
     'deleted' => 0,
-    'description' => '',
+    'description' => 'List the type of expertise your organization and its staff provide',
     'display' => array(
       'at_a_glance' => array(
         'label' => 'above',
@@ -488,6 +498,7 @@ function gie_organization_field_default_field_instances() {
         'weight' => 28,
       ),
     ),
+    'ds_extras_field_template' => '',
     'entity_type' => 'node',
     'field_name' => 'field_org_expertise',
     'label' => 'Areas of Expertise ',
@@ -600,7 +611,7 @@ function gie_organization_field_default_field_instances() {
         'display_label' => 1,
       ),
       'type' => 'options_onoff',
-      'weight' => 2,
+      'weight' => 6,
     ),
   );
 
@@ -609,7 +620,7 @@ function gie_organization_field_default_field_instances() {
     'bundle' => 'organization',
     'default_value' => NULL,
     'deleted' => 0,
-    'description' => '',
+    'description' => 'List your organizaton\'s areas of focus ',
     'display' => array(
       'at_a_glance' => array(
         'label' => 'above',
@@ -694,13 +705,15 @@ function gie_organization_field_default_field_instances() {
         'weight' => 29,
       ),
     ),
+    'ds_extras_field_template' => '',
     'entity_type' => 'node',
     'field_name' => 'field_org_focus',
     'label' => 'Area of Focus',
-    'required' => 1,
+    'required' => 0,
     'settings' => array(
       'better_formats' => array(
         'allowed_formats' => array(
+          'comments_filtered' => 0,
           'filtered_html' => 'filtered_html',
           'full_html' => 'full_html',
           'plain_text' => 'plain_text',
@@ -709,6 +722,9 @@ function gie_organization_field_default_field_instances() {
         'default_order_toggle' => 0,
         'default_order_wrapper' => array(
           'formats' => array(
+            'comments_filtered' => array(
+              'weight' => 0,
+            ),
             'filtered_html' => array(
               'weight' => 0,
             ),
@@ -731,7 +747,7 @@ function gie_organization_field_default_field_instances() {
         'rows' => 5,
       ),
       'type' => 'text_textarea',
-      'weight' => 6,
+      'weight' => 8,
     ),
   );
 
@@ -740,7 +756,7 @@ function gie_organization_field_default_field_instances() {
     'bundle' => 'organization',
     'default_value' => NULL,
     'deleted' => 0,
-    'description' => '',
+    'description' => 'Link to your organization\'s website',
     'display' => array(
       'at_a_glance' => array(
         'label' => 'hidden',
@@ -825,10 +841,11 @@ function gie_organization_field_default_field_instances() {
         'weight' => 22,
       ),
     ),
+    'ds_extras_field_template' => '',
     'entity_type' => 'node',
     'field_name' => 'field_org_link',
     'label' => 'Link URL',
-    'required' => 1,
+    'required' => 0,
     'settings' => array(
       'absolute_url' => 1,
       'attributes' => array(
@@ -857,7 +874,7 @@ function gie_organization_field_default_field_instances() {
       'module' => 'html5_tools',
       'settings' => array(),
       'type' => 'urlwidget',
-      'weight' => 4,
+      'weight' => 5,
     ),
   );
 
@@ -865,7 +882,7 @@ function gie_organization_field_default_field_instances() {
   $field_instances['node-organization-field_org_logo'] = array(
     'bundle' => 'organization',
     'deleted' => 0,
-    'description' => '',
+    'description' => 'Upload your organization\'s hi-resolution logo. ',
     'display' => array(
       'at_a_glance' => array(
         'label' => 'above',
@@ -1035,7 +1052,7 @@ function gie_organization_field_default_field_instances() {
         'progress_indicator' => 'throbber',
       ),
       'type' => 'image_image',
-      'weight' => 1,
+      'weight' => 2,
     ),
   );
 
@@ -1044,7 +1061,7 @@ function gie_organization_field_default_field_instances() {
     'bundle' => 'organization',
     'default_value' => NULL,
     'deleted' => 0,
-    'description' => '',
+    'description' => 'The mission of your organization',
     'display' => array(
       'at_a_glance' => array(
         'label' => 'above',
@@ -1129,13 +1146,15 @@ function gie_organization_field_default_field_instances() {
         'weight' => 19,
       ),
     ),
+    'ds_extras_field_template' => '',
     'entity_type' => 'node',
     'field_name' => 'field_org_mission',
-    'label' => 'Mission',
-    'required' => 1,
+    'label' => 'Organization Mission',
+    'required' => 0,
     'settings' => array(
       'better_formats' => array(
         'allowed_formats' => array(
+          'comments_filtered' => 0,
           'filtered_html' => 'filtered_html',
           'full_html' => 'full_html',
           'plain_text' => 'plain_text',
@@ -1144,6 +1163,9 @@ function gie_organization_field_default_field_instances() {
         'default_order_toggle' => 0,
         'default_order_wrapper' => array(
           'formats' => array(
+            'comments_filtered' => array(
+              'weight' => 0,
+            ),
             'filtered_html' => array(
               'weight' => 0,
             ),
@@ -1166,7 +1188,7 @@ function gie_organization_field_default_field_instances() {
         'rows' => 5,
       ),
       'type' => 'text_textarea',
-      'weight' => 5,
+      'weight' => 6,
     ),
   );
 
@@ -1175,7 +1197,7 @@ function gie_organization_field_default_field_instances() {
     'bundle' => 'organization',
     'default_value' => NULL,
     'deleted' => 0,
-    'description' => '',
+    'description' => 'Type the organizations that this program is partnered with. They must have an organization profile in order to appear on your page. Please encourage your partners to create organization profiles and user profiles on the Exchange if they don\'t appear.',
     'display' => array(
       'at_a_glance' => array(
         'label' => 'above',
@@ -1248,6 +1270,7 @@ function gie_organization_field_default_field_instances() {
         'weight' => 18,
       ),
     ),
+    'ds_extras_field_template' => '',
     'entity_type' => 'node',
     'entityconnect_unload_add' => 0,
     'entityconnect_unload_edit' => 0,
@@ -1270,7 +1293,7 @@ function gie_organization_field_default_field_instances() {
         'size' => 60,
       ),
       'type' => 'entityreference_autocomplete',
-      'weight' => 16,
+      'weight' => 13,
     ),
   );
 
@@ -1279,7 +1302,7 @@ function gie_organization_field_default_field_instances() {
     'bundle' => 'organization',
     'default_value' => NULL,
     'deleted' => 0,
-    'description' => '',
+    'description' => 'The point of contact must be someone with a user profile in the Exchange. Start writing a name (first name initial last name e.g. kshipley) to see if it comes up in the Exchange member directory. If not, create a profile or email the person to invite them to create a profile. If no point of contact is listed, there will be no point of contact listed on the innovation profile.',
     'display' => array(
       'at_a_glance' => array(
         'label' => 'above',
@@ -1367,6 +1390,7 @@ function gie_organization_field_default_field_instances() {
         'weight' => 20,
       ),
     ),
+    'ds_extras_field_template' => '',
     'entity_type' => 'node',
     'entityconnect_unload_add' => 0,
     'entityconnect_unload_edit' => 0,
@@ -1389,7 +1413,7 @@ function gie_organization_field_default_field_instances() {
         'size' => 60,
       ),
       'type' => 'entityreference_autocomplete',
-      'weight' => 12,
+      'weight' => 11,
     ),
   );
 
@@ -1398,7 +1422,7 @@ function gie_organization_field_default_field_instances() {
     'bundle' => 'organization',
     'default_value' => NULL,
     'deleted' => 0,
-    'description' => '',
+    'description' => 'Telephone number for your organization including country code',
     'display' => array(
       'at_a_glance' => array(
         'label' => 'above',
@@ -1523,7 +1547,7 @@ function gie_organization_field_default_field_instances() {
       'module' => 'html5_tools',
       'settings' => array(),
       'type' => 'telwidget',
-      'weight' => 13,
+      'weight' => 12,
     ),
   );
 
@@ -1532,7 +1556,7 @@ function gie_organization_field_default_field_instances() {
     'bundle' => 'organization',
     'default_value' => NULL,
     'deleted' => 0,
-    'description' => '',
+    'description' => 'A general E-mail address for the organization',
     'display' => array(
       'at_a_glance' => array(
         'label' => 'above',
@@ -1620,7 +1644,7 @@ function gie_organization_field_default_field_instances() {
     'ds_extras_field_template' => '',
     'entity_type' => 'node',
     'field_name' => 'field_org_text_email',
-    'label' => 'Email',
+    'label' => 'Contact Email',
     'required' => 0,
     'settings' => array(
       'better_formats' => array(
@@ -1657,7 +1681,7 @@ function gie_organization_field_default_field_instances() {
       'module' => 'html5_tools',
       'settings' => array(),
       'type' => 'emailwidget',
-      'weight' => 14,
+      'weight' => 13,
     ),
   );
 
@@ -1666,7 +1690,7 @@ function gie_organization_field_default_field_instances() {
     'bundle' => 'organization',
     'default_value' => NULL,
     'deleted' => 0,
-    'description' => '',
+    'description' => 'Paste your organization\'s Facebook page URL so that users can go directly there',
     'display' => array(
       'at_a_glance' => array(
         'label' => 'above',
@@ -1737,21 +1761,47 @@ function gie_organization_field_default_field_instances() {
         'weight' => 5,
       ),
     ),
+    'ds_extras_field_template' => '',
     'entity_type' => 'node',
     'field_name' => 'field_organization_facebook',
     'label' => 'Facebook',
-    'required' => FALSE,
+    'required' => 0,
     'settings' => array(
+      'better_formats' => array(
+        'allowed_formats' => array(
+          'comments_filtered' => 'comments_filtered',
+          'filtered_html' => 'filtered_html',
+          'full_html' => 'full_html',
+          'plain_text' => 'plain_text',
+        ),
+        'allowed_formats_toggle' => 0,
+        'default_order_toggle' => 0,
+        'default_order_wrapper' => array(
+          'formats' => array(
+            'comments_filtered' => array(
+              'weight' => 0,
+            ),
+            'filtered_html' => array(
+              'weight' => 0,
+            ),
+            'full_html' => array(
+              'weight' => 1,
+            ),
+            'plain_text' => array(
+              'weight' => 10,
+            ),
+          ),
+        ),
+      ),
       'text_processing' => 0,
       'user_register_form' => FALSE,
     ),
     'widget' => array(
+      'active' => 0,
       'module' => 'html5_tools',
-      'settings' => array(
-        'size' => 60,
-      ),
+      'settings' => array(),
       'type' => 'urlwidget',
-      'weight' => 17,
+      'weight' => 9,
     ),
   );
 
@@ -1760,7 +1810,7 @@ function gie_organization_field_default_field_instances() {
     'bundle' => 'organization',
     'default_value' => NULL,
     'deleted' => 0,
-    'description' => 'Provide the LinkedIn URL for your Organization. ',
+    'description' => 'Paste your organization\'s LinkedIn URL so that users can go directly there',
     'display' => array(
       'at_a_glance' => array(
         'label' => 'above',
@@ -1871,7 +1921,7 @@ function gie_organization_field_default_field_instances() {
       'module' => 'html5_tools',
       'settings' => array(),
       'type' => 'urlwidget',
-      'weight' => 18,
+      'weight' => 10,
     ),
   );
 
@@ -1880,7 +1930,7 @@ function gie_organization_field_default_field_instances() {
     'bundle' => 'organization',
     'default_value' => NULL,
     'deleted' => 0,
-    'description' => '',
+    'description' => 'Paste your organization\'s Twitter URL so that users can go directly there',
     'display' => array(
       'at_a_glance' => array(
         'label' => 'above',
@@ -1991,7 +2041,7 @@ function gie_organization_field_default_field_instances() {
       'module' => 'html5_tools',
       'settings' => array(),
       'type' => 'urlwidget',
-      'weight' => 19,
+      'weight' => 11,
     ),
   );
 
@@ -2000,7 +2050,7 @@ function gie_organization_field_default_field_instances() {
     'bundle' => 'organization',
     'default_value' => NULL,
     'deleted' => 0,
-    'description' => '',
+    'description' => 'Select the type(s) of organization you are',
     'display' => array(
       'at_a_glance' => array(
         'label' => 'above',
@@ -2086,7 +2136,7 @@ function gie_organization_field_default_field_instances() {
         'apply_chosen' => '',
       ),
       'type' => 'options_select',
-      'weight' => 8,
+      'weight' => 4,
     ),
   );
 
@@ -2095,7 +2145,7 @@ function gie_organization_field_default_field_instances() {
     'bundle' => 'organization',
     'default_value' => NULL,
     'deleted' => 0,
-    'description' => '',
+    'description' => 'Select which roles your think your organization will play on the Exchange ',
     'display' => array(
       'at_a_glance' => array(
         'label' => 'above',
@@ -2181,7 +2231,7 @@ function gie_organization_field_default_field_instances() {
         'apply_chosen' => '',
       ),
       'type' => 'options_select',
-      'weight' => 9,
+      'weight' => 10,
     ),
   );
 
@@ -2190,7 +2240,7 @@ function gie_organization_field_default_field_instances() {
     'bundle' => 'organization',
     'default_value' => NULL,
     'deleted' => 0,
-    'description' => '',
+    'description' => 'Select the regions that apply to the selected countries',
     'display' => array(
       'at_a_glance' => array(
         'label' => 'above',
@@ -2265,7 +2315,7 @@ function gie_organization_field_default_field_instances() {
     'entity_type' => 'node',
     'field_name' => 'field_term_region',
     'label' => 'Region',
-    'required' => 0,
+    'required' => 1,
     'settings' => array(
       'user_register_form' => FALSE,
     ),
@@ -2276,7 +2326,7 @@ function gie_organization_field_default_field_instances() {
         'apply_chosen' => 1,
       ),
       'type' => 'options_select',
-      'weight' => 15,
+      'weight' => 12,
     ),
   );
 
@@ -2285,7 +2335,7 @@ function gie_organization_field_default_field_instances() {
     'bundle' => 'organization',
     'default_value' => NULL,
     'deleted' => 0,
-    'description' => '',
+    'description' => 'Please select the sectors and sub-sectors related to your organization. You will notice that the overall sectors are listed with their sub-sectors nested with a dash (-) symbol. Be sure to select the sectors and subsectors that apply. Be sure to scroll to the bottom, there are a lot of sectors. We know this isn\'t so easy to use right now, but we will be improving this selection process.',
     'display' => array(
       'at_a_glance' => array(
         'label' => 'above',
@@ -2360,18 +2410,27 @@ function gie_organization_field_default_field_instances() {
     'entity_type' => 'node',
     'field_name' => 'field_term_sector',
     'label' => 'Sector',
-    'required' => 0,
+    'required' => 1,
     'settings' => array(
       'user_register_form' => FALSE,
     ),
     'widget' => array(
       'active' => 1,
-      'module' => 'options',
+      'module' => 'term_reference_tree',
       'settings' => array(
         'apply_chosen' => 1,
+        'cascading_selection' => 0,
+        'filter_view' => '',
+        'leaves_only' => 0,
+        'max_depth' => '',
+        'parent_term_id' => '',
+        'select_parents' => 0,
+        'start_minimized' => 1,
+        'token_display' => '',
+        'track_list' => 0,
       ),
-      'type' => 'options_select',
-      'weight' => 10,
+      'type' => 'term_reference_tree',
+      'weight' => 11,
     ),
   );
 
@@ -2380,7 +2439,7 @@ function gie_organization_field_default_field_instances() {
     'bundle' => 'organization',
     'default_value' => NULL,
     'deleted' => 0,
-    'description' => '',
+    'description' => 'The title of the organization',
     'display' => array(
       'at_a_glance' => array(
         'label' => 'hidden',
@@ -2488,11 +2547,38 @@ function gie_organization_field_default_field_instances() {
         'weight' => 30,
       ),
     ),
+    'ds_extras_field_template' => '',
     'entity_type' => 'node',
     'field_name' => 'title_field',
-    'label' => 'Title',
-    'required' => TRUE,
+    'label' => 'Organization Title',
+    'required' => 1,
     'settings' => array(
+      'better_formats' => array(
+        'allowed_formats' => array(
+          'comments_filtered' => 'comments_filtered',
+          'filtered_html' => 'filtered_html',
+          'full_html' => 'full_html',
+          'plain_text' => 'plain_text',
+        ),
+        'allowed_formats_toggle' => 0,
+        'default_order_toggle' => 0,
+        'default_order_wrapper' => array(
+          'formats' => array(
+            'comments_filtered' => array(
+              'weight' => 0,
+            ),
+            'filtered_html' => array(
+              'weight' => 0,
+            ),
+            'full_html' => array(
+              'weight' => 1,
+            ),
+            'plain_text' => array(
+              'weight' => 10,
+            ),
+          ),
+        ),
+      ),
       'hide_label' => array(
         'entity' => 0,
         'page' => 0,
@@ -2501,12 +2587,13 @@ function gie_organization_field_default_field_instances() {
       'user_register_form' => FALSE,
     ),
     'widget' => array(
+      'active' => 1,
       'module' => 'text',
       'settings' => array(
         'size' => 60,
       ),
       'type' => 'text_textfield',
-      'weight' => 0,
+      'weight' => 1,
     ),
   );
 
@@ -2736,31 +2823,47 @@ function gie_organization_field_default_field_instances() {
 
   // Translatables
   // Included for use with string extractors like potx.
+  t('A general E-mail address for the organization');
   t('Address');
   t('Area of Focus');
   t('Areas of Expertise ');
   t('Comment');
+  t('Contact Email');
   t('Description');
-  t('Email');
-  t('Enter your organization\'s mission, value, history and size.');
   t('Facebook');
   t('Featured');
   t('Link URL');
+  t('Link to your organization\'s website');
   t('LinkedIn');
+  t('List the type of expertise your organization and its staff provide');
+  t('List your organizaton\'s areas of focus ');
   t('Logo');
-  t('Mission');
   t('Name');
+  t('Organization Mission');
+  t('Organization Title');
   t('Organization Type');
   t('Partners');
+  t('Paste your organization\'s Facebook page URL so that users can go directly there');
+  t('Paste your organization\'s LinkedIn URL so that users can go directly there');
+  t('Paste your organization\'s Twitter URL so that users can go directly there');
+  t('Please select the sectors and sub-sectors related to your organization. You will notice that the overall sectors are listed with their sub-sectors nested with a dash (-) symbol. Be sure to select the sectors and subsectors that apply. Be sure to scroll to the bottom, there are a lot of sectors. We know this isn\'t so easy to use right now, but we will be improving this selection process.');
   t('Point of Contact');
-  t('Provide the LinkedIn URL for your Organization. ');
   t('Region');
   t('Role on the Exchange');
   t('Sector');
+  t('Select the regions that apply to the selected countries');
+  t('Select the type(s) of organization you are');
+  t('Select which roles your think your organization will play on the Exchange ');
   t('Subject');
   t('Telephone');
-  t('Title');
+  t('Telephone number for your organization including country code');
+  t('The mailing address of your organization');
+  t('The mission of your organization');
+  t('The point of contact must be someone with a user profile in the Exchange. Start writing a name (first name initial last name e.g. kshipley) to see if it comes up in the Exchange member directory. If not, create a profile or email the person to invite them to create a profile. If no point of contact is listed, there will be no point of contact listed on the innovation profile.');
+  t('The title of the organization');
   t('Twitter');
+  t('Type the organizations that this program is partnered with. They must have an organization profile in order to appear on your page. Please encourage your partners to create organization profiles and user profiles on the Exchange if they don\'t appear.');
+  t('Upload your organization\'s hi-resolution logo. ');
 
   return $field_instances;
 }

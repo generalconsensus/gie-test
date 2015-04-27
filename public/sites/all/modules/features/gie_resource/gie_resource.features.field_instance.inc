@@ -151,7 +151,7 @@ function gie_resource_field_default_field_instances() {
     'bundle' => 'resource',
     'default_value' => NULL,
     'deleted' => 0,
-    'description' => '',
+    'description' => 'Upload any documents or files related to this resource. ',
     'display' => array(
       'at_a_glance' => array(
         'label' => 'above',
@@ -238,7 +238,7 @@ function gie_resource_field_default_field_instances() {
     'entityconnect_unload_add' => 0,
     'entityconnect_unload_edit' => 0,
     'field_name' => 'field_resource_assets',
-    'label' => 'Attachments',
+    'label' => 'Resource Attachments',
     'required' => 0,
     'settings' => array(
       'user_register_form' => FALSE,
@@ -256,7 +256,7 @@ function gie_resource_field_default_field_instances() {
         'size' => 60,
       ),
       'type' => 'entityreference_autocomplete',
-      'weight' => 6,
+      'weight' => 7,
     ),
   );
 
@@ -265,7 +265,7 @@ function gie_resource_field_default_field_instances() {
     'bundle' => 'resource',
     'default_value' => NULL,
     'deleted' => 0,
-    'description' => '',
+    'description' => 'The source author must be someone with a user profile in the Exchange. Start writing a name ( (first name initial last name e.g. kshipley) to see if it comes up in the Exchange member directory. If not, create a profile or email the person to invite them to create a profile. If no resource author is listed, there will be no author listed on the innovation profile.',
     'display' => array(
       'at_a_glance' => array(
         'label' => 'above',
@@ -363,6 +363,7 @@ function gie_resource_field_default_field_instances() {
         'weight' => 10,
       ),
     ),
+    'ds_extras_field_template' => '',
     'entity_type' => 'node',
     'entityconnect_unload_add' => 0,
     'entityconnect_unload_edit' => 0,
@@ -385,7 +386,7 @@ function gie_resource_field_default_field_instances() {
         'size' => 60,
       ),
       'type' => 'entityreference_autocomplete',
-      'weight' => 3,
+      'weight' => 6,
     ),
   );
 
@@ -393,7 +394,7 @@ function gie_resource_field_default_field_instances() {
   $field_instances['node-resource-field_resource_date'] = array(
     'bundle' => 'resource',
     'deleted' => 0,
-    'description' => '',
+    'description' => 'This is the date the resource was created. It will default to the date the resource was added to the Exchange if left blank.',
     'display' => array(
       'at_a_glance' => array(
         'label' => 'above',
@@ -520,6 +521,7 @@ function gie_resource_field_default_field_instances() {
         'weight' => 1,
       ),
     ),
+    'ds_extras_field_template' => '',
     'entity_type' => 'node',
     'field_name' => 'field_resource_date',
     'label' => 'Date Added',
@@ -543,7 +545,7 @@ function gie_resource_field_default_field_instances() {
         'year_range' => '-3:+3',
       ),
       'type' => 'date_popup',
-      'weight' => 1,
+      'weight' => 4,
     ),
   );
 
@@ -552,7 +554,7 @@ function gie_resource_field_default_field_instances() {
     'bundle' => 'resource',
     'default_value' => NULL,
     'deleted' => 0,
-    'description' => '',
+    'description' => 'Enter a short description of your innovation. How can this resource help others? Who should read it/use it?',
     'display' => array(
       'at_a_glance' => array(
         'label' => 'hidden',
@@ -652,6 +654,7 @@ function gie_resource_field_default_field_instances() {
         'weight' => 13,
       ),
     ),
+    'ds_extras_field_template' => '',
     'entity_type' => 'node',
     'field_name' => 'field_resource_desc',
     'label' => 'Description',
@@ -659,6 +662,7 @@ function gie_resource_field_default_field_instances() {
     'settings' => array(
       'better_formats' => array(
         'allowed_formats' => array(
+          'comments_filtered' => 0,
           'filtered_html' => 'filtered_html',
           'full_html' => 'full_html',
           'plain_text' => 'plain_text',
@@ -667,6 +671,9 @@ function gie_resource_field_default_field_instances() {
         'default_order_toggle' => 0,
         'default_order_wrapper' => array(
           'formats' => array(
+            'comments_filtered' => array(
+              'weight' => 0,
+            ),
             'filtered_html' => array(
               'weight' => 0,
             ),
@@ -689,7 +696,7 @@ function gie_resource_field_default_field_instances() {
         'rows' => 5,
       ),
       'type' => 'text_textarea',
-      'weight' => 7,
+      'weight' => 5,
     ),
   );
 
@@ -698,7 +705,7 @@ function gie_resource_field_default_field_instances() {
     'bundle' => 'resource',
     'default_value' => NULL,
     'deleted' => 0,
-    'description' => '',
+    'description' => 'The URL that directly links to the resource. ',
     'display' => array(
       'at_a_glance' => array(
         'label' => 'above',
@@ -777,9 +784,10 @@ function gie_resource_field_default_field_instances() {
         'weight' => 12,
       ),
     ),
+    'ds_extras_field_template' => '',
     'entity_type' => 'node',
     'field_name' => 'field_resource_link',
-    'label' => 'Link URL',
+    'label' => 'Direct Resource URL',
     'required' => 0,
     'settings' => array(
       'absolute_url' => 1,
@@ -809,7 +817,7 @@ function gie_resource_field_default_field_instances() {
       'module' => 'html5_tools',
       'settings' => array(),
       'type' => 'urlwidget',
-      'weight' => 5,
+      'weight' => 6,
     ),
   );
 
@@ -818,7 +826,7 @@ function gie_resource_field_default_field_instances() {
     'bundle' => 'resource',
     'default_value' => NULL,
     'deleted' => 0,
-    'description' => '',
+    'description' => 'The organization that is associated with this resource. The organization must have profile on the Exchange to be included on this line. Start typing the organization name to see if it has a profile on the Exchange yet. If it doesn\'t appear, please contact the organization and encourage them to create an organization profile. ',
     'display' => array(
       'at_a_glance' => array(
         'label' => 'above',
@@ -899,6 +907,7 @@ function gie_resource_field_default_field_instances() {
         'weight' => 20,
       ),
     ),
+    'ds_extras_field_template' => '',
     'entity_type' => 'node',
     'entityconnect_unload_add' => 0,
     'entityconnect_unload_edit' => 0,
@@ -921,7 +930,7 @@ function gie_resource_field_default_field_instances() {
         'size' => 60,
       ),
       'type' => 'entityreference_autocomplete',
-      'weight' => 13,
+      'weight' => 7,
     ),
   );
 
@@ -930,7 +939,7 @@ function gie_resource_field_default_field_instances() {
     'bundle' => 'resource',
     'default_value' => NULL,
     'deleted' => 0,
-    'description' => '',
+    'description' => 'The program that is associated with this resource. The program must have profile on the Exchange to be included on this line. Start typing the program name to see if it has a profile on the Exchange yet. If it doesn\'t appear, please contact the program and encourage them to create an program profile. ',
     'display' => array(
       'at_a_glance' => array(
         'label' => 'above',
@@ -1011,6 +1020,7 @@ function gie_resource_field_default_field_instances() {
         'weight' => 19,
       ),
     ),
+    'ds_extras_field_template' => '',
     'entity_type' => 'node',
     'entityconnect_unload_add' => 1,
     'entityconnect_unload_edit' => 1,
@@ -1033,7 +1043,7 @@ function gie_resource_field_default_field_instances() {
         'size' => 60,
       ),
       'type' => 'entityreference_autocomplete',
-      'weight' => 14,
+      'weight' => 8,
     ),
   );
 
@@ -1042,7 +1052,7 @@ function gie_resource_field_default_field_instances() {
     'bundle' => 'resource',
     'default_value' => NULL,
     'deleted' => 0,
-    'description' => '',
+    'description' => 'If your resource is hosted on another website, you can add that website here.',
     'display' => array(
       'at_a_glance' => array(
         'label' => 'above',
@@ -1121,9 +1131,10 @@ function gie_resource_field_default_field_instances() {
         'weight' => 9,
       ),
     ),
+    'ds_extras_field_template' => '',
     'entity_type' => 'node',
     'field_name' => 'field_resource_source',
-    'label' => 'Source',
+    'label' => 'Source URL',
     'required' => 0,
     'settings' => array(
       'absolute_url' => 1,
@@ -1162,7 +1173,7 @@ function gie_resource_field_default_field_instances() {
     'bundle' => 'resource',
     'default_value' => NULL,
     'deleted' => 0,
-    'description' => '',
+    'description' => 'What type best describes your resource?',
     'display' => array(
       'at_a_glance' => array(
         'label' => 'above',
@@ -1255,6 +1266,7 @@ function gie_resource_field_default_field_instances() {
         'weight' => 14,
       ),
     ),
+    'ds_extras_field_template' => '',
     'entity_type' => 'node',
     'field_name' => 'field_resource_type',
     'label' => 'Resource Type',
@@ -1269,7 +1281,7 @@ function gie_resource_field_default_field_instances() {
         'apply_chosen' => 1,
       ),
       'type' => 'options_select',
-      'weight' => 4,
+      'weight' => 3,
     ),
   );
 
@@ -1278,7 +1290,7 @@ function gie_resource_field_default_field_instances() {
     'bundle' => 'resource',
     'default_value' => NULL,
     'deleted' => 0,
-    'description' => '',
+    'description' => 'Select the countries where your resource was created.',
     'display' => array(
       'at_a_glance' => array(
         'label' => 'above',
@@ -1361,7 +1373,7 @@ function gie_resource_field_default_field_instances() {
     'entity_type' => 'node',
     'field_name' => 'field_term_country',
     'label' => 'Country',
-    'required' => 0,
+    'required' => 1,
     'settings' => array(
       'user_register_form' => FALSE,
     ),
@@ -1372,7 +1384,7 @@ function gie_resource_field_default_field_instances() {
         'apply_chosen' => 1,
       ),
       'type' => 'options_select',
-      'weight' => 10,
+      'weight' => 6,
     ),
   );
 
@@ -1381,7 +1393,7 @@ function gie_resource_field_default_field_instances() {
     'bundle' => 'resource',
     'default_value' => NULL,
     'deleted' => 0,
-    'description' => '',
+    'description' => 'Select the region that corresponds to the countries listed. ',
     'display' => array(
       'at_a_glance' => array(
         'label' => 'above',
@@ -1464,7 +1476,7 @@ function gie_resource_field_default_field_instances() {
     'entity_type' => 'node',
     'field_name' => 'field_term_region',
     'label' => 'Region',
-    'required' => 0,
+    'required' => 1,
     'settings' => array(
       'user_register_form' => FALSE,
     ),
@@ -1475,7 +1487,7 @@ function gie_resource_field_default_field_instances() {
         'apply_chosen' => 1,
       ),
       'type' => 'options_select',
-      'weight' => 8,
+      'weight' => 7,
     ),
   );
 
@@ -1484,7 +1496,7 @@ function gie_resource_field_default_field_instances() {
     'bundle' => 'resource',
     'default_value' => NULL,
     'deleted' => 0,
-    'description' => '',
+    'description' => 'Please select the sectors and sub-sectors related to your resource. You will notice that the overall sectors are listed with their sub-sectors nested with a dash (-) symbol. Be sure to select the sectors and subsectors that apply. Do not select a sub-sector without also selecting the corresponding sector. Be sure to scroll to the bottom, there are a lot of sectors. We know this isn\'t so easy to use right now, but as we get feedback from users we\'ll be improving this selection process.',
     'display' => array(
       'at_a_glance' => array(
         'label' => 'above',
@@ -1581,18 +1593,27 @@ function gie_resource_field_default_field_instances() {
     'entity_type' => 'node',
     'field_name' => 'field_term_sector',
     'label' => 'Sector',
-    'required' => 0,
+    'required' => 1,
     'settings' => array(
       'user_register_form' => FALSE,
     ),
     'widget' => array(
       'active' => 1,
-      'module' => 'options',
+      'module' => 'term_reference_tree',
       'settings' => array(
         'apply_chosen' => 1,
+        'cascading_selection' => 0,
+        'filter_view' => '',
+        'leaves_only' => 0,
+        'max_depth' => '',
+        'parent_term_id' => '',
+        'select_parents' => 0,
+        'start_minimized' => 1,
+        'token_display' => '',
+        'track_list' => 0,
       ),
-      'type' => 'options_select',
-      'weight' => 12,
+      'type' => 'term_reference_tree',
+      'weight' => 4,
     ),
   );
 
@@ -1601,7 +1622,7 @@ function gie_resource_field_default_field_instances() {
     'bundle' => 'resource',
     'default_value' => NULL,
     'deleted' => 0,
-    'description' => '',
+    'description' => 'Topics are issues that may be of interest to Exchange users. Select any (or none) topics that you think apply to your iresource.',
     'display' => array(
       'at_a_glance' => array(
         'label' => 'above',
@@ -1695,7 +1716,7 @@ function gie_resource_field_default_field_instances() {
         'apply_chosen' => 1,
       ),
       'type' => 'options_select',
-      'weight' => 11,
+      'weight' => 5,
     ),
   );
 
@@ -1704,7 +1725,7 @@ function gie_resource_field_default_field_instances() {
     'bundle' => 'resource',
     'default_value' => NULL,
     'deleted' => 0,
-    'description' => '',
+    'description' => 'Title of your resource',
     'display' => array(
       'at_a_glance' => array(
         'label' => 'hidden',
@@ -1823,11 +1844,38 @@ function gie_resource_field_default_field_instances() {
         'weight' => 0,
       ),
     ),
+    'ds_extras_field_template' => '',
     'entity_type' => 'node',
     'field_name' => 'title_field',
-    'label' => 'Title',
-    'required' => TRUE,
+    'label' => 'Resource Title',
+    'required' => 1,
     'settings' => array(
+      'better_formats' => array(
+        'allowed_formats' => array(
+          'comments_filtered' => 'comments_filtered',
+          'filtered_html' => 'filtered_html',
+          'full_html' => 'full_html',
+          'plain_text' => 'plain_text',
+        ),
+        'allowed_formats_toggle' => 0,
+        'default_order_toggle' => 0,
+        'default_order_wrapper' => array(
+          'formats' => array(
+            'comments_filtered' => array(
+              'weight' => 0,
+            ),
+            'filtered_html' => array(
+              'weight' => 0,
+            ),
+            'full_html' => array(
+              'weight' => 1,
+            ),
+            'plain_text' => array(
+              'weight' => 10,
+            ),
+          ),
+        ),
+      ),
       'hide_label' => array(
         'entity' => 0,
         'page' => 0,
@@ -1836,12 +1884,13 @@ function gie_resource_field_default_field_instances() {
       'user_register_form' => FALSE,
     ),
     'widget' => array(
+      'active' => 1,
       'module' => 'text',
       'settings' => array(
         'size' => 60,
       ),
       'type' => 'text_textfield',
-      'weight' => 0,
+      'weight' => 3,
     ),
   );
 
@@ -1921,23 +1970,37 @@ function gie_resource_field_default_field_instances() {
 
   // Translatables
   // Included for use with string extractors like potx.
-  t('Attachments');
   t('Comment');
   t('Country');
   t('Date Added');
   t('Description');
-  t('Link URL');
+  t('Direct Resource URL');
+  t('Enter a short description of your innovation. How can this resource help others? Who should read it/use it?');
+  t('If your resource is hosted on another website, you can add that website here.');
   t('Name');
   t('Organizations');
+  t('Please select the sectors and sub-sectors related to your resource. You will notice that the overall sectors are listed with their sub-sectors nested with a dash (-) symbol. Be sure to select the sectors and subsectors that apply. Do not select a sub-sector without also selecting the corresponding sector. Be sure to scroll to the bottom, there are a lot of sectors. We know this isn\'t so easy to use right now, but as we get feedback from users we\'ll be improving this selection process.');
   t('Program');
   t('Region');
+  t('Resource Attachments');
   t('Resource Author');
+  t('Resource Title');
   t('Resource Type');
   t('Sector');
-  t('Source');
+  t('Select the countries where your resource was created.');
+  t('Select the region that corresponds to the countries listed. ');
+  t('Source URL');
   t('Subject');
-  t('Title');
+  t('The URL that directly links to the resource. ');
+  t('The organization that is associated with this resource. The organization must have profile on the Exchange to be included on this line. Start typing the organization name to see if it has a profile on the Exchange yet. If it doesn\'t appear, please contact the organization and encourage them to create an organization profile. ');
+  t('The program that is associated with this resource. The program must have profile on the Exchange to be included on this line. Start typing the program name to see if it has a profile on the Exchange yet. If it doesn\'t appear, please contact the program and encourage them to create an program profile. ');
+  t('The source author must be someone with a user profile in the Exchange. Start writing a name ( (first name initial last name e.g. kshipley) to see if it comes up in the Exchange member directory. If not, create a profile or email the person to invite them to create a profile. If no resource author is listed, there will be no author listed on the innovation profile.');
+  t('This is the date the resource was created. It will default to the date the resource was added to the Exchange if left blank.');
+  t('Title of your resource');
   t('Topic');
+  t('Topics are issues that may be of interest to Exchange users. Select any (or none) topics that you think apply to your iresource.');
+  t('Upload any documents or files related to this resource. ');
+  t('What type best describes your resource?');
 
   return $field_instances;
 }
