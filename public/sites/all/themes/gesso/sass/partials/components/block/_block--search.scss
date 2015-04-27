@@ -1,20 +1,22 @@
 .block--search {
+  background: #fff;
   display: block;
   @include breakpoint(max-width $mobile-menu-bp - 1) {
     display: none;    
   }
+  .block__title {
+    display: none;
+  }
   form {
-    background: #fff;
     border: 3px solid $lightblue;
     height: 60px;
+    position: relative;
     width: 375px;
-    .container-inline {
+    .form-item {
       height: 54px;
+      margin: 0;
       position: relative;
       width: 369px;
-    }
-    .form-item {
-      margin: 0;
     }
     .form-text {
       border: 0;

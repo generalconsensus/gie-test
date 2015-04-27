@@ -1,13 +1,10 @@
-<div class="block block-search-form block--search block--search-form">      
+<div class="block block--search block--search-api-page-node-search">    
+  <h2 class="block__title">Node Search</h2>
   <form accept-charset="UTF-8">
-    <div class="container-inline">
-      <h2 class="element-invisible">Search form</h2>
-      <div class="form-item form-item--searchfield form-item--search-block-form">
-        <input type="search" class="form-text form-search" maxlength="128" size="15" value="" title="Enter the terms you wish to search for." placeholder="START SEARCHING...">
-      </div>
-      <div class="form-actions">
-        <input type="submit" class="button button--submit" value="Search">
-      </div>
+    <div class="form-item form-item--textfield">
+      <label for="edit-keys-1" class="form-item__label element-invisible">START SEARCHING...</label>
+      <input type="text" class="form-text" maxlength="128" size="15" value="" id="edit-keys-1" autocorrect="off" autocapitalize="off" placeholder="START SEARCHING...">
     </div>
+    <input type="submit" class="button button--submit" value="Search" name="op">
   </form>  
 </div>
