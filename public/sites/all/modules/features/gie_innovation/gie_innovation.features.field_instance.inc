@@ -301,7 +301,7 @@ function gie_innovation_field_default_field_instances() {
         'module' => 'image',
         'settings' => array(
           'field_delimiter' => '',
-          'image_link' => 'content',
+          'image_link' => '',
           'image_style' => 'thumb-78x78',
           'linked_field' => array(
             'advanced' => array(
