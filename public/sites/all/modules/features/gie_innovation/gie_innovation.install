@@ -77,3 +77,11 @@ function gie_innovation_update_7004() {
     field_delete_field('field_testng_phase');
     field_purge_batch(1);
 }
+
+/**
+ * Delete Proper Innovation Testing Phase field.
+ */
+function gie_innovation_update_7005() {
+    field_delete_field('field_testing_phase');
+    field_purge_batch(1);
+}
