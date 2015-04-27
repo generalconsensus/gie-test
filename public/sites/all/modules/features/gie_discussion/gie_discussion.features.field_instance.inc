@@ -775,7 +775,7 @@ function gie_discussion_field_default_field_instances() {
         'weight' => 9,
       ),
       'teaser_date' => array(
-        'label' => 'above',
+        'label' => 'hidden',
         'module' => 'title',
         'settings' => array(
           'field_delimiter' => '',
@@ -791,8 +791,8 @@ function gie_discussion_field_default_field_instances() {
             'linked' => 0,
           ),
           'title_class' => '',
-          'title_link' => '',
-          'title_style' => '',
+          'title_link' => 'content',
+          'title_style' => '_none',
         ),
         'type' => 'title_linked',
         'weight' => 0,
