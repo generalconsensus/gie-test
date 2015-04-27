@@ -2763,7 +2763,7 @@ function gie_user_field_default_field_instances() {
             'destination' => '',
             'linked' => 0,
           ),
-          'taxonomy_term_link' => 1,
+          'taxonomy_term_link' => 0,
           'taxonomy_term_separator' => ', ',
         ),
         'type' => 'ds_taxonomy_separator',
