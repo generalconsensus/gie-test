@@ -4752,6 +4752,30 @@ tr.drag-previous {
   width: 25%;
 }
 
+/* line 1, ../sass/partials/components/view/_view--how-to-apply.scss */
+.view--how-to-apply {
+  overflow: hidden;
+  padding-left: 1.5em;
+}
+
+/* line 6, ../sass/partials/components/view/_view--how-to-apply.scss */
+.button--alt {
+  background-color: #b71234;
+  line-height: 35px;
+  text-transform: uppercase;
+}
+/* line 10, ../sass/partials/components/view/_view--how-to-apply.scss */
+.button--alt:before {
+  content: '';
+  background-image: url("../images/bg/edit.png");
+  display: inline-block;
+  height: 22px;
+  position: relative;
+  right: 5px;
+  top: 5px;
+  width: 22px;
+}
+
 /* line 2, ../sass/partials/components/view/_view--partners.scss */
 .view--partners .view__content {
   overflow: hidden;
