@@ -442,6 +442,7 @@ function gie_general_strongarm() {
   $strongarm->api_version = 1;
   $strongarm->name = 'path_alias_whitelist';
   $strongarm->value = array(
+    'node' => TRUE,
     'taxonomy' => TRUE,
     'user' => TRUE,
   );
