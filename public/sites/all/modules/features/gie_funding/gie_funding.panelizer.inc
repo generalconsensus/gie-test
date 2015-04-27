@@ -80,40 +80,13 @@ function gie_funding_panelizer_defaults() {
     $display->content['new-6a0ba570-85c6-4226-a676-02d29e816467'] = $pane;
     $display->panels['bottom'][0] = 'new-6a0ba570-85c6-4226-a676-02d29e816467';
     $pane = new stdClass();
-    $pane->pid = 'new-687d845f-98b6-41a1-bfa5-ea8ed9ca5767';
+    $pane->pid = 'new-11da7c66-db04-4986-9f9c-406289802b11';
     $pane->panel = 'bottom_sidebar';
-    $pane->type = 'entity_field';
-    $pane->subtype = 'node:field_funding_organization';
+    $pane->type = 'views_panes';
+    $pane->subtype = 'funding_fields-funding_organizations';
     $pane->shown = TRUE;
     $pane->access = array();
-    $pane->configuration = array(
-      'label' => 'title',
-      'formatter' => 'entityreference_entity_view',
-      'delta_limit' => '0',
-      'delta_offset' => '0',
-      'delta_reversed' => 0,
-      'formatter_settings' => array(
-        'link' => 0,
-        'field_delimiter' => '',
-        'linked_field' => array(
-          'linked' => 0,
-          'destination' => '',
-          'advanced' => array(
-            'title' => '',
-            'target' => '',
-            'class' => '',
-            'rel' => '',
-            'text' => '',
-          ),
-        ),
-        'view_mode' => 'teaser',
-        'links' => 1,
-      ),
-      'context' => 'panelizer',
-      'override_title' => 1,
-      'override_title_text' => 'Funding Organization',
-      'override_title_heading' => 'h2',
-    );
+    $pane->configuration = array();
     $pane->cache = array();
     $pane->style = array(
       'settings' => NULL,
@@ -122,9 +95,9 @@ function gie_funding_panelizer_defaults() {
     $pane->extras = array();
     $pane->position = 0;
     $pane->locks = array();
-    $pane->uuid = '687d845f-98b6-41a1-bfa5-ea8ed9ca5767';
-    $display->content['new-687d845f-98b6-41a1-bfa5-ea8ed9ca5767'] = $pane;
-    $display->panels['bottom_sidebar'][0] = 'new-687d845f-98b6-41a1-bfa5-ea8ed9ca5767';
+    $pane->uuid = '11da7c66-db04-4986-9f9c-406289802b11';
+    $display->content['new-11da7c66-db04-4986-9f9c-406289802b11'] = $pane;
+    $display->panels['bottom_sidebar'][0] = 'new-11da7c66-db04-4986-9f9c-406289802b11';
     $pane = new stdClass();
     $pane->pid = 'new-58973bf6-930f-4b84-9010-34ac40b9758e';
     $pane->panel = 'box_first';
