@@ -165,7 +165,7 @@ function gie_resource_strongarm() {
             'visible' => FALSE,
           ),
           'full' => array(
-            'weight' => '3',
+            'weight' => '2',
             'visible' => TRUE,
           ),
           'search_listing' => array(
@@ -195,7 +195,7 @@ function gie_resource_strongarm() {
             'visible' => FALSE,
           ),
           'full' => array(
-            'weight' => '20',
+            'weight' => '22',
             'visible' => FALSE,
           ),
           'at_a_glance' => array(
@@ -221,7 +221,7 @@ function gie_resource_strongarm() {
             'visible' => FALSE,
           ),
           'full' => array(
-            'weight' => '22',
+            'weight' => '24',
             'visible' => FALSE,
           ),
           'at_a_glance' => array(
@@ -238,11 +238,19 @@ function gie_resource_strongarm() {
             'weight' => '11',
             'visible' => TRUE,
           ),
+          'full' => array(
+            'weight' => '14',
+            'visible' => FALSE,
+          ),
         ),
         'resource_counters_resource_favorite_count_detail' => array(
           'at_a_glance' => array(
             'weight' => '12',
             'visible' => TRUE,
+          ),
+          'full' => array(
+            'weight' => '15',
+            'visible' => FALSE,
           ),
         ),
       ),
