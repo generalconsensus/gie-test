@@ -18,19 +18,14 @@ function gie_innovation_ds_field_settings_info() {
   $ds_fieldsetting->view_mode = 'default';
   $ds_fieldsetting->settings = array(
     'links' => array(
-      'weight' => '3',
+      'weight' => '4',
       'label' => 'hidden',
       'format' => 'default',
     ),
     'post_date' => array(
-      'weight' => '1',
+      'weight' => '2',
       'label' => 'hidden',
       'format' => 'ds_post_date_short',
-    ),
-    'author' => array(
-      'weight' => '0',
-      'label' => 'hidden',
-      'format' => 'default',
     ),
   );
   $export['comment|comment_node_innovation|default'] = $ds_fieldsetting;
@@ -401,7 +396,7 @@ function gie_innovation_ds_layout_settings_info() {
   $ds_layout->settings = array(
     'regions' => array(
       'media' => array(
-        0 => 'author',
+        0 => 'comment_author_entity_view_1',
       ),
       'main_content' => array(
         1 => 'post_date',
@@ -410,7 +405,7 @@ function gie_innovation_ds_layout_settings_info() {
       ),
     ),
     'fields' => array(
-      'author' => 'media',
+      'comment_author_entity_view_1' => 'media',
       'post_date' => 'main_content',
       'comment_body' => 'main_content',
       'links' => 'main_content',
