@@ -81,7 +81,14 @@ function gie_innovation_strongarm() {
           'weight' => '0',
         ),
       ),
-      'display' => array(),
+      'display' => array(
+        'comment_author_entity_view_1' => array(
+          'default' => array(
+            'weight' => '1',
+            'visible' => TRUE,
+          ),
+        ),
+      ),
     ),
   );
   $export['field_bundle_settings_comment__comment_node_innovation'] = $strongarm;
