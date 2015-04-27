@@ -856,6 +856,12 @@ function gie_user_views_default_views() {
   $handler->display->display_options['filters']['status']['value'] = array(
     1 => '1',
   );
+  /* Filter criterion: Indexed User: User ID */
+  $handler->display->display_options['filters']['uid']['id'] = 'uid';
+  $handler->display->display_options['filters']['uid']['table'] = 'search_api_index_default_user_index';
+  $handler->display->display_options['filters']['uid']['field'] = 'uid';
+  $handler->display->display_options['filters']['uid']['operator'] = '<>';
+  $handler->display->display_options['filters']['uid']['value'] = '1';
 
   /* Display: Listing */
   $handler = $view->new_display('panel_pane', 'Listing', 'listing_pane');

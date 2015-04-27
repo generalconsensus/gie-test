@@ -197,7 +197,8 @@ function gie_search_default_search_api_index() {
         "field_user_org" : { "type" : "list\\u003Cinteger\\u003E", "entity_type" : "node" },
         "field_user_programs" : { "type" : "list\\u003Cinteger\\u003E", "entity_type" : "node" },
         "search_api_language" : { "type" : "string" },
-        "status" : { "type" : "integer" }
+        "status" : { "type" : "integer" },
+        "uid" : { "type" : "integer" }
       },
       "data_alter_callbacks" : {
         "search_api_ranges_alter" : { "status" : 0, "weight" : "-50", "settings" : [] },
