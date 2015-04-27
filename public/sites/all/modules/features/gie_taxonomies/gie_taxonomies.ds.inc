@@ -40,16 +40,6 @@ function gie_taxonomies_ds_field_settings_info() {
         ),
       ),
     ),
-    'more_link' => array(
-      'weight' => '2',
-      'label' => 'hidden',
-      'format' => 'default',
-    ),
-    'description_field' => array(
-      'formatter_settings' => array(
-        'ft' => array(),
-      ),
-    ),
   );
   $export['taxonomy_term|region|listing'] = $ds_fieldsetting;
 
@@ -83,11 +73,6 @@ function gie_taxonomies_ds_field_settings_info() {
         ),
       ),
     ),
-    'more_link' => array(
-      'weight' => '2',
-      'label' => 'hidden',
-      'format' => 'default',
-    ),
   );
   $export['taxonomy_term|sector|listing'] = $ds_fieldsetting;
 
@@ -99,7 +84,7 @@ function gie_taxonomies_ds_field_settings_info() {
   $ds_fieldsetting->view_mode = 'listing';
   $ds_fieldsetting->settings = array(
     'title' => array(
-      'weight' => '1',
+      'weight' => '0',
       'label' => 'hidden',
       'format' => 'default',
       'formatter_settings' => array(
@@ -120,11 +105,6 @@ function gie_taxonomies_ds_field_settings_info() {
           ),
         ),
       ),
-    ),
-    'more_link' => array(
-      'weight' => '3',
-      'label' => 'hidden',
-      'format' => 'default',
     ),
   );
   $export['taxonomy_term|topic|listing'] = $ds_fieldsetting;
@@ -177,14 +157,10 @@ function gie_taxonomies_ds_layout_settings_info() {
     'regions' => array(
       'main_content' => array(
         0 => 'title',
-        1 => 'description_field',
-        2 => 'more_link',
       ),
     ),
     'fields' => array(
       'title' => 'main_content',
-      'description_field' => 'main_content',
-      'more_link' => 'main_content',
     ),
     'classes' => array(),
     'wrappers' => array(
@@ -239,15 +215,11 @@ function gie_taxonomies_ds_layout_settings_info() {
     'regions' => array(
       'main_content' => array(
         0 => 'title',
-        1 => 'description_field',
-        2 => 'more_link',
-        3 => 'group_card_content',
+        1 => 'group_card_content',
       ),
     ),
     'fields' => array(
       'title' => 'main_content',
-      'description_field' => 'main_content',
-      'more_link' => 'main_content',
       'group_card_content' => 'main_content',
     ),
     'classes' => array(),
@@ -303,14 +275,10 @@ function gie_taxonomies_ds_layout_settings_info() {
     'regions' => array(
       'main_content' => array(
         0 => 'title',
-        1 => 'description_field',
-        2 => 'more_link',
       ),
     ),
     'fields' => array(
       'title' => 'main_content',
-      'description_field' => 'main_content',
-      'more_link' => 'main_content',
     ),
     'classes' => array(),
     'wrappers' => array(
