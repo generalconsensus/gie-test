@@ -90,35 +90,45 @@
             <div class="view view--at-a-glance">
               <div class="views-row">      
                 <div class="views-field has-icon--favorite">    
-                  <span class="views-label views-label-count">Favorites</span>    
+                  <span class="views-label">Favorites</span>    
                   <span class="field-content">1</span>  
                 </div>  
                 <div class="views-field has-icon--comment">    
-                  <span class="views-label views-label-comment-count">Comments</span>    
+                  <span class="views-label">Comments</span>    
                   <span class="field-content">2</span>  
                 </div>  
-                <div class="views-field">    
-                  <span class="views-label">Award Amount:</span>    
-                  <span class="field-content">$100,000</span>  
+                <div class="views-field has-icon--amount">    
+                  <span class="views-label"></span>    
+                  <span class="field__label">$100,000</span>  
                 </div>  
               </div>
             </div>
           </div>
-        </div>      </div>
+        </div>       </div>
       <div class="l-box-second">
-        <div style="background: #ccc; color: #fff; font-weight: bold; text-align: center;">
-        DEADLINEZ<br>
-        GO<br>
-        HERE<br>
-      </div>
+        <div class="pane"> 
+          <h2 class="pane__title">Deadline</h2>
+          <div class="pane__content">
+            <div class="field field--funding-deadline">
+              <div class="field--funding-deadline__day">31</div>
+              <div class="field--funding-deadline__info">
+                <div class="field--funding-deadline__date">September 31st, 2015</div>
+                <div class="field--funding-deadline__time">5:00PM EST</div>
+              </div>
+            </div> 
+          </div>
+        </div>  
+         
       </div>
       <div class="l-box-third">
-        <div style="background: #ccc; color: #fff; font-weight: bold; text-align: center;">
-        APPLY BUTTONZ<br>
-        GO<br>
-        HERE<br>
-      </div>
-      </div>
+        <div class="pane pane--how-to-apply"> 
+          <h2 class="pane__title">How to Apply</h2>
+          <div class="pane__content">     
+            <a class="button button--edit button--highlight">
+              Apply For Opportunity    
+            </a>
+          </div>
+        </div>        </div>
     </div>
   </div>
   <div class="l-wrapper layout-constrain">
@@ -353,7 +363,7 @@
 	<script>
 		// handle injection of items from PHP
 		var patternPartial = "organisms-funding";
-		var lineage        = [{"lineagePattern":"molecules-favorite-this","lineagePath":"..\/..\/patterns\/01-molecules-04-panes-favorite-this\/01-molecules-04-panes-favorite-this.html","lineageState":"inprogress"},{"lineagePattern":"molecules-at-a-glance-funding","lineagePath":"..\/..\/patterns\/01-molecules-04-panes-at-a-glance-funding\/01-molecules-04-panes-at-a-glance-funding.html","lineageState":"inprogress"},{"lineagePattern":"molecules-comments","lineagePath":"..\/..\/patterns\/01-molecules-02-drupal-comments\/01-molecules-02-drupal-comments.html","lineageState":"inprogress"}];
+		var lineage        = [{"lineagePattern":"molecules-favorite-this","lineagePath":"..\/..\/patterns\/01-molecules-04-panes-favorite-this\/01-molecules-04-panes-favorite-this.html","lineageState":"inprogress"},{"lineagePattern":"molecules-at-a-glance-funding","lineagePath":"..\/..\/patterns\/01-molecules-04-panes-at-a-glance-funding\/01-molecules-04-panes-at-a-glance-funding.html","lineageState":"inprogress"},{"lineagePattern":"molecules-deadline-funding","lineagePath":"..\/..\/patterns\/01-molecules-04-panes-deadline-funding\/01-molecules-04-panes-deadline-funding.html","lineageState":"inprogress"},{"lineagePattern":"molecules-how-to-apply-funding","lineagePath":"..\/..\/patterns\/01-molecules-04-panes-how-to-apply-funding\/01-molecules-04-panes-how-to-apply-funding.html","lineageState":"inprogress"},{"lineagePattern":"molecules-comments","lineagePath":"..\/..\/patterns\/01-molecules-02-drupal-comments\/01-molecules-02-drupal-comments.html","lineageState":"inprogress"}];
 		var lineageR       = [{"lineagePattern":"templates-funding-detail","lineagePath":"..\/..\/patterns\/03-templates-04-funding-detail\/03-templates-04-funding-detail.html","lineageState":"inprogress"}];
 		var patternState   = "inprogress";
 		var cssEnabled     = false;
