@@ -115,6 +115,116 @@ function gie_resource_field_group_info() {
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
   $field_group->api_version = 1;
+  $field_group->identifier = 'group_resource_about|node|resource|form';
+  $field_group->group_name = 'group_resource_about';
+  $field_group->entity_type = 'node';
+  $field_group->bundle = 'resource';
+  $field_group->mode = 'form';
+  $field_group->parent_name = '';
+  $field_group->data = array(
+    'label' => 'About your Resource',
+    'weight' => '2',
+    'children' => array(
+      0 => 'title_field',
+      1 => 'field_resource_assets',
+      2 => 'field_resource_author',
+      3 => 'field_resource_date',
+      4 => 'field_resource_desc',
+    ),
+    'format_type' => 'div',
+    'format_settings' => array(
+      'label' => 'About your Resource',
+      'instance_settings' => array(
+        'required_fields' => 1,
+        'id' => '',
+        'classes' => '',
+        'description' => '',
+        'show_label' => '1',
+        'label_element' => 'h2',
+        'effect' => 'none',
+        'speed' => 'none',
+      ),
+      'formatter' => 'open',
+    ),
+  );
+  $export['group_resource_about|node|resource|form'] = $field_group;
+
+  $field_group = new stdClass();
+  $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
+  $field_group->api_version = 1;
+  $field_group->identifier = 'group_resource_addtl|node|resource|form';
+  $field_group->group_name = 'group_resource_addtl';
+  $field_group->entity_type = 'node';
+  $field_group->bundle = 'resource';
+  $field_group->mode = 'form';
+  $field_group->parent_name = '';
+  $field_group->data = array(
+    'label' => 'Additional resource information',
+    'weight' => '9',
+    'children' => array(
+      0 => 'field_resource_link',
+      1 => 'field_resource_org',
+      2 => 'field_resource_program',
+    ),
+    'format_type' => 'div',
+    'format_settings' => array(
+      'label' => 'Additional resource information',
+      'instance_settings' => array(
+        'required_fields' => 1,
+        'id' => '',
+        'classes' => 'group-resource-addtl field-group-div',
+        'description' => '',
+        'show_label' => '1',
+        'label_element' => 'h2',
+        'effect' => 'none',
+        'speed' => 'none',
+      ),
+      'formatter' => 'open',
+    ),
+  );
+  $export['group_resource_addtl|node|resource|form'] = $field_group;
+
+  $field_group = new stdClass();
+  $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
+  $field_group->api_version = 1;
+  $field_group->identifier = 'group_resource_details|node|resource|form';
+  $field_group->group_name = 'group_resource_details';
+  $field_group->entity_type = 'node';
+  $field_group->bundle = 'resource';
+  $field_group->mode = 'form';
+  $field_group->parent_name = '';
+  $field_group->data = array(
+    'label' => 'Key resource details',
+    'weight' => '8',
+    'children' => array(
+      0 => 'field_resource_source',
+      1 => 'field_resource_type',
+      2 => 'field_term_sector',
+      3 => 'field_term_topic',
+      4 => 'field_term_region',
+      5 => 'field_term_country',
+    ),
+    'format_type' => 'div',
+    'format_settings' => array(
+      'label' => 'Key resource details',
+      'instance_settings' => array(
+        'required_fields' => 1,
+        'id' => '',
+        'classes' => 'group-resource-details field-group-div',
+        'description' => '',
+        'show_label' => '1',
+        'label_element' => 'h2',
+        'effect' => 'none',
+        'speed' => 'none',
+      ),
+      'formatter' => 'open',
+    ),
+  );
+  $export['group_resource_details|node|resource|form'] = $field_group;
+
+  $field_group = new stdClass();
+  $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
+  $field_group->api_version = 1;
   $field_group->identifier = 'group_resource_glance|node|resource|at_a_glance';
   $field_group->group_name = 'group_resource_glance';
   $field_group->entity_type = 'node';

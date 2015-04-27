@@ -78,5 +78,152 @@ function gie_organization_field_group_info() {
   );
   $export['group_card_counts|node|organization|listing'] = $field_group;
 
+  $field_group = new stdClass();
+  $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
+  $field_group->api_version = 1;
+  $field_group->identifier = 'group_org_addtl|node|organization|form';
+  $field_group->group_name = 'group_org_addtl';
+  $field_group->entity_type = 'node';
+  $field_group->bundle = 'organization';
+  $field_group->mode = 'form';
+  $field_group->parent_name = '';
+  $field_group->data = array(
+    'label' => 'Additional Information',
+    'weight' => '4',
+    'children' => array(
+      0 => 'field_org_expertise',
+      1 => 'field_org_focus',
+      2 => 'field_org_mission',
+      3 => 'field_organization_facebook',
+      4 => 'field_organization_linkedin',
+      5 => 'field_organization_twitter',
+    ),
+    'format_type' => 'div',
+    'format_settings' => array(
+      'label' => 'Additional Information',
+      'instance_settings' => array(
+        'required_fields' => 1,
+        'id' => '',
+        'classes' => 'group-org-addtl field-group-div',
+        'description' => '',
+        'show_label' => '1',
+        'label_element' => 'h2',
+        'effect' => 'none',
+        'speed' => 'none',
+      ),
+      'formatter' => 'open',
+    ),
+  );
+  $export['group_org_addtl|node|organization|form'] = $field_group;
+
+  $field_group = new stdClass();
+  $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
+  $field_group->api_version = 1;
+  $field_group->identifier = 'group_org_affiliations|node|organization|form';
+  $field_group->group_name = 'group_org_affiliations';
+  $field_group->entity_type = 'node';
+  $field_group->bundle = 'organization';
+  $field_group->mode = 'form';
+  $field_group->parent_name = '';
+  $field_group->data = array(
+    'label' => 'Focus and Affiliations',
+    'weight' => '5',
+    'children' => array(
+      0 => 'field_org_partners',
+      1 => 'field_term_sector',
+      2 => 'field_term_region',
+      3 => 'field_role_on_the_exchange',
+    ),
+    'format_type' => 'div',
+    'format_settings' => array(
+      'label' => 'Focus and Affiliations',
+      'instance_settings' => array(
+        'required_fields' => 1,
+        'id' => '',
+        'classes' => 'group-org-affiliations field-group-div',
+        'description' => '',
+        'show_label' => '1',
+        'label_element' => 'h2',
+        'effect' => 'none',
+        'speed' => 'fast',
+      ),
+      'formatter' => 'open',
+    ),
+  );
+  $export['group_org_affiliations|node|organization|form'] = $field_group;
+
+  $field_group = new stdClass();
+  $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
+  $field_group->api_version = 1;
+  $field_group->identifier = 'group_org_general|node|organization|form';
+  $field_group->group_name = 'group_org_general';
+  $field_group->entity_type = 'node';
+  $field_group->bundle = 'organization';
+  $field_group->mode = 'form';
+  $field_group->parent_name = '';
+  $field_group->data = array(
+    'label' => 'General Information',
+    'weight' => '2',
+    'children' => array(
+      0 => 'title_field',
+      1 => 'field_org_desc',
+      2 => 'field_org_link',
+      3 => 'field_organization_type',
+      4 => 'field_org_logo',
+    ),
+    'format_type' => 'div',
+    'format_settings' => array(
+      'label' => 'General Information',
+      'instance_settings' => array(
+        'required_fields' => 1,
+        'id' => '',
+        'classes' => 'group-org-general field-group-div',
+        'description' => '',
+        'show_label' => '1',
+        'label_element' => 'h2',
+        'effect' => 'none',
+        'speed' => 'none',
+      ),
+      'formatter' => 'open',
+    ),
+  );
+  $export['group_org_general|node|organization|form'] = $field_group;
+
+  $field_group = new stdClass();
+  $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
+  $field_group->api_version = 1;
+  $field_group->identifier = 'group_org_glance|node|organization|form';
+  $field_group->group_name = 'group_org_glance';
+  $field_group->entity_type = 'node';
+  $field_group->bundle = 'organization';
+  $field_group->mode = 'form';
+  $field_group->parent_name = '';
+  $field_group->data = array(
+    'label' => 'At a Glance',
+    'weight' => '3',
+    'children' => array(
+      0 => 'field_org_address',
+      1 => 'field_org_poc',
+      2 => 'field_org_telephone',
+      3 => 'field_org_text_email',
+    ),
+    'format_type' => 'div',
+    'format_settings' => array(
+      'label' => 'At a Glance',
+      'instance_settings' => array(
+        'required_fields' => 1,
+        'id' => '',
+        'classes' => 'group-org-glance field-group-div',
+        'description' => '',
+        'show_label' => '1',
+        'label_element' => 'h2',
+        'effect' => 'none',
+        'speed' => 'none',
+      ),
+      'formatter' => 'open',
+    ),
+  );
+  $export['group_org_glance|node|organization|form'] = $field_group;
+
   return $export;
 }

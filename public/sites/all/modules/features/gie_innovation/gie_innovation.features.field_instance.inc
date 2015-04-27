@@ -360,7 +360,7 @@ function gie_innovation_field_default_field_instances() {
     'bundle' => 'innovation',
     'default_value' => NULL,
     'deleted' => 0,
-    'description' => 'Upload high-resolution photos and videos of your innovation. These will appear at the top of your innovation profile page.',
+    'description' => 'Upload multiple high-resolution photos and videos of your innovation. These will appear at the top of your innovation profile page.',
     'display' => array(
       'at_a_glance' => array(
         'label' => 'above',
@@ -547,7 +547,7 @@ function gie_innovation_field_default_field_instances() {
     'bundle' => 'innovation',
     'default_value' => NULL,
     'deleted' => 0,
-    'description' => 'Have you calculated how much your innovation costs per person that it benefits? This is a great way to show the value of your innovation.',
+    'description' => 'Have you calculated how much your innovation costs per person (in US Dollars) that it benefits? This is a great way to show the value of your innovation.  Please enter a whole number, like 15 (for $15.00). No symbols, commas, or periods/decimals allowed',
     'display' => array(
       'at_a_glance' => array(
         'label' => 'above',
@@ -858,7 +858,7 @@ function gie_innovation_field_default_field_instances() {
     'bundle' => 'innovation',
     'default_value' => NULL,
     'deleted' => 0,
-    'description' => 'Enter a short description of your innovation. What does it do?',
+    'description' => 'Enter a short description of your innovation.',
     'display' => array(
       'at_a_glance' => array(
         'label' => 'above',
@@ -1018,7 +1018,7 @@ function gie_innovation_field_default_field_instances() {
     'bundle' => 'innovation',
     'default_value' => NULL,
     'deleted' => 0,
-    'description' => '',
+    'description' => 'Is there evidence that your innovation works/has had the desired impact?',
     'display' => array(
       'at_a_glance' => array(
         'label' => 'above',
@@ -1339,7 +1339,7 @@ function gie_innovation_field_default_field_instances() {
     'bundle' => 'innovation',
     'default_value' => NULL,
     'deleted' => 0,
-    'description' => 'Do you have a funding goal (in US Dollars) that you would like to raise? Please enter a whole number, like 590000  No symbols, commas, or periods/decimals allowed',
+    'description' => 'Do you have a funding goal (in US Dollars) that you would like to raise? Please enter a whole number, like 590000 (for $59,000). No symbols, commas, or periods/decimals allowed',
     'display' => array(
       'at_a_glance' => array(
         'label' => 'above',
@@ -1451,7 +1451,7 @@ function gie_innovation_field_default_field_instances() {
   $field_instances['node-innovation-field_innovation_image'] = array(
     'bundle' => 'innovation',
     'deleted' => 0,
-    'description' => 'Upload an image that will represent your innovation in other areas of the Exchange like sectors, communities, etc.',
+    'description' => 'Upload an image that will represent your innovation in other areas of the Exchange.',
     'display' => array(
       'at_a_glance' => array(
         'label' => 'above',
@@ -2021,7 +2021,7 @@ function gie_innovation_field_default_field_instances() {
     'bundle' => 'innovation',
     'default_value' => NULL,
     'deleted' => 0,
-    'description' => 'The point of contact must be someone with a user profile in the Exchange. Start writing a name to see if it comes up in the Exchange member directory. If not, create a profile or email the person to invite them to create a profile. If no point of contact is listed, there will be no point of contact listed on the innovation profile.',
+    'description' => 'The point of contact must be someone with a user profile in the Exchange. Start writing a name (first name initial last name e.g. kshipley) to see if it comes up in the Exchange member directory. If not, create a profile or email the person to invite them to create a profile. If no point of contact is listed, there will be no point of contact listed on the innovation profile.',
     'display' => array(
       'at_a_glance' => array(
         'label' => 'above',
@@ -2252,7 +2252,7 @@ function gie_innovation_field_default_field_instances() {
       ),
     ),
     'deleted' => 0,
-    'description' => 'Is there documentation that your innovation works and has the desired impact? Upload an evaluation, test results, or other documents, photos, or videos that prove your innovation works.',
+    'description' => 'Upload an evaluation, test results, or other documents, photos, or videos that prove your innovation works.',
     'display' => array(
       'at_a_glance' => array(
         'label' => 'above',
@@ -2454,7 +2454,7 @@ function gie_innovation_field_default_field_instances() {
     'bundle' => 'innovation',
     'default_value' => NULL,
     'deleted' => 0,
-    'description' => 'Have you already raised funding for your innovation? Share your successes here! In whole numbes like 9999 no commas, periods, or symbols please',
+    'description' => 'Have you already raised funding (in US Dollars) for your innovation? Share your successes here! In whole numbes like 10000 (for $10,000) no commas, periods, or symbols please.',
     'display' => array(
       'at_a_glance' => array(
         'label' => 'above',
@@ -2851,7 +2851,7 @@ function gie_innovation_field_default_field_instances() {
     'bundle' => 'innovation',
     'default_value' => NULL,
     'deleted' => 0,
-    'description' => 'Select the stage that best describes where the innovation current is',
+    'description' => 'Select the stage that best describes the current status of your innovation',
     'display' => array(
       'at_a_glance' => array(
         'label' => 'above',
@@ -3214,7 +3214,7 @@ function gie_innovation_field_default_field_instances() {
     'bundle' => 'innovation',
     'default_value' => NULL,
     'deleted' => 0,
-    'description' => 'Type in team members\' names to connect those who are developing the innovation to your innovation profile. Team members must have user profiles on the Exchange to come up. If they have not created profiles yet, please encourage them to do so. ',
+    'description' => 'Type in team members\' names (first name initial last name e.g. kshipley) to connect those who are developing the innovation to your innovation profile. Only team members who have user profiles on the Exchange will appear. If they have not created profiles yet, please encourage them to do so. ',
     'display' => array(
       'at_a_glance' => array(
         'label' => 'above',
@@ -3885,7 +3885,7 @@ function gie_innovation_field_default_field_instances() {
     'bundle' => 'innovation',
     'default_value' => NULL,
     'deleted' => 0,
-    'description' => 'Please select the sectors and sub-sectors related to your innovation. You will notice that the overall sectors are listed with their sub-sectors nested with a dash )(-) symbol. Be sure to select the sectors and subsectors that apply. Do not select a sub-sector without also selecting the corresponding sector. Be sure to scroll to the bottom, there are a lot of sectors. We know this isn\'t so easy to use right now, but as we get feedback from users we\'ll be improving this selection process.',
+    'description' => 'Please select the sectors and sub-sectors related to your innovation. You will notice that the overall sectors are listed with their sub-sectors nested with a dash (-) symbol. Be sure to select the sectors and subsectors that apply. Do not select a sub-sector without also selecting the corresponding sector. Be sure to scroll to the bottom, there are a lot of sectors. We know this isn\'t so easy to use right now, but we will be improving this selection process.',
     'display' => array(
       'at_a_glance' => array(
         'label' => 'above',
@@ -3983,7 +3983,7 @@ function gie_innovation_field_default_field_instances() {
     'bundle' => 'innovation',
     'default_value' => NULL,
     'deleted' => 0,
-    'description' => 'Topics include issue that may be of interest to Exchange users. Select any (or none) topics that you think apply to your innovation (i.e. social impact investing)',
+    'description' => 'Topics are issues that may be of interest to Exchange users. Select any (or none) topics that you think apply to your innovation (i.e. social impact investing)',
     'display' => array(
       'at_a_glance' => array(
         'label' => 'above',
@@ -4633,9 +4633,9 @@ function gie_innovation_field_default_field_instances() {
   t('Country Implemented In');
   t('Current Users / Testers Include');
   t('Description');
-  t('Do you have a funding goal (in US Dollars) that you would like to raise? Please enter a whole number, like 590000  No symbols, commas, or periods/decimals allowed');
+  t('Do you have a funding goal (in US Dollars) that you would like to raise? Please enter a whole number, like 590000 (for $59,000). No symbols, commas, or periods/decimals allowed');
   t('Email');
-  t('Enter a short description of your innovation. What does it do?');
+  t('Enter a short description of your innovation.');
   t('Evidence Available?');
   t('Evidence it Works');
   t('Exchange References');
@@ -4645,8 +4645,8 @@ function gie_innovation_field_default_field_instances() {
   t('Funded By');
   t('Funding Goal');
   t('Funding Raised');
-  t('Have you already raised funding for your innovation? Share your successes here! In whole numbes like 9999 no commas, periods, or symbols please');
-  t('Have you calculated how much your innovation costs per person that it benefits? This is a great way to show the value of your innovation.');
+  t('Have you already raised funding (in US Dollars) for your innovation? Share your successes here! In whole numbes like 10000 (for $10,000) no commas, periods, or symbols please.');
+  t('Have you calculated how much your innovation costs per person (in US Dollars) that it benefits? This is a great way to show the value of your innovation.  Please enter a whole number, like 15 (for $15.00). No symbols, commas, or periods/decimals allowed');
   t('How it Works');
   t('If you have a cost per unit for your innovation, share it here!');
   t('If you have a handbook, marketing materials, toolkit or other files that you would like to share on the Exchange, upload them here!');
@@ -4655,14 +4655,14 @@ function gie_innovation_field_default_field_instances() {
   t('Innovation Stage');
   t('Innovation Team');
   t('Innovation Type');
-  t('Is there documentation that your innovation works and has the desired impact? Upload an evaluation, test results, or other documents, photos, or videos that prove your innovation works.');
   t('Is there evidence that your innovation works or has the desired impact?');
+  t('Is there evidence that your innovation works/has had the desired impact?');
   t('Last Name');
   t('Name');
   t('Next Steps');
   t('Non-Exchange References');
   t('Photo');
-  t('Please select the sectors and sub-sectors related to your innovation. You will notice that the overall sectors are listed with their sub-sectors nested with a dash )(-) symbol. Be sure to select the sectors and subsectors that apply. Do not select a sub-sector without also selecting the corresponding sector. Be sure to scroll to the bottom, there are a lot of sectors. We know this isn\'t so easy to use right now, but as we get feedback from users we\'ll be improving this selection process.');
+  t('Please select the sectors and sub-sectors related to your innovation. You will notice that the overall sectors are listed with their sub-sectors nested with a dash (-) symbol. Be sure to select the sectors and subsectors that apply. Do not select a sub-sector without also selecting the corresponding sector. Be sure to scroll to the bottom, there are a lot of sectors. We know this isn\'t so easy to use right now, but we will be improving this selection process.');
   t('Please type in any programs/projects related to this innovation. The program must have a profile on the Exchange before you can include it. If the program is not there, please contact the program and ask them to add a profile on the Exchange. Then you can come back and tag it. Programs are often funded or implemented by organizations, have a set budget, and a start and end date.');
   t('Point of Contact');
   t('Proof Available?');
@@ -4675,7 +4675,7 @@ function gie_innovation_field_default_field_instances() {
   t('Select the countries where your innovation is being tested/used');
   t('Select the countries where your innovation was created');
   t('Select the regions that include the above countries');
-  t('Select the stage that best describes where the innovation current is');
+  t('Select the stage that best describes the current status of your innovation');
   t('Share any articles, blogs, or other news items that showcase your innovation');
   t('Share more details about how the innovation works');
   t('Share the URL for your innovation website ');
@@ -4687,14 +4687,15 @@ function gie_innovation_field_default_field_instances() {
   t('Subject');
   t('Tell us who is using and/or testing your innovation right now');
   t('Testing Phase');
-  t('The point of contact must be someone with a user profile in the Exchange. Start writing a name to see if it comes up in the Exchange member directory. If not, create a profile or email the person to invite them to create a profile. If no point of contact is listed, there will be no point of contact listed on the innovation profile.');
+  t('The point of contact must be someone with a user profile in the Exchange. Start writing a name (first name initial last name e.g. kshipley) to see if it comes up in the Exchange member directory. If not, create a profile or email the person to invite them to create a profile. If no point of contact is listed, there will be no point of contact listed on the innovation profile.');
   t('Title');
   t('Topic');
-  t('Topics include issue that may be of interest to Exchange users. Select any (or none) topics that you think apply to your innovation (i.e. social impact investing)');
-  t('Type in team members\' names to connect those who are developing the innovation to your innovation profile. Team members must have user profiles on the Exchange to come up. If they have not created profiles yet, please encourage them to do so. ');
+  t('Topics are issues that may be of interest to Exchange users. Select any (or none) topics that you think apply to your innovation (i.e. social impact investing)');
+  t('Type in team members\' names (first name initial last name e.g. kshipley) to connect those who are developing the innovation to your innovation profile. Only team members who have user profiles on the Exchange will appear. If they have not created profiles yet, please encourage them to do so. ');
   t('Type the organizations or programs that you are funded by. They must have an organization or program profile to appear on your page. Please encourage your funders to create organization/program profiles and user profiles on the Exchange if they don\'t appear.');
-  t('Upload an image that will represent your innovation in other areas of the Exchange like sectors, communities, etc.');
-  t('Upload high-resolution photos and videos of your innovation. These will appear at the top of your innovation profile page.');
+  t('Upload an evaluation, test results, or other documents, photos, or videos that prove your innovation works.');
+  t('Upload an image that will represent your innovation in other areas of the Exchange.');
+  t('Upload multiple high-resolution photos and videos of your innovation. These will appear at the top of your innovation profile page.');
   t('Website');
   t('What is your plan for increasing sales or use of your innovation?');
   t('What type of assistance do you need to grow your innovation? If you don\'t select any assistance your profile will say "No Assistance Needed at this Time"');
