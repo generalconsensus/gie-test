@@ -1,0 +1,17 @@
+.date-display-single {
+  background-image: url(../images/bg/large-blank-event1.png);
+  background-repeat: no-repeat;
+  display: block;
+  height: 73px;
+  overflow: hidden;
+  width: 73px;
+  .date-display-single__number {
+    color: $lightorange;
+    display: block;
+    font-size: $font-size-xxxl;
+    line-height: 73px;
+    padding: 0;
+    text-align: center;
+  }
+}
+

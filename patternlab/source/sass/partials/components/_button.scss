@@ -29,3 +29,7 @@
   @extend %button--member;
 }
 
+.button--edit { // has member edit
+  @extend %button--edit;
+}
+

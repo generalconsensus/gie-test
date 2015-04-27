@@ -136,3 +136,15 @@
     width: 18px;
   }
 }
+
+%button--edit {
+  @extend %button--icon;
+  color: $button-text-color !important;
+  padding-left: 40px;
+  &:before {
+    @include svg-background(edit);
+    height: 20px;
+    top: 8px;
+    width: 20px;
+  } 
+}
