@@ -726,31 +726,6 @@ function gie_taxonomies_panelizer_defaults() {
     $pane->uuid = '9e1ee77f-bade-48fb-94be-1f7ab4386b47';
     $display->content['new-9e1ee77f-bade-48fb-94be-1f7ab4386b47'] = $pane;
     $display->panels['middle'][0] = 'new-9e1ee77f-bade-48fb-94be-1f7ab4386b47';
-    $pane = new stdClass();
-    $pane->pid = 'new-0e06b7f3-2f82-490f-a216-8efe8e305f40';
-    $pane->panel = 'middle';
-    $pane->type = 'flag_link';
-    $pane->subtype = 'taxonomy_term';
-    $pane->shown = TRUE;
-    $pane->access = array();
-    $pane->configuration = array(
-      'flag_name' => 'follow_taxonomy',
-      'context' => 'panelizer',
-      'override_title' => 1,
-      'override_title_text' => '',
-      'override_title_heading' => 'h2',
-    );
-    $pane->cache = array();
-    $pane->style = array(
-      'settings' => NULL,
-    );
-    $pane->css = array();
-    $pane->extras = array();
-    $pane->position = 1;
-    $pane->locks = array();
-    $pane->uuid = '0e06b7f3-2f82-490f-a216-8efe8e305f40';
-    $display->content['new-0e06b7f3-2f82-490f-a216-8efe8e305f40'] = $pane;
-    $display->panels['middle'][1] = 'new-0e06b7f3-2f82-490f-a216-8efe8e305f40';
   $display->hide_title = PANELS_TITLE_FIXED;
   $display->title_pane = '0';
   $panelizer->display = $display;
@@ -1161,31 +1136,6 @@ function gie_taxonomies_panelizer_defaults() {
     $pane->uuid = '8045bba2-66ec-4990-a6ff-bb0d5b4ff72d';
     $display->content['new-8045bba2-66ec-4990-a6ff-bb0d5b4ff72d'] = $pane;
     $display->panels['middle'][0] = 'new-8045bba2-66ec-4990-a6ff-bb0d5b4ff72d';
-    $pane = new stdClass();
-    $pane->pid = 'new-94002802-81fc-4d5c-96c8-63e1df96d223';
-    $pane->panel = 'middle';
-    $pane->type = 'flag_link';
-    $pane->subtype = 'taxonomy_term';
-    $pane->shown = TRUE;
-    $pane->access = array();
-    $pane->configuration = array(
-      'flag_name' => 'follow_taxonomy',
-      'context' => 'panelizer',
-      'override_title' => 1,
-      'override_title_text' => '',
-      'override_title_heading' => 'h2',
-    );
-    $pane->cache = array();
-    $pane->style = array(
-      'settings' => NULL,
-    );
-    $pane->css = array();
-    $pane->extras = array();
-    $pane->position = 1;
-    $pane->locks = array();
-    $pane->uuid = '94002802-81fc-4d5c-96c8-63e1df96d223';
-    $display->content['new-94002802-81fc-4d5c-96c8-63e1df96d223'] = $pane;
-    $display->panels['middle'][1] = 'new-94002802-81fc-4d5c-96c8-63e1df96d223';
   $display->hide_title = PANELS_TITLE_FIXED;
   $display->title_pane = '0';
   $panelizer->display = $display;
@@ -1598,31 +1548,6 @@ function gie_taxonomies_panelizer_defaults() {
     $pane->uuid = 'f248aa76-b462-43f9-b907-e8a67ad87a68';
     $display->content['new-f248aa76-b462-43f9-b907-e8a67ad87a68'] = $pane;
     $display->panels['middle'][0] = 'new-f248aa76-b462-43f9-b907-e8a67ad87a68';
-    $pane = new stdClass();
-    $pane->pid = 'new-f52b3ca8-89cb-41eb-b022-5df329db20cd';
-    $pane->panel = 'middle';
-    $pane->type = 'flag_link';
-    $pane->subtype = 'taxonomy_term';
-    $pane->shown = TRUE;
-    $pane->access = array();
-    $pane->configuration = array(
-      'flag_name' => 'follow_taxonomy',
-      'context' => 'panelizer',
-      'override_title' => 1,
-      'override_title_text' => '',
-      'override_title_heading' => 'h2',
-    );
-    $pane->cache = array();
-    $pane->style = array(
-      'settings' => NULL,
-    );
-    $pane->css = array();
-    $pane->extras = array();
-    $pane->position = 1;
-    $pane->locks = array();
-    $pane->uuid = 'f52b3ca8-89cb-41eb-b022-5df329db20cd';
-    $display->content['new-f52b3ca8-89cb-41eb-b022-5df329db20cd'] = $pane;
-    $display->panels['middle'][1] = 'new-f52b3ca8-89cb-41eb-b022-5df329db20cd';
   $display->hide_title = PANELS_TITLE_FIXED;
   $display->title_pane = '0';
   $panelizer->display = $display;
