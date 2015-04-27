@@ -77,6 +77,32 @@ function gie_user_default_page_manager_handlers() {
     $display->content['new-ee6d06f2-0db1-4f93-848f-ac56edec09ca'] = $pane;
     $display->panels['main'][0] = 'new-ee6d06f2-0db1-4f93-848f-ac56edec09ca';
     $pane = new stdClass();
+    $pane->pid = 'new-0680aa8f-56b3-4fee-98e7-baa6cd3eea59';
+    $pane->panel = 'main';
+    $pane->type = 'custom';
+    $pane->subtype = 'custom';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array(
+      'admin_title' => '',
+      'title' => 'Legal Disclaimer',
+      'body' => 'The partners and sponsors of the Global Innovation Exchange ("Exchange") make no warranties or representations and do not endorse, recommend, or confirm any information or statements made on this Exchange. The Exchange is an open and free market of ideas and information, and information contained on the Exchange does not necessarily reflect the views of the partners or sponsors of the Exchange. Participants and readers of the Exchange should conduct appropriate due diligence when considering information, innovations, and other resources found on the Exchange.&nbsp;<br />
+',
+      'format' => 'filtered_html',
+      'substitute' => TRUE,
+    );
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
+    $pane->css = array();
+    $pane->extras = array();
+    $pane->position = 1;
+    $pane->locks = array();
+    $pane->uuid = '0680aa8f-56b3-4fee-98e7-baa6cd3eea59';
+    $display->content['new-0680aa8f-56b3-4fee-98e7-baa6cd3eea59'] = $pane;
+    $display->panels['main'][1] = 'new-0680aa8f-56b3-4fee-98e7-baa6cd3eea59';
+    $pane = new stdClass();
     $pane->pid = 'new-031308b6-8e61-4d26-b63c-89deecaf793f';
     $pane->panel = 'title';
     $pane->type = 'page_title';

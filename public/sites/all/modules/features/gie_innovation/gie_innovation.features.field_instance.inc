@@ -2332,7 +2332,7 @@ function gie_innovation_field_default_field_instances() {
         'display_label' => 1,
       ),
       'type' => 'options_onoff',
-      'weight' => 7,
+      'weight' => 11,
     ),
   );
 
@@ -2445,7 +2445,7 @@ function gie_innovation_field_default_field_instances() {
         'size' => 60,
       ),
       'type' => 'entityreference_autocomplete',
-      'weight' => 8,
+      'weight' => 12,
     ),
   );
 
@@ -4067,109 +4067,6 @@ function gie_innovation_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-innovation-field_testing_phase'
-  $field_instances['node-innovation-field_testing_phase'] = array(
-    'bundle' => 'innovation',
-    'default_value' => NULL,
-    'deleted' => 0,
-    'description' => '',
-    'display' => array(
-      'at_a_glance' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 22,
-      ),
-      'contact' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 22,
-      ),
-      'default' => array(
-        'label' => 'above',
-        'module' => 'taxonomy',
-        'settings' => array(
-          'field_delimiter' => '',
-          'linked_field' => array(
-            'advanced' => array(
-              'class' => '',
-              'rel' => '',
-              'target' => '',
-              'text' => '',
-              'title' => '',
-            ),
-            'destination' => '',
-            'linked' => 0,
-          ),
-        ),
-        'type' => 'taxonomy_term_reference_link',
-        'weight' => 10,
-      ),
-      'full' => array(
-        'label' => 'inline',
-        'module' => 'taxonomy',
-        'settings' => array(
-          'field_delimiter' => '',
-          'linked_field' => array(
-            'advanced' => array(
-              'class' => '',
-              'rel' => '',
-              'target' => '',
-              'text' => '',
-              'title' => '',
-            ),
-            'destination' => '',
-            'linked' => 0,
-          ),
-        ),
-        'type' => 'taxonomy_term_reference_plain',
-        'weight' => 51,
-      ),
-      'listing' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 18,
-      ),
-      'search_listing' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 16,
-      ),
-      'teaser' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 0,
-      ),
-      'teaser_date' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 23,
-      ),
-    ),
-    'ds_extras_field_template' => '',
-    'entity_type' => 'node',
-    'field_name' => 'field_testing_phase',
-    'label' => 'Testing Phase',
-    'required' => 0,
-    'settings' => array(
-      'user_register_form' => FALSE,
-    ),
-    'widget' => array(
-      'active' => 1,
-      'module' => 'options',
-      'settings' => array(
-        'apply_chosen' => 1,
-      ),
-      'type' => 'options_select',
-      'weight' => 33,
-    ),
-  );
-
   // Exported field_instance: 'node-innovation-title_field'
   $field_instances['node-innovation-title_field'] = array(
     'bundle' => 'innovation',
@@ -4686,7 +4583,6 @@ function gie_innovation_field_default_field_instances() {
   t('Strategy for expanding use of your innovation');
   t('Subject');
   t('Tell us who is using and/or testing your innovation right now');
-  t('Testing Phase');
   t('The point of contact must be someone with a user profile in the Exchange. Start writing a name (first name initial last name e.g. kshipley) to see if it comes up in the Exchange member directory. If not, create a profile or email the person to invite them to create a profile. If no point of contact is listed, there will be no point of contact listed on the innovation profile.');
   t('Title');
   t('Topic');
