@@ -144,7 +144,10 @@ function gie_resource_strongarm() {
     'extra_fields' => array(
       'form' => array(
         'path' => array(
-          'weight' => '15',
+          'weight' => '1',
+        ),
+        'rabbit_hole' => array(
+          'weight' => '0',
         ),
       ),
       'display' => array(
