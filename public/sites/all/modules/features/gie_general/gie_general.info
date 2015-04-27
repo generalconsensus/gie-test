@@ -71,6 +71,7 @@ dependencies[] = pm_existing_pages
 dependencies[] = rdf
 dependencies[] = references_dialog
 dependencies[] = search
+dependencies[] = search_api_page
 dependencies[] = sharethis
 dependencies[] = simplify
 dependencies[] = smart_trim

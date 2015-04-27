@@ -44,11 +44,11 @@ function gie_general_context_default_contexts() {
           'region' => 'navigation',
           'weight' => '-9',
         ),
-        'search-form' => array(
-          'module' => 'search',
-          'delta' => 'form',
+        'search_api_page-node_search' => array(
+          'module' => 'search_api_page',
+          'delta' => 'node_search',
           'region' => 'navigation',
-          'weight' => '-8',
+          'weight' => '-7',
         ),
         'blockify-blockify-messages' => array(
           'module' => 'blockify',
