@@ -1,30 +1,27 @@
 .view--subterms {
 	.views-row {
-		background-color: $blue;
 		border-bottom: 1px solid $border-color;
-		padding: 10px 25px 10px 10px;
-		position: relative;
+		padding: 0;
 		a {
+			background-color: $blue;
 			color: $button-text-color; 
 			display: block;
 			font-weight: 400;
+			padding: 10px 25px 10px 10px;
+			position: relative;
 			text-decoration: none;
-		}
-		&:hover, &:focus {
-			background-color: darken($blue, 10%);
-		}
-		&:after {
-			@include svg-background(chevron-thin-right2);
-			color: $button-text-color;
-			content: '';
-			display: inline-block;
-			font-size: $font-size-lg + 2px;
-			font-weight: 100;
-			height: 16px;
-			position: absolute;
-			right: 10px;
-			top: 15px;
-			width: 16px;
+			&:hover, &:focus {
+				background-color: darken($blue, 10%);
+			}
+			&:after {
+				@include image-replace(16px,16px);
+				@include svg-background(chevron-thin-right2);
+				content: '';
+				display: inline-block;
+				position: absolute;
+				right: 10px;
+				top: 15px;
+			}
 		}
 	}
 }

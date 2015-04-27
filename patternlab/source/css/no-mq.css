@@ -1,5 +1,5 @@
 /* line 65, c:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/singularitygs-1.1.2/stylesheets/singularitygs/helpers/_clearfix.scss */
-.clearfix:after, .layout-grid__row:after, .pane--homepage-views-personas-pane .pane__content .view--homepage-views:after, .pane--landing-intro:after, .quicktabs-tabs.quicktabs-style-nostyle:after, .region-footer:after, .view__header:after, .view--homepage-cardflip:after {
+.clearfix:after, .layout-grid__row:after, .field--funding-deadline:after, .pane--homepage-views-personas-pane .pane__content .view--homepage-views:after, .pane--landing-intro:after, .quicktabs-tabs.quicktabs-style-nostyle:after, .region-footer:after, .view__header:after, .view--homepage-cardflip:after {
   content: "";
   display: table;
   clear: both;
@@ -29,12 +29,12 @@
 }
 
 /* line 9, ../sass/partials/global/helpers/_clearfix.scss */
-.clearfix:after, .layout-grid__row:after, .pane--homepage-views-personas-pane .pane__content .view--homepage-views:after, .pane--landing-intro:after, .quicktabs-tabs.quicktabs-style-nostyle:after, .region-footer:after, .view__header:after, .view--homepage-cardflip:after {
+.clearfix:after, .layout-grid__row:after, .field--funding-deadline:after, .pane--homepage-views-personas-pane .pane__content .view--homepage-views:after, .pane--landing-intro:after, .quicktabs-tabs.quicktabs-style-nostyle:after, .region-footer:after, .view__header:after, .view--homepage-cardflip:after {
   display: table;
   content: "";
 }
 /* line 14, ../sass/partials/global/helpers/_clearfix.scss */
-.clearfix:after, .layout-grid__row:after, .pane--homepage-views-personas-pane .pane__content .view--homepage-views:after, .pane--landing-intro:after, .quicktabs-tabs.quicktabs-style-nostyle:after, .region-footer:after, .view__header:after, .view--homepage-cardflip:after {
+.clearfix:after, .layout-grid__row:after, .field--funding-deadline:after, .pane--homepage-views-personas-pane .pane__content .view--homepage-views:after, .pane--landing-intro:after, .quicktabs-tabs.quicktabs-style-nostyle:after, .region-footer:after, .view__header:after, .view--homepage-cardflip:after {
   clear: both;
 }
 
@@ -227,17 +227,16 @@
 
 /* line 140, ../sass/partials/global/extendables/_button.scss */
 .button--edit {
-  color: white !important;
   padding-left: 40px;
 }
-/* line 144, ../sass/partials/global/extendables/_button.scss */
+/* line 143, ../sass/partials/global/extendables/_button.scss */
 .button--edit:before {
-  background-image: url('../images/bg/edit.png');
+  background-image: url('../images/bg/icon-edit-22-22-white.png');
   background-image: -webkit-linear-gradient(transparent, transparent), url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4NCjwhLS0gR2VuZXJhdGVkIGJ5IEljb01vb24uaW8gLS0+DQo8IURPQ1RZUEUgc3ZnIFBVQkxJQyAiLS8vVzNDLy9EVEQgU1ZHIDEuMS8vRU4iICJodHRwOi8vd3d3LnczLm9yZy9HcmFwaGljcy9TVkcvMS4xL0RURC9zdmcxMS5kdGQiPg0KPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHdpZHRoPSIyMiIgaGVpZ2h0PSIyMiIgdmlld0JveD0iMCAwIDIyIDIyIj4NCjxwYXRoIGZpbGw9IiNmZmZmZmYiIGQ9Ik03LjM0MyAxMi41MTdsLTEuNTE5IDMuODk4IDMuODMxLTEuNTg2LTIuMzEyLTIuMzEyek0xOC40NjMgNC4xOTJsLTAuNDg2LTAuNDg2Yy0wLjUzNi0wLjUzNy0xLjQwNy0wLjUzNy0xLjk0NCAwbC0wLjk3MiAwLjk3MiAyLjQzIDIuNDMxIDAuOTcyLTAuOTcyYzAuNTM4LTAuNTM3IDAuNTM4LTEuNDA4IDAtMS45NDV6TTcuNDIgMTIuMzE5bDAuMzQ4LTAuMzQ4IDIuNDMgMi40MyA2LjgwNi02LjgwNi0yLjQzLTIuNDMgMC40ODYtMC40ODctNy42NCA3LjY0MXpNMTUuODE1IDE3Ljg3OGwtMTEuNzA1IDAuMDA0IDAuMDAyLTExLjcwNSA4LjE5Ni0wLjAwMyAxLjI4NC0xLjM2MWgtMTAuMTc4Yy0wLjM3OSAwLTAuNjg4IDAuMzA3LTAuNjg4IDAuNjg4djEzLjA2M2MwIDAuMzggMC4zMDggMC42ODggMC42ODggMC42ODhoMTMuMDYzYzAuMzggMCAwLjY4OC0wLjMwNyAwLjY4OC0wLjY4OHYtOS42NjVsLTEuMzg1IDEuMzU5IDAuMDM3IDcuNjIxeiI+PC9wYXRoPg0KPC9zdmc+DQo=');
   background-image: linear-gradient(transparent, transparent), url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4NCjwhLS0gR2VuZXJhdGVkIGJ5IEljb01vb24uaW8gLS0+DQo8IURPQ1RZUEUgc3ZnIFBVQkxJQyAiLS8vVzNDLy9EVEQgU1ZHIDEuMS8vRU4iICJodHRwOi8vd3d3LnczLm9yZy9HcmFwaGljcy9TVkcvMS4xL0RURC9zdmcxMS5kdGQiPg0KPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHdpZHRoPSIyMiIgaGVpZ2h0PSIyMiIgdmlld0JveD0iMCAwIDIyIDIyIj4NCjxwYXRoIGZpbGw9IiNmZmZmZmYiIGQ9Ik03LjM0MyAxMi41MTdsLTEuNTE5IDMuODk4IDMuODMxLTEuNTg2LTIuMzEyLTIuMzEyek0xOC40NjMgNC4xOTJsLTAuNDg2LTAuNDg2Yy0wLjUzNi0wLjUzNy0xLjQwNy0wLjUzNy0xLjk0NCAwbC0wLjk3MiAwLjk3MiAyLjQzIDIuNDMxIDAuOTcyLTAuOTcyYzAuNTM4LTAuNTM3IDAuNTM4LTEuNDA4IDAtMS45NDV6TTcuNDIgMTIuMzE5bDAuMzQ4LTAuMzQ4IDIuNDMgMi40MyA2LjgwNi02LjgwNi0yLjQzLTIuNDMgMC40ODYtMC40ODctNy42NCA3LjY0MXpNMTUuODE1IDE3Ljg3OGwtMTEuNzA1IDAuMDA0IDAuMDAyLTExLjcwNSA4LjE5Ni0wLjAwMyAxLjI4NC0xLjM2MWgtMTAuMTc4Yy0wLjM3OSAwLTAuNjg4IDAuMzA3LTAuNjg4IDAuNjg4djEzLjA2M2MwIDAuMzggMC4zMDggMC42ODggMC42ODggMC42ODhoMTMuMDYzYzAuMzggMCAwLjY4OC0wLjMwNyAwLjY4OC0wLjY4OHYtOS42NjVsLTEuMzg1IDEuMzU5IDAuMDM3IDcuNjIxeiI+PC9wYXRoPg0KPC9zdmc+DQo=');
-  height: 20px;
+  height: 22px;
   top: 8px;
-  width: 20px;
+  width: 22px;
 }
 
 /* line 15, ../sass/partials/base/_normalize.scss */
@@ -2064,8 +2063,8 @@ input.throbbing {
   background-color: #03283b;
 }
 
-/* line 1, ../sass/partials/components/_field--funding-deadline.scss */
-.field--funding-deadline {
+/* line 5, ../sass/partials/components/_field--funding-deadline.scss */
+.field--funding-deadline__day {
   background-image: url(../images/bg/large-blank-event1.png);
   background-repeat: no-repeat;
   color: #ed7d3a;
@@ -2073,25 +2072,19 @@ input.throbbing {
   font-size: 32px;
   height: 73px;
   line-height: 80px;
+  margin-right: 1em;
   overflow: hidden;
   text-align: center;
   width: 70px;
 }
 
-/* line 14, ../sass/partials/components/_field--funding-deadline.scss */
+/* line 19, ../sass/partials/components/_field--funding-deadline.scss */
 .field--funding-deadline__info {
   float: left;
-  position: relative;
-  right: 0;
-  top: 0;
 }
-/* line 19, ../sass/partials/components/_field--funding-deadline.scss */
-.field--funding-deadline__info p {
-  margin: 0;
-  padding: 0 0 0 25px;
-}
-/* line 23, ../sass/partials/components/_field--funding-deadline.scss */
-.field--funding-deadline__info .field--funding-deadline__time {
+
+/* line 25, ../sass/partials/components/_field--funding-deadline.scss */
+.field--funding-deadline__time {
   text-transform: uppercase;
 }
 
@@ -3388,6 +3381,11 @@ div[class*="pane--facetapi-"] .pane__content ul li a {
   width: 33.33333%;
 }
 
+/* line 2, ../sass/partials/components/pane/_pane--how-to-apply.scss */
+.pane--how-to-apply .pane__content {
+  padding-left: 1.5em;
+}
+
 /* line 1, ../sass/partials/components/pane/_pane--landing-intro.scss */
 .pane--landing-intro {
   background: url(../images/background--path.png) no-repeat 100% 0;
@@ -3857,6 +3855,10 @@ div[class*="pane--facetapi-"] .pane__content ul li a {
 /* line 15, ../sass/partials/components/_region-meta.scss */
 .region-meta a:hover, .region-meta a:focus {
   color: #f8f8f8;
+}
+/* line 19, ../sass/partials/components/_region-meta.scss */
+.region-meta .button {
+  color: white;
 }
 
 /* line 1, ../sass/partials/components/_region-navigation.scss */
@@ -4596,25 +4598,6 @@ tr.drag-previous {
   padding-left: 0.5em;
 }
 
-/* line 1, ../sass/partials/components/view/_view--deadline.scss */
-.date-display-single {
-  background-image: url(../images/bg/large-blank-event1.png);
-  background-repeat: no-repeat;
-  display: block;
-  height: 73px;
-  overflow: hidden;
-  width: 73px;
-}
-/* line 8, ../sass/partials/components/view/_view--deadline.scss */
-.date-display-single .date-display-single__number {
-  color: #ed7d3a;
-  display: block;
-  font-size: 32px;
-  line-height: 73px;
-  padding: 0;
-  text-align: center;
-}
-
 /* line 3, ../sass/partials/components/view/_view--featured-assets.scss */
 .view--featured-assets .flexslider {
   border: 0;
@@ -4818,14 +4801,6 @@ tr.drag-previous {
   width: 25%;
 }
 
-/* line 1, ../sass/partials/components/view/_view--how-to-apply.scss */
-.view--how-to-apply {
-  color: white !important;
-  overflow: hidden;
-  padding-left: 1.5em;
-  text-transform: uppercase;
-}
-
 /* line 2, ../sass/partials/components/view/_view--partners.scss */
 .view--partners .view__content {
   overflow: hidden;
@@ -4872,37 +4847,43 @@ tr.drag-previous {
 
 /* line 2, ../sass/partials/components/view/_view--subterms.scss */
 .view--subterms .views-row {
-  background-color: #003359;
   border-bottom: 1px solid #cecfcb;
-  padding: 10px 25px 10px 10px;
-  position: relative;
+  padding: 0;
 }
-/* line 7, ../sass/partials/components/view/_view--subterms.scss */
+/* line 5, ../sass/partials/components/view/_view--subterms.scss */
 .view--subterms .views-row a {
+  background-color: #003359;
   color: white;
   display: block;
   font-weight: 400;
+  padding: 10px 25px 10px 10px;
+  position: relative;
   text-decoration: none;
 }
 /* line 13, ../sass/partials/components/view/_view--subterms.scss */
-.view--subterms .views-row:hover, .view--subterms .views-row:focus {
+.view--subterms .views-row a:hover, .view--subterms .views-row a:focus {
   background-color: #001626;
 }
 /* line 16, ../sass/partials/components/view/_view--subterms.scss */
-.view--subterms .views-row:after {
+.view--subterms .views-row a:after {
+  height: 16px;
+  overflow: hidden;
+  width: 16px;
   background-image: url('../images/bg/chevron-thin-right2.png');
   background-image: -webkit-linear-gradient(transparent, transparent), url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4NCjwhLS0gR2VuZXJhdGVkIGJ5IEljb01vb24uaW8gLS0+DQo8IURPQ1RZUEUgc3ZnIFBVQkxJQyAiLS8vVzNDLy9EVEQgU1ZHIDEuMS8vRU4iICJodHRwOi8vd3d3LnczLm9yZy9HcmFwaGljcy9TVkcvMS4xL0RURC9zdmcxMS5kdGQiPg0KPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHdpZHRoPSIxNiIgaGVpZ2h0PSIxNiIgdmlld0JveD0iMCAwIDE2IDE2Ij4NCjxwYXRoIGZpbGw9IiNmZmZmZmYiIGQ9Ik0xMC42IDhsLTUuNzEzLTUuOTM2Yy0wLjIxNC0wLjIxNi0wLjIxNC0wLjU2NiAwLTAuNzgzIDAuMjE0LTAuMjE2IDAuNTYxLTAuMjE2IDAuNzc1IDBsNi4yNjQgNi4zMjZjMC4yMTQgMC4yMTcgMC4yMTQgMC41NjcgMCAwLjc4M2wtNi4yNjQgNi4zMjZjLTAuMjE0IDAuMjE3LTAuNTYxIDAuMjE2LTAuNzc1IDBzLTAuMjE0LTAuNTY2IDAtMC43ODNsNS43MTMtNS45MzR6Ij48L3BhdGg+DQo8L3N2Zz4NCg==');
   background-image: linear-gradient(transparent, transparent), url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4NCjwhLS0gR2VuZXJhdGVkIGJ5IEljb01vb24uaW8gLS0+DQo8IURPQ1RZUEUgc3ZnIFBVQkxJQyAiLS8vVzNDLy9EVEQgU1ZHIDEuMS8vRU4iICJodHRwOi8vd3d3LnczLm9yZy9HcmFwaGljcy9TVkcvMS4xL0RURC9zdmcxMS5kdGQiPg0KPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHdpZHRoPSIxNiIgaGVpZ2h0PSIxNiIgdmlld0JveD0iMCAwIDE2IDE2Ij4NCjxwYXRoIGZpbGw9IiNmZmZmZmYiIGQ9Ik0xMC42IDhsLTUuNzEzLTUuOTM2Yy0wLjIxNC0wLjIxNi0wLjIxNC0wLjU2NiAwLTAuNzgzIDAuMjE0LTAuMjE2IDAuNTYxLTAuMjE2IDAuNzc1IDBsNi4yNjQgNi4zMjZjMC4yMTQgMC4yMTcgMC4yMTQgMC41NjcgMCAwLjc4M2wtNi4yNjQgNi4zMjZjLTAuMjE0IDAuMjE3LTAuNTYxIDAuMjE2LTAuNzc1IDBzLTAuMjE0LTAuNTY2IDAtMC43ODNsNS43MTMtNS45MzR6Ij48L3BhdGg+DQo8L3N2Zz4NCg==');
-  color: white;
   content: '';
   display: inline-block;
-  font-size: 20px;
-  font-weight: 100;
-  height: 16px;
   position: absolute;
   right: 10px;
   top: 15px;
-  width: 16px;
+}
+/* line 14, ../sass/partials/global/helpers/_image-replace.scss */
+.view--subterms .views-row a:after:before {
+  content: "";
+  display: block;
+  height: 150%;
+  width: 0;
 }
 
 /* line 4, ../sass/partials/components/_views-widget.scss */

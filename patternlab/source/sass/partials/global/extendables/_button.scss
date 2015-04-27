@@ -139,12 +139,11 @@
 
 %button--edit {
   @extend %button--icon;
-  color: $button-text-color !important;
   padding-left: 40px;
   &:before {
-    @include svg-background(edit);
-    height: 20px;
+    @include svg-background(icon-edit-22-22-white);
+    height: 22px;
     top: 8px;
-    width: 20px;
+    width: 22px;
   } 
 }
