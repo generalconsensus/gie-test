@@ -880,7 +880,7 @@ function gie_resource_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 21,
+        'weight' => 23,
       ),
       'listing' => array(
         'label' => 'above',
@@ -993,7 +993,7 @@ function gie_resource_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 19,
+        'weight' => 21,
       ),
       'listing' => array(
         'label' => 'above',
@@ -1104,7 +1104,7 @@ function gie_resource_field_default_field_instances() {
         'label' => 'inline',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 14,
+        'weight' => 16,
       ),
       'listing' => array(
         'label' => 'above',
@@ -1225,7 +1225,7 @@ function gie_resource_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 23,
+        'weight' => 25,
       ),
       'listing' => array(
         'label' => 'hidden',
@@ -1342,7 +1342,7 @@ function gie_resource_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 15,
+        'weight' => 17,
       ),
       'listing' => array(
         'label' => 'above',
@@ -1445,7 +1445,7 @@ function gie_resource_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 16,
+        'weight' => 18,
       ),
       'listing' => array(
         'label' => 'above',
@@ -1548,7 +1548,7 @@ function gie_resource_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 18,
+        'weight' => 20,
       ),
       'listing' => array(
         'label' => 'inline',
@@ -1674,7 +1674,7 @@ function gie_resource_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 17,
+        'weight' => 19,
       ),
       'listing' => array(
         'label' => 'above',
@@ -1766,7 +1766,7 @@ function gie_resource_field_default_field_instances() {
         'label' => 'hidden',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 24,
+        'weight' => 26,
       ),
       'listing' => array(
         'label' => 'hidden',
