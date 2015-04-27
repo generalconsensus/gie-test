@@ -211,7 +211,7 @@ function gie_funding_views_default_views() {
   $handler->display->display_options['fields']['field_funding_link']['field'] = 'field_funding_link';
   $handler->display->display_options['fields']['field_funding_link']['label'] = '';
   $handler->display->display_options['fields']['field_funding_link']['alter']['alter_text'] = TRUE;
-  $handler->display->display_options['fields']['field_funding_link']['alter']['text'] = '<a class="button button--alt" href="[field_funding_link]" title="Apply for Funding">Apply</a>';
+  $handler->display->display_options['fields']['field_funding_link']['alter']['text'] = '<a class="button button--highlight button--edit" href="[field_funding_link]" title="Apply for Opportunity">Apply For Opportunity</a>';
   $handler->display->display_options['fields']['field_funding_link']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['field_funding_link']['element_default_classes'] = FALSE;
   $handler->display->display_options['fields']['field_funding_link']['settings'] = array(

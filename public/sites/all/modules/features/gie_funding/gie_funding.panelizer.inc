@@ -193,8 +193,8 @@ function gie_funding_panelizer_defaults() {
       'context' => array(
         0 => 'panelizer.nid',
       ),
-      'override_title' => 0,
-      'override_title_text' => '',
+      'override_title' => 1,
+      'override_title_text' => 'How to Apply',
       'override_title_heading' => 'h2',
     );
     $pane->cache = array();

@@ -68,6 +68,10 @@
   function cardView() {
     
     $('.view--card-view,.view--card-view-four-columns').each(function(){
+      var tab = $(this).parents('.quicktabs-hide');
+      if (tab.length > 0) { 
+        tab.show(); // if in hidden tab, temporarily show it so height can be measured
+      }
       if ($(this).is('.view--card-view-four-columns')) {
         var columns = 4;
       } else {
@@ -139,6 +143,9 @@
           }
         }
       });
+      if (tab.length > 0) { 
+        tab.removeAttr("style");  // reset hidden tab back to hidden
+      }
            
     });
   }

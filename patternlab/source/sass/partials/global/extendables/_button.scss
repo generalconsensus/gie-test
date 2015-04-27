@@ -136,3 +136,14 @@
     width: 18px;
   }
 }
+
+%button--edit {
+  @extend %button--icon;
+  padding-left: 40px;
+  &:before {
+    @include svg-background(icon-edit-22-22-white);
+    height: 22px;
+    top: 8px;
+    width: 22px;
+  } 
+}
