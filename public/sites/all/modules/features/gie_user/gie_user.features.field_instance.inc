@@ -84,6 +84,80 @@ function gie_user_field_default_field_instances() {
     ),
   );
 
+  // Exported field_instance: 'taxonomy_term-member_help-description_field'
+  $field_instances['taxonomy_term-member_help-description_field'] = array(
+    'bundle' => 'member_help',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 1,
+      ),
+    ),
+    'entity_type' => 'taxonomy_term',
+    'field_name' => 'description_field',
+    'label' => 'Description',
+    'required' => FALSE,
+    'settings' => array(
+      'display_summary' => 0,
+      'hide_label' => array(
+        'entity' => 0,
+        'page' => 0,
+      ),
+      'text_processing' => 1,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'module' => 'text',
+      'settings' => array(
+        'rows' => 20,
+        'summary_rows' => 5,
+      ),
+      'type' => 'text_textarea_with_summary',
+      'weight' => -5,
+    ),
+  );
+
+  // Exported field_instance: 'taxonomy_term-member_help-name_field'
+  $field_instances['taxonomy_term-member_help-name_field'] = array(
+    'bundle' => 'member_help',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'taxonomy_term',
+    'field_name' => 'name_field',
+    'label' => 'Name',
+    'required' => TRUE,
+    'settings' => array(
+      'hide_label' => array(
+        'entity' => 0,
+        'page' => 0,
+      ),
+      'text_processing' => 0,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'module' => 'text',
+      'settings' => array(
+        'size' => 60,
+      ),
+      'type' => 'text_textfield',
+      'weight' => -5,
+    ),
+  );
+
   // Exported field_instance: 'taxonomy_term-other_interest-description_field'
   $field_instances['taxonomy_term-other_interest-description_field'] = array(
     'bundle' => 'other_interest',
@@ -507,7 +581,7 @@ function gie_user_field_default_field_instances() {
     'bundle' => 'user',
     'default_value' => NULL,
     'deleted' => 0,
-    'description' => 'Please select the sectors and sub-sectors you are interested in. This will drive the Exchange to send you information that is relevant to you. You will notice that the overall sectors are listed with their sub-sectors nested with a dash )(-) symbol beneath. Be sure to select the sectors and subsectors that apply. If you select a sub-sector it will not automatically select its main sector. Be sure to scroll to the bottom, there are a lot of sectors/sub-sectors. We know this isn\'t so easy to use right now, but as we get feedback from users we\'ll be improving this selection process.',
+    'description' => 'Please select the sectors and sub-sectors related to your innovation. Click on the plus (+) icon on the different sectors to access sub sectors. Be sure to select the sectors and subsectors that apply. Do not select a sub-sector without also selecting the corresponding sector.',
     'display' => array(
       'default' => array(
         'label' => 'above',
@@ -2867,7 +2941,7 @@ function gie_user_field_default_field_instances() {
   t('Name');
   t('Organizational Affiliations');
   t('Other Interests');
-  t('Please select the sectors and sub-sectors you are interested in. This will drive the Exchange to send you information that is relevant to you. You will notice that the overall sectors are listed with their sub-sectors nested with a dash )(-) symbol beneath. Be sure to select the sectors and subsectors that apply. If you select a sub-sector it will not automatically select its main sector. Be sure to scroll to the bottom, there are a lot of sectors/sub-sectors. We know this isn\'t so easy to use right now, but as we get feedback from users we\'ll be improving this selection process.');
+  t('Please select the sectors and sub-sectors related to your innovation. Click on the plus (+) icon on the different sectors to access sub sectors. Be sure to select the sectors and subsectors that apply. Do not select a sub-sector without also selecting the corresponding sector.');
   t('Please type in any programs/Projects you are associated with. The program must have a profile on the Exchange before you can include it. If the program is not there, please contact the program and ask them to add a profile on the Exchange. Then you can come back and tag it. Programs are often funded or implemented by organizations, have a set budget, and a start and end date.');
   t('Profile Photo');
   t('Programs');

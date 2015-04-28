@@ -1002,6 +1002,97 @@ function gie_program_field_default_field_instances() {
     ),
   );
 
+  // Exported field_instance: 'node-program-field_program_parent_org'
+  $field_instances['node-program-field_program_parent_org'] = array(
+    'bundle' => 'program',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => 'Select the Parent Organization for the Program. ',
+    'display' => array(
+      'at_a_glance' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'contact' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'default' => array(
+        'label' => 'above',
+        'module' => 'entityreference',
+        'settings' => array(
+          'field_delimiter' => '',
+          'link' => FALSE,
+          'linked_field' => array(
+            'advanced' => array(
+              'class' => '',
+              'rel' => '',
+              'target' => '',
+              'text' => '',
+              'title' => '',
+            ),
+            'destination' => '',
+            'linked' => 0,
+          ),
+        ),
+        'type' => 'entityreference_label',
+        'weight' => 20,
+      ),
+      'full' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'listing' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'page_header' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'search_listing' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'ds_extras_field_template' => '',
+    'entity_type' => 'node',
+    'entityconnect_unload_add' => 0,
+    'entityconnect_unload_edit' => 0,
+    'field_name' => 'field_program_parent_org',
+    'label' => 'Parent Organization',
+    'required' => 0,
+    'settings' => array(
+      'description_display' => 'before',
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 0,
+      'module' => 'multiple_selects',
+      'settings' => array(),
+      'type' => 'multiple_selects',
+      'weight' => 30,
+    ),
+  );
+
   // Exported field_instance: 'node-program-field_program_partners'
   $field_instances['node-program-field_program_partners'] = array(
     'bundle' => 'program',
@@ -2103,6 +2194,7 @@ function gie_program_field_default_field_instances() {
   t('Link to your program\'s website.');
   t('Logo');
   t('Objectives');
+  t('Parent Organization');
   t('Partners');
   t('Please select the sectors and sub-sectors related to your innovation. Click on the plus (+) icon on the different sectors to access sub sectors. Be sure to select the sectors and subsectors that apply. Do not select a sub-sector without also selecting the corresponding sector. ');
   t('Point of Contact');
@@ -2113,6 +2205,7 @@ function gie_program_field_default_field_instances() {
   t('Region');
   t('Sector');
   t('Select any (or none) topics that you think apply to your program. Topics include issues that we think may be of interest to Exchange users. ');
+  t('Select the Parent Organization for the Program. ');
   t('Select the countries where your program is active. ');
   t('Select the regions that apply to the countries above. ');
   t('Short Description');

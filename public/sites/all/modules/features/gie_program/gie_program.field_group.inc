@@ -132,6 +132,7 @@ function gie_program_field_group_info() {
       1 => 'field_term_region',
       2 => 'field_term_sector',
       3 => 'field_term_topic',
+      4 => 'field_program_parent_org',
     ),
     'format_type' => 'div',
     'format_settings' => array(
