@@ -117,8 +117,8 @@ function gie_taxonomies_panelizer_defaults() {
     $pane->shown = TRUE;
     $pane->access = array();
     $pane->configuration = array(
-      'label' => 'above',
-      'formatter' => 'entityreference_label',
+      'label' => 'title',
+      'formatter' => 'entityreference_entity_view',
       'delta_limit' => 0,
       'delta_offset' => '0',
       'delta_reversed' => FALSE,
@@ -136,8 +136,13 @@ function gie_taxonomies_panelizer_defaults() {
             'text' => '',
           ),
         ),
+        'view_mode' => 'user_teaser',
+        'links' => 0,
       ),
       'context' => 'panelizer',
+      'override_title' => 1,
+      'override_title_text' => 'Program Contact',
+      'override_title_heading' => 'h2',
     );
     $pane->cache = array();
     $pane->style = array(
@@ -169,47 +174,6 @@ function gie_taxonomies_panelizer_defaults() {
     $pane->uuid = 'ea26d2c8-2472-4a61-9684-14b7d14a40b3';
     $display->content['new-ea26d2c8-2472-4a61-9684-14b7d14a40b3'] = $pane;
     $display->panels['bottom_sidebar'][1] = 'new-ea26d2c8-2472-4a61-9684-14b7d14a40b3';
-    $pane = new stdClass();
-    $pane->pid = 'new-a216094f-19b4-4a32-916f-59e1b1f41241';
-    $pane->panel = 'bottom_sidebar';
-    $pane->type = 'entity_field';
-    $pane->subtype = 'taxonomy_term:field_program_related_program';
-    $pane->shown = TRUE;
-    $pane->access = array();
-    $pane->configuration = array(
-      'label' => 'above',
-      'formatter' => 'entityreference_label',
-      'delta_limit' => 0,
-      'delta_offset' => '0',
-      'delta_reversed' => FALSE,
-      'formatter_settings' => array(
-        'link' => FALSE,
-        'field_delimiter' => '',
-        'linked_field' => array(
-          'linked' => 0,
-          'destination' => '',
-          'advanced' => array(
-            'title' => '',
-            'target' => '',
-            'class' => '',
-            'rel' => '',
-            'text' => '',
-          ),
-        ),
-      ),
-      'context' => 'panelizer',
-    );
-    $pane->cache = array();
-    $pane->style = array(
-      'settings' => NULL,
-    );
-    $pane->css = array();
-    $pane->extras = array();
-    $pane->position = 2;
-    $pane->locks = array();
-    $pane->uuid = 'a216094f-19b4-4a32-916f-59e1b1f41241';
-    $display->content['new-a216094f-19b4-4a32-916f-59e1b1f41241'] = $pane;
-    $display->panels['bottom_sidebar'][2] = 'new-a216094f-19b4-4a32-916f-59e1b1f41241';
     $pane = new stdClass();
     $pane->pid = 'new-6d39ec12-c4b4-4ed4-bdcf-871cb2c6aaa7';
     $pane->panel = 'main';
