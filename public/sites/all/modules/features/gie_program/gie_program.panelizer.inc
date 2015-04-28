@@ -279,28 +279,6 @@ function gie_program_panelizer_defaults() {
     $display->content['new-b6cb5059-1538-4840-a7aa-51551d06f161'] = $pane;
     $display->panels['main'][0] = 'new-b6cb5059-1538-4840-a7aa-51551d06f161';
     $pane = new stdClass();
-    $pane->pid = 'new-6961ca6d-30ac-4ce3-b458-127d6bf6622f';
-    $pane->panel = 'main';
-    $pane->type = 'views_panes';
-    $pane->subtype = 'program_community-panel_pane_1';
-    $pane->shown = TRUE;
-    $pane->access = array();
-    $pane->configuration = array();
-    $pane->cache = array();
-    $pane->style = array(
-      'settings' => NULL,
-    );
-    $pane->css = array(
-      'css_id' => '',
-      'css_class' => '',
-    );
-    $pane->extras = array();
-    $pane->position = 1;
-    $pane->locks = array();
-    $pane->uuid = '6961ca6d-30ac-4ce3-b458-127d6bf6622f';
-    $display->content['new-6961ca6d-30ac-4ce3-b458-127d6bf6622f'] = $pane;
-    $display->panels['main'][1] = 'new-6961ca6d-30ac-4ce3-b458-127d6bf6622f';
-    $pane = new stdClass();
     $pane->pid = 'new-31f8103e-e0fe-41c5-a24b-f241b08d546b';
     $pane->panel = 'main_sidebar';
     $pane->type = 'flag_link';
@@ -328,6 +306,28 @@ function gie_program_panelizer_defaults() {
     $pane->uuid = '31f8103e-e0fe-41c5-a24b-f241b08d546b';
     $display->content['new-31f8103e-e0fe-41c5-a24b-f241b08d546b'] = $pane;
     $display->panels['main_sidebar'][0] = 'new-31f8103e-e0fe-41c5-a24b-f241b08d546b';
+    $pane = new stdClass();
+    $pane->pid = 'new-6961ca6d-30ac-4ce3-b458-127d6bf6622f';
+    $pane->panel = 'main_sidebar';
+    $pane->type = 'views_panes';
+    $pane->subtype = 'program_community-panel_pane_1';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array();
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
+    $pane->css = array(
+      'css_id' => '',
+      'css_class' => '',
+    );
+    $pane->extras = array();
+    $pane->position = 1;
+    $pane->locks = array();
+    $pane->uuid = '6961ca6d-30ac-4ce3-b458-127d6bf6622f';
+    $display->content['new-6961ca6d-30ac-4ce3-b458-127d6bf6622f'] = $pane;
+    $display->panels['main_sidebar'][1] = 'new-6961ca6d-30ac-4ce3-b458-127d6bf6622f';
     $pane = new stdClass();
     $pane->pid = 'new-8ce4bb67-ec9e-48e9-bfa0-071eaab8c3a5';
     $pane->panel = 'title';
