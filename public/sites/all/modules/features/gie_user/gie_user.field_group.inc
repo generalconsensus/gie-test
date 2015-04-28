@@ -205,8 +205,8 @@ function gie_user_field_group_info() {
       4 => 'field_user_programs',
       5 => 'field_term_sector',
       6 => 'field_term_region',
-      7 => 'field_user_parent_organization',
-      8 => 'field_types_of_assistance_you_ca',
+      7 => 'field_user_parent',
+      8 => 'field_assistance_offered',
     ),
     'format_type' => 'div',
     'format_settings' => array(
