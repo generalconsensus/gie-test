@@ -434,6 +434,7 @@ function gie_innovation_field_default_field_instances() {
     'label' => 'Innovation Photos and Videos',
     'required' => 0,
     'settings' => array(
+      'description_display' => 'before',
       'user_register_form' => FALSE,
     ),
     'widget' => array(
@@ -529,6 +530,7 @@ function gie_innovation_field_default_field_instances() {
     'label' => 'Assistance Type',
     'required' => 0,
     'settings' => array(
+      'description_display' => 'before',
       'user_register_form' => FALSE,
     ),
     'widget' => array(
@@ -622,6 +624,7 @@ function gie_innovation_field_default_field_instances() {
     'label' => 'Cost per Beneficiary',
     'required' => 0,
     'settings' => array(
+      'description_display' => 'before',
       'max' => '',
       'min' => '',
       'prefix' => '',
@@ -735,6 +738,7 @@ function gie_innovation_field_default_field_instances() {
     'label' => 'Cost Per Unit',
     'required' => 0,
     'settings' => array(
+      'description_display' => 'before',
       'max' => '',
       'min' => '',
       'prefix' => '',
@@ -840,6 +844,7 @@ function gie_innovation_field_default_field_instances() {
     'label' => 'Country Created In',
     'required' => 1,
     'settings' => array(
+      'description_display' => 'before',
       'user_register_form' => FALSE,
     ),
     'widget' => array(
@@ -999,6 +1004,7 @@ function gie_innovation_field_default_field_instances() {
           ),
         ),
       ),
+      'description_display' => 'before',
       'text_processing' => 1,
       'user_register_form' => FALSE,
     ),
@@ -1129,6 +1135,7 @@ function gie_innovation_field_default_field_instances() {
           ),
         ),
       ),
+      'description_display' => 'before',
       'text_processing' => 1,
       'user_register_form' => FALSE,
     ),
@@ -1223,6 +1230,7 @@ function gie_innovation_field_default_field_instances() {
     'label' => 'Evidence Available?',
     'required' => 0,
     'settings' => array(
+      'description_display' => 'before',
       'user_register_form' => FALSE,
     ),
     'widget' => array(
@@ -1315,6 +1323,7 @@ function gie_innovation_field_default_field_instances() {
     'label' => 'Funded By',
     'required' => 0,
     'settings' => array(
+      'description_display' => 'before',
       'user_register_form' => FALSE,
     ),
     'widget' => array(
@@ -1432,6 +1441,7 @@ function gie_innovation_field_default_field_instances() {
     'label' => 'Funding Goal',
     'required' => 0,
     'settings' => array(
+      'description_display' => 'before',
       'max' => '',
       'min' => '',
       'prefix' => '',
@@ -1546,6 +1556,7 @@ function gie_innovation_field_default_field_instances() {
       'alt_field_sync_title' => 0,
       'alt_field_update_on_edit' => 0,
       'default_image' => 35,
+      'description_display' => 'before',
       'file_directory' => '',
       'file_extensions' => 'png gif jpg jpeg',
       'max_filesize' => '',
@@ -1687,6 +1698,7 @@ function gie_innovation_field_default_field_instances() {
           ),
         ),
       ),
+      'description_display' => 'before',
       'text_processing' => 1,
       'user_register_form' => FALSE,
     ),
@@ -1791,6 +1803,7 @@ function gie_innovation_field_default_field_instances() {
     'label' => 'Country Implemented In',
     'required' => 1,
     'settings' => array(
+      'description_display' => 'before',
       'user_register_form' => FALSE,
     ),
     'widget' => array(
@@ -1903,6 +1916,7 @@ function gie_innovation_field_default_field_instances() {
         'target' => 'default',
         'title' => '',
       ),
+      'description_display' => 'before',
       'display' => array(
         'url_cutoff' => 80,
       ),
@@ -2111,6 +2125,7 @@ function gie_innovation_field_default_field_instances() {
     'label' => 'Point of Contact',
     'required' => 0,
     'settings' => array(
+      'description_display' => 'before',
       'user_register_form' => FALSE,
     ),
     'widget' => array(
@@ -2175,7 +2190,7 @@ function gie_innovation_field_default_field_instances() {
         'module' => 'entityreference',
         'settings' => array(
           'field_delimiter' => '',
-          'link' => FALSE,
+          'link' => 1,
           'linked_field' => array(
             'advanced' => array(
               'class' => '',
@@ -2224,6 +2239,7 @@ function gie_innovation_field_default_field_instances() {
     'label' => 'Related Programs',
     'required' => 0,
     'settings' => array(
+      'description_display' => 'before',
       'user_register_form' => FALSE,
     ),
     'widget' => array(
@@ -2323,6 +2339,7 @@ function gie_innovation_field_default_field_instances() {
     'label' => 'Proof Available?',
     'required' => 0,
     'settings' => array(
+      'description_display' => 'before',
       'user_register_form' => FALSE,
     ),
     'widget' => array(
@@ -2529,6 +2546,7 @@ function gie_innovation_field_default_field_instances() {
     'label' => 'Funding Raised',
     'required' => 0,
     'settings' => array(
+      'description_display' => 'before',
       'max' => '',
       'min' => '',
       'prefix' => '',
@@ -2827,6 +2845,7 @@ function gie_innovation_field_default_field_instances() {
     'label' => 'Resources',
     'required' => 0,
     'settings' => array(
+      'description_display' => 'before',
       'user_register_form' => FALSE,
     ),
     'widget' => array(
@@ -2936,6 +2955,7 @@ function gie_innovation_field_default_field_instances() {
     'label' => 'Innovation Stage',
     'required' => 0,
     'settings' => array(
+      'description_display' => 'before',
       'user_register_form' => FALSE,
     ),
     'widget' => array(
@@ -3065,6 +3085,7 @@ function gie_innovation_field_default_field_instances() {
           ),
         ),
       ),
+      'description_display' => 'before',
       'text_processing' => 1,
       'user_register_form' => FALSE,
     ),
@@ -3195,6 +3216,7 @@ function gie_innovation_field_default_field_instances() {
           ),
         ),
       ),
+      'description_display' => 'before',
       'text_processing' => 1,
       'user_register_form' => FALSE,
     ),
@@ -3288,6 +3310,7 @@ function gie_innovation_field_default_field_instances() {
     'label' => 'Innovation Team',
     'required' => 0,
     'settings' => array(
+      'description_display' => 'before',
       'user_register_form' => FALSE,
     ),
     'widget' => array(
@@ -3423,6 +3446,7 @@ function gie_innovation_field_default_field_instances() {
           ),
         ),
       ),
+      'description_display' => 'before',
       'text_processing' => 1,
       'user_register_form' => FALSE,
     ),
@@ -3527,6 +3551,7 @@ function gie_innovation_field_default_field_instances() {
     'label' => 'Innovation Type',
     'required' => 0,
     'settings' => array(
+      'description_display' => 'before',
       'user_register_form' => FALSE,
     ),
     'widget' => array(
@@ -3639,6 +3664,7 @@ function gie_innovation_field_default_field_instances() {
         'target' => 'default',
         'title' => '',
       ),
+      'description_display' => 'before',
       'display' => array(
         'url_cutoff' => 80,
       ),
@@ -3777,6 +3803,7 @@ function gie_innovation_field_default_field_instances() {
           ),
         ),
       ),
+      'description_display' => 'before',
       'text_processing' => 1,
       'user_register_form' => FALSE,
     ),
@@ -3867,6 +3894,7 @@ function gie_innovation_field_default_field_instances() {
     'label' => 'Region',
     'required' => 1,
     'settings' => array(
+      'description_display' => 'before',
       'user_register_form' => FALSE,
     ),
     'widget' => array(
@@ -3885,7 +3913,7 @@ function gie_innovation_field_default_field_instances() {
     'bundle' => 'innovation',
     'default_value' => NULL,
     'deleted' => 0,
-    'description' => 'Please select the sectors and sub-sectors related to your innovation. You will notice that the overall sectors are listed with their sub-sectors nested with a dash (-) symbol. Be sure to select the sectors and subsectors that apply. Do not select a sub-sector without also selecting the corresponding sector. Be sure to scroll to the bottom, there are a lot of sectors. We know this isn\'t so easy to use right now, but we will be improving this selection process.',
+    'description' => 'Please select the sectors and sub-sectors related to your innovation. Click on the plus (+) icon on the different sectors to access sub sectors. Be sure to select the sectors and subsectors that apply. Do not select a sub-sector without also selecting the corresponding sector. ',
     'display' => array(
       'at_a_glance' => array(
         'label' => 'above',
@@ -3956,6 +3984,7 @@ function gie_innovation_field_default_field_instances() {
     'label' => 'Sector',
     'required' => 1,
     'settings' => array(
+      'description_display' => 'before',
       'user_register_form' => FALSE,
     ),
     'widget' => array(
@@ -4054,6 +4083,7 @@ function gie_innovation_field_default_field_instances() {
     'label' => 'Topic',
     'required' => 0,
     'settings' => array(
+      'description_display' => 'before',
       'user_register_form' => FALSE,
     ),
     'widget' => array(
@@ -4206,6 +4236,7 @@ function gie_innovation_field_default_field_instances() {
           ),
         ),
       ),
+      'description_display' => 'before',
       'hide_label' => array(
         'entity' => 0,
         'page' => 0,
@@ -4559,7 +4590,7 @@ function gie_innovation_field_default_field_instances() {
   t('Next Steps');
   t('Non-Exchange References');
   t('Photo');
-  t('Please select the sectors and sub-sectors related to your innovation. You will notice that the overall sectors are listed with their sub-sectors nested with a dash (-) symbol. Be sure to select the sectors and subsectors that apply. Do not select a sub-sector without also selecting the corresponding sector. Be sure to scroll to the bottom, there are a lot of sectors. We know this isn\'t so easy to use right now, but we will be improving this selection process.');
+  t('Please select the sectors and sub-sectors related to your innovation. Click on the plus (+) icon on the different sectors to access sub sectors. Be sure to select the sectors and subsectors that apply. Do not select a sub-sector without also selecting the corresponding sector. ');
   t('Please type in any programs/projects related to this innovation. The program must have a profile on the Exchange before you can include it. If the program is not there, please contact the program and ask them to add a profile on the Exchange. Then you can come back and tag it. Programs are often funded or implemented by organizations, have a set budget, and a start and end date.');
   t('Point of Contact');
   t('Proof Available?');
