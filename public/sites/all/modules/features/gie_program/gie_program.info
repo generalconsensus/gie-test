@@ -95,6 +95,7 @@ features[variable][] = panelizer_defaults_node_program
 features[variable][] = panelizer_node:program:default_selection
 features[variable][] = panelizer_node:program:page_manager_selection
 features[views_view][] = program_at_a_glance
+features[views_view][] = program_community
 features[views_view][] = program_counters
 features[views_view][] = program_listing
 features[views_view][] = program_recent_content
