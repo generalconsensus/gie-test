@@ -1199,6 +1199,103 @@ function gie_organization_field_default_field_instances() {
     ),
   );
 
+  // Exported field_instance: 'node-organization-field_org_parent_organization'
+  $field_instances['node-organization-field_org_parent_organization'] = array(
+    'bundle' => 'organization',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => 'Select the Parent Organization. ',
+    'display' => array(
+      'at_a_glance' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'contact' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'default' => array(
+        'label' => 'above',
+        'module' => 'entityreference',
+        'settings' => array(
+          'field_delimiter' => '',
+          'link' => FALSE,
+          'linked_field' => array(
+            'advanced' => array(
+              'class' => '',
+              'rel' => '',
+              'target' => '',
+              'text' => '',
+              'title' => '',
+            ),
+            'destination' => '',
+            'linked' => 0,
+          ),
+        ),
+        'type' => 'entityreference_label',
+        'weight' => 25,
+      ),
+      'full' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'listing' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'logo' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'page_header' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'search_listing' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'ds_extras_field_template' => '',
+    'entity_type' => 'node',
+    'entityconnect_unload_add' => 0,
+    'entityconnect_unload_edit' => 0,
+    'field_name' => 'field_org_parent_organization',
+    'label' => 'Parent Organization',
+    'required' => 0,
+    'settings' => array(
+      'description_display' => 'before',
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 0,
+      'module' => 'multiple_selects',
+      'settings' => array(),
+      'type' => 'multiple_selects',
+      'weight' => 14,
+    ),
+  );
+
   // Exported field_instance: 'node-organization-field_org_partners'
   $field_instances['node-organization-field_org_partners'] = array(
     'bundle' => 'organization',
@@ -2861,6 +2958,7 @@ function gie_organization_field_default_field_instances() {
   t('Organization Mission');
   t('Organization Title');
   t('Organization Type');
+  t('Parent Organization');
   t('Partners');
   t('Paste your organization\'s Facebook page URL so that users can go directly there');
   t('Paste your organization\'s LinkedIn URL so that users can go directly there');
@@ -2870,6 +2968,7 @@ function gie_organization_field_default_field_instances() {
   t('Region');
   t('Role on the Exchange');
   t('Sector');
+  t('Select the Parent Organization. ');
   t('Select the regions that apply to the selected countries');
   t('Select the type(s) of organization you are');
   t('Select which roles your think your organization will play on the Exchange ');
