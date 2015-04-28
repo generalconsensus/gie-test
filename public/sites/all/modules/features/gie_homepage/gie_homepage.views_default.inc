@@ -239,7 +239,7 @@ function gie_homepage_views_default_views() {
   $handler->display->display_options['header']['area']['id'] = 'area';
   $handler->display->display_options['header']['area']['table'] = 'views';
   $handler->display->display_options['header']['area']['field'] = 'area';
-  $handler->display->display_options['header']['area']['content'] = '<h1 class="view__header-title">Staff Picks</h1><div><a href="innovations" class="view__header-link">View All Innovations</a><a class="button button--highlight button--large button--add view__header-button" href="node/add/innovation">Add Innovation</a></div>';
+  $handler->display->display_options['header']['area']['content'] = '<h1 class="view__header-title">Highlights</h1><div><a href="innovations" class="view__header-link">View All Innovations</a><a class="button button--highlight button--large button--add view__header-button" href="node/add/innovation">Add Innovation</a></div>';
   $handler->display->display_options['header']['area']['format'] = 'full_html';
   $handler->display->display_options['defaults']['relationships'] = FALSE;
   /* Relationship: Entity Reference: Referencing entity */
