@@ -710,7 +710,7 @@ function gie_funding_field_default_field_instances() {
     'ds_extras_field_template' => '',
     'entity_type' => 'node',
     'field_name' => 'field_funding_effort',
-    'label' => 'Time to Apply ',
+    'label' => 'Estimated Time to Complete Application',
     'required' => 0,
     'settings' => array(
       'description_display' => 'before',
@@ -2705,6 +2705,7 @@ function gie_funding_field_default_field_instances() {
   t('Duration of Award');
   t('Eligibility Details');
   t('Eligibility Type');
+  t('Estimated Time to Complete Application');
   t('Funding Author');
   t('Funding Opportunity Title');
   t('Funding Type');
@@ -2729,7 +2730,6 @@ function gie_funding_field_default_field_instances() {
   t('The title of the funding opportunity. ');
   t('The value of the award. If the award is a range, enter the lowest amount in the range. If the amount is unknown, please leave blank.');
   t('This is the individual who is entering information into the form. This person can be different than the point of content. The funding author does need to have a profile on the Exchange.');
-  t('Time to Apply ');
   t('Topic');
   t('Topics are issues that may be of interest to Exchange users. Select any (or none) topics that you think apply to your funding opportunity.');
 
