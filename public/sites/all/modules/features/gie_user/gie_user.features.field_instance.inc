@@ -380,6 +380,96 @@ function gie_user_field_default_field_instances() {
     ),
   );
 
+  // Exported field_instance: 'user-user-field_assistance_offered'
+  $field_instances['user-user-field_assistance_offered'] = array(
+    'bundle' => 'user',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'taxonomy',
+        'settings' => array(
+          'field_delimiter' => '',
+          'linked_field' => array(
+            'advanced' => array(
+              'class' => '',
+              'rel' => '',
+              'target' => '',
+              'text' => '',
+              'title' => '',
+            ),
+            'destination' => '',
+            'linked' => 0,
+          ),
+        ),
+        'type' => 'taxonomy_term_reference_link',
+        'weight' => 26,
+      ),
+      'full' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'listing' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'resource_user' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'title' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'user_teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'user_teaser_summary' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'user_teaser_with_motto' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'ds_extras_field_template' => '',
+    'entity_type' => 'user',
+    'field_name' => 'field_assistance_offered',
+    'label' => 'Assistance Offered',
+    'required' => 0,
+    'settings' => array(
+      'description_display' => 'after',
+      'user_register_form' => 1,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'options',
+      'settings' => array(
+        'apply_chosen' => '',
+      ),
+      'type' => 'options_select',
+      'weight' => 29,
+    ),
+  );
+
   // Exported field_instance: 'user-user-field_newsletter_sign_up'
   $field_instances['user-user-field_newsletter_sign_up'] = array(
     'bundle' => 'user',
@@ -572,7 +662,7 @@ function gie_user_field_default_field_instances() {
         'apply_chosen' => 1,
       ),
       'type' => 'options_select',
-      'weight' => 10,
+      'weight' => 32,
     ),
   );
 
@@ -671,7 +761,7 @@ function gie_user_field_default_field_instances() {
         'track_list' => 0,
       ),
       'type' => 'term_reference_tree',
-      'weight' => 8,
+      'weight' => 30,
     ),
   );
 
@@ -799,7 +889,7 @@ function gie_user_field_default_field_instances() {
     'bundle' => 'user',
     'default_value' => NULL,
     'deleted' => 0,
-    'description' => 'The company you currently work for. This must be an organization with an organization profile on the Exchange. If it doesn\'t show up in the list as you start to type then create a new one!',
+    'description' => 'The company you currently work for. Begin typing your organization name and select the match, if one exists. If not, finish typing your organization name. ',
     'display' => array(
       'default' => array(
         'label' => 'hidden',
@@ -1452,7 +1542,7 @@ function gie_user_field_default_field_instances() {
         'apply_chosen' => 1,
       ),
       'type' => 'options_select',
-      'weight' => 9,
+      'weight' => 31,
     ),
   );
 
@@ -1826,7 +1916,7 @@ function gie_user_field_default_field_instances() {
     'bundle' => 'user',
     'default_value' => NULL,
     'deleted' => 0,
-    'description' => 'Type the organizations or programs that you are funded by. They must have an organization or program profile to appear on your page. Please encourage your funders to create organization/program profiles and user profiles on the Exchange if they don\'t appear.',
+    'description' => 'Select organizations on the exchange that you are affiliated with, whether you have worked with them on a project or receive funding from them for an innovation. ',
     'display' => array(
       'default' => array(
         'label' => 'above',
@@ -1917,7 +2007,7 @@ function gie_user_field_default_field_instances() {
         'size' => 60,
       ),
       'type' => 'entityreference_autocomplete',
-      'weight' => 12,
+      'weight' => 35,
     ),
   );
 
@@ -2008,7 +2098,100 @@ function gie_user_field_default_field_instances() {
         'size' => 60,
       ),
       'type' => 'taxonomy_autocomplete',
-      'weight' => 15,
+      'weight' => 37,
+    ),
+  );
+
+  // Exported field_instance: 'user-user-field_user_parent'
+  $field_instances['user-user-field_user_parent'] = array(
+    'bundle' => 'user',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => 'Select your parent organization on the exchange. ',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'entityreference',
+        'settings' => array(
+          'field_delimiter' => '',
+          'link' => FALSE,
+          'linked_field' => array(
+            'advanced' => array(
+              'class' => '',
+              'rel' => '',
+              'target' => '',
+              'text' => '',
+              'title' => '',
+            ),
+            'destination' => '',
+            'linked' => 0,
+          ),
+        ),
+        'type' => 'entityreference_label',
+        'weight' => 25,
+      ),
+      'full' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'listing' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'resource_user' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'title' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'user_teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'user_teaser_summary' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'user_teaser_with_motto' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'ds_extras_field_template' => '',
+    'entity_type' => 'user',
+    'entityconnect_unload_add' => 0,
+    'entityconnect_unload_edit' => 0,
+    'field_name' => 'field_user_parent',
+    'label' => 'Parent Organization',
+    'required' => 0,
+    'settings' => array(
+      'description_display' => 'before',
+      'user_register_form' => 1,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'options',
+      'settings' => array(
+        'apply_chosen' => '',
+      ),
+      'type' => 'options_select',
+      'weight' => 34,
     ),
   );
 
@@ -2312,7 +2495,7 @@ function gie_user_field_default_field_instances() {
         'size' => 60,
       ),
       'type' => 'entityreference_autocomplete',
-      'weight' => 14,
+      'weight' => 36,
     ),
   );
 
@@ -2406,7 +2589,7 @@ function gie_user_field_default_field_instances() {
         'size' => 60,
       ),
       'type' => 'taxonomy_autocomplete',
-      'weight' => 11,
+      'weight' => 33,
     ),
   );
 
@@ -2925,6 +3108,7 @@ function gie_user_field_default_field_instances() {
   t('About Me');
   t('About Me!');
   t('Address');
+  t('Assistance Offered');
   t('Company / Institution');
   t('Connect');
   t('Description');
@@ -2941,6 +3125,7 @@ function gie_user_field_default_field_instances() {
   t('Name');
   t('Organizational Affiliations');
   t('Other Interests');
+  t('Parent Organization');
   t('Please select the sectors and sub-sectors related to your innovation. Click on the plus (+) icon on the different sectors to access sub sectors. Be sure to select the sectors and subsectors that apply. Do not select a sub-sector without also selecting the corresponding sector.');
   t('Please type in any programs/Projects you are associated with. The program must have a profile on the Exchange before you can include it. If the program is not there, please contact the program and ask them to add a profile on the Exchange. Then you can come back and tag it. Programs are often funded or implemented by organizations, have a set budget, and a start and end date.');
   t('Profile Photo');
@@ -2951,19 +3136,20 @@ function gie_user_field_default_field_instances() {
   t('Region');
   t('Sectors of Interest');
   t('Select as many types that apply to your current role and expertise.');
+  t('Select organizations on the exchange that you are affiliated with, whether you have worked with them on a project or receive funding from them for an innovation. ');
   t('Select the region where you are based. ');
+  t('Select your parent organization on the exchange. ');
   t('Separate terms with a comma (e.g. Health, Water, English). Type in any other areas of interest for you. If somoeone has also listed that area then it will appear otherwise you will be creating new areas of interest. This data helps us understand what areas we should be focusing on.');
   t('Share a great photo of yourself. If you don\'t upload your photo, one will be automatically assigned to you!');
   t('Share your education background and degrees.');
   t('Share your mailing address');
   t('Sign Up for Updates');
   t('Skills');
-  t('The company you currently work for. This must be an organization with an organization profile on the Exchange. If it doesn\'t show up in the list as you start to type then create a new one!');
+  t('The company you currently work for. Begin typing your organization name and select the match, if one exists. If not, finish typing your organization name. ');
   t('Title');
   t('Topics include issue that may be of interest to Exchange users. Select any (or none) topics that you think apply to your innovation.');
   t('Topics of Interest');
   t('Twitter');
-  t('Type the organizations or programs that you are funded by. They must have an organization or program profile to appear on your page. Please encourage your funders to create organization/program profiles and user profiles on the Exchange if they don\'t appear.');
   t('Your current job title. ');
   t('Your first name.');
   t('Your last name. ');

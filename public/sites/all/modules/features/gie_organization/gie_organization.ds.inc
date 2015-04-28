@@ -238,37 +238,6 @@ function gie_organization_ds_field_settings_info() {
   $ds_fieldsetting->bundle = 'organization';
   $ds_fieldsetting->view_mode = 'teaser';
   $ds_fieldsetting->settings = array(
-    'title' => array(
-      'weight' => '1',
-      'label' => 'hidden',
-      'format' => 'default',
-      'formatter_settings' => array(
-        'link' => '1',
-        'wrapper' => '',
-        'class' => '',
-        'ft' => array(
-          'func' => 'theme_ds_field_expert',
-          'fi' => TRUE,
-          'fi-el' => 'div',
-          'fi-cl' => 'profile-thumb__name',
-          'fi-at' => '',
-          'fi-def-at' => FALSE,
-          'fi-odd-even' => FALSE,
-        ),
-        'field_delimiter' => '',
-        'linked_field' => array(
-          'linked' => 0,
-          'destination' => '',
-          'advanced' => array(
-            'title' => '',
-            'target' => '',
-            'class' => '',
-            'rel' => '',
-            'text' => '',
-          ),
-        ),
-      ),
-    ),
     'field_org_logo' => array(
       'formatter_settings' => array(
         'ft' => array(
@@ -549,12 +518,10 @@ function gie_organization_ds_layout_settings_info() {
     'regions' => array(
       'ds_content' => array(
         0 => 'field_org_logo',
-        1 => 'title',
       ),
     ),
     'fields' => array(
       'field_org_logo' => 'ds_content',
-      'title' => 'ds_content',
     ),
     'classes' => array(),
     'wrappers' => array(
