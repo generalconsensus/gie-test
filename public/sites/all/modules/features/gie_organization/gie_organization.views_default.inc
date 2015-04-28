@@ -975,7 +975,7 @@ function gie_organization_views_default_views() {
   $handler->display->display_options['footer']['area']['id'] = 'area';
   $handler->display->display_options['footer']['area']['table'] = 'views';
   $handler->display->display_options['footer']['area']['field'] = 'area';
-  $handler->display->display_options['footer']['area']['content'] = '<a class="button button--highlight" href="/node/61">Become a Partner</a><a href="/organizations" class="view__all">View All Partners</a>';
+  $handler->display->display_options['footer']['area']['content'] = '<a class="button button--highlight" href="/node/61">Become a Partner</a><a href="/organizations" class="view__all">View All Organizations</a>';
   $handler->display->display_options['footer']['area']['format'] = 'full_html';
   /* Field: Content: Title */
   $handler->display->display_options['fields']['title']['id'] = 'title';
