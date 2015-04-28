@@ -50,17 +50,15 @@ $aliases['stage'] = array(
   ),
 );
 
-/*
 
 $aliases['prod'] = array(
-  'uri' => 'www.example.com',
-  'root' => '/var/www/vhosts/example.www/public',
-  'remote-host' => 'www.example.com',
-  'remote-user' => 'example',
+  'uri' => 'http://www.globalinnovationexchange.com/',
+  'root' => '/var/www/vhosts/giexchange.www/public',
+  'remote-host' => 'www.globalinnovationexchange.com',
+  'remote-user' => 'giexchange',
   'command-specific' => array(
     'rsync' => array (
       'mode' => 'rzv'
     ),
   ),
 );
-*/
