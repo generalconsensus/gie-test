@@ -234,7 +234,7 @@ function gie_program_views_default_views() {
   $handler->display->display_options['filters']['machine_name']['table'] = 'taxonomy_vocabulary';
   $handler->display->display_options['filters']['machine_name']['field'] = 'machine_name';
   $handler->display->display_options['filters']['machine_name']['value'] = array(
-    'program_discussion' => 'program_discussion',
+    'program_discussions' => 'program_discussions',
   );
 
   /* Display: Content pane */
