@@ -30,7 +30,6 @@ function gie_user_field_group_info() {
       4 => 'field_user_summary',
       5 => 'field_user_title',
       6 => 'field_user_motto',
-      7 => 'field_member_help',
     ),
     'format_type' => 'div',
     'format_settings' => array(
@@ -206,7 +205,8 @@ function gie_user_field_group_info() {
       4 => 'field_user_programs',
       5 => 'field_term_sector',
       6 => 'field_term_region',
-      7 => 'field_member_parent_organization',
+      7 => 'field_user_parent',
+      8 => 'field_assistance_offered',
     ),
     'format_type' => 'div',
     'format_settings' => array(
