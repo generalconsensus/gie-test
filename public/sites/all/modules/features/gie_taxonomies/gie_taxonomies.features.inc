@@ -49,6 +49,7 @@ function gie_taxonomies_flag_default_flags() {
       0 => 'region',
       1 => 'topic',
       2 => 'sector',
+      3 => 'program_discussions',
     ),
     'flag_short' => 'Follow',
     'flag_long' => 'Follow this term',
@@ -61,7 +62,9 @@ function gie_taxonomies_flag_default_flags() {
     'weight' => 0,
     'show_in_links' => array(
       'full' => 'full',
+      'diff_standard' => 0,
       'token' => 0,
+      'listing' => 0,
     ),
     'show_as_field' => 0,
     'show_on_form' => 0,
