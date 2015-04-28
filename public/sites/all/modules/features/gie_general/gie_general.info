@@ -168,6 +168,7 @@ features[variable][] = pathauto_node_pattern
 features[variable][] = pathauto_punctuation_hyphen
 features[variable][] = pathauto_taxonomy_term_pattern
 features[variable][] = pathauto_user_pattern
+features[variable][] = r4032login_redirect_authenticated_users_to
 features[variable][] = sharethis_button_option
 features[variable][] = sharethis_location
 features[variable][] = sharethis_node_types

@@ -451,6 +451,13 @@ function gie_general_strongarm() {
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
+  $strongarm->name = 'r4032login_redirect_authenticated_users_to';
+  $strongarm->value = 'node/80';
+  $export['r4032login_redirect_authenticated_users_to'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
   $strongarm->name = 'sharethis_button_option';
   $strongarm->value = 'stbc_custom';
   $export['sharethis_button_option'] = $strongarm;
@@ -512,7 +519,7 @@ function gie_general_strongarm() {
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'site_403';
-  $strongarm->value = 'node/80';
+  $strongarm->value = 'r4032login';
   $export['site_403'] = $strongarm;
 
   $strongarm = new stdClass();
