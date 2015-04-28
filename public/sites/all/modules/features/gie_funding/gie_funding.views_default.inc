@@ -307,7 +307,7 @@ function gie_funding_views_default_views() {
   $handler->display->display_options['fields']['field_org_logo']['click_sort_column'] = 'fid';
   $handler->display->display_options['fields']['field_org_logo']['settings'] = array(
     'image_style' => '',
-    'image_link' => '',
+    'image_link' => 'content',
     'linked_field' => array(
       'linked' => 0,
       'destination' => '',
@@ -326,6 +326,7 @@ function gie_funding_views_default_views() {
   $handler->display->display_options['fields']['title']['field'] = 'title';
   $handler->display->display_options['fields']['title']['relationship'] = 'field_funding_organization_target_id';
   $handler->display->display_options['fields']['title']['label'] = '';
+  $handler->display->display_options['fields']['title']['exclude'] = TRUE;
   $handler->display->display_options['fields']['title']['element_type'] = 'div';
   $handler->display->display_options['fields']['title']['element_class'] = 'profile-thumb__name';
   $handler->display->display_options['fields']['title']['element_label_colon'] = FALSE;

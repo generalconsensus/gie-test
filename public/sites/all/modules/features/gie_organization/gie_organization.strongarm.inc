@@ -321,6 +321,10 @@ function gie_organization_strongarm() {
             'weight' => '10',
             'visible' => FALSE,
           ),
+          'teaser' => array(
+            'weight' => '10',
+            'visible' => FALSE,
+          ),
         ),
         'organization_at_a_glance_member_count' => array(
           'at_a_glance' => array(
@@ -348,6 +352,10 @@ function gie_organization_strongarm() {
             'visible' => FALSE,
           ),
           'full' => array(
+            'weight' => '10',
+            'visible' => FALSE,
+          ),
+          'teaser' => array(
             'weight' => '10',
             'visible' => FALSE,
           ),
@@ -390,6 +398,10 @@ function gie_organization_strongarm() {
             'weight' => '10',
             'visible' => FALSE,
           ),
+          'teaser' => array(
+            'weight' => '10',
+            'visible' => FALSE,
+          ),
         ),
         'organization_at_a_glance_partner_count' => array(
           'at_a_glance' => array(
@@ -417,6 +429,10 @@ function gie_organization_strongarm() {
             'visible' => FALSE,
           ),
           'full' => array(
+            'weight' => '10',
+            'visible' => FALSE,
+          ),
+          'teaser' => array(
             'weight' => '10',
             'visible' => FALSE,
           ),
