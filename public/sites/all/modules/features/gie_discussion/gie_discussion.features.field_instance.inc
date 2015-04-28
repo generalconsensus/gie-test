@@ -508,7 +508,7 @@ function gie_discussion_field_default_field_instances() {
     'bundle' => 'discussion',
     'default_value' => NULL,
     'deleted' => 0,
-    'description' => '',
+    'description' => 'Please select the sectors and sub-sectors related to your innovation. Click on the plus (+) icon on the different sectors to access sub sectors. Be sure to select the sectors and subsectors that apply. Do not select a sub-sector without also selecting the corresponding sector. ',
     'display' => array(
       'default' => array(
         'label' => 'above',
@@ -573,6 +573,7 @@ function gie_discussion_field_default_field_instances() {
     'label' => 'Sector',
     'required' => 0,
     'settings' => array(
+      'description_display' => 'before',
       'user_register_form' => FALSE,
     ),
     'widget' => array(
@@ -824,6 +825,7 @@ function gie_discussion_field_default_field_instances() {
   // Included for use with string extractors like potx.
   t('Comment');
   t('Description');
+  t('Please select the sectors and sub-sectors related to your innovation. Click on the plus (+) icon on the different sectors to access sub sectors. Be sure to select the sectors and subsectors that apply. Do not select a sub-sector without also selecting the corresponding sector. ');
   t('Program');
   t('Region');
   t('Sector');

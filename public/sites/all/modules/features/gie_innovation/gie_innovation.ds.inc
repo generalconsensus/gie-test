@@ -189,6 +189,11 @@ function gie_innovation_ds_field_settings_info() {
         ),
       ),
     ),
+    'field_innovation_program' => array(
+      'formatter_settings' => array(
+        'ft' => array(),
+      ),
+    ),
     'field_innovation_resources' => array(
       'formatter_settings' => array(
         'ft' => array(
@@ -623,10 +628,9 @@ function gie_innovation_ds_layout_settings_info() {
         14 => 'field_innovation_type',
         15 => 'field_innovation_stage',
         16 => 'field_innovation_cost_per_unit',
-        17 => 'field_testing_phase',
-        18 => 'field_innovation_created',
-        19 => 'field_innovation_implemented',
-        20 => 'field_innovation_program',
+        17 => 'field_innovation_created',
+        18 => 'field_innovation_implemented',
+        19 => 'field_innovation_program',
       ),
     ),
     'fields' => array(
@@ -647,7 +651,6 @@ function gie_innovation_ds_layout_settings_info() {
       'field_innovation_type' => 'ds_content',
       'field_innovation_stage' => 'ds_content',
       'field_innovation_cost_per_unit' => 'ds_content',
-      'field_testing_phase' => 'ds_content',
       'field_innovation_created' => 'ds_content',
       'field_innovation_implemented' => 'ds_content',
       'field_innovation_program' => 'ds_content',

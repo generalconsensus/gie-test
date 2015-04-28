@@ -214,6 +214,7 @@ function gie_organization_field_default_field_instances() {
           ),
         ),
       ),
+      'description_display' => 'before',
       'text_processing' => 1,
       'user_register_form' => FALSE,
     ),
@@ -394,6 +395,7 @@ function gie_organization_field_default_field_instances() {
           ),
         ),
       ),
+      'description_display' => 'before',
       'text_processing' => 1,
       'user_register_form' => FALSE,
     ),
@@ -504,6 +506,7 @@ function gie_organization_field_default_field_instances() {
     'label' => 'Areas of Expertise ',
     'required' => 0,
     'settings' => array(
+      'description_display' => 'before',
       'user_register_form' => FALSE,
     ),
     'widget' => array(
@@ -737,6 +740,7 @@ function gie_organization_field_default_field_instances() {
           ),
         ),
       ),
+      'description_display' => 'before',
       'text_processing' => 1,
       'user_register_form' => FALSE,
     ),
@@ -856,6 +860,7 @@ function gie_organization_field_default_field_instances() {
         'target' => 'default',
         'title' => '',
       ),
+      'description_display' => 'before',
       'display' => array(
         'url_cutoff' => 80,
       ),
@@ -1031,6 +1036,7 @@ function gie_organization_field_default_field_instances() {
       'alt_field_sync_title' => 1,
       'alt_field_update_on_edit' => 1,
       'default_image' => 43,
+      'description_display' => 'before',
       'file_directory' => '',
       'file_extensions' => 'png gif jpg jpeg',
       'max_filesize' => '',
@@ -1178,6 +1184,7 @@ function gie_organization_field_default_field_instances() {
           ),
         ),
       ),
+      'description_display' => 'before',
       'text_processing' => 1,
       'user_register_form' => FALSE,
     ),
@@ -1278,6 +1285,7 @@ function gie_organization_field_default_field_instances() {
     'label' => 'Partners',
     'required' => 0,
     'settings' => array(
+      'description_display' => 'before',
       'user_register_form' => FALSE,
     ),
     'widget' => array(
@@ -1398,6 +1406,7 @@ function gie_organization_field_default_field_instances() {
     'label' => 'Point of Contact',
     'required' => 1,
     'settings' => array(
+      'description_display' => 'before',
       'user_register_form' => FALSE,
     ),
     'widget' => array(
@@ -1539,6 +1548,7 @@ function gie_organization_field_default_field_instances() {
           ),
         ),
       ),
+      'description_display' => 'before',
       'text_processing' => 0,
       'user_register_form' => FALSE,
     ),
@@ -1673,6 +1683,7 @@ function gie_organization_field_default_field_instances() {
           ),
         ),
       ),
+      'description_display' => 'before',
       'text_processing' => 0,
       'user_register_form' => FALSE,
     ),
@@ -1793,6 +1804,7 @@ function gie_organization_field_default_field_instances() {
           ),
         ),
       ),
+      'description_display' => 'before',
       'text_processing' => 0,
       'user_register_form' => FALSE,
     ),
@@ -1913,6 +1925,7 @@ function gie_organization_field_default_field_instances() {
           ),
         ),
       ),
+      'description_display' => 'before',
       'text_processing' => 0,
       'user_register_form' => FALSE,
     ),
@@ -2033,6 +2046,7 @@ function gie_organization_field_default_field_instances() {
           ),
         ),
       ),
+      'description_display' => 'before',
       'text_processing' => 0,
       'user_register_form' => FALSE,
     ),
@@ -2127,6 +2141,7 @@ function gie_organization_field_default_field_instances() {
     'label' => 'Organization Type',
     'required' => 0,
     'settings' => array(
+      'description_display' => 'before',
       'user_register_form' => FALSE,
     ),
     'widget' => array(
@@ -2222,6 +2237,7 @@ function gie_organization_field_default_field_instances() {
     'label' => 'Role on the Exchange',
     'required' => 0,
     'settings' => array(
+      'description_display' => 'before',
       'user_register_form' => FALSE,
     ),
     'widget' => array(
@@ -2317,6 +2333,7 @@ function gie_organization_field_default_field_instances() {
     'label' => 'Region',
     'required' => 1,
     'settings' => array(
+      'description_display' => 'before',
       'user_register_form' => FALSE,
     ),
     'widget' => array(
@@ -2335,7 +2352,7 @@ function gie_organization_field_default_field_instances() {
     'bundle' => 'organization',
     'default_value' => NULL,
     'deleted' => 0,
-    'description' => 'Please select the sectors and sub-sectors related to your organization. You will notice that the overall sectors are listed with their sub-sectors nested with a dash (-) symbol. Be sure to select the sectors and subsectors that apply. Be sure to scroll to the bottom, there are a lot of sectors. We know this isn\'t so easy to use right now, but we will be improving this selection process.',
+    'description' => 'Please select the sectors and sub-sectors related to your innovation. Click on the plus (+) icon on the different sectors to access sub sectors. Be sure to select the sectors and subsectors that apply. Do not select a sub-sector without also selecting the corresponding sector. ',
     'display' => array(
       'at_a_glance' => array(
         'label' => 'above',
@@ -2412,6 +2429,7 @@ function gie_organization_field_default_field_instances() {
     'label' => 'Sector',
     'required' => 1,
     'settings' => array(
+      'description_display' => 'before',
       'user_register_form' => FALSE,
     ),
     'widget' => array(
@@ -2579,6 +2597,7 @@ function gie_organization_field_default_field_instances() {
           ),
         ),
       ),
+      'description_display' => 'before',
       'hide_label' => array(
         'entity' => 0,
         'page' => 0,
@@ -2846,7 +2865,7 @@ function gie_organization_field_default_field_instances() {
   t('Paste your organization\'s Facebook page URL so that users can go directly there');
   t('Paste your organization\'s LinkedIn URL so that users can go directly there');
   t('Paste your organization\'s Twitter URL so that users can go directly there');
-  t('Please select the sectors and sub-sectors related to your organization. You will notice that the overall sectors are listed with their sub-sectors nested with a dash (-) symbol. Be sure to select the sectors and subsectors that apply. Be sure to scroll to the bottom, there are a lot of sectors. We know this isn\'t so easy to use right now, but we will be improving this selection process.');
+  t('Please select the sectors and sub-sectors related to your innovation. Click on the plus (+) icon on the different sectors to access sub sectors. Be sure to select the sectors and subsectors that apply. Do not select a sub-sector without also selecting the corresponding sector. ');
   t('Point of Contact');
   t('Region');
   t('Role on the Exchange');

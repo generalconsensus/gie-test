@@ -338,9 +338,8 @@ function gie_innovation_field_group_info() {
     'children' => array(
       0 => 'field_innovation_stage',
       1 => 'field_innovation_type',
-      2 => 'field_testing_phase',
-      3 => 'field_innovation_funding_goal',
-      4 => 'field_innovation_cost_per_unit',
+      2 => 'field_innovation_funding_goal',
+      3 => 'field_innovation_cost_per_unit',
     ),
     'format_type' => 'div',
     'format_settings' => array(

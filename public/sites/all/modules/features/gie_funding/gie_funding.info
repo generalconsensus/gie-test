@@ -16,6 +16,7 @@ dependencies[] = gie_innovation
 dependencies[] = gie_organization
 dependencies[] = gie_taxonomies
 dependencies[] = html5_tools
+dependencies[] = multiple_selects
 dependencies[] = number
 dependencies[] = options
 dependencies[] = pane
