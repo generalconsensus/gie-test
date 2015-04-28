@@ -71,6 +71,7 @@ dependencies[] = pathauto
 dependencies[] = pathologic
 dependencies[] = phone
 dependencies[] = pm_existing_pages
+dependencies[] = r4032login
 dependencies[] = rdf
 dependencies[] = references_dialog
 dependencies[] = search
