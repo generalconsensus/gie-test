@@ -388,6 +388,7 @@ function gie_user_field_default_field_instances() {
     'label' => 'Sign Up for Updates',
     'required' => 0,
     'settings' => array(
+      'description_display' => 'before',
       'interest_groups_title' => 'Interest Groups',
       'mergefields' => array(
         'EMAIL' => 'mail',
@@ -487,6 +488,7 @@ function gie_user_field_default_field_instances() {
     'label' => 'Region',
     'required' => 1,
     'settings' => array(
+      'description_display' => 'before',
       'user_register_form' => 1,
     ),
     'widget' => array(
@@ -576,6 +578,7 @@ function gie_user_field_default_field_instances() {
     'label' => 'Sectors of Interest',
     'required' => 1,
     'settings' => array(
+      'description_display' => 'before',
       'user_register_form' => 1,
     ),
     'widget' => array(
@@ -692,6 +695,7 @@ function gie_user_field_default_field_instances() {
     'label' => 'Address',
     'required' => 0,
     'settings' => array(
+      'description_display' => 'before',
       'user_register_form' => 1,
     ),
     'widget' => array(
@@ -822,6 +826,7 @@ function gie_user_field_default_field_instances() {
     'label' => 'Company / Institution',
     'required' => 0,
     'settings' => array(
+      'description_display' => 'before',
       'user_register_form' => 1,
     ),
     'widget' => array(
@@ -1036,6 +1041,7 @@ function gie_user_field_default_field_instances() {
           ),
         ),
       ),
+      'description_display' => 'before',
       'text_processing' => 0,
       'user_register_form' => 1,
     ),
@@ -1152,6 +1158,7 @@ function gie_user_field_default_field_instances() {
           ),
         ),
       ),
+      'description_display' => 'before',
       'text_processing' => 0,
       'user_register_form' => 1,
     ),
@@ -1268,6 +1275,7 @@ function gie_user_field_default_field_instances() {
           ),
         ),
       ),
+      'description_display' => 'before',
       'text_processing' => 0,
       'user_register_form' => 1,
     ),
@@ -1360,6 +1368,7 @@ function gie_user_field_default_field_instances() {
     'label' => 'Topics of Interest',
     'required' => 0,
     'settings' => array(
+      'description_display' => 'before',
       'user_register_form' => 1,
     ),
     'widget' => array(
@@ -1475,6 +1484,7 @@ function gie_user_field_default_field_instances() {
           ),
         ),
       ),
+      'description_display' => 'before',
       'text_processing' => 0,
       'user_register_form' => 1,
     ),
@@ -1591,6 +1601,7 @@ function gie_user_field_default_field_instances() {
           ),
         ),
       ),
+      'description_display' => 'before',
       'text_processing' => 0,
       'user_register_form' => 1,
     ),
@@ -1721,6 +1732,7 @@ function gie_user_field_default_field_instances() {
           ),
         ),
       ),
+      'description_display' => 'before',
       'text_processing' => 0,
       'user_register_form' => 0,
     ),
@@ -1815,6 +1827,7 @@ function gie_user_field_default_field_instances() {
     'label' => 'Organizational Affiliations',
     'required' => 0,
     'settings' => array(
+      'description_display' => 'before',
       'user_register_form' => 1,
     ),
     'widget' => array(
@@ -1910,6 +1923,7 @@ function gie_user_field_default_field_instances() {
     'label' => 'Other Interests',
     'required' => 0,
     'settings' => array(
+      'description_display' => 'before',
       'user_register_form' => 0,
     ),
     'widget' => array(
@@ -2103,6 +2117,7 @@ function gie_user_field_default_field_instances() {
       'alt_field_sync_title' => 0,
       'alt_field_update_on_edit' => 0,
       'default_image' => 0,
+      'description_display' => 'before',
       'file_directory' => 'images',
       'file_extensions' => 'png gif jpg jpeg',
       'max_filesize' => '',
@@ -2207,6 +2222,7 @@ function gie_user_field_default_field_instances() {
     'label' => 'Programs',
     'required' => 0,
     'settings' => array(
+      'description_display' => 'before',
       'user_register_form' => 1,
     ),
     'widget' => array(
@@ -2304,10 +2320,11 @@ function gie_user_field_default_field_instances() {
     'label' => 'Skills',
     'required' => 0,
     'settings' => array(
+      'description_display' => 'before',
       'user_register_form' => 1,
     ),
     'widget' => array(
-      'active' => 1,
+      'active' => 0,
       'module' => 'taxonomy',
       'settings' => array(
         'apply_chosen' => 1,
@@ -2444,6 +2461,7 @@ function gie_user_field_default_field_instances() {
           ),
         ),
       ),
+      'description_display' => 'before',
       'text_processing' => 1,
       'user_register_form' => 1,
     ),
@@ -2588,6 +2606,7 @@ function gie_user_field_default_field_instances() {
           ),
         ),
       ),
+      'description_display' => 'before',
       'text_processing' => 0,
       'user_register_form' => 1,
     ),
@@ -2704,6 +2723,7 @@ function gie_user_field_default_field_instances() {
           ),
         ),
       ),
+      'description_display' => 'before',
       'text_processing' => 0,
       'user_register_form' => 1,
     ),
@@ -2812,6 +2832,7 @@ function gie_user_field_default_field_instances() {
     'label' => 'Member Type',
     'required' => 0,
     'settings' => array(
+      'description_display' => 'before',
       'user_register_form' => 1,
     ),
     'widget' => array(

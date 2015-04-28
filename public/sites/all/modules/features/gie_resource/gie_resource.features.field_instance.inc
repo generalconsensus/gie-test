@@ -241,6 +241,7 @@ function gie_resource_field_default_field_instances() {
     'label' => 'Resource Attachments',
     'required' => 0,
     'settings' => array(
+      'description_display' => 'before',
       'user_register_form' => FALSE,
     ),
     'widget' => array(
@@ -371,6 +372,7 @@ function gie_resource_field_default_field_instances() {
     'label' => 'Resource Author',
     'required' => 1,
     'settings' => array(
+      'description_display' => 'before',
       'user_register_form' => FALSE,
     ),
     'widget' => array(
@@ -531,6 +533,7 @@ function gie_resource_field_default_field_instances() {
       'default_value2' => 'same',
       'default_value_code' => '',
       'default_value_code2' => '',
+      'description_display' => 'before',
       'user_register_form' => FALSE,
     ),
     'widget' => array(
@@ -686,6 +689,7 @@ function gie_resource_field_default_field_instances() {
           ),
         ),
       ),
+      'description_display' => 'before',
       'text_processing' => 1,
       'user_register_form' => FALSE,
     ),
@@ -799,6 +803,7 @@ function gie_resource_field_default_field_instances() {
         'target' => 'default',
         'title' => '',
       ),
+      'description_display' => 'before',
       'display' => array(
         'url_cutoff' => 80,
       ),
@@ -915,6 +920,7 @@ function gie_resource_field_default_field_instances() {
     'label' => 'Organizations',
     'required' => 0,
     'settings' => array(
+      'description_display' => 'before',
       'user_register_form' => FALSE,
     ),
     'widget' => array(
@@ -1028,6 +1034,7 @@ function gie_resource_field_default_field_instances() {
     'label' => 'Program',
     'required' => 0,
     'settings' => array(
+      'description_display' => 'before',
       'user_register_form' => FALSE,
     ),
     'widget' => array(
@@ -1146,6 +1153,7 @@ function gie_resource_field_default_field_instances() {
         'target' => 'default',
         'title' => '',
       ),
+      'description_display' => 'before',
       'display' => array(
         'url_cutoff' => 80,
       ),
@@ -1272,6 +1280,7 @@ function gie_resource_field_default_field_instances() {
     'label' => 'Resource Type',
     'required' => 1,
     'settings' => array(
+      'description_display' => 'before',
       'user_register_form' => FALSE,
     ),
     'widget' => array(
@@ -1375,6 +1384,7 @@ function gie_resource_field_default_field_instances() {
     'label' => 'Country',
     'required' => 1,
     'settings' => array(
+      'description_display' => 'before',
       'user_register_form' => FALSE,
     ),
     'widget' => array(
@@ -1478,6 +1488,7 @@ function gie_resource_field_default_field_instances() {
     'label' => 'Region',
     'required' => 1,
     'settings' => array(
+      'description_display' => 'before',
       'user_register_form' => FALSE,
     ),
     'widget' => array(
@@ -1496,7 +1507,7 @@ function gie_resource_field_default_field_instances() {
     'bundle' => 'resource',
     'default_value' => NULL,
     'deleted' => 0,
-    'description' => 'Please select the sectors and sub-sectors related to your resource. You will notice that the overall sectors are listed with their sub-sectors nested with a dash (-) symbol. Be sure to select the sectors and subsectors that apply. Do not select a sub-sector without also selecting the corresponding sector. Be sure to scroll to the bottom, there are a lot of sectors. We know this isn\'t so easy to use right now, but as we get feedback from users we\'ll be improving this selection process.',
+    'description' => 'Please select the sectors and sub-sectors related to your innovation. Click on the plus (+) icon on the different sectors to access sub sectors. Be sure to select the sectors and subsectors that apply. Do not select a sub-sector without also selecting the corresponding sector. ',
     'display' => array(
       'at_a_glance' => array(
         'label' => 'above',
@@ -1595,6 +1606,7 @@ function gie_resource_field_default_field_instances() {
     'label' => 'Sector',
     'required' => 1,
     'settings' => array(
+      'description_display' => 'before',
       'user_register_form' => FALSE,
     ),
     'widget' => array(
@@ -1707,6 +1719,7 @@ function gie_resource_field_default_field_instances() {
     'label' => 'Topic',
     'required' => 0,
     'settings' => array(
+      'description_display' => 'before',
       'user_register_form' => FALSE,
     ),
     'widget' => array(
@@ -1876,6 +1889,7 @@ function gie_resource_field_default_field_instances() {
           ),
         ),
       ),
+      'description_display' => 'before',
       'hide_label' => array(
         'entity' => 0,
         'page' => 0,
@@ -1979,7 +1993,7 @@ function gie_resource_field_default_field_instances() {
   t('If your resource is hosted on another website, you can add that website here.');
   t('Name');
   t('Organizations');
-  t('Please select the sectors and sub-sectors related to your resource. You will notice that the overall sectors are listed with their sub-sectors nested with a dash (-) symbol. Be sure to select the sectors and subsectors that apply. Do not select a sub-sector without also selecting the corresponding sector. Be sure to scroll to the bottom, there are a lot of sectors. We know this isn\'t so easy to use right now, but as we get feedback from users we\'ll be improving this selection process.');
+  t('Please select the sectors and sub-sectors related to your innovation. Click on the plus (+) icon on the different sectors to access sub sectors. Be sure to select the sectors and subsectors that apply. Do not select a sub-sector without also selecting the corresponding sector. ');
   t('Program');
   t('Region');
   t('Resource Attachments');

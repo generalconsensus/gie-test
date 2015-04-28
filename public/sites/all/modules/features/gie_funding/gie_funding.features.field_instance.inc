@@ -220,6 +220,7 @@ function gie_funding_field_default_field_instances() {
     'label' => 'Funding Author',
     'required' => 0,
     'settings' => array(
+      'description_display' => 'before',
       'user_register_form' => FALSE,
     ),
     'widget' => array(
@@ -336,6 +337,7 @@ function gie_funding_field_default_field_instances() {
       'default_value2' => 'same',
       'default_value_code' => '',
       'default_value_code2' => '',
+      'description_display' => 'before',
       'user_register_form' => FALSE,
     ),
     'widget' => array(
@@ -471,6 +473,7 @@ function gie_funding_field_default_field_instances() {
           ),
         ),
       ),
+      'description_display' => 'before',
       'text_processing' => 1,
       'user_register_form' => FALSE,
     ),
@@ -595,6 +598,7 @@ function gie_funding_field_default_field_instances() {
           ),
         ),
       ),
+      'description_display' => 'before',
       'text_processing' => 0,
       'user_register_form' => FALSE,
     ),
@@ -709,6 +713,7 @@ function gie_funding_field_default_field_instances() {
     'label' => 'Time to Apply ',
     'required' => 0,
     'settings' => array(
+      'description_display' => 'before',
       'user_register_form' => FALSE,
     ),
     'widget' => array(
@@ -855,6 +860,7 @@ function gie_funding_field_default_field_instances() {
           ),
         ),
       ),
+      'description_display' => 'before',
       'text_processing' => 1,
       'user_register_form' => FALSE,
     ),
@@ -953,6 +959,7 @@ function gie_funding_field_default_field_instances() {
     'label' => 'Eligibility Type',
     'required' => 1,
     'settings' => array(
+      'description_display' => 'before',
       'user_register_form' => FALSE,
     ),
     'widget' => array(
@@ -1088,12 +1095,13 @@ function gie_funding_field_default_field_instances() {
         'weight' => 0,
       ),
     ),
-    'ds_extras_field_template' => '',
+    'ds_extras_field_template' => 'theme_field',
     'entity_type' => 'node',
     'field_name' => 'field_funding_grant_award_value',
     'label' => 'Grant / Award Value',
     'required' => 0,
     'settings' => array(
+      'description_display' => 'before',
       'max' => '',
       'min' => 0,
       'prefix' => '$',
@@ -1219,6 +1227,7 @@ function gie_funding_field_default_field_instances() {
           ),
         ),
       ),
+      'description_display' => 'before',
       'text_processing' => 1,
       'user_register_form' => FALSE,
     ),
@@ -1303,6 +1312,7 @@ function gie_funding_field_default_field_instances() {
     'label' => 'Innovation Stage',
     'required' => 0,
     'settings' => array(
+      'description_display' => 'before',
       'user_register_form' => FALSE,
     ),
     'widget' => array(
@@ -1386,6 +1396,7 @@ function gie_funding_field_default_field_instances() {
     'label' => 'Innovation Type',
     'required' => 0,
     'settings' => array(
+      'description_display' => 'before',
       'user_register_form' => FALSE,
     ),
     'widget' => array(
@@ -1495,6 +1506,7 @@ function gie_funding_field_default_field_instances() {
           ),
         ),
       ),
+      'description_display' => 'before',
       'text_processing' => 0,
       'user_register_form' => FALSE,
     ),
@@ -1581,6 +1593,7 @@ function gie_funding_field_default_field_instances() {
     'label' => 'Organization',
     'required' => 0,
     'settings' => array(
+      'description_display' => 'before',
       'user_register_form' => FALSE,
     ),
     'widget' => array(
@@ -1713,6 +1726,7 @@ function gie_funding_field_default_field_instances() {
           ),
         ),
       ),
+      'description_display' => 'before',
       'text_processing' => 0,
       'user_register_form' => FALSE,
     ),
@@ -1795,6 +1809,7 @@ function gie_funding_field_default_field_instances() {
     'label' => 'Funding Type',
     'required' => 1,
     'settings' => array(
+      'description_display' => 'before',
       'user_register_form' => FALSE,
     ),
     'widget' => array(
@@ -1962,6 +1977,7 @@ function gie_funding_field_default_field_instances() {
     'label' => 'Country',
     'required' => 1,
     'settings' => array(
+      'description_display' => 'before',
       'user_register_form' => FALSE,
     ),
     'widget' => array(
@@ -2059,6 +2075,7 @@ function gie_funding_field_default_field_instances() {
     'label' => 'Region',
     'required' => 1,
     'settings' => array(
+      'description_display' => 'before',
       'user_register_form' => FALSE,
     ),
     'widget' => array(
@@ -2077,7 +2094,7 @@ function gie_funding_field_default_field_instances() {
     'bundle' => 'funding',
     'default_value' => NULL,
     'deleted' => 0,
-    'description' => 'Please select the sectors and sub-sectors related to your funding opportunity. You will notice that the overall sectors are listed with their sub-sectors nested with a dash (-) symbol. Be sure to select the sectors and subsectors that apply. Do not select a sub-sector without also selecting the corresponding sector. Be sure to scroll to the bottom, there are a lot of sectors. We know this isn\'t so easy to use right now, but we will be improving this selection process.',
+    'description' => 'Please select the sectors and sub-sectors related to your innovation. Click on the plus (+) icon on the different sectors to access sub sectors. Be sure to select the sectors and subsectors that apply. Do not select a sub-sector without also selecting the corresponding sector. ',
     'display' => array(
       'at_a_glance' => array(
         'label' => 'above',
@@ -2156,6 +2173,7 @@ function gie_funding_field_default_field_instances() {
     'label' => 'Sector',
     'required' => 1,
     'settings' => array(
+      'description_display' => 'before',
       'user_register_form' => FALSE,
     ),
     'widget' => array(
@@ -2262,6 +2280,7 @@ function gie_funding_field_default_field_instances() {
     'label' => 'Topic',
     'required' => 0,
     'settings' => array(
+      'description_display' => 'before',
       'user_register_form' => FALSE,
     ),
     'widget' => array(
@@ -2425,6 +2444,7 @@ function gie_funding_field_default_field_instances() {
           ),
         ),
       ),
+      'description_display' => 'before',
       'hide_label' => array(
         'entity' => 0,
         'page' => 0,
@@ -2696,7 +2716,7 @@ function gie_funding_field_default_field_instances() {
   t('List the countries that are eligible. Choose global if all countries are eligible.');
   t('Name');
   t('Organization');
-  t('Please select the sectors and sub-sectors related to your funding opportunity. You will notice that the overall sectors are listed with their sub-sectors nested with a dash (-) symbol. Be sure to select the sectors and subsectors that apply. Do not select a sub-sector without also selecting the corresponding sector. Be sure to scroll to the bottom, there are a lot of sectors. We know this isn\'t so easy to use right now, but we will be improving this selection process.');
+  t('Please select the sectors and sub-sectors related to your innovation. Click on the plus (+) icon on the different sectors to access sub sectors. Be sure to select the sectors and subsectors that apply. Do not select a sub-sector without also selecting the corresponding sector. ');
   t('Point of Contact Email');
   t('Region');
   t('Related Programs');
