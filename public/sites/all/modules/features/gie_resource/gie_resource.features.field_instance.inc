@@ -760,7 +760,7 @@ function gie_resource_field_default_field_instances() {
             'linked' => 0,
           ),
         ),
-        'type' => 'link_default',
+        'type' => 'link_label',
         'weight' => 5,
       ),
       'listing' => array(
@@ -1226,7 +1226,7 @@ function gie_resource_field_default_field_instances() {
             'linked' => 0,
           ),
         ),
-        'type' => 'taxonomy_term_reference_link',
+        'type' => 'taxonomy_term_reference_plain',
         'weight' => 1,
       ),
       'full' => array(

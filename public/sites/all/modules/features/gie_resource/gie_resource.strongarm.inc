@@ -249,6 +249,10 @@ function gie_resource_strongarm() {
             'weight' => '14',
             'visible' => FALSE,
           ),
+          'details' => array(
+            'weight' => '10',
+            'visible' => FALSE,
+          ),
         ),
         'resource_counters_resource_favorite_count_detail' => array(
           'at_a_glance' => array(
@@ -257,6 +261,10 @@ function gie_resource_strongarm() {
           ),
           'full' => array(
             'weight' => '15',
+            'visible' => FALSE,
+          ),
+          'details' => array(
+            'weight' => '10',
             'visible' => FALSE,
           ),
         ),
