@@ -572,7 +572,7 @@ function gie_user_field_default_field_instances() {
         'apply_chosen' => 1,
       ),
       'type' => 'options_select',
-      'weight' => 10,
+      'weight' => 23,
     ),
   );
 
@@ -671,7 +671,7 @@ function gie_user_field_default_field_instances() {
         'track_list' => 0,
       ),
       'type' => 'term_reference_tree',
-      'weight' => 8,
+      'weight' => 21,
     ),
   );
 
@@ -799,7 +799,7 @@ function gie_user_field_default_field_instances() {
     'bundle' => 'user',
     'default_value' => NULL,
     'deleted' => 0,
-    'description' => 'The company you currently work for. This must be an organization with an organization profile on the Exchange. If it doesn\'t show up in the list as you start to type then create a new one!',
+    'description' => 'The company you currently work for. Begin typing your organization name and select the match, if one exists. If not, finish typing your organization name. ',
     'display' => array(
       'default' => array(
         'label' => 'hidden',
@@ -1452,7 +1452,7 @@ function gie_user_field_default_field_instances() {
         'apply_chosen' => 1,
       ),
       'type' => 'options_select',
-      'weight' => 9,
+      'weight' => 22,
     ),
   );
 
@@ -1826,7 +1826,7 @@ function gie_user_field_default_field_instances() {
     'bundle' => 'user',
     'default_value' => NULL,
     'deleted' => 0,
-    'description' => 'Type the organizations or programs that you are funded by. They must have an organization or program profile to appear on your page. Please encourage your funders to create organization/program profiles and user profiles on the Exchange if they don\'t appear.',
+    'description' => 'Select organizations on the exchange that you are affiliated with, whether you have worked with them on a project or receive funding from them for an innovation. ',
     'display' => array(
       'default' => array(
         'label' => 'above',
@@ -1917,7 +1917,7 @@ function gie_user_field_default_field_instances() {
         'size' => 60,
       ),
       'type' => 'entityreference_autocomplete',
-      'weight' => 12,
+      'weight' => 25,
     ),
   );
 
@@ -2008,7 +2008,7 @@ function gie_user_field_default_field_instances() {
         'size' => 60,
       ),
       'type' => 'taxonomy_autocomplete',
-      'weight' => 15,
+      'weight' => 28,
     ),
   );
 
@@ -2312,7 +2312,7 @@ function gie_user_field_default_field_instances() {
         'size' => 60,
       ),
       'type' => 'entityreference_autocomplete',
-      'weight' => 14,
+      'weight' => 27,
     ),
   );
 
@@ -2406,7 +2406,7 @@ function gie_user_field_default_field_instances() {
         'size' => 60,
       ),
       'type' => 'taxonomy_autocomplete',
-      'weight' => 11,
+      'weight' => 24,
     ),
   );
 
@@ -2951,6 +2951,7 @@ function gie_user_field_default_field_instances() {
   t('Region');
   t('Sectors of Interest');
   t('Select as many types that apply to your current role and expertise.');
+  t('Select organizations on the exchange that you are affiliated with, whether you have worked with them on a project or receive funding from them for an innovation. ');
   t('Select the region where you are based. ');
   t('Separate terms with a comma (e.g. Health, Water, English). Type in any other areas of interest for you. If somoeone has also listed that area then it will appear otherwise you will be creating new areas of interest. This data helps us understand what areas we should be focusing on.');
   t('Share a great photo of yourself. If you don\'t upload your photo, one will be automatically assigned to you!');
@@ -2958,12 +2959,11 @@ function gie_user_field_default_field_instances() {
   t('Share your mailing address');
   t('Sign Up for Updates');
   t('Skills');
-  t('The company you currently work for. This must be an organization with an organization profile on the Exchange. If it doesn\'t show up in the list as you start to type then create a new one!');
+  t('The company you currently work for. Begin typing your organization name and select the match, if one exists. If not, finish typing your organization name. ');
   t('Title');
   t('Topics include issue that may be of interest to Exchange users. Select any (or none) topics that you think apply to your innovation.');
   t('Topics of Interest');
   t('Twitter');
-  t('Type the organizations or programs that you are funded by. They must have an organization or program profile to appear on your page. Please encourage your funders to create organization/program profiles and user profiles on the Exchange if they don\'t appear.');
   t('Your current job title. ');
   t('Your first name.');
   t('Your last name. ');

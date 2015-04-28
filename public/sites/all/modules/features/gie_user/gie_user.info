@@ -127,6 +127,7 @@ features[flag][] = follow
 features[image][] = thumb-78x78
 features[page_manager_existing_pages][] = user_registration
 features[page_manager_handlers][] = pm_existing_pages_user_registration__user_registration
+features[page_manager_handlers][] = user_edit__user_edit
 features[page_manager_pages][] = member_directory
 features[pane_container][] = members_directory_introduction
 features[panelizer_defaults][] = user:user:default

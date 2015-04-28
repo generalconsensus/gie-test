@@ -17,6 +17,7 @@ dependencies[] = html5_tools
 dependencies[] = image
 dependencies[] = link
 dependencies[] = list
+dependencies[] = multiple_selects
 dependencies[] = node
 dependencies[] = options
 dependencies[] = pane
