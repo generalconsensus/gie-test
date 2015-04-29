@@ -228,11 +228,19 @@ function gie_program_strongarm() {
             'weight' => '1',
             'visible' => TRUE,
           ),
+          'full' => array(
+            'weight' => '10',
+            'visible' => FALSE,
+          ),
         ),
         'program_at_a_glance_innovation' => array(
           'at_a_glance' => array(
             'weight' => '0',
             'visible' => TRUE,
+          ),
+          'full' => array(
+            'weight' => '10',
+            'visible' => FALSE,
           ),
         ),
       ),
