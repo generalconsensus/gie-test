@@ -695,6 +695,18 @@ function gie_program_views_default_views() {
   $handler = $view->new_display('panel_pane', 'Regions/Countries', 'regions_countries_pane');
   $handler->display->display_options['defaults']['title'] = FALSE;
   $handler->display->display_options['title'] = 'Where We Work';
+  $handler->display->display_options['defaults']['fields'] = FALSE;
+  /* Field: Taxonomy term: Rendered Taxonomy term */
+  $handler->display->display_options['fields']['rendered_entity']['id'] = 'rendered_entity';
+  $handler->display->display_options['fields']['rendered_entity']['table'] = 'views_entity_taxonomy_term';
+  $handler->display->display_options['fields']['rendered_entity']['field'] = 'rendered_entity';
+  $handler->display->display_options['fields']['rendered_entity']['relationship'] = 'term_node_tid';
+  $handler->display->display_options['fields']['rendered_entity']['label'] = '';
+  $handler->display->display_options['fields']['rendered_entity']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['rendered_entity']['link_to_entity'] = 0;
+  $handler->display->display_options['fields']['rendered_entity']['display'] = 'view';
+  $handler->display->display_options['fields']['rendered_entity']['view_mode'] = 'title';
+  $handler->display->display_options['fields']['rendered_entity']['bypass_access'] = 0;
 
   /* Display: Sectors/Topics */
   $handler = $view->new_display('panel_pane', 'Sectors/Topics', 'sectors_pane');
