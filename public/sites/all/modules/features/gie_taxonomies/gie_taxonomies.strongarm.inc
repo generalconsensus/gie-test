@@ -28,6 +28,9 @@ function gie_taxonomies_strongarm() {
       'listing' => array(
         'custom_settings' => TRUE,
       ),
+      'title' => array(
+        'custom_settings' => TRUE,
+      ),
     ),
     'extra_fields' => array(
       'form' => array(
