@@ -108,6 +108,7 @@ features[user_role][] = Location Manager
 features[user_role][] = Program Community Manager
 features[user_role][] = Sector Manager
 features[user_role][] = Topic Manager
+features[variable][] = field_bundle_settings_taxonomy_term__country
 features[variable][] = field_bundle_settings_taxonomy_term__region
 features[variable][] = field_bundle_settings_taxonomy_term__sector
 features[variable][] = field_bundle_settings_taxonomy_term__topic
