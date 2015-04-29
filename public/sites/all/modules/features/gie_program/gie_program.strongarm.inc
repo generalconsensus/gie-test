@@ -102,7 +102,7 @@ function gie_program_strongarm() {
         'custom_settings' => TRUE,
       ),
       'logo' => array(
-        'custom_settings' => FALSE,
+        'custom_settings' => TRUE,
       ),
       'search_listing' => array(
         'custom_settings' => TRUE,
@@ -153,6 +153,10 @@ function gie_program_strongarm() {
             'weight' => '18',
             'visible' => FALSE,
           ),
+          'logo' => array(
+            'weight' => '10',
+            'visible' => FALSE,
+          ),
         ),
         'program_counters_favorite_count' => array(
           'full' => array(
@@ -162,6 +166,7 @@ function gie_program_strongarm() {
           'at_a_glance' => NULL,
           'search_listing' => NULL,
           'page_header' => NULL,
+          'logo' => NULL,
         ),
         'program_counters_innovation_count' => array(
           'full' => array(
@@ -190,6 +195,10 @@ function gie_program_strongarm() {
           ),
           'page_header' => array(
             'weight' => '19',
+            'visible' => FALSE,
+          ),
+          'logo' => array(
+            'weight' => '10',
             'visible' => FALSE,
           ),
         ),
@@ -222,6 +231,10 @@ function gie_program_strongarm() {
             'weight' => '17',
             'visible' => FALSE,
           ),
+          'logo' => array(
+            'weight' => '10',
+            'visible' => FALSE,
+          ),
         ),
         'program_at_a_glance_favorites' => array(
           'at_a_glance' => array(
@@ -232,6 +245,14 @@ function gie_program_strongarm() {
             'weight' => '10',
             'visible' => FALSE,
           ),
+          'default' => array(
+            'weight' => '10',
+            'visible' => TRUE,
+          ),
+          'logo' => array(
+            'weight' => '10',
+            'visible' => FALSE,
+          ),
         ),
         'program_at_a_glance_innovation' => array(
           'at_a_glance' => array(
@@ -239,6 +260,14 @@ function gie_program_strongarm() {
             'visible' => TRUE,
           ),
           'full' => array(
+            'weight' => '10',
+            'visible' => FALSE,
+          ),
+          'default' => array(
+            'weight' => '10',
+            'visible' => TRUE,
+          ),
+          'logo' => array(
             'weight' => '10',
             'visible' => FALSE,
           ),
