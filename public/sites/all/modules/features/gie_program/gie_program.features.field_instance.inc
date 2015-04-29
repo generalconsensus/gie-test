@@ -835,7 +835,7 @@ function gie_program_field_default_field_instances() {
         'weight' => 0,
       ),
       'logo' => array(
-        'label' => 'above',
+        'label' => 'hidden',
         'module' => 'image',
         'settings' => array(
           'field_delimiter' => '',
