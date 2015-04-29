@@ -110,6 +110,50 @@ function gie_taxonomies_panelizer_defaults() {
     $display->content['new-de53dbf0-3359-4994-9931-45800234501e'] = $pane;
     $display->panels['bottom'][2] = 'new-de53dbf0-3359-4994-9931-45800234501e';
     $pane = new stdClass();
+    $pane->pid = 'new-82258846-8b65-41db-b77b-8dffb7c32aa5';
+    $pane->panel = 'bottom_sidebar';
+    $pane->type = 'entity_field';
+    $pane->subtype = 'taxonomy_term:field_program_related_program';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array(
+      'label' => 'title',
+      'formatter' => 'entityreference_entity_view',
+      'delta_limit' => 0,
+      'delta_offset' => '0',
+      'delta_reversed' => FALSE,
+      'formatter_settings' => array(
+        'linked_field' => array(
+          'linked' => 0,
+          'destination' => '',
+          'advanced' => array(
+            'title' => '',
+            'target' => '',
+            'class' => '',
+            'rel' => '',
+            'text' => '',
+          ),
+        ),
+        'view_mode' => 'logo',
+        'links' => 1,
+      ),
+      'context' => 'panelizer',
+      'override_title' => 1,
+      'override_title_text' => 'Community Sponsor',
+      'override_title_heading' => 'h2',
+    );
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
+    $pane->css = array();
+    $pane->extras = array();
+    $pane->position = 0;
+    $pane->locks = array();
+    $pane->uuid = '82258846-8b65-41db-b77b-8dffb7c32aa5';
+    $display->content['new-82258846-8b65-41db-b77b-8dffb7c32aa5'] = $pane;
+    $display->panels['bottom_sidebar'][0] = 'new-82258846-8b65-41db-b77b-8dffb7c32aa5';
+    $pane = new stdClass();
     $pane->pid = 'new-5a24538a-1c33-4286-ba77-f743dec1ea18';
     $pane->panel = 'bottom_sidebar';
     $pane->type = 'entity_field';
@@ -150,11 +194,11 @@ function gie_taxonomies_panelizer_defaults() {
     );
     $pane->css = array();
     $pane->extras = array();
-    $pane->position = 0;
+    $pane->position = 1;
     $pane->locks = array();
     $pane->uuid = '5a24538a-1c33-4286-ba77-f743dec1ea18';
     $display->content['new-5a24538a-1c33-4286-ba77-f743dec1ea18'] = $pane;
-    $display->panels['bottom_sidebar'][0] = 'new-5a24538a-1c33-4286-ba77-f743dec1ea18';
+    $display->panels['bottom_sidebar'][1] = 'new-5a24538a-1c33-4286-ba77-f743dec1ea18';
     $pane = new stdClass();
     $pane->pid = 'new-ea26d2c8-2472-4a61-9684-14b7d14a40b3';
     $pane->panel = 'bottom_sidebar';
@@ -169,11 +213,11 @@ function gie_taxonomies_panelizer_defaults() {
     );
     $pane->css = array();
     $pane->extras = array();
-    $pane->position = 1;
+    $pane->position = 2;
     $pane->locks = array();
     $pane->uuid = 'ea26d2c8-2472-4a61-9684-14b7d14a40b3';
     $display->content['new-ea26d2c8-2472-4a61-9684-14b7d14a40b3'] = $pane;
-    $display->panels['bottom_sidebar'][1] = 'new-ea26d2c8-2472-4a61-9684-14b7d14a40b3';
+    $display->panels['bottom_sidebar'][2] = 'new-ea26d2c8-2472-4a61-9684-14b7d14a40b3';
     $pane = new stdClass();
     $pane->pid = 'new-6d39ec12-c4b4-4ed4-bdcf-871cb2c6aaa7';
     $pane->panel = 'main';

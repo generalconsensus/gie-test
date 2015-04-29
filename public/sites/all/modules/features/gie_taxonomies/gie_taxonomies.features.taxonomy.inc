@@ -33,7 +33,7 @@ function gie_taxonomies_taxonomy_default_vocabularies() {
       ),
     ),
     'program_discussions' => array(
-      'name' => 'Program Discussions',
+      'name' => 'Program Community',
       'machine_name' => 'program_discussions',
       'description' => '',
       'hierarchy' => 0,
