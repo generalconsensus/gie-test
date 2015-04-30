@@ -139,6 +139,21 @@ function gie_program_ds_field_settings_info() {
 
   $ds_fieldsetting = new stdClass();
   $ds_fieldsetting->api_version = 1;
+  $ds_fieldsetting->id = 'node|program|logo';
+  $ds_fieldsetting->entity_type = 'node';
+  $ds_fieldsetting->bundle = 'program';
+  $ds_fieldsetting->view_mode = 'logo';
+  $ds_fieldsetting->settings = array(
+    'field_program_logo' => array(
+      'formatter_settings' => array(
+        'ft' => array(),
+      ),
+    ),
+  );
+  $export['node|program|logo'] = $ds_fieldsetting;
+
+  $ds_fieldsetting = new stdClass();
+  $ds_fieldsetting->api_version = 1;
   $ds_fieldsetting->id = 'node|program|page_header';
   $ds_fieldsetting->entity_type = 'node';
   $ds_fieldsetting->bundle = 'program';
