@@ -169,6 +169,18 @@ function gie_user_strongarm() {
         'default' => 0,
         'choice' => 0,
       ),
+      'listing' => array(
+        'status' => 0,
+        'substitute' => 0,
+        'default' => 0,
+        'choice' => 0,
+      ),
+      'user_teaser_with_motto' => array(
+        'status' => 0,
+        'substitute' => 0,
+        'default' => 0,
+        'choice' => 0,
+      ),
       'resource_user' => array(
         'status' => 0,
         'substitute' => 0,
@@ -236,7 +248,7 @@ function gie_user_strongarm() {
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'user_register';
-  $strongarm->value = '2';
+  $strongarm->value = '1';
   $export['user_register'] = $strongarm;
 
   return $export;

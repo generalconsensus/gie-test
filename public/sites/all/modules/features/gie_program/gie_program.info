@@ -29,6 +29,7 @@ features[ds_field_settings][] = node|program|at_a_glance
 features[ds_field_settings][] = node|program|contact
 features[ds_field_settings][] = node|program|full
 features[ds_field_settings][] = node|program|listing
+features[ds_field_settings][] = node|program|logo
 features[ds_field_settings][] = node|program|page_header
 features[ds_field_settings][] = node|program|search_listing
 features[ds_layout_settings][] = node|program|at_a_glance
