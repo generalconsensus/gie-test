@@ -138,19 +138,36 @@ function gie_user_field_formatter_view($entity_type, $entity, $field, $instance,
 
   if ($display['type'] == 'city_state_country') {
     foreach ($items as $delta => $item) {
-      // Get city, state, and country ISO code from Address field
-      $city = $item['locality'];
-      $state = $item['administrative_area'];
-      $country_iso = $item['country'];
+      // Initialize empty address array
+      $address_parts = array();
 
-      // Get list of countries
-      $countries = _addressfield_country_options_list();
+      // Set city/locality
+      if (!empty($item['locality'])) {
+        $address_parts[] = $item['locality'];
+      }
 
-      // Get full name of country based on country code
-      $country = $countries[$country_iso];
+      // Set state/administrative area
+      if (!empty($item['administrative_area'])) {
+        $address_parts[] = $item['administrative_area'];
+      }
+
+      // Set country
+      if (!empty($item['country'])) {
+        $country_iso = $item['country'];
+
+        // Get list of countries
+        $countries = _addressfield_country_options_list();
+
+        // Get full name of country based on country code
+        $country = $countries[$country_iso];
+        $address_parts[] = $country;
+      }
+
+      // Set comma separated output of address items
+      $inline_address = implode(', ', $address_parts);
 
       // Output for field: City, State, Country
-      $element[$delta] = array('#markup' => $city . ', ' . $state . ', ' . $country);
+      $element[$delta] = array('#markup' => $inline_address);
     }
   }
 
