@@ -24,7 +24,7 @@
   </head>
   <body class="<?php print $classes; ?>"<?php print $body_attributes; ?>>
     <div class="skip-links">
-      <a href="#main" class="skip-links__link element-invisible element-focusable"><?php print t('Skip to main content'); ?></a>
+      <a href="#main" class="skip-links__link element-focusable"><?php print t('Skip to main content'); ?></a>
     </div>
 
     <?php print $page_top; ?>
@@ -41,7 +41,7 @@
       <?php endif; ?>
     </header>
 
-    <main id="main" role="main">
+    <main id="main" role="main" tabindex="-1">
       <?php if ($messages): ?>
         <div id="messages" role="alertdialog"><?php print $messages; ?></div>
       <?php endif; ?>
