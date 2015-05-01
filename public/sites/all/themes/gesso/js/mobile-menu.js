@@ -76,7 +76,7 @@
             // Close searchbar if open
           if ($('.js-mobile-search-button').hasClass('is-active')) {
             $('.js-mobile-search-button').removeClass('is-active');
-            $('.mobile-nav .mobile-nav__search').hide();
+            $('.mobile-menu .mobile-menu__search').hide();
           }
 
           // Remove focus for mouse clicks after closing the menu.
@@ -111,8 +111,8 @@
         $('.js-mobile-search-button', context).click(function (e) {
           $(this).toggleClass('is-active');
 
-          if (!($('.mobile-nav .mobile-nav__search').length > 0)) {
-            $('.block--search').clone().addClass('mobile-nav__search').find('.block--search__button').remove().end().appendTo('.mobile-nav');
+          if (!($('.mobile-menu .mobile-menu__search').length > 0)) {
+            $('.block--search').clone().addClass('mobile-menu__search').find('.block--search__button').remove().end().appendTo('.mobile-menu');
           }
 
           // Close menu if open
@@ -127,7 +127,7 @@
             $(this).blur();
           });
 
-         $('.mobile-nav .mobile-nav__search').slideToggle();
+         $('.mobile-menu .mobile-menu__search').slideToggle();
           e.preventDefault();
 
         });
