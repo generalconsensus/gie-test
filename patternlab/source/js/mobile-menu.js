@@ -10,7 +10,7 @@
       // Create mobile menu container, create mobile bar, and clone the main
       // menu in the navigation region.
       var $mobileNav = $('<nav class="mobile-menu" role="navigation"></nav>'),
-          $mobileBar = $('<div class="mobile-menu__bar"><a class="mobile-menu__button mobile-menu__button--home" href="/" rel="home"><span class="mobile-menu__icon mobile-menu__icon--home">Home</span></a><button class="mobile-menu__button js-mobile-menu-button mobile-menu__button--menu"><span class="mobile-menu__icon mobile-menu__icon--menu">Menu</span></button><button class="mobile-menu__button js-mobile-search-button mobile-menu__button--search"><span class="mobile-menu__icon mobile-menu__icon--search">Search</span></button></div>'),
+          $mobileBar = $('<div class="mobile-menu__bar"><button class="mobile-menu__button js-mobile-menu-button mobile-menu__button--menu"><span class="mobile-menu__icon mobile-menu__icon--menu">Menu</span></button><a class="mobile-menu__button mobile-menu__button--home" href="/" rel="home"><span class="mobile-menu__icon mobile-menu__icon--home">Home</span></a><button class="mobile-menu__button js-mobile-search-button mobile-menu__button--search"><span class="mobile-menu__icon mobile-menu__icon--search">Search</span></button></div>'),
           $mobileLinks = $('<div class="mobile-menu__links element-hidden"></div>'),
           $mainMenu = $('.region-navigation', context).find('.nav--main-menu, .block--system-main-menu .nav, .block--tb-megamenu-main-menu .nav').not('.contextual-links').first().clone(),
           $isSuperfish = ($mainMenu.hasClass('sf-menu')) ? true : false,
@@ -76,7 +76,7 @@
             // Close searchbar if open
           if ($('.js-mobile-search-button').hasClass('is-active')) {
             $('.js-mobile-search-button').removeClass('is-active');
-            $('.mobile-nav .mobile-nav__search').hide();
+            $('.mobile-menu .mobile-nav__search').hide();
           }
 
           // Remove focus for mouse clicks after closing the menu.
@@ -111,8 +111,8 @@
         $('.js-mobile-search-button', context).click(function (e) {
           $(this).toggleClass('is-active');
 
-          if (!($('.mobile-nav .mobile-nav__search').length > 0)) {
-            $('.block--search').clone().addClass('mobile-nav__search').find('.block--search__button').remove().end().appendTo('.mobile-nav');
+          if (!($('.mobile-menu .mobile-menu__search').length > 0)) {
+            $('.block--search').clone().addClass('mobile-menu__search').find('.block--search__button').remove().end().appendTo('.mobile-menu');
           }
 
           // Close menu if open
@@ -127,7 +127,7 @@
             $(this).blur();
           });
 
-         $('.mobile-nav .mobile-nav__search').slideToggle();
+         $('.mobile-menu .mobile-menu__search').slideToggle();
           e.preventDefault();
 
         });
