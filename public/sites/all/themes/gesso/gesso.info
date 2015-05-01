@@ -36,7 +36,6 @@ regions[page_bottom] = 'Page bottom'
 ; ========================================
 
 scripts[] = 'js/mobile-menu.js'
-scripts[] = 'js/skiplinks.js'
 scripts[] = 'js/scripts.js'
 
 ; ========================================

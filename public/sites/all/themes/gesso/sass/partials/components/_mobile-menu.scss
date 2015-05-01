@@ -1,7 +1,7 @@
 // @file
-// Mobile menu
+// Styles for the mobile menu.
 
-.mobile-nav {
+.mobile-menu {
   @include breakpoint($mobile-menu-bp, $no-query: true) {
     display: none;
   }
@@ -9,7 +9,7 @@
   z-index: 10;
 }
 
-.mobile-nav__bar {
+.mobile-menu__bar {
   @include background-image(
     linear-gradient(
       top,
@@ -29,7 +29,7 @@
   }
 }
 
-.mobile-nav__button {
+.mobile-menu__button {
   @include background-image(
     linear-gradient(
       top,
@@ -67,7 +67,7 @@
   }
 }
 
-.mobile-nav__icon {
+.mobile-menu__icon {
   @include image-replace(26px, 22px);
   background-position: 50% 50%;
   background-repeat: no-repeat;
@@ -76,22 +76,22 @@
   margin-top: 0.5em;
 }
 
-.mobile-nav__icon--home {
+.mobile-menu__icon--home {
   @include svg-background(home);
 }
 
-.mobile-nav__icon--menu {
+.mobile-menu__icon--menu {
   @include svg-background(hamburger);
 }
 
-.mobile-nav__icon--search {
+.mobile-menu__icon--search {
   @include svg-background(mobile-search);
   background-size: 20px 22px;
   height: 22px;
   width: 20px;
 }
 
-.mobile-nav__links {
+.mobile-menu__links {
   background-color: $mobile-menu-bg-color-fallback;
   background-color: $mobile-menu-bg-color;
   color: $mobile-menu-text-color;
@@ -101,102 +101,9 @@
   z-index: 100;
 }
 
-.mobile-nav__search {
+.mobile-menu__search {
   display: none;
   position: absolute;
   right: 0;
   top: 3em;
-}
-
-.nav--mobile {
-  border-bottom: 1px solid $mobile-menu-border-color;
-  border-top: 1px solid $mobile-menu-border-color;
-  margin: 0;
-
-  .nav__item {
-    margin: 0;
-    padding: 0;
-
-    + .nav__item {
-      border-top: 1px solid $mobile-menu-border-color;
-    }
-  }
-
-  .nav__link {
-    background-color: transparent;
-    border: 0;
-    color: $mobile-menu-text-color;
-    display: block;
-    font-family: $mobile-menu-font-family;
-    font-size: $font-size-normal;
-    font-weight: bold;
-    line-height: 1.25;
-    margin: 0;
-    padding: em(12px) 1em;
-    text-align: left;
-    text-decoration: none;
-    white-space: normal;
-    width: 100%;
-
-    &:focus,
-    &:hover,
-    &:active,
-    &.is-active {
-      background-color: $mobile-menu-link-color;
-      color: $mobile-menu-text-color;
-      outline: 0;
-      text-decoration: none;
-    }
-  }
-
-  .nav__link--parent {
-
-    &:after {
-      @include svg-background(arrow-right); // LTR
-      background-position: 0 50%;
-      background-repeat: no-repeat;
-      content: '';
-      display: inline-block;
-      height: 20px;
-      margin-left: 1em; // LTR
-      vertical-align: top;
-      width: 20px;
-
-      [dir="rtl"] & {
-        @include svg-background(arrow-left);
-        margin-left: 0;
-        margin-right: 1em;
-      }
-    }
-
-    &.is-active:after {
-      @include svg-background(arrow-down);
-    }
-  }
-
-  .nav--subnav {
-    display: none;
-    list-style: none;
-    margin: 0;
-    padding: 0;
-
-    .nav__item {
-      background: $mobile-submenu-bg-color;
-
-      + .nav__item {
-        border-top: 1px solid $mobile-submenu-border-color;
-      }
-    }
-
-    .nav__link {
-      color: $mobile-submenu-text-color;
-      padding-left: 1.5em;
-
-      &:focus,
-      &:hover,
-      &:active {
-        background-color: $mobile-submenu-link-color;
-      }
-    }
-  }
 }
