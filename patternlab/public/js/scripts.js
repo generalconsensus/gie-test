@@ -59,6 +59,12 @@
   }
   // adds Modernizr value for preserve-3d, which IE10/11 do not support
   Modernizr.addValueTest('transform-style','preserve-3d');
+  // IE 11 (e.g., v11.0.8) on Win10 passes preserve-3d test for some reason.
+  // adding this hack to target IE11.  May need to revisit this if IE11 adds
+  // true preserve-3d support or if useragent changes.
+  if(navigator.userAgent.match(/Trident.*rv:11\./)) { 
+    $('html').addClass('no-transformstylepreserve3d').removeClass('transformstylepreserve3d'); 
+  }
 
   Drupal.behaviors.mainSearch = {
     attach: function (context) {
