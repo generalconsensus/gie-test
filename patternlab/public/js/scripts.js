@@ -95,7 +95,6 @@
       }
       betaVersion('.header .region-header');
       betaVersion('.l-panels-home .pane--homepage-header');
-      betaVersion('.site-name');
     }
   }
 
