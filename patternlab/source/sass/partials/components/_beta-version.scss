@@ -14,18 +14,7 @@
       line-height: 2.5em;
     }
   }
-  .site-name & { // mobile header version
-    position: absolute;
-    right: -80px;
-    top: 0;
-    width: 70px;
-    h2 {
-      color: #aaa;
-    }
-    @include breakpoint($mobile-menu-bp, $no-query: true) {
-      display: none;
-    }
-  }
+  
   .pane--homepage-header & { // homepage version
     bottom: 0;
     position: absolute;

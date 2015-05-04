@@ -11,10 +11,6 @@
 .block--tb-megamenu-main-menu {
   //layout for main menu wrapper when in navigation region
   .region-navigation & {
-    display: none;
-    @include breakpoint($mobile-menu-bp, $no-query: true) {
-      display: block;
-    }
     left: 0;
     @include breakpoint(1140px, $no-query: true) {
       left: 210px;
