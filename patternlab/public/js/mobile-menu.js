@@ -10,7 +10,7 @@
       // Create mobile menu container, create mobile bar, and clone the main
       // menu in the navigation region.
       var $mobileNav = $('<nav class="mobile-menu" role="navigation"></nav>'),
-          $mobileBar = $('<div class="mobile-menu__bar"><a class="mobile-menu__button mobile-menu__button--home" href="/" rel="home"><span class="mobile-menu__icon mobile-menu__icon--home">Home</span></a><button class="mobile-menu__button js-mobile-menu-button mobile-menu__button--menu"><span class="mobile-menu__icon mobile-menu__icon--menu">Menu</span></button><button class="mobile-menu__button js-mobile-search-button mobile-menu__button--search"><span class="mobile-menu__icon mobile-menu__icon--search">Search</span></button></div>'),
+          $mobileBar = $('<div class="mobile-menu__bar"><button class="mobile-menu__button js-mobile-menu-button mobile-menu__button--menu"><span class="mobile-menu__icon mobile-menu__icon--menu">Menu</span></button><a class="mobile-menu__button mobile-menu__button--home" href="/" rel="home"><span class="mobile-menu__icon mobile-menu__icon--home">Home</span></a><button class="mobile-menu__button js-mobile-search-button mobile-menu__button--search"><span class="mobile-menu__icon mobile-menu__icon--search">Search</span></button></div>'),
           $mobileLinks = $('<div class="mobile-menu__links element-hidden"></div>'),
           $mainMenu = $('.region-navigation', context).find('.nav--main-menu, .block--system-main-menu .nav, .block--tb-megamenu-main-menu .nav').not('.contextual-links').first().clone(),
           $isSuperfish = ($mainMenu.hasClass('sf-menu')) ? true : false,
@@ -19,23 +19,7 @@
       // Only create mobile menu if there is a main menu.
       if ($mainMenu.length > 0) {
 
-        // Remove menu id, add class, and format subnav menus.
-        $mainMenu.removeAttr('id').attr('class', 'nav nav--mobile-menu').find('ul').each(function () {
-          var $parentLink = $(this).closest('a');
 
-          // Copy parent link to subnav list.
-          $parentLink.clone().prependTo(this).wrap('<li class="nav__item"></li>');
-
-          // Change parent link into a button and add classes.
-          $parentLink.replaceWith(function () {
-            return $('<button class="nav__link nav__link--parent js-mobile-menu-parent" />').append($(this).contents());
-          });
-
-          // Remove inline styles from Superfish.
-          if ($isSuperfish || $isMegaMenu) {
-            $(this).removeAttr('style').addClass('nav--subnav').find('ul, li, a').removeAttr('style');
-          }
-        });
 
         // Set classes on superfish items.
         if ($isSuperfish || $isMegaMenu) {
@@ -44,11 +28,25 @@
           });
         }
 
+        // Remove menu id, add class, and format subnav menus.
+        $mainMenu.removeAttr('id').attr('class', 'nav nav--mobile-menu').find('ul').each(function () {
+          while ($(this).parent().is('div')) {
+            $(this).unwrap();
+          }
+          var $parentLink = $(this).siblings('a');
+          $parentLink.addClass('nav__link--parent').after('<button class="nav__subnav-arrow">Show</button>').parent('li').addClass('nav__item--parent');
+
+          // Remove inline styles from Superfish.
+          if ($isSuperfish || $isMegaMenu) { 
+            $(this).removeAttr('style').addClass('nav--subnav').find('ul, li, a').removeAttr('style');
+          }
+        });
+
         // Remove third level menu items.
         $mainMenu.find('ul ul').remove();
 
         // add utility links
-        $('.block--system-user-menu > ul.nav .nav__item').clone().appendTo($mainMenu);
+        $('.block--system-user-menu').eq(0).find('> ul.nav .nav__item').clone().appendTo($mainMenu);
 
         // Insert the cloned menus into the mobile menu container.
         $mainMenu.appendTo($mobileLinks);
@@ -76,7 +74,7 @@
             // Close searchbar if open
           if ($('.js-mobile-search-button').hasClass('is-active')) {
             $('.js-mobile-search-button').removeClass('is-active');
-            $('.mobile-nav .mobile-nav__search').hide();
+            $('.mobile-menu .mobile-menu__search').hide();
           }
 
           // Remove focus for mouse clicks after closing the menu.
@@ -96,10 +94,11 @@
         });
 
         // Open/close submenus.
-        $('.js-mobile-menu-parent', context).click(function (e) {
-          $(this).toggleClass('is-active').next('ul').slideToggle();
+        $('.nav__subnav-arrow', context).click(function (e) {
+          $(this).toggleClass('is-active').prev('a').toggleClass('is-active')
+          $(this).next('ul').slideToggle();
 
-          // Remove focus for mouse clicks after closing the subnav.
+          // Remove focus for mouse clicks after closing the menu.
           $(this).not('.is-active').mouseleave(function () {
             $(this).blur();
           });
@@ -111,14 +110,14 @@
         $('.js-mobile-search-button', context).click(function (e) {
           $(this).toggleClass('is-active');
 
-          if (!($('.mobile-nav .mobile-nav__search').length > 0)) {
-            $('.block--search').clone().addClass('mobile-nav__search').find('.block--search__button').remove().end().appendTo('.mobile-nav');
+          if (!($('.mobile-menu .mobile-menu__search').length > 0)) {
+            $('.block--search').clone().addClass('mobile-menu__search').find('.block--search__button').remove().end().appendTo('.mobile-menu');
           }
 
           // Close menu if open
           if ($('.js-mobile-menu-button').hasClass('is-active')) {
             $('.js-mobile-menu-button').removeClass('is-active');
-            $mobileMenuWrapper.hide();
+            $mobileMenuWrapper.addClass('element-hidden');
             $mobileMenuLinks.attr('tabindex', -1);
           }
            
@@ -127,8 +126,8 @@
             $(this).blur();
           });
 
-         $('.mobile-nav .mobile-nav__search').slideToggle();
-          e.preventDefault();
+         $('.mobile-menu .mobile-menu__search').slideToggle(200);
+         e.preventDefault();
 
         });
 
