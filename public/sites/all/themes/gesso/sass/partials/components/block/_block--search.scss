@@ -1,9 +1,5 @@
 .block--search {
   background: #fff;
-  display: block;
-  @include breakpoint(max-width $mobile-menu-bp - 1) {
-    display: none;    
-  }
   .block__title {
     display: none;
   }

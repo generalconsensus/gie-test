@@ -1,7 +1,10 @@
 .region-navigation {
   background: #fff;
   @include box-shadow(0 8px 8px -6px rgba(0,0,0,0.15));
-  height: 60px;
+  display: none;
+  @include breakpoint($mobile-menu-bp, $no-query: true) {
+    display: block;
+  }
   @include breakpoint($mobile-menu-bp 1139px) {
     height: 120px;
   }
