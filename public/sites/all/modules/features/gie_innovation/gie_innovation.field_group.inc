@@ -126,6 +126,7 @@ function gie_innovation_field_group_info() {
     'children' => array(
       0 => 'title_field',
       1 => 'field_innovation_desc',
+      2 => 'field_innovation_address',
     ),
     'format_type' => 'div',
     'format_settings' => array(
