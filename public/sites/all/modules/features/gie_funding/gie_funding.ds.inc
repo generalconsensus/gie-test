@@ -329,13 +329,13 @@ function gie_funding_ds_layout_settings_info() {
       'ds_content' => array(
         0 => 'funding_ops_counters_favorites',
         1 => 'funding_ops_counters_comments',
-        2 => 'field_funding_grant_award_value',
+        2 => 'funding_ops_counters_amount',
       ),
     ),
     'fields' => array(
       'funding_ops_counters_favorites' => 'ds_content',
       'funding_ops_counters_comments' => 'ds_content',
-      'field_funding_grant_award_value' => 'ds_content',
+      'funding_ops_counters_amount' => 'ds_content',
     ),
     'classes' => array(),
     'wrappers' => array(
