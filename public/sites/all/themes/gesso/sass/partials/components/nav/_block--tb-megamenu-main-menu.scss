@@ -11,14 +11,18 @@
 .block--tb-megamenu-main-menu {
   //layout for main menu wrapper when in navigation region
   .region-navigation & {
-    left: 0;
+    //left: 0;
+    padding-left: 0;
     @include breakpoint(1140px, $no-query: true) {
-      left: 210px;
+      //left: 210px;
+      padding-left: 210px;
     }
-    position: absolute;
-    top: 61px;
+    //position: absolute;
+    //top: 61px;
+    padding-top: 61px;
     @include breakpoint(1140px, $no-query: true) {
-      top: 0;
+      //top: 0;
+      padding-top: 0;
     }
     @media print {
       display: none;
@@ -27,6 +31,7 @@
   .tb-megamenu-main-menu {
     background: none;
     color: $primary-text-color;
+    position: static;
     .tb-megamenu-nav {
       margin: 0;
       padding: 0;
@@ -35,7 +40,7 @@
         margin: 0;
         padding: 0;
         &.dropdown {
-          position: relative;
+          //position: relative;
           > a {
             &:after {
               @include svg-background(chevron-thin-down);
