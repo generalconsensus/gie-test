@@ -2019,6 +2019,56 @@ input.throbbing {
   padding-left: 1em;
 }
 
+/* line 1, ../sass/partials/components/_community.scss */
+.community__content {
+  background-image: url(../images/bg/icon-innovations-white-185x254.png);
+  background-repeat: no-repeat;
+  background-position: 200px 0px;
+  float: left;
+  max-width: 45%;
+  margin: 0 60px 35px 0;
+  padding: 16px 16px 10px 16px;
+  position: relative;
+}
+/* line 10, ../sass/partials/components/_community.scss */
+.community__content:nth-child(even) {
+  float: right;
+  margin: 0;
+}
+/* line 14, ../sass/partials/components/_community.scss */
+.community__content .community__card-type {
+  font-size: 14px;
+  font-weight: 100;
+  text-transform: uppercase;
+}
+/* line 19, ../sass/partials/components/_community.scss */
+.community__content .community__primary-title {
+  border-bottom: 1px solid #f0f0f0;
+  font-weight: 100;
+  padding: 0 0 3em 0;
+}
+/* line 24, ../sass/partials/components/_community.scss */
+.community__content .community__author-image img {
+  border-radius: 20px;
+}
+/* line 27, ../sass/partials/components/_community.scss */
+.community__content .community__author {
+  bottom: 18px;
+  left: 65px;
+  line-height: 16px;
+  position: absolute;
+}
+/* line 33, ../sass/partials/components/_community.scss */
+.community__content .community__author-name {
+  color: #565a5c;
+  font-size: 12px;
+  font-weight: 700;
+}
+/* line 38, ../sass/partials/components/_community.scss */
+.community__content .community__author-date {
+  font-size: 11px;
+}
+
 /* line 1, ../sass/partials/components/_connect.scss */
 .connect {
   background-color: #f8f8f8;

@@ -1,0 +1,41 @@
+.community__content {
+	background-image: url(../images/bg/icon-innovations-white-185x254.png);
+  background-repeat: no-repeat;
+  background-position: 200px 0px;
+	float: left;
+	max-width: 45%;
+	margin: 0 60px 35px 0;
+  padding: 16px 16px 10px 16px; 
+  position: relative;
+  &:nth-child(even) {
+	  float: right;
+	  margin: 0;
+  }
+  .community__card-type {
+  	font-size: $font-size-md;
+  	font-weight: 100;
+  	text-transform: uppercase;
+  }
+  .community__primary-title {
+	  border-bottom: 1px solid $card-border-color;
+    font-weight: 100;
+	  padding: 0 0 3em 0;
+  }
+  .community__author-image img {
+		border-radius: 20px;
+	}
+	.community__author {
+		bottom: 18px;
+		left: 65px;
+		line-height: 16px;
+		position: absolute;	
+	}
+  .community__author-name {
+  	color: $primary-text-color;
+		font-size: $font-size-sm;
+		font-weight: 700;
+  }
+  .community__author-date {
+  	font-size: $font-size-sm - 1px;
+  }
+} 
