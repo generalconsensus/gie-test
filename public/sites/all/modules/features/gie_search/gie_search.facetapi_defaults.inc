@@ -113,6 +113,7 @@ function gie_search_facetapi_default_facet_settings() {
     'dependencies' => array(
       'bundle' => 'none',
       'bundle_selected' => array(),
+      'roles' => array(),
     ),
     'facet_mincount' => '1',
     'facet_missing' => '0',
@@ -123,7 +124,7 @@ function gie_search_facetapi_default_facet_settings() {
     'default_true' => '1',
     'facet_search_ids' => array(),
     'exclude' => 0,
-    'pretty_paths_alias' => 'innovation-stage',
+    'pretty_paths_alias' => 'funding-innovation-stage',
     'pretty_paths_taxonomy_pathauto' => 0,
     'pretty_paths_taxonomy_pathauto_vocabulary' => 'innovation_stage',
   );
