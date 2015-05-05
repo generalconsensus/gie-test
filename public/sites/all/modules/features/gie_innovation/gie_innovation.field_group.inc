@@ -126,6 +126,7 @@ function gie_innovation_field_group_info() {
     'children' => array(
       0 => 'title_field',
       1 => 'field_innovation_desc',
+      2 => 'field_innovation_address',
     ),
     'format_type' => 'div',
     'format_settings' => array(
@@ -374,6 +375,8 @@ function gie_innovation_field_group_info() {
       0 => 'field_innovation_created',
       1 => 'field_innovation_implemented',
       2 => 'field_innovation_program',
+      3 => 'field_term_sector',
+      4 => 'field_term_topic',
     ),
     'format_type' => 'div',
     'format_settings' => array(

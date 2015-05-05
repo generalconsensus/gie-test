@@ -189,11 +189,6 @@ function gie_innovation_ds_field_settings_info() {
         ),
       ),
     ),
-    'field_innovation_program' => array(
-      'formatter_settings' => array(
-        'ft' => array(),
-      ),
-    ),
     'field_innovation_resources' => array(
       'formatter_settings' => array(
         'ft' => array(
@@ -631,6 +626,8 @@ function gie_innovation_ds_layout_settings_info() {
         17 => 'field_innovation_created',
         18 => 'field_innovation_implemented',
         19 => 'field_innovation_program',
+        20 => 'field_term_sector',
+        21 => 'field_term_topic',
       ),
     ),
     'fields' => array(
@@ -654,6 +651,8 @@ function gie_innovation_ds_layout_settings_info() {
       'field_innovation_created' => 'ds_content',
       'field_innovation_implemented' => 'ds_content',
       'field_innovation_program' => 'ds_content',
+      'field_term_sector' => 'ds_content',
+      'field_term_topic' => 'ds_content',
     ),
     'classes' => array(),
     'wrappers' => array(
