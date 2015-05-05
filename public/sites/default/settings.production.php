@@ -631,10 +631,5 @@ $conf['memcache_key_prefix'] = 'gie_www';
  * Google Analytics config
  */
 $conf['googleanalytics_account'] = 'UA-62347470-1';
-$conf['googleanalytics_roles'] = array(1 => 1, 2 => 1, 3 => 0);
-
 
 ini_set('memory_limit', '256M');
-
-
-
