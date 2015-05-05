@@ -259,6 +259,13 @@
     });
     $('div[class*="pane--facetapi-"]').first().addClass('is-open').removeClass('is-closed').find('.pane__content').show();
   }
+
+  function mainmenuDropdown() { // adds responsive max-width for main menu dropdown based on screen size
+    $('.tb-megamenu-submenu.dropdown-menu').each(function(){
+      var site = $('body').width();
+      $(this).css("max-width",site-20);
+    });
+  }
  
 
   // Generic function that runs on window resize.
@@ -267,6 +274,7 @@
     cardFlip();
     homepageFooterCallout();
     homepagePersonasCards();
+    mainmenuDropdown();
   }
 
   // Runs function once on window resize.
