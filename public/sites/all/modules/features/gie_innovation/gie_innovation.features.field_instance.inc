@@ -2313,7 +2313,7 @@ function gie_innovation_field_default_field_instances() {
           ),
         ),
         'type' => 'entityreference_label',
-        'weight' => 56,
+        'weight' => 54,
       ),
       'listing' => array(
         'label' => 'above',
@@ -4057,10 +4057,24 @@ function gie_innovation_field_default_field_instances() {
         'weight' => 38,
       ),
       'full' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 0,
+        'label' => 'inline',
+        'module' => 'taxonomy',
+        'settings' => array(
+          'field_delimiter' => '',
+          'linked_field' => array(
+            'advanced' => array(
+              'class' => '',
+              'rel' => '',
+              'target' => '',
+              'text' => '',
+              'title' => '',
+            ),
+            'destination' => '',
+            'linked' => 0,
+          ),
+        ),
+        'type' => 'taxonomy_term_reference_link',
+        'weight' => 55,
       ),
       'listing' => array(
         'label' => 'above',
@@ -4156,10 +4170,24 @@ function gie_innovation_field_default_field_instances() {
         'weight' => 39,
       ),
       'full' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 0,
+        'label' => 'inline',
+        'module' => 'taxonomy',
+        'settings' => array(
+          'field_delimiter' => '',
+          'linked_field' => array(
+            'advanced' => array(
+              'class' => '',
+              'rel' => '',
+              'target' => '',
+              'text' => '',
+              'title' => '',
+            ),
+            'destination' => '',
+            'linked' => 0,
+          ),
+        ),
+        'type' => 'taxonomy_term_reference_link',
+        'weight' => 56,
       ),
       'listing' => array(
         'label' => 'above',
