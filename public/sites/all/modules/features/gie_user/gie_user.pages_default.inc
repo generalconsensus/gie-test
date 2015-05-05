@@ -133,6 +133,103 @@ function gie_user_default_page_manager_handlers() {
   $handler->conf['display'] = $display;
   $export['pm_existing_pages_user_registration__user_registration'] = $handler;
 
+  $handler = new stdClass();
+  $handler->disabled = FALSE; /* Edit this to true to make a default handler disabled initially */
+  $handler->api_version = 1;
+  $handler->name = 'user_edit__user_edit';
+  $handler->task = 'user_edit';
+  $handler->subtask = '';
+  $handler->handler = 'panel_context';
+  $handler->weight = 0;
+  $handler->conf = array(
+    'title' => 'User Edit',
+    'no_blocks' => 0,
+    'pipeline' => 'standard',
+    'body_classes_to_remove' => '',
+    'body_classes_to_add' => '',
+    'css_id' => '',
+    'css' => '',
+    'contexts' => array(),
+    'relationships' => array(),
+    'name' => 'user_edit',
+  );
+  $display = new panels_display();
+  $display->layout = 'detail';
+  $display->layout_settings = array();
+  $display->panel_settings = array(
+    'style_settings' => array(
+      'default' => NULL,
+      'title' => NULL,
+      'main' => NULL,
+      'main_sidebar' => NULL,
+      'center' => NULL,
+      'box_first' => NULL,
+      'box_second' => NULL,
+      'box_third' => NULL,
+      'bottom_sidebar' => NULL,
+      'bottom' => NULL,
+    ),
+  );
+  $display->cache = array();
+  $display->title = '';
+  $display->uuid = '0743589a-7fcb-443b-b59b-87cf226f6fbb';
+  $display->content = array();
+  $display->panels = array();
+    $pane = new stdClass();
+    $pane->pid = 'new-cda5c95e-34b5-45ce-b749-34eb34e19761';
+    $pane->panel = 'main';
+    $pane->type = 'form';
+    $pane->subtype = 'form';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array(
+      'context' => 'argument_user_edit_1',
+      'override_title' => 0,
+      'override_title_text' => '',
+      'override_title_heading' => 'h2',
+    );
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
+    $pane->css = array();
+    $pane->extras = array();
+    $pane->position = 0;
+    $pane->locks = array();
+    $pane->uuid = 'cda5c95e-34b5-45ce-b749-34eb34e19761';
+    $display->content['new-cda5c95e-34b5-45ce-b749-34eb34e19761'] = $pane;
+    $display->panels['main'][0] = 'new-cda5c95e-34b5-45ce-b749-34eb34e19761';
+    $pane = new stdClass();
+    $pane->pid = 'new-026dd694-9d07-4478-9586-fe852745370d';
+    $pane->panel = 'title';
+    $pane->type = 'page_title';
+    $pane->subtype = 'page_title';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array(
+      'markup' => 'h1',
+      'class' => '',
+      'id' => '',
+      'override_title' => 0,
+      'override_title_text' => '',
+      'override_title_heading' => 'h2',
+    );
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
+    $pane->css = array();
+    $pane->extras = array();
+    $pane->position = 0;
+    $pane->locks = array();
+    $pane->uuid = '026dd694-9d07-4478-9586-fe852745370d';
+    $display->content['new-026dd694-9d07-4478-9586-fe852745370d'] = $pane;
+    $display->panels['title'][0] = 'new-026dd694-9d07-4478-9586-fe852745370d';
+  $display->hide_title = PANELS_TITLE_FIXED;
+  $display->title_pane = 'new-026dd694-9d07-4478-9586-fe852745370d';
+  $handler->conf['display'] = $display;
+  $export['user_edit__user_edit'] = $handler;
+
   return $export;
 }
 

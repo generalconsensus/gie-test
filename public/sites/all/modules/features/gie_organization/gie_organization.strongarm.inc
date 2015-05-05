@@ -42,14 +42,14 @@ function gie_organization_strongarm() {
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'comment_organization';
-  $strongarm->value = '2';
+  $strongarm->value = '0';
   $export['comment_organization'] = $strongarm;
 
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'comment_preview_organization';
-  $strongarm->value = '1';
+  $strongarm->value = '0';
   $export['comment_preview_organization'] = $strongarm;
 
   $strongarm = new stdClass();
@@ -321,6 +321,10 @@ function gie_organization_strongarm() {
             'weight' => '10',
             'visible' => FALSE,
           ),
+          'teaser' => array(
+            'weight' => '10',
+            'visible' => FALSE,
+          ),
         ),
         'organization_at_a_glance_member_count' => array(
           'at_a_glance' => array(
@@ -348,6 +352,10 @@ function gie_organization_strongarm() {
             'visible' => FALSE,
           ),
           'full' => array(
+            'weight' => '10',
+            'visible' => FALSE,
+          ),
+          'teaser' => array(
             'weight' => '10',
             'visible' => FALSE,
           ),
@@ -390,6 +398,10 @@ function gie_organization_strongarm() {
             'weight' => '10',
             'visible' => FALSE,
           ),
+          'teaser' => array(
+            'weight' => '10',
+            'visible' => FALSE,
+          ),
         ),
         'organization_at_a_glance_partner_count' => array(
           'at_a_glance' => array(
@@ -417,6 +429,10 @@ function gie_organization_strongarm() {
             'visible' => FALSE,
           ),
           'full' => array(
+            'weight' => '10',
+            'visible' => FALSE,
+          ),
+          'teaser' => array(
             'weight' => '10',
             'visible' => FALSE,
           ),
@@ -501,7 +517,49 @@ function gie_organization_strongarm() {
         'default' => 0,
         'choice' => 0,
       ),
+      'full' => array(
+        'status' => 0,
+        'substitute' => 0,
+        'default' => 0,
+        'choice' => 0,
+      ),
       'teaser' => array(
+        'status' => 0,
+        'substitute' => 0,
+        'default' => 0,
+        'choice' => 0,
+      ),
+      'listing' => array(
+        'status' => 0,
+        'substitute' => 0,
+        'default' => 0,
+        'choice' => 0,
+      ),
+      'page_header' => array(
+        'status' => 0,
+        'substitute' => 0,
+        'default' => 0,
+        'choice' => 0,
+      ),
+      'at_a_glance' => array(
+        'status' => 0,
+        'substitute' => 0,
+        'default' => 0,
+        'choice' => 0,
+      ),
+      'contact' => array(
+        'status' => 0,
+        'substitute' => 0,
+        'default' => 0,
+        'choice' => 0,
+      ),
+      'logo' => array(
+        'status' => 0,
+        'substitute' => 0,
+        'default' => 0,
+        'choice' => 0,
+      ),
+      'search_listing' => array(
         'status' => 0,
         'substitute' => 0,
         'default' => 0,

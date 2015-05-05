@@ -717,6 +717,7 @@ function gie_user_ds_view_modes_info() {
   $ds_view_mode->view_mode = 'title';
   $ds_view_mode->label = 'Title';
   $ds_view_mode->entities = array(
+    'taxonomy_term' => 'taxonomy_term',
     'user' => 'user',
   );
   $export['title'] = $ds_view_mode;

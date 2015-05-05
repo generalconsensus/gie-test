@@ -1,0 +1,104 @@
+// @file
+// Styles for the mobile menu.
+
+.nav--mobile-menu {
+  margin: 0;
+
+  .nav__item {
+    margin: 0;
+    padding: 0;
+  }
+
+  .nav__item--parent {
+    position: relative;
+  }
+
+  .nav__link {
+    background-color: transparent;
+    border: 0;
+    color: $mobile-menu-text-color;
+    display: block;
+    font-family: $mobile-menu-font-family;
+    font-size: $font-size-lg;
+    font-weight: bold;
+    line-height: 1.25;
+    margin: 0;
+    padding: 0.75em 1em;
+    text-align: left;
+    text-decoration: none;
+    white-space: normal;
+    width: 100%;
+
+    &:focus,
+    &:hover,
+    &:active,
+    &.is-active {
+      color: $mobile-menu-hover-color;
+    }
+  }
+
+  .nav__link--parent {
+    padding: 0.75em 44px 0.75em 1em;
+    [dir="rtl"] & {
+      padding: 0.75em 1em 0.75em 44px;
+    }
+    &.is-active {
+      background: $mobile-submenu-fallback-bg-color;
+      background: $mobile-submenu-bg-color;
+      color: $mobile-menu-active-color;
+    }
+  }
+
+  .nav__subnav-arrow {
+    background: none;
+    @include image-replace(44px,44px);
+    @include svg-background(arrow-down);  
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    background-size: 19px 12px;
+    border: 0;
+    @include box-shadow(none);
+    display: inline-block;
+    //margin-left: 1em; // LTR
+    position: absolute;
+    right: 0;
+    top: 0;
+    vertical-align: top;
+    z-index: 2;
+    &:focus {
+      outline: thin dotted;
+    }
+    &.is-active {
+      @include svg-background(arrow-up);
+    }
+    [dir="rtl"] & {
+      left: 0;
+      right: auto;
+    }
+  }
+
+
+  .nav--subnav {
+    background: $mobile-submenu-fallback-bg-color;
+    background: $mobile-submenu-bg-color;
+    display: none;
+    list-style: none;
+    margin: 0;
+    padding: 0 0 1em 0;
+
+    .nav__item {
+      
+    }
+
+    .nav__link {
+      color: $mobile-submenu-text-color;
+      padding-left: 2em;
+
+      &:focus,
+      &:hover,
+      &:active {
+        color: $mobile-submenu-hover-color;
+      }
+    }
+  }
+}

@@ -760,7 +760,7 @@ function gie_resource_field_default_field_instances() {
             'linked' => 0,
           ),
         ),
-        'type' => 'link_default',
+        'type' => 'link_label',
         'weight' => 5,
       ),
       'listing' => array(
@@ -791,7 +791,7 @@ function gie_resource_field_default_field_instances() {
     'ds_extras_field_template' => '',
     'entity_type' => 'node',
     'field_name' => 'field_resource_link',
-    'label' => 'Direct Resource URL',
+    'label' => 'Access Resource Online',
     'required' => 0,
     'settings' => array(
       'absolute_url' => 1,
@@ -1226,7 +1226,7 @@ function gie_resource_field_default_field_instances() {
             'linked' => 0,
           ),
         ),
-        'type' => 'taxonomy_term_reference_link',
+        'type' => 'taxonomy_term_reference_plain',
         'weight' => 1,
       ),
       'full' => array(
@@ -1344,7 +1344,7 @@ function gie_resource_field_default_field_instances() {
             'linked' => 0,
           ),
         ),
-        'type' => 'taxonomy_term_reference_link',
+        'type' => 'taxonomy_term_reference_plain',
         'weight' => 3,
       ),
       'full' => array(
@@ -1984,11 +1984,11 @@ function gie_resource_field_default_field_instances() {
 
   // Translatables
   // Included for use with string extractors like potx.
+  t('Access Resource Online');
   t('Comment');
   t('Country');
   t('Date Added');
   t('Description');
-  t('Direct Resource URL');
   t('Enter a short description of your innovation. How can this resource help others? Who should read it/use it?');
   t('If your resource is hosted on another website, you can add that website here.');
   t('Name');

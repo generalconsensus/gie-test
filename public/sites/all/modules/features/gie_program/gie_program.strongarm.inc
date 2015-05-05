@@ -42,14 +42,14 @@ function gie_program_strongarm() {
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'comment_preview_program';
-  $strongarm->value = '1';
+  $strongarm->value = '0';
   $export['comment_preview_program'] = $strongarm;
 
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'comment_program';
-  $strongarm->value = '2';
+  $strongarm->value = '0';
   $export['comment_program'] = $strongarm;
 
   $strongarm = new stdClass();
@@ -102,7 +102,7 @@ function gie_program_strongarm() {
         'custom_settings' => TRUE,
       ),
       'logo' => array(
-        'custom_settings' => FALSE,
+        'custom_settings' => TRUE,
       ),
       'search_listing' => array(
         'custom_settings' => TRUE,
@@ -153,6 +153,10 @@ function gie_program_strongarm() {
             'weight' => '18',
             'visible' => FALSE,
           ),
+          'logo' => array(
+            'weight' => '10',
+            'visible' => FALSE,
+          ),
         ),
         'program_counters_favorite_count' => array(
           'full' => array(
@@ -162,6 +166,7 @@ function gie_program_strongarm() {
           'at_a_glance' => NULL,
           'search_listing' => NULL,
           'page_header' => NULL,
+          'logo' => NULL,
         ),
         'program_counters_innovation_count' => array(
           'full' => array(
@@ -190,6 +195,10 @@ function gie_program_strongarm() {
           ),
           'page_header' => array(
             'weight' => '19',
+            'visible' => FALSE,
+          ),
+          'logo' => array(
+            'weight' => '10',
             'visible' => FALSE,
           ),
         ),
@@ -222,17 +231,45 @@ function gie_program_strongarm() {
             'weight' => '17',
             'visible' => FALSE,
           ),
+          'logo' => array(
+            'weight' => '10',
+            'visible' => FALSE,
+          ),
         ),
         'program_at_a_glance_favorites' => array(
           'at_a_glance' => array(
             'weight' => '1',
             'visible' => TRUE,
           ),
+          'full' => array(
+            'weight' => '10',
+            'visible' => FALSE,
+          ),
+          'default' => array(
+            'weight' => '10',
+            'visible' => TRUE,
+          ),
+          'logo' => array(
+            'weight' => '10',
+            'visible' => FALSE,
+          ),
         ),
         'program_at_a_glance_innovation' => array(
           'at_a_glance' => array(
             'weight' => '0',
             'visible' => TRUE,
+          ),
+          'full' => array(
+            'weight' => '10',
+            'visible' => FALSE,
+          ),
+          'default' => array(
+            'weight' => '10',
+            'visible' => TRUE,
+          ),
+          'logo' => array(
+            'weight' => '10',
+            'visible' => FALSE,
           ),
         ),
       ),
@@ -305,7 +342,43 @@ function gie_program_strongarm() {
         'default' => 0,
         'choice' => 0,
       ),
+      'full' => array(
+        'status' => 0,
+        'substitute' => 0,
+        'default' => 0,
+        'choice' => 0,
+      ),
       'teaser' => array(
+        'status' => 0,
+        'substitute' => 0,
+        'default' => 0,
+        'choice' => 0,
+      ),
+      'listing' => array(
+        'status' => 0,
+        'substitute' => 0,
+        'default' => 0,
+        'choice' => 0,
+      ),
+      'page_header' => array(
+        'status' => 0,
+        'substitute' => 0,
+        'default' => 0,
+        'choice' => 0,
+      ),
+      'at_a_glance' => array(
+        'status' => 0,
+        'substitute' => 0,
+        'default' => 0,
+        'choice' => 0,
+      ),
+      'contact' => array(
+        'status' => 0,
+        'substitute' => 0,
+        'default' => 0,
+        'choice' => 0,
+      ),
+      'search_listing' => array(
         'status' => 0,
         'substitute' => 0,
         'default' => 0,

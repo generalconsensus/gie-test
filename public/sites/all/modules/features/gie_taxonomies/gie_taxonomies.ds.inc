@@ -120,6 +120,32 @@ function gie_taxonomies_ds_layout_settings_info() {
 
   $ds_layout = new stdClass();
   $ds_layout->api_version = 1;
+  $ds_layout->id = 'taxonomy_term|country|title';
+  $ds_layout->entity_type = 'taxonomy_term';
+  $ds_layout->bundle = 'country';
+  $ds_layout->view_mode = 'title';
+  $ds_layout->layout = 'ds_1col';
+  $ds_layout->settings = array(
+    'regions' => array(
+      'ds_content' => array(
+        0 => 'name_field',
+      ),
+    ),
+    'fields' => array(
+      'name_field' => 'ds_content',
+    ),
+    'classes' => array(),
+    'wrappers' => array(),
+    'layout_wrapper' => 'div',
+    'layout_attributes' => '',
+    'layout_attributes_merge' => TRUE,
+    'layout_link_attribute' => FALSE,
+    'layout_link_custom' => '',
+  );
+  $export['taxonomy_term|country|title'] = $ds_layout;
+
+  $ds_layout = new stdClass();
+  $ds_layout->api_version = 1;
   $ds_layout->id = 'taxonomy_term|region|full';
   $ds_layout->entity_type = 'taxonomy_term';
   $ds_layout->bundle = 'region';
@@ -175,6 +201,32 @@ function gie_taxonomies_ds_layout_settings_info() {
     'layout_link_custom' => '',
   );
   $export['taxonomy_term|region|listing'] = $ds_layout;
+
+  $ds_layout = new stdClass();
+  $ds_layout->api_version = 1;
+  $ds_layout->id = 'taxonomy_term|region|title';
+  $ds_layout->entity_type = 'taxonomy_term';
+  $ds_layout->bundle = 'region';
+  $ds_layout->view_mode = 'title';
+  $ds_layout->layout = 'ds_1col';
+  $ds_layout->settings = array(
+    'regions' => array(
+      'ds_content' => array(
+        0 => 'name_field',
+      ),
+    ),
+    'fields' => array(
+      'name_field' => 'ds_content',
+    ),
+    'classes' => array(),
+    'wrappers' => array(),
+    'layout_wrapper' => 'div',
+    'layout_attributes' => '',
+    'layout_attributes_merge' => TRUE,
+    'layout_link_attribute' => FALSE,
+    'layout_link_custom' => '',
+  );
+  $export['taxonomy_term|region|title'] = $ds_layout;
 
   $ds_layout = new stdClass();
   $ds_layout->api_version = 1;

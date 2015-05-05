@@ -14,7 +14,7 @@ features[] = 'slogan'
 features[] = 'node_user_picture'
 features[] = 'comment_user_picture'
 features[] = 'comment_user_verification'
-features[] = 'favicon'
+;features[] = 'favicon'
 
 ; ========================================
 ; Regions
@@ -36,7 +36,6 @@ regions[page_bottom] = 'Page bottom'
 ; ========================================
 
 scripts[] = 'js/mobile-menu.js'
-scripts[] = 'js/skiplinks.js'
 scripts[] = 'js/scripts.js'
 
 ; ========================================
