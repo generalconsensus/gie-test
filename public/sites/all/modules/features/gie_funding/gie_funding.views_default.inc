@@ -346,6 +346,79 @@ function gie_funding_views_default_views() {
   $handler->display->display_options['filters']['status']['value'] = '1';
   $handler->display->display_options['filters']['status']['group'] = 1;
   $handler->display->display_options['filters']['status']['expose']['operator'] = FALSE;
+
+  /* Display: Deadline */
+  $handler = $view->new_display('entity_view', 'Deadline', 'deadline');
+  $handler->display->display_options['defaults']['fields'] = FALSE;
+  /* Field: Content: Deadlines */
+  $handler->display->display_options['fields']['field_funding_deadline']['id'] = 'field_funding_deadline';
+  $handler->display->display_options['fields']['field_funding_deadline']['table'] = 'field_data_field_funding_deadline';
+  $handler->display->display_options['fields']['field_funding_deadline']['field'] = 'field_funding_deadline';
+  $handler->display->display_options['fields']['field_funding_deadline']['label'] = '';
+  $handler->display->display_options['fields']['field_funding_deadline']['exclude'] = TRUE;
+  $handler->display->display_options['fields']['field_funding_deadline']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_funding_deadline']['element_default_classes'] = FALSE;
+  $handler->display->display_options['fields']['field_funding_deadline']['settings'] = array(
+    'format_type' => 'deadline_date',
+    'fromto' => 'both',
+    'multiple_number' => '',
+    'multiple_from' => '',
+    'multiple_to' => '',
+    'linked_field' => array(
+      'linked' => 0,
+      'destination' => '',
+      'advanced' => array(
+        'title' => '',
+        'target' => '',
+        'class' => '',
+        'rel' => '',
+        'text' => '',
+      ),
+    ),
+  );
+  /* Field: Content: Deadlines */
+  $handler->display->display_options['fields']['field_funding_deadline_1']['id'] = 'field_funding_deadline_1';
+  $handler->display->display_options['fields']['field_funding_deadline_1']['table'] = 'field_data_field_funding_deadline';
+  $handler->display->display_options['fields']['field_funding_deadline_1']['field'] = 'field_funding_deadline';
+  $handler->display->display_options['fields']['field_funding_deadline_1']['label'] = '';
+  $handler->display->display_options['fields']['field_funding_deadline_1']['exclude'] = TRUE;
+  $handler->display->display_options['fields']['field_funding_deadline_1']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_funding_deadline_1']['element_default_classes'] = FALSE;
+  $handler->display->display_options['fields']['field_funding_deadline_1']['settings'] = array(
+    'format_type' => 'deadline_day',
+    'fromto' => 'both',
+    'multiple_number' => '',
+    'multiple_from' => '',
+    'multiple_to' => '',
+    'linked_field' => array(
+      'linked' => 0,
+      'destination' => '',
+      'advanced' => array(
+        'title' => '',
+        'target' => '',
+        'class' => '',
+        'rel' => '',
+        'text' => '',
+      ),
+    ),
+  );
+  /* Field: Global: Custom text */
+  $handler->display->display_options['fields']['nothing']['id'] = 'nothing';
+  $handler->display->display_options['fields']['nothing']['table'] = 'views';
+  $handler->display->display_options['fields']['nothing']['field'] = 'nothing';
+  $handler->display->display_options['fields']['nothing']['label'] = '';
+  $handler->display->display_options['fields']['nothing']['alter']['text'] = '<div class="field field--funding-deadline">
+              <div class="field--funding-deadline__day">[field_funding_deadline_1]</div>
+              <div class="field--funding-deadline__info">
+                <div class="field--funding-deadline__date">[field_funding_deadline]</div>
+              </div>
+            </div>';
+  $handler->display->display_options['fields']['nothing']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['nothing']['element_default_classes'] = FALSE;
+  $handler->display->display_options['entity_type'] = 'node';
+  $handler->display->display_options['bundles'] = array(
+    0 => 'funding',
+  );
   $export['funding_fields'] = $view;
 
   $view = new view();
@@ -570,6 +643,51 @@ function gie_funding_views_default_views() {
   $handler->display->display_options['fields']['count']['element_wrapper_class'] = 'views-field has-icon--favorite';
   $handler->display->display_options['fields']['count']['element_default_classes'] = FALSE;
   $handler->display->display_options['fields']['count']['format_plural'] = TRUE;
+  $handler->display->display_options['entity_type'] = 'node';
+  $handler->display->display_options['bundles'] = array(
+    0 => 'funding',
+  );
+
+  /* Display: Amount */
+  $handler = $view->new_display('entity_view', 'Amount', 'amount');
+  $handler->display->display_options['defaults']['style_plugin'] = FALSE;
+  $handler->display->display_options['style_plugin'] = 'default';
+  $handler->display->display_options['style_options']['default_row_class'] = FALSE;
+  $handler->display->display_options['style_options']['row_class_special'] = FALSE;
+  $handler->display->display_options['defaults']['style_options'] = FALSE;
+  $handler->display->display_options['defaults']['row_plugin'] = FALSE;
+  $handler->display->display_options['row_plugin'] = 'fields';
+  $handler->display->display_options['row_options']['default_field_elements'] = FALSE;
+  $handler->display->display_options['defaults']['row_options'] = FALSE;
+  $handler->display->display_options['defaults']['relationships'] = FALSE;
+  $handler->display->display_options['defaults']['fields'] = FALSE;
+  /* Field: Content: Grant / Award Value */
+  $handler->display->display_options['fields']['field_funding_grant_award_value']['id'] = 'field_funding_grant_award_value';
+  $handler->display->display_options['fields']['field_funding_grant_award_value']['table'] = 'field_data_field_funding_grant_award_value';
+  $handler->display->display_options['fields']['field_funding_grant_award_value']['field'] = 'field_funding_grant_award_value';
+  $handler->display->display_options['fields']['field_funding_grant_award_value']['label'] = '';
+  $handler->display->display_options['fields']['field_funding_grant_award_value']['element_type'] = 'span';
+  $handler->display->display_options['fields']['field_funding_grant_award_value']['element_label_type'] = 'span';
+  $handler->display->display_options['fields']['field_funding_grant_award_value']['element_label_class'] = 'views-label';
+  $handler->display->display_options['fields']['field_funding_grant_award_value']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_funding_grant_award_value']['element_wrapper_type'] = 'div';
+  $handler->display->display_options['fields']['field_funding_grant_award_value']['element_wrapper_class'] = 'views-field has-icon--amount';
+  $handler->display->display_options['fields']['field_funding_grant_award_value']['element_default_classes'] = FALSE;
+  $handler->display->display_options['fields']['field_funding_grant_award_value']['settings'] = array(
+    'thousand_separator' => ',',
+    'prefix_suffix' => 1,
+    'linked_field' => array(
+      'linked' => 0,
+      'destination' => '',
+      'advanced' => array(
+        'title' => '',
+        'target' => '',
+        'class' => '',
+        'rel' => '',
+        'text' => '',
+      ),
+    ),
+  );
   $handler->display->display_options['entity_type'] = 'node';
   $handler->display->display_options['bundles'] = array(
     0 => 'funding',

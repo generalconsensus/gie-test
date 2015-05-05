@@ -180,7 +180,7 @@ function gie_funding_strongarm() {
             'visible' => FALSE,
           ),
           'at_a_glance' => array(
-            'weight' => '21',
+            'weight' => '23',
             'visible' => FALSE,
           ),
         ),
@@ -202,7 +202,7 @@ function gie_funding_strongarm() {
             'visible' => FALSE,
           ),
           'at_a_glance' => array(
-            'weight' => '13',
+            'weight' => '15',
             'visible' => FALSE,
           ),
         ),
@@ -224,7 +224,7 @@ function gie_funding_strongarm() {
             'visible' => FALSE,
           ),
           'at_a_glance' => array(
-            'weight' => '12',
+            'weight' => '14',
             'visible' => FALSE,
           ),
         ),
@@ -262,7 +262,7 @@ function gie_funding_strongarm() {
             'visible' => FALSE,
           ),
           'at_a_glance' => array(
-            'weight' => '3',
+            'weight' => '13',
             'visible' => FALSE,
           ),
         ),
@@ -284,7 +284,7 @@ function gie_funding_strongarm() {
             'visible' => FALSE,
           ),
           'at_a_glance' => array(
-            'weight' => '2',
+            'weight' => '12',
             'visible' => FALSE,
           ),
         ),
@@ -297,6 +297,12 @@ function gie_funding_strongarm() {
         'funding_ops_counters_favorites' => array(
           'at_a_glance' => array(
             'weight' => '0',
+            'visible' => TRUE,
+          ),
+        ),
+        'funding_ops_counters_amount' => array(
+          'at_a_glance' => array(
+            'weight' => '2',
             'visible' => TRUE,
           ),
         ),
