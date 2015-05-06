@@ -8,6 +8,17 @@
   width: 22px;
 }
 
+%tb-megamenu-submenu-icon {
+  background-size: 26px 20px;
+  content: "";
+  display: inline-block;
+  height: 26px;
+  margin-right: 5px;
+  position: relative;
+  top: 2px;
+  width: 26px;
+}
+
 .block--tb-megamenu-main-menu {
   //layout for main menu wrapper when in navigation region
   .region-navigation & {
@@ -128,18 +139,19 @@
             @include svg-background(icon-more-22-22-white);
           }
         }
-        // the dropdown
+
+        // DROP DOWNS
         .tb-megamenu-submenu {
           border: 0;
           border-top: 8px solid $orange;
+          @include box-shadow(0 2px 2px rgba(0,0,0,0.2));
+          min-width: 300px;
+          padding: 1em;
           .lt-ie9 & {
             border: 1px solid $gray;
           }
-          @include box-shadow(0 2px 2px rgba(0,0,0,0.2));
-          padding: 1em;
-          .tb-megamenu-column-inner {
-            padding: 0;
-          }
+
+          // simple dropdown
           .tb-megamenu-subnav {
             list-style: none;
             margin: 0;
@@ -150,9 +162,15 @@
               }
             }
           }
+
+          //complex dropdown
           .row-fluid {
             border: 0;
+            .tb-megamenu-column-inner {
+              padding: 1em;
+            }
           }
+
           .view {
             @include hyphens(none);
             .view__header {
@@ -163,15 +181,20 @@
                 padding: 0 0 0.5em 0;
               }
             }
-            .views-row {
-              margin: 0;
-              padding: 0.75em 0 0.75em 0;
-              a {
-                padding: 0;
-                white-space: normal;
+            .item-list {
+              ul {
+                .views-row {
+                  margin: 0;
+                  padding: 0.75em 0 0.75em 0;
+                  a {
+                    padding: 0;
+                    white-space: normal;
+                  }
+
+                }
               }
             }
-            .view__footer {
+           .view__footer {
               padding: 0.75em 0 0.75em 0;
               a {
                 color: $link-color;
@@ -181,6 +204,49 @@
                   color: $link-hover-color;
                 }
               }
+            }
+          }
+
+          .has-icon-discussions .view__header h2 {
+            &:before {
+              @extend %tb-megamenu-submenu-icon;
+              @include svg-background(icon-discussions-26-20-orange);
+            }
+          }
+          .has-icon-sectors .view__header h2 {
+            &:before {
+              @extend %tb-megamenu-submenu-icon;
+              //@include svg-background(icon-discussions-26-20-orange);
+            }
+          }
+          .has-icon-topics .view__header h2 {
+            &:before {
+              @extend %tb-megamenu-submenu-icon;
+              @include svg-background(icon-topics-23-20-orange);
+            }
+          }
+          .has-icon-locations .view__header h2 {
+            &:before {
+              @extend %tb-megamenu-submenu-icon;
+              @include svg-background(icon-locations-15-20-orange);
+            }
+          }
+          .has-icon-programs .view__header h2 {
+            &:before {
+              @extend %tb-megamenu-submenu-icon;
+              @include svg-background(icon-programs-23-20-orange);
+            }
+          }
+          .has-icon-organizations .view__header h2 {
+            &:before {
+              @extend %tb-megamenu-submenu-icon;
+              @include svg-background(icon-organization-20-20-orange);
+            }
+          }
+          .has-icon-members .view__header h2 {
+            &:before {
+              @extend %tb-megamenu-submenu-icon;
+              @include svg-background(icon-members-20-20-orange);
             }
           }
 
