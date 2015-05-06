@@ -317,8 +317,9 @@ function gie_organization_views_default_views() {
   $handler->display->display_options['fields']['count']['field'] = 'count';
   $handler->display->display_options['fields']['count']['relationship'] = 'flag_count_rel';
   $handler->display->display_options['fields']['count']['label'] = '';
-  $handler->display->display_options['fields']['count']['element_type'] = 'div';
-  $handler->display->display_options['fields']['count']['element_class'] = 'has-icon--favorite';
+  $handler->display->display_options['fields']['count']['alter']['alter_text'] = TRUE;
+  $handler->display->display_options['fields']['count']['alter']['text'] = '<div class="has-icon--favorite" title="Favorites">[count]</div>';
+  $handler->display->display_options['fields']['count']['element_type'] = '0';
   $handler->display->display_options['fields']['count']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['count']['element_default_classes'] = FALSE;
   $handler->display->display_options['defaults']['filter_groups'] = FALSE;
@@ -358,8 +359,9 @@ function gie_organization_views_default_views() {
   $handler->display->display_options['fields']['nid']['field'] = 'nid';
   $handler->display->display_options['fields']['nid']['group_type'] = 'count';
   $handler->display->display_options['fields']['nid']['label'] = '';
-  $handler->display->display_options['fields']['nid']['element_type'] = 'div';
-  $handler->display->display_options['fields']['nid']['element_class'] = 'has-icon--innovation';
+  $handler->display->display_options['fields']['nid']['alter']['alter_text'] = TRUE;
+  $handler->display->display_options['fields']['nid']['alter']['text'] = '<div class="has-icon--innovation" title="Innovations">[nid]</div>';
+  $handler->display->display_options['fields']['nid']['element_type'] = '0';
   $handler->display->display_options['fields']['nid']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['nid']['element_default_classes'] = FALSE;
   $handler->display->display_options['defaults']['arguments'] = FALSE;
@@ -404,8 +406,9 @@ function gie_organization_views_default_views() {
   $handler->display->display_options['fields']['uid']['relationship'] = 'reverse_field_user_org_user';
   $handler->display->display_options['fields']['uid']['group_type'] = 'count_distinct';
   $handler->display->display_options['fields']['uid']['label'] = '';
-  $handler->display->display_options['fields']['uid']['element_type'] = 'div';
-  $handler->display->display_options['fields']['uid']['element_class'] = 'has-icon--member';
+  $handler->display->display_options['fields']['uid']['alter']['alter_text'] = TRUE;
+  $handler->display->display_options['fields']['uid']['alter']['text'] = '<div class="has-icon--member" title="Members">[uid]</div>';
+  $handler->display->display_options['fields']['uid']['element_type'] = '0';
   $handler->display->display_options['fields']['uid']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['uid']['element_default_classes'] = FALSE;
   $handler->display->display_options['defaults']['filter_groups'] = FALSE;
@@ -433,8 +436,9 @@ function gie_organization_views_default_views() {
   $handler->display->display_options['fields']['field_org_partners']['field'] = 'field_org_partners';
   $handler->display->display_options['fields']['field_org_partners']['group_type'] = 'count';
   $handler->display->display_options['fields']['field_org_partners']['label'] = '';
-  $handler->display->display_options['fields']['field_org_partners']['element_type'] = 'div';
-  $handler->display->display_options['fields']['field_org_partners']['element_class'] = 'has-icon--partner';
+  $handler->display->display_options['fields']['field_org_partners']['alter']['alter_text'] = TRUE;
+  $handler->display->display_options['fields']['field_org_partners']['alter']['text'] = '<div class="has-icon--partner" title="Partners">[field_org_partners]</div>';
+  $handler->display->display_options['fields']['field_org_partners']['element_type'] = '0';
   $handler->display->display_options['fields']['field_org_partners']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['field_org_partners']['element_default_classes'] = FALSE;
   $handler->display->display_options['fields']['field_org_partners']['separator'] = ', ';
