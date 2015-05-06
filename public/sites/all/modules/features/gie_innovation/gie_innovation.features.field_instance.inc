@@ -2168,7 +2168,7 @@ function gie_innovation_field_default_field_instances() {
             'destination' => '',
             'linked' => 0,
           ),
-          'links' => 1,
+          'links' => 0,
           'view_mode' => 'user_teaser_summary',
         ),
         'type' => 'entityreference_entity_view',
