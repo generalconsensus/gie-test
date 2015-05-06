@@ -7,3 +7,4 @@ Vagrantfile.local
 .DS_Store
 /_site
 /tmp
+.idea/

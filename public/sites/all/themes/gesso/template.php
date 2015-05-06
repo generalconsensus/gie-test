@@ -38,3 +38,14 @@ require_once dirname(__FILE__) . '/includes/views.inc';
 function gesso_form_comment_form_alter(&$form, &$form_state) {
     $form['actions']['submit']['#value'] = t('Comment');
 }
+
+/*
+ * User Register form alter
+ * Change submit button to say Activate your account
+ */
+function gesso_form_alter(&$form, &$form_state, $form_id) {
+    if ($form_id == 'user_register_form') {
+        $form['actions']['submit']['#value'] = t('Activate Your Account');
+        $form['actions']['submit']['#attributes']['class'][] = 'button--highlight';
+    }
+}
