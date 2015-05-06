@@ -322,8 +322,9 @@ function gie_program_views_default_views() {
   $handler->display->display_options['fields']['count']['field'] = 'count';
   $handler->display->display_options['fields']['count']['relationship'] = 'flag_count_rel';
   $handler->display->display_options['fields']['count']['label'] = '';
-  $handler->display->display_options['fields']['count']['element_type'] = 'div';
-  $handler->display->display_options['fields']['count']['element_class'] = 'has-icon--favorite';
+  $handler->display->display_options['fields']['count']['alter']['alter_text'] = TRUE;
+  $handler->display->display_options['fields']['count']['alter']['text'] = '<div class="has-icon--favorite" title="Favorites">[count]</div>';
+  $handler->display->display_options['fields']['count']['element_type'] = '0';
   $handler->display->display_options['fields']['count']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['count']['element_default_classes'] = FALSE;
   $handler->display->display_options['defaults']['filter_groups'] = FALSE;
@@ -364,8 +365,9 @@ function gie_program_views_default_views() {
   $handler->display->display_options['fields']['nid']['field'] = 'nid';
   $handler->display->display_options['fields']['nid']['group_type'] = 'count';
   $handler->display->display_options['fields']['nid']['label'] = '';
-  $handler->display->display_options['fields']['nid']['element_type'] = 'div';
-  $handler->display->display_options['fields']['nid']['element_class'] = 'has-icon--innovation';
+  $handler->display->display_options['fields']['nid']['alter']['alter_text'] = TRUE;
+  $handler->display->display_options['fields']['nid']['alter']['text'] = '<div class="has-icon--innovation" title="Innovations">[nid]</div>';
+  $handler->display->display_options['fields']['nid']['element_type'] = '0';
   $handler->display->display_options['fields']['nid']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['nid']['element_default_classes'] = FALSE;
   $handler->display->display_options['defaults']['arguments'] = FALSE;

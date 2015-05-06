@@ -857,8 +857,9 @@ function gie_innovation_views_default_views() {
   $handler->display->display_options['fields']['field_innovation_proof_evidence']['field'] = 'field_innovation_proof_evidence';
   $handler->display->display_options['fields']['field_innovation_proof_evidence']['group_type'] = 'count';
   $handler->display->display_options['fields']['field_innovation_proof_evidence']['label'] = '';
-  $handler->display->display_options['fields']['field_innovation_proof_evidence']['element_type'] = 'div';
-  $handler->display->display_options['fields']['field_innovation_proof_evidence']['element_class'] = 'has-icon--evidence';
+  $handler->display->display_options['fields']['field_innovation_proof_evidence']['alter']['alter_text'] = TRUE;
+  $handler->display->display_options['fields']['field_innovation_proof_evidence']['alter']['text'] = '<div class="has-icon--evidence" title="Evidence">[field_innovation_proof_evidence]</div>';
+  $handler->display->display_options['fields']['field_innovation_proof_evidence']['element_type'] = '0';
   $handler->display->display_options['fields']['field_innovation_proof_evidence']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['field_innovation_proof_evidence']['element_default_classes'] = FALSE;
   $handler->display->display_options['fields']['field_innovation_proof_evidence']['separator'] = ', ';
@@ -884,8 +885,9 @@ function gie_innovation_views_default_views() {
   $handler->display->display_options['fields']['comment_count']['table'] = 'node_comment_statistics';
   $handler->display->display_options['fields']['comment_count']['field'] = 'comment_count';
   $handler->display->display_options['fields']['comment_count']['label'] = '';
-  $handler->display->display_options['fields']['comment_count']['element_type'] = 'div';
-  $handler->display->display_options['fields']['comment_count']['element_class'] = 'has-icon--comment';
+  $handler->display->display_options['fields']['comment_count']['alter']['alter_text'] = TRUE;
+  $handler->display->display_options['fields']['comment_count']['alter']['text'] = '<div class="has-icon--comment" title="Comments">[comment_count]</div>';
+  $handler->display->display_options['fields']['comment_count']['element_type'] = '0';
   $handler->display->display_options['fields']['comment_count']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['comment_count']['element_default_classes'] = FALSE;
   $handler->display->display_options['entity_type'] = 'node';
@@ -911,8 +913,9 @@ function gie_innovation_views_default_views() {
   $handler->display->display_options['fields']['field_innovation_funders']['field'] = 'field_innovation_funders';
   $handler->display->display_options['fields']['field_innovation_funders']['group_type'] = 'count';
   $handler->display->display_options['fields']['field_innovation_funders']['label'] = '';
-  $handler->display->display_options['fields']['field_innovation_funders']['element_type'] = 'div';
-  $handler->display->display_options['fields']['field_innovation_funders']['element_class'] = 'has-icon--organization';
+  $handler->display->display_options['fields']['field_innovation_funders']['alter']['alter_text'] = TRUE;
+  $handler->display->display_options['fields']['field_innovation_funders']['alter']['text'] = '<div class="has-icon--organization" title="Funding Organizations">[field_innovation_funders]</div>';
+  $handler->display->display_options['fields']['field_innovation_funders']['element_type'] = '0';
   $handler->display->display_options['fields']['field_innovation_funders']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['field_innovation_funders']['element_default_classes'] = FALSE;
   $handler->display->display_options['fields']['field_innovation_funders']['separator'] = ', ';
@@ -946,8 +949,9 @@ function gie_innovation_views_default_views() {
   $handler->display->display_options['fields']['count']['field'] = 'count';
   $handler->display->display_options['fields']['count']['relationship'] = 'flag_count_rel';
   $handler->display->display_options['fields']['count']['label'] = '';
-  $handler->display->display_options['fields']['count']['element_type'] = 'div';
-  $handler->display->display_options['fields']['count']['element_class'] = 'has-icon--favorite';
+  $handler->display->display_options['fields']['count']['alter']['alter_text'] = TRUE;
+  $handler->display->display_options['fields']['count']['alter']['text'] = '<div class="has-icon--favorite" title="Favorites">[count]</div>';
+  $handler->display->display_options['fields']['count']['element_type'] = '0';
   $handler->display->display_options['fields']['count']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['count']['element_default_classes'] = FALSE;
   $handler->display->display_options['entity_type'] = 'node';
