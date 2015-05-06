@@ -9,14 +9,11 @@
 }
 
 %tb-megamenu-submenu-icon {
-  background-size: 26px 20px;
   content: "";
   display: inline-block;
-  height: 26px;
   margin-right: 5px;
   position: relative;
   top: 2px;
-  width: 26px;
 }
 
 .block--tb-megamenu-main-menu {
@@ -167,7 +164,7 @@
           .row-fluid {
             border: 0;
             .tb-megamenu-column-inner {
-              padding: 1em;
+              padding: 0;
             }
           }
 
@@ -185,7 +182,7 @@
               ul {
                 .views-row {
                   margin: 0;
-                  padding: 0.75em 0 0.75em 0;
+                  padding: 0.5em 0 0.5em 0;
                   a {
                     padding: 0;
                     white-space: normal;
@@ -194,8 +191,8 @@
                 }
               }
             }
-           .view__footer {
-              padding: 0.75em 0 0.75em 0;
+            .view__footer {
+              padding: 0.5em 0 0.5em 0;
               a {
                 color: $link-color;
                 padding: 0;
@@ -207,10 +204,29 @@
             }
           }
 
-          .has-icon-discussions .view__header h2 {
-            &:before {
-              @extend %tb-megamenu-submenu-icon;
-              @include svg-background(icon-discussions-26-20-orange);
+          .span12 {
+            .view .item-list ul {
+              @include column-count(3);
+              @include column-gap(1em);
+              li {
+                @include column-break-inside(avoid);
+                display: table; // firefox
+                width: 100%; // firefox
+                break-inside: avoid-column; // ie10
+              }
+            }
+          }
+
+          .has-icon-discussions {
+            //background: #f8f8f8;
+            .view__header h2 {
+              &:before {
+                @extend %tb-megamenu-submenu-icon;
+                @include svg-background(icon-discussions-26-20-orange);
+                background-size: 26px 20px;
+                height: 20px;
+                width: 26px;
+              }
             }
           }
           .has-icon-sectors .view__header h2 {
@@ -223,30 +239,45 @@
             &:before {
               @extend %tb-megamenu-submenu-icon;
               @include svg-background(icon-topics-23-20-orange);
+              background-size: 23px 20px;
+              height: 20px;
+              width: 23px;
             }
           }
           .has-icon-locations .view__header h2 {
             &:before {
               @extend %tb-megamenu-submenu-icon;
               @include svg-background(icon-locations-15-20-orange);
+              background-size: 15px 20px;
+              height: 20px;
+              width: 15px;
             }
           }
           .has-icon-programs .view__header h2 {
             &:before {
               @extend %tb-megamenu-submenu-icon;
               @include svg-background(icon-programs-23-20-orange);
+              background-size: 23px 20px;
+              height: 20px;
+              width: 23px;
             }
           }
           .has-icon-organizations .view__header h2 {
             &:before {
               @extend %tb-megamenu-submenu-icon;
               @include svg-background(icon-organization-20-20-orange);
+              background-size: 20px 20px;
+              height: 20px;
+              width: 20px;
             }
           }
           .has-icon-members .view__header h2 {
             &:before {
               @extend %tb-megamenu-submenu-icon;
               @include svg-background(icon-members-20-20-orange);
+              background-size: 20px 20px;
+              height: 20px;
+              width: 20px;
             }
           }
 
