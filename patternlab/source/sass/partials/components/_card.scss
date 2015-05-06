@@ -30,15 +30,35 @@
 .card__title {
   font-weight: normal;
   margin: 0 0 0.75em 0;
-  a {
+  a { 
     font-weight: normal;
-  }
+  } 
 }
 
 .card__primary-title {
   @extend .card__title;
   border-bottom: 1px solid $card-border-color;
   padding: 0 0 0.75em 0;
+}
+
+.card__background {
+  background-image: url(../images/bg/icon-innovations-white-185x254.png);
+  background-repeat: no-repeat;
+  background-position: 225px 0px;
+  float: left;
+  width: 45%;
+  margin: 0 60px 35px 0;
+  &:nth-child(even) {
+    float: right;
+    margin: 0;
+  }
+  .card__primary-title {
+    border-bottom: 1px solid $card-border-color;
+    padding: 0 0 3em 0;
+  }
+  .card__content {
+    padding: 16px 16px 10px 16px; 
+  }
 }
 
 .card__author {
