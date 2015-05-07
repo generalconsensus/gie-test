@@ -293,17 +293,35 @@ function gie_funding_strongarm() {
             'weight' => '1',
             'visible' => TRUE,
           ),
+          'full' => array(
+            'weight' => '10',
+            'visible' => FALSE,
+          ),
         ),
         'funding_ops_counters_favorites' => array(
           'at_a_glance' => array(
             'weight' => '0',
             'visible' => TRUE,
           ),
+          'full' => array(
+            'weight' => '10',
+            'visible' => FALSE,
+          ),
         ),
         'funding_ops_counters_amount' => array(
           'at_a_glance' => array(
             'weight' => '2',
             'visible' => TRUE,
+          ),
+          'full' => array(
+            'weight' => '10',
+            'visible' => FALSE,
+          ),
+        ),
+        'funding_fields_deadline' => array(
+          'full' => array(
+            'weight' => '10',
+            'visible' => FALSE,
           ),
         ),
       ),

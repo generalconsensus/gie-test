@@ -37,3 +37,123 @@ function _gie_innovation_non_ref_display($field) {
 
   return check_plain($full_name);
 }
+
+/**
+ * Implements hook_field_formatter_info().
+ * - create formatter for 'Listing link'
+ */
+function gie_innovation_field_formatter_info() {
+  return array(
+    'gie_listing_link' => array(
+      'label' => t('Listing link'),
+      'field types' => array('taxonomy_term_reference', 'number_integer', 'text'),
+    ),
+  );
+}
+
+/**
+ * Implements hook_field_formatter_view().
+ * - Display for 'Listing link' formatter
+ */
+function gie_innovation_field_formatter_view($entity_type, $entity, $field, $instance, $langcode, $items, $display) {
+  $settings = $display['settings'];
+  $element = array();
+
+  // Set listing link display
+  if ($display['type'] == 'gie_listing_link') {
+    // Set default link boolean
+    $link_status = TRUE;
+
+    // Set listing page based on bundle
+    switch($instance['bundle']) {
+      case 'innovation':
+        $listing_page = 'innovations';
+        break;
+      case 'funding':
+        $listing_page = 'funding';
+        break;
+      case 'resource':
+        $listing_page = 'resources';
+        break;
+      case 'program':
+        $listing_page = 'programs';
+        break;
+      default:
+        // No listing page for corresponding bundle
+        $link_status = FALSE;
+    }
+
+    // Set facet based on field
+    switch($field['field_name']) {
+      case 'field_innovation_created':
+        $facet_link = 'created-in';
+        break;
+      case 'field_innovation_implemented':
+        $facet_link = 'implemented-in';
+        break;
+      case 'field_innovation_stage':
+        $facet_link = 'innovation-stage';
+        break;
+      case 'field_innovation_type':
+        $facet_link = 'innovation-type';
+        break;
+      case 'field_innovation_funding_goal':
+        $facet_link = 'funding-goal';
+        break;
+      case 'field_innovation_cost_per_unit':
+        $facet_link = 'cost-per-unit';
+        break;
+      case 'field_funding_effort':
+        $facet_link = 'timetoapply';
+        break;
+      case 'field_funding_grant_award_value':
+        $facet_link = 'grant-award-value';
+        break;
+      case 'field_resource_type':
+        $facet_link = 'resource-type';
+        break;
+      case 'field_term_country':
+        $facet_link = 'country';
+        break;
+      default:
+        // No facet for corresponding field
+        $link_status = FALSE;
+    }
+
+    // Format taxonomy terms
+    if ($field['type'] == 'taxonomy_term_reference') {
+
+      foreach ($items as $delta => $item) {
+        $term = taxonomy_term_load($item['tid']);
+        $name = $term->name;
+        $facet_value = $item['tid'];
+
+        if($link_status && isset($facet_link) && isset($listing_page)) {
+          $output = l($name, $listing_page . '/' . $facet_link . '/' . $facet_value);
+        } else {
+          $output = check_plain($name);
+        }
+
+        $element[$delta] = array('#markup' => $output);
+      }
+    } elseif ($field['type'] == 'number_integer') {
+
+      // Format integers
+      foreach ($items as $delta => $item) {
+        $value = $item['value'];
+        $output_text = $instance['settings']['prefix'] . number_format(intval($value)) . $instance['settings']['suffix'];
+        $facet_value = '[0 TO ' . $value . ']';
+
+        if ($link_status && isset($facet_link) && isset($listing_page)) {
+          $output = l($output_text, $listing_page . '/' . $facet_link . '/' . $facet_value);
+        } else {
+          $output = check_plain($output_text);
+        }
+
+        $element[$delta] = array('#markup' => $output);
+      }
+    }
+  }
+
+  return $element;
+}
