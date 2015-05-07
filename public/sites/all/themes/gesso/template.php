@@ -49,3 +49,33 @@ function gesso_form_alter(&$form, &$form_state, $form_id) {
         $form['actions']['submit']['#attributes']['class'][] = 'button--highlight';
     }
 }
+
+/*
+ * Accessibility
+ * Add default alt and title when none has been given
+ */
+function gesso_image($variables) {
+  $attributes = $variables ['attributes'];
+  $attributes ['src'] = file_create_url($variables ['path']);
+
+  foreach (array('width', 'height', 'alt', 'title') as $key) {
+
+    if (isset($variables [$key])) {
+      $attributes [$key] = $variables [$key];
+    }
+
+  }
+
+  // Set default alt and title if no alt provided
+  if (empty($variables['alt'])) {
+    $attributes ['alt'] = 'Default image, no image supplied by the user.';
+    $attributes ['title'] = 'Default image, no image supplied by the user.';
+  }
+
+  // set title equal to alt if no title given
+  if (!empty($variables['alt']) && empty($variables['title'])) {
+    $attributes ['title'] = $attributes ['alt'];
+  }
+
+  return '<img' . drupal_attributes($attributes) . ' />';
+}
