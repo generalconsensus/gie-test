@@ -866,7 +866,7 @@ function gie_program_field_default_field_instances() {
         'settings' => array(
           'field_delimiter' => '',
           'image_link' => '',
-          'image_style' => 'card__175x175_',
+          'image_style' => 'org_and_program_detail',
           'linked_field' => array(
             'advanced' => array(
               'class' => '',
@@ -910,6 +910,9 @@ function gie_program_field_default_field_instances() {
       'description_display' => 'before',
       'file_directory' => '',
       'file_extensions' => 'png gif jpg jpeg',
+      'focus' => 1,
+      'focus_lock_ratio' => 1,
+      'focus_min_size' => '500x300',
       'max_filesize' => '',
       'max_resolution' => '',
       'min_resolution' => '500x300',
