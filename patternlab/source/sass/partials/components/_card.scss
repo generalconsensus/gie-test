@@ -15,7 +15,7 @@
   font-size: em($font-size-sm);
   text-transform: uppercase;
 }
-
+ 
 .card__image {
   line-height: 0;
 }
@@ -42,9 +42,9 @@
 }
 
 .card__background {
-  background-image: url(../images/bg/icon-innovations-white-185x254.png);
+  background-image: url(../images/bg/icon-innovations-white-101x254.png);
   background-repeat: no-repeat;
-  background-position: 225px 0px;
+  background-position: 100%;
   .card__primary-title {
     border-bottom: 1px solid $card-border-color;
     padding: 0 0 3em 0;
