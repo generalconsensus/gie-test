@@ -34,7 +34,7 @@
       margin-right: 10px;
       position: relative;
       top: 6px;
-      @include breakpoint(1260px, $no-query: true) {
+      @include breakpoint(1270px, $no-query: true) {
         left: -61px; // width + 15
         margin-right: 0;
         position: absolute;
@@ -47,7 +47,7 @@
   &.pane--innovations-introduction h1:before {
     @include svg-background(icon-innovations-34-46-white);
     width: 34px;
-    @include breakpoint(1260px, $no-query: true) {
+    @include breakpoint(1270px, $no-query: true) {
       left: -49px; // width + 15
     }
   }
@@ -57,14 +57,14 @@
   &.pane--resources-introduction h1:before {
     @include svg-background(icon-resources-50-46-white);
     width: 50px; 
-    @include breakpoint(1260px, $no-query: true) {
+    @include breakpoint(1270px, $no-query: true) {
       left: -65px; // width + 15
     }
   }
   &.pane--communities-introduction h1:before {
     @include svg-background(icon-communities-54-46-white);
     width: 54px;
-    @include breakpoint(1260px, $no-query: true) {
+    @include breakpoint(1270px, $no-query: true) {
       left: -69px; // width + 15
     }
   }
@@ -74,9 +74,44 @@
   &.pane--organizations-introduction h1:before {
     @include svg-background(icon-organization-45-46-white);
     width: 45px;
-     @include breakpoint(1260px, $no-query: true) {
+     @include breakpoint(1270px, $no-query: true) {
       left: -60px; // width + 15
     }
+  }
+
+  &.pane--discussions-introduction h1:before {
+    @include svg-background(icon-discussions-60-46-white);
+    width: 60px;
+    @include breakpoint(1270px, $no-query: true) {
+      left: -75px; // width + 15
+    }
+  }
+  &.pane--sectors-introduction h1:before {
+    //@include svg-background(icon-sectors-46-46-white);
+  }
+  &.pane--topics-introduction h1:before {
+    @include svg-background(icon-topics-53-46-white);
+    width: 53px;
+    @include breakpoint(1270px, $no-query: true) {
+      left: -68px; // width + 15
+    }
+  }
+  &.pane--locations-introduction h1:before {
+    @include svg-background(icon-locations-35-46-white);
+    width: 35px;
+     @include breakpoint(1270px, $no-query: true) {
+      left: -50px; // width + 15
+    }
+  }
+  &.pane--programs-introduction h1:before {
+    @include svg-background(icon-programs-53-46-white);
+    width: 53px;
+    @include breakpoint(1270px, $no-query: true) {
+      left: -68px; // width + 15
+    }
+  }
+  &.pane--members-directory-introduction h1:before {
+    @include svg-background(icon-members-46-46-white);
   }
 }
 

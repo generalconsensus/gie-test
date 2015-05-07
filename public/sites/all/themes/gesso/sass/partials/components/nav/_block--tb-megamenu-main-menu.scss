@@ -8,6 +8,14 @@
   width: 22px;
 }
 
+%tb-megamenu-submenu-icon {
+  content: "";
+  display: inline-block;
+  margin-right: 5px;
+  position: relative;
+  top: 2px;
+}
+
 .block--tb-megamenu-main-menu {
   //layout for main menu wrapper when in navigation region
   .region-navigation & {
@@ -128,18 +136,19 @@
             @include svg-background(icon-more-22-22-white);
           }
         }
-        // the dropdown
+
+        // DROP DOWNS
         .tb-megamenu-submenu {
           border: 0;
           border-top: 8px solid $orange;
+          @include box-shadow(0 2px 2px rgba(0,0,0,0.2));
+          min-width: 300px;
+          padding: 1em;
           .lt-ie9 & {
             border: 1px solid $gray;
           }
-          @include box-shadow(0 2px 2px rgba(0,0,0,0.2));
-          padding: 2em;
-          .tb-megamenu-column-inner {
-            padding: 0;
-          }
+
+          // simple dropdown
           .tb-megamenu-subnav {
             list-style: none;
             margin: 0;
@@ -150,9 +159,15 @@
               }
             }
           }
+
+          //complex dropdown
           .row-fluid {
             border: 0;
+            .tb-megamenu-column-inner {
+              padding: 0;
+            }
           }
+
           .view {
             @include hyphens(none);
             .view__header {
@@ -163,16 +178,21 @@
                 padding: 0 0 0.5em 0;
               }
             }
-            .views-row {
-              margin: 0;
-              padding: 0.75em 0 0.75em 0;
-              a {
-                padding: 0;
-                white-space: normal;
+            .item-list {
+              ul {
+                .views-row {
+                  margin: 0;
+                  padding: 0.5em 0 0.5em 0;
+                  a {
+                    padding: 0;
+                    white-space: normal;
+                  }
+
+                }
               }
             }
             .view__footer {
-              padding: 0.75em 0 0.75em 0;
+              padding: 0.5em 0 0.5em 0;
               a {
                 color: $link-color;
                 padding: 0;
@@ -181,6 +201,83 @@
                   color: $link-hover-color;
                 }
               }
+            }
+          }
+
+          .span12 {
+            .view .item-list ul {
+              @include column-count(3);
+              @include column-gap(1em);
+              li {
+                @include column-break-inside(avoid);
+                display: table; // firefox
+                width: 100%; // firefox
+                break-inside: avoid-column; // ie10
+              }
+            }
+          }
+
+          .has-icon-discussions {
+            //background: #f8f8f8;
+            .view__header h2 {
+              &:before {
+                @extend %tb-megamenu-submenu-icon;
+                @include svg-background(icon-discussions-26-20-orange);
+                background-size: 26px 20px;
+                height: 20px;
+                width: 26px;
+              }
+            }
+          }
+          .has-icon-sectors .view__header h2 {
+            &:before {
+              @extend %tb-megamenu-submenu-icon;
+              //@include svg-background(icon-discussions-26-20-orange);
+            }
+          }
+          .has-icon-topics .view__header h2 {
+            &:before {
+              @extend %tb-megamenu-submenu-icon;
+              @include svg-background(icon-topics-23-20-orange);
+              background-size: 23px 20px;
+              height: 20px;
+              width: 23px;
+            }
+          }
+          .has-icon-locations .view__header h2 {
+            &:before {
+              @extend %tb-megamenu-submenu-icon;
+              @include svg-background(icon-locations-15-20-orange);
+              background-size: 15px 20px;
+              height: 20px;
+              width: 15px;
+            }
+          }
+          .has-icon-programs .view__header h2 {
+            &:before {
+              @extend %tb-megamenu-submenu-icon;
+              @include svg-background(icon-programs-23-20-orange);
+              background-size: 23px 20px;
+              height: 20px;
+              width: 23px;
+            }
+          }
+          .has-icon-organizations .view__header h2 {
+            &:before {
+              @extend %tb-megamenu-submenu-icon;
+              @include svg-background(icon-organization-20-20-orange);
+              background-size: 20px 20px;
+              height: 20px;
+              width: 20px;
+            }
+          }
+          .has-icon-members .view__header h2 {
+            &:before {
+              @extend %tb-megamenu-submenu-icon;
+              @include svg-background(icon-members-20-20-orange);
+              background-size: 20px 20px;
+              height: 20px;
+              width: 20px;
             }
           }
 

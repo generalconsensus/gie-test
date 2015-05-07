@@ -308,13 +308,17 @@ table {}
 
 tbody {}
 
-td {}
+td {
+  vertical-align: top;
+}
 
 textarea {}
 
 tfoot {}
 
-th {}
+th {
+  vertical-align: top;
+}
 
 thead {}
 
