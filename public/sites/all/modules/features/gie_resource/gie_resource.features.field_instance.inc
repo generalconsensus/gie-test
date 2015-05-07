@@ -637,7 +637,9 @@ function gie_resource_field_default_field_instances() {
           'more_text' => 'Read more',
           'summary_handler' => 'full',
           'trim_length' => 300,
+          'trim_link' => FALSE,
           'trim_options' => array(),
+          'trim_preserve_tags' => '',
           'trim_suffix' => '...',
           'trim_type' => 'chars',
         ),
@@ -1211,7 +1213,7 @@ function gie_resource_field_default_field_instances() {
       ),
       'details' => array(
         'label' => 'inline',
-        'module' => 'taxonomy',
+        'module' => 'gie_innovation',
         'settings' => array(
           'field_delimiter' => '',
           'linked_field' => array(
@@ -1226,7 +1228,7 @@ function gie_resource_field_default_field_instances() {
             'linked' => 0,
           ),
         ),
-        'type' => 'taxonomy_term_reference_plain',
+        'type' => 'gie_listing_link',
         'weight' => 1,
       ),
       'full' => array(
@@ -1329,7 +1331,7 @@ function gie_resource_field_default_field_instances() {
       ),
       'details' => array(
         'label' => 'inline',
-        'module' => 'taxonomy',
+        'module' => 'gie_innovation',
         'settings' => array(
           'field_delimiter' => '',
           'linked_field' => array(
@@ -1344,7 +1346,7 @@ function gie_resource_field_default_field_instances() {
             'linked' => 0,
           ),
         ),
-        'type' => 'taxonomy_term_reference_plain',
+        'type' => 'gie_listing_link',
         'weight' => 3,
       ),
       'full' => array(

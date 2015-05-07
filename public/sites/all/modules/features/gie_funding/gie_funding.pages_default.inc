@@ -16,7 +16,10 @@ function gie_funding_default_page_manager_pages() {
   $page->admin_title = 'Funding';
   $page->admin_description = 'Funding Landing Page';
   $page->path = 'funding';
-  $page->access = array();
+  $page->access = array(
+    'type' => 'none',
+    'settings' => NULL,
+  );
   $page->menu = array();
   $page->arguments = array();
   $page->conf = array(
