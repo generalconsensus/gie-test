@@ -36,6 +36,32 @@ function gie_organization_views_api($module = NULL, $api = NULL) {
 }
 
 /**
+ * Implements hook_image_default_styles().
+ */
+function gie_organization_image_default_styles() {
+  $styles = array();
+
+  // Exported image style: org_and_program_detail.
+  $styles['org_and_program_detail'] = array(
+    'label' => 'Org and Program Detail page',
+    'effects' => array(
+      12 => array(
+        'name' => 'imagefield_focus_scale_and_crop',
+        'data' => array(
+          'width' => 259,
+          'height' => 155,
+          'strength' => 'high',
+          'fallback' => 'smartcrop',
+        ),
+        'weight' => 1,
+      ),
+    ),
+  );
+
+  return $styles;
+}
+
+/**
  * Implements hook_node_info().
  */
 function gie_organization_node_info() {

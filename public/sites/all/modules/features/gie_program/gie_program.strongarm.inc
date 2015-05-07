@@ -253,6 +253,10 @@ function gie_program_strongarm() {
             'weight' => '10',
             'visible' => FALSE,
           ),
+          'page_header' => array(
+            'weight' => '10',
+            'visible' => FALSE,
+          ),
         ),
         'program_at_a_glance_innovation' => array(
           'at_a_glance' => array(
@@ -268,6 +272,10 @@ function gie_program_strongarm() {
             'visible' => TRUE,
           ),
           'logo' => array(
+            'weight' => '10',
+            'visible' => FALSE,
+          ),
+          'page_header' => array(
             'weight' => '10',
             'visible' => FALSE,
           ),
