@@ -27,17 +27,25 @@
         }
 
         // Remove menu id, add class, and format subnav menus.
-        $mainMenu.removeAttr('id').attr('class', 'nav nav--mobile-menu').find('ul').each(function () {
+        $mainMenu.removeAttr('id').attr('class', 'nav nav--mobile-menu').find('.tb-megamenu-subnav,.view').each(function () {
+          // remove any wrappers
           while ($(this).parent().is('div')) {
             $(this).unwrap();
           }
           var $parentLink = $(this).siblings('a');
-          $parentLink.addClass('nav__link--parent').after('<button class="nav__subnav-arrow">Show</button>').parent('li').addClass('nav__item--parent');
+          $parentLink.addClass('nav__link--parent').parent('li').addClass('nav__item--parent');
+          if ($parentLink.siblings('.nav__subnav-arrow').length < 1) {
+            $parentLink.after('<button class="nav__subnav-arrow">Show</button>');
+          } 
+          if ($(this).is('.view')) {
+
+          } else {            
+            
+          }
 
           // Remove any inline styles.
-          if ($isSuperfish || $isMegaMenu) { 
-            $(this).removeAttr('style').addClass('nav--subnav').find('ul, li, a').removeAttr('style');
-          }
+          $(this).removeAttr('style').addClass('nav--subnav').find('ul, li, a').removeAttr('style');
+          
         });
 
         // Remove third level menu items.
