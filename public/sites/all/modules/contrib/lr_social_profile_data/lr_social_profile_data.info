@@ -1,0 +1,11 @@
+name = Social Profile Data
+description = Collect desired user profile and social data when	user signs up.
+dependencies[] = lr_social_login
+package = Advance Social Login and Share
+core = 7.x
+configure = admin/config/people/loginradius/socialprofiledata
+
+version = "7.x-3.0"
+core = "7.x"
+project = "advance-social-login-and-share"
+

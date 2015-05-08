@@ -1,0 +1,11 @@
+name = Advance Custom Settings
+description = Add advance options to module Social Login ex. Custom interface, skip email verification.
+package = Advance Social Login and Share
+dependencies[] = lr_social_login
+core = 7.x
+stylesheets[all][] = css/lr_interface_css.css
+
+version = "7.x-3.0"
+core = "7.x"
+project = "advance-social-login-and-share"
+
