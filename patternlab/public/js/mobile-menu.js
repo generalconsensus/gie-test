@@ -19,9 +19,7 @@
       // Only create mobile menu if there is a main menu.
       if ($mainMenu.length > 0) {
 
-
-
-        // Set classes on superfish items.
+        // Set classes on menu items.
         if ($isSuperfish || $isMegaMenu) {
           $mainMenu.find('li').each(function(){
             $(this).attr('class', 'nav__item').find('a').attr('class', 'nav__link');
@@ -36,7 +34,7 @@
           var $parentLink = $(this).siblings('a');
           $parentLink.addClass('nav__link--parent').after('<button class="nav__subnav-arrow">Show</button>').parent('li').addClass('nav__item--parent');
 
-          // Remove inline styles from Superfish.
+          // Remove any inline styles.
           if ($isSuperfish || $isMegaMenu) { 
             $(this).removeAttr('style').addClass('nav--subnav').find('ul, li, a').removeAttr('style');
           }
@@ -47,6 +45,9 @@
 
         // add utility links
         $('.block--system-user-menu').eq(0).find('> ul.nav .nav__item').clone().appendTo($mainMenu);
+
+        // add a home link
+        $('<li class="nav__item"><a href="/" class="nav__link">Home</a></li>').prependTo($mainMenu);
 
         // Insert the cloned menus into the mobile menu container.
         $mainMenu.appendTo($mobileLinks);
@@ -95,7 +96,7 @@
 
         // Open/close submenus.
         $('.nav__subnav-arrow', context).click(function (e) {
-          $(this).toggleClass('is-active').prev('a').toggleClass('is-active')
+          $(this).toggleClass('is-active').prev('a').toggleClass('is-open');
           $(this).next('ul').slideToggle();
 
           // Remove focus for mouse clicks after closing the menu.

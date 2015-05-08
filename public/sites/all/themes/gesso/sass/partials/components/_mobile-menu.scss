@@ -100,7 +100,14 @@
 
 .mobile-menu__search {
   display: none;
-  position: absolute;
-  right: 0;
-  top: em(60px);
+  padding: 0.5em;
+  form {
+    width: 100%;
+    .form-item {
+      width: 100%;
+    }
+    .form-text {
+      width: 100%;
+    }
+  }
 }
