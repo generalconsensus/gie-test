@@ -55,14 +55,22 @@ function gie_taxonomies_ds_field_settings_info() {
       'label' => 'hidden',
       'format' => 'default',
       'formatter_settings' => array(
-        'link' => '1',
-        'wrapper' => 'h2',
+        'link' => '0',
+        'wrapper' => 'center',
         'class' => '',
-        'ft' => array(),
+        'ft' => array(
+          'func' => 'theme_ds_field_expert',
+          'fi' => TRUE,
+          'fi-el' => 'h3',
+          'fi-cl' => 'card__title',
+          'fi-at' => '',
+          'fi-def-at' => FALSE,
+          'fi-odd-even' => FALSE,
+        ),
         'field_delimiter' => '',
         'linked_field' => array(
-          'linked' => 0,
-          'destination' => '',
+          'linked' => 1,
+          'destination' => '[term:url]',
           'advanced' => array(
             'title' => '',
             'target' => '',
@@ -70,6 +78,19 @@ function gie_taxonomies_ds_field_settings_info() {
             'rel' => '',
             'text' => '',
           ),
+        ),
+      ),
+    ),
+    'field_sector_image' => array(
+      'formatter_settings' => array(
+        'ft' => array(
+          'func' => 'theme_ds_field_expert',
+          'fi' => TRUE,
+          'fi-el' => 'div',
+          'fi-cl' => 'card__image',
+          'fi-at' => '',
+          'fi-def-at' => FALSE,
+          'fi-odd-even' => FALSE,
         ),
       ),
     ),
@@ -267,14 +288,20 @@ function gie_taxonomies_ds_layout_settings_info() {
     'regions' => array(
       'main_content' => array(
         0 => 'title',
-        1 => 'group_card_content',
+        1 => 'field_sector_image',
+        2 => 'group_card_content',
       ),
     ),
     'fields' => array(
       'title' => 'main_content',
+      'field_sector_image' => 'main_content',
       'group_card_content' => 'main_content',
     ),
-    'classes' => array(),
+    'classes' => array(
+      'layout_class' => array(
+        'card' => 'card',
+      ),
+    ),
     'wrappers' => array(
       'header' => 'div',
       'main_content' => 'div',
