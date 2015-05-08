@@ -205,9 +205,15 @@ function gesso_button($vars) {
   element_set_attributes($element, array('id', 'name', 'value'));
   $only_use_smacss = theme_get_setting('only_use_smacss');
 
+  // Add button classes.
   $element['#attributes']['class'][] = 'button';
-  $element['#attributes']['class'][] = 'button--' . $element['#button_type'];
-
+  // Adjust classes for reset buttons.
+  if (isset($element['#id']) && $element['#id'] == 'edit-reset') {
+    $element['#attributes']['class'][] = 'button--reset';
+  }
+  else {
+    $element['#attributes']['class'][] = 'button--' . drupal_html_class($element['#button_type']);
+  }
   // Add default class if wanted.
   if (!$only_use_smacss) {
     $element['#attributes']['class'][] = 'form-' . $element['#button_type'];
@@ -222,7 +228,7 @@ function gesso_button($vars) {
     }
   }
 
-  return '<input' . drupal_attributes($element['#attributes']) . ' />';
+  return '<input' . drupal_attributes($element['#attributes']) . '>';
 }
 
 /**
@@ -243,7 +249,7 @@ function gesso_checkbox($vars) {
   }
   _gesso_form_set_class($element, array('form-checkbox'));
 
-  return '<input' . drupal_attributes($element['#attributes']) . ' />';
+  return '<input' . drupal_attributes($element['#attributes']) . '>';
 }
 
 /**
@@ -414,7 +420,7 @@ function gesso_file($vars) {
   element_set_attributes($element, array('id', 'name', 'size'));
   _gesso_form_set_class($element, array('form-file'));
 
-  return '<input' . drupal_attributes($element['#attributes']) . ' />';
+  return '<input' . drupal_attributes($element['#attributes']) . '>';
 }
 
 /**
@@ -448,7 +454,7 @@ function gesso_image_button($vars) {
     }
   }
 
-  return '<input' . drupal_attributes($element['#attributes']) . ' />';
+  return '<input' . drupal_attributes($element['#attributes']) . '>';
 }
 
 /**
@@ -462,7 +468,7 @@ function gesso_password($vars) {
   element_set_attributes($element, array('id', 'name', 'size', 'maxlength'));
   _gesso_form_set_class($element, array('form-text'));
 
-  return '<input' . drupal_attributes($element['#attributes']) . ' />';
+  return '<input' . drupal_attributes($element['#attributes']) . '>';
 }
 
 /**
@@ -482,7 +488,7 @@ function gesso_radio($vars) {
   }
   _gesso_form_set_class($element, array('form-radio'));
 
-  return '<input' . drupal_attributes($element['#attributes']) . ' />';
+  return '<input' . drupal_attributes($element['#attributes']) . '>';
 }
 
 /**
@@ -617,10 +623,10 @@ function gesso_textfield($vars) {
     $attributes['value'] = url($element['#autocomplete_path'], array('absolute' => TRUE));
     $attributes['disabled'] = 'disabled';
     $attributes['class'][] = 'autocomplete';
-    $extra = '<input' . drupal_attributes($attributes) . ' />';
+    $extra = '<input' . drupal_attributes($attributes) . '>';
   }
 
-  $output = '<input' . drupal_attributes($element['#attributes']) . ' />';
+  $output = '<input' . drupal_attributes($element['#attributes']) . '>';
 
   return $output . $extra;
 }
