@@ -59,6 +59,7 @@ features[field_base][] = field_topic_highlights
 features[field_base][] = field_topic_image
 features[field_base][] = name_field
 features[field_group][] = group_card_content|taxonomy_term|sector|listing
+features[field_group][] = group_card_counts|taxonomy_term|sector|listing
 features[field_instance][] = taxonomy_term-country-description_field
 features[field_instance][] = taxonomy_term-country-name_field
 features[field_instance][] = taxonomy_term-program_discussions-description_field
