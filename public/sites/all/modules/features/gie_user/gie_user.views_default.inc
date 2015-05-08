@@ -1002,6 +1002,124 @@ function gie_user_views_default_views() {
   $export['user_programs'] = $view;
 
   $view = new view();
+  $view->name = 'user_reference';
+  $view->description = '';
+  $view->tag = 'default';
+  $view->base_table = 'users';
+  $view->human_name = 'User reference';
+  $view->core = 7;
+  $view->api_version = '3.0';
+  $view->disabled = FALSE; /* Edit this to true to make a default view disabled initially */
+
+  /* Display: Master */
+  $handler = $view->new_display('default', 'Master', 'default');
+  $handler->display->display_options['use_more_always'] = FALSE;
+  $handler->display->display_options['access']['type'] = 'perm';
+  $handler->display->display_options['access']['perm'] = 'access user profiles';
+  $handler->display->display_options['cache']['type'] = 'none';
+  $handler->display->display_options['query']['type'] = 'views_query';
+  $handler->display->display_options['exposed_form']['type'] = 'basic';
+  $handler->display->display_options['pager']['type'] = 'full';
+  $handler->display->display_options['style_plugin'] = 'default';
+  $handler->display->display_options['row_plugin'] = 'fields';
+  /* Field: User: Profile Photo */
+  $handler->display->display_options['fields']['field_user_photo']['id'] = 'field_user_photo';
+  $handler->display->display_options['fields']['field_user_photo']['table'] = 'field_data_field_user_photo';
+  $handler->display->display_options['fields']['field_user_photo']['field'] = 'field_user_photo';
+  $handler->display->display_options['fields']['field_user_photo']['label'] = '';
+  $handler->display->display_options['fields']['field_user_photo']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_user_photo']['click_sort_column'] = 'fid';
+  $handler->display->display_options['fields']['field_user_photo']['settings'] = array(
+    'image_style' => 'resource_author__35x35_',
+    'image_link' => '',
+    'linked_field' => array(
+      'linked' => 0,
+      'destination' => '',
+      'advanced' => array(
+        'title' => '',
+        'target' => '',
+        'class' => '',
+        'rel' => '',
+        'text' => '',
+      ),
+    ),
+  );
+  /* Field: User: First Name */
+  $handler->display->display_options['fields']['field_user_firstname']['id'] = 'field_user_firstname';
+  $handler->display->display_options['fields']['field_user_firstname']['table'] = 'field_data_field_user_firstname';
+  $handler->display->display_options['fields']['field_user_firstname']['field'] = 'field_user_firstname';
+  $handler->display->display_options['fields']['field_user_firstname']['label'] = '';
+  $handler->display->display_options['fields']['field_user_firstname']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_user_firstname']['settings'] = array(
+    'linked_field' => array(
+      'linked' => 0,
+      'destination' => '',
+      'advanced' => array(
+        'title' => '',
+        'target' => '',
+        'class' => '',
+        'rel' => '',
+        'text' => '',
+      ),
+    ),
+  );
+  /* Field: User: Last Name */
+  $handler->display->display_options['fields']['field_user_lastname']['id'] = 'field_user_lastname';
+  $handler->display->display_options['fields']['field_user_lastname']['table'] = 'field_data_field_user_lastname';
+  $handler->display->display_options['fields']['field_user_lastname']['field'] = 'field_user_lastname';
+  $handler->display->display_options['fields']['field_user_lastname']['label'] = '';
+  $handler->display->display_options['fields']['field_user_lastname']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_user_lastname']['settings'] = array(
+    'linked_field' => array(
+      'linked' => 0,
+      'destination' => '',
+      'advanced' => array(
+        'title' => '',
+        'target' => '',
+        'class' => '',
+        'rel' => '',
+        'text' => '',
+      ),
+    ),
+  );
+  /* Filter criterion: User: Active */
+  $handler->display->display_options['filters']['status']['id'] = 'status';
+  $handler->display->display_options['filters']['status']['table'] = 'users';
+  $handler->display->display_options['filters']['status']['field'] = 'status';
+  $handler->display->display_options['filters']['status']['value'] = '1';
+  $handler->display->display_options['filters']['status']['group'] = 1;
+  $handler->display->display_options['filters']['status']['expose']['operator'] = FALSE;
+  /* Filter criterion: User: First Name (field_user_firstname) */
+  $handler->display->display_options['filters']['field_user_firstname_value']['id'] = 'field_user_firstname_value';
+  $handler->display->display_options['filters']['field_user_firstname_value']['table'] = 'field_data_field_user_firstname';
+  $handler->display->display_options['filters']['field_user_firstname_value']['field'] = 'field_user_firstname_value';
+  $handler->display->display_options['filters']['field_user_firstname_value']['operator'] = 'not empty';
+
+  /* Display: Full name */
+  $handler = $view->new_display('entityreference', 'Full name', 'fullname_ref');
+  $handler->display->display_options['defaults']['title'] = FALSE;
+  $handler->display->display_options['pager']['type'] = 'none';
+  $handler->display->display_options['pager']['options']['offset'] = '0';
+  $handler->display->display_options['defaults']['style_plugin'] = FALSE;
+  $handler->display->display_options['style_plugin'] = 'entityreference_style';
+  $handler->display->display_options['style_options']['search_fields'] = array(
+    'field_user_firstname' => 'field_user_firstname',
+    'field_user_lastname' => 'field_user_lastname',
+    'name' => 0,
+  );
+  $handler->display->display_options['defaults']['style_options'] = FALSE;
+  $handler->display->display_options['defaults']['row_plugin'] = FALSE;
+  $handler->display->display_options['row_plugin'] = 'entityreference_fields';
+  $handler->display->display_options['row_options']['inline'] = array(
+    'field_user_photo' => 'field_user_photo',
+    'field_user_firstname' => 'field_user_firstname',
+    'field_user_lastname' => 'field_user_lastname',
+  );
+  $handler->display->display_options['row_options']['separator'] = '';
+  $handler->display->display_options['defaults']['row_options'] = FALSE;
+  $export['user_reference'] = $view;
+
+  $view = new view();
   $view->name = 'user_regions';
   $view->description = 'Regions listing on User display';
   $view->tag = 'default';
