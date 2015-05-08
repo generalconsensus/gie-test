@@ -24,6 +24,7 @@ function gie_taxonomies_field_group_info() {
     'weight' => '1',
     'children' => array(
       0 => 'title',
+      1 => 'group_card_counts',
     ),
     'format_type' => 'div',
     'format_settings' => array(

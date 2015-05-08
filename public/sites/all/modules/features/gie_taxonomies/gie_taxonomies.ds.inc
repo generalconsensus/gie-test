@@ -289,13 +289,21 @@ function gie_taxonomies_ds_layout_settings_info() {
       'main_content' => array(
         0 => 'title',
         1 => 'field_sector_image',
-        2 => 'group_card_content',
+        2 => 'community_counts_funding_sum_field',
+        3 => 'group_card_content',
+        4 => 'group_card_counts',
+        5 => 'community_counts_innovation_count_field',
+        6 => 'community_counts_entity_view_1',
       ),
     ),
     'fields' => array(
       'title' => 'main_content',
       'field_sector_image' => 'main_content',
+      'community_counts_funding_sum_field' => 'main_content',
       'group_card_content' => 'main_content',
+      'group_card_counts' => 'main_content',
+      'community_counts_innovation_count_field' => 'main_content',
+      'community_counts_entity_view_1' => 'main_content',
     ),
     'classes' => array(
       'layout_class' => array(
