@@ -62,7 +62,7 @@ function gie_taxonomies_ds_field_settings_info() {
           'func' => 'theme_ds_field_expert',
           'fi' => TRUE,
           'fi-el' => 'h3',
-          'fi-cl' => 'card__title',
+          'fi-cl' => 'card__primary-title',
           'fi-at' => '',
           'fi-def-at' => FALSE,
           'fi-odd-even' => FALSE,
@@ -70,7 +70,7 @@ function gie_taxonomies_ds_field_settings_info() {
         'field_delimiter' => '',
         'linked_field' => array(
           'linked' => 1,
-          'destination' => '[term:url]',
+          'destination' => '[term:url:path]',
           'advanced' => array(
             'title' => '',
             'target' => '',
