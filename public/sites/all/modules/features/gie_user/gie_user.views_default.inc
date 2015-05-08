@@ -1082,6 +1082,10 @@ function gie_user_views_default_views() {
       ),
     ),
   );
+  /* Sort criterion: User: Last Name (field_user_lastname) */
+  $handler->display->display_options['sorts']['field_user_lastname_value']['id'] = 'field_user_lastname_value';
+  $handler->display->display_options['sorts']['field_user_lastname_value']['table'] = 'field_data_field_user_lastname';
+  $handler->display->display_options['sorts']['field_user_lastname_value']['field'] = 'field_user_lastname_value';
   /* Filter criterion: User: Active */
   $handler->display->display_options['filters']['status']['id'] = 'status';
   $handler->display->display_options['filters']['status']['table'] = 'users';
