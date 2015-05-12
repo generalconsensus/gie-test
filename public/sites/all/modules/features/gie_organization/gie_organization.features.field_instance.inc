@@ -1039,6 +1039,7 @@ function gie_organization_field_default_field_instances() {
       'alt_field_hide' => 0,
       'alt_field_sync_title' => 1,
       'alt_field_update_on_edit' => 1,
+      'default_image' => 0,
       'description_display' => 'before',
       'file_directory' => '',
       'file_extensions' => 'png gif jpg jpeg',
@@ -2258,6 +2259,106 @@ function gie_organization_field_default_field_instances() {
     ),
   );
 
+  // Exported field_instance: 'node-organization-field_partner'
+  $field_instances['node-organization-field_partner'] = array(
+    'bundle' => 'organization',
+    'default_value' => array(
+      0 => array(
+        'value' => 0,
+      ),
+    ),
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'at_a_glance' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'contact' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'default' => array(
+        'label' => 'above',
+        'module' => 'list',
+        'settings' => array(
+          'field_delimiter' => '',
+          'linked_field' => array(
+            'advanced' => array(
+              'class' => '',
+              'rel' => '',
+              'target' => '',
+              'text' => '',
+              'title' => '',
+            ),
+            'destination' => '',
+            'linked' => 0,
+          ),
+        ),
+        'type' => 'list_default',
+        'weight' => 26,
+      ),
+      'full' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'listing' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'logo' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'page_header' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'search_listing' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'ds_extras_field_template' => '',
+    'entity_type' => 'node',
+    'field_name' => 'field_partner',
+    'label' => 'Partner',
+    'required' => 0,
+    'settings' => array(
+      'description_display' => 'after',
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'options',
+      'settings' => array(
+        'display_label' => 0,
+      ),
+      'type' => 'options_onoff',
+      'weight' => 6,
+    ),
+  );
+
   // Exported field_instance: 'node-organization-field_role_on_the_exchange'
   $field_instances['node-organization-field_role_on_the_exchange'] = array(
     'bundle' => 'organization',
@@ -2965,6 +3066,7 @@ function gie_organization_field_default_field_instances() {
   t('Organization Title');
   t('Organization Type');
   t('Parent Organization');
+  t('Partner');
   t('Partners');
   t('Paste your organization\'s Facebook page URL so that users can go directly there');
   t('Paste your organization\'s LinkedIn URL so that users can go directly there');
