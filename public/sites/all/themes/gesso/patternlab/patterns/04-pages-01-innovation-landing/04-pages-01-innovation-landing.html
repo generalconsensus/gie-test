@@ -14,6 +14,10 @@
     <meta http-equiv="cleartype" content="on">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <link href='http://fonts.googleapis.com/css?family=Lato:400,400italic,700,700italic,300italic,300' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="../../css/overrides/tb_megamenu/bootstrap.css?0" media="all">
+    <link rel="stylesheet" href="../../css/overrides/tb_megamenu/base.css?0" media="all">
+    <link rel="stylesheet" href="../../css/overrides/tb_megamenu/default.css?0" media="all">
+    <link rel="stylesheet" href="../../css/overrides/tb_megamenu/compatibility.css?0" media="all">
     <!--[if gte IE 9]><!-->
     <link rel="stylesheet" href="../../css/styles.css?0" media="all">
     <!--<![endif]-->
@@ -68,38 +72,401 @@
         <h1 class="site-name__text">Global Innovation Exchange</h1>
       </a>
     </span>
-    <div class="block block-tb-megamenu-main-menu block--tb-megamenu block--tb-megamenu-main-menu">      
+    <div class="block block-tb-megamenu-main-menu block--tb-megamenu block--tb-megamenu-main-menu">
       <div role="navigation" class="tb-megamenu tb-megamenu-main-menu">
-        <ul class="nav tb-megamenu-nav">
-          <li class="tb-megamenu-item tb-megamenu-item--about"><a class="" href="http://google.com"> About </a></li>
-          <li class="tb-megamenu-item tb-megamenu-item--innovations"><a class="" href="#"> Innovations </a></li>
-          <li class="tb-megamenu-item tb-megamenu-item--funding"><a class="" href="#"> Funding </a></li>
-          <li class="tb-megamenu-item tb-megamenu-item--resources"><a class="" href="#"> Resources </a></li>
-          <li class="tb-megamenu-item tb-megamenu-item--communities dropdown"><a class="" href="#"> Communities </a></li>
-          <li class="tb-megamenu-item tb-megamenu-item--more dropdown"><a class="" href="http://google.com"> More </a>
-            <!--<div class="tb-megamenu-submenu dropdown-menu mega-dropdown-menu nav-child" data-width="" data-class="">
+        <ul class="tb-megamenu-nav nav">
+          <!-- ABOUT -->
+          <li class="tb-megamenu-item level-1 mega tb-megamenu-item--about dropdown">
+            <a href="/about-exchange"> About </a>
+            <div class="tb-megamenu-submenu dropdown-menu mega-dropdown-menu nav-child">
               <div class="mega-dropdown-inner">
                 <div class="tb-megamenu-row row-fluid">
-                  <div class="tb-megamenu-column span12  mega-col-nav" id="tb-megamenu-column-1" data-hidewcol="0" data-width="12" data-class="">
+                  <div class="tb-megamenu-column span12 mega-col-nav">
                     <div class="tb-megamenu-column-inner mega-inner clearfix">
-                      <ul role="list" class="tb-megamenu-subnav mega-nav level-1 items-2">
-                        <li aria-level="2" role="listitem" class="tb-megamenu-item level-2 mega" data-hidesub="0" data-hidewcol="0" data-group="0" data-alignsub="" data-caption="" data-xicon="" data-class="" data-type="menu_item" data-level="2" data-id="1324">
-                          <a class="" href="http://google.com">More link 2</a>
-                        </li>
-                        <li aria-level="2" role="listitem" class="tb-megamenu-item level-2 mega" data-hidesub="0" data-hidewcol="0" data-group="0" data-alignsub="" data-caption="" data-xicon="" data-class="" data-type="menu_item" data-level="2" data-id="1323">
-                          <a class="" href="http://google.com">More link 1</a>
+                      <ul role="list" class="tb-megamenu-subnav mega-nav level-1 items-1">
+                        <li class="tb-megamenu-item level-2 mega">
+                          <a class="" href="/frequently-asked-questions">
+                            Frequently Asked Questions
+                          </a>
                         </li>
                       </ul>
                     </div>
                   </div>
                 </div>
               </div>
-            </div>-->
+            </div>
+          </li>
+          <!-- INNOVATIONS -->
+          <li class="tb-megamenu-item level-1 mega tb-megamenu-item--innovations">
+            <a class="" href="/innovations">
+              Innovations
+            </a>
+          </li>
+          <!-- FUNDING -->
+          <li class="tb-megamenu-item level-1 mega tb-megamenu-item--funding">
+            <a class="" href="/funding">
+              Funding
+            </a>
+          </li>
+          <!-- RESOURCES -->
+          <li class="tb-megamenu-item level-1 mega tb-megamenu-item--resources">
+            <a class="" href="/resources">
+              Resources
+            </a>
+          </li>
+          <!-- COMMUNITIES -->
+          <li class="tb-megamenu-item level-1 mega tb-megamenu-item--communities mega-align-right dropdown">
+            <a href="/">
+              Communities
+            </a>
+            <div class="tb-megamenu-submenu dropdown-menu mega-dropdown-menu nav-child">
+              <div class="mega-dropdown-inner">
+                <div class="tb-megamenu-row row-fluid">
+                  <div class="tb-megamenu-column span12  mega-col-nav has-icon-discussions">
+                    <div class="tb-megamenu-column-inner mega-inner clearfix">
+                      <div class="tb-megamenu-block tb-block tb-megamenu-block">
+                        <div class="block-inner">
+                          <div class="block">
+                            <div class="view view--communities-content-types-menu view--display-id-discussions view--simple-list view-communities-content-types-menu">
+                              <div class="view__header">
+                                <h2>Discussions</h2>
+                              </div>
+                              <div class="item-list">
+                                <ul>
+                                  <li class="views-row views-row-1 views-row-odd views-row-first">
+                                    <div class="views-field views-field-title">
+                                      <span class="field-content"><a href="/discussions/initial-impressions-exchange">Initial Impressions of the Exchange</a></span>
+                                    </div>
+                                  </li>
+                                  <li class="views-row views-row-2 views-row-even">
+                                    <div class="views-field views-field-title">
+                                      <span class="field-content"><a href="/discussions/discussion-topic-number-two">Discussion Topic Number Two</a></span>
+                                    </div>
+                                  </li>
+                                  <li class="views-row views-row-3 views-row-odd">
+                                    <div class="views-field views-field-title">
+                                      <span class="field-content"><a href="/discussions/discussion-topic-number-three">Discussion Topic Number Three</a></span>
+                                    </div>
+                                  </li>
+                                  <li class="views-row views-row-4 views-row-even">
+                                    <div class="views-field views-field-title">
+                                      <span class="field-content"><a href="/discussions/discussion-topic-number-four">Discussion Topic Number Four</a></span>
+                                    </div>
+                                  </li>
+                                  <li class="views-row views-row-5 views-row-odd">
+                                    <div class="views-field views-field-title">
+                                      <span class="field-content"><a href="/discussions/discussion-topic-number-five">Discussion Topic Number Five</a></span>
+                                    </div>
+                                  </li>
+                                  <li class="views-row views-row-6 views-row-even">
+                                    <div class="views-field views-field-title">
+                                      <span class="field-content"><a href="/discussions/discussion-topic-number-six">Discussion Topic Number Six</a></span>
+                                    </div>
+                                  </li>
+                                  <li class="views-row views-row-7 views-row-odd">
+                                    <div class="views-field views-field-title">
+                                      <span class="field-content"><a href="/discussions/discussion-topic-number-seven">Discussion Topic Number Seven</a></span>
+                                    </div>
+                                  </li>
+                                  <li class="views-row views-row-8 views-row-even views-row-last">
+                                    <div class="views-field views-field-title">
+                                      <span class="field-content"><a href="/discussions/discussion-topic-number-eight">Discussion Topic Number Eight</a></span>
+                                    </div>
+                                  </li>
+                                </ul>
+                              </div>
+                              <div class="view__footer">
+                                <p><a href="discussions">View All</a></p>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="tb-megamenu-row row-fluid">
+                  <div class="tb-megamenu-column span6  mega-col-nav has-icon-sectors">
+                    <div class="tb-megamenu-column-inner mega-inner clearfix">
+                      <div class="tb-megamenu-block tb-block tb-megamenu-block">
+                        <div class="block-inner">
+                          <div class="block block-views-communities-terms-menu-sectors block--views block--views-communities-terms-menu-sectors">
+                            <div class="view view--communities-terms-menu view--id-communities_terms_menu view--display-id-sectors view--simple-list view-communities-terms-menu view-id-communities_terms_menu view-display-id-sectors">
+                              <div class="view__header">
+                                <h2>Sectors</h2>
+                              </div>
+                              <div class="item-list">
+                                <ul>
+                                  <li class="views-row views-row-1 views-row-odd views-row-first">
+                                    <a href="/sector/adolescent-health">Adolescent Health</a>
+                                  </li>
+                                  <li class="views-row views-row-2 views-row-even">
+                                    <a href="/sector/ageing">Ageing</a>
+                                  </li>
+                                  <li class="views-row views-row-3 views-row-odd">
+                                    <a href="/sector/agribusiness-smse">Agribusiness (SMSE)</a>
+                                  </li>
+                                  <li class="views-row views-row-4 views-row-even views-row-last">
+                                    <a href="/sector/agricultural-water-management">Agricultural Water Management</a>
+                                  </li>
+                                </ul>
+                              </div>
+                              <div class="view__footer">
+                                <p><a href="sectors">View All</a></p>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="tb-megamenu-column span6 mega-col-nav has-icon-topics">
+                    <div class="tb-megamenu-column-inner mega-inner clearfix">
+                      <div class="tb-megamenu-block tb-block tb-megamenu-block">
+                        <div class="block-inner">
+                          <div class="block block-views-communities-terms-menu-topics block--views block--views-communities-terms-menu-topics">
+                            <div class="view view--communities-terms-menu view--id-communities_terms_menu view--display-id-topics view--simple-list view-communities-terms-menu view-id-communities_terms_menu view-display-id-topics">
+                              <div class="view__header">
+                                <h2>Topics</h2>
+                              </div>
+                              <div class="item-list">
+                                <ul>
+                                  <li class="views-row views-row-1 views-row-odd views-row-first">
+                                    <a href="/topic/acceleration">Acceleration</a>
+                                  </li>
+                                  <li class="views-row views-row-2 views-row-even">
+                                    <a href="/topic/communications-and-media">Communications and Media</a>
+                                  </li>
+                                  <li class="views-row views-row-3 views-row-odd">
+                                    <a href="/topic/data-development">Data for Development</a>
+                                  </li>
+                                  <li class="views-row views-row-4 views-row-even views-row-last">
+                                    <a href="/topic/digital-development">Digital Development</a>
+                                  </li>
+                                </ul>
+                              </div>
+                              <div class="view__footer">
+                                <p><a href="topics">View All</a></p>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="tb-megamenu-row row-fluid">
+                  <div class="tb-megamenu-column span6 mega-col-nav has-icon-locations">
+                    <div class="tb-megamenu-column-inner mega-inner clearfix">
+                      <div class="tb-megamenu-block tb-block tb-megamenu-block">
+                        <div class="block-inner">
+                          <div class="block block--views">
+                            <div class="view view--communities-terms-menu view--id-communities_terms_menu view--display-id-locations view-communities-terms-menu view-id-communities_terms_menu view-display-id-locations">
+                              <div class="view__header">
+                                <h2>Locations</h2>
+                              </div>
+                              <div class="item-list">
+                                <ul>
+                                  <li class="views-row views-row-1 views-row-odd views-row-first">
+                                    <a href="/region/africa">Africa</a>
+                                  </li>
+                                  <li class="views-row views-row-2 views-row-even">
+                                    <a href="/region/asia-pacific">Asia Pacific</a>
+                                  </li>
+                                  <li class="views-row views-row-3 views-row-odd">
+                                    <a href="/region/europe-and-eurasia">Europe and Eurasia</a>
+                                  </li>
+                                  <li class="views-row views-row-4 views-row-even views-row-last">
+                                    <a href="/region/global">Global</a>
+                                  </li>
+                                </ul>
+                              </div>
+                              <div class="view__footer">
+                                <p><a href="locations">View All</a></p>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="tb-megamenu-column span6  mega-col-nav has-icon-programs">
+                    <div class="tb-megamenu-column-inner mega-inner clearfix">
+                      <div class="tb-megamenu-block tb-block tb-megamenu-block">
+                        <div class="block-inner">
+                          <div class="block block--views">
+                            <div class="view view--communities-content-types-menu view--id-communities_content_types_menu view--display-id-programs view--simple-list view-communities-content-types-menu view-id-communities_content_types_menu view-display-id-programs">
+                              <div class="view__header">
+                                <h2>Programs</h2>
+                              </div>
+                              <div class="item-list">
+                                <ul>
+                                  <li class="views-row views-row-1 views-row-odd views-row-first">
+                                    <div class="views-field views-field-title">
+                                      <span class="field-content"><a href="/programs/powering-ag">Powering Ag</a></span>
+                                    </div>
+                                  </li>
+                                  <li class="views-row views-row-2 views-row-even">
+                                    <div class="views-field views-field-title">
+                                      <span class="field-content"><a href="/programs/div-development-innovation-ventures">DIV (Development Innovation Ventures)</a></span>
+                                    </div>
+                                  </li>
+                                  <li class="views-row views-row-3 views-row-odd">
+                                    <div class="views-field views-field-title">
+                                      <span class="field-content"><a href="/programs/skoll-world-forum">Skoll World Forum</a></span>
+                                    </div>
+                                  </li>
+                                  <li class="views-row views-row-4 views-row-even views-row-last">
+                                    <div class="views-field views-field-title">
+                                      <span class="field-content"><a href="/programs/hesn-higher-education-solutions-network">HESN (Higher Education Solutions Network)</a></span>
+                                    </div>
+                                  </li>
+                                </ul>
+                              </div>
+                              <div class="view__footer">
+                                <p><a href="programs">View All</a></p>
+                              </div>
+                             </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </li>
+          <!-- MORE -->
+          <li class="tb-megamenu-item level-1 mega tb-megamenu-item--more mega-align-right dropdown">
+            <a class="" href="/"> More </a>
+            <div class="tb-megamenu-submenu dropdown-menu mega-dropdown-menu nav-child">
+              <div class="mega-dropdown-inner">
+                <div class="tb-megamenu-row row-fluid">
+                  <div class="tb-megamenu-column span4 mega-col-nav has-icon-programs">
+                    <div class="tb-megamenu-column-inner mega-inner clearfix">
+                      <div class="tb-megamenu-block tb-block tb-megamenu-block">
+                        <div class="block-inner">
+                          <div class="block">
+                            <div class="view view--communities-content-types-menu view--id-communities_content_types_menu view--display-id-programs view--simple-list view-communities-content-types-menu view-id-communities_content_types_menu view-display-id-programs">
+                              <div class="view__header">
+                                <h2>Programs</h2>
+                              </div>
+                              <div class="item-list">
+                                <ul>
+                                  <li class="views-row views-row-1 views-row-odd views-row-first">
+                                    <div class="views-field views-field-title">
+                                      <span class="field-content"><a href="/programs/powering-ag">Powering Ag</a></span>
+                                    </div>
+                                  </li>
+                                  <li class="views-row views-row-2 views-row-even">
+                                    <div class="views-field views-field-title">
+                                      <span class="field-content"><a href="/programs/div-development-innovation-ventures">DIV (Development Innovation Ventures)</a></span>
+                                    </div>
+                                  </li>
+                                  <li class="views-row views-row-3 views-row-odd">
+                                    <div class="views-field views-field-title">
+                                      <span class="field-content"><a href="/programs/skoll-world-forum">Skoll World Forum</a></span>
+                                    </div>
+                                  </li>
+                                  <li class="views-row views-row-4 views-row-even views-row-last">
+                                    <div class="views-field views-field-title">
+                                      <span class="field-content"><a href="/programs/hesn-higher-education-solutions-network">HESN (Higher Education Solutions Network)</a></span>
+                                    </div>
+                                  </li>
+                                </ul>
+                              </div>
+                              <div class="view__footer">
+                                <p><a href="programs">View All</a></p>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="tb-megamenu-column span4 mega-col-nav has-icon-organizations">
+                    <div class="tb-megamenu-column-inner mega-inner clearfix">
+                      <div class="tb-megamenu-block tb-block tb-megamenu-block">
+                        <div class="block-inner">
+                          <div class="block block--views">
+                            <div class="view view--communities-content-types-menu view--id-communities_content_types_menu view--display-id-organizations view--simple-list view-communities-content-types-menu view-id-communities_content_types_menu view-display-id-organizations">
+                              <div class="view__header">
+                                <h2>Organizations</h2>
+                              </div>
+                              <div class="item-list">
+                                <ul>
+                                  <li class="views-row views-row-1 views-row-odd views-row-first">
+                                    <div class="views-field views-field-title">
+                                      <span class="field-content"><a href="/organizations/usaid-us-agency-international-development">USAID (U.S. Agency for International Development)</a></span>
+                                    </div>
+                                  </li>
+                                  <li class="views-row views-row-2 views-row-even">
+                                    <div class="views-field views-field-title">
+                                      <span class="field-content"><a href="/organizations/us-global-development-lab">U.S. Global Development Lab</a></span>
+                                    </div>
+                                  </li>
+                                  <li class="views-row views-row-3 views-row-odd">
+                                    <div class="views-field views-field-title">
+                                      <span class="field-content"><a href="/organizations/global-integrity">Global Integrity</a></span>
+                                    </div>
+                                  </li>
+                                  <li class="views-row views-row-4 views-row-even views-row-last">
+                                    <div class="views-field views-field-title">
+                                      <span class="field-content"><a href="/organizations/bill-and-melinda-gates-foundation">Bill and Melinda Gates Foundation</a></span>
+                                    </div>
+                                  </li>
+                                </ul>
+                              </div>
+                              <div class="view__footer">
+                                <p><a href="organizations">View All</a></p>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="tb-megamenu-column span4  mega-col-nav has-icon-members">
+                    <div class="tb-megamenu-column-inner mega-inner clearfix">
+                      <div class="tb-megamenu-block tb-block tb-megamenu-block">
+                        <div class="block-inner">
+                          <div class="block block-views-communities-user-menu-members block--views block--views-communities-user-menu-members">
+                            <div class="view view--communities-user-menu view--id-communities_user_menu view--display-id-members view--simple-list view-communities-user-menu view-id-communities_user_menu view-display-id-members">
+                              <div class="view__header">
+                                <h2>Members</h2>
+                              </div>
+                              <div class="item-list">
+                                <ul>
+                                  <li class="views-row views-row-1 views-row-odd views-row-first">
+                                    <a href="members/forumone">Matt Burge</a>
+                                  </li>
+                                  <li class="views-row views-row-2 views-row-even">
+                                    <a href="members/abonnell">Alexis Bonnell</a>
+                                  </li>
+                                  <li class="views-row views-row-3 views-row-odd">
+                                    <a href="members/kshipley">Katie Shipley</a>
+                                  </li>
+                                  <li class="views-row views-row-4 views-row-even views-row-last">
+                                    <a href="members/mdrayer">Mike Drayer</a>
+                                  </li>
+                                </ul>
+                              </div>
+                              <div class="view__footer">
+                                <p><a href="members">View All</a></p>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
           </li>
         </ul>
       </div>
-    </div>
-    <div class="block block--search block--search-api-page-node-search">    
+    </div>    <div class="block block--search block--search-api-page-node-search">    
       <h2 class="block__title">Node Search</h2>
       <form accept-charset="UTF-8">
         <div class="form-item form-item--textfield">
@@ -184,12 +551,38 @@
               <div class="views-row">
                 <article class="card">
                   <div class="card__image">
-                    <a href="http://forumone.com/"><img src="http://lorempixel.com/500/300/animals/1/" alt="Card 5:3" height="300" width="500">
+                    <a href="http://forumone.com/"><img src="http://lorempixel.com/500/300/city/2/" alt="Card 5:3" height="300" width="500">
 </a>
                   </div>
                   <div class="card__content">
-                    <h3 class="card__title"><a href="http://forumone.com/">Innovation Title</a></h3>
-                    <div><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas a lectus erat. Cras leo urna, fermentum ac lacus ac, pharetra gravida sapien.</p></div>
+                    <h3 class="card__title"><a href="http://forumone.com/">A Longer Innovation Title</a></h3>
+                    <div><p>Fusce euismod ultricies mauris eget pellentesque. Curabitur mauris eros, pretium condimentum diam id, vulputate condimentum diam. Quisque viverra massa sed lorem ultrices gravida vel quis velit.</p></div>
+                    <div class="card__counts">
+                      <div class="view">
+                        <div class="has-icon--evidence" title="Evidence">0</div>
+                      </div>
+                      <div class="view">
+                        <div class="has-icon--comment" title="Comments">12</div>
+                      </div>
+                      <div class="view">
+                        <div class="has-icon--organization" title="Organizations">5</div>
+                      </div>
+                      <div class="view">
+                        <div class="has-icon--favorite" title="Favorites">6</div>
+                      </div>
+                    </div>
+                  </div>
+                </article>
+              </div>
+              <div class="views-row">
+                <article class="card">
+                  <div class="card__image">
+                    <a href="http://forumone.com/"><img src="http://lorempixel.com/500/300/animals/3/" alt="Card 5:3" height="300" width="500">
+</a>
+                  </div>
+                  <div class="card__content">
+                    <h3 class="card__title"><a href="http://forumone.com/">A Really, Really Much Much Longer Innovation Title</a></h3>
+                    <div><p>Fusce euismod ultricies mauris eget pellentesque. Curabitur mauris eros, pretium condimentum diam id, vulputate condimentum diam. Quisque viverra massa sed lorem ultrices gravida vel quis velit.</p></div>
                     <div class="card__counts">
                       <div class="view">
                         <div class="has-icon--evidence" title="Evidence">0</div>
@@ -236,64 +629,12 @@
               <div class="views-row">
                 <article class="card">
                   <div class="card__image">
-                    <a href="http://forumone.com/"><img src="http://lorempixel.com/500/300/animals/3/" alt="Card 5:3" height="300" width="500">
-</a>
-                  </div>
-                  <div class="card__content">
-                    <h3 class="card__title"><a href="http://forumone.com/">A Really, Really Much Much Longer Innovation Title</a></h3>
-                    <div><p>Fusce euismod ultricies mauris eget pellentesque. Curabitur mauris eros, pretium condimentum diam id, vulputate condimentum diam. Quisque viverra massa sed lorem ultrices gravida vel quis velit.</p></div>
-                    <div class="card__counts">
-                      <div class="view">
-                        <div class="has-icon--evidence" title="Evidence">0</div>
-                      </div>
-                      <div class="view">
-                        <div class="has-icon--comment" title="Comments">12</div>
-                      </div>
-                      <div class="view">
-                        <div class="has-icon--organization" title="Organizations">5</div>
-                      </div>
-                      <div class="view">
-                        <div class="has-icon--favorite" title="Favorites">6</div>
-                      </div>
-                    </div>
-                  </div>
-                </article>
-              </div>
-              <div class="views-row">
-                <article class="card">
-                  <div class="card__image">
-                    <a href="http://forumone.com/"><img src="http://lorempixel.com/500/300/business/2/" alt="Card 5:3" height="300" width="500">
-</a>
-                  </div>
-                  <div class="card__content">
-                    <h3 class="card__title"><a href="http://forumone.com/">Innovation Title</a></h3>
-                    <div><p>Pellentesque dapibus, est sed sollicitudin tincidunt, orci leo ornare dui, tempor euismod dolor elit quis quam. Etiam eu ex ut felis suscipit scelerisque.</p></div>
-                    <div class="card__counts">
-                      <div class="view">
-                        <div class="has-icon--evidence" title="Evidence">0</div>
-                      </div>
-                      <div class="view">
-                        <div class="has-icon--comment" title="Comments">12</div>
-                      </div>
-                      <div class="view">
-                        <div class="has-icon--organization" title="Organizations">5</div>
-                      </div>
-                      <div class="view">
-                        <div class="has-icon--favorite" title="Favorites">6</div>
-                      </div>
-                    </div>
-                  </div>
-                </article>
-              </div>
-              <div class="views-row">
-                <article class="card">
-                  <div class="card__image">
-                    <a href="http://forumone.com/"><img src="http://lorempixel.com/500/300/city/2/" alt="Card 5:3" height="300" width="500">
+                    <a href="http://forumone.com/"><img src="http://lorempixel.com/500/300/business/1/" alt="Card 5:3" height="300" width="500">
 </a>
                   </div>
                   <div class="card__content">
                     <h3 class="card__title"><a href="http://forumone.com/">A Longer Innovation Title</a></h3>
-                    <div><p>Fusce euismod ultricies mauris eget pellentesque. Curabitur mauris eros, pretium condimentum diam id, vulputate condimentum diam. Quisque viverra massa sed lorem ultrices gravida vel quis velit.</p></div>
+                    <div><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas a lectus erat. Cras leo urna, fermentum ac lacus ac, pharetra gravida sapien.</p></div>
                     <div class="card__counts">
                       <div class="view">
                         <div class="has-icon--evidence" title="Evidence">0</div>
@@ -340,12 +681,64 @@
               <div class="views-row">
                 <article class="card">
                   <div class="card__image">
-                    <a href="http://forumone.com/"><img src="http://lorempixel.com/500/300/business/1/" alt="Card 5:3" height="300" width="500">
+                    <a href="http://forumone.com/"><img src="http://lorempixel.com/500/300/city/1/" alt="Card 5:3" height="300" width="500">
 </a>
                   </div>
                   <div class="card__content">
-                    <h3 class="card__title"><a href="http://forumone.com/">A Longer Innovation Title</a></h3>
+                    <h3 class="card__title"><a href="http://forumone.com/">A Really, Really Much Much Longer Innovation Title</a></h3>
                     <div><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas a lectus erat. Cras leo urna, fermentum ac lacus ac, pharetra gravida sapien.</p></div>
+                    <div class="card__counts">
+                      <div class="view">
+                        <div class="has-icon--evidence" title="Evidence">0</div>
+                      </div>
+                      <div class="view">
+                        <div class="has-icon--comment" title="Comments">12</div>
+                      </div>
+                      <div class="view">
+                        <div class="has-icon--organization" title="Organizations">5</div>
+                      </div>
+                      <div class="view">
+                        <div class="has-icon--favorite" title="Favorites">6</div>
+                      </div>
+                    </div>
+                  </div>
+                </article>
+              </div>
+              <div class="views-row">
+                <article class="card">
+                  <div class="card__image">
+                    <a href="http://forumone.com/"><img src="http://lorempixel.com/500/300/animals/1/" alt="Card 5:3" height="300" width="500">
+</a>
+                  </div>
+                  <div class="card__content">
+                    <h3 class="card__title"><a href="http://forumone.com/">Innovation Title</a></h3>
+                    <div><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas a lectus erat. Cras leo urna, fermentum ac lacus ac, pharetra gravida sapien.</p></div>
+                    <div class="card__counts">
+                      <div class="view">
+                        <div class="has-icon--evidence" title="Evidence">0</div>
+                      </div>
+                      <div class="view">
+                        <div class="has-icon--comment" title="Comments">12</div>
+                      </div>
+                      <div class="view">
+                        <div class="has-icon--organization" title="Organizations">5</div>
+                      </div>
+                      <div class="view">
+                        <div class="has-icon--favorite" title="Favorites">6</div>
+                      </div>
+                    </div>
+                  </div>
+                </article>
+              </div>
+              <div class="views-row">
+                <article class="card">
+                  <div class="card__image">
+                    <a href="http://forumone.com/"><img src="http://lorempixel.com/500/300/business/2/" alt="Card 5:3" height="300" width="500">
+</a>
+                  </div>
+                  <div class="card__content">
+                    <h3 class="card__title"><a href="http://forumone.com/">Innovation Title</a></h3>
+                    <div><p>Pellentesque dapibus, est sed sollicitudin tincidunt, orci leo ornare dui, tempor euismod dolor elit quis quam. Etiam eu ex ut felis suscipit scelerisque.</p></div>
                     <div class="card__counts">
                       <div class="view">
                         <div class="has-icon--evidence" title="Evidence">0</div>
@@ -389,32 +782,6 @@
                   </div>
                 </article>
               </div>
-              <div class="views-row">
-                <article class="card">
-                  <div class="card__image">
-                    <a href="http://forumone.com/"><img src="http://lorempixel.com/500/300/city/1/" alt="Card 5:3" height="300" width="500">
-</a>
-                  </div>
-                  <div class="card__content">
-                    <h3 class="card__title"><a href="http://forumone.com/">A Really, Really Much Much Longer Innovation Title</a></h3>
-                    <div><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas a lectus erat. Cras leo urna, fermentum ac lacus ac, pharetra gravida sapien.</p></div>
-                    <div class="card__counts">
-                      <div class="view">
-                        <div class="has-icon--evidence" title="Evidence">0</div>
-                      </div>
-                      <div class="view">
-                        <div class="has-icon--comment" title="Comments">12</div>
-                      </div>
-                      <div class="view">
-                        <div class="has-icon--organization" title="Organizations">5</div>
-                      </div>
-                      <div class="view">
-                        <div class="has-icon--favorite" title="Favorites">6</div>
-                      </div>
-                    </div>
-                  </div>
-                </article>
-              </div>
           </div>
 
            <div class="view--card-view">
@@ -422,7 +789,7 @@
                 <article class="card">
                   <div class="card__content">
                     <h2 class="card__type">Toolkit</h2>
-                    <h3 class="card__primary-title"><a href="http://forumone.com/">A Really, Really Much Much Longer Innovation Title</a></h3>
+                    <h3 class="card__primary-title"><a href="http://forumone.com/">Innovation Title</a></h3>
                     <div class="card__author">
                       <div class="card__author-image"><img src="../../images-patternlab/buffy-35-35.jpg"></div>
                       <div class="card__author-name">Buffy Summers</div>
@@ -452,7 +819,7 @@
                 <article class="card">
                   <div class="card__content">
                     <h2 class="card__type">Toolkit</h2>
-                    <h3 class="card__primary-title"><a href="http://forumone.com/">A Longer Innovation Title</a></h3>
+                    <h3 class="card__primary-title"><a href="http://forumone.com/">Innovation Title</a></h3>
                     <div class="card__author">
                       <div class="card__author-image"><img src="../../images-patternlab/buffy-35-35.jpg"></div>
                       <div class="card__author-name">Buffy Summers</div>
@@ -514,11 +881,34 @@
               <div class="views-row">
                 <article class="card">
                   <div class="card__image">
-                    <a href="http://forumone.com/"><img src="http://lorempixel.com/500/300/city/1/" alt="Card 5:3" height="300" width="500">
+                    <a href="http://forumone.com/"><img src="http://lorempixel.com/500/300/business/2/" alt="Card 5:3" height="300" width="500">
 </a>
                   </div>
                   <div class="card__content">
-                    <h3 class="card__title"><a href="http://forumone.com/">A Really, Really Much Much Longer Innovation Title</a></h3>
+                    <h3 class="card__title"><a href="http://forumone.com/">Innovation Title</a></h3>
+                    <div><p>Pellentesque dapibus, est sed sollicitudin tincidunt, orci leo ornare dui, tempor euismod dolor elit quis quam. Etiam eu ex ut felis suscipit scelerisque.</p></div>
+                    <div class="card__counts">
+                      <div class="view">
+                        <div class="has-icon--innovation" title="Innovations">12</div>
+                      </div>
+                      <div class="view">
+                        <div class="has-icon--member" title="Members">5</div>
+                      </div>
+                      <div class="view">
+                        <div class="has-icon--favorite" title="Favorites">6</div>
+                      </div>
+                    </div>
+                  </div>
+                </article>
+              </div>
+              <div class="views-row">
+                <article class="card">
+                  <div class="card__image">
+                    <a href="http://forumone.com/"><img src="http://lorempixel.com/500/300/animals/1/" alt="Card 5:3" height="300" width="500">
+</a>
+                  </div>
+                  <div class="card__content">
+                    <h3 class="card__title"><a href="http://forumone.com/">Innovation Title</a></h3>
                     <div><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas a lectus erat. Cras leo urna, fermentum ac lacus ac, pharetra gravida sapien.</p></div>
                     <div class="card__counts">
                       <div class="view">
@@ -537,30 +927,7 @@
               <div class="views-row">
                 <article class="card">
                   <div class="card__image">
-                    <a href="http://forumone.com/"><img src="http://lorempixel.com/500/300/business/1/" alt="Card 5:3" height="300" width="500">
-</a>
-                  </div>
-                  <div class="card__content">
-                    <h3 class="card__title"><a href="http://forumone.com/">A Longer Innovation Title</a></h3>
-                    <div><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas a lectus erat. Cras leo urna, fermentum ac lacus ac, pharetra gravida sapien.</p></div>
-                    <div class="card__counts">
-                      <div class="view">
-                        <div class="has-icon--innovation" title="Innovations">12</div>
-                      </div>
-                      <div class="view">
-                        <div class="has-icon--member" title="Members">5</div>
-                      </div>
-                      <div class="view">
-                        <div class="has-icon--favorite" title="Favorites">6</div>
-                      </div>
-                    </div>
-                  </div>
-                </article>
-              </div>
-              <div class="views-row">
-                <article class="card">
-                  <div class="card__image">
-                    <a href="http://forumone.com/"><img src="http://lorempixel.com/500/300/animals/3/" alt="Card 5:3" height="300" width="500">
+                    <a href="http://forumone.com/"><img src="http://lorempixel.com/500/300/business/3/" alt="Card 5:3" height="300" width="500">
 </a>
                   </div>
                   <div class="card__content">
@@ -586,7 +953,7 @@
               <div class="views-row">
                 <article class="card">
                   <div class="card__content">
-                    <h3 class="card__primary-title"><a href="http://forumone.com/">A Really, Really Much Much Longer Innovation Title</a></h3>
+                    <h3 class="card__primary-title"><a href="http://forumone.com/">Innovation Title</a></h3>
                     <div class="card__number">$30,000,000</div>
                     <div class="card__due-date">Due by: 3/21/2015</div> 
                     <div class="card__list">
@@ -618,7 +985,7 @@
               <div class="views-row">
                 <article class="card">
                   <div class="card__content">
-                    <h3 class="card__primary-title"><a href="http://forumone.com/">A Longer Innovation Title</a></h3>
+                    <h3 class="card__primary-title"><a href="http://forumone.com/">Innovation Title</a></h3>
                     <div class="card__number">$30,000,000</div>
                     <div class="card__due-date">Due by: 3/21/2015</div> 
                     <div class="card__list">
