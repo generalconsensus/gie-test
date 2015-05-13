@@ -304,7 +304,7 @@ function gie_taxonomies_views_default_views() {
   /* Display: Master */
   $handler = $view->new_display('default', 'Master', 'default');
   $handler->display->display_options['title'] = 'Highlights';
-  $handler->display->display_options['css_class'] = 'view--card-view';
+  $handler->display->display_options['css_class'] = 'view--card-view-3col';
   $handler->display->display_options['use_more_always'] = FALSE;
   $handler->display->display_options['access']['type'] = 'perm';
   $handler->display->display_options['cache']['type'] = 'none';
@@ -594,7 +594,7 @@ function gie_taxonomies_views_default_views() {
   $handler->display->display_options['defaults']['title'] = FALSE;
   $handler->display->display_options['title'] = 'Innovations';
   $handler->display->display_options['defaults']['css_class'] = FALSE;
-  $handler->display->display_options['css_class'] = 'view--card-view';
+  $handler->display->display_options['css_class'] = 'view--card-view-3col';
   $handler->display->display_options['defaults']['relationships'] = FALSE;
   /* Relationship: Entity Reference: Referenced Entity */
   $handler->display->display_options['relationships']['field_innovation_program_target_id']['id'] = 'field_innovation_program_target_id';
@@ -639,7 +639,7 @@ function gie_taxonomies_views_default_views() {
   $handler->display->display_options['defaults']['title'] = FALSE;
   $handler->display->display_options['title'] = 'Resources';
   $handler->display->display_options['defaults']['css_class'] = FALSE;
-  $handler->display->display_options['css_class'] = 'view--card-view';
+  $handler->display->display_options['css_class'] = 'view--card-view-3col';
   $handler->display->display_options['defaults']['relationships'] = FALSE;
   /* Relationship: Entity Reference: Referenced Entity */
   $handler->display->display_options['relationships']['field_resource_program_target_id']['id'] = 'field_resource_program_target_id';
@@ -676,7 +676,7 @@ function gie_taxonomies_views_default_views() {
 
   /* Display: Master */
   $handler = $view->new_display('default', 'Master', 'default');
-  $handler->display->display_options['css_class'] = 'view--card-view';
+  $handler->display->display_options['css_class'] = 'view--card-view-3col';
   $handler->display->display_options['use_more_always'] = FALSE;
   $handler->display->display_options['access']['type'] = 'perm';
   $handler->display->display_options['cache']['type'] = 'none';
@@ -724,7 +724,7 @@ function gie_taxonomies_views_default_views() {
   /* Display: Master */
   $handler = $view->new_display('default', 'Master', 'default');
   $handler->display->display_options['title'] = 'Resources';
-  $handler->display->display_options['css_class'] = 'view--card-view';
+  $handler->display->display_options['css_class'] = 'view--card-view-3col';
   $handler->display->display_options['use_more_always'] = FALSE;
   $handler->display->display_options['access']['type'] = 'perm';
   $handler->display->display_options['cache']['type'] = 'none';
@@ -873,7 +873,7 @@ function gie_taxonomies_views_default_views() {
 
   /* Display: Master */
   $handler = $view->new_display('default', 'Master', 'default');
-  $handler->display->display_options['css_class'] = 'view--card-view';
+  $handler->display->display_options['css_class'] = 'view--card-view-3col';
   $handler->display->display_options['use_more_always'] = FALSE;
   $handler->display->display_options['access']['type'] = 'perm';
   $handler->display->display_options['cache']['type'] = 'none';
@@ -931,7 +931,7 @@ function gie_taxonomies_views_default_views() {
   /* Display: Master */
   $handler = $view->new_display('default', 'Master', 'default');
   $handler->display->display_options['title'] = 'Resources';
-  $handler->display->display_options['css_class'] = 'view--card-view';
+  $handler->display->display_options['css_class'] = 'view--card-view-3col';
   $handler->display->display_options['use_more_always'] = FALSE;
   $handler->display->display_options['access']['type'] = 'perm';
   $handler->display->display_options['cache']['type'] = 'none';
@@ -1229,7 +1229,7 @@ function gie_taxonomies_views_default_views() {
   /* Display: Master */
   $handler = $view->new_display('default', 'Master', 'default');
   $handler->display->display_options['title'] = 'Innovations';
-  $handler->display->display_options['css_class'] = 'view--card-view';
+  $handler->display->display_options['css_class'] = 'view--card-view-3col';
   $handler->display->display_options['use_more_always'] = FALSE;
   $handler->display->display_options['access']['type'] = 'perm';
   $handler->display->display_options['cache']['type'] = 'none';
@@ -1378,7 +1378,7 @@ function gie_taxonomies_views_default_views() {
 
   /* Display: Master */
   $handler = $view->new_display('default', 'Master', 'default');
-  $handler->display->display_options['css_class'] = 'view--card-view';
+  $handler->display->display_options['css_class'] = 'view--card-view-3col';
   $handler->display->display_options['use_more_always'] = FALSE;
   $handler->display->display_options['access']['type'] = 'perm';
   $handler->display->display_options['cache']['type'] = 'none';

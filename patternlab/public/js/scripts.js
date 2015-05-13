@@ -127,16 +127,20 @@
 
   function cardView() {
     
-    $('.view--card-view,.view--card-view-four-columns').each(function(){
+    $('.view--card-view-2col,.view--card-view-3col,.view--card-view-4col').each(function(){
       var tab = $(this).parents('.quicktabs-hide');
       if (tab.length > 0) { 
         tab.show(); // if in hidden tab, temporarily show it so height can be measured
       }
-      if ($(this).is('.view--card-view-four-columns')) {
+      if ($(this).is('.view--card-view-4col')) {
         var columns = 4;
-      } else {
+      } 
+      if ($(this).is('.view--card-view-3col')) {
         var columns = 3;
-      }
+      } 
+      if ($(this).is('.view--card-view-2col')) {
+        var columns = 2;
+      } 
 
       var items = $(this).find('.views-row');
       items.removeClass('first second third fourth even odd');
@@ -149,6 +153,9 @@
         });
       }
       if (Modernizr.mq('(min-width: 800px)')) { 
+        if (columns == 2) {
+          var classes = ['odd', 'even'];
+        }
         if (columns == 3) {
           var classes = ['first', 'second', 'third'];
         } 
@@ -260,10 +267,10 @@
     $('div[class*="pane--facetapi-"]').first().addClass('is-open').removeClass('is-closed').find('.pane__content').show();
   }
 
-  function mainmenuDropdown() { // adds responsive max-width for main menu dropdown based on screen size
+  function mainmenuDropdown() { // adds responsive width for main menu dropdown based on screen size
     $('.tb-megamenu-submenu.dropdown-menu').each(function(){
-      var site = $('body').width();
-      $(this).css("max-width",site-20);
+      var site = $('.region-navigation .region__inner').eq(0).width();
+      $(this).css("width",site);
     });
   }
  
