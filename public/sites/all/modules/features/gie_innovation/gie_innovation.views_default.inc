@@ -1137,7 +1137,7 @@ function gie_innovation_views_default_views() {
   /* Display: Innovations */
   $handler = $view->new_display('panel_pane', 'Innovations', 'resource_listing');
   $handler->display->display_options['defaults']['css_class'] = FALSE;
-  $handler->display->display_options['css_class'] = 'view--card-view';
+  $handler->display->display_options['css_class'] = 'view--card-view-3col';
   $handler->display->display_options['defaults']['style_plugin'] = FALSE;
   $handler->display->display_options['style_plugin'] = 'default';
   $handler->display->display_options['style_options']['row_class_special'] = FALSE;

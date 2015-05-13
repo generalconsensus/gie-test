@@ -219,7 +219,7 @@ function gie_homepage_views_default_views() {
   $handler = $view->new_display('panel_pane', 'Staff Picks', 'staff_picks_pane');
   $handler->display->display_options['defaults']['title'] = FALSE;
   $handler->display->display_options['defaults']['css_class'] = FALSE;
-  $handler->display->display_options['css_class'] = 'view--card-view-four-columns';
+  $handler->display->display_options['css_class'] = 'view--card-view-4col';
   $handler->display->display_options['defaults']['hide_admin_links'] = FALSE;
   $handler->display->display_options['hide_admin_links'] = TRUE;
   $handler->display->display_options['defaults']['pager'] = FALSE;
@@ -252,7 +252,7 @@ function gie_homepage_views_default_views() {
   $handler = $view->new_display('panel_pane', 'Funding', 'funding_pane');
   $handler->display->display_options['defaults']['title'] = FALSE;
   $handler->display->display_options['defaults']['css_class'] = FALSE;
-  $handler->display->display_options['css_class'] = 'view--card-view-four-columns';
+  $handler->display->display_options['css_class'] = 'view--card-view-4col';
   $handler->display->display_options['defaults']['hide_admin_links'] = FALSE;
   $handler->display->display_options['hide_admin_links'] = TRUE;
   $handler->display->display_options['defaults']['pager'] = FALSE;

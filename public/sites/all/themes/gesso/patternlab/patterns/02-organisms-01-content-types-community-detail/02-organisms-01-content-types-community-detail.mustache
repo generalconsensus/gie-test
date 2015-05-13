@@ -1,0 +1,47 @@
+&lt;div class=&quot;l-panels-detail title main main-sidebar center-empty bottom-sidebar bottom&quot;&gt;
+  &lt;div class=&quot;l-title region-title&quot;&gt;
+    &lt;div class=&quot;layout-constrain&quot;&gt;
+      &lt;div class=&quot;pane pane--page-title&quot;&gt;
+        &lt;div class=&quot;pane__content&quot;&gt;
+          &lt;h1&gt;{{ pageTitle }}&lt;/h1&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;l-wrapper layout-constrain&quot;&gt;
+    &lt;div class=&quot;l-main&quot;&gt;
+      {{{ body }}}
+    &lt;/div&gt;
+    &lt;aside class=&quot;l-main-sidebar&quot;&gt;
+      {{&gt; molecules-favorite-this }}
+    &lt;/aside&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;l-center layout-constrain&quot;&gt; 
+ 
+  &lt;/div&gt;
+  
+  &lt;div class=&quot;l-wrapper layout-constrain&quot;&gt; 
+    &lt;div class=&quot;l-bottom&quot;&gt;
+
+      &lt;div class=&quot;pane pane--node&quot;&gt;
+        &lt;h2 class=&quot;pane__title&quot;&gt;Highlights&lt;/h2&gt; 
+        &lt;div class=&quot;pane__content&quot;&gt;
+
+          &lt;div class=&quot;view--card-view-2col&quot;&gt;
+            {{# listItems.eight }}
+              &lt;div class=&quot;views-row&quot;&gt;
+                {{&gt; organisms-highlight-teaser }}
+              &lt;/div&gt;
+            {{/ listItems.eight }}
+          &lt;/div&gt;
+
+        &lt;/div&gt;
+      &lt;/div&gt;
+
+    &lt;/div&gt;
+    &lt;aside class=&quot;l-bottom-sidebar&quot;&gt;
+       {{&gt; molecules-related-subsectors }}
+       {{&gt; molecules-recent-conversations }}
+    &lt;/aside&gt;
+  &lt;/div&gt;
+&lt;/div&gt;

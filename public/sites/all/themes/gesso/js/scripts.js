@@ -127,16 +127,20 @@
 
   function cardView() {
     
-    $('.view--card-view,.view--card-view-four-columns').each(function(){
+    $('.view--card-view-2col,.view--card-view-3col,.view--card-view-4col').each(function(){
       var tab = $(this).parents('.quicktabs-hide');
       if (tab.length > 0) { 
         tab.show(); // if in hidden tab, temporarily show it so height can be measured
       }
-      if ($(this).is('.view--card-view-four-columns')) {
+      if ($(this).is('.view--card-view-4col')) {
         var columns = 4;
-      } else {
+      } 
+      if ($(this).is('.view--card-view-3col')) {
         var columns = 3;
-      }
+      } 
+      if ($(this).is('.view--card-view-2col')) {
+        var columns = 2;
+      } 
 
       var items = $(this).find('.views-row');
       items.removeClass('first second third fourth even odd');
@@ -149,6 +153,9 @@
         });
       }
       if (Modernizr.mq('(min-width: 800px)')) { 
+        if (columns == 2) {
+          var classes = ['odd', 'even'];
+        }
         if (columns == 3) {
           var classes = ['first', 'second', 'third'];
         } 
