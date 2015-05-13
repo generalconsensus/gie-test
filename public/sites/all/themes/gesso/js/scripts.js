@@ -260,10 +260,10 @@
     $('div[class*="pane--facetapi-"]').first().addClass('is-open').removeClass('is-closed').find('.pane__content').show();
   }
 
-  function mainmenuDropdown() { // adds responsive max-width for main menu dropdown based on screen size
+  function mainmenuDropdown() { // adds responsive width for main menu dropdown based on screen size
     $('.tb-megamenu-submenu.dropdown-menu').each(function(){
-      var site = $('body').width();
-      $(this).css("max-width",site-20);
+      var site = $('.region-navigation .region__inner').eq(0).width();
+      $(this).css("width",site);
     });
   }
  

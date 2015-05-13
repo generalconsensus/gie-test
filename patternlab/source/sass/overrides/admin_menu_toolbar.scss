@@ -4,6 +4,10 @@
 @import '../partials/global';
 
 #admin-menu {
+  a {
+    font-weight: normal;
+  }
+  
   .admin-menu-icon {
     height: 26px;
     margin: 0;
