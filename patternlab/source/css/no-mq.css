@@ -1651,17 +1651,43 @@ input.throbbing {
 }
 
 /* line 44, ../sass/partials/components/_card.scss */
+.card--background {
+  background-image: url(../images/bg/icon-innovations-white-101x254.png);
+  background-repeat: no-repeat;
+  background-position: 100%;
+  position: relative;
+}
+/* line 50, ../sass/partials/components/_card.scss */
+.card--background .card__author {
+  bottom: 0;
+  left: 0;
+  position: absolute;
+  width: 100%;
+}
+/* line 56, ../sass/partials/components/_card.scss */
+.card--background .card__author-inner {
+  border-top: 1px solid #f0f0f0;
+  margin: 0 16px;
+  overflow: hidden;
+  padding: 10px 0;
+}
+/* line 62, ../sass/partials/components/_card.scss */
+.card--background .card__content {
+  padding: 16px 16px 100px 16px;
+}
+
+/* line 67, ../sass/partials/components/_card.scss */
 .card__author {
   font-size: 0.75em;
   line-height: 1.3;
   overflow: hidden;
 }
-/* line 48, ../sass/partials/components/_card.scss */
+/* line 71, ../sass/partials/components/_card.scss */
 .card__author .card__author-image {
   float: left;
   margin: 0 0.5em 0 0;
 }
-/* line 51, ../sass/partials/components/_card.scss */
+/* line 74, ../sass/partials/components/_card.scss */
 .card__author .card__author-image img {
   -webkit-border-radius: 50%;
   -moz-border-radius: 50%;
@@ -1670,35 +1696,35 @@ input.throbbing {
   border-radius: 50%;
   border: 1px solid #cecfcb;
 }
-/* line 56, ../sass/partials/components/_card.scss */
+/* line 79, ../sass/partials/components/_card.scss */
 .card__author .card__author-name {
   font-weight: bold;
 }
 
-/* line 64, ../sass/partials/components/_card.scss */
+/* line 87, ../sass/partials/components/_card.scss */
 .card__number {
   font-size: 1.3125em;
 }
 
-/* line 68, ../sass/partials/components/_card.scss */
+/* line 91, ../sass/partials/components/_card.scss */
 .card__due-date {
   font-size: 0.875em;
 }
 
-/* line 72, ../sass/partials/components/_card.scss */
+/* line 95, ../sass/partials/components/_card.scss */
 .card__list {
   font-size: 0.75em;
   line-height: 1.3;
   margin: 1em 0;
 }
 
-/* line 78, ../sass/partials/components/_card.scss */
+/* line 101, ../sass/partials/components/_card.scss */
 .card__list-label {
   display: inline;
   font-weight: bold;
 }
 
-/* line 83, ../sass/partials/components/_card.scss */
+/* line 106, ../sass/partials/components/_card.scss */
 .card__button {
   bottom: 10px;
   left: 0;
@@ -1708,7 +1734,7 @@ input.throbbing {
   width: 100%;
 }
 
-/* line 97, ../sass/partials/components/_card.scss */
+/* line 120, ../sass/partials/components/_card.scss */
 .card__counts > .view .has-icon--comment:before, .card__counts > .view .has-icon--camera:before, .card__counts > .view .has-icon--favorite:before, .card__counts > .view .has-icon--member:before, .card__counts > .view .has-icon--organization:before, .card__counts > .view .has-icon--evidence:before, .card__counts > .view .has-icon--innovation:before, .view--at-a-glance .has-icon--amount:before, .view--at-a-glance .has-icon--comment:before, .view--at-a-glance .has-icon--camera:before, .view--at-a-glance .has-icon--favorite:before, .view--at-a-glance .has-icon--member:before, .view--at-a-glance .has-icon--organization:before, .view--at-a-glance .has-icon--evidence:before, .view--at-a-glance .has-icon--innovation:before {
   content: "";
   display: block;
@@ -1718,7 +1744,7 @@ input.throbbing {
   left: 50%;
 }
 
-/* line 106, ../sass/partials/components/_card.scss */
+/* line 129, ../sass/partials/components/_card.scss */
 .card__counts {
   bottom: 10px;
   left: 0;
@@ -1728,7 +1754,7 @@ input.throbbing {
   text-align: center;
   width: 100%;
 }
-/* line 114, ../sass/partials/components/_card.scss */
+/* line 137, ../sass/partials/components/_card.scss */
 .card__counts > .view {
   display: inline-block;
   font-size: 0.75em;
@@ -1738,7 +1764,7 @@ input.throbbing {
   padding: 0 6%;
   text-align: center;
 }
-/* line 123, ../sass/partials/components/_card.scss */
+/* line 146, ../sass/partials/components/_card.scss */
 .card__counts > .view .has-icon--comment:before {
   height: 17px;
   overflow: hidden;
@@ -1755,7 +1781,7 @@ input.throbbing {
   height: 150%;
   width: 0;
 }
-/* line 131, ../sass/partials/components/_card.scss */
+/* line 154, ../sass/partials/components/_card.scss */
 .card__counts > .view .has-icon--camera:before {
   height: 17px;
   overflow: hidden;
@@ -1772,7 +1798,7 @@ input.throbbing {
   height: 150%;
   width: 0;
 }
-/* line 139, ../sass/partials/components/_card.scss */
+/* line 162, ../sass/partials/components/_card.scss */
 .card__counts > .view .has-icon--favorite:before {
   height: 17px;
   overflow: hidden;
@@ -1789,7 +1815,7 @@ input.throbbing {
   height: 150%;
   width: 0;
 }
-/* line 147, ../sass/partials/components/_card.scss */
+/* line 170, ../sass/partials/components/_card.scss */
 .card__counts > .view .has-icon--member:before {
   height: 17px;
   overflow: hidden;
@@ -1806,7 +1832,7 @@ input.throbbing {
   height: 150%;
   width: 0;
 }
-/* line 155, ../sass/partials/components/_card.scss */
+/* line 178, ../sass/partials/components/_card.scss */
 .card__counts > .view .has-icon--organization:before {
   height: 17px;
   overflow: hidden;
@@ -1823,7 +1849,7 @@ input.throbbing {
   height: 150%;
   width: 0;
 }
-/* line 163, ../sass/partials/components/_card.scss */
+/* line 186, ../sass/partials/components/_card.scss */
 .card__counts > .view .has-icon--evidence:before {
   height: 17px;
   overflow: hidden;
@@ -1840,7 +1866,7 @@ input.throbbing {
   height: 150%;
   width: 0;
 }
-/* line 171, ../sass/partials/components/_card.scss */
+/* line 194, ../sass/partials/components/_card.scss */
 .card__counts > .view .has-icon--innovation:before {
   height: 20px;
   overflow: hidden;
@@ -3792,8 +3818,8 @@ div[class*="pane--facetapi-"] .pane__content ul li a {
 /* line 90, ../sass/partials/components/pane/_pane--landing-intro.scss */
 .pane--landing-intro.pane--sectors-introduction h1:before {
   background-image: url('../images/bg/icon-sectors-46-46-white.png');
-  background-image: -webkit-linear-gradient(transparent, transparent), url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4KPCEtLSBHZW5lcmF0ZWQgYnkgSWNvTW9vbi5pbyAtLT4KPCFET0NUWVBFIHN2ZyBQVUJMSUMgIi0vL1czQy8vRFREIFNWRyAxLjEvL0VOIiAiaHR0cDovL3d3dy53My5vcmcvR3JhcGhpY3MvU1ZHLzEuMS9EVEQvc3ZnMTEuZHRkIj4KPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHdpZHRoPSI0NiIgaGVpZ2h0PSI0NiIgdmlld0JveD0iMCAwIDQ2IDQ2Ij4KPHBhdGggZmlsbD0iI2ZmZmZmZiIgZD0iTTIxLjQ2NyAyNS44NDhjLTAuNDM4IDAtMC42NTctMC4yMTktMC44NzYtMC40MzgtMC40MzgtMC40MzgtMC40MzgtMS4wOTUtMC4yMTktMS41MzNsMTMuMTQzLTIzLjIxOWMwLTAuNDM4IDAuNDM4LTAuNjU3IDAuODc2LTAuNjU3czAuODc2IDAgMS4wOTUgMC40MzhsMTAuMDc2IDEwLjA3NmMwLjQzOCAwLjIxOSAwLjQzOCAwLjY1NyAwLjQzOCAxLjA5NXMtMC4yMTkgMC42NTctMC42NTcgMC44NzZsLTIzLjIxOSAxMy4xNDNjLTAuMjE5IDAuMjE5LTAuNDM4IDAuMjE5LTAuNjU3IDAuMjE5ek0zNC44MjkgMy41MDVsLTEwLjA3NiAxNy43NDMgMTcuNzQzLTEwLjA3Ni03LjY2Ny03LjY2N3oiPjwvcGF0aD4KPHBhdGggZmlsbD0iI2ZmZmZmZiIgZD0iTTIxLjQ2NyA0NmMtMTEuODI5IDAtMjEuNDY3LTkuNjM4LTIxLjQ2Ny0yMS40NjdzOS42MzgtMjEuNDY3IDIxLjQ2Ny0yMS40NjdjMi4xOSAwIDQuMzgxIDAuNDM4IDYuNTcxIDEuMDk1bC0wLjg3NiAyLjQxYy0xLjc1Mi0wLjY1Ny0zLjcyNC0wLjg3Ni01LjY5NS0wLjg3Ni0xMC41MTQgMC0xOC44MzggOC41NDMtMTguODM4IDE4LjgzOCAwIDEwLjUxNCA4LjU0MyAxOC44MzggMTguODM4IDE4LjgzOHMxOC44MzgtOC41NDMgMTguODM4LTE4LjgzOGMwLTEuOTcxLTAuMjE5LTMuOTQzLTAuODc2LTUuNjk1bDIuNDEtMC44NzZjMC42NTcgMi4xOSAxLjA5NSA0LjM4MSAxLjA5NSA2LjU3MSAwIDExLjgyOS05LjYzOCAyMS40NjctMjEuNDY3IDIxLjQ2N3oiPjwvcGF0aD4KPHBhdGggZmlsbD0iI2ZmZmZmZiIgZD0iTTIxLjQ2NyAzNS45MjRjLTYuMzUyIDAtMTEuMzktNS4wMzgtMTEuMzktMTEuMzlzNS4wMzgtMTEuMzkgMTEuMzktMTEuMzljMC4yMTkgMCAwLjQzOCAwIDAuNjU3IDBoMC4yMTlsLTAuMjE5IDIuNjI5aC0wLjQzOGMtMC4yMTkgMC0wLjIxOSAwLTAuNDM4IDAtNC44MTkgMC04Ljc2MiAzLjk0My04Ljc2MiA4Ljc2MnMzLjk0MyA4Ljc2MiA4Ljc2MiA4Ljc2MiA4Ljc2Mi0zLjk0MyA4Ljc2Mi04Ljc2MmMwLTAuMjE5IDAtMC4yMTkgMC0wLjQzOHYtMC40MzhsMi42MjktMC4yMTl2MC4yMTljMCAwLjIxOSAwIDAuNDM4IDAgMC42NTcgMC4yMTkgNi41NzEtNC44MTkgMTEuNjEtMTEuMTcxIDExLjYxeiI+PC9wYXRoPgo8L3N2Zz4K');
-  background-image: linear-gradient(transparent, transparent), url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4KPCEtLSBHZW5lcmF0ZWQgYnkgSWNvTW9vbi5pbyAtLT4KPCFET0NUWVBFIHN2ZyBQVUJMSUMgIi0vL1czQy8vRFREIFNWRyAxLjEvL0VOIiAiaHR0cDovL3d3dy53My5vcmcvR3JhcGhpY3MvU1ZHLzEuMS9EVEQvc3ZnMTEuZHRkIj4KPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHdpZHRoPSI0NiIgaGVpZ2h0PSI0NiIgdmlld0JveD0iMCAwIDQ2IDQ2Ij4KPHBhdGggZmlsbD0iI2ZmZmZmZiIgZD0iTTIxLjQ2NyAyNS44NDhjLTAuNDM4IDAtMC42NTctMC4yMTktMC44NzYtMC40MzgtMC40MzgtMC40MzgtMC40MzgtMS4wOTUtMC4yMTktMS41MzNsMTMuMTQzLTIzLjIxOWMwLTAuNDM4IDAuNDM4LTAuNjU3IDAuODc2LTAuNjU3czAuODc2IDAgMS4wOTUgMC40MzhsMTAuMDc2IDEwLjA3NmMwLjQzOCAwLjIxOSAwLjQzOCAwLjY1NyAwLjQzOCAxLjA5NXMtMC4yMTkgMC42NTctMC42NTcgMC44NzZsLTIzLjIxOSAxMy4xNDNjLTAuMjE5IDAuMjE5LTAuNDM4IDAuMjE5LTAuNjU3IDAuMjE5ek0zNC44MjkgMy41MDVsLTEwLjA3NiAxNy43NDMgMTcuNzQzLTEwLjA3Ni03LjY2Ny03LjY2N3oiPjwvcGF0aD4KPHBhdGggZmlsbD0iI2ZmZmZmZiIgZD0iTTIxLjQ2NyA0NmMtMTEuODI5IDAtMjEuNDY3LTkuNjM4LTIxLjQ2Ny0yMS40NjdzOS42MzgtMjEuNDY3IDIxLjQ2Ny0yMS40NjdjMi4xOSAwIDQuMzgxIDAuNDM4IDYuNTcxIDEuMDk1bC0wLjg3NiAyLjQxYy0xLjc1Mi0wLjY1Ny0zLjcyNC0wLjg3Ni01LjY5NS0wLjg3Ni0xMC41MTQgMC0xOC44MzggOC41NDMtMTguODM4IDE4LjgzOCAwIDEwLjUxNCA4LjU0MyAxOC44MzggMTguODM4IDE4LjgzOHMxOC44MzgtOC41NDMgMTguODM4LTE4LjgzOGMwLTEuOTcxLTAuMjE5LTMuOTQzLTAuODc2LTUuNjk1bDIuNDEtMC44NzZjMC42NTcgMi4xOSAxLjA5NSA0LjM4MSAxLjA5NSA2LjU3MSAwIDExLjgyOS05LjYzOCAyMS40NjctMjEuNDY3IDIxLjQ2N3oiPjwvcGF0aD4KPHBhdGggZmlsbD0iI2ZmZmZmZiIgZD0iTTIxLjQ2NyAzNS45MjRjLTYuMzUyIDAtMTEuMzktNS4wMzgtMTEuMzktMTEuMzlzNS4wMzgtMTEuMzkgMTEuMzktMTEuMzljMC4yMTkgMCAwLjQzOCAwIDAuNjU3IDBoMC4yMTlsLTAuMjE5IDIuNjI5aC0wLjQzOGMtMC4yMTkgMC0wLjIxOSAwLTAuNDM4IDAtNC44MTkgMC04Ljc2MiAzLjk0My04Ljc2MiA4Ljc2MnMzLjk0MyA4Ljc2MiA4Ljc2MiA4Ljc2MiA4Ljc2Mi0zLjk0MyA4Ljc2Mi04Ljc2MmMwLTAuMjE5IDAtMC4yMTkgMC0wLjQzOHYtMC40MzhsMi42MjktMC4yMTl2MC4yMTljMCAwLjIxOSAwIDAuNDM4IDAgMC42NTcgMC4yMTkgNi41NzEtNC44MTkgMTEuNjEtMTEuMTcxIDExLjYxeiI+PC9wYXRoPgo8L3N2Zz4K');
+  background-image: -webkit-linear-gradient(transparent, transparent), url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4NCjwhLS0gR2VuZXJhdGVkIGJ5IEljb01vb24uaW8gLS0+DQo8IURPQ1RZUEUgc3ZnIFBVQkxJQyAiLS8vVzNDLy9EVEQgU1ZHIDEuMS8vRU4iICJodHRwOi8vd3d3LnczLm9yZy9HcmFwaGljcy9TVkcvMS4xL0RURC9zdmcxMS5kdGQiPg0KPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHdpZHRoPSI0NiIgaGVpZ2h0PSI0NiIgdmlld0JveD0iMCAwIDQ2IDQ2Ij4NCjxwYXRoIGZpbGw9IiNmZmZmZmYiIGQ9Ik0yMS40NjcgMjUuODQ4Yy0wLjQzOCAwLTAuNjU3LTAuMjE5LTAuODc2LTAuNDM4LTAuNDM4LTAuNDM4LTAuNDM4LTEuMDk1LTAuMjE5LTEuNTMzbDEzLjE0My0yMy4yMTljMC0wLjQzOCAwLjQzOC0wLjY1NyAwLjg3Ni0wLjY1N3MwLjg3NiAwIDEuMDk1IDAuNDM4bDEwLjA3NiAxMC4wNzZjMC40MzggMC4yMTkgMC40MzggMC42NTcgMC40MzggMS4wOTVzLTAuMjE5IDAuNjU3LTAuNjU3IDAuODc2bC0yMy4yMTkgMTMuMTQzYy0wLjIxOSAwLjIxOS0wLjQzOCAwLjIxOS0wLjY1NyAwLjIxOXpNMzQuODI5IDMuNTA1bC0xMC4wNzYgMTcuNzQzIDE3Ljc0My0xMC4wNzYtNy42NjctNy42Njd6Ij48L3BhdGg+DQo8cGF0aCBmaWxsPSIjZmZmZmZmIiBkPSJNMjEuNDY3IDQ2Yy0xMS44MjkgMC0yMS40NjctOS42MzgtMjEuNDY3LTIxLjQ2N3M5LjYzOC0yMS40NjcgMjEuNDY3LTIxLjQ2N2MyLjE5IDAgNC4zODEgMC40MzggNi41NzEgMS4wOTVsLTAuODc2IDIuNDFjLTEuNzUyLTAuNjU3LTMuNzI0LTAuODc2LTUuNjk1LTAuODc2LTEwLjUxNCAwLTE4LjgzOCA4LjU0My0xOC44MzggMTguODM4IDAgMTAuNTE0IDguNTQzIDE4LjgzOCAxOC44MzggMTguODM4czE4LjgzOC04LjU0MyAxOC44MzgtMTguODM4YzAtMS45NzEtMC4yMTktMy45NDMtMC44NzYtNS42OTVsMi40MS0wLjg3NmMwLjY1NyAyLjE5IDEuMDk1IDQuMzgxIDEuMDk1IDYuNTcxIDAgMTEuODI5LTkuNjM4IDIxLjQ2Ny0yMS40NjcgMjEuNDY3eiI+PC9wYXRoPg0KPHBhdGggZmlsbD0iI2ZmZmZmZiIgZD0iTTIxLjQ2NyAzNS45MjRjLTYuMzUyIDAtMTEuMzktNS4wMzgtMTEuMzktMTEuMzlzNS4wMzgtMTEuMzkgMTEuMzktMTEuMzljMC4yMTkgMCAwLjQzOCAwIDAuNjU3IDBoMC4yMTlsLTAuMjE5IDIuNjI5aC0wLjQzOGMtMC4yMTkgMC0wLjIxOSAwLTAuNDM4IDAtNC44MTkgMC04Ljc2MiAzLjk0My04Ljc2MiA4Ljc2MnMzLjk0MyA4Ljc2MiA4Ljc2MiA4Ljc2MiA4Ljc2Mi0zLjk0MyA4Ljc2Mi04Ljc2MmMwLTAuMjE5IDAtMC4yMTkgMC0wLjQzOHYtMC40MzhsMi42MjktMC4yMTl2MC4yMTljMCAwLjIxOSAwIDAuNDM4IDAgMC42NTcgMC4yMTkgNi41NzEtNC44MTkgMTEuNjEtMTEuMTcxIDExLjYxeiI+PC9wYXRoPg0KPC9zdmc+DQo=');
+  background-image: linear-gradient(transparent, transparent), url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4NCjwhLS0gR2VuZXJhdGVkIGJ5IEljb01vb24uaW8gLS0+DQo8IURPQ1RZUEUgc3ZnIFBVQkxJQyAiLS8vVzNDLy9EVEQgU1ZHIDEuMS8vRU4iICJodHRwOi8vd3d3LnczLm9yZy9HcmFwaGljcy9TVkcvMS4xL0RURC9zdmcxMS5kdGQiPg0KPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHdpZHRoPSI0NiIgaGVpZ2h0PSI0NiIgdmlld0JveD0iMCAwIDQ2IDQ2Ij4NCjxwYXRoIGZpbGw9IiNmZmZmZmYiIGQ9Ik0yMS40NjcgMjUuODQ4Yy0wLjQzOCAwLTAuNjU3LTAuMjE5LTAuODc2LTAuNDM4LTAuNDM4LTAuNDM4LTAuNDM4LTEuMDk1LTAuMjE5LTEuNTMzbDEzLjE0My0yMy4yMTljMC0wLjQzOCAwLjQzOC0wLjY1NyAwLjg3Ni0wLjY1N3MwLjg3NiAwIDEuMDk1IDAuNDM4bDEwLjA3NiAxMC4wNzZjMC40MzggMC4yMTkgMC40MzggMC42NTcgMC40MzggMS4wOTVzLTAuMjE5IDAuNjU3LTAuNjU3IDAuODc2bC0yMy4yMTkgMTMuMTQzYy0wLjIxOSAwLjIxOS0wLjQzOCAwLjIxOS0wLjY1NyAwLjIxOXpNMzQuODI5IDMuNTA1bC0xMC4wNzYgMTcuNzQzIDE3Ljc0My0xMC4wNzYtNy42NjctNy42Njd6Ij48L3BhdGg+DQo8cGF0aCBmaWxsPSIjZmZmZmZmIiBkPSJNMjEuNDY3IDQ2Yy0xMS44MjkgMC0yMS40NjctOS42MzgtMjEuNDY3LTIxLjQ2N3M5LjYzOC0yMS40NjcgMjEuNDY3LTIxLjQ2N2MyLjE5IDAgNC4zODEgMC40MzggNi41NzEgMS4wOTVsLTAuODc2IDIuNDFjLTEuNzUyLTAuNjU3LTMuNzI0LTAuODc2LTUuNjk1LTAuODc2LTEwLjUxNCAwLTE4LjgzOCA4LjU0My0xOC44MzggMTguODM4IDAgMTAuNTE0IDguNTQzIDE4LjgzOCAxOC44MzggMTguODM4czE4LjgzOC04LjU0MyAxOC44MzgtMTguODM4YzAtMS45NzEtMC4yMTktMy45NDMtMC44NzYtNS42OTVsMi40MS0wLjg3NmMwLjY1NyAyLjE5IDEuMDk1IDQuMzgxIDEuMDk1IDYuNTcxIDAgMTEuODI5LTkuNjM4IDIxLjQ2Ny0yMS40NjcgMjEuNDY3eiI+PC9wYXRoPg0KPHBhdGggZmlsbD0iI2ZmZmZmZiIgZD0iTTIxLjQ2NyAzNS45MjRjLTYuMzUyIDAtMTEuMzktNS4wMzgtMTEuMzktMTEuMzlzNS4wMzgtMTEuMzkgMTEuMzktMTEuMzljMC4yMTkgMCAwLjQzOCAwIDAuNjU3IDBoMC4yMTlsLTAuMjE5IDIuNjI5aC0wLjQzOGMtMC4yMTkgMC0wLjIxOSAwLTAuNDM4IDAtNC44MTkgMC04Ljc2MiAzLjk0My04Ljc2MiA4Ljc2MnMzLjk0MyA4Ljc2MiA4Ljc2MiA4Ljc2MiA4Ljc2Mi0zLjk0MyA4Ljc2Mi04Ljc2MmMwLTAuMjE5IDAtMC4yMTkgMC0wLjQzOHYtMC40MzhsMi42MjktMC4yMTl2MC4yMTljMCAwLjIxOSAwIDAuNDM4IDAgMC42NTcgMC4yMTkgNi41NzEtNC44MTkgMTEuNjEtMTEuMTcxIDExLjYxeiI+PC9wYXRoPg0KPC9zdmc+DQo=');
 }
 /* line 93, ../sass/partials/components/pane/_pane--landing-intro.scss */
 .pane--landing-intro.pane--topics-introduction h1:before {
@@ -4882,67 +4908,98 @@ tr.drag-previous {
   width: 0;
 }
 
-/* line 1, ../sass/partials/components/view/_view--card-view-four-columns.scss */
-.view--card-view-four-columns {
+/* line 1, ../sass/partials/components/view/_view--card-view-2col.scss */
+.view--card-view-2col {
   overflow: hidden;
 }
-/* line 3, ../sass/partials/components/view/_view--card-view-four-columns.scss */
-.view--card-view-four-columns .views-row {
+/* line 3, ../sass/partials/components/view/_view--card-view-2col.scss */
+.view--card-view-2col .views-row {
   float: left;
   width: 50%;
-  width: 25%;
 }
-/* line 11, ../sass/partials/components/view/_view--card-view-four-columns.scss */
-.view--card-view-four-columns .views-row.even {
+/* line 8, ../sass/partials/components/view/_view--card-view-2col.scss */
+.view--card-view-2col .views-row.even {
   padding-left: 0.5em;
 }
-/* line 14, ../sass/partials/components/view/_view--card-view-four-columns.scss */
-.view--card-view-four-columns .views-row.odd {
+/* line 11, ../sass/partials/components/view/_view--card-view-2col.scss */
+.view--card-view-2col .views-row.odd {
   padding-right: 0.5em;
 }
-/* line 17, ../sass/partials/components/view/_view--card-view-four-columns.scss */
-.view--card-view-four-columns .views-row.first {
+/* line 14, ../sass/partials/components/view/_view--card-view-2col.scss */
+.view--card-view-2col .views-row.first {
   padding-right: 0.5em;
 }
-/* line 21, ../sass/partials/components/view/_view--card-view-four-columns.scss */
-.view--card-view-four-columns .views-row.second, .view--card-view-four-columns .views-row.third {
+/* line 17, ../sass/partials/components/view/_view--card-view-2col.scss */
+.view--card-view-2col .views-row.second {
   padding-left: 0.25em;
   padding-right: 0.25em;
 }
-/* line 25, ../sass/partials/components/view/_view--card-view-four-columns.scss */
-.view--card-view-four-columns .views-row.fourth {
+/* line 21, ../sass/partials/components/view/_view--card-view-2col.scss */
+.view--card-view-2col .views-row.third {
   padding-left: 0.5em;
 }
 
-/* line 1, ../sass/partials/components/view/_view--card-view.scss */
-.view--card-view {
+/* line 1, ../sass/partials/components/view/_view--card-view-3col.scss */
+.view--card-view-3col {
   overflow: hidden;
 }
-/* line 3, ../sass/partials/components/view/_view--card-view.scss */
-.view--card-view .views-row {
+/* line 3, ../sass/partials/components/view/_view--card-view-3col.scss */
+.view--card-view-3col .views-row {
   float: left;
   width: 50%;
   width: 33.33333%;
 }
-/* line 11, ../sass/partials/components/view/_view--card-view.scss */
-.view--card-view .views-row.even {
+/* line 11, ../sass/partials/components/view/_view--card-view-3col.scss */
+.view--card-view-3col .views-row.even {
   padding-left: 0.5em;
 }
-/* line 14, ../sass/partials/components/view/_view--card-view.scss */
-.view--card-view .views-row.odd {
+/* line 14, ../sass/partials/components/view/_view--card-view-3col.scss */
+.view--card-view-3col .views-row.odd {
   padding-right: 0.5em;
 }
-/* line 17, ../sass/partials/components/view/_view--card-view.scss */
-.view--card-view .views-row.first {
+/* line 17, ../sass/partials/components/view/_view--card-view-3col.scss */
+.view--card-view-3col .views-row.first {
   padding-right: 0.5em;
 }
-/* line 20, ../sass/partials/components/view/_view--card-view.scss */
-.view--card-view .views-row.second {
+/* line 20, ../sass/partials/components/view/_view--card-view-3col.scss */
+.view--card-view-3col .views-row.second {
   padding-left: 0.25em;
   padding-right: 0.25em;
 }
-/* line 24, ../sass/partials/components/view/_view--card-view.scss */
-.view--card-view .views-row.third {
+/* line 24, ../sass/partials/components/view/_view--card-view-3col.scss */
+.view--card-view-3col .views-row.third {
+  padding-left: 0.5em;
+}
+
+/* line 1, ../sass/partials/components/view/_view--card-view-4col.scss */
+.view--card-view-4col {
+  overflow: hidden;
+}
+/* line 3, ../sass/partials/components/view/_view--card-view-4col.scss */
+.view--card-view-4col .views-row {
+  float: left;
+  width: 50%;
+  width: 25%;
+}
+/* line 11, ../sass/partials/components/view/_view--card-view-4col.scss */
+.view--card-view-4col .views-row.even {
+  padding-left: 0.5em;
+}
+/* line 14, ../sass/partials/components/view/_view--card-view-4col.scss */
+.view--card-view-4col .views-row.odd {
+  padding-right: 0.5em;
+}
+/* line 17, ../sass/partials/components/view/_view--card-view-4col.scss */
+.view--card-view-4col .views-row.first {
+  padding-right: 0.5em;
+}
+/* line 21, ../sass/partials/components/view/_view--card-view-4col.scss */
+.view--card-view-4col .views-row.second, .view--card-view-4col .views-row.third {
+  padding-left: 0.25em;
+  padding-right: 0.25em;
+}
+/* line 25, ../sass/partials/components/view/_view--card-view-4col.scss */
+.view--card-view-4col .views-row.fourth {
   padding-left: 0.5em;
 }
 
