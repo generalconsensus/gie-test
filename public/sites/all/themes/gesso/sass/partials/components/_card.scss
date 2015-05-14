@@ -174,12 +174,12 @@
         margin-left: -8px; // half of width
       }
     }
-    .has-icon--organization {
+    .has-icon--organization { 
       &:before {
         @extend %cardicon;
         @include image-replace(17px,17px);
         @include svg-background(icon-organization-17-17-blue);
-        margin-left: -8px; // half of width
+        margin-left: -8px; // half of width 
       }
     }
     .has-icon--evidence {
@@ -195,6 +195,14 @@
         @extend %cardicon;
         @include image-replace(15px,20px);
         @include svg-background(icon-innovations-15-20-blue);
+        margin-left: -8px; // half of width
+      }
+    }
+    .has-icon--assistance {
+      &:before {
+        @extend %cardicon;
+        @include image-replace(17px,17px);
+        @include svg-background(icon-assistance-17-17-blue);
         margin-left: -8px; // half of width
       }
     }
