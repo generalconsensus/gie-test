@@ -8,14 +8,22 @@ module.exports = function(grunt) {
         compass : { // Task
           patternlab: {
             options: {
-              basePath: 'patternlab/source',
+              basePath: 'public/sites/all/themes/gesso/',
               bundleExec: true,  // use Bundler specified versions
               outputStyle: 'expanded',
             },
           },
+          patternlablite: {
+            options: {
+              basePath: 'public/sites/all/themes/gesso/',
+              bundleExec: true,  // use Bundler specified versions
+              outputStyle: 'expanded',
+              specify: ['public/sites/all/themes/gesso/sass/*.scss'], // only compile primary files
+            },
+          },
           dev : { // Target
             options : { // Target options
-              basePath: 'public/sites/all/themes/f1ux/',
+              basePath: 'public/sites/all/themes/gesso/',
               outputStyle: 'expanded',
               noLineComments: false,
               bundleExec: true
@@ -23,7 +31,7 @@ module.exports = function(grunt) {
           },
           staging : { // Target
             options : { // Target options
-              basePath: 'public/sites/all/themes/f1ux/',
+              basePath: 'public/sites/all/themes/gesso/',
               outputStyle: 'compressed',
               noLineComments: true,
               force: true,
@@ -33,12 +41,12 @@ module.exports = function(grunt) {
         },
         watch : {
           compass : {
-            files : [ 'public/sites/all/themes/f1ux/sass/*.scss', 'public/sites/all/themes/f1ux/sass/**/*.scss' ],
+            files : [ 'public/sites/all/themes/gesso/sass/*.scss', 'public/sites/all/themes/gesso/sass/**/*.scss' ],
             tasks : [ 'compass:dev' ]
           },
           patternlabSass: {
             files: [
-              'patternlab/source/sass/**/*.scss'
+              'public/sites/all/themes/gesso/sass/**/*.scss'
             ],
             tasks: [
               'compass:patternlab'
@@ -64,7 +72,7 @@ module.exports = function(grunt) {
           // Generate patterns & use native watch/live reload feature
           patternlabWatchReload: {
             command: [
-              'php patternlab/core/builder.php -wr',
+              'php public/sites/all/themes/gesso/patternlab/core/builder.php -wr',
             ].join('&&')
           },
         }
@@ -74,4 +82,5 @@ module.exports = function(grunt) {
 
   grunt.registerTask('default', [ ]);
   grunt.registerTask('patternlab', ['compass:patternlab', 'concurrent:patternlab']);
+  grunt.registerTask('patternlablite', ['compass:patternlablite', 'concurrent:patternlab']);
 };
