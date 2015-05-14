@@ -486,7 +486,7 @@ function gie_taxonomies_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 1,
+        'weight' => 5,
       ),
       'title' => array(
         'label' => 'above',
@@ -557,7 +557,7 @@ function gie_taxonomies_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 5,
+        'weight' => 7,
       ),
       'title' => array(
         'label' => 'above',
@@ -631,7 +631,7 @@ function gie_taxonomies_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 4,
+        'weight' => 6,
       ),
       'title' => array(
         'label' => 'above',
@@ -695,9 +695,25 @@ function gie_taxonomies_field_default_field_instances() {
       ),
       'listing' => array(
         'label' => 'hidden',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 3,
+        'module' => 'image',
+        'settings' => array(
+          'field_delimiter' => '',
+          'image_link' => '',
+          'image_style' => 'card__500x300_',
+          'linked_field' => array(
+            'advanced' => array(
+              'class' => '',
+              'rel' => '',
+              'target' => '',
+              'text' => '',
+              'title' => '',
+            ),
+            'destination' => '[term:url:path]',
+            'linked' => 1,
+          ),
+        ),
+        'type' => 'image',
+        'weight' => 0,
       ),
       'title' => array(
         'label' => 'above',
@@ -786,7 +802,7 @@ function gie_taxonomies_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 6,
+        'weight' => 8,
       ),
       'title' => array(
         'label' => 'hidden',
@@ -1210,7 +1226,7 @@ function gie_taxonomies_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 2,
+        'weight' => 3,
       ),
     ),
     'entity_type' => 'taxonomy_term',
@@ -1403,9 +1419,25 @@ function gie_taxonomies_field_default_field_instances() {
       ),
       'listing' => array(
         'label' => 'hidden',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 3,
+        'module' => 'image',
+        'settings' => array(
+          'field_delimiter' => '',
+          'image_link' => '',
+          'image_style' => 'card__500x300_',
+          'linked_field' => array(
+            'advanced' => array(
+              'class' => '',
+              'rel' => '',
+              'target' => '',
+              'text' => '',
+              'title' => '',
+            ),
+            'destination' => '[term:url:path]',
+            'linked' => 1,
+          ),
+        ),
+        'type' => 'image',
+        'weight' => 0,
       ),
     ),
     'ds_extras_field_template' => '',
