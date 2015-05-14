@@ -1,4 +1,4 @@
-name = Events
+name = GIE Events
 description = GIE Feature for Events
 core = 7.x
 package = GIE
