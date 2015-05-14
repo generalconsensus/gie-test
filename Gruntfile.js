@@ -13,7 +13,7 @@ module.exports = function(grunt) {
               outputStyle: 'expanded',
             },
           },
-          patternlabdev: {
+          patternlablite: {
             options: {
               basePath: 'public/sites/all/themes/gesso/',
               bundleExec: true,  // use Bundler specified versions
@@ -82,5 +82,5 @@ module.exports = function(grunt) {
 
   grunt.registerTask('default', [ ]);
   grunt.registerTask('patternlab', ['compass:patternlab', 'concurrent:patternlab']);
-  grunt.registerTask('patternlabdev', ['compass:patternlabdev', 'concurrent:patternlab']);
+  grunt.registerTask('patternlablite', ['compass:patternlablite', 'concurrent:patternlab']);
 };

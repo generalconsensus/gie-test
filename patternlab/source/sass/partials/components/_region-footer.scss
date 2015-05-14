@@ -1,9 +1,0 @@
-.region-footer {
-  @extend %clearfix;
-  padding-top: 2em;
-  .pane__title,
-  .block__title {
-    font-size: em(18px);
-    text-transform: uppercase;
-  }
-}
