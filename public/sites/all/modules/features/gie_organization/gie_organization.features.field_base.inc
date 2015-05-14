@@ -162,7 +162,6 @@ function gie_organization_field_default_field_bases() {
     'locked' => 0,
     'module' => 'image',
     'settings' => array(
-      'default_image' => 43,
       'uri_scheme' => 'public',
     ),
     'translatable' => 0,
@@ -273,17 +272,18 @@ function gie_organization_field_default_field_bases() {
     'locked' => 0,
     'module' => 'entityreference',
     'settings' => array(
-      'handler' => 'base',
+      'handler' => 'views',
       'handler_settings' => array(
         'behaviors' => array(
           'views-select-list' => array(
             'status' => 0,
           ),
         ),
-        'sort' => array(
-          'type' => 'none',
+        'view' => array(
+          'args' => array(),
+          'display_name' => 'fullname_ref',
+          'view_name' => 'user_reference',
         ),
-        'target_bundles' => array(),
       ),
       'target_type' => 'user',
     ),
@@ -420,6 +420,31 @@ function gie_organization_field_default_field_bases() {
     ),
     'translatable' => 0,
     'type' => 'taxonomy_term_reference',
+  );
+
+  // Exported field_base: 'field_partner'
+  $field_bases['field_partner'] = array(
+    'active' => 1,
+    'cardinality' => 1,
+    'deleted' => 0,
+    'entity_types' => array(),
+    'field_name' => 'field_partner',
+    'indexes' => array(
+      'value' => array(
+        0 => 'value',
+      ),
+    ),
+    'locked' => 0,
+    'module' => 'list',
+    'settings' => array(
+      'allowed_values' => array(
+        0 => '',
+        1 => '',
+      ),
+      'allowed_values_function' => '',
+    ),
+    'translatable' => 0,
+    'type' => 'list_boolean',
   );
 
   // Exported field_base: 'field_role_on_the_exchange'

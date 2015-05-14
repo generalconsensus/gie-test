@@ -11,6 +11,196 @@ function gie_taxonomies_views_default_views() {
   $export = array();
 
   $view = new view();
+  $view->name = 'community_counts';
+  $view->description = '';
+  $view->tag = 'default';
+  $view->base_table = 'node';
+  $view->human_name = 'Sector Counts';
+  $view->core = 7;
+  $view->api_version = '3.0';
+  $view->disabled = FALSE; /* Edit this to true to make a default view disabled initially */
+
+  /* Display: Master */
+  $handler = $view->new_display('default', 'Master', 'default');
+  $handler->display->display_options['use_more_always'] = FALSE;
+  $handler->display->display_options['group_by'] = TRUE;
+  $handler->display->display_options['access']['type'] = 'perm';
+  $handler->display->display_options['cache']['type'] = 'none';
+  $handler->display->display_options['query']['type'] = 'views_query';
+  $handler->display->display_options['exposed_form']['type'] = 'basic';
+  $handler->display->display_options['pager']['type'] = 'full';
+  $handler->display->display_options['style_plugin'] = 'default';
+  $handler->display->display_options['style_options']['default_row_class'] = FALSE;
+  $handler->display->display_options['style_options']['row_class_special'] = FALSE;
+  $handler->display->display_options['row_plugin'] = 'fields';
+  /* Relationship: Field: Sector (field_term_sector) */
+  $handler->display->display_options['relationships']['field_term_sector_tid']['id'] = 'field_term_sector_tid';
+  $handler->display->display_options['relationships']['field_term_sector_tid']['table'] = 'field_data_field_term_sector';
+  $handler->display->display_options['relationships']['field_term_sector_tid']['field'] = 'field_term_sector_tid';
+  $handler->display->display_options['relationships']['field_term_sector_tid']['required'] = TRUE;
+  /* Field: SUM(Content: Grant / Award Value) */
+  $handler->display->display_options['fields']['field_funding_grant_award_value_1']['id'] = 'field_funding_grant_award_value_1';
+  $handler->display->display_options['fields']['field_funding_grant_award_value_1']['table'] = 'field_data_field_funding_grant_award_value';
+  $handler->display->display_options['fields']['field_funding_grant_award_value_1']['field'] = 'field_funding_grant_award_value';
+  $handler->display->display_options['fields']['field_funding_grant_award_value_1']['group_type'] = 'sum';
+  $handler->display->display_options['fields']['field_funding_grant_award_value_1']['settings'] = array(
+    'thousand_separator' => ' ',
+    'prefix_suffix' => 1,
+    'linked_field' => array(
+      'linked' => 0,
+      'destination' => '',
+      'advanced' => array(
+        'title' => '',
+        'target' => '',
+        'class' => '',
+        'rel' => '',
+        'text' => '',
+      ),
+    ),
+  );
+  /* Contextual filter: Field: Sector (field_term_sector) */
+  $handler->display->display_options['arguments']['field_term_sector_tid']['id'] = 'field_term_sector_tid';
+  $handler->display->display_options['arguments']['field_term_sector_tid']['table'] = 'field_data_field_term_sector';
+  $handler->display->display_options['arguments']['field_term_sector_tid']['field'] = 'field_term_sector_tid';
+  $handler->display->display_options['arguments']['field_term_sector_tid']['default_action'] = 'default';
+  $handler->display->display_options['arguments']['field_term_sector_tid']['default_argument_type'] = 'taxonomy_tid';
+  $handler->display->display_options['arguments']['field_term_sector_tid']['summary']['number_of_records'] = '0';
+  $handler->display->display_options['arguments']['field_term_sector_tid']['summary']['format'] = 'default_summary';
+  $handler->display->display_options['arguments']['field_term_sector_tid']['summary_options']['items_per_page'] = '25';
+  /* Filter criterion: Content: Published */
+  $handler->display->display_options['filters']['status']['id'] = 'status';
+  $handler->display->display_options['filters']['status']['table'] = 'node';
+  $handler->display->display_options['filters']['status']['field'] = 'status';
+  $handler->display->display_options['filters']['status']['value'] = 1;
+  $handler->display->display_options['filters']['status']['group'] = 1;
+  $handler->display->display_options['filters']['status']['expose']['operator'] = FALSE;
+  /* Filter criterion: Content: Type */
+  $handler->display->display_options['filters']['type']['id'] = 'type';
+  $handler->display->display_options['filters']['type']['table'] = 'node';
+  $handler->display->display_options['filters']['type']['field'] = 'type';
+  $handler->display->display_options['filters']['type']['value'] = array(
+    'min' => '',
+    'max' => '',
+    'value' => '',
+    'funding' => 'funding',
+  );
+
+  /* Display: Content pane */
+  $handler = $view->new_display('panel_pane', 'Content pane', 'funding_sum');
+  $handler->display->display_options['defaults']['title'] = FALSE;
+  $handler->display->display_options['title'] = 'Funding Amount';
+
+  /* Display: Funding Sum Field */
+  $handler = $view->new_display('entity_view', 'Funding Sum Field', 'funding_sum_field');
+  $handler->display->display_options['defaults']['title'] = FALSE;
+  $handler->display->display_options['title'] = 'Funding Sum ';
+  $handler->display->display_options['defaults']['fields'] = FALSE;
+  /* Field: SUM(Content: Grant / Award Value) */
+  $handler->display->display_options['fields']['field_funding_grant_award_value_1']['id'] = 'field_funding_grant_award_value_1';
+  $handler->display->display_options['fields']['field_funding_grant_award_value_1']['table'] = 'field_data_field_funding_grant_award_value';
+  $handler->display->display_options['fields']['field_funding_grant_award_value_1']['field'] = 'field_funding_grant_award_value';
+  $handler->display->display_options['fields']['field_funding_grant_award_value_1']['group_type'] = 'sum';
+  $handler->display->display_options['fields']['field_funding_grant_award_value_1']['label'] = 'Funding';
+  $handler->display->display_options['fields']['field_funding_grant_award_value_1']['alter']['alter_text'] = TRUE;
+  $handler->display->display_options['fields']['field_funding_grant_award_value_1']['alter']['text'] = '<div class="has-icon--amount" title="Amount Available">[field_funding_grant_award_value_1]</div>';
+  $handler->display->display_options['fields']['field_funding_grant_award_value_1']['element_type'] = '0';
+  $handler->display->display_options['fields']['field_funding_grant_award_value_1']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_funding_grant_award_value_1']['element_default_classes'] = FALSE;
+  $handler->display->display_options['fields']['field_funding_grant_award_value_1']['empty'] = 'No Funding Available';
+  $handler->display->display_options['fields']['field_funding_grant_award_value_1']['empty_zero'] = TRUE;
+  $handler->display->display_options['fields']['field_funding_grant_award_value_1']['hide_alter_empty'] = FALSE;
+  $handler->display->display_options['fields']['field_funding_grant_award_value_1']['settings'] = array(
+    'thousand_separator' => ',',
+    'prefix_suffix' => 1,
+    'linked_field' => array(
+      'linked' => 0,
+      'destination' => '',
+      'advanced' => array(
+        'title' => '',
+        'target' => '',
+        'class' => '',
+        'rel' => '',
+        'text' => '',
+      ),
+    ),
+  );
+  $handler->display->display_options['entity_type'] = 'taxonomy_term';
+  $handler->display->display_options['bundles'] = array(
+    0 => 'sector',
+  );
+
+  /* Display: Innovation Count */
+  $handler = $view->new_display('entity_view', 'Innovation Count', 'innovation_count_field');
+  $handler->display->display_options['defaults']['fields'] = FALSE;
+  /* Field: COUNT(Content: Nid) */
+  $handler->display->display_options['fields']['nid']['id'] = 'nid';
+  $handler->display->display_options['fields']['nid']['table'] = 'node';
+  $handler->display->display_options['fields']['nid']['field'] = 'nid';
+  $handler->display->display_options['fields']['nid']['group_type'] = 'count';
+  $handler->display->display_options['fields']['nid']['label'] = 'Innovations';
+  $handler->display->display_options['fields']['nid']['alter']['alter_text'] = TRUE;
+  $handler->display->display_options['fields']['nid']['alter']['text'] = '<div class="has-icon--innovations" title="Innovations">[nid]</div>';
+  $handler->display->display_options['fields']['nid']['element_type'] = '0';
+  $handler->display->display_options['fields']['nid']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['nid']['element_default_classes'] = FALSE;
+  $handler->display->display_options['defaults']['filter_groups'] = FALSE;
+  $handler->display->display_options['defaults']['filters'] = FALSE;
+  /* Filter criterion: Content: Published */
+  $handler->display->display_options['filters']['status']['id'] = 'status';
+  $handler->display->display_options['filters']['status']['table'] = 'node';
+  $handler->display->display_options['filters']['status']['field'] = 'status';
+  $handler->display->display_options['filters']['status']['value'] = 1;
+  $handler->display->display_options['filters']['status']['group'] = 1;
+  $handler->display->display_options['filters']['status']['expose']['operator'] = FALSE;
+  /* Filter criterion: Content: Type */
+  $handler->display->display_options['filters']['type']['id'] = 'type';
+  $handler->display->display_options['filters']['type']['table'] = 'node';
+  $handler->display->display_options['filters']['type']['field'] = 'type';
+  $handler->display->display_options['filters']['type']['value'] = array(
+    'innovation' => 'innovation',
+  );
+  $handler->display->display_options['entity_type'] = 'taxonomy_term';
+  $handler->display->display_options['bundles'] = array(
+    0 => 'sector',
+  );
+
+  /* Display: Resource Count */
+  $handler = $view->new_display('entity_view', 'Resource Count', 'entity_view_1');
+  $handler->display->display_options['defaults']['fields'] = FALSE;
+  /* Field: COUNT(Content: Nid) */
+  $handler->display->display_options['fields']['nid']['id'] = 'nid';
+  $handler->display->display_options['fields']['nid']['table'] = 'node';
+  $handler->display->display_options['fields']['nid']['field'] = 'nid';
+  $handler->display->display_options['fields']['nid']['group_type'] = 'count';
+  $handler->display->display_options['fields']['nid']['label'] = 'Resources';
+  $handler->display->display_options['fields']['nid']['alter']['alter_text'] = TRUE;
+  $handler->display->display_options['fields']['nid']['alter']['text'] = '<div class="has-icon--resources" title="Resources">[nid]</div>';
+  $handler->display->display_options['fields']['nid']['element_type'] = '0';
+  $handler->display->display_options['fields']['nid']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['nid']['element_default_classes'] = FALSE;
+  $handler->display->display_options['defaults']['filter_groups'] = FALSE;
+  $handler->display->display_options['defaults']['filters'] = FALSE;
+  /* Filter criterion: Content: Published */
+  $handler->display->display_options['filters']['status']['id'] = 'status';
+  $handler->display->display_options['filters']['status']['table'] = 'node';
+  $handler->display->display_options['filters']['status']['field'] = 'status';
+  $handler->display->display_options['filters']['status']['value'] = 1;
+  $handler->display->display_options['filters']['status']['group'] = 1;
+  $handler->display->display_options['filters']['status']['expose']['operator'] = FALSE;
+  /* Filter criterion: Content: Type */
+  $handler->display->display_options['filters']['type']['id'] = 'type';
+  $handler->display->display_options['filters']['type']['table'] = 'node';
+  $handler->display->display_options['filters']['type']['field'] = 'type';
+  $handler->display->display_options['filters']['type']['value'] = array(
+    'resource' => 'resource',
+  );
+  $handler->display->display_options['entity_type'] = 'taxonomy_term';
+  $handler->display->display_options['bundles'] = array(
+    0 => 'sector',
+  );
+  $export['community_counts'] = $view;
+
+  $view = new view();
   $view->name = 'followers';
   $view->description = '';
   $view->tag = 'default';
@@ -111,7 +301,7 @@ function gie_taxonomies_views_default_views() {
   /* Display: Master */
   $handler = $view->new_display('default', 'Master', 'default');
   $handler->display->display_options['title'] = 'Highlights';
-  $handler->display->display_options['css_class'] = 'view--card-view';
+  $handler->display->display_options['css_class'] = 'view--card-view-3col';
   $handler->display->display_options['use_more_always'] = FALSE;
   $handler->display->display_options['access']['type'] = 'perm';
   $handler->display->display_options['cache']['type'] = 'none';
@@ -401,7 +591,7 @@ function gie_taxonomies_views_default_views() {
   $handler->display->display_options['defaults']['title'] = FALSE;
   $handler->display->display_options['title'] = 'Innovations';
   $handler->display->display_options['defaults']['css_class'] = FALSE;
-  $handler->display->display_options['css_class'] = 'view--card-view';
+  $handler->display->display_options['css_class'] = 'view--card-view-3col';
   $handler->display->display_options['defaults']['relationships'] = FALSE;
   /* Relationship: Entity Reference: Referenced Entity */
   $handler->display->display_options['relationships']['field_innovation_program_target_id']['id'] = 'field_innovation_program_target_id';
@@ -446,7 +636,7 @@ function gie_taxonomies_views_default_views() {
   $handler->display->display_options['defaults']['title'] = FALSE;
   $handler->display->display_options['title'] = 'Resources';
   $handler->display->display_options['defaults']['css_class'] = FALSE;
-  $handler->display->display_options['css_class'] = 'view--card-view';
+  $handler->display->display_options['css_class'] = 'view--card-view-3col';
   $handler->display->display_options['defaults']['relationships'] = FALSE;
   /* Relationship: Entity Reference: Referenced Entity */
   $handler->display->display_options['relationships']['field_resource_program_target_id']['id'] = 'field_resource_program_target_id';
@@ -472,6 +662,223 @@ function gie_taxonomies_views_default_views() {
   $export['program_recent_discussions_content'] = $view;
 
   $view = new view();
+  $view->name = 'region_counts';
+  $view->description = '';
+  $view->tag = 'default';
+  $view->base_table = 'node';
+  $view->human_name = 'Region Counts';
+  $view->core = 7;
+  $view->api_version = '3.0';
+  $view->disabled = FALSE; /* Edit this to true to make a default view disabled initially */
+
+  /* Display: Master */
+  $handler = $view->new_display('default', 'Master', 'default');
+  $handler->display->display_options['use_more_always'] = FALSE;
+  $handler->display->display_options['group_by'] = TRUE;
+  $handler->display->display_options['access']['type'] = 'perm';
+  $handler->display->display_options['cache']['type'] = 'none';
+  $handler->display->display_options['query']['type'] = 'views_query';
+  $handler->display->display_options['exposed_form']['type'] = 'basic';
+  $handler->display->display_options['pager']['type'] = 'full';
+  $handler->display->display_options['style_plugin'] = 'default';
+  $handler->display->display_options['style_options']['default_row_class'] = FALSE;
+  $handler->display->display_options['style_options']['row_class_special'] = FALSE;
+  $handler->display->display_options['row_plugin'] = 'fields';
+  /* Relationship: Field: Region (field_term_region) */
+  $handler->display->display_options['relationships']['field_term_region_tid']['id'] = 'field_term_region_tid';
+  $handler->display->display_options['relationships']['field_term_region_tid']['table'] = 'field_data_field_term_region';
+  $handler->display->display_options['relationships']['field_term_region_tid']['field'] = 'field_term_region_tid';
+  $handler->display->display_options['relationships']['field_term_region_tid']['required'] = TRUE;
+  /* Field: SUM(Content: Grant / Award Value) */
+  $handler->display->display_options['fields']['field_funding_grant_award_value_1']['id'] = 'field_funding_grant_award_value_1';
+  $handler->display->display_options['fields']['field_funding_grant_award_value_1']['table'] = 'field_data_field_funding_grant_award_value';
+  $handler->display->display_options['fields']['field_funding_grant_award_value_1']['field'] = 'field_funding_grant_award_value';
+  $handler->display->display_options['fields']['field_funding_grant_award_value_1']['group_type'] = 'sum';
+  $handler->display->display_options['fields']['field_funding_grant_award_value_1']['settings'] = array(
+    'thousand_separator' => ' ',
+    'prefix_suffix' => 1,
+    'linked_field' => array(
+      'linked' => 0,
+      'destination' => '',
+      'advanced' => array(
+        'title' => '',
+        'target' => '',
+        'class' => '',
+        'rel' => '',
+        'text' => '',
+      ),
+    ),
+  );
+  /* Contextual filter: Field: Region (field_term_region) */
+  $handler->display->display_options['arguments']['field_term_region_tid']['id'] = 'field_term_region_tid';
+  $handler->display->display_options['arguments']['field_term_region_tid']['table'] = 'field_data_field_term_region';
+  $handler->display->display_options['arguments']['field_term_region_tid']['field'] = 'field_term_region_tid';
+  $handler->display->display_options['arguments']['field_term_region_tid']['default_action'] = 'default';
+  $handler->display->display_options['arguments']['field_term_region_tid']['default_argument_type'] = 'taxonomy_tid';
+  $handler->display->display_options['arguments']['field_term_region_tid']['summary']['number_of_records'] = '0';
+  $handler->display->display_options['arguments']['field_term_region_tid']['summary']['format'] = 'default_summary';
+  $handler->display->display_options['arguments']['field_term_region_tid']['summary_options']['items_per_page'] = '25';
+  /* Filter criterion: Content: Published */
+  $handler->display->display_options['filters']['status']['id'] = 'status';
+  $handler->display->display_options['filters']['status']['table'] = 'node';
+  $handler->display->display_options['filters']['status']['field'] = 'status';
+  $handler->display->display_options['filters']['status']['value'] = 1;
+  $handler->display->display_options['filters']['status']['group'] = 1;
+  $handler->display->display_options['filters']['status']['expose']['operator'] = FALSE;
+  /* Filter criterion: Content: Type */
+  $handler->display->display_options['filters']['type']['id'] = 'type';
+  $handler->display->display_options['filters']['type']['table'] = 'node';
+  $handler->display->display_options['filters']['type']['field'] = 'type';
+  $handler->display->display_options['filters']['type']['value'] = array(
+    'min' => '',
+    'max' => '',
+    'value' => '',
+    'funding' => 'funding',
+  );
+
+  /* Display: Content pane */
+  $handler = $view->new_display('panel_pane', 'Content pane', 'funding_sum');
+  $handler->display->display_options['defaults']['title'] = FALSE;
+  $handler->display->display_options['title'] = 'Funding Amount';
+  $handler->display->display_options['defaults']['fields'] = FALSE;
+  /* Field: SUM(Content: Grant / Award Value) */
+  $handler->display->display_options['fields']['field_funding_grant_award_value_1']['id'] = 'field_funding_grant_award_value_1';
+  $handler->display->display_options['fields']['field_funding_grant_award_value_1']['table'] = 'field_data_field_funding_grant_award_value';
+  $handler->display->display_options['fields']['field_funding_grant_award_value_1']['field'] = 'field_funding_grant_award_value';
+  $handler->display->display_options['fields']['field_funding_grant_award_value_1']['group_type'] = 'sum';
+  $handler->display->display_options['fields']['field_funding_grant_award_value_1']['label'] = 'Funding';
+  $handler->display->display_options['fields']['field_funding_grant_award_value_1']['alter']['alter_text'] = TRUE;
+  $handler->display->display_options['fields']['field_funding_grant_award_value_1']['alter']['text'] = '<div class="has-icon--amount" title="Funding Available">[field_funding_grant_award_value_1]</div>';
+  $handler->display->display_options['fields']['field_funding_grant_award_value_1']['element_type'] = '0';
+  $handler->display->display_options['fields']['field_funding_grant_award_value_1']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_funding_grant_award_value_1']['element_default_classes'] = FALSE;
+  $handler->display->display_options['fields']['field_funding_grant_award_value_1']['settings'] = array(
+    'thousand_separator' => ' ',
+    'prefix_suffix' => 1,
+    'linked_field' => array(
+      'linked' => 0,
+      'destination' => '',
+      'advanced' => array(
+        'title' => '',
+        'target' => '',
+        'class' => '',
+        'rel' => '',
+        'text' => '',
+      ),
+    ),
+  );
+
+  /* Display: Funding Sum Field */
+  $handler = $view->new_display('entity_view', 'Funding Sum Field', 'funding_sum_field');
+  $handler->display->display_options['defaults']['title'] = FALSE;
+  $handler->display->display_options['title'] = 'Funding Sum ';
+  $handler->display->display_options['defaults']['fields'] = FALSE;
+  /* Field: SUM(Content: Grant / Award Value) */
+  $handler->display->display_options['fields']['field_funding_grant_award_value_1']['id'] = 'field_funding_grant_award_value_1';
+  $handler->display->display_options['fields']['field_funding_grant_award_value_1']['table'] = 'field_data_field_funding_grant_award_value';
+  $handler->display->display_options['fields']['field_funding_grant_award_value_1']['field'] = 'field_funding_grant_award_value';
+  $handler->display->display_options['fields']['field_funding_grant_award_value_1']['group_type'] = 'sum';
+  $handler->display->display_options['fields']['field_funding_grant_award_value_1']['label'] = 'Funding';
+  $handler->display->display_options['fields']['field_funding_grant_award_value_1']['alter']['alter_text'] = TRUE;
+  $handler->display->display_options['fields']['field_funding_grant_award_value_1']['alter']['text'] = '<div class="has-icon--amount" title="Funding Available">[field_funding_grant_award_value_1]</div>';
+  $handler->display->display_options['fields']['field_funding_grant_award_value_1']['element_type'] = '0';
+  $handler->display->display_options['fields']['field_funding_grant_award_value_1']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_funding_grant_award_value_1']['element_default_classes'] = FALSE;
+  $handler->display->display_options['fields']['field_funding_grant_award_value_1']['empty'] = 'No Funding Available';
+  $handler->display->display_options['fields']['field_funding_grant_award_value_1']['empty_zero'] = TRUE;
+  $handler->display->display_options['fields']['field_funding_grant_award_value_1']['hide_alter_empty'] = FALSE;
+  $handler->display->display_options['fields']['field_funding_grant_award_value_1']['settings'] = array(
+    'thousand_separator' => ',',
+    'prefix_suffix' => 1,
+    'linked_field' => array(
+      'linked' => 0,
+      'destination' => '',
+      'advanced' => array(
+        'title' => '',
+        'target' => '',
+        'class' => '',
+        'rel' => '',
+        'text' => '',
+      ),
+    ),
+  );
+  $handler->display->display_options['entity_type'] = 'taxonomy_term';
+  $handler->display->display_options['bundles'] = array(
+    0 => 'region',
+  );
+
+  /* Display: Innovation Count */
+  $handler = $view->new_display('entity_view', 'Innovation Count', 'innovation_count_field');
+  $handler->display->display_options['defaults']['fields'] = FALSE;
+  /* Field: COUNT(Content: Nid) */
+  $handler->display->display_options['fields']['nid']['id'] = 'nid';
+  $handler->display->display_options['fields']['nid']['table'] = 'node';
+  $handler->display->display_options['fields']['nid']['field'] = 'nid';
+  $handler->display->display_options['fields']['nid']['group_type'] = 'count';
+  $handler->display->display_options['fields']['nid']['label'] = 'Innovations';
+  $handler->display->display_options['fields']['nid']['alter']['alter_text'] = TRUE;
+  $handler->display->display_options['fields']['nid']['alter']['text'] = '<div class="has-icon--innovations" title="Innovations">[nid]</div>';
+  $handler->display->display_options['fields']['nid']['element_type'] = '0';
+  $handler->display->display_options['fields']['nid']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['nid']['element_default_classes'] = FALSE;
+  $handler->display->display_options['defaults']['filter_groups'] = FALSE;
+  $handler->display->display_options['defaults']['filters'] = FALSE;
+  /* Filter criterion: Content: Published */
+  $handler->display->display_options['filters']['status']['id'] = 'status';
+  $handler->display->display_options['filters']['status']['table'] = 'node';
+  $handler->display->display_options['filters']['status']['field'] = 'status';
+  $handler->display->display_options['filters']['status']['value'] = 1;
+  $handler->display->display_options['filters']['status']['group'] = 1;
+  $handler->display->display_options['filters']['status']['expose']['operator'] = FALSE;
+  /* Filter criterion: Content: Type */
+  $handler->display->display_options['filters']['type']['id'] = 'type';
+  $handler->display->display_options['filters']['type']['table'] = 'node';
+  $handler->display->display_options['filters']['type']['field'] = 'type';
+  $handler->display->display_options['filters']['type']['value'] = array(
+    'innovation' => 'innovation',
+  );
+  $handler->display->display_options['entity_type'] = 'taxonomy_term';
+  $handler->display->display_options['bundles'] = array(
+    0 => 'region',
+  );
+
+  /* Display: Resource Count */
+  $handler = $view->new_display('entity_view', 'Resource Count', 'entity_view_1');
+  $handler->display->display_options['defaults']['fields'] = FALSE;
+  /* Field: COUNT(Content: Nid) */
+  $handler->display->display_options['fields']['nid']['id'] = 'nid';
+  $handler->display->display_options['fields']['nid']['table'] = 'node';
+  $handler->display->display_options['fields']['nid']['field'] = 'nid';
+  $handler->display->display_options['fields']['nid']['group_type'] = 'count';
+  $handler->display->display_options['fields']['nid']['label'] = 'Resources';
+  $handler->display->display_options['fields']['nid']['alter']['alter_text'] = TRUE;
+  $handler->display->display_options['fields']['nid']['alter']['text'] = '<div class="has-icon--resource" title="Resources">[nid]</div>';
+  $handler->display->display_options['fields']['nid']['element_type'] = '0';
+  $handler->display->display_options['fields']['nid']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['nid']['element_default_classes'] = FALSE;
+  $handler->display->display_options['defaults']['filter_groups'] = FALSE;
+  $handler->display->display_options['defaults']['filters'] = FALSE;
+  /* Filter criterion: Content: Published */
+  $handler->display->display_options['filters']['status']['id'] = 'status';
+  $handler->display->display_options['filters']['status']['table'] = 'node';
+  $handler->display->display_options['filters']['status']['field'] = 'status';
+  $handler->display->display_options['filters']['status']['value'] = 1;
+  $handler->display->display_options['filters']['status']['group'] = 1;
+  $handler->display->display_options['filters']['status']['expose']['operator'] = FALSE;
+  /* Filter criterion: Content: Type */
+  $handler->display->display_options['filters']['type']['id'] = 'type';
+  $handler->display->display_options['filters']['type']['table'] = 'node';
+  $handler->display->display_options['filters']['type']['field'] = 'type';
+  $handler->display->display_options['filters']['type']['value'] = array(
+    'resource' => 'resource',
+  );
+  $handler->display->display_options['entity_type'] = 'taxonomy_term';
+  $handler->display->display_options['bundles'] = array(
+    0 => 'region',
+  );
+  $export['region_counts'] = $view;
+
+  $view = new view();
   $view->name = 'region_listing';
   $view->description = '';
   $view->tag = 'default';
@@ -483,7 +890,7 @@ function gie_taxonomies_views_default_views() {
 
   /* Display: Master */
   $handler = $view->new_display('default', 'Master', 'default');
-  $handler->display->display_options['css_class'] = 'view--card-view';
+  $handler->display->display_options['css_class'] = 'view--card-view-3col';
   $handler->display->display_options['use_more_always'] = FALSE;
   $handler->display->display_options['access']['type'] = 'perm';
   $handler->display->display_options['cache']['type'] = 'none';
@@ -531,7 +938,7 @@ function gie_taxonomies_views_default_views() {
   /* Display: Master */
   $handler = $view->new_display('default', 'Master', 'default');
   $handler->display->display_options['title'] = 'Resources';
-  $handler->display->display_options['css_class'] = 'view--card-view';
+  $handler->display->display_options['css_class'] = 'view--card-view-3col';
   $handler->display->display_options['use_more_always'] = FALSE;
   $handler->display->display_options['access']['type'] = 'perm';
   $handler->display->display_options['cache']['type'] = 'none';
@@ -680,7 +1087,7 @@ function gie_taxonomies_views_default_views() {
 
   /* Display: Master */
   $handler = $view->new_display('default', 'Master', 'default');
-  $handler->display->display_options['css_class'] = 'view--card-view';
+  $handler->display->display_options['css_class'] = 'view--card-view-3col';
   $handler->display->display_options['use_more_always'] = FALSE;
   $handler->display->display_options['access']['type'] = 'perm';
   $handler->display->display_options['cache']['type'] = 'none';
@@ -738,7 +1145,7 @@ function gie_taxonomies_views_default_views() {
   /* Display: Master */
   $handler = $view->new_display('default', 'Master', 'default');
   $handler->display->display_options['title'] = 'Resources';
-  $handler->display->display_options['css_class'] = 'view--card-view';
+  $handler->display->display_options['css_class'] = 'view--card-view-3col';
   $handler->display->display_options['use_more_always'] = FALSE;
   $handler->display->display_options['access']['type'] = 'perm';
   $handler->display->display_options['cache']['type'] = 'none';
@@ -1024,6 +1431,197 @@ function gie_taxonomies_views_default_views() {
   $export['term_organizations'] = $view;
 
   $view = new view();
+  $view->name = 'topic_counts';
+  $view->description = '';
+  $view->tag = 'default';
+  $view->base_table = 'node';
+  $view->human_name = 'Topic Counts';
+  $view->core = 7;
+  $view->api_version = '3.0';
+  $view->disabled = FALSE; /* Edit this to true to make a default view disabled initially */
+
+  /* Display: Master */
+  $handler = $view->new_display('default', 'Master', 'default');
+  $handler->display->display_options['use_more_always'] = FALSE;
+  $handler->display->display_options['group_by'] = TRUE;
+  $handler->display->display_options['access']['type'] = 'perm';
+  $handler->display->display_options['cache']['type'] = 'none';
+  $handler->display->display_options['query']['type'] = 'views_query';
+  $handler->display->display_options['exposed_form']['type'] = 'basic';
+  $handler->display->display_options['pager']['type'] = 'full';
+  $handler->display->display_options['style_plugin'] = 'default';
+  $handler->display->display_options['style_options']['default_row_class'] = FALSE;
+  $handler->display->display_options['style_options']['row_class_special'] = FALSE;
+  $handler->display->display_options['row_plugin'] = 'fields';
+  $handler->display->display_options['row_options']['default_field_elements'] = FALSE;
+  /* Relationship: Content: Topic (field_term_topic) */
+  $handler->display->display_options['relationships']['field_term_topic_tid']['id'] = 'field_term_topic_tid';
+  $handler->display->display_options['relationships']['field_term_topic_tid']['table'] = 'field_data_field_term_topic';
+  $handler->display->display_options['relationships']['field_term_topic_tid']['field'] = 'field_term_topic_tid';
+  $handler->display->display_options['relationships']['field_term_topic_tid']['required'] = TRUE;
+  /* Field: SUM(Content: Grant / Award Value) */
+  $handler->display->display_options['fields']['field_funding_grant_award_value_1']['id'] = 'field_funding_grant_award_value_1';
+  $handler->display->display_options['fields']['field_funding_grant_award_value_1']['table'] = 'field_data_field_funding_grant_award_value';
+  $handler->display->display_options['fields']['field_funding_grant_award_value_1']['field'] = 'field_funding_grant_award_value';
+  $handler->display->display_options['fields']['field_funding_grant_award_value_1']['group_type'] = 'sum';
+  $handler->display->display_options['fields']['field_funding_grant_award_value_1']['settings'] = array(
+    'thousand_separator' => ' ',
+    'prefix_suffix' => 1,
+    'linked_field' => array(
+      'linked' => 0,
+      'destination' => '',
+      'advanced' => array(
+        'title' => '',
+        'target' => '',
+        'class' => '',
+        'rel' => '',
+        'text' => '',
+      ),
+    ),
+  );
+  /* Contextual filter: Content: Topic (field_term_topic) */
+  $handler->display->display_options['arguments']['field_term_topic_tid']['id'] = 'field_term_topic_tid';
+  $handler->display->display_options['arguments']['field_term_topic_tid']['table'] = 'field_data_field_term_topic';
+  $handler->display->display_options['arguments']['field_term_topic_tid']['field'] = 'field_term_topic_tid';
+  $handler->display->display_options['arguments']['field_term_topic_tid']['default_action'] = 'default';
+  $handler->display->display_options['arguments']['field_term_topic_tid']['default_argument_type'] = 'taxonomy_tid';
+  $handler->display->display_options['arguments']['field_term_topic_tid']['summary']['number_of_records'] = '0';
+  $handler->display->display_options['arguments']['field_term_topic_tid']['summary']['format'] = 'default_summary';
+  $handler->display->display_options['arguments']['field_term_topic_tid']['summary_options']['items_per_page'] = '25';
+  /* Filter criterion: Content: Published */
+  $handler->display->display_options['filters']['status']['id'] = 'status';
+  $handler->display->display_options['filters']['status']['table'] = 'node';
+  $handler->display->display_options['filters']['status']['field'] = 'status';
+  $handler->display->display_options['filters']['status']['value'] = 1;
+  $handler->display->display_options['filters']['status']['group'] = 1;
+  $handler->display->display_options['filters']['status']['expose']['operator'] = FALSE;
+  /* Filter criterion: Content: Type */
+  $handler->display->display_options['filters']['type']['id'] = 'type';
+  $handler->display->display_options['filters']['type']['table'] = 'node';
+  $handler->display->display_options['filters']['type']['field'] = 'type';
+  $handler->display->display_options['filters']['type']['value'] = array(
+    'min' => '',
+    'max' => '',
+    'value' => '',
+    'funding' => 'funding',
+  );
+
+  /* Display: Content pane */
+  $handler = $view->new_display('panel_pane', 'Content pane', 'funding_sum');
+  $handler->display->display_options['defaults']['title'] = FALSE;
+  $handler->display->display_options['title'] = 'Funding Amount';
+
+  /* Display: Funding Sum Field */
+  $handler = $view->new_display('entity_view', 'Funding Sum Field', 'topic_funding_sum_field');
+  $handler->display->display_options['defaults']['title'] = FALSE;
+  $handler->display->display_options['title'] = 'Funding Sum ';
+  $handler->display->display_options['defaults']['fields'] = FALSE;
+  /* Field: SUM(Content: Grant / Award Value) */
+  $handler->display->display_options['fields']['field_funding_grant_award_value_1']['id'] = 'field_funding_grant_award_value_1';
+  $handler->display->display_options['fields']['field_funding_grant_award_value_1']['table'] = 'field_data_field_funding_grant_award_value';
+  $handler->display->display_options['fields']['field_funding_grant_award_value_1']['field'] = 'field_funding_grant_award_value';
+  $handler->display->display_options['fields']['field_funding_grant_award_value_1']['group_type'] = 'sum';
+  $handler->display->display_options['fields']['field_funding_grant_award_value_1']['label'] = 'Funding';
+  $handler->display->display_options['fields']['field_funding_grant_award_value_1']['alter']['alter_text'] = TRUE;
+  $handler->display->display_options['fields']['field_funding_grant_award_value_1']['alter']['text'] = '<div class="has-icon--amount" title="Funding Available">[field_funding_grant_award_value_1]</div>';
+  $handler->display->display_options['fields']['field_funding_grant_award_value_1']['element_type'] = '0';
+  $handler->display->display_options['fields']['field_funding_grant_award_value_1']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_funding_grant_award_value_1']['element_default_classes'] = FALSE;
+  $handler->display->display_options['fields']['field_funding_grant_award_value_1']['empty'] = 'No Funding Available';
+  $handler->display->display_options['fields']['field_funding_grant_award_value_1']['empty_zero'] = TRUE;
+  $handler->display->display_options['fields']['field_funding_grant_award_value_1']['hide_alter_empty'] = FALSE;
+  $handler->display->display_options['fields']['field_funding_grant_award_value_1']['settings'] = array(
+    'thousand_separator' => ',',
+    'prefix_suffix' => 1,
+    'linked_field' => array(
+      'linked' => 0,
+      'destination' => '',
+      'advanced' => array(
+        'title' => '',
+        'target' => '',
+        'class' => '',
+        'rel' => '',
+        'text' => '',
+      ),
+    ),
+  );
+  $handler->display->display_options['entity_type'] = 'taxonomy_term';
+  $handler->display->display_options['bundles'] = array(
+    0 => 'topic',
+  );
+
+  /* Display: Innovation Count */
+  $handler = $view->new_display('entity_view', 'Innovation Count', 'topic_innovation_count_field');
+  $handler->display->display_options['defaults']['fields'] = FALSE;
+  /* Field: COUNT(Content: Nid) */
+  $handler->display->display_options['fields']['nid']['id'] = 'nid';
+  $handler->display->display_options['fields']['nid']['table'] = 'node';
+  $handler->display->display_options['fields']['nid']['field'] = 'nid';
+  $handler->display->display_options['fields']['nid']['group_type'] = 'count';
+  $handler->display->display_options['fields']['nid']['label'] = 'Innovations';
+  $handler->display->display_options['fields']['nid']['alter']['alter_text'] = TRUE;
+  $handler->display->display_options['fields']['nid']['alter']['text'] = '<div class="has-icon--innovations" title="Number of Innovations">[nid]</div>';
+  $handler->display->display_options['fields']['nid']['element_type'] = '0';
+  $handler->display->display_options['fields']['nid']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['nid']['element_default_classes'] = FALSE;
+  $handler->display->display_options['defaults']['filter_groups'] = FALSE;
+  $handler->display->display_options['defaults']['filters'] = FALSE;
+  /* Filter criterion: Content: Published */
+  $handler->display->display_options['filters']['status']['id'] = 'status';
+  $handler->display->display_options['filters']['status']['table'] = 'node';
+  $handler->display->display_options['filters']['status']['field'] = 'status';
+  $handler->display->display_options['filters']['status']['value'] = 1;
+  $handler->display->display_options['filters']['status']['group'] = 1;
+  $handler->display->display_options['filters']['status']['expose']['operator'] = FALSE;
+  /* Filter criterion: Content: Type */
+  $handler->display->display_options['filters']['type']['id'] = 'type';
+  $handler->display->display_options['filters']['type']['table'] = 'node';
+  $handler->display->display_options['filters']['type']['field'] = 'type';
+  $handler->display->display_options['filters']['type']['value'] = array(
+    'innovation' => 'innovation',
+  );
+  $handler->display->display_options['entity_type'] = 'taxonomy_term';
+  $handler->display->display_options['bundles'] = array(
+    0 => 'topic',
+  );
+
+  /* Display: Resource Count */
+  $handler = $view->new_display('entity_view', 'Resource Count', 'topic_resource_count');
+  $handler->display->display_options['defaults']['fields'] = FALSE;
+  /* Field: COUNT(Content: Nid) */
+  $handler->display->display_options['fields']['nid']['id'] = 'nid';
+  $handler->display->display_options['fields']['nid']['table'] = 'node';
+  $handler->display->display_options['fields']['nid']['field'] = 'nid';
+  $handler->display->display_options['fields']['nid']['group_type'] = 'count';
+  $handler->display->display_options['fields']['nid']['label'] = 'Resources';
+  $handler->display->display_options['fields']['nid']['alter']['alter_text'] = TRUE;
+  $handler->display->display_options['fields']['nid']['alter']['text'] = '<div class="has-icon--resource" title="Number of Resources">[nid]</div>';
+  $handler->display->display_options['fields']['nid']['element_type'] = '0';
+  $handler->display->display_options['fields']['nid']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['nid']['element_default_classes'] = FALSE;
+  $handler->display->display_options['defaults']['filter_groups'] = FALSE;
+  $handler->display->display_options['defaults']['filters'] = FALSE;
+  /* Filter criterion: Content: Published */
+  $handler->display->display_options['filters']['status']['id'] = 'status';
+  $handler->display->display_options['filters']['status']['table'] = 'node';
+  $handler->display->display_options['filters']['status']['field'] = 'status';
+  $handler->display->display_options['filters']['status']['value'] = 1;
+  $handler->display->display_options['filters']['status']['group'] = 1;
+  $handler->display->display_options['filters']['status']['expose']['operator'] = FALSE;
+  /* Filter criterion: Content: Type */
+  $handler->display->display_options['filters']['type']['id'] = 'type';
+  $handler->display->display_options['filters']['type']['table'] = 'node';
+  $handler->display->display_options['filters']['type']['field'] = 'type';
+  $handler->display->display_options['filters']['type']['value'] = array(
+    'resource' => 'resource',
+  );
+  $handler->display->display_options['entity_type'] = 'taxonomy_term';
+  $handler->display->display_options['bundles'] = array(
+    0 => 'topic',
+  );
+  $export['topic_counts'] = $view;
+
+  $view = new view();
   $view->name = 'topic_recent_content';
   $view->description = '';
   $view->tag = 'default';
@@ -1036,7 +1634,7 @@ function gie_taxonomies_views_default_views() {
   /* Display: Master */
   $handler = $view->new_display('default', 'Master', 'default');
   $handler->display->display_options['title'] = 'Innovations';
-  $handler->display->display_options['css_class'] = 'view--card-view';
+  $handler->display->display_options['css_class'] = 'view--card-view-3col';
   $handler->display->display_options['use_more_always'] = FALSE;
   $handler->display->display_options['access']['type'] = 'perm';
   $handler->display->display_options['cache']['type'] = 'none';
@@ -1185,7 +1783,7 @@ function gie_taxonomies_views_default_views() {
 
   /* Display: Master */
   $handler = $view->new_display('default', 'Master', 'default');
-  $handler->display->display_options['css_class'] = 'view--card-view';
+  $handler->display->display_options['css_class'] = 'view--card-view-3col';
   $handler->display->display_options['use_more_always'] = FALSE;
   $handler->display->display_options['access']['type'] = 'perm';
   $handler->display->display_options['cache']['type'] = 'none';

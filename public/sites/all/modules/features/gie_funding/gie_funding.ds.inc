@@ -91,16 +91,6 @@ function gie_funding_ds_field_settings_info() {
         ),
       ),
     ),
-    'field_funding_grant_award_value' => array(
-      'formatter_settings' => array(
-        'ft' => array(),
-      ),
-    ),
-    'field_funding_poc' => array(
-      'formatter_settings' => array(
-        'ft' => array(),
-      ),
-    ),
   );
   $export['node|funding|full'] = $ds_fieldsetting;
 

@@ -39,13 +39,13 @@ function gie_homepage_image_default_styles() {
   $styles['card__175x175_'] = array(
     'label' => 'Card (175x175)',
     'effects' => array(
-      4 => array(
-        'name' => 'image_scale_and_crop',
+      16 => array(
+        'name' => 'smartcrop_crop',
         'data' => array(
           'width' => 175,
           'height' => 175,
         ),
-        'weight' => 1,
+        'weight' => 2,
       ),
     ),
   );

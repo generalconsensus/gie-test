@@ -67,7 +67,26 @@ function gie_taxonomies_strongarm() {
           'weight' => '5',
         ),
       ),
-      'display' => array(),
+      'display' => array(
+        'region_counts_funding_sum_field' => array(
+          'listing' => array(
+            'weight' => '11',
+            'visible' => TRUE,
+          ),
+        ),
+        'region_counts_innovation_count_field' => array(
+          'listing' => array(
+            'weight' => '12',
+            'visible' => TRUE,
+          ),
+        ),
+        'region_counts_entity_view_1' => array(
+          'listing' => array(
+            'weight' => '13',
+            'visible' => TRUE,
+          ),
+        ),
+      ),
     ),
   );
   $export['field_bundle_settings_taxonomy_term__region'] = $strongarm;
@@ -97,7 +116,26 @@ function gie_taxonomies_strongarm() {
           'weight' => '5',
         ),
       ),
-      'display' => array(),
+      'display' => array(
+        'community_counts_funding_sum_field' => array(
+          'listing' => array(
+            'weight' => '1',
+            'visible' => TRUE,
+          ),
+        ),
+        'community_counts_innovation_count_field' => array(
+          'listing' => array(
+            'weight' => '2',
+            'visible' => TRUE,
+          ),
+        ),
+        'community_counts_entity_view_1' => array(
+          'listing' => array(
+            'weight' => '3',
+            'visible' => TRUE,
+          ),
+        ),
+      ),
     ),
   );
   $export['field_bundle_settings_taxonomy_term__sector'] = $strongarm;
@@ -127,7 +165,26 @@ function gie_taxonomies_strongarm() {
           'weight' => '5',
         ),
       ),
-      'display' => array(),
+      'display' => array(
+        'topic_counts_topic_funding_sum_field' => array(
+          'listing' => array(
+            'weight' => '8',
+            'visible' => TRUE,
+          ),
+        ),
+        'topic_counts_topic_innovation_count_field' => array(
+          'listing' => array(
+            'weight' => '9',
+            'visible' => TRUE,
+          ),
+        ),
+        'topic_counts_topic_resource_count' => array(
+          'listing' => array(
+            'weight' => '10',
+            'visible' => TRUE,
+          ),
+        ),
+      ),
     ),
   );
   $export['field_bundle_settings_taxonomy_term__topic'] = $strongarm;
