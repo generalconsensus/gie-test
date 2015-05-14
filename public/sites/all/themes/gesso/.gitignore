@@ -1,2 +1,12 @@
-# Ignore Sass cache directory
-.sass-cache
+# OS generated files
+.DS_Store
+.DS_Store?
+
+# Generated files
+*.sass-cache/
+
+# Pattern Lab
+patternlab/public/*
+!patternlab/public/styleguide/
+patternlab/public/styleguide/html/styleguide.html
+patternlab/*-ck.js
