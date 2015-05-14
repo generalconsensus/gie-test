@@ -136,7 +136,7 @@ function gie_taxonomies_ds_field_settings_info() {
         'ft' => array(
           'func' => 'theme_ds_field_expert',
           'fi' => TRUE,
-          'fi-el' => 'div',
+          'fi-el' => 'h3',
           'fi-cl' => 'card__primary-title',
           'fi-at' => '',
           'fi-def-at' => FALSE,
@@ -437,11 +437,7 @@ function gie_taxonomies_ds_layout_settings_info() {
       'topic_counts_topic_innovation_count_field' => 'main_content',
       'topic_counts_topic_resource_count' => 'main_content',
     ),
-    'classes' => array(
-      'layout_class' => array(
-        'card' => 'card',
-      ),
-    ),
+    'classes' => array(),
     'wrappers' => array(
       'header' => 'div',
       'main_content' => 'div',
