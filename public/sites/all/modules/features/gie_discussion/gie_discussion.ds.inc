@@ -175,7 +175,7 @@ function gie_discussion_ds_field_settings_info() {
           'lb-el' => 'span',
           'ow' => TRUE,
           'ow-el' => 'div',
-          'ow-cl' => 'card__list',
+          'ow-cl' => '',
           'ow-def-cl' => FALSE,
           'ow-at' => '',
           'ow-def-at' => FALSE,

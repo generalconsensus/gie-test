@@ -297,6 +297,10 @@ function gie_funding_strongarm() {
             'weight' => '10',
             'visible' => FALSE,
           ),
+          'listing' => array(
+            'weight' => '10',
+            'visible' => FALSE,
+          ),
         ),
         'funding_ops_counters_favorites' => array(
           'at_a_glance' => array(
@@ -304,6 +308,10 @@ function gie_funding_strongarm() {
             'visible' => TRUE,
           ),
           'full' => array(
+            'weight' => '10',
+            'visible' => FALSE,
+          ),
+          'listing' => array(
             'weight' => '10',
             'visible' => FALSE,
           ),
@@ -317,9 +325,17 @@ function gie_funding_strongarm() {
             'weight' => '10',
             'visible' => FALSE,
           ),
+          'listing' => array(
+            'weight' => '10',
+            'visible' => FALSE,
+          ),
         ),
         'funding_fields_deadline' => array(
           'full' => array(
+            'weight' => '10',
+            'visible' => FALSE,
+          ),
+          'listing' => array(
             'weight' => '10',
             'visible' => FALSE,
           ),
