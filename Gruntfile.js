@@ -54,6 +54,18 @@ module.exports = function(grunt) {
             options: {
               spawn: false,
               // livereload: true
+            },
+          },
+          patternlabliteSass: {
+            files: [
+              'public/sites/all/themes/gesso/sass/**/*.scss'
+            ],
+            tasks: [
+              'compass:patternlablite'
+            ],
+            options: {
+              spawn: false,
+              // livereload: true
             }
           },
         },
@@ -62,6 +74,15 @@ module.exports = function(grunt) {
             tasks: [
               'shell:patternlabWatchReload',
               'simple-watch:patternlabSass'
+            ],
+            options: {
+              logConcurrentOutput: true
+            }
+          },
+          patternlablite: {
+            tasks: [
+              'shell:patternlabWatchReload',
+              'simple-watch:patternlabliteSass'
             ],
             options: {
               logConcurrentOutput: true
@@ -82,5 +103,5 @@ module.exports = function(grunt) {
 
   grunt.registerTask('default', [ ]);
   grunt.registerTask('patternlab', ['compass:patternlab', 'concurrent:patternlab']);
-  grunt.registerTask('patternlablite', ['compass:patternlablite', 'concurrent:patternlab']);
+  grunt.registerTask('patternlablite', ['compass:patternlablite', 'concurrent:patternlablite']);
 };
