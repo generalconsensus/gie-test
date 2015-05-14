@@ -7,6 +7,15 @@
     display: none; // hide comment field text format info
   }
 
+  .field-widget-text-textarea .text-format-wrapper .form-item {
+    margin: rhythm(1) 0;
+  }
+
+  label {
+    display: block;
+    font-weight: bold;
+  }
+  
   .indented {
     padding-left: 2em;
     .indented {
