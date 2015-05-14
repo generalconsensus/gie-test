@@ -8,5 +8,4 @@
 # Pattern Lab
 patternlab/public/*
 !patternlab/public/styleguide/
-patternlab/public/styleguide/html/styleguide.html
 patternlab/*-ck.js
