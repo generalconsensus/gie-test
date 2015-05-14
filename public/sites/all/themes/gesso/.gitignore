@@ -6,6 +6,6 @@
 *.sass-cache/
 
 # Pattern Lab
-patternlab/public/*
-!patternlab/public/styleguide/
+#patternlab/public/*
+#!patternlab/public/styleguide/
 patternlab/*-ck.js
