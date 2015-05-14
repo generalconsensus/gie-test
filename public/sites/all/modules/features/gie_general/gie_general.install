@@ -227,3 +227,13 @@ function gie_general_update_7020() {
 function gie_general_update_7021() {
   field_delete_field('field_discussion_program');
 }
+
+/**
+ * Enable GIE Event feature.
+ */
+function gie_general_update_7022() {
+  $modules = array(
+    'events'
+  );
+  module_enable($modules, TRUE);
+}

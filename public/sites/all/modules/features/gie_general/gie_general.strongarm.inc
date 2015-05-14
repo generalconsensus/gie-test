@@ -412,6 +412,13 @@ function gie_general_strongarm() {
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
+  $strongarm->name = 'panelizer_node:error_page:page_manager_selection';
+  $strongarm->value = 'node:error_page:default';
+  $export['panelizer_node:error_page:page_manager_selection'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
   $strongarm->name = 'pathauto_node_pattern';
   $strongarm->value = '[node:menu-link:parent:title]/[node:menu-link:title]';
   $export['pathauto_node_pattern'] = $strongarm;
