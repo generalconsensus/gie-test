@@ -1,7 +1,0 @@
-.chosen-choices li {
-  .pane__content & { // undo bullet from _html-elements
-    &:before {
-      display: none;
-    }
-  }  
-}
