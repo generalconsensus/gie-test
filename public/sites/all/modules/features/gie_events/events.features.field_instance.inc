@@ -37,27 +37,9 @@ function events_field_default_field_instances() {
       ),
       'listing' => array(
         'label' => 'above',
-        'module' => 'number',
-        'settings' => array(
-          'decimal_separator' => '.',
-          'field_delimiter' => '',
-          'linked_field' => array(
-            'advanced' => array(
-              'class' => '',
-              'rel' => '',
-              'target' => '',
-              'text' => '',
-              'title' => '',
-            ),
-            'destination' => '',
-            'linked' => 0,
-          ),
-          'prefix_suffix' => TRUE,
-          'scale' => 0,
-          'thousand_separator' => ' ',
-        ),
-        'type' => 'number_integer',
-        'weight' => 7,
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 12,
       ),
       'page_header' => array(
         'label' => 'above',
@@ -135,23 +117,9 @@ function events_field_default_field_instances() {
       ),
       'listing' => array(
         'label' => 'above',
-        'module' => 'taxonomy',
-        'settings' => array(
-          'field_delimiter' => '',
-          'linked_field' => array(
-            'advanced' => array(
-              'class' => '',
-              'rel' => '',
-              'target' => '',
-              'text' => '',
-              'title' => '',
-            ),
-            'destination' => '',
-            'linked' => 0,
-          ),
-        ),
-        'type' => 'taxonomy_term_reference_link',
-        'weight' => 17,
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 18,
       ),
       'page_header' => array(
         'label' => 'above',
@@ -211,28 +179,9 @@ function events_field_default_field_instances() {
         'weight' => 30,
       ),
       'listing' => array(
-        'label' => 'above',
-        'module' => 'date',
-        'settings' => array(
-          'field_delimiter' => '',
-          'format_type' => 'long',
-          'fromto' => 'both',
-          'linked_field' => array(
-            'advanced' => array(
-              'class' => '',
-              'rel' => '',
-              'target' => '',
-              'text' => '',
-              'title' => '',
-            ),
-            'destination' => '',
-            'linked' => 0,
-          ),
-          'multiple_from' => '',
-          'multiple_number' => '',
-          'multiple_to' => '',
-        ),
-        'type' => 'date_default',
+        'label' => 'hidden',
+        'settings' => array(),
+        'type' => 'hidden',
         'weight' => 2,
       ),
       'page_header' => array(
@@ -305,23 +254,9 @@ function events_field_default_field_instances() {
       ),
       'listing' => array(
         'label' => 'above',
-        'module' => 'text',
-        'settings' => array(
-          'field_delimiter' => '',
-          'linked_field' => array(
-            'advanced' => array(
-              'class' => '',
-              'rel' => '',
-              'target' => '',
-              'text' => '',
-              'title' => '',
-            ),
-            'destination' => '',
-            'linked' => 0,
-          ),
-        ),
-        'type' => 'text_default',
-        'weight' => 1,
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 10,
       ),
       'page_header' => array(
         'label' => 'hidden',
@@ -432,25 +367,9 @@ function events_field_default_field_instances() {
       ),
       'listing' => array(
         'label' => 'above',
-        'module' => 'image',
-        'settings' => array(
-          'field_delimiter' => '',
-          'image_link' => '',
-          'image_style' => '',
-          'linked_field' => array(
-            'advanced' => array(
-              'class' => '',
-              'rel' => '',
-              'target' => '',
-              'text' => '',
-              'title' => '',
-            ),
-            'destination' => '',
-            'linked' => 0,
-          ),
-        ),
-        'type' => 'image',
-        'weight' => 6,
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 11,
       ),
       'page_header' => array(
         'label' => 'above',
@@ -532,12 +451,14 @@ function events_field_default_field_instances() {
         'weight' => 29,
       ),
       'listing' => array(
-        'label' => 'above',
+        'label' => 'inline',
         'module' => 'addressfield',
         'settings' => array(
           'field_delimiter' => '',
           'format_handlers' => array(
-            0 => 'address',
+            'address' => 'address',
+            'address-hide-postal-code' => 'address-hide-postal-code',
+            'address-hide-street' => 'address-hide-street',
           ),
           'linked_field' => array(
             'advanced' => array(
@@ -550,10 +471,10 @@ function events_field_default_field_instances() {
             'destination' => '',
             'linked' => 0,
           ),
-          'use_widget_handlers' => 1,
+          'use_widget_handlers' => 0,
         ),
         'type' => 'addressfield_default',
-        'weight' => 3,
+        'weight' => 22,
       ),
       'page_header' => array(
         'label' => 'above',
@@ -626,24 +547,9 @@ function events_field_default_field_instances() {
       ),
       'listing' => array(
         'label' => 'above',
-        'module' => 'entityreference',
-        'settings' => array(
-          'field_delimiter' => '',
-          'link' => FALSE,
-          'linked_field' => array(
-            'advanced' => array(
-              'class' => '',
-              'rel' => '',
-              'target' => '',
-              'text' => '',
-              'title' => '',
-            ),
-            'destination' => '',
-            'linked' => 0,
-          ),
-        ),
-        'type' => 'entityreference_label',
-        'weight' => 16,
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 19,
       ),
       'page_header' => array(
         'label' => 'above',
@@ -713,24 +619,9 @@ function events_field_default_field_instances() {
       ),
       'listing' => array(
         'label' => 'above',
-        'module' => 'entityreference',
-        'settings' => array(
-          'field_delimiter' => '',
-          'link' => FALSE,
-          'linked_field' => array(
-            'advanced' => array(
-              'class' => '',
-              'rel' => '',
-              'target' => '',
-              'text' => '',
-              'title' => '',
-            ),
-            'destination' => '',
-            'linked' => 0,
-          ),
-        ),
-        'type' => 'entityreference_label',
-        'weight' => 18,
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 17,
       ),
       'page_header' => array(
         'label' => 'above',
@@ -815,24 +706,9 @@ function events_field_default_field_instances() {
       ),
       'listing' => array(
         'label' => 'above',
-        'module' => 'entityreference',
-        'settings' => array(
-          'field_delimiter' => '',
-          'link' => FALSE,
-          'linked_field' => array(
-            'advanced' => array(
-              'class' => '',
-              'rel' => '',
-              'target' => '',
-              'text' => '',
-              'title' => '',
-            ),
-            'destination' => '',
-            'linked' => 0,
-          ),
-        ),
-        'type' => 'entityreference_label',
-        'weight' => 11,
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 22,
       ),
       'page_header' => array(
         'label' => 'above',
@@ -911,24 +787,9 @@ function events_field_default_field_instances() {
       ),
       'listing' => array(
         'label' => 'above',
-        'module' => 'entityreference',
-        'settings' => array(
-          'field_delimiter' => '',
-          'link' => FALSE,
-          'linked_field' => array(
-            'advanced' => array(
-              'class' => '',
-              'rel' => '',
-              'target' => '',
-              'text' => '',
-              'title' => '',
-            ),
-            'destination' => '',
-            'linked' => 0,
-          ),
-        ),
-        'type' => 'entityreference_label',
-        'weight' => 12,
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 21,
       ),
       'page_header' => array(
         'label' => 'above',
@@ -1006,23 +867,9 @@ function events_field_default_field_instances() {
       ),
       'listing' => array(
         'label' => 'above',
-        'module' => 'taxonomy',
-        'settings' => array(
-          'field_delimiter' => '',
-          'linked_field' => array(
-            'advanced' => array(
-              'class' => '',
-              'rel' => '',
-              'target' => '',
-              'text' => '',
-              'title' => '',
-            ),
-            'destination' => '',
-            'linked' => 0,
-          ),
-        ),
-        'type' => 'taxonomy_term_reference_link',
-        'weight' => 14,
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 20,
       ),
       'page_header' => array(
         'label' => 'above',
@@ -1097,10 +944,10 @@ function events_field_default_field_instances() {
         'weight' => 30,
       ),
       'listing' => array(
-        'label' => 'above',
+        'label' => 'inline',
         'module' => 'taxonomy',
         'settings' => array(
-          'field_delimiter' => '',
+          'field_delimiter' => ',',
           'linked_field' => array(
             'advanced' => array(
               'class' => '',
@@ -1114,7 +961,7 @@ function events_field_default_field_instances() {
           ),
         ),
         'type' => 'taxonomy_term_reference_link',
-        'weight' => 13,
+        'weight' => 24,
       ),
       'page_header' => array(
         'label' => 'above',
@@ -1197,10 +1044,10 @@ function events_field_default_field_instances() {
         'weight' => 29,
       ),
       'listing' => array(
-        'label' => 'above',
+        'label' => 'inline',
         'module' => 'taxonomy',
         'settings' => array(
-          'field_delimiter' => '',
+          'field_delimiter' => ',',
           'linked_field' => array(
             'advanced' => array(
               'class' => '',
@@ -1214,7 +1061,7 @@ function events_field_default_field_instances() {
           ),
         ),
         'type' => 'taxonomy_term_reference_link',
-        'weight' => 15,
+        'weight' => 23,
       ),
       'page_header' => array(
         'label' => 'above',
@@ -1298,23 +1145,9 @@ function events_field_default_field_instances() {
       ),
       'listing' => array(
         'label' => 'above',
-        'module' => 'link',
-        'settings' => array(
-          'field_delimiter' => '',
-          'linked_field' => array(
-            'advanced' => array(
-              'class' => '',
-              'rel' => '',
-              'target' => '',
-              'text' => '',
-              'title' => '',
-            ),
-            'destination' => '',
-            'linked' => 0,
-          ),
-        ),
-        'type' => 'link_default',
-        'weight' => 9,
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 15,
       ),
       'page_header' => array(
         'label' => 'above',
@@ -1408,23 +1241,9 @@ function events_field_default_field_instances() {
       ),
       'listing' => array(
         'label' => 'above',
-        'module' => 'taxonomy',
-        'settings' => array(
-          'field_delimiter' => '',
-          'linked_field' => array(
-            'advanced' => array(
-              'class' => '',
-              'rel' => '',
-              'target' => '',
-              'text' => '',
-              'title' => '',
-            ),
-            'destination' => '',
-            'linked' => 0,
-          ),
-        ),
-        'type' => 'taxonomy_term_reference_link',
-        'weight' => 8,
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 14,
       ),
       'page_header' => array(
         'label' => 'above',
@@ -1500,23 +1319,9 @@ function events_field_default_field_instances() {
       ),
       'listing' => array(
         'label' => 'above',
-        'module' => 'link',
-        'settings' => array(
-          'field_delimiter' => '',
-          'linked_field' => array(
-            'advanced' => array(
-              'class' => '',
-              'rel' => '',
-              'target' => '',
-              'text' => '',
-              'title' => '',
-            ),
-            'destination' => '',
-            'linked' => 0,
-          ),
-        ),
-        'type' => 'link_default',
-        'weight' => 10,
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 13,
       ),
       'page_header' => array(
         'label' => 'above',
@@ -1595,10 +1400,27 @@ function events_field_default_field_instances() {
         'weight' => 31,
       ),
       'listing' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 0,
+        'label' => 'hidden',
+        'module' => 'title',
+        'settings' => array(
+          'field_delimiter' => '',
+          'linked_field' => array(
+            'advanced' => array(
+              'class' => '',
+              'rel' => '',
+              'target' => '',
+              'text' => '',
+              'title' => '',
+            ),
+            'destination' => '',
+            'linked' => 0,
+          ),
+          'title_class' => '',
+          'title_link' => 'content',
+          'title_style' => '_none',
+        ),
+        'type' => 'title_linked',
+        'weight' => 20,
       ),
       'page_header' => array(
         'label' => 'above',

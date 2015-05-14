@@ -151,6 +151,13 @@ function gie_general_strongarm() {
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
+  $strongarm->name = 'date_format_day';
+  $strongarm->value = 'd';
+  $export['date_format_day'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
   $strongarm->name = 'date_format_html5_tools_iso8601';
   $strongarm->value = 'c';
   $export['date_format_html5_tools_iso8601'] = $strongarm;
@@ -168,6 +175,13 @@ function gie_general_strongarm() {
   $strongarm->name = 'date_format_medium';
   $strongarm->value = 'D, m/d/Y - g:ia';
   $export['date_format_medium'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'date_format_month';
+  $strongarm->value = 'F Y';
+  $export['date_format_month'] = $strongarm;
 
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */

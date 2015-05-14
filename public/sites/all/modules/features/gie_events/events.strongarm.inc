@@ -134,8 +134,8 @@ function events_strongarm() {
             'visible' => FALSE,
           ),
           'listing' => array(
-            'weight' => '10',
-            'visible' => TRUE,
+            'weight' => '26',
+            'visible' => FALSE,
           ),
           'at_a_glance' => array(
             'weight' => '10',
@@ -155,6 +155,10 @@ function events_strongarm() {
             'weight' => '16',
             'visible' => FALSE,
           ),
+          'listing' => array(
+            'weight' => '16',
+            'visible' => FALSE,
+          ),
         ),
         'events_at_a_glance_favorites' => array(
           'at_a_glance' => array(
@@ -163,6 +167,10 @@ function events_strongarm() {
           ),
           'full' => array(
             'weight' => '14',
+            'visible' => FALSE,
+          ),
+          'listing' => array(
+            'weight' => '24',
             'visible' => FALSE,
           ),
         ),
@@ -174,6 +182,16 @@ function events_strongarm() {
           'full' => array(
             'weight' => '12',
             'visible' => FALSE,
+          ),
+          'listing' => array(
+            'weight' => '23',
+            'visible' => FALSE,
+          ),
+        ),
+        'events_at_a_glance_entity_view_1' => array(
+          'listing' => array(
+            'weight' => '21',
+            'visible' => TRUE,
           ),
         ),
       ),
