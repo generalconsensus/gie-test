@@ -65,30 +65,33 @@
 						<div class="sg-pattern-body">
 							<section class="comments" id="comments">
   <h2 class="comments__title">Discuss</h2>
-  <form class="comment-form ds-reset">
-    <div class="form-item form-item--item">
-      <label class="form-item__label">
-        Your name 
-      </label>
-      <a class="username" title="View user profile." href="/users/admin">admin</a>
+  <form accept-charset="UTF-8" class="comment-form ds-reset">
+    <div class="form-item form-type-item">
+      <label>Your name </label>
+      <a class="username" href="/users/admin">admin</a>
     </div>
     <div class="field-type-text-long field-name-comment-body field-widget-text-textarea">
       <div>
         <div class="text-format-wrapper">
-          <div class="form-item form-item--textarea form-item--comment-body-und-0-value is-required">
-            <label class="form-item__label">Comment <span class="form-item__required-marker"><span class="element-invisible">This field is required.</span></span></label>
+          <div class="form-item form-type-textarea">
+            <label class="fel-field-label">Comment 
+              <span class="form-item__required-marker">
+                <span class="element-invisible">This field is required.</span>
+              </span>
+            </label>
             <textarea rows="5" cols="60" class="text-full form-textarea is-required"></textarea>
           </div>
-          <fieldset class="filter-wrapper fieldset">
-            <div class="fieldset__content">
+          <fieldset class="filter-wrapper form-wrapper">
+            <div class="fieldset-wrapper">
               <div class="filter-help">
-                <p><a target="_blank" href="/filter/tips">More information about text formats</a></p>
+                <p>
+                  <a target="_blank" href="/filter/tips">More information about text formats</a>
+                </p>
               </div>
               <div class="filter-guidelines filter-guidelines-processed">
                 <div class="filter-guidelines-item filter-guidelines-comments_filtered">
-                  <ul class="tips">
-                    <li>Allowed HTML tags: &lt;a&gt; &lt;em&gt; &lt;strong&gt; &lt;cite&gt; &lt;blockquote&gt; &lt;code&gt; &lt;ul&gt; &lt;ol&gt; &lt;li&gt; &lt;dl&gt; &lt;dt&gt; &lt;dd&gt;</li><li>Lines and paragraphs break automatically.</li><li>Web page addresses and e-mail addresses turn into links automatically.</li>
-                  </ul>
+                  <h3 style="display: none;">Comments Filtered</h3>
+                  <ul class="tips"><li>Allowed HTML tags: &lt;a&gt; &lt;em&gt; &lt;strong&gt; &lt;cite&gt; &lt;blockquote&gt; &lt;code&gt; &lt;ul&gt; &lt;ol&gt; &lt;li&gt; &lt;dl&gt; &lt;dt&gt; &lt;dd&gt;</li><li>Lines and paragraphs break automatically.</li><li>Web page addresses and e-mail addresses turn into links automatically.</li></ul>
                 </div>
               </div>
             </div>
@@ -99,7 +102,7 @@
     <div class="form-actions">
       <input type="submit" class="button button--submit" value="Comment">
     </div>
-  </form>    
+  </form>
   <div class="layout-slat comment comment--by-node-author view-mode-full">
     <div class="layout-slat__media">
       <span>
@@ -211,30 +214,33 @@
 									<code>
 										&lt;section class=&quot;comments&quot; id=&quot;comments&quot;&gt;
   &lt;h2 class=&quot;comments__title&quot;&gt;Discuss&lt;/h2&gt;
-  &lt;form class=&quot;comment-form ds-reset&quot;&gt;
-    &lt;div class=&quot;form-item form-item--item&quot;&gt;
-      &lt;label class=&quot;form-item__label&quot;&gt;
-        Your name 
-      &lt;/label&gt;
-      &lt;a class=&quot;username&quot; title=&quot;View user profile.&quot; href=&quot;/users/admin&quot;&gt;admin&lt;/a&gt;
+  &lt;form accept-charset=&quot;UTF-8&quot; class=&quot;comment-form ds-reset&quot;&gt;
+    &lt;div class=&quot;form-item form-type-item&quot;&gt;
+      &lt;label&gt;Your name &lt;/label&gt;
+      &lt;a class=&quot;username&quot; href=&quot;/users/admin&quot;&gt;admin&lt;/a&gt;
     &lt;/div&gt;
     &lt;div class=&quot;field-type-text-long field-name-comment-body field-widget-text-textarea&quot;&gt;
       &lt;div&gt;
         &lt;div class=&quot;text-format-wrapper&quot;&gt;
-          &lt;div class=&quot;form-item form-item--textarea form-item--comment-body-und-0-value is-required&quot;&gt;
-            &lt;label class=&quot;form-item__label&quot;&gt;Comment &lt;span class=&quot;form-item__required-marker&quot;&gt;&lt;span class=&quot;element-invisible&quot;&gt;This field is required.&lt;/span&gt;&lt;/span&gt;&lt;/label&gt;
+          &lt;div class=&quot;form-item form-type-textarea&quot;&gt;
+            &lt;label class=&quot;fel-field-label&quot;&gt;Comment 
+              &lt;span class=&quot;form-item__required-marker&quot;&gt;
+                &lt;span class=&quot;element-invisible&quot;&gt;This field is required.&lt;/span&gt;
+              &lt;/span&gt;
+            &lt;/label&gt;
             &lt;textarea rows=&quot;5&quot; cols=&quot;60&quot; class=&quot;text-full form-textarea is-required&quot;&gt;&lt;/textarea&gt;
           &lt;/div&gt;
-          &lt;fieldset class=&quot;filter-wrapper fieldset&quot;&gt;
-            &lt;div class=&quot;fieldset__content&quot;&gt;
+          &lt;fieldset class=&quot;filter-wrapper form-wrapper&quot;&gt;
+            &lt;div class=&quot;fieldset-wrapper&quot;&gt;
               &lt;div class=&quot;filter-help&quot;&gt;
-                &lt;p&gt;&lt;a target=&quot;_blank&quot; href=&quot;/filter/tips&quot;&gt;More information about text formats&lt;/a&gt;&lt;/p&gt;
+                &lt;p&gt;
+                  &lt;a target=&quot;_blank&quot; href=&quot;/filter/tips&quot;&gt;More information about text formats&lt;/a&gt;
+                &lt;/p&gt;
               &lt;/div&gt;
               &lt;div class=&quot;filter-guidelines filter-guidelines-processed&quot;&gt;
                 &lt;div class=&quot;filter-guidelines-item filter-guidelines-comments_filtered&quot;&gt;
-                  &lt;ul class=&quot;tips&quot;&gt;
-                    &lt;li&gt;Allowed HTML tags: &amp;lt;a&amp;gt; &amp;lt;em&amp;gt; &amp;lt;strong&amp;gt; &amp;lt;cite&amp;gt; &amp;lt;blockquote&amp;gt; &amp;lt;code&amp;gt; &amp;lt;ul&amp;gt; &amp;lt;ol&amp;gt; &amp;lt;li&amp;gt; &amp;lt;dl&amp;gt; &amp;lt;dt&amp;gt; &amp;lt;dd&amp;gt;&lt;/li&gt;&lt;li&gt;Lines and paragraphs break automatically.&lt;/li&gt;&lt;li&gt;Web page addresses and e-mail addresses turn into links automatically.&lt;/li&gt;
-                  &lt;/ul&gt;
+                  &lt;h3 style=&quot;display: none;&quot;&gt;Comments Filtered&lt;/h3&gt;
+                  &lt;ul class=&quot;tips&quot;&gt;&lt;li&gt;Allowed HTML tags: &amp;lt;a&amp;gt; &amp;lt;em&amp;gt; &amp;lt;strong&amp;gt; &amp;lt;cite&amp;gt; &amp;lt;blockquote&amp;gt; &amp;lt;code&amp;gt; &amp;lt;ul&amp;gt; &amp;lt;ol&amp;gt; &amp;lt;li&amp;gt; &amp;lt;dl&amp;gt; &amp;lt;dt&amp;gt; &amp;lt;dd&amp;gt;&lt;/li&gt;&lt;li&gt;Lines and paragraphs break automatically.&lt;/li&gt;&lt;li&gt;Web page addresses and e-mail addresses turn into links automatically.&lt;/li&gt;&lt;/ul&gt;
                 &lt;/div&gt;
               &lt;/div&gt;
             &lt;/div&gt;
@@ -245,7 +251,7 @@
     &lt;div class=&quot;form-actions&quot;&gt;
       &lt;input type=&quot;submit&quot; class=&quot;button button--submit&quot; value=&quot;Comment&quot;&gt;
     &lt;/div&gt;
-  &lt;/form&gt;    
+  &lt;/form&gt;
   &lt;div class=&quot;layout-slat comment comment--by-node-author view-mode-full&quot;&gt;
     &lt;div class=&quot;layout-slat__media&quot;&gt;
       &lt;span&gt;
