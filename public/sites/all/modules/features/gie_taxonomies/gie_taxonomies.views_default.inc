@@ -679,7 +679,8 @@ function gie_taxonomies_views_default_views() {
   $handler->display->display_options['cache']['type'] = 'none';
   $handler->display->display_options['query']['type'] = 'views_query';
   $handler->display->display_options['exposed_form']['type'] = 'basic';
-  $handler->display->display_options['pager']['type'] = 'full';
+  $handler->display->display_options['pager']['type'] = 'none';
+  $handler->display->display_options['pager']['options']['offset'] = '0';
   $handler->display->display_options['style_plugin'] = 'default';
   $handler->display->display_options['style_options']['default_row_class'] = FALSE;
   $handler->display->display_options['style_options']['row_class_special'] = FALSE;
@@ -784,8 +785,6 @@ function gie_taxonomies_views_default_views() {
   $handler->display->display_options['fields']['field_funding_grant_award_value_1']['element_type'] = '0';
   $handler->display->display_options['fields']['field_funding_grant_award_value_1']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['field_funding_grant_award_value_1']['element_default_classes'] = FALSE;
-  $handler->display->display_options['fields']['field_funding_grant_award_value_1']['empty'] = 'No Funding Available';
-  $handler->display->display_options['fields']['field_funding_grant_award_value_1']['empty_zero'] = TRUE;
   $handler->display->display_options['fields']['field_funding_grant_award_value_1']['hide_alter_empty'] = FALSE;
   $handler->display->display_options['fields']['field_funding_grant_award_value_1']['settings'] = array(
     'thousand_separator' => ',',
@@ -1448,7 +1447,8 @@ function gie_taxonomies_views_default_views() {
   $handler->display->display_options['cache']['type'] = 'none';
   $handler->display->display_options['query']['type'] = 'views_query';
   $handler->display->display_options['exposed_form']['type'] = 'basic';
-  $handler->display->display_options['pager']['type'] = 'full';
+  $handler->display->display_options['pager']['type'] = 'none';
+  $handler->display->display_options['pager']['options']['offset'] = '0';
   $handler->display->display_options['style_plugin'] = 'default';
   $handler->display->display_options['style_options']['default_row_class'] = FALSE;
   $handler->display->display_options['style_options']['row_class_special'] = FALSE;
