@@ -13,6 +13,14 @@ module.exports = function(grunt) {
               outputStyle: 'expanded',
             },
           },
+          patternlabdev: {
+            options: {
+              basePath: 'public/sites/all/themes/gesso/',
+              bundleExec: true,  // use Bundler specified versions
+              outputStyle: 'expanded',
+              specify: ['public/sites/all/themes/gesso/sass/*.scss'], // only compile primary files
+            },
+          },
           dev : { // Target
             options : { // Target options
               basePath: 'public/sites/all/themes/gesso/',
@@ -74,4 +82,5 @@ module.exports = function(grunt) {
 
   grunt.registerTask('default', [ ]);
   grunt.registerTask('patternlab', ['compass:patternlab', 'concurrent:patternlab']);
+  grunt.registerTask('patternlabdev', ['compass:patternlabdev', 'concurrent:patternlab']);
 };
