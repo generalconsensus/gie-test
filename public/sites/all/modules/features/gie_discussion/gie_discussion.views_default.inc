@@ -164,6 +164,8 @@ function gie_discussion_views_default_views() {
   $handler = $view->new_display('entity_view', 'Photo', 'author_photo_display');
   $handler->display->display_options['defaults']['style_plugin'] = FALSE;
   $handler->display->display_options['style_plugin'] = 'default';
+  $handler->display->display_options['style_options']['default_row_class'] = FALSE;
+  $handler->display->display_options['style_options']['row_class_special'] = FALSE;
   $handler->display->display_options['defaults']['style_options'] = FALSE;
   $handler->display->display_options['defaults']['row_plugin'] = FALSE;
   $handler->display->display_options['row_plugin'] = 'fields';
@@ -179,7 +181,7 @@ function gie_discussion_views_default_views() {
   $handler->display->display_options['fields']['field_user_photo']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['field_user_photo']['click_sort_column'] = 'fid';
   $handler->display->display_options['fields']['field_user_photo']['settings'] = array(
-    'image_style' => 'thumb-78x78',
+    'image_style' => 'resource_author__58x58_',
     'image_link' => '',
     'linked_field' => array(
       'linked' => 0,

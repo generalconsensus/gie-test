@@ -971,37 +971,38 @@ ul.panels-ipe-linkbar li {
 /* line 11, ../sass/partials/layout/ds/_slat.scss */
 .layout-slat__media {
   margin: 0;
-  padding: 0 0 1.625em;
+  padding: 0 0 0.8125em;
 }
 @media (min-width: 37.5em) {
   /* line 11, ../sass/partials/layout/ds/_slat.scss */
   .layout-slat__media {
     float: left;
+    padding-bottom: 0;
     padding-right: 1.5em;
   }
-  /* line 18, ../sass/partials/layout/ds/_slat.scss */
+  /* line 19, ../sass/partials/layout/ds/_slat.scss */
   .layout-slat--small .layout-slat__media {
     padding-right: 0.5em;
   }
 }
-/* line 23, ../sass/partials/layout/ds/_slat.scss */
+/* line 24, ../sass/partials/layout/ds/_slat.scss */
 .layout-slat__media:empty {
   padding: 0;
 }
-/* line 28, ../sass/partials/layout/ds/_slat.scss */
+/* line 29, ../sass/partials/layout/ds/_slat.scss */
 .layout-slat__media a,
 .layout-slat__media img {
   display: block;
 }
 
-/* line 33, ../sass/partials/layout/ds/_slat.scss */
+/* line 34, ../sass/partials/layout/ds/_slat.scss */
 .layout-slat__content {
   display: table-cell;
   width: 10000px;
 }
 
 @media (min-width: 37.5em) {
-  /* line 44, ../sass/partials/layout/ds/_slat.scss */
+  /* line 45, ../sass/partials/layout/ds/_slat.scss */
   .layout-slat--reversed .layout-slat__media {
     float: right;
     padding-left: 1.5em;
@@ -3534,6 +3535,21 @@ header.header {
   }
 }
 
+/* line 3, ../sass/partials/components/_node.scss */
+.node__posted-by {
+  font-style: italic;
+  margin: 0 0 0.25em 0;
+}
+
+/* line 9, ../sass/partials/components/_node.scss */
+.node--listing .node__title {
+  margin: 0 0 0.25em 0;
+}
+/* line 12, ../sass/partials/components/_node.scss */
+.node--listing .node__summary {
+  line-height: 1.4;
+}
+
 /* line 4, ../sass/partials/components/_pager.scss */
 .pager {
   clear: both;
@@ -3616,6 +3632,11 @@ aside .pane__title {
   font-weight: 300;
   margin: 0 0 1em 0;
   padding: 0;
+}
+
+/* line 1, ../sass/partials/components/pane/_pane--discussion-header.scss */
+.pane--discussion-header {
+  margin: 0 0 1em 0;
 }
 
 /* line 1, ../sass/partials/components/pane/_pane--facetapi.scss */
@@ -5727,7 +5748,7 @@ tr.drag-previous {
 
 /* line 2, ../sass/partials/components/view/_view--recent-conversations.scss */
 .view--recent-conversations .views-row {
-  padding: 0 0 0.5em 0;
+  padding: 0 0 1em 0;
 }
 /* line 5, ../sass/partials/components/view/_view--recent-conversations.scss */
 .view--recent-conversations .view__title {
