@@ -479,12 +479,24 @@
 </div>
 
 <main id="main" class="main" role="main" tabindex="-1">
-  <div class="region-content layout-constrain">
+  <div class="region-content">
 
-    <article class="node node--page node--full" role="article">
-      <h1 class="node__title">Page Title</h1>
-      
-    </article>
+    <div class="l-panels-detail title main main-sidebar-empty">
+      <div class="l-title region-title">
+        <div class="layout-constrain">
+          <div class="pane pane--page-title">
+            <div class="pane__content">
+              <h1>Page Title</h1>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="l-wrapper layout-constrain">
+        <div class="l-main">
+          
+        </div>
+      </div>
+    </div>
 
   </div>
 </main>
@@ -557,7 +569,7 @@
 	<script>
 		// handle injection of items from PHP
 		var patternPartial = "templates-basic-page";
-		var lineage        = [{"lineagePattern":"organisms-header","lineagePath":"..\/..\/patterns\/02-organisms-00-regions-01-header\/02-organisms-00-regions-01-header.html","lineageState":"inprogress"},{"lineagePattern":"organisms-navigation","lineagePath":"..\/..\/patterns\/02-organisms-00-regions-02-navigation\/02-organisms-00-regions-02-navigation.html","lineageState":"inprogress"},{"lineagePattern":"organisms-basic-page","lineagePath":"..\/..\/patterns\/02-organisms-01-content-types-00-basic-page\/02-organisms-01-content-types-00-basic-page.html","lineageState":"inprogress"},{"lineagePattern":"organisms-postscript","lineagePath":"..\/..\/patterns\/02-organisms-00-regions-_postscript\/02-organisms-00-regions-_postscript.html","lineageState":"inprogress"},{"lineagePattern":"organisms-footer","lineagePath":"..\/..\/patterns\/02-organisms-00-regions-05-footer\/02-organisms-00-regions-05-footer.html","lineageState":"inprogress"}];
+		var lineage        = [{"lineagePattern":"organisms-header","lineagePath":"..\/..\/patterns\/02-organisms-00-regions-01-header\/02-organisms-00-regions-01-header.html","lineageState":"inprogress"},{"lineagePattern":"organisms-navigation","lineagePath":"..\/..\/patterns\/02-organisms-00-regions-02-navigation\/02-organisms-00-regions-02-navigation.html","lineageState":"inprogress"},{"lineagePattern":"organisms-basic-page","lineagePath":"..\/..\/patterns\/02-organisms-01-content-types-basic-page\/02-organisms-01-content-types-basic-page.html","lineageState":"inprogress"},{"lineagePattern":"organisms-postscript","lineagePath":"..\/..\/patterns\/02-organisms-00-regions-_postscript\/02-organisms-00-regions-_postscript.html","lineageState":"inprogress"},{"lineagePattern":"organisms-footer","lineagePath":"..\/..\/patterns\/02-organisms-00-regions-03-footer\/02-organisms-00-regions-03-footer.html","lineageState":"inprogress"}];
 		var lineageR       = [{"lineagePattern":"pages-basic-page","lineagePath":"..\/..\/patterns\/04-pages-basic-page\/04-pages-basic-page.html","lineageState":"inprogress"}];
 		var patternState   = "inprogress";
 		var cssEnabled     = false;

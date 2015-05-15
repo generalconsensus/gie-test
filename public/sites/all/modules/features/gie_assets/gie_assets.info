@@ -61,6 +61,7 @@ features[filter][] = plain_text
 features[image][] = card__500x300_
 features[image][] = org_teaser
 features[image][] = resource_author__35x35_
+features[image][] = resource_author__58x58_
 features[user_permission][] = administer ckeditor
 features[user_permission][] = customize ckeditor
 features[user_permission][] = show format selection for asset

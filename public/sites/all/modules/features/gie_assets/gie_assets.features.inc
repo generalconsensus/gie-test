@@ -70,5 +70,20 @@ function gie_assets_image_default_styles() {
     ),
   );
 
+  // Exported image style: resource_author__58x58_.
+  $styles['resource_author__58x58_'] = array(
+    'label' => 'Resource Author (58x58)',
+    'effects' => array(
+      4 => array(
+        'name' => 'image_scale_and_crop',
+        'data' => array(
+          'width' => 58,
+          'height' => 58,
+        ),
+        'weight' => 1,
+      ),
+    ),
+  );
+
   return $styles;
 }
