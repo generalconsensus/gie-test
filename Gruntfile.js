@@ -103,5 +103,5 @@ module.exports = function(grunt) {
 
   grunt.registerTask('default', [ ]);
   grunt.registerTask('patternlab', ['compass:patternlab', 'concurrent:patternlab']);
-  grunt.registerTask('patternlablite', ['compass:patternlablite', 'concurrent:patternlablite']);
+  grunt.registerTask('patternlablite', ['compass:patternlab', 'concurrent:patternlablite']);
 };

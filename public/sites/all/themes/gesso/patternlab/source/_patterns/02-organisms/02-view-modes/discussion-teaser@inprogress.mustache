@@ -1,0 +1,29 @@
+<div class="layout-slat node node--discussion node--listing view-mode-listing">
+  <div class="layout-slat__media">
+    <div class="view view-content-author">
+      <div class="views-field views-field-field-user-photo">        
+        <div class="field-content profile-thumb__image--rounded">
+          <img src="{{ img.icon.src }}">
+        </div>  
+      </div>  
+    </div>
+  </div>
+  <div class="layout-slat__content">
+    <h3 class="node__title">
+      <a href="{{ url }}">{{ title }}</a>
+    </h3>
+    <div class="node__posted-by">
+      <span>Posted by <a href="#">{{ author }}</a> on May 6, 2015 at 1:03pm</span>
+    </div>
+    <div class="node__summary">
+      <div class="field field--discussion-desc">
+        <div class="field-items">
+          <div class="field-item even">
+            {{{ summary }}}
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
