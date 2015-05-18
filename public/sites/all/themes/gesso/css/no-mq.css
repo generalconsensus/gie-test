@@ -1,4 +1,4 @@
-/* line 65, ../../../../../../../../../../../Ruby21-x64/lib/ruby/gems/2.1.0/gems/singularitygs-1.1.2/stylesheets/singularitygs/helpers/_clearfix.scss */
+/* line 65, ../../../../../../../../Ruby22-x64/lib/ruby/gems/2.2.0/gems/singularitygs-1.1.2/stylesheets/singularitygs/helpers/_clearfix.scss */
 .clearfix:after, .layout-grid__row:after, .field--funding-deadline:after, .pane--homepage-views-personas-pane .pane__content .view--homepage-views:after, .pane--landing-intro:after, .quicktabs-tabs.quicktabs-style-nostyle:after, .region-footer:after, .view__header:after, .view--homepage-cardflip:after {
   content: "";
   display: table;
@@ -4290,7 +4290,7 @@ div[class*="pane--facetapi-"] .pane__content ul li a {
   display: block;
   height: 60px;
   position: relative;
-  z-index: 2;
+  z-index: 3;
 }
 /* line 16, ../sass/partials/components/_region-navigation.scss */
 .region-navigation > .region__inner {
