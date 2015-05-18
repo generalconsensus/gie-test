@@ -117,10 +117,10 @@ function events_strongarm() {
     'extra_fields' => array(
       'form' => array(
         'path' => array(
-          'weight' => '3',
+          'weight' => '4',
         ),
         'rabbit_hole' => array(
-          'weight' => '2',
+          'weight' => '3',
         ),
       ),
       'display' => array(
@@ -130,7 +130,7 @@ function events_strongarm() {
             'visible' => FALSE,
           ),
           'full' => array(
-            'weight' => '13',
+            'weight' => '16',
             'visible' => FALSE,
           ),
           'listing' => array(
@@ -152,7 +152,7 @@ function events_strongarm() {
             'visible' => TRUE,
           ),
           'full' => array(
-            'weight' => '16',
+            'weight' => '18',
             'visible' => FALSE,
           ),
           'listing' => array(
@@ -166,7 +166,7 @@ function events_strongarm() {
             'visible' => TRUE,
           ),
           'full' => array(
-            'weight' => '14',
+            'weight' => '17',
             'visible' => FALSE,
           ),
           'listing' => array(
@@ -180,7 +180,7 @@ function events_strongarm() {
             'visible' => TRUE,
           ),
           'full' => array(
-            'weight' => '12',
+            'weight' => '15',
             'visible' => FALSE,
           ),
           'listing' => array(
@@ -192,6 +192,16 @@ function events_strongarm() {
           'listing' => array(
             'weight' => '21',
             'visible' => TRUE,
+          ),
+          'full' => array(
+            'weight' => '14',
+            'visible' => FALSE,
+          ),
+        ),
+        'events_at_a_glance_event_attending_flag' => array(
+          'full' => array(
+            'weight' => '12',
+            'visible' => FALSE,
           ),
         ),
       ),
