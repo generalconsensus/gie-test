@@ -1,0 +1,34 @@
+{{> organisms-header }}
+{{> organisms-navigation }}
+
+<main id="main" class="main" role="main" tabindex="-1"
+  <div class="region-content">
+
+    <div class="l-panels-landing preface-empty title sidebar main">
+      <div class="l-preface layout-constrain"></div>
+      <div class="l-title region-landing-title">
+        <div class="layout-constrain">
+          {{> atoms-landing-page-intro-discussions }}
+        </div>
+      </div>
+      <div class="l-wrapper layout-constrain">
+        <aside class="l-sidebar">
+          {{> molecules-filters }}
+        </aside>
+        <div class="l-main">
+          <div class="view view--discussion-listing">
+            {{# listItems.nine }}
+              <div class="views-row">
+                {{> organisms-discussion-teaser }}
+              </div>
+            {{/ listItems.nine }}
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</main>
+
+{{> organisms-postscript }}
+{{> organisms-footer }}

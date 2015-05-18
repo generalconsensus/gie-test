@@ -1,1 +1,17 @@
 .node {}
+
+.node__posted-by {
+  font-style: italic;
+  margin: 0 0 0.25em 0;
+}
+
+.node--listing {
+  .node__title {
+    margin: 0 0 0.25em 0;
+  }
+  .node__summary {
+    line-height: 1.4;
+  }
+}
+
+ 

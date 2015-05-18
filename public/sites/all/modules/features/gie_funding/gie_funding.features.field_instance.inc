@@ -2221,7 +2221,7 @@ function gie_funding_field_default_field_instances() {
         'label' => 'inline',
         'module' => 'taxonomy',
         'settings' => array(
-          'field_delimiter' => '',
+          'field_delimiter' => ', ',
           'linked_field' => array(
             'advanced' => array(
               'class' => '',
