@@ -12,7 +12,7 @@
     height: 60px;
   }
   position: relative;
-  z-index: 2;
+  z-index: 3;
   > .region__inner {
     @extend .layout-constrain;
     position: relative;    
