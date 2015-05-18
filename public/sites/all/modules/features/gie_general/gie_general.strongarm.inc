@@ -582,13 +582,9 @@ function gie_general_strongarm() {
     'toggle_node_user_picture' => 1,
     'toggle_comment_user_picture' => 1,
     'toggle_comment_user_verification' => 1,
-    'toggle_favicon' => 1,
     'default_logo' => 1,
     'logo_path' => '',
     'logo_upload' => '',
-    'default_favicon' => 1,
-    'favicon_path' => '',
-    'favicon_upload' => '',
     'only_use_smacss' => 1,
     'show_first_last' => 0,
     'show_collapsed_expanded' => 0,
@@ -599,7 +595,7 @@ node/*.css
 system/*.css
 admin_menu/admin_menu-rtl.css
 views/css/views.css',
-    'magic_footer_js' => 1,
+    'magic_footer_js' => 0,
     'magic_library_head' => 1,
     'magic_experimental_js' => 0,
     'magic_js_excludes' => '',
