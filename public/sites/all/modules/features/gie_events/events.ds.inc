@@ -89,38 +89,6 @@ function events_ds_field_settings_info() {
         ),
       ),
     ),
-    'field_event_related_sectors' => array(
-      'formatter_settings' => array(
-        'ft' => array(
-          'func' => 'theme_ds_field_expert',
-          'lb' => 'Sectors',
-          'lb-el' => 'div',
-          'lb-cl' => 'card__list-label',
-          'ow' => TRUE,
-          'ow-el' => 'div',
-          'ow-cl' => 'card__list',
-          'ow-def-cl' => FALSE,
-          'ow-at' => '',
-          'ow-def-at' => FALSE,
-        ),
-      ),
-    ),
-    'field_event_related_topics' => array(
-      'formatter_settings' => array(
-        'ft' => array(
-          'func' => 'theme_ds_field_expert',
-          'lb' => 'Topics',
-          'lb-el' => 'div',
-          'lb-cl' => 'card__list-label',
-          'ow' => TRUE,
-          'ow-el' => 'div',
-          'ow-cl' => 'card__list',
-          'ow-def-cl' => FALSE,
-          'ow-at' => '',
-          'ow-def-at' => FALSE,
-        ),
-      ),
-    ),
   );
   $export['node|event|listing'] = $ds_fieldsetting;
 
@@ -237,19 +205,17 @@ function events_ds_layout_settings_info() {
       'main_content' => array(
         0 => 'group_card_content',
         1 => 'title_field',
-        2 => 'events_at_a_glance_entity_view_1',
-        3 => 'field_event_location',
-        4 => 'field_event_related_topics',
-        5 => 'field_event_related_sectors',
+        2 => 'field_event_date',
+        3 => 'events_at_a_glance_related_org_card_event',
+        4 => 'field_event_location',
       ),
     ),
     'fields' => array(
       'group_card_content' => 'main_content',
       'title_field' => 'main_content',
-      'events_at_a_glance_entity_view_1' => 'main_content',
+      'field_event_date' => 'main_content',
+      'events_at_a_glance_related_org_card_event' => 'main_content',
       'field_event_location' => 'main_content',
-      'field_event_related_topics' => 'main_content',
-      'field_event_related_sectors' => 'main_content',
     ),
     'classes' => array(
       'layout_class' => array(

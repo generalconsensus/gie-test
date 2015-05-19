@@ -82,15 +82,15 @@ function events_default_page_manager_pages() {
     $display->content['new-f051a61e-8fec-4c84-a0ec-681d19d44a49'] = $pane;
     $display->panels['main'][0] = 'new-f051a61e-8fec-4c84-a0ec-681d19d44a49';
     $pane = new stdClass();
-    $pane->pid = 'new-175914f1-d7ba-416a-b6a0-5441bbed1f09';
+    $pane->pid = 'new-f8f0332f-5f2c-4e82-bbc9-5813aabbad55';
     $pane->panel = 'sidebar';
     $pane->type = 'block';
-    $pane->subtype = 'facetapi-s8Djc5hBKrGsa0EGjWCz4fJ1rz4PjtoJ';
+    $pane->subtype = 'facetapi-7agkrpJSmLA0AUAWiFyPTn51dEa0Tgfv';
     $pane->shown = TRUE;
     $pane->access = array();
     $pane->configuration = array(
       'override_title' => 1,
-      'override_title_text' => '',
+      'override_title_text' => 'Related Regions',
       'override_title_heading' => 'h2',
     );
     $pane->cache = array();
@@ -101,9 +101,55 @@ function events_default_page_manager_pages() {
     $pane->extras = array();
     $pane->position = 0;
     $pane->locks = array();
-    $pane->uuid = '175914f1-d7ba-416a-b6a0-5441bbed1f09';
-    $display->content['new-175914f1-d7ba-416a-b6a0-5441bbed1f09'] = $pane;
-    $display->panels['sidebar'][0] = 'new-175914f1-d7ba-416a-b6a0-5441bbed1f09';
+    $pane->uuid = 'f8f0332f-5f2c-4e82-bbc9-5813aabbad55';
+    $display->content['new-f8f0332f-5f2c-4e82-bbc9-5813aabbad55'] = $pane;
+    $display->panels['sidebar'][0] = 'new-f8f0332f-5f2c-4e82-bbc9-5813aabbad55';
+    $pane = new stdClass();
+    $pane->pid = 'new-59524a33-3f51-4868-8054-99668dc4626a';
+    $pane->panel = 'sidebar';
+    $pane->type = 'block';
+    $pane->subtype = 'facetapi-eathVF1ycdCqo6DtNNcwpLPKM1d7Ho1H';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array(
+      'override_title' => 1,
+      'override_title_text' => 'Related Countries',
+      'override_title_heading' => 'h2',
+    );
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
+    $pane->css = array();
+    $pane->extras = array();
+    $pane->position = 1;
+    $pane->locks = array();
+    $pane->uuid = '59524a33-3f51-4868-8054-99668dc4626a';
+    $display->content['new-59524a33-3f51-4868-8054-99668dc4626a'] = $pane;
+    $display->panels['sidebar'][1] = 'new-59524a33-3f51-4868-8054-99668dc4626a';
+    $pane = new stdClass();
+    $pane->pid = 'new-c75786a1-f582-4331-9b08-71f49cc91d93';
+    $pane->panel = 'sidebar';
+    $pane->type = 'block';
+    $pane->subtype = 'facetapi-V4QSx81ur2rH1Aaplmf5D4qMXgM7csu4';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array(
+      'override_title' => 1,
+      'override_title_text' => 'Related Sectors',
+      'override_title_heading' => 'h2',
+    );
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
+    $pane->css = array();
+    $pane->extras = array();
+    $pane->position = 2;
+    $pane->locks = array();
+    $pane->uuid = 'c75786a1-f582-4331-9b08-71f49cc91d93';
+    $display->content['new-c75786a1-f582-4331-9b08-71f49cc91d93'] = $pane;
+    $display->panels['sidebar'][2] = 'new-c75786a1-f582-4331-9b08-71f49cc91d93';
     $pane = new stdClass();
     $pane->pid = 'new-09b9e23c-a945-402b-af15-e74aa944a491';
     $pane->panel = 'title';

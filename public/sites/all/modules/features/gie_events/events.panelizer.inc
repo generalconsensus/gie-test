@@ -77,43 +77,33 @@ function events_panelizer_defaults() {
     $display->content['new-da000b27-5f80-47ce-af7e-719230f086c3'] = $pane;
     $display->panels['bottom'][0] = 'new-da000b27-5f80-47ce-af7e-719230f086c3';
     $pane = new stdClass();
-    $pane->pid = 'new-899f8b2e-c5fa-4ef9-82be-7043460d6b86';
+    $pane->pid = 'new-f67e8518-4780-4fd4-b13a-9d1705d772ac';
     $pane->panel = 'bottom_sidebar';
-    $pane->type = 'views';
-    $pane->subtype = 'events_at_a_glance';
+    $pane->type = 'flag_link';
+    $pane->subtype = 'node';
     $pane->shown = TRUE;
     $pane->access = array();
     $pane->configuration = array(
-      'override_pager_settings' => 0,
-      'use_pager' => 0,
-      'nodes_per_page' => '1',
-      'pager_id' => '0',
-      'offset' => '0',
-      'more_link' => 0,
-      'feed_icons' => 0,
-      'panel_args' => 0,
-      'link_to_view' => 0,
-      'args' => '',
-      'url' => '',
-      'display' => 'event_attending_flag',
-      'context' => array(
-        0 => '',
-      ),
+      'flag_name' => 'attending',
+      'context' => 'panelizer',
       'override_title' => 1,
-      'override_title_text' => '',
+      'override_title_text' => 'Attending This Event? <p>Click below to mark yourself as <br>an attendee for this event!</p>',
       'override_title_heading' => 'h2',
     );
     $pane->cache = array();
     $pane->style = array(
       'settings' => NULL,
     );
-    $pane->css = array();
+    $pane->css = array(
+      'css_id' => '',
+      'css_class' => 'pane--favorite-this',
+    );
     $pane->extras = array();
     $pane->position = 0;
     $pane->locks = array();
-    $pane->uuid = '899f8b2e-c5fa-4ef9-82be-7043460d6b86';
-    $display->content['new-899f8b2e-c5fa-4ef9-82be-7043460d6b86'] = $pane;
-    $display->panels['bottom_sidebar'][0] = 'new-899f8b2e-c5fa-4ef9-82be-7043460d6b86';
+    $pane->uuid = 'f67e8518-4780-4fd4-b13a-9d1705d772ac';
+    $display->content['new-f67e8518-4780-4fd4-b13a-9d1705d772ac'] = $pane;
+    $display->panels['bottom_sidebar'][0] = 'new-f67e8518-4780-4fd4-b13a-9d1705d772ac';
     $pane = new stdClass();
     $pane->pid = 'new-fc6fe658-b854-4c4e-ba88-e5e4f5a5b139';
     $pane->panel = 'bottom_sidebar';

@@ -21,13 +21,12 @@ function events_field_group_info() {
   $field_group->parent_name = '';
   $field_group->data = array(
     'label' => 'Card Content',
-    'weight' => '1',
+    'weight' => '0',
     'children' => array(
       0 => 'title_field',
-      1 => 'field_event_location',
-      2 => 'field_event_related_sectors',
-      3 => 'field_event_related_topics',
-      4 => 'events_at_a_glance_entity_view_1',
+      1 => 'field_event_date',
+      2 => 'field_event_location',
+      3 => 'events_at_a_glance_related_org_card_event',
     ),
     'format_type' => 'div',
     'format_settings' => array(
