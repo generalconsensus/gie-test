@@ -59,11 +59,12 @@ function events_field_group_info() {
     'label' => 'Event Details First',
     'weight' => '1',
     'children' => array(
-      0 => 'field_event_type',
+      0 => 'field_event_program',
       1 => 'field_event_rsvp_url',
-      2 => 'field_event_website_url',
-      3 => 'field_event_program',
-      4 => 'field_event_related_organization',
+      2 => 'field_event_type',
+      3 => 'field_event_website_url',
+      4 => 'field_event_needs',
+      5 => 'field_event_size',
     ),
     'format_type' => 'div',
     'format_settings' => array(
@@ -93,12 +94,12 @@ function events_field_group_info() {
   $field_group->parent_name = 'group_event_details';
   $field_group->data = array(
     'label' => 'Event Details Second',
-    'weight' => '2',
+    'weight' => '3',
     'children' => array(
-      0 => 'field_event_related_sectors',
+      0 => 'field_event_country',
       1 => 'field_event_related_regions',
-      2 => 'field_event_related_topics',
-      3 => 'field_event_country',
+      2 => 'field_event_related_sectors',
+      3 => 'field_event_related_topics',
     ),
     'format_type' => 'div',
     'format_settings' => array(
