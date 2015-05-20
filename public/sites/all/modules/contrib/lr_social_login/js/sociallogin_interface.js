@@ -2,8 +2,8 @@ var LoginRadius_Social_JS;
 
 if (window.LoginRadius_Social_JS != true) {
     LoginRadius_Social_JS = true;
-    var options = {};
-    options.login = true;
+    var lr_options = {};
+    lr_options.login = true;
     LoginRadius_SocialLogin.util.ready(function () {
         $ui = LoginRadius_SocialLogin.lr_login_settings;
         $ui.interfacesize = Drupal.settings.lrsociallogin.interfacesize;
@@ -16,7 +16,7 @@ if (window.LoginRadius_Social_JS != true) {
         }
         $ui.callback = Drupal.settings.lrsociallogin.callback;
         $ui.lrinterfacecontainer = "interfacecontainerdiv";
-        LoginRadius_SocialLogin.init(options);
+        LoginRadius_SocialLogin.init(lr_options);
     });
 }
 LoginRadiusSDK.setLoginCallback(function () {
