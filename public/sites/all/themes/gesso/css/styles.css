@@ -2365,6 +2365,16 @@ input.throbbing {
   display: none;
 }
 
+/* line 1, ../sass/partials/components/_fineprint.scss */
+.fineprint {
+  -webkit-hyphens: none;
+  -moz-hyphens: none;
+  hyphens: none;
+  color: #888;
+  font-size: 0.75em;
+  line-height: 1.3;
+}
+
 /* line 3, ../sass/partials/components/_flag-favorite.scss */
 .flag-favorite a {
   margin-bottom: 0.5em;
@@ -3892,7 +3902,7 @@ div[class*="pane--facetapi-"] .pane__content ul li a {
 @media (min-width: 50em) {
   /* line 1, ../sass/partials/components/pane/_pane--homepage-header.scss */
   .pane--homepage-header {
-    min-height: 385px;
+    min-height: 300px;
     padding: 2em;
   }
 }
@@ -3953,13 +3963,13 @@ div[class*="pane--facetapi-"] .pane__content ul li a {
   font-size: 1.25em;
   font-weight: 300;
   margin: 0;
-  padding: 0 0 1em 0;
+  padding: 0 0 0.5em 0;
 }
 @media (min-width: 50em) {
   /* line 57, ../sass/partials/components/pane/_pane--homepage-header.scss */
   .pane--homepage-header .pane__content p {
     font-size: 2em;
-    padding: 0 0 2em 0;
+    padding: 0 0 1em 0;
   }
 }
 
