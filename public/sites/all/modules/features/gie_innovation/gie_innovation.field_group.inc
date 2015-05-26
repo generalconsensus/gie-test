@@ -61,6 +61,7 @@ function gie_innovation_field_group_info() {
       1 => 'innovation_listing_counts_comments',
       2 => 'innovation_listing_counts_orgs',
       3 => 'innovation_listing_counts_favorites',
+      4 => 'innovation_listing_counts_assistance',
     ),
     'format_type' => 'div',
     'format_settings' => array(
