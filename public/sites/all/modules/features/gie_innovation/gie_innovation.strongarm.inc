@@ -345,6 +345,10 @@ function gie_innovation_strongarm() {
             'weight' => '10',
             'visible' => FALSE,
           ),
+          'listing' => array(
+            'weight' => '10',
+            'visible' => FALSE,
+          ),
         ),
         'innovation_at_a_glance_favorites' => array(
           'at_a_glance' => array(
@@ -360,6 +364,10 @@ function gie_innovation_strongarm() {
             'visible' => FALSE,
           ),
           'full' => array(
+            'weight' => '10',
+            'visible' => FALSE,
+          ),
+          'listing' => array(
             'weight' => '10',
             'visible' => FALSE,
           ),
@@ -380,6 +388,16 @@ function gie_innovation_strongarm() {
           'full' => array(
             'weight' => '10',
             'visible' => FALSE,
+          ),
+          'listing' => array(
+            'weight' => '10',
+            'visible' => FALSE,
+          ),
+        ),
+        'innovation_listing_counts_assistance' => array(
+          'listing' => array(
+            'weight' => '8',
+            'visible' => TRUE,
           ),
         ),
       ),
