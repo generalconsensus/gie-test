@@ -3383,7 +3383,7 @@ header.header {
   display: inline-block;
   line-height: 0;
   list-style: none;
-  margin: 0;
+  margin: 10px 0;
   padding: 0;
 }
 
@@ -3434,7 +3434,7 @@ header.header {
   font-size: 16px;
   height: 32px;
   line-height: 32px;
-  padding: 0 10px;
+  padding: 0 10px !important;
   text-align: center;
 }
 
