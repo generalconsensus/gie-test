@@ -13,6 +13,105 @@ function gie_funding_field_group_info() {
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
   $field_group->api_version = 1;
+  $field_group->identifier = 'group_card_author_inner|node|funding|highlights';
+  $field_group->group_name = 'group_card_author_inner';
+  $field_group->entity_type = 'node';
+  $field_group->bundle = 'funding';
+  $field_group->mode = 'highlights';
+  $field_group->parent_name = 'group_card_author';
+  $field_group->data = array(
+    'label' => 'Card Author Inner',
+    'weight' => '32',
+    'children' => array(
+      0 => 'field_funding_author',
+      1 => 'post_date',
+    ),
+    'format_type' => 'div',
+    'format_settings' => array(
+      'label' => 'Card Author Inner',
+      'instance_settings' => array(
+        'id' => '',
+        'classes' => 'card__author-inner',
+        'description' => '',
+        'show_label' => '0',
+        'label_element' => 'h3',
+        'effect' => 'none',
+        'speed' => 'none',
+      ),
+      'formatter' => 'open',
+    ),
+  );
+  $export['group_card_author_inner|node|funding|highlights'] = $field_group;
+
+  $field_group = new stdClass();
+  $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
+  $field_group->api_version = 1;
+  $field_group->identifier = 'group_card_author|node|funding|highlights';
+  $field_group->group_name = 'group_card_author';
+  $field_group->entity_type = 'node';
+  $field_group->bundle = 'funding';
+  $field_group->mode = 'highlights';
+  $field_group->parent_name = 'group_card_content';
+  $field_group->data = array(
+    'label' => 'Card Author',
+    'weight' => '17',
+    'children' => array(
+      0 => 'group_card_author_inner',
+    ),
+    'format_type' => 'div',
+    'format_settings' => array(
+      'label' => 'Card Author',
+      'instance_settings' => array(
+        'id' => '',
+        'classes' => 'card__author',
+        'description' => '',
+        'show_label' => '0',
+        'label_element' => 'h3',
+        'effect' => 'none',
+        'speed' => 'none',
+      ),
+      'formatter' => 'open',
+    ),
+  );
+  $export['group_card_author|node|funding|highlights'] = $field_group;
+
+  $field_group = new stdClass();
+  $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
+  $field_group->api_version = 1;
+  $field_group->identifier = 'group_card_content|node|funding|highlights';
+  $field_group->group_name = 'group_card_content';
+  $field_group->entity_type = 'node';
+  $field_group->bundle = 'funding';
+  $field_group->mode = 'highlights';
+  $field_group->parent_name = '';
+  $field_group->data = array(
+    'label' => 'Card Content',
+    'weight' => '0',
+    'children' => array(
+      0 => 'title_field',
+      1 => 'field_funding_type',
+      2 => 'group_card_author',
+    ),
+    'format_type' => 'div',
+    'format_settings' => array(
+      'label' => 'Card Content',
+      'instance_settings' => array(
+        'id' => '',
+        'classes' => 'card__content',
+        'description' => '',
+        'show_label' => '0',
+        'label_element' => 'h3',
+        'effect' => 'none',
+        'speed' => 'none',
+      ),
+      'formatter' => 'open',
+    ),
+  );
+  $export['group_card_content|node|funding|highlights'] = $field_group;
+
+  $field_group = new stdClass();
+  $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
+  $field_group->api_version = 1;
   $field_group->identifier = 'group_card_content|node|funding|listing';
   $field_group->group_name = 'group_card_content';
   $field_group->entity_type = 'node';
