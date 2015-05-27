@@ -24,3 +24,10 @@ function gie_user_update_7001() {
     field_delete_field('field_user_connect');
     field_purge_batch(1);
 }
+
+/**
+ * Delete User Connect field again.
+ */
+function gie_user_update_7002() {
+  field_delete_field('field_user_connect');
+}
