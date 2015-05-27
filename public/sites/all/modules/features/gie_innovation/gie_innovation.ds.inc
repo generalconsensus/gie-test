@@ -306,6 +306,77 @@ function gie_innovation_ds_field_settings_info() {
 
   $ds_fieldsetting = new stdClass();
   $ds_fieldsetting->api_version = 1;
+  $ds_fieldsetting->id = 'node|innovation|highlights';
+  $ds_fieldsetting->entity_type = 'node';
+  $ds_fieldsetting->bundle = 'innovation';
+  $ds_fieldsetting->view_mode = 'highlights';
+  $ds_fieldsetting->settings = array(
+    'post_date' => array(
+      'weight' => '6',
+      'label' => 'hidden',
+      'format' => 'ds_post_date_gie_general_slash_no_time',
+      'formatter_settings' => array(
+        'ft' => array(
+          'func' => 'theme_ds_field_expert',
+          'fi' => TRUE,
+          'fi-el' => 'div',
+          'fi-cl' => 'card__author-date',
+          'fi-at' => '',
+          'fi-def-at' => FALSE,
+          'fi-odd-even' => FALSE,
+        ),
+        'field_delimiter' => '',
+        'linked_field' => array(
+          'linked' => 0,
+          'destination' => '',
+          'advanced' => array(
+            'title' => '',
+            'target' => '',
+            'class' => '',
+            'rel' => '',
+            'text' => '',
+          ),
+        ),
+      ),
+    ),
+    'title_field' => array(
+      'formatter_settings' => array(
+        'ft' => array(
+          'func' => 'theme_ds_field_expert',
+          'fi' => TRUE,
+          'fi-el' => 'h3',
+          'fi-cl' => 'card__title',
+          'fi-at' => '',
+          'fi-def-at' => FALSE,
+          'fi-odd-even' => FALSE,
+        ),
+      ),
+    ),
+    'field_innovation_poc' => array(
+      'formatter_settings' => array(
+        'ft' => array(
+          'func' => 'theme_ds_field_expert',
+        ),
+      ),
+    ),
+    'field_innovation_type' => array(
+      'formatter_settings' => array(
+        'ft' => array(
+          'func' => 'theme_ds_field_expert',
+          'fi' => TRUE,
+          'fi-el' => 'h2',
+          'fi-cl' => 'card__type',
+          'fi-at' => '',
+          'fi-def-at' => FALSE,
+          'fi-odd-even' => FALSE,
+        ),
+      ),
+    ),
+  );
+  $export['node|innovation|highlights'] = $ds_fieldsetting;
+
+  $ds_fieldsetting = new stdClass();
+  $ds_fieldsetting->api_version = 1;
   $ds_fieldsetting->id = 'node|innovation|listing';
   $ds_fieldsetting->entity_type = 'node';
   $ds_fieldsetting->bundle = 'innovation';
@@ -665,6 +736,53 @@ function gie_innovation_ds_layout_settings_info() {
     'layout_link_custom' => '',
   );
   $export['node|innovation|full'] = $ds_layout;
+
+  $ds_layout = new stdClass();
+  $ds_layout->api_version = 1;
+  $ds_layout->id = 'node|innovation|highlights';
+  $ds_layout->entity_type = 'node';
+  $ds_layout->bundle = 'innovation';
+  $ds_layout->view_mode = 'highlights';
+  $ds_layout->layout = 'article';
+  $ds_layout->settings = array(
+    'regions' => array(
+      'main_content' => array(
+        0 => 'field_innovation_poc',
+        1 => 'post_date',
+        2 => 'field_innovation_type',
+        3 => 'title_field',
+        4 => 'group_card_author',
+        5 => 'group_card_author_inner',
+        6 => 'group_card_content',
+      ),
+    ),
+    'fields' => array(
+      'field_innovation_poc' => 'main_content',
+      'post_date' => 'main_content',
+      'field_innovation_type' => 'main_content',
+      'title_field' => 'main_content',
+      'group_card_author' => 'main_content',
+      'group_card_author_inner' => 'main_content',
+      'group_card_content' => 'main_content',
+    ),
+    'classes' => array(
+      'layout_class' => array(
+        'card' => 'card',
+        'card--background' => 'card--background',
+      ),
+    ),
+    'wrappers' => array(
+      'header' => 'div',
+      'main_content' => 'div',
+      'footer' => 'div',
+    ),
+    'layout_wrapper' => 'div',
+    'layout_attributes' => '',
+    'layout_attributes_merge' => 1,
+    'layout_link_attribute' => '',
+    'layout_link_custom' => '',
+  );
+  $export['node|innovation|highlights'] = $ds_layout;
 
   $ds_layout = new stdClass();
   $ds_layout->api_version = 1;
