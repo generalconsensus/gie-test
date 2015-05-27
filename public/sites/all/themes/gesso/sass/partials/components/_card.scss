@@ -23,6 +23,21 @@
 .card__date {
   background: $orange;
   color: #fff;
+  font-size: $font-size-xxl;
+  font-weight: bold;
+  margin: -16px -16px 16px -16px;
+  padding: 1em 0.25em;
+  text-align: center;
+  text-transform: uppercase;
+  &:before {
+    @include image-replace(24px,25px);
+    @include svg-background(icon-calendar-24-25-white);
+    content: "";
+    display: inline-block;
+    margin-right: 10px;
+    position: relative;
+    top: 3px;
+  }
 }
 
 .card__content {
@@ -43,14 +58,14 @@
 .card__primary-title {
   @extend .card__title;
   border-bottom: 1px solid $card-border-color;
-  padding: 0 0 0.75em 0;
+  margin: 0 0 1em 0;
+  padding: 0 0 1em 0;
 }
 
 .card--background {
   background-image: url(../images/highlights_background.png);
   background-repeat: no-repeat;
   background-position: 100%;
-  //padding-bottom: 90px;
   position: relative;
   .card__author {
     bottom: 0;
