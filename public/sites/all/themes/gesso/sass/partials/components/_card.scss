@@ -20,6 +20,11 @@
   line-height: 0;
 }
 
+.card__date {
+  background: $orange;
+  color: #fff;
+}
+
 .card__content {
   padding: 16px 16px 66px 16px; // extra bottom space for icons
   .card--button & {
@@ -42,7 +47,7 @@
 }
 
 .card--background {
-  background-image: url(../images/bg/icon-innovations-white-101x254.png);
+  background-image: url(../images/highlights_background.png);
   background-repeat: no-repeat;
   background-position: 100%;
   //padding-bottom: 90px;

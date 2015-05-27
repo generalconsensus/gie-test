@@ -1,4 +1,4 @@
-/* line 65, ../../../../../../../../Ruby22-x64/lib/ruby/gems/2.2.0/gems/singularitygs-1.1.2/stylesheets/singularitygs/helpers/_clearfix.scss */
+/* line 65, ../../../../../../../../../../../Ruby21-x64/lib/ruby/gems/2.1.0/gems/singularitygs-1.1.2/stylesheets/singularitygs/helpers/_clearfix.scss */
 .clearfix:after, .layout-grid__row:after, .field--funding-deadline:after, .pane--homepage-views-personas-pane .pane__content .view--homepage-views:after, .pane--landing-intro:after, .quicktabs-tabs.quicktabs-style-nostyle:after, .region-footer:after, .view__header:after, .view--homepage-cardflip:after {
   content: "";
   display: table;
@@ -1693,68 +1693,74 @@ input.throbbing {
 }
 
 /* line 23, ../sass/partials/components/_card.scss */
+.card__date {
+  background: #dc5606;
+  color: #fff;
+}
+
+/* line 28, ../sass/partials/components/_card.scss */
 .card__content {
   padding: 16px 16px 66px 16px;
 }
-/* line 25, ../sass/partials/components/_card.scss */
+/* line 30, ../sass/partials/components/_card.scss */
 .card--button .card__content {
   padding-bottom: 100px;
 }
 
-/* line 30, ../sass/partials/components/_card.scss */
+/* line 35, ../sass/partials/components/_card.scss */
 .card__title, .card__primary-title {
   font-weight: normal;
   margin: 0 0 0.75em 0;
 }
-/* line 33, ../sass/partials/components/_card.scss */
+/* line 38, ../sass/partials/components/_card.scss */
 .card__title a, .card__primary-title a {
   font-weight: normal;
 }
 
-/* line 38, ../sass/partials/components/_card.scss */
+/* line 43, ../sass/partials/components/_card.scss */
 .card__primary-title {
   border-bottom: 1px solid #f0f0f0;
   padding: 0 0 0.75em 0;
 }
 
-/* line 44, ../sass/partials/components/_card.scss */
+/* line 49, ../sass/partials/components/_card.scss */
 .card--background {
-  background-image: url(../images/bg/icon-innovations-white-101x254.png);
+  background-image: url(../images/highlights_background.png);
   background-repeat: no-repeat;
   background-position: 100%;
   position: relative;
 }
-/* line 50, ../sass/partials/components/_card.scss */
+/* line 55, ../sass/partials/components/_card.scss */
 .card--background .card__author {
   bottom: 0;
   left: 0;
   position: absolute;
   width: 100%;
 }
-/* line 56, ../sass/partials/components/_card.scss */
+/* line 61, ../sass/partials/components/_card.scss */
 .card--background .card__author-inner {
   border-top: 1px solid #f0f0f0;
   margin: 0 16px;
   overflow: hidden;
   padding: 10px 0;
 }
-/* line 62, ../sass/partials/components/_card.scss */
+/* line 67, ../sass/partials/components/_card.scss */
 .card--background .card__content {
   padding: 16px 16px 100px 16px;
 }
 
-/* line 67, ../sass/partials/components/_card.scss */
+/* line 72, ../sass/partials/components/_card.scss */
 .card__author {
   font-size: 0.75em;
   line-height: 1.3;
   overflow: hidden;
 }
-/* line 71, ../sass/partials/components/_card.scss */
+/* line 76, ../sass/partials/components/_card.scss */
 .card__author .card__author-image {
   float: left;
   margin: 0 0.5em 0 0;
 }
-/* line 74, ../sass/partials/components/_card.scss */
+/* line 79, ../sass/partials/components/_card.scss */
 .card__author .card__author-image img {
   -webkit-border-radius: 50%;
   -moz-border-radius: 50%;
@@ -1763,35 +1769,35 @@ input.throbbing {
   border-radius: 50%;
   border: 1px solid #cecfcb;
 }
-/* line 79, ../sass/partials/components/_card.scss */
+/* line 84, ../sass/partials/components/_card.scss */
 .card__author .card__author-name {
   font-weight: bold;
 }
 
-/* line 87, ../sass/partials/components/_card.scss */
+/* line 92, ../sass/partials/components/_card.scss */
 .card__number {
   font-size: 1.3125em;
 }
 
-/* line 91, ../sass/partials/components/_card.scss */
+/* line 96, ../sass/partials/components/_card.scss */
 .card__due-date {
   font-size: 0.875em;
 }
 
-/* line 95, ../sass/partials/components/_card.scss */
+/* line 100, ../sass/partials/components/_card.scss */
 .card__list {
   font-size: 0.75em;
   line-height: 1.3;
   margin: 1em 0;
 }
 
-/* line 101, ../sass/partials/components/_card.scss */
+/* line 106, ../sass/partials/components/_card.scss */
 .card__list-label {
   display: inline;
   font-weight: bold;
 }
 
-/* line 106, ../sass/partials/components/_card.scss */
+/* line 111, ../sass/partials/components/_card.scss */
 .card__button {
   bottom: 10px;
   left: 0;
@@ -1801,7 +1807,7 @@ input.throbbing {
   width: 100%;
 }
 
-/* line 120, ../sass/partials/components/_card.scss */
+/* line 125, ../sass/partials/components/_card.scss */
 .card__counts > .view .has-icon--comment:before, .card__counts > .view .has-icon--camera:before, .card__counts > .view .has-icon--favorite:before, .card__counts > .view .has-icon--member:before, .card__counts > .view .has-icon--organization:before, .card__counts > .view .has-icon--evidence:before, .card__counts > .view .has-icon--innovation:before, .card__counts > .view .has-icon--assistance:before, .view--at-a-glance .has-icon--amount:before, .view--at-a-glance .has-icon--comment:before, .view--at-a-glance .has-icon--camera:before, .view--at-a-glance .has-icon--favorite:before, .view--at-a-glance .has-icon--member:before, .view--at-a-glance .has-icon--organization:before, .view--at-a-glance .has-icon--evidence:before, .view--at-a-glance .has-icon--innovation:before {
   content: "";
   display: block;
@@ -1811,7 +1817,7 @@ input.throbbing {
   left: 50%;
 }
 
-/* line 129, ../sass/partials/components/_card.scss */
+/* line 134, ../sass/partials/components/_card.scss */
 .card__counts {
   bottom: 10px;
   left: 0;
@@ -1821,7 +1827,7 @@ input.throbbing {
   text-align: center;
   width: 100%;
 }
-/* line 137, ../sass/partials/components/_card.scss */
+/* line 142, ../sass/partials/components/_card.scss */
 .card__counts > .view {
   display: inline-block;
   font-size: 0.75em;
@@ -1831,7 +1837,7 @@ input.throbbing {
   padding: 0 6%;
   text-align: center;
 }
-/* line 146, ../sass/partials/components/_card.scss */
+/* line 151, ../sass/partials/components/_card.scss */
 .card__counts > .view .has-icon--comment:before {
   height: 17px;
   overflow: hidden;
@@ -1848,7 +1854,7 @@ input.throbbing {
   height: 150%;
   width: 0;
 }
-/* line 154, ../sass/partials/components/_card.scss */
+/* line 159, ../sass/partials/components/_card.scss */
 .card__counts > .view .has-icon--camera:before {
   height: 17px;
   overflow: hidden;
@@ -1865,7 +1871,7 @@ input.throbbing {
   height: 150%;
   width: 0;
 }
-/* line 162, ../sass/partials/components/_card.scss */
+/* line 167, ../sass/partials/components/_card.scss */
 .card__counts > .view .has-icon--favorite:before {
   height: 17px;
   overflow: hidden;
@@ -1882,7 +1888,7 @@ input.throbbing {
   height: 150%;
   width: 0;
 }
-/* line 170, ../sass/partials/components/_card.scss */
+/* line 175, ../sass/partials/components/_card.scss */
 .card__counts > .view .has-icon--member:before {
   height: 17px;
   overflow: hidden;
@@ -1899,7 +1905,7 @@ input.throbbing {
   height: 150%;
   width: 0;
 }
-/* line 178, ../sass/partials/components/_card.scss */
+/* line 183, ../sass/partials/components/_card.scss */
 .card__counts > .view .has-icon--organization:before {
   height: 17px;
   overflow: hidden;
@@ -1916,7 +1922,7 @@ input.throbbing {
   height: 150%;
   width: 0;
 }
-/* line 186, ../sass/partials/components/_card.scss */
+/* line 191, ../sass/partials/components/_card.scss */
 .card__counts > .view .has-icon--evidence:before {
   height: 17px;
   overflow: hidden;
@@ -1933,7 +1939,7 @@ input.throbbing {
   height: 150%;
   width: 0;
 }
-/* line 194, ../sass/partials/components/_card.scss */
+/* line 199, ../sass/partials/components/_card.scss */
 .card__counts > .view .has-icon--innovation:before {
   height: 20px;
   overflow: hidden;
@@ -1950,7 +1956,7 @@ input.throbbing {
   height: 150%;
   width: 0;
 }
-/* line 202, ../sass/partials/components/_card.scss */
+/* line 207, ../sass/partials/components/_card.scss */
 .card__counts > .view .has-icon--assistance:before {
   height: 17px;
   overflow: hidden;
@@ -3822,7 +3828,7 @@ div[class*="pane--facetapi-"] .pane__content ul li a {
 
 /* line 1, ../sass/partials/components/pane/_pane--favorite-this.scss */
 .pane--favorite-this {
-  background: #f8f8f8 url(../images/background--lightbulb.png) no-repeat 100% 0;
+  background: #f8f8f8 url(../images/favorite_background.png) no-repeat 100% 0;
   padding: 1em;
 }
 /* line 4, ../sass/partials/components/pane/_pane--favorite-this.scss */
@@ -4087,7 +4093,7 @@ div[class*="pane--facetapi-"] .pane__content ul li a {
   -webkit-hyphens: none;
   -moz-hyphens: none;
   hyphens: none;
-  background: url(../images/background--path.png) no-repeat 100% 0;
+  background: url(../images/intro_background.png) no-repeat 100% 0;
   margin: 0;
   min-height: 300px;
   padding: 25px 0 0 0;
