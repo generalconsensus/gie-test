@@ -96,6 +96,77 @@ function gie_funding_ds_field_settings_info() {
 
   $ds_fieldsetting = new stdClass();
   $ds_fieldsetting->api_version = 1;
+  $ds_fieldsetting->id = 'node|funding|highlights';
+  $ds_fieldsetting->entity_type = 'node';
+  $ds_fieldsetting->bundle = 'funding';
+  $ds_fieldsetting->view_mode = 'highlights';
+  $ds_fieldsetting->settings = array(
+    'post_date' => array(
+      'weight' => '9',
+      'label' => 'hidden',
+      'format' => 'ds_post_date_gie_general_slash_no_time',
+      'formatter_settings' => array(
+        'ft' => array(
+          'func' => 'theme_ds_field_expert',
+          'fi' => TRUE,
+          'fi-el' => 'div',
+          'fi-cl' => 'card__author-date',
+          'fi-at' => '',
+          'fi-def-at' => FALSE,
+          'fi-odd-even' => FALSE,
+        ),
+        'field_delimiter' => '',
+        'linked_field' => array(
+          'linked' => 0,
+          'destination' => '',
+          'advanced' => array(
+            'title' => '',
+            'target' => '',
+            'class' => '',
+            'rel' => '',
+            'text' => '',
+          ),
+        ),
+      ),
+    ),
+    'title_field' => array(
+      'formatter_settings' => array(
+        'ft' => array(
+          'func' => 'theme_ds_field_expert',
+          'fi' => TRUE,
+          'fi-el' => 'h3',
+          'fi-cl' => 'card__title',
+          'fi-at' => '',
+          'fi-def-at' => FALSE,
+          'fi-odd-even' => FALSE,
+        ),
+      ),
+    ),
+    'field_funding_author' => array(
+      'formatter_settings' => array(
+        'ft' => array(
+          'func' => 'theme_ds_field_expert',
+        ),
+      ),
+    ),
+    'field_funding_type' => array(
+      'formatter_settings' => array(
+        'ft' => array(
+          'func' => 'theme_ds_field_expert',
+          'fi' => TRUE,
+          'fi-el' => 'h2',
+          'fi-cl' => 'card__type',
+          'fi-at' => '',
+          'fi-def-at' => FALSE,
+          'fi-odd-even' => FALSE,
+        ),
+      ),
+    ),
+  );
+  $export['node|funding|highlights'] = $ds_fieldsetting;
+
+  $ds_fieldsetting = new stdClass();
+  $ds_fieldsetting->api_version = 1;
   $ds_fieldsetting->id = 'node|funding|listing';
   $ds_fieldsetting->entity_type = 'node';
   $ds_fieldsetting->bundle = 'funding';
@@ -390,6 +461,56 @@ function gie_funding_ds_layout_settings_info() {
     'layout_link_custom' => '',
   );
   $export['node|funding|full'] = $ds_layout;
+
+  $ds_layout = new stdClass();
+  $ds_layout->api_version = 1;
+  $ds_layout->id = 'node|funding|highlights';
+  $ds_layout->entity_type = 'node';
+  $ds_layout->bundle = 'funding';
+  $ds_layout->view_mode = 'highlights';
+  $ds_layout->layout = 'article';
+  $ds_layout->settings = array(
+    'regions' => array(
+      'main_content' => array(
+        0 => 'group_card_content',
+        1 => 'field_funding_author',
+        2 => 'post_date',
+        3 => 'field_funding_type',
+        4 => 'title_field',
+        5 => 'group_card_author',
+        6 => 'group_card_author_inner',
+      ),
+    ),
+    'fields' => array(
+      'group_card_content' => 'main_content',
+      'field_funding_author' => 'main_content',
+      'post_date' => 'main_content',
+      'field_funding_type' => 'main_content',
+      'title_field' => 'main_content',
+      'group_card_author' => 'main_content',
+      'group_card_author_inner' => 'main_content',
+    ),
+    'limit' => array(
+      'field_funding_type' => '1',
+    ),
+    'classes' => array(
+      'layout_class' => array(
+        'card' => 'card',
+        'card--background' => 'card--background',
+      ),
+    ),
+    'wrappers' => array(
+      'header' => 'div',
+      'main_content' => 'div',
+      'footer' => 'div',
+    ),
+    'layout_wrapper' => 'div',
+    'layout_attributes' => '',
+    'layout_attributes_merge' => 1,
+    'layout_link_attribute' => '',
+    'layout_link_custom' => '',
+  );
+  $export['node|funding|highlights'] = $ds_layout;
 
   $ds_layout = new stdClass();
   $ds_layout->api_version = 1;

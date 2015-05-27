@@ -147,6 +147,9 @@ function gie_resource_strongarm() {
       'details' => array(
         'custom_settings' => TRUE,
       ),
+      'highlights' => array(
+        'custom_settings' => TRUE,
+      ),
     ),
     'extra_fields' => array(
       'form' => array(
@@ -187,6 +190,10 @@ function gie_resource_strongarm() {
             'weight' => '23',
             'visible' => FALSE,
           ),
+          'highlights' => array(
+            'weight' => '14',
+            'visible' => FALSE,
+          ),
         ),
         'resource_counters_comment_count' => array(
           'listing' => array(
@@ -211,6 +218,10 @@ function gie_resource_strongarm() {
           ),
           'details' => array(
             'weight' => '22',
+            'visible' => FALSE,
+          ),
+          'highlights' => array(
+            'weight' => '16',
             'visible' => FALSE,
           ),
         ),
@@ -239,6 +250,10 @@ function gie_resource_strongarm() {
             'weight' => '21',
             'visible' => FALSE,
           ),
+          'highlights' => array(
+            'weight' => '18',
+            'visible' => FALSE,
+          ),
         ),
         'resource_counters_resource_comment_detail' => array(
           'at_a_glance' => array(
@@ -253,6 +268,14 @@ function gie_resource_strongarm() {
             'weight' => '10',
             'visible' => FALSE,
           ),
+          'default' => array(
+            'weight' => '10',
+            'visible' => TRUE,
+          ),
+          'highlights' => array(
+            'weight' => '17',
+            'visible' => FALSE,
+          ),
         ),
         'resource_counters_resource_favorite_count_detail' => array(
           'at_a_glance' => array(
@@ -265,6 +288,14 @@ function gie_resource_strongarm() {
           ),
           'details' => array(
             'weight' => '10',
+            'visible' => FALSE,
+          ),
+          'default' => array(
+            'weight' => '10',
+            'visible' => TRUE,
+          ),
+          'highlights' => array(
+            'weight' => '15',
             'visible' => FALSE,
           ),
         ),

@@ -147,6 +147,9 @@ function gie_funding_strongarm() {
       'details' => array(
         'custom_settings' => FALSE,
       ),
+      'highlights' => array(
+        'custom_settings' => TRUE,
+      ),
     ),
     'extra_fields' => array(
       'form' => array(
@@ -183,6 +186,10 @@ function gie_funding_strongarm() {
             'weight' => '23',
             'visible' => FALSE,
           ),
+          'highlights' => array(
+            'weight' => '17',
+            'visible' => FALSE,
+          ),
         ),
         'funding_fields_link_url' => array(
           'full' => array(
@@ -203,6 +210,10 @@ function gie_funding_strongarm() {
           ),
           'at_a_glance' => array(
             'weight' => '15',
+            'visible' => FALSE,
+          ),
+          'highlights' => array(
+            'weight' => '14',
             'visible' => FALSE,
           ),
         ),
@@ -227,6 +238,10 @@ function gie_funding_strongarm() {
             'weight' => '14',
             'visible' => FALSE,
           ),
+          'highlights' => array(
+            'weight' => '13',
+            'visible' => FALSE,
+          ),
         ),
         'funding_listing_counts_comments' => array(
           'listing' => array(
@@ -235,6 +250,7 @@ function gie_funding_strongarm() {
           ),
           'search_listing' => NULL,
           'at_a_glance' => NULL,
+          'highlights' => NULL,
         ),
         'funding_listing_counts_favorites' => array(
           'listing' => array(
@@ -243,6 +259,7 @@ function gie_funding_strongarm() {
           ),
           'search_listing' => NULL,
           'at_a_glance' => NULL,
+          'highlights' => NULL,
         ),
         'funding_counters_comment_count' => array(
           'listing' => array(
@@ -263,6 +280,10 @@ function gie_funding_strongarm() {
           ),
           'at_a_glance' => array(
             'weight' => '13',
+            'visible' => FALSE,
+          ),
+          'highlights' => array(
+            'weight' => '21',
             'visible' => FALSE,
           ),
         ),
@@ -287,6 +308,10 @@ function gie_funding_strongarm() {
             'weight' => '12',
             'visible' => FALSE,
           ),
+          'highlights' => array(
+            'weight' => '20',
+            'visible' => FALSE,
+          ),
         ),
         'funding_ops_counters_comments' => array(
           'at_a_glance' => array(
@@ -299,6 +324,14 @@ function gie_funding_strongarm() {
           ),
           'listing' => array(
             'weight' => '10',
+            'visible' => FALSE,
+          ),
+          'default' => array(
+            'weight' => '10',
+            'visible' => TRUE,
+          ),
+          'highlights' => array(
+            'weight' => '16',
             'visible' => FALSE,
           ),
         ),
@@ -315,6 +348,14 @@ function gie_funding_strongarm() {
             'weight' => '10',
             'visible' => FALSE,
           ),
+          'default' => array(
+            'weight' => '10',
+            'visible' => TRUE,
+          ),
+          'highlights' => array(
+            'weight' => '19',
+            'visible' => FALSE,
+          ),
         ),
         'funding_ops_counters_amount' => array(
           'at_a_glance' => array(
@@ -329,6 +370,14 @@ function gie_funding_strongarm() {
             'weight' => '10',
             'visible' => FALSE,
           ),
+          'default' => array(
+            'weight' => '10',
+            'visible' => TRUE,
+          ),
+          'highlights' => array(
+            'weight' => '18',
+            'visible' => FALSE,
+          ),
         ),
         'funding_fields_deadline' => array(
           'full' => array(
@@ -337,6 +386,14 @@ function gie_funding_strongarm() {
           ),
           'listing' => array(
             'weight' => '10',
+            'visible' => FALSE,
+          ),
+          'default' => array(
+            'weight' => '10',
+            'visible' => TRUE,
+          ),
+          'highlights' => array(
+            'weight' => '15',
             'visible' => FALSE,
           ),
         ),
