@@ -702,7 +702,11 @@ function gie_innovation_ds_layout_settings_info() {
       'innovation_listing_counts_favorites' => 'main_content',
       'innovation_listing_counts_assistance' => 'main_content',
     ),
-    'classes' => array(),
+    'classes' => array(
+      'layout_class' => array(
+        'card' => 'card',
+      ),
+    ),
     'wrappers' => array(
       'header' => 'div',
       'main_content' => 'div',
