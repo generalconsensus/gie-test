@@ -33,7 +33,7 @@ function gie_user_views_default_views() {
   $handler->display->display_options['pager']['options']['offset'] = '0';
   $handler->display->display_options['style_plugin'] = 'default';
   $handler->display->display_options['row_plugin'] = 'fields';
-  /* Relationship: Taxonomy term: User using Topics of Interest */
+  /* Relationship: Taxonomy term: User using Your Topics of Interest */
   $handler->display->display_options['relationships']['reverse_field_user_interests_user']['id'] = 'reverse_field_user_interests_user';
   $handler->display->display_options['relationships']['reverse_field_user_interests_user']['table'] = 'taxonomy_term_data';
   $handler->display->display_options['relationships']['reverse_field_user_interests_user']['field'] = 'reverse_field_user_interests_user';
