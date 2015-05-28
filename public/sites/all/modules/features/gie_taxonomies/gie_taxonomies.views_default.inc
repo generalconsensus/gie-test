@@ -1301,7 +1301,7 @@ function gie_taxonomies_views_default_views() {
   $handler->display->display_options['defaults']['use_more_always'] = FALSE;
   $handler->display->display_options['use_more_always'] = FALSE;
   $handler->display->display_options['defaults']['use_more_text'] = FALSE;
-  $handler->display->display_options['use_more_text'] = 'Explore all resources in this sector';
+  $handler->display->display_options['use_more_text'] = 'Explore all funding opportunities in this sector';
   $handler->display->display_options['defaults']['link_display'] = FALSE;
   $handler->display->display_options['link_display'] = 'custom_url';
   $handler->display->display_options['link_url'] = '/funding/sector/!1';

@@ -65,7 +65,7 @@ function events_ds_field_settings_info() {
         'ft' => array(
           'func' => 'theme_ds_field_expert',
           'fi' => TRUE,
-          'fi-el' => 'h2',
+          'fi-el' => 'h3',
           'fi-cl' => 'card__primary-title',
           'fi-at' => '',
           'fi-def-at' => FALSE,
@@ -204,17 +204,19 @@ function events_ds_layout_settings_info() {
     'regions' => array(
       'main_content' => array(
         0 => 'group_card_content',
-        1 => 'title_field',
-        2 => 'field_event_date',
+        1 => 'events_at_a_glance_entity_view_1',
+        2 => 'title_field',
         3 => 'events_at_a_glance_related_org_card_event',
-        4 => 'field_event_location',
+        4 => 'group_card_meta',
+        5 => 'field_event_location',
       ),
     ),
     'fields' => array(
       'group_card_content' => 'main_content',
+      'events_at_a_glance_entity_view_1' => 'main_content',
       'title_field' => 'main_content',
-      'field_event_date' => 'main_content',
       'events_at_a_glance_related_org_card_event' => 'main_content',
+      'group_card_meta' => 'main_content',
       'field_event_location' => 'main_content',
     ),
     'classes' => array(
