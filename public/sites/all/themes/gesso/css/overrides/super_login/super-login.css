@@ -1,0 +1,68 @@
+/* line 10, ../../../sass/overrides/super_login/super-login.scss */
+#user-login,
+#user-pass {
+  border: 2px solid #cecfcb;
+  -moz-box-shadow: 0 2px 4px 2px rgba(0, 0, 0, 0.15);
+  -webkit-box-shadow: 0 2px 4px 2px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 2px 4px 2px rgba(0, 0, 0, 0.15);
+  max-width: 750px;
+  max-width: 650px;
+  margin: 2em auto;
+  overflow: hidden;
+  padding: 2em;
+}
+/* line 21, ../../../sass/overrides/super_login/super-login.scss */
+#user-login #edit-lr-social-login-links,
+#user-pass #edit-lr-social-login-links {
+  border-bottom: 1px solid #cecfcb;
+  margin: 0 0 1.5em 0;
+  padding: 0 0 1.5em 0;
+}
+/* line 27, ../../../sass/overrides/super_login/super-login.scss */
+#user-login .interfacecontainerdiv,
+#user-pass .interfacecontainerdiv {
+  margin-left: -20px;
+}
+/* line 31, ../../../sass/overrides/super_login/super-login.scss */
+#user-login p.login-title,
+#user-pass p.login-title {
+  color: #565a5c;
+  font-size: 2em;
+  font-weight: normal;
+  line-height: 1.1;
+  margin: 0 0 0.5em 0;
+  padding: 0;
+}
+/* line 40, ../../../sass/overrides/super_login/super-login.scss */
+#user-login .form-item-pass,
+#user-pass .form-item-pass {
+  margin-bottom: 0;
+}
+/* line 44, ../../../sass/overrides/super_login/super-login.scss */
+#user-login .forgot-password,
+#user-pass .forgot-password {
+  font-size: 0.8em;
+}
+/* line 48, ../../../sass/overrides/super_login/super-login.scss */
+#user-login .button--submit,
+#user-pass .button--submit {
+  margin: 0;
+}
+/* line 52, ../../../sass/overrides/super_login/super-login.scss */
+#user-login .form-actions,
+#user-pass .form-actions {
+  float: left;
+}
+/* line 56, ../../../sass/overrides/super_login/super-login.scss */
+#user-login .super-login-register,
+#user-pass .super-login-register {
+  display: inline-block;
+  float: right;
+  padding-top: 1em;
+}
+/* line 62, ../../../sass/overrides/super_login/super-login.scss */
+#user-login #capslockdiv p,
+#user-pass #capslockdiv p {
+  color: #c61414;
+  font-weight: bold;
+}
