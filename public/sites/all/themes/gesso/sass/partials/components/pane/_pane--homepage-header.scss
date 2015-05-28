@@ -7,7 +7,7 @@
   text-align: center;
   z-index: 1;
   @include breakpoint(800px, $no-query: true) {
-    min-height: 385px;
+    min-height: 300px;
     padding: 2em;
   }
   &:after {
@@ -58,10 +58,10 @@
       font-size: em(20px);
       font-weight: 300;
       margin: 0;
-      padding: 0 0 1em 0;
+      padding: 0 0 0.5em 0;
       @include breakpoint(800px, $no-query: true) {
         font-size: em($font-size-xxxl);
-        padding: 0 0 2em 0;
+        padding: 0 0 1em 0;
       }
     }
     .button {

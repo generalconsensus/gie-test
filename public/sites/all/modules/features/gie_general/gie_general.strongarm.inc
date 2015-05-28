@@ -495,12 +495,18 @@ function gie_general_strongarm() {
   $strongarm->api_version = 1;
   $strongarm->name = 'sharethis_node_types';
   $strongarm->value = array(
+    'event' => 'event',
     'funding' => 'funding',
     'innovation' => 'innovation',
     'resource' => 'resource',
+    'action_card' => 0,
     'article' => 0,
     'page' => 0,
+    'discussion' => 0,
+    'error_page' => 0,
+    'homepage' => 0,
     'organization' => 0,
+    'persona' => 0,
     'program' => 0,
   );
   $export['sharethis_node_types'] = $strongarm;

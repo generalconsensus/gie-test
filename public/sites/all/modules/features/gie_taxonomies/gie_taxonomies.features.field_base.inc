@@ -193,7 +193,7 @@ function gie_taxonomies_field_default_field_bases() {
   // Exported field_base: 'field_region_highlights'
   $field_bases['field_region_highlights'] = array(
     'active' => 1,
-    'cardinality' => 3,
+    'cardinality' => 4,
     'deleted' => 0,
     'entity_types' => array(),
     'field_name' => 'field_region_highlights',
@@ -283,7 +283,7 @@ function gie_taxonomies_field_default_field_bases() {
   // Exported field_base: 'field_sector_highlights'
   $field_bases['field_sector_highlights'] = array(
     'active' => 1,
-    'cardinality' => 3,
+    'cardinality' => 4,
     'deleted' => 0,
     'entity_types' => array(),
     'field_name' => 'field_sector_highlights',
@@ -373,7 +373,7 @@ function gie_taxonomies_field_default_field_bases() {
   // Exported field_base: 'field_topic_highlights'
   $field_bases['field_topic_highlights'] = array(
     'active' => 1,
-    'cardinality' => 3,
+    'cardinality' => 4,
     'deleted' => 0,
     'entity_types' => array(),
     'field_name' => 'field_topic_highlights',

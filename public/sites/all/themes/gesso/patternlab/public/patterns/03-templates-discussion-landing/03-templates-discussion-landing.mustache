@@ -16,12 +16,17 @@
           {{&gt; molecules-filters }}
         &lt;/aside&gt;
         &lt;div class=&quot;l-main&quot;&gt;
-          &lt;div class=&quot;view view--discussion-listing&quot;&gt;
-            {{# listItems.nine }}
-              &lt;div class=&quot;views-row&quot;&gt;
-                {{&gt; organisms-discussion-teaser }}
+          &lt;div class=&quot;pane&quot;&gt;
+            &lt;div class=&quot;pane__content&quot;&gt;
+              &lt;div class=&quot;view view--discussion-listing&quot;&gt;
+                {{# listItems.nine }}
+                  &lt;div class=&quot;views-row&quot;&gt;
+                    {{&gt; organisms-discussion-teaser }}
+                  &lt;/div&gt;
+                {{/ listItems.nine }}
+                {{&gt; molecules-pager }}
               &lt;/div&gt;
-            {{/ listItems.nine }}
+            &lt;/div&gt;
           &lt;/div&gt;
         &lt;/div&gt;
       &lt;/div&gt;

@@ -208,6 +208,12 @@ function gie_resource_field_default_field_instances() {
         'type' => 'entityreference_entity_view',
         'weight' => 4,
       ),
+      'highlights' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 11,
+      ),
       'listing' => array(
         'label' => 'above',
         'settings' => array(),
@@ -322,6 +328,28 @@ function gie_resource_field_default_field_instances() {
         ),
         'type' => 'entityreference_entity_view',
         'weight' => 1,
+      ),
+      'highlights' => array(
+        'label' => 'hidden',
+        'module' => 'entityreference',
+        'settings' => array(
+          'field_delimiter' => '',
+          'linked_field' => array(
+            'advanced' => array(
+              'class' => '',
+              'rel' => '',
+              'target' => '',
+              'text' => '',
+              'title' => '',
+            ),
+            'destination' => '',
+            'linked' => 0,
+          ),
+          'links' => 0,
+          'view_mode' => 'resource_user',
+        ),
+        'type' => 'entityreference_entity_view',
+        'weight' => 28,
       ),
       'listing' => array(
         'label' => 'hidden',
@@ -459,6 +487,31 @@ function gie_resource_field_default_field_instances() {
         ),
         'type' => 'date_default',
         'weight' => 0,
+      ),
+      'highlights' => array(
+        'label' => 'hidden',
+        'module' => 'date',
+        'settings' => array(
+          'field_delimiter' => '',
+          'format_type' => 'gie_general_slash_no_time',
+          'fromto' => 'both',
+          'linked_field' => array(
+            'advanced' => array(
+              'class' => '',
+              'rel' => '',
+              'target' => '',
+              'text' => '',
+              'title' => '',
+            ),
+            'destination' => '',
+            'linked' => 0,
+          ),
+          'multiple_from' => '',
+          'multiple_number' => '',
+          'multiple_to' => '',
+        ),
+        'type' => 'date_default',
+        'weight' => 29,
       ),
       'listing' => array(
         'label' => 'hidden',
@@ -610,6 +663,12 @@ function gie_resource_field_default_field_instances() {
         ),
         'type' => 'text_default',
         'weight' => 3,
+      ),
+      'highlights' => array(
+        'label' => 'hidden',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 13,
       ),
       'listing' => array(
         'label' => 'hidden',
@@ -765,6 +824,12 @@ function gie_resource_field_default_field_instances() {
         'type' => 'link_label',
         'weight' => 5,
       ),
+      'highlights' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 12,
+      ),
       'listing' => array(
         'label' => 'above',
         'settings' => array(),
@@ -889,6 +954,12 @@ function gie_resource_field_default_field_instances() {
         'type' => 'hidden',
         'weight' => 23,
       ),
+      'highlights' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 20,
+      ),
       'listing' => array(
         'label' => 'above',
         'settings' => array(),
@@ -1003,6 +1074,12 @@ function gie_resource_field_default_field_instances() {
         'type' => 'hidden',
         'weight' => 21,
       ),
+      'highlights' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 19,
+      ),
       'listing' => array(
         'label' => 'above',
         'settings' => array(),
@@ -1114,6 +1191,12 @@ function gie_resource_field_default_field_instances() {
         'settings' => array(),
         'type' => 'hidden',
         'weight' => 16,
+      ),
+      'highlights' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 10,
       ),
       'listing' => array(
         'label' => 'above',
@@ -1237,6 +1320,26 @@ function gie_resource_field_default_field_instances() {
         'type' => 'hidden',
         'weight' => 25,
       ),
+      'highlights' => array(
+        'label' => 'hidden',
+        'module' => 'taxonomy',
+        'settings' => array(
+          'field_delimiter' => '',
+          'linked_field' => array(
+            'advanced' => array(
+              'class' => '',
+              'rel' => '',
+              'target' => '',
+              'text' => '',
+              'title' => '',
+            ),
+            'destination' => '',
+            'linked' => 0,
+          ),
+        ),
+        'type' => 'taxonomy_term_reference_plain',
+        'weight' => 2,
+      ),
       'listing' => array(
         'label' => 'hidden',
         'module' => 'taxonomy',
@@ -1355,6 +1458,12 @@ function gie_resource_field_default_field_instances() {
         'type' => 'hidden',
         'weight' => 17,
       ),
+      'highlights' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 24,
+      ),
       'listing' => array(
         'label' => 'above',
         'settings' => array(),
@@ -1459,6 +1568,12 @@ function gie_resource_field_default_field_instances() {
         'type' => 'hidden',
         'weight' => 18,
       ),
+      'highlights' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 23,
+      ),
       'listing' => array(
         'label' => 'above',
         'settings' => array(),
@@ -1562,6 +1677,12 @@ function gie_resource_field_default_field_instances() {
         'settings' => array(),
         'type' => 'hidden',
         'weight' => 20,
+      ),
+      'highlights' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 21,
       ),
       'listing' => array(
         'label' => 'inline',
@@ -1690,6 +1811,12 @@ function gie_resource_field_default_field_instances() {
         'type' => 'hidden',
         'weight' => 19,
       ),
+      'highlights' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 22,
+      ),
       'listing' => array(
         'label' => 'above',
         'settings' => array(),
@@ -1782,6 +1909,29 @@ function gie_resource_field_default_field_instances() {
         'settings' => array(),
         'type' => 'hidden',
         'weight' => 26,
+      ),
+      'highlights' => array(
+        'label' => 'hidden',
+        'module' => 'title',
+        'settings' => array(
+          'field_delimiter' => '',
+          'linked_field' => array(
+            'advanced' => array(
+              'class' => '',
+              'rel' => '',
+              'target' => '',
+              'text' => '',
+              'title' => '',
+            ),
+            'destination' => '',
+            'linked' => 0,
+          ),
+          'title_class' => '',
+          'title_link' => 'content',
+          'title_style' => '_none',
+        ),
+        'type' => 'title_linked',
+        'weight' => 3,
       ),
       'listing' => array(
         'label' => 'hidden',

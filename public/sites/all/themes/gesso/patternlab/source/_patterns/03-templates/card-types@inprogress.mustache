@@ -1,0 +1,84 @@
+{{> organisms-header }}
+{{> organisms-navigation }}
+
+<main id="main" class="main" role="main" tabindex="-1"
+  <div class="region-content">
+
+    <div class="l-panels-landing preface-empty title sidebar main">
+      <div class="l-preface layout-constrain"></div>
+      <div class="l-title region-landing-title">
+        <div class="layout-constrain">
+          {{> atoms-landing-page-intro-innovations }}
+        </div>
+      </div>
+      <div class="l-wrapper layout-constrain">
+        <aside class="l-sidebar">
+          {{> molecules-filters }}
+        </aside>
+        <div class="l-main">
+
+          <div class="view--card-view-3col">
+            <h2 style="margin-bottom: 0.25em;">Event Teaser</h2>
+            {{# listItems.three }}
+              <div class="views-row">
+                {{> organisms-event-teaser }}
+              </div>
+            {{/ listItems.three }}
+          </div>
+
+          <div class="view--card-view-3col">
+            <h2 style="margin-bottom: 0.25em;">Innovation Teaser</h2>
+            {{# listItems.three }}
+              <div class="views-row">
+                {{> organisms-innovation-teaser }}
+              </div>
+            {{/ listItems.three }}
+          </div>
+
+          <div class="view--card-view-3col">
+            <h2 style="margin-bottom: 0.25em;">Highlight Teaser</h2>
+            {{# listItems.three }}
+              <div class="views-row">
+                {{> organisms-highlight-teaser }}
+              </div>
+            {{/ listItems.three }}
+          </div>
+
+           <div class="view--card-view-3col">
+            <h2 style="margin-bottom: 0.25em;">Resource Teaser</h2>
+            {{# listItems.three }}
+              <div class="views-row">
+                {{> organisms-resource-teaser }}
+              </div>
+            {{/ listItems.three }}
+          </div>
+
+           <div class="view--card-view-3col">
+            <h2 style="margin-bottom: 0.25em;">Organization Teaser</h2>
+            {{# listItems.three }}
+              <div class="views-row">
+                {{> organisms-organization-teaser }}
+              </div>
+            {{/ listItems.three }}
+          </div>
+
+           <div class="view--card-view-3col">
+            <h2 style="margin-bottom: 0.25em;">Funding Op Teaser</h2>
+            {{# listItems.three }}
+              <div class="views-row">
+                {{> organisms-funding-op-teaser }}
+              </div>
+            {{/ listItems.three }}
+          </div>
+
+          {{> molecules-pager }}
+
+        </div>
+      </div>
+    </div>
+
+  </div>
+</main>
+
+{{> organisms-postscript }}
+{{> organisms-footer }}

@@ -958,6 +958,35 @@ function gie_innovation_views_default_views() {
   $handler->display->display_options['bundles'] = array(
     0 => 'innovation',
   );
+
+  /* Display: Assistance sought */
+  $handler = $view->new_display('entity_view', 'Assistance sought', 'assistance');
+  $handler->display->display_options['defaults']['style_plugin'] = FALSE;
+  $handler->display->display_options['style_plugin'] = 'default';
+  $handler->display->display_options['style_options']['default_row_class'] = FALSE;
+  $handler->display->display_options['style_options']['row_class_special'] = FALSE;
+  $handler->display->display_options['defaults']['style_options'] = FALSE;
+  $handler->display->display_options['defaults']['row_plugin'] = FALSE;
+  $handler->display->display_options['row_plugin'] = 'fields';
+  $handler->display->display_options['row_options']['default_field_elements'] = FALSE;
+  $handler->display->display_options['defaults']['row_options'] = FALSE;
+  $handler->display->display_options['defaults']['fields'] = FALSE;
+  /* Field: COUNT(Content: Assistance Type) */
+  $handler->display->display_options['fields']['field_innovation_assistance']['id'] = 'field_innovation_assistance';
+  $handler->display->display_options['fields']['field_innovation_assistance']['table'] = 'field_data_field_innovation_assistance';
+  $handler->display->display_options['fields']['field_innovation_assistance']['field'] = 'field_innovation_assistance';
+  $handler->display->display_options['fields']['field_innovation_assistance']['group_type'] = 'count';
+  $handler->display->display_options['fields']['field_innovation_assistance']['label'] = '';
+  $handler->display->display_options['fields']['field_innovation_assistance']['alter']['alter_text'] = TRUE;
+  $handler->display->display_options['fields']['field_innovation_assistance']['alter']['text'] = '<div class="has-icon--assistance" title="Assistance Sought">[field_innovation_assistance]</div>';
+  $handler->display->display_options['fields']['field_innovation_assistance']['element_type'] = '0';
+  $handler->display->display_options['fields']['field_innovation_assistance']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_innovation_assistance']['element_default_classes'] = FALSE;
+  $handler->display->display_options['fields']['field_innovation_assistance']['separator'] = ', ';
+  $handler->display->display_options['entity_type'] = 'node';
+  $handler->display->display_options['bundles'] = array(
+    0 => 'innovation',
+  );
   $export['innovation_listing_counts'] = $view;
 
   $view = new view();

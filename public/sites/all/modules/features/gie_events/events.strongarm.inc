@@ -117,10 +117,10 @@ function events_strongarm() {
     'extra_fields' => array(
       'form' => array(
         'path' => array(
-          'weight' => '3',
+          'weight' => '4',
         ),
         'rabbit_hole' => array(
-          'weight' => '2',
+          'weight' => '3',
         ),
       ),
       'display' => array(
@@ -130,11 +130,11 @@ function events_strongarm() {
             'visible' => FALSE,
           ),
           'full' => array(
-            'weight' => '13',
+            'weight' => '16',
             'visible' => FALSE,
           ),
           'listing' => array(
-            'weight' => '26',
+            'weight' => '31',
             'visible' => FALSE,
           ),
           'at_a_glance' => array(
@@ -152,11 +152,11 @@ function events_strongarm() {
             'visible' => TRUE,
           ),
           'full' => array(
-            'weight' => '16',
+            'weight' => '18',
             'visible' => FALSE,
           ),
           'listing' => array(
-            'weight' => '16',
+            'weight' => '22',
             'visible' => FALSE,
           ),
         ),
@@ -166,11 +166,11 @@ function events_strongarm() {
             'visible' => TRUE,
           ),
           'full' => array(
-            'weight' => '14',
+            'weight' => '17',
             'visible' => FALSE,
           ),
           'listing' => array(
-            'weight' => '24',
+            'weight' => '29',
             'visible' => FALSE,
           ),
         ),
@@ -180,17 +180,33 @@ function events_strongarm() {
             'visible' => TRUE,
           ),
           'full' => array(
-            'weight' => '12',
+            'weight' => '15',
             'visible' => FALSE,
           ),
           'listing' => array(
-            'weight' => '23',
+            'weight' => '28',
             'visible' => FALSE,
           ),
         ),
         'events_at_a_glance_entity_view_1' => array(
           'listing' => array(
-            'weight' => '21',
+            'weight' => '10',
+            'visible' => FALSE,
+          ),
+          'full' => array(
+            'weight' => '14',
+            'visible' => FALSE,
+          ),
+        ),
+        'events_at_a_glance_event_attending_flag' => array(
+          'full' => array(
+            'weight' => '12',
+            'visible' => FALSE,
+          ),
+        ),
+        'events_at_a_glance_related_org_card_event' => array(
+          'listing' => array(
+            'weight' => '22',
             'visible' => TRUE,
           ),
         ),
