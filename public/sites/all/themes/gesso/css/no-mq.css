@@ -1,4 +1,4 @@
-/* line 65, ../../../../../../../../../../../Ruby21-x64/lib/ruby/gems/2.1.0/gems/singularitygs-1.1.2/stylesheets/singularitygs/helpers/_clearfix.scss */
+/* line 65, ../../../../../../../../Ruby22-x64/lib/ruby/gems/2.2.0/gems/singularitygs-1.1.2/stylesheets/singularitygs/helpers/_clearfix.scss */
 .clearfix:after, .layout-grid__row:after, .field--funding-deadline:after, .pane--homepage-views-personas-pane .pane__content .view--homepage-views:after, .pane--landing-intro:after, .quicktabs-tabs.quicktabs-style-nostyle:after, .region-footer:after, .view__header:after, .view--homepage-cardflip:after {
   content: "";
   display: table;
@@ -41,7 +41,7 @@
   clear: both;
 }
 
-/* line 35, ../sass/partials/global/extendables/_button.scss */
+/* line 36, ../sass/partials/global/extendables/_button.scss */
 .button, .card__button a, .flag-favorite a, .flag-follow a,
 .flag-follow-taxonomy a, .sharethis-buttons .st_sharethis_custom {
   font-size: 0.875em;
@@ -53,27 +53,28 @@
   border-radius: 0;
   background-color: #003359;
   border: 1px solid #003359;
-  color: white;
+  color: white !important;
   cursor: pointer;
   display: inline-block;
   font-family: Lato, "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: normal;
   margin: 0 0 1.625em;
   padding: 0.5em 1.75em;
   text-align: center;
   text-decoration: none;
   vertical-align: baseline;
 }
-/* line 25, ../sass/partials/global/extendables/_button.scss */
+/* line 26, ../sass/partials/global/extendables/_button.scss */
 .button:focus, .card__button a:focus, .flag-favorite a:focus, .flag-follow a:focus,
 .flag-follow-taxonomy a:focus, .sharethis-buttons .st_sharethis_custom:focus, .button:hover, .card__button a:hover, .flag-favorite a:hover, .flag-follow a:hover,
 .flag-follow-taxonomy a:hover, .sharethis-buttons .st_sharethis_custom:hover {
   background-color: #001f36;
   border-color: #001f36;
-  color: white;
+  color: white !important;
   outline: 0;
   text-decoration: none;
 }
-/* line 38, ../sass/partials/global/extendables/_button.scss */
+/* line 39, ../sass/partials/global/extendables/_button.scss */
 .button + .button, .card__button a + .button, .flag-favorite a + .button, .flag-follow a + .button,
 .flag-follow-taxonomy a + .button, .sharethis-buttons .st_sharethis_custom + .button, .card__button .button + a, .card__button a + a, .sharethis-buttons .card__button .st_sharethis_custom + a, .card__button .sharethis-buttons .st_sharethis_custom + a, .flag-favorite .button + a, .flag-favorite a + a, .sharethis-buttons .flag-favorite .st_sharethis_custom + a, .flag-favorite .sharethis-buttons .st_sharethis_custom + a, .flag-follow .button + a, .flag-follow a + a, .sharethis-buttons .flag-follow .st_sharethis_custom + a, .flag-follow .sharethis-buttons .st_sharethis_custom + a,
 .flag-follow-taxonomy .button + a,
@@ -84,7 +85,7 @@
 .sharethis-buttons .flag-follow-taxonomy a + .st_sharethis_custom, .sharethis-buttons .st_sharethis_custom + .st_sharethis_custom {
   margin-left: 1em;
 }
-/* line 41, ../sass/partials/global/extendables/_button.scss */
+/* line 42, ../sass/partials/global/extendables/_button.scss */
 [dir="rtl"] .button + .button, [dir="rtl"] .card__button a + .button, .card__button [dir="rtl"] a + .button, [dir="rtl"] .flag-favorite a + .button, .flag-favorite [dir="rtl"] a + .button, [dir="rtl"] .flag-follow a + .button, .flag-follow [dir="rtl"] a + .button,
 [dir="rtl"] .flag-follow-taxonomy a + .button,
 .flag-follow-taxonomy [dir="rtl"] a + .button, [dir="rtl"] .sharethis-buttons .st_sharethis_custom + .button, .sharethis-buttons [dir="rtl"] .st_sharethis_custom + .button, [dir="rtl"] .card__button .button + a, .card__button [dir="rtl"] .button + a, [dir="rtl"] .card__button a + a, .card__button [dir="rtl"] a + a, [dir="rtl"] .sharethis-buttons .card__button .st_sharethis_custom + a, .card__button [dir="rtl"] .sharethis-buttons .st_sharethis_custom + a, .sharethis-buttons [dir="rtl"] .card__button .st_sharethis_custom + a, .card__button .sharethis-buttons [dir="rtl"] .st_sharethis_custom + a, [dir="rtl"] .flag-favorite .button + a, .flag-favorite [dir="rtl"] .button + a, [dir="rtl"] .flag-favorite a + a, .flag-favorite [dir="rtl"] a + a, [dir="rtl"] .sharethis-buttons .flag-favorite .st_sharethis_custom + a, .flag-favorite [dir="rtl"] .sharethis-buttons .st_sharethis_custom + a, .sharethis-buttons [dir="rtl"] .flag-favorite .st_sharethis_custom + a, .flag-favorite .sharethis-buttons [dir="rtl"] .st_sharethis_custom + a, [dir="rtl"] .flag-follow .button + a, .flag-follow [dir="rtl"] .button + a, [dir="rtl"] .flag-follow a + a, .flag-follow [dir="rtl"] a + a, [dir="rtl"] .sharethis-buttons .flag-follow .st_sharethis_custom + a, .flag-follow [dir="rtl"] .sharethis-buttons .st_sharethis_custom + a, .sharethis-buttons [dir="rtl"] .flag-follow .st_sharethis_custom + a, .flag-follow .sharethis-buttons [dir="rtl"] .st_sharethis_custom + a,
@@ -104,18 +105,18 @@
   margin-right: 1em;
 }
 
-/* line 48, ../sass/partials/global/extendables/_button.scss */
+/* line 49, ../sass/partials/global/extendables/_button.scss */
 .button--large, .card__button a {
   text-transform: uppercase;
 }
 
-/* line 52, ../sass/partials/global/extendables/_button.scss */
+/* line 53, ../sass/partials/global/extendables/_button.scss */
 .button--highlight, .card__button a, .flag-follow a,
 .flag-follow-taxonomy a, .sharethis-buttons .st_sharethis_custom {
   background-color: #b71234;
   border-color: #b71234;
 }
-/* line 55, ../sass/partials/global/extendables/_button.scss */
+/* line 56, ../sass/partials/global/extendables/_button.scss */
 .button--highlight:hover, .card__button a:hover, .flag-follow a:hover,
 .flag-follow-taxonomy a:hover, .sharethis-buttons .st_sharethis_custom:hover, .button--highlight:focus, .card__button a:focus, .flag-follow a:focus,
 .flag-follow-taxonomy a:focus, .sharethis-buttons .st_sharethis_custom:focus {
@@ -123,33 +124,33 @@
   border-color: #822433;
 }
 
-/* line 61, ../sass/partials/global/extendables/_button.scss */
+/* line 62, ../sass/partials/global/extendables/_button.scss */
 .button--light {
   background-color: #fff;
   border: 1px solid #565a5c;
-  color: #565a5c;
+  color: #565a5c !important;
 }
-/* line 65, ../sass/partials/global/extendables/_button.scss */
+/* line 66, ../sass/partials/global/extendables/_button.scss */
 .button--light:hover, .button--light:focus {
   background-color: #565a5c;
-  color: #fff;
+  color: #fff !important;
 }
 
-/* line 71, ../sass/partials/global/extendables/_button.scss */
+/* line 72, ../sass/partials/global/extendables/_button.scss */
 .button--white, .pane--homepage-footer-callout .pane__content .pane__text .button, .pane--homepage-header .pane__content .button {
   background: #fff;
   border: 0;
-  color: #dc5606;
+  color: #dc5606 !important;
   margin-bottom: 0;
   opacity: 0.75;
   text-transform: uppercase;
 }
-/* line 78, ../sass/partials/global/extendables/_button.scss */
+/* line 79, ../sass/partials/global/extendables/_button.scss */
 .button--white:hover, .pane--homepage-footer-callout .pane__content .pane__text .button:hover, .pane--homepage-header .pane__content .button:hover, .button--white:focus, .pane--homepage-footer-callout .pane__content .pane__text .button:focus, .pane--homepage-header .pane__content .button:focus {
   opacity: 1;
 }
 
-/* line 83, ../sass/partials/global/extendables/_button.scss */
+/* line 84, ../sass/partials/global/extendables/_button.scss */
 .sharethis-buttons .st_sharethis_custom, .flag-favorite a, .button--add, .button--member, .flag-follow a,
 .flag-follow-taxonomy a, .button--edit {
   padding-left: 50px;
@@ -157,7 +158,7 @@
   position: relative;
   text-transform: uppercase;
 }
-/* line 88, ../sass/partials/global/extendables/_button.scss */
+/* line 89, ../sass/partials/global/extendables/_button.scss */
 .sharethis-buttons .st_sharethis_custom:before, .flag-favorite a:before, .button--add:before, .button--member:before, .flag-follow a:before,
 .flag-follow-taxonomy a:before, .button--edit:before {
   height: 20px;
@@ -178,7 +179,7 @@
   width: 0;
 }
 
-/* line 100, ../sass/partials/global/extendables/_button.scss */
+/* line 101, ../sass/partials/global/extendables/_button.scss */
 .sharethis-buttons .st_sharethis_custom:before {
   background-image: url('../images/bg/icon-share-18-21-white.png');
   background-image: -webkit-linear-gradient(transparent, transparent), url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4NCjwhLS0gR2VuZXJhdGVkIGJ5IEljb01vb24uaW8gLS0+DQo8IURPQ1RZUEUgc3ZnIFBVQkxJQyAiLS8vVzNDLy9EVEQgU1ZHIDEuMS8vRU4iICJodHRwOi8vd3d3LnczLm9yZy9HcmFwaGljcy9TVkcvMS4xL0RURC9zdmcxMS5kdGQiPg0KPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHdpZHRoPSIxOCIgaGVpZ2h0PSIyMSIgdmlld0JveD0iMCAwIDE4IDIxIj4NCjxwYXRoIGZpbGw9IiNmZmZmZmYiIGQ9Ik0xNC45MjEgMTQuNTg5Yy0wLjg4NCAwLTEuNzY4IDAuNDQyLTIuMzIxIDAuOTk1bC02LjQxMS0zLjk3OWMwLjExMS0wLjMzMiAwLjIyMS0wLjc3NCAwLjIyMS0xLjEwNSAwLTAuNDQyLTAuMTExLTAuNzc0LTAuMjIxLTEuMjE2bDYuNTIxLTMuNzU4YzAuNTUzIDAuNTUzIDEuNDM3IDAuOTk1IDIuMzIxIDAuOTk1IDEuNzY4IDAgMy4yMDUtMS40MzcgMy4yMDUtMy4yMDVzLTEuNTQ3LTMuMzE2LTMuMzE2LTMuMzE2LTMuMjA1IDEuNDM3LTMuMjA1IDMuMjA1YzAgMC40NDIgMC4xMTEgMC43NzQgMC4yMjEgMS4yMTZsLTYuNDExIDMuNzU4Yy0wLjU1My0wLjY2My0xLjQzNy0wLjk5NS0yLjMyMS0wLjk5NS0xLjc2OCAwLTMuMjA1IDEuNDM3LTMuMjA1IDMuMjA1czEuNDM3IDMuMjA1IDMuMjA1IDMuMjA1YzAuODg0IDAgMS43NjgtMC4zMzIgMi4zMjEtMC45OTVsNi40MTEgMy45NzljLTAuMTExIDAuMzMyLTAuMjIxIDAuNjYzLTAuMjIxIDEuMTA1IDAgMS43NjggMS40MzcgMy4yMDUgMy4yMDUgMy4yMDVzMy4yMDUtMS40MzcgMy4yMDUtMy4yMDUtMS40MzctMy4wOTUtMy4yMDUtMy4wOTV6TTE0LjkyMSAxLjMyNmMxLjEwNSAwIDEuODc5IDAuODg0IDEuODc5IDEuODc5cy0wLjg4NCAxLjg3OS0xLjg3OSAxLjg3OS0xLjg3OS0wLjg4NC0xLjg3OS0xLjg3OSAwLjg4NC0xLjg3OSAxLjg3OS0xLjg3OXpNMy4yMDUgMTIuMzc5Yy0xLjEwNSAwLTEuODc5LTAuODg0LTEuODc5LTEuODc5czAuODg0LTEuOTg5IDEuODc5LTEuOTg5YzAuNjYzIDAgMS4yMTYgMC4zMzIgMS41NDcgMC43NzQgMCAwIDAgMCAwIDAuMTExIDAgMCAwIDAgMC4xMTEgMC4xMTEgMC4yMjEgMC4zMzIgMC4zMzIgMC42NjMgMC4zMzIgMC45OTVzLTAuMTExIDAuNzc0LTAuMzMyIDAuOTk1YzAgMCAwIDAgMCAwczAgMCAwIDBjLTAuMzMyIDAuNTUzLTAuOTk1IDAuODg0LTEuNjU4IDAuODg0ek0xNC45MjEgMTkuNjc0Yy0xLjEwNSAwLTEuODc5LTAuODg0LTEuODc5LTEuODc5IDAtMC4zMzIgMC4xMTEtMC42NjMgMC4yMjEtMC45OTUgMCAwIDAgMCAwIDBzMCAwIDAgMGMwLjMzMi0wLjU1MyAwLjk5NS0wLjg4NCAxLjY1OC0wLjg4NCAxLjEwNSAwIDEuODc5IDAuODg0IDEuODc5IDEuODc5IDAuMTExIDAuOTk1LTAuNzc0IDEuODc5LTEuODc5IDEuODc5eiI+PC9wYXRoPg0KPC9zdmc+DQo=');
@@ -187,7 +188,7 @@
   width: 18px;
 }
 
-/* line 109, ../sass/partials/global/extendables/_button.scss */
+/* line 110, ../sass/partials/global/extendables/_button.scss */
 .flag-favorite a:before {
   background-image: url('../images/bg/icon-favorite-19-18-white.png');
   background-image: -webkit-linear-gradient(transparent, transparent), url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4NCjwhLS0gR2VuZXJhdGVkIGJ5IEljb01vb24uaW8gLS0+DQo8IURPQ1RZUEUgc3ZnIFBVQkxJQyAiLS8vVzNDLy9EVEQgU1ZHIDEuMS8vRU4iICJodHRwOi8vd3d3LnczLm9yZy9HcmFwaGljcy9TVkcvMS4xL0RURC9zdmcxMS5kdGQiPg0KPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHdpZHRoPSIxOSIgaGVpZ2h0PSIxOCIgdmlld0JveD0iMCAwIDE5IDE4Ij4NCjxwYXRoIGZpbGw9IiNmZmZmZmYiIGQ9Ik05LjU4NiAxOGMtMC4xMDcgMC0wLjMyLTAuMTA3LTAuNDI2LTAuMjEzLTAuMzItMC4zMi03LjM0OS02LjkyMy04LjczNC0xMC43NTctMC4zMi0wLjUzMy0wLjQyNi0xLjI3OC0wLjQyNi0xLjkxNyAwLTIuODc2IDIuMzQzLTUuMTEyIDUuMTEyLTUuMTEyIDEuOTE3IDAgMy42MjEgMS4wNjUgNC40NzMgMi42NjMgMC44NTItMS41OTggMi41NTYtMi42NjMgNC40NzMtMi42NjMgMi44NzYgMCA1LjExMiAyLjIzNyA1LjExMiA1LjExMiAwIDAuNjM5LTAuMTA3IDEuMzg1LTAuNDI2IDIuMDI0LTEuMzg1IDMuODM0LTguNDE0IDEwLjQzOC04LjczNCAxMC43NTctMC4xMDcgMC0wLjMyIDAuMTA3LTAuNDI2IDAuMTA3ek01LjExMiAxLjI3OGMtMi4xMyAwLTMuODM0IDEuNzA0LTMuODM0IDMuODM0IDAgMC41MzMgMC4xMDcgMS4wNjUgMC4zMiAxLjQ5MSAxLjE3MiAzLjA4OSA2LjQ5NyA4LjQxNCA3Ljk4OCA5LjkwNSAxLjU5OC0xLjQ5MSA2LjkyMy02LjgxNyA3Ljk4OC05LjkwNSAwLjIxMy0wLjUzMyAwLjMyLTEuMDY1IDAuMzItMS40OTEgMC0yLjEzLTEuNzA0LTMuODM0LTMuODM0LTMuODM0LTIuMDI0IDAtMy44MzQgMS43MDQtMy44MzQgMy43MjggMCAwLjMyLTAuMzIgMC42MzktMC42MzkgMC42MzlzLTAuNjM5LTAuMzItMC42MzktMC42MzljMC0yLjAyNC0xLjgxMS0zLjcyOC0zLjgzNC0zLjcyOHoiPjwvcGF0aD4NCjwvc3ZnPg0K');
@@ -198,11 +199,11 @@
   top: 12px;
 }
 
-/* line 118, ../sass/partials/global/extendables/_button.scss */
+/* line 119, ../sass/partials/global/extendables/_button.scss */
 .button--add {
   padding-left: 40px;
 }
-/* line 121, ../sass/partials/global/extendables/_button.scss */
+/* line 122, ../sass/partials/global/extendables/_button.scss */
 .button--add:before {
   background-image: url('../images/bg/icon-plus-12-12-white.png');
   background-image: -webkit-linear-gradient(transparent, transparent), url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4NCjwhLS0gR2VuZXJhdGVkIGJ5IEljb01vb24uaW8gLS0+DQo8IURPQ1RZUEUgc3ZnIFBVQkxJQyAiLS8vVzNDLy9EVEQgU1ZHIDEuMS8vRU4iICJodHRwOi8vd3d3LnczLm9yZy9HcmFwaGljcy9TVkcvMS4xL0RURC9zdmcxMS5kdGQiPg0KPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHdpZHRoPSIxMiIgaGVpZ2h0PSIxMiIgdmlld0JveD0iMCAwIDEyIDEyIj4NCjxwYXRoIGZpbGw9IiNmZmZmZmYiIGQ9Ik0xMS40IDUuNGgtNC44di00LjhjMC0wLjMtMC4zLTAuNi0wLjYtMC42cy0wLjYgMC4zLTAuNiAwLjZ2NC45aC00LjhjLTAuMy0wLjEtMC42IDAuMi0wLjYgMC41czAuMyAwLjYgMC42IDAuNmg0Ljl2NC45Yy0wLjEgMC4yIDAuMiAwLjUgMC41IDAuNXMwLjYtMC4zIDAuNi0wLjZ2LTQuOGg0LjljMC4yIDAgMC41LTAuMyAwLjUtMC42cy0wLjMtMC42LTAuNi0wLjZ6Ij48L3BhdGg+DQo8L3N2Zz4NCg==');
@@ -212,12 +213,12 @@
   width: 12px;
 }
 
-/* line 129, ../sass/partials/global/extendables/_button.scss */
+/* line 130, ../sass/partials/global/extendables/_button.scss */
 .button--member, .flag-follow a,
 .flag-follow-taxonomy a {
   padding-left: 40px;
 }
-/* line 132, ../sass/partials/global/extendables/_button.scss */
+/* line 133, ../sass/partials/global/extendables/_button.scss */
 .button--member:before, .flag-follow a:before,
 .flag-follow-taxonomy a:before {
   background-image: url('../images/bg/icon-member-18-18-white.png');
@@ -228,11 +229,11 @@
   width: 18px;
 }
 
-/* line 140, ../sass/partials/global/extendables/_button.scss */
+/* line 141, ../sass/partials/global/extendables/_button.scss */
 .button--edit {
   padding-left: 40px;
 }
-/* line 143, ../sass/partials/global/extendables/_button.scss */
+/* line 144, ../sass/partials/global/extendables/_button.scss */
 .button--edit:before {
   background-image: url('../images/bg/icon-edit-22-22-white.png');
   background-image: -webkit-linear-gradient(transparent, transparent), url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4NCjwhLS0gR2VuZXJhdGVkIGJ5IEljb01vb24uaW8gLS0+DQo8IURPQ1RZUEUgc3ZnIFBVQkxJQyAiLS8vVzNDLy9EVEQgU1ZHIDEuMS8vRU4iICJodHRwOi8vd3d3LnczLm9yZy9HcmFwaGljcy9TVkcvMS4xL0RURC9zdmcxMS5kdGQiPg0KPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHdpZHRoPSIyMiIgaGVpZ2h0PSIyMiIgdmlld0JveD0iMCAwIDIyIDIyIj4NCjxwYXRoIGZpbGw9IiNmZmZmZmYiIGQ9Ik03LjM0MyAxMi41MTdsLTEuNTE5IDMuODk4IDMuODMxLTEuNTg2LTIuMzEyLTIuMzEyek0xOC40NjMgNC4xOTJsLTAuNDg2LTAuNDg2Yy0wLjUzNi0wLjUzNy0xLjQwNy0wLjUzNy0xLjk0NCAwbC0wLjk3MiAwLjk3MiAyLjQzIDIuNDMxIDAuOTcyLTAuOTcyYzAuNTM4LTAuNTM3IDAuNTM4LTEuNDA4IDAtMS45NDV6TTcuNDIgMTIuMzE5bDAuMzQ4LTAuMzQ4IDIuNDMgMi40MyA2LjgwNi02LjgwNi0yLjQzLTIuNDMgMC40ODYtMC40ODctNy42NCA3LjY0MXpNMTUuODE1IDE3Ljg3OGwtMTEuNzA1IDAuMDA0IDAuMDAyLTExLjcwNSA4LjE5Ni0wLjAwMyAxLjI4NC0xLjM2MWgtMTAuMTc4Yy0wLjM3OSAwLTAuNjg4IDAuMzA3LTAuNjg4IDAuNjg4djEzLjA2M2MwIDAuMzggMC4zMDggMC42ODggMC42ODggMC42ODhoMTMuMDYzYzAuMzggMCAwLjY4OC0wLjMwNyAwLjY4OC0wLjY4OHYtOS42NjVsLTEuMzg1IDEuMzU5IDAuMDM3IDcuNjIxeiI+PC9wYXRoPg0KPC9zdmc+DQo=');
@@ -1598,6 +1599,11 @@ input.throbbing {
   margin-left: 0;
 }
 
+/* line 36, ../sass/partials/components/_button.scss */
+.button--submit {
+  text-transform: uppercase;
+}
+
 /* line 1, ../sass/partials/components/_card.scss */
 .card {
   background: #fff;
@@ -1643,8 +1649,8 @@ input.throbbing {
   overflow: hidden;
   width: 24px;
   background-image: url('../images/bg/icon-calendar-24-25-white.png');
-  background-image: -webkit-linear-gradient(transparent, transparent), url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4KPCEtLSBHZW5lcmF0ZWQgYnkgSWNvTW9vbi5pbyAtLT4KPCFET0NUWVBFIHN2ZyBQVUJMSUMgIi0vL1czQy8vRFREIFNWRyAxLjEvL0VOIiAiaHR0cDovL3d3dy53My5vcmcvR3JhcGhpY3MvU1ZHLzEuMS9EVEQvc3ZnMTEuZHRkIj4KPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNSIgdmlld0JveD0iMCAwIDI0IDI1Ij4KPHBhdGggZmlsbD0iI2ZmZmZmZiIgZD0iTTUuODM3IDIuNTMzaDEyLjIyNXYxLjMyMmgtMTIuMjI1di0xLjMyMnoiPjwvcGF0aD4KPHBhdGggZmlsbD0iI2ZmZmZmZiIgZD0iTTIzLjU2OCAyLjUzM2gtMi41MzN2MS4zMjJoMS44NzJ2MTkuODI0aC0yMS41ODZ2LTE5LjgyNGgxLjY1MnYtMS4zMjJoLTIuMzEzYy0wLjMzIDAtMC42NjEgMC4zMy0wLjY2MSAwLjY2MXYyMS4xNDVjMCAwLjMzIDAuMzMgMC42NjEgMC42NjEgMC42NjFoMjIuOTA3YzAuMzMgMCAwLjY2MS0wLjMzIDAuNjYxLTAuNjYxdi0yMS4xNDVjMC0wLjMzLTAuMzMtMC42NjEtMC42NjEtMC42NjF6Ij48L3BhdGg+CjxwYXRoIGZpbGw9IiNmZmZmZmYiIGQ9Ik00LjQwNSA1LjgzN2MwLjMzIDAgMC42NjEtMC4zMyAwLjY2MS0wLjY2MXYtNC42MjZjMC0wLjIyLTAuMzMtMC41NTEtMC42NjEtMC41NTFzLTAuNjYxIDAuMzMtMC42NjEgMC42NjF2NC42MjZjMCAwLjMzIDAuMzMgMC41NTEgMC42NjEgMC41NTF6Ij48L3BhdGg+CjxwYXRoIGZpbGw9IiNmZmZmZmYiIGQ9Ik0xOS42MDQgNS44MzdjMC4zMyAwIDAuNjYxLTAuMzMgMC42NjEtMC42NjF2LTQuNjI2YzAtMC4zMy0wLjMzLTAuNjYxLTAuNjYxLTAuNjYxcy0wLjY2MSAwLjMzLTAuNjYxIDAuNjYxdjQuNjI2YzAgMC40NDEgMC4yMiAwLjY2MSAwLjY2MSAwLjY2MXoiPjwvcGF0aD4KPHBhdGggZmlsbD0iI2ZmZmZmZiIgZD0iTTQuNTE1IDguNDhoMTUuMTk4djEuMzIyaC0xNS4xOTh2LTEuMzIyeiI+PC9wYXRoPgo8cGF0aCBmaWxsPSIjZmZmZmZmIiBkPSJNNC41MTUgMTIuMDA0aDE1LjE5OHYxLjMyMmgtMTUuMTk4di0xLjMyMnoiPjwvcGF0aD4KPHBhdGggZmlsbD0iI2ZmZmZmZiIgZD0iTTQuNTE1IDE1LjYzOWgxNS4xOTh2MS4zMjJoLTE1LjE5OHYtMS4zMjJ6Ij48L3BhdGg+CjxwYXRoIGZpbGw9IiNmZmZmZmYiIGQ9Ik00LjUxNSAxOS4xNjNoOC41OXYxLjMyMmgtOC41OXYtMS4zMjJ6Ij48L3BhdGg+Cjwvc3ZnPgo=');
-  background-image: linear-gradient(transparent, transparent), url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4KPCEtLSBHZW5lcmF0ZWQgYnkgSWNvTW9vbi5pbyAtLT4KPCFET0NUWVBFIHN2ZyBQVUJMSUMgIi0vL1czQy8vRFREIFNWRyAxLjEvL0VOIiAiaHR0cDovL3d3dy53My5vcmcvR3JhcGhpY3MvU1ZHLzEuMS9EVEQvc3ZnMTEuZHRkIj4KPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNSIgdmlld0JveD0iMCAwIDI0IDI1Ij4KPHBhdGggZmlsbD0iI2ZmZmZmZiIgZD0iTTUuODM3IDIuNTMzaDEyLjIyNXYxLjMyMmgtMTIuMjI1di0xLjMyMnoiPjwvcGF0aD4KPHBhdGggZmlsbD0iI2ZmZmZmZiIgZD0iTTIzLjU2OCAyLjUzM2gtMi41MzN2MS4zMjJoMS44NzJ2MTkuODI0aC0yMS41ODZ2LTE5LjgyNGgxLjY1MnYtMS4zMjJoLTIuMzEzYy0wLjMzIDAtMC42NjEgMC4zMy0wLjY2MSAwLjY2MXYyMS4xNDVjMCAwLjMzIDAuMzMgMC42NjEgMC42NjEgMC42NjFoMjIuOTA3YzAuMzMgMCAwLjY2MS0wLjMzIDAuNjYxLTAuNjYxdi0yMS4xNDVjMC0wLjMzLTAuMzMtMC42NjEtMC42NjEtMC42NjF6Ij48L3BhdGg+CjxwYXRoIGZpbGw9IiNmZmZmZmYiIGQ9Ik00LjQwNSA1LjgzN2MwLjMzIDAgMC42NjEtMC4zMyAwLjY2MS0wLjY2MXYtNC42MjZjMC0wLjIyLTAuMzMtMC41NTEtMC42NjEtMC41NTFzLTAuNjYxIDAuMzMtMC42NjEgMC42NjF2NC42MjZjMCAwLjMzIDAuMzMgMC41NTEgMC42NjEgMC41NTF6Ij48L3BhdGg+CjxwYXRoIGZpbGw9IiNmZmZmZmYiIGQ9Ik0xOS42MDQgNS44MzdjMC4zMyAwIDAuNjYxLTAuMzMgMC42NjEtMC42NjF2LTQuNjI2YzAtMC4zMy0wLjMzLTAuNjYxLTAuNjYxLTAuNjYxcy0wLjY2MSAwLjMzLTAuNjYxIDAuNjYxdjQuNjI2YzAgMC40NDEgMC4yMiAwLjY2MSAwLjY2MSAwLjY2MXoiPjwvcGF0aD4KPHBhdGggZmlsbD0iI2ZmZmZmZiIgZD0iTTQuNTE1IDguNDhoMTUuMTk4djEuMzIyaC0xNS4xOTh2LTEuMzIyeiI+PC9wYXRoPgo8cGF0aCBmaWxsPSIjZmZmZmZmIiBkPSJNNC41MTUgMTIuMDA0aDE1LjE5OHYxLjMyMmgtMTUuMTk4di0xLjMyMnoiPjwvcGF0aD4KPHBhdGggZmlsbD0iI2ZmZmZmZiIgZD0iTTQuNTE1IDE1LjYzOWgxNS4xOTh2MS4zMjJoLTE1LjE5OHYtMS4zMjJ6Ij48L3BhdGg+CjxwYXRoIGZpbGw9IiNmZmZmZmYiIGQ9Ik00LjUxNSAxOS4xNjNoOC41OXYxLjMyMmgtOC41OXYtMS4zMjJ6Ij48L3BhdGg+Cjwvc3ZnPgo=');
+  background-image: -webkit-linear-gradient(transparent, transparent), url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4NCjwhLS0gR2VuZXJhdGVkIGJ5IEljb01vb24uaW8gLS0+DQo8IURPQ1RZUEUgc3ZnIFBVQkxJQyAiLS8vVzNDLy9EVEQgU1ZHIDEuMS8vRU4iICJodHRwOi8vd3d3LnczLm9yZy9HcmFwaGljcy9TVkcvMS4xL0RURC9zdmcxMS5kdGQiPg0KPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNSIgdmlld0JveD0iMCAwIDI0IDI1Ij4NCjxwYXRoIGZpbGw9IiNmZmZmZmYiIGQ9Ik01LjgzNyAyLjUzM2gxMi4yMjV2MS4zMjJoLTEyLjIyNXYtMS4zMjJ6Ij48L3BhdGg+DQo8cGF0aCBmaWxsPSIjZmZmZmZmIiBkPSJNMjMuNTY4IDIuNTMzaC0yLjUzM3YxLjMyMmgxLjg3MnYxOS44MjRoLTIxLjU4NnYtMTkuODI0aDEuNjUydi0xLjMyMmgtMi4zMTNjLTAuMzMgMC0wLjY2MSAwLjMzLTAuNjYxIDAuNjYxdjIxLjE0NWMwIDAuMzMgMC4zMyAwLjY2MSAwLjY2MSAwLjY2MWgyMi45MDdjMC4zMyAwIDAuNjYxLTAuMzMgMC42NjEtMC42NjF2LTIxLjE0NWMwLTAuMzMtMC4zMy0wLjY2MS0wLjY2MS0wLjY2MXoiPjwvcGF0aD4NCjxwYXRoIGZpbGw9IiNmZmZmZmYiIGQ9Ik00LjQwNSA1LjgzN2MwLjMzIDAgMC42NjEtMC4zMyAwLjY2MS0wLjY2MXYtNC42MjZjMC0wLjIyLTAuMzMtMC41NTEtMC42NjEtMC41NTFzLTAuNjYxIDAuMzMtMC42NjEgMC42NjF2NC42MjZjMCAwLjMzIDAuMzMgMC41NTEgMC42NjEgMC41NTF6Ij48L3BhdGg+DQo8cGF0aCBmaWxsPSIjZmZmZmZmIiBkPSJNMTkuNjA0IDUuODM3YzAuMzMgMCAwLjY2MS0wLjMzIDAuNjYxLTAuNjYxdi00LjYyNmMwLTAuMzMtMC4zMy0wLjY2MS0wLjY2MS0wLjY2MXMtMC42NjEgMC4zMy0wLjY2MSAwLjY2MXY0LjYyNmMwIDAuNDQxIDAuMjIgMC42NjEgMC42NjEgMC42NjF6Ij48L3BhdGg+DQo8cGF0aCBmaWxsPSIjZmZmZmZmIiBkPSJNNC41MTUgOC40OGgxNS4xOTh2MS4zMjJoLTE1LjE5OHYtMS4zMjJ6Ij48L3BhdGg+DQo8cGF0aCBmaWxsPSIjZmZmZmZmIiBkPSJNNC41MTUgMTIuMDA0aDE1LjE5OHYxLjMyMmgtMTUuMTk4di0xLjMyMnoiPjwvcGF0aD4NCjxwYXRoIGZpbGw9IiNmZmZmZmYiIGQ9Ik00LjUxNSAxNS42MzloMTUuMTk4djEuMzIyaC0xNS4xOTh2LTEuMzIyeiI+PC9wYXRoPg0KPHBhdGggZmlsbD0iI2ZmZmZmZiIgZD0iTTQuNTE1IDE5LjE2M2g4LjU5djEuMzIyaC04LjU5di0xLjMyMnoiPjwvcGF0aD4NCjwvc3ZnPg0K');
+  background-image: linear-gradient(transparent, transparent), url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4NCjwhLS0gR2VuZXJhdGVkIGJ5IEljb01vb24uaW8gLS0+DQo8IURPQ1RZUEUgc3ZnIFBVQkxJQyAiLS8vVzNDLy9EVEQgU1ZHIDEuMS8vRU4iICJodHRwOi8vd3d3LnczLm9yZy9HcmFwaGljcy9TVkcvMS4xL0RURC9zdmcxMS5kdGQiPg0KPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNSIgdmlld0JveD0iMCAwIDI0IDI1Ij4NCjxwYXRoIGZpbGw9IiNmZmZmZmYiIGQ9Ik01LjgzNyAyLjUzM2gxMi4yMjV2MS4zMjJoLTEyLjIyNXYtMS4zMjJ6Ij48L3BhdGg+DQo8cGF0aCBmaWxsPSIjZmZmZmZmIiBkPSJNMjMuNTY4IDIuNTMzaC0yLjUzM3YxLjMyMmgxLjg3MnYxOS44MjRoLTIxLjU4NnYtMTkuODI0aDEuNjUydi0xLjMyMmgtMi4zMTNjLTAuMzMgMC0wLjY2MSAwLjMzLTAuNjYxIDAuNjYxdjIxLjE0NWMwIDAuMzMgMC4zMyAwLjY2MSAwLjY2MSAwLjY2MWgyMi45MDdjMC4zMyAwIDAuNjYxLTAuMzMgMC42NjEtMC42NjF2LTIxLjE0NWMwLTAuMzMtMC4zMy0wLjY2MS0wLjY2MS0wLjY2MXoiPjwvcGF0aD4NCjxwYXRoIGZpbGw9IiNmZmZmZmYiIGQ9Ik00LjQwNSA1LjgzN2MwLjMzIDAgMC42NjEtMC4zMyAwLjY2MS0wLjY2MXYtNC42MjZjMC0wLjIyLTAuMzMtMC41NTEtMC42NjEtMC41NTFzLTAuNjYxIDAuMzMtMC42NjEgMC42NjF2NC42MjZjMCAwLjMzIDAuMzMgMC41NTEgMC42NjEgMC41NTF6Ij48L3BhdGg+DQo8cGF0aCBmaWxsPSIjZmZmZmZmIiBkPSJNMTkuNjA0IDUuODM3YzAuMzMgMCAwLjY2MS0wLjMzIDAuNjYxLTAuNjYxdi00LjYyNmMwLTAuMzMtMC4zMy0wLjY2MS0wLjY2MS0wLjY2MXMtMC42NjEgMC4zMy0wLjY2MSAwLjY2MXY0LjYyNmMwIDAuNDQxIDAuMjIgMC42NjEgMC42NjEgMC42NjF6Ij48L3BhdGg+DQo8cGF0aCBmaWxsPSIjZmZmZmZmIiBkPSJNNC41MTUgOC40OGgxNS4xOTh2MS4zMjJoLTE1LjE5OHYtMS4zMjJ6Ij48L3BhdGg+DQo8cGF0aCBmaWxsPSIjZmZmZmZmIiBkPSJNNC41MTUgMTIuMDA0aDE1LjE5OHYxLjMyMmgtMTUuMTk4di0xLjMyMnoiPjwvcGF0aD4NCjxwYXRoIGZpbGw9IiNmZmZmZmYiIGQ9Ik00LjUxNSAxNS42MzloMTUuMTk4djEuMzIyaC0xNS4xOTh2LTEuMzIyeiI+PC9wYXRoPg0KPHBhdGggZmlsbD0iI2ZmZmZmZiIgZD0iTTQuNTE1IDE5LjE2M2g4LjU5djEuMzIyaC04LjU5di0xLjMyMnoiPjwvcGF0aD4NCjwvc3ZnPg0K');
   content: "";
   display: inline-block;
   margin-right: 10px;
@@ -2371,53 +2377,72 @@ body > .footer {
 
 /* line 4, ../sass/partials/components/_form-item.scss */
 .form-item {
-  margin: 1.625em 0;
+  margin: 1em 0;
+}
+/* line 7, ../sass/partials/components/_form-item.scss */
+.form-item label {
+  display: block;
+  font-weight: bold;
+}
+/* line 13, ../sass/partials/components/_form-item.scss */
+.form-item legend,
+.form-item .form-item__legend {
+  font-weight: bold;
+}
+/* line 18, ../sass/partials/components/_form-item.scss */
+.form-item .description,
+.form-item .form-item__description {
+  font-size: 0.875em;
+  line-height: 1.85714em;
+  -webkit-hyphens: none;
+  -moz-hyphens: none;
+  hyphens: none;
+  color: #555555;
+  font-size: 0.875em;
+  font-style: italic;
+  line-height: 1.4;
+  padding-bottom: 0.5em;
 }
 
-/* line 8, ../sass/partials/components/_form-item.scss */
+/* line 29, ../sass/partials/components/_form-item.scss */
 .form-item__label {
   display: block;
   font-weight: bold;
 }
 
-/* line 13, ../sass/partials/components/_form-item.scss */
+/* line 39, ../sass/partials/components/_form-item.scss */
+.form-type-checkbox label,
+.form-type-checkbox .form-item__label,
+.form-item--checkbox label,
+.form-item--checkbox .form-item__label,
+.form-type-radio label,
+.form-type-radio .form-item__label,
+.form-item--radio label,
+.form-item--radio .form-item__label {
+  display: inline;
+  font-weight: normal;
+}
+
+/* line 45, ../sass/partials/components/_form-item.scss */
 .form-item__fieldset {
   border: 0;
   margin: 0;
   padding: 0;
 }
 
-/* line 19, ../sass/partials/components/_form-item.scss */
-.form-item__legend {
-  font-weight: bold;
-}
-
-/* line 23, ../sass/partials/components/_form-item.scss */
-.form-item__description {
-  font-size: 0.875em;
-  line-height: 1.85714em;
-  color: #555555;
-}
-
-/* line 28, ../sass/partials/components/_form-item.scss */
+/* line 51, ../sass/partials/components/_form-item.scss */
 .form-item__required-marker:before {
+  color: #990000;
   content: "*";
 }
 
-/* line 34, ../sass/partials/components/_form-item.scss */
-.form-item--checkbox .form-item__label,
-.form-item--radio .form-item__label {
-  display: inline;
-  font-weight: normal;
-}
-
-/* line 41, ../sass/partials/components/_form-item.scss */
+/* line 57, ../sass/partials/components/_form-item.scss */
 .form-item--checkboxes .form-item--checkbox,
 .form-item--radio {
   margin: 0;
 }
 
-/* line 47, ../sass/partials/components/_form-item.scss */
+/* line 63, ../sass/partials/components/_form-item.scss */
 .form-item--date-day,
 .form-item--date-month,
 .form-item--date-year {
@@ -2425,25 +2450,25 @@ body > .footer {
   margin: 0;
 }
 
-/* line 52, ../sass/partials/components/_form-item.scss */
+/* line 68, ../sass/partials/components/_form-item.scss */
 .form-item--password-confirm-pass-1 {
   margin-bottom: 0.8125em;
 }
 
-/* line 56, ../sass/partials/components/_form-item.scss */
+/* line 72, ../sass/partials/components/_form-item.scss */
 .form-item--password-confirm-pass-2 {
   margin: 0.8125em 0;
 }
 
-/* line 62, ../sass/partials/components/_form-item.scss */
+/* line 78, ../sass/partials/components/_form-item.scss */
 .form-select,
 .form-text,
 .form-textarea {
   border: 1px solid #cccccc;
   font-size: 1em;
-  padding: 0.3125em 0.625em;
+  padding: 0.5em 0.75em;
 }
-/* line 67, ../sass/partials/components/_form-item.scss */
+/* line 83, ../sass/partials/components/_form-item.scss */
 .form-select:focus,
 .form-text:focus,
 .form-textarea:focus {
@@ -3771,7 +3796,7 @@ div[class*="pane--facetapi-"] .pane__content ul li a {
   text-align: center;
   z-index: 1;
   min-height: 300px;
-  padding: 2em;
+  padding: 1.5em;
 }
 /* line 13, ../sass/partials/components/pane/_pane--homepage-header.scss */
 .pane--homepage-header:after {
@@ -3810,20 +3835,26 @@ div[class*="pane--facetapi-"] .pane__content ul li a {
   color: #fff;
   font-size: 2.1875em;
   font-weight: bold;
+  line-height: 1.1;
   margin: 0 auto;
   max-width: 600px;
-  padding: 0 0 0.5em 0;
+  padding: 0 0 0.25em 0;
   text-transform: uppercase;
   font-size: 3em;
 }
-/* line 57, ../sass/partials/components/pane/_pane--homepage-header.scss */
+/* line 58, ../sass/partials/components/pane/_pane--homepage-header.scss */
 .pane--homepage-header .pane__content p {
   font-size: 1.25em;
   font-weight: 300;
+  line-height: 1.1;
   margin: 0;
-  padding: 0 0 0.5em 0;
+  padding: 0 0 0.25em 0;
   font-size: 2em;
-  padding: 0 0 1em 0;
+  padding: 0 0 0.6em 0;
+}
+/* line 69, ../sass/partials/components/pane/_pane--homepage-header.scss */
+.pane--homepage-header .pane__content .button {
+  margin-bottom: 0.25em;
 }
 
 /* line 2, ../sass/partials/components/pane/_pane--homepage-join-callout.scss */
@@ -4424,6 +4455,15 @@ div[class*="pane--facetapi-"] .pane__content ul li a {
   width: 0;
 }
 
+/* line 1, ../sass/partials/components/_required-fields.scss */
+.required-fields {
+  margin: 0 0 3em 0;
+}
+/* line 4, ../sass/partials/components/_required-fields.scss */
+.required-fields h2 {
+  margin: 0 0 1em 0;
+}
+
 /* line 3, ../sass/partials/components/_sharethis-buttons.scss */
 .sharethis-buttons .st_sharethis_custom {
   white-space: nowrap;
@@ -4713,6 +4753,69 @@ tr.drag-previous {
 .user-header__type {
   font-size: 0.875em;
   line-height: 1.5;
+}
+
+/* line 1, ../sass/partials/components/_user-register-form.scss */
+#user-register-form {
+  border: 2px solid #cecfcb;
+  -webkit-box-shadow: 0 2px 4px 2px rgba(0, 0, 0, 0.15);
+  -moz-box-shadow: 0 2px 4px 2px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 2px 4px 2px rgba(0, 0, 0, 0.15);
+  max-width: 750px;
+  margin: 1em auto 2em auto;
+  overflow: hidden;
+  padding: 2em;
+}
+/* line 9, ../sass/partials/components/_user-register-form.scss */
+#user-register-form #edit-lr-social-login-links {
+  border-bottom: 1px solid #cecfcb;
+  margin: 0 0 1.5em 0;
+  padding: 0 0 1.5em 0;
+}
+/* line 15, ../sass/partials/components/_user-register-form.scss */
+#user-register-form .interfacecontainerdiv {
+  margin-left: -20px;
+}
+/* line 19, ../sass/partials/components/_user-register-form.scss */
+#user-register-form h2 {
+  margin: 1.5em 0 0.75em 0;
+}
+/* line 23, ../sass/partials/components/_user-register-form.scss */
+#user-register-form .button--submit {
+  margin: 0.5em 0;
+}
+/* line 27, ../sass/partials/components/_user-register-form.scss */
+#user-register-form .field-name-field-user-photo {
+  margin: 2em 0;
+}
+/* line 29, ../sass/partials/components/_user-register-form.scss */
+#user-register-form .field-name-field-user-photo .description {
+  font-style: normal;
+}
+/* line 32, ../sass/partials/components/_user-register-form.scss */
+#user-register-form .field-name-field-user-photo .image-widget {
+  margin-top: 0.5em;
+}
+/* line 37, ../sass/partials/components/_user-register-form.scss */
+#user-register-form .field-type-mailchimp-lists-subscription {
+  margin: 2em 0 2em 0;
+}
+/* line 39, ../sass/partials/components/_user-register-form.scss */
+#user-register-form .field-type-mailchimp-lists-subscription legend {
+  font-weight: bold;
+}
+/* line 42, ../sass/partials/components/_user-register-form.scss */
+#user-register-form .field-type-mailchimp-lists-subscription .description {
+  font-size: 0.875em;
+  line-height: 1.4;
+}
+/* line 46, ../sass/partials/components/_user-register-form.scss */
+#user-register-form .field-type-mailchimp-lists-subscription .form-type-checkbox {
+  margin: 0.5em 0 0 0;
+}
+/* line 51, ../sass/partials/components/_user-register-form.scss */
+#user-register-form .form-item.form-type-password {
+  margin-bottom: 0;
 }
 
 /* line 4, ../sass/partials/components/_vertical-tabs.scss */

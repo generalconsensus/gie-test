@@ -66,4 +66,16 @@ function gesso_css_alter(&$css) {
       $css[$css_path]['data'] = $theme_path . '/css/overrides/tb_megamenu/compatibility.css';
     }
   }
+
+  // Replace toolbar css.
+  if (module_exists('super_login')) {
+    $css_path = drupal_get_path('module', 'super_login') . '/css/super-login.css';
+    if (isset($css[$css_path])) {
+      $css[$css_path]['data'] = $theme_path . '/css/overrides/super_login/super-login.css';
+    }
+    $css_path = drupal_get_path('module', 'super_login') . '/css/super-login-buttons.css';
+    if (isset($css[$css_path])) {
+      $css[$css_path]['data'] = $theme_path . '/css/overrides/super_login/super-login-buttons.css';
+    }
+  }
 }

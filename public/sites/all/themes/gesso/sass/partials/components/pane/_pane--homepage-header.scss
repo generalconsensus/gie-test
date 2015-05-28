@@ -8,7 +8,7 @@
   z-index: 1;
   @include breakpoint(800px, $no-query: true) {
     min-height: 300px;
-    padding: 2em;
+    padding: 1.5em;
   }
   &:after {
     @include breakpoint(800px, $no-query: true) {
@@ -46,9 +46,10 @@
       color: #fff;
       font-size: em(35px);
       font-weight: bold;
+      line-height: 1.1;
       margin: 0 auto;
       max-width: 600px;
-      padding: 0 0 0.5em 0;
+      padding: 0 0 0.25em 0;
       text-transform: uppercase;
       @include breakpoint(800px, $no-query: true) {
         font-size: em(48px);
@@ -57,15 +58,17 @@
     p {
       font-size: em(20px);
       font-weight: 300;
+      line-height: 1.1;
       margin: 0;
-      padding: 0 0 0.5em 0;
+      padding: 0 0 0.25em 0;
       @include breakpoint(800px, $no-query: true) {
         font-size: em($font-size-xxxl);
-        padding: 0 0 1em 0;
+        padding: 0 0 0.6em 0;
       }
     }
     .button {
       @extend %button--white;
+      margin-bottom: 0.25em;
     }
   }
 }
