@@ -648,6 +648,7 @@ function gie_taxonomies_field_default_field_instances() {
     'label' => 'Highlights',
     'required' => 0,
     'settings' => array(
+      'description_display' => 'after',
       'user_register_form' => FALSE,
     ),
     'widget' => array(
@@ -1031,10 +1032,11 @@ function gie_taxonomies_field_default_field_instances() {
     'label' => 'Highlights',
     'required' => 0,
     'settings' => array(
+      'description_display' => 'after',
       'user_register_form' => FALSE,
     ),
     'widget' => array(
-      'active' => 1,
+      'active' => 0,
       'module' => 'multiple_selects',
       'settings' => array(
         'apply_chosen' => '',
@@ -1370,6 +1372,7 @@ function gie_taxonomies_field_default_field_instances() {
     'label' => 'Highlights',
     'required' => 0,
     'settings' => array(
+      'description_display' => 'after',
       'user_register_form' => FALSE,
     ),
     'widget' => array(

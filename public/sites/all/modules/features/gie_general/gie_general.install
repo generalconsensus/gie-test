@@ -237,3 +237,14 @@ function gie_general_update_7022() {
   );
   module_enable($modules, TRUE);
 }
+
+/**
+ * Enable GIE Feeds feature.
+ */
+function gie_general_update_7023() {
+    $modules = array(
+        'gie_feeds'
+    );
+    module_enable($modules, TRUE);
+}
+

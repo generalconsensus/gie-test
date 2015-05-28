@@ -16,12 +16,17 @@
           {{> molecules-filters }}
         </aside>
         <div class="l-main">
-          <div class="view view--discussion-listing">
-            {{# listItems.nine }}
-              <div class="views-row">
-                {{> organisms-discussion-teaser }}
+          <div class="pane">
+            <div class="pane__content">
+              <div class="view view--discussion-listing">
+                {{# listItems.nine }}
+                  <div class="views-row">
+                    {{> organisms-discussion-teaser }}
+                  </div>
+                {{/ listItems.nine }}
+                {{> molecules-pager }}
               </div>
-            {{/ listItems.nine }}
+            </div>
           </div>
         </div>
       </div>

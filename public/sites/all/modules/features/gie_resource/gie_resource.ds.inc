@@ -92,6 +92,62 @@ function gie_resource_ds_field_settings_info() {
 
   $ds_fieldsetting = new stdClass();
   $ds_fieldsetting->api_version = 1;
+  $ds_fieldsetting->id = 'node|resource|highlights';
+  $ds_fieldsetting->entity_type = 'node';
+  $ds_fieldsetting->bundle = 'resource';
+  $ds_fieldsetting->view_mode = 'highlights';
+  $ds_fieldsetting->settings = array(
+    'title_field' => array(
+      'formatter_settings' => array(
+        'ft' => array(
+          'func' => 'theme_ds_field_expert',
+          'fi' => TRUE,
+          'fi-el' => 'h3',
+          'fi-cl' => 'card__title',
+          'fi-at' => '',
+          'fi-def-at' => FALSE,
+          'fi-odd-even' => FALSE,
+        ),
+      ),
+    ),
+    'field_resource_author' => array(
+      'formatter_settings' => array(
+        'ft' => array(
+          'func' => 'theme_ds_field_expert',
+        ),
+      ),
+    ),
+    'field_resource_date' => array(
+      'formatter_settings' => array(
+        'ft' => array(
+          'func' => 'theme_ds_field_expert',
+          'fi' => TRUE,
+          'fi-el' => 'div',
+          'fi-cl' => 'card__author-date',
+          'fi-at' => '',
+          'fi-def-at' => FALSE,
+          'fi-odd-even' => FALSE,
+        ),
+      ),
+    ),
+    'field_resource_type' => array(
+      'formatter_settings' => array(
+        'ft' => array(
+          'func' => 'theme_ds_field_expert',
+          'fi' => TRUE,
+          'fi-el' => 'h2',
+          'fi-cl' => 'card__type',
+          'fi-at' => '',
+          'fi-def-at' => FALSE,
+          'fi-odd-even' => FALSE,
+        ),
+      ),
+    ),
+  );
+  $export['node|resource|highlights'] = $ds_fieldsetting;
+
+  $ds_fieldsetting = new stdClass();
+  $ds_fieldsetting->api_version = 1;
   $ds_fieldsetting->id = 'node|resource|listing';
   $ds_fieldsetting->entity_type = 'node';
   $ds_fieldsetting->bundle = 'resource';
@@ -368,6 +424,53 @@ function gie_resource_ds_layout_settings_info() {
     'layout_link_custom' => '',
   );
   $export['node|resource|full'] = $ds_layout;
+
+  $ds_layout = new stdClass();
+  $ds_layout->api_version = 1;
+  $ds_layout->id = 'node|resource|highlights';
+  $ds_layout->entity_type = 'node';
+  $ds_layout->bundle = 'resource';
+  $ds_layout->view_mode = 'highlights';
+  $ds_layout->layout = 'article';
+  $ds_layout->settings = array(
+    'regions' => array(
+      'main_content' => array(
+        0 => 'group_card_content',
+        1 => 'field_resource_type',
+        2 => 'title_field',
+        3 => 'group_card_author',
+        4 => 'group_card_author_inner',
+        5 => 'field_resource_author',
+        6 => 'field_resource_date',
+      ),
+    ),
+    'fields' => array(
+      'group_card_content' => 'main_content',
+      'field_resource_type' => 'main_content',
+      'title_field' => 'main_content',
+      'group_card_author' => 'main_content',
+      'group_card_author_inner' => 'main_content',
+      'field_resource_author' => 'main_content',
+      'field_resource_date' => 'main_content',
+    ),
+    'classes' => array(
+      'layout_class' => array(
+        'card' => 'card',
+        'card--background' => 'card--background',
+      ),
+    ),
+    'wrappers' => array(
+      'header' => 'div',
+      'main_content' => 'div',
+      'footer' => 'div',
+    ),
+    'layout_wrapper' => 'div',
+    'layout_attributes' => '',
+    'layout_attributes_merge' => 1,
+    'layout_link_attribute' => '',
+    'layout_link_custom' => '',
+  );
+  $export['node|resource|highlights'] = $ds_layout;
 
   $ds_layout = new stdClass();
   $ds_layout->api_version = 1;
