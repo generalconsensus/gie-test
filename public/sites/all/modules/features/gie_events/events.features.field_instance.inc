@@ -180,28 +180,9 @@ function events_field_default_field_instances() {
       ),
       'listing' => array(
         'label' => 'hidden',
-        'module' => 'date',
-        'settings' => array(
-          'field_delimiter' => '',
-          'format_type' => 'long',
-          'fromto' => 'both',
-          'linked_field' => array(
-            'advanced' => array(
-              'class' => '',
-              'rel' => '',
-              'target' => '',
-              'text' => '',
-              'title' => '',
-            ),
-            'destination' => '',
-            'linked' => 0,
-          ),
-          'multiple_from' => '',
-          'multiple_number' => '',
-          'multiple_to' => '',
-        ),
-        'type' => 'date_default',
-        'weight' => 21,
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 2,
       ),
       'page_header' => array(
         'label' => 'above',
@@ -612,7 +593,7 @@ function events_field_default_field_instances() {
           'use_widget_handlers' => 0,
         ),
         'type' => 'addressfield_default',
-        'weight' => 24,
+        'weight' => 14,
       ),
       'page_header' => array(
         'label' => 'above',
@@ -1002,7 +983,7 @@ function events_field_default_field_instances() {
         'label' => 'hidden',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 2,
+        'weight' => 9,
       ),
       'page_header' => array(
         'label' => 'above',
@@ -1246,7 +1227,7 @@ function events_field_default_field_instances() {
         'label' => 'inline',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 9,
+        'weight' => 10,
       ),
       'page_header' => array(
         'label' => 'above',
@@ -1814,7 +1795,7 @@ function events_field_default_field_instances() {
           'title_style' => '_none',
         ),
         'type' => 'title_linked',
-        'weight' => 20,
+        'weight' => 11,
       ),
       'page_header' => array(
         'label' => 'above',

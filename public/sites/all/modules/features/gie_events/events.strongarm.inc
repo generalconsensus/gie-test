@@ -62,6 +62,13 @@ function events_strongarm() {
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
+  $strongarm->name = 'date_format_card_date';
+  $strongarm->value = 'F m';
+  $export['date_format_card_date'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
   $strongarm->name = 'field_bundle_settings_node__event';
   $strongarm->value = array(
     'view_modes' => array(
@@ -191,7 +198,7 @@ function events_strongarm() {
         'events_at_a_glance_entity_view_1' => array(
           'listing' => array(
             'weight' => '10',
-            'visible' => FALSE,
+            'visible' => TRUE,
           ),
           'full' => array(
             'weight' => '14',
@@ -206,7 +213,7 @@ function events_strongarm() {
         ),
         'events_at_a_glance_related_org_card_event' => array(
           'listing' => array(
-            'weight' => '22',
+            'weight' => '12',
             'visible' => TRUE,
           ),
         ),
