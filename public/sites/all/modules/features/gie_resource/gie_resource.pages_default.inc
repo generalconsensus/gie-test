@@ -243,6 +243,29 @@ function gie_resource_default_page_manager_pages() {
     $display->content['new-bc2720c5-a09e-4775-a9d3-425ad79d404d'] = $pane;
     $display->panels['sidebar'][6] = 'new-bc2720c5-a09e-4775-a9d3-425ad79d404d';
     $pane = new stdClass();
+    $pane->pid = 'new-9cec5539-0d17-436d-8713-7659726311e0';
+    $pane->panel = 'sidebar';
+    $pane->type = 'block';
+    $pane->subtype = 'facetapi-PcG2dvVTqp1uY6fcA8KAdTP2cPwseIaj';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array(
+      'override_title' => 1,
+      'override_title_text' => 'Organizations',
+      'override_title_heading' => 'h2',
+    );
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
+    $pane->css = array();
+    $pane->extras = array();
+    $pane->position = 7;
+    $pane->locks = array();
+    $pane->uuid = '9cec5539-0d17-436d-8713-7659726311e0';
+    $display->content['new-9cec5539-0d17-436d-8713-7659726311e0'] = $pane;
+    $display->panels['sidebar'][7] = 'new-9cec5539-0d17-436d-8713-7659726311e0';
+    $pane = new stdClass();
     $pane->pid = 'new-63e72540-78bd-4dac-a6eb-354aec4fd6f8';
     $pane->panel = 'title';
     $pane->type = 'pane';
