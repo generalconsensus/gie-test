@@ -63,6 +63,8 @@ function gie_search_strongarm() {
       'search_api_views:solr_search_node:node_pane' => 'search_api_views:solr_search_node:node_pane',
       'search_api_page:search' => 'search_api_page:search',
       'search_api_views:events_listing:funding_listing' => 'search_api_views:events_listing:funding_listing',
+      'search_api_views:program_listing:program_listing' => 'search_api_views:program_listing:program_listing',
+      'search_api_views:partner_listing:org_listing' => 'search_api_views:partner_listing:org_listing',
     ),
     'default_user_index' => array(
       'search_api_views:user_listing:listing_pane' => 'search_api_views:user_listing:listing_pane',
@@ -77,7 +79,7 @@ function gie_search_strongarm() {
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'search_api_solr_last_optimize';
-  $strongarm->value = 1431623158;
+  $strongarm->value = 1432820303;
   $export['search_api_solr_last_optimize'] = $strongarm;
 
   $strongarm = new stdClass();
