@@ -475,7 +475,7 @@ function gie_user_field_default_field_instances() {
         'track_list' => 0,
       ),
       'type' => 'term_reference_tree',
-      'weight' => 29,
+      'weight' => 6,
     ),
   );
 
@@ -666,11 +666,20 @@ function gie_user_field_default_field_instances() {
     ),
     'widget' => array(
       'active' => 1,
-      'module' => 'options',
+      'module' => 'term_reference_tree',
       'settings' => array(
         'apply_chosen' => 1,
+        'cascading_selection' => 0,
+        'filter_view' => '',
+        'leaves_only' => 0,
+        'max_depth' => '',
+        'parent_term_id' => '',
+        'select_parents' => 0,
+        'start_minimized' => 0,
+        'token_display' => '',
+        'track_list' => 0,
       ),
-      'type' => 'options_select',
+      'type' => 'term_reference_tree',
       'weight' => 32,
     ),
   );
@@ -879,9 +888,9 @@ function gie_user_field_default_field_instances() {
         'default_country' => 'US',
         'format_handlers' => array(
           'address' => 'address',
+          'address-hide-street' => 'address-hide-street',
           'address-optional' => 'address-optional',
           'address-hide-postal-code' => 0,
-          'address-hide-street' => 0,
           'address-hide-country' => 0,
           'organisation' => 0,
           'name-full' => 0,
@@ -1127,7 +1136,7 @@ function gie_user_field_default_field_instances() {
         'rows' => 5,
       ),
       'type' => 'text_textarea',
-      'weight' => 7,
+      'weight' => 36,
     ),
   );
 
@@ -1448,11 +1457,20 @@ function gie_user_field_default_field_instances() {
     ),
     'widget' => array(
       'active' => 1,
-      'module' => 'options',
+      'module' => 'term_reference_tree',
       'settings' => array(
         'apply_chosen' => 1,
+        'cascading_selection' => 0,
+        'filter_view' => '',
+        'leaves_only' => 0,
+        'max_depth' => '',
+        'parent_term_id' => '',
+        'select_parents' => 0,
+        'start_minimized' => 0,
+        'token_display' => '',
+        'track_list' => 0,
       ),
-      'type' => 'options_select',
+      'type' => 'term_reference_tree',
       'weight' => 31,
     ),
   );
@@ -1818,7 +1836,7 @@ function gie_user_field_default_field_instances() {
         'size' => 60,
       ),
       'type' => 'text_textfield',
-      'weight' => 8,
+      'weight' => 10,
     ),
   );
 
@@ -1918,7 +1936,7 @@ function gie_user_field_default_field_instances() {
         'size' => 60,
       ),
       'type' => 'entityreference_autocomplete',
-      'weight' => 35,
+      'weight' => 7,
     ),
   );
 
@@ -2009,7 +2027,7 @@ function gie_user_field_default_field_instances() {
         'size' => 60,
       ),
       'type' => 'taxonomy_autocomplete',
-      'weight' => 37,
+      'weight' => 35,
     ),
   );
 
@@ -2097,12 +2115,19 @@ function gie_user_field_default_field_instances() {
     ),
     'widget' => array(
       'active' => 1,
-      'module' => 'options',
+      'module' => 'entityreference',
       'settings' => array(
         'apply_chosen' => '',
+        'match_operator' => 'CONTAINS',
+        'path' => '',
+        'references_dialog_add' => 0,
+        'references_dialog_edit' => 0,
+        'references_dialog_search' => 0,
+        'references_dialog_search_view' => '',
+        'size' => 60,
       ),
-      'type' => 'options_select',
-      'weight' => 34,
+      'type' => 'entityreference_autocomplete',
+      'weight' => 8,
     ),
   );
 
@@ -2409,7 +2434,7 @@ function gie_user_field_default_field_instances() {
         'size' => 60,
       ),
       'type' => 'entityreference_autocomplete',
-      'weight' => 36,
+      'weight' => 34,
     ),
   );
 
@@ -2645,7 +2670,7 @@ function gie_user_field_default_field_instances() {
         'rows' => 5,
       ),
       'type' => 'text_textarea',
-      'weight' => 9,
+      'weight' => 11,
     ),
   );
 
@@ -2790,7 +2815,7 @@ function gie_user_field_default_field_instances() {
         'size' => 60,
       ),
       'type' => 'text_textfield',
-      'weight' => 6,
+      'weight' => 9,
     ),
   );
 
@@ -3010,11 +3035,20 @@ function gie_user_field_default_field_instances() {
     ),
     'widget' => array(
       'active' => 1,
-      'module' => 'options',
+      'module' => 'term_reference_tree',
       'settings' => array(
         'apply_chosen' => 1,
+        'cascading_selection' => 0,
+        'filter_view' => '',
+        'leaves_only' => 0,
+        'max_depth' => '',
+        'parent_term_id' => '',
+        'select_parents' => 0,
+        'start_minimized' => 0,
+        'token_display' => '',
+        'track_list' => 0,
       ),
-      'type' => 'options_select',
+      'type' => 'term_reference_tree',
       'weight' => 5,
     ),
   );
