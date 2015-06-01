@@ -20,7 +20,7 @@
     position: absolute;
     right: 0;
     text-align: right;
-    width: 70px;
+    width: 75px;
     z-index: 2;
     @include breakpoint(max-width 400px) {
       display: none;
