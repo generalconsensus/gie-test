@@ -1431,7 +1431,7 @@ input.throbbing {
   position: absolute;
   right: 0;
   text-align: right;
-  width: 70px;
+  width: 75px;
   z-index: 2;
 }
 @media (max-width: 25em) {
@@ -3780,9 +3780,12 @@ div[class*="pane--facetapi-"] {
 }
 /* line 6, ../sass/partials/components/pane/_pane--facetapi.scss */
 div[class*="pane--facetapi-"]:last-child {
+  -webkit-box-shadow: 0px 4px 2px -2px rgba(0, 0, 0, 0.2);
+  -moz-box-shadow: 0px 4px 2px -2px rgba(0, 0, 0, 0.2);
+  box-shadow: 0px 4px 2px -2px rgba(0, 0, 0, 0.2);
   margin-bottom: 2em;
 }
-/* line 9, ../sass/partials/components/pane/_pane--facetapi.scss */
+/* line 10, ../sass/partials/components/pane/_pane--facetapi.scss */
 div[class*="pane--facetapi-"] .pane__title {
   background: #dc5606;
   border: 0;
@@ -3793,12 +3796,16 @@ div[class*="pane--facetapi-"] .pane__title {
   padding: 1em 0.75em;
 }
 /* line 19, ../sass/partials/components/pane/_pane--facetapi.scss */
+div[class*="pane--facetapi-"].is-closed {
+  border-bottom: 1px solid #fff;
+}
+/* line 23, ../sass/partials/components/pane/_pane--facetapi.scss */
 div[class*="pane--facetapi-"].is-open .pane__title, div[class*="pane--facetapi-"].is-closed .pane__title {
   cursor: pointer;
   padding-right: 40px;
   position: relative;
 }
-/* line 23, ../sass/partials/components/pane/_pane--facetapi.scss */
+/* line 27, ../sass/partials/components/pane/_pane--facetapi.scss */
 div[class*="pane--facetapi-"].is-open .pane__title:after, div[class*="pane--facetapi-"].is-closed .pane__title:after {
   background-size: contain;
   content: "";
@@ -3809,34 +3816,34 @@ div[class*="pane--facetapi-"].is-open .pane__title:after, div[class*="pane--face
   top: 1em;
   width: 15px;
 }
-/* line 35, ../sass/partials/components/pane/_pane--facetapi.scss */
+/* line 39, ../sass/partials/components/pane/_pane--facetapi.scss */
 div[class*="pane--facetapi-"].is-open .pane__title:after {
   background-image: url('../images/bg/icon-minus-15-15-white.png');
   background-image: -webkit-linear-gradient(transparent, transparent), url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4NCjwhLS0gR2VuZXJhdGVkIGJ5IEljb01vb24uaW8gLS0+DQo8IURPQ1RZUEUgc3ZnIFBVQkxJQyAiLS8vVzNDLy9EVEQgU1ZHIDEuMS8vRU4iICJodHRwOi8vd3d3LnczLm9yZy9HcmFwaGljcy9TVkcvMS4xL0RURC9zdmcxMS5kdGQiPg0KPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHdpZHRoPSIxNSIgaGVpZ2h0PSIxNSIgdmlld0JveD0iMCAwIDE1IDE1Ij4NCjxwYXRoIGZpbGw9IiNmZmZmZmYiIGQ9Ik0xNC4yNSA4LjI1aC0xMy41Yy0wLjM3NSAwLTAuNzUtMC4yNS0wLjc1LTAuNjI1czAuMzc1LTAuNzUgMC43NS0wLjc1aDEzLjYyNWMwLjI1IDAgMC42MjUgMC4zNzUgMC42MjUgMC43NXMtMC4zNzUgMC42MjUtMC43NSAwLjYyNXoiPjwvcGF0aD4NCjwvc3ZnPg0K');
   background-image: linear-gradient(transparent, transparent), url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4NCjwhLS0gR2VuZXJhdGVkIGJ5IEljb01vb24uaW8gLS0+DQo8IURPQ1RZUEUgc3ZnIFBVQkxJQyAiLS8vVzNDLy9EVEQgU1ZHIDEuMS8vRU4iICJodHRwOi8vd3d3LnczLm9yZy9HcmFwaGljcy9TVkcvMS4xL0RURC9zdmcxMS5kdGQiPg0KPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHdpZHRoPSIxNSIgaGVpZ2h0PSIxNSIgdmlld0JveD0iMCAwIDE1IDE1Ij4NCjxwYXRoIGZpbGw9IiNmZmZmZmYiIGQ9Ik0xNC4yNSA4LjI1aC0xMy41Yy0wLjM3NSAwLTAuNzUtMC4yNS0wLjc1LTAuNjI1czAuMzc1LTAuNzUgMC43NS0wLjc1aDEzLjYyNWMwLjI1IDAgMC42MjUgMC4zNzUgMC42MjUgMC43NXMtMC4zNzUgMC42MjUtMC43NSAwLjYyNXoiPjwvcGF0aD4NCjwvc3ZnPg0K');
 }
-/* line 39, ../sass/partials/components/pane/_pane--facetapi.scss */
+/* line 43, ../sass/partials/components/pane/_pane--facetapi.scss */
 div[class*="pane--facetapi-"].is-closed .pane__title {
   background: #f1f1f1;
   color: #565a5c;
 }
-/* line 42, ../sass/partials/components/pane/_pane--facetapi.scss */
+/* line 46, ../sass/partials/components/pane/_pane--facetapi.scss */
 div[class*="pane--facetapi-"].is-closed .pane__title:after {
   background-image: url('../images/bg/icon-plus-15-15-orange.png');
   background-image: -webkit-linear-gradient(transparent, transparent), url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4NCjwhLS0gR2VuZXJhdGVkIGJ5IEljb01vb24uaW8gLS0+DQo8IURPQ1RZUEUgc3ZnIFBVQkxJQyAiLS8vVzNDLy9EVEQgU1ZHIDEuMS8vRU4iICJodHRwOi8vd3d3LnczLm9yZy9HcmFwaGljcy9TVkcvMS4xL0RURC9zdmcxMS5kdGQiPg0KPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHdpZHRoPSIxNSIgaGVpZ2h0PSIxNSIgdmlld0JveD0iMCAwIDE1IDE1Ij4NCjxwYXRoIGZpbGw9IiNkYzU2MDYiIGQ9Ik0xNC4yNSA2Ljc1aC02di02YzAtMC4zNzUtMC4zNzUtMC43NS0wLjc1LTAuNzVzLTAuNzUgMC4zNzUtMC43NSAwLjc1djYuMTI1aC02Yy0wLjM3NS0wLjEyNS0wLjc1IDAuMjUtMC43NSAwLjYyNXMwLjM3NSAwLjc1IDAuNzUgMC43NWg2LjEyNXY2LjEyNWMtMC4xMjUgMC4yNSAwLjI1IDAuNjI1IDAuNjI1IDAuNjI1czAuNzUtMC4zNzUgMC43NS0wLjc1di02aDYuMTI1YzAuMjUgMCAwLjYyNS0wLjM3NSAwLjYyNS0wLjc1cy0wLjM3NS0wLjc1LTAuNzUtMC43NXoiPjwvcGF0aD4NCjwvc3ZnPg0K');
   background-image: linear-gradient(transparent, transparent), url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4NCjwhLS0gR2VuZXJhdGVkIGJ5IEljb01vb24uaW8gLS0+DQo8IURPQ1RZUEUgc3ZnIFBVQkxJQyAiLS8vVzNDLy9EVEQgU1ZHIDEuMS8vRU4iICJodHRwOi8vd3d3LnczLm9yZy9HcmFwaGljcy9TVkcvMS4xL0RURC9zdmcxMS5kdGQiPg0KPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHdpZHRoPSIxNSIgaGVpZ2h0PSIxNSIgdmlld0JveD0iMCAwIDE1IDE1Ij4NCjxwYXRoIGZpbGw9IiNkYzU2MDYiIGQ9Ik0xNC4yNSA2Ljc1aC02di02YzAtMC4zNzUtMC4zNzUtMC43NS0wLjc1LTAuNzVzLTAuNzUgMC4zNzUtMC43NSAwLjc1djYuMTI1aC02Yy0wLjM3NS0wLjEyNS0wLjc1IDAuMjUtMC43NSAwLjYyNXMwLjM3NSAwLjc1IDAuNzUgMC43NWg2LjEyNXY2LjEyNWMtMC4xMjUgMC4yNSAwLjI1IDAuNjI1IDAuNjI1IDAuNjI1czAuNzUtMC4zNzUgMC43NS0wLjc1di02aDYuMTI1YzAuMjUgMCAwLjYyNS0wLjM3NSAwLjYyNS0wLjc1cy0wLjM3NS0wLjc1LTAuNzUtMC43NXoiPjwvcGF0aD4NCjwvc3ZnPg0K');
 }
-/* line 46, ../sass/partials/components/pane/_pane--facetapi.scss */
+/* line 50, ../sass/partials/components/pane/_pane--facetapi.scss */
 div[class*="pane--facetapi-"] .pane__content {
   padding: 0.75em;
 }
-/* line 48, ../sass/partials/components/pane/_pane--facetapi.scss */
+/* line 52, ../sass/partials/components/pane/_pane--facetapi.scss */
 div[class*="pane--facetapi-"] .pane__content ul {
   list-style: none;
   margin: -0.75em 0;
   padding: 0;
 }
-/* line 52, ../sass/partials/components/pane/_pane--facetapi.scss */
+/* line 56, ../sass/partials/components/pane/_pane--facetapi.scss */
 div[class*="pane--facetapi-"] .pane__content ul li {
   border-bottom: 1px solid #f2f2f2;
   font-size: 0.875em;
@@ -3845,21 +3852,21 @@ div[class*="pane--facetapi-"] .pane__content ul li {
   padding: 0.75em 0;
   text-indent: -22px;
 }
-/* line 59, ../sass/partials/components/pane/_pane--facetapi.scss */
+/* line 63, ../sass/partials/components/pane/_pane--facetapi.scss */
 div[class*="pane--facetapi-"] .pane__content ul li:last-child {
   border-bottom: 0;
 }
-/* line 62, ../sass/partials/components/pane/_pane--facetapi.scss */
+/* line 66, ../sass/partials/components/pane/_pane--facetapi.scss */
 div[class*="pane--facetapi-"] .pane__content ul li:before {
   display: none;
 }
-/* line 65, ../sass/partials/components/pane/_pane--facetapi.scss */
+/* line 69, ../sass/partials/components/pane/_pane--facetapi.scss */
 div[class*="pane--facetapi-"] .pane__content ul li input {
   bottom: -1px;
   margin-right: 8px;
   position: relative;
 }
-/* line 70, ../sass/partials/components/pane/_pane--facetapi.scss */
+/* line 74, ../sass/partials/components/pane/_pane--facetapi.scss */
 div[class*="pane--facetapi-"] .pane__content ul li a {
   -webkit-hyphens: none;
   -moz-hyphens: none;
@@ -3869,11 +3876,11 @@ div[class*="pane--facetapi-"] .pane__content ul li a {
   overflow: hidden;
 }
 
-/* line 81, ../sass/partials/components/pane/_pane--facetapi.scss */
+/* line 85, ../sass/partials/components/pane/_pane--facetapi.scss */
 .pane--facetapi__main-title {
   border: 0 !important;
 }
-/* line 84, ../sass/partials/components/pane/_pane--facetapi.scss */
+/* line 88, ../sass/partials/components/pane/_pane--facetapi.scss */
 .pane--facetapi__main-title .pane__content h2 {
   margin: 0 0 0.5em 0;
   padding: 0;
