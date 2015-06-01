@@ -73,6 +73,13 @@ function events_ds_field_settings_info() {
         ),
       ),
     ),
+    'field_event_image' => array(
+      'formatter_settings' => array(
+        'ft' => array(
+          'func' => 'theme_ds_field_expert',
+        ),
+      ),
+    ),
     'field_event_location' => array(
       'formatter_settings' => array(
         'ft' => array(
@@ -203,21 +210,23 @@ function events_ds_layout_settings_info() {
   $ds_layout->settings = array(
     'regions' => array(
       'main_content' => array(
-        0 => 'group_card_content',
-        1 => 'events_at_a_glance_entity_view_1',
-        2 => 'title_field',
-        3 => 'events_at_a_glance_related_org_card_event',
+        0 => 'group_card_image',
+        1 => 'group_card_content',
+        2 => 'events_at_a_glance_entity_view_1',
+        3 => 'title_field',
         4 => 'group_card_meta',
         5 => 'field_event_location',
+        6 => 'field_event_image',
       ),
     ),
     'fields' => array(
+      'group_card_image' => 'main_content',
       'group_card_content' => 'main_content',
       'events_at_a_glance_entity_view_1' => 'main_content',
       'title_field' => 'main_content',
-      'events_at_a_glance_related_org_card_event' => 'main_content',
       'group_card_meta' => 'main_content',
       'field_event_location' => 'main_content',
+      'field_event_image' => 'main_content',
     ),
     'classes' => array(
       'layout_class' => array(
