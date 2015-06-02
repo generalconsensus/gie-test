@@ -1005,6 +1005,13 @@ function gie_taxonomies_views_default_views() {
 
   /* Display: Resources */
   $handler = $view->new_display('panel_pane', 'Resources', 'resource_pane');
+  $handler->display->display_options['defaults']['use_more'] = FALSE;
+  $handler->display->display_options['use_more'] = TRUE;
+  $handler->display->display_options['defaults']['use_more_always'] = FALSE;
+  $handler->display->display_options['defaults']['use_more_always'] = FALSE;
+  $handler->display->display_options['use_more_always'] = FALSE;
+  $handler->display->display_options['defaults']['use_more_text'] = FALSE;
+  $handler->display->display_options['use_more_text'] = 'View All Resources';
   $handler->display->display_options['link_url'] = '/resources/region/!1';
   $handler->display->display_options['defaults']['sorts'] = FALSE;
   /* Sort criterion: Content: Date Added (field_resource_date) */
@@ -1023,7 +1030,7 @@ function gie_taxonomies_views_default_views() {
   $handler->display->display_options['defaults']['use_more_always'] = FALSE;
   $handler->display->display_options['use_more_always'] = FALSE;
   $handler->display->display_options['defaults']['use_more_text'] = FALSE;
-  $handler->display->display_options['use_more_text'] = 'Explore all funding opportunities in this region';
+  $handler->display->display_options['use_more_text'] = 'View All Funding Opportunities';
   $handler->display->display_options['defaults']['link_display'] = FALSE;
   $handler->display->display_options['link_display'] = 'custom_url';
   $handler->display->display_options['link_url'] = '/funding/region/!1';
@@ -1070,7 +1077,7 @@ function gie_taxonomies_views_default_views() {
   $handler->display->display_options['defaults']['use_more_always'] = FALSE;
   $handler->display->display_options['use_more_always'] = FALSE;
   $handler->display->display_options['defaults']['use_more_text'] = FALSE;
-  $handler->display->display_options['use_more_text'] = 'Explore all innovations in this region';
+  $handler->display->display_options['use_more_text'] = 'View All Innovations';
   $handler->display->display_options['defaults']['link_display'] = FALSE;
   $handler->display->display_options['link_display'] = 'custom_url';
   $handler->display->display_options['link_url'] = '/innovations/region/!1';
