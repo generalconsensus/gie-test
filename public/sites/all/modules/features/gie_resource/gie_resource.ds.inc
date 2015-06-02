@@ -69,7 +69,7 @@ function gie_resource_ds_field_settings_info() {
   $ds_fieldsetting->view_mode = 'full';
   $ds_fieldsetting->settings = array(
     'comments' => array(
-      'weight' => '6',
+      'weight' => '4',
       'label' => 'hidden',
       'format' => 'default',
     ),
@@ -77,13 +77,6 @@ function gie_resource_ds_field_settings_info() {
       'formatter_settings' => array(
         'ft' => array(
           'lb' => 'Download',
-        ),
-      ),
-    ),
-    'field_resource_author' => array(
-      'formatter_settings' => array(
-        'ft' => array(
-          'lb' => 'Posted By',
         ),
       ),
     ),
@@ -210,6 +203,21 @@ function gie_resource_ds_field_settings_info() {
     ),
   );
   $export['node|resource|listing'] = $ds_fieldsetting;
+
+  $ds_fieldsetting = new stdClass();
+  $ds_fieldsetting->api_version = 1;
+  $ds_fieldsetting->id = 'node|resource|page_header';
+  $ds_fieldsetting->entity_type = 'node';
+  $ds_fieldsetting->bundle = 'resource';
+  $ds_fieldsetting->view_mode = 'page_header';
+  $ds_fieldsetting->settings = array(
+    'field_resource_date' => array(
+      'formatter_settings' => array(
+        'ft' => array(),
+      ),
+    ),
+  );
+  $export['node|resource|page_header'] = $ds_fieldsetting;
 
   $ds_fieldsetting = new stdClass();
   $ds_fieldsetting->api_version = 1;
@@ -395,18 +403,14 @@ function gie_resource_ds_layout_settings_info() {
   $ds_layout->settings = array(
     'regions' => array(
       'ds_content' => array(
-        0 => 'field_resource_date',
-        1 => 'field_resource_author',
-        2 => 'sharethis',
-        3 => 'field_resource_desc',
-        4 => 'field_resource_assets',
-        5 => 'field_resource_link',
-        6 => 'comments',
+        0 => 'sharethis',
+        1 => 'field_resource_desc',
+        2 => 'field_resource_assets',
+        3 => 'field_resource_link',
+        4 => 'comments',
       ),
     ),
     'fields' => array(
-      'field_resource_date' => 'ds_content',
-      'field_resource_author' => 'ds_content',
       'sharethis' => 'ds_content',
       'field_resource_desc' => 'ds_content',
       'field_resource_assets' => 'ds_content',
@@ -419,8 +423,8 @@ function gie_resource_ds_layout_settings_info() {
     ),
     'layout_wrapper' => 'div',
     'layout_attributes' => '',
-    'layout_attributes_merge' => TRUE,
-    'layout_link_attribute' => FALSE,
+    'layout_attributes_merge' => 1,
+    'layout_link_attribute' => '',
     'layout_link_custom' => '',
   );
   $export['node|resource|full'] = $ds_layout;
@@ -523,6 +527,38 @@ function gie_resource_ds_layout_settings_info() {
     'layout_link_custom' => '',
   );
   $export['node|resource|listing'] = $ds_layout;
+
+  $ds_layout = new stdClass();
+  $ds_layout->api_version = 1;
+  $ds_layout->id = 'node|resource|page_header';
+  $ds_layout->entity_type = 'node';
+  $ds_layout->bundle = 'resource';
+  $ds_layout->view_mode = 'page_header';
+  $ds_layout->layout = 'ds_reset';
+  $ds_layout->settings = array(
+    'regions' => array(
+      'ds_content' => array(
+        0 => 'group_card_author',
+        1 => 'field_resource_author',
+        2 => 'field_resource_date',
+      ),
+    ),
+    'fields' => array(
+      'group_card_author' => 'ds_content',
+      'field_resource_author' => 'ds_content',
+      'field_resource_date' => 'ds_content',
+    ),
+    'classes' => array(),
+    'wrappers' => array(
+      'ds_content' => 'div',
+    ),
+    'layout_wrapper' => 'div',
+    'layout_attributes' => '',
+    'layout_attributes_merge' => 1,
+    'layout_link_attribute' => '',
+    'layout_link_custom' => '',
+  );
+  $export['node|resource|page_header'] = $ds_layout;
 
   $ds_layout = new stdClass();
   $ds_layout->api_version = 1;
