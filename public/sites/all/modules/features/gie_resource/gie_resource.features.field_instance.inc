@@ -206,7 +206,7 @@ function gie_resource_field_default_field_instances() {
           'view_mode' => 'download',
         ),
         'type' => 'entityreference_entity_view',
-        'weight' => 4,
+        'weight' => 2,
       ),
       'highlights' => array(
         'label' => 'above',
@@ -219,6 +219,12 @@ function gie_resource_field_default_field_instances() {
         'settings' => array(),
         'type' => 'hidden',
         'weight' => 18,
+      ),
+      'page_header' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 11,
       ),
       'search_listing' => array(
         'label' => 'above',
@@ -309,25 +315,9 @@ function gie_resource_field_default_field_instances() {
       ),
       'full' => array(
         'label' => 'hidden',
-        'module' => 'entityreference',
-        'settings' => array(
-          'field_delimiter' => '',
-          'linked_field' => array(
-            'advanced' => array(
-              'class' => '',
-              'rel' => '',
-              'target' => '',
-              'text' => '',
-              'title' => '',
-            ),
-            'destination' => '',
-            'linked' => 0,
-          ),
-          'links' => 0,
-          'view_mode' => 'title',
-        ),
-        'type' => 'entityreference_entity_view',
-        'weight' => 1,
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 13,
       ),
       'highlights' => array(
         'label' => 'hidden',
@@ -372,6 +362,28 @@ function gie_resource_field_default_field_instances() {
         ),
         'type' => 'entityreference_entity_view',
         'weight' => 4,
+      ),
+      'page_header' => array(
+        'label' => 'hidden',
+        'module' => 'entityreference',
+        'settings' => array(
+          'field_delimiter' => '',
+          'linked_field' => array(
+            'advanced' => array(
+              'class' => '',
+              'rel' => '',
+              'target' => '',
+              'text' => '',
+              'title' => '',
+            ),
+            'destination' => '',
+            'linked' => 0,
+          ),
+          'links' => 1,
+          'view_mode' => 'resource_user',
+        ),
+        'type' => 'entityreference_entity_view',
+        'weight' => 1,
       ),
       'search_listing' => array(
         'label' => 'above',
@@ -465,28 +477,9 @@ function gie_resource_field_default_field_instances() {
       ),
       'full' => array(
         'label' => 'hidden',
-        'module' => 'date',
-        'settings' => array(
-          'field_delimiter' => '',
-          'format_type' => 'long',
-          'fromto' => 'both',
-          'linked_field' => array(
-            'advanced' => array(
-              'class' => '',
-              'rel' => '',
-              'target' => '',
-              'text' => '',
-              'title' => '',
-            ),
-            'destination' => '',
-            'linked' => 0,
-          ),
-          'multiple_from' => '',
-          'multiple_number' => '',
-          'multiple_to' => '',
-        ),
-        'type' => 'date_default',
-        'weight' => 0,
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 12,
       ),
       'highlights' => array(
         'label' => 'hidden',
@@ -537,6 +530,31 @@ function gie_resource_field_default_field_instances() {
         ),
         'type' => 'date_default',
         'weight' => 5,
+      ),
+      'page_header' => array(
+        'label' => 'hidden',
+        'module' => 'date',
+        'settings' => array(
+          'field_delimiter' => '',
+          'format_type' => 'gie_general_slash_no_time',
+          'fromto' => 'both',
+          'linked_field' => array(
+            'advanced' => array(
+              'class' => '',
+              'rel' => '',
+              'target' => '',
+              'text' => '',
+              'title' => '',
+            ),
+            'destination' => '',
+            'linked' => 0,
+          ),
+          'multiple_from' => '',
+          'multiple_number' => '',
+          'multiple_to' => '',
+        ),
+        'type' => 'date_default',
+        'weight' => 2,
       ),
       'search_listing' => array(
         'label' => 'above',
@@ -662,7 +680,7 @@ function gie_resource_field_default_field_instances() {
           ),
         ),
         'type' => 'text_default',
-        'weight' => 3,
+        'weight' => 1,
       ),
       'highlights' => array(
         'label' => 'hidden',
@@ -671,6 +689,12 @@ function gie_resource_field_default_field_instances() {
         'weight' => 13,
       ),
       'listing' => array(
+        'label' => 'hidden',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 13,
+      ),
+      'page_header' => array(
         'label' => 'hidden',
         'settings' => array(),
         'type' => 'hidden',
@@ -822,7 +846,7 @@ function gie_resource_field_default_field_instances() {
           ),
         ),
         'type' => 'link_label',
-        'weight' => 5,
+        'weight' => 3,
       ),
       'highlights' => array(
         'label' => 'above',
@@ -835,6 +859,12 @@ function gie_resource_field_default_field_instances() {
         'settings' => array(),
         'type' => 'hidden',
         'weight' => 19,
+      ),
+      'page_header' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 12,
       ),
       'search_listing' => array(
         'label' => 'above',
@@ -966,6 +996,12 @@ function gie_resource_field_default_field_instances() {
         'type' => 'hidden',
         'weight' => 16,
       ),
+      'page_header' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 20,
+      ),
       'search_listing' => array(
         'label' => 'above',
         'settings' => array(),
@@ -1086,6 +1122,12 @@ function gie_resource_field_default_field_instances() {
         'type' => 'hidden',
         'weight' => 15,
       ),
+      'page_header' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 19,
+      ),
       'search_listing' => array(
         'label' => 'above',
         'settings' => array(),
@@ -1203,6 +1245,12 @@ function gie_resource_field_default_field_instances() {
         'settings' => array(),
         'type' => 'hidden',
         'weight' => 17,
+      ),
+      'page_header' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 10,
       ),
       'search_listing' => array(
         'label' => 'above',
@@ -1360,6 +1408,12 @@ function gie_resource_field_default_field_instances() {
         'type' => 'taxonomy_term_reference_plain',
         'weight' => 1,
       ),
+      'page_header' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 14,
+      ),
       'search_listing' => array(
         'label' => 'above',
         'settings' => array(),
@@ -1470,6 +1524,12 @@ function gie_resource_field_default_field_instances() {
         'type' => 'hidden',
         'weight' => 10,
       ),
+      'page_header' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 24,
+      ),
       'search_listing' => array(
         'label' => 'above',
         'settings' => array(),
@@ -1579,6 +1639,12 @@ function gie_resource_field_default_field_instances() {
         'settings' => array(),
         'type' => 'hidden',
         'weight' => 11,
+      ),
+      'page_header' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 23,
       ),
       'search_listing' => array(
         'label' => 'above',
@@ -1704,6 +1770,12 @@ function gie_resource_field_default_field_instances() {
         'type' => 'taxonomy_term_reference_link',
         'weight' => 4,
       ),
+      'page_header' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 21,
+      ),
       'search_listing' => array(
         'label' => 'above',
         'settings' => array(),
@@ -1822,6 +1894,12 @@ function gie_resource_field_default_field_instances() {
         'settings' => array(),
         'type' => 'hidden',
         'weight' => 12,
+      ),
+      'page_header' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 22,
       ),
       'search_listing' => array(
         'label' => 'above',
@@ -1955,6 +2033,12 @@ function gie_resource_field_default_field_instances() {
         ),
         'type' => 'title_linked',
         'weight' => 2,
+      ),
+      'page_header' => array(
+        'label' => 'hidden',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 9,
       ),
       'search_listing' => array(
         'label' => 'hidden',
