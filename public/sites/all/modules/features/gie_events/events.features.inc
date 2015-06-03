@@ -65,6 +65,7 @@ function events_flag_default_flags() {
       'search_result' => 0,
       'diff_standard' => 0,
       'token' => 0,
+      'highlights' => 0,
       'listing' => 0,
       'page_header' => 0,
       'teaser_date' => 0,
