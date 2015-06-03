@@ -1,0 +1,14 @@
+<?php
+
+/**
+ * Implements hook_update_n
+ * run any updates here
+ */
+
+function events_update_7000() {
+    field_delete_field('field_event_related_sectors');
+    field_delete_field('field_event_related_regions');
+    field_delete_field('field_event_related_topics');
+    field_delete_field('field_event_related_country');
+    field_purge_batch(1);
+}
