@@ -15,7 +15,7 @@ function events_field_default_field_instances() {
     'bundle' => 'event',
     'default_value' => NULL,
     'deleted' => 0,
-    'description' => 'If there is a cost associated with your event, what is the registration fee?',
+    'description' => 'If there is a cost associated with your event, what is the registration fee? USD or USD equivalent',
     'display' => array(
       'at_a_glance' => array(
         'label' => 'above',
@@ -80,7 +80,7 @@ function events_field_default_field_instances() {
   $field_instances['node-event-field_event_date'] = array(
     'bundle' => 'event',
     'deleted' => 0,
-    'description' => 'The date of the Event. ',
+    'description' => 'The date of the Event. EST',
     'display' => array(
       'at_a_glance' => array(
         'label' => 'above',
@@ -368,7 +368,7 @@ function events_field_default_field_instances() {
         ),
       ),
       'description_display' => 'before',
-      'text_processing' => 0,
+      'text_processing' => 1,
       'user_register_form' => FALSE,
     ),
     'widget' => array(
@@ -672,7 +672,7 @@ function events_field_default_field_instances() {
     'bundle' => 'event',
     'default_value' => NULL,
     'deleted' => 0,
-    'description' => '',
+    'description' => 'Event organizers are individuals who have a profile on the Exchange. Start typing a name to see if the individual organizers have a profile in the Exchange.',
     'display' => array(
       'at_a_glance' => array(
         'label' => 'above',
@@ -719,7 +719,7 @@ function events_field_default_field_instances() {
     'label' => 'Event Organizers',
     'required' => 0,
     'settings' => array(
-      'description_display' => 'after',
+      'description_display' => 'before',
       'user_register_form' => FALSE,
     ),
     'widget' => array(
@@ -744,7 +744,7 @@ function events_field_default_field_instances() {
     'bundle' => 'event',
     'default_value' => NULL,
     'deleted' => 0,
-    'description' => '',
+    'description' => 'If you would like to assign someone as the point of contact for this event in the Exchange start typing their name to search. They will not appear unless they have an existing profile on the Exchange.',
     'display' => array(
       'at_a_glance' => array(
         'label' => 'above',
@@ -791,7 +791,7 @@ function events_field_default_field_instances() {
     'label' => 'Event Point of Contact',
     'required' => 0,
     'settings' => array(
-      'description_display' => 'after',
+      'description_display' => 'before',
       'user_register_form' => FALSE,
     ),
     'widget' => array(
@@ -883,14 +883,18 @@ function events_field_default_field_instances() {
     ),
     'widget' => array(
       'active' => 1,
-      'module' => 'multiple_selects',
+      'module' => 'entityreference',
       'settings' => array(
         'apply_chosen' => '',
         'match_operator' => 'CONTAINS',
         'path' => '',
+        'references_dialog_add' => 0,
+        'references_dialog_edit' => 0,
+        'references_dialog_search' => 0,
+        'references_dialog_search_view' => '',
         'size' => 60,
       ),
-      'type' => 'multiple_selects',
+      'type' => 'entityreference_autocomplete',
       'weight' => 14,
     ),
   );
@@ -952,11 +956,18 @@ function events_field_default_field_instances() {
     ),
     'widget' => array(
       'active' => 1,
-      'module' => 'multiple_selects',
+      'module' => 'entityreference',
       'settings' => array(
         'apply_chosen' => '',
+        'match_operator' => 'CONTAINS',
+        'path' => '',
+        'references_dialog_add' => 0,
+        'references_dialog_edit' => 0,
+        'references_dialog_search' => 0,
+        'references_dialog_search_view' => '',
+        'size' => 60,
       ),
-      'type' => 'multiple_selects',
+      'type' => 'entityreference_autocomplete',
       'weight' => 15,
     ),
   );
@@ -1396,7 +1407,7 @@ function events_field_default_field_instances() {
     'ds_extras_field_template' => '',
     'entity_type' => 'node',
     'field_name' => 'field_event_who_should_attend',
-    'label' => 'Who is attending',
+    'label' => 'Speakers and Agenda',
     'required' => 0,
     'settings' => array(
       'better_formats' => array(
@@ -1475,9 +1486,23 @@ function events_field_default_field_instances() {
       ),
       'full' => array(
         'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 0,
+        'module' => 'gie_innovation',
+        'settings' => array(
+          'field_delimiter' => '',
+          'linked_field' => array(
+            'advanced' => array(
+              'class' => '',
+              'rel' => '',
+              'target' => '',
+              'text' => '',
+              'title' => '',
+            ),
+            'destination' => '',
+            'linked' => 0,
+          ),
+        ),
+        'type' => 'gie_listing_link',
+        'weight' => 3,
       ),
       'listing' => array(
         'label' => 'above',
@@ -1553,9 +1578,23 @@ function events_field_default_field_instances() {
       ),
       'full' => array(
         'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 0,
+        'module' => 'taxonomy',
+        'settings' => array(
+          'field_delimiter' => '',
+          'linked_field' => array(
+            'advanced' => array(
+              'class' => '',
+              'rel' => '',
+              'target' => '',
+              'text' => '',
+              'title' => '',
+            ),
+            'destination' => '',
+            'linked' => 0,
+          ),
+        ),
+        'type' => 'taxonomy_term_reference_link',
+        'weight' => 2,
       ),
       'listing' => array(
         'label' => 'above',
@@ -1639,8 +1678,22 @@ function events_field_default_field_instances() {
       ),
       'full' => array(
         'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
+        'module' => 'taxonomy',
+        'settings' => array(
+          'field_delimiter' => '',
+          'linked_field' => array(
+            'advanced' => array(
+              'class' => '',
+              'rel' => '',
+              'target' => '',
+              'text' => '',
+              'title' => '',
+            ),
+            'destination' => '',
+            'linked' => 0,
+          ),
+        ),
+        'type' => 'taxonomy_term_reference_link',
         'weight' => 0,
       ),
       'listing' => array(
@@ -1681,7 +1734,7 @@ function events_field_default_field_instances() {
         'max_depth' => '',
         'parent_term_id' => '',
         'select_parents' => 0,
-        'start_minimized' => 0,
+        'start_minimized' => 1,
         'token_display' => '',
         'track_list' => 0,
       ),
@@ -1725,9 +1778,23 @@ function events_field_default_field_instances() {
       ),
       'full' => array(
         'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 0,
+        'module' => 'taxonomy',
+        'settings' => array(
+          'field_delimiter' => '',
+          'linked_field' => array(
+            'advanced' => array(
+              'class' => '',
+              'rel' => '',
+              'target' => '',
+              'text' => '',
+              'title' => '',
+            ),
+            'destination' => '',
+            'linked' => 0,
+          ),
+        ),
+        'type' => 'taxonomy_term_reference_link',
+        'weight' => 1,
       ),
       'listing' => array(
         'label' => 'above',
@@ -2098,8 +2165,10 @@ function events_field_default_field_instances() {
   t('Event Point of Contact');
   t('Event Size');
   t('Event Type');
+  t('Event organizers are individuals who have a profile on the Exchange. Start typing a name to see if the individual organizers have a profile in the Exchange.');
   t('Full Event Description');
-  t('If there is a cost associated with your event, what is the registration fee?');
+  t('If there is a cost associated with your event, what is the registration fee? USD or USD equivalent');
+  t('If you would like to assign someone as the point of contact for this event in the Exchange start typing their name to search. They will not appear unless they have an existing profile on the Exchange.');
   t('Location');
   t('Name');
   t('RSVP URL');
@@ -2107,12 +2176,12 @@ function events_field_default_field_instances() {
   t('Related Organization');
   t('Related Program');
   t('Related Sectors');
+  t('Speakers and Agenda');
   t('Specify any related programs for this event. ');
-  t('The date of the Event. ');
+  t('The date of the Event. EST');
   t('Title');
   t('Topic');
   t('Website URL');
-  t('Who is attending');
 
   return $field_instances;
 }
