@@ -23,18 +23,64 @@
   <div class="l-wrapper layout-constrain"> 
     <div class="l-bottom">
 
-      <div class="pane pane--node">
+      <div class="pane pane--highlights-community-pane">
         <h2 class="pane__title">Highlights</h2> 
         <div class="pane__content">
-
           <div class="view--card-view-2col">
-            {{# listItems.eight }}
+            {{# listItems.four }}
               <div class="views-row">
                 {{> organisms-highlight-teaser }}
               </div>
-            {{/ listItems.eight }}
+            {{/ listItems.four }}
           </div>
+        </div>
+      </div>
 
+      <div class="pane has-icon-innovation">
+        <h2 class="pane__title">Innovations</h2> 
+        <div class="pane__content">
+          <div class="view--card-view-3col">
+            {{# listItems.three }}
+              <div class="views-row">
+                {{> organisms-innovation-teaser }}
+              </div>
+            {{/ listItems.three }}
+            <div class="view__footer">
+              <a href="#" class="view__all">View All Innovations</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="pane has-icon-resource">
+        <h2 class="pane__title">Resources</h2> 
+        <div class="pane__content">
+          <div class="view--card-view-3col">
+            {{# listItems.three }}
+              <div class="views-row">
+                {{> organisms-resource-teaser }}
+              </div>
+            {{/ listItems.three }}
+            <div class="view__footer">
+              <a href="#" class="view__all">View All Resources</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="pane has-icon-funding">
+        <h2 class="pane__title">Funding Opportunities</h2> 
+        <div class="pane__content">
+          <div class="view--card-view-3col">
+            {{# listItems.three }}
+              <div class="views-row">
+                {{> organisms-funding-op-teaser }}
+              </div>
+            {{/ listItems.three }}
+            <div class="view__footer">
+              <a href="#" class="view__all">View All Funding Opportunies</a>
+            </div>
+          </div>
         </div>
       </div>
 

@@ -60,7 +60,7 @@
         top: 5%;
       }
       h1 {
-        @extend %pane__title--homepage;
+        @extend %pane__title--large;
         color: #fff;
         @include breakpoint(max-width 700px) {
           margin-bottom: 0.5em;
