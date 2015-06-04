@@ -3,37 +3,93 @@
   padding: 0;
 }
 
+%contenttypeicon {
+  content: "";
+  display: inline-block;
+  margin-right: 10px;
+  position: relative;
+  top: 2px;
+}
+
 .pane__title {
-  border-bottom: 1px solid $border-color;
-  color: $primary-text-color;
-  font-size: em($font-size-xl);
+  font-size: em($font-size-xxl);
   font-weight: normal;
-  margin: 0 0 1em 0;
+  margin: 0 0 0.5em 0;
   padding: 0 0 0.5em 0;
 
   aside & {
+    border-bottom: 1px solid $border-color;
     color: $lightblue;
+    font-size: em($font-size-xl);
+    margin: 0 0 1em 0;
+  }
+
+  .region-footer & {
+    border-bottom: 1px solid $border-color;
+    color: $primary-text-color;
+    font-size: em($font-size-xl);
+    margin: 0 0 1em 0;
   }
 
   .pane--full-content > & {
+    border-bottom: 1px solid $border-color;
     color: $orange;
-    font-size: em($font-size-xxl);
     @include breakpoint(550px, $no-query: true) {
       font-size: em($font-size-xxxl);
     }
+    margin: 0 0 1em 0;
     text-transform: uppercase;
+  }
+
+  [class*="pane--highlights"] > & {
+    font-size: em($font-size-xxxl);
+    text-transform: uppercase;
+  }
+
+  .has-icon-innovation > & {
+    &:before {
+      @extend %contenttypeicon;
+      @include svg-background(icon-innovations-17-23-darkblue);
+      height: 23px;
+      width: 17px;
+    }
+  }
+
+  .has-icon-resource > & {
+    &:before {
+      @extend %contenttypeicon;
+      @include svg-background(icon-resources-25-23-darkblue);
+      height: 23px;
+      width: 25px;
+    }
+  }
+
+  .has-icon-funding > & {
+    &:before {
+      @extend %contenttypeicon;
+      @include svg-background(icon-funding-23-23-darkblue);
+      height: 23px;
+      width: 23px;
+    }
+  }
+
+  .has-icon-organization > & {
+    &:before {
+      @extend %contenttypeicon;
+      @include svg-background(icon-organization-23-23-darkblue);
+      height: 23px;
+      width: 23px;
+    }
   }
 }
 
-%pane__title--homepage {
-  border: 0;
+%pane__title--large {
   font-size: em(40px);
   font-weight: 300;
   margin: 0 0 1em 0;
   padding: 0;
 }
 
- 
 
 // Custom pane styles imported via sass globbing.
 @import 'pane/*.*';

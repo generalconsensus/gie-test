@@ -1,7 +1,7 @@
 {{> organisms-header }}
 {{> organisms-navigation }}
 
-<main id="main" class="main" role="main" tabindex="-1"
+<main id="main" class="main" role="main" tabindex="-1">
   <div class="region-content">
 
     <div class="l-panels-landing preface-empty title sidebar main">
@@ -17,58 +17,82 @@
         </aside>
         <div class="l-main">
 
-          <div class="view--card-view-3col">
-            <h2 style="margin-bottom: 0.25em;">Event Teaser</h2>
-            {{# listItems.three }}
-              <div class="views-row">
-                {{> organisms-event-teaser }}
+          <div class="pane">
+            <h2 class="pane__title">Event Teaser</h2> 
+            <div class="pane__content">
+              <div class="view--card-view-3col">
+                {{# listItems.three }}
+                  <div class="views-row">
+                    {{> organisms-event-teaser }}
+                  </div>
+                {{/ listItems.three }}
               </div>
-            {{/ listItems.three }}
+            </div>
           </div>
 
-          <div class="view--card-view-3col">
-            <h2 style="margin-bottom: 0.25em;">Innovation Teaser</h2>
-            {{# listItems.three }}
-              <div class="views-row">
-                {{> organisms-innovation-teaser }}
+          <div class="pane">
+            <h2 class="pane__title">Innovation Teaser</h2> 
+            <div class="pane__content">
+              <div class="view--card-view-3col">
+                {{# listItems.three }}
+                  <div class="views-row">
+                    {{> organisms-innovation-teaser }}
+                  </div>
+                {{/ listItems.three }}
               </div>
-            {{/ listItems.three }}
+            </div>
           </div>
 
-          <div class="view--card-view-3col">
-            <h2 style="margin-bottom: 0.25em;">Highlight Teaser</h2>
-            {{# listItems.three }}
-              <div class="views-row">
-                {{> organisms-highlight-teaser }}
+          <div class="pane">
+            <h2 class="pane__title">Highlight Teaser</h2> 
+            <div class="pane__content">
+              <div class="view--card-view-3col">
+                {{# listItems.three }}
+                  <div class="views-row">
+                    {{> organisms-highlight-teaser }}
+                  </div>
+                {{/ listItems.three }}
               </div>
-            {{/ listItems.three }}
+            </div>
           </div>
 
-           <div class="view--card-view-3col">
-            <h2 style="margin-bottom: 0.25em;">Resource Teaser</h2>
-            {{# listItems.three }}
-              <div class="views-row">
-                {{> organisms-resource-teaser }}
+          <div class="pane">
+            <h2 class="pane__title">Resource Teaser</h2> 
+            <div class="pane__content">
+              <div class="view--card-view-3col">
+                {{# listItems.three }}
+                  <div class="views-row">
+                    {{> organisms-resource-teaser }}
+                  </div>
+                {{/ listItems.three }}
               </div>
-            {{/ listItems.three }}
+            </div>
           </div>
 
-           <div class="view--card-view-3col">
-            <h2 style="margin-bottom: 0.25em;">Organization Teaser</h2>
-            {{# listItems.three }}
-              <div class="views-row">
-                {{> organisms-organization-teaser }}
+          <div class="pane">
+            <h2 class="pane__title">Organization Teaser</h2> 
+            <div class="pane__content">
+              <div class="view--card-view-3col">
+                {{# listItems.three }}
+                  <div class="views-row">
+                    {{> organisms-organization-teaser }}
+                  </div>
+                {{/ listItems.three }}
               </div>
-            {{/ listItems.three }}
+            </div>
           </div>
 
-           <div class="view--card-view-3col">
-            <h2 style="margin-bottom: 0.25em;">Funding Op Teaser</h2>
-            {{# listItems.three }}
-              <div class="views-row">
-                {{> organisms-funding-op-teaser }}
+          <div class="pane">
+            <h2 class="pane__title">Funding Op Teaser</h2> 
+            <div class="pane__content">
+              <div class="view--card-view-3col">
+                {{# listItems.three }}
+                  <div class="views-row">
+                    {{> organisms-funding-op-teaser }}
+                  </div>
+                {{/ listItems.three }}
               </div>
-            {{/ listItems.three }}
+            </div>
           </div>
 
           {{> molecules-pager }}

@@ -2,7 +2,7 @@
   .pane__content {
     text-align: center;
     h1 {
-      @extend %pane__title--homepage;
+      @extend %pane__title--large;
     }
   }
 }
