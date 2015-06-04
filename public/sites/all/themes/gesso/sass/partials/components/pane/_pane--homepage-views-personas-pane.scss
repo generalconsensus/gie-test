@@ -1,7 +1,7 @@
 .pane--homepage-views-personas-pane {
   margin: 0 0 4em 0;
   .pane__title {
-    @extend %pane__title--homepage;
+    @extend %pane__title--large;
     text-align: center;
   }
   .pane__content {
