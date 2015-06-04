@@ -13,6 +13,11 @@ function events_update_7000() {
     field_purge_batch(1);
 }
 
+/**
+ * Delete Event Country field, using the regular coutnry reference field instead
+ */
+
 function events_update_7001() {
 	field_delete_field('field_event_country');
+	    field_purge_batch(1);
 }
