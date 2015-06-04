@@ -15,7 +15,7 @@ function events_field_default_field_instances() {
     'bundle' => 'event',
     'default_value' => NULL,
     'deleted' => 0,
-    'description' => 'If there is a cost associated with your event, what is the registration fee?',
+    'description' => 'If there is a cost associated with your event, what is the registration fee? USD or USD equivalent',
     'display' => array(
       'at_a_glance' => array(
         'label' => 'above',
@@ -76,89 +76,11 @@ function events_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-event-field_event_country'
-  $field_instances['node-event-field_event_country'] = array(
-    'bundle' => 'event',
-    'default_value' => NULL,
-    'deleted' => 0,
-    'description' => '',
-    'display' => array(
-      'at_a_glance' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 18,
-      ),
-      'default' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 15,
-      ),
-      'full' => array(
-        'label' => 'inline',
-        'module' => 'gie_innovation',
-        'settings' => array(
-          'field_delimiter' => '',
-          'linked_field' => array(
-            'advanced' => array(
-              'class' => '',
-              'rel' => '',
-              'target' => '',
-              'text' => '',
-              'title' => '',
-            ),
-            'destination' => '',
-            'linked' => 0,
-          ),
-        ),
-        'type' => 'gie_listing_link',
-        'weight' => 27,
-      ),
-      'listing' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 26,
-      ),
-      'page_header' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 15,
-      ),
-      'teaser' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 0,
-      ),
-    ),
-    'ds_extras_field_template' => '',
-    'entity_type' => 'node',
-    'field_name' => 'field_event_country',
-    'label' => 'Related Country',
-    'required' => 0,
-    'settings' => array(
-      'description_display' => 'after',
-      'user_register_form' => FALSE,
-    ),
-    'widget' => array(
-      'active' => 1,
-      'module' => 'options',
-      'settings' => array(
-        'apply_chosen' => '',
-      ),
-      'type' => 'options_select',
-      'weight' => 20,
-    ),
-  );
-
   // Exported field_instance: 'node-event-field_event_date'
   $field_instances['node-event-field_event_date'] = array(
     'bundle' => 'event',
     'deleted' => 0,
-    'description' => 'The date of the Event. ',
+    'description' => 'The date of the Event. EST',
     'display' => array(
       'at_a_glance' => array(
         'label' => 'above',
@@ -446,7 +368,7 @@ function events_field_default_field_instances() {
         ),
       ),
       'description_display' => 'before',
-      'text_processing' => 0,
+      'text_processing' => 1,
       'user_register_form' => FALSE,
     ),
     'widget' => array(
@@ -750,7 +672,7 @@ function events_field_default_field_instances() {
     'bundle' => 'event',
     'default_value' => NULL,
     'deleted' => 0,
-    'description' => '',
+    'description' => 'Event organizers are individuals who have a profile on the Exchange. Start typing a name to see if the individual organizers have a profile in the Exchange.',
     'display' => array(
       'at_a_glance' => array(
         'label' => 'above',
@@ -797,7 +719,7 @@ function events_field_default_field_instances() {
     'label' => 'Event Organizers',
     'required' => 0,
     'settings' => array(
-      'description_display' => 'after',
+      'description_display' => 'before',
       'user_register_form' => FALSE,
     ),
     'widget' => array(
@@ -822,7 +744,7 @@ function events_field_default_field_instances() {
     'bundle' => 'event',
     'default_value' => NULL,
     'deleted' => 0,
-    'description' => '',
+    'description' => 'If you would like to assign someone as the point of contact for this event in the Exchange start typing their name to search. They will not appear unless they have an existing profile on the Exchange.',
     'display' => array(
       'at_a_glance' => array(
         'label' => 'above',
@@ -869,7 +791,7 @@ function events_field_default_field_instances() {
     'label' => 'Event Point of Contact',
     'required' => 0,
     'settings' => array(
-      'description_display' => 'after',
+      'description_display' => 'before',
       'user_register_form' => FALSE,
     ),
     'widget' => array(
@@ -961,11 +883,18 @@ function events_field_default_field_instances() {
     ),
     'widget' => array(
       'active' => 1,
-      'module' => 'options',
+      'module' => 'entityreference',
       'settings' => array(
         'apply_chosen' => '',
+        'match_operator' => 'CONTAINS',
+        'path' => '',
+        'references_dialog_add' => 0,
+        'references_dialog_edit' => 0,
+        'references_dialog_search' => 0,
+        'references_dialog_search_view' => '',
+        'size' => 60,
       ),
-      'type' => 'options_select',
+      'type' => 'entityreference_autocomplete',
       'weight' => 14,
     ),
   );
@@ -1027,262 +956,19 @@ function events_field_default_field_instances() {
     ),
     'widget' => array(
       'active' => 1,
-      'module' => 'options',
+      'module' => 'entityreference',
       'settings' => array(
         'apply_chosen' => '',
+        'match_operator' => 'CONTAINS',
+        'path' => '',
+        'references_dialog_add' => 0,
+        'references_dialog_edit' => 0,
+        'references_dialog_search' => 0,
+        'references_dialog_search_view' => '',
+        'size' => 60,
       ),
-      'type' => 'options_select',
+      'type' => 'entityreference_autocomplete',
       'weight' => 15,
-    ),
-  );
-
-  // Exported field_instance: 'node-event-field_event_related_regions'
-  $field_instances['node-event-field_event_related_regions'] = array(
-    'bundle' => 'event',
-    'default_value' => NULL,
-    'deleted' => 0,
-    'description' => '',
-    'display' => array(
-      'at_a_glance' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 15,
-      ),
-      'default' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 12,
-      ),
-      'full' => array(
-        'label' => 'inline',
-        'module' => 'gie_innovation',
-        'settings' => array(
-          'field_delimiter' => '',
-          'linked_field' => array(
-            'advanced' => array(
-              'class' => '',
-              'rel' => '',
-              'target' => '',
-              'text' => '',
-              'title' => '',
-            ),
-            'destination' => '',
-            'linked' => 1,
-          ),
-        ),
-        'type' => 'gie_listing_link',
-        'weight' => 28,
-      ),
-      'listing' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 28,
-      ),
-      'page_header' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 12,
-      ),
-      'teaser' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 0,
-      ),
-    ),
-    'ds_extras_field_template' => '',
-    'entity_type' => 'node',
-    'field_name' => 'field_event_related_regions',
-    'label' => 'Related Regions',
-    'required' => 0,
-    'settings' => array(
-      'description_display' => 'after',
-      'user_register_form' => FALSE,
-    ),
-    'widget' => array(
-      'active' => 1,
-      'module' => 'options',
-      'settings' => array(
-        'apply_chosen' => '',
-      ),
-      'type' => 'options_select',
-      'weight' => 17,
-    ),
-  );
-
-  // Exported field_instance: 'node-event-field_event_related_sectors'
-  $field_instances['node-event-field_event_related_sectors'] = array(
-    'bundle' => 'event',
-    'default_value' => NULL,
-    'deleted' => 0,
-    'description' => '',
-    'display' => array(
-      'at_a_glance' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 14,
-      ),
-      'default' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 11,
-      ),
-      'full' => array(
-        'label' => 'inline',
-        'module' => 'gie_innovation',
-        'settings' => array(
-          'field_delimiter' => '',
-          'linked_field' => array(
-            'advanced' => array(
-              'class' => '',
-              'rel' => '',
-              'target' => '',
-              'text' => '',
-              'title' => '',
-            ),
-            'destination' => '',
-            'linked' => 0,
-          ),
-        ),
-        'type' => 'gie_listing_link',
-        'weight' => 30,
-      ),
-      'listing' => array(
-        'label' => 'inline',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 13,
-      ),
-      'page_header' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 11,
-      ),
-      'teaser' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 0,
-      ),
-    ),
-    'ds_extras_field_template' => '',
-    'entity_type' => 'node',
-    'field_name' => 'field_event_related_sectors',
-    'label' => 'Related Sectors',
-    'required' => 0,
-    'settings' => array(
-      'description_display' => 'after',
-      'user_register_form' => FALSE,
-    ),
-    'widget' => array(
-      'active' => 1,
-      'module' => 'term_reference_tree',
-      'settings' => array(
-        'cascading_selection' => 0,
-        'filter_view' => '',
-        'leaves_only' => 0,
-        'max_depth' => '',
-        'parent_term_id' => '',
-        'select_parents' => 0,
-        'start_minimized' => 1,
-        'token_display' => '',
-        'track_list' => 0,
-      ),
-      'type' => 'term_reference_tree',
-      'weight' => 16,
-    ),
-  );
-
-  // Exported field_instance: 'node-event-field_event_related_topics'
-  $field_instances['node-event-field_event_related_topics'] = array(
-    'bundle' => 'event',
-    'default_value' => NULL,
-    'deleted' => 0,
-    'description' => '',
-    'display' => array(
-      'at_a_glance' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 16,
-      ),
-      'default' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 13,
-      ),
-      'full' => array(
-        'label' => 'inline',
-        'module' => 'gie_innovation',
-        'settings' => array(
-          'field_delimiter' => '',
-          'linked_field' => array(
-            'advanced' => array(
-              'class' => '',
-              'rel' => '',
-              'target' => '',
-              'text' => '',
-              'title' => '',
-            ),
-            'destination' => '',
-            'linked' => 0,
-          ),
-        ),
-        'type' => 'gie_listing_link',
-        'weight' => 29,
-      ),
-      'listing' => array(
-        'label' => 'inline',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 12,
-      ),
-      'page_header' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 13,
-      ),
-      'teaser' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 0,
-      ),
-    ),
-    'ds_extras_field_template' => '',
-    'entity_type' => 'node',
-    'field_name' => 'field_event_related_topics',
-    'label' => 'Related Topics',
-    'required' => 0,
-    'settings' => array(
-      'description_display' => 'after',
-      'user_register_form' => FALSE,
-    ),
-    'widget' => array(
-      'active' => 1,
-      'module' => 'term_reference_tree',
-      'settings' => array(
-        'cascading_selection' => 0,
-        'filter_view' => '',
-        'leaves_only' => 0,
-        'max_depth' => '',
-        'parent_term_id' => '',
-        'select_parents' => 0,
-        'start_minimized' => 1,
-        'token_display' => '',
-        'track_list' => 0,
-      ),
-      'type' => 'term_reference_tree',
-      'weight' => 18,
     ),
   );
 
@@ -1721,7 +1407,7 @@ function events_field_default_field_instances() {
     'ds_extras_field_template' => '',
     'entity_type' => 'node',
     'field_name' => 'field_event_who_should_attend',
-    'label' => 'Who is attending',
+    'label' => 'Speakers and Agenda',
     'required' => 0,
     'settings' => array(
       'better_formats' => array(
@@ -1762,6 +1448,399 @@ function events_field_default_field_instances() {
       ),
       'type' => 'text_textarea',
       'weight' => 22,
+    ),
+  );
+
+  // Exported field_instance: 'node-event-field_term_country'
+  $field_instances['node-event-field_term_country'] = array(
+    'bundle' => 'event',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'at_a_glance' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'default' => array(
+        'label' => 'above',
+        'module' => 'taxonomy',
+        'settings' => array(
+          'field_delimiter' => '',
+          'linked_field' => array(
+            'advanced' => array(
+              'class' => '',
+              'rel' => '',
+              'target' => '',
+              'text' => '',
+              'title' => '',
+            ),
+            'destination' => '',
+            'linked' => 0,
+          ),
+        ),
+        'type' => 'taxonomy_term_reference_link',
+        'weight' => 25,
+      ),
+      'full' => array(
+        'label' => 'above',
+        'module' => 'gie_innovation',
+        'settings' => array(
+          'field_delimiter' => '',
+          'linked_field' => array(
+            'advanced' => array(
+              'class' => '',
+              'rel' => '',
+              'target' => '',
+              'text' => '',
+              'title' => '',
+            ),
+            'destination' => '',
+            'linked' => 0,
+          ),
+        ),
+        'type' => 'gie_listing_link',
+        'weight' => 3,
+      ),
+      'listing' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'page_header' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'ds_extras_field_template' => '',
+    'entity_type' => 'node',
+    'field_name' => 'field_term_country',
+    'label' => 'Country',
+    'required' => 0,
+    'settings' => array(
+      'description_display' => 'after',
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'options',
+      'settings' => array(
+        'apply_chosen' => '',
+      ),
+      'type' => 'options_select',
+      'weight' => 30,
+    ),
+  );
+
+  // Exported field_instance: 'node-event-field_term_region'
+  $field_instances['node-event-field_term_region'] = array(
+    'bundle' => 'event',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'at_a_glance' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'default' => array(
+        'label' => 'above',
+        'module' => 'taxonomy',
+        'settings' => array(
+          'field_delimiter' => '',
+          'linked_field' => array(
+            'advanced' => array(
+              'class' => '',
+              'rel' => '',
+              'target' => '',
+              'text' => '',
+              'title' => '',
+            ),
+            'destination' => '',
+            'linked' => 0,
+          ),
+        ),
+        'type' => 'taxonomy_term_reference_link',
+        'weight' => 22,
+      ),
+      'full' => array(
+        'label' => 'above',
+        'module' => 'taxonomy',
+        'settings' => array(
+          'field_delimiter' => '',
+          'linked_field' => array(
+            'advanced' => array(
+              'class' => '',
+              'rel' => '',
+              'target' => '',
+              'text' => '',
+              'title' => '',
+            ),
+            'destination' => '',
+            'linked' => 0,
+          ),
+        ),
+        'type' => 'taxonomy_term_reference_link',
+        'weight' => 2,
+      ),
+      'listing' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'page_header' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'ds_extras_field_template' => '',
+    'entity_type' => 'node',
+    'field_name' => 'field_term_region',
+    'label' => 'Regions ',
+    'required' => 0,
+    'settings' => array(
+      'description_display' => 'after',
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'term_reference_tree',
+      'settings' => array(
+        'cascading_selection' => 0,
+        'filter_view' => '',
+        'leaves_only' => 0,
+        'max_depth' => '',
+        'parent_term_id' => '',
+        'select_parents' => 0,
+        'start_minimized' => 0,
+        'token_display' => '',
+        'track_list' => 0,
+      ),
+      'type' => 'term_reference_tree',
+      'weight' => 24,
+    ),
+  );
+
+  // Exported field_instance: 'node-event-field_term_sector'
+  $field_instances['node-event-field_term_sector'] = array(
+    'bundle' => 'event',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'at_a_glance' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'default' => array(
+        'label' => 'above',
+        'module' => 'taxonomy',
+        'settings' => array(
+          'field_delimiter' => '',
+          'linked_field' => array(
+            'advanced' => array(
+              'class' => '',
+              'rel' => '',
+              'target' => '',
+              'text' => '',
+              'title' => '',
+            ),
+            'destination' => '',
+            'linked' => 0,
+          ),
+        ),
+        'type' => 'taxonomy_term_reference_link',
+        'weight' => 23,
+      ),
+      'full' => array(
+        'label' => 'above',
+        'module' => 'taxonomy',
+        'settings' => array(
+          'field_delimiter' => '',
+          'linked_field' => array(
+            'advanced' => array(
+              'class' => '',
+              'rel' => '',
+              'target' => '',
+              'text' => '',
+              'title' => '',
+            ),
+            'destination' => '',
+            'linked' => 0,
+          ),
+        ),
+        'type' => 'taxonomy_term_reference_link',
+        'weight' => 0,
+      ),
+      'listing' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'page_header' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'ds_extras_field_template' => '',
+    'entity_type' => 'node',
+    'field_name' => 'field_term_sector',
+    'label' => 'Related Sectors',
+    'required' => 0,
+    'settings' => array(
+      'description_display' => 'after',
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'term_reference_tree',
+      'settings' => array(
+        'cascading_selection' => 0,
+        'filter_view' => '',
+        'leaves_only' => 0,
+        'max_depth' => '',
+        'parent_term_id' => '',
+        'select_parents' => 0,
+        'start_minimized' => 1,
+        'token_display' => '',
+        'track_list' => 0,
+      ),
+      'type' => 'term_reference_tree',
+      'weight' => 26,
+    ),
+  );
+
+  // Exported field_instance: 'node-event-field_term_topic'
+  $field_instances['node-event-field_term_topic'] = array(
+    'bundle' => 'event',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'at_a_glance' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'default' => array(
+        'label' => 'above',
+        'module' => 'taxonomy',
+        'settings' => array(
+          'field_delimiter' => '',
+          'linked_field' => array(
+            'advanced' => array(
+              'class' => '',
+              'rel' => '',
+              'target' => '',
+              'text' => '',
+              'title' => '',
+            ),
+            'destination' => '',
+            'linked' => 0,
+          ),
+        ),
+        'type' => 'taxonomy_term_reference_link',
+        'weight' => 24,
+      ),
+      'full' => array(
+        'label' => 'above',
+        'module' => 'taxonomy',
+        'settings' => array(
+          'field_delimiter' => '',
+          'linked_field' => array(
+            'advanced' => array(
+              'class' => '',
+              'rel' => '',
+              'target' => '',
+              'text' => '',
+              'title' => '',
+            ),
+            'destination' => '',
+            'linked' => 0,
+          ),
+        ),
+        'type' => 'taxonomy_term_reference_link',
+        'weight' => 1,
+      ),
+      'listing' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'page_header' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'ds_extras_field_template' => '',
+    'entity_type' => 'node',
+    'field_name' => 'field_term_topic',
+    'label' => 'Topic',
+    'required' => 0,
+    'settings' => array(
+      'description_display' => 'after',
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'term_reference_tree',
+      'settings' => array(
+        'apply_chosen' => '',
+        'cascading_selection' => 0,
+        'filter_view' => '',
+        'leaves_only' => 0,
+        'max_depth' => '',
+        'parent_term_id' => '',
+        'select_parents' => 0,
+        'start_minimized' => 0,
+        'token_display' => '',
+        'track_list' => 0,
+      ),
+      'type' => 'term_reference_tree',
+      'weight' => 28,
     ),
   );
 
@@ -2075,6 +2154,7 @@ function events_field_default_field_instances() {
   t('A short description of the Event. 
 ');
   t('Brief Event Introduction');
+  t('Country');
   t('Description');
   t('Enter the full event description here. ');
   t('Event Cost');
@@ -2085,22 +2165,23 @@ function events_field_default_field_instances() {
   t('Event Point of Contact');
   t('Event Size');
   t('Event Type');
+  t('Event organizers are individuals who have a profile on the Exchange. Start typing a name to see if the individual organizers have a profile in the Exchange.');
   t('Full Event Description');
-  t('If there is a cost associated with your event, what is the registration fee?');
+  t('If there is a cost associated with your event, what is the registration fee? USD or USD equivalent');
+  t('If you would like to assign someone as the point of contact for this event in the Exchange start typing their name to search. They will not appear unless they have an existing profile on the Exchange.');
   t('Location');
   t('Name');
   t('RSVP URL');
-  t('Related Country');
+  t('Regions ');
   t('Related Organization');
   t('Related Program');
-  t('Related Regions');
   t('Related Sectors');
-  t('Related Topics');
+  t('Speakers and Agenda');
   t('Specify any related programs for this event. ');
-  t('The date of the Event. ');
+  t('The date of the Event. EST');
   t('Title');
+  t('Topic');
   t('Website URL');
-  t('Who is attending');
 
   return $field_instances;
 }

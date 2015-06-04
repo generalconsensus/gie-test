@@ -216,6 +216,10 @@ function events_strongarm() {
             'weight' => '2',
             'visible' => FALSE,
           ),
+          'full' => array(
+            'weight' => '10',
+            'visible' => FALSE,
+          ),
         ),
       ),
     ),

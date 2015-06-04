@@ -159,9 +159,10 @@ function events_field_group_info() {
     'weight' => '3',
     'children' => array(
       0 => 'field_event_country',
-      1 => 'field_event_related_regions',
-      2 => 'field_event_related_sectors',
-      3 => 'field_event_related_topics',
+      1 => 'field_term_country',
+      2 => 'field_term_region',
+      3 => 'field_term_sector',
+      4 => 'field_term_topic',
     ),
     'format_type' => 'div',
     'format_settings' => array(
