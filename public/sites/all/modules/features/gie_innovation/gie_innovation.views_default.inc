@@ -914,7 +914,7 @@ function gie_innovation_views_default_views() {
   $handler->display->display_options['fields']['field_innovation_funders']['group_type'] = 'count';
   $handler->display->display_options['fields']['field_innovation_funders']['label'] = '';
   $handler->display->display_options['fields']['field_innovation_funders']['alter']['alter_text'] = TRUE;
-  $handler->display->display_options['fields']['field_innovation_funders']['alter']['text'] = '<div class="has-icon--organization" title="Funding Organizations">[field_innovation_funders]</div>';
+  $handler->display->display_options['fields']['field_innovation_funders']['alter']['text'] = '<div class="has-icon--funding" title="Funding Organizations">[field_innovation_funders]</div>';
   $handler->display->display_options['fields']['field_innovation_funders']['element_type'] = '0';
   $handler->display->display_options['fields']['field_innovation_funders']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['field_innovation_funders']['element_default_classes'] = FALSE;
