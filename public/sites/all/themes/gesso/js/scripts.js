@@ -152,7 +152,7 @@
           return classes[i % classes.length];
         });
       }
-      if (Modernizr.mq('(min-width: 800px)')) { 
+      if (Modernizr.mq('(min-width: 800px)') || Modernizr.mq() == false) { 
         if (columns == 2) {
           var classes = ['odd', 'even'];
         }
@@ -244,7 +244,7 @@
           tallest = height;
         }
       });
-      if (Modernizr.mq('(min-width: 800px)')) { 
+      if (Modernizr.mq('(min-width: 800px)') || Modernizr.mq() == false) { 
         if (tallest > 0) {
           items.css("height",tallest+"px");
         }

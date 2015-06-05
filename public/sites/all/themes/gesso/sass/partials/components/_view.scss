@@ -8,9 +8,12 @@
 }
 
 .view__all {
-  font-size: em(14px);
   font-weight: bold;
   text-decoration: underline;
+
+  aside &, .region-footer & {
+    font-size: em(14px);
+  }
 }
 
 .view__header {

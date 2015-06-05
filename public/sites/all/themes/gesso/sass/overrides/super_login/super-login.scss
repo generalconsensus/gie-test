@@ -1,0 +1,67 @@
+///* Try to hide Page Titles on login pages */
+// #page-title,
+// h1#page-title,
+// h1.page-header{
+//   display:none;
+// }
+ 
+
+#user-login,
+#user-pass {
+  border: 2px solid #cecfcb;
+  -moz-box-shadow: 0 2px 4px 2px rgba(0, 0, 0, 0.15);
+  -webkit-box-shadow: 0 2px 4px 2px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 2px 4px 2px rgba(0, 0, 0, 0.15);
+  max-width: 750px;
+  max-width: 650px;
+  margin: 2em auto;
+  overflow: hidden;
+  padding: 2em;
+
+  #edit-lr-social-login-links {
+    border-bottom: 1px solid #cecfcb;
+    margin: 0 0 1.5em 0;
+    padding: 0 0 1.5em 0;
+  }
+
+  .interfacecontainerdiv {
+    margin-left: -20px;
+  }
+
+  p.login-title {
+    color: #565a5c;
+    font-size: 2em;
+    font-weight: normal;
+    line-height: 1.1;
+    margin: 0 0 0.5em 0;
+    padding: 0;
+  }
+
+  .form-item-pass {
+    margin-bottom: 0;
+  }
+
+  .forgot-password {
+    font-size: 0.8em;
+  }
+
+  .button--submit {
+     margin: 0;
+  }
+
+  .form-actions {
+    float: left;
+  }
+
+  .super-login-register {
+    display: inline-block;
+    float: right;
+    padding-top: 1em;
+  }
+
+  #capslockdiv p {
+    color: #c61414;
+    font-weight: bold;
+  }
+
+}

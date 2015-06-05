@@ -119,7 +119,7 @@
 
         // Open/close submenus.
         $('.nav__subnav-arrow', context).click(function (e) {
-          $(this).toggleClass('is-active').prev('a').toggleClass('is-open');
+          $(this).toggleClass('is-active').parent().toggleClass('is-open');
           $(this).siblings('.nav__toggler').slideToggle();
 
           // Remove focus for mouse clicks after closing the menu.

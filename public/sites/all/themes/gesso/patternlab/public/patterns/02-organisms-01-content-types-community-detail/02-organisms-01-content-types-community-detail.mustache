@@ -23,18 +23,64 @@
   &lt;div class=&quot;l-wrapper layout-constrain&quot;&gt; 
     &lt;div class=&quot;l-bottom&quot;&gt;
 
-      &lt;div class=&quot;pane pane--node&quot;&gt;
+      &lt;div class=&quot;pane pane--highlights-community-pane&quot;&gt;
         &lt;h2 class=&quot;pane__title&quot;&gt;Highlights&lt;/h2&gt; 
         &lt;div class=&quot;pane__content&quot;&gt;
-
           &lt;div class=&quot;view--card-view-2col&quot;&gt;
-            {{# listItems.eight }}
+            {{# listItems.four }}
               &lt;div class=&quot;views-row&quot;&gt;
                 {{&gt; organisms-highlight-teaser }}
               &lt;/div&gt;
-            {{/ listItems.eight }}
+            {{/ listItems.four }}
           &lt;/div&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
 
+      &lt;div class=&quot;pane has-icon-innovation&quot;&gt;
+        &lt;h2 class=&quot;pane__title&quot;&gt;Innovations&lt;/h2&gt; 
+        &lt;div class=&quot;pane__content&quot;&gt;
+          &lt;div class=&quot;view--card-view-3col&quot;&gt;
+            {{# listItems.three }}
+              &lt;div class=&quot;views-row&quot;&gt;
+                {{&gt; organisms-innovation-teaser }}
+              &lt;/div&gt;
+            {{/ listItems.three }}
+            &lt;div class=&quot;view__footer&quot;&gt;
+              &lt;a href=&quot;#&quot; class=&quot;view__all&quot;&gt;View All Innovations&lt;/a&gt;
+            &lt;/div&gt;
+          &lt;/div&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+
+      &lt;div class=&quot;pane has-icon-resource&quot;&gt;
+        &lt;h2 class=&quot;pane__title&quot;&gt;Resources&lt;/h2&gt; 
+        &lt;div class=&quot;pane__content&quot;&gt;
+          &lt;div class=&quot;view--card-view-3col&quot;&gt;
+            {{# listItems.three }}
+              &lt;div class=&quot;views-row&quot;&gt;
+                {{&gt; organisms-resource-teaser }}
+              &lt;/div&gt;
+            {{/ listItems.three }}
+            &lt;div class=&quot;view__footer&quot;&gt;
+              &lt;a href=&quot;#&quot; class=&quot;view__all&quot;&gt;View All Resources&lt;/a&gt;
+            &lt;/div&gt;
+          &lt;/div&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+
+      &lt;div class=&quot;pane has-icon-funding&quot;&gt;
+        &lt;h2 class=&quot;pane__title&quot;&gt;Funding Opportunities&lt;/h2&gt; 
+        &lt;div class=&quot;pane__content&quot;&gt;
+          &lt;div class=&quot;view--card-view-3col&quot;&gt;
+            {{# listItems.three }}
+              &lt;div class=&quot;views-row&quot;&gt;
+                {{&gt; organisms-funding-op-teaser }}
+              &lt;/div&gt;
+            {{/ listItems.three }}
+            &lt;div class=&quot;view__footer&quot;&gt;
+              &lt;a href=&quot;#&quot; class=&quot;view__all&quot;&gt;View All Funding Opportunies&lt;/a&gt;
+            &lt;/div&gt;
+          &lt;/div&gt;
         &lt;/div&gt;
       &lt;/div&gt;
 

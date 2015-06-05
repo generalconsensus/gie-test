@@ -31,6 +31,7 @@ features[facetapi][] = search_api@default_node_index::field_discussion_program_d
 features[facetapi][] = search_api@default_node_index::field_funding_effort
 features[facetapi][] = search_api@default_node_index::field_funding_grant_award_value
 features[facetapi][] = search_api@default_node_index::field_funding_innovation_stage
+features[facetapi][] = search_api@default_node_index::field_funding_organization
 features[facetapi][] = search_api@default_node_index::field_funding_type
 features[facetapi][] = search_api@default_node_index::field_innovation_assistance
 features[facetapi][] = search_api@default_node_index::field_innovation_cost_bene

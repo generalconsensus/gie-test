@@ -62,6 +62,13 @@ function events_strongarm() {
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
+  $strongarm->name = 'date_format_card_date';
+  $strongarm->value = 'F m';
+  $export['date_format_card_date'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
   $strongarm->name = 'field_bundle_settings_node__event';
   $strongarm->value = array(
     'view_modes' => array(
@@ -134,7 +141,7 @@ function events_strongarm() {
             'visible' => FALSE,
           ),
           'listing' => array(
-            'weight' => '31',
+            'weight' => '33',
             'visible' => FALSE,
           ),
           'at_a_glance' => array(
@@ -156,7 +163,7 @@ function events_strongarm() {
             'visible' => FALSE,
           ),
           'listing' => array(
-            'weight' => '22',
+            'weight' => '24',
             'visible' => FALSE,
           ),
         ),
@@ -170,7 +177,7 @@ function events_strongarm() {
             'visible' => FALSE,
           ),
           'listing' => array(
-            'weight' => '29',
+            'weight' => '31',
             'visible' => FALSE,
           ),
         ),
@@ -184,14 +191,14 @@ function events_strongarm() {
             'visible' => FALSE,
           ),
           'listing' => array(
-            'weight' => '28',
+            'weight' => '30',
             'visible' => FALSE,
           ),
         ),
         'events_at_a_glance_entity_view_1' => array(
           'listing' => array(
             'weight' => '10',
-            'visible' => FALSE,
+            'visible' => TRUE,
           ),
           'full' => array(
             'weight' => '14',
@@ -206,8 +213,12 @@ function events_strongarm() {
         ),
         'events_at_a_glance_related_org_card_event' => array(
           'listing' => array(
-            'weight' => '22',
-            'visible' => TRUE,
+            'weight' => '2',
+            'visible' => FALSE,
+          ),
+          'full' => array(
+            'weight' => '10',
+            'visible' => FALSE,
           ),
         ),
       ),
