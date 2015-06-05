@@ -520,6 +520,10 @@ function gie_innovation_field_group_info() {
       9 => 'field_term_sector',
       10 => 'field_term_topic',
       11 => 'field_term_region',
+      12 => 'field_innovation_potent_lives_im',
+      13 => 'field_innovation_lives_impacted',
+      14 => 'field_innovation_potent_lives_sa',
+      15 => 'field_innovation_lives_saved',
     ),
     'format_type' => 'div',
     'format_settings' => array(
