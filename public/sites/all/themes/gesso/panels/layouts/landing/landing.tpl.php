@@ -20,17 +20,19 @@
     </div>
   <?php endif; ?>
   <?php if (!empty($content['main']) || !empty($content['sidebar'])): ?>
-    <div class="l-wrapper layout-constrain">
-      <?php if (!empty($content['sidebar'])): ?>
-        <aside class="l-sidebar">
-          <?php print $content['sidebar']; ?>
-        </aside>
-      <?php endif; ?>
-      <?php if (!empty($content['main'])): ?>
-        <div class="l-main">
-          <?php print $content['main']; ?>
-        </div>
-      <?php endif; ?>
+    <div class="l-wrapper region-landing-content">
+      <div class="layout-constrain">
+        <?php if (!empty($content['sidebar'])): ?>
+          <aside class="l-sidebar">
+            <?php print $content['sidebar']; ?>
+          </aside>
+        <?php endif; ?>
+        <?php if (!empty($content['main'])): ?>
+          <div class="l-main">
+            <?php print $content['main']; ?>
+          </div>
+        <?php endif; ?>
+      </div>
     </div>
   <?php endif; ?>
 </div>

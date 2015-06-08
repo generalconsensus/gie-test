@@ -14,11 +14,8 @@
   h1 {
     color: #fff;
     font-size: em(30px);
-    @include breakpoint(700px 1199px) {
-      font-size: em(42px);
-    }
-    @include breakpoint(1200px, $no-query: true) {
-      font-size: em(48px); 
+    @include breakpoint(700px, $no-query: true) {
+      font-size: em(40px);
     }
     font-weight: 700;
     line-height: 1.2;
@@ -26,102 +23,139 @@
     padding: 0 0 0.4em 0;
     position: relative;
     text-transform: uppercase;
-    &:before {
-      @include image-replace(46px,46px);
-      @include breakpoint(500px, $no-query: true) { // don't show until 500px
-        content: "";
-        display: inline-block;
-      }
-      margin-right: 10px;
-      position: relative;
-      top: 6px;
-      @include breakpoint(1270px, $no-query: true) {
-        left: -61px; // width + 15
-        margin-right: 0;
-        position: absolute;
-      }
-    }
-  }
-  &.pane--about-introduction h1:before {
-    @include svg-background(icon-about-46-46-white);
-  }
-  &.pane--innovations-introduction h1:before {
-    @include svg-background(icon-innovations-34-46-white);
-    width: 34px;
-    @include breakpoint(1270px, $no-query: true) {
-      left: -49px; // width + 15
-    }
-  }
-  &.pane--funding-introduction h1:before {
-    @include svg-background(icon-funding-46-46-white);
-  }
-  &.pane--resources-introduction h1:before {
-    @include svg-background(icon-resources-50-46-white);
-    width: 50px; 
-    @include breakpoint(1270px, $no-query: true) {
-      left: -65px; // width + 15
-    }
-  }
-  &.pane--communities-introduction h1:before {
-    @include svg-background(icon-communities-54-46-white);
-    width: 54px;
-    @include breakpoint(1270px, $no-query: true) {
-      left: -69px; // width + 15
-    }
-  }
-  &.pane--more-introduction h1:before {
-    @include svg-background(icon-more-46-46-white);
-  }
-  &.pane--organizations-introduction h1:before {
-    @include svg-background(icon-organization-45-46-white);
-    width: 45px;
-     @include breakpoint(1270px, $no-query: true) {
-      left: -60px; // width + 15
-    }
-  }
-
-  &.pane--discussions-introduction h1:before {
-    @include svg-background(icon-discussions-60-46-white);
-    width: 60px;
-    @include breakpoint(1270px, $no-query: true) {
-      left: -75px; // width + 15
-    }
-  }
-  &.pane--sectors-introduction h1:before {
-    @include svg-background(icon-sectors-46-46-white);
-  }
-  &.pane--topics-introduction h1:before {
-    @include svg-background(icon-topics-53-46-white);
-    width: 53px;
-    @include breakpoint(1270px, $no-query: true) {
-      left: -68px; // width + 15
-    }
-  }
-  &.pane--locations-introduction h1:before {
-    @include svg-background(icon-locations-35-46-white);
-    width: 35px;
-     @include breakpoint(1270px, $no-query: true) {
-      left: -50px; // width + 15
-    }
-  }
-  &.pane--programs-introduction h1:before {
-    @include svg-background(icon-programs-53-46-white);
-    width: 53px;
-    @include breakpoint(1270px, $no-query: true) {
-      left: -68px; // width + 15
-    }
-  }
-  &.pane--members-directory-introduction h1:before {
-    @include svg-background(icon-members-46-46-white);
   }
 }
 
 .pane--landing-intro__left {
+  position: relative;
+  @include breakpoint(500px, $no-query: true) { // don't show icon until 500px
+    padding-left: 51px; // icon width + 15
+  }
   @include breakpoint(900px, $no-query: true) {
     float: left;
-    padding: 0 5% 0 0;
+    padding-right: 5%;
     width: 60%;
   }
+  &:before {
+    @include image-replace(46px,46px);
+    @include breakpoint(500px, $no-query: true) { // don't show icon until 500px
+      content: "";
+      display: inline-block;
+    }
+    left: 0;
+    position: absolute;
+    top: 5px;
+  }
+  // Innovation icon
+  .pane--innovations-introduction & {
+    @include breakpoint(500px, $no-query: true) { // don't show icon until 500px
+      padding-left: 49px; // icon width + 15
+    } 
+    &:before {
+      @include svg-background(icon-innovations-34-46-white);
+      width: 34px;
+    }
+  }
+  // About icon
+  .pane--about-introduction & {
+    &:before {
+      @include svg-background(icon-about-46-46-white);
+    }
+  }
+  // Funding icon
+  .pane--funding-introduction & {
+    &:before {
+      @include svg-background(icon-funding-46-46-white);
+    }
+  }
+  // Resources icon
+  .pane--resources-introduction & {
+    @include breakpoint(500px, $no-query: true) { // don't show icon until 500px
+      padding-left: 65px; // icon width + 15
+    } 
+    &:before {
+      @include svg-background(icon-resources-50-46-white);
+      width: 50px;
+    }
+  }
+  // Communities icon
+  .pane--communities-introduction & {
+    @include breakpoint(500px, $no-query: true) { // don't show icon until 500px
+      padding-left: 69px; // icon width + 15
+    } 
+    &:before {
+      @include svg-background(icon-communities-54-46-white);
+      width: 54px;
+    }
+  }
+  // More icon
+  .pane--more-introduction & {
+    &:before {
+      @include svg-background(icon-more-46-46-white);
+    }
+  }
+  // Organizations icon
+  .pane--organizations-introduction & {
+    @include breakpoint(500px, $no-query: true) { // don't show icon until 500px
+      padding-left: 60px; // icon width + 15
+    } 
+    &:before {
+      @include svg-background(icon-organization-45-46-white);
+      width: 45px;
+    }
+  }
+  // Discussions icon
+  .pane--discussions-introduction & {
+    @include breakpoint(500px, $no-query: true) { // don't show icon until 500px
+      padding-left: 75px; // icon width + 15
+    } 
+    &:before {
+      @include svg-background(icon-discussions-60-46-white);
+      width: 60px;
+    }
+  }
+  // Sectors icon
+  .pane--sectors-introduction & {
+    &:before {
+      @include svg-background(icon-sectors-46-46-white);
+    }
+  }
+  // Topics icon
+  .pane--topics-introduction & {
+    @include breakpoint(500px, $no-query: true) { // don't show icon until 500px
+      padding-left: 68px; // icon width + 15
+    } 
+    &:before {
+      @include svg-background(icon-topics-53-46-white);
+      width: 53px;
+    }
+  }
+  // Locations icon
+  .pane--locations-introduction & {
+    @include breakpoint(500px, $no-query: true) { // don't show icon until 500px
+      padding-left: 50px; // icon width + 15
+    } 
+    &:before {
+      @include svg-background(icon-locations-35-46-white);
+      width: 35px;
+    }
+  }
+  // Programs icon
+  .pane--programs-introduction & {
+    @include breakpoint(500px, $no-query: true) { // don't show icon until 500px
+      padding-left: 68px; // icon width + 15
+    } 
+    &:before {
+      @include svg-background(icon-programs-53-46-white);
+      width: 53px;
+    }
+  }
+  .pane--members-directory-introduction & {
+    &:before {
+      @include svg-background(icon-members-46-46-white);
+    }
+  }
+  
 }
 
 .pane--landing-intro__right {
