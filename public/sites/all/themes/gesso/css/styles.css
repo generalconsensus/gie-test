@@ -2187,6 +2187,43 @@ input.throbbing {
   text-decoration: underline;
 }
 
+/* line 1, ../sass/partials/components/_comment.scss */
+.comment {
+  background: #fff;
+  color: #666666;
+  margin: 0 0 2em 0;
+}
+/* line 5, ../sass/partials/components/_comment.scss */
+.comment .view-comment-author .views-row {
+  padding-bottom: 0.5em;
+}
+/* line 8, ../sass/partials/components/_comment.scss */
+.comment .field--comment-body {
+  min-height: 3em;
+}
+/* line 10, ../sass/partials/components/_comment.scss */
+.comment .field--comment-body p:last-child {
+  margin-bottom: 0;
+}
+/* line 14, ../sass/partials/components/_comment.scss */
+.comment .field--post-date {
+  background: #fff;
+  font-size: 0.875em;
+  font-style: italic;
+  padding: 0 0.25em;
+  position: absolute;
+  right: 1em;
+  text-align: right;
+  top: -1em;
+}
+
+/* line 26, ../sass/partials/components/_comment.scss */
+.comment__content {
+  border: 1px solid #cecfcb;
+  padding: 0.75em;
+  position: relative;
+}
+
 /* line 1, ../sass/partials/components/_comments.scss */
 .comments {
   border-top: 1px solid #cecfcb;
@@ -2194,25 +2231,51 @@ input.throbbing {
   padding: 2.4375em 0 0 0;
 }
 /* line 6, ../sass/partials/components/_comments.scss */
+.comments #comment-form {
+  border-bottom: 1px solid #cecfcb;
+}
+/* line 10, ../sass/partials/components/_comments.scss */
 .comments .field-widget-text-textarea .text-format-wrapper .filter-wrapper {
   display: none;
 }
-/* line 10, ../sass/partials/components/_comments.scss */
+/* line 14, ../sass/partials/components/_comments.scss */
 .comments .field-widget-text-textarea .text-format-wrapper .form-item {
   margin: 1.625em 0;
 }
-/* line 14, ../sass/partials/components/_comments.scss */
+/* line 18, ../sass/partials/components/_comments.scss */
 .comments label {
   display: block;
   font-weight: bold;
 }
-/* line 19, ../sass/partials/components/_comments.scss */
-.comments .indented {
-  padding-left: 2em;
-}
 /* line 23, ../sass/partials/components/_comments.scss */
-.comments .indented .indented .indented .indented {
+.comments .indented {
   padding-left: 1em;
+}
+@media (min-width: 43.75em) {
+  /* line 23, ../sass/partials/components/_comments.scss */
+  .comments .indented {
+    padding-left: 2em;
+  }
+}
+/* line 30, ../sass/partials/components/_comments.scss */
+.comments .indented .indented .indented .indented {
+  padding-left: 0.5em;
+}
+@media (min-width: 43.75em) {
+  /* line 30, ../sass/partials/components/_comments.scss */
+  .comments .indented .indented .indented .indented {
+    padding-left: 1em;
+  }
+}
+/* line 37, ../sass/partials/components/_comments.scss */
+.comments .indented .indented .indented .indented .indented .indented .indented {
+  padding-left: 0.25em;
+}
+@media (min-width: 43.75em) {
+  /* line 37, ../sass/partials/components/_comments.scss */
+  .comments .indented .indented .indented .indented .indented .indented .indented {
+    padding-left: 0.5em;
+  }
 }
 
 /* line 1, ../sass/partials/components/_connect.scss */
@@ -2341,7 +2404,6 @@ input.throbbing {
   padding-top: 2.4375em;
 }
 
-/* No files to import found in field/*.* */
 /* line 4, ../sass/partials/components/_fieldset.scss */
 .fieldset {
   background: #fff;
@@ -2479,7 +2541,6 @@ body > .footer {
   -webkit-hyphens: none;
   -moz-hyphens: none;
   hyphens: none;
-  color: #555555;
   font-size: 0.875em;
   font-style: italic;
   line-height: 1.4;
@@ -3442,6 +3503,14 @@ header.header {
   background-size: 20px 20px;
   height: 20px;
   width: 20px;
+}
+
+/* line 1, ../sass/partials/components/nav/_nav--comment.scss */
+.nav--comment {
+  float: right;
+  font-size: 0.8125em;
+  line-height: 1;
+  margin: 0.5em 0 1em 0;
 }
 
 /* line 4, ../sass/partials/components/nav/_nav--mobile-menu.scss */
@@ -4632,7 +4701,7 @@ div[class*="pane--facetapi-"] .pane__content ul li a {
 .progress__percentage {
   font-size: 0.8125em;
   line-height: 2em;
-  color: #555555;
+  color: #666666;
   overflow: hidden;
 }
 

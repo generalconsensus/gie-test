@@ -1,0 +1,30 @@
+.comment {
+  background: #fff;
+  color: $secondary-text-color;
+  margin: 0 0 2em 0;
+  .view-comment-author .views-row {
+    padding-bottom: 0.5em;
+  }
+  .field--comment-body {
+    min-height: 3em;
+    p:last-child {
+      margin-bottom: 0;
+    }
+  }
+  .field--post-date {
+    background: #fff;
+    font-size: em($font-size-md);
+    font-style: italic;
+    padding: 0 0.25em;
+    position: absolute;
+    right: 1em;
+    text-align: right;
+    top: -1em;
+  }
+}
+
+.comment__content {
+  border: 1px solid $border-color;
+  padding: 0.75em;  
+  position: relative;
+}
