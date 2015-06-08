@@ -1,7 +1,7 @@
 {{> organisms-header }}
 {{> organisms-navigation }}
 
-<main id="main" class="main" role="main" tabindex="-1"
+<main id="main" class="main" role="main" tabindex="-1">
   <div class="region-content">
 
     <div class="l-panels-landing preface-empty title sidebar main">
@@ -11,20 +11,22 @@
           {{> atoms-landing-page-intro-discussions }}
         </div>
       </div>
-      <div class="l-wrapper layout-constrain">
-        <aside class="l-sidebar">
-          {{> molecules-filters }}
-        </aside>
-        <div class="l-main">
-          <div class="pane">
-            <div class="pane__content">
-              <div class="view view--discussion-listing">
-                {{# listItems.nine }}
-                  <div class="views-row">
-                    {{> organisms-discussion-teaser }}
-                  </div>
-                {{/ listItems.nine }}
-                {{> molecules-pager }}
+      <div class="l-wrapper region-landing-content">
+        <div class="layout-constrain">
+          <aside class="l-sidebar">
+            {{> molecules-filters }}
+          </aside>
+          <div class="l-main">
+            <div class="pane">
+              <div class="pane__content">
+                <div class="view view--discussion-listing">
+                  {{# listItems.nine }}
+                    <div class="views-row">
+                      {{> organisms-discussion-teaser }}
+                    </div>
+                  {{/ listItems.nine }}
+                  {{> molecules-pager }}
+                </div>
               </div>
             </div>
           </div>
