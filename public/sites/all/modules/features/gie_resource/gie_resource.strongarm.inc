@@ -142,7 +142,7 @@ function gie_resource_strongarm() {
         'custom_settings' => FALSE,
       ),
       'page_header' => array(
-        'custom_settings' => FALSE,
+        'custom_settings' => TRUE,
       ),
       'details' => array(
         'custom_settings' => TRUE,
@@ -175,7 +175,7 @@ function gie_resource_strongarm() {
             'visible' => FALSE,
           ),
           'full' => array(
-            'weight' => '2',
+            'weight' => '0',
             'visible' => TRUE,
           ),
           'search_listing' => array(
@@ -192,6 +192,10 @@ function gie_resource_strongarm() {
           ),
           'highlights' => array(
             'weight' => '14',
+            'visible' => FALSE,
+          ),
+          'page_header' => array(
+            'weight' => '8',
             'visible' => FALSE,
           ),
         ),
@@ -224,6 +228,10 @@ function gie_resource_strongarm() {
             'weight' => '16',
             'visible' => FALSE,
           ),
+          'page_header' => array(
+            'weight' => '18',
+            'visible' => FALSE,
+          ),
         ),
         'resource_counters_favorite_count' => array(
           'listing' => array(
@@ -254,6 +262,10 @@ function gie_resource_strongarm() {
             'weight' => '18',
             'visible' => FALSE,
           ),
+          'page_header' => array(
+            'weight' => '17',
+            'visible' => FALSE,
+          ),
         ),
         'resource_counters_resource_comment_detail' => array(
           'at_a_glance' => array(
@@ -276,6 +288,10 @@ function gie_resource_strongarm() {
             'weight' => '17',
             'visible' => FALSE,
           ),
+          'page_header' => array(
+            'weight' => '16',
+            'visible' => FALSE,
+          ),
         ),
         'resource_counters_resource_favorite_count_detail' => array(
           'at_a_glance' => array(
@@ -295,6 +311,10 @@ function gie_resource_strongarm() {
             'visible' => TRUE,
           ),
           'highlights' => array(
+            'weight' => '15',
+            'visible' => FALSE,
+          ),
+          'page_header' => array(
             'weight' => '15',
             'visible' => FALSE,
           ),

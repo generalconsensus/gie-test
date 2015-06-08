@@ -141,7 +141,7 @@ function events_strongarm() {
             'visible' => FALSE,
           ),
           'listing' => array(
-            'weight' => '31',
+            'weight' => '33',
             'visible' => FALSE,
           ),
           'at_a_glance' => array(
@@ -163,7 +163,7 @@ function events_strongarm() {
             'visible' => FALSE,
           ),
           'listing' => array(
-            'weight' => '22',
+            'weight' => '24',
             'visible' => FALSE,
           ),
         ),
@@ -177,7 +177,7 @@ function events_strongarm() {
             'visible' => FALSE,
           ),
           'listing' => array(
-            'weight' => '29',
+            'weight' => '31',
             'visible' => FALSE,
           ),
         ),
@@ -191,7 +191,7 @@ function events_strongarm() {
             'visible' => FALSE,
           ),
           'listing' => array(
-            'weight' => '28',
+            'weight' => '30',
             'visible' => FALSE,
           ),
         ),
@@ -213,8 +213,12 @@ function events_strongarm() {
         ),
         'events_at_a_glance_related_org_card_event' => array(
           'listing' => array(
-            'weight' => '12',
-            'visible' => TRUE,
+            'weight' => '2',
+            'visible' => FALSE,
+          ),
+          'full' => array(
+            'weight' => '10',
+            'visible' => FALSE,
           ),
         ),
       ),

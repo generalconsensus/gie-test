@@ -22,4 +22,14 @@
       padding-left: 0.5em;
     }
   }
+  .view__footer {
+    border-bottom: 1px solid $border-color;
+    margin-bottom: 1em;
+    padding-bottom: 3em;
+    text-align: right;
+    .pane:last-child & {
+      border: 0;
+      padding-bottom: 0;
+    }
+  }
 }

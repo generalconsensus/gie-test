@@ -21,12 +21,11 @@ function events_field_group_info() {
   $field_group->parent_name = '';
   $field_group->data = array(
     'label' => 'Card Content',
-    'weight' => '0',
+    'weight' => '1',
     'children' => array(
       0 => 'title_field',
       1 => 'events_at_a_glance_entity_view_1',
-      2 => 'events_at_a_glance_related_org_card_event',
-      3 => 'group_card_meta',
+      2 => 'group_card_meta',
     ),
     'format_type' => 'div',
     'format_settings' => array(
@@ -44,6 +43,38 @@ function events_field_group_info() {
     ),
   );
   $export['group_card_content|node|event|listing'] = $field_group;
+
+  $field_group = new stdClass();
+  $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
+  $field_group->api_version = 1;
+  $field_group->identifier = 'group_card_image|node|event|listing';
+  $field_group->group_name = 'group_card_image';
+  $field_group->entity_type = 'node';
+  $field_group->bundle = 'event';
+  $field_group->mode = 'listing';
+  $field_group->parent_name = '';
+  $field_group->data = array(
+    'label' => 'Card Image',
+    'weight' => '0',
+    'children' => array(
+      0 => 'field_event_image',
+    ),
+    'format_type' => 'div',
+    'format_settings' => array(
+      'label' => 'Card Image',
+      'instance_settings' => array(
+        'id' => '',
+        'classes' => 'card__image',
+        'description' => '',
+        'show_label' => '0',
+        'label_element' => 'h3',
+        'effect' => 'none',
+        'speed' => 'none',
+      ),
+      'formatter' => 'open',
+    ),
+  );
+  $export['group_card_image|node|event|listing'] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -128,9 +159,10 @@ function events_field_group_info() {
     'weight' => '3',
     'children' => array(
       0 => 'field_event_country',
-      1 => 'field_event_related_regions',
-      2 => 'field_event_related_sectors',
-      3 => 'field_event_related_topics',
+      1 => 'field_term_country',
+      2 => 'field_term_region',
+      3 => 'field_term_sector',
+      4 => 'field_term_topic',
     ),
     'format_type' => 'div',
     'format_settings' => array(
