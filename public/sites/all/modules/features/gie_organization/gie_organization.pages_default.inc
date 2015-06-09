@@ -287,25 +287,6 @@ function gie_organization_default_page_manager_pages() {
     $display->content['new-1235979b-16c4-475e-838c-f30ce09f4114'] = $pane;
     $display->panels['main'][1] = 'new-1235979b-16c4-475e-838c-f30ce09f4114';
     $pane = new stdClass();
-    $pane->pid = 'new-2e781491-4001-4bf6-832c-49983e81293a';
-    $pane->panel = 'main';
-    $pane->type = 'views_panes';
-    $pane->subtype = 'partner_listing-org_listing';
-    $pane->shown = TRUE;
-    $pane->access = array();
-    $pane->configuration = array();
-    $pane->cache = array();
-    $pane->style = array(
-      'settings' => NULL,
-    );
-    $pane->css = array();
-    $pane->extras = array();
-    $pane->position = 2;
-    $pane->locks = array();
-    $pane->uuid = '2e781491-4001-4bf6-832c-49983e81293a';
-    $display->content['new-2e781491-4001-4bf6-832c-49983e81293a'] = $pane;
-    $display->panels['main'][2] = 'new-2e781491-4001-4bf6-832c-49983e81293a';
-    $pane = new stdClass();
     $pane->pid = 'new-9b991d38-cf70-4755-85e3-538b86a41821';
     $pane->panel = 'title';
     $pane->type = 'page_title';
