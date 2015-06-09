@@ -84,7 +84,7 @@ function gie_innovation_strongarm() {
       'display' => array(
         'comment_author_entity_view_1' => array(
           'default' => array(
-            'weight' => '1',
+            'weight' => '0',
             'visible' => TRUE,
           ),
         ),
