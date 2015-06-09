@@ -77,34 +77,6 @@ function events_panelizer_defaults() {
     $display->content['new-da000b27-5f80-47ce-af7e-719230f086c3'] = $pane;
     $display->panels['bottom'][0] = 'new-da000b27-5f80-47ce-af7e-719230f086c3';
     $pane = new stdClass();
-    $pane->pid = 'new-f67e8518-4780-4fd4-b13a-9d1705d772ac';
-    $pane->panel = 'bottom_sidebar';
-    $pane->type = 'flag_link';
-    $pane->subtype = 'node';
-    $pane->shown = TRUE;
-    $pane->access = array();
-    $pane->configuration = array(
-      'flag_name' => 'attending',
-      'context' => 'panelizer',
-      'override_title' => 1,
-      'override_title_text' => 'Attending This Event? <p>Click below to mark yourself as <br>an attendee for this event!</p>',
-      'override_title_heading' => 'h2',
-    );
-    $pane->cache = array();
-    $pane->style = array(
-      'settings' => NULL,
-    );
-    $pane->css = array(
-      'css_id' => '',
-      'css_class' => 'pane--favorite-this',
-    );
-    $pane->extras = array();
-    $pane->position = 0;
-    $pane->locks = array();
-    $pane->uuid = 'f67e8518-4780-4fd4-b13a-9d1705d772ac';
-    $display->content['new-f67e8518-4780-4fd4-b13a-9d1705d772ac'] = $pane;
-    $display->panels['bottom_sidebar'][0] = 'new-f67e8518-4780-4fd4-b13a-9d1705d772ac';
-    $pane = new stdClass();
     $pane->pid = 'new-fc6fe658-b854-4c4e-ba88-e5e4f5a5b139';
     $pane->panel = 'bottom_sidebar';
     $pane->type = 'views_panes';
@@ -118,11 +90,11 @@ function events_panelizer_defaults() {
     );
     $pane->css = array();
     $pane->extras = array();
-    $pane->position = 1;
+    $pane->position = 0;
     $pane->locks = array();
     $pane->uuid = 'fc6fe658-b854-4c4e-ba88-e5e4f5a5b139';
     $display->content['new-fc6fe658-b854-4c4e-ba88-e5e4f5a5b139'] = $pane;
-    $display->panels['bottom_sidebar'][1] = 'new-fc6fe658-b854-4c4e-ba88-e5e4f5a5b139';
+    $display->panels['bottom_sidebar'][0] = 'new-fc6fe658-b854-4c4e-ba88-e5e4f5a5b139';
     $pane = new stdClass();
     $pane->pid = 'new-7258890d-118f-499e-9cec-b533bb909fa9';
     $pane->panel = 'bottom_sidebar';
@@ -141,11 +113,11 @@ function events_panelizer_defaults() {
     );
     $pane->css = array();
     $pane->extras = array();
-    $pane->position = 2;
+    $pane->position = 1;
     $pane->locks = array();
     $pane->uuid = '7258890d-118f-499e-9cec-b533bb909fa9';
     $display->content['new-7258890d-118f-499e-9cec-b533bb909fa9'] = $pane;
-    $display->panels['bottom_sidebar'][2] = 'new-7258890d-118f-499e-9cec-b533bb909fa9';
+    $display->panels['bottom_sidebar'][1] = 'new-7258890d-118f-499e-9cec-b533bb909fa9';
     $pane = new stdClass();
     $pane->pid = 'new-d9905e66-a7b2-4b5c-a931-3fbac4f89020';
     $pane->panel = 'bottom_sidebar';
@@ -160,11 +132,11 @@ function events_panelizer_defaults() {
     );
     $pane->css = array();
     $pane->extras = array();
-    $pane->position = 3;
+    $pane->position = 2;
     $pane->locks = array();
     $pane->uuid = 'd9905e66-a7b2-4b5c-a931-3fbac4f89020';
     $display->content['new-d9905e66-a7b2-4b5c-a931-3fbac4f89020'] = $pane;
-    $display->panels['bottom_sidebar'][3] = 'new-d9905e66-a7b2-4b5c-a931-3fbac4f89020';
+    $display->panels['bottom_sidebar'][2] = 'new-d9905e66-a7b2-4b5c-a931-3fbac4f89020';
     $pane = new stdClass();
     $pane->pid = 'new-35a7698b-f3a8-41bb-b20f-b9704bea3b25';
     $pane->panel = 'box_first';
@@ -313,17 +285,17 @@ function events_panelizer_defaults() {
     $display->content['new-fbafd9b3-f396-4e80-a4ef-b594e5eacf4e'] = $pane;
     $display->panels['main'][2] = 'new-fbafd9b3-f396-4e80-a4ef-b594e5eacf4e';
     $pane = new stdClass();
-    $pane->pid = 'new-507b3484-e8b2-4bd3-b7c0-d8b0daba884e';
+    $pane->pid = 'new-f67e8518-4780-4fd4-b13a-9d1705d772ac';
     $pane->panel = 'main_sidebar';
     $pane->type = 'flag_link';
     $pane->subtype = 'node';
     $pane->shown = TRUE;
     $pane->access = array();
     $pane->configuration = array(
-      'flag_name' => 'favorite',
+      'flag_name' => 'attending',
       'context' => 'panelizer',
       'override_title' => 1,
-      'override_title_text' => 'Like This Event? <p>Add it to your favorites.</p>',
+      'override_title_text' => 'Attending This Event? <p>Click here if your going! <br>This is not registration.</p>',
       'override_title_heading' => 'h2',
     );
     $pane->cache = array();
@@ -337,9 +309,9 @@ function events_panelizer_defaults() {
     $pane->extras = array();
     $pane->position = 0;
     $pane->locks = array();
-    $pane->uuid = '507b3484-e8b2-4bd3-b7c0-d8b0daba884e';
-    $display->content['new-507b3484-e8b2-4bd3-b7c0-d8b0daba884e'] = $pane;
-    $display->panels['main_sidebar'][0] = 'new-507b3484-e8b2-4bd3-b7c0-d8b0daba884e';
+    $pane->uuid = 'f67e8518-4780-4fd4-b13a-9d1705d772ac';
+    $display->content['new-f67e8518-4780-4fd4-b13a-9d1705d772ac'] = $pane;
+    $display->panels['main_sidebar'][0] = 'new-f67e8518-4780-4fd4-b13a-9d1705d772ac';
     $pane = new stdClass();
     $pane->pid = 'new-a0ec12a1-eda2-4794-bfe1-e1ff9dbd52ed';
     $pane->panel = 'title';
