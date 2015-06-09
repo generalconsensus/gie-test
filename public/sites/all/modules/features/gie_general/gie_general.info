@@ -88,6 +88,7 @@ dependencies[] = text
 dependencies[] = title
 dependencies[] = token
 dependencies[] = views
+dependencies[] = views_arguments_extras
 dependencies[] = views_bulk_operations
 dependencies[] = views_content
 features[context][] = sitewide
