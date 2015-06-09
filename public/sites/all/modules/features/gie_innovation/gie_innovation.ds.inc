@@ -470,18 +470,24 @@ function gie_innovation_ds_layout_settings_info() {
         0 => 'comment_author_entity_view_1',
       ),
       'main_content' => array(
-        1 => 'post_date',
-        2 => 'comment_body',
-        3 => 'links',
+        1 => 'group_comment_content',
+        2 => 'post_date',
+        3 => 'comment_body',
+        4 => 'links',
       ),
     ),
     'fields' => array(
       'comment_author_entity_view_1' => 'media',
+      'group_comment_content' => 'main_content',
       'post_date' => 'main_content',
       'comment_body' => 'main_content',
       'links' => 'main_content',
     ),
-    'classes' => array(),
+    'classes' => array(
+      'layout_class' => array(
+        '' => '',
+      ),
+    ),
     'wrappers' => array(
       'header' => 'div',
       'media' => 'div',
