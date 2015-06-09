@@ -65,6 +65,81 @@ function gie_dashboard_default_page_manager_pages() {
   $display->content = array();
   $display->panels = array();
     $pane = new stdClass();
+    $pane->pid = 'new-79569c40-d815-4209-995a-35fea6907415';
+    $pane->panel = 'main';
+    $pane->type = 'custom';
+    $pane->subtype = 'custom';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array(
+      'admin_title' => 'Take Action',
+      'title' => '',
+      'body' => '<h1>Take Action on the Exchange</h1>
+',
+      'format' => 'full_html',
+      'substitute' => TRUE,
+    );
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
+    $pane->css = array();
+    $pane->extras = array();
+    $pane->position = 0;
+    $pane->locks = array();
+    $pane->uuid = '79569c40-d815-4209-995a-35fea6907415';
+    $display->content['new-79569c40-d815-4209-995a-35fea6907415'] = $pane;
+    $display->panels['main'][0] = 'new-79569c40-d815-4209-995a-35fea6907415';
+    $pane = new stdClass();
+    $pane->pid = 'new-a6b2389d-c251-45f0-aa63-3a401417d5fa';
+    $pane->panel = 'main';
+    $pane->type = 'pane';
+    $pane->subtype = 'dashboard_action_cards';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array(
+      'override_title' => 1,
+      'override_title_text' => '',
+      'override_title_heading' => 'h2',
+    );
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
+    $pane->css = array();
+    $pane->extras = array();
+    $pane->position = 1;
+    $pane->locks = array();
+    $pane->uuid = 'a6b2389d-c251-45f0-aa63-3a401417d5fa';
+    $display->content['new-a6b2389d-c251-45f0-aa63-3a401417d5fa'] = $pane;
+    $display->panels['main'][1] = 'new-a6b2389d-c251-45f0-aa63-3a401417d5fa';
+    $pane = new stdClass();
+    $pane->pid = 'new-db50d99d-94db-4085-a8ba-8edfb7423138';
+    $pane->panel = 'main';
+    $pane->type = 'custom';
+    $pane->subtype = 'custom';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array(
+      'admin_title' => 'find content',
+      'title' => '',
+      'body' => '<h1>Find Content on the Exchange</h1>
+',
+      'format' => 'full_html',
+      'substitute' => TRUE,
+    );
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
+    $pane->css = array();
+    $pane->extras = array();
+    $pane->position = 2;
+    $pane->locks = array();
+    $pane->uuid = 'db50d99d-94db-4085-a8ba-8edfb7423138';
+    $display->content['new-db50d99d-94db-4085-a8ba-8edfb7423138'] = $pane;
+    $display->panels['main'][2] = 'new-db50d99d-94db-4085-a8ba-8edfb7423138';
+    $pane = new stdClass();
     $pane->pid = 'new-cc873759-f953-459a-9ba2-c94aff11b86d';
     $pane->panel = 'main';
     $pane->type = 'block';
@@ -82,11 +157,11 @@ function gie_dashboard_default_page_manager_pages() {
     );
     $pane->css = array();
     $pane->extras = array();
-    $pane->position = 0;
+    $pane->position = 3;
     $pane->locks = array();
     $pane->uuid = 'cc873759-f953-459a-9ba2-c94aff11b86d';
     $display->content['new-cc873759-f953-459a-9ba2-c94aff11b86d'] = $pane;
-    $display->panels['main'][0] = 'new-cc873759-f953-459a-9ba2-c94aff11b86d';
+    $display->panels['main'][3] = 'new-cc873759-f953-459a-9ba2-c94aff11b86d';
     $pane = new stdClass();
     $pane->pid = 'new-580cb31e-5a70-489b-98e7-e701b204c0b4';
     $pane->panel = 'title';
