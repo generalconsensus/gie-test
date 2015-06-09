@@ -2131,15 +2131,11 @@ input.throbbing {
 .comment .view-comment-author .views-row {
   padding-bottom: 0.5em;
 }
-/* line 8, ../sass/partials/components/_comment.scss */
-.comment .field--comment-body {
-  min-height: 3em;
-}
-/* line 10, ../sass/partials/components/_comment.scss */
+/* line 9, ../sass/partials/components/_comment.scss */
 .comment .field--comment-body p:last-child {
   margin-bottom: 0;
 }
-/* line 14, ../sass/partials/components/_comment.scss */
+/* line 13, ../sass/partials/components/_comment.scss */
 .comment .field--post-date {
   background: #fff;
   font-size: 0.875em;
@@ -2151,11 +2147,31 @@ input.throbbing {
   top: -1em;
 }
 
-/* line 26, ../sass/partials/components/_comment.scss */
+/* line 25, ../sass/partials/components/_comment.scss */
 .comment__content {
   border: 1px solid #cecfcb;
+  min-height: 5em;
   padding: 0.75em;
   position: relative;
+}
+/* line 30, ../sass/partials/components/_comment.scss */
+.comment__content:before {
+  height: 24px;
+  overflow: hidden;
+  width: 12px;
+  background: url(../images/bubble_arrow.png) no-repeat 0 0;
+  content: "";
+  display: block;
+  left: -12px;
+  position: absolute;
+  top: 25px;
+}
+/* line 14, ../sass/partials/global/helpers/_image-replace.scss */
+.comment__content:before:before {
+  content: "";
+  display: block;
+  height: 150%;
+  width: 0;
 }
 
 /* line 1, ../sass/partials/components/_comments.scss */
@@ -2165,33 +2181,35 @@ input.throbbing {
   padding: 2.4375em 0 0 0;
 }
 /* line 6, ../sass/partials/components/_comments.scss */
-.comments #comment-form {
+.comments .comment-form {
   border-bottom: 1px solid #cecfcb;
+  margin-bottom: 4em;
+  padding-bottom: 2em;
 }
-/* line 10, ../sass/partials/components/_comments.scss */
+/* line 12, ../sass/partials/components/_comments.scss */
 .comments .field-widget-text-textarea .text-format-wrapper .filter-wrapper {
   display: none;
 }
-/* line 14, ../sass/partials/components/_comments.scss */
+/* line 16, ../sass/partials/components/_comments.scss */
 .comments .field-widget-text-textarea .text-format-wrapper .form-item {
   margin: 1.625em 0;
 }
-/* line 18, ../sass/partials/components/_comments.scss */
+/* line 20, ../sass/partials/components/_comments.scss */
 .comments label {
   display: block;
   font-weight: bold;
 }
-/* line 23, ../sass/partials/components/_comments.scss */
+/* line 25, ../sass/partials/components/_comments.scss */
 .comments .indented {
   padding-left: 1em;
   padding-left: 2em;
 }
-/* line 30, ../sass/partials/components/_comments.scss */
+/* line 32, ../sass/partials/components/_comments.scss */
 .comments .indented .indented .indented .indented {
   padding-left: 0.5em;
   padding-left: 1em;
 }
-/* line 37, ../sass/partials/components/_comments.scss */
+/* line 39, ../sass/partials/components/_comments.scss */
 .comments .indented .indented .indented .indented .indented .indented .indented {
   padding-left: 0.25em;
   padding-left: 0.5em;
