@@ -521,6 +521,10 @@ function lr_social_login_user_register_validate($form, &$form_state) {
     unset($_SESSION['lrdata']);
     drupal_goto();
   }
+  
+  $secret = trim(variable_get('lr_social_login_apisecret'));
+  $token = $obj->loginradius_fetch_access_token($secret);
+  
   //check loginradius token is posted on this page.
   if (empty($token)) {
     return;
