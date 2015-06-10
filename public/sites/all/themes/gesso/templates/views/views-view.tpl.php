@@ -38,7 +38,9 @@
   <?php endif; ?>
 
   <?php if ($pager): ?>
-    <?php print $pager; ?>
+    <div class="view__pager">
+      <?php print $pager; ?>
+    </div>
   <?php endif; ?>
 
   <?php if ($attachment_after): ?>
