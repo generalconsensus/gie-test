@@ -2,21 +2,23 @@ var LoginRadius_Social_JS;
 
 if (window.LoginRadius_Social_JS != true) {
     LoginRadius_Social_JS = true;
-    var lr_options = {};
-    lr_options.login = true;
+    var options = {};
+    options.login = true;
     LoginRadius_SocialLogin.util.ready(function () {
         $ui = LoginRadius_SocialLogin.lr_login_settings;
         $ui.interfacesize = Drupal.settings.lrsociallogin.interfacesize;
         $ui.lrinterfacebackground = Drupal.settings.lrsociallogin.lrinterfacebackground;
         $ui.noofcolumns = Drupal.settings.lrsociallogin.noofcolumns;
         $ui.apikey = Drupal.settings.lrsociallogin.apikey;
-        $ui.is_access_token = true;
         if (detectmob()) {
             $ui.isParentWindowLogin = true;
         }
-        $ui.callback = Drupal.settings.lrsociallogin.callback;
+		else {
+			$ui.is_access_token = true;
+		}
+        $ui.callback = Drupal.settings.lrsociallogin.location;
         $ui.lrinterfacecontainer = "interfacecontainerdiv";
-        LoginRadius_SocialLogin.init(lr_options);
+        LoginRadius_SocialLogin.init(options);
     });
 }
 LoginRadiusSDK.setLoginCallback(function () {

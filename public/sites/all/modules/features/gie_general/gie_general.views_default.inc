@@ -22,6 +22,7 @@ function gie_general_views_default_views() {
 
   /* Display: Master */
   $handler = $view->new_display('default', 'Master', 'default');
+  $handler->display->display_options['hide_admin_links'] = TRUE;
   $handler->display->display_options['use_more_always'] = FALSE;
   $handler->display->display_options['access']['type'] = 'perm';
   $handler->display->display_options['access']['perm'] = 'access comments';
@@ -46,7 +47,7 @@ function gie_general_views_default_views() {
   $handler->display->display_options['fields']['rendered_entity']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['rendered_entity']['link_to_entity'] = 0;
   $handler->display->display_options['fields']['rendered_entity']['display'] = 'view';
-  $handler->display->display_options['fields']['rendered_entity']['view_mode'] = 'title';
+  $handler->display->display_options['fields']['rendered_entity']['view_mode'] = 'user_teaser';
   $handler->display->display_options['fields']['rendered_entity']['bypass_access'] = 0;
   /* Contextual filter: Comment: ID */
   $handler->display->display_options['arguments']['cid']['id'] = 'cid';
