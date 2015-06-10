@@ -400,6 +400,7 @@ function gie_organization_ds_layout_settings_info() {
     'classes' => array(
       'layout_class' => array(
         'card' => 'card',
+        'card--icons' => 'card--icons',
       ),
     ),
     'wrappers' => array(

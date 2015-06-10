@@ -175,7 +175,7 @@ function gie_funding_strongarm() {
             'visible' => FALSE,
           ),
           'listing' => array(
-            'weight' => '19',
+            'weight' => '26',
             'visible' => FALSE,
           ),
           'search_listing' => array(
@@ -197,7 +197,7 @@ function gie_funding_strongarm() {
             'visible' => FALSE,
           ),
           'listing' => array(
-            'weight' => '14',
+            'weight' => '21',
             'visible' => FALSE,
           ),
           'default' => array(
@@ -223,7 +223,7 @@ function gie_funding_strongarm() {
             'visible' => FALSE,
           ),
           'listing' => array(
-            'weight' => '13',
+            'weight' => '20',
             'visible' => FALSE,
           ),
           'default' => array(
@@ -323,7 +323,7 @@ function gie_funding_strongarm() {
             'visible' => FALSE,
           ),
           'listing' => array(
-            'weight' => '10',
+            'weight' => '16',
             'visible' => FALSE,
           ),
           'default' => array(
@@ -345,7 +345,7 @@ function gie_funding_strongarm() {
             'visible' => FALSE,
           ),
           'listing' => array(
-            'weight' => '10',
+            'weight' => '14',
             'visible' => FALSE,
           ),
           'default' => array(
@@ -367,7 +367,7 @@ function gie_funding_strongarm() {
             'visible' => FALSE,
           ),
           'listing' => array(
-            'weight' => '10',
+            'weight' => '15',
             'visible' => FALSE,
           ),
           'default' => array(
@@ -385,7 +385,7 @@ function gie_funding_strongarm() {
             'visible' => FALSE,
           ),
           'listing' => array(
-            'weight' => '10',
+            'weight' => '13',
             'visible' => FALSE,
           ),
           'default' => array(
