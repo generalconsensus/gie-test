@@ -19,6 +19,45 @@
           &lt;div class=&quot;l-main&quot;&gt;
 
             &lt;div class=&quot;pane&quot;&gt;
+              &lt;h2 class=&quot;pane__title&quot;&gt;Funding Op Teaser&lt;/h2&gt; 
+              &lt;div class=&quot;pane__content&quot;&gt;
+                &lt;div class=&quot;view--card-view-3col&quot;&gt;
+                  {{# listItems.three }}
+                    &lt;div class=&quot;views-row&quot;&gt;
+                      {{&gt; organisms-funding-op-teaser }}
+                    &lt;/div&gt;
+                  {{/ listItems.three }}
+                &lt;/div&gt;
+              &lt;/div&gt;
+            &lt;/div&gt;
+
+            &lt;div class=&quot;pane&quot;&gt;
+              &lt;h2 class=&quot;pane__title&quot;&gt;User Teaser&lt;/h2&gt; 
+              &lt;div class=&quot;pane__content&quot;&gt;
+                &lt;div class=&quot;view--card-view-3col&quot;&gt;
+                  {{# listItems.three }}
+                    &lt;div class=&quot;views-row&quot;&gt;
+                      {{&gt; organisms-user-teaser }}
+                    &lt;/div&gt;
+                  {{/ listItems.three }}
+                &lt;/div&gt;
+              &lt;/div&gt;
+            &lt;/div&gt;
+
+            &lt;div class=&quot;pane&quot;&gt;
+              &lt;h2 class=&quot;pane__title&quot;&gt;Sector/Region/Topic Teaser&lt;/h2&gt; 
+              &lt;div class=&quot;pane__content&quot;&gt;
+                &lt;div class=&quot;view--card-view-3col&quot;&gt;
+                  {{# listItems.three }}
+                    &lt;div class=&quot;views-row&quot;&gt;
+                      {{&gt; organisms-region-teaser }}
+                    &lt;/div&gt;
+                  {{/ listItems.three }}
+                &lt;/div&gt;
+              &lt;/div&gt;
+            &lt;/div&gt;
+
+            &lt;div class=&quot;pane&quot;&gt;
               &lt;h2 class=&quot;pane__title&quot;&gt;Event Teaser&lt;/h2&gt; 
               &lt;div class=&quot;pane__content&quot;&gt;
                 &lt;div class=&quot;view--card-view-3col&quot;&gt;
@@ -79,24 +118,12 @@
                       {{&gt; organisms-organization-teaser }}
                     &lt;/div&gt;
                   {{/ listItems.three }}
+                  &lt;div class=&quot;view__pager&quot;&gt;
+                    {{&gt; molecules-pager }}
+                  &lt;/div&gt;
                 &lt;/div&gt;
               &lt;/div&gt;
             &lt;/div&gt;
-
-            &lt;div class=&quot;pane&quot;&gt;
-              &lt;h2 class=&quot;pane__title&quot;&gt;Funding Op Teaser&lt;/h2&gt; 
-              &lt;div class=&quot;pane__content&quot;&gt;
-                &lt;div class=&quot;view--card-view-3col&quot;&gt;
-                  {{# listItems.three }}
-                    &lt;div class=&quot;views-row&quot;&gt;
-                      {{&gt; organisms-funding-op-teaser }}
-                    &lt;/div&gt;
-                  {{/ listItems.three }}
-                &lt;/div&gt;
-              &lt;/div&gt;
-            &lt;/div&gt;
-
-            {{&gt; molecules-pager }}
 
           &lt;/div&gt;
         &lt;/div&gt;

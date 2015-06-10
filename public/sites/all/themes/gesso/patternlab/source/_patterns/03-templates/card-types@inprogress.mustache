@@ -19,6 +19,45 @@
           <div class="l-main">
 
             <div class="pane">
+              <h2 class="pane__title">Funding Op Teaser</h2> 
+              <div class="pane__content">
+                <div class="view--card-view-3col">
+                  {{# listItems.three }}
+                    <div class="views-row">
+                      {{> organisms-funding-op-teaser }}
+                    </div>
+                  {{/ listItems.three }}
+                </div>
+              </div>
+            </div>
+
+            <div class="pane">
+              <h2 class="pane__title">User Teaser</h2> 
+              <div class="pane__content">
+                <div class="view--card-view-3col">
+                  {{# listItems.three }}
+                    <div class="views-row">
+                      {{> organisms-user-teaser }}
+                    </div>
+                  {{/ listItems.three }}
+                </div>
+              </div>
+            </div>
+
+            <div class="pane">
+              <h2 class="pane__title">Sector/Region/Topic Teaser</h2> 
+              <div class="pane__content">
+                <div class="view--card-view-3col">
+                  {{# listItems.three }}
+                    <div class="views-row">
+                      {{> organisms-region-teaser }}
+                    </div>
+                  {{/ listItems.three }}
+                </div>
+              </div>
+            </div>
+
+            <div class="pane">
               <h2 class="pane__title">Event Teaser</h2> 
               <div class="pane__content">
                 <div class="view--card-view-3col">
@@ -79,24 +118,12 @@
                       {{> organisms-organization-teaser }}
                     </div>
                   {{/ listItems.three }}
+                  <div class="view__pager">
+                    {{> molecules-pager }}
+                  </div>
                 </div>
               </div>
             </div>
-
-            <div class="pane">
-              <h2 class="pane__title">Funding Op Teaser</h2> 
-              <div class="pane__content">
-                <div class="view--card-view-3col">
-                  {{# listItems.three }}
-                    <div class="views-row">
-                      {{> organisms-funding-op-teaser }}
-                    </div>
-                  {{/ listItems.three }}
-                </div>
-              </div>
-            </div>
-
-            {{> molecules-pager }}
 
           </div>
         </div>

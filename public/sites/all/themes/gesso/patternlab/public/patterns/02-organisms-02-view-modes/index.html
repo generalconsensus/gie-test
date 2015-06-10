@@ -136,15 +136,17 @@
 						<h2 class="sg-pattern-head" ><a href="../../patterns/02-organisms-02-view-modes-event-teaser/02-organisms-02-view-modes-event-teaser.html" class="patternLink" data-patternpartial="organisms-event-teaser">Event Teaser</a></h2>
 						<div class="sg-pattern-body">
 							<article class="card">
+  <h2 class="card__date">September 21</h2>
   <div class="card__content">
-    <h2 class="card__date">September 21</h2>
     <h3 class="card__primary-title"><a href="#">Title</a></h3>
     <div class="card__meta">
-      <div class="card__list">
-        <div class="card__list-label">Location:</div> United States
+      <div class="card__list--split">
+        <span class="card__list-label">Location:</span> 
+        <span class="card__list-content">Alexandria, VA<br>United States</span>
       </div>
       <div class="card__list">
-        <div class="card__list-label">Topic:</div> Agriculture
+        <span class="card__list-label">Topic:</span> 
+        <span class="card__list-content">Agriculture</span>
       </div>
     </div>
   </div>
@@ -154,15 +156,17 @@
 								<pre class="sg-code-html">
 									<code>
 										&lt;article class=&quot;card&quot;&gt;
+  &lt;h2 class=&quot;card__date&quot;&gt;September 21&lt;/h2&gt;
   &lt;div class=&quot;card__content&quot;&gt;
-    &lt;h2 class=&quot;card__date&quot;&gt;September 21&lt;/h2&gt;
     &lt;h3 class=&quot;card__primary-title&quot;&gt;&lt;a href=&quot;#&quot;&gt;Title&lt;/a&gt;&lt;/h3&gt;
     &lt;div class=&quot;card__meta&quot;&gt;
-      &lt;div class=&quot;card__list&quot;&gt;
-        &lt;div class=&quot;card__list-label&quot;&gt;Location:&lt;/div&gt; United States
+      &lt;div class=&quot;card__list--split&quot;&gt;
+        &lt;span class=&quot;card__list-label&quot;&gt;Location:&lt;/span&gt; 
+        &lt;span class=&quot;card__list-content&quot;&gt;Alexandria, VA&lt;br&gt;United States&lt;/span&gt;
       &lt;/div&gt;
       &lt;div class=&quot;card__list&quot;&gt;
-        &lt;div class=&quot;card__list-label&quot;&gt;Topic:&lt;/div&gt; Agriculture
+        &lt;span class=&quot;card__list-label&quot;&gt;Topic:&lt;/span&gt; 
+        &lt;span class=&quot;card__list-content&quot;&gt;Agriculture&lt;/span&gt;
       &lt;/div&gt;
     &lt;/div&gt;
   &lt;/div&gt;
@@ -175,19 +179,27 @@
 					<div id="organisms-funding-op-teaser" class="sg-pattern">
 						<h2 class="sg-pattern-head" ><a href="../../patterns/02-organisms-02-view-modes-funding-op-teaser/02-organisms-02-view-modes-funding-op-teaser.html" class="patternLink" data-patternpartial="organisms-funding-op-teaser">Funding Op Teaser</a></h2>
 						<div class="sg-pattern-body">
-							<article class="card">
+							<article class="card card--icons">
+  <div class="card__number">$30,000,000</div>
+  <div class="card__image">
+    <a href="#"><img src="http://fpoimg.com/500x300?text=Card 5:3" alt="Card 5:3" height="300" width="500">
+</a>
+  </div>
   <div class="card__content">
     <h3 class="card__primary-title"><a href="#">Title</a></h3>
-    <div class="card__number">$30,000,000</div>
-    <div class="card__due-date">Due by: 3/21/2015</div> 
     <div class="card__list">
-      <div class="card__list-label">Eligibility:</div> Lorem ipsum sit amet, cons ectetur adipiscing elit.
+      <div class="card__list-label">Due by:</div> 3/21/2015
+    </div> 
+    <div class="card__list">
+      <div class="card__list-label">Eligibility:</div> <span class="has-icon-member" title="Member">Member</span> <span class="has-icon-community" title="Organization">Organization</span>
     </div>
     <div class="card__list">
-      <div class="card__list-label">Level of Effort:</div> Lorem ipsum
+      <span class="card__list-label">Level of Effort:</span>
+      <span class="card__list-content">Lorem ipsum</span>
     </div>
     <div class="card__list">
-      <div class="card__list-label">Topics:</div> <a href="#">Agriculture</a>, <a href="#">Irrigation</a>
+      <span class="card__list-label">Topics:</span> 
+      <span class="card__list-content"><a href="#">Agriculture</a>, <a href="#">Irrigation</a></span>
     </div>
     <div class="card__counts">
       <div class="view">
@@ -207,22 +219,34 @@
  
 
 							<div class="sg-code" style="display: none">
+									<div class="sg-code-contains">
+										This pattern contains: 
+											<a href="../../patterns/00-atoms-04-images-04-card-image/00-atoms-04-images-04-card-image.html"><code>atoms-card-image</code></a>
+									</div>
 								<h3 class="sg-code-head">HTML</h3>
 								<pre class="sg-code-html">
 									<code>
-										&lt;article class=&quot;card&quot;&gt;
+										&lt;article class=&quot;card card--icons&quot;&gt;
+  &lt;div class=&quot;card__number&quot;&gt;$30,000,000&lt;/div&gt;
+  &lt;div class=&quot;card__image&quot;&gt;
+    &lt;a href=&quot;#&quot;&gt;&lt;img src=&quot;http://fpoimg.com/500x300?text=Card 5:3&quot; alt=&quot;Card 5:3&quot; height=&quot;300&quot; width=&quot;500&quot;&gt;
+&lt;/a&gt;
+  &lt;/div&gt;
   &lt;div class=&quot;card__content&quot;&gt;
     &lt;h3 class=&quot;card__primary-title&quot;&gt;&lt;a href=&quot;#&quot;&gt;Title&lt;/a&gt;&lt;/h3&gt;
-    &lt;div class=&quot;card__number&quot;&gt;$30,000,000&lt;/div&gt;
-    &lt;div class=&quot;card__due-date&quot;&gt;Due by: 3/21/2015&lt;/div&gt; 
     &lt;div class=&quot;card__list&quot;&gt;
-      &lt;div class=&quot;card__list-label&quot;&gt;Eligibility:&lt;/div&gt; Lorem ipsum sit amet, cons ectetur adipiscing elit.
+      &lt;div class=&quot;card__list-label&quot;&gt;Due by:&lt;/div&gt; 3/21/2015
+    &lt;/div&gt; 
+    &lt;div class=&quot;card__list&quot;&gt;
+      &lt;div class=&quot;card__list-label&quot;&gt;Eligibility:&lt;/div&gt; &lt;span class=&quot;has-icon-member&quot; title=&quot;Member&quot;&gt;Member&lt;/span&gt; &lt;span class=&quot;has-icon-community&quot; title=&quot;Organization&quot;&gt;Organization&lt;/span&gt;
     &lt;/div&gt;
     &lt;div class=&quot;card__list&quot;&gt;
-      &lt;div class=&quot;card__list-label&quot;&gt;Level of Effort:&lt;/div&gt; Lorem ipsum
+      &lt;span class=&quot;card__list-label&quot;&gt;Level of Effort:&lt;/span&gt;
+      &lt;span class=&quot;card__list-content&quot;&gt;Lorem ipsum&lt;/span&gt;
     &lt;/div&gt;
     &lt;div class=&quot;card__list&quot;&gt;
-      &lt;div class=&quot;card__list-label&quot;&gt;Topics:&lt;/div&gt; &lt;a href=&quot;#&quot;&gt;Agriculture&lt;/a&gt;, &lt;a href=&quot;#&quot;&gt;Irrigation&lt;/a&gt;
+      &lt;span class=&quot;card__list-label&quot;&gt;Topics:&lt;/span&gt; 
+      &lt;span class=&quot;card__list-content&quot;&gt;&lt;a href=&quot;#&quot;&gt;Agriculture&lt;/a&gt;, &lt;a href=&quot;#&quot;&gt;Irrigation&lt;/a&gt;&lt;/span&gt;
     &lt;/div&gt;
     &lt;div class=&quot;card__counts&quot;&gt;
       &lt;div class=&quot;view&quot;&gt;
@@ -334,7 +358,7 @@
 					<div id="organisms-innovation-teaser" class="sg-pattern">
 						<h2 class="sg-pattern-head" ><a href="../../patterns/02-organisms-02-view-modes-innovation-teaser/02-organisms-02-view-modes-innovation-teaser.html" class="patternLink" data-patternpartial="organisms-innovation-teaser">Innovation Teaser</a></h2>
 						<div class="sg-pattern-body">
-							<article class="card">
+							<article class="card card--icons">
   <div class="card__image">
     <a href="#"><img src="http://fpoimg.com/500x300?text=Card 5:3" alt="Card 5:3" height="300" width="500">
 </a>
@@ -370,7 +394,7 @@
 								<h3 class="sg-code-head">HTML</h3>
 								<pre class="sg-code-html">
 									<code>
-										&lt;article class=&quot;card&quot;&gt;
+										&lt;article class=&quot;card card--icons&quot;&gt;
   &lt;div class=&quot;card__image&quot;&gt;
     &lt;a href=&quot;#&quot;&gt;&lt;img src=&quot;http://fpoimg.com/500x300?text=Card 5:3&quot; alt=&quot;Card 5:3&quot; height=&quot;300&quot; width=&quot;500&quot;&gt;
 &lt;/a&gt;
@@ -406,7 +430,7 @@
 					<div id="organisms-organization-teaser" class="sg-pattern">
 						<h2 class="sg-pattern-head" ><a href="../../patterns/02-organisms-02-view-modes-organization-teaser/02-organisms-02-view-modes-organization-teaser.html" class="patternLink" data-patternpartial="organisms-organization-teaser">Organization Teaser</a></h2>
 						<div class="sg-pattern-body">
-							<article class="card">
+							<article class="card card--icons">
   <div class="card__image">
     <a href="#"><img src="http://fpoimg.com/500x300?text=Card 5:3" alt="Card 5:3" height="300" width="500">
 </a>
@@ -436,7 +460,7 @@
 								<h3 class="sg-code-head">HTML</h3>
 								<pre class="sg-code-html">
 									<code>
-										&lt;article class=&quot;card&quot;&gt;
+										&lt;article class=&quot;card card--icons&quot;&gt;
   &lt;div class=&quot;card__image&quot;&gt;
     &lt;a href=&quot;#&quot;&gt;&lt;img src=&quot;http://fpoimg.com/500x300?text=Card 5:3&quot; alt=&quot;Card 5:3&quot; height=&quot;300&quot; width=&quot;500&quot;&gt;
 &lt;/a&gt;
@@ -463,10 +487,68 @@
 							</div>
 						</div>
 					</div>
+					<div id="organisms-region-teaser" class="sg-pattern">
+						<h2 class="sg-pattern-head" ><a href="../../patterns/02-organisms-02-view-modes-region-teaser/02-organisms-02-view-modes-region-teaser.html" class="patternLink" data-patternpartial="organisms-region-teaser">Region Teaser</a></h2>
+						<div class="sg-pattern-body">
+							<article class="card card--icons card--center">
+  <div class="card__image">
+    <a href="#"><img src="http://fpoimg.com/500x300?text=Card 5:3" alt="Card 5:3" height="300" width="500">
+</a>
+  </div>
+  <div class="card__content">
+    <h3 class="card__primary-title"><a href="#">Latin America / Caribbean</a></h3>
+    <div class="card__counts">
+      <div class="view">
+        <div class="has-icon--funding" title="Funding">12</div>
+      </div>
+      <div class="view">
+        <div class="has-icon--innovation" title="Innovations">5</div>
+      </div>
+      <div class="view">
+        <div class="has-icon--resource" title="Resources">6</div>
+      </div>
+    </div>
+  </div>
+</article>
+
+							<div class="sg-code" style="display: none">
+									<div class="sg-code-contains">
+										This pattern contains: 
+											<a href="../../patterns/00-atoms-04-images-04-card-image/00-atoms-04-images-04-card-image.html"><code>atoms-card-image</code></a>
+									</div>
+								<h3 class="sg-code-head">HTML</h3>
+								<pre class="sg-code-html">
+									<code>
+										&lt;article class=&quot;card card--icons card--center&quot;&gt;
+  &lt;div class=&quot;card__image&quot;&gt;
+    &lt;a href=&quot;#&quot;&gt;&lt;img src=&quot;http://fpoimg.com/500x300?text=Card 5:3&quot; alt=&quot;Card 5:3&quot; height=&quot;300&quot; width=&quot;500&quot;&gt;
+&lt;/a&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;card__content&quot;&gt;
+    &lt;h3 class=&quot;card__primary-title&quot;&gt;&lt;a href=&quot;#&quot;&gt;Latin America / Caribbean&lt;/a&gt;&lt;/h3&gt;
+    &lt;div class=&quot;card__counts&quot;&gt;
+      &lt;div class=&quot;view&quot;&gt;
+        &lt;div class=&quot;has-icon--funding&quot; title=&quot;Funding&quot;&gt;12&lt;/div&gt;
+      &lt;/div&gt;
+      &lt;div class=&quot;view&quot;&gt;
+        &lt;div class=&quot;has-icon--innovation&quot; title=&quot;Innovations&quot;&gt;5&lt;/div&gt;
+      &lt;/div&gt;
+      &lt;div class=&quot;view&quot;&gt;
+        &lt;div class=&quot;has-icon--resource&quot; title=&quot;Resources&quot;&gt;6&lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/article&gt;
+
+									</code>
+								</pre>
+							</div>
+						</div>
+					</div>
 					<div id="organisms-resource-teaser" class="sg-pattern">
 						<h2 class="sg-pattern-head" ><a href="../../patterns/02-organisms-02-view-modes-resource-teaser/02-organisms-02-view-modes-resource-teaser.html" class="patternLink" data-patternpartial="organisms-resource-teaser">Resource Teaser</a></h2>
 						<div class="sg-pattern-body">
-							<article class="card">
+							<article class="card card--icons">
   <div class="card__content">
     <h2 class="card__type">Toolkit</h2>
     <h3 class="card__primary-title"><a href="#">Title</a></h3>
@@ -476,7 +558,8 @@
       <div class="card__author-date">03/15/2015</div>    
     </div>
     <div class="card__list">
-      <div class="card__list-label">Sectors:</div> <a href="#">Health</a>, <a href="#">Education</a>, <a href="#">Economic Growth</a>, <a href="#">Housing and Transportation</a>
+      <span class="card__list-label">Sectors:</span> 
+      <span class="card__list-content"><a href="#">Health</a>, <a href="#">Education</a>, <a href="#">Economic Growth</a>, <a href="#">Housing and Transportation</a></span>
     </div>
     <div class="card__counts">
       <div class="view">
@@ -499,7 +582,7 @@
 								<h3 class="sg-code-head">HTML</h3>
 								<pre class="sg-code-html">
 									<code>
-										&lt;article class=&quot;card&quot;&gt;
+										&lt;article class=&quot;card card--icons&quot;&gt;
   &lt;div class=&quot;card__content&quot;&gt;
     &lt;h2 class=&quot;card__type&quot;&gt;Toolkit&lt;/h2&gt;
     &lt;h3 class=&quot;card__primary-title&quot;&gt;&lt;a href=&quot;#&quot;&gt;Title&lt;/a&gt;&lt;/h3&gt;
@@ -509,7 +592,8 @@
       &lt;div class=&quot;card__author-date&quot;&gt;03/15/2015&lt;/div&gt;    
     &lt;/div&gt;
     &lt;div class=&quot;card__list&quot;&gt;
-      &lt;div class=&quot;card__list-label&quot;&gt;Sectors:&lt;/div&gt; &lt;a href=&quot;#&quot;&gt;Health&lt;/a&gt;, &lt;a href=&quot;#&quot;&gt;Education&lt;/a&gt;, &lt;a href=&quot;#&quot;&gt;Economic Growth&lt;/a&gt;, &lt;a href=&quot;#&quot;&gt;Housing and Transportation&lt;/a&gt;
+      &lt;span class=&quot;card__list-label&quot;&gt;Sectors:&lt;/span&gt; 
+      &lt;span class=&quot;card__list-content&quot;&gt;&lt;a href=&quot;#&quot;&gt;Health&lt;/a&gt;, &lt;a href=&quot;#&quot;&gt;Education&lt;/a&gt;, &lt;a href=&quot;#&quot;&gt;Economic Growth&lt;/a&gt;, &lt;a href=&quot;#&quot;&gt;Housing and Transportation&lt;/a&gt;&lt;/span&gt;
     &lt;/div&gt;
     &lt;div class=&quot;card__counts&quot;&gt;
       &lt;div class=&quot;view&quot;&gt;
@@ -622,6 +706,40 @@
     &lt;/div&gt;
   &lt;/div&gt;
 &lt;/div&gt;
+									</code>
+								</pre>
+							</div>
+						</div>
+					</div>
+					<div id="organisms-user-teaser" class="sg-pattern">
+						<h2 class="sg-pattern-head" ><a href="../../patterns/02-organisms-02-view-modes-user-teaser/02-organisms-02-view-modes-user-teaser.html" class="patternLink" data-patternpartial="organisms-user-teaser">User Teaser</a></h2>
+						<div class="sg-pattern-body">
+							<article class="card card--center">
+  <div class="card__image">
+    <a href="#"><img src="" alt=""></a>
+  </div>
+  <div class="card__content">
+    <h3 class="card__title"><a href="#"></a></h3>
+    <div class="card__user-title"></div>
+    <div class="card__user-organization"></div>
+  </div>
+</article>
+
+							<div class="sg-code" style="display: none">
+								<h3 class="sg-code-head">HTML</h3>
+								<pre class="sg-code-html">
+									<code>
+										&lt;article class=&quot;card card--center&quot;&gt;
+  &lt;div class=&quot;card__image&quot;&gt;
+    &lt;a href=&quot;#&quot;&gt;&lt;img src=&quot;&quot; alt=&quot;&quot;&gt;&lt;/a&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;card__content&quot;&gt;
+    &lt;h3 class=&quot;card__title&quot;&gt;&lt;a href=&quot;#&quot;&gt;&lt;/a&gt;&lt;/h3&gt;
+    &lt;div class=&quot;card__user-title&quot;&gt;&lt;/div&gt;
+    &lt;div class=&quot;card__user-organization&quot;&gt;&lt;/div&gt;
+  &lt;/div&gt;
+&lt;/article&gt;
+
 									</code>
 								</pre>
 							</div>

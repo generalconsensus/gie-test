@@ -519,6 +519,7 @@ function gie_resource_ds_layout_settings_info() {
     'classes' => array(
       'layout_class' => array(
         'card' => 'card',
+        'card--icons' => 'card--icons',
       ),
     ),
     'wrappers' => array(

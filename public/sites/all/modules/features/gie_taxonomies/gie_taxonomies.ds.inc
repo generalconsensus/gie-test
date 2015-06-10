@@ -266,6 +266,8 @@ function gie_taxonomies_ds_layout_settings_info() {
     'classes' => array(
       'layout_class' => array(
         'card' => 'card',
+        'card--icons' => 'card--icons',
+        'card--center' => 'card--center',
       ),
     ),
     'wrappers' => array(
@@ -366,6 +368,8 @@ function gie_taxonomies_ds_layout_settings_info() {
     'classes' => array(
       'layout_class' => array(
         'card' => 'card',
+        'card--icons' => 'card--icons',
+        'card--center' => 'card--center',
       ),
     ),
     'wrappers' => array(
@@ -440,6 +444,8 @@ function gie_taxonomies_ds_layout_settings_info() {
     'classes' => array(
       'layout_class' => array(
         'card' => 'card',
+        'card--icons' => 'card--icons',
+        'card--center' => 'card--center',
       ),
     ),
     'wrappers' => array(

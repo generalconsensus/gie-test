@@ -7,10 +7,6 @@
   position: relative;
 }
 
-.card--button {
-  text-align: center;
-}
-
 .card__type {
   font-size: em($font-size-sm);
   text-transform: uppercase;
@@ -19,16 +15,19 @@
 .card__image {
   line-height: 0;
 }
-
-.card__date {
+ 
+.card__number {
   background: $orange;
   color: #fff;
   font-size: $font-size-xxl;
   font-weight: bold;
-  margin: -16px -16px 16px -16px;
-  padding: 1em 0.25em;
+  padding: 0.75em 0.25em;
   text-align: center;
   text-transform: uppercase;
+}
+
+.card__date {
+  @extend .card__number;
   &:before {
     @include image-replace(24px,25px);
     @include svg-background(icon-calendar-24-25-white);
@@ -41,8 +40,12 @@
 }
 
 .card__content {
-  padding: 16px 16px 66px 16px; // extra bottom space for icons
-  .card--button & {
+  padding: 16px;  
+  .card--icons & {
+    padding-bottom: 66px; // extra bottom space for icons
+  }
+  .card--button &,
+  .card--background & {
     padding-bottom: 100px; // extra space for button;
   }
 }
@@ -62,26 +65,12 @@
   padding: 0 0 1em 0;
 }
 
-.card--background {
-  background-image: url(../images/highlights_background.png);
-  background-repeat: no-repeat;
-  background-position: 100%;
-  position: relative;
-  .card__author {
-    bottom: 0;
-    left: 0;
-    position: absolute;
-    width: 100%;
-  }
-  .card__author-inner {
-    border-top: 1px solid $card-border-color;
-    margin: 0 16px;
-    overflow: hidden;
-    padding: 10px 0;
-  }
-  .card__content {
-    padding: 16px 16px 100px 16px; 
-  }
+.card__user-organization {
+  font-weight: bold;
+}
+
+.card__user-title {
+  font-style: italic; 
 }
 
 .card__author {
@@ -104,14 +93,6 @@
   }
 }
 
-.card__number {
-  font-size: em($font-size-xl);
-}
-
-.card__due-date {
-  font-size: em($font-size-md);
-}
-
 .card__list {
   font-size: em($font-size-sm);
   line-height: 1.3;
@@ -121,6 +102,38 @@
 .card__list-label {
   display: inline;
   font-weight: bold;
+  padding-right: 0.25em;
+}
+
+.card__list--split {
+  @extend .card__list;
+  @extend %clearfix;
+  .card__list-label {
+    display: block;
+    float: left;
+    max-width: 50%;
+    padding-right: 0.5em;
+  }
+  .card__list-content {
+    display: block;
+    float: left;
+    max-width: 50%;
+  }
+}
+
+.card__list {
+  .has-icon-member {
+    @include image-replace(17px,17px);
+    @include svg-background(icon-members-17-17-orange);
+    display: inline-block;
+    margin-right: 0.25em;
+  }
+  .has-icon-community {
+    @include image-replace(20px,17px);
+    @include svg-background(icon-communities-20-17-orange);
+    display: inline-block;
+    margin-right: 0.25em;
+  }
 }
 
 .card__button {
@@ -168,6 +181,14 @@
         @include image-replace(20px,17px);
         @include svg-background(icon-comment-20-17-blue); 
         margin-left: -10px; // half of width
+      }
+    }
+    .has-icon--resource {
+      &:before {
+        @extend %cardicon;
+        @include image-replace(19px,17px);
+        @include svg-background(icon-resource-19-17-blue);
+        margin-left: -9px; // half of width
       }
     }
     .has-icon--camera {
@@ -234,5 +255,34 @@
         margin-left: -8px; // half of width
       }
     }
+  }
+}
+
+.card--button {
+  text-align: center;
+}
+
+.card--center {
+  text-align: center;
+}
+
+.card--icons {}
+
+.card--background {
+  background-image: url(../images/highlights_background.png);
+  background-repeat: no-repeat;
+  background-position: 100%;
+  position: relative;
+  .card__author {
+    bottom: 0;
+    left: 0;
+    position: absolute;
+    width: 100%;
+  }
+  .card__author-inner {
+    border-top: 1px solid $card-border-color;
+    margin: 0 16px;
+    overflow: hidden;
+    padding: 10px 0;
   }
 }
