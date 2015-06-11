@@ -54,19 +54,27 @@
     <div class="skiplinks">
       <a href="#main" class="skiplinks__link element-invisible element-focusable">Skip to main content</a>
     </div>
-<article class="card">
+<article class="card card--icons">
+  <div class="card__number">$30,000,000</div>
+  <div class="card__image">
+    <a href="#"><img src="http://fpoimg.com/500x300?text=Card 5:3" alt="Card 5:3" height="300" width="500">
+</a>
+  </div>
   <div class="card__content">
     <h3 class="card__primary-title"><a href="#">Title</a></h3>
-    <div class="card__number">$30,000,000</div>
-    <div class="card__due-date">Due by: 3/21/2015</div> 
     <div class="card__list">
-      <div class="card__list-label">Eligibility:</div> Lorem ipsum sit amet, cons ectetur adipiscing elit.
+      <div class="card__list-label">Due by:</div> 3/21/2015
+    </div> 
+    <div class="card__list">
+      <div class="card__list-label">Eligibility:</div> <span class="has-icon-member" title="Member">Member</span> <span class="has-icon-community" title="Organization">Organization</span>
     </div>
     <div class="card__list">
-      <div class="card__list-label">Level of Effort:</div> Lorem ipsum
+      <span class="card__list-label">Level of Effort:</span>
+      <span class="card__list-content">Lorem ipsum</span>
     </div>
     <div class="card__list">
-      <div class="card__list-label">Topics:</div> <a href="#">Agriculture</a>, <a href="#">Irrigation</a>
+      <span class="card__list-label">Topics:</span> 
+      <span class="card__list-content"><a href="#">Agriculture</a>, <a href="#">Irrigation</a></span>
     </div>
     <div class="card__counts">
       <div class="view">
@@ -90,7 +98,7 @@
 	<script>
 		// handle injection of items from PHP
 		var patternPartial = "organisms-funding-op-teaser";
-		var lineage        = [];
+		var lineage        = [{"lineagePattern":"atoms-card-image","lineagePath":"..\/..\/patterns\/00-atoms-04-images-04-card-image\/00-atoms-04-images-04-card-image.html","lineageState":"inprogress"}];
 		var lineageR       = [{"lineagePattern":"molecules-homepage-views-funding-pane","lineagePath":"..\/..\/patterns\/01-molecules-04-panes-_homepage-views-funding-pane\/01-molecules-04-panes-_homepage-views-funding-pane.html","lineageState":"inprogress"},{"lineagePattern":"organisms-community-detail","lineagePath":"..\/..\/patterns\/02-organisms-01-content-types-community-detail\/02-organisms-01-content-types-community-detail.html","lineageState":"inprogress"},{"lineagePattern":"templates-card-types","lineagePath":"..\/..\/patterns\/03-templates-card-types\/03-templates-card-types.html","lineageState":"inprogress"}];
 		var patternState   = "inprogress";
 		var cssEnabled     = false;

@@ -3,9 +3,18 @@
     "url": "http://forumone.com/",
     "title": "Card Title",
     "summary": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas a lectus erat. Cras leo urna, fermentum ac lacus ac, pharetra gravida sapien.</p>",
+    "user": {
+      "name": "Sherlock Holmes",
+      "org" : "Scotland Yard",
+      "title": "Consulting Detective"
+    }, 
     "img": {
       "card": {
         "src": "http://lorempixel.com/500/300/animals/1/",
+        "alt": "Card 5:3"
+      },
+      "user": {
+        "src": "../../images-patternlab/sherlock-500-300.jpg",
         "alt": "Card 5:3"
       }
     }
@@ -14,9 +23,18 @@
     "url": "http://forumone.com/",
     "title": "A Longer Card Title",
     "summary": "<p>Pellentesque dapibus, est sed sollicitudin tincidunt, orci leo ornare dui, tempor euismod dolor elit quis quam. Etiam eu ex ut felis suscipit scelerisque.</p>",
+    "user": {
+      "name": "Dana Scully",
+      "org" : "Federal Bureau of Investigation",
+      "title": "Special Agent"
+    }, 
     "img": {
       "card": {
         "src": "http://lorempixel.com/500/300/animals/2/",
+        "alt": "Card 5:3"
+      },
+      "user": {
+        "src": "../../images-patternlab/scully-500-300.jpg",
         "alt": "Card 5:3"
       }
     }
@@ -25,75 +43,18 @@
     "url": "http://forumone.com/",
     "title": "A Really, Really Much Much Longer Card Title",
     "summary": "<p>Fusce euismod ultricies mauris eget pellentesque. Curabitur mauris eros, pretium condimentum diam id, vulputate condimentum diam. Quisque viverra massa sed lorem ultrices gravida vel quis velit.</p>",
+    "user": {
+      "name": "Walter White",
+      "org" : "Chemistry Teacher",
+      "title": "J. P. Wynne High School"
+    }, 
     "img": {
       "card": {
         "src": "http://lorempixel.com/500/300/animals/3/",
         "alt": "Card 5:3"
-      }
-    }
-  },
-  "4": {
-    "url": "http://forumone.com/",
-    "title": "A Really, Really Much Much Longer Card Title",
-    "summary": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas a lectus erat. Cras leo urna, fermentum ac lacus ac, pharetra gravida sapien.</p>",
-    "img": {
-      "card": {
-        "src": "http://lorempixel.com/500/300/city/1/",
-        "alt": "Card 5:3"
-      }
-    }
-  },
-  "5": {
-    "url": "http://forumone.com/",
-    "title": "A Longer Card Title",
-    "summary": "<p>Fusce euismod ultricies mauris eget pellentesque. Curabitur mauris eros, pretium condimentum diam id, vulputate condimentum diam. Quisque viverra massa sed lorem ultrices gravida vel quis velit.</p>",
-    "img": {
-      "card": {
-        "src": "http://lorempixel.com/500/300/city/2/",
-        "alt": "Card 5:3"
-      }
-    }
-  },
-  "6": {
-    "url": "http://forumone.com/",
-    "title": "Card Title",
-    "summary": "<p>Pellentesque dapibus, est sed sollicitudin tincidunt, orci leo ornare dui, tempor euismod dolor elit quis quam. Etiam eu ex ut felis suscipit scelerisque.</p>",
-    "img": {
-      "card": {
-        "src": "http://lorempixel.com/500/300/city/3/",
-        "alt": "Card 5:3"
-      }
-    }
-  },
-  "7": {
-    "url": "http://forumone.com/",
-    "title": "A Longer Card Title",
-    "summary": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas a lectus erat. Cras leo urna, fermentum ac lacus ac, pharetra gravida sapien.</p>",
-    "img": {
-      "card": {
-        "src": "http://lorempixel.com/500/300/business/1/",
-        "alt": "Card 5:3"
-      }
-    }
-  },
-  "8": {
-    "url": "http://forumone.com/",
-    "title": "Card Title",
-    "summary": "<p>Pellentesque dapibus, est sed sollicitudin tincidunt, orci leo ornare dui, tempor euismod dolor elit quis quam. Etiam eu ex ut felis suscipit scelerisque.</p>",
-    "img": {
-      "card": {
-        "src": "http://lorempixel.com/500/300/business/2/",
-        "alt": "Card 5:3"
-      }
-    }
-  },
-  "9": {
-    "url": "http://forumone.com/",
-    "title": "A Really, Really Much Much Longer Card Title",
-    "summary": "<p>Fusce euismod ultricies mauris eget pellentesque. Curabitur mauris eros, pretium condimentum diam id, vulputate condimentum diam. Quisque viverra massa sed lorem ultrices gravida vel quis velit.</p>",
-    "img": {
-      "card": {
-        "src": "http://lorempixel.com/500/300/business/3/",
+      },
+      "user": {
+        "src": "../../images-patternlab/walter-500-300.jpg",
         "alt": "Card 5:3"
       }
     }
