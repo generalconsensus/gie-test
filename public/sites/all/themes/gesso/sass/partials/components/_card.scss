@@ -15,19 +15,33 @@
 .card__image {
   line-height: 0;
 }
- 
-.card__number {
+
+%cardheader {
   background: $orange;
   color: #fff;
   font-size: $font-size-xxl;
   font-weight: bold;
+  margin: 0;
   padding: 0.75em 0.25em;
   text-align: center;
   text-transform: uppercase;
 }
+ 
+.card__number {
+  @extend %cardheader;
+  &:before {
+    @include image-replace(25px,25px);
+    @include svg-background(icon-funding-25-25-white);
+    content: "";
+    display: inline-block;
+    margin-right: 5px;
+    position: relative;
+    top: 3px;
+  }
+}
 
 .card__date {
-  @extend .card__number;
+  @extend %cardheader;
   &:before {
     @include image-replace(24px,25px);
     @include svg-background(icon-calendar-24-25-white);
