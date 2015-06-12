@@ -271,7 +271,6 @@ function gie_innovation_views_default_views() {
   $handler->display->display_options['fields']['field_org_logo']['id'] = 'field_org_logo';
   $handler->display->display_options['fields']['field_org_logo']['table'] = 'field_data_field_org_logo';
   $handler->display->display_options['fields']['field_org_logo']['field'] = 'field_org_logo';
-  $handler->display->display_options['fields']['field_org_logo']['relationship'] = 'field_innovation_funders_target_id';
   $handler->display->display_options['fields']['field_org_logo']['label'] = '';
   $handler->display->display_options['fields']['field_org_logo']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['field_org_logo']['element_wrapper_type'] = 'div';
@@ -378,6 +377,116 @@ function gie_innovation_views_default_views() {
   $handler->display->display_options['allow']['title_override'] = 'title_override';
   $handler->display->display_options['allow']['exposed_form'] = 0;
   $handler->display->display_options['allow']['fields_override'] = 0;
+
+  /* Display: Related Orgs  */
+  $handler = $view->new_display('panel_pane', 'Related Orgs ', 'related_orgs');
+  $handler->display->display_options['defaults']['title'] = FALSE;
+  $handler->display->display_options['title'] = 'Related Organizations';
+  $handler->display->display_options['defaults']['relationships'] = FALSE;
+  /* Relationship: Entity Reference: Referenced Entity */
+  $handler->display->display_options['relationships']['field_innovation_related_org_target_id']['id'] = 'field_innovation_related_org_target_id';
+  $handler->display->display_options['relationships']['field_innovation_related_org_target_id']['table'] = 'field_data_field_innovation_related_org';
+  $handler->display->display_options['relationships']['field_innovation_related_org_target_id']['field'] = 'field_innovation_related_org_target_id';
+  $handler->display->display_options['relationships']['field_innovation_related_org_target_id']['required'] = TRUE;
+  $handler->display->display_options['defaults']['fields'] = FALSE;
+  /* Field: Content: Logo */
+  $handler->display->display_options['fields']['field_org_logo']['id'] = 'field_org_logo';
+  $handler->display->display_options['fields']['field_org_logo']['table'] = 'field_data_field_org_logo';
+  $handler->display->display_options['fields']['field_org_logo']['field'] = 'field_org_logo';
+  $handler->display->display_options['fields']['field_org_logo']['relationship'] = 'field_innovation_related_org_target_id';
+  $handler->display->display_options['fields']['field_org_logo']['label'] = '';
+  $handler->display->display_options['fields']['field_org_logo']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_org_logo']['element_wrapper_type'] = 'div';
+  $handler->display->display_options['fields']['field_org_logo']['element_wrapper_class'] = 'profile-thumb__image';
+  $handler->display->display_options['fields']['field_org_logo']['element_default_classes'] = FALSE;
+  $handler->display->display_options['fields']['field_org_logo']['click_sort_column'] = 'fid';
+  $handler->display->display_options['fields']['field_org_logo']['settings'] = array(
+    'view_mode' => 'image_teaser',
+    'links' => 0,
+    'linked_field' => array(
+      'linked' => 0,
+      'destination' => '',
+      'advanced' => array(
+        'title' => '',
+        'target' => '',
+        'class' => '',
+        'rel' => '',
+        'text' => '',
+      ),
+    ),
+  );
+  $handler->display->display_options['fields']['field_org_logo']['group_column'] = 'target_id';
+  /* Field: Content: Title */
+  $handler->display->display_options['fields']['title']['id'] = 'title';
+  $handler->display->display_options['fields']['title']['table'] = 'node';
+  $handler->display->display_options['fields']['title']['field'] = 'title';
+  $handler->display->display_options['fields']['title']['relationship'] = 'field_innovation_related_org_target_id';
+  $handler->display->display_options['fields']['title']['label'] = '';
+  $handler->display->display_options['fields']['title']['exclude'] = TRUE;
+  $handler->display->display_options['fields']['title']['element_type'] = 'div';
+  $handler->display->display_options['fields']['title']['element_class'] = 'profile-thumb__name';
+  $handler->display->display_options['fields']['title']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['title']['element_default_classes'] = FALSE;
+  $handler->display->display_options['defaults']['arguments'] = FALSE;
+  /* Contextual filter: Content: Nid */
+  $handler->display->display_options['arguments']['nid']['id'] = 'nid';
+  $handler->display->display_options['arguments']['nid']['table'] = 'node';
+  $handler->display->display_options['arguments']['nid']['field'] = 'nid';
+  $handler->display->display_options['arguments']['nid']['default_action'] = 'default';
+  $handler->display->display_options['arguments']['nid']['default_argument_type'] = 'node';
+  $handler->display->display_options['arguments']['nid']['summary']['number_of_records'] = '0';
+  $handler->display->display_options['arguments']['nid']['summary']['format'] = 'default_summary';
+  $handler->display->display_options['arguments']['nid']['summary_options']['items_per_page'] = '25';
+
+  /* Display: Related Programs */
+  $handler = $view->new_display('panel_pane', 'Related Programs', 'related_programs');
+  $handler->display->display_options['defaults']['title'] = FALSE;
+  $handler->display->display_options['title'] = 'Related Programs';
+  $handler->display->display_options['defaults']['relationships'] = FALSE;
+  /* Relationship: Entity Reference: Referenced Entity */
+  $handler->display->display_options['relationships']['field_innovation_program_target_id']['id'] = 'field_innovation_program_target_id';
+  $handler->display->display_options['relationships']['field_innovation_program_target_id']['table'] = 'field_data_field_innovation_program';
+  $handler->display->display_options['relationships']['field_innovation_program_target_id']['field'] = 'field_innovation_program_target_id';
+  $handler->display->display_options['relationships']['field_innovation_program_target_id']['required'] = TRUE;
+  $handler->display->display_options['defaults']['fields'] = FALSE;
+  /* Field: Content: Logo */
+  $handler->display->display_options['fields']['field_org_logo']['id'] = 'field_org_logo';
+  $handler->display->display_options['fields']['field_org_logo']['table'] = 'field_data_field_org_logo';
+  $handler->display->display_options['fields']['field_org_logo']['field'] = 'field_org_logo';
+  $handler->display->display_options['fields']['field_org_logo']['relationship'] = 'field_innovation_program_target_id';
+  $handler->display->display_options['fields']['field_org_logo']['label'] = '';
+  $handler->display->display_options['fields']['field_org_logo']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_org_logo']['element_wrapper_type'] = 'div';
+  $handler->display->display_options['fields']['field_org_logo']['element_wrapper_class'] = 'profile-thumb__image';
+  $handler->display->display_options['fields']['field_org_logo']['element_default_classes'] = FALSE;
+  $handler->display->display_options['fields']['field_org_logo']['click_sort_column'] = 'fid';
+  $handler->display->display_options['fields']['field_org_logo']['settings'] = array(
+    'view_mode' => 'image_teaser',
+    'links' => 0,
+    'linked_field' => array(
+      'linked' => 0,
+      'destination' => '',
+      'advanced' => array(
+        'title' => '',
+        'target' => '',
+        'class' => '',
+        'rel' => '',
+        'text' => '',
+      ),
+    ),
+  );
+  $handler->display->display_options['fields']['field_org_logo']['group_column'] = 'target_id';
+  /* Field: Content: Title */
+  $handler->display->display_options['fields']['title']['id'] = 'title';
+  $handler->display->display_options['fields']['title']['table'] = 'node';
+  $handler->display->display_options['fields']['title']['field'] = 'title';
+  $handler->display->display_options['fields']['title']['relationship'] = 'field_innovation_program_target_id';
+  $handler->display->display_options['fields']['title']['label'] = '';
+  $handler->display->display_options['fields']['title']['exclude'] = TRUE;
+  $handler->display->display_options['fields']['title']['element_type'] = 'div';
+  $handler->display->display_options['fields']['title']['element_class'] = 'profile-thumb__name';
+  $handler->display->display_options['fields']['title']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['title']['element_default_classes'] = FALSE;
   $export['funded_by'] = $view;
 
   $view = new view();
