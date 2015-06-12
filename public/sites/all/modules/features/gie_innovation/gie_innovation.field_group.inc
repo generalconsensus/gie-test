@@ -474,6 +474,10 @@ function gie_innovation_field_group_info() {
       1 => 'field_innovation_type',
       2 => 'field_innovation_funding_goal',
       3 => 'field_innovation_cost_per_unit',
+      4 => 'field_innovation_lives_impacted',
+      5 => 'field_innovation_lives_saved',
+      6 => 'field_innovation_potent_lives_im',
+      7 => 'field_innovation_potent_lives_sa',
     ),
     'format_type' => 'div',
     'format_settings' => array(
@@ -553,10 +557,10 @@ function gie_innovation_field_group_info() {
       9 => 'field_term_sector',
       10 => 'field_term_topic',
       11 => 'field_term_region',
-      12 => 'field_innovation_potent_lives_im',
-      13 => 'field_innovation_lives_impacted',
-      14 => 'field_innovation_potent_lives_sa',
-      15 => 'field_innovation_lives_saved',
+      12 => 'field_innovation_lives_impacted',
+      13 => 'field_innovation_lives_saved',
+      14 => 'field_innovation_potent_lives_im',
+      15 => 'field_innovation_potent_lives_sa',
     ),
     'format_type' => 'div',
     'format_settings' => array(
@@ -625,6 +629,7 @@ function gie_innovation_field_group_info() {
       0 => 'field_innovation_funders',
       1 => 'field_innovation_program',
       2 => 'field_innovation_team',
+      3 => 'field_innovation_related_org',
     ),
     'format_type' => 'div',
     'format_settings' => array(
