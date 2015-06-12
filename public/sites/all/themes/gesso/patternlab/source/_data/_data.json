@@ -31,6 +31,10 @@
     "card": {
       "src": "http://fpoimg.com/500x300?text=Card 5:3",
       "alt": "Card 5:3"
+    },
+    "user": {
+      "src": "http://fpoimg.com/500x300?text=Card 5:3",
+      "alt": "Card 5:3"
     }
   },
   "year": {
