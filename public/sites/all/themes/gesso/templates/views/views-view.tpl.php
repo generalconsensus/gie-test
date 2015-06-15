@@ -50,7 +50,9 @@
   <?php endif; ?>
 
   <?php if ($more): ?>
-    <?php print $more; ?>
+    <div class="view__more">
+      <?php print $more; ?>
+    </div>
   <?php endif; ?>
 
   <?php if ($footer): ?>

@@ -1,5 +1,14 @@
 .view--card-view-2col {
+  border-bottom: 1px solid $border-color;
+  margin-bottom: 1em;
   overflow: hidden;
+  padding-bottom: 1em;
+  .pane:last-child &,
+  .front & {
+    border: 0;
+    margin-bottom: 0;
+    padding-bottom: 0;
+  }
   .views-row {
     @include breakpoint(500px, $no-query: true) {
       float: left;
@@ -20,16 +29,6 @@
     }
     &.third {
       padding-left: 0.5em;
-    }
-  }
-  .view__footer {
-    border-bottom: 1px solid $border-color;
-    margin-bottom: 1em;
-    padding-bottom: 3em;
-    text-align: right;
-    .pane:last-child & {
-      border: 0;
-      padding-bottom: 0;
     }
   }
 }
