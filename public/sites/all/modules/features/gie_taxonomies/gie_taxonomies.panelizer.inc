@@ -402,7 +402,10 @@ function gie_taxonomies_panelizer_defaults() {
     $pane->style = array(
       'settings' => NULL,
     );
-    $pane->css = array();
+    $pane->css = array(
+      'css_id' => '',
+      'css_class' => 'has-icon-innovation',
+    );
     $pane->extras = array();
     $pane->position = 1;
     $pane->locks = array();
@@ -421,7 +424,10 @@ function gie_taxonomies_panelizer_defaults() {
     $pane->style = array(
       'settings' => NULL,
     );
-    $pane->css = array();
+    $pane->css = array(
+      'css_id' => '',
+      'css_class' => 'has-icon-resource',
+    );
     $pane->extras = array();
     $pane->position = 2;
     $pane->locks = array();
@@ -440,7 +446,10 @@ function gie_taxonomies_panelizer_defaults() {
     $pane->style = array(
       'settings' => NULL,
     );
-    $pane->css = array();
+    $pane->css = array(
+      'css_id' => '',
+      'css_class' => 'has-icon-funding',
+    );
     $pane->extras = array();
     $pane->position = 3;
     $pane->locks = array();
@@ -837,7 +846,10 @@ function gie_taxonomies_panelizer_defaults() {
     $pane->style = array(
       'settings' => NULL,
     );
-    $pane->css = array();
+    $pane->css = array(
+      'css_id' => '',
+      'css_class' => 'has-icon-innovation',
+    );
     $pane->extras = array();
     $pane->position = 1;
     $pane->locks = array();
@@ -856,7 +868,10 @@ function gie_taxonomies_panelizer_defaults() {
     $pane->style = array(
       'settings' => NULL,
     );
-    $pane->css = array();
+    $pane->css = array(
+      'css_id' => '',
+      'css_class' => 'has-icon-resource',
+    );
     $pane->extras = array();
     $pane->position = 2;
     $pane->locks = array();
@@ -875,7 +890,10 @@ function gie_taxonomies_panelizer_defaults() {
     $pane->style = array(
       'settings' => NULL,
     );
-    $pane->css = array();
+    $pane->css = array(
+      'css_id' => '',
+      'css_class' => 'has-icon-funding',
+    );
     $pane->extras = array();
     $pane->position = 3;
     $pane->locks = array();
@@ -1274,7 +1292,10 @@ function gie_taxonomies_panelizer_defaults() {
     $pane->style = array(
       'settings' => NULL,
     );
-    $pane->css = array();
+    $pane->css = array(
+      'css_id' => '',
+      'css_class' => 'has-icon-innovation',
+    );
     $pane->extras = array();
     $pane->position = 1;
     $pane->locks = array();
@@ -1293,7 +1314,10 @@ function gie_taxonomies_panelizer_defaults() {
     $pane->style = array(
       'settings' => NULL,
     );
-    $pane->css = array();
+    $pane->css = array(
+      'css_id' => '',
+      'css_class' => 'has-icon-resource',
+    );
     $pane->extras = array();
     $pane->position = 2;
     $pane->locks = array();
@@ -1312,7 +1336,10 @@ function gie_taxonomies_panelizer_defaults() {
     $pane->style = array(
       'settings' => NULL,
     );
-    $pane->css = array();
+    $pane->css = array(
+      'css_id' => '',
+      'css_class' => 'has-icon-funding',
+    );
     $pane->extras = array();
     $pane->position = 3;
     $pane->locks = array();
