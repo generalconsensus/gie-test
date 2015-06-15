@@ -1299,6 +1299,13 @@ function gie_taxonomies_views_default_views() {
   $handler = $view->new_display('panel_pane', 'Innovations', 'innovations_pane');
   $handler->display->display_options['defaults']['title'] = FALSE;
   $handler->display->display_options['title'] = 'Innovations';
+  $handler->display->display_options['defaults']['use_more'] = FALSE;
+  $handler->display->display_options['use_more'] = TRUE;
+  $handler->display->display_options['defaults']['use_more_always'] = FALSE;
+  $handler->display->display_options['defaults']['use_more_always'] = FALSE;
+  $handler->display->display_options['use_more_always'] = FALSE;
+  $handler->display->display_options['defaults']['use_more_text'] = FALSE;
+  $handler->display->display_options['use_more_text'] = 'View All Innovations';
   $handler->display->display_options['link_url'] = '/innovations/sector/!1';
 
   /* Display: Resources */
@@ -1309,7 +1316,7 @@ function gie_taxonomies_views_default_views() {
   $handler->display->display_options['defaults']['use_more_always'] = FALSE;
   $handler->display->display_options['use_more_always'] = FALSE;
   $handler->display->display_options['defaults']['use_more_text'] = FALSE;
-  $handler->display->display_options['use_more_text'] = 'Explore all resources in this sector';
+  $handler->display->display_options['use_more_text'] = 'View All Resources';
   $handler->display->display_options['defaults']['link_display'] = FALSE;
   $handler->display->display_options['link_display'] = 'custom_url';
   $handler->display->display_options['link_url'] = '/resources/sector/!1';
@@ -1362,7 +1369,7 @@ function gie_taxonomies_views_default_views() {
   $handler->display->display_options['defaults']['use_more_always'] = FALSE;
   $handler->display->display_options['use_more_always'] = FALSE;
   $handler->display->display_options['defaults']['use_more_text'] = FALSE;
-  $handler->display->display_options['use_more_text'] = 'Explore all funding opportunities in this sector';
+  $handler->display->display_options['use_more_text'] = 'View All Funding Opportunities';
   $handler->display->display_options['defaults']['link_display'] = FALSE;
   $handler->display->display_options['link_display'] = 'custom_url';
   $handler->display->display_options['link_url'] = '/funding/sector/!1';
@@ -1838,6 +1845,13 @@ function gie_taxonomies_views_default_views() {
 
   /* Display: Innovations */
   $handler = $view->new_display('panel_pane', 'Innovations', 'innovations_pane');
+  $handler->display->display_options['defaults']['use_more'] = FALSE;
+  $handler->display->display_options['use_more'] = TRUE;
+  $handler->display->display_options['defaults']['use_more_always'] = FALSE;
+  $handler->display->display_options['defaults']['use_more_always'] = FALSE;
+  $handler->display->display_options['use_more_always'] = FALSE;
+  $handler->display->display_options['defaults']['use_more_text'] = FALSE;
+  $handler->display->display_options['use_more_text'] = 'View All Innovations';
   $handler->display->display_options['link_url'] = '/innovations/topic/!1';
 
   /* Display: Resources */
@@ -1850,7 +1864,7 @@ function gie_taxonomies_views_default_views() {
   $handler->display->display_options['defaults']['use_more_always'] = FALSE;
   $handler->display->display_options['use_more_always'] = FALSE;
   $handler->display->display_options['defaults']['use_more_text'] = FALSE;
-  $handler->display->display_options['use_more_text'] = 'Explore all resources in this topic';
+  $handler->display->display_options['use_more_text'] = 'View All Resources';
   $handler->display->display_options['defaults']['link_display'] = FALSE;
   $handler->display->display_options['link_display'] = 'custom_url';
   $handler->display->display_options['link_url'] = '/resources/topic/!1';
@@ -1903,7 +1917,7 @@ function gie_taxonomies_views_default_views() {
   $handler->display->display_options['defaults']['use_more_always'] = FALSE;
   $handler->display->display_options['use_more_always'] = FALSE;
   $handler->display->display_options['defaults']['use_more_text'] = FALSE;
-  $handler->display->display_options['use_more_text'] = 'Explore all funding opportunities in this topic';
+  $handler->display->display_options['use_more_text'] = 'View All Funding Opportunities';
   $handler->display->display_options['defaults']['link_display'] = FALSE;
   $handler->display->display_options['link_display'] = 'custom_url';
   $handler->display->display_options['link_url'] = '/funding/topic/!1';
