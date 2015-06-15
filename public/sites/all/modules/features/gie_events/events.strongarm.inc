@@ -170,7 +170,7 @@ function events_strongarm() {
             'visible' => FALSE,
           ),
           'listing' => array(
-            'weight' => '24',
+            'weight' => '26',
             'visible' => FALSE,
           ),
         ),
@@ -204,7 +204,7 @@ function events_strongarm() {
         ),
         'events_at_a_glance_entity_view_1' => array(
           'listing' => array(
-            'weight' => '10',
+            'weight' => '0',
             'visible' => TRUE,
           ),
           'full' => array(
@@ -220,7 +220,7 @@ function events_strongarm() {
         ),
         'events_at_a_glance_related_org_card_event' => array(
           'listing' => array(
-            'weight' => '2',
+            'weight' => '14',
             'visible' => FALSE,
           ),
           'full' => array(

@@ -120,12 +120,12 @@ function gie_funding_field_group_info() {
   $field_group->parent_name = '';
   $field_group->data = array(
     'label' => 'Card Content',
-    'weight' => '1',
+    'weight' => '2',
     'children' => array(
       0 => 'title_field',
       1 => 'field_funding_deadline',
       2 => 'field_funding_effort',
-      3 => 'field_funding_eligibility',
+      3 => 'field_funding_eligibility_type',
       4 => 'field_term_topic',
     ),
     'format_type' => 'div',
@@ -156,7 +156,7 @@ function gie_funding_field_group_info() {
   $field_group->parent_name = '';
   $field_group->data = array(
     'label' => 'Card Counts',
-    'weight' => '2',
+    'weight' => '3',
     'children' => array(
       0 => 'funding_counters_comment_count',
       1 => 'funding_counters_favorite_count',
@@ -226,6 +226,7 @@ function gie_funding_field_group_info() {
     'children' => array(
       0 => 'title_field',
       1 => 'field_funding_desc',
+      2 => 'field_funding_image',
     ),
     'format_type' => 'div',
     'format_settings' => array(

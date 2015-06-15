@@ -21,11 +21,10 @@ function events_field_group_info() {
   $field_group->parent_name = '';
   $field_group->data = array(
     'label' => 'Card Content',
-    'weight' => '1',
+    'weight' => '2',
     'children' => array(
       0 => 'title_field',
-      1 => 'events_at_a_glance_entity_view_1',
-      2 => 'group_card_meta',
+      1 => 'group_card_meta',
     ),
     'format_type' => 'div',
     'format_settings' => array(
@@ -55,7 +54,7 @@ function events_field_group_info() {
   $field_group->parent_name = '';
   $field_group->data = array(
     'label' => 'Card Image',
-    'weight' => '0',
+    'weight' => '1',
     'children' => array(
       0 => 'field_event_image',
     ),
