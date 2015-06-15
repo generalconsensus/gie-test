@@ -175,7 +175,7 @@ function gie_funding_strongarm() {
             'visible' => FALSE,
           ),
           'listing' => array(
-            'weight' => '26',
+            'weight' => '28',
             'visible' => FALSE,
           ),
           'search_listing' => array(
@@ -197,7 +197,7 @@ function gie_funding_strongarm() {
             'visible' => FALSE,
           ),
           'listing' => array(
-            'weight' => '21',
+            'weight' => '23',
             'visible' => FALSE,
           ),
           'default' => array(
@@ -223,7 +223,7 @@ function gie_funding_strongarm() {
             'visible' => FALSE,
           ),
           'listing' => array(
-            'weight' => '20',
+            'weight' => '22',
             'visible' => FALSE,
           ),
           'default' => array(
@@ -323,7 +323,7 @@ function gie_funding_strongarm() {
             'visible' => FALSE,
           ),
           'listing' => array(
-            'weight' => '16',
+            'weight' => '18',
             'visible' => FALSE,
           ),
           'default' => array(
@@ -345,7 +345,7 @@ function gie_funding_strongarm() {
             'visible' => FALSE,
           ),
           'listing' => array(
-            'weight' => '14',
+            'weight' => '16',
             'visible' => FALSE,
           ),
           'default' => array(
@@ -367,7 +367,7 @@ function gie_funding_strongarm() {
             'visible' => FALSE,
           ),
           'listing' => array(
-            'weight' => '15',
+            'weight' => '17',
             'visible' => FALSE,
           ),
           'default' => array(
@@ -385,7 +385,7 @@ function gie_funding_strongarm() {
             'visible' => FALSE,
           ),
           'listing' => array(
-            'weight' => '13',
+            'weight' => '15',
             'visible' => FALSE,
           ),
           'default' => array(
@@ -395,6 +395,12 @@ function gie_funding_strongarm() {
           'highlights' => array(
             'weight' => '15',
             'visible' => FALSE,
+          ),
+        ),
+        'funding_counters_eligibility' => array(
+          'listing' => array(
+            'weight' => '3',
+            'visible' => TRUE,
           ),
         ),
       ),

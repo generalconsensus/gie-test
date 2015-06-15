@@ -213,7 +213,7 @@ function gie_funding_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 22,
+        'weight' => 24,
       ),
       'search_listing' => array(
         'label' => 'above',
@@ -334,7 +334,7 @@ function gie_funding_field_default_field_instances() {
           'multiple_to' => '',
         ),
         'type' => 'date_default',
-        'weight' => 3,
+        'weight' => 2,
       ),
       'search_listing' => array(
         'label' => 'above',
@@ -433,7 +433,7 @@ function gie_funding_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 23,
+        'weight' => 25,
       ),
       'search_listing' => array(
         'label' => 'hidden',
@@ -587,7 +587,7 @@ function gie_funding_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 27,
+        'weight' => 29,
       ),
       'search_listing' => array(
         'label' => 'above',
@@ -734,7 +734,7 @@ function gie_funding_field_default_field_instances() {
           ),
         ),
         'type' => 'taxonomy_term_reference_plain',
-        'weight' => 5,
+        'weight' => 4,
       ),
       'search_listing' => array(
         'label' => 'above',
@@ -836,33 +836,8 @@ function gie_funding_field_default_field_instances() {
       ),
       'listing' => array(
         'label' => 'inline',
-        'module' => 'smart_trim',
-        'settings' => array(
-          'field_delimiter' => '',
-          'linked_field' => array(
-            'advanced' => array(
-              'class' => '',
-              'rel' => '',
-              'target' => '',
-              'text' => '',
-              'title' => '',
-            ),
-            'destination' => '',
-            'linked' => 0,
-          ),
-          'more_link' => 0,
-          'more_text' => 'Read more',
-          'summary_handler' => 'full',
-          'trim_length' => 150,
-          'trim_link' => FALSE,
-          'trim_options' => array(
-            'text' => 'text',
-          ),
-          'trim_preserve_tags' => '',
-          'trim_suffix' => '...',
-          'trim_type' => 'chars',
-        ),
-        'type' => 'smart_trim_format',
+        'settings' => array(),
+        'type' => 'hidden',
         'weight' => 4,
       ),
       'search_listing' => array(
@@ -991,10 +966,24 @@ function gie_funding_field_default_field_instances() {
         'weight' => 25,
       ),
       'listing' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 29,
+        'label' => 'inline',
+        'module' => 'taxonomy',
+        'settings' => array(
+          'field_delimiter' => ', ',
+          'linked_field' => array(
+            'advanced' => array(
+              'class' => '',
+              'rel' => '',
+              'target' => '',
+              'text' => '',
+              'title' => '',
+            ),
+            'destination' => '',
+            'linked' => 0,
+          ),
+        ),
+        'type' => 'taxonomy_term_reference_plain',
+        'weight' => 3,
       ),
       'search_listing' => array(
         'label' => 'above',
@@ -1115,7 +1104,7 @@ function gie_funding_field_default_field_instances() {
             'destination' => '',
             'linked' => 0,
           ),
-          'prefix_suffix' => 1,
+          'prefix_suffix' => 0,
           'scale' => 0,
           'thousand_separator' => ',',
         ),
@@ -1226,7 +1215,7 @@ function gie_funding_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 24,
+        'weight' => 26,
       ),
       'search_listing' => array(
         'label' => 'above',
@@ -1294,6 +1283,134 @@ function gie_funding_field_default_field_instances() {
     ),
   );
 
+  // Exported field_instance: 'node-funding-field_funding_image'
+  $field_instances['node-funding-field_funding_image'] = array(
+    'bundle' => 'funding',
+    'deleted' => 0,
+    'description' => 'Share a funding photo. If you don\'t upload your photo, one will be automatically assigned!',
+    'display' => array(
+      'at_a_glance' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'default' => array(
+        'label' => 'above',
+        'module' => 'image',
+        'settings' => array(
+          'field_delimiter' => '',
+          'image_link' => '',
+          'image_style' => '',
+          'linked_field' => array(
+            'advanced' => array(
+              'class' => '',
+              'rel' => '',
+              'target' => '',
+              'text' => '',
+              'title' => '',
+            ),
+            'destination' => '',
+            'linked' => 0,
+          ),
+        ),
+        'type' => 'image',
+        'weight' => 30,
+      ),
+      'full' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'highlights' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'listing' => array(
+        'label' => 'hidden',
+        'module' => 'image',
+        'settings' => array(
+          'field_delimiter' => '',
+          'image_link' => 'content',
+          'image_style' => 'card__500x300_',
+          'linked_field' => array(
+            'advanced' => array(
+              'class' => '',
+              'rel' => '',
+              'target' => '',
+              'text' => '',
+              'title' => '',
+            ),
+            'destination' => '',
+            'linked' => 0,
+          ),
+        ),
+        'type' => 'image',
+        'weight' => 1,
+      ),
+      'search_listing' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'teaser_date' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'ds_extras_field_template' => '',
+    'entity_type' => 'node',
+    'field_name' => 'field_funding_image',
+    'label' => 'Featured Image',
+    'required' => 0,
+    'settings' => array(
+      'alt_field' => 1,
+      'alt_field_default' => '[node:title_field]',
+      'alt_field_hide' => 0,
+      'alt_field_sync_title' => 0,
+      'alt_field_update_on_edit' => 0,
+      'default_image' => 0,
+      'description_display' => 'before',
+      'file_directory' => 'images/funding',
+      'file_extensions' => 'png gif jpg jpeg',
+      'focus' => 0,
+      'focus_lock_ratio' => 0,
+      'focus_min_size' => '',
+      'max_filesize' => '',
+      'max_resolution' => '',
+      'min_resolution' => '',
+      'random_default' => 1,
+      'random_default_path' => 'funding',
+      'title_field' => 0,
+      'title_field_default' => '',
+      'title_field_hide' => 0,
+      'title_field_update_on_edit' => 0,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'image',
+      'settings' => array(
+        'preview_image_style' => 'thumbnail',
+        'progress_indicator' => 'throbber',
+      ),
+      'type' => 'image_image',
+      'weight' => 3,
+    ),
+  );
+
   // Exported field_instance: 'node-funding-field_funding_innovation_stage'
   $field_instances['node-funding-field_funding_innovation_stage'] = array(
     'bundle' => 'funding',
@@ -1343,7 +1460,7 @@ function gie_funding_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 30,
+        'weight' => 32,
       ),
       'search_listing' => array(
         'label' => 'above',
@@ -1433,7 +1550,7 @@ function gie_funding_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 31,
+        'weight' => 33,
       ),
       'search_listing' => array(
         'label' => 'above',
@@ -1523,7 +1640,7 @@ function gie_funding_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 12,
+        'weight' => 14,
       ),
       'search_listing' => array(
         'label' => 'above',
@@ -1640,7 +1757,7 @@ function gie_funding_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 28,
+        'weight' => 30,
       ),
       'search_listing' => array(
         'label' => 'above',
@@ -1755,7 +1872,7 @@ function gie_funding_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 11,
+        'weight' => 13,
       ),
       'search_listing' => array(
         'label' => 'above',
@@ -1884,7 +2001,7 @@ function gie_funding_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 25,
+        'weight' => 27,
       ),
       'search_listing' => array(
         'label' => 'above',
@@ -1975,7 +2092,7 @@ function gie_funding_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 10,
+        'weight' => 12,
       ),
       'search_listing' => array(
         'label' => 'above',
@@ -2064,7 +2181,7 @@ function gie_funding_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 18,
+        'weight' => 20,
       ),
       'search_listing' => array(
         'label' => 'above',
@@ -2168,7 +2285,7 @@ function gie_funding_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 17,
+        'weight' => 19,
       ),
       'search_listing' => array(
         'label' => 'above',
@@ -2272,7 +2389,7 @@ function gie_funding_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 19,
+        'weight' => 21,
       ),
       'search_listing' => array(
         'label' => 'above',
@@ -2385,7 +2502,7 @@ function gie_funding_field_default_field_instances() {
           ),
         ),
         'type' => 'taxonomy_term_reference_link',
-        'weight' => 6,
+        'weight' => 5,
       ),
       'search_listing' => array(
         'label' => 'above',
@@ -2861,6 +2978,7 @@ function gie_funding_field_default_field_instances() {
   t('Eligibility Details');
   t('Eligibility Type');
   t('Estimated Time to Complete Application');
+  t('Featured Image');
   t('Funding Author');
   t('Funding Opportunity Title');
   t('Funding Type');
@@ -2878,6 +2996,7 @@ function gie_funding_field_default_field_instances() {
   t('Related Programs');
   t('Sector');
   t('Select the corresponding regions that apply for the selected countries.');
+  t('Share a funding photo. If you don\'t upload your photo, one will be automatically assigned!');
   t('Subject');
   t('The URL to the application or additional information about the opportunity.');
   t('The deadline for submission. If it is a rolling deadline, please leave blank.');
