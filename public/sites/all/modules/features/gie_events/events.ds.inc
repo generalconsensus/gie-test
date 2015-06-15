@@ -212,9 +212,9 @@ function events_ds_layout_settings_info() {
   $ds_layout->settings = array(
     'regions' => array(
       'main_content' => array(
-        0 => 'group_card_image',
-        1 => 'group_card_content',
-        2 => 'events_at_a_glance_entity_view_1',
+        0 => 'events_at_a_glance_entity_view_1',
+        1 => 'group_card_image',
+        2 => 'group_card_content',
         3 => 'title_field',
         4 => 'group_card_meta',
         5 => 'field_event_location',
@@ -222,9 +222,9 @@ function events_ds_layout_settings_info() {
       ),
     ),
     'fields' => array(
+      'events_at_a_glance_entity_view_1' => 'main_content',
       'group_card_image' => 'main_content',
       'group_card_content' => 'main_content',
-      'events_at_a_glance_entity_view_1' => 'main_content',
       'title_field' => 'main_content',
       'group_card_meta' => 'main_content',
       'field_event_location' => 'main_content',
