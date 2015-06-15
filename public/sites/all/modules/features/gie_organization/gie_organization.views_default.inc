@@ -225,6 +225,7 @@ function gie_organization_views_default_views() {
   $handler->display->display_options['fields']['field_org_partners']['element_type'] = 'span';
   $handler->display->display_options['fields']['field_org_partners']['element_label_type'] = 'span';
   $handler->display->display_options['fields']['field_org_partners']['element_label_class'] = 'views-label';
+  $handler->display->display_options['fields']['field_org_partners']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['field_org_partners']['element_wrapper_type'] = 'div';
   $handler->display->display_options['fields']['field_org_partners']['element_wrapper_class'] = 'views-field has-icon--organization';
   $handler->display->display_options['fields']['field_org_partners']['element_default_classes'] = FALSE;
