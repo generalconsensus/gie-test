@@ -450,19 +450,19 @@ function gie_innovation_views_default_views() {
   $handler->display->display_options['relationships']['field_innovation_program_target_id']['required'] = TRUE;
   $handler->display->display_options['defaults']['fields'] = FALSE;
   /* Field: Content: Logo */
-  $handler->display->display_options['fields']['field_org_logo']['id'] = 'field_org_logo';
-  $handler->display->display_options['fields']['field_org_logo']['table'] = 'field_data_field_org_logo';
-  $handler->display->display_options['fields']['field_org_logo']['field'] = 'field_org_logo';
-  $handler->display->display_options['fields']['field_org_logo']['relationship'] = 'field_innovation_program_target_id';
-  $handler->display->display_options['fields']['field_org_logo']['label'] = '';
-  $handler->display->display_options['fields']['field_org_logo']['element_label_colon'] = FALSE;
-  $handler->display->display_options['fields']['field_org_logo']['element_wrapper_type'] = 'div';
-  $handler->display->display_options['fields']['field_org_logo']['element_wrapper_class'] = 'profile-thumb__image';
-  $handler->display->display_options['fields']['field_org_logo']['element_default_classes'] = FALSE;
-  $handler->display->display_options['fields']['field_org_logo']['click_sort_column'] = 'fid';
-  $handler->display->display_options['fields']['field_org_logo']['settings'] = array(
-    'view_mode' => 'image_teaser',
-    'links' => 0,
+  $handler->display->display_options['fields']['field_program_logo']['id'] = 'field_program_logo';
+  $handler->display->display_options['fields']['field_program_logo']['table'] = 'field_data_field_program_logo';
+  $handler->display->display_options['fields']['field_program_logo']['field'] = 'field_program_logo';
+  $handler->display->display_options['fields']['field_program_logo']['relationship'] = 'field_innovation_program_target_id';
+  $handler->display->display_options['fields']['field_program_logo']['label'] = '';
+  $handler->display->display_options['fields']['field_program_logo']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_program_logo']['element_wrapper_type'] = 'div';
+  $handler->display->display_options['fields']['field_program_logo']['element_wrapper_class'] = 'profile-thumb__image';
+  $handler->display->display_options['fields']['field_program_logo']['element_default_classes'] = FALSE;
+  $handler->display->display_options['fields']['field_program_logo']['click_sort_column'] = 'fid';
+  $handler->display->display_options['fields']['field_program_logo']['settings'] = array(
+    'image_style' => '',
+    'image_link' => '',
     'linked_field' => array(
       'linked' => 0,
       'destination' => '',
@@ -475,7 +475,6 @@ function gie_innovation_views_default_views() {
       ),
     ),
   );
-  $handler->display->display_options['fields']['field_org_logo']['group_column'] = 'target_id';
   /* Field: Content: Title */
   $handler->display->display_options['fields']['title']['id'] = 'title';
   $handler->display->display_options['fields']['title']['table'] = 'node';
