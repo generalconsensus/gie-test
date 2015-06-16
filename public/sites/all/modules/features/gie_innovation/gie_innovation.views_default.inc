@@ -241,7 +241,7 @@ function gie_innovation_views_default_views() {
 
   $view = new view();
   $view->name = 'funded_by';
-  $view->description = '';
+  $view->description = 'View for the Innovations detail page, displaying organization logos in right rail.';
   $view->tag = 'default';
   $view->base_table = 'node';
   $view->human_name = 'Funded by';
@@ -401,8 +401,8 @@ function gie_innovation_views_default_views() {
   $handler->display->display_options['fields']['field_org_logo']['element_default_classes'] = FALSE;
   $handler->display->display_options['fields']['field_org_logo']['click_sort_column'] = 'fid';
   $handler->display->display_options['fields']['field_org_logo']['settings'] = array(
-    'view_mode' => 'image_teaser',
-    'links' => 0,
+    'image_style' => '',
+    'image_link' => 'content',
     'linked_field' => array(
       'linked' => 0,
       'destination' => '',
@@ -462,7 +462,7 @@ function gie_innovation_views_default_views() {
   $handler->display->display_options['fields']['field_program_logo']['click_sort_column'] = 'fid';
   $handler->display->display_options['fields']['field_program_logo']['settings'] = array(
     'image_style' => '',
-    'image_link' => '',
+    'image_link' => 'content',
     'linked_field' => array(
       'linked' => 0,
       'destination' => '',
