@@ -92,21 +92,26 @@ function gie_feeds_feeds_importer_default() {
             'unique' => FALSE,
           ),
           9 => array(
+            'source' => 'Related Organization',
+            'target' => 'field_innovation_related_org:etid',
+            'unique' => FALSE,
+          ),
+          10 => array(
             'source' => 'Funded By',
             'target' => 'field_innovation_funders:etid',
             'unique' => FALSE,
           ),
-          10 => array(
+          11 => array(
             'source' => 'Published status',
             'target' => 'status',
             'unique' => FALSE,
           ),
-          11 => array(
+          12 => array(
             'source' => 'In the News Title',
             'target' => 'field_innovation_news:title',
             'unique' => FALSE,
           ),
-          12 => array(
+          13 => array(
             'source' => 'In the News URL',
             'target' => 'field_innovation_news:url',
             'unique' => FALSE,
