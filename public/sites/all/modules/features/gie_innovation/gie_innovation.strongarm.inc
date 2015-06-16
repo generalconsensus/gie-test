@@ -445,10 +445,6 @@ function gie_innovation_strongarm() {
             'weight' => '10',
             'visible' => FALSE,
           ),
-          'full' => array(
-            'weight' => '10',
-            'visible' => FALSE,
-          ),
         ),
       ),
     ),
