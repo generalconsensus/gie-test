@@ -509,14 +509,9 @@ function events_field_default_field_instances() {
       ),
       'listing' => array(
         'label' => 'inline',
-        'module' => 'addressfield',
+        'module' => 'gie_user',
         'settings' => array(
           'field_delimiter' => '',
-          'format_handlers' => array(
-            'address' => 'address',
-            'address-hide-postal-code' => 'address-hide-postal-code',
-            'address-hide-street' => 'address-hide-street',
-          ),
           'linked_field' => array(
             'advanced' => array(
               'class' => '',
@@ -528,9 +523,8 @@ function events_field_default_field_instances() {
             'destination' => '',
             'linked' => 0,
           ),
-          'use_widget_handlers' => 0,
         ),
-        'type' => 'addressfield_default',
+        'type' => 'city_state_country',
         'weight' => 14,
       ),
       'page_header' => array(
