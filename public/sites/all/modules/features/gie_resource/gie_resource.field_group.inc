@@ -295,6 +295,7 @@ function gie_resource_field_group_info() {
       2 => 'field_resource_author',
       3 => 'field_resource_date',
       4 => 'field_resource_desc',
+      5 => 'field_resource_assistance',
     ),
     'format_type' => 'div',
     'format_settings' => array(
