@@ -386,7 +386,7 @@ function events_field_default_field_instances() {
   $field_instances['node-event-field_event_image'] = array(
     'bundle' => 'event',
     'deleted' => 0,
-    'description' => '',
+    'description' => 'Share an Event photo. If you don\'t upload your photo, one will be automatically assigned!',
     'display' => array(
       'at_a_glance' => array(
         'label' => 'above',
@@ -447,13 +447,13 @@ function events_field_default_field_instances() {
     'label' => 'Event Image',
     'required' => 0,
     'settings' => array(
-      'alt_field' => 0,
-      'alt_field_default' => '',
+      'alt_field' => 1,
+      'alt_field_default' => '[node:title_field]',
       'alt_field_hide' => 0,
       'alt_field_sync_title' => 0,
-      'alt_field_update_on_edit' => 0,
+      'alt_field_update_on_edit' => 1,
       'default_image' => 0,
-      'description_display' => 'after',
+      'description_display' => 'before',
       'file_directory' => '',
       'file_extensions' => 'png gif jpg jpeg',
       'focus' => 0,
@@ -462,8 +462,8 @@ function events_field_default_field_instances() {
       'max_filesize' => '',
       'max_resolution' => '',
       'min_resolution' => '',
-      'random_default' => 0,
-      'random_default_path' => '',
+      'random_default' => 1,
+      'random_default_path' => 'random/event',
       'title_field' => 0,
       'title_field_default' => '',
       'title_field_hide' => 0,
@@ -2170,6 +2170,7 @@ function events_field_default_field_instances() {
   t('Related Organization');
   t('Related Program');
   t('Related Sectors');
+  t('Share an Event photo. If you don\'t upload your photo, one will be automatically assigned!');
   t('Speakers and Agenda');
   t('Specify any related programs for this event. ');
   t('The date of the Event. EST');
