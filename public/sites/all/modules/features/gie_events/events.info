@@ -8,6 +8,7 @@ dependencies[] = eva
 dependencies[] = field_group
 dependencies[] = flag
 dependencies[] = gie_funding
+dependencies[] = gie_user
 dependencies[] = multiple_selects
 dependencies[] = page_manager
 dependencies[] = pane
