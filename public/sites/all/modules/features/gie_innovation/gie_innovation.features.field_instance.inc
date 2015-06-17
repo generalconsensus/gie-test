@@ -1727,10 +1727,10 @@ function gie_innovation_field_default_field_instances() {
     'required' => 0,
     'settings' => array(
       'alt_field' => 1,
-      'alt_field_default' => '',
+      'alt_field_default' => '[node:title_field]',
       'alt_field_hide' => 0,
       'alt_field_sync_title' => 0,
-      'alt_field_update_on_edit' => 0,
+      'alt_field_update_on_edit' => 1,
       'default_image' => 35,
       'description_display' => 'before',
       'file_directory' => '',
