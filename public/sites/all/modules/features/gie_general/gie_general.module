@@ -34,3 +34,23 @@ function _gie_general_welcome() {
     return t('User account');
   }
 }
+
+/**
+ * Implements hook_comment_insert().
+ * - Trigger Comment Notify message
+ */
+function gie_general_comment_insert($comment) {
+  $node = node_load($comment->nid);
+  if ($comment->uid == $node->uid) {
+    // Same comment author as node author
+    return;
+  }
+
+  $message = message_create('comment_notify', array('uid' => $node->uid));
+  $wrapper = entity_metadata_wrapper('message', $message);
+  $wrapper->field_node_ref->set($node);
+  $wrapper->field_comment_ref->set($comment);
+
+  message_notify_send_message($message);
+
+}
