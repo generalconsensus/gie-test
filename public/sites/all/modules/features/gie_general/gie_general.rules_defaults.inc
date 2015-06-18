@@ -12,6 +12,7 @@ function gie_general_default_rules_configuration() {
   $items['rules_new_comment_notify'] = entity_import('rules_config', '{ "rules_new_comment_notify" : {
       "LABEL" : "New comment notify",
       "PLUGIN" : "reaction rule",
+      "ACTIVE" : false,
       "OWNER" : "rules",
       "REQUIRES" : [ "rules", "comment" ],
       "ON" : { "comment_insert" : [] },
