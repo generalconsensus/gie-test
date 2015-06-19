@@ -159,6 +159,7 @@ features[variable][] = sharethis_organization_options
 features[views_view][] = organization_at_a_glance
 features[views_view][] = organization_counters
 features[views_view][] = organization_listing
+features[views_view][] = organization_partners
 features[views_view][] = organization_recent_content
 features[views_view][] = organization_social
 features[views_view][] = organization_taxonomies

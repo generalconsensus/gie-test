@@ -158,6 +158,44 @@ function gie_organization_panelizer_defaults() {
     $display->content['new-448ad011-93e7-4f27-9c10-3550b03bb833'] = $pane;
     $display->panels['bottom_sidebar'][0] = 'new-448ad011-93e7-4f27-9c10-3550b03bb833';
     $pane = new stdClass();
+    $pane->pid = 'new-174520ff-4467-4676-9280-675d52f73ecf';
+    $pane->panel = 'bottom_sidebar';
+    $pane->type = 'views_panes';
+    $pane->subtype = 'organization_partners-org_partners';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array();
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
+    $pane->css = array();
+    $pane->extras = array();
+    $pane->position = 1;
+    $pane->locks = array();
+    $pane->uuid = '174520ff-4467-4676-9280-675d52f73ecf';
+    $display->content['new-174520ff-4467-4676-9280-675d52f73ecf'] = $pane;
+    $display->panels['bottom_sidebar'][1] = 'new-174520ff-4467-4676-9280-675d52f73ecf';
+    $pane = new stdClass();
+    $pane->pid = 'new-084f06d9-98b6-4b2c-bc70-4ed75760e611';
+    $pane->panel = 'bottom_sidebar';
+    $pane->type = 'views_panes';
+    $pane->subtype = 'organization_partners-org_programs';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array();
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
+    $pane->css = array();
+    $pane->extras = array();
+    $pane->position = 2;
+    $pane->locks = array();
+    $pane->uuid = '084f06d9-98b6-4b2c-bc70-4ed75760e611';
+    $display->content['new-084f06d9-98b6-4b2c-bc70-4ed75760e611'] = $pane;
+    $display->panels['bottom_sidebar'][2] = 'new-084f06d9-98b6-4b2c-bc70-4ed75760e611';
+    $pane = new stdClass();
     $pane->pid = 'new-ff5d7524-b61c-4696-b894-25e8854e8395';
     $pane->panel = 'bottom_sidebar';
     $pane->type = 'views_panes';
@@ -171,11 +209,11 @@ function gie_organization_panelizer_defaults() {
     );
     $pane->css = array();
     $pane->extras = array();
-    $pane->position = 1;
+    $pane->position = 3;
     $pane->locks = array();
     $pane->uuid = 'ff5d7524-b61c-4696-b894-25e8854e8395';
     $display->content['new-ff5d7524-b61c-4696-b894-25e8854e8395'] = $pane;
-    $display->panels['bottom_sidebar'][1] = 'new-ff5d7524-b61c-4696-b894-25e8854e8395';
+    $display->panels['bottom_sidebar'][3] = 'new-ff5d7524-b61c-4696-b894-25e8854e8395';
     $pane = new stdClass();
     $pane->pid = 'new-a403ef15-d844-420a-9131-5cbcd6bcb4b2';
     $pane->panel = 'bottom_sidebar';
@@ -190,11 +228,11 @@ function gie_organization_panelizer_defaults() {
     );
     $pane->css = array();
     $pane->extras = array();
-    $pane->position = 2;
+    $pane->position = 4;
     $pane->locks = array();
     $pane->uuid = 'a403ef15-d844-420a-9131-5cbcd6bcb4b2';
     $display->content['new-a403ef15-d844-420a-9131-5cbcd6bcb4b2'] = $pane;
-    $display->panels['bottom_sidebar'][2] = 'new-a403ef15-d844-420a-9131-5cbcd6bcb4b2';
+    $display->panels['bottom_sidebar'][4] = 'new-a403ef15-d844-420a-9131-5cbcd6bcb4b2';
     $pane = new stdClass();
     $pane->pid = 'new-9a128b75-815e-4adf-b3b7-6f6021441c88';
     $pane->panel = 'box_first';
