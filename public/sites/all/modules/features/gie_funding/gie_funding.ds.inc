@@ -217,7 +217,7 @@ function gie_funding_ds_field_settings_info() {
         ),
       ),
     ),
-    'field_funding_eligibility' => array(
+    'field_funding_eligibility_type' => array(
       'formatter_settings' => array(
         'ft' => array(
           'func' => 'theme_ds_field_expert',
@@ -237,7 +237,6 @@ function gie_funding_ds_field_settings_info() {
       'formatter_settings' => array(
         'ft' => array(
           'func' => 'theme_ds_field_expert',
-          'suffix' => ' | ',
           'fi' => TRUE,
           'fi-el' => 'div',
           'fi-cl' => 'card__number',
@@ -260,6 +259,19 @@ function gie_funding_ds_field_settings_info() {
           'ow-def-cl' => FALSE,
           'ow-at' => '',
           'ow-def-at' => FALSE,
+        ),
+      ),
+    ),
+    'field_funding_image' => array(
+      'formatter_settings' => array(
+        'ft' => array(
+          'func' => 'theme_ds_field_expert',
+          'fi' => TRUE,
+          'fi-el' => 'div',
+          'fi-cl' => 'card__image',
+          'fi-at' => '',
+          'fi-def-at' => FALSE,
+          'fi-odd-even' => FALSE,
         ),
       ),
     ),
@@ -531,23 +543,25 @@ function gie_funding_ds_layout_settings_info() {
       'main_content' => array(
         0 => 'field_funding_grant_award_value',
         1 => 'title_field',
-        2 => 'group_card_content',
-        3 => 'group_card_counts',
-        4 => 'field_funding_deadline',
-        5 => 'field_funding_eligibility',
-        6 => 'field_funding_effort',
-        7 => 'field_term_topic',
-        8 => 'funding_counters_comment_count',
-        9 => 'funding_counters_favorite_count',
+        2 => 'field_funding_image',
+        3 => 'field_funding_deadline',
+        4 => 'group_card_content',
+        5 => 'group_card_counts',
+        6 => 'field_funding_eligibility_type',
+        7 => 'field_funding_effort',
+        8 => 'field_term_topic',
+        9 => 'funding_counters_comment_count',
+        10 => 'funding_counters_favorite_count',
       ),
     ),
     'fields' => array(
       'field_funding_grant_award_value' => 'main_content',
       'title_field' => 'main_content',
+      'field_funding_image' => 'main_content',
+      'field_funding_deadline' => 'main_content',
       'group_card_content' => 'main_content',
       'group_card_counts' => 'main_content',
-      'field_funding_deadline' => 'main_content',
-      'field_funding_eligibility' => 'main_content',
+      'field_funding_eligibility_type' => 'main_content',
       'field_funding_effort' => 'main_content',
       'field_term_topic' => 'main_content',
       'funding_counters_comment_count' => 'main_content',

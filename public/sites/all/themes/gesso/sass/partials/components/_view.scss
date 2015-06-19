@@ -16,6 +16,12 @@
   }
 }
 
+.view__more {
+  clear: both;
+  margin-bottom: 0.5em;
+  text-align: right;
+}
+
 .view__header {
   @extend %clearfix;
 }

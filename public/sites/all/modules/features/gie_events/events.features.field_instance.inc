@@ -39,7 +39,7 @@ function events_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 20,
+        'weight' => 22,
       ),
       'page_header' => array(
         'label' => 'above',
@@ -104,7 +104,7 @@ function events_field_default_field_instances() {
         'label' => 'hidden',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 10,
+        'weight' => 15,
       ),
       'page_header' => array(
         'label' => 'above',
@@ -178,7 +178,7 @@ function events_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 18,
+        'weight' => 21,
       ),
       'page_header' => array(
         'label' => 'hidden',
@@ -320,7 +320,7 @@ function events_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 16,
+        'weight' => 19,
       ),
       'page_header' => array(
         'label' => 'above',
@@ -386,7 +386,7 @@ function events_field_default_field_instances() {
   $field_instances['node-event-field_event_image'] = array(
     'bundle' => 'event',
     'deleted' => 0,
-    'description' => '',
+    'description' => 'Share an Event photo. If you don\'t upload your photo, one will be automatically assigned!',
     'display' => array(
       'at_a_glance' => array(
         'label' => 'above',
@@ -447,13 +447,13 @@ function events_field_default_field_instances() {
     'label' => 'Event Image',
     'required' => 0,
     'settings' => array(
-      'alt_field' => 0,
-      'alt_field_default' => '',
+      'alt_field' => 1,
+      'alt_field_default' => '[node:title_field]',
       'alt_field_hide' => 0,
       'alt_field_sync_title' => 0,
-      'alt_field_update_on_edit' => 0,
+      'alt_field_update_on_edit' => 1,
       'default_image' => 0,
-      'description_display' => 'after',
+      'description_display' => 'before',
       'file_directory' => '',
       'file_extensions' => 'png gif jpg jpeg',
       'focus' => 0,
@@ -462,8 +462,8 @@ function events_field_default_field_instances() {
       'max_filesize' => '',
       'max_resolution' => '',
       'min_resolution' => '',
-      'random_default' => 0,
-      'random_default_path' => '',
+      'random_default' => 1,
+      'random_default_path' => 'random/event',
       'title_field' => 0,
       'title_field_default' => '',
       'title_field_hide' => 0,
@@ -509,14 +509,9 @@ function events_field_default_field_instances() {
       ),
       'listing' => array(
         'label' => 'inline',
-        'module' => 'addressfield',
+        'module' => 'gie_user',
         'settings' => array(
           'field_delimiter' => '',
-          'format_handlers' => array(
-            'address' => 'address',
-            'address-hide-postal-code' => 'address-hide-postal-code',
-            'address-hide-street' => 'address-hide-street',
-          ),
           'linked_field' => array(
             'advanced' => array(
               'class' => '',
@@ -528,9 +523,8 @@ function events_field_default_field_instances() {
             'destination' => '',
             'linked' => 0,
           ),
-          'use_widget_handlers' => 0,
         ),
-        'type' => 'addressfield_default',
+        'type' => 'city_state_country',
         'weight' => 14,
       ),
       'page_header' => array(
@@ -634,7 +628,7 @@ function events_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 17,
+        'weight' => 20,
       ),
       'page_header' => array(
         'label' => 'above',
@@ -696,7 +690,7 @@ function events_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 27,
+        'weight' => 28,
       ),
       'page_header' => array(
         'label' => 'above',
@@ -768,7 +762,7 @@ function events_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 25,
+        'weight' => 27,
       ),
       'page_header' => array(
         'label' => 'above',
@@ -928,7 +922,7 @@ function events_field_default_field_instances() {
         'label' => 'hidden',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 11,
+        'weight' => 16,
       ),
       'page_header' => array(
         'label' => 'above',
@@ -1015,7 +1009,7 @@ function events_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 23,
+        'weight' => 25,
       ),
       'page_header' => array(
         'label' => 'above',
@@ -1125,7 +1119,7 @@ function events_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 15,
+        'weight' => 18,
       ),
       'page_header' => array(
         'label' => 'above',
@@ -1201,7 +1195,7 @@ function events_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 22,
+        'weight' => 24,
       ),
       'page_header' => array(
         'label' => 'above',
@@ -1279,7 +1273,7 @@ function events_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 21,
+        'weight' => 23,
       ),
       'page_header' => array(
         'label' => 'above',
@@ -1389,7 +1383,7 @@ function events_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 14,
+        'weight' => 17,
       ),
       'page_header' => array(
         'label' => 'above',
@@ -1508,7 +1502,7 @@ function events_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 0,
+        'weight' => 12,
       ),
       'page_header' => array(
         'label' => 'above',
@@ -1600,7 +1594,7 @@ function events_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 0,
+        'weight' => 13,
       ),
       'page_header' => array(
         'label' => 'above',
@@ -1700,7 +1694,7 @@ function events_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 0,
+        'weight' => 6,
       ),
       'page_header' => array(
         'label' => 'above',
@@ -1800,7 +1794,7 @@ function events_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 0,
+        'weight' => 5,
       ),
       'page_header' => array(
         'label' => 'above',
@@ -2176,6 +2170,7 @@ function events_field_default_field_instances() {
   t('Related Organization');
   t('Related Program');
   t('Related Sectors');
+  t('Share an Event photo. If you don\'t upload your photo, one will be automatically assigned!');
   t('Speakers and Agenda');
   t('Specify any related programs for this event. ');
   t('The date of the Event. EST');

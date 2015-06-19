@@ -1,0 +1,89 @@
+%lr_providericon_replacement {
+  @extend %button;
+  background-image: none;
+  border: 0;
+  height: auto;
+  padding-left: 1em;
+  width: auto;
+  &:before {
+    @include image-replace(18px,18px);
+    content: "";
+    display: inline-block;
+    margin-right: 10px;
+    position: relative;
+    top: 4px;
+  }
+}
+
+#edit-lr-social-login-links {
+  margin-bottom: 2em;
+  > label {
+    border-bottom: 1px solid #cecfcb;
+    font-size: 32px;
+    font-weight: bold;
+    margin: 0 0 1em 0;
+    padding: 0 0 0.5em 0;
+    text-align: center;
+  }
+  .interface_container {
+    text-align: center;
+    .lr_icons_box {
+      display: inline-block;
+      float: none;
+    }
+  }
+  .lr_providericons {   
+    &.lr_linkedin {
+      @extend %lr_providericon_replacement;
+      background-color: #0077b5;
+      &:hover, &:focus {
+        background-color: darken(#0077b5,20%);
+      }
+      &:before {
+        @include svg-background(linkedin-icon-white);
+      }
+      &:after {
+        content: "Login with LinkedIn";
+      }
+    }
+    &.lr_facebook {
+      @extend %lr_providericon_replacement;
+      background-color: #3a5795;
+      &:hover, &:focus {
+        background-color: darken(#3a5795,20%);
+      }
+      &:before {
+        @include svg-background(facebook-icon-white);
+      }
+      &:after {
+        content: "Login with Facebook";
+      }
+    }
+    &.lr_twitter {
+      @extend %lr_providericon_replacement;
+      background-color: #55acee;
+      &:hover, &:focus {
+        background-color: darken(#55acee,20%);
+      }
+      &:before {
+        @include svg-background(twitter-icon-white);
+      }
+      &:after {
+        content: "Login with Twitter";
+      }
+    }
+    &.lr_google {
+      @extend %lr_providericon_replacement;
+      background-color: #dd4b39;
+      &:hover, &:focus {
+        background-color: darken(#dd4b39,20%);
+      }
+      &:before {
+        @include svg-background(googleplus-icon-white);
+      }
+      &:after {
+        content: "Login with Google";
+      }
+    }
+  }
+}
