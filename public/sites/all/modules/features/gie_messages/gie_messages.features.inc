@@ -68,5 +68,30 @@ function gie_messages_default_message_type() {
     },
     "rdf_mapping" : []
   }');
+  $items['follow_user_notify'] = entity_import('message_type', '{
+    "name" : "follow_user_notify",
+    "description" : "Follow: User Notify",
+    "argument_keys" : [],
+    "argument" : [],
+    "category" : "message_type",
+    "data" : {
+      "token options" : { "clear" : 0 },
+      "purge" : { "override" : 0, "enabled" : 0, "quota" : "", "days" : "" }
+    },
+    "language" : "",
+    "arguments" : null,
+    "message_text" : { "und" : [
+        {
+          "value" : "[message:field-user-ref:name] is now following you.",
+          "format" : "filtered_html"
+        },
+        {
+          "value" : "[message:field-user-ref:name] has started following you. See their profile:\\u0026nbsp;[message:field-user-ref:url]",
+          "format" : "filtered_html"
+        }
+      ]
+    },
+    "rdf_mapping" : []
+  }');
   return $items;
 }

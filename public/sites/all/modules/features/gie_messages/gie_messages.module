@@ -71,5 +71,38 @@ function gie_messages_flag_flag($flag, $content_id, $account, $flagging) {
       message_notify_send_message($message);
 
       break;
+    case 'follow':
+
+      if ($account->uid == $content_id) {
+        // User flagged self, do nothing.
+        break;
+      }
+
+      // Check for previous Follow: User Notify messages
+      $query = db_select('field_data_field_user_ref', 'u');
+      $query->join('message', 'm', 'u.entity_id=m.mid');
+      $query->fields('u', array('entity_id', 'bundle', 'field_user_ref_target_id'));
+      $query->fields('m', array('uid'));
+      $query->condition('u.bundle','follow_user_notify','=');
+      $query->condition('u.field_user_ref_target_id',$account->uid,'=');
+      $query->condition('m.uid',$content_id,'=');
+
+      $result = $query->execute();
+      if ($result->rowCount() > 0) {
+        // Follow: User Notify message has been previously created and sent
+        // To prevent spam, do not create/send more. Break statement now.
+        break;
+      }
+
+      // Set message entity
+      $message = message_create('follow_user_notify', array('uid' => $content_id));
+      $wrapper = entity_metadata_wrapper('message', $message);
+      $wrapper->field_user_ref->set($account);
+      $wrapper->field_flag_ref->set($flagging);
+
+      // Send message
+      message_notify_send_message($message);
+
+      break;
   }
 }
