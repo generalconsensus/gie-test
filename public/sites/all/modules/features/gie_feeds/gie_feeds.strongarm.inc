@@ -31,6 +31,7 @@ function gie_feeds_strongarm() {
     'csv_importer-country_implemented_in-explode' => FALSE,
     'csv_importer-country_created_in-explode' => FALSE,
     'csv_importer-related_organization-explode' => FALSE,
+    'csv_importer-assistance-explode' => FALSE,
   );
   $export['default_feeds_tamper'] = $strongarm;
 
