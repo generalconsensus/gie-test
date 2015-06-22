@@ -95,12 +95,12 @@ function more_like_this_render($subtype, $conf, $panel_args, $context = NULL) {
         $query->filter($filter);
 
         // More like this
-
-        $query->setOption('search_api_mlt', array(
-            'id' => $nids,
+        $mlt = array(
+            'id' => 315,
             'fields' => ['title, body:value, field_term_sector, field_term_region, field_term_topic']
-        ));
+        );
 
+        $query->setOption('search_api_mlt', $mlt);
 
         // Fetch results
         $results = $query->execute();
