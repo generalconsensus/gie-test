@@ -116,6 +116,16 @@ function gie_feeds_feeds_importer_default() {
             'target' => 'field_innovation_news:url',
             'unique' => FALSE,
           ),
+          14 => array(
+            'source' => 'Point of Contact',
+            'target' => 'field_innovation_poc:etid',
+            'unique' => FALSE,
+          ),
+          15 => array(
+            'source' => 'Assistance',
+            'target' => 'field_innovation_assistance',
+            'unique' => FALSE,
+          ),
         ),
         'update_existing' => '0',
         'input_format' => 'filtered_html',
