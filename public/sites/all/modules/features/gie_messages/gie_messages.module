@@ -5,3 +5,71 @@
  */
 
 include_once 'gie_messages.features.inc';
+
+/**
+ * Implements hook_comment_insert().
+ * - Trigger Comment Notify message
+ */
+function gie_messages_comment_insert($comment) {
+  $node = node_load($comment->nid);
+  if ($comment->uid == $node->uid) {
+    // Same comment author as node author
+    return;
+  }
+
+  $message = message_create('comment_notify', array('uid' => $node->uid));
+  $wrapper = entity_metadata_wrapper('message', $message);
+  $wrapper->field_node_ref->set($node);
+  $wrapper->field_comment_ref->set($comment);
+
+  message_notify_send_message($message);
+
+}
+
+/**
+ * Implements hook_flag_flag().
+ * - Trigger Follow: User Notify message
+ * - Trigger Favorite Notify message
+ */
+function gie_messages_flag_flag($flag, $content_id, $account, $flagging) {
+  switch($flag->name) {
+    case 'favorite':
+
+      // Load node entity and check for node author
+      $node = node_load($content_id);
+
+      if ($account->uid == $node->uid) {
+        // Author flagged own content, do nothing. Break statement now.
+        break;
+      }
+
+      // Check for previous Favorite Notify messages
+      $query = db_select('field_data_field_user_ref', 'u');
+      $query->join('field_data_field_node_ref', 'n', 'u.entity_id=n.entity_id');
+      $query->fields('u', array('entity_id', 'bundle', 'field_user_ref_target_id'));
+      $query->fields('n', array('field_node_ref_target_id'));
+      $query->condition('u.bundle','favorite_notify','=');
+      $query->condition('u.field_user_ref_target_id',$account->uid,'=');
+      $query->condition('n.field_node_ref_target_id',$content_id,'=');
+
+      $result = $query->execute();
+      if ($result->rowCount() > 0) {
+        // Favorite Notify message has been previously created and sent
+        // To prevent spam, do not create/send more. Break statement now.
+        break;
+      }
+
+
+      // Set message entity
+      $message = message_create('favorite_notify', array('uid' => $node->uid));
+      $wrapper = entity_metadata_wrapper('message', $message);
+      $wrapper->field_node_ref->set($node);
+      $wrapper->field_flag_ref->set($flagging);
+      $wrapper->field_user_ref->set($account);
+
+      // Send message
+      message_notify_send_message($message);
+
+      break;
+  }
+}
