@@ -9,9 +9,11 @@ include_once 'gie_general.features.inc';
 /**
  * Implements hook_menu_alter().
  * - Alter title of 'User Account' link.
+ * - Alter Dashboard so only logged in users see link. 
  */
 function gie_general_menu_alter(&$items) {
   $items['user']['title callback'] = '_gie_general_welcome';
+  $items['dashboard']['access callback'] = 'user_is_logged_in';
 }
 
 /**
@@ -34,3 +36,4 @@ function _gie_general_welcome() {
     return t('User account');
   }
 }
+
