@@ -77,37 +77,44 @@ function more_like_this_render($subtype, $conf, $panel_args, $context = NULL) {
     // DB results
     $db_results = $db_query->execute();
 
-    // Select an index
-    $index = search_api_index_load('default_node_index');
-    $query = new SearchApiQuery($index);
+    // If user has nodes look for similar ones
+    if (isset($db_results['node'])) {
+        $nids = array_keys($db_results['node']);
 
-    // Build a filter
-    $filter = $query->createFilter('AND');
-    $filter->condition('type', $conf['type'], '=');
-    $filter->condition('status', 1);
-    $query->filter($filter);
+        // Select an index
+        $index = search_api_index_load('default_node_index');
+        $query = new SearchApiQuery($index);
 
-    // Conditions
+        // Build a filter
+        $filter = $query->createFilter('AND');
+        $filter->condition('type', $conf['type'], '=');
+        $filter->condition('status', 1);
+        foreach ($nids as $nid) {
+            $filter->condition('nid', $nid, '<>');
+        }
+        $query->filter($filter);
 
-    // More like this
-    $query->setOption('search_api_mlt', array(
-        'id' => '5',
-        'fields' => 'title'
-    ));
+        // More like this
+        /*
+        $query->setOption('search_api_mlt', array(
+            'id' => $nids,
+            'fields' => 'title'
+        ));
+        */
 
-    // Fetch results
-    $results = $query->execute();
-
-
-    dpm($results);
-
-
+        // Fetch results
+        $results = $query->execute();
+        dpm($results);
 
 
 
+    }
 
 
 
+
+
+    // Render results
     $output = '';
 
     // we have results
