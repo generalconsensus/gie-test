@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the GIE Messages feature.
+ */
+
+include_once 'gie_messages.features.inc';
