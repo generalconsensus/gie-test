@@ -63,28 +63,43 @@ function more_like_this_edit_form_submit($form, &$form_state) {
  * Run-time rendering of the body of the block (content type).
  */
 function more_like_this_render($subtype, $conf, $panel_args, $context = NULL) {
-    // global variables
+    // Global variables
     global $user;
     $uid = $user->uid;
 
-    // db query
+    // DB query
     $db_query = new EntityFieldQuery();
     $db_query->entityCondition('entity_type', 'node')
         ->entityCondition('bundle', $conf['type'])
         ->propertyCondition('uid', $uid)
         ->propertyCondition('status', 1);
 
-    // db results
-    $db_result = $db_query->execute();
+    // DB results
+    $db_results = $db_query->execute();
 
-
+    // Select an index
     $index = search_api_index_load('default_node_index');
     $query = new SearchApiQuery($index);
-    
-    $result = $query->execute();
+
+    // Build a filter
+    $filter = $query->createFilter('AND');
+    $filter->condition('type', $conf['type'], '=');
+    $filter->condition('status', 1);
+    $query->filter($filter);
+
+    // Conditions
+
+    // More like this
+    $query->setOption('search_api_mlt', array(
+        'id' => '5',
+        'fields' => 'title'
+    ));
+
+    // Fetch results
+    $results = $query->execute();
 
 
-    dpm($result);
+    dpm($results);
 
 
 
