@@ -2,19 +2,21 @@
   &lt;h2 class=&quot;pane__title&quot;&gt;Point of Contact&lt;/h2&gt;  
   &lt;div class=&quot;pane__content&quot;&gt;
     &lt;article role=&quot;article&quot; class=&quot;layout-slat profile-thumb&quot;&gt;
-      &lt;div class=&quot;layout-slat__media&quot;&gt; 
-        &lt;div class=&quot;profile-thumb__image--rounded&quot;&gt;
-          &lt;a href=&quot;#&quot;&gt;&lt;img alt=&quot;&quot; src=&quot;../../images-patternlab/sherlock-78-78.jpg&quot;&gt;&lt;/a&gt;
+      {{# listItems.one }}
+        &lt;div class=&quot;layout-slat__media&quot;&gt; 
+          &lt;div class=&quot;profile-thumb__image--rounded&quot;&gt;
+            &lt;a href=&quot;#&quot;&gt;&lt;img alt=&quot;&quot; src=&quot;{{ user.img-78-78.src }}&quot;&gt;&lt;/a&gt;
+          &lt;/div&gt;
+          &lt;div class=&quot;profile-thumb__name&quot;&gt;
+            &lt;a href=&quot;#&quot;&gt;{{ user.name }}&lt;/a&gt;  
+          &lt;/div&gt;
         &lt;/div&gt;
-        &lt;div class=&quot;profile-thumb__name&quot;&gt;
-          &lt;a href=&quot;#&quot;&gt;Sherlock Holmes&lt;/a&gt;  
+        &lt;div class=&quot;layout-slat__content&quot;&gt;
+          &lt;div class=&quot;profile-thumb__summary&quot;&gt;
+            {{ user.motto }}
+          &lt;/div&gt;
         &lt;/div&gt;
-      &lt;/div&gt;
-      &lt;div class=&quot;layout-slat__content&quot;&gt;
-        &lt;div class=&quot;profile-thumb__summary&quot;&gt;
-          How often have I said to you that when you have eliminated the impossible, whatever remains, however improbable, must be the truth?
-        &lt;/div&gt;
-      &lt;/div&gt;
+      {{/ listItems.one }}
     &lt;/article&gt;
   &lt;/div&gt;
 &lt;/div&gt; 

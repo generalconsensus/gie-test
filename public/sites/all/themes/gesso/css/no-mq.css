@@ -4642,6 +4642,9 @@ div[class*="pane--facetapi-"] .pane__content ul li a {
 
 /* line 38, ../sass/partials/components/_profile-thumb.scss */
 .profile-thumb__summary {
+  -webkit-hyphens: none;
+  -moz-hyphens: none;
+  hyphens: none;
   font-size: 0.875em;
   line-height: 1.5;
 }
@@ -6009,6 +6012,7 @@ aside .view__all, .region-footer .view__all {
 /* line 8, ../sass/partials/components/view/_view--recent-conversations.scss */
 .view--recent-conversations .view__meta {
   font-size: 0.75em;
+  line-height: 1.3;
 }
 
 /* line 2, ../sass/partials/components/view/_view--recently-posted.scss */
