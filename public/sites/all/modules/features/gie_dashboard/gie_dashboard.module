@@ -5,3 +5,39 @@
  */
 
 include_once 'gie_dashboard.features.inc';
+
+
+/*
+ * Implements hook_ctools_plugin_directory()
+ */
+function gie_dashboard_ctools_plugin_directory($owner, $plugin_type) {
+    if ($owner == 'ctools' && $plugin_type == 'content_types') {
+        return 'plugins/' . $plugin_type;
+    }
+}
+
+/**
+ * Implements hook_search_api_solr_query_alter().
+ * 
+ * Adds multiple IDs for MLT call
+ */
+function gie_dashboard_search_api_solr_query_alter(array &$call_args, SearchApiQueryInterface $query) {
+    $id = search_api_solr_site_hash();
+    $nids =  &drupal_static('_mlt_nids');
+    $node_index = 'id:"'. $id . '-default_node_index-' . $nids[0] . '"';
+
+    // Make sure it's the query we want, could also check reference of query
+    if ($node_index == $call_args['query']) {
+
+        $index = 1;
+        $count = count($nids);
+
+        $call_args['query'] = 'id:(';
+        foreach ($nids as $nid) {
+            $call_args['query'] .= '"'. $id . '-default_node_index-' . $nid . '"';
+            if($index < $count) $call_args['query'] .= ' OR ';
+            $index ++;
+        }
+        $call_args['query'] .= ')';
+    }
+}
