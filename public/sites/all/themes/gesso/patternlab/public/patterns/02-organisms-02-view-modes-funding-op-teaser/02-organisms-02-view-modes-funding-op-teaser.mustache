@@ -1,12 +1,12 @@
 &lt;article class=&quot;card card--icons&quot;&gt;
-  &lt;div class=&quot;card__number&quot;&gt;30,000,000&lt;/div&gt;
+  &lt;div class=&quot;card__number&quot;&gt;{{ funding }}&lt;/div&gt;
   &lt;div class=&quot;card__image&quot;&gt;
     &lt;a href=&quot;{{ url }}&quot;&gt;{{&gt; atoms-card-image }}&lt;/a&gt;
   &lt;/div&gt;
   &lt;div class=&quot;card__content&quot;&gt;
     &lt;h3 class=&quot;card__primary-title&quot;&gt;&lt;a href=&quot;{{ url }}&quot;&gt;{{ title }}&lt;/a&gt;&lt;/h3&gt;
     &lt;div class=&quot;card__list&quot;&gt;
-      &lt;div class=&quot;card__list-label&quot;&gt;Due by:&lt;/div&gt; 3/21/2015
+      &lt;div class=&quot;card__list-label&quot;&gt;Due by:&lt;/div&gt; {{ month.digit }}/{{ day.long }}/{{ year.long }}
     &lt;/div&gt; 
     &lt;div class=&quot;card__list&quot;&gt;
       &lt;div class=&quot;card__list-label&quot;&gt;Eligibility:&lt;/div&gt; &lt;span class=&quot;has-icon-member&quot; title=&quot;Member&quot;&gt;Member&lt;/span&gt; &lt;span class=&quot;has-icon-community&quot; title=&quot;Organization&quot;&gt;Organization&lt;/span&gt;
@@ -21,10 +21,10 @@
     &lt;/div&gt;
     &lt;div class=&quot;card__counts&quot;&gt;
       &lt;div class=&quot;view&quot;&gt;
-        &lt;div class=&quot;has-icon--comment&quot; title=&quot;Comments&quot;&gt;12&lt;/div&gt;
+        &lt;div class=&quot;has-icon--comment&quot; title=&quot;Comments&quot;&gt;{{ comments }}&lt;/div&gt;
       &lt;/div&gt;
       &lt;div class=&quot;view&quot;&gt;
-        &lt;div class=&quot;has-icon--favorite&quot; title=&quot;Favorites&quot;&gt;6&lt;/div&gt;
+        &lt;div class=&quot;has-icon--favorite&quot; title=&quot;Favorites&quot;&gt;{{ favorites }}&lt;/div&gt;
       &lt;/div&gt;
     &lt;/div&gt;
   &lt;/div&gt;
