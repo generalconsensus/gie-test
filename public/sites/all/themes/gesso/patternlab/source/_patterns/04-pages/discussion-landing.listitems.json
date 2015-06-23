@@ -2,109 +2,46 @@
   "1": {
     "url": "http://forumone.com/",
     "title": "Discussion Title",
-    "summary": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas a lectus erat. Cras leo urna, fermentum ac lacus ac, pharetra gravida sapien.</p>",
-    "author": "Buffy Summers",
-    "img": {
-      "icon": {
-        "src": "../../images-patternlab/buffy-58-58.jpg",
-        "alt": "Icon"
-      }
-    }
+    "summary": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas a lectus erat. Cras leo urna, fermentum ac lacus ac, pharetra gravida sapien.</p>"
   },
   "2": {
     "url": "http://forumone.com/",
     "title": "A Longer Discussion Title",
-    "summary": "<p>Pellentesque dapibus, est sed sollicitudin tincidunt, orci leo ornare dui, tempor euismod dolor elit quis quam. Etiam eu ex ut felis suscipit scelerisque.</p>",
-    "author": "Sherlock Holmes",
-    "img": {
-      "icon": {
-        "src": "../../images-patternlab/sherlock-58-58.jpg",
-        "alt": "Icon"
-      }
-    }
+    "summary": "<p>Pellentesque dapibus, est sed sollicitudin tincidunt, orci leo ornare dui, tempor euismod dolor elit quis quam. Etiam eu ex ut felis suscipit scelerisque.</p>"
   },
   "3": {
     "url": "http://forumone.com/",
     "title": "A Really, Really Much Much Longer Discussion Title",
-    "summary": "<p>Fusce euismod ultricies mauris eget pellentesque. Curabitur mauris eros, pretium condimentum diam id, vulputate condimentum diam. Quisque viverra massa sed lorem ultrices gravida vel quis velit.</p>",
-    "author": "John Watson",
-    "img": {
-      "icon": {
-        "src": "../../images-patternlab/watson-58-58.jpg",
-        "alt": "Icon"
-      }
-    }
+    "summary": "<p>Fusce euismod ultricies mauris eget pellentesque. Curabitur mauris eros, pretium condimentum diam id, vulputate condimentum diam. Quisque viverra massa sed lorem ultrices gravida vel quis velit.</p>"
   },
   "4": {
     "url": "http://forumone.com/",
     "title": "A Really, Really Much Much Longer Discussion Title",
-    "summary": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas a lectus erat. Cras leo urna, fermentum ac lacus ac, pharetra gravida sapien.</p>",
-    "author": "Willow Rosenberg",
-    "img": {
-      "icon": {
-        "src": "../../images-patternlab/willow-58-58.jpg",
-        "alt": "Icon"
-      }
-    }
+    "summary": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas a lectus erat. Cras leo urna, fermentum ac lacus ac, pharetra gravida sapien.</p>"
   },
   "5": {
     "url": "http://forumone.com/",
     "title": "A Longer Discussion Title",
-    "summary": "<p>Fusce euismod ultricies mauris eget pellentesque. Curabitur mauris eros, pretium condimentum diam id, vulputate condimentum diam. Quisque viverra massa sed lorem ultrices gravida vel quis velit.</p>",
-    "author": "Will Graham",
-    "img": {
-      "icon": {
-        "src": "../../images-patternlab/will-58-58.jpg",
-        "alt": "Icon"
-      }
-    }
+    "summary": "<p>Fusce euismod ultricies mauris eget pellentesque. Curabitur mauris eros, pretium condimentum diam id, vulputate condimentum diam. Quisque viverra massa sed lorem ultrices gravida vel quis velit.</p>"
   },
   "6": {
     "url": "http://forumone.com/",
     "title": "Discussion Title",
-    "summary": "<p>Pellentesque dapibus, est sed sollicitudin tincidunt, orci leo ornare dui, tempor euismod dolor elit quis quam. Etiam eu ex ut felis suscipit scelerisque.</p>",
-    "author": "Buffy Summers",
-    "img": {
-      "icon": {
-        "src": "../../images-patternlab/buffy-58-58.jpg",
-        "alt": "Icon"
-      }
-    }
+    "summary": "<p>Pellentesque dapibus, est sed sollicitudin tincidunt, orci leo ornare dui, tempor euismod dolor elit quis quam. Etiam eu ex ut felis suscipit scelerisque.</p>"
   },
   "7": {
     "url": "http://forumone.com/",
     "title": "A Longer Discussion Title",
-    "summary": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas a lectus erat. Cras leo urna, fermentum ac lacus ac, pharetra gravida sapien.</p>",
-    "author": "Dr. Hannibal Lecter",
-    "img": {
-      "icon": {
-        "src": "../../images-patternlab/hannibal-58-58.jpg",
-        "alt": "Icon"
-      }
-    }
+    "summary": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas a lectus erat. Cras leo urna, fermentum ac lacus ac, pharetra gravida sapien.</p>"
   },
   "8": {
     "url": "http://forumone.com/",
     "title": "Discussion Title",
-    "summary": "<p>Pellentesque dapibus, est sed sollicitudin tincidunt, orci leo ornare dui, tempor euismod dolor elit quis quam. Etiam eu ex ut felis suscipit scelerisque.</p>",
-    "author": "Sherlock Holmes",
-    "img": {
-      "icon": {
-        "src": "../../images-patternlab/sherlock-58-58.jpg",
-        "alt": "Icon"
-      }
-    }
+    "summary": "<p>Pellentesque dapibus, est sed sollicitudin tincidunt, orci leo ornare dui, tempor euismod dolor elit quis quam. Etiam eu ex ut felis suscipit scelerisque.</p>"
   },
   "9": {
     "url": "http://forumone.com/",
     "title": "A Really, Really Much Much Longer Discussion Title",
-    "summary": "<p>Fusce euismod ultricies mauris eget pellentesque. Curabitur mauris eros, pretium condimentum diam id, vulputate condimentum diam. Quisque viverra massa sed lorem ultrices gravida vel quis velit.</p>",
-    "author": "John Watson",
-    "img": {
-      "icon": {
-        "src": "../../images-patternlab/watson-58-58.jpg",
-        "alt": "Icon"
-      }
-    }
+    "summary": "<p>Fusce euismod ultricies mauris eget pellentesque. Curabitur mauris eros, pretium condimentum diam id, vulputate condimentum diam. Quisque viverra massa sed lorem ultrices gravida vel quis velit.</p>"
   }
 }
