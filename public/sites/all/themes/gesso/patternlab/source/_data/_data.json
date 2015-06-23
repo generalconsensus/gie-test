@@ -38,13 +38,13 @@
     }
   },
   "year": {
-    "long": "2013",
-    "short": "13"
+    "long": "2015",
+    "short": "15"
   },
   "month": {
     "long": "February",
     "short": "Feb",
-    "digit": "02"
+    "digit": "2"
   },
   "weekday": {
     "long": "Monday",

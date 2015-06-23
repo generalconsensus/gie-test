@@ -5,7 +5,7 @@
     <div class="card__author">
       <div class="card__author-image"><img src="../../images-patternlab/buffy-35-35.jpg"></div>
       <div class="card__author-name">Buffy Summers</div>
-      <div class="card__author-date">03/15/2015</div>    
+      <div class="card__author-date">{{ month.digit }}/{{ day.long }}/{{ year.long }}</div>    
     </div>
     <div class="card__list">
       <span class="card__list-label">Sectors:</span> 
@@ -13,10 +13,10 @@
     </div>
     <div class="card__counts">
       <div class="view">
-        <div class="has-icon--comment" title="Comments">12</div>
+        <div class="has-icon--comment" title="Comments">{{ comments }}</div>
       </div>
       <div class="view">
-        <div class="has-icon--favorite" title="Favorites">6</div>
+        <div class="has-icon--favorite" title="Favorites">{{ favorites }}</div>
       </div>
     </div>
   </div>
