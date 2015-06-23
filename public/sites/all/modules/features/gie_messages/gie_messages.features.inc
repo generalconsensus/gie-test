@@ -93,5 +93,30 @@ function gie_messages_default_message_type() {
     },
     "rdf_mapping" : []
   }');
+  $items['node_update_notify'] = entity_import('message_type', '{
+    "name" : "node_update_notify",
+    "description" : "Node update notify",
+    "argument_keys" : [],
+    "argument" : [],
+    "category" : "message_type",
+    "data" : {
+      "token options" : { "clear" : 0 },
+      "purge" : { "override" : 0, "enabled" : 0, "quota" : "", "days" : "" }
+    },
+    "language" : "",
+    "arguments" : null,
+    "message_text" : { "und" : [
+        {
+          "value" : "[message:field-node-ref:title] has been updated",
+          "format" : "filtered_html"
+        },
+        {
+          "value" : "[message:field-node-ref:title] has been updated:\\u0026nbsp;[message:field-node-ref:url]",
+          "format" : "filtered_html"
+        }
+      ]
+    },
+    "rdf_mapping" : []
+  }');
   return $items;
 }
