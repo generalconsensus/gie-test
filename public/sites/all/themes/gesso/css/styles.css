@@ -1,4 +1,4 @@
-/* line 65, ../../../../../../../../../../../Ruby21-x64/lib/ruby/gems/2.1.0/gems/singularitygs-1.1.2/stylesheets/singularitygs/helpers/_clearfix.scss */
+/* line 65, ../../../../../../../../Ruby22-x64/lib/ruby/gems/2.2.0/gems/singularitygs-1.1.2/stylesheets/singularitygs/helpers/_clearfix.scss */
 .clearfix:after, .layout-grid__row:after, .card__list--split:after, .field--funding-deadline:after, .pane--homepage-views-personas-pane .pane__content .view--homepage-views:after, .pane--landing-intro:after, .quicktabs-tabs.quicktabs-style-nostyle:after, .region-footer:after, .view__header:after, .view--homepage-cardflip:after {
   content: "";
   display: table;
@@ -1843,7 +1843,7 @@ input.throbbing {
 }
 /* line 62, ../sass/partials/components/_card.scss */
 .card--button .card__content {
-  padding: 1em 1em 100px 1em;
+  padding: 1.25em 1em 80px 1em;
 }
 
 /* line 67, ../sass/partials/components/_card.scss */
@@ -1972,8 +1972,12 @@ input.throbbing {
   text-align: center;
   width: 100%;
 }
+/* line 160, ../sass/partials/components/_card.scss */
+.card__button a {
+  margin-bottom: 0.5em;
+}
 
-/* line 167, ../sass/partials/components/_card.scss */
+/* line 168, ../sass/partials/components/_card.scss */
 .card__counts > .view .has-icon--comment:before, .card__counts > .view .has-icon--resource:before, .card__counts > .view .has-icon--camera:before, .card__counts > .view .has-icon--favorite:before, .card__counts > .view .has-icon--funding:before, .card__counts > .view .has-icon--member:before, .card__counts > .view .has-icon--organization:before, .card__counts > .view .has-icon--evidence:before, .card__counts > .view .has-icon--innovation:before, .card__counts > .view .has-icon--assistance:before, .view--at-a-glance .has-icon--amount:before, .view--at-a-glance .has-icon--comment:before, .view--at-a-glance .has-icon--camera:before, .view--at-a-glance .has-icon--favorite:before, .view--at-a-glance .has-icon--member:before, .view--at-a-glance .has-icon--organization:before, .view--at-a-glance .has-icon--evidence:before, .view--at-a-glance .has-icon--innovation:before {
   content: "";
   display: block;
@@ -1983,7 +1987,7 @@ input.throbbing {
   left: 50%;
 }
 
-/* line 176, ../sass/partials/components/_card.scss */
+/* line 177, ../sass/partials/components/_card.scss */
 .card__counts {
   bottom: 8px;
   left: 0;
@@ -1994,7 +1998,7 @@ input.throbbing {
   text-align: center;
   width: 100%;
 }
-/* line 185, ../sass/partials/components/_card.scss */
+/* line 186, ../sass/partials/components/_card.scss */
 .card__counts > .view {
   display: inline-block;
   font-size: 0.75em;
@@ -2004,7 +2008,7 @@ input.throbbing {
   padding: 0 4%;
   text-align: center;
 }
-/* line 194, ../sass/partials/components/_card.scss */
+/* line 195, ../sass/partials/components/_card.scss */
 .card__counts > .view .has-icon--comment:before {
   height: 17px;
   overflow: hidden;
@@ -2021,7 +2025,7 @@ input.throbbing {
   height: 150%;
   width: 0;
 }
-/* line 202, ../sass/partials/components/_card.scss */
+/* line 203, ../sass/partials/components/_card.scss */
 .card__counts > .view .has-icon--resource:before {
   height: 17px;
   overflow: hidden;
@@ -2038,7 +2042,7 @@ input.throbbing {
   height: 150%;
   width: 0;
 }
-/* line 210, ../sass/partials/components/_card.scss */
+/* line 211, ../sass/partials/components/_card.scss */
 .card__counts > .view .has-icon--camera:before {
   height: 17px;
   overflow: hidden;
@@ -2055,7 +2059,7 @@ input.throbbing {
   height: 150%;
   width: 0;
 }
-/* line 218, ../sass/partials/components/_card.scss */
+/* line 219, ../sass/partials/components/_card.scss */
 .card__counts > .view .has-icon--favorite:before {
   height: 17px;
   overflow: hidden;
@@ -2072,7 +2076,7 @@ input.throbbing {
   height: 150%;
   width: 0;
 }
-/* line 226, ../sass/partials/components/_card.scss */
+/* line 227, ../sass/partials/components/_card.scss */
 .card__counts > .view .has-icon--funding:before {
   height: 20px;
   overflow: hidden;
@@ -2089,7 +2093,7 @@ input.throbbing {
   height: 150%;
   width: 0;
 }
-/* line 234, ../sass/partials/components/_card.scss */
+/* line 235, ../sass/partials/components/_card.scss */
 .card__counts > .view .has-icon--member:before {
   height: 17px;
   overflow: hidden;
@@ -2106,7 +2110,7 @@ input.throbbing {
   height: 150%;
   width: 0;
 }
-/* line 242, ../sass/partials/components/_card.scss */
+/* line 243, ../sass/partials/components/_card.scss */
 .card__counts > .view .has-icon--organization:before {
   height: 17px;
   overflow: hidden;
@@ -2123,7 +2127,7 @@ input.throbbing {
   height: 150%;
   width: 0;
 }
-/* line 250, ../sass/partials/components/_card.scss */
+/* line 251, ../sass/partials/components/_card.scss */
 .card__counts > .view .has-icon--evidence:before {
   height: 17px;
   overflow: hidden;
@@ -2140,7 +2144,7 @@ input.throbbing {
   height: 150%;
   width: 0;
 }
-/* line 258, ../sass/partials/components/_card.scss */
+/* line 259, ../sass/partials/components/_card.scss */
 .card__counts > .view .has-icon--innovation:before {
   height: 20px;
   overflow: hidden;
@@ -2157,7 +2161,7 @@ input.throbbing {
   height: 150%;
   width: 0;
 }
-/* line 266, ../sass/partials/components/_card.scss */
+/* line 267, ../sass/partials/components/_card.scss */
 .card__counts > .view .has-icon--assistance:before {
   height: 17px;
   overflow: hidden;
@@ -2175,31 +2179,31 @@ input.throbbing {
   width: 0;
 }
 
-/* line 276, ../sass/partials/components/_card.scss */
+/* line 277, ../sass/partials/components/_card.scss */
 .card--button {
   text-align: center;
 }
 
-/* line 280, ../sass/partials/components/_card.scss */
+/* line 281, ../sass/partials/components/_card.scss */
 .card--center {
   text-align: center;
 }
 
-/* line 286, ../sass/partials/components/_card.scss */
+/* line 287, ../sass/partials/components/_card.scss */
 .card--background {
   background-image: url(../images/highlights_background.png);
   background-repeat: no-repeat;
   background-position: 100%;
   position: relative;
 }
-/* line 291, ../sass/partials/components/_card.scss */
+/* line 292, ../sass/partials/components/_card.scss */
 .card--background .card__author {
   bottom: 0;
   left: 0;
   position: absolute;
   width: 100%;
 }
-/* line 297, ../sass/partials/components/_card.scss */
+/* line 298, ../sass/partials/components/_card.scss */
 .card--background .card__author-inner {
   border-top: 1px solid #f0f0f0;
   margin: 0 16px;

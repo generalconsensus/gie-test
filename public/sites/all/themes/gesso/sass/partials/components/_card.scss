@@ -60,7 +60,7 @@
     padding-bottom: 60px; // extra bottom space for icons
   }
   .card--button & {
-    padding: 1em 1em 100px 1em; // extra bottom space for button
+    padding: 1.25em 1em 80px 1em; // extra bottom space for button
   }
 }
 
@@ -161,6 +161,7 @@
     @extend %button;
     @extend %button--highlight;
     @extend %button--large;
+    margin-bottom: 0.5em;
   }
 }
 
