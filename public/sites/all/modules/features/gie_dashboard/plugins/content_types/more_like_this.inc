@@ -81,6 +81,9 @@ function more_like_this_render($subtype, $conf, $panel_args, $context = NULL) {
     if (isset($db_results['node'])) {
         $nids = array_keys($db_results['node']);
 
+        // Create static list of node id's
+        $my_nids = _mlt_nids($nids);
+
         // Select an index
         $index = search_api_index_load('default_node_index');
         $query = new SearchApiQuery($index);
@@ -94,32 +97,27 @@ function more_like_this_render($subtype, $conf, $panel_args, $context = NULL) {
         }
         $query->filter($filter);
 
+        // Limit results
+        $query->range(null,8);
+
         // More like this
         $mlt = array(
-            'id' => 315,
-            'fields' => ['title, body:value, field_term_sector, field_term_region, field_term_topic']
+            'id' => $nids[0],
+            'fields' => array('title', 'body:value', 'field_term_sector', 'field_term_region', 'field_term_topic')
         );
 
         $query->setOption('search_api_mlt', $mlt);
 
         // Fetch results
         $results = $query->execute();
-        dpm($results);
-
-
-
     }
-
-
-
-
 
     // Render results
     $output = '';
 
     // we have results
-    if (isset($result['node'])) {
-        $nids = array_keys($result['node']);
+    if (isset($results['results'])) {
+        $nids = array_keys($results['results']);
         $nodes = node_load_multiple($nids);
 
         $index = 0;
@@ -144,4 +142,12 @@ function more_like_this_render($subtype, $conf, $panel_args, $context = NULL) {
     // Create block content.
     $block->content = $output;
     return $block;
+}
+
+function _mlt_nids($nids) {
+    $var = &drupal_static(__FUNCTION__);
+    if(!isset($var)) {
+        $var = $nids;
+    }
+    return $var;
 }

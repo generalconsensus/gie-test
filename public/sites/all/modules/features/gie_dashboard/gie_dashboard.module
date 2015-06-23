@@ -22,10 +22,22 @@ function gie_dashboard_ctools_plugin_directory($owner, $plugin_type) {
  * Adds multiple IDs for MLT call
  */
 function gie_dashboard_search_api_solr_query_alter(array &$call_args, SearchApiQueryInterface $query) {
-  $id = search_api_solr_site_hash();
-  
-  // Make sure it's the query we want, could also check reference of query
-  if ("id:\"{$id}-default_node_index-315\"" == $call_args['query']) {
-    $call_args['query'] = "id:(\"{$id}-default_node_index-315\" OR \"{$id}-default_node_index-484\")";
-  }
+    $id = search_api_solr_site_hash();
+    $nids =  &drupal_static('_mlt_nids');
+    $node_index = 'id:"'. $id . '-default_node_index-' . $nids[0] . '"';
+
+    // Make sure it's the query we want, could also check reference of query
+    if ($node_index == $call_args['query']) {
+
+        $index = 1;
+        $count = count($nids);
+
+        $call_args['query'] = 'id:(';
+        foreach ($nids as $nid) {
+            $call_args['query'] .= '"'. $id . '-default_node_index-' . $nid . '"';
+            if($index < $count) $call_args['query'] .= ' OR ';
+            $index ++;
+        }
+        $call_args['query'] .= ')';
+    }
 }
