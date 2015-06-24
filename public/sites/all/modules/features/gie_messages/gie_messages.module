@@ -17,13 +17,20 @@ function gie_messages_comment_insert($comment) {
     return;
   }
 
+  // Get User Notifications frequency field
+  $notifier_name = _gie_messages_get_notifier_name($node->uid);
+  if ($notifier_name == 'do_not_send') {
+    // user set to not receive emails
+    return;
+  }
+
   $message = message_create('comment_notify', array('uid' => $node->uid));
   $wrapper = entity_metadata_wrapper('message', $message);
   $wrapper->field_node_ref->set($node);
   $wrapper->field_comment_ref->set($comment);
 
-  message_notify_send_message($message);
-
+  // Send message using Message Notify
+  message_notify_send_message($message, array(), $notifier_name);
 }
 
 /**
@@ -43,6 +50,13 @@ function gie_messages_flag_flag($flag, $content_id, $account, $flagging) {
         break;
       }
 
+      // Get notifier name based on node author
+      $notifier_name = _gie_messages_get_notifier_name($node->uid);
+      if ($notifier_name == 'do_not_send') {
+        // user set to not receive emails, break statement
+        break;
+      }
+
       // Check for previous Favorite Notify messages
       $query = db_select('field_data_field_user_ref', 'u');
       $query->join('field_data_field_node_ref', 'n', 'u.entity_id=n.entity_id');
@@ -59,7 +73,6 @@ function gie_messages_flag_flag($flag, $content_id, $account, $flagging) {
         break;
       }
 
-
       // Set message entity
       $message = message_create('favorite_notify', array('uid' => $node->uid));
       $wrapper = entity_metadata_wrapper('message', $message);
@@ -67,14 +80,21 @@ function gie_messages_flag_flag($flag, $content_id, $account, $flagging) {
       $wrapper->field_flag_ref->set($flagging);
       $wrapper->field_user_ref->set($account);
 
-      // Send message
-      message_notify_send_message($message);
+      // Send message using Message Notify
+      message_notify_send_message($message, array(), $notifier_name);
 
       break;
     case 'follow':
 
       if ($account->uid == $content_id) {
         // User flagged self, do nothing.
+        break;
+      }
+
+      // Get notifier name based on user (content id)
+      $notifier_name = _gie_messages_get_notifier_name($content_id);
+      if ($notifier_name == 'do_not_send') {
+        // user set to not receive emails, break statement
         break;
       }
 
@@ -100,8 +120,8 @@ function gie_messages_flag_flag($flag, $content_id, $account, $flagging) {
       $wrapper->field_user_ref->set($account);
       $wrapper->field_flag_ref->set($flagging);
 
-      // Send message
-      message_notify_send_message($message);
+      // Send message using Message Notify
+      message_notify_send_message($message, array(), $notifier_name);
 
       break;
   }
@@ -128,6 +148,13 @@ function gie_messages_node_update($node) {
       continue;
     }
 
+    // Get notifier name based on user
+    $notifier_name = _gie_messages_get_notifier_name($uid);
+    if ($notifier_name == 'do_not_send') {
+      // user set to not receive emails, skip to next user
+      continue;
+    }
+
     // Get specific node update notifications from past 24 hours to user
     $q = db_select('message', 'm');
     $q->join('field_data_field_node_ref','n','m.mid=n.entity_id');
@@ -150,7 +177,37 @@ function gie_messages_node_update($node) {
     $wrapper = entity_metadata_wrapper('message', $message);
     $wrapper->field_node_ref->set($node);
 
-    // Send message
-    message_notify_send_message($message);
+    // Send message using Message Notify
+    message_notify_send_message($message, array(), $notifier_name);
   }
+}
+
+/**
+ * Helper function to get notifier name
+ * @param $uid
+ *   User ID
+ * @return string
+ *   Notifier Name
+ */
+function _gie_messages_get_notifier_name($uid) {
+  // Get User Notifications frequency field
+  $user = entity_metadata_wrapper('user', $uid);
+  $notification = $user->field_user_notifications->value();
+
+  // Get notifier based on email message frequency of user
+  switch($notification) {
+    case 'daily':
+      $notifier_name = 'digest_day';
+      break;
+    case 'weekly':
+      $notifier_name = 'digest_week';
+      break;
+    case 'no_email':
+      $notifier_name = 'do_not_send';
+      break;
+    default:
+      $notifier_name = 'email'; //send immediately
+  }
+
+  return $notifier_name;
 }
