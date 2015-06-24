@@ -10,6 +10,7 @@ dependencies[] = entityreference
 dependencies[] = features
 dependencies[] = list
 dependencies[] = message
+dependencies[] = message_digest
 dependencies[] = message_notify
 dependencies[] = strongarm
 dependencies[] = text
