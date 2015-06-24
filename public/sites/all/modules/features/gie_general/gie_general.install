@@ -257,3 +257,13 @@ function gie_general_update_7024() {
   );
   module_enable($modules, TRUE);
 }
+
+/**
+ * Enable GIE Dashboard feature.
+ */
+function gie_general_update_7025() {
+  $modules = array(
+    'gie_needs'
+  );
+  module_enable($modules, TRUE);
+}
