@@ -1,13 +1,13 @@
 @media (min-width: 43.75em) {
-  /* line 13, ../../sass/partials/layout/panels/_landing.scss */
+  /* line 12, ../../sass/partials/layout/panels/_landing.scss */
   .l-panels-landing.main.sidebar .l-sidebar {
     width: 20.58824%;
     float: left;
     margin-right: -100%;
-    margin-left: 0%;
+    margin-left: 0;
     clear: none;
   }
-  /* line 16, ../../sass/partials/layout/panels/_landing.scss */
+  /* line 15, ../../sass/partials/layout/panels/_landing.scss */
   .l-panels-landing.main.sidebar .l-main {
     width: 73.52941%;
     float: right;
@@ -17,6 +17,10 @@
   }
 }
 
+/* line 22, ../../sass/partials/layout/panels/_landing.scss */
+.l-panels-landing {
+  *zoom: 1;
+}
 /* line 9, ../../sass/partials/global/helpers/_clearfix.scss */
 .l-panels-landing:after {
   display: table;
@@ -26,15 +30,18 @@
 .l-panels-landing:after {
   clear: both;
 }
-/* line 29, ../../sass/partials/layout/panels/_landing.scss */
+/* line 24, ../../sass/partials/layout/panels/_landing.scss */
 .l-panels-landing .l-preface,
 .l-panels-landing .l-title,
 .l-panels-landing .l-main,
 .l-panels-landing .l-sidebar,
 .l-panels-landing .l-wrapper {
-  -webkit-box-sizing: border-box;
+  *zoom: 1;
   -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
   box-sizing: border-box;
+  *box-sizing: content-box;
+  *behavior: url("/sites/all/themes/gesso/polyfills/boxsizing.htc");
 }
 /* line 9, ../../sass/partials/global/helpers/_clearfix.scss */
 .l-panels-landing .l-preface:after,
