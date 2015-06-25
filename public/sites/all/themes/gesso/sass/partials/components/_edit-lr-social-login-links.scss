@@ -3,6 +3,7 @@
   background-image: none;
   border: 0;
   height: auto;
+  margin-bottom: 0 !important;
   padding-left: 1em;
   width: auto;
   &:before {
@@ -17,7 +18,7 @@
 
 #edit-lr-social-login-links {
   margin-bottom: 3em;
-  > label {
+  > label { 
     @include hyphens(none);
     border-bottom: 1px solid #cecfcb;
     font-size: 32px;
@@ -35,7 +36,6 @@
     }
   }
   .lr_providericons {   
-    margin-bottom: 0;
     &.lr_linkedin {
       @extend %lr_providericon_replacement;
       background-color: #0077b5;
