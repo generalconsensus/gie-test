@@ -2555,10 +2555,11 @@ input.throbbing {
   background-image: none;
   border: 0;
   height: auto;
+  margin-bottom: 0 !important;
   padding-left: 1em;
   width: auto;
 }
-/* line 8, ../sass/partials/components/_edit-lr-social-login-links.scss */
+/* line 9, ../sass/partials/components/_edit-lr-social-login-links.scss */
 #edit-lr-social-login-links .lr_providericons.lr_linkedin:before, #edit-lr-social-login-links .lr_providericons.lr_facebook:before, #edit-lr-social-login-links .lr_providericons.lr_twitter:before, #edit-lr-social-login-links .lr_providericons.lr_google:before {
   height: 18px;
   overflow: hidden;
@@ -2577,11 +2578,11 @@ input.throbbing {
   width: 0;
 }
 
-/* line 18, ../sass/partials/components/_edit-lr-social-login-links.scss */
+/* line 19, ../sass/partials/components/_edit-lr-social-login-links.scss */
 #edit-lr-social-login-links {
   margin-bottom: 3em;
 }
-/* line 20, ../sass/partials/components/_edit-lr-social-login-links.scss */
+/* line 21, ../sass/partials/components/_edit-lr-social-login-links.scss */
 #edit-lr-social-login-links > label {
   -moz-hyphens: none;
   -ms-hyphens: none;
@@ -2595,18 +2596,14 @@ input.throbbing {
   padding: 0 0 0.5em 0;
   text-align: center;
 }
-/* line 30, ../sass/partials/components/_edit-lr-social-login-links.scss */
+/* line 31, ../sass/partials/components/_edit-lr-social-login-links.scss */
 #edit-lr-social-login-links .interface_container {
   text-align: center;
 }
-/* line 32, ../sass/partials/components/_edit-lr-social-login-links.scss */
+/* line 33, ../sass/partials/components/_edit-lr-social-login-links.scss */
 #edit-lr-social-login-links .interface_container .lr_icons_box {
   display: inline-block;
   float: none;
-}
-/* line 37, ../sass/partials/components/_edit-lr-social-login-links.scss */
-#edit-lr-social-login-links .lr_providericons {
-  margin-bottom: 0;
 }
 /* line 39, ../sass/partials/components/_edit-lr-social-login-links.scss */
 #edit-lr-social-login-links .lr_providericons.lr_linkedin {
@@ -5577,62 +5574,67 @@ tr.drag-previous {
 }
 /* line 10, ../sass/partials/components/_user-register-form.scss */
 #user-register-form #edit-lr-social-login-links:after {
+  -moz-hyphens: none;
+  -ms-hyphens: none;
+  -webkit-hyphens: none;
+  hyphens: none;
   border-bottom: 1px solid #cecfcb;
   content: "Or sign up with your Email Address";
   display: block;
   font-size: 32px;
   font-weight: bold;
+  line-height: 1.1;
   margin: 2em 0 1em 0;
   padding: 0 0 0.5em 0;
   text-align: center;
 }
-/* line 22, ../sass/partials/components/_user-register-form.scss */
+/* line 24, ../sass/partials/components/_user-register-form.scss */
 #user-register-form .interfacecontainerdiv {
   margin-left: -20px;
 }
-/* line 26, ../sass/partials/components/_user-register-form.scss */
+/* line 28, ../sass/partials/components/_user-register-form.scss */
 #user-register-form h2 {
   margin: 1.5em 0 0.75em 0;
 }
-/* line 30, ../sass/partials/components/_user-register-form.scss */
+/* line 32, ../sass/partials/components/_user-register-form.scss */
 #user-register-form .button--submit {
   margin: 0.5em 0;
 }
-/* line 34, ../sass/partials/components/_user-register-form.scss */
+/* line 36, ../sass/partials/components/_user-register-form.scss */
 #user-register-form .field-name-field-user-photo {
   margin: 2em 0;
 }
-/* line 36, ../sass/partials/components/_user-register-form.scss */
+/* line 38, ../sass/partials/components/_user-register-form.scss */
 #user-register-form .field-name-field-user-photo .description {
   font-style: normal;
 }
-/* line 39, ../sass/partials/components/_user-register-form.scss */
+/* line 41, ../sass/partials/components/_user-register-form.scss */
 #user-register-form .field-name-field-user-photo .image-widget {
   margin-top: 0.5em;
 }
-/* line 44, ../sass/partials/components/_user-register-form.scss */
+/* line 46, ../sass/partials/components/_user-register-form.scss */
 #user-register-form .field-type-mailchimp-lists-subscription {
   margin: 2em 0 2em 0;
 }
-/* line 46, ../sass/partials/components/_user-register-form.scss */
+/* line 48, ../sass/partials/components/_user-register-form.scss */
 #user-register-form .field-type-mailchimp-lists-subscription legend {
   font-weight: bold;
 }
-/* line 49, ../sass/partials/components/_user-register-form.scss */
+/* line 51, ../sass/partials/components/_user-register-form.scss */
 #user-register-form .field-type-mailchimp-lists-subscription .description {
   font-size: 0.875em;
   line-height: 1.4;
 }
-/* line 53, ../sass/partials/components/_user-register-form.scss */
+/* line 55, ../sass/partials/components/_user-register-form.scss */
 #user-register-form .field-type-mailchimp-lists-subscription .form-type-checkbox {
   margin: 0.5em 0 0 0;
 }
-/* line 58, ../sass/partials/components/_user-register-form.scss */
+/* line 60, ../sass/partials/components/_user-register-form.scss */
 #user-register-form .form-item.form-type-password {
   margin-bottom: 0;
 }
 @media (max-width: 40.625em) {
-  /* line 62, ../sass/partials/components/_user-register-form.scss */
+  /* line 64, ../sass/partials/components/_user-register-form.scss */
   #user-register-form .password-strength {
     float: none;
     margin: 0.5em 0;

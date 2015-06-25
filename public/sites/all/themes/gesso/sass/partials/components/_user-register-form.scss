@@ -8,11 +8,13 @@
   
   #edit-lr-social-login-links {
     &:after {
+      @include hyphens(none);
       border-bottom: 1px solid #cecfcb;
       content: "Or sign up with your Email Address";
       display: block;
       font-size: 32px;
       font-weight: bold;
+      line-height: 1.1;
       margin: 2em 0 1em 0;
       padding: 0 0 0.5em 0;
       text-align: center;
