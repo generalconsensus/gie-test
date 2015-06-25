@@ -267,3 +267,13 @@ function gie_general_update_7025() {
   );
   module_enable($modules, TRUE);
 }
+
+/**
+ * Enable GIE Messages feature.
+ */
+function gie_general_update_7026() {
+  $modules = array(
+    'gie_messages'
+  );
+  module_enable($modules, TRUE);
+}
