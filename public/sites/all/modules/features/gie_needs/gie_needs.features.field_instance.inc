@@ -61,7 +61,7 @@ function gie_needs_field_default_field_instances() {
           ),
         ),
         'type' => 'text_default',
-        'weight' => 0,
+        'weight' => 1,
       ),
       'listing' => array(
         'label' => 'hidden',
@@ -98,7 +98,7 @@ function gie_needs_field_default_field_instances() {
         'label' => 'hidden',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 15,
+        'weight' => 16,
       ),
       'teaser' => array(
         'label' => 'hidden',
@@ -219,7 +219,7 @@ function gie_needs_field_default_field_instances() {
             'destination' => '',
             'linked' => 0,
           ),
-          'prefix_suffix' => TRUE,
+          'prefix_suffix' => 1,
           'scale' => 0,
           'thousand_separator' => ' ',
         ),
@@ -230,7 +230,7 @@ function gie_needs_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 28,
+        'weight' => 29,
       ),
       'listing' => array(
         'label' => 'above',
@@ -242,7 +242,7 @@ function gie_needs_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 25,
+        'weight' => 26,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -332,7 +332,7 @@ function gie_needs_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 27,
+        'weight' => 28,
       ),
       'listing' => array(
         'label' => 'above',
@@ -344,7 +344,7 @@ function gie_needs_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 24,
+        'weight' => 25,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -423,7 +423,7 @@ function gie_needs_field_default_field_instances() {
             'destination' => '',
             'linked' => 0,
           ),
-          'prefix_suffix' => TRUE,
+          'prefix_suffix' => 1,
           'scale' => 0,
           'thousand_separator' => ' ',
         ),
@@ -434,7 +434,7 @@ function gie_needs_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 29,
+        'weight' => 30,
       ),
       'listing' => array(
         'label' => 'above',
@@ -446,7 +446,7 @@ function gie_needs_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 26,
+        'weight' => 27,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -528,7 +528,7 @@ function gie_needs_field_default_field_instances() {
           ),
         ),
         'type' => 'text_default',
-        'weight' => 3,
+        'weight' => 4,
       ),
       'listing' => array(
         'label' => 'above',
@@ -540,7 +540,7 @@ function gie_needs_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 29,
+        'weight' => 30,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -656,7 +656,7 @@ function gie_needs_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 15,
+        'weight' => 17,
       ),
       'listing' => array(
         'label' => 'inline',
@@ -763,7 +763,7 @@ function gie_needs_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 16,
+        'weight' => 18,
       ),
       'listing' => array(
         'label' => 'above',
@@ -892,7 +892,7 @@ function gie_needs_field_default_field_instances() {
           ),
         ),
         'type' => 'text_default',
-        'weight' => 2,
+        'weight' => 3,
       ),
       'listing' => array(
         'label' => 'above',
@@ -904,7 +904,7 @@ function gie_needs_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 27,
+        'weight' => 28,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -1001,7 +1001,7 @@ function gie_needs_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 18,
+        'weight' => 20,
       ),
       'listing' => array(
         'label' => 'inline',
@@ -1029,7 +1029,7 @@ function gie_needs_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 16,
+        'weight' => 17,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -1124,7 +1124,7 @@ function gie_needs_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 25,
+        'weight' => 26,
       ),
       'listing' => array(
         'label' => 'above',
@@ -1136,7 +1136,7 @@ function gie_needs_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 22,
+        'weight' => 23,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -1203,7 +1203,7 @@ function gie_needs_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 17,
+        'weight' => 19,
       ),
       'listing' => array(
         'label' => 'above',
@@ -1224,8 +1224,8 @@ function gie_needs_field_default_field_instances() {
               'text' => '',
               'title' => '',
             ),
-            'destination' => '',
-            'linked' => 0,
+            'destination' => '[user:url]',
+            'linked' => 1,
           ),
           'links' => 1,
           'view_mode' => 'resource_user',
@@ -1319,7 +1319,7 @@ function gie_needs_field_default_field_instances() {
           ),
         ),
         'type' => 'text_default',
-        'weight' => 1,
+        'weight' => 2,
       ),
       'listing' => array(
         'label' => 'above',
@@ -1331,7 +1331,7 @@ function gie_needs_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 28,
+        'weight' => 29,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -1440,7 +1440,7 @@ function gie_needs_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 19,
+        'weight' => 21,
       ),
       'listing' => array(
         'label' => 'above',
@@ -1452,7 +1452,7 @@ function gie_needs_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 17,
+        'weight' => 18,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -1542,7 +1542,7 @@ function gie_needs_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 20,
+        'weight' => 22,
       ),
       'listing' => array(
         'label' => 'above',
@@ -1554,7 +1554,7 @@ function gie_needs_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 18,
+        'weight' => 19,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -1642,7 +1642,7 @@ function gie_needs_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 26,
+        'weight' => 27,
       ),
       'listing' => array(
         'label' => 'above',
@@ -1654,7 +1654,7 @@ function gie_needs_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 23,
+        'weight' => 24,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -1738,7 +1738,7 @@ function gie_needs_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 14,
+        'weight' => 16,
       ),
       'listing' => array(
         'label' => 'above',
@@ -1750,7 +1750,7 @@ function gie_needs_field_default_field_instances() {
         'label' => 'inline',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 6,
+        'weight' => 13,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -1839,7 +1839,7 @@ function gie_needs_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 24,
+        'weight' => 25,
       ),
       'listing' => array(
         'label' => 'above',
@@ -1851,7 +1851,7 @@ function gie_needs_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 21,
+        'weight' => 22,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -1939,7 +1939,7 @@ function gie_needs_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 21,
+        'weight' => 23,
       ),
       'listing' => array(
         'label' => 'above',
@@ -1951,7 +1951,7 @@ function gie_needs_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 19,
+        'weight' => 20,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -2039,7 +2039,7 @@ function gie_needs_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 23,
+        'weight' => 24,
       ),
       'listing' => array(
         'label' => 'above',
@@ -2051,7 +2051,7 @@ function gie_needs_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 20,
+        'weight' => 21,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -2111,7 +2111,7 @@ function gie_needs_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 13,
+        'weight' => 15,
       ),
       'listing' => array(
         'label' => 'hidden',
@@ -2140,7 +2140,7 @@ function gie_needs_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 14,
+        'weight' => 15,
       ),
       'teaser' => array(
         'label' => 'above',

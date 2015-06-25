@@ -17,24 +17,33 @@ function gie_needs_ds_field_settings_info() {
   $ds_fieldsetting->bundle = 'needs';
   $ds_fieldsetting->view_mode = 'details';
   $ds_fieldsetting->settings = array(
-    'field_needs_type' => array(
+    'field_needs_paid' => array(
       'formatter_settings' => array(
-        'ft' => array(),
-      ),
-    ),
-    'field_needs_related_organization' => array(
-      'formatter_settings' => array(
-        'ft' => array(),
-      ),
-    ),
-    'field_needs_related_program' => array(
-      'formatter_settings' => array(
-        'ft' => array(),
+        'ft' => array(
+          'lb' => 'Is this a Paid Need?',
+        ),
       ),
     ),
     'field_needs_amount_money' => array(
       'formatter_settings' => array(
-        'ft' => array(),
+        'ft' => array(
+          'lb' => 'Funding Needed',
+          'prefix' => '$',
+        ),
+      ),
+    ),
+    'field_needs_amount_items' => array(
+      'formatter_settings' => array(
+        'ft' => array(
+          'lb' => 'Items Needed',
+        ),
+      ),
+    ),
+    'field_needs_amount_people' => array(
+      'formatter_settings' => array(
+        'ft' => array(
+          'lb' => 'People Needed',
+        ),
       ),
     ),
   );
@@ -48,14 +57,39 @@ function gie_needs_ds_field_settings_info() {
   $ds_fieldsetting->view_mode = 'full';
   $ds_fieldsetting->settings = array(
     'comments' => array(
-      'weight' => '5',
+      'weight' => '6',
       'label' => 'hidden',
       'format' => 'default',
     ),
     'post_date' => array(
-      'weight' => '4',
-      'label' => 'hidden',
+      'weight' => '5',
+      'label' => 'inline',
       'format' => 'ds_post_date_gie_general_slash_no_time',
+      'formatter_settings' => array(
+        'ft' => array(
+          'func' => 'theme_ds_field_expert',
+          'lb' => 'Posted on',
+          'lb-def-at' => TRUE,
+          'ow' => TRUE,
+          'ow-el' => 'div',
+          'ow-cl' => '',
+          'ow-def-cl' => TRUE,
+          'ow-at' => '',
+          'ow-def-at' => TRUE,
+        ),
+        'field_delimiter' => '',
+        'linked_field' => array(
+          'linked' => 0,
+          'destination' => '',
+          'advanced' => array(
+            'title' => '',
+            'target' => '',
+            'class' => '',
+            'rel' => '',
+            'text' => '',
+          ),
+        ),
+      ),
     ),
     'field_needs_instructions' => array(
       'formatter_settings' => array(
@@ -63,6 +97,8 @@ function gie_needs_ds_field_settings_info() {
           'func' => 'theme_ds_field_expert',
           'lb-el' => 'h2',
           'lb-col' => TRUE,
+          'lbw' => 1,
+          'lbw-el' => 'h2',
           'ow' => TRUE,
           'ow-el' => 'div',
           'ow-cl' => '',
@@ -273,19 +309,21 @@ function gie_needs_ds_layout_settings_info() {
   $ds_layout->entity_type = 'node';
   $ds_layout->bundle = 'needs';
   $ds_layout->view_mode = 'full';
-  $ds_layout->layout = 'ds_reset';
+  $ds_layout->layout = 'ds_1col';
   $ds_layout->settings = array(
     'regions' => array(
       'ds_content' => array(
-        0 => 'body',
-        1 => 'field_needs_qualifications',
-        2 => 'field_needs_instructions',
-        3 => 'field_needs_certifications',
-        4 => 'post_date',
-        5 => 'comments',
+        0 => 'sharethis',
+        1 => 'body',
+        2 => 'field_needs_qualifications',
+        3 => 'field_needs_instructions',
+        4 => 'field_needs_certifications',
+        5 => 'post_date',
+        6 => 'comments',
       ),
     ),
     'fields' => array(
+      'sharethis' => 'ds_content',
       'body' => 'ds_content',
       'field_needs_qualifications' => 'ds_content',
       'field_needs_instructions' => 'ds_content',
@@ -299,8 +337,8 @@ function gie_needs_ds_layout_settings_info() {
     ),
     'layout_wrapper' => 'div',
     'layout_attributes' => '',
-    'layout_attributes_merge' => TRUE,
-    'layout_link_attribute' => FALSE,
+    'layout_attributes_merge' => 1,
+    'layout_link_attribute' => '',
     'layout_link_custom' => '',
   );
   $export['node|needs|full'] = $ds_layout;
@@ -358,14 +396,14 @@ function gie_needs_ds_layout_settings_info() {
       'main_content' => array(
         1 => 'field_needs_point_of_contact',
         2 => 'field_needs_date_needed',
-        3 => 'sharethis',
+        3 => 'needs_point_of_contact_needs_contact_button',
       ),
     ),
     'fields' => array(
       'field_needs_image' => 'media',
       'field_needs_point_of_contact' => 'main_content',
       'field_needs_date_needed' => 'main_content',
-      'sharethis' => 'main_content',
+      'needs_point_of_contact_needs_contact_button' => 'main_content',
     ),
     'classes' => array(),
     'wrappers' => array(
