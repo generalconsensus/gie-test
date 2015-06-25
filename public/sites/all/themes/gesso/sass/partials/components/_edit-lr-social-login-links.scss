@@ -3,6 +3,7 @@
   background-image: none;
   border: 0;
   height: auto;
+  margin-bottom: 0 !important;
   padding-left: 1em;
   width: auto;
   &:before {
@@ -16,11 +17,13 @@
 }
 
 #edit-lr-social-login-links {
-  margin-bottom: 2em;
-  > label {
+  margin-bottom: 3em;
+  > label { 
+    @include hyphens(none);
     border-bottom: 1px solid #cecfcb;
     font-size: 32px;
     font-weight: bold;
+    line-height: 1.1;
     margin: 0 0 1em 0;
     padding: 0 0 0.5em 0;
     text-align: center;

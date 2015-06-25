@@ -2555,10 +2555,11 @@ input.throbbing {
   background-image: none;
   border: 0;
   height: auto;
+  margin-bottom: 0 !important;
   padding-left: 1em;
   width: auto;
 }
-/* line 8, ../sass/partials/components/_edit-lr-social-login-links.scss */
+/* line 9, ../sass/partials/components/_edit-lr-social-login-links.scss */
 #edit-lr-social-login-links .lr_providericons.lr_linkedin:before, #edit-lr-social-login-links .lr_providericons.lr_facebook:before, #edit-lr-social-login-links .lr_providericons.lr_twitter:before, #edit-lr-social-login-links .lr_providericons.lr_google:before {
   height: 18px;
   overflow: hidden;
@@ -2577,97 +2578,102 @@ input.throbbing {
   width: 0;
 }
 
-/* line 18, ../sass/partials/components/_edit-lr-social-login-links.scss */
+/* line 19, ../sass/partials/components/_edit-lr-social-login-links.scss */
 #edit-lr-social-login-links {
-  margin-bottom: 2em;
+  margin-bottom: 3em;
 }
-/* line 20, ../sass/partials/components/_edit-lr-social-login-links.scss */
+/* line 21, ../sass/partials/components/_edit-lr-social-login-links.scss */
 #edit-lr-social-login-links > label {
+  -moz-hyphens: none;
+  -ms-hyphens: none;
+  -webkit-hyphens: none;
+  hyphens: none;
   border-bottom: 1px solid #cecfcb;
   font-size: 32px;
   font-weight: bold;
+  line-height: 1.1;
   margin: 0 0 1em 0;
   padding: 0 0 0.5em 0;
   text-align: center;
 }
-/* line 28, ../sass/partials/components/_edit-lr-social-login-links.scss */
+/* line 31, ../sass/partials/components/_edit-lr-social-login-links.scss */
 #edit-lr-social-login-links .interface_container {
   text-align: center;
 }
-/* line 30, ../sass/partials/components/_edit-lr-social-login-links.scss */
+/* line 33, ../sass/partials/components/_edit-lr-social-login-links.scss */
 #edit-lr-social-login-links .interface_container .lr_icons_box {
   display: inline-block;
   float: none;
 }
-/* line 36, ../sass/partials/components/_edit-lr-social-login-links.scss */
+/* line 39, ../sass/partials/components/_edit-lr-social-login-links.scss */
 #edit-lr-social-login-links .lr_providericons.lr_linkedin {
   background-color: #0077b5;
 }
-/* line 39, ../sass/partials/components/_edit-lr-social-login-links.scss */
+/* line 42, ../sass/partials/components/_edit-lr-social-login-links.scss */
 #edit-lr-social-login-links .lr_providericons.lr_linkedin:hover, #edit-lr-social-login-links .lr_providericons.lr_linkedin:focus {
   background-color: #00344f;
 }
-/* line 42, ../sass/partials/components/_edit-lr-social-login-links.scss */
+/* line 45, ../sass/partials/components/_edit-lr-social-login-links.scss */
 #edit-lr-social-login-links .lr_providericons.lr_linkedin:before {
   background-image: url('../images/bg/linkedin-icon-white.png');
   background-image: -webkit-linear-gradient(transparent, transparent), url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4NCjwhLS0gR2VuZXJhdGVkIGJ5IEljb01vb24uaW8gLS0+DQo8IURPQ1RZUEUgc3ZnIFBVQkxJQyAiLS8vVzNDLy9EVEQgU1ZHIDEuMS8vRU4iICJodHRwOi8vd3d3LnczLm9yZy9HcmFwaGljcy9TVkcvMS4xL0RURC9zdmcxMS5kdGQiPg0KPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHdpZHRoPSIxOCIgaGVpZ2h0PSIxOCIgdmlld0JveD0iMCAwIDE4IDE4Ij4NCjxwYXRoIGZpbGw9IiNmZmZmZmYiIGQ9Ik0xNC45NzcgMGgtMTEuOTUzYy0xLjY2MyAwLTMuMDIzIDEuMzYxLTMuMDIzIDMuMDIzdjExLjk1M2MwIDEuNjYzIDEuMzYxIDMuMDIzIDMuMDIzIDMuMDIzaDExLjk1M2MxLjY2MyAwIDMuMDIzLTEuMzYxIDMuMDIzLTMuMDIzdi0xMS45NTNjMC0xLjY2My0xLjM2MS0zLjAyMy0zLjAyMy0zLjAyM3pNNi43NSAxNC42MjVoLTIuMjV2LTcuODc1aDIuMjV2Ny44NzV6TTUuNjI1IDUuNjI1Yy0wLjYyMSAwLTEuMTI1LTAuNTA0LTEuMTI1LTEuMTI1czAuNTA0LTEuMTI1IDEuMTI1LTEuMTI1IDEuMTI1IDAuNTA0IDEuMTI1IDEuMTI1LTAuNTA0IDEuMTI1LTEuMTI1IDEuMTI1ek0xNC42MjUgMTQuNjI1aC0yLjI1di00LjVjMC0wLjYyMS0wLjUwNC0xLjEyNS0xLjEyNS0xLjEyNXMtMS4xMjUgMC41MDQtMS4xMjUgMS4xMjV2NC41aC0yLjI1di03Ljg3NWgyLjI1djEuMzk3YzAuNDY0LTAuNjM3IDEuMTczLTEuMzk3IDEuOTY5LTEuMzk3IDEuMzk4IDAgMi41MzEgMS4yNTkgMi41MzEgMi44MTN2NS4wNjN6Ij48L3BhdGg+DQo8L3N2Zz4NCg==');
   background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0)), url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4NCjwhLS0gR2VuZXJhdGVkIGJ5IEljb01vb24uaW8gLS0+DQo8IURPQ1RZUEUgc3ZnIFBVQkxJQyAiLS8vVzNDLy9EVEQgU1ZHIDEuMS8vRU4iICJodHRwOi8vd3d3LnczLm9yZy9HcmFwaGljcy9TVkcvMS4xL0RURC9zdmcxMS5kdGQiPg0KPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHdpZHRoPSIxOCIgaGVpZ2h0PSIxOCIgdmlld0JveD0iMCAwIDE4IDE4Ij4NCjxwYXRoIGZpbGw9IiNmZmZmZmYiIGQ9Ik0xNC45NzcgMGgtMTEuOTUzYy0xLjY2MyAwLTMuMDIzIDEuMzYxLTMuMDIzIDMuMDIzdjExLjk1M2MwIDEuNjYzIDEuMzYxIDMuMDIzIDMuMDIzIDMuMDIzaDExLjk1M2MxLjY2MyAwIDMuMDIzLTEuMzYxIDMuMDIzLTMuMDIzdi0xMS45NTNjMC0xLjY2My0xLjM2MS0zLjAyMy0zLjAyMy0zLjAyM3pNNi43NSAxNC42MjVoLTIuMjV2LTcuODc1aDIuMjV2Ny44NzV6TTUuNjI1IDUuNjI1Yy0wLjYyMSAwLTEuMTI1LTAuNTA0LTEuMTI1LTEuMTI1czAuNTA0LTEuMTI1IDEuMTI1LTEuMTI1IDEuMTI1IDAuNTA0IDEuMTI1IDEuMTI1LTAuNTA0IDEuMTI1LTEuMTI1IDEuMTI1ek0xNC42MjUgMTQuNjI1aC0yLjI1di00LjVjMC0wLjYyMS0wLjUwNC0xLjEyNS0xLjEyNS0xLjEyNXMtMS4xMjUgMC41MDQtMS4xMjUgMS4xMjV2NC41aC0yLjI1di03Ljg3NWgyLjI1djEuMzk3YzAuNDY0LTAuNjM3IDEuMTczLTEuMzk3IDEuOTY5LTEuMzk3IDEuMzk4IDAgMi41MzEgMS4yNTkgMi41MzEgMi44MTN2NS4wNjN6Ij48L3BhdGg+DQo8L3N2Zz4NCg==');
 }
-/* line 45, ../sass/partials/components/_edit-lr-social-login-links.scss */
+/* line 48, ../sass/partials/components/_edit-lr-social-login-links.scss */
 #edit-lr-social-login-links .lr_providericons.lr_linkedin:after {
   content: "Login with LinkedIn";
 }
-/* line 49, ../sass/partials/components/_edit-lr-social-login-links.scss */
+/* line 52, ../sass/partials/components/_edit-lr-social-login-links.scss */
 #edit-lr-social-login-links .lr_providericons.lr_facebook {
   background-color: #3a5795;
 }
-/* line 52, ../sass/partials/components/_edit-lr-social-login-links.scss */
+/* line 55, ../sass/partials/components/_edit-lr-social-login-links.scss */
 #edit-lr-social-login-links .lr_providericons.lr_facebook:hover, #edit-lr-social-login-links .lr_providericons.lr_facebook:focus {
   background-color: #1d2c4c;
 }
-/* line 55, ../sass/partials/components/_edit-lr-social-login-links.scss */
+/* line 58, ../sass/partials/components/_edit-lr-social-login-links.scss */
 #edit-lr-social-login-links .lr_providericons.lr_facebook:before {
   background-image: url('../images/bg/facebook-icon-white.png');
   background-image: -webkit-linear-gradient(transparent, transparent), url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4NCjwhLS0gR2VuZXJhdGVkIGJ5IEljb01vb24uaW8gLS0+DQo8IURPQ1RZUEUgc3ZnIFBVQkxJQyAiLS8vVzNDLy9EVEQgU1ZHIDEuMS8vRU4iICJodHRwOi8vd3d3LnczLm9yZy9HcmFwaGljcy9TVkcvMS4xL0RURC9zdmcxMS5kdGQiPg0KPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHdpZHRoPSIxOCIgaGVpZ2h0PSIxOCIgdmlld0JveD0iMCAwIDE4IDE4Ij4NCjxwYXRoIGZpbGw9IiNmZmZmZmYiIGQ9Ik0xMC4xMjMgMThoLTMuMzczdi05aC0yLjI1di0zLjEwMmwyLjI1LTAuMDAxLTAuMDA0LTEuODI3YzAtMi41MyAwLjY4Ni00LjA3MCAzLjY2Ny00LjA3MGgyLjQ4MnYzLjEwMmgtMS41NTFjLTEuMTYxIDAtMS4yMTcgMC40MzMtMS4yMTcgMS4yNDJsLTAuMDA1IDEuNTUzaDIuNzg5bC0wLjMyOSAzLjEwMi0yLjQ1OCAwLjAwMS0wLjAwMiA5eiI+PC9wYXRoPg0KPC9zdmc+DQo=');
   background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0)), url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4NCjwhLS0gR2VuZXJhdGVkIGJ5IEljb01vb24uaW8gLS0+DQo8IURPQ1RZUEUgc3ZnIFBVQkxJQyAiLS8vVzNDLy9EVEQgU1ZHIDEuMS8vRU4iICJodHRwOi8vd3d3LnczLm9yZy9HcmFwaGljcy9TVkcvMS4xL0RURC9zdmcxMS5kdGQiPg0KPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHdpZHRoPSIxOCIgaGVpZ2h0PSIxOCIgdmlld0JveD0iMCAwIDE4IDE4Ij4NCjxwYXRoIGZpbGw9IiNmZmZmZmYiIGQ9Ik0xMC4xMjMgMThoLTMuMzczdi05aC0yLjI1di0zLjEwMmwyLjI1LTAuMDAxLTAuMDA0LTEuODI3YzAtMi41MyAwLjY4Ni00LjA3MCAzLjY2Ny00LjA3MGgyLjQ4MnYzLjEwMmgtMS41NTFjLTEuMTYxIDAtMS4yMTcgMC40MzMtMS4yMTcgMS4yNDJsLTAuMDA1IDEuNTUzaDIuNzg5bC0wLjMyOSAzLjEwMi0yLjQ1OCAwLjAwMS0wLjAwMiA5eiI+PC9wYXRoPg0KPC9zdmc+DQo=');
 }
-/* line 58, ../sass/partials/components/_edit-lr-social-login-links.scss */
+/* line 61, ../sass/partials/components/_edit-lr-social-login-links.scss */
 #edit-lr-social-login-links .lr_providericons.lr_facebook:after {
   content: "Login with Facebook";
 }
-/* line 62, ../sass/partials/components/_edit-lr-social-login-links.scss */
+/* line 65, ../sass/partials/components/_edit-lr-social-login-links.scss */
 #edit-lr-social-login-links .lr_providericons.lr_twitter {
   background-color: #55acee;
 }
-/* line 65, ../sass/partials/components/_edit-lr-social-login-links.scss */
+/* line 68, ../sass/partials/components/_edit-lr-social-login-links.scss */
 #edit-lr-social-login-links .lr_providericons.lr_twitter:hover, #edit-lr-social-login-links .lr_providericons.lr_twitter:focus {
   background-color: #147bc9;
 }
-/* line 68, ../sass/partials/components/_edit-lr-social-login-links.scss */
+/* line 71, ../sass/partials/components/_edit-lr-social-login-links.scss */
 #edit-lr-social-login-links .lr_providericons.lr_twitter:before {
   background-image: url('../images/bg/twitter-icon-white.png');
   background-image: -webkit-linear-gradient(transparent, transparent), url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4NCjwhLS0gR2VuZXJhdGVkIGJ5IEljb01vb24uaW8gLS0+DQo8IURPQ1RZUEUgc3ZnIFBVQkxJQyAiLS8vVzNDLy9EVEQgU1ZHIDEuMS8vRU4iICJodHRwOi8vd3d3LnczLm9yZy9HcmFwaGljcy9TVkcvMS4xL0RURC9zdmcxMS5kdGQiPg0KPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHdpZHRoPSIxOCIgaGVpZ2h0PSIxOCIgdmlld0JveD0iMCAwIDE4IDE4Ij4NCjxwYXRoIGZpbGw9IiNmZmZmZmYiIGQ9Ik0xOCAzLjQxOGMtMC42NjIgMC4yOTQtMS4zNzQgMC40OTItMi4xMjEgMC41ODEgMC43NjItMC40NTcgMS4zNDgtMS4xODEgMS42MjQtMi4wNDMtMC43MTQgMC40MjMtMS41MDQgMC43MzEtMi4zNDUgMC44OTYtMC42NzQtMC43MTgtMS42MzMtMS4xNjYtMi42OTYtMS4xNjYtMi4wMzkgMC0zLjY5MyAxLjY1My0zLjY5MyAzLjY5MyAwIDAuMjg5IDAuMDMzIDAuNTcxIDAuMDk2IDAuODQyLTMuMDY5LTAuMTU0LTUuNzktMS42MjQtNy42MTItMy44NTktMC4zMTggMC41NDUtMC41IDEuMTgtMC41IDEuODU3IDAgMS4yODEgMC42NTIgMi40MTIgMS42NDMgMy4wNzQtMC42MDUtMC4wMTktMS4xNzUtMC4xODUtMS42NzMtMC40NjItMCAwLjAxNS0wIDAuMDMxLTAgMC4wNDYgMCAxLjc4OSAxLjI3MyAzLjI4MiAyLjk2MiAzLjYyMS0wLjMxIDAuMDg0LTAuNjM2IDAuMTMtMC45NzMgMC4xMy0wLjIzOCAwLTAuNDY5LTAuMDIzLTAuNjk1LTAuMDY2IDAuNDcgMS40NjcgMS44MzQgMi41MzUgMy40NSAyLjU2NS0xLjI2NCAwLjk5MS0yLjg1NiAxLjU4MS00LjU4NiAxLjU4MS0wLjI5OCAwLTAuNTkyLTAuMDE3LTAuODgxLTAuMDUyIDEuNjM0IDEuMDQ4IDMuNTc1IDEuNjU5IDUuNjYxIDEuNjU5IDYuNzkzIDAgMTAuNTA3LTUuNjI3IDEwLjUwNy0xMC41MDcgMC0wLjE2LTAuMDA0LTAuMzE5LTAuMDExLTAuNDc4IDAuNzIyLTAuNTIxIDEuMzQ4LTEuMTcxIDEuODQzLTEuOTEyeiI+PC9wYXRoPg0KPC9zdmc+DQo=');
   background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0)), url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4NCjwhLS0gR2VuZXJhdGVkIGJ5IEljb01vb24uaW8gLS0+DQo8IURPQ1RZUEUgc3ZnIFBVQkxJQyAiLS8vVzNDLy9EVEQgU1ZHIDEuMS8vRU4iICJodHRwOi8vd3d3LnczLm9yZy9HcmFwaGljcy9TVkcvMS4xL0RURC9zdmcxMS5kdGQiPg0KPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHdpZHRoPSIxOCIgaGVpZ2h0PSIxOCIgdmlld0JveD0iMCAwIDE4IDE4Ij4NCjxwYXRoIGZpbGw9IiNmZmZmZmYiIGQ9Ik0xOCAzLjQxOGMtMC42NjIgMC4yOTQtMS4zNzQgMC40OTItMi4xMjEgMC41ODEgMC43NjItMC40NTcgMS4zNDgtMS4xODEgMS42MjQtMi4wNDMtMC43MTQgMC40MjMtMS41MDQgMC43MzEtMi4zNDUgMC44OTYtMC42NzQtMC43MTgtMS42MzMtMS4xNjYtMi42OTYtMS4xNjYtMi4wMzkgMC0zLjY5MyAxLjY1My0zLjY5MyAzLjY5MyAwIDAuMjg5IDAuMDMzIDAuNTcxIDAuMDk2IDAuODQyLTMuMDY5LTAuMTU0LTUuNzktMS42MjQtNy42MTItMy44NTktMC4zMTggMC41NDUtMC41IDEuMTgtMC41IDEuODU3IDAgMS4yODEgMC42NTIgMi40MTIgMS42NDMgMy4wNzQtMC42MDUtMC4wMTktMS4xNzUtMC4xODUtMS42NzMtMC40NjItMCAwLjAxNS0wIDAuMDMxLTAgMC4wNDYgMCAxLjc4OSAxLjI3MyAzLjI4MiAyLjk2MiAzLjYyMS0wLjMxIDAuMDg0LTAuNjM2IDAuMTMtMC45NzMgMC4xMy0wLjIzOCAwLTAuNDY5LTAuMDIzLTAuNjk1LTAuMDY2IDAuNDcgMS40NjcgMS44MzQgMi41MzUgMy40NSAyLjU2NS0xLjI2NCAwLjk5MS0yLjg1NiAxLjU4MS00LjU4NiAxLjU4MS0wLjI5OCAwLTAuNTkyLTAuMDE3LTAuODgxLTAuMDUyIDEuNjM0IDEuMDQ4IDMuNTc1IDEuNjU5IDUuNjYxIDEuNjU5IDYuNzkzIDAgMTAuNTA3LTUuNjI3IDEwLjUwNy0xMC41MDcgMC0wLjE2LTAuMDA0LTAuMzE5LTAuMDExLTAuNDc4IDAuNzIyLTAuNTIxIDEuMzQ4LTEuMTcxIDEuODQzLTEuOTEyeiI+PC9wYXRoPg0KPC9zdmc+DQo=');
 }
-/* line 71, ../sass/partials/components/_edit-lr-social-login-links.scss */
+/* line 74, ../sass/partials/components/_edit-lr-social-login-links.scss */
 #edit-lr-social-login-links .lr_providericons.lr_twitter:after {
   content: "Login with Twitter";
 }
-/* line 75, ../sass/partials/components/_edit-lr-social-login-links.scss */
+/* line 78, ../sass/partials/components/_edit-lr-social-login-links.scss */
 #edit-lr-social-login-links .lr_providericons.lr_google {
   background-color: #dd4b39;
 }
-/* line 78, ../sass/partials/components/_edit-lr-social-login-links.scss */
+/* line 81, ../sass/partials/components/_edit-lr-social-login-links.scss */
 #edit-lr-social-login-links .lr_providericons.lr_google:hover, #edit-lr-social-login-links .lr_providericons.lr_google:focus {
   background-color: #96271a;
 }
-/* line 81, ../sass/partials/components/_edit-lr-social-login-links.scss */
+/* line 84, ../sass/partials/components/_edit-lr-social-login-links.scss */
 #edit-lr-social-login-links .lr_providericons.lr_google:before {
   background-image: url('../images/bg/googleplus-icon-white.png');
   background-image: -webkit-linear-gradient(transparent, transparent), url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4NCjwhLS0gR2VuZXJhdGVkIGJ5IEljb01vb24uaW8gLS0+DQo8IURPQ1RZUEUgc3ZnIFBVQkxJQyAiLS8vVzNDLy9EVEQgU1ZHIDEuMS8vRU4iICJodHRwOi8vd3d3LnczLm9yZy9HcmFwaGljcy9TVkcvMS4xL0RURC9zdmcxMS5kdGQiPg0KPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHdpZHRoPSIxOCIgaGVpZ2h0PSIxOCIgdmlld0JveD0iMCAwIDE4IDE4Ij4NCjxwYXRoIGZpbGw9IiNmZmZmZmYiIGQ9Ik05LjgyNyAxLjEyNWMwIDAtMy41MzIgMC00LjcxIDAtMi4xMTEgMC00LjA5OSAxLjYtNC4wOTkgMy40NTMgMCAxLjg5NCAxLjQzOSAzLjQyMiAzLjU4NyAzLjQyMiAwLjE0OSAwIDAuMjk1LTAuMDAzIDAuNDM3LTAuMDEzLTAuMTM5IDAuMjY3LTAuMjM5IDAuNTY4LTAuMjM5IDAuODggMCAwLjUyNiAwLjI4MyAwLjk1MyAwLjY0MSAxLjMwMS0wLjI3IDAtMC41MzIgMC4wMDgtMC44MTcgMC4wMDgtMi42MTUtMC00LjYyOCAxLjY2Ni00LjYyOCAzLjM5MyAwIDEuNzAxIDIuMjA3IDIuNzY1IDQuODIyIDIuNzY1IDIuOTgyIDAgNC42MjgtMS42OTIgNC42MjgtMy4zOTMgMC0xLjM2NC0wLjQwMi0yLjE4MS0xLjY0Ny0zLjA2MS0wLjQyNi0wLjMwMS0xLjI0LTEuMDM0LTEuMjQtMS40NjUgMC0wLjUwNSAwLjE0NC0wLjc1NCAwLjkwNC0xLjM0NyAwLjc3OS0wLjYwOSAxLjMzLTEuNDY0IDEuMzMtMi40NTkgMC0xLjE4NS0wLjUyOC0yLjM0LTEuNTE4LTIuNzIxaDEuNDkzbDEuMDU0LTAuNzYyek04LjE4MiAxMi42NDdjMC4wMzcgMC4xNTggMC4wNTggMC4zMiAwLjA1OCAwLjQ4NiAwIDEuMzc1LTAuODg2IDIuNDQ5LTMuNDI3IDIuNDQ5LTEuODA4IDAtMy4xMTMtMS4xNDQtMy4xMTMtMi41MTkgMC0xLjM0NyAxLjYxOS0yLjQ2OSAzLjQyNy0yLjQ0OSAwLjQyMiAwLjAwNCAwLjgxNSAwLjA3MiAxLjE3MiAwLjE4OCAwLjk4MSAwLjY4MiAxLjY4NSAxLjA2OCAxLjg4NCAxLjg0NnpNNS4yODggNy41MTljLTEuMjE0LTAuMDM2LTIuMzY3LTEuMzU3LTIuNTc2LTIuOTUxczAuNjA0LTIuODEzIDEuODE3LTIuNzc3YzEuMjEzIDAuMDM2IDIuMzY3IDEuMzE1IDIuNTc2IDIuOTA4cy0wLjYwNSAyLjg1Ni0xLjgxNyAyLjgxOXpNMTQuNjI1IDQuNXYtMy4zNzVoLTEuMTI1djMuMzc1aC0zLjM3NXYxLjEyNWgzLjM3NXYzLjM3NWgxLjEyNXYtMy4zNzVoMy4zNzV2LTEuMTI1eiI+PC9wYXRoPg0KPC9zdmc+DQo=');
   background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0)), url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4NCjwhLS0gR2VuZXJhdGVkIGJ5IEljb01vb24uaW8gLS0+DQo8IURPQ1RZUEUgc3ZnIFBVQkxJQyAiLS8vVzNDLy9EVEQgU1ZHIDEuMS8vRU4iICJodHRwOi8vd3d3LnczLm9yZy9HcmFwaGljcy9TVkcvMS4xL0RURC9zdmcxMS5kdGQiPg0KPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHdpZHRoPSIxOCIgaGVpZ2h0PSIxOCIgdmlld0JveD0iMCAwIDE4IDE4Ij4NCjxwYXRoIGZpbGw9IiNmZmZmZmYiIGQ9Ik05LjgyNyAxLjEyNWMwIDAtMy41MzIgMC00LjcxIDAtMi4xMTEgMC00LjA5OSAxLjYtNC4wOTkgMy40NTMgMCAxLjg5NCAxLjQzOSAzLjQyMiAzLjU4NyAzLjQyMiAwLjE0OSAwIDAuMjk1LTAuMDAzIDAuNDM3LTAuMDEzLTAuMTM5IDAuMjY3LTAuMjM5IDAuNTY4LTAuMjM5IDAuODggMCAwLjUyNiAwLjI4MyAwLjk1MyAwLjY0MSAxLjMwMS0wLjI3IDAtMC41MzIgMC4wMDgtMC44MTcgMC4wMDgtMi42MTUtMC00LjYyOCAxLjY2Ni00LjYyOCAzLjM5MyAwIDEuNzAxIDIuMjA3IDIuNzY1IDQuODIyIDIuNzY1IDIuOTgyIDAgNC42MjgtMS42OTIgNC42MjgtMy4zOTMgMC0xLjM2NC0wLjQwMi0yLjE4MS0xLjY0Ny0zLjA2MS0wLjQyNi0wLjMwMS0xLjI0LTEuMDM0LTEuMjQtMS40NjUgMC0wLjUwNSAwLjE0NC0wLjc1NCAwLjkwNC0xLjM0NyAwLjc3OS0wLjYwOSAxLjMzLTEuNDY0IDEuMzMtMi40NTkgMC0xLjE4NS0wLjUyOC0yLjM0LTEuNTE4LTIuNzIxaDEuNDkzbDEuMDU0LTAuNzYyek04LjE4MiAxMi42NDdjMC4wMzcgMC4xNTggMC4wNTggMC4zMiAwLjA1OCAwLjQ4NiAwIDEuMzc1LTAuODg2IDIuNDQ5LTMuNDI3IDIuNDQ5LTEuODA4IDAtMy4xMTMtMS4xNDQtMy4xMTMtMi41MTkgMC0xLjM0NyAxLjYxOS0yLjQ2OSAzLjQyNy0yLjQ0OSAwLjQyMiAwLjAwNCAwLjgxNSAwLjA3MiAxLjE3MiAwLjE4OCAwLjk4MSAwLjY4MiAxLjY4NSAxLjA2OCAxLjg4NCAxLjg0NnpNNS4yODggNy41MTljLTEuMjE0LTAuMDM2LTIuMzY3LTEuMzU3LTIuNTc2LTIuOTUxczAuNjA0LTIuODEzIDEuODE3LTIuNzc3YzEuMjEzIDAuMDM2IDIuMzY3IDEuMzE1IDIuNTc2IDIuOTA4cy0wLjYwNSAyLjg1Ni0xLjgxNyAyLjgxOXpNMTQuNjI1IDQuNXYtMy4zNzVoLTEuMTI1djMuMzc1aC0zLjM3NXYxLjEyNWgzLjM3NXYzLjM3NWgxLjEyNXYtMy4zNzVoMy4zNzV2LTEuMTI1eiI+PC9wYXRoPg0KPC9zdmc+DQo=');
 }
-/* line 84, ../sass/partials/components/_edit-lr-social-login-links.scss */
+/* line 87, ../sass/partials/components/_edit-lr-social-login-links.scss */
 #edit-lr-social-login-links .lr_providericons.lr_google:after {
   content: "Login with Google";
 }
@@ -5568,62 +5574,67 @@ tr.drag-previous {
 }
 /* line 10, ../sass/partials/components/_user-register-form.scss */
 #user-register-form #edit-lr-social-login-links:after {
+  -moz-hyphens: none;
+  -ms-hyphens: none;
+  -webkit-hyphens: none;
+  hyphens: none;
   border-bottom: 1px solid #cecfcb;
   content: "Or sign up with your Email Address";
   display: block;
   font-size: 32px;
   font-weight: bold;
+  line-height: 1.1;
   margin: 2em 0 1em 0;
   padding: 0 0 0.5em 0;
   text-align: center;
 }
-/* line 22, ../sass/partials/components/_user-register-form.scss */
+/* line 24, ../sass/partials/components/_user-register-form.scss */
 #user-register-form .interfacecontainerdiv {
   margin-left: -20px;
 }
-/* line 26, ../sass/partials/components/_user-register-form.scss */
+/* line 28, ../sass/partials/components/_user-register-form.scss */
 #user-register-form h2 {
   margin: 1.5em 0 0.75em 0;
 }
-/* line 30, ../sass/partials/components/_user-register-form.scss */
+/* line 32, ../sass/partials/components/_user-register-form.scss */
 #user-register-form .button--submit {
   margin: 0.5em 0;
 }
-/* line 34, ../sass/partials/components/_user-register-form.scss */
+/* line 36, ../sass/partials/components/_user-register-form.scss */
 #user-register-form .field-name-field-user-photo {
   margin: 2em 0;
 }
-/* line 36, ../sass/partials/components/_user-register-form.scss */
+/* line 38, ../sass/partials/components/_user-register-form.scss */
 #user-register-form .field-name-field-user-photo .description {
   font-style: normal;
 }
-/* line 39, ../sass/partials/components/_user-register-form.scss */
+/* line 41, ../sass/partials/components/_user-register-form.scss */
 #user-register-form .field-name-field-user-photo .image-widget {
   margin-top: 0.5em;
 }
-/* line 44, ../sass/partials/components/_user-register-form.scss */
+/* line 46, ../sass/partials/components/_user-register-form.scss */
 #user-register-form .field-type-mailchimp-lists-subscription {
   margin: 2em 0 2em 0;
 }
-/* line 46, ../sass/partials/components/_user-register-form.scss */
+/* line 48, ../sass/partials/components/_user-register-form.scss */
 #user-register-form .field-type-mailchimp-lists-subscription legend {
   font-weight: bold;
 }
-/* line 49, ../sass/partials/components/_user-register-form.scss */
+/* line 51, ../sass/partials/components/_user-register-form.scss */
 #user-register-form .field-type-mailchimp-lists-subscription .description {
   font-size: 0.875em;
   line-height: 1.4;
 }
-/* line 53, ../sass/partials/components/_user-register-form.scss */
+/* line 55, ../sass/partials/components/_user-register-form.scss */
 #user-register-form .field-type-mailchimp-lists-subscription .form-type-checkbox {
   margin: 0.5em 0 0 0;
 }
-/* line 58, ../sass/partials/components/_user-register-form.scss */
+/* line 60, ../sass/partials/components/_user-register-form.scss */
 #user-register-form .form-item.form-type-password {
   margin-bottom: 0;
 }
 @media (max-width: 40.625em) {
-  /* line 62, ../sass/partials/components/_user-register-form.scss */
+  /* line 64, ../sass/partials/components/_user-register-form.scss */
   #user-register-form .password-strength {
     float: none;
     margin: 0.5em 0;
