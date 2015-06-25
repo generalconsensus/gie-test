@@ -212,12 +212,13 @@
             }
           }
 
-          .span12 {
+          .span12,
+          .span {
             .view .item-list ul {
               @include column-count(3);
               @include column-gap(1em);
               li {
-                @include column-break-inside(avoid);
+                @include break-inside(avoid);
                 display: table; // firefox
                 width: 100%; // firefox
                 break-inside: avoid-column; // ie10

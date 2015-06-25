@@ -5,6 +5,7 @@
 node_modules
 Vagrantfile.local
 .DS_Store
+.sass-cache
 /_site
 /tmp
 .idea/
