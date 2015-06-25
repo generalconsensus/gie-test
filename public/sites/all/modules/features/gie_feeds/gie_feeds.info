@@ -18,6 +18,7 @@ features[ctools][] = strongarm:strongarm:1
 features[ctools][] = views:views_default:3.0
 features[features_api][] = api:2
 features[feeds_importer][] = csv_importer
+features[feeds_tamper][] = csv_importer-assistance-explode
 features[feeds_tamper][] = csv_importer-country_created_in-explode
 features[feeds_tamper][] = csv_importer-country_implemented_in-explode
 features[feeds_tamper][] = csv_importer-funded_by-explode
