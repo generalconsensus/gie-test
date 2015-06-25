@@ -61,7 +61,7 @@ function gie_messages_default_message_type() {
           "format" : "filtered_html"
         },
         {
-          "value" : "\\u003Ca href=\\u0022url]\\u0022\\u003E[message:field-user-ref:name]\\u003C\\/a\\u003E favorited\\u0026nbsp;[message:field-node-ref:title]. See\\u0026nbsp;[message:field-node-ref:content-type:name]:\\u0026nbsp;[message:field-node-ref:url]",
+          "value" : "\\u003Ca href=\\u0022[message:field-user-ref:url]\\u0022\\u003E[message:field-user-ref:name]\\u003C\\/a\\u003E favorited\\u0026nbsp;[message:field-node-ref:title]. See\\u0026nbsp;[message:field-node-ref:content-type:name]:\\u0026nbsp;[message:field-node-ref:url]",
           "format" : "filtered_html"
         }
       ]
