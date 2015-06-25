@@ -16,11 +16,13 @@
 }
 
 #edit-lr-social-login-links {
-  margin-bottom: 2em;
+  margin-bottom: 3em;
   > label {
+    @include hyphens(none);
     border-bottom: 1px solid #cecfcb;
     font-size: 32px;
     font-weight: bold;
+    line-height: 1.1;
     margin: 0 0 1em 0;
     padding: 0 0 0.5em 0;
     text-align: center;
@@ -33,6 +35,7 @@
     }
   }
   .lr_providericons {   
+    margin-bottom: 0;
     &.lr_linkedin {
       @extend %lr_providericon_replacement;
       background-color: #0077b5;
