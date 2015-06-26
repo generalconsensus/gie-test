@@ -489,7 +489,7 @@ function gie_organization_views_default_views() {
   $handler->display->display_options['fields']['nid']['id'] = 'nid';
   $handler->display->display_options['fields']['nid']['table'] = 'search_api_index_default_node_index';
   $handler->display->display_options['fields']['nid']['field'] = 'nid';
-  /* Sort criterion: Indexed Node: Organization Title */
+  /* Sort criterion: Indexed Node: Funding Opportunity Title */
   $handler->display->display_options['sorts']['title_field']['id'] = 'title_field';
   $handler->display->display_options['sorts']['title_field']['table'] = 'search_api_index_default_node_index';
   $handler->display->display_options['sorts']['title_field']['field'] = 'title_field';
@@ -1166,7 +1166,7 @@ function gie_organization_views_default_views() {
   $handler->display->display_options['fields']['nid']['id'] = 'nid';
   $handler->display->display_options['fields']['nid']['table'] = 'search_api_index_default_node_index';
   $handler->display->display_options['fields']['nid']['field'] = 'nid';
-  /* Sort criterion: Indexed Node: Organization Title */
+  /* Sort criterion: Indexed Node: Funding Opportunity Title */
   $handler->display->display_options['sorts']['title_field']['id'] = 'title_field';
   $handler->display->display_options['sorts']['title_field']['table'] = 'search_api_index_default_node_index';
   $handler->display->display_options['sorts']['title_field']['field'] = 'title_field';
@@ -1263,6 +1263,13 @@ function gie_organization_views_default_views() {
 
   /* Display: Partners */
   $handler = $view->new_display('block', 'Partners', 'partners');
+  $handler->display->display_options['defaults']['footer'] = FALSE;
+  /* Footer: Global: Text area */
+  $handler->display->display_options['footer']['area']['id'] = 'area';
+  $handler->display->display_options['footer']['area']['table'] = 'views';
+  $handler->display->display_options['footer']['area']['field'] = 'area';
+  $handler->display->display_options['footer']['area']['content'] = '<a class="button button--highlight" href="/node/174">Become a Partner</a><a href="/partners" class="view__all">View All Partners</a>';
+  $handler->display->display_options['footer']['area']['format'] = 'full_html';
   $export['partners'] = $view;
 
   $view = new view();
