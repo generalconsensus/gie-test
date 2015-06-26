@@ -484,11 +484,11 @@ function gie_user_field_default_field_instances() {
     'bundle' => 'user',
     'default_value' => array(
       0 => array(
-        'subscribe' => 0,
+        'subscribe' => 1,
       ),
     ),
     'deleted' => 0,
-    'description' => 'Join the Global Innovation Exchange mailing list! You will receive important updates about the Exchange, upcoming releases, and featured content. ',
+    'description' => 'Receive email alerts about new funding opportunities, innovations, people, events, and other content coming into the Exchange that is relevant to you based on your profile. We will also send you occasional updates on new features and opportunities in the Exchange. ',
     'display' => array(
       'default' => array(
         'label' => 'above',
@@ -558,7 +558,7 @@ function gie_user_field_default_field_instances() {
     'ds_extras_field_template' => '',
     'entity_type' => 'user',
     'field_name' => 'field_newsletter_sign_up',
-    'label' => 'Sign Up for Updates',
+    'label' => 'Make the Exchange Work for You ',
     'required' => 0,
     'settings' => array(
       'description_display' => 'before',
@@ -3162,10 +3162,10 @@ function gie_user_field_default_field_instances() {
   t('First Name');
   t('Is there a motto, saying, or famous quote that inspires you?');
   t('Job Title');
-  t('Join the Global Innovation Exchange mailing list! You will receive important updates about the Exchange, upcoming releases, and featured content. ');
   t('Last Name');
   t('LinkedIn');
   t('List any skills you have. If another user has previously entered a skill it will show up in a drop down list, if it is a new skill then it will be created. These will later be used to match you with innovations in need of your skills on the Exchange. ');
+  t('Make the Exchange Work for You ');
   t('My Motto');
   t('Name');
   t('Other Interests');
@@ -3176,6 +3176,7 @@ function gie_user_field_default_field_instances() {
   t('Provide the Facebook URL for your profile. ');
   t('Provide the LinkedIn URL for your profile. ');
   t('Provide the Twitter URL for your profile. ');
+  t('Receive email alerts about new funding opportunities, innovations, people, events, and other content coming into the Exchange that is relevant to you based on your profile. We will also send you occasional updates on new features and opportunities in the Exchange. ');
   t('Select as many types that apply to your current role and expertise.');
   t('Select organizations on the exchange that you are affiliated with, whether you have worked with them on a project or receive funding from them for an innovation. ');
   t('Select the region where you are based. ');
@@ -3185,7 +3186,6 @@ function gie_user_field_default_field_instances() {
   t('Share a great photo of yourself. If you don\'t upload your photo, one will be automatically assigned to you!');
   t('Share your education background and degrees.');
   t('Share your mailing address');
-  t('Sign Up for Updates');
   t('Skills');
   t('Topics include issue that may be of interest to Exchange users. Select any (or none) topics that you think apply to your innovation.');
   t('Twitter');

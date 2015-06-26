@@ -55,6 +55,9 @@ function gie_user_strongarm() {
         'timezone' => array(
           'weight' => '18',
         ),
+        'googleanalytics' => array(
+          'weight' => '3',
+        ),
       ),
       'display' => array(
         'summary' => array(
