@@ -5,9 +5,8 @@
 // Grid via: singularity.gs
 
 .l-panels-landing {
-  $grids: 1;
-  $grids: add-grid(12 at 700px);
-  $gutters: 2;
+  @include add-grid(12 at 700px);
+  @include add-gutter(2);
   @include breakpoint(700px, $no-query: true) {
     &.main.sidebar {
       .l-sidebar {

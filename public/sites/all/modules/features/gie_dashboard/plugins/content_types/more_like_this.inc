@@ -92,9 +92,12 @@ function more_like_this_render($subtype, $conf, $panel_args, $context = NULL) {
         $filter = $query->createFilter('AND');
         $filter->condition('type', $conf['type'], '=');
         $filter->condition('status', 1);
+
+        // Exclude node id's
         foreach ($nids as $nid) {
-            $filter->condition('nid', $nid, '<>');
+            $filter->condition('nid', trim($nid), '<>');
         }
+
         $query->filter($filter);
 
         // Limit results

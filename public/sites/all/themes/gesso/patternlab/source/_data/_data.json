@@ -31,10 +31,33 @@
     "card": {
       "src": "http://fpoimg.com/500x300?text=Card 5:3",
       "alt": "Card 5:3"
-    },
-    "user": {
-      "src": "http://fpoimg.com/500x300?text=Card 5:3",
+    }
+  },
+  "user": {
+    "name": "Sherlock Holmes",
+    "org" : "Scotland Yard",
+    "title": "Consulting Detective",
+    "location": "London, England",
+    "motto": "How often have I said to you that when you have eliminated the impossible, whatever remains, however improbable, must be the truth?",
+    "img-500-300": {
+      "src": "../../images-patternlab/sherlock-500-300.jpg",
       "alt": "Card 5:3"
+    },
+    "img-178-178": {
+      "src": "../../images-patternlab/sherlock-178-178.jpg",
+      "alt": "Card 1:1"
+    },
+    "img-78-78": {
+      "src": "../../images-patternlab/sherlock-78-78.jpg",
+      "alt": "Card 1:1"
+    },
+    "img-58-58": {
+      "src": "../../images-patternlab/sherlock-58-58.jpg",
+      "alt": "Card 1:1"
+    },
+    "img-35-35": {
+      "src": "../../images-patternlab/sherlock-35-35.jpg",
+      "alt": "Card 1:1"
     }
   },
   "year": {
@@ -65,5 +88,14 @@
     "long": "20",
     "short": "20"
   },
-  "seconds": "31"
+  "seconds": "31",
+  "funding": "10,000",
+  "comments": "10",
+  "favorites": "10",
+  "evidence": "10",
+  "funders": "10",
+  "assistance": "10",
+  "innovations": "10",
+  "resources": "10",
+  "members": "10"
 }

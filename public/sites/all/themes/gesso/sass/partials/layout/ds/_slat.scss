@@ -35,7 +35,7 @@ $gutter: 1.5em;
   display: table-cell;
   width: 10000px;
 
-  @if $legacy-support-for-ie6 or $legacy-support-for-ie7 {
+  @if support-legacy-browser('ie', '6', '7') {
     *width: auto;
     *zoom: 1;
   }
