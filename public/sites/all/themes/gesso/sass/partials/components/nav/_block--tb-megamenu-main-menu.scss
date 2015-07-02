@@ -291,9 +291,19 @@
               width: 20px;
             }
           }
+          .has-icon-events .view__header h2 {
+            &:before {
+              @extend %tb-megamenu-submenu-icon;
+              @include svg-background(icon-events-19-20-orange);
+              background-size: 19px 20px;
+              height: 20px;
+              width: 19px;
+            }
+          }
 
         }
       }
     }
   }
 }
+
