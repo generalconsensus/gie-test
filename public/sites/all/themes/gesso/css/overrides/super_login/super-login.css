@@ -1,4 +1,4 @@
-/* line 2, ../../../sass/overrides/super_login/super-login.scss */
+/* line 1, ../../../sass/overrides/super_login/super-login.scss */
 #user-login,
 #user-pass {
   border: 2px solid #cecfcb;
@@ -19,41 +19,46 @@
 /* line 17, ../../../sass/overrides/super_login/super-login.scss */
 #user-login p.login-title,
 #user-pass p.login-title {
+  -moz-hyphens: none;
+  -ms-hyphens: none;
+  -webkit-hyphens: none;
+  hyphens: none;
   border-bottom: 1px solid #cecfcb;
   font-size: 32px;
   font-weight: bold;
+  line-height: 1.1;
   margin: 0 0 1em 0;
   padding: 0 0 0.5em 0;
   text-align: center;
 }
-/* line 26, ../../../sass/overrides/super_login/super-login.scss */
+/* line 31, ../../../sass/overrides/super_login/super-login.scss */
 #user-login .form-item-pass,
 #user-pass .form-item-pass {
   margin-bottom: 0;
 }
-/* line 30, ../../../sass/overrides/super_login/super-login.scss */
+/* line 35, ../../../sass/overrides/super_login/super-login.scss */
 #user-login .forgot-password,
 #user-pass .forgot-password {
   font-size: 0.8em;
 }
-/* line 34, ../../../sass/overrides/super_login/super-login.scss */
+/* line 39, ../../../sass/overrides/super_login/super-login.scss */
 #user-login .button--submit,
 #user-pass .button--submit {
   margin: 0;
 }
-/* line 38, ../../../sass/overrides/super_login/super-login.scss */
+/* line 43, ../../../sass/overrides/super_login/super-login.scss */
 #user-login .form-actions,
 #user-pass .form-actions {
   float: left;
 }
-/* line 42, ../../../sass/overrides/super_login/super-login.scss */
+/* line 47, ../../../sass/overrides/super_login/super-login.scss */
 #user-login .super-login-register,
 #user-pass .super-login-register {
   display: inline-block;
   float: right;
   padding-top: 1em;
 }
-/* line 48, ../../../sass/overrides/super_login/super-login.scss */
+/* line 53, ../../../sass/overrides/super_login/super-login.scss */
 #user-login #capslockdiv p,
 #user-pass #capslockdiv p {
   color: #c61414;

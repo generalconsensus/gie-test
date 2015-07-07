@@ -1,13 +1,13 @@
 @media (min-width: 43.75em) {
-  /* line 14, ../../sass/partials/layout/panels/_detail.scss */
+  /* line 13, ../../sass/partials/layout/panels/_detail.scss */
   .l-panels-detail.main.main-sidebar .l-main {
     width: 64.70588%;
     float: left;
     margin-right: -100%;
-    margin-left: 0%;
+    margin-left: 0;
     clear: none;
   }
-  /* line 15, ../../sass/partials/layout/panels/_detail.scss */
+  /* line 14, ../../sass/partials/layout/panels/_detail.scss */
   .l-panels-detail.main.main-sidebar .l-main-sidebar {
     width: 29.41176%;
     float: right;
@@ -17,15 +17,15 @@
   }
 }
 @media (min-width: 43.75em) {
-  /* line 23, ../../sass/partials/layout/panels/_detail.scss */
+  /* line 22, ../../sass/partials/layout/panels/_detail.scss */
   .l-panels-detail.bottom.bottom-sidebar .l-bottom {
     width: 55.88235%;
     float: left;
     margin-right: -100%;
-    margin-left: 0%;
+    margin-left: 0;
     clear: none;
   }
-  /* line 24, ../../sass/partials/layout/panels/_detail.scss */
+  /* line 23, ../../sass/partials/layout/panels/_detail.scss */
   .l-panels-detail.bottom.bottom-sidebar .l-bottom-sidebar {
     width: 38.23529%;
     float: right;
@@ -35,15 +35,15 @@
   }
 }
 @media (min-width: 56.25em) {
-  /* line 27, ../../sass/partials/layout/panels/_detail.scss */
+  /* line 26, ../../sass/partials/layout/panels/_detail.scss */
   .l-panels-detail.bottom.bottom-sidebar .l-bottom {
     width: 64.70588%;
     float: left;
     margin-right: -100%;
-    margin-left: 0%;
+    margin-left: 0;
     clear: none;
   }
-  /* line 28, ../../sass/partials/layout/panels/_detail.scss */
+  /* line 27, ../../sass/partials/layout/panels/_detail.scss */
   .l-panels-detail.bottom.bottom-sidebar .l-bottom-sidebar {
     width: 29.41176%;
     float: right;
@@ -53,15 +53,15 @@
   }
 }
 @media (min-width: 56.25em) {
-  /* line 36, ../../sass/partials/layout/panels/_detail.scss */
+  /* line 35, ../../sass/partials/layout/panels/_detail.scss */
   .l-panels-detail.box-first.box-second.box-third .l-box-first {
     width: 29.41176%;
     float: left;
     margin-right: -100%;
-    margin-left: 0%;
+    margin-left: 0;
     clear: none;
   }
-  /* line 37, ../../sass/partials/layout/panels/_detail.scss */
+  /* line 36, ../../sass/partials/layout/panels/_detail.scss */
   .l-panels-detail.box-first.box-second.box-third .l-box-second {
     width: 29.41176%;
     float: left;
@@ -69,7 +69,7 @@
     margin-left: 35.29412%;
     clear: none;
   }
-  /* line 38, ../../sass/partials/layout/panels/_detail.scss */
+  /* line 37, ../../sass/partials/layout/panels/_detail.scss */
   .l-panels-detail.box-first.box-second.box-third .l-box-third {
     width: 29.41176%;
     float: right;
@@ -79,15 +79,15 @@
   }
 }
 @media (min-width: 43.75em) {
-  /* line 43, ../../sass/partials/layout/panels/_detail.scss */
+  /* line 42, ../../sass/partials/layout/panels/_detail.scss */
   .l-panels-detail.box-first.box-second.box-third-empty .l-box-first {
     width: 47.05882%;
     float: left;
     margin-right: -100%;
-    margin-left: 0%;
+    margin-left: 0;
     clear: none;
   }
-  /* line 44, ../../sass/partials/layout/panels/_detail.scss */
+  /* line 43, ../../sass/partials/layout/panels/_detail.scss */
   .l-panels-detail.box-first.box-second.box-third-empty .l-box-second {
     width: 47.05882%;
     float: right;
@@ -97,15 +97,15 @@
   }
 }
 @media (min-width: 43.75em) {
-  /* line 50, ../../sass/partials/layout/panels/_detail.scss */
+  /* line 49, ../../sass/partials/layout/panels/_detail.scss */
   .l-panels-detail.box-first.box-second-empty.box-third .l-box-first {
     width: 47.05882%;
     float: left;
     margin-right: -100%;
-    margin-left: 0%;
+    margin-left: 0;
     clear: none;
   }
-  /* line 51, ../../sass/partials/layout/panels/_detail.scss */
+  /* line 50, ../../sass/partials/layout/panels/_detail.scss */
   .l-panels-detail.box-first.box-second-empty.box-third .l-box-third {
     width: 47.05882%;
     float: right;
@@ -115,15 +115,15 @@
   }
 }
 @media (min-width: 43.75em) {
-  /* line 57, ../../sass/partials/layout/panels/_detail.scss */
+  /* line 56, ../../sass/partials/layout/panels/_detail.scss */
   .l-panels-detail.box-first-empty.box-second.box-third .l-box-second {
     width: 47.05882%;
     float: left;
     margin-right: -100%;
-    margin-left: 0%;
+    margin-left: 0;
     clear: none;
   }
-  /* line 58, ../../sass/partials/layout/panels/_detail.scss */
+  /* line 57, ../../sass/partials/layout/panels/_detail.scss */
   .l-panels-detail.box-first-empty.box-second.box-third .l-box-third {
     width: 47.05882%;
     float: right;
@@ -133,6 +133,10 @@
   }
 }
 
+/* line 62, ../../sass/partials/layout/panels/_detail.scss */
+.l-panels-detail {
+  *zoom: 1;
+}
 /* line 9, ../../sass/partials/global/helpers/_clearfix.scss */
 .l-panels-detail:after {
   display: table;
@@ -142,7 +146,7 @@
 .l-panels-detail:after {
   clear: both;
 }
-/* line 74, ../../sass/partials/layout/panels/_detail.scss */
+/* line 64, ../../sass/partials/layout/panels/_detail.scss */
 .l-panels-detail .l-wrapper,
 .l-panels-detail .l-title,
 .l-panels-detail .l-main,
@@ -153,9 +157,12 @@
 .l-panels-detail .l-box-third,
 .l-panels-detail .l-bottom-sidebar,
 .l-panels-detail .l-bottom {
-  -webkit-box-sizing: border-box;
+  *zoom: 1;
   -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
   box-sizing: border-box;
+  *box-sizing: content-box;
+  *behavior: url("/sites/all/themes/gesso/polyfills/boxsizing.htc");
 }
 /* line 9, ../../sass/partials/global/helpers/_clearfix.scss */
 .l-panels-detail .l-wrapper:after,

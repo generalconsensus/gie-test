@@ -26,15 +26,43 @@ function gie_assets_image_default_styles() {
   $styles['card__500x300_'] = array(
     'label' => 'Card (500x300)',
     'effects' => array(
-      14 => array(
-        'name' => 'imagefield_focus_scale_and_crop',
+      7 => array(
+        'name' => 'imagefield_focus_crop',
         'data' => array(
-          'width' => 500,
-          'height' => 300,
-          'strength' => 'high',
-          'fallback' => 'smartcrop',
+          'target' => 'focus_rect only',
         ),
-        'weight' => 2,
+        'weight' => -10,
+      ),
+      9 => array(
+        'name' => 'image_scale',
+        'data' => array(
+          'width' => 259,
+          'height' => 155,
+          'upscale' => 0,
+        ),
+        'weight' => -9,
+      ),
+      8 => array(
+        'name' => 'canvasactions_definecanvas',
+        'data' => array(
+          'RGB' => array(
+            'HEX' => '#ffffff',
+          ),
+          'under' => 1,
+          'exact' => array(
+            'width' => 259,
+            'height' => 155,
+            'xpos' => 'center',
+            'ypos' => 'center',
+          ),
+          'relative' => array(
+            'leftdiff' => '',
+            'rightdiff' => '',
+            'topdiff' => '',
+            'bottomdiff' => '',
+          ),
+        ),
+        'weight' => -8,
       ),
     ),
   );

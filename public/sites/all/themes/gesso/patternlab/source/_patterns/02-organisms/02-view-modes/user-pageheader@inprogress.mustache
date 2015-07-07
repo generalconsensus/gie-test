@@ -1,16 +1,16 @@
 <div class="layout-slat node node--discussion node--page-header view-mode-page_header">
   <div class="layout-slat__media">
-    <div class="view view-content-author view-id-content_author view-display-id-author_photo_display">    
-      <div class="views-field views-field-field-user-photo">        
-        <div class="field-content profile-thumb__image--rounded">
-          <img src="../../images-patternlab/sherlock-58-58.jpg">
-        </div>  
-      </div>  
+    <div class="view view-content-author view-id-content_author view-display-id-author_photo_display">   
+      <div class="views-field views-field-field-user-photo">       
+       <div class="field-content profile-thumb__image--rounded">
+          <img src="{{ user.img-58-58.src }}">
+        </div>
+      </div>   
     </div>
   </div>
   <div class="layout-slat__content">
     <div class="node__posted-by">
-      <span>Posted by <a href="#">Sherlock Holmes</a> on April 28, 2015 at 9:13am</span>
+      <span>Posted by <a href="#">{{ user.name }}</a> on {{ month.long }} {{ day.short }}, {{ year.long }} at {{ hour.short }}:{{ minute.long}}{{ hour.ampm }}</span>
     </div>
     <div>
       <span class="field__label field__label--inline">Topic:&nbsp;</span>

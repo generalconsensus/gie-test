@@ -133,7 +133,7 @@ figure {
 footer {}
 
 form {
-  @if $legacy-support-for-ie6 or $legacy-support-for-ie7 {
+  @if support-legacy-browser('ie', '6', '7') {
     // Correct margin displayed oddly in IE 6/7.
     margin: 0;
   }
@@ -214,12 +214,12 @@ iframe {}
 +img {
   border: 0;
 
-  @if $legacy-support-for-ie7 {
+  @if support-legacy-browser('ie', '7') {
     // Improve image quality when scaled in IE 7.
     -ms-interpolation-mode: bicubic;
   }
 
-  @if $legacy-support-for-ie8 {
+  @if support-legacy-browser('ie', '8') {
     // Correct IE 8 not scaling image height when resized.
     width: auto;
   }
@@ -264,7 +264,7 @@ legend {
   border: 0;
   margin: 0;
   padding: 0;
-  @if $legacy-support-for-ie6 or $legacy-support-for-ie7 {
+  @if support-legacy-browser('ie', '6', '7') {
     *margin-left: -7px; // LTR
 
     [dir="rtl"] & {
@@ -325,7 +325,7 @@ pre {
   margin: 0 0 rhythm(1);
   overflow: auto;
 
-  @if $legacy-support-for-ie6 or $legacy-support-for-ie7 {
+  @if support-legacy-browser('ie', '6', '7') {
     white-space: pre;
     white-space: pre-wrap;
     word-wrap: break-word;
@@ -461,7 +461,7 @@ video {}
     background: transparent !important;
     box-shadow: none !important;
     color: #000 !important;
-    @if $legacy-support-for-ie6 or $legacy-support-for-ie7 or $legacy-support-for-ie8 {
+    @if support-legacy-browser('ie', '6', '8') {
       -ms-filter: none !important;
       filter: none !important;
     }

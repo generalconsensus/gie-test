@@ -3,25 +3,25 @@
     <div class="layout-slat">
       <div class="layout-slat__media">
         <div class="user-header__photo">
-          <img src="../../images-patternlab/tyrion-178-178.jpg">
+          <img src="{{ user.img-178-178.src }}">
         </div>  
       </div>
       <div class="layout-slat__content">
         <div class="field user-header__name">
-          Tyrion Lannister
+          {{ user.name }}
         </div>
         <div class="field user-header__organization">
-          Lannister, Inc.
+          {{ user.org }}
         </div>
         <div class="field user-header__title">
-          Hand of the King
+           {{ user.title }}
         </div>
         <div class="user-header__meta">
           <div class="field user-header__address">
-            King's Landing, Westeros
+            {{ user.location }}
           </div>
           <div class="field user-header__member-since">
-            Member since Mar 18, 2015
+            Member since {{ month.short }} {{ day.short }}, {{ year.long }}
           </div>
           <div class="field user-header__type">
             <a href="/user-type/implementer">Implementer</a>, <a href="/user-type/researcher">Researcher</a>
