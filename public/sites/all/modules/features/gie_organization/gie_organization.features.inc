@@ -44,18 +44,7 @@ function gie_organization_image_default_styles() {
   // Exported image style: org_and_program_detail.
   $styles['org_and_program_detail'] = array(
     'label' => 'Org and Program Detail page',
-    'effects' => array(
-      12 => array(
-        'name' => 'imagefield_focus_scale_and_crop',
-        'data' => array(
-          'width' => 259,
-          'height' => 155,
-          'strength' => 'high',
-          'fallback' => 'smartcrop',
-        ),
-        'weight' => 1,
-      ),
-    ),
+    'effects' => array(),
   );
 
   return $styles;
