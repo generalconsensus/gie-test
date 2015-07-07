@@ -255,16 +255,22 @@
   function filters() {
     $('div[class*="pane--facetapi-"]').each(function(){
       var moi = $(this);
-      var title = $(this).find('.pane__title').eq(0);
-      var content = $(this).find('.pane__content').eq(0);
+      var title = moi.find('.pane__title').first();
+      var content = moi.find('.pane__content').first();
       moi.addClass('is-closed');
       content.hide();
       title.click(function(){
         moi.toggleClass('is-open').toggleClass('is-closed');
         content.slideToggle();
       });
+    }).each(function(index) { 
+      var moi = $(this);
+      var content = moi.find('.pane__content').first(); 
+      if ((index == 0) || (content.find('input:checked').length > 0)) {
+        content.show();
+        moi.addClass('is-open').removeClass('is-closed');
+      }
     });
-    $('div[class*="pane--facetapi-"]').first().addClass('is-open').removeClass('is-closed').find('.pane__content').show();
   }
 
   function mainmenuDropdown() { // adds responsive width for main menu dropdown based on screen size
@@ -273,7 +279,7 @@
       $(this).css("width",site);
     });
   }
- 
+  
 
   // Generic function that runs on window resize.
   function resizeStuff() {
