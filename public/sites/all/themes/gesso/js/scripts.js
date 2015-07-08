@@ -255,8 +255,8 @@
   function filters() {
     $('div[class*="pane--facetapi-"]').each(function(){
       var moi = $(this);
-      var title = moi.find('.pane__title').first();
-      var content = moi.find('.pane__content').first();
+      var title = moi.find('.pane__title').eq(0);
+      var content = moi.find('.pane__content').eq(0);
       moi.addClass('is-closed');
       content.hide();
       title.click(function(){
@@ -265,10 +265,17 @@
       });
     }).each(function(index) { 
       var moi = $(this);
-      var content = moi.find('.pane__content').first(); 
+      var content = moi.find('.pane__content').eq(0); 
       if ((index == 0) || (content.find('input:checked').length > 0)) {
-        content.show();
         moi.addClass('is-open').removeClass('is-closed');
+        content.show();
+      }
+      var slider = content.find('.ui-slider-range').eq(0);
+      if (slider.length > 0) {
+        if (slider.css("width") != "100%") {
+          moi.addClass('is-open').removeClass('is-closed');
+          content.show();
+        }
       }
     });
   }
