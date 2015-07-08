@@ -419,6 +419,26 @@ function gie_innovation_field_default_field_instances() {
         'type' => 'hidden',
         'weight' => 0,
       ),
+      'needs_list' => array(
+        'label' => 'inline',
+        'module' => 'gie_user',
+        'settings' => array(
+          'field_delimiter' => '',
+          'linked_field' => array(
+            'advanced' => array(
+              'class' => '',
+              'rel' => '',
+              'target' => '',
+              'text' => '',
+              'title' => '',
+            ),
+            'destination' => '',
+            'linked' => 0,
+          ),
+        ),
+        'type' => 'city_state_country',
+        'weight' => 2,
+      ),
       'search_listing' => array(
         'label' => 'above',
         'settings' => array(),
@@ -527,6 +547,12 @@ function gie_innovation_field_default_field_instances() {
         'type' => 'hidden',
         'weight' => 13,
       ),
+      'needs_list' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 5,
+      ),
       'search_listing' => array(
         'label' => 'above',
         'settings' => array(),
@@ -631,6 +657,12 @@ function gie_innovation_field_default_field_instances() {
         'type' => 'hidden',
         'weight' => 14,
       ),
+      'needs_list' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 6,
+      ),
       'search_listing' => array(
         'label' => 'above',
         'settings' => array(),
@@ -730,6 +762,12 @@ function gie_innovation_field_default_field_instances() {
         'settings' => array(),
         'type' => 'hidden',
         'weight' => 35,
+      ),
+      'needs_list' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 32,
       ),
       'search_listing' => array(
         'label' => 'above',
@@ -847,6 +885,12 @@ function gie_innovation_field_default_field_instances() {
         'type' => 'hidden',
         'weight' => 42,
       ),
+      'needs_list' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 39,
+      ),
       'search_listing' => array(
         'label' => 'above',
         'settings' => array(),
@@ -958,6 +1002,12 @@ function gie_innovation_field_default_field_instances() {
         'settings' => array(),
         'type' => 'hidden',
         'weight' => 20,
+      ),
+      'needs_list' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 17,
       ),
       'search_listing' => array(
         'label' => 'above',
@@ -1079,6 +1129,12 @@ function gie_innovation_field_default_field_instances() {
         ),
         'type' => 'smart_trim_format',
         'weight' => 3,
+      ),
+      'needs_list' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 4,
       ),
       'search_listing' => array(
         'label' => 'hidden',
@@ -1240,6 +1296,12 @@ function gie_innovation_field_default_field_instances() {
         'type' => 'hidden',
         'weight' => 25,
       ),
+      'needs_list' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 22,
+      ),
       'search_listing' => array(
         'label' => 'above',
         'settings' => array(),
@@ -1367,6 +1429,12 @@ function gie_innovation_field_default_field_instances() {
         'type' => 'hidden',
         'weight' => 37,
       ),
+      'needs_list' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 34,
+      ),
       'search_listing' => array(
         'label' => 'above',
         'settings' => array(),
@@ -1463,6 +1531,12 @@ function gie_innovation_field_default_field_instances() {
         'settings' => array(),
         'type' => 'hidden',
         'weight' => 31,
+      ),
+      'needs_list' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 28,
       ),
       'search_listing' => array(
         'label' => 'above',
@@ -1586,6 +1660,12 @@ function gie_innovation_field_default_field_instances() {
         'type' => 'hidden',
         'weight' => 41,
       ),
+      'needs_list' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 38,
+      ),
       'search_listing' => array(
         'label' => 'above',
         'settings' => array(),
@@ -1700,6 +1780,12 @@ function gie_innovation_field_default_field_instances() {
         ),
         'type' => 'image',
         'weight' => 1,
+      ),
+      'needs_list' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 44,
       ),
       'search_listing' => array(
         'label' => 'above',
@@ -1831,6 +1917,12 @@ function gie_innovation_field_default_field_instances() {
         'settings' => array(),
         'type' => 'hidden',
         'weight' => 27,
+      ),
+      'needs_list' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 24,
       ),
       'search_listing' => array(
         'label' => 'above',
@@ -1969,6 +2061,12 @@ function gie_innovation_field_default_field_instances() {
         'type' => 'hidden',
         'weight' => 21,
       ),
+      'needs_list' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 18,
+      ),
       'search_listing' => array(
         'label' => 'above',
         'settings' => array(),
@@ -2082,6 +2180,12 @@ function gie_innovation_field_default_field_instances() {
         'settings' => array(),
         'type' => 'hidden',
         'weight' => 0,
+      ),
+      'needs_list' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 47,
       ),
       'search_listing' => array(
         'label' => 'above',
@@ -2199,6 +2303,12 @@ function gie_innovation_field_default_field_instances() {
         'type' => 'hidden',
         'weight' => 0,
       ),
+      'needs_list' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 49,
+      ),
       'search_listing' => array(
         'label' => 'above',
         'settings' => array(),
@@ -2310,6 +2420,12 @@ function gie_innovation_field_default_field_instances() {
         'settings' => array(),
         'type' => 'hidden',
         'weight' => 28,
+      ),
+      'needs_list' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 25,
       ),
       'search_listing' => array(
         'label' => 'above',
@@ -2429,6 +2545,12 @@ function gie_innovation_field_default_field_instances() {
         'settings' => array(),
         'type' => 'hidden',
         'weight' => 36,
+      ),
+      'needs_list' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 33,
       ),
       'search_listing' => array(
         'label' => 'above',
@@ -2555,6 +2677,12 @@ function gie_innovation_field_default_field_instances() {
         'type' => 'hidden',
         'weight' => 15,
       ),
+      'needs_list' => array(
+        'label' => 'hidden',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 7,
+      ),
       'search_listing' => array(
         'label' => 'above',
         'settings' => array(),
@@ -2677,6 +2805,12 @@ function gie_innovation_field_default_field_instances() {
         'type' => 'hidden',
         'weight' => 0,
       ),
+      'needs_list' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 45,
+      ),
       'search_listing' => array(
         'label' => 'above',
         'settings' => array(),
@@ -2793,6 +2927,12 @@ function gie_innovation_field_default_field_instances() {
         'type' => 'hidden',
         'weight' => 0,
       ),
+      'needs_list' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 46,
+      ),
       'search_listing' => array(
         'label' => 'above',
         'settings' => array(),
@@ -2907,6 +3047,12 @@ function gie_innovation_field_default_field_instances() {
         'type' => 'hidden',
         'weight' => 22,
       ),
+      'needs_list' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 19,
+      ),
       'search_listing' => array(
         'label' => 'above',
         'settings' => array(),
@@ -3014,6 +3160,12 @@ function gie_innovation_field_default_field_instances() {
         'settings' => array(),
         'type' => 'hidden',
         'weight' => 39,
+      ),
+      'needs_list' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 36,
       ),
       'search_listing' => array(
         'label' => 'above',
@@ -3127,6 +3279,12 @@ function gie_innovation_field_default_field_instances() {
         'type' => 'hidden',
         'weight' => 38,
       ),
+      'needs_list' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 35,
+      ),
       'search_listing' => array(
         'label' => 'above',
         'settings' => array(),
@@ -3234,6 +3392,12 @@ function gie_innovation_field_default_field_instances() {
         'type' => 'hidden',
         'weight' => 34,
       ),
+      'needs_list' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 31,
+      ),
       'search_listing' => array(
         'label' => 'above',
         'settings' => array(),
@@ -3336,6 +3500,12 @@ function gie_innovation_field_default_field_instances() {
         'type' => 'hidden',
         'weight' => 40,
       ),
+      'needs_list' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 37,
+      ),
       'search_listing' => array(
         'label' => 'above',
         'settings' => array(),
@@ -3430,6 +3600,12 @@ function gie_innovation_field_default_field_instances() {
         'settings' => array(),
         'type' => 'hidden',
         'weight' => 32,
+      ),
+      'needs_list' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 29,
       ),
       'search_listing' => array(
         'label' => 'above',
@@ -3533,6 +3709,12 @@ function gie_innovation_field_default_field_instances() {
         'settings' => array(),
         'type' => 'hidden',
         'weight' => 0,
+      ),
+      'needs_list' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 48,
       ),
       'search_listing' => array(
         'label' => 'above',
@@ -3654,6 +3836,12 @@ function gie_innovation_field_default_field_instances() {
         'type' => 'hidden',
         'weight' => 29,
       ),
+      'needs_list' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 26,
+      ),
       'search_listing' => array(
         'label' => 'above',
         'settings' => array(),
@@ -3772,6 +3960,26 @@ function gie_innovation_field_default_field_instances() {
         'type' => 'hidden',
         'weight' => 17,
       ),
+      'needs_list' => array(
+        'label' => 'above',
+        'module' => 'gie_innovation',
+        'settings' => array(
+          'field_delimiter' => '',
+          'linked_field' => array(
+            'advanced' => array(
+              'class' => '',
+              'rel' => '',
+              'target' => '',
+              'text' => '',
+              'title' => '',
+            ),
+            'destination' => '',
+            'linked' => 0,
+          ),
+        ),
+        'type' => 'gie_listing_link',
+        'weight' => 3,
+      ),
       'search_listing' => array(
         'label' => 'above',
         'settings' => array(),
@@ -3881,6 +4089,12 @@ function gie_innovation_field_default_field_instances() {
         'settings' => array(),
         'type' => 'hidden',
         'weight' => 33,
+      ),
+      'needs_list' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 30,
       ),
       'search_listing' => array(
         'label' => 'above',
@@ -4019,6 +4233,12 @@ function gie_innovation_field_default_field_instances() {
         'type' => 'hidden',
         'weight' => 23,
       ),
+      'needs_list' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 20,
+      ),
       'search_listing' => array(
         'label' => 'above',
         'settings' => array(),
@@ -4143,6 +4363,12 @@ function gie_innovation_field_default_field_instances() {
         'type' => 'hidden',
         'weight' => 30,
       ),
+      'needs_list' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 27,
+      ),
       'search_listing' => array(
         'label' => 'above',
         'settings' => array(),
@@ -4260,6 +4486,12 @@ function gie_innovation_field_default_field_instances() {
         'settings' => array(),
         'type' => 'hidden',
         'weight' => 26,
+      ),
+      'needs_list' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 23,
       ),
       'search_listing' => array(
         'label' => 'above',
@@ -4412,6 +4644,26 @@ function gie_innovation_field_default_field_instances() {
         'type' => 'hidden',
         'weight' => 16,
       ),
+      'needs_list' => array(
+        'label' => 'hidden',
+        'module' => 'taxonomy',
+        'settings' => array(
+          'field_delimiter' => '',
+          'linked_field' => array(
+            'advanced' => array(
+              'class' => '',
+              'rel' => '',
+              'target' => '',
+              'text' => '',
+              'title' => '',
+            ),
+            'destination' => '',
+            'linked' => 0,
+          ),
+        ),
+        'type' => 'taxonomy_term_reference_plain',
+        'weight' => 0,
+      ),
       'search_listing' => array(
         'label' => 'above',
         'settings' => array(),
@@ -4521,6 +4773,12 @@ function gie_innovation_field_default_field_instances() {
         'settings' => array(),
         'type' => 'hidden',
         'weight' => 43,
+      ),
+      'needs_list' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 40,
       ),
       'search_listing' => array(
         'label' => 'above',
@@ -4650,6 +4908,12 @@ function gie_innovation_field_default_field_instances() {
         'type' => 'hidden',
         'weight' => 24,
       ),
+      'needs_list' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 21,
+      ),
       'search_listing' => array(
         'label' => 'above',
         'settings' => array(),
@@ -4773,6 +5037,12 @@ function gie_innovation_field_default_field_instances() {
         'type' => 'hidden',
         'weight' => 10,
       ),
+      'needs_list' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 43,
+      ),
       'search_listing' => array(
         'label' => 'above',
         'settings' => array(),
@@ -4882,6 +5152,12 @@ function gie_innovation_field_default_field_instances() {
         'settings' => array(),
         'type' => 'hidden',
         'weight' => 11,
+      ),
+      'needs_list' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 41,
       ),
       'search_listing' => array(
         'label' => 'above',
@@ -5002,6 +5278,12 @@ function gie_innovation_field_default_field_instances() {
         'type' => 'hidden',
         'weight' => 12,
       ),
+      'needs_list' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 42,
+      ),
       'search_listing' => array(
         'label' => 'above',
         'settings' => array(),
@@ -5117,6 +5399,29 @@ function gie_innovation_field_default_field_instances() {
         ),
         'type' => 'title_linked',
         'weight' => 2,
+      ),
+      'needs_list' => array(
+        'label' => 'hidden',
+        'module' => 'title',
+        'settings' => array(
+          'field_delimiter' => '',
+          'linked_field' => array(
+            'advanced' => array(
+              'class' => '',
+              'rel' => '',
+              'target' => '',
+              'text' => '',
+              'title' => '',
+            ),
+            'destination' => '',
+            'linked' => 0,
+          ),
+          'title_class' => '',
+          'title_link' => '',
+          'title_style' => '',
+        ),
+        'type' => 'title_linked',
+        'weight' => 1,
       ),
       'search_listing' => array(
         'label' => 'hidden',

@@ -23,6 +23,7 @@ features[ds_layout_settings][] = node|needs|details
 features[ds_layout_settings][] = node|needs|full
 features[ds_layout_settings][] = node|needs|listing
 features[ds_layout_settings][] = node|needs|page_header
+features[ds_view_modes][] = needs_list
 features[features_api][] = api:2
 features[field_base][] = body
 features[field_base][] = field_needs_amount_items

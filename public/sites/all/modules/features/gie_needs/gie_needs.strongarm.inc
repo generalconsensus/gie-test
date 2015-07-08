@@ -113,6 +113,9 @@ function gie_needs_strongarm() {
       'revision' => array(
         'custom_settings' => FALSE,
       ),
+      'needs_list' => array(
+        'custom_settings' => TRUE,
+      ),
     ),
     'extra_fields' => array(
       'form' => array(
@@ -145,6 +148,10 @@ function gie_needs_strongarm() {
             'weight' => '10',
             'visible' => TRUE,
           ),
+          'needs_list' => array(
+            'weight' => '10',
+            'visible' => TRUE,
+          ),
         ),
         'sharethis' => array(
           'default' => array(
@@ -165,6 +172,10 @@ function gie_needs_strongarm() {
           ),
           'details' => array(
             'weight' => '26',
+            'visible' => FALSE,
+          ),
+          'needs_list' => array(
+            'weight' => '13',
             'visible' => FALSE,
           ),
         ),
@@ -188,6 +199,10 @@ function gie_needs_strongarm() {
           'details' => array(
             'weight' => '25',
             'visible' => FALSE,
+          ),
+          'needs_list' => array(
+            'weight' => '10',
+            'visible' => TRUE,
           ),
         ),
       ),
