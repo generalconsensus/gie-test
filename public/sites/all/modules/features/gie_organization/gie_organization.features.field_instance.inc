@@ -1039,7 +1039,6 @@ function gie_organization_field_default_field_instances() {
       'alt_field_hide' => 0,
       'alt_field_sync_title' => 1,
       'alt_field_update_on_edit' => 1,
-      'default_image' => 44,
       'description_display' => 'before',
       'file_directory' => '',
       'file_extensions' => 'png gif jpg jpeg',

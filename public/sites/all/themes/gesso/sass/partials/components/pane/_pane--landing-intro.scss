@@ -56,6 +56,16 @@
       width: 34px;
     }
   }
+  // Events icon
+  .pane--events-introduction & {
+    @include breakpoint(500px, $no-query: true) { // don't show icon until 500px
+      padding-left: 60px; // icon width + 15
+    } 
+    &:before {
+      @include svg-background(icon-events-45-46-white);
+      width: 45px;
+    }
+  }
   // About icon
   .pane--about-introduction & {
     &:before {
