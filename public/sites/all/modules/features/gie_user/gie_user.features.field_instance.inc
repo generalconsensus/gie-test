@@ -2418,7 +2418,7 @@ function gie_user_field_default_field_instances() {
       'max_resolution' => '',
       'min_resolution' => '',
       'random_default' => 1,
-      'random_default_path' => 'random',
+      'random_default_path' => 'random/user',
       'title_field' => 0,
       'title_field_default' => '',
       'title_field_hide' => 0,
