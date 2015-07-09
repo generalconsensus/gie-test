@@ -28,6 +28,8 @@ function gie_messages_comment_insert($comment) {
   $wrapper = entity_metadata_wrapper('message', $message);
   $wrapper->field_node_ref->set($node);
   $wrapper->field_comment_ref->set($comment);
+  // Save before message_notify_send_message, or else mid won't exist for message digest to use
+  $wrapper->save();
 
   // Send message using Message Notify
   message_notify_send_message($message, array(), $notifier_name);
@@ -79,6 +81,8 @@ function gie_messages_flag_flag($flag, $content_id, $account, $flagging) {
       $wrapper->field_node_ref->set($node);
       $wrapper->field_flag_ref->set($flagging);
       $wrapper->field_user_ref->set($account);
+      // Save before message_notify_send_message, or else mid won't exist for message digest to use
+      $wrapper->save();
 
       // Send message using Message Notify
       message_notify_send_message($message, array(), $notifier_name);
@@ -119,6 +123,8 @@ function gie_messages_flag_flag($flag, $content_id, $account, $flagging) {
       $wrapper = entity_metadata_wrapper('message', $message);
       $wrapper->field_user_ref->set($account);
       $wrapper->field_flag_ref->set($flagging);
+      // Save before message_notify_send_message, or else mid won't exist for message digest to use
+      $wrapper->save();
 
       // Send message using Message Notify
       message_notify_send_message($message, array(), $notifier_name);
@@ -176,6 +182,8 @@ function gie_messages_node_update($node) {
     $message = message_create('node_update_notify', array('uid' => $uid));
     $wrapper = entity_metadata_wrapper('message', $message);
     $wrapper->field_node_ref->set($node);
+    // Save before message_notify_send_message, or else mid won't exist for message digest to use
+    $wrapper->save();
 
     // Send message using Message Notify
     message_notify_send_message($message, array(), $notifier_name);
