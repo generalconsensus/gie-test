@@ -27,31 +27,23 @@ function gie_messages_strongarm() {
       'form' => array(),
       'display' => array(
         'message__message_text__0' => array(
-          'default' => array(
-            'weight' => '0',
-            'visible' => TRUE,
-          ),
           'message_notify_email_subject' => array(
-            'weight' => '0',
             'visible' => TRUE,
+            'weight' => 0,
           ),
           'message_notify_email_body' => array(
-            'weight' => '1',
             'visible' => FALSE,
+            'weight' => 0,
           ),
         ),
         'message__message_text__1' => array(
-          'default' => array(
-            'weight' => '1',
-            'visible' => TRUE,
-          ),
           'message_notify_email_subject' => array(
-            'weight' => '1',
             'visible' => FALSE,
+            'weight' => 0,
           ),
           'message_notify_email_body' => array(
-            'weight' => '0',
             'visible' => TRUE,
+            'weight' => 0,
           ),
         ),
       ),
