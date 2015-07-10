@@ -4,9 +4,9 @@
     <h3 class="card__title"><a href="{{ url }}">{{ title }}</a></h3>
     <div class="card__author">
       <div class="card__author-inner">
-        <div class="card__author-image"><img src="../../images-patternlab/buffy-35-35.jpg"></div>
-        <div class="card__author-name">Buffy Summers</div>
-        <div class="card__author-date">03/15/2015</div>    
+        <div class="card__author-image"><img src="{{ user.img-35-35.src }}"></div>
+        <div class="card__author-name">{{ user.name }}</div>
+        <div class="card__author-date">{{ month.digit }}/{{ day.long }}/{{ year.long }}</div>    
       </div>
     </div>
   </div>

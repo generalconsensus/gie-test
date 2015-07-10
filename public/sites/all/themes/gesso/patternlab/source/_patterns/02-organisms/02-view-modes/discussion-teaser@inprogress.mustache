@@ -3,7 +3,7 @@
     <div class="view view-content-author">
       <div class="views-field views-field-field-user-photo">        
         <div class="field-content profile-thumb__image--rounded">
-          <img src="{{ img.icon.src }}">
+          <img src="{{ user.img-58-58.src }}">
         </div>  
       </div>  
     </div>
@@ -13,7 +13,7 @@
       <a href="{{ url }}">{{ title }}</a>
     </h3>
     <div class="node__posted-by">
-      <span>Posted by <a href="#">{{ author }}</a> on May 6, 2015 at 1:03pm</span>
+      <span>Posted by <a href="#">{{ user.name }}</a> on {{ month.long }} {{ day.short }}, {{ year.long }} at {{ hour.short }}:{{ minute.long}}{{ hour.ampm }}</span>
     </div>
     <div class="node__summary">
       <div class="field field--discussion-desc">

@@ -212,12 +212,13 @@
             }
           }
 
-          .span12 {
+          .span12,
+          .span {
             .view .item-list ul {
               @include column-count(3);
               @include column-gap(1em);
               li {
-                @include column-break-inside(avoid);
+                @include break-inside(avoid);
                 display: table; // firefox
                 width: 100%; // firefox
                 break-inside: avoid-column; // ie10
@@ -290,9 +291,19 @@
               width: 20px;
             }
           }
+          .has-icon-events .view__header h2 {
+            &:before {
+              @extend %tb-megamenu-submenu-icon;
+              @include svg-background(icon-events-19-20-orange);
+              background-size: 19px 20px;
+              height: 20px;
+              width: 19px;
+            }
+          }
 
         }
       }
     }
   }
 }
+

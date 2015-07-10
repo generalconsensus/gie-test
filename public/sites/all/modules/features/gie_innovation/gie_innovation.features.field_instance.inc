@@ -474,7 +474,7 @@ function gie_innovation_field_default_field_instances() {
     'bundle' => 'innovation',
     'default_value' => NULL,
     'deleted' => 0,
-    'description' => 'Upload multiple high-resolution photos and videos of your innovation. These will appear at the top of your innovation profile page.',
+    'description' => 'Upload multiple high-resolution photos and videos of your innovation. These will appear at the top of your innovation profile page. Images will display at full size in the following dimensions: 1100 x 687 pixels. To optimize the look of your innovation page, the image you select should be big enough to display at this size without degradation. ',
     'display' => array(
       'at_a_glance' => array(
         'label' => 'above',
@@ -1631,7 +1631,9 @@ function gie_innovation_field_default_field_instances() {
   $field_instances['node-innovation-field_innovation_image'] = array(
     'bundle' => 'innovation',
     'deleted' => 0,
-    'description' => 'Upload an image that will represent your innovation in other areas of the Exchange.',
+    'description' => 'Upload an image that will represent your innovation in other areas of the Exchange.
+
+Using the selector below, highlight the area of the image you would like to feature. ',
     'display' => array(
       'at_a_glance' => array(
         'label' => 'above',
@@ -1727,15 +1729,15 @@ function gie_innovation_field_default_field_instances() {
     'required' => 0,
     'settings' => array(
       'alt_field' => 1,
-      'alt_field_default' => '',
+      'alt_field_default' => '[node:title_field]',
       'alt_field_hide' => 0,
       'alt_field_sync_title' => 0,
-      'alt_field_update_on_edit' => 0,
+      'alt_field_update_on_edit' => 1,
       'default_image' => 35,
       'description_display' => 'before',
       'file_directory' => '',
       'file_extensions' => 'png gif jpg jpeg',
-      'focus' => 0,
+      'focus' => 1,
       'focus_lock_ratio' => 0,
       'focus_min_size' => '',
       'max_filesize' => '',
@@ -4721,7 +4723,7 @@ function gie_innovation_field_default_field_instances() {
     'bundle' => 'innovation',
     'default_value' => NULL,
     'deleted' => 0,
-    'description' => 'Select the regions that include the above countries',
+    'description' => 'Select the regions that include the countries selected for this innovation. ',
     'display' => array(
       'at_a_glance' => array(
         'label' => 'above',
@@ -5575,7 +5577,7 @@ function gie_innovation_field_default_field_instances() {
   t('Sector');
   t('Select the countries where your innovation is being tested/used');
   t('Select the countries where your innovation was created');
-  t('Select the regions that include the above countries');
+  t('Select the regions that include the countries selected for this innovation. ');
   t('Select the stage that best describes the current status of your innovation');
   t('Share any articles, blogs, or other news items that showcase your innovation');
   t('Share more details about how the innovation works');
@@ -5594,8 +5596,10 @@ function gie_innovation_field_default_field_instances() {
   t('Type in team members\' names (first name initial last name e.g. kshipley) to connect those who are developing the innovation to your innovation profile. Only team members who have user profiles on the Exchange will appear. If they have not created profiles yet, please encourage them to do so. ');
   t('Type the organizations or programs that you are funded by. They must have an organization or program profile to appear on your page. Please encourage your funders to create organization/program profiles and user profiles on the Exchange if they don\'t appear.');
   t('Upload an evaluation, test results, or other documents, photos, or videos that prove your innovation works.');
-  t('Upload an image that will represent your innovation in other areas of the Exchange.');
-  t('Upload multiple high-resolution photos and videos of your innovation. These will appear at the top of your innovation profile page.');
+  t('Upload an image that will represent your innovation in other areas of the Exchange.
+
+Using the selector below, highlight the area of the image you would like to feature. ');
+  t('Upload multiple high-resolution photos and videos of your innovation. These will appear at the top of your innovation profile page. Images will display at full size in the following dimensions: 1100 x 687 pixels. To optimize the look of your innovation page, the image you select should be big enough to display at this size without degradation. ');
   t('Website');
   t('What is your plan for increasing sales or use of your innovation?');
   t('What type of assistance do you need to grow your innovation? If you don\'t select any assistance your profile will say "No Assistance Needed at this Time"');

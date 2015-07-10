@@ -632,4 +632,13 @@ $conf['memcache_key_prefix'] = 'gie_www';
  */
 $conf['googleanalytics_account'] = 'UA-62347470-1';
 
+/**
+ * Change memory limit
+ */
 ini_set('memory_limit', '512M');
+
+/**
+ * Change file upload sizes
+ */
+ini_set('upload_max_filesize','20M');
+ini_set('post_max_size','20M');

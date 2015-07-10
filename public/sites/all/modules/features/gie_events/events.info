@@ -9,6 +9,7 @@ dependencies[] = field_group
 dependencies[] = flag
 dependencies[] = gie_funding
 dependencies[] = gie_user
+dependencies[] = image_field_random
 dependencies[] = multiple_selects
 dependencies[] = page_manager
 dependencies[] = pane

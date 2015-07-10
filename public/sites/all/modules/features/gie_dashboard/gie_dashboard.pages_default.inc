@@ -163,6 +163,30 @@ function gie_dashboard_default_page_manager_pages() {
     $display->content['new-cc873759-f953-459a-9ba2-c94aff11b86d'] = $pane;
     $display->panels['main'][3] = 'new-cc873759-f953-459a-9ba2-c94aff11b86d';
     $pane = new stdClass();
+    $pane->pid = 'new-98116e50-7a74-4d4a-be6b-52e4be25e762';
+    $pane->panel = 'main';
+    $pane->type = 'more_like_this';
+    $pane->subtype = 'more_like_this';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array(
+      'type' => 'innovation',
+      'override_title' => 0,
+      'override_title_text' => '',
+      'override_title_heading' => 'h2',
+    );
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
+    $pane->css = array();
+    $pane->extras = array();
+    $pane->position = 4;
+    $pane->locks = array();
+    $pane->uuid = '98116e50-7a74-4d4a-be6b-52e4be25e762';
+    $display->content['new-98116e50-7a74-4d4a-be6b-52e4be25e762'] = $pane;
+    $display->panels['main'][4] = 'new-98116e50-7a74-4d4a-be6b-52e4be25e762';
+    $pane = new stdClass();
     $pane->pid = 'new-580cb31e-5a70-489b-98e7-e701b204c0b4';
     $pane->panel = 'title';
     $pane->type = 'page_title';

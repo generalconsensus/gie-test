@@ -1,8 +1,8 @@
 {
   "1": {
-    "url": "http://lorizzle.nl/",
-    "title": "Nullizzle shizznit velizzle, hizzle, suscipit own yo', gravida vizzle, arcu.",
-    "summary": "<p>Fizzle crazy tortor. Sed rizzle. Ass pimpin' dolor dapibizzle turpis tempizzle fo shizzle my nizzle. Maurizzle pellentesque its fo rizzle izzle turpis. Get down get down we gonna chung nizzle. Shizzlin dizzle eleifend rhoncizzle break it down. In yo ghetto platea dictumst. Bling bling dapibizzle. Curabitur break yo neck, yall fo, pretizzle eu, go to hizzle dope, own yo' vitae, nunc. Bizzle suscipizzle. Semper velit sizzle fo.</p>",
+    "url": "http://http://www.commercekitchen.com/whedon-ipsum/",
+    "title": "You Can't Take The Sky From Me",
+    "summary": "<p> We're gonna explode? I don't wanna explode. Boy, when they were handing out school spirit, you didn't even stand in line, did you? We will rule over all this land, and we will call it...This Land. It's about power and it's about women and you just hate those two words in the same sentence, don't you? Just once I would like to run into a cult of bunny worshippers. Put your words in word places please. </p>",
     "img": {
       "icon": {
         "src": "http://lorempixel.com/48/48/animals/8/",
@@ -27,20 +27,43 @@
       "card": {
         "src": "http://lorempixel.com/500/300/animals/3/",
         "alt": "Card 5:3"
-      },
-      "user": {
-        "src": "http://lorempixel.com/500/300/people/1/",
+      }
+    },
+    "user": {
+      "name": "Sherlock Holmes",
+      "org" : "Scotland Yard",
+      "title": "Consulting Detective",
+      "location": "London, England",
+      "motto": "How often have I said to you that when you have eliminated the impossible, whatever remains, however improbable, must be the truth?",
+      "img-500-300": {
+        "src": "../../images-patternlab/sherlock-500-300.jpg",
         "alt": "Card 5:3"
+      },
+      "img-178-178": {
+        "src": "../../images-patternlab/sherlock-178-178.jpg",
+        "alt": "Card 1:1"
+      },
+      "img-78-78": {
+        "src": "../../images-patternlab/sherlock-78-78.jpg",
+        "alt": "Card 1:1"
+      },
+      "img-58-58": {
+        "src": "../../images-patternlab/sherlock-58-58.jpg",
+        "alt": "Card 1:1"
+      },
+      "img-35-35": {
+        "src": "../../images-patternlab/sherlock-35-35.jpg",
+        "alt": "Card 1:1"
       }
     },
     "year": {
-      "long": "2013",
-      "short": "13"
+      "long": "2015",
+      "short": "15"
     },
     "month": {
       "long": "January",
       "short": "Jan",
-      "digit": "01"
+      "digit": "1"
     },
     "weekday": {
       "long": "Sunday",
@@ -61,7 +84,16 @@
       "long": "20",
       "short": "20"
     },
-    "seconds": "31"
+    "seconds": "31",
+    "funding": "30,000,000",
+    "comments": "1",
+    "favorites": "10",
+    "evidence": "2",
+    "funders": "4500",
+    "assistance": "4",
+    "innovations": "2",
+    "resources": "32",
+    "members": "10"
   },
   "2": {
     "url": "http://veggieipsum.com",
@@ -91,20 +123,43 @@
       "card": {
         "src": "http://lorempixel.com/500/300/food/3/",
         "alt": "Card 5:3"
-      },
-      "user": {
-        "src": "http://lorempixel.com/500/300/people/2/",
+      }
+    },
+    "user": {
+      "name": "Dr. John Watson, M.D.",
+      "org" : "Scotland Yard",
+      "title": "Assistant Consulting Detective",
+      "location": "London, England",
+      "motto": "Did we just break in to a military base to investigate a rabbit?",
+      "img-500-300": {
+        "src": "../../images-patternlab/watson-500-300.jpg",
         "alt": "Card 5:3"
+      },
+      "img-178-178": {
+        "src": "../../images-patternlab/watson-178-178.jpg",
+        "alt": "Card 1:1"
+      },
+      "img-78-78": {
+        "src": "../../images-patternlab/watson-78-78.jpg",
+        "alt": "Card 1:1"
+      },
+      "img-58-58": {
+        "src": "../../images-patternlab/watson-58-58.jpg",
+        "alt": "Card 1:1"
+      },
+      "img-35-35": {
+        "src": "../../images-patternlab/watson-35-35.jpg",
+        "alt": "Card 1:1"
       }
     },
     "year": {
-      "long": "2013",
-      "short": "13"
+      "long": "2015",
+      "short": "15"
     },
     "month": {
       "long": "February",
       "short": "Feb",
-      "digit": "02"
+      "digit": "2"
     },
     "weekday": {
       "long": "Monday",
@@ -125,7 +180,16 @@
       "long": "20",
       "short": "20"
     },
-    "seconds": "31"
+    "seconds": "31",
+    "funding": "3,000,001",
+    "comments": "245",
+    "favorites": "1055",
+    "evidence": "56",
+    "funders": "452",
+    "assistance": "45",
+    "innovations": "6",
+    "resources": "5",
+    "members": "105"
   },
   "3": {
     "url": "http://baconipsum.com/",
@@ -155,20 +219,43 @@
       "card": {
         "src": "http://lorempixel.com/500/300/city/3/",
         "alt": "Card 5:3"
-      },
-      "user": {
-        "src": "http://lorempixel.com/500/300/people/3/",
+      }
+    },
+    "user": {
+      "name": "Fox Mulder",
+      "org" : "Federal Bureau of Investigation",
+      "title": "Special Agent",
+      "location": "Alexandria, VA",
+      "motto": "That's why they put the I in FBI.",
+      "img-500-300": {
+        "src": "../../images-patternlab/mulder-500-300.jpg",
         "alt": "Card 5:3"
+      },
+      "img-178-178": {
+        "src": "../../images-patternlab/mulder-178-178.jpg",
+        "alt": "Card 1:1"
+      },
+      "img-78-78": {
+        "src": "../../images-patternlab/mulder-78-78.jpg",
+        "alt": "Card 1:1"
+      },
+      "img-58-58": {
+        "src": "../../images-patternlab/mulder-58-58.jpg",
+        "alt": "Card 1:1"
+      },
+      "img-35-35": {
+        "src": "../../images-patternlab/mulder-35-35.jpg",
+        "alt": "Card 1:1"
       }
     },
     "year": {
-      "long": "2013",
-      "short": "13"
+      "long": "2015",
+      "short": "15"
     },
     "month": {
       "long": "March",
       "short": "Mar",
-      "digit": "03"
+      "digit": "3"
     },
     "weekday": {
       "long": "Tuesday",
@@ -189,7 +276,16 @@
       "long": "45",
       "short": "45"
     },
-    "seconds": "11"
+    "seconds": "11",
+    "funding": "355",
+    "comments": "0",
+    "favorites": "0",
+    "evidence": "52",
+    "funders": "2",
+    "assistance": "1",
+    "innovations": "7",
+    "resources": "22",
+    "members": "1"
   },
   "4": {
     "url": "http://hipsteripsum.me/",
@@ -219,20 +315,43 @@
       "card": {
         "src": "http://lorempixel.com/500/300/business/3/",
         "alt": "Card 5:3"
-      },
-      "user": {
-        "src": "http://lorempixel.com/500/300/people/4/",
+      }
+    },
+    "user": {
+      "name": "Dana Scully",
+      "org" : "Federal Bureau of Investigation",
+      "title": "Special Agent",
+      "location": "Annapolis, Maryland",
+      "motto": "Just because I can't explain it doesn't mean I'm going to believe they're UFOs.",
+      "img-500-300": {
+        "src": "../../images-patternlab/scully-500-300.jpg",
         "alt": "Card 5:3"
+      },
+      "img-178-178": {
+        "src": "../../images-patternlab/scully-178-178.jpg",
+        "alt": "Card 1:1"
+      },
+      "img-78-78": {
+        "src": "../../images-patternlab/scully-78-78.jpg",
+        "alt": "Card 1:1"
+      },
+      "img-58-58": {
+        "src": "../../images-patternlab/scully-58-58.jpg",
+        "alt": "Card 1:1"
+      },
+      "img-35-35": {
+        "src": "../../images-patternlab/scully-35-35.jpg",
+        "alt": "Card 1:1"
       }
     },
     "year": {
-      "long": "2013",
-      "short": "13"
+      "long": "2015",
+      "short": "15"
     },
     "month": {
       "long": "April",
       "short": "Apr",
-      "digit": "04"
+      "digit": "4"
     },
     "weekday": {
       "long": "Wednesday",
@@ -253,7 +372,16 @@
       "long": "14",
       "short": "14"
     },
-    "seconds": "52"
+    "seconds": "52",
+    "funding": "256,000",
+    "comments": "5",
+    "favorites": "3",
+    "evidence": "2",
+    "funders": "104",
+    "assistance": "305",
+    "innovations": "67",
+    "resources": "32",
+    "members": "55"
   },
   "5": {
     "url": "http://www.niemanlab.org/journo-ipsum/",
@@ -283,20 +411,43 @@
       "card": {
         "src": "http://lorempixel.com/500/300/nature/3/",
         "alt": "Card 5:3"
-      },
-      "user": {
-        "src": "http://lorempixel.com/500/300/people/5/",
+      }
+    },
+    "user": {
+      "name": "Daenerys Targaryen",
+      "org" : "House Targaryen",
+      "title": "Queen Daenerys, First of Her Name, the Unburnt, Khaleesi of the Great Grass Sea, Breaker of Chains, and Mother of Dragons",
+      "location": "Meereen",
+      "motto": "No one will take my dragons.",
+      "img-500-300": {
+        "src": "../../images-patternlab/daenerys-500-300.jpg",
         "alt": "Card 5:3"
+      },
+      "img-178-178": {
+        "src": "../../images-patternlab/daenerys-178-178.jpg",
+        "alt": "Card 1:1"
+      },
+      "img-78-78": {
+        "src": "../../images-patternlab/daenerys-78-78.jpg",
+        "alt": "Card 1:1"
+      },
+      "img-58-58": {
+        "src": "../../images-patternlab/daenerys-58-58.jpg",
+        "alt": "Card 1:1"
+      },
+      "img-35-35": {
+        "src": "../../images-patternlab/daenerys-35-35.jpg",
+        "alt": "Card 1:1"
       }
     },
     "year": {
-      "long": "2013",
-      "short": "13"
+      "long": "2015",
+      "short": "15"
     },
     "month": {
       "long": "May",
       "short": "May",
-      "digit": "05"
+      "digit": "5"
     },
     "weekday": {
       "long": "Thursday",
@@ -317,7 +468,16 @@
       "long": "37",
       "short": "37"
     },
-    "seconds": "24"
+    "seconds": "24",
+    "funding": "554,237",
+    "comments": "23",
+    "favorites": "100",
+    "evidence": "5",
+    "funders": "67",
+    "assistance": "65",
+    "innovations": "1",
+    "resources": "2",
+    "members": "10"
   },
   "6": {
     "url": "http://www.malevole.com/mv/misc/text/",
@@ -347,20 +507,43 @@
       "card": {
         "src": "http://lorempixel.com/500/300/sports/4/",
         "alt": "Card 5:3"
-      },
-      "user": {
-        "src": "http://lorempixel.com/500/300/people/6/",
+      }
+    },
+    "user": {
+      "name": "Tyrion Lannister",
+      "org" : "Government of Westeros",
+      "title": "Hand of the King",
+      "location": "King's Landing",
+      "motto": "Never forget what you are.  The rest of the world will not.  Wear it like armor, and it can never be used to hurt you.",
+      "img-500-300": {
+        "src": "../../images-patternlab/tyrion-500-300.jpg",
         "alt": "Card 5:3"
+      },
+      "img-178-178": {
+        "src": "../../images-patternlab/tyrion-178-178.jpg",
+        "alt": "Card 1:1"
+      },
+      "img-78-78": {
+        "src": "../../images-patternlab/tyrion-78-78.jpg",
+        "alt": "Card 1:1"
+      },
+      "img-58-58": {
+        "src": "../../images-patternlab/tyrion-58-58.jpg",
+        "alt": "Card 1:1"
+      },
+      "img-35-35": {
+        "src": "../../images-patternlab/tyrion-35-35.jpg",
+        "alt": "Card 1:1"
       }
     },
     "year": {
-      "long": "2013",
-      "short": "13"
+      "long": "2015",
+      "short": "15"
     },
     "month": {
       "long": "June",
       "short": "Jun",
-      "digit": "06"
+      "digit": "6"
     },
     "weekday": {
       "long": "Friday",
@@ -381,7 +564,16 @@
       "long": "37",
       "short": "37"
     },
-    "seconds": "33"
+    "seconds": "33",
+    "funding": "1,245,324",
+    "comments": "55",
+    "favorites": "3",
+    "evidence": "6",
+    "funders": "245",
+    "assistance": "899",
+    "innovations": "8",
+    "resources": "4",
+    "members": "35"
   },
   "7": {
     "url": "http://slipsum.com/lite/",
@@ -411,20 +603,43 @@
       "card": {
         "src": "http://lorempixel.com/500/300/people/3/",
         "alt": "Card 5:3"
-      },
-      "user": {
-        "src": "http://lorempixel.com/500/300/people/1/",
+      }
+    },
+    "user": {
+      "name": "Joshua Lyman",
+      "org" : "United States Government",
+      "title": "White House Deputy Chief of Staff",
+      "location": "Washington, DC",
+      "motto": " I drink from the keg of glory, Donna. Bring me the finest muffins and bagels in all the land.",
+      "img-500-300": {
+        "src": "../../images-patternlab/josh-500-300.jpg",
         "alt": "Card 5:3"
+      },
+      "img-178-178": {
+        "src": "../../images-patternlab/josh-178-178.jpg",
+        "alt": "Card 1:1"
+      },
+      "img-78-78": {
+        "src": "../../images-patternlab/josh-78-78.jpg",
+        "alt": "Card 1:1"
+      },
+      "img-58-58": {
+        "src": "../../images-patternlab/josh-58-58.jpg",
+        "alt": "Card 1:1"
+      },
+      "img-35-35": {
+        "src": "../../images-patternlab/josh-35-35.jpg",
+        "alt": "Card 1:1"
       }
     },
     "year": {
-      "long": "2013",
-      "short": "13"
+      "long": "2015",
+      "short": "15"
     },
     "month": {
       "long": "July",
       "short": "Jul",
-      "digit": "07"
+      "digit": "7"
     },
     "weekday": {
       "long": "Saturday",
@@ -445,7 +660,16 @@
       "long": "12",
       "short": "12"
     },
-    "seconds": "47"
+    "seconds": "47",
+    "funding": "21,400",
+    "comments": "2",
+    "favorites": "7",
+    "evidence": "2",
+    "funders": "4",
+    "assistance": "4",
+    "innovations": "12",
+    "resources": "2",
+    "members": "167"
   },
   "8": {
     "url": "http://web20ipsum.com",
@@ -475,20 +699,43 @@
       "card": {
         "src": "http://lorempixel.com/500/300/technics/3/",
         "alt": "Card 5:3"
-      },
-      "user": {
-        "src": "http://lorempixel.com/500/300/people/2/",
+      }
+    },
+    "user": {
+      "name": "C.J. Cregg",
+      "org" : "United States Government",
+      "title": "White House Press Secretary",
+      "location": "Washington, DC",
+      "motto": "Why, why, oh why do you ask me questions that you absolutely positively know I'm not going to answer?",
+      "img-500-300": {
+        "src": "../../images-patternlab/cj-500-300.jpg",
         "alt": "Card 5:3"
+      },
+      "img-178-178": {
+        "src": "../../images-patternlab/cj-178-178.jpg",
+        "alt": "Card 1:1"
+      },
+      "img-78-78": {
+        "src": "../../images-patternlab/cj-78-78.jpg",
+        "alt": "Card 1:1"
+      },
+      "img-58-58": {
+        "src": "../../images-patternlab/cj-58-58.jpg",
+        "alt": "Card 1:1"
+      },
+      "img-35-35": {
+        "src": "../../images-patternlab/cj-35-35.jpg",
+        "alt": "Card 1:1"
       }
     },
     "year": {
-      "long": "2013",
-      "short": "13"
+      "long": "2015",
+      "short": "15"
     },
     "month": {
       "long": "August",
       "short": "Aug",
-      "digit": "08"
+      "digit": "8"
     },
     "weekday": {
       "long": "Sunday",
@@ -509,7 +756,16 @@
       "long": "42",
       "short": "42"
     },
-    "seconds": "21"
+    "seconds": "21",
+    "funding": "4,550",
+    "comments": "1",
+    "favorites": "1",
+    "evidence": "2",
+    "funders": "6",
+    "assistance": "4",
+    "innovations": "4",
+    "resources": "66",
+    "members": "3"
   },
   "9": {
     "url": "http://chrisvalleskey.com/fillerama/",
@@ -539,20 +795,43 @@
       "card": {
         "src": "http://lorempixel.com/500/300/transport/3/",
         "alt": "Card 5:3"
-      },
-      "user": {
-        "src": "http://lorempixel.com/500/300/people/3/",
+      }
+    },
+    "user": {
+      "name": "Cameron Howe",
+      "org" : "Cardiff Electric",
+      "title": "Lead Programmer",
+      "location": "Dallas, TX",
+      "motto": "Computers could be more. They should be.",
+      "img-500-300": {
+        "src": "../../images-patternlab/cameron-500-300.jpg",
         "alt": "Card 5:3"
+      },
+      "img-178-178": {
+        "src": "../../images-patternlab/cameron-178-178.jpg",
+        "alt": "Card 1:1"
+      },
+      "img-78-78": {
+        "src": "../../images-patternlab/cameron-78-78.jpg",
+        "alt": "Card 1:1"
+      },
+      "img-58-58": {
+        "src": "../../images-patternlab/cameron-58-58.jpg",
+        "alt": "Card 1:1"
+      },
+      "img-35-35": {
+        "src": "../../images-patternlab/cameron-35-35.jpg",
+        "alt": "Card 1:1"
       }
     },
     "year": {
-      "long": "2013",
-      "short": "13"
+      "long": "2015",
+      "short": "15"
     },
     "month": {
       "long": "September",
       "short": "Sep",
-      "digit": "09"
+      "digit": "9"
     },
     "weekday": {
       "long": "Monday",
@@ -573,7 +852,16 @@
       "long": "04",
       "short": "4"
     },
-    "seconds": "37"
+    "seconds": "37",
+    "funding": "2,500,000",
+    "comments": "36",
+    "favorites": "20",
+    "evidence": "25",
+    "funders": "225",
+    "assistance": "678",
+    "innovations": "2",
+    "resources": "55",
+    "members": "145"
   },
   "10": {
     "url": "http://chrisvalleskey.com/fillerama/",
@@ -603,15 +891,38 @@
       "card": {
         "src": "http://lorempixel.com/500/300/cats/3/",
         "alt": "Card 5:3"
-      },
-      "user": {
-        "src": "http://lorempixel.com/500/300/people/4/",
+      }
+    },
+    "user": {
+      "name": "Gordon Clark",
+      "org" : "Cardiff Electric",
+      "title": "Lead Engineer",
+      "location": "Dallas, TX",
+      "motto": "A personal computer, like any other computer, is just a nothing box full of electronic switches and hardware.",
+      "img-500-300": {
+        "src": "../../images-patternlab/gordon-500-300.jpg",
         "alt": "Card 5:3"
+      },
+      "img-178-178": {
+        "src": "../../images-patternlab/gordon-178-178.jpg",
+        "alt": "Card 1:1"
+      },
+      "img-78-78": {
+        "src": "../../images-patternlab/gordon-78-78.jpg",
+        "alt": "Card 1:1"
+      },
+      "img-58-58": {
+        "src": "../../images-patternlab/gordon-58-58.jpg",
+        "alt": "Card 1:1"
+      },
+      "img-35-35": {
+        "src": "../../images-patternlab/gordon-35-35.jpg",
+        "alt": "Card 1:1"
       }
     },
     "year": {
-      "long": "2013",
-      "short": "13"
+      "long": "2015",
+      "short": "15"
     },
     "month": {
       "long": "October",
@@ -637,7 +948,16 @@
       "long": "51",
       "short": "51"
     },
-    "second": "19"
+    "second": "19",
+    "funding": "120,000,000",
+    "comments": "1034",
+    "favorites": "230",
+    "evidence": "295",
+    "funders": "450",
+    "assistance": "487",
+    "innovations": "4",
+    "resources": "12",
+    "members": "4578"
   },
   "11": {
     "url": "http://cupcakeipsum.com/",
@@ -667,15 +987,38 @@
       "card": {
         "src": "http://lorempixel.com/500/300/nightlife/3/",
         "alt": "Card 5:3"
-      },
-      "user": {
-        "src": "http://lorempixel.com/500/300/people/5/",
+      }
+    },
+    "user": {
+      "name": "Inigo Montoya",
+      "org" : "Vizzini",
+      "title": "Fencer/Henceman",
+      "location": "Florin",
+      "motto": "Hello. My name is Inigo Montoya. You killed my father. Prepare to die.",
+      "img-500-300": {
+        "src": "../../images-patternlab/inigo-500-300.jpg",
         "alt": "Card 5:3"
+      },
+      "img-178-178": {
+        "src": "../../images-patternlab/inigo-178-178.jpg",
+        "alt": "Card 1:1"
+      },
+      "img-78-78": {
+        "src": "../../images-patternlab/inigo-78-78.jpg",
+        "alt": "Card 1:1"
+      },
+      "img-58-58": {
+        "src": "../../images-patternlab/inigo-58-58.jpg",
+        "alt": "Card 1:1"
+      },
+      "img-35-35": {
+        "src": "../../images-patternlab/inigo-35-35.jpg",
+        "alt": "Card 1:1"
       }
     },
     "year": {
-      "long": "2013",
-      "short": "13"
+      "long": "2015",
+      "short": "15"
     },
     "month": {
       "long": "November",
@@ -701,7 +1044,16 @@
       "long": "55",
       "short": "55"
     },
-    "seconds": "12"
+    "seconds": "12",
+    "funding": "35,000",
+    "comments": "17",
+    "favorites": "65",
+    "evidence": "2",
+    "funders": "45",
+    "assistance": "9",
+    "innovations": "3",
+    "resources": "13",
+    "members": "6"
   },
   "12": {
     "url": "http://www.cheeseipsum.co.uk/",
@@ -731,15 +1083,38 @@
       "card": {
         "src": "http://lorempixel.com/500/300/abstract/3/",
         "alt": "Card 5:3"
-      },
-      "user": {
-        "src": "http://lorempixel.com/500/300/people/6/",
+      }
+    },
+    "user": {
+      "name": "Princess Buttercup",
+      "org" : "Government of Florin",
+      "title": "Princess",
+      "location": "Florin",
+      "motto": "You cannot track that, not with a thousand bloodhounds, and you cannot break it, not with a thousand swords.",
+      "img-500-300": {
+        "src": "../../images-patternlab/buttercup-500-300.jpg",
         "alt": "Card 5:3"
+      },
+      "img-178-178": {
+        "src": "../../images-patternlab/buttercup-178-178.jpg",
+        "alt": "Card 1:1"
+      },
+      "img-78-78": {
+        "src": "../../images-patternlab/buttercup-78-78.jpg",
+        "alt": "Card 1:1"
+      },
+      "img-58-58": {
+        "src": "../../images-patternlab/buttercup-58-58.jpg",
+        "alt": "Card 1:1"
+      },
+      "img-35-35": {
+        "src": "../../images-patternlab/buttercup-35-35.jpg",
+        "alt": "Card 1:1"
       }
     },
     "year": {
-      "long": "2013",
-      "short": "13"
+      "long": "2015",
+      "short": "15"
     },
     "month": {
       "long": "December",
@@ -765,6 +1140,15 @@
       "long": "34",
       "short": "34"
     },
-    "seconds": "56"
+    "seconds": "56",
+    "funding": "55,260,000",
+    "comments": "344",
+    "favorites": "23",
+    "evidence": "67",
+    "funders": "246",
+    "assistance": "300",
+    "innovations": "6",
+    "resources": "1",
+    "members": "899"
   }
 }

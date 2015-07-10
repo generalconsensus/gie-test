@@ -36,6 +36,7 @@
 }
 
 .profile-thumb__summary {
+  @include hyphens(none);
   font-size: em(14px);
   line-height: 1.5;
 }
