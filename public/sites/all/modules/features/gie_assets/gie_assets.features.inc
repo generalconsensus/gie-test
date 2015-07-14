@@ -26,23 +26,23 @@ function gie_assets_image_default_styles() {
   $styles['card__500x300_'] = array(
     'label' => 'Card (500x300)',
     'effects' => array(
-      7 => array(
+      4 => array(
         'name' => 'imagefield_focus_crop',
         'data' => array(
           'target' => 'focus_rect only',
         ),
         'weight' => -10,
       ),
-      9 => array(
+      5 => array(
         'name' => 'image_scale',
         'data' => array(
-          'width' => 259,
-          'height' => 155,
+          'width' => 500,
+          'height' => 300,
           'upscale' => 0,
         ),
         'weight' => -9,
       ),
-      8 => array(
+      6 => array(
         'name' => 'canvasactions_definecanvas',
         'data' => array(
           'RGB' => array(
@@ -50,8 +50,8 @@ function gie_assets_image_default_styles() {
           ),
           'under' => 1,
           'exact' => array(
-            'width' => 259,
-            'height' => 155,
+            'width' => 500,
+            'height' => 300,
             'xpos' => 'center',
             'ypos' => 'center',
           ),
@@ -62,7 +62,7 @@ function gie_assets_image_default_styles() {
             'bottomdiff' => '',
           ),
         ),
-        'weight' => -8,
+        'weight' => 3,
       ),
     ),
   );
