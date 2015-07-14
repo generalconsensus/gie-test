@@ -182,5 +182,106 @@ function gie_dashboard_default_panels_mini() {
   $mini->display = $display;
   $export['dashboard_recommendations'] = $mini;
 
+  $mini = new stdClass();
+  $mini->disabled = FALSE; /* Edit this to true to make a default mini disabled initially */
+  $mini->api_version = 1;
+  $mini->name = 'dashboard_similar';
+  $mini->category = 'Dashboard';
+  $mini->admin_title = 'Dashboard Similar';
+  $mini->admin_description = 'Here is the Similar content Dashboard Tab';
+  $mini->requiredcontexts = array();
+  $mini->contexts = array();
+  $mini->relationships = array();
+  $display = new panels_display();
+  $display->layout = 'onecol';
+  $display->layout_settings = array();
+  $display->panel_settings = array(
+    'style_settings' => array(
+      'default' => NULL,
+      'middle' => NULL,
+    ),
+  );
+  $display->cache = array();
+  $display->title = '';
+  $display->uuid = '5a14f11a-ef3e-421e-9a44-f572e32a8d61';
+  $display->content = array();
+  $display->panels = array();
+    $pane = new stdClass();
+    $pane->pid = 'new-a9ed824e-80bd-41f9-b72b-ad710d65fd5a';
+    $pane->panel = 'middle';
+    $pane->type = 'more_like_this';
+    $pane->subtype = 'more_like_this';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array(
+      'type' => 'innovation',
+      'override_title' => 1,
+      'override_title_text' => 'Similar Innovations',
+      'override_title_heading' => 'h2',
+    );
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
+    $pane->css = array();
+    $pane->extras = array();
+    $pane->position = 0;
+    $pane->locks = array();
+    $pane->uuid = 'a9ed824e-80bd-41f9-b72b-ad710d65fd5a';
+    $display->content['new-a9ed824e-80bd-41f9-b72b-ad710d65fd5a'] = $pane;
+    $display->panels['middle'][0] = 'new-a9ed824e-80bd-41f9-b72b-ad710d65fd5a';
+    $pane = new stdClass();
+    $pane->pid = 'new-d8884fd9-9a91-4d61-98a5-357b9ffce4a5';
+    $pane->panel = 'middle';
+    $pane->type = 'more_like_this';
+    $pane->subtype = 'more_like_this';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array(
+      'type' => 'resource',
+      'override_title' => 1,
+      'override_title_text' => 'Similar Resources',
+      'override_title_heading' => 'h2',
+    );
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
+    $pane->css = array();
+    $pane->extras = array();
+    $pane->position = 1;
+    $pane->locks = array();
+    $pane->uuid = 'd8884fd9-9a91-4d61-98a5-357b9ffce4a5';
+    $display->content['new-d8884fd9-9a91-4d61-98a5-357b9ffce4a5'] = $pane;
+    $display->panels['middle'][1] = 'new-d8884fd9-9a91-4d61-98a5-357b9ffce4a5';
+    $pane = new stdClass();
+    $pane->pid = 'new-45e541fb-448b-4654-8615-c3b2c9a384d7';
+    $pane->panel = 'middle';
+    $pane->type = 'more_like_this';
+    $pane->subtype = 'more_like_this';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array(
+      'type' => 'funding',
+      'override_title' => 1,
+      'override_title_text' => 'Similar Funding',
+      'override_title_heading' => 'h2',
+    );
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
+    $pane->css = array();
+    $pane->extras = array();
+    $pane->position = 2;
+    $pane->locks = array();
+    $pane->uuid = '45e541fb-448b-4654-8615-c3b2c9a384d7';
+    $display->content['new-45e541fb-448b-4654-8615-c3b2c9a384d7'] = $pane;
+    $display->panels['middle'][2] = 'new-45e541fb-448b-4654-8615-c3b2c9a384d7';
+  $display->hide_title = PANELS_TITLE_FIXED;
+  $display->title_pane = '0';
+  $mini->display = $display;
+  $export['dashboard_similar'] = $mini;
+
   return $export;
 }
