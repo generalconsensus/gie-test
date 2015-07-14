@@ -20,6 +20,7 @@ features[page_manager_pages][] = dashboard
 features[pane_container][] = dashboard_action_cards
 features[panels_mini][] = dashboard_follow
 features[panels_mini][] = dashboard_recommendations
+features[panels_mini][] = dashboard_similar
 features[quicktabs][] = dashboard
 features[views_view][] = dashboard
 features[views_view][] = dashboard_users
