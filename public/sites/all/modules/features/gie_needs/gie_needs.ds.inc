@@ -17,10 +17,10 @@ function gie_needs_ds_field_settings_info() {
   $ds_fieldsetting->bundle = 'needs';
   $ds_fieldsetting->view_mode = 'details';
   $ds_fieldsetting->settings = array(
-    'field_needs_paid' => array(
+    'field_needs_amount_items' => array(
       'formatter_settings' => array(
         'ft' => array(
-          'lb' => 'Is this a Paid Need?',
+          'lb' => 'Items Needed',
         ),
       ),
     ),
@@ -32,17 +32,17 @@ function gie_needs_ds_field_settings_info() {
         ),
       ),
     ),
-    'field_needs_amount_items' => array(
-      'formatter_settings' => array(
-        'ft' => array(
-          'lb' => 'Items Needed',
-        ),
-      ),
-    ),
     'field_needs_amount_people' => array(
       'formatter_settings' => array(
         'ft' => array(
           'lb' => 'People Needed',
+        ),
+      ),
+    ),
+    'field_needs_paid' => array(
+      'formatter_settings' => array(
+        'ft' => array(
+          'lb' => 'Is this a Paid Need?',
         ),
       ),
     ),
@@ -261,24 +261,26 @@ function gie_needs_ds_layout_settings_info() {
   $ds_layout->settings = array(
     'regions' => array(
       'ds_content' => array(
-        0 => 'field_needs_type',
-        1 => 'group_details',
-        2 => 'field_needs_date_needed',
-        3 => 'field_needs_status',
-        4 => 'field_needs_related_organization',
-        5 => 'field_needs_related_program',
-        6 => 'field_term_sector',
-        7 => 'field_term_region',
-        8 => 'field_term_topic',
-        9 => 'field_needs_paid',
-        10 => 'field_needs_amount_money',
-        11 => 'field_needs_amount_items',
-        12 => 'field_needs_amount_people',
+        0 => 'group_details',
+        1 => 'field_needs_location',
+        2 => 'field_needs_type',
+        3 => 'field_needs_date_needed',
+        4 => 'field_needs_status',
+        5 => 'field_needs_related_organization',
+        6 => 'field_needs_related_program',
+        7 => 'field_term_sector',
+        8 => 'field_term_region',
+        9 => 'field_term_topic',
+        10 => 'field_needs_paid',
+        11 => 'field_needs_amount_money',
+        12 => 'field_needs_amount_items',
+        13 => 'field_needs_amount_people',
       ),
     ),
     'fields' => array(
-      'field_needs_type' => 'ds_content',
       'group_details' => 'ds_content',
+      'field_needs_location' => 'ds_content',
+      'field_needs_type' => 'ds_content',
       'field_needs_date_needed' => 'ds_content',
       'field_needs_status' => 'ds_content',
       'field_needs_related_organization' => 'ds_content',

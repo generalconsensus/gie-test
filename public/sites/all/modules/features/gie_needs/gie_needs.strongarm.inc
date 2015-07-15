@@ -120,10 +120,10 @@ function gie_needs_strongarm() {
     'extra_fields' => array(
       'form' => array(
         'path' => array(
-          'weight' => '30',
+          'weight' => '2',
         ),
         'rabbit_hole' => array(
-          'weight' => '0',
+          'weight' => '1',
         ),
       ),
       'display' => array(
@@ -155,8 +155,8 @@ function gie_needs_strongarm() {
         ),
         'sharethis' => array(
           'default' => array(
-            'weight' => '10',
-            'visible' => TRUE,
+            'weight' => '12',
+            'visible' => FALSE,
           ),
           'listing' => array(
             'weight' => '18',
@@ -175,7 +175,7 @@ function gie_needs_strongarm() {
             'visible' => FALSE,
           ),
           'needs_list' => array(
-            'weight' => '13',
+            'weight' => '23',
             'visible' => FALSE,
           ),
         ),
@@ -214,6 +214,18 @@ function gie_needs_strongarm() {
             'weight' => '14',
             'visible' => FALSE,
           ),
+          'details' => array(
+            'weight' => '10',
+            'visible' => FALSE,
+          ),
+          'needs_list' => array(
+            'weight' => '14',
+            'visible' => FALSE,
+          ),
+          'default' => array(
+            'weight' => '10',
+            'visible' => FALSE,
+          ),
         ),
         'needs_point_of_contact_needs_profile_button' => array(
           'page_header' => array(
@@ -222,6 +234,18 @@ function gie_needs_strongarm() {
           ),
           'full' => array(
             'weight' => '13',
+            'visible' => FALSE,
+          ),
+          'details' => array(
+            'weight' => '10',
+            'visible' => FALSE,
+          ),
+          'needs_list' => array(
+            'weight' => '13',
+            'visible' => FALSE,
+          ),
+          'default' => array(
+            'weight' => '9',
             'visible' => FALSE,
           ),
         ),

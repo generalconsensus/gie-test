@@ -153,6 +153,8 @@ function gie_search_default_search_api_index() {
         "field_innovation_ref_avail" : { "type" : "boolean" },
         "field_innovation_stage" : { "type" : "integer", "entity_type" : "taxonomy_term" },
         "field_innovation_type" : { "type" : "integer", "entity_type" : "taxonomy_term" },
+        "field_needs_type" : { "type" : "list\\u003Cinteger\\u003E", "entity_type" : "taxonomy_term" },
+        "field_needs_type:tid" : { "type" : "list\\u003Cinteger\\u003E" },
         "field_org_expertise" : { "type" : "integer", "entity_type" : "taxonomy_term" },
         "field_org_featured" : { "type" : "boolean" },
         "field_org_partners" : { "type" : "list\\u003Cinteger\\u003E", "entity_type" : "node" },
