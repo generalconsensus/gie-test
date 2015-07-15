@@ -163,12 +163,12 @@ function gie_needs_strongarm() {
             'visible' => FALSE,
           ),
           'full' => array(
-            'weight' => '6',
-            'visible' => FALSE,
+            'weight' => '0',
+            'visible' => TRUE,
           ),
           'page_header' => array(
-            'weight' => '3',
-            'visible' => TRUE,
+            'weight' => '5',
+            'visible' => FALSE,
           ),
           'details' => array(
             'weight' => '26',
@@ -203,6 +203,26 @@ function gie_needs_strongarm() {
           'needs_list' => array(
             'weight' => '10',
             'visible' => TRUE,
+          ),
+        ),
+        'needs_point_of_contact_needs_contact_button' => array(
+          'page_header' => array(
+            'weight' => '3',
+            'visible' => TRUE,
+          ),
+          'full' => array(
+            'weight' => '14',
+            'visible' => FALSE,
+          ),
+        ),
+        'needs_point_of_contact_needs_profile_button' => array(
+          'page_header' => array(
+            'weight' => '4',
+            'visible' => FALSE,
+          ),
+          'full' => array(
+            'weight' => '13',
+            'visible' => FALSE,
           ),
         ),
       ),

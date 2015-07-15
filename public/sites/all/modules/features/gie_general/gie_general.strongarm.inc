@@ -498,6 +498,7 @@ function gie_general_strongarm() {
     'event' => 'event',
     'funding' => 'funding',
     'innovation' => 'innovation',
+    'needs' => 'needs',
     'resource' => 'resource',
     'action_card' => 0,
     'article' => 0,

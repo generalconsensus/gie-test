@@ -234,7 +234,7 @@ function gie_organization_field_default_field_instances() {
     'bundle' => 'organization',
     'default_value' => NULL,
     'deleted' => 0,
-    'description' => 'The mission of your organization',
+    'description' => '',
     'display' => array(
       'at_a_glance' => array(
         'label' => 'hidden',
@@ -370,7 +370,7 @@ function gie_organization_field_default_field_instances() {
     'ds_extras_field_template' => '',
     'entity_type' => 'node',
     'field_name' => 'field_org_desc',
-    'label' => 'Description',
+    'label' => 'Short Description',
     'required' => 0,
     'settings' => array(
       'better_formats' => array(
@@ -764,7 +764,7 @@ function gie_organization_field_default_field_instances() {
     'bundle' => 'organization',
     'default_value' => NULL,
     'deleted' => 0,
-    'description' => 'Link to your organization\'s website',
+    'description' => 'Link to your organization\'s website using the full URL. Example: http://www.globalinnovationexchange.com',
     'display' => array(
       'at_a_glance' => array(
         'label' => 'hidden',
@@ -861,7 +861,7 @@ function gie_organization_field_default_field_instances() {
         'configurable_class' => 0,
         'configurable_title' => 0,
         'rel' => '',
-        'target' => 'default',
+        'target' => '_blank',
         'title' => '',
       ),
       'description_display' => 'before',
@@ -873,7 +873,7 @@ function gie_organization_field_default_field_instances() {
       'title' => 'value',
       'title_label_use_field_label' => 0,
       'title_maxlength' => 128,
-      'title_value' => 'Link URL',
+      'title_value' => 'Organization Website',
       'url' => 0,
       'user_register_form' => FALSE,
       'validate_url' => 1,
@@ -983,7 +983,7 @@ function gie_organization_field_default_field_instances() {
         'settings' => array(
           'field_delimiter' => '',
           'image_link' => '',
-          'image_style' => 'card__500x300_',
+          'image_style' => 'org_and_program_detail',
           'linked_field' => array(
             'advanced' => array(
               'class' => '',
@@ -1039,7 +1039,6 @@ function gie_organization_field_default_field_instances() {
       'alt_field_hide' => 0,
       'alt_field_sync_title' => 1,
       'alt_field_update_on_edit' => 1,
-      'default_image' => 44,
       'description_display' => 'before',
       'file_directory' => '',
       'file_extensions' => 'png gif jpg jpeg',
@@ -1299,7 +1298,7 @@ function gie_organization_field_default_field_instances() {
       'module' => 'multiple_selects',
       'settings' => array(),
       'type' => 'multiple_selects',
-      'weight' => 14,
+      'weight' => 15,
     ),
   );
 
@@ -1405,7 +1404,7 @@ function gie_organization_field_default_field_instances() {
         'size' => 60,
       ),
       'type' => 'entityreference_autocomplete',
-      'weight' => 13,
+      'weight' => 14,
     ),
   );
 
@@ -1508,7 +1507,7 @@ function gie_organization_field_default_field_instances() {
     'entityconnect_unload_edit' => 0,
     'field_name' => 'field_org_poc',
     'label' => 'Point of Contact',
-    'required' => 1,
+    'required' => 0,
     'settings' => array(
       'description_display' => 'before',
       'user_register_form' => FALSE,
@@ -2547,7 +2546,7 @@ function gie_organization_field_default_field_instances() {
         'apply_chosen' => 1,
       ),
       'type' => 'options_select',
-      'weight' => 12,
+      'weight' => 13,
     ),
   );
 
@@ -2630,7 +2629,7 @@ function gie_organization_field_default_field_instances() {
     'ds_extras_field_template' => '',
     'entity_type' => 'node',
     'field_name' => 'field_term_sector',
-    'label' => 'Sector',
+    'label' => 'Related Sectors',
     'required' => 1,
     'settings' => array(
       'description_display' => 'before',
@@ -2653,6 +2652,110 @@ function gie_organization_field_default_field_instances() {
       ),
       'type' => 'term_reference_tree',
       'weight' => 11,
+    ),
+  );
+
+  // Exported field_instance: 'node-organization-field_term_topic'
+  $field_instances['node-organization-field_term_topic'] = array(
+    'bundle' => 'organization',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'at_a_glance' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'contact' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'default' => array(
+        'label' => 'above',
+        'module' => 'taxonomy',
+        'settings' => array(
+          'field_delimiter' => '',
+          'linked_field' => array(
+            'advanced' => array(
+              'class' => '',
+              'rel' => '',
+              'target' => '',
+              'text' => '',
+              'title' => '',
+            ),
+            'destination' => '',
+            'linked' => 0,
+          ),
+        ),
+        'type' => 'taxonomy_term_reference_link',
+        'weight' => 27,
+      ),
+      'full' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'listing' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'logo' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'page_header' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'search_listing' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'ds_extras_field_template' => '',
+    'entity_type' => 'node',
+    'field_name' => 'field_term_topic',
+    'label' => 'Related Topics',
+    'required' => 0,
+    'settings' => array(
+      'description_display' => 'after',
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'term_reference_tree',
+      'settings' => array(
+        'cascading_selection' => 0,
+        'filter_view' => '',
+        'leaves_only' => 0,
+        'max_depth' => '',
+        'parent_term_id' => '',
+        'select_parents' => 0,
+        'start_minimized' => 0,
+        'token_display' => '',
+        'track_list' => 0,
+      ),
+      'type' => 'term_reference_tree',
+      'weight' => 12,
     ),
   );
 
@@ -3056,7 +3159,7 @@ function gie_organization_field_default_field_instances() {
   t('Facebook');
   t('Featured');
   t('Link URL');
-  t('Link to your organization\'s website');
+  t('Link to your organization\'s website using the full URL. Example: http://www.globalinnovationexchange.com');
   t('LinkedIn');
   t('List the type of expertise your organization and its staff provide');
   t('List your organizaton\'s areas of focus ');
@@ -3074,12 +3177,14 @@ function gie_organization_field_default_field_instances() {
   t('Please select the sectors and sub-sectors related to your innovation. Click on the plus (+) icon on the different sectors to access sub sectors. Be sure to select the sectors and subsectors that apply. Do not select a sub-sector without also selecting the corresponding sector. ');
   t('Point of Contact');
   t('Region');
+  t('Related Sectors');
+  t('Related Topics');
   t('Role on the Exchange');
-  t('Sector');
   t('Select the Parent Organization. ');
   t('Select the regions that apply to the selected countries');
   t('Select the type(s) of organization you are');
   t('Select which roles your think your organization will play on the Exchange ');
+  t('Short Description');
   t('Subject');
   t('Telephone');
   t('Telephone number for your organization including country code');

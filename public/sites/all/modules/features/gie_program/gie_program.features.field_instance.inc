@@ -911,7 +911,7 @@ function gie_program_field_default_field_instances() {
       'file_directory' => '',
       'file_extensions' => 'png gif jpg jpeg',
       'focus' => 1,
-      'focus_lock_ratio' => 1,
+      'focus_lock_ratio' => 0,
       'focus_min_size' => '500x300',
       'max_filesize' => '',
       'max_resolution' => '',
@@ -1374,7 +1374,7 @@ function gie_program_field_default_field_instances() {
     'entityconnect_unload_edit' => 0,
     'field_name' => 'field_program_poc',
     'label' => 'Point of Contact',
-    'required' => 1,
+    'required' => 0,
     'settings' => array(
       'description_display' => 'before',
       'user_register_form' => FALSE,
