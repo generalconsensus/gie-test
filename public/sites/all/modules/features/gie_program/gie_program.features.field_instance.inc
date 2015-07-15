@@ -866,7 +866,7 @@ function gie_program_field_default_field_instances() {
         'settings' => array(
           'field_delimiter' => '',
           'image_link' => '',
-          'image_style' => 'org_and_program_detail',
+          'image_style' => 'card__500x300_',
           'linked_field' => array(
             'advanced' => array(
               'class' => '',
@@ -906,11 +906,12 @@ function gie_program_field_default_field_instances() {
       'alt_field_hide' => 0,
       'alt_field_sync_title' => 1,
       'alt_field_update_on_edit' => 1,
+      'default_image' => 0,
       'description_display' => 'before',
       'file_directory' => '',
       'file_extensions' => 'png gif jpg jpeg',
       'focus' => 1,
-      'focus_lock_ratio' => 1,
+      'focus_lock_ratio' => 0,
       'focus_min_size' => '500x300',
       'max_filesize' => '',
       'max_resolution' => '',
