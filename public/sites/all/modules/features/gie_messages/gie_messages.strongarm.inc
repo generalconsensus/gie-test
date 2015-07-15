@@ -296,5 +296,12 @@ function gie_messages_strongarm() {
   $strongarm->value = 'full_html';
   $export['mimemail_format'] = $strongarm;
 
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'mimemail_sitestyle';
+  $strongarm->value = 0;
+  $export['mimemail_sitestyle'] = $strongarm;
+
   return $export;
 }
