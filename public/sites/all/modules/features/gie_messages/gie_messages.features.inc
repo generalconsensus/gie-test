@@ -36,11 +36,11 @@ function gie_messages_default_message_type() {
           "format" : "full_html"
         },
         {
-          "value" : "\\u003Cp\\u003EDear [message:user],\\u003C\\/p\\u003E\\r\\n\\r\\n\\u003Cp\\u003E\\u003Ca href=\\u0022[message:field-comment-ref:author:url]\\u0022\\u003E[message:field-comment-ref:author:name]\\u003C\\/a\\u003E just commented on [message:field-node-ref:title]:\\u003C\\/p\\u003E\\r\\n\\r\\n\\u003Cdiv\\u003E[message:field-comment-ref:body]\\u003C\\/div\\u003E\\r\\n\\r\\n\\u003Cp\\u003EGo reply to [message:field-comment-ref:author:name]\\u0027s comment \\u003Ca href=\\u0022[message:field-comment-ref:url]\\u0022\\u003Ehere\\u003C\\/a\\u003E!\\u003C\\/p\\u003E\\r\\n\\r\\n\\u003Cp\\u003EIs your user profile complete? The Exchange alerts you to new funding opportunities, innovations, events and more that match your profile and interests. Click \\u003Ca href=\\u0022[message:user:url]\\u0022\\u003Ehere\\u003C\\/a\\u003E to complete your profile.\\u003C\\/p\\u003E\\r\\n",
+          "value" : "\\u003Cp\\u003EDear [message:user],\\u003C\\/p\\u003E\\r\\n\\r\\n\\u003Cp\\u003E\\u003Ca href=\\u0022[message:field-comment-ref:author:url]\\u0022\\u003E[message:field-comment-ref:author:name]\\u003C\\/a\\u003E just commented on [message:field-node-ref:title]:\\u003C\\/p\\u003E\\r\\n\\r\\n\\u003Cdiv\\u003E[message:field-comment-ref:body]\\u003C\\/div\\u003E\\r\\n\\r\\n\\u003Cp\\u003EGo reply to [message:field-comment-ref:author:name]\\u0027s comment \\u003Ca href=\\u0022[message:field-comment-ref:url]\\u0022\\u003Ehere\\u003C\\/a\\u003E!\\u003C\\/p\\u003E\\r\\n\\r\\n\\u003Cp\\u003EIs your user profile complete? The Exchange alerts you to new funding opportunities, innovations, events and more that match your profile and interests. Click \\u003Ca href=\\u0022[message:user:url]\\u0022\\u003Ehere\\u003C\\/a\\u003E to complete your profile.\\u003C\\/p\\u003E\\r\\n\\r\\n\\u003Cp\\u003EUpdate your message settings by editing your profile on the Exchange: [message:field-user-ref:edit-url]\\u003C\\/p\\u003E\\r\\n",
           "format" : "full_html"
         },
         {
-          "value" : "\\u003Cp\\u003E[message:field-comment-ref:author:name] commented on [message:field-node-ref:title]: [message:field-comment-ref:url]\\u003C\\/p\\u003E",
+          "value" : "\\u003Cp\\u003E[message:field-comment-ref:author:name] commented on [message:field-node-ref:title]: [message:field-comment-ref:url]\\u003C\\/p\\u003E\\r\\n",
           "format" : "full_html"
         }
       ]
@@ -65,11 +65,11 @@ function gie_messages_default_message_type() {
           "format" : "full_html"
         },
         {
-          "value" : "\\u003Cp\\u003EDear [message:user],\\u003C\\/p\\u003E\\r\\n\\r\\n\\u003Cp\\u003E\\u003Ca href=\\u0022[message:field-user-ref:url]\\u0022\\u003E[message:field-user-ref:name]\\u003C\\/a\\u003E is now following [message:field-node-ref:title].\\u003C\\/p\\u003E\\r\\n\\r\\n\\u003Cp\\u003EConnect with [message:field-user-ref:name] by viewing [message:field-user-ref:name]\\u2019s Profile or sending [message:field-user-ref:name] a note!\\u003C\\/p\\u003E\\r\\n\\r\\n\\u003Cp\\u003EIs your user profile complete? The Exchange alerts you to new funding opportunities, innovations, events and more that match your profile and interests. Click \\u003Ca href=\\u0022[message:user:url]\\u0022\\u003Ehere\\u003C\\/a\\u003E to complete your profile.\\u003C\\/p\\u003E\\r\\n",
+          "value" : "\\u003Cp\\u003EDear [message:user],\\u003C\\/p\\u003E\\r\\n\\r\\n\\u003Cp\\u003E\\u003Ca href=\\u0022[message:field-user-ref:url]\\u0022\\u003E[message:field-user-ref:name]\\u003C\\/a\\u003E is now following [message:field-node-ref:title].\\u003C\\/p\\u003E\\r\\n\\r\\n\\u003Cp\\u003EConnect with [message:field-user-ref:name] by viewing [message:field-user-ref:name]\\u2019s Profile or sending [message:field-user-ref:name] a note!\\u003C\\/p\\u003E\\r\\n\\r\\n\\u003Cp\\u003EIs your user profile complete? The Exchange alerts you to new funding opportunities, innovations, events and more that match your profile and interests. Click \\u003Ca href=\\u0022[message:user:url]\\u0022\\u003Ehere\\u003C\\/a\\u003E to complete your profile.\\u003C\\/p\\u003E\\r\\n\\r\\n\\u003Cp\\u003EUpdate your message settings by editing your profile on the Exchange: [message:field-user-ref:edit-url]\\u003C\\/p\\u003E",
           "format" : "full_html"
         },
         {
-          "value" : "\\u003Cp\\u003E[message:field-user-ref:name] favorited [message:field-node-ref:title]:  [message:field-node-ref:url]\\u003C\\/p\\u003E",
+          "value" : "\\u003Cp\\u003E[message:field-user-ref:name] favorited [message:field-node-ref:title]: [message:field-node-ref:url]\\u003C\\/p\\u003E\\r\\n",
           "format" : "full_html"
         }
       ]
@@ -94,11 +94,11 @@ function gie_messages_default_message_type() {
           "format" : "full_html"
         },
         {
-          "value" : "\\u003Cp\\u003EDear [message:user],\\u003C\\/p\\u003E\\r\\n\\r\\n\\u003Cp\\u003E\\u003Ca href=\\u0022[message:field-user-ref:url]\\u0022\\u003E[message:field-user-ref:name]\\u003C\\/a\\u003E is now following you on the Global Innovation Exchange!\\u003C\\/p\\u003E\\r\\n\\r\\n\\u003Cp\\u003EGo view\\u0026nbsp;[message:field-user-ref:name]\\u0027s profile, send\\u0026nbsp;[message:field-user-ref:name] a note, or follow\\u0026nbsp;[message:field-user-ref:name] back!\\u003C\\/p\\u003E\\r\\n\\r\\n\\u003Cp\\u003EIs your user profile complete? The Exchange alerts you to new funding opportunities, innovations, events and more that match your profile and interests. Click \\u003Ca href=\\u0022[message:user:url]\\u0022\\u003Ehere\\u003C\\/a\\u003E to complete your profile.\\u003C\\/p\\u003E\\r\\n",
+          "value" : "\\u003Cp\\u003EDear [message:user],\\u003C\\/p\\u003E\\r\\n\\r\\n\\u003Cp\\u003E\\u003Ca href=\\u0022[message:field-user-ref:url]\\u0022\\u003E[message:field-user-ref:name]\\u003C\\/a\\u003E is now following you on the Global Innovation Exchange!\\u003C\\/p\\u003E\\r\\n\\r\\n\\u003Cp\\u003EGo view\\u0026nbsp;[message:field-user-ref:name]\\u0027s profile, send\\u0026nbsp;[message:field-user-ref:name] a note, or follow\\u0026nbsp;[message:field-user-ref:name] back!\\u003C\\/p\\u003E\\r\\n\\r\\n\\u003Cp\\u003EIs your user profile complete? The Exchange alerts you to new funding opportunities, innovations, events and more that match your profile and interests. Click \\u003Ca href=\\u0022[message:user:url]\\u0022\\u003Ehere\\u003C\\/a\\u003E to complete your profile.\\u003C\\/p\\u003E\\r\\n\\r\\n\\u003Cp\\u003EUpdate your message settings by editing your profile on the Exchange: [message:field-user-ref:edit-url]\\u003C\\/p\\u003E",
           "format" : "full_html"
         },
         {
-          "value" : "\\u003Cp\\u003E[message:field-user-ref:name] followed you. Follow them back: [message:field-user-ref:url]\\u003C\\/p\\u003E",
+          "value" : "\\u003Cp\\u003E[message:field-user-ref:name] followed you. Follow them back: [message:field-user-ref:url]\\u003C\\/p\\u003E\\r\\n",
           "format" : "full_html"
         }
       ]
@@ -123,11 +123,11 @@ function gie_messages_default_message_type() {
           "format" : "full_html"
         },
         {
-          "value" : "[message:field-node-ref:title] has been updated:\\u0026nbsp;[message:field-node-ref:url]",
+          "value" : "\\u003Cp\\u003E[message:field-node-ref:title] has been updated:\\u0026nbsp;[message:field-node-ref:url]\\u003C\\/p\\u003E\\r\\n\\r\\n\\u003Cp\\u003EUpdate your message settings by editing your profile on the Exchange: [message:field-user-ref:edit-url]\\u003C\\/p\\u003E",
           "format" : "full_html"
         },
         {
-          "value" : "\\u003Cp\\u003E[message:field-node-ref:title] has been updated: [message:field-node-ref:url]\\u003C\\/p\\u003E",
+          "value" : "\\u003Cp\\u003E[message:field-node-ref:title] has been updated: [message:field-node-ref:url]\\u003C\\/p\\u003E\\r\\n",
           "format" : "full_html"
         }
       ]
