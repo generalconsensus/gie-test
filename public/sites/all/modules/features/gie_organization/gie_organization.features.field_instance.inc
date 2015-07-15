@@ -983,7 +983,7 @@ function gie_organization_field_default_field_instances() {
         'settings' => array(
           'field_delimiter' => '',
           'image_link' => '',
-          'image_style' => 'card__500x300_',
+          'image_style' => 'org_and_program_detail',
           'linked_field' => array(
             'advanced' => array(
               'class' => '',
