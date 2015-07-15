@@ -135,7 +135,22 @@ function more_like_this_render($subtype, $conf, $panel_args, $context = NULL) {
             $index ++;
         }
     } else {
-        $output .= 'No results';
+
+        switch($conf['type']){
+            case "innovation":
+                $output .= 'You have not added any content to the Exchange. <a title="Add an Innovation" href="/node/add/innovation">Add an Innovation</a> to get better recommendations.';
+                break;
+            case "resource":
+                $output .= 'You have not added any content to the Exchange. <a title="Add Resource" href="/node/add/resource">Add Resource</a> to get better recommendations.';
+                break;
+            case "funding":
+                $output .= 'You have not added any content to the Exchange. <a title="Add Funding Opp" href="/node/add/funding">Add Funding Opp</a> to get better recommendations.';
+                break;
+            default:
+                $output .= 'No results.';
+                break;
+        }
+
     }
 
     // Render block
