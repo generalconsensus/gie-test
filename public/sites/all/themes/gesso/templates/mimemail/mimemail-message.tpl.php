@@ -32,6 +32,11 @@
 </head>
 <body id="mimemail-body" <?php if ($module && $key): print 'class="'. $module .'-'. $key .'"'; endif; ?>>
 <div id="center">
+  <div id="header">
+    <?php if ($recipient): ?>
+      <p>Recipient is an available variable.</p>
+    <? endif; ?>
+  </div>
   <div id="main">
     <?php print $body ?>
   </div>
