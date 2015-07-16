@@ -38,9 +38,7 @@
   <div id="footer">
     <?php if ($recipient): ?>
       <p>Update your message settings by editing your profile on the Exchange <a href="<?php
-        $user = entity_metadata_wrapper('user', $recipient);
-        $uid = $user->uid->value();
-        print $GLOBALS['base_url'] . '/user/' . $uid . '/edit';
+        print $GLOBALS['base_url'] . '/user';
       ?>">here</a>.</p>
     <?php endif; ?>
   </div>
