@@ -36,10 +36,13 @@
     <?php print $body ?>
   </div>
   <div id="footer">
-    <p>Update your message settings by editing your profile on the Exchange <a href="<?php
-      $uid = $recipient->uid;
-      print $GLOBALS['base_url'] . '/user/' . $uid . '/edit';
-    ?>">here</a>.</p>
+    <?php if ($recipient): ?>
+      <p>Update your message settings by editing your profile on the Exchange <a href="<?php
+        $user = entity_metadata_wrapper('user', $recipient);
+        $uid = $user->uid->value();
+        print $GLOBALS['base_url'] . '/user/' . $uid . '/edit';
+      ?>">here</a>.</p>
+    <?php endif; ?>
   </div>
 </div>
 </body>
