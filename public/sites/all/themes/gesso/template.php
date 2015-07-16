@@ -79,3 +79,14 @@ function gesso_image($variables) {
 
   return '<img' . drupal_attributes($attributes) . ' />';
 }
+
+/**
+ * Get recipient variable working correctly.
+ */
+function gesso_preprocess_mimemail_message(&$variables) {
+  $recipient = $variables['recipient'];
+  if (is_string($recipient)) {
+    $user = user_load_by_mail($recipient);
+    $variables['recipient'] = $user;
+  }
+}
