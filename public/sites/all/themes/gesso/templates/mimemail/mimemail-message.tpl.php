@@ -38,7 +38,8 @@
   <div id="footer">
     <?php if ($recipient): ?>
       <p>Update your message settings by editing your profile on the Exchange <a href="<?php
-        print $GLOBALS['base_url'] . '/user';
+        $uid = $recipient->uid;
+        print $GLOBALS['base_url'] . '/user/' . $uid . '/edit';
       ?>">here</a>.</p>
     <?php endif; ?>
   </div>
