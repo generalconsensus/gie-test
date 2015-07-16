@@ -37,7 +37,8 @@
   </div>
   <div id="footer">
     <p>Update your message settings by editing your profile on the Exchange <a href="<?php
-      print $GLOBALS['base_url'] . '/user/' . $recipient->uid . '/edit';
+      $uid = $recipient->uid;
+      print $GLOBALS['base_url'] . '/user/' . $uid . '/edit';
     ?>">here</a>.</p>
   </div>
 </div>
