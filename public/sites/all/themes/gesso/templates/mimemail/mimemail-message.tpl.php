@@ -32,21 +32,14 @@
 </head>
 <body id="mimemail-body" <?php if ($module && $key): print 'class="'. $module .'-'. $key .'"'; endif; ?>>
 <div id="center">
-  <div id="header">
-    <?php if ($recipient): ?>
-      <p>Recipient is an available variable.</p>
-    <? endif; ?>
-  </div>
   <div id="main">
     <?php print $body ?>
   </div>
   <div id="footer">
-    <?php if ($recipient): ?>
     <p>Update your message settings by editing your profile on the Exchange <a href="<?php
       $uid = $recipient->uid;
       print $GLOBALS['base_url'] . '/user/' . $uid . '/edit';
     ?>">here</a>.</p>
-    <?php endif; ?>
   </div>
 </div>
 </body>
