@@ -106,6 +106,7 @@ features[field_instance][] = node-organization-field_partner
 features[field_instance][] = node-organization-field_role_on_the_exchange
 features[field_instance][] = node-organization-field_term_region
 features[field_instance][] = node-organization-field_term_sector
+features[field_instance][] = node-organization-field_term_topic
 features[field_instance][] = node-organization-title_field
 features[field_instance][] = taxonomy_term-expertise_type-description_field
 features[field_instance][] = taxonomy_term-expertise_type-name_field

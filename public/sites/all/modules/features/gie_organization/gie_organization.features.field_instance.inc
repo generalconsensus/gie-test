@@ -983,7 +983,7 @@ function gie_organization_field_default_field_instances() {
         'settings' => array(
           'field_delimiter' => '',
           'image_link' => '',
-          'image_style' => 'card__500x300_',
+          'image_style' => 'org_and_program_detail',
           'linked_field' => array(
             'advanced' => array(
               'class' => '',
@@ -2655,6 +2655,110 @@ function gie_organization_field_default_field_instances() {
     ),
   );
 
+  // Exported field_instance: 'node-organization-field_term_topic'
+  $field_instances['node-organization-field_term_topic'] = array(
+    'bundle' => 'organization',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'at_a_glance' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'contact' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'default' => array(
+        'label' => 'above',
+        'module' => 'taxonomy',
+        'settings' => array(
+          'field_delimiter' => '',
+          'linked_field' => array(
+            'advanced' => array(
+              'class' => '',
+              'rel' => '',
+              'target' => '',
+              'text' => '',
+              'title' => '',
+            ),
+            'destination' => '',
+            'linked' => 0,
+          ),
+        ),
+        'type' => 'taxonomy_term_reference_link',
+        'weight' => 27,
+      ),
+      'full' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'listing' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'logo' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'page_header' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'search_listing' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'ds_extras_field_template' => '',
+    'entity_type' => 'node',
+    'field_name' => 'field_term_topic',
+    'label' => 'Related Topics',
+    'required' => 0,
+    'settings' => array(
+      'description_display' => 'after',
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'term_reference_tree',
+      'settings' => array(
+        'cascading_selection' => 0,
+        'filter_view' => '',
+        'leaves_only' => 0,
+        'max_depth' => '',
+        'parent_term_id' => '',
+        'select_parents' => 0,
+        'start_minimized' => 0,
+        'token_display' => '',
+        'track_list' => 0,
+      ),
+      'type' => 'term_reference_tree',
+      'weight' => 12,
+    ),
+  );
+
   // Exported field_instance: 'node-organization-title_field'
   $field_instances['node-organization-title_field'] = array(
     'bundle' => 'organization',
@@ -3073,6 +3177,7 @@ function gie_organization_field_default_field_instances() {
   t('Please select the sectors and sub-sectors related to your innovation. Click on the plus (+) icon on the different sectors to access sub sectors. Be sure to select the sectors and subsectors that apply. Do not select a sub-sector without also selecting the corresponding sector. ');
   t('Point of Contact');
   t('Region');
+  t('Related Topics');
   t('Role on the Exchange');
   t('Sector');
   t('Select the Parent Organization. ');

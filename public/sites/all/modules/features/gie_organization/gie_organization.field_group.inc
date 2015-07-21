@@ -134,6 +134,7 @@ function gie_organization_field_group_info() {
       2 => 'field_term_region',
       3 => 'field_role_on_the_exchange',
       4 => 'field_org_parent_organization',
+      5 => 'field_term_topic',
     ),
     'format_type' => 'div',
     'format_settings' => array(
