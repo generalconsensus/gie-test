@@ -1,9 +1,8 @@
 .pane--landing-intro {
   @extend %clearfix;
   @include hyphens(none);
-  background: url(../images/intro_background.png) no-repeat 100% 0;
   margin: 0;
-  min-height: 300px;
+  min-height: 130px;
   padding: 25px 0 0 0;
   @include breakpoint(900px, $no-query: true) {
     padding: 50px 0 20px 0;
