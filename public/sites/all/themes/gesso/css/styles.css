@@ -4604,9 +4604,7 @@ div[class*="pane--facetapi-"] .pane__content ul li a {
   -ms-hyphens: none;
   -webkit-hyphens: none;
   hyphens: none;
-  background: url(../images/intro_background.png) no-repeat 100% 0;
   margin: 0;
-  min-height: 300px;
   padding: 25px 0 0 0;
   position: relative;
   z-index: 2;
@@ -4617,7 +4615,7 @@ div[class*="pane--facetapi-"] .pane__content ul li a {
     padding: 50px 0 20px 0;
   }
 }
-/* line 14, ../sass/partials/components/pane/_pane--landing-intro.scss */
+/* line 12, ../sass/partials/components/pane/_pane--landing-intro.scss */
 .pane--landing-intro h1 {
   color: #fff;
   font-size: 1.875em;
@@ -4629,31 +4627,31 @@ div[class*="pane--facetapi-"] .pane__content ul li a {
   text-transform: uppercase;
 }
 @media (min-width: 43.75em) {
-  /* line 14, ../sass/partials/components/pane/_pane--landing-intro.scss */
+  /* line 12, ../sass/partials/components/pane/_pane--landing-intro.scss */
   .pane--landing-intro h1 {
     font-size: 2.5em;
   }
 }
 
-/* line 29, ../sass/partials/components/pane/_pane--landing-intro.scss */
+/* line 27, ../sass/partials/components/pane/_pane--landing-intro.scss */
 .pane--landing-intro__left {
   position: relative;
 }
 @media (min-width: 31.25em) {
-  /* line 29, ../sass/partials/components/pane/_pane--landing-intro.scss */
+  /* line 27, ../sass/partials/components/pane/_pane--landing-intro.scss */
   .pane--landing-intro__left {
     padding-left: 51px;
   }
 }
 @media (min-width: 56.25em) {
-  /* line 29, ../sass/partials/components/pane/_pane--landing-intro.scss */
+  /* line 27, ../sass/partials/components/pane/_pane--landing-intro.scss */
   .pane--landing-intro__left {
     float: left;
     padding-right: 5%;
     width: 60%;
   }
 }
-/* line 39, ../sass/partials/components/pane/_pane--landing-intro.scss */
+/* line 37, ../sass/partials/components/pane/_pane--landing-intro.scss */
 .pane--landing-intro__left:before {
   height: 46px;
   overflow: hidden;
@@ -4670,16 +4668,17 @@ div[class*="pane--facetapi-"] .pane__content ul li a {
   width: 0;
 }
 @media (min-width: 31.25em) {
-  /* line 39, ../sass/partials/components/pane/_pane--landing-intro.scss */
+  /* line 37, ../sass/partials/components/pane/_pane--landing-intro.scss */
   .pane--landing-intro__left:before {
     content: "";
     display: inline-block;
   }
 }
 @media (min-width: 31.25em) {
-  /* line 50, ../sass/partials/components/pane/_pane--landing-intro.scss */
+  /* line 48, ../sass/partials/components/pane/_pane--landing-intro.scss */
   .pane--innovations-introduction .pane--landing-intro__left {
     padding-left: 49px;
+    margin-bottom: 25px;
   }
 }
 /* line 54, ../sass/partials/components/pane/_pane--landing-intro.scss */
@@ -5145,30 +5144,10 @@ div[class*="pane--facetapi-"] .pane__content ul li a {
   background: #ed7d3a;
   color: #fff;
   margin: 0;
-  min-height: 288px;
   position: relative;
   z-index: 1;
 }
-@media (min-width: 56.25em) {
-  /* line 1, ../sass/partials/components/_region-landing-title.scss */
-  .region-landing-title {
-    min-height: 300px;
-  }
-}
-/* line 11, ../sass/partials/components/_region-landing-title.scss */
-.region-landing-title:after {
-  content: "";
-  display: block;
-  border-style: solid;
-  border-width: 300px 180px 0 0;
-  border-color: #dc5606 transparent transparent transparent;
-  height: 0;
-  left: 0;
-  position: absolute;
-  top: 0;
-  width: 0;
-}
-/* line 23, ../sass/partials/components/_region-landing-title.scss */
+/* line 19, ../sass/partials/components/_region-landing-title.scss */
 .region-landing-title:before {
   content: "";
   display: block;
@@ -5183,7 +5162,7 @@ div[class*="pane--facetapi-"] .pane__content ul li a {
   width: 0;
 }
 @media (min-width: 43.75em) {
-  /* line 23, ../sass/partials/components/_region-landing-title.scss */
+  /* line 19, ../sass/partials/components/_region-landing-title.scss */
   .region-landing-title:before {
     border-width: 28px 28px 0 28px;
     bottom: -28px;
