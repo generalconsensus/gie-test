@@ -266,7 +266,7 @@
     }).each(function(index) { 
       var moi = $(this);
       var content = moi.find('.pane__content').eq(0); 
-      if ((index == 0) || (content.find('input:checked').length > 0)) {
+      if (content.find('input:checked').length > 0) {
         moi.addClass('is-open').removeClass('is-closed');
         content.show();
       }
