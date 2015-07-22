@@ -2,7 +2,6 @@
   @extend %clearfix;
   @include hyphens(none);
   margin: 0;
-  min-height: 130px;
   padding: 25px 0 0 0;
   @include breakpoint(900px, $no-query: true) {
     padding: 50px 0 20px 0;
@@ -49,7 +48,9 @@
   .pane--innovations-introduction & {
     @include breakpoint(500px, $no-query: true) { // don't show icon until 500px
       padding-left: 49px; // icon width + 15
+      margin-bottom: 25px;
     } 
+    
     &:before {
       @include svg-background(icon-innovations-34-46-white);
       width: 34px;
