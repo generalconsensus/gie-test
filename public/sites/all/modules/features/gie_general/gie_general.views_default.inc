@@ -73,7 +73,8 @@ function gie_general_views_default_views() {
     0 => 'comment_node_discussion',
     1 => 'comment_node_funding',
     2 => 'comment_node_innovation',
-    3 => 'comment_node_resource',
+    3 => 'comment_node_needs',
+    4 => 'comment_node_resource',
   );
   $export['comment_author'] = $view;
 

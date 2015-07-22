@@ -113,14 +113,17 @@ function gie_needs_strongarm() {
       'revision' => array(
         'custom_settings' => FALSE,
       ),
+      'needs_list' => array(
+        'custom_settings' => TRUE,
+      ),
     ),
     'extra_fields' => array(
       'form' => array(
         'path' => array(
-          'weight' => '30',
+          'weight' => '2',
         ),
         'rabbit_hole' => array(
-          'weight' => '0',
+          'weight' => '1',
         ),
       ),
       'display' => array(
@@ -145,26 +148,34 @@ function gie_needs_strongarm() {
             'weight' => '10',
             'visible' => TRUE,
           ),
+          'needs_list' => array(
+            'weight' => '10',
+            'visible' => TRUE,
+          ),
         ),
         'sharethis' => array(
           'default' => array(
-            'weight' => '10',
-            'visible' => TRUE,
+            'weight' => '12',
+            'visible' => FALSE,
           ),
           'listing' => array(
             'weight' => '18',
             'visible' => FALSE,
           ),
           'full' => array(
-            'weight' => '0',
-            'visible' => TRUE,
+            'weight' => '6',
+            'visible' => FALSE,
           ),
           'page_header' => array(
-            'weight' => '5',
-            'visible' => FALSE,
+            'weight' => '3',
+            'visible' => TRUE,
           ),
           'details' => array(
             'weight' => '26',
+            'visible' => FALSE,
+          ),
+          'needs_list' => array(
+            'weight' => '23',
             'visible' => FALSE,
           ),
         ),
@@ -189,24 +200,52 @@ function gie_needs_strongarm() {
             'weight' => '25',
             'visible' => FALSE,
           ),
+          'needs_list' => array(
+            'weight' => '10',
+            'visible' => TRUE,
+          ),
         ),
         'needs_point_of_contact_needs_contact_button' => array(
           'page_header' => array(
-            'weight' => '3',
-            'visible' => TRUE,
+            'weight' => '11',
+            'visible' => FALSE,
           ),
           'full' => array(
+            'weight' => '16',
+            'visible' => FALSE,
+          ),
+          'details' => array(
+            'weight' => '10',
+            'visible' => TRUE,
+          ),
+          'needs_list' => array(
             'weight' => '14',
+            'visible' => FALSE,
+          ),
+          'default' => array(
+            'weight' => '10',
             'visible' => FALSE,
           ),
         ),
         'needs_point_of_contact_needs_profile_button' => array(
           'page_header' => array(
-            'weight' => '4',
+            'weight' => '12',
             'visible' => FALSE,
           ),
           'full' => array(
+            'weight' => '14',
+            'visible' => FALSE,
+          ),
+          'details' => array(
+            'weight' => '10',
+            'visible' => FALSE,
+          ),
+          'needs_list' => array(
             'weight' => '13',
+            'visible' => FALSE,
+          ),
+          'default' => array(
+            'weight' => '9',
             'visible' => FALSE,
           ),
         ),

@@ -230,13 +230,15 @@ function gie_needs_views_default_views() {
   $handler->display->display_options['relationships']['vocabulary']['field'] = 'vocabulary';
   $handler->display->display_options['relationships']['vocabulary']['relationship'] = 'field_needs_type';
   $handler->display->display_options['defaults']['arguments'] = FALSE;
-  /* Contextual filter: Broken/missing handler */
-  $handler->display->display_options['arguments']['field_needs_type']['id'] = 'field_needs_type';
-  $handler->display->display_options['arguments']['field_needs_type']['table'] = 'search_api_index_default_node_index';
-  $handler->display->display_options['arguments']['field_needs_type']['field'] = 'field_needs_type';
-  $handler->display->display_options['arguments']['field_needs_type']['default_action'] = 'default';
-  $handler->display->display_options['arguments']['field_needs_type']['default_argument_type'] = 'taxonomy_tid';
-  $handler->display->display_options['arguments']['field_needs_type']['summary']['format'] = 'default_summary';
+  /* Contextual filter: Type of Need: Term ID (indexed) */
+  $handler->display->display_options['arguments']['field_needs_type_tid']['id'] = 'field_needs_type_tid';
+  $handler->display->display_options['arguments']['field_needs_type_tid']['table'] = 'search_api_index_default_node_index';
+  $handler->display->display_options['arguments']['field_needs_type_tid']['field'] = 'field_needs_type_tid';
+  $handler->display->display_options['arguments']['field_needs_type_tid']['default_action'] = 'default';
+  $handler->display->display_options['arguments']['field_needs_type_tid']['default_argument_type'] = 'taxonomy_tid';
+  $handler->display->display_options['arguments']['field_needs_type_tid']['summary']['format'] = 'default_summary';
+  $handler->display->display_options['arguments']['field_needs_type_tid']['break_phrase'] = 0;
+  $handler->display->display_options['arguments']['field_needs_type_tid']['not'] = 0;
   $handler->display->display_options['defaults']['filter_groups'] = FALSE;
   $handler->display->display_options['defaults']['filters'] = FALSE;
   /* Filter criterion: Indexed Node: Content type */
