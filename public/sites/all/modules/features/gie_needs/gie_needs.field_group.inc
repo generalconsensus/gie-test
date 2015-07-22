@@ -36,6 +36,7 @@ function gie_needs_field_group_info() {
       10 => 'field_term_region',
       11 => 'field_term_sector',
       12 => 'field_term_topic',
+      13 => 'needs_point_of_contact_needs_contact_button',
     ),
     'format_type' => 'div',
     'format_settings' => array(

@@ -217,7 +217,7 @@ function gie_needs_views_default_views() {
   $handler->display->display_options['defaults']['style_options'] = FALSE;
   $handler->display->display_options['defaults']['row_plugin'] = FALSE;
   $handler->display->display_options['row_plugin'] = 'entity';
-  $handler->display->display_options['row_options']['view_mode'] = 'needs_list';
+  $handler->display->display_options['row_options']['view_mode'] = 'listing';
   $handler->display->display_options['defaults']['row_options'] = FALSE;
   $handler->display->display_options['defaults']['relationships'] = FALSE;
   /* Relationship: Indexed Node: Type of Need */
@@ -229,95 +229,6 @@ function gie_needs_views_default_views() {
   $handler->display->display_options['relationships']['vocabulary']['table'] = 'entity_taxonomy_term';
   $handler->display->display_options['relationships']['vocabulary']['field'] = 'vocabulary';
   $handler->display->display_options['relationships']['vocabulary']['relationship'] = 'field_needs_type';
-  $handler->display->display_options['defaults']['fields'] = FALSE;
-  /* Field: Indexed Node: Type of Need */
-  $handler->display->display_options['fields']['field_needs_type']['id'] = 'field_needs_type';
-  $handler->display->display_options['fields']['field_needs_type']['table'] = 'search_api_index_default_node_index';
-  $handler->display->display_options['fields']['field_needs_type']['field'] = 'field_needs_type';
-  $handler->display->display_options['fields']['field_needs_type']['label'] = '';
-  $handler->display->display_options['fields']['field_needs_type']['element_label_colon'] = FALSE;
-  $handler->display->display_options['fields']['field_needs_type']['link_to_entity'] = 0;
-  $handler->display->display_options['fields']['field_needs_type']['view_mode'] = 'full';
-  $handler->display->display_options['fields']['field_needs_type']['bypass_access'] = 0;
-  /* Field: Indexed Node: Title */
-  $handler->display->display_options['fields']['title']['id'] = 'title';
-  $handler->display->display_options['fields']['title']['table'] = 'search_api_index_default_node_index';
-  $handler->display->display_options['fields']['title']['field'] = 'title';
-  $handler->display->display_options['fields']['title']['label'] = '';
-  $handler->display->display_options['fields']['title']['element_label_colon'] = FALSE;
-  $handler->display->display_options['fields']['title']['link_to_entity'] = 0;
-  /* Field: Indexed Node: Location */
-  $handler->display->display_options['fields']['field_needs_location']['id'] = 'field_needs_location';
-  $handler->display->display_options['fields']['field_needs_location']['table'] = 'search_api_index_default_node_index';
-  $handler->display->display_options['fields']['field_needs_location']['field'] = 'field_needs_location';
-  $handler->display->display_options['fields']['field_needs_location']['label'] = '';
-  $handler->display->display_options['fields']['field_needs_location']['element_label_colon'] = FALSE;
-  $handler->display->display_options['fields']['field_needs_location']['click_sort_column'] = 'country';
-  $handler->display->display_options['fields']['field_needs_location']['settings'] = array(
-    'use_widget_handlers' => 0,
-    'format_handlers' => array(
-      'address' => 'address',
-      'address-hide-street' => 'address-hide-street',
-    ),
-    'linked_field' => array(
-      'linked' => 0,
-      'destination' => '',
-      'advanced' => array(
-        'title' => '',
-        'target' => '',
-        'class' => '',
-        'rel' => '',
-        'text' => '',
-      ),
-    ),
-  );
-  /* Field: Indexed Node: Date Needed By */
-  $handler->display->display_options['fields']['field_needs_date_needed']['id'] = 'field_needs_date_needed';
-  $handler->display->display_options['fields']['field_needs_date_needed']['table'] = 'search_api_index_default_node_index';
-  $handler->display->display_options['fields']['field_needs_date_needed']['field'] = 'field_needs_date_needed';
-  $handler->display->display_options['fields']['field_needs_date_needed']['settings'] = array(
-    'format_type' => 'long',
-    'fromto' => 'both',
-    'multiple_number' => '',
-    'multiple_from' => '',
-    'multiple_to' => '',
-    'linked_field' => array(
-      'linked' => 0,
-      'destination' => '',
-      'advanced' => array(
-        'title' => '',
-        'target' => '',
-        'class' => '',
-        'rel' => '',
-        'text' => '',
-      ),
-    ),
-  );
-  /* Field: Indexed Node: Paid? */
-  $handler->display->display_options['fields']['field_needs_paid']['id'] = 'field_needs_paid';
-  $handler->display->display_options['fields']['field_needs_paid']['table'] = 'search_api_index_default_node_index';
-  $handler->display->display_options['fields']['field_needs_paid']['field'] = 'field_needs_paid';
-  $handler->display->display_options['fields']['field_needs_paid']['label'] = 'Is this a paid need?';
-  $handler->display->display_options['fields']['field_needs_paid']['element_label_colon'] = FALSE;
-  $handler->display->display_options['fields']['field_needs_paid']['settings'] = array(
-    'linked_field' => array(
-      'linked' => 0,
-      'destination' => '',
-      'advanced' => array(
-        'title' => '',
-        'target' => '',
-        'class' => '',
-        'rel' => '',
-        'text' => '',
-      ),
-    ),
-  );
-  $handler->display->display_options['defaults']['sorts'] = FALSE;
-  /* Sort criterion: Indexed Node: Date created */
-  $handler->display->display_options['sorts']['created']['id'] = 'created';
-  $handler->display->display_options['sorts']['created']['table'] = 'search_api_index_default_node_index';
-  $handler->display->display_options['sorts']['created']['field'] = 'created';
-  $handler->display->display_options['sorts']['created']['order'] = 'DESC';
   $handler->display->display_options['defaults']['arguments'] = FALSE;
   /* Contextual filter: Type of Need: Term ID (indexed) */
   $handler->display->display_options['arguments']['field_needs_type_tid']['id'] = 'field_needs_type_tid';

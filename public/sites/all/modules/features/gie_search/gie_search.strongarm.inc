@@ -14,7 +14,7 @@ function gie_search_strongarm() {
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'facetapi:block_cache:search_api@default_node_index';
-  $strongarm->value = -1;
+  $strongarm->value = '-1';
   $export['facetapi:block_cache:search_api@default_node_index'] = $strongarm;
 
   $strongarm = new stdClass();
@@ -82,7 +82,7 @@ function gie_search_strongarm() {
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'search_api_solr_last_optimize';
-  $strongarm->value = 1436991444;
+  $strongarm->value = 1437569865;
   $export['search_api_solr_last_optimize'] = $strongarm;
 
   $strongarm = new stdClass();

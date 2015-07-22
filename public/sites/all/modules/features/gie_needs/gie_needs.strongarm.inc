@@ -163,12 +163,12 @@ function gie_needs_strongarm() {
             'visible' => FALSE,
           ),
           'full' => array(
-            'weight' => '0',
-            'visible' => TRUE,
+            'weight' => '6',
+            'visible' => FALSE,
           ),
           'page_header' => array(
-            'weight' => '5',
-            'visible' => FALSE,
+            'weight' => '3',
+            'visible' => TRUE,
           ),
           'details' => array(
             'weight' => '26',
@@ -207,16 +207,16 @@ function gie_needs_strongarm() {
         ),
         'needs_point_of_contact_needs_contact_button' => array(
           'page_header' => array(
-            'weight' => '3',
-            'visible' => TRUE,
+            'weight' => '11',
+            'visible' => FALSE,
           ),
           'full' => array(
-            'weight' => '14',
+            'weight' => '16',
             'visible' => FALSE,
           ),
           'details' => array(
             'weight' => '10',
-            'visible' => FALSE,
+            'visible' => TRUE,
           ),
           'needs_list' => array(
             'weight' => '14',
@@ -229,11 +229,11 @@ function gie_needs_strongarm() {
         ),
         'needs_point_of_contact_needs_profile_button' => array(
           'page_header' => array(
-            'weight' => '4',
+            'weight' => '12',
             'visible' => FALSE,
           ),
           'full' => array(
-            'weight' => '13',
+            'weight' => '14',
             'visible' => FALSE,
           ),
           'details' => array(

@@ -57,12 +57,12 @@ function gie_needs_ds_field_settings_info() {
   $ds_fieldsetting->view_mode = 'full';
   $ds_fieldsetting->settings = array(
     'comments' => array(
-      'weight' => '6',
+      'weight' => '5',
       'label' => 'hidden',
       'format' => 'default',
     ),
     'post_date' => array(
-      'weight' => '5',
+      'weight' => '4',
       'label' => 'inline',
       'format' => 'ds_post_date_gie_general_slash_no_time',
       'formatter_settings' => array(
@@ -88,6 +88,21 @@ function gie_needs_ds_field_settings_info() {
             'rel' => '',
             'text' => '',
           ),
+        ),
+      ),
+    ),
+    'field_needs_certifications' => array(
+      'formatter_settings' => array(
+        'ft' => array(
+          'func' => 'theme_ds_field_expert',
+          'lb-el' => 'h2',
+          'lb-col' => TRUE,
+          'ow' => TRUE,
+          'ow-el' => 'div',
+          'ow-cl' => '',
+          'ow-def-cl' => TRUE,
+          'ow-at' => '',
+          'ow-def-at' => TRUE,
         ),
       ),
     ),
@@ -123,12 +138,13 @@ function gie_needs_ds_field_settings_info() {
         ),
       ),
     ),
-    'field_needs_certifications' => array(
+    'field_needs_additional_info' => array(
       'formatter_settings' => array(
         'ft' => array(
           'func' => 'theme_ds_field_expert',
           'lb-el' => 'h2',
           'lb-col' => TRUE,
+          'lbw-el' => 'div',
           'ow' => TRUE,
           'ow-el' => 'div',
           'ow-cl' => '',
@@ -226,19 +242,6 @@ function gie_needs_ds_field_settings_info() {
         ),
       ),
     ),
-    'field_needs_point_of_contact' => array(
-      'formatter_settings' => array(
-        'ft' => array(
-          'func' => 'theme_ds_field_expert',
-          'ow' => TRUE,
-          'ow-el' => 'div',
-          'ow-cl' => 'card__author',
-          'ow-def-cl' => FALSE,
-          'ow-at' => '',
-          'ow-def-at' => FALSE,
-        ),
-      ),
-    ),
   );
   $export['node|needs|page_header'] = $ds_fieldsetting;
 
@@ -262,23 +265,25 @@ function gie_needs_ds_layout_settings_info() {
     'regions' => array(
       'ds_content' => array(
         0 => 'group_details',
-        1 => 'field_needs_location',
-        2 => 'field_needs_type',
-        3 => 'field_needs_date_needed',
-        4 => 'field_needs_status',
-        5 => 'field_needs_related_organization',
-        6 => 'field_needs_related_program',
-        7 => 'field_term_sector',
-        8 => 'field_term_region',
-        9 => 'field_term_topic',
-        10 => 'field_needs_paid',
-        11 => 'field_needs_amount_money',
-        12 => 'field_needs_amount_items',
-        13 => 'field_needs_amount_people',
+        1 => 'needs_point_of_contact_needs_contact_button',
+        2 => 'field_needs_location',
+        3 => 'field_needs_type',
+        4 => 'field_needs_date_needed',
+        5 => 'field_needs_status',
+        6 => 'field_needs_related_organization',
+        7 => 'field_needs_related_program',
+        8 => 'field_term_sector',
+        9 => 'field_term_region',
+        10 => 'field_term_topic',
+        11 => 'field_needs_paid',
+        12 => 'field_needs_amount_money',
+        13 => 'field_needs_amount_items',
+        14 => 'field_needs_amount_people',
       ),
     ),
     'fields' => array(
       'group_details' => 'ds_content',
+      'needs_point_of_contact_needs_contact_button' => 'ds_content',
       'field_needs_location' => 'ds_content',
       'field_needs_type' => 'ds_content',
       'field_needs_date_needed' => 'ds_content',
@@ -315,18 +320,16 @@ function gie_needs_ds_layout_settings_info() {
   $ds_layout->settings = array(
     'regions' => array(
       'ds_content' => array(
-        0 => 'sharethis',
-        1 => 'body',
-        2 => 'field_needs_qualifications',
-        3 => 'field_needs_instructions',
-        4 => 'field_needs_certifications',
-        5 => 'post_date',
-        6 => 'comments',
+        0 => 'field_needs_additional_info',
+        1 => 'field_needs_qualifications',
+        2 => 'field_needs_instructions',
+        3 => 'field_needs_certifications',
+        4 => 'post_date',
+        5 => 'comments',
       ),
     ),
     'fields' => array(
-      'sharethis' => 'ds_content',
-      'body' => 'ds_content',
+      'field_needs_additional_info' => 'ds_content',
       'field_needs_qualifications' => 'ds_content',
       'field_needs_instructions' => 'ds_content',
       'field_needs_certifications' => 'ds_content',
@@ -393,19 +396,19 @@ function gie_needs_ds_layout_settings_info() {
   $ds_layout->settings = array(
     'regions' => array(
       'media' => array(
-        0 => 'field_needs_image',
+        0 => 'field_needs_point_of_contact',
       ),
       'main_content' => array(
-        1 => 'field_needs_point_of_contact',
+        1 => 'body',
         2 => 'field_needs_date_needed',
-        3 => 'needs_point_of_contact_needs_contact_button',
+        3 => 'sharethis',
       ),
     ),
     'fields' => array(
-      'field_needs_image' => 'media',
-      'field_needs_point_of_contact' => 'main_content',
+      'field_needs_point_of_contact' => 'media',
+      'body' => 'main_content',
       'field_needs_date_needed' => 'main_content',
-      'needs_point_of_contact_needs_contact_button' => 'main_content',
+      'sharethis' => 'main_content',
     ),
     'classes' => array(),
     'wrappers' => array(
