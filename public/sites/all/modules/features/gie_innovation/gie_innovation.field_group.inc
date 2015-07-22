@@ -623,7 +623,7 @@ function gie_innovation_field_group_info() {
   $field_group->mode = 'form';
   $field_group->parent_name = '';
   $field_group->data = array(
-    'label' => 'Tell us who your innovation team and funders',
+    'label' => 'Tell us about your innovation team and affiliated organizations',
     'weight' => '5',
     'children' => array(
       0 => 'field_innovation_funders',
@@ -633,7 +633,7 @@ function gie_innovation_field_group_info() {
     ),
     'format_type' => 'div',
     'format_settings' => array(
-      'label' => 'Tell us who your innovation team and funders',
+      'label' => 'Tell us about your innovation team and affiliated organizations',
       'instance_settings' => array(
         'required_fields' => 1,
         'id' => '',
