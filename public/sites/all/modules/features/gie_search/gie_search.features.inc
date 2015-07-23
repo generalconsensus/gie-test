@@ -192,6 +192,7 @@ function gie_search_default_search_api_index() {
       "index_directly" : 1,
       "cron_limit" : "50",
       "fields" : {
+        "field_assistance_offered" : { "type" : "list\\u003Cinteger\\u003E", "entity_type" : "taxonomy_term" },
         "field_term_region" : { "type" : "list\\u003Cinteger\\u003E", "entity_type" : "taxonomy_term" },
         "field_term_sector" : { "type" : "list\\u003Cinteger\\u003E", "entity_type" : "taxonomy_term" },
         "field_user_address:country" : { "type" : "string" },
@@ -199,6 +200,7 @@ function gie_search_default_search_api_index() {
         "field_user_lastname" : { "type" : "string" },
         "field_user_org" : { "type" : "list\\u003Cinteger\\u003E", "entity_type" : "node" },
         "field_user_programs" : { "type" : "list\\u003Cinteger\\u003E", "entity_type" : "node" },
+        "field_user_type" : { "type" : "list\\u003Cinteger\\u003E", "entity_type" : "taxonomy_term" },
         "search_api_language" : { "type" : "string" },
         "status" : { "type" : "integer" },
         "uid" : { "type" : "integer" }
