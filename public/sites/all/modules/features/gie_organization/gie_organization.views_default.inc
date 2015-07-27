@@ -522,7 +522,8 @@ function gie_organization_views_default_views() {
   $handler->display->display_options['cache']['type'] = 'none';
   $handler->display->display_options['query']['type'] = 'views_query';
   $handler->display->display_options['exposed_form']['type'] = 'basic';
-  $handler->display->display_options['pager']['type'] = 'full';
+  $handler->display->display_options['pager']['type'] = 'none';
+  $handler->display->display_options['pager']['options']['offset'] = '0';
   $handler->display->display_options['style_plugin'] = 'grid';
   $handler->display->display_options['style_options']['row_class'] = 'profile-thumb';
   $handler->display->display_options['style_options']['columns'] = '3';
@@ -534,16 +535,12 @@ function gie_organization_views_default_views() {
   $handler->display->display_options['fields']['title']['label'] = '';
   $handler->display->display_options['fields']['title']['alter']['word_boundary'] = FALSE;
   $handler->display->display_options['fields']['title']['alter']['ellipsis'] = FALSE;
-  /* Sort criterion: Content: Post date */
-  $handler->display->display_options['sorts']['created']['id'] = 'created';
-  $handler->display->display_options['sorts']['created']['table'] = 'node';
-  $handler->display->display_options['sorts']['created']['field'] = 'created';
-  $handler->display->display_options['sorts']['created']['order'] = 'DESC';
   /* Filter criterion: Content: Published */
   $handler->display->display_options['filters']['status']['id'] = 'status';
   $handler->display->display_options['filters']['status']['table'] = 'node';
   $handler->display->display_options['filters']['status']['field'] = 'status';
-  $handler->display->display_options['filters']['status']['value'] = 1;
+  $handler->display->display_options['filters']['status']['relationship'] = 'field_org_partners_target_id';
+  $handler->display->display_options['filters']['status']['value'] = '1';
   $handler->display->display_options['filters']['status']['group'] = 1;
   $handler->display->display_options['filters']['status']['expose']['operator'] = FALSE;
 
@@ -562,6 +559,7 @@ function gie_organization_views_default_views() {
   $handler->display->display_options['fields']['title']['id'] = 'title';
   $handler->display->display_options['fields']['title']['table'] = 'node';
   $handler->display->display_options['fields']['title']['field'] = 'title';
+  $handler->display->display_options['fields']['title']['relationship'] = 'field_org_partners_target_id';
   $handler->display->display_options['fields']['title']['label'] = '';
   $handler->display->display_options['fields']['title']['exclude'] = TRUE;
   $handler->display->display_options['fields']['title']['alter']['word_boundary'] = FALSE;
@@ -571,6 +569,7 @@ function gie_organization_views_default_views() {
   $handler->display->display_options['fields']['field_org_logo']['id'] = 'field_org_logo';
   $handler->display->display_options['fields']['field_org_logo']['table'] = 'field_data_field_org_logo';
   $handler->display->display_options['fields']['field_org_logo']['field'] = 'field_org_logo';
+  $handler->display->display_options['fields']['field_org_logo']['relationship'] = 'field_org_partners_target_id';
   $handler->display->display_options['fields']['field_org_logo']['label'] = '';
   $handler->display->display_options['fields']['field_org_logo']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['field_org_logo']['element_wrapper_type'] = 'div';
