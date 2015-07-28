@@ -565,9 +565,9 @@ function gie_user_field_default_field_instances() {
       'interest_groups_title' => 'Interest Groups',
       'mergefields' => array(
         'EMAIL' => '[user:mail]',
-        'FNAME' => '[user:flag-abuse-user-flagged:field-user-firstname]',
-        'LNAME' => '[user:flag-abuse-user-flagged:field-user-lastname]',
-        'advanced' => 0,
+        'FNAME' => '[user:field_user_firstname]',
+        'LNAME' => '[user:field_user_lastname]',
+        'advanced' => 1,
       ),
       'options' => array(
         'interest_groups' => array(),
