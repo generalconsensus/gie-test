@@ -128,6 +128,7 @@ function gie_search_default_search_api_index() {
         "changed" : { "type" : "date" },
         "created" : { "type" : "date" },
         "field_discussion_program_disc" : { "type" : "list\\u003Cinteger\\u003E", "entity_type" : "taxonomy_term" },
+        "field_event_date:value" : { "type" : "date" },
         "field_event_type" : { "type" : "integer", "entity_type" : "taxonomy_term" },
         "field_funding_author" : { "type" : "list\\u003Cinteger\\u003E", "entity_type" : "user" },
         "field_funding_deadline" : { "type" : "date" },

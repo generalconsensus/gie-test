@@ -707,6 +707,11 @@ function events_views_default_views() {
   $handler->display->display_options['fields']['nid']['id'] = 'nid';
   $handler->display->display_options['fields']['nid']['table'] = 'search_api_index_default_node_index';
   $handler->display->display_options['fields']['nid']['field'] = 'nid';
+  /* Sort criterion: Event Date: Start date (indexed) */
+  $handler->display->display_options['sorts']['field_event_date_value']['id'] = 'field_event_date_value';
+  $handler->display->display_options['sorts']['field_event_date_value']['table'] = 'search_api_index_default_node_index';
+  $handler->display->display_options['sorts']['field_event_date_value']['field'] = 'field_event_date_value';
+  $handler->display->display_options['sorts']['field_event_date_value']['order'] = 'DESC';
   /* Filter criterion: Indexed Node: Content type */
   $handler->display->display_options['filters']['type']['id'] = 'type';
   $handler->display->display_options['filters']['type']['table'] = 'search_api_index_default_node_index';
@@ -727,12 +732,6 @@ function events_views_default_views() {
   $handler->display->display_options['row_plugin'] = 'entity';
   $handler->display->display_options['row_options']['view_mode'] = 'listing';
   $handler->display->display_options['defaults']['row_options'] = FALSE;
-  $handler->display->display_options['defaults']['sorts'] = FALSE;
-  /* Sort criterion: Event Date: End date (indexed) */
-  $handler->display->display_options['sorts']['field_event_date_value2']['id'] = 'field_event_date_value2';
-  $handler->display->display_options['sorts']['field_event_date_value2']['table'] = 'search_api_index_default_node_index';
-  $handler->display->display_options['sorts']['field_event_date_value2']['field'] = 'field_event_date_value2';
-  $handler->display->display_options['sorts']['field_event_date_value2']['order'] = 'DESC';
   $handler->display->display_options['defaults']['filter_groups'] = FALSE;
   $handler->display->display_options['defaults']['filters'] = FALSE;
   /* Filter criterion: Indexed Node: Content type */
@@ -769,10 +768,10 @@ function events_views_default_views() {
   $handler->display->display_options['pager']['options']['items_per_page'] = '4';
   $handler->display->display_options['pager']['options']['offset'] = '0';
   $handler->display->display_options['defaults']['sorts'] = FALSE;
-  /* Sort criterion: Event Date: End date (indexed) */
-  $handler->display->display_options['sorts']['field_event_date_value2']['id'] = 'field_event_date_value2';
-  $handler->display->display_options['sorts']['field_event_date_value2']['table'] = 'search_api_index_default_node_index';
-  $handler->display->display_options['sorts']['field_event_date_value2']['field'] = 'field_event_date_value2';
+  /* Sort criterion: Event Date: Start date (indexed) */
+  $handler->display->display_options['sorts']['field_event_date_value']['id'] = 'field_event_date_value';
+  $handler->display->display_options['sorts']['field_event_date_value']['table'] = 'search_api_index_default_node_index';
+  $handler->display->display_options['sorts']['field_event_date_value']['field'] = 'field_event_date_value';
   $handler->display->display_options['defaults']['filter_groups'] = FALSE;
   $handler->display->display_options['defaults']['filters'] = FALSE;
   /* Filter criterion: Indexed Node: Content type */
@@ -782,12 +781,12 @@ function events_views_default_views() {
   $handler->display->display_options['filters']['type']['value'] = array(
     'event' => 'event',
   );
-  /* Filter criterion: Event Date: End date (indexed) */
-  $handler->display->display_options['filters']['field_event_date_value2']['id'] = 'field_event_date_value2';
-  $handler->display->display_options['filters']['field_event_date_value2']['table'] = 'search_api_index_default_node_index';
-  $handler->display->display_options['filters']['field_event_date_value2']['field'] = 'field_event_date_value2';
-  $handler->display->display_options['filters']['field_event_date_value2']['operator'] = '>';
-  $handler->display->display_options['filters']['field_event_date_value2']['value'] = 'now';
+  /* Filter criterion: Event Date: Start date (indexed) */
+  $handler->display->display_options['filters']['field_event_date_value']['id'] = 'field_event_date_value';
+  $handler->display->display_options['filters']['field_event_date_value']['table'] = 'search_api_index_default_node_index';
+  $handler->display->display_options['filters']['field_event_date_value']['field'] = 'field_event_date_value';
+  $handler->display->display_options['filters']['field_event_date_value']['operator'] = '>=';
+  $handler->display->display_options['filters']['field_event_date_value']['value'] = 'now';
 
   /* Display: Upcoming Events */
   $handler = $view->new_display('block', 'Upcoming Events', 'event_mega');
@@ -834,10 +833,10 @@ function events_views_default_views() {
   $handler->display->display_options['fields']['title']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['title']['link_to_entity'] = 1;
   $handler->display->display_options['defaults']['sorts'] = FALSE;
-  /* Sort criterion: Event Date: End date (indexed) */
-  $handler->display->display_options['sorts']['field_event_date_value2']['id'] = 'field_event_date_value2';
-  $handler->display->display_options['sorts']['field_event_date_value2']['table'] = 'search_api_index_default_node_index';
-  $handler->display->display_options['sorts']['field_event_date_value2']['field'] = 'field_event_date_value2';
+  /* Sort criterion: Event Date: Start date (indexed) */
+  $handler->display->display_options['sorts']['field_event_date_value']['id'] = 'field_event_date_value';
+  $handler->display->display_options['sorts']['field_event_date_value']['table'] = 'search_api_index_default_node_index';
+  $handler->display->display_options['sorts']['field_event_date_value']['field'] = 'field_event_date_value';
   $handler->display->display_options['defaults']['filter_groups'] = FALSE;
   $handler->display->display_options['defaults']['filters'] = FALSE;
   /* Filter criterion: Indexed Node: Content type */
@@ -847,12 +846,12 @@ function events_views_default_views() {
   $handler->display->display_options['filters']['type']['value'] = array(
     'event' => 'event',
   );
-  /* Filter criterion: Event Date: End date (indexed) */
-  $handler->display->display_options['filters']['field_event_date_value2']['id'] = 'field_event_date_value2';
-  $handler->display->display_options['filters']['field_event_date_value2']['table'] = 'search_api_index_default_node_index';
-  $handler->display->display_options['filters']['field_event_date_value2']['field'] = 'field_event_date_value2';
-  $handler->display->display_options['filters']['field_event_date_value2']['operator'] = '>=';
-  $handler->display->display_options['filters']['field_event_date_value2']['value'] = 'now';
+  /* Filter criterion: Event Date: Start date (indexed) */
+  $handler->display->display_options['filters']['field_event_date_value']['id'] = 'field_event_date_value';
+  $handler->display->display_options['filters']['field_event_date_value']['table'] = 'search_api_index_default_node_index';
+  $handler->display->display_options['filters']['field_event_date_value']['field'] = 'field_event_date_value';
+  $handler->display->display_options['filters']['field_event_date_value']['operator'] = '>=';
+  $handler->display->display_options['filters']['field_event_date_value']['value'] = 'now';
   $export['events_listing'] = $view;
 
   return $export;
