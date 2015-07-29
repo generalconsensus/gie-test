@@ -44,6 +44,7 @@ dependencies[] = field_group
 dependencies[] = fieldable_panels_panes
 dependencies[] = file
 dependencies[] = flag
+dependencies[] = flag_abuse
 dependencies[] = html5_tools
 dependencies[] = image
 dependencies[] = imagefield_tokens

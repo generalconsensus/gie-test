@@ -47,7 +47,7 @@ function gie_user_field_default_field_bases() {
     'locked' => 0,
     'module' => 'mailchimp_lists',
     'settings' => array(
-      'double_opt_in' => 1,
+      'double_opt_in' => 0,
       'mc_list_id' => 'a16d0e8610',
       'send_welcome' => 0,
     ),

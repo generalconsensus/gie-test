@@ -387,6 +387,31 @@ function gie_innovation_panelizer_defaults() {
     $display->content['new-af1e2794-970b-47bf-ad8d-117071bb144e'] = $pane;
     $display->panels['main'][2] = 'new-af1e2794-970b-47bf-ad8d-117071bb144e';
     $pane = new stdClass();
+    $pane->pid = 'new-ffa635f8-cea9-4ba8-ae1a-082b9b92b0c9';
+    $pane->panel = 'main';
+    $pane->type = 'flag_link';
+    $pane->subtype = 'node';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array(
+      'flag_name' => 'abuse_node',
+      'context' => 'panelizer',
+      'override_title' => 1,
+      'override_title_text' => '',
+      'override_title_heading' => 'h5',
+    );
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
+    $pane->css = array();
+    $pane->extras = array();
+    $pane->position = 3;
+    $pane->locks = array();
+    $pane->uuid = 'ffa635f8-cea9-4ba8-ae1a-082b9b92b0c9';
+    $display->content['new-ffa635f8-cea9-4ba8-ae1a-082b9b92b0c9'] = $pane;
+    $display->panels['main'][3] = 'new-ffa635f8-cea9-4ba8-ae1a-082b9b92b0c9';
+    $pane = new stdClass();
     $pane->pid = 'new-ec63f124-5bc7-44f1-8a82-5ad0ac118efb';
     $pane->panel = 'main_sidebar';
     $pane->type = 'flag_link';
