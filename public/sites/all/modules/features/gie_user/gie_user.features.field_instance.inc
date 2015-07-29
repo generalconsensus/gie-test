@@ -1944,7 +1944,7 @@ function gie_user_field_default_field_instances() {
     'bundle' => 'user',
     'default_value' => NULL,
     'deleted' => 0,
-    'description' => 'Select organizations on the exchange that you are affiliated with, whether you have worked with them on a project or receive funding from them for an innovation. ',
+    'description' => '',
     'display' => array(
       'default' => array(
         'label' => 'above',
@@ -3179,7 +3179,6 @@ function gie_user_field_default_field_instances() {
   t('Provide the Twitter URL for your profile. ');
   t('Receive email alerts about new funding opportunities, innovations, people, events, and other content coming into the Exchange that is relevant to you based on your profile. We will also send you occasional updates on new features and opportunities in the Exchange. ');
   t('Select as many types that apply to your current role and expertise.');
-  t('Select organizations on the exchange that you are affiliated with, whether you have worked with them on a project or receive funding from them for an innovation. ');
   t('Select the region where you are based. ');
   t('Select the types of assistance you can offer members and organizations of the Exchange');
   t('Select your parent organization on the exchange. ');
