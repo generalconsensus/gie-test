@@ -151,6 +151,29 @@ function gie_organization_default_page_manager_pages() {
     $display->content['new-7551e06a-8e6e-4348-b14e-b6923ff5cc79'] = $pane;
     $display->panels['sidebar'][2] = 'new-7551e06a-8e6e-4348-b14e-b6923ff5cc79';
     $pane = new stdClass();
+    $pane->pid = 'new-8405ecc6-e783-410f-94a3-a144ca7d23e6';
+    $pane->panel = 'sidebar';
+    $pane->type = 'block';
+    $pane->subtype = 'facetapi-CNTQlr1xQ326apCkXIeJ0vkfQKHXX7JD';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array(
+      'override_title' => 1,
+      'override_title_text' => 'Type',
+      'override_title_heading' => 'h2',
+    );
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
+    $pane->css = array();
+    $pane->extras = array();
+    $pane->position = 3;
+    $pane->locks = array();
+    $pane->uuid = '8405ecc6-e783-410f-94a3-a144ca7d23e6';
+    $display->content['new-8405ecc6-e783-410f-94a3-a144ca7d23e6'] = $pane;
+    $display->panels['sidebar'][3] = 'new-8405ecc6-e783-410f-94a3-a144ca7d23e6';
+    $pane = new stdClass();
     $pane->pid = 'new-cdc4ae87-c5dd-4a1f-9c0a-2d5771d3c8da';
     $pane->panel = 'title';
     $pane->type = 'pane';
