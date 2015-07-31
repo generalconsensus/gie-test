@@ -35,6 +35,6 @@ function gie_user_update_7002() {
 /**
  * Delete User Connect field again again.
  */
-function gie_user_update_7003() {
+function gie_user_update_7004() {
   field_delete_field('field_user_connect');
 }
