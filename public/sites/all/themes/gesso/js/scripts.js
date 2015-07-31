@@ -74,8 +74,7 @@
       $block.prepend($button).wrapInner('<div class="block--search__inner"></div>');
       $button.click(function(){
         $block.toggleClass('is-open');
-      }).mouseleave(function(){
-        $(this).blur();
+        $form.find('.form-text').focus();
       });
     }
   }
