@@ -4825,7 +4825,12 @@ div[class*="pane--facetapi-"] .pane__content ul li a {
   margin: 0 0 1em 0;
 }
 
-/* line 3, ../sass/partials/components/_sharethis-buttons.scss */
+/* line 2, ../sass/partials/components/_sharethis-buttons.scss */
+.sharethis-buttons {
+  float: left;
+  margin-right: 1em;
+}
+/* line 5, ../sass/partials/components/_sharethis-buttons.scss */
 .sharethis-buttons .st_sharethis_custom {
   white-space: nowrap;
 }
