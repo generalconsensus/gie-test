@@ -29,11 +29,17 @@
   @extend %button--member;
 }
 
-.button--edit { // has member edit
+.button--edit { // has edit icon
   @extend %button--edit;
+}
+
+.button--flag { // has flag icon
+  @extend %button--flag;
 }
 
 .button--submit {
   text-transform: uppercase;
 }
+
+
 
