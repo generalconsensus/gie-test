@@ -1,5 +1,7 @@
 // custom share button from ShareThis module. see related code in scripts.js
 .sharethis-buttons {
+  float: left;
+  margin-right: 1em;
   .st_sharethis_custom {
     @extend %button;
     @extend %button--highlight;
