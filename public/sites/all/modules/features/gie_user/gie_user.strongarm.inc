@@ -58,6 +58,9 @@ function gie_user_strongarm() {
         'googleanalytics' => array(
           'weight' => '3',
         ),
+        'mimemail' => array(
+          'weight' => '0',
+        ),
       ),
       'display' => array(
         'summary' => array(
