@@ -1,0 +1,6 @@
+.flag-abuse-node {
+  a {
+    @extend %button;
+    @extend %button--flag;
+  }
+}

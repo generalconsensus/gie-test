@@ -157,13 +157,9 @@
             $mobileMenuWrapper.addClass('element-hidden');
             $mobileMenuLinks.attr('tabindex', -1);
           }
-           
-          // Remove focus for mouse clicks after closing the menu.
-          $(this).not('.is-active').mouseleave(function () {
-            $(this).blur();
-          });
 
          $('.mobile-menu .mobile-menu__search').slideToggle(200);
+         $('.mobile-menu .mobile-menu__search form input.form-text').focus();
          e.preventDefault();
 
         });

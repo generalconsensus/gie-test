@@ -465,7 +465,7 @@ function gie_user_field_default_field_instances() {
       'settings' => array(
         'apply_chosen' => '',
         'cascading_selection' => 0,
-        'filter_view' => '',
+        'filter_view' => 'areas_of_interest:default',
         'leaves_only' => 0,
         'max_depth' => '',
         'parent_term_id' => '',
@@ -564,9 +564,10 @@ function gie_user_field_default_field_instances() {
       'description_display' => 'before',
       'interest_groups_title' => 'Interest Groups',
       'mergefields' => array(
-        'EMAIL' => 'mail',
-        'FNAME' => 'flag_follow_flagged:field_user_firstname',
-        'LNAME' => 'flag_follow_flagged:field_user_lastname',
+        'EMAIL' => '[user:mail]',
+        'FNAME' => '[user:field_user_firstname]',
+        'LNAME' => '[user:field_user_lastname]',
+        'advanced' => 1,
       ),
       'options' => array(
         'interest_groups' => array(),
@@ -996,7 +997,7 @@ function gie_user_field_default_field_instances() {
         'track_list' => 0,
       ),
       'type' => 'term_reference_tree',
-      'weight' => 37,
+      'weight' => 7,
     ),
   );
 
@@ -1934,7 +1935,7 @@ function gie_user_field_default_field_instances() {
         'size' => 60,
       ),
       'type' => 'text_textfield',
-      'weight' => 10,
+      'weight' => 11,
     ),
   );
 
@@ -1943,7 +1944,7 @@ function gie_user_field_default_field_instances() {
     'bundle' => 'user',
     'default_value' => NULL,
     'deleted' => 0,
-    'description' => 'Select organizations on the exchange that you are affiliated with, whether you have worked with them on a project or receive funding from them for an innovation. ',
+    'description' => '',
     'display' => array(
       'default' => array(
         'label' => 'above',
@@ -2034,7 +2035,7 @@ function gie_user_field_default_field_instances() {
         'size' => 60,
       ),
       'type' => 'entityreference_autocomplete',
-      'weight' => 7,
+      'weight' => 8,
     ),
   );
 
@@ -2225,7 +2226,7 @@ function gie_user_field_default_field_instances() {
         'size' => 60,
       ),
       'type' => 'entityreference_autocomplete',
-      'weight' => 8,
+      'weight' => 9,
     ),
   );
 
@@ -2768,7 +2769,7 @@ function gie_user_field_default_field_instances() {
         'rows' => 5,
       ),
       'type' => 'text_textarea',
-      'weight' => 11,
+      'weight' => 12,
     ),
   );
 
@@ -2913,7 +2914,7 @@ function gie_user_field_default_field_instances() {
         'size' => 60,
       ),
       'type' => 'text_textfield',
-      'weight' => 9,
+      'weight' => 10,
     ),
   );
 
@@ -3178,7 +3179,6 @@ function gie_user_field_default_field_instances() {
   t('Provide the Twitter URL for your profile. ');
   t('Receive email alerts about new funding opportunities, innovations, people, events, and other content coming into the Exchange that is relevant to you based on your profile. We will also send you occasional updates on new features and opportunities in the Exchange. ');
   t('Select as many types that apply to your current role and expertise.');
-  t('Select organizations on the exchange that you are affiliated with, whether you have worked with them on a project or receive funding from them for an innovation. ');
   t('Select the region where you are based. ');
   t('Select the types of assistance you can offer members and organizations of the Exchange');
   t('Select your parent organization on the exchange. ');
