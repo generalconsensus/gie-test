@@ -30,13 +30,12 @@
       z-index: 3;
     }    
   }
-}
-
-.region-landing-title--alt { // blue header
-  background: #00729c;
-  @include breakpoint(1500px, $no-query: true) {
-    &:after {
-      border-color: #025979 transparent transparent transparent;
+  .section--wanteds & {
+    background: #00729c;
+    @include breakpoint(1500px, $no-query: true) {
+      &:after {
+        border-color: #025979 transparent transparent transparent;
+      }
     }
   }
 }
