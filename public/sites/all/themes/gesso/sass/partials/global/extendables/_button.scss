@@ -81,6 +81,15 @@
   }
 }
 
+%button--orange {
+  background: $lightorange;
+  border-color: $lightorange;
+  &:hover, &:focus {
+    background: $orange;
+    border-color: $orange;
+  }
+}
+
 %button--icon {
   padding-left: 50px;
   padding-right: 2em;
