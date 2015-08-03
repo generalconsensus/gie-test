@@ -1262,50 +1262,6 @@ ul.panels-ipe-linkbar li {
   clear: both;
 }
 
-/* line 12, ../sass/partials/layout/panels/_landing-alt.scss */
-.l-panels-landing-alt.main.sidebar .l-sidebar {
-  width: 20.58824%;
-  float: left;
-  margin-right: -100%;
-  margin-left: 0;
-  clear: none;
-}
-/* line 15, ../sass/partials/layout/panels/_landing-alt.scss */
-.l-panels-landing-alt.main.sidebar .l-main {
-  width: 73.52941%;
-  float: right;
-  margin-left: 0;
-  margin-right: 0;
-  clear: none;
-}
-
-/* line 9, ../sass/partials/global/helpers/_clearfix.scss */
-.l-panels-landing-alt:after {
-  display: table;
-  content: "";
-}
-/* line 14, ../sass/partials/global/helpers/_clearfix.scss */
-.l-panels-landing-alt:after {
-  clear: both;
-}
-/* line 9, ../sass/partials/global/helpers/_clearfix.scss */
-.l-panels-landing-alt .l-preface:after,
-.l-panels-landing-alt .l-title:after,
-.l-panels-landing-alt .l-main:after,
-.l-panels-landing-alt .l-sidebar:after,
-.l-panels-landing-alt .l-wrapper:after {
-  display: table;
-  content: "";
-}
-/* line 14, ../sass/partials/global/helpers/_clearfix.scss */
-.l-panels-landing-alt .l-preface:after,
-.l-panels-landing-alt .l-title:after,
-.l-panels-landing-alt .l-main:after,
-.l-panels-landing-alt .l-sidebar:after,
-.l-panels-landing-alt .l-wrapper:after {
-  clear: both;
-}
-
 /* line 12, ../sass/partials/layout/panels/_landing.scss */
 .l-panels-landing.main.sidebar .l-sidebar {
   width: 20.58824%;
@@ -4366,7 +4322,7 @@ div[class*="pane--facetapi-"] .pane__content ul li a {
   margin-left: -14px;
 }
 /* line 34, ../sass/partials/components/pane/_pane--landing-intro.scss */
-.region-landing-title--alt .pane--landing-intro:before {
+.section--wanteds .pane--landing-intro:before {
   border-color: #00729c transparent transparent transparent;
 }
 
@@ -4865,13 +4821,12 @@ div[class*="pane--facetapi-"] .pane__content ul li a {
   width: 60px;
   z-index: 3;
 }
-
-/* line 35, ../sass/partials/components/_region-landing-title.scss */
-.region-landing-title--alt {
+/* line 33, ../sass/partials/components/_region-landing-title.scss */
+.section--wanteds .region-landing-title {
   background: #00729c;
 }
-/* line 38, ../sass/partials/components/_region-landing-title.scss */
-.region-landing-title--alt:after {
+/* line 36, ../sass/partials/components/_region-landing-title.scss */
+.section--wanteds .region-landing-title:after {
   border-color: #025979 transparent transparent transparent;
 }
 
