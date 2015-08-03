@@ -262,7 +262,7 @@
         moi.toggleClass('is-open').toggleClass('is-closed');
         content.slideToggle();
       });
-    }).each(function(index) { 
+    }).each(function() { 
       var moi = $(this);
       var content = moi.find('.pane__content').eq(0); 
       if (content.find('input:checked').length > 0) {
