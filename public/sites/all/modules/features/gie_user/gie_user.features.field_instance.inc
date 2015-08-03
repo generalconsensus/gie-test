@@ -465,7 +465,7 @@ function gie_user_field_default_field_instances() {
       'settings' => array(
         'apply_chosen' => '',
         'cascading_selection' => 0,
-        'filter_view' => '',
+        'filter_view' => 'areas_of_interest:default',
         'leaves_only' => 0,
         'max_depth' => '',
         'parent_term_id' => '',
@@ -997,7 +997,7 @@ function gie_user_field_default_field_instances() {
         'track_list' => 0,
       ),
       'type' => 'term_reference_tree',
-      'weight' => 37,
+      'weight' => 7,
     ),
   );
 
@@ -1935,7 +1935,7 @@ function gie_user_field_default_field_instances() {
         'size' => 60,
       ),
       'type' => 'text_textfield',
-      'weight' => 10,
+      'weight' => 11,
     ),
   );
 
@@ -2035,7 +2035,7 @@ function gie_user_field_default_field_instances() {
         'size' => 60,
       ),
       'type' => 'entityreference_autocomplete',
-      'weight' => 7,
+      'weight' => 8,
     ),
   );
 
@@ -2226,7 +2226,7 @@ function gie_user_field_default_field_instances() {
         'size' => 60,
       ),
       'type' => 'entityreference_autocomplete',
-      'weight' => 8,
+      'weight' => 9,
     ),
   );
 
@@ -2769,7 +2769,7 @@ function gie_user_field_default_field_instances() {
         'rows' => 5,
       ),
       'type' => 'text_textarea',
-      'weight' => 11,
+      'weight' => 12,
     ),
   );
 
@@ -2914,7 +2914,7 @@ function gie_user_field_default_field_instances() {
         'size' => 60,
       ),
       'type' => 'text_textfield',
-      'weight' => 9,
+      'weight' => 10,
     ),
   );
 

@@ -74,8 +74,7 @@
       $block.prepend($button).wrapInner('<div class="block--search__inner"></div>');
       $button.click(function(){
         $block.toggleClass('is-open');
-      }).mouseleave(function(){
-        $(this).blur();
+        $form.find('.form-text').focus();
       });
     }
   }
@@ -263,7 +262,7 @@
         moi.toggleClass('is-open').toggleClass('is-closed');
         content.slideToggle();
       });
-    }).each(function(index) { 
+    }).each(function() { 
       var moi = $(this);
       var content = moi.find('.pane__content').eq(0); 
       if (content.find('input:checked').length > 0) {

@@ -148,3 +148,27 @@
     width: 22px;
   } 
 }
+
+%button--flag {
+  @extend %button--icon;
+  background-color: #fff;
+  border: 1px solid $primary-text-color;
+  color: $primary-text-color !important;
+  padding-left: 55px;
+  &:before {
+    @include svg-background(icon-flag-19-20);
+    height: 20px;
+    left: 20px;
+    opacity: 0.65;
+    top: 9px;
+    width: 19px;
+  } 
+  &:hover, &:focus {
+    background-color: #f1f1f1;
+    border-color: #000;
+    color: #000 !important;
+    &:before {
+      opacity: 0.9;
+    }
+  }
+}
