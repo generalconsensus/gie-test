@@ -295,13 +295,44 @@ function gie_funding_panelizer_defaults() {
     $pane->style = array(
       'settings' => NULL,
     );
-    $pane->css = array();
+    $pane->css = array(
+      'css_id' => '',
+      'css_class' => 'pane--button',
+    );
     $pane->extras = array();
     $pane->position = 2;
     $pane->locks = array();
     $pane->uuid = '9e478168-8a94-4f2f-8154-abd91607296c';
     $display->content['new-9e478168-8a94-4f2f-8154-abd91607296c'] = $pane;
     $display->panels['main'][2] = 'new-9e478168-8a94-4f2f-8154-abd91607296c';
+    $pane = new stdClass();
+    $pane->pid = 'new-2ac62afa-5da9-4ebb-8c80-a2ed63f50b0c';
+    $pane->panel = 'main';
+    $pane->type = 'flag_link';
+    $pane->subtype = 'node';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array(
+      'flag_name' => 'abuse_node',
+      'context' => 'panelizer',
+      'override_title' => 1,
+      'override_title_text' => '',
+      'override_title_heading' => 'h2',
+    );
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
+    $pane->css = array(
+      'css_id' => '',
+      'css_class' => 'pane--button',
+    );
+    $pane->extras = array();
+    $pane->position = 3;
+    $pane->locks = array();
+    $pane->uuid = '2ac62afa-5da9-4ebb-8c80-a2ed63f50b0c';
+    $display->content['new-2ac62afa-5da9-4ebb-8c80-a2ed63f50b0c'] = $pane;
+    $display->panels['main'][3] = 'new-2ac62afa-5da9-4ebb-8c80-a2ed63f50b0c';
     $pane = new stdClass();
     $pane->pid = 'new-79698f57-9ad4-49d0-b14a-be615f249c98';
     $pane->panel = 'main_sidebar';
