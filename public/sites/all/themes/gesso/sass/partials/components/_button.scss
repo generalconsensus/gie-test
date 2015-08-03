@@ -21,6 +21,10 @@
   @extend %button--white;
 }
 
+.button--orange {
+  @extend %button--orange;
+}
+
 .button--add { // has plus icon
   @extend %button--add;
 }
