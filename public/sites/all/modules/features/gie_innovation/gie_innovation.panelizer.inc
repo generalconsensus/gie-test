@@ -379,7 +379,10 @@ function gie_innovation_panelizer_defaults() {
     $pane->style = array(
       'settings' => NULL,
     );
-    $pane->css = array();
+    $pane->css = array(
+      'css_id' => '',
+      'css_class' => 'pane--button',
+    );
     $pane->extras = array();
     $pane->position = 2;
     $pane->locks = array();
@@ -407,7 +410,7 @@ function gie_innovation_panelizer_defaults() {
     );
     $pane->css = array(
       'css_id' => '',
-      'css_class' => '',
+      'css_class' => 'pane--button',
     );
     $pane->extras = array();
     $pane->position = 3;
