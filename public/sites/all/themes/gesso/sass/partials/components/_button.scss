@@ -21,6 +21,10 @@
   @extend %button--white;
 }
 
+.button--orange {
+  @extend %button--orange;
+}
+
 .button--add { // has plus icon
   @extend %button--add;
 }
@@ -29,11 +33,17 @@
   @extend %button--member;
 }
 
-.button--edit { // has member edit
+.button--edit { // has edit icon
   @extend %button--edit;
+}
+
+.button--flag { // has flag icon
+  @extend %button--flag;
 }
 
 .button--submit {
   text-transform: uppercase;
 }
+
+
 

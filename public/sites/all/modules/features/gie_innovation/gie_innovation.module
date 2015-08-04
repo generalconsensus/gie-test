@@ -157,3 +157,14 @@ function gie_innovation_field_formatter_view($entity_type, $entity, $field, $ins
 
   return $element;
 }
+
+/**
+ * Implements hook_form_alter().
+ */
+function gie_innovation_form_innovation_node_form_alter(&$form, &$form_state) {
+  $node = $form_state['node'];
+  // Set help text for submit on new Innovation form
+  if (!isset($node->nid) || isset($node->is_new)) {
+    $form['actions']['submit']['#prefix'] = '<p>Please only click \'Save\' once.</p>';
+  }
+}

@@ -104,9 +104,16 @@ function _gie_user_user_member_since($field) {
  */
 function _gie_user_user_email($field) {
   $wrapper = entity_metadata_wrapper('user', $field['entity']);
+  $uid = $wrapper->uid->value();
+
+  global $user;
+  if ($user->uid == $uid) {
+    // do not show on own user page
+    return;
+  }
 
   $email = $wrapper->mail->value();
-  $link = l(t('Send Note'), 'mailto:' . $email, array(
+  $link = l(t('Send Email'), 'mailto:' . $email, array(
     'attributes' => array(
       'class' => array('button')
     ),

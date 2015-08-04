@@ -128,6 +128,7 @@ function gie_search_default_search_api_index() {
         "changed" : { "type" : "date" },
         "created" : { "type" : "date" },
         "field_discussion_program_disc" : { "type" : "list\\u003Cinteger\\u003E", "entity_type" : "taxonomy_term" },
+        "field_event_date:value" : { "type" : "date" },
         "field_event_type" : { "type" : "integer", "entity_type" : "taxonomy_term" },
         "field_funding_author" : { "type" : "list\\u003Cinteger\\u003E", "entity_type" : "user" },
         "field_funding_deadline" : { "type" : "date" },
@@ -169,6 +170,7 @@ function gie_search_default_search_api_index() {
         "field_org_poc" : { "type" : "integer", "entity_type" : "user" },
         "field_org_telephone" : { "type" : "text" },
         "field_org_text_email" : { "type" : "text" },
+        "field_organization_type" : { "type" : "list\\u003Cinteger\\u003E", "entity_type" : "taxonomy_term" },
         "field_resource_assets" : { "type" : "list\\u003Cinteger\\u003E", "entity_type" : "asset" },
         "field_resource_author" : { "type" : "integer", "entity_type" : "user" },
         "field_resource_date" : { "type" : "date" },
@@ -201,6 +203,7 @@ function gie_search_default_search_api_index() {
       "index_directly" : 1,
       "cron_limit" : "50",
       "fields" : {
+        "field_assistance_offered" : { "type" : "list\\u003Cinteger\\u003E", "entity_type" : "taxonomy_term" },
         "field_term_region" : { "type" : "list\\u003Cinteger\\u003E", "entity_type" : "taxonomy_term" },
         "field_term_sector" : { "type" : "list\\u003Cinteger\\u003E", "entity_type" : "taxonomy_term" },
         "field_user_address:country" : { "type" : "string" },
@@ -208,6 +211,7 @@ function gie_search_default_search_api_index() {
         "field_user_lastname" : { "type" : "string" },
         "field_user_org" : { "type" : "list\\u003Cinteger\\u003E", "entity_type" : "node" },
         "field_user_programs" : { "type" : "list\\u003Cinteger\\u003E", "entity_type" : "node" },
+        "field_user_type" : { "type" : "list\\u003Cinteger\\u003E", "entity_type" : "taxonomy_term" },
         "search_api_language" : { "type" : "string" },
         "status" : { "type" : "integer" },
         "uid" : { "type" : "integer" }

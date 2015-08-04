@@ -27,17 +27,24 @@ function gie_dashboard_quicktabs_default_quicktabs() {
       'type' => 'block',
     ),
     1 => array(
-      'bid' => 'panels_mini_delta_dashboard_similar',
-      'hide_title' => 0,
-      'title' => 'Similar',
+      'bid' => 'panels_mini_delta_dashboard_help',
+      'hide_title' => 1,
+      'title' => 'Use Your Skills',
       'weight' => '-99',
       'type' => 'block',
     ),
     2 => array(
+      'bid' => 'panels_mini_delta_dashboard_similar',
+      'hide_title' => 0,
+      'title' => 'Similar Content',
+      'weight' => '-98',
+      'type' => 'block',
+    ),
+    3 => array(
       'bid' => 'panels_mini_delta_dashboard_follow',
       'hide_title' => 0,
       'title' => 'Content You Follow',
-      'weight' => '-98',
+      'weight' => '-97',
       'type' => 'block',
     ),
   );
@@ -50,7 +57,8 @@ function gie_dashboard_quicktabs_default_quicktabs() {
   t('Content You Follow');
   t('Dashboard');
   t('Recommended');
-  t('Similar');
+  t('Similar Content');
+  t('Use Your Skills');
 
   $export['dashboard'] = $quicktabs;
 
