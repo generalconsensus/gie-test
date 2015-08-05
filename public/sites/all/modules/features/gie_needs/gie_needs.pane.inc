@@ -41,5 +41,25 @@ function gie_needs_default_pane_container() {
   );
   $export['indemand_landing'] = $template;
 
+  $template = new stdClass();
+  $template->disabled = FALSE; /* Edit this to true to make a default template disabled initially */
+  $template->api_version = 2;
+  $template->name = 'wanted_type_landing_page';
+  $template->title = 'Wanted Type Landing Page';
+  $template->plugin = 'text';
+  $template->description = '';
+  $template->configuration = '';
+  $export['wanted_type_landing_page'] = $template;
+
+  $template = new stdClass();
+  $template->disabled = FALSE; /* Edit this to true to make a default template disabled initially */
+  $template->api_version = 2;
+  $template->name = 'wanteds_introduction';
+  $template->title = 'Wanteds Introduction';
+  $template->plugin = 'text';
+  $template->description = '';
+  $template->configuration = '';
+  $export['wanteds_introduction'] = $template;
+
   return $export;
 }

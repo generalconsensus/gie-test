@@ -174,6 +174,7 @@ function gie_needs_ds_field_settings_info() {
           'fi-at' => '',
           'fi-def-at' => FALSE,
           'fi-odd-even' => FALSE,
+          'fi-first-last' => FALSE,
         ),
       ),
     ),
@@ -190,24 +191,36 @@ function gie_needs_ds_field_settings_info() {
         ),
       ),
     ),
+    'field_needs_image' => array(
+      'formatter_settings' => array(
+        'ft' => array(
+          'func' => 'theme_ds_field_expert',
+        ),
+      ),
+    ),
     'field_needs_location' => array(
       'formatter_settings' => array(
         'ft' => array(
           'func' => 'theme_ds_field_expert',
-          'lb' => 'Location',
-          'lb-el' => 'span',
-          'lb-cl' => 'card__list-label',
-          'ow' => TRUE,
-          'ow-el' => 'div',
-          'ow-cl' => 'card__list--split',
-          'ow-def-cl' => FALSE,
-          'ow-at' => '',
-          'ow-def-at' => FALSE,
           'fis' => TRUE,
-          'fis-el' => 'span',
-          'fis-cl' => 'card__list-content',
+          'fis-el' => 'div',
+          'fis-cl' => 'user-header__address',
           'fis-at' => '',
           'fis-def-at' => FALSE,
+        ),
+      ),
+    ),
+    'field_needs_type' => array(
+      'formatter_settings' => array(
+        'ft' => array(
+          'func' => 'theme_ds_field_expert',
+          'fi' => TRUE,
+          'fi-el' => 'h2',
+          'fi-cl' => 'card__type',
+          'fi-at' => '',
+          'fi-def-at' => FALSE,
+          'fi-odd-even' => FALSE,
+          'fi-first-last' => FALSE,
         ),
       ),
     ),
@@ -354,35 +367,49 @@ function gie_needs_ds_layout_settings_info() {
   $ds_layout->entity_type = 'node';
   $ds_layout->bundle = 'needs';
   $ds_layout->view_mode = 'listing';
-  $ds_layout->layout = 'slat';
+  $ds_layout->layout = 'ds_2col_stacked_fluid';
   $ds_layout->settings = array(
     'regions' => array(
-      'media' => array(
-        0 => 'content_author_entity_poc_photo',
+      'left' => array(
+        0 => 'field_needs_image',
       ),
-      'main_content' => array(
-        1 => 'title_field',
-        2 => 'body',
+      'right' => array(
+        1 => 'field_needs_type',
+        2 => 'title_field',
         3 => 'field_needs_location',
+        4 => 'body',
+        5 => 'group_counts',
+        6 => 'wanted_counts_comments',
+        7 => 'wanted_counts_entity_view_1',
+        8 => 'wanted_counts_wanted_funding_available',
+        9 => 'wanted_counts_wanted_people_needed',
       ),
     ),
     'fields' => array(
-      'content_author_entity_poc_photo' => 'media',
-      'title_field' => 'main_content',
-      'body' => 'main_content',
-      'field_needs_location' => 'main_content',
+      'field_needs_image' => 'left',
+      'field_needs_type' => 'right',
+      'title_field' => 'right',
+      'field_needs_location' => 'right',
+      'body' => 'right',
+      'group_counts' => 'right',
+      'wanted_counts_comments' => 'right',
+      'wanted_counts_entity_view_1' => 'right',
+      'wanted_counts_wanted_funding_available' => 'right',
+      'wanted_counts_wanted_people_needed' => 'right',
     ),
     'classes' => array(),
     'wrappers' => array(
       'header' => 'div',
-      'media' => 'div',
-      'main_content' => 'div',
+      'left' => 'div',
+      'right' => 'div',
+      'footer' => 'div',
     ),
     'layout_wrapper' => 'div',
     'layout_attributes' => '',
     'layout_attributes_merge' => 1,
     'layout_link_attribute' => '',
     'layout_link_custom' => '',
+    'layout_disable_css' => 0,
   );
   $export['node|needs|listing'] = $ds_layout;
 
