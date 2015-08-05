@@ -362,7 +362,7 @@ function gie_general_views_default_views() {
   $handler->display->display_options['header']['area']['id'] = 'area';
   $handler->display->display_options['header']['area']['table'] = 'views';
   $handler->display->display_options['header']['area']['field'] = 'area';
-  $handler->display->display_options['header']['area']['content'] = '<h2>Members</h2>';
+  $handler->display->display_options['header']['area']['content'] = '<h2><a href="/members">Members</a></h2>';
   $handler->display->display_options['header']['area']['format'] = 'full_html';
   /* Footer: Global: Text area */
   $handler->display->display_options['footer']['area']['id'] = 'area';
@@ -412,21 +412,22 @@ function gie_general_views_default_views() {
       ),
     ),
   );
-  /* Field: User: Name */
-  $handler->display->display_options['fields']['name']['id'] = 'name';
-  $handler->display->display_options['fields']['name']['table'] = 'users';
-  $handler->display->display_options['fields']['name']['field'] = 'name';
-  $handler->display->display_options['fields']['name']['label'] = '';
-  $handler->display->display_options['fields']['name']['exclude'] = TRUE;
-  $handler->display->display_options['fields']['name']['element_label_colon'] = FALSE;
-  $handler->display->display_options['fields']['name']['element_default_classes'] = FALSE;
-  $handler->display->display_options['fields']['name']['link_to_user'] = FALSE;
+  /* Field: User: Uid */
+  $handler->display->display_options['fields']['uid']['id'] = 'uid';
+  $handler->display->display_options['fields']['uid']['table'] = 'users';
+  $handler->display->display_options['fields']['uid']['field'] = 'uid';
+  $handler->display->display_options['fields']['uid']['label'] = '';
+  $handler->display->display_options['fields']['uid']['exclude'] = TRUE;
+  $handler->display->display_options['fields']['uid']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['uid']['link_to_user'] = FALSE;
   /* Field: Global: Custom text */
   $handler->display->display_options['fields']['nothing']['id'] = 'nothing';
   $handler->display->display_options['fields']['nothing']['table'] = 'views';
   $handler->display->display_options['fields']['nothing']['field'] = 'nothing';
   $handler->display->display_options['fields']['nothing']['label'] = '';
-  $handler->display->display_options['fields']['nothing']['alter']['text'] = '<a href="members/[name]">[field_user_firstname] [field_user_lastname]</a>';
+  $handler->display->display_options['fields']['nothing']['alter']['text'] = '[field_user_firstname] [field_user_lastname]';
+  $handler->display->display_options['fields']['nothing']['alter']['make_link'] = TRUE;
+  $handler->display->display_options['fields']['nothing']['alter']['path'] = 'user/[uid]';
   $handler->display->display_options['fields']['nothing']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['nothing']['element_default_classes'] = FALSE;
   /* Filter criterion: User: Active */
