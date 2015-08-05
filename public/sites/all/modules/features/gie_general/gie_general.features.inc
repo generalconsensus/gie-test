@@ -84,11 +84,11 @@ function gie_general_flag_default_flags() {
     'access_author' => '',
     'show_contextual_link' => 0,
     'i18n' => 0,
-    'api_version' => 3,
     'module' => 'gie_general',
     'locked' => array(
       0 => 'name',
     ),
+    'api_version' => 3,
   );
   // Exported flag: "Node Whitelist".
   $flags['abuse_whitelist_node'] = array(
@@ -130,11 +130,11 @@ function gie_general_flag_default_flags() {
     'i18n' => 0,
     'flag_confirmation' => 'Are you sure you want to whitelist this content?',
     'unflag_confirmation' => 'Are you sure you want to un-whitelist this content?',
-    'api_version' => 3,
     'module' => 'gie_general',
     'locked' => array(
       0 => 'name',
     ),
+    'api_version' => 3,
   );
   // Exported flag: "Favorite".
   $flags['favorite'] = array(
@@ -145,9 +145,10 @@ function gie_general_flag_default_flags() {
       0 => 'event',
       1 => 'funding',
       2 => 'innovation',
-      3 => 'organization',
-      4 => 'program',
-      5 => 'resource',
+      3 => 'needs',
+      4 => 'organization',
+      5 => 'program',
+      6 => 'resource',
     ),
     'flag_short' => 'Follow',
     'flag_long' => '',
@@ -164,12 +165,12 @@ function gie_general_flag_default_flags() {
       'rss' => 0,
       'search_index' => 0,
       'search_result' => 0,
-      'diff_standard' => 0,
       'token' => 0,
       'highlights' => 0,
       'listing' => 0,
       'page_header' => 0,
       'teaser_date' => 0,
+      'needs_list' => 0,
       'at_a_glance' => 0,
       'contact' => 0,
       'logo' => 0,

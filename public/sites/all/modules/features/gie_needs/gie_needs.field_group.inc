@@ -13,6 +13,41 @@ function gie_needs_field_group_info() {
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
   $field_group->api_version = 1;
+  $field_group->identifier = 'group_counts|node|needs|listing';
+  $field_group->group_name = 'group_counts';
+  $field_group->entity_type = 'node';
+  $field_group->bundle = 'needs';
+  $field_group->mode = 'listing';
+  $field_group->parent_name = '';
+  $field_group->data = array(
+    'label' => 'Counts',
+    'weight' => '5',
+    'children' => array(
+      0 => 'wanted_counts_entity_view_1',
+      1 => 'wanted_counts_comments',
+      2 => 'wanted_counts_wanted_people_needed',
+      3 => 'wanted_counts_wanted_funding_available',
+    ),
+    'format_type' => 'div',
+    'format_settings' => array(
+      'label' => 'Counts',
+      'instance_settings' => array(
+        'id' => '',
+        'classes' => 'card__counts',
+        'description' => '',
+        'show_label' => '0',
+        'label_element' => 'h3',
+        'effect' => 'none',
+        'speed' => 'none',
+      ),
+      'formatter' => 'open',
+    ),
+  );
+  $export['group_counts|node|needs|listing'] = $field_group;
+
+  $field_group = new stdClass();
+  $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
+  $field_group->api_version = 1;
   $field_group->identifier = 'group_details|node|needs|details';
   $field_group->group_name = 'group_details';
   $field_group->entity_type = 'node';

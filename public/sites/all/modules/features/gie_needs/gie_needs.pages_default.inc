@@ -15,7 +15,7 @@ function gie_needs_default_page_manager_pages() {
   $page->task = 'page';
   $page->admin_title = 'InDemand Landing Page';
   $page->admin_description = 'This is the landing page for Indemand';
-  $page->path = 'indemand';
+  $page->path = 'wanteds';
   $page->access = array();
   $page->menu = array();
   $page->arguments = array();
@@ -43,7 +43,7 @@ function gie_needs_default_page_manager_pages() {
     'relationships' => array(),
   );
   $display = new panels_display();
-  $display->layout = 'detail';
+  $display->layout = 'landing';
   $display->layout_settings = array();
   $display->panel_settings = array(
     'style_settings' => array(
@@ -113,31 +113,31 @@ function gie_needs_default_page_manager_pages() {
     $display->content['new-e78e1e05-45c0-4c83-9204-2be8ccd0cf60'] = $pane;
     $display->panels['main'][1] = 'new-e78e1e05-45c0-4c83-9204-2be8ccd0cf60';
     $pane = new stdClass();
-    $pane->pid = 'new-aa4ec254-462b-41dd-97d8-8ec01dbfb0ce';
+    $pane->pid = 'new-84efb7e5-bfc3-4353-aa8a-3f2d29a0f265';
     $pane->panel = 'title';
-    $pane->type = 'page_title';
-    $pane->subtype = 'page_title';
+    $pane->type = 'pane';
+    $pane->subtype = 'wanteds_introduction';
     $pane->shown = TRUE;
     $pane->access = array();
     $pane->configuration = array(
-      'markup' => 'h1',
-      'class' => '',
-      'id' => '',
-      'override_title' => 0,
-      'override_title_text' => 'Exchange InDemand',
-      'override_title_heading' => 'h1',
+      'override_title' => 1,
+      'override_title_text' => '',
+      'override_title_heading' => 'h2',
     );
     $pane->cache = array();
     $pane->style = array(
       'settings' => NULL,
     );
-    $pane->css = array();
+    $pane->css = array(
+      'css_id' => '',
+      'css_class' => 'pane--landing-intro',
+    );
     $pane->extras = array();
     $pane->position = 0;
     $pane->locks = array();
-    $pane->uuid = 'aa4ec254-462b-41dd-97d8-8ec01dbfb0ce';
-    $display->content['new-aa4ec254-462b-41dd-97d8-8ec01dbfb0ce'] = $pane;
-    $display->panels['title'][0] = 'new-aa4ec254-462b-41dd-97d8-8ec01dbfb0ce';
+    $pane->uuid = '84efb7e5-bfc3-4353-aa8a-3f2d29a0f265';
+    $display->content['new-84efb7e5-bfc3-4353-aa8a-3f2d29a0f265'] = $pane;
+    $display->panels['title'][0] = 'new-84efb7e5-bfc3-4353-aa8a-3f2d29a0f265';
   $display->hide_title = PANELS_TITLE_FIXED;
   $display->title_pane = '0';
   $handler->conf['display'] = $display;

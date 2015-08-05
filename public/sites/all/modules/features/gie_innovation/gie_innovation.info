@@ -230,3 +230,4 @@ features[views_view][] = innovations_listing
 features[views_view][] = non_exchange_references
 features_exclude[dependencies][email] = email
 features_exclude[dependencies][html5_tools] = html5_tools
+features_exclude[dependencies][gie_innovation] = gie_innovation

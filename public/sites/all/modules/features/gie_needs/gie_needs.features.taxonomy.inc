@@ -56,10 +56,10 @@ function gie_needs_taxonomy_default_vocabularies() {
       ),
     ),
     'needs_type' => array(
-      'name' => 'Needs Type',
+      'name' => 'Wanteds Type',
       'machine_name' => 'needs_type',
       'description' => 'This is the taxonomy that provides the Needs type for the InDemand section of the website.',
-      'hierarchy' => 1,
+      'hierarchy' => 0,
       'module' => 'taxonomy',
       'weight' => 0,
       'rdf_mapping' => array(
