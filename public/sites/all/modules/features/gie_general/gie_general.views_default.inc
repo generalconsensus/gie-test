@@ -103,7 +103,7 @@ function gie_general_views_default_views() {
   $handler->display->display_options['header']['area']['id'] = 'area';
   $handler->display->display_options['header']['area']['table'] = 'views';
   $handler->display->display_options['header']['area']['field'] = 'area';
-  $handler->display->display_options['header']['area']['content'] = '<h2><a href="/organizations">Organizations</a></h2>';
+  $handler->display->display_options['header']['area']['content'] = '<div><a href="/organizations">Organizations</a></div>';
   $handler->display->display_options['header']['area']['format'] = 'full_html';
   /* Footer: Global: Text area */
   $handler->display->display_options['footer']['area']['id'] = 'area';
@@ -140,8 +140,7 @@ function gie_general_views_default_views() {
   $handler->display->display_options['footer']['area']['id'] = 'area';
   $handler->display->display_options['footer']['area']['table'] = 'views';
   $handler->display->display_options['footer']['area']['field'] = 'area';
-  $handler->display->display_options['footer']['area']['content'] = '<a href="/organizations">View All</a><br />
-<a href="/node/add/organization">Add New Organization</a>';
+  $handler->display->display_options['footer']['area']['content'] = '<a href="/organizations">View All</a><a class="add-new" href="/node/add/organization">Add New Organization</a>';
   $handler->display->display_options['footer']['area']['format'] = 'full_html';
 
   /* Display: Programs */
@@ -151,15 +150,14 @@ function gie_general_views_default_views() {
   $handler->display->display_options['header']['area']['id'] = 'area';
   $handler->display->display_options['header']['area']['table'] = 'views';
   $handler->display->display_options['header']['area']['field'] = 'area';
-  $handler->display->display_options['header']['area']['content'] = '<h2><a href="/programs">Programs</a></h2>';
+  $handler->display->display_options['header']['area']['content'] = '<div><a href="/programs">Programs</a></div>';
   $handler->display->display_options['header']['area']['format'] = 'full_html';
   $handler->display->display_options['defaults']['footer'] = FALSE;
   /* Footer: Global: Text area */
   $handler->display->display_options['footer']['area']['id'] = 'area';
   $handler->display->display_options['footer']['area']['table'] = 'views';
   $handler->display->display_options['footer']['area']['field'] = 'area';
-  $handler->display->display_options['footer']['area']['content'] = '<a href="/programs">View All</a><br />
-<a href="/node/add/program">Add New Program</a>';
+  $handler->display->display_options['footer']['area']['content'] = '<a href="/programs">View All</a><a class="add-new" href="/node/add/program">Add New Program</a>';
   $handler->display->display_options['footer']['area']['format'] = 'full_html';
   $handler->display->display_options['defaults']['filter_groups'] = FALSE;
   $handler->display->display_options['defaults']['filters'] = FALSE;
@@ -189,15 +187,14 @@ function gie_general_views_default_views() {
   $handler->display->display_options['header']['area']['id'] = 'area';
   $handler->display->display_options['header']['area']['table'] = 'views';
   $handler->display->display_options['header']['area']['field'] = 'area';
-  $handler->display->display_options['header']['area']['content'] = '<h2><a href="/discussions">Discussions</a></h2>';
+  $handler->display->display_options['header']['area']['content'] = '<div><a href="/discussions">Discussions</a></div>';
   $handler->display->display_options['header']['area']['format'] = 'full_html';
   $handler->display->display_options['defaults']['footer'] = FALSE;
   /* Footer: Global: Text area */
   $handler->display->display_options['footer']['area']['id'] = 'area';
   $handler->display->display_options['footer']['area']['table'] = 'views';
   $handler->display->display_options['footer']['area']['field'] = 'area';
-  $handler->display->display_options['footer']['area']['content'] = '<a href="/discussions">View All</a><br />
-<a href="/node/add/discussion">Add New Discussion</a>';
+  $handler->display->display_options['footer']['area']['content'] = '<a href="/discussions">View All</a><a class="add-new" href="/node/add/discussion">Add New Discussion</a>';
   $handler->display->display_options['footer']['area']['format'] = 'full_html';
   $handler->display->display_options['defaults']['filter_groups'] = FALSE;
   $handler->display->display_options['defaults']['filters'] = FALSE;
@@ -246,7 +243,7 @@ function gie_general_views_default_views() {
   $handler->display->display_options['header']['area']['id'] = 'area';
   $handler->display->display_options['header']['area']['table'] = 'views';
   $handler->display->display_options['header']['area']['field'] = 'area';
-  $handler->display->display_options['header']['area']['content'] = '<h2><a href="/locations">Locations</a></h2>';
+  $handler->display->display_options['header']['area']['content'] = '<div><a href="/locations">Locations</a></div>';
   $handler->display->display_options['header']['area']['format'] = 'full_html';
   /* Footer: Global: Text area */
   $handler->display->display_options['footer']['area']['id'] = 'area';
@@ -291,7 +288,7 @@ function gie_general_views_default_views() {
   $handler->display->display_options['header']['area']['id'] = 'area';
   $handler->display->display_options['header']['area']['table'] = 'views';
   $handler->display->display_options['header']['area']['field'] = 'area';
-  $handler->display->display_options['header']['area']['content'] = '<h2><a href="/sectors">Sectors</a></h2>';
+  $handler->display->display_options['header']['area']['content'] = '<div><a href="/sectors">Sectors</a></div>';
   $handler->display->display_options['header']['area']['format'] = 'full_html';
   $handler->display->display_options['defaults']['footer'] = FALSE;
   /* Footer: Global: Text area */
@@ -317,7 +314,7 @@ function gie_general_views_default_views() {
   $handler->display->display_options['header']['area']['id'] = 'area';
   $handler->display->display_options['header']['area']['table'] = 'views';
   $handler->display->display_options['header']['area']['field'] = 'area';
-  $handler->display->display_options['header']['area']['content'] = '<h2><a href="/topics">Topics</a></h2>';
+  $handler->display->display_options['header']['area']['content'] = '<div><a href="/topics">Topics</a></div>';
   $handler->display->display_options['header']['area']['format'] = 'full_html';
   $handler->display->display_options['defaults']['footer'] = FALSE;
   /* Footer: Global: Text area */
@@ -365,7 +362,7 @@ function gie_general_views_default_views() {
   $handler->display->display_options['header']['area']['id'] = 'area';
   $handler->display->display_options['header']['area']['table'] = 'views';
   $handler->display->display_options['header']['area']['field'] = 'area';
-  $handler->display->display_options['header']['area']['content'] = '<h2><a href="/members">Members</a></h2>';
+  $handler->display->display_options['header']['area']['content'] = '<div><a href="/members">Members</a></div>';
   $handler->display->display_options['header']['area']['format'] = 'full_html';
   /* Footer: Global: Text area */
   $handler->display->display_options['footer']['area']['id'] = 'area';
