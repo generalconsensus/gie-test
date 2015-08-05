@@ -32,28 +32,13 @@ function gie_homepage_ds_field_settings_info() {
   $ds_fieldsetting->bundle = 'persona';
   $ds_fieldsetting->view_mode = 'listing';
   $ds_fieldsetting->settings = array(
-    'title' => array(
-      'weight' => '3',
+    'title_count' => array(
+      'weight' => '4',
       'label' => 'hidden',
       'format' => 'default',
       'formatter_settings' => array(
-        'link' => '0',
-        'wrapper' => 'h1',
-        'class' => 'card__title',
         'ft' => array(
           'func' => 'theme_ds_field_expert',
-        ),
-        'field_delimiter' => '',
-        'linked_field' => array(
-          'linked' => 1,
-          'destination' => '[node:field-persona-link:url]',
-          'advanced' => array(
-            'title' => '',
-            'target' => '',
-            'class' => '',
-            'rel' => '',
-            'text' => '',
-          ),
         ),
       ),
     ),
@@ -67,6 +52,7 @@ function gie_homepage_ds_field_settings_info() {
           'fi-at' => '',
           'fi-def-at' => FALSE,
           'fi-odd-even' => FALSE,
+          'fi-first-last' => FALSE,
         ),
       ),
     ),
@@ -87,6 +73,7 @@ function gie_homepage_ds_field_settings_info() {
           'fi-at' => '',
           'fi-def-at' => FALSE,
           'fi-odd-even' => FALSE,
+          'fi-first-last' => FALSE,
         ),
       ),
     ),
@@ -153,7 +140,7 @@ function gie_homepage_ds_layout_settings_info() {
         0 => 'group_card_image',
         1 => 'field_persona_image',
         2 => 'group_card_content',
-        3 => 'title',
+        3 => 'title_count',
         4 => 'field_persona_description',
         5 => 'field_persona_link',
       ),
@@ -162,7 +149,7 @@ function gie_homepage_ds_layout_settings_info() {
       'group_card_image' => 'main_content',
       'field_persona_image' => 'main_content',
       'group_card_content' => 'main_content',
-      'title' => 'main_content',
+      'title_count' => 'main_content',
       'field_persona_description' => 'main_content',
       'field_persona_link' => 'main_content',
     ),
