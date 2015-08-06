@@ -176,12 +176,16 @@
           .view {
             @include hyphens(none);
             .view__header {
-              h2 {
+              a {
+                @extend %h2;
+              }
+              a, h2 {
                 border-bottom: 1px solid $border-color;
                 color: $orange;
                 margin: 0 0 0.5em 0;
                 padding: 0 0 0.5em 0;
               }
+              
             }
             .item-list {
               ul {
@@ -203,10 +207,21 @@
               }
               a {
                 color: $link-color;
-                padding: 0;
+                display: block;
+                padding: 0 0 1em 0;
                 text-decoration: underline;
                 &:hover, &:focus {
                   color: $link-hover-color;
+                }
+              }
+              .add-new {
+                color: #999;
+                font-size: em($font-size-sm);
+                padding-top: 0.5em;
+                text-decoration: none;
+                &:hover, &:focus {
+                  color: #333;
+                  text-decoration: underline;
                 }
               }
             }
@@ -227,80 +242,95 @@
           }
 
           .has-icon-discussions {
-            .view__header h2 {
-              &:before {
-                @extend %tb-megamenu-submenu-icon;
-                @include svg-background(icon-discussions-26-20-orange);
-                background-size: 26px 20px;
-                height: 20px;
-                width: 26px;
+            .view__header {
+              a, h2 {
+                &:before {
+                  @extend %tb-megamenu-submenu-icon;
+                  @include svg-background(icon-discussions-26-20-orange);
+                  background-size: 26px 20px;
+                  height: 20px;
+                  width: 26px;
+                }
               }
             }
           }
-          .has-icon-sectors .view__header h2 {
-            &:before {
-              @extend %tb-megamenu-submenu-icon;
-              @include svg-background(icon-sectors-20-20-orange);
-              background-size: 20px 20px;
-              height: 20px;
-              width: 20px;
+          .has-icon-sectors .view__header {
+            a, h2 {
+              &:before {
+                @extend %tb-megamenu-submenu-icon;
+                @include svg-background(icon-sectors-20-20-orange);
+                background-size: 20px 20px;
+                height: 20px;
+                width: 20px;
+              }
             }
           }
-          .has-icon-topics .view__header h2 {
-            &:before {
-              @extend %tb-megamenu-submenu-icon;
-              @include svg-background(icon-topics-23-20-orange);
-              background-size: 23px 20px;
-              height: 20px;
-              width: 23px;
+          .has-icon-topics .view__header {
+            a, h2 {
+              &:before {
+                @extend %tb-megamenu-submenu-icon;
+                @include svg-background(icon-topics-23-20-orange);
+                background-size: 23px 20px;
+                height: 20px;
+                width: 23px;
+              }
             }
           }
-          .has-icon-locations .view__header h2 {
-            &:before {
-              @extend %tb-megamenu-submenu-icon;
-              @include svg-background(icon-locations-15-20-orange);
-              background-size: 15px 20px;
-              height: 20px;
-              width: 15px;
+          .has-icon-locations .view__header {
+            a, h2 {
+              &:before {
+                @extend %tb-megamenu-submenu-icon;
+                @include svg-background(icon-locations-15-20-orange);
+                background-size: 15px 20px;
+                height: 20px;
+                width: 15px;
+              }
             }
           }
-          .has-icon-programs .view__header h2 {
-            &:before {
-              @extend %tb-megamenu-submenu-icon;
-              @include svg-background(icon-programs-23-20-orange);
-              background-size: 23px 20px;
-              height: 20px;
-              width: 23px;
+          .has-icon-programs .view__header {
+            a, h2 {
+              &:before {
+                @extend %tb-megamenu-submenu-icon;
+                @include svg-background(icon-programs-23-20-orange);
+                background-size: 23px 20px;
+                height: 20px;
+                width: 23px;
+              }
             }
           }
-          .has-icon-organizations .view__header h2 {
-            &:before {
-              @extend %tb-megamenu-submenu-icon;
-              @include svg-background(icon-organization-20-20-orange);
-              background-size: 20px 20px;
-              height: 20px;
-              width: 20px;
+          .has-icon-organizations .view__header {
+            a, h2 {
+              &:before {
+                @extend %tb-megamenu-submenu-icon;
+                @include svg-background(icon-organization-20-20-orange);
+                background-size: 20px 20px;
+                height: 20px;
+                width: 20px;
+              }
             }
           }
-          .has-icon-members .view__header h2 {
-            &:before {
-              @extend %tb-megamenu-submenu-icon;
-              @include svg-background(icon-members-20-20-orange);
-              background-size: 20px 20px;
-              height: 20px;
-              width: 20px;
+          .has-icon-members .view__header {
+            a, h2 {
+              &:before {
+                @extend %tb-megamenu-submenu-icon;
+                @include svg-background(icon-members-20-20-orange);
+                background-size: 20px 20px;
+                height: 20px;
+                width: 20px;
+              }
             }
           }
-          .has-icon-events .view__header h2 {
-            &:before {
-              @extend %tb-megamenu-submenu-icon;
-              @include svg-background(icon-events-19-20-orange);
-              background-size: 19px 20px;
-              height: 20px;
-              width: 19px;
+          .has-icon-events .view__header {
+            a, h2 {
+              &:before {
+                @extend %tb-megamenu-submenu-icon;
+                @include svg-background(icon-events-19-20-orange);
+                background-size: 19px 20px;
+                height: 20px;
+                width: 19px;
+              }
             }
           }
-
         }
       }
     }
