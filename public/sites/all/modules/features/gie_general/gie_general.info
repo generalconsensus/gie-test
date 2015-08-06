@@ -89,6 +89,7 @@ dependencies[] = term_reference_tree
 dependencies[] = text
 dependencies[] = title
 dependencies[] = token
+dependencies[] = token_tweaks
 dependencies[] = views
 dependencies[] = views_arguments_extras
 dependencies[] = views_bulk_operations

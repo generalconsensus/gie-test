@@ -84,11 +84,11 @@ function gie_general_flag_default_flags() {
     'access_author' => '',
     'show_contextual_link' => 0,
     'i18n' => 0,
-    'api_version' => 3,
     'module' => 'gie_general',
     'locked' => array(
       0 => 'name',
     ),
+    'api_version' => 3,
   );
   // Exported flag: "Node Whitelist".
   $flags['abuse_whitelist_node'] = array(
@@ -130,11 +130,11 @@ function gie_general_flag_default_flags() {
     'i18n' => 0,
     'flag_confirmation' => 'Are you sure you want to whitelist this content?',
     'unflag_confirmation' => 'Are you sure you want to un-whitelist this content?',
-    'api_version' => 3,
     'module' => 'gie_general',
     'locked' => array(
       0 => 'name',
     ),
+    'api_version' => 3,
   );
   // Exported flag: "Favorite".
   $flags['favorite'] = array(
