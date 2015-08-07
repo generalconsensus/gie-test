@@ -1,0 +1,29 @@
+<div class="layout-slat card card--listing">
+  <div class="layout-slat__media">
+    <a href="#">{{> atoms-card-image }}</a>
+  </div>  
+  <div class="layout-slat__content">
+    <div class="card__meta">
+      <div class="card__type">People</div>
+      <div class="card__location">Albania</div>
+    </div>
+    <h3 class="card__title"><a href="#">{{ title }}</a></h3>
+    <div class="card__summary">
+      {{{ summary }}}
+    </div>
+    <div class="card__counts">
+      <div class="view">
+        <div title="Comments" class="has-icon--comment">{{ comments }}</div>
+      </div>
+      <div class="view">
+        <div title="Favorites" class="has-icon--favorite">{{ favorites }}</div>
+      </div>
+      <div class="view">
+        <div title="Funding Available" class="has-icon--funding">{{ funders }}</div>
+      </div>
+      <div class="view">
+        <div title="Number of People Needed" class="has-icon--member">{{ members }}</div>
+      </div>
+    </div>
+  </div>
+</div>
