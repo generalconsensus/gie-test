@@ -245,7 +245,10 @@ function gie_user_default_page_manager_pages() {
   $page->admin_title = 'Member directory';
   $page->admin_description = '';
   $page->path = 'members';
-  $page->access = array();
+  $page->access = array(
+    'type' => 'none',
+    'settings' => NULL,
+  );
   $page->menu = array();
   $page->arguments = array();
   $page->conf = array(
