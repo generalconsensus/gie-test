@@ -79,6 +79,16 @@
     }
   }
 
+  Drupal.behaviors.general = {
+    attach: function(context) {
+
+      $('.toggle-button').click(function(){
+        $('.toggle-text').slideToggle();
+      });
+    
+    }
+  }
+
   Drupal.behaviors.shareThis = {
     attach: function (context) {
       $('.sharethis-buttons .st_sharethis_custom').text('share');
@@ -310,6 +320,7 @@
     homepagePersonasCards();
     mainmenuDropdown();
   }
+
 
   // Runs function once on window resize.
   var TO = false;

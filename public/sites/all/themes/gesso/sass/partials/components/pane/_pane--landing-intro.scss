@@ -2,7 +2,7 @@
   @extend %clearfix;
   @include hyphens(none);
   margin: 0;
-  padding: 25px 0 0 0;
+  padding: 25px 0 20px 0;
   @include breakpoint(900px, $no-query: true) {
     background: url(../images/intro_background2.png) no-repeat 100% 10px;
     min-height: 200px;
@@ -211,5 +211,8 @@
   p {
     margin: 0;
     text-align: right;
+  }
+  .button {
+    margin-bottom: 10px;
   }
 }
