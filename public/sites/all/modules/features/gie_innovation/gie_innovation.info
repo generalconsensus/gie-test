@@ -11,6 +11,7 @@ dependencies[] = ds
 dependencies[] = ds_forms
 dependencies[] = entity
 dependencies[] = entityreference
+dependencies[] = entityreference_view_widget
 dependencies[] = eva
 dependencies[] = features
 dependencies[] = field_collection

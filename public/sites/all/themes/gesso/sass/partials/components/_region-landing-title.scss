@@ -30,7 +30,7 @@
       z-index: 3;
     }    
   }
-  .section--wanteds & {
+  .section-wanteds & {
     background: #00729c;
     @include breakpoint(1500px, $no-query: true) {
       &:after {

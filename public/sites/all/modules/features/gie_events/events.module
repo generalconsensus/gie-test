@@ -5,3 +5,16 @@
  */
 
 include_once 'events.features.inc';
+
+/**
+ * Implements hook_date_formats().
+ */
+function events_hook_date_formats() {
+  return array(
+    array(
+      'type' => 'short_month',
+      'format' => 'M d Y',
+      'locales' => array(),
+    ),
+  );
+}

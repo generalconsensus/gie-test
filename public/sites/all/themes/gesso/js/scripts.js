@@ -79,6 +79,16 @@
     }
   }
 
+  Drupal.behaviors.general = {
+    attach: function(context) {
+
+      $('.toggle-button').click(function(){
+        $('.toggle-text').slideToggle();
+      });
+    
+    }
+  }
+
   Drupal.behaviors.shareThis = {
     attach: function (context) {
       $('.sharethis-buttons .st_sharethis_custom').text('share');
@@ -119,6 +129,21 @@
       });
       if (tallest > 0) {
         items.css("height",tallest+40+"px"); // add 40 for the 20px padding  
+      }
+    });
+    $('.view--wanteds-cardflip').each(function(){
+      var items = $(this).find('.cardflip,.cardflip__card,.cardflip__1,.cardflip__2');
+      items.css("height","auto");
+      var tallest = 0;
+      items.each(function(){
+        var height = $(this).height();
+        if (height >= tallest) { 
+          tallest = height;
+        }
+        return tallest;
+      });
+      if (tallest > 0) {
+        items.css("height",tallest+"px");  
       }
     });
   }
@@ -295,6 +320,7 @@
     homepagePersonasCards();
     mainmenuDropdown();
   }
+
 
   // Runs function once on window resize.
   var TO = false;

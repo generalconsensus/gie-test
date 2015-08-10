@@ -1347,11 +1347,11 @@ function gie_user_field_default_field_instances() {
     ),
     'widget' => array(
       'active' => 1,
-      'module' => 'text',
+      'module' => 'html5_tools',
       'settings' => array(
         'size' => 256,
       ),
-      'type' => 'text_textfield',
+      'type' => 'urlwidget',
       'weight' => 10,
     ),
   );
@@ -1799,11 +1799,11 @@ function gie_user_field_default_field_instances() {
     ),
     'widget' => array(
       'active' => 1,
-      'module' => 'text',
+      'module' => 'html5_tools',
       'settings' => array(
         'size' => 256,
       ),
-      'type' => 'text_textfield',
+      'type' => 'urlwidget',
       'weight' => 9,
     ),
   );
@@ -3026,11 +3026,11 @@ function gie_user_field_default_field_instances() {
     ),
     'widget' => array(
       'active' => 1,
-      'module' => 'text',
+      'module' => 'html5_tools',
       'settings' => array(
         'size' => 256,
       ),
-      'type' => 'text_textfield',
+      'type' => 'urlwidget',
       'weight' => 8,
     ),
   );
