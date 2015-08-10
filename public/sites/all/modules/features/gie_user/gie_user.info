@@ -38,6 +38,7 @@ dependencies[] = term_reference_tree
 dependencies[] = text
 dependencies[] = views
 dependencies[] = views_content
+dependencies[] = views_contextual_filters_or
 features[ctools][] = ds:ds:1
 features[ctools][] = field_group:field_group:1
 features[ctools][] = field_validation:default_field_validation_rules:2
