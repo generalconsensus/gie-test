@@ -64,7 +64,7 @@ function gie_needs_field_default_field_instances() {
           'trim_type' => 'chars',
         ),
         'type' => 'smart_trim_format',
-        'weight' => 4,
+        'weight' => 5,
       ),
       'needs_list' => array(
         'label' => 'hidden',
@@ -215,7 +215,7 @@ function gie_needs_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 15,
+        'weight' => 16,
       ),
       'needs_list' => array(
         'label' => 'above',
@@ -330,7 +330,7 @@ function gie_needs_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 29,
+        'weight' => 30,
       ),
       'needs_list' => array(
         'label' => 'above',
@@ -420,7 +420,7 @@ function gie_needs_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 28,
+        'weight' => 29,
       ),
       'needs_list' => array(
         'label' => 'above',
@@ -510,7 +510,7 @@ function gie_needs_field_default_field_instances() {
         'label' => 'hidden',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 14,
+        'weight' => 15,
       ),
       'needs_list' => array(
         'label' => 'above',
@@ -596,7 +596,7 @@ function gie_needs_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 32,
+        'weight' => 33,
       ),
       'needs_list' => array(
         'label' => 'above',
@@ -711,7 +711,7 @@ function gie_needs_field_default_field_instances() {
         'label' => 'inline',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 19,
+        'weight' => 20,
       ),
       'needs_list' => array(
         'label' => 'inline',
@@ -829,7 +829,7 @@ function gie_needs_field_default_field_instances() {
         'settings' => array(
           'field_delimiter' => '',
           'image_link' => '',
-          'image_style' => 'thumbnail',
+          'image_style' => 'card__500x300_',
           'linked_field' => array(
             'advanced' => array(
               'class' => '',
@@ -948,7 +948,7 @@ function gie_needs_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 30,
+        'weight' => 31,
       ),
       'needs_list' => array(
         'label' => 'above',
@@ -1057,10 +1057,9 @@ function gie_needs_field_default_field_instances() {
       ),
       'listing' => array(
         'label' => 'hidden',
-        'module' => 'addressfield',
+        'module' => 'gie_user',
         'settings' => array(
           'field_delimiter' => '',
-          'format_handlers' => array(),
           'linked_field' => array(
             'advanced' => array(
               'class' => '',
@@ -1072,9 +1071,8 @@ function gie_needs_field_default_field_instances() {
             'destination' => '',
             'linked' => 0,
           ),
-          'use_widget_handlers' => 1,
         ),
-        'type' => 'addressfield_default',
+        'type' => 'city_state_country',
         'weight' => 3,
       ),
       'needs_list' => array(
@@ -1192,7 +1190,7 @@ function gie_needs_field_default_field_instances() {
         'label' => 'hidden',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 13,
+        'weight' => 14,
       ),
       'needs_list' => array(
         'label' => 'inline',
@@ -1276,7 +1274,7 @@ function gie_needs_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 20,
+        'weight' => 21,
       ),
       'needs_list' => array(
         'label' => 'above',
@@ -1384,7 +1382,7 @@ function gie_needs_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 31,
+        'weight' => 32,
       ),
       'needs_list' => array(
         'label' => 'above',
@@ -1496,7 +1494,7 @@ function gie_needs_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 21,
+        'weight' => 22,
       ),
       'needs_list' => array(
         'label' => 'above',
@@ -1589,7 +1587,7 @@ function gie_needs_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 22,
+        'weight' => 23,
       ),
       'needs_list' => array(
         'label' => 'above',
@@ -1681,7 +1679,7 @@ function gie_needs_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 27,
+        'weight' => 28,
       ),
       'needs_list' => array(
         'label' => 'inline',
@@ -1797,7 +1795,7 @@ function gie_needs_field_default_field_instances() {
           ),
         ),
         'type' => 'taxonomy_term_reference_plain',
-        'weight' => 1,
+        'weight' => 2,
       ),
       'needs_list' => array(
         'label' => 'hidden',
@@ -1904,7 +1902,7 @@ function gie_needs_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 26,
+        'weight' => 27,
       ),
       'needs_list' => array(
         'label' => 'above',
@@ -1996,7 +1994,7 @@ function gie_needs_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 23,
+        'weight' => 24,
       ),
       'needs_list' => array(
         'label' => 'above',
@@ -2088,7 +2086,7 @@ function gie_needs_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 25,
+        'weight' => 26,
       ),
       'needs_list' => array(
         'label' => 'above',
@@ -2183,7 +2181,7 @@ function gie_needs_field_default_field_instances() {
           'title_style' => '_none',
         ),
         'type' => 'title_linked',
-        'weight' => 2,
+        'weight' => 4,
       ),
       'needs_list' => array(
         'label' => 'hidden',
