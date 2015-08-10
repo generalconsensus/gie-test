@@ -170,7 +170,7 @@ function gie_needs_ds_field_settings_info() {
           'func' => 'theme_ds_field_expert',
           'fi' => TRUE,
           'fi-el' => 'h3',
-          'fi-cl' => 'node__title',
+          'fi-cl' => 'card__title',
           'fi-at' => '',
           'fi-def-at' => FALSE,
           'fi-odd-even' => FALSE,
@@ -184,7 +184,7 @@ function gie_needs_ds_field_settings_info() {
           'func' => 'theme_ds_field_expert',
           'ow' => TRUE,
           'ow-el' => 'div',
-          'ow-cl' => 'node__summary',
+          'ow-cl' => 'card__summary',
           'ow-def-cl' => FALSE,
           'ow-at' => '',
           'ow-def-at' => FALSE,
@@ -202,11 +202,13 @@ function gie_needs_ds_field_settings_info() {
       'formatter_settings' => array(
         'ft' => array(
           'func' => 'theme_ds_field_expert',
-          'fis' => TRUE,
-          'fis-el' => 'div',
-          'fis-cl' => 'user-header__address',
-          'fis-at' => '',
-          'fis-def-at' => FALSE,
+          'fi' => TRUE,
+          'fi-el' => 'div',
+          'fi-cl' => 'card__location',
+          'fi-at' => '',
+          'fi-def-at' => FALSE,
+          'fi-odd-even' => FALSE,
+          'fi-first-last' => FALSE,
         ),
       ),
     ),
@@ -215,7 +217,7 @@ function gie_needs_ds_field_settings_info() {
         'ft' => array(
           'func' => 'theme_ds_field_expert',
           'fi' => TRUE,
-          'fi-el' => 'h2',
+          'fi-el' => 'div',
           'fi-cl' => 'card__type',
           'fi-at' => '',
           'fi-def-at' => FALSE,
@@ -367,49 +369,54 @@ function gie_needs_ds_layout_settings_info() {
   $ds_layout->entity_type = 'node';
   $ds_layout->bundle = 'needs';
   $ds_layout->view_mode = 'listing';
-  $ds_layout->layout = 'ds_2col_stacked_fluid';
+  $ds_layout->layout = 'slat';
   $ds_layout->settings = array(
     'regions' => array(
-      'left' => array(
+      'media' => array(
         0 => 'field_needs_image',
       ),
-      'right' => array(
-        1 => 'field_needs_type',
-        2 => 'title_field',
+      'main_content' => array(
+        1 => 'group_card_meta',
+        2 => 'field_needs_type',
         3 => 'field_needs_location',
-        4 => 'body',
-        5 => 'group_counts',
-        6 => 'wanted_counts_comments',
-        7 => 'wanted_counts_entity_view_1',
-        8 => 'wanted_counts_wanted_funding_available',
-        9 => 'wanted_counts_wanted_people_needed',
+        4 => 'title_field',
+        5 => 'body',
+        6 => 'group_counts',
+        7 => 'wanted_counts_comments',
+        8 => 'wanted_counts_entity_view_1',
+        9 => 'wanted_counts_wanted_funding_available',
+        10 => 'wanted_counts_wanted_people_needed',
       ),
     ),
     'fields' => array(
-      'field_needs_image' => 'left',
-      'field_needs_type' => 'right',
-      'title_field' => 'right',
-      'field_needs_location' => 'right',
-      'body' => 'right',
-      'group_counts' => 'right',
-      'wanted_counts_comments' => 'right',
-      'wanted_counts_entity_view_1' => 'right',
-      'wanted_counts_wanted_funding_available' => 'right',
-      'wanted_counts_wanted_people_needed' => 'right',
+      'field_needs_image' => 'media',
+      'group_card_meta' => 'main_content',
+      'field_needs_type' => 'main_content',
+      'field_needs_location' => 'main_content',
+      'title_field' => 'main_content',
+      'body' => 'main_content',
+      'group_counts' => 'main_content',
+      'wanted_counts_comments' => 'main_content',
+      'wanted_counts_entity_view_1' => 'main_content',
+      'wanted_counts_wanted_funding_available' => 'main_content',
+      'wanted_counts_wanted_people_needed' => 'main_content',
     ),
-    'classes' => array(),
+    'classes' => array(
+      'layout_class' => array(
+        'card' => 'card',
+        'card--listing' => 'card--listing',
+      ),
+    ),
     'wrappers' => array(
       'header' => 'div',
-      'left' => 'div',
-      'right' => 'div',
-      'footer' => 'div',
+      'media' => 'div',
+      'main_content' => 'div',
     ),
     'layout_wrapper' => 'div',
     'layout_attributes' => '',
     'layout_attributes_merge' => 1,
     'layout_link_attribute' => '',
     'layout_link_custom' => '',
-    'layout_disable_css' => 0,
   );
   $export['node|needs|listing'] = $ds_layout;
 

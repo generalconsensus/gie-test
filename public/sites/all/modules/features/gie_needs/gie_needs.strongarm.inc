@@ -159,7 +159,7 @@ function gie_needs_strongarm() {
             'visible' => FALSE,
           ),
           'listing' => array(
-            'weight' => '24',
+            'weight' => '25',
             'visible' => FALSE,
           ),
           'full' => array(
@@ -227,7 +227,7 @@ function gie_needs_strongarm() {
             'visible' => FALSE,
           ),
           'listing' => array(
-            'weight' => '16',
+            'weight' => '17',
             'visible' => FALSE,
           ),
         ),
@@ -253,7 +253,7 @@ function gie_needs_strongarm() {
             'visible' => FALSE,
           ),
           'listing' => array(
-            'weight' => '17',
+            'weight' => '18',
             'visible' => FALSE,
           ),
         ),
@@ -271,7 +271,7 @@ function gie_needs_strongarm() {
         ),
         'flag_abuse_node' => array(
           'listing' => array(
-            'weight' => '18',
+            'weight' => '19',
             'visible' => FALSE,
           ),
         ),

@@ -54,7 +54,7 @@ function gie_needs_views_default_views() {
   $handler = $view->new_display('panel_pane', 'InDemand Landing', 'exchange_indemand_landing');
   $handler->display->display_options['defaults']['title'] = FALSE;
   $handler->display->display_options['defaults']['css_class'] = FALSE;
-  $handler->display->display_options['css_class'] = 'view--homepage-cardflip';
+  $handler->display->display_options['css_class'] = 'view--wanteds-cardflip';
   $handler->display->display_options['defaults']['style_plugin'] = FALSE;
   $handler->display->display_options['style_plugin'] = 'default';
   $handler->display->display_options['defaults']['style_options'] = FALSE;
@@ -142,19 +142,20 @@ function gie_needs_views_default_views() {
   $handler->display->display_options['fields']['nothing']['table'] = 'views';
   $handler->display->display_options['fields']['nothing']['field'] = 'nothing';
   $handler->display->display_options['fields']['nothing']['label'] = '';
-  $handler->display->display_options['fields']['nothing']['alter']['text'] = '<div class="cardflip">
-  <div class="cardflip__card">
-    <div class="cardflip__a">
-      <div class="cardflip__title">[title]</div>
-      <div class="cardflip__image">[field_action_image]</div>
-    </div>
-    <div class="cardflip__b">
-      <div class="cardflip__title">[title]</div>
-      <div class="cardflip__description">[field_action_description]</div>
-      <div class="cardflip__link">[field_action_link]</div>
-    </div>
-  </div>
-</div>';
+  $handler->display->display_options['fields']['nothing']['alter']['text'] = '<div class="cardflip" style="height: 180px;">
+                      <div class="cardflip__card" style="height: 180px;">
+                        <div class="cardflip__1" style="height: 180px;">
+                          <div class="cardflip__title">[title]</div>
+                          <div class="cardflip__image">[field_action_image]</div>
+                        </div>
+                        <div class="cardflip__2" style="height: 180px;">
+                          <div class="cardflip__title">[title]</div>
+                          <div class="cardflip__description">[field_action_description]</div>
+                          <div class="cardflip__link"><a href="#">[field_action_link]</a></div>
+                          <div class="cardflip__image">[field_action_image]</div>
+                        </div>
+                      </div>
+                    </div>';
   $handler->display->display_options['fields']['nothing']['element_label_colon'] = FALSE;
   $handler->display->display_options['defaults']['arguments'] = FALSE;
   /* Contextual filter: Content: Nid */
@@ -197,6 +198,7 @@ function gie_needs_views_default_views() {
 
   /* Display: Master */
   $handler = $view->new_display('default', 'Master', 'default');
+  $handler->display->display_options['css_class'] = 'view--needs-listing-pages';
   $handler->display->display_options['use_more_always'] = FALSE;
   $handler->display->display_options['access']['type'] = 'none';
   $handler->display->display_options['cache']['type'] = 'none';
