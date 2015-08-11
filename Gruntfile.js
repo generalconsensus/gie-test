@@ -21,6 +21,13 @@ module.exports = function(grunt) {
               specify: ['public/sites/all/themes/gesso/sass/*.scss'], // only compile primary files
             },
           },
+          longformpatternlab: {
+            options: {
+              basePath: 'public/sites/all/themes/gesso_longform/',
+              bundleExec: true,  // use Bundler specified versions
+              outputStyle: 'expanded',
+            },
+          },
           dev : { // Target
             options : { // Target options
               basePath: 'public/sites/all/themes/gesso/',
@@ -68,6 +75,18 @@ module.exports = function(grunt) {
               // livereload: true
             }
           },
+          longformpatternlabSass: {
+            files: [
+              'public/sites/all/themes/gesso_longform/sass/**/*.scss'
+            ],
+            tasks: [
+              'compass:longformpatternlab'
+            ],
+            options: {
+              spawn: false,
+              // livereload: true
+            },
+          },
         },
         concurrent: {
           patternlab: {
@@ -88,12 +107,26 @@ module.exports = function(grunt) {
               logConcurrentOutput: true
             }
           },
+          longformpatternlab: {
+            tasks: [
+              'shell:longformpatternlabWatchReload',
+              'simple-watch:longformpatternlabSass'
+            ],
+            options: {
+              logConcurrentOutput: true
+            }
+          },
         },
         shell: {
           // Generate patterns & use native watch/live reload feature
           patternlabWatchReload: {
             command: [
               'php public/sites/all/themes/gesso/patternlab/core/builder.php -wr',
+            ].join('&&')
+          },
+           longformpatternlabWatchReload: {
+            command: [
+              'php public/sites/all/themes/gesso_longform/patternlab/core/builder.php -wr',
             ].join('&&')
           },
         }
@@ -104,4 +137,5 @@ module.exports = function(grunt) {
   grunt.registerTask('default', [ ]);
   grunt.registerTask('patternlab', ['compass:patternlab', 'concurrent:patternlab']);
   grunt.registerTask('patternlablite', ['compass:patternlab', 'concurrent:patternlablite']);
+  grunt.registerTask('longformpatternlab', ['compass:longformpatternlab', 'concurrent:longformpatternlab']);
 };
