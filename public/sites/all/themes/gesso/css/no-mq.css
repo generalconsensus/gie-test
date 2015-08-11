@@ -5084,7 +5084,11 @@ div[class*="pane--facetapi-"] .pane__content ul li a {
   margin: 0 0 3em 0;
   position: relative;
 }
-/* line 8, ../sass/partials/components/_region-title.scss */
+/* line 3, ../sass/partials/components/_region-title.scss */
+.section-wanteds .region-title {
+  background: #00729c;
+}
+/* line 11, ../sass/partials/components/_region-title.scss */
 .region-title:after {
   content: "";
   display: block;
@@ -5096,6 +5100,10 @@ div[class*="pane--facetapi-"] .pane__content ul li a {
   position: absolute;
   top: 0;
   width: 0;
+}
+/* line 17, ../sass/partials/components/_region-title.scss */
+.section-wanteds .region-title:after {
+  border-color: #025979 transparent transparent transparent;
 }
 
 /* line 1, ../sass/partials/components/_required-fields.scss */
