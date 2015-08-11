@@ -5196,7 +5196,11 @@ div[class*="pane--facetapi-"] .pane__content ul li a {
     bottom: -21px;
   }
 }
-/* line 22, ../sass/partials/components/pane/_pane--page-title.scss */
+/* line 17, ../sass/partials/components/pane/_pane--page-title.scss */
+.section-wanteds .pane--page-title:after {
+  border-color: #00729c transparent transparent transparent;
+}
+/* line 25, ../sass/partials/components/pane/_pane--page-title.scss */
 .pane--page-title h1 {
   color: #fff;
   font-size: 1.5em;
@@ -5206,7 +5210,7 @@ div[class*="pane--facetapi-"] .pane__content ul li a {
   padding: 0.6em 0 0.75em 0;
 }
 @media (min-width: 43.75em) {
-  /* line 22, ../sass/partials/components/pane/_pane--page-title.scss */
+  /* line 25, ../sass/partials/components/pane/_pane--page-title.scss */
   .pane--page-title h1 {
     font-size: 2.5em;
   }
@@ -5577,6 +5581,10 @@ div[class*="pane--facetapi-"] .pane__content ul li a {
   background: #ed7d3a;
   margin: 0 0 3em 0;
 }
+/* line 3, ../sass/partials/components/_region-title.scss */
+.section-wanteds .region-title {
+  background: #00729c;
+}
 @media (min-width: 75em) {
   /* line 1, ../sass/partials/components/_region-title.scss */
   .region-title {
@@ -5584,7 +5592,7 @@ div[class*="pane--facetapi-"] .pane__content ul li a {
   }
 }
 @media (min-width: 75em) {
-  /* line 8, ../sass/partials/components/_region-title.scss */
+  /* line 11, ../sass/partials/components/_region-title.scss */
   .region-title:after {
     content: "";
     display: block;
@@ -5596,6 +5604,10 @@ div[class*="pane--facetapi-"] .pane__content ul li a {
     position: absolute;
     top: 0;
     width: 0;
+  }
+  /* line 17, ../sass/partials/components/_region-title.scss */
+  .section-wanteds .region-title:after {
+    border-color: #025979 transparent transparent transparent;
   }
 }
 

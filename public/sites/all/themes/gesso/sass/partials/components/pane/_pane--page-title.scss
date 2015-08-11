@@ -14,6 +14,9 @@
       bottom: -21px;
     }
     border-color: $lightorange transparent transparent transparent;
+    .section-wanteds & {
+      border-color: #00729c transparent transparent transparent;
+    }
     height: 0;
     left: 0;
     position: absolute;
