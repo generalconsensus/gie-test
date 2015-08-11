@@ -67,6 +67,7 @@ function gie_search_strongarm() {
       'search_api_views:partner_listing:org_listing' => 'search_api_views:partner_listing:org_listing',
       'search_api_views:events_listing:event_mega' => 'search_api_views:events_listing:event_mega',
       'SearchApiQuery' => 'SearchApiQuery',
+      'search_api_views:needs_listing_pages:needs_listings' => 'search_api_views:needs_listing_pages:needs_listings',
     ),
     'default_user_index' => array(
       'search_api_views:user_listing:listing_pane' => 'search_api_views:user_listing:listing_pane',
@@ -81,7 +82,7 @@ function gie_search_strongarm() {
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'search_api_solr_last_optimize';
-  $strongarm->value = 1435150383;
+  $strongarm->value = 1438788814;
   $export['search_api_solr_last_optimize'] = $strongarm;
 
   $strongarm = new stdClass();
