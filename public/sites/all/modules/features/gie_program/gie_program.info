@@ -12,6 +12,7 @@ dependencies[] = features
 dependencies[] = field_group
 dependencies[] = image
 dependencies[] = link
+dependencies[] = maxlength
 dependencies[] = multiple_selects
 dependencies[] = panelizer
 dependencies[] = smart_trim
