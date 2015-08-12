@@ -165,7 +165,6 @@ features[views_view][] = organization_recent_content
 features[views_view][] = organization_social
 features[views_view][] = organization_taxonomies
 features[views_view][] = organization_type_view
-features[views_view][] = partner_listing
 features[views_view][] = partners
 features[views_view][] = partners_listing_page
 features_exclude[dependencies][email] = email
