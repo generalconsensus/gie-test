@@ -93,64 +93,6 @@ function gie_organization_views_default_views() {
     'organization' => 'organization',
   );
 
-  /* Display: Innovations */
-  $handler = $view->new_display('entity_view', 'Innovations', 'innovation_count');
-  $handler->display->display_options['defaults']['css_class'] = FALSE;
-  $handler->display->display_options['css_class'] = 'view--at-a-glance';
-  $handler->display->display_options['defaults']['group_by'] = FALSE;
-  $handler->display->display_options['group_by'] = TRUE;
-  $handler->display->display_options['defaults']['style_plugin'] = FALSE;
-  $handler->display->display_options['style_plugin'] = 'default';
-  $handler->display->display_options['style_options']['default_row_class'] = FALSE;
-  $handler->display->display_options['style_options']['row_class_special'] = FALSE;
-  $handler->display->display_options['defaults']['style_options'] = FALSE;
-  $handler->display->display_options['defaults']['row_plugin'] = FALSE;
-  $handler->display->display_options['row_plugin'] = 'fields';
-  $handler->display->display_options['row_options']['default_field_elements'] = FALSE;
-  $handler->display->display_options['defaults']['row_options'] = FALSE;
-  $handler->display->display_options['defaults']['relationships'] = FALSE;
-  /* Relationship: Entity Reference: Referenced Entity */
-  $handler->display->display_options['relationships']['field_innovation_funders_target_id']['id'] = 'field_innovation_funders_target_id';
-  $handler->display->display_options['relationships']['field_innovation_funders_target_id']['table'] = 'field_data_field_innovation_funders';
-  $handler->display->display_options['relationships']['field_innovation_funders_target_id']['field'] = 'field_innovation_funders_target_id';
-  $handler->display->display_options['defaults']['fields'] = FALSE;
-  /* Field: Content: Nid */
-  $handler->display->display_options['fields']['nid']['id'] = 'nid';
-  $handler->display->display_options['fields']['nid']['table'] = 'node';
-  $handler->display->display_options['fields']['nid']['field'] = 'nid';
-  $handler->display->display_options['fields']['nid']['group_type'] = 'count';
-  $handler->display->display_options['fields']['nid']['label'] = 'Innovations';
-  $handler->display->display_options['fields']['nid']['element_type'] = 'span';
-  $handler->display->display_options['fields']['nid']['element_label_type'] = 'span';
-  $handler->display->display_options['fields']['nid']['element_label_class'] = 'views-label';
-  $handler->display->display_options['fields']['nid']['element_label_colon'] = FALSE;
-  $handler->display->display_options['fields']['nid']['element_wrapper_type'] = 'div';
-  $handler->display->display_options['fields']['nid']['element_wrapper_class'] = 'views-field has-icon--innovation';
-  $handler->display->display_options['fields']['nid']['element_default_classes'] = FALSE;
-  $handler->display->display_options['fields']['nid']['format_plural'] = TRUE;
-  $handler->display->display_options['defaults']['arguments'] = FALSE;
-  /* Contextual filter: Content: Nid */
-  $handler->display->display_options['arguments']['nid']['id'] = 'nid';
-  $handler->display->display_options['arguments']['nid']['table'] = 'node';
-  $handler->display->display_options['arguments']['nid']['field'] = 'nid';
-  $handler->display->display_options['arguments']['nid']['relationship'] = 'field_innovation_funders_target_id';
-  $handler->display->display_options['arguments']['nid']['default_action'] = 'default';
-  $handler->display->display_options['arguments']['nid']['default_argument_type'] = 'node';
-  $handler->display->display_options['arguments']['nid']['summary']['number_of_records'] = '0';
-  $handler->display->display_options['arguments']['nid']['summary']['format'] = 'default_summary';
-  $handler->display->display_options['arguments']['nid']['summary_options']['items_per_page'] = '25';
-  $handler->display->display_options['defaults']['filter_groups'] = FALSE;
-  $handler->display->display_options['defaults']['filters'] = FALSE;
-  /* Filter criterion: Content: Published */
-  $handler->display->display_options['filters']['status']['id'] = 'status';
-  $handler->display->display_options['filters']['status']['table'] = 'node';
-  $handler->display->display_options['filters']['status']['field'] = 'status';
-  $handler->display->display_options['filters']['status']['value'] = '1';
-  $handler->display->display_options['entity_type'] = 'node';
-  $handler->display->display_options['bundles'] = array(
-    0 => 'organization',
-  );
-
   /* Display: Members */
   $handler = $view->new_display('entity_view', 'Members', 'member_count');
   $handler->display->display_options['defaults']['css_class'] = FALSE;
@@ -339,52 +281,6 @@ function gie_organization_views_default_views() {
   $handler->display->display_options['filters']['type']['value'] = array(
     'organization' => 'organization',
   );
-  $handler->display->display_options['entity_type'] = 'node';
-  $handler->display->display_options['bundles'] = array(
-    0 => 'organization',
-  );
-
-  /* Display: Innovation count */
-  $handler = $view->new_display('entity_view', 'Innovation count', 'innovation_count');
-  $handler->display->display_options['defaults']['group_by'] = FALSE;
-  $handler->display->display_options['group_by'] = TRUE;
-  $handler->display->display_options['defaults']['relationships'] = FALSE;
-  /* Relationship: Entity Reference: Referenced Entity */
-  $handler->display->display_options['relationships']['field_innovation_funders_target_id']['id'] = 'field_innovation_funders_target_id';
-  $handler->display->display_options['relationships']['field_innovation_funders_target_id']['table'] = 'field_data_field_innovation_funders';
-  $handler->display->display_options['relationships']['field_innovation_funders_target_id']['field'] = 'field_innovation_funders_target_id';
-  $handler->display->display_options['defaults']['fields'] = FALSE;
-  /* Field: Content: Nid */
-  $handler->display->display_options['fields']['nid']['id'] = 'nid';
-  $handler->display->display_options['fields']['nid']['table'] = 'node';
-  $handler->display->display_options['fields']['nid']['field'] = 'nid';
-  $handler->display->display_options['fields']['nid']['group_type'] = 'count';
-  $handler->display->display_options['fields']['nid']['label'] = '';
-  $handler->display->display_options['fields']['nid']['alter']['alter_text'] = TRUE;
-  $handler->display->display_options['fields']['nid']['alter']['text'] = '<div class="has-icon--innovation" title="Innovations">[nid]</div>';
-  $handler->display->display_options['fields']['nid']['element_type'] = '0';
-  $handler->display->display_options['fields']['nid']['element_label_colon'] = FALSE;
-  $handler->display->display_options['fields']['nid']['element_default_classes'] = FALSE;
-  $handler->display->display_options['defaults']['arguments'] = FALSE;
-  /* Contextual filter: Content: Nid */
-  $handler->display->display_options['arguments']['nid']['id'] = 'nid';
-  $handler->display->display_options['arguments']['nid']['table'] = 'node';
-  $handler->display->display_options['arguments']['nid']['field'] = 'nid';
-  $handler->display->display_options['arguments']['nid']['relationship'] = 'field_innovation_funders_target_id';
-  $handler->display->display_options['arguments']['nid']['default_action'] = 'default';
-  $handler->display->display_options['arguments']['nid']['default_argument_type'] = 'node';
-  $handler->display->display_options['arguments']['nid']['summary']['number_of_records'] = '0';
-  $handler->display->display_options['arguments']['nid']['summary']['format'] = 'default_summary';
-  $handler->display->display_options['arguments']['nid']['summary_options']['items_per_page'] = '25';
-  $handler->display->display_options['defaults']['filter_groups'] = FALSE;
-  $handler->display->display_options['defaults']['filters'] = FALSE;
-  /* Filter criterion: Content: Published */
-  $handler->display->display_options['filters']['status']['id'] = 'status';
-  $handler->display->display_options['filters']['status']['table'] = 'node';
-  $handler->display->display_options['filters']['status']['field'] = 'status';
-  $handler->display->display_options['filters']['status']['value'] = 1;
-  $handler->display->display_options['filters']['status']['group'] = 1;
-  $handler->display->display_options['filters']['status']['expose']['operator'] = FALSE;
   $handler->display->display_options['entity_type'] = 'node';
   $handler->display->display_options['bundles'] = array(
     0 => 'organization',
@@ -743,37 +639,71 @@ function gie_organization_views_default_views() {
   $handler->display->display_options['defaults']['title'] = FALSE;
   $handler->display->display_options['title'] = 'Innovations';
   $handler->display->display_options['defaults']['use_more'] = FALSE;
-  $handler->display->display_options['use_more'] = TRUE;
   $handler->display->display_options['defaults']['use_more_always'] = FALSE;
   $handler->display->display_options['defaults']['use_more_always'] = FALSE;
-  $handler->display->display_options['use_more_always'] = FALSE;
+  $handler->display->display_options['use_more_always'] = TRUE;
   $handler->display->display_options['defaults']['use_more_text'] = FALSE;
   $handler->display->display_options['use_more_text'] = 'Explore all innovations by this organization';
   $handler->display->display_options['defaults']['link_display'] = FALSE;
   $handler->display->display_options['link_display'] = 'custom_url';
   $handler->display->display_options['link_url'] = '/innovations/funded-by/!1';
+  $handler->display->display_options['defaults']['query'] = FALSE;
+  $handler->display->display_options['query']['type'] = 'views_query';
+  $handler->display->display_options['defaults']['pager'] = FALSE;
+  $handler->display->display_options['pager']['type'] = 'some';
+  $handler->display->display_options['pager']['options']['items_per_page'] = '6';
+  $handler->display->display_options['pager']['options']['offset'] = '0';
+  $handler->display->display_options['defaults']['footer'] = FALSE;
+  /* Footer: Global: Text area */
+  $handler->display->display_options['footer']['area']['id'] = 'area';
+  $handler->display->display_options['footer']['area']['table'] = 'views';
+  $handler->display->display_options['footer']['area']['field'] = 'area';
+  $handler->display->display_options['footer']['area']['content'] = '<div class="more-link">
+  <a href="/innovations/funded-by/162">
+    Explore all innovations funded by this organization  </a>
+</div>
+<div class="more-link">
+  <a href="/innovations/innovation-related-org/162">
+    Explore all innovations associated with this organization  </a>
+</div>';
+  $handler->display->display_options['footer']['area']['format'] = 'full_html';
   $handler->display->display_options['defaults']['relationships'] = FALSE;
-  /* Relationship: Entity Reference: Referenced Entity */
-  $handler->display->display_options['relationships']['field_innovation_funders_target_id']['id'] = 'field_innovation_funders_target_id';
-  $handler->display->display_options['relationships']['field_innovation_funders_target_id']['table'] = 'field_data_field_innovation_funders';
-  $handler->display->display_options['relationships']['field_innovation_funders_target_id']['field'] = 'field_innovation_funders_target_id';
   $handler->display->display_options['defaults']['sorts'] = FALSE;
-  /* Sort criterion: Content: Post date */
-  $handler->display->display_options['sorts']['created']['id'] = 'created';
-  $handler->display->display_options['sorts']['created']['table'] = 'node';
-  $handler->display->display_options['sorts']['created']['field'] = 'created';
-  $handler->display->display_options['sorts']['created']['order'] = 'DESC';
   $handler->display->display_options['defaults']['arguments'] = FALSE;
-  /* Contextual filter: Content: Nid */
-  $handler->display->display_options['arguments']['nid']['id'] = 'nid';
-  $handler->display->display_options['arguments']['nid']['table'] = 'node';
-  $handler->display->display_options['arguments']['nid']['field'] = 'nid';
-  $handler->display->display_options['arguments']['nid']['relationship'] = 'field_innovation_funders_target_id';
-  $handler->display->display_options['arguments']['nid']['default_action'] = 'default';
-  $handler->display->display_options['arguments']['nid']['default_argument_type'] = 'node';
-  $handler->display->display_options['arguments']['nid']['summary']['number_of_records'] = '0';
-  $handler->display->display_options['arguments']['nid']['summary']['format'] = 'default_summary';
-  $handler->display->display_options['arguments']['nid']['summary_options']['items_per_page'] = '25';
+  /* Contextual filter: Content: Funded By (field_innovation_funders) */
+  $handler->display->display_options['arguments']['field_innovation_funders_target_id']['id'] = 'field_innovation_funders_target_id';
+  $handler->display->display_options['arguments']['field_innovation_funders_target_id']['table'] = 'field_data_field_innovation_funders';
+  $handler->display->display_options['arguments']['field_innovation_funders_target_id']['field'] = 'field_innovation_funders_target_id';
+  $handler->display->display_options['arguments']['field_innovation_funders_target_id']['default_action'] = 'default';
+  $handler->display->display_options['arguments']['field_innovation_funders_target_id']['default_argument_type'] = 'node';
+  $handler->display->display_options['arguments']['field_innovation_funders_target_id']['summary']['number_of_records'] = '0';
+  $handler->display->display_options['arguments']['field_innovation_funders_target_id']['summary']['format'] = 'default_summary';
+  $handler->display->display_options['arguments']['field_innovation_funders_target_id']['summary_options']['items_per_page'] = '25';
+  /* Contextual filter: Content: Related Organizations (field_innovation_related_org) */
+  $handler->display->display_options['arguments']['field_innovation_related_org_target_id']['id'] = 'field_innovation_related_org_target_id';
+  $handler->display->display_options['arguments']['field_innovation_related_org_target_id']['table'] = 'field_data_field_innovation_related_org';
+  $handler->display->display_options['arguments']['field_innovation_related_org_target_id']['field'] = 'field_innovation_related_org_target_id';
+  $handler->display->display_options['arguments']['field_innovation_related_org_target_id']['default_action'] = 'default';
+  $handler->display->display_options['arguments']['field_innovation_related_org_target_id']['default_argument_type'] = 'node';
+  $handler->display->display_options['arguments']['field_innovation_related_org_target_id']['summary']['number_of_records'] = '0';
+  $handler->display->display_options['arguments']['field_innovation_related_org_target_id']['summary']['format'] = 'default_summary';
+  $handler->display->display_options['arguments']['field_innovation_related_org_target_id']['summary_options']['items_per_page'] = '25';
+  $handler->display->display_options['defaults']['filter_groups'] = FALSE;
+  $handler->display->display_options['defaults']['filters'] = FALSE;
+  /* Filter criterion: Content: Published */
+  $handler->display->display_options['filters']['status']['id'] = 'status';
+  $handler->display->display_options['filters']['status']['table'] = 'node';
+  $handler->display->display_options['filters']['status']['field'] = 'status';
+  $handler->display->display_options['filters']['status']['value'] = 1;
+  $handler->display->display_options['filters']['status']['group'] = 1;
+  $handler->display->display_options['filters']['status']['expose']['operator'] = FALSE;
+  /* Filter criterion: Content: Type */
+  $handler->display->display_options['filters']['type']['id'] = 'type';
+  $handler->display->display_options['filters']['type']['table'] = 'node';
+  $handler->display->display_options['filters']['type']['field'] = 'type';
+  $handler->display->display_options['filters']['type']['value'] = array(
+    'innovation' => 'innovation',
+  );
 
   /* Display: Funding ops */
   $handler = $view->new_display('panel_pane', 'Funding ops', 'funding_pane');

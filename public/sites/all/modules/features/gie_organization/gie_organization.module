@@ -5,3 +5,53 @@
  */
 
 include_once 'gie_organization.features.inc';
+
+/**
+ * Implements hook_views_query_alter().
+ */
+function gie_organization_views_query_alter(&$view, &$query)
+{
+    if($view->name == "organization_recent_content" && $view->current_display == "innovations_pane"){
+        $query->where[0]['type'] = 'OR';
+    }
+}
+
+/**
+ * Implements hook_ds_fields_info().
+ */
+function gie_organization_ds_fields_info($entity_type) {
+    $fields = array();
+
+    if($entity_type == 'node') {
+        $fields['org_innovation_detail_count'] = array(
+            'title' => t('Organization - Innovation Count'),
+            'field_type' => DS_FIELD_TYPE_FUNCTION,
+            'ui_limit' => array('organization|at_a_glance'),
+            'function' => 'gie_organization_innovation_detail_count',
+        );
+        $fields['org_innovation_listing_count'] = array(
+            'title' => t('Organization - Innovation Listing'),
+            'field_type' => DS_FIELD_TYPE_FUNCTION,
+            'ui_limit' => array('organization|listing'),
+            'function' => 'gie_organization_innovation_listing_count',
+        );
+        return array($entity_type => $fields);
+    }
+    return;
+}
+
+/*
+ * Custom function to return Innovation Count based on Organization
+ */
+function gie_organization_innovation_detail_count($field) {
+    $count = db_query('SELECT COUNT(a.nid) FROM {node} a LEFT JOIN field_data_field_innovation_funders b ON a.nid = b.entity_id LEFT JOIN field_data_field_innovation_related_org c ON a.nid = c.entity_id WHERE type = :type AND status = :status AND (b.field_innovation_funders_target_id = :nid OR c.field_innovation_related_org_target_id = :nid)', array(':type' => 'innovation', ':status' => 1, ':nid' => $field['entity']->nid))->fetchField();
+    return '<span class="views-label">Innovations</span><span>' . $count . '</span>';
+}
+
+/*
+ * Custom function to return Innovation Count based on Organization
+ */
+function gie_organization_innovation_listing_count($field) {
+    $count = db_query('SELECT COUNT(a.nid) FROM {node} a LEFT JOIN field_data_field_innovation_funders b ON a.nid = b.entity_id LEFT JOIN field_data_field_innovation_related_org c ON a.nid = c.entity_id WHERE type = :type AND status = :status AND (b.field_innovation_funders_target_id = :nid OR c.field_innovation_related_org_target_id = :nid)', array(':type' => 'innovation', ':status' => 1, ':nid' => $field['entity']->nid))->fetchField();
+    return '<div class="has-icon--innovation" title="Innovations">' . $count . '</div>';
+}
