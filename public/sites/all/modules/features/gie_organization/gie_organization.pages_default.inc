@@ -264,17 +264,13 @@ function gie_organization_default_page_manager_pages() {
   $display->content = array();
   $display->panels = array();
     $pane = new stdClass();
-    $pane->pid = 'new-b42db6a6-9e4d-429a-bd1d-a890aa8aa3a2';
+    $pane->pid = 'new-21fb288a-83cb-4f0e-b374-38fed226374a';
     $pane->panel = 'main';
-    $pane->type = 'pane';
-    $pane->subtype = 'partners_listing_page_all';
+    $pane->type = 'views_panes';
+    $pane->subtype = 'partners_listing_page-partners_page';
     $pane->shown = TRUE;
     $pane->access = array();
-    $pane->configuration = array(
-      'override_title' => 1,
-      'override_title_text' => 'All Partners',
-      'override_title_heading' => 'h2',
-    );
+    $pane->configuration = array();
     $pane->cache = array();
     $pane->style = array(
       'settings' => NULL,
@@ -283,32 +279,9 @@ function gie_organization_default_page_manager_pages() {
     $pane->extras = array();
     $pane->position = 0;
     $pane->locks = array();
-    $pane->uuid = 'b42db6a6-9e4d-429a-bd1d-a890aa8aa3a2';
-    $display->content['new-b42db6a6-9e4d-429a-bd1d-a890aa8aa3a2'] = $pane;
-    $display->panels['main'][0] = 'new-b42db6a6-9e4d-429a-bd1d-a890aa8aa3a2';
-    $pane = new stdClass();
-    $pane->pid = 'new-1235979b-16c4-475e-838c-f30ce09f4114';
-    $pane->panel = 'main';
-    $pane->type = 'pane';
-    $pane->subtype = 'partners_listing_page';
-    $pane->shown = TRUE;
-    $pane->access = array();
-    $pane->configuration = array(
-      'override_title' => 1,
-      'override_title_text' => 'Featured Partners',
-      'override_title_heading' => 'h1',
-    );
-    $pane->cache = array();
-    $pane->style = array(
-      'settings' => NULL,
-    );
-    $pane->css = array();
-    $pane->extras = array();
-    $pane->position = 1;
-    $pane->locks = array();
-    $pane->uuid = '1235979b-16c4-475e-838c-f30ce09f4114';
-    $display->content['new-1235979b-16c4-475e-838c-f30ce09f4114'] = $pane;
-    $display->panels['main'][1] = 'new-1235979b-16c4-475e-838c-f30ce09f4114';
+    $pane->uuid = '21fb288a-83cb-4f0e-b374-38fed226374a';
+    $display->content['new-21fb288a-83cb-4f0e-b374-38fed226374a'] = $pane;
+    $display->panels['main'][0] = 'new-21fb288a-83cb-4f0e-b374-38fed226374a';
     $pane = new stdClass();
     $pane->pid = 'new-9b991d38-cf70-4755-85e3-538b86a41821';
     $pane->panel = 'title';
