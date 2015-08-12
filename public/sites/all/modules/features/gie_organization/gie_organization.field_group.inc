@@ -58,8 +58,8 @@ function gie_organization_field_group_info() {
     'weight' => '4',
     'children' => array(
       0 => 'organization_counters_favorite_count',
-      1 => 'organization_counters_innovation_count',
-      2 => 'organization_counters_member_count',
+      1 => 'organization_counters_member_count',
+      2 => 'org_innovation_listing_count',
     ),
     'format_type' => 'div',
     'format_settings' => array(

@@ -17,6 +17,39 @@ function gie_organization_ds_field_settings_info() {
   $ds_fieldsetting->bundle = 'organization';
   $ds_fieldsetting->view_mode = 'at_a_glance';
   $ds_fieldsetting->settings = array(
+    'org_innovation_detail_count' => array(
+      'weight' => '0',
+      'label' => 'hidden',
+      'format' => 'default',
+      'formatter_settings' => array(
+        'ft' => array(
+          'func' => 'theme_ds_field_expert',
+          'ow' => TRUE,
+          'ow-el' => 'div',
+          'ow-cl' => 'view--at-a-glance',
+          'ow-def-cl' => FALSE,
+          'ow-at' => '',
+          'ow-def-at' => FALSE,
+          'fis' => TRUE,
+          'fis-el' => 'div',
+          'fis-cl' => 'views-field has-icon--innovation',
+          'fis-at' => '',
+          'fis-def-at' => FALSE,
+        ),
+        'field_delimiter' => '',
+        'linked_field' => array(
+          'linked' => 0,
+          'destination' => '',
+          'advanced' => array(
+            'title' => '',
+            'target' => '',
+            'class' => '',
+            'rel' => '',
+            'text' => '',
+          ),
+        ),
+      ),
+    ),
     'field_org_link' => array(
       'formatter_settings' => array(
         'ft' => array(
@@ -27,6 +60,7 @@ function gie_organization_ds_field_settings_info() {
           'fi-at' => '',
           'fi-def-at' => FALSE,
           'fi-odd-even' => FALSE,
+          'fi-first-last' => FALSE,
         ),
       ),
     ),
@@ -136,6 +170,35 @@ function gie_organization_ds_field_settings_info() {
   $ds_fieldsetting->bundle = 'organization';
   $ds_fieldsetting->view_mode = 'listing';
   $ds_fieldsetting->settings = array(
+    'org_innovation_listing_count' => array(
+      'weight' => '0',
+      'label' => 'hidden',
+      'format' => 'default',
+      'formatter_settings' => array(
+        'ft' => array(
+          'func' => 'theme_ds_field_expert',
+          'fi' => TRUE,
+          'fi-el' => 'div',
+          'fi-cl' => 'view',
+          'fi-at' => '',
+          'fi-def-at' => FALSE,
+          'fi-odd-even' => FALSE,
+          'fi-first-last' => FALSE,
+        ),
+        'field_delimiter' => '',
+        'linked_field' => array(
+          'linked' => 0,
+          'destination' => '',
+          'advanced' => array(
+            'title' => '',
+            'target' => '',
+            'class' => '',
+            'rel' => '',
+            'text' => '',
+          ),
+        ),
+      ),
+    ),
     'title_field' => array(
       'formatter_settings' => array(
         'ft' => array(
@@ -158,6 +221,7 @@ function gie_organization_ds_field_settings_info() {
           'fi-at' => '',
           'fi-def-at' => FALSE,
           'fi-odd-even' => FALSE,
+          'fi-first-last' => FALSE,
         ),
       ),
     ),
@@ -171,6 +235,7 @@ function gie_organization_ds_field_settings_info() {
           'fi-at' => '',
           'fi-def-at' => FALSE,
           'fi-odd-even' => FALSE,
+          'fi-first-last' => FALSE,
         ),
       ),
     ),
@@ -273,19 +338,23 @@ function gie_organization_ds_layout_settings_info() {
   $ds_layout->settings = array(
     'regions' => array(
       'ds_content' => array(
-        0 => 'organization_at_a_glance_innovation_count',
+        0 => 'org_innovation_detail_count',
         1 => 'organization_at_a_glance_member_count',
         2 => 'organization_at_a_glance_partner_count',
         3 => 'field_org_link',
       ),
     ),
     'fields' => array(
-      'organization_at_a_glance_innovation_count' => 'ds_content',
+      'org_innovation_detail_count' => 'ds_content',
       'organization_at_a_glance_member_count' => 'ds_content',
       'organization_at_a_glance_partner_count' => 'ds_content',
       'field_org_link' => 'ds_content',
     ),
-    'classes' => array(),
+    'classes' => array(
+      'layout_class' => array(
+        '' => '',
+      ),
+    ),
     'wrappers' => array(
       'ds_content' => 'div',
     ),
@@ -378,24 +447,24 @@ function gie_organization_ds_layout_settings_info() {
     'regions' => array(
       'main_content' => array(
         0 => 'field_org_logo',
-        1 => 'group_card_content',
-        2 => 'organization_counters_innovation_count',
+        1 => 'org_innovation_listing_count',
+        2 => 'group_card_content',
         3 => 'title_field',
         4 => 'organization_counters_member_count',
-        5 => 'field_org_desc',
-        6 => 'group_card_counts',
-        7 => 'organization_counters_favorite_count',
+        5 => 'organization_counters_favorite_count',
+        6 => 'field_org_desc',
+        7 => 'group_card_counts',
       ),
     ),
     'fields' => array(
       'field_org_logo' => 'main_content',
+      'org_innovation_listing_count' => 'main_content',
       'group_card_content' => 'main_content',
-      'organization_counters_innovation_count' => 'main_content',
       'title_field' => 'main_content',
       'organization_counters_member_count' => 'main_content',
+      'organization_counters_favorite_count' => 'main_content',
       'field_org_desc' => 'main_content',
       'group_card_counts' => 'main_content',
-      'organization_counters_favorite_count' => 'main_content',
     ),
     'classes' => array(
       'layout_class' => array(

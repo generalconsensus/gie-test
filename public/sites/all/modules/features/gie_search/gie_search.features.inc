@@ -152,6 +152,7 @@ function gie_search_default_search_api_index() {
         "field_innovation_program" : { "type" : "list\\u003Cinteger\\u003E", "entity_type" : "node" },
         "field_innovation_raised" : { "type" : "integer" },
         "field_innovation_ref_avail" : { "type" : "boolean" },
+        "field_innovation_related_org" : { "type" : "list\\u003Cinteger\\u003E", "entity_type" : "node" },
         "field_innovation_stage" : { "type" : "integer", "entity_type" : "taxonomy_term" },
         "field_innovation_type" : { "type" : "integer", "entity_type" : "taxonomy_term" },
         "field_needs_amount_items" : { "type" : "integer" },
