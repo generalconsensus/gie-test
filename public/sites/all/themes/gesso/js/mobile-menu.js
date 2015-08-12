@@ -44,8 +44,8 @@
 
           if ($(this).is('.view')) {
             $(this).addClass('nav__view');
-            var $childLink = $(this).find('h2');
-            $childLink.addClass('nav__header').parent('.view__header').addClass('nav__item--lvl2parent');
+            var $childLink = $(this).find('.view__header').find('h2,a');
+            $childLink.addClass('nav__header').closest('.view__header').addClass('nav__item--lvl2parent');
             if ($childLink.siblings('.nav__lvl2subnav-arrow').length < 1) {
               $childLink.after('<button class="nav__lvl2subnav-arrow">Show</button>');
             }
@@ -133,7 +133,7 @@
         // Open/close sub-submenus 
         $('.nav__lvl2subnav-arrow',context).click(function (e) {
           $(this).toggleClass('is-active').prev('.nav__link--subparent').toggleClass('is-open');
-          $(this).parent('.nav__item--lvl2parent').siblings('.nav--lvl2subnav').slideToggle();
+          $(this).closest('.nav__item--lvl2parent').siblings('.nav--lvl2subnav').slideToggle();
 
           // Remove focus for mouse clicks after closing the menu.
           $(this).not('.is-active').mouseleave(function () {
