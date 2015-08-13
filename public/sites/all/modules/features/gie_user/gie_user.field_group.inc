@@ -21,7 +21,7 @@ function gie_user_field_group_info() {
   $field_group->parent_name = '';
   $field_group->data = array(
     'label' => 'Tell Us About You',
-    'weight' => '0',
+    'weight' => '2',
     'children' => array(
       0 => 'field_user_company',
       1 => 'field_user_firstname',
@@ -63,7 +63,7 @@ function gie_user_field_group_info() {
   $field_group->parent_name = '';
   $field_group->data = array(
     'label' => 'Choose Your Account Details',
-    'weight' => '2',
+    'weight' => '5',
     'children' => array(
       0 => 'field_user_type',
       1 => 'field_user_photo',
@@ -164,7 +164,7 @@ function gie_user_field_group_info() {
   $field_group->parent_name = '';
   $field_group->data = array(
     'label' => 'Where else can we connect with you?',
-    'weight' => '4',
+    'weight' => '8',
     'children' => array(
       0 => 'field_user_facebook',
       1 => 'field_user_linkedin',
@@ -199,7 +199,7 @@ function gie_user_field_group_info() {
   $field_group->parent_name = '';
   $field_group->data = array(
     'label' => 'What interests you about the Exchange?',
-    'weight' => '3',
+    'weight' => '6',
     'children' => array(
       0 => 'field_user_education',
       1 => 'field_user_interests',
@@ -272,7 +272,7 @@ function gie_user_field_group_info() {
   $field_group->parent_name = '';
   $field_group->data = array(
     'label' => 'Where are you from?',
-    'weight' => '1',
+    'weight' => '4',
     'children' => array(
       0 => 'field_user_address',
       1 => 'timezone',
