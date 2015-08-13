@@ -2413,7 +2413,7 @@ function gie_user_field_default_field_instances() {
       'file_directory' => 'images',
       'file_extensions' => 'png gif jpg jpeg',
       'focus' => 1,
-      'focus_lock_ratio' => 0,
+      'focus_lock_ratio' => 1,
       'focus_min_size' => '200x133',
       'max_filesize' => '',
       'max_resolution' => '',
