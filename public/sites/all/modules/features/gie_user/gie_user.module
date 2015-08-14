@@ -207,3 +207,13 @@ Function gie_user_views_query_alter(&$view, &$query) {
     );
   }
 }
+
+/**
+ * Implements hook_views_pre_render().
+ */
+function gie_user_views_pre_render(&$view) {
+  // Add 'Create your account' link to user menu view for anonymous users.
+  if ($view->name == 'communities_user_menu' && user_is_anonymous()) {
+    $view->footer['area']->options['content'] .= '<a class="add-new" href="/user/register">Create Your Account</a>';
+  }
+}
