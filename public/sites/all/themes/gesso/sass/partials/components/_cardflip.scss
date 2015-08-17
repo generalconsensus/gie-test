@@ -1,4 +1,4 @@
-$cardheight: 200px;
+$cardheight: 180px;
 
 .cardflip {
   cursor: pointer;
@@ -50,8 +50,6 @@ $cardheight: 200px;
 
 %cardside {
   @include backface-visibility(hidden);
-  border: 1px solid #eee;
-  @include box-shadow(0 1px 1px 0 rgba(0,0,0,0.1));
   min-height: $cardheight;
   left: 0;
   padding: 20px;
@@ -61,15 +59,11 @@ $cardheight: 200px;
   width: 100%;
 }
 
-.cardflip__a {
-  @extend %cardside;
-  background: $lightorange;
+%cardside-front {
   z-index: 0;
 }
 
-.cardflip__b {
-  @extend %cardside;
-  background: $orange;
+%cardside-back {
   @include transform(rotateY(180deg));
   .no-transformstylepreserve3d & {
     @include transform(none);
@@ -83,9 +77,42 @@ $cardheight: 200px;
   }
 }
 
+.cardflip__a { // homepage style card, front side
+  @extend %cardside;
+  @extend %cardside-front;
+  @include box-shadow(0 1px 1px 0 rgba(0,0,0,0.1));
+  background: $lightorange;
+  border: 1px solid #eee;
+
+}
+
+.cardflip__b { // homepage style card, back side
+  @extend %cardside;
+  @extend %cardside-back;
+  @include box-shadow(0 1px 1px 0 rgba(0,0,0,0.1));
+  background: $orange;
+  border: 1px solid #eee;
+  
+}
+
+.cardflip__1 { // wanteds landing page style card, front side
+  @extend %cardside;
+  @extend %cardside-front;
+  max-height: 180px;
+  max-width: 275px;
+}
+
+.cardflip__2 { // wanteds landing page style card, back side
+  @extend %cardside;
+  @extend %cardside-back;
+  max-height: 180px;
+  max-width: 275px;
+  text-align: left;
+}
+
 .cardflip__title {
   @include hyphens(none);
-  font-size: em(21px);
+  font-size: 21px;
   .cardflip__a & {
     min-height: 60px;
   }
@@ -94,16 +121,73 @@ $cardheight: 200px;
     margin-bottom: 1em;
     padding-bottom: 1em;
   }
+  .cardflip__1 & {
+    left: 0;
+    position: absolute;
+    right: 0;
+    text-align: center;
+    text-transform: uppercase;
+    top: 50%;
+    z-index: 3;
+    @include transform(translateY(-50%)); // vertically center 
+  }
+  .cardflip__2 & {
+    font-size: 13px;
+    margin-bottom: 0.5em;
+    position: relative;
+    text-transform: uppercase;
+    z-index: 3;
+  }
 }
 
-.cardflip__image {}
+.cardflip__image {
+  .cardflip__1 &, .cardflip__2 & {
+    bottom: 0;
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    z-index: 1;
+  }
+  .cardflip__2 &:after {
+    background: rgba(237,125,58,0.8);
+    bottom: 0;
+    content: "";
+    display: block;
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    z-index: 2;
+  }
+}
 
-.cardflip__description {}
+.cardflip__description {
+  .cardflip__2 & {
+    font-size: 18px;
+    line-height: 1.1;
+    position: relative;
+    z-index: 3;
+  }
+}
 
 .cardflip__link {
-  font-size: em(14px);
+  font-size: 14px;
   padding-top: 1em;
   a {
     text-decoration: underline;
+  }
+  .cardflip__2 & {
+    font-size: 16px;
+    padding-top: 1.5em;
+    position: relative;
+    text-transform: uppercase;
+    z-index: 3;
+    a {
+      text-decoration: none;
+      &:hover, &:focus {
+        text-decoration: underline;
+      }
+    }
   }
 }

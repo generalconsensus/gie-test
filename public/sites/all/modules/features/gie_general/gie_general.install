@@ -259,9 +259,19 @@ function gie_general_update_7024() {
 }
 
 /**
- * Enable GIE Messages feature.
+ * Enable GIE Dashboard feature.
  */
 function gie_general_update_7025() {
+  $modules = array(
+    'gie_needs'
+  );
+  module_enable($modules, TRUE);
+}
+
+/**
+ * Enable GIE Messages feature.
+ */
+function gie_general_update_7026() {
   $modules = array(
     'gie_messages'
   );

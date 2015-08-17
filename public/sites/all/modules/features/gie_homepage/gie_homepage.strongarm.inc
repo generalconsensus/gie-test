@@ -244,6 +244,9 @@ function gie_homepage_strongarm() {
         'path' => array(
           'weight' => '1',
         ),
+        'rabbit_hole' => array(
+          'weight' => '0',
+        ),
       ),
       'display' => array(),
     ),
@@ -293,7 +296,10 @@ function gie_homepage_strongarm() {
     'extra_fields' => array(
       'form' => array(
         'path' => array(
-          'weight' => '30',
+          'weight' => '6',
+        ),
+        'rabbit_hole' => array(
+          'weight' => '5',
         ),
       ),
       'display' => array(
@@ -303,7 +309,7 @@ function gie_homepage_strongarm() {
             'visible' => TRUE,
           ),
           'listing' => array(
-            'weight' => '12',
+            'weight' => '10',
             'visible' => FALSE,
           ),
         ),

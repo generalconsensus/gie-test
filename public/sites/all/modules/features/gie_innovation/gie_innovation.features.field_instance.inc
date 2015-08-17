@@ -419,6 +419,26 @@ function gie_innovation_field_default_field_instances() {
         'type' => 'hidden',
         'weight' => 0,
       ),
+      'needs_list' => array(
+        'label' => 'inline',
+        'module' => 'gie_user',
+        'settings' => array(
+          'field_delimiter' => '',
+          'linked_field' => array(
+            'advanced' => array(
+              'class' => '',
+              'rel' => '',
+              'target' => '',
+              'text' => '',
+              'title' => '',
+            ),
+            'destination' => '',
+            'linked' => 0,
+          ),
+        ),
+        'type' => 'city_state_country',
+        'weight' => 2,
+      ),
       'search_listing' => array(
         'label' => 'above',
         'settings' => array(),
@@ -527,6 +547,12 @@ function gie_innovation_field_default_field_instances() {
         'type' => 'hidden',
         'weight' => 13,
       ),
+      'needs_list' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 5,
+      ),
       'search_listing' => array(
         'label' => 'above',
         'settings' => array(),
@@ -631,6 +657,12 @@ function gie_innovation_field_default_field_instances() {
         'type' => 'hidden',
         'weight' => 14,
       ),
+      'needs_list' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 6,
+      ),
       'search_listing' => array(
         'label' => 'above',
         'settings' => array(),
@@ -730,6 +762,12 @@ function gie_innovation_field_default_field_instances() {
         'settings' => array(),
         'type' => 'hidden',
         'weight' => 35,
+      ),
+      'needs_list' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 32,
       ),
       'search_listing' => array(
         'label' => 'above',
@@ -847,6 +885,12 @@ function gie_innovation_field_default_field_instances() {
         'type' => 'hidden',
         'weight' => 42,
       ),
+      'needs_list' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 39,
+      ),
       'search_listing' => array(
         'label' => 'above',
         'settings' => array(),
@@ -958,6 +1002,12 @@ function gie_innovation_field_default_field_instances() {
         'settings' => array(),
         'type' => 'hidden',
         'weight' => 20,
+      ),
+      'needs_list' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 17,
       ),
       'search_listing' => array(
         'label' => 'above',
@@ -1080,6 +1130,12 @@ function gie_innovation_field_default_field_instances() {
         'type' => 'smart_trim_format',
         'weight' => 3,
       ),
+      'needs_list' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 4,
+      ),
       'search_listing' => array(
         'label' => 'hidden',
         'module' => 'smart_trim',
@@ -1162,6 +1218,10 @@ function gie_innovation_field_default_field_instances() {
       'active' => 1,
       'module' => 'text',
       'settings' => array(
+        'maxlength_js' => 500,
+        'maxlength_js_enforce' => 0,
+        'maxlength_js_label' => 'Content limited to @limit characters, remaining: <strong>@remaining</strong>',
+        'maxlength_js_truncate_html' => 1,
         'rows' => 3,
       ),
       'type' => 'text_textarea',
@@ -1239,6 +1299,12 @@ function gie_innovation_field_default_field_instances() {
         'settings' => array(),
         'type' => 'hidden',
         'weight' => 25,
+      ),
+      'needs_list' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 22,
       ),
       'search_listing' => array(
         'label' => 'above',
@@ -1367,6 +1433,12 @@ function gie_innovation_field_default_field_instances() {
         'type' => 'hidden',
         'weight' => 37,
       ),
+      'needs_list' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 34,
+      ),
       'search_listing' => array(
         'label' => 'above',
         'settings' => array(),
@@ -1463,6 +1535,12 @@ function gie_innovation_field_default_field_instances() {
         'settings' => array(),
         'type' => 'hidden',
         'weight' => 31,
+      ),
+      'needs_list' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 28,
       ),
       'search_listing' => array(
         'label' => 'above',
@@ -1586,6 +1664,12 @@ function gie_innovation_field_default_field_instances() {
         'type' => 'hidden',
         'weight' => 41,
       ),
+      'needs_list' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 38,
+      ),
       'search_listing' => array(
         'label' => 'above',
         'settings' => array(),
@@ -1702,6 +1786,12 @@ Using the selector below, highlight the area of the image you would like to feat
         ),
         'type' => 'image',
         'weight' => 1,
+      ),
+      'needs_list' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 44,
       ),
       'search_listing' => array(
         'label' => 'above',
@@ -1833,6 +1923,12 @@ Using the selector below, highlight the area of the image you would like to feat
         'settings' => array(),
         'type' => 'hidden',
         'weight' => 27,
+      ),
+      'needs_list' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 24,
       ),
       'search_listing' => array(
         'label' => 'above',
@@ -1971,6 +2067,12 @@ Using the selector below, highlight the area of the image you would like to feat
         'type' => 'hidden',
         'weight' => 21,
       ),
+      'needs_list' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 18,
+      ),
       'search_listing' => array(
         'label' => 'above',
         'settings' => array(),
@@ -2084,6 +2186,12 @@ Using the selector below, highlight the area of the image you would like to feat
         'settings' => array(),
         'type' => 'hidden',
         'weight' => 0,
+      ),
+      'needs_list' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 47,
       ),
       'search_listing' => array(
         'label' => 'above',
@@ -2201,6 +2309,12 @@ Using the selector below, highlight the area of the image you would like to feat
         'type' => 'hidden',
         'weight' => 0,
       ),
+      'needs_list' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 49,
+      ),
       'search_listing' => array(
         'label' => 'above',
         'settings' => array(),
@@ -2312,6 +2426,12 @@ Using the selector below, highlight the area of the image you would like to feat
         'settings' => array(),
         'type' => 'hidden',
         'weight' => 28,
+      ),
+      'needs_list' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 25,
       ),
       'search_listing' => array(
         'label' => 'above',
@@ -2432,6 +2552,12 @@ Using the selector below, highlight the area of the image you would like to feat
         'type' => 'hidden',
         'weight' => 36,
       ),
+      'needs_list' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 33,
+      ),
       'search_listing' => array(
         'label' => 'above',
         'settings' => array(),
@@ -2472,7 +2598,7 @@ Using the selector below, highlight the area of the image you would like to feat
     'bundle' => 'innovation',
     'default_value' => NULL,
     'deleted' => 0,
-    'description' => 'The point of contact must be someone with a user profile in the Exchange. Start writing a name (first name initial last name e.g. kshipley) to see if it comes up in the Exchange member directory. If not, create a profile or email the person to invite them to create a profile. If no point of contact is listed, there will be no point of contact listed on the innovation profile.',
+    'description' => 'The point of contact must be a member of the Global Innovation Exchange. You may search on First Name or Last Name and select the relevant user from the search results.',
     'display' => array(
       'at_a_glance' => array(
         'label' => 'above',
@@ -2557,6 +2683,12 @@ Using the selector below, highlight the area of the image you would like to feat
         'type' => 'hidden',
         'weight' => 15,
       ),
+      'needs_list' => array(
+        'label' => 'hidden',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 7,
+      ),
       'search_listing' => array(
         'label' => 'above',
         'settings' => array(),
@@ -2589,17 +2721,17 @@ Using the selector below, highlight the area of the image you would like to feat
     ),
     'widget' => array(
       'active' => 1,
-      'module' => 'entityreference',
+      'module' => 'entityreference_view_widget',
       'settings' => array(
-        'match_operator' => 'CONTAINS',
-        'path' => '',
-        'references_dialog_add' => 0,
-        'references_dialog_edit' => 0,
-        'references_dialog_search' => 0,
-        'references_dialog_search_view' => '',
-        'size' => 60,
+        'allow_duplicates' => 0,
+        'close_modal' => 1,
+        'pass_argument' => 0,
+        'pass_arguments' => '',
+        'rendered_entity' => 0,
+        'view' => 'user_reference|entityreference_view_widget_1',
+        'view_mode' => 'full',
       ),
-      'type' => 'entityreference_autocomplete',
+      'type' => 'entityreference_view_widget',
       'weight' => 12,
     ),
   );
@@ -2678,6 +2810,12 @@ Using the selector below, highlight the area of the image you would like to feat
         'settings' => array(),
         'type' => 'hidden',
         'weight' => 0,
+      ),
+      'needs_list' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 45,
       ),
       'search_listing' => array(
         'label' => 'above',
@@ -2795,6 +2933,12 @@ Using the selector below, highlight the area of the image you would like to feat
         'type' => 'hidden',
         'weight' => 0,
       ),
+      'needs_list' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 46,
+      ),
       'search_listing' => array(
         'label' => 'above',
         'settings' => array(),
@@ -2909,6 +3053,12 @@ Using the selector below, highlight the area of the image you would like to feat
         'type' => 'hidden',
         'weight' => 22,
       ),
+      'needs_list' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 19,
+      ),
       'search_listing' => array(
         'label' => 'above',
         'settings' => array(),
@@ -3016,6 +3166,12 @@ Using the selector below, highlight the area of the image you would like to feat
         'settings' => array(),
         'type' => 'hidden',
         'weight' => 39,
+      ),
+      'needs_list' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 36,
       ),
       'search_listing' => array(
         'label' => 'above',
@@ -3129,6 +3285,12 @@ Using the selector below, highlight the area of the image you would like to feat
         'type' => 'hidden',
         'weight' => 38,
       ),
+      'needs_list' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 35,
+      ),
       'search_listing' => array(
         'label' => 'above',
         'settings' => array(),
@@ -3236,6 +3398,12 @@ Using the selector below, highlight the area of the image you would like to feat
         'type' => 'hidden',
         'weight' => 34,
       ),
+      'needs_list' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 31,
+      ),
       'search_listing' => array(
         'label' => 'above',
         'settings' => array(),
@@ -3338,6 +3506,12 @@ Using the selector below, highlight the area of the image you would like to feat
         'type' => 'hidden',
         'weight' => 40,
       ),
+      'needs_list' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 37,
+      ),
       'search_listing' => array(
         'label' => 'above',
         'settings' => array(),
@@ -3432,6 +3606,12 @@ Using the selector below, highlight the area of the image you would like to feat
         'settings' => array(),
         'type' => 'hidden',
         'weight' => 32,
+      ),
+      'needs_list' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 29,
       ),
       'search_listing' => array(
         'label' => 'above',
@@ -3535,6 +3715,12 @@ Using the selector below, highlight the area of the image you would like to feat
         'settings' => array(),
         'type' => 'hidden',
         'weight' => 0,
+      ),
+      'needs_list' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 48,
       ),
       'search_listing' => array(
         'label' => 'above',
@@ -3656,6 +3842,12 @@ Using the selector below, highlight the area of the image you would like to feat
         'type' => 'hidden',
         'weight' => 29,
       ),
+      'needs_list' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 26,
+      ),
       'search_listing' => array(
         'label' => 'above',
         'settings' => array(),
@@ -3774,6 +3966,26 @@ Using the selector below, highlight the area of the image you would like to feat
         'type' => 'hidden',
         'weight' => 17,
       ),
+      'needs_list' => array(
+        'label' => 'above',
+        'module' => 'gie_innovation',
+        'settings' => array(
+          'field_delimiter' => '',
+          'linked_field' => array(
+            'advanced' => array(
+              'class' => '',
+              'rel' => '',
+              'target' => '',
+              'text' => '',
+              'title' => '',
+            ),
+            'destination' => '',
+            'linked' => 0,
+          ),
+        ),
+        'type' => 'gie_listing_link',
+        'weight' => 3,
+      ),
       'search_listing' => array(
         'label' => 'above',
         'settings' => array(),
@@ -3883,6 +4095,12 @@ Using the selector below, highlight the area of the image you would like to feat
         'settings' => array(),
         'type' => 'hidden',
         'weight' => 33,
+      ),
+      'needs_list' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 30,
       ),
       'search_listing' => array(
         'label' => 'above',
@@ -4021,6 +4239,12 @@ Using the selector below, highlight the area of the image you would like to feat
         'type' => 'hidden',
         'weight' => 23,
       ),
+      'needs_list' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 20,
+      ),
       'search_listing' => array(
         'label' => 'above',
         'settings' => array(),
@@ -4145,6 +4369,12 @@ Using the selector below, highlight the area of the image you would like to feat
         'type' => 'hidden',
         'weight' => 30,
       ),
+      'needs_list' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 27,
+      ),
       'search_listing' => array(
         'label' => 'above',
         'settings' => array(),
@@ -4262,6 +4492,12 @@ Using the selector below, highlight the area of the image you would like to feat
         'settings' => array(),
         'type' => 'hidden',
         'weight' => 26,
+      ),
+      'needs_list' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 23,
       ),
       'search_listing' => array(
         'label' => 'above',
@@ -4414,6 +4650,26 @@ Using the selector below, highlight the area of the image you would like to feat
         'type' => 'hidden',
         'weight' => 16,
       ),
+      'needs_list' => array(
+        'label' => 'hidden',
+        'module' => 'taxonomy',
+        'settings' => array(
+          'field_delimiter' => '',
+          'linked_field' => array(
+            'advanced' => array(
+              'class' => '',
+              'rel' => '',
+              'target' => '',
+              'text' => '',
+              'title' => '',
+            ),
+            'destination' => '',
+            'linked' => 0,
+          ),
+        ),
+        'type' => 'taxonomy_term_reference_plain',
+        'weight' => 0,
+      ),
       'search_listing' => array(
         'label' => 'above',
         'settings' => array(),
@@ -4523,6 +4779,12 @@ Using the selector below, highlight the area of the image you would like to feat
         'settings' => array(),
         'type' => 'hidden',
         'weight' => 43,
+      ),
+      'needs_list' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 40,
       ),
       'search_listing' => array(
         'label' => 'above',
@@ -4652,6 +4914,12 @@ Using the selector below, highlight the area of the image you would like to feat
         'type' => 'hidden',
         'weight' => 24,
       ),
+      'needs_list' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 21,
+      ),
       'search_listing' => array(
         'label' => 'above',
         'settings' => array(),
@@ -4775,6 +5043,12 @@ Using the selector below, highlight the area of the image you would like to feat
         'type' => 'hidden',
         'weight' => 10,
       ),
+      'needs_list' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 43,
+      ),
       'search_listing' => array(
         'label' => 'above',
         'settings' => array(),
@@ -4884,6 +5158,12 @@ Using the selector below, highlight the area of the image you would like to feat
         'settings' => array(),
         'type' => 'hidden',
         'weight' => 11,
+      ),
+      'needs_list' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 41,
       ),
       'search_listing' => array(
         'label' => 'above',
@@ -5004,6 +5284,12 @@ Using the selector below, highlight the area of the image you would like to feat
         'type' => 'hidden',
         'weight' => 12,
       ),
+      'needs_list' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 42,
+      ),
       'search_listing' => array(
         'label' => 'above',
         'settings' => array(),
@@ -5119,6 +5405,29 @@ Using the selector below, highlight the area of the image you would like to feat
         ),
         'type' => 'title_linked',
         'weight' => 2,
+      ),
+      'needs_list' => array(
+        'label' => 'hidden',
+        'module' => 'title',
+        'settings' => array(
+          'field_delimiter' => '',
+          'linked_field' => array(
+            'advanced' => array(
+              'class' => '',
+              'rel' => '',
+              'target' => '',
+              'text' => '',
+              'title' => '',
+            ),
+            'destination' => '',
+            'linked' => 0,
+          ),
+          'title_class' => '',
+          'title_link' => '',
+          'title_style' => '',
+        ),
+        'type' => 'title_linked',
+        'weight' => 1,
       ),
       'search_listing' => array(
         'label' => 'hidden',
@@ -5589,7 +5898,7 @@ Using the selector below, highlight the area of the image you would like to feat
   t('Strategy for expanding use of your innovation');
   t('Subject');
   t('Tell us who is using and/or testing your innovation right now');
-  t('The point of contact must be someone with a user profile in the Exchange. Start writing a name (first name initial last name e.g. kshipley) to see if it comes up in the Exchange member directory. If not, create a profile or email the person to invite them to create a profile. If no point of contact is listed, there will be no point of contact listed on the innovation profile.');
+  t('The point of contact must be a member of the Global Innovation Exchange. You may search on First Name or Last Name and select the relevant user from the search results.');
   t('Title');
   t('Topic');
   t('Topics are issues that may be of interest to Exchange users. Select any (or none) topics that you think apply to your innovation (i.e. social impact investing)');

@@ -70,6 +70,22 @@ function events_ds_field_settings_info() {
           'fi-at' => '',
           'fi-def-at' => FALSE,
           'fi-odd-even' => FALSE,
+          'fi-first-last' => FALSE,
+        ),
+      ),
+    ),
+    'field_event_date' => array(
+      'formatter_settings' => array(
+        'ft' => array(
+          'func' => 'theme_ds_field_expert',
+          'lb-el' => 'h2',
+          'lb-cl' => 'card__date',
+          'ow' => TRUE,
+          'ow-el' => 'h2',
+          'ow-cl' => 'card__date',
+          'ow-def-cl' => FALSE,
+          'ow-at' => '',
+          'ow-def-at' => FALSE,
         ),
       ),
     ),
@@ -217,7 +233,7 @@ function events_ds_layout_settings_info() {
   $ds_layout->settings = array(
     'regions' => array(
       'main_content' => array(
-        0 => 'events_at_a_glance_entity_view_1',
+        0 => 'field_event_date',
         1 => 'group_card_image',
         2 => 'group_card_content',
         3 => 'title_field',
@@ -227,7 +243,7 @@ function events_ds_layout_settings_info() {
       ),
     ),
     'fields' => array(
-      'events_at_a_glance_entity_view_1' => 'main_content',
+      'field_event_date' => 'main_content',
       'group_card_image' => 'main_content',
       'group_card_content' => 'main_content',
       'title_field' => 'main_content',
