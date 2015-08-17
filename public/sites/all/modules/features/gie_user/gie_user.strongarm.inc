@@ -13,6 +13,72 @@ function gie_user_strongarm() {
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
+  $strongarm->name = 'contact_plus_path';
+  $strongarm->value = '';
+  $export['contact_plus_path'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'contact_plus_user_copy';
+  $strongarm->value = 1;
+  $export['contact_plus_user_copy'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'contact_plus_user_mail';
+  $strongarm->value = 'hset';
+  $export['contact_plus_user_mail'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'contact_plus_user_name';
+  $strongarm->value = 'hset';
+  $export['contact_plus_user_name'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'contact_plus_user_path';
+  $strongarm->value = '';
+  $export['contact_plus_user_path'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'contact_plus_user_subj';
+  $strongarm->value = 0;
+  $export['contact_plus_user_subj'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'contact_plus_user_text';
+  $strongarm->value = array(
+    'value' => '',
+    'format' => 'filtered_html',
+  );
+  $export['contact_plus_user_text'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'contact_plus_user_title';
+  $strongarm->value = '';
+  $export['contact_plus_user_title'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'contact_plus_user_to';
+  $strongarm->value = 1;
+  $export['contact_plus_user_to'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
   $strongarm->name = 'field_bundle_settings_user__user';
   $strongarm->value = array(
     'view_modes' => array(
@@ -142,6 +208,13 @@ function gie_user_strongarm() {
   $strongarm->name = 'mailchimp_api_key';
   $strongarm->value = 'b6c2f74e5dae88e87e00d95bea1669c6-us10';
   $export['mailchimp_api_key'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'page_manager_contact_user_disabled';
+  $strongarm->value = FALSE;
+  $export['page_manager_contact_user_disabled'] = $strongarm;
 
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
