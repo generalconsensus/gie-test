@@ -1828,8 +1828,8 @@ Using the selector below, highlight the area of the image you would like to feat
       'file_directory' => '',
       'file_extensions' => 'png gif jpg jpeg',
       'focus' => 1,
-      'focus_lock_ratio' => 0,
-      'focus_min_size' => '',
+      'focus_lock_ratio' => 1,
+      'focus_min_size' => '500x300',
       'max_filesize' => '',
       'max_resolution' => '',
       'min_resolution' => '500x300',
@@ -3814,7 +3814,6 @@ Using the selector below, highlight the area of the image you would like to feat
         'module' => 'entityreference',
         'settings' => array(
           'field_delimiter' => '',
-          'link' => 0,
           'linked_field' => array(
             'advanced' => array(
               'class' => '',
@@ -3826,8 +3825,10 @@ Using the selector below, highlight the area of the image you would like to feat
             'destination' => '',
             'linked' => 0,
           ),
+          'links' => 1,
+          'view_mode' => 'default',
         ),
-        'type' => 'entityreference_label',
+        'type' => 'entityreference_entity_view',
         'weight' => 9,
       ),
       'highlights' => array(

@@ -80,6 +80,12 @@ function gie_general_context_default_contexts() {
           'region' => 'footer',
           'weight' => '-16',
         ),
+        'block-1' => array(
+          'module' => 'block',
+          'delta' => '1',
+          'region' => 'footer',
+          'weight' => '-10',
+        ),
       ),
     ),
   );
