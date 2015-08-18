@@ -113,7 +113,7 @@ function gie_user_strongarm() {
     'extra_fields' => array(
       'form' => array(
         'ckeditor' => array(
-          'weight' => '9',
+          'weight' => '7',
         ),
         'account' => array(
           'weight' => '3',
@@ -122,10 +122,13 @@ function gie_user_strongarm() {
           'weight' => '18',
         ),
         'googleanalytics' => array(
-          'weight' => '7',
+          'weight' => '4',
         ),
         'mimemail' => array(
           'weight' => '3',
+        ),
+        'contact' => array(
+          'weight' => '10',
         ),
       ),
       'display' => array(
