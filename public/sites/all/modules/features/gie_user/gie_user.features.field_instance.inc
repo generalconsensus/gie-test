@@ -582,7 +582,7 @@ function gie_user_field_default_field_instances() {
       'module' => 'mailchimp_lists',
       'settings' => array(),
       'type' => 'mailchimp_lists_select',
-      'weight' => 19,
+      'weight' => 8,
     ),
   );
 
