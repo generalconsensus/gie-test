@@ -152,6 +152,7 @@ features[views_view][] = sector_listing
 features[views_view][] = sector_recent_content
 features[views_view][] = subterms
 features[views_view][] = term_organizations
+features[views_view][] = term_programs
 features[views_view][] = topic_counts
 features[views_view][] = topic_recent_content
 features[views_view][] = topics_listing
