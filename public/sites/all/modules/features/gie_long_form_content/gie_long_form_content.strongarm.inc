@@ -64,7 +64,59 @@ function gie_long_form_content_strongarm() {
   $strongarm->api_version = 1;
   $strongarm->name = 'field_bundle_settings_node__long_form_page';
   $strongarm->value = array(
-    'view_modes' => array(),
+    'view_modes' => array(
+      'full' => array(
+        'custom_settings' => TRUE,
+      ),
+      'teaser' => array(
+        'custom_settings' => FALSE,
+      ),
+      'rss' => array(
+        'custom_settings' => FALSE,
+      ),
+      'search_index' => array(
+        'custom_settings' => FALSE,
+      ),
+      'search_result' => array(
+        'custom_settings' => FALSE,
+      ),
+      'token' => array(
+        'custom_settings' => FALSE,
+      ),
+      'highlights' => array(
+        'custom_settings' => FALSE,
+      ),
+      'listing' => array(
+        'custom_settings' => FALSE,
+      ),
+      'page_header' => array(
+        'custom_settings' => FALSE,
+      ),
+      'teaser_date' => array(
+        'custom_settings' => FALSE,
+      ),
+      'needs_list' => array(
+        'custom_settings' => FALSE,
+      ),
+      'at_a_glance' => array(
+        'custom_settings' => FALSE,
+      ),
+      'contact' => array(
+        'custom_settings' => FALSE,
+      ),
+      'logo' => array(
+        'custom_settings' => FALSE,
+      ),
+      'details' => array(
+        'custom_settings' => FALSE,
+      ),
+      'search_listing' => array(
+        'custom_settings' => FALSE,
+      ),
+      'revision' => array(
+        'custom_settings' => FALSE,
+      ),
+    ),
     'extra_fields' => array(
       'form' => array(
         'path' => array(
@@ -74,7 +126,18 @@ function gie_long_form_content_strongarm() {
           'weight' => '2',
         ),
       ),
-      'display' => array(),
+      'display' => array(
+        'sharethis' => array(
+          'default' => array(
+            'weight' => '10',
+            'visible' => TRUE,
+          ),
+          'full' => array(
+            'weight' => '10',
+            'visible' => FALSE,
+          ),
+        ),
+      ),
     ),
   );
   $export['field_bundle_settings_node__long_form_page'] = $strongarm;
@@ -117,6 +180,42 @@ function gie_long_form_content_strongarm() {
   $strongarm->name = 'node_submitted_long_form_page';
   $strongarm->value = 0;
   $export['node_submitted_long_form_page'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'panelizer_defaults_node_long_form_page';
+  $strongarm->value = array(
+    'status' => 1,
+    'view modes' => array(
+      'page_manager' => array(
+        'status' => 1,
+        'substitute' => '',
+        'default' => 1,
+        'choice' => 0,
+      ),
+      'default' => array(
+        'status' => 0,
+        'substitute' => 0,
+        'default' => 0,
+        'choice' => 0,
+      ),
+      'full' => array(
+        'status' => 0,
+        'substitute' => 0,
+        'default' => 0,
+        'choice' => 0,
+      ),
+    ),
+  );
+  $export['panelizer_defaults_node_long_form_page'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'panelizer_node:long_form_page:page_manager_selection';
+  $strongarm->value = 'node:long_form_page:default';
+  $export['panelizer_node:long_form_page:page_manager_selection'] = $strongarm;
 
   return $export;
 }
