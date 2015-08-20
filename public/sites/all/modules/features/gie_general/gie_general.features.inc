@@ -23,6 +23,9 @@ function gie_general_ctools_plugin_api($module = NULL, $api = NULL) {
   if ($module == "panelizer" && $api == "panelizer") {
     return array("version" => "1");
   }
+  if ($module == "pm_existing_pages" && $api == "pm_existing_pages") {
+    return array("version" => "1");
+  }
   if ($module == "strongarm" && $api == "strongarm") {
     return array("version" => "1");
   }
@@ -52,14 +55,14 @@ function gie_general_flag_default_flags() {
       3 => 'needs',
       4 => 'resource',
     ),
-    'flag_short' => 'Report',
+    'flag_short' => 'Flag this as Inappropriate',
     'flag_long' => 'Flag this content as offensive.',
     'flag_message' => '',
     'unflag_short' => 'Flag as non-offensive',
     'unflag_long' => 'Flag this content as non-offensive.',
     'unflag_message' => '',
     'unflag_denied_text' => 'Thank you for submitting your request. Exchange administrators will review this content.',
-    'link_type' => 'toggle',
+    'link_type' => 'confirm',
     'weight' => 0,
     'show_in_links' => array(
       'full' => 0,
@@ -67,11 +70,13 @@ function gie_general_flag_default_flags() {
       'rss' => 0,
       'search_index' => 0,
       'search_result' => 0,
+      'diff_standard' => 0,
       'token' => 0,
       'highlights' => 0,
       'listing' => 0,
       'page_header' => 0,
       'teaser_date' => 0,
+      'needs_list' => 0,
       'at_a_glance' => 0,
       'contact' => 0,
       'logo' => 0,
@@ -84,6 +89,8 @@ function gie_general_flag_default_flags() {
     'access_author' => '',
     'show_contextual_link' => 0,
     'i18n' => 0,
+    'flag_confirmation' => 'OOPS! We\'re sorry you found something inappropriate or offensive. Let us know how this is offensive so we can address the issue!',
+    'unflag_confirmation' => '',
     'module' => 'gie_general',
     'locked' => array(
       0 => 'name',
