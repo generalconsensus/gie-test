@@ -134,5 +134,34 @@ function gie_messages_default_message_type() {
     },
     "rdf_mapping" : []
   }');
+  $items['user_follow_create'] = entity_import('message_type', '{
+    "name" : "user_follow_create",
+    "description" : "User follow create",
+    "argument_keys" : [],
+    "argument" : [],
+    "category" : "message_type",
+    "data" : {
+      "token options" : { "clear" : 0 },
+      "purge" : { "override" : 0, "enabled" : 0, "quota" : "", "days" : "" }
+    },
+    "language" : "",
+    "arguments" : null,
+    "message_text" : { "und" : [
+        {
+          "value" : "[message:field-node-ref:author] posted new content",
+          "format" : "filtered_html"
+        },
+        {
+          "value" : "[message:field-node-ref:author] has posted a new\\u0026nbsp;[message:field-node-ref:content-type]:\\u0026nbsp;[message:field-node-ref:url]",
+          "format" : "filtered_html"
+        },
+        {
+          "value" : "[message:field-node-ref:author] has posted a new\\u0026nbsp;[message:field-node-ref:content-type]:\\u0026nbsp;[message:field-node-ref:url]",
+          "format" : "filtered_html"
+        }
+      ]
+    },
+    "rdf_mapping" : []
+  }');
   return $items;
 }
