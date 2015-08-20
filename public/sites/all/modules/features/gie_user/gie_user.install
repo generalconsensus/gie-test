@@ -38,3 +38,19 @@ function gie_user_update_7002() {
 function gie_user_update_7004() {
   field_delete_field('field_user_connect');
 }
+
+/**
+ * [#44576] Update all user Contact fields.
+ */
+function gie_user_update_7005() {
+  // load all users
+  $users = entity_load('user');
+  foreach ($users as $user) {
+    // skip anonymous and admin user
+    if ($user->uid == 0 || $user->uid == 1) continue;
+
+    // If contact field is empty, set to Enabled
+    if (!$user->data['contact']) $user->data['contact'] = 1;
+    user_save($user);
+  }
+}
