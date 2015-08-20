@@ -46,7 +46,7 @@ function gie_homepage_title_count($field) {
                 break;
             case "user":
                 $count = db_query('SELECT COUNT(uid) FROM {users} WHERE status > :status', array(':status' => 0))->fetchField();
-                return '<h1 class="card__title"><a href="/members">' . $count . ' Members</a></h1>';
+                return '<h1 class="card__title"><a href="/members">' . $count . ' Collaborators</a></h1>';
                 break;
         }
 
