@@ -785,6 +785,15 @@ input.throbbing {
   margin-left: 0;
 }
 
+.p__dropcap:first-letter {
+  background-color: #b71234;
+  color: #FFF;
+  float: left;
+  font-size: 24px;
+  margin-right: 5px;
+  padding: .5em;
+}
+
 .fieldset {
   background: #fff;
   border: 1px solid #ccc;

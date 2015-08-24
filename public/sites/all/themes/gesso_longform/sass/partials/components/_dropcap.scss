@@ -1,0 +1,13 @@
+// @file
+// Styles for the Dropcap Paragraphs.
+
+.p__dropcap {
+	&:first-letter { 
+		background-color: #b71234; 
+		color: #FFF;
+		float: left; 
+		font-size: $font-size-xxl; 
+		margin-right: 5px;
+		padding: .5em;
+	}
+}
