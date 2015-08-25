@@ -35,6 +35,7 @@ function gie_feeds_strongarm() {
     'csv_importer-topic-explode' => FALSE,
     'csv_importer-innovation_type-explode' => FALSE,
     'csv_importer-program-explode' => FALSE,
+    'csv_importer-video-explode' => FALSE,
   );
   $export['default_feeds_tamper'] = $strongarm;
 
