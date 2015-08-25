@@ -224,6 +224,11 @@ function gie_feeds_feeds_importer_default() {
             'target' => 'field_innovation_type',
             'unique' => FALSE,
           ),
+          23 => array(
+            'source' => 'Video',
+            'target' => 'field_innovation_assets:label',
+            'unique' => FALSE,
+          ),
         ),
         'update_existing' => '0',
         'input_format' => 'filtered_html',

@@ -28,6 +28,7 @@ features[feeds_tamper][] = csv_importer-program-explode
 features[feeds_tamper][] = csv_importer-region-explode
 features[feeds_tamper][] = csv_importer-sector-explode
 features[feeds_tamper][] = csv_importer-topic-explode
+features[feeds_tamper][] = csv_importer-video-explode
 features[user_permission][] = administer feeds
 features[user_permission][] = administer feeds_tamper
 features[user_permission][] = clear csv_importer feeds

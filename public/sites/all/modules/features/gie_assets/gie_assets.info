@@ -6,6 +6,7 @@ version = 7.x-1.0
 project = gie_assets
 dependencies[] = asset
 dependencies[] = asset_document
+dependencies[] = asset_feeds
 dependencies[] = asset_image
 dependencies[] = asset_video
 dependencies[] = better_formats
