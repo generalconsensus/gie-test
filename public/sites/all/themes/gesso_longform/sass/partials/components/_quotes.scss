@@ -2,17 +2,8 @@
 // Quotes
 
 blockquote {
-	// 
-	p{
-		&:before{
-			content:”\201C”;
-			color: #FFF;
-			display: block;
-			background: red;
-			padding: 30px;
-			// @include circleicon(20, $lightred);
-		}
-		
-		
+	&:before {
+		@include circleicon(50px, $lightred, #FFF);
+		content: open-quote;
 	}
 }
