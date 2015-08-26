@@ -5,13 +5,14 @@ blockquote {
 	// 
 	p{
 		&:before{
-			@include circleicon(20, $lightred);
+			content:”\201C”;
+			color: #FFF;
+			display: block;
+			background: red;
+			padding: 30px;
+			// @include circleicon(20, $lightred);
 		}
 		
-		// content:”\201C”;
-		// color: #FFF;
-		// display: block;
-		// background: red;
-		// padding: 30px;
+		
 	}
 }
