@@ -274,6 +274,8 @@ abbr:hover {
 
 blockquote {
   margin: 0 1.5em 1.625em;
+  color: #ff1352;
+  font-size: 18px;
 }
 
 body {
@@ -1514,6 +1516,20 @@ input.throbbing {
 }
 .progress--small .progress__bar {
   height: 0.5em;
+}
+
+blockquote p:before {
+  background: #ff1352;
+  display: inline;
+  padding: 10;
+  border-radius: 50%;
+  line-height: 20;
+  width: 20;
+  height: 20;
+  margin-right: 20;
+  vertical-align: middle;
+  text-align: center;
+  float: left;
 }
 
 .region-navigation {
