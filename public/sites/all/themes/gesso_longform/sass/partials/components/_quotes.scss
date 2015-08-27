@@ -3,7 +3,10 @@
 
 blockquote {
 	&:before {
-		@include circleicon(50px, $lightred, #FFF);
+		@include circleicon(2em, $lightred, #FFF);
 		content: open-quote;
+	}
+	p{
+		font-style: italic;
 	}
 }

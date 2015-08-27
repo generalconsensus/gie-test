@@ -5,7 +5,7 @@
   @include adjust-font-size-to($font-size);
   @include border-radius(0);
   background-color: $bg-color;
-  border: 1px solid $bg-color;
+  border: none;
   color: $button-text-color !important;
   cursor: pointer;
   display: inline-block;

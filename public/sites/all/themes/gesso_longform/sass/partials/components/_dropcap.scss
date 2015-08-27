@@ -3,7 +3,7 @@
 
 .p__dropcap {
 	&:first-letter { 
-		background-color: #b71234; 
+		background-color: $red; 
 		color: #FFF;
 		float: left; 
 		font-size: $font-size-xxl; 
