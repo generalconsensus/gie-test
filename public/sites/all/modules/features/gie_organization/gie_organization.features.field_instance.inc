@@ -1507,7 +1507,7 @@ function gie_organization_field_default_field_instances() {
     'entityconnect_unload_edit' => 1,
     'field_name' => 'field_org_poc',
     'label' => 'Point of Contact',
-    'required' => 1,
+    'required' => 0,
     'settings' => array(
       'description_display' => 'before',
       'user_register_form' => FALSE,
