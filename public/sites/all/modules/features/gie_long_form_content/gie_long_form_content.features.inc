@@ -47,6 +47,11 @@ function gie_long_form_content_paragraphs_info() {
       'bundle' => 'long_form_image',
       'locked' => '1',
     ),
+    'long_form_text' => array(
+      'name' => 'Long Form Text',
+      'bundle' => 'long_form_text',
+      'locked' => '1',
+    ),
   );
   return $items;
 }
