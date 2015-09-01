@@ -16,6 +16,8 @@
           $isSuperfish = ($mainMenu.hasClass('sf-menu')) ? true : false,
           $isMegaMenu = ($mainMenu.hasClass('tb-megamenu-nav')) ? true : false;
 
+          console.log($mainMenu);
+
       // Only create mobile menu if there is a main menu.
       if ($mainMenu.length > 0) {
 
@@ -27,7 +29,7 @@
         }
 
         // Remove menu id, add class, and format subnav menus.
-        $mainMenu.removeAttr('id').attr('class', 'nav nav--mobile-menu').find('.tb-megamenu-subnav,.view').each(function () {
+        $mainMenu.removeAttr('id').attr('class', 'nav nav--mobile-menu').find('.tb-megamenu-submenu,.view').each(function () {
           // remove any wrappers
           while ($(this).parent().is('div')) {
             $(this).unwrap();
@@ -36,10 +38,11 @@
           $parentLink.addClass('nav__link--parent').parent('li').addClass('nav__item--parent');
           if ($parentLink.siblings('.nav__subnav-arrow').length < 1) {
             $parentLink.after('<button class="nav__subnav-arrow">Show</button>');
-          } 
+          }
 
-          if ($(this).is('.tb-megamenu-subnav')) {
+          if ($(this).is('.tb-megamenu-submenu')) {
             $(this).addClass('nav--subnav');
+
           }
 
           if ($(this).is('.view')) {
@@ -52,11 +55,11 @@
             $(this).find('.item-list ul').addClass('nav--lvl2subnav').unwrap();
             $(this).find('.view__footer a').appendTo($(this).find('.nav--lvl2subnav')).addClass('nav__link--view-all').wrap('<li class="nav__item"></li>');
             $(this).find('.view__footer').remove();
-          } 
+          }
 
           // Remove any inline styles.
           $(this).removeAttr('style').find('ul, li, a').removeAttr('style');
-          
+
         });
 
         $mainMenu.find('.nav__item--parent').each(function(){
@@ -130,7 +133,7 @@
           e.preventDefault();
         });
 
-        // Open/close sub-submenus 
+        // Open/close sub-submenus
         $('.nav__lvl2subnav-arrow',context).click(function (e) {
           $(this).toggleClass('is-active').prev('.nav__link--subparent').toggleClass('is-open');
           $(this).closest('.nav__item--lvl2parent').siblings('.nav--lvl2subnav').slideToggle();
