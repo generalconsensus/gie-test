@@ -6,6 +6,17 @@ $tb-icon-width: 20px;
 $tb-icon-padding: 75px;
 $tb-max-width: 264px;
 
+
+$iconList : (
+'has-icon-innovation' : ('icon-innov-browse-41-54-blue', 'icon-innov-browse-41-54-darkblue' ),
+'has-icon-add' : ('icon-innov-add-32-32-blue', 'icon-innov-add-32-32-darkblue' ),
+'has-icon-innovator' : ('icon-innov-collaborate-56-56-blue', 'icon-innov-collaborate-56-56-darkblue' ),
+);
+
+
+
+
+
 .tb-megamenu-big-button {
   @extend %button;
   background: $lightblue;
@@ -48,41 +59,34 @@ $tb-max-width: 264px;
   }
 }
 
-.tb-megamenu-big-button {
-  &.has-icon-innovation:before {
-    @include svg-background(icon-innov-browse-41-54-blue);
-  }
-  &.has-icon-innovation:hover:before {
-    @include svg-background(icon-innov-browse-41-54-darkblue);
-  }
 
+
+//Add addtional class names and icons to $iconList variable
+@each $iconList, $iconName in $iconList {
+    .#{$iconList}:before {
+      @include svg-background(nth($iconName, 1));
+    }
+    .#{$iconList}:hover:before {
+      @include svg-background(nth($iconName, 2));
+    }
+}
+
+
+//Icon positioning overrides
+.tb-megamenu-big-button {
   &.has-icon-add:before {
     height: 32px;
     left: -#{$tb-icon-padding - 3px};
     top: 13px;
     width: 32px;
-
-    @include svg-background(icon-innov-add-32-32-blue);
   }
-  &.has-icon-add:hover:before {
-    @include svg-background(icon-innov-add-32-32-darkblue);
-  }
-
   &.has-icon-innovator:before {
-    @include svg-background(icon-innov-collaborate-56-56-blue);
     left: -#{$tb-icon-padding + 6px};
     height: 56px;
     width: 56px;
     top: 0;
-
-  }
-  &.has-icon-innovator:hover:before {
-    @include svg-background(icon-innov-collaborate-56-56-darkblue);
-    height: 56px;
-    width: 56px;
   }
 }
-
 
 
 .tb-megamenu-big-button {
