@@ -78,7 +78,7 @@
   .nav__lvl2subnav-arrow {
     background: none;
     @include image-replace(100%,44px);
-    @include svg-background(arrow-down);  
+    @include svg-background(arrow-down);
     background-position: 95% 50%;
     background-repeat: no-repeat;
     background-size: 19px 12px;
@@ -119,9 +119,16 @@
     .nav__item {}
 
     .nav__link {
+      break-word: normal;
       color: $mobile-submenu-text-color;
+      min-width: em(190px, 16px);
       padding-left: 2em;
-
+      word-wrap: normal;
+      overflow-wrap:normal;
+      -moz-hyphens: none;
+      -webkit-hyphens: none;
+      -ms-hyphens: none;
+      hyphens: none;
       &:focus,
       &:hover,
       &:active {

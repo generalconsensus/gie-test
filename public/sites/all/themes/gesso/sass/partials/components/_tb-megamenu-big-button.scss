@@ -11,6 +11,9 @@ $iconList : (
 'has-icon-innovation' : ('icon-innov-browse-41-54-blue', 'icon-innov-browse-41-54-darkblue' ),
 'has-icon-add' : ('icon-innov-add-32-32-blue', 'icon-innov-add-32-32-darkblue' ),
 'has-icon-innovator' : ('icon-innov-collaborate-56-56-blue', 'icon-innov-collaborate-56-56-darkblue' ),
+'has-icon-funding' : ('icon-fund-browse-54-54-blue', 'icon-fund-browse-54-54-darkblue' ),
+'has-icon-resources' : ('icon-resources-browse-54-54-blue', 'icon-resources-browse-54-54-darkblue' ),
+
 );
 
 
@@ -33,6 +36,8 @@ $iconList : (
     background: $blue;
   }
 &:before {
+  background-repeat: no-repeat;
+  background-position: center center;
   display: block;
   content: "\a0";
   position: absolute;
@@ -57,6 +62,14 @@ $iconList : (
   .lt-ie9 &{
     width: $tb-max-width;
   }
+
+  .tb-megamenu-item--funding & {
+    max-width: em(360px, 16px);
+  }
+
+  .lt-ie9 .tb-megamenu-item--funding & {
+    width: 360px;
+  }
 }
 
 
@@ -66,9 +79,12 @@ $iconList : (
     .#{$iconList}:before {
       @include svg-background(nth($iconName, 1));
     }
-    .#{$iconList}:hover:before {
+    .#{$iconList}:focus:before,
+    .#{$iconList}:hover:before,
+    .#{$iconList}:active:before {
       @include svg-background(nth($iconName, 2));
     }
+
 }
 
 
