@@ -47,6 +47,11 @@ function gie_long_form_content_paragraphs_info() {
       'bundle' => 'long_form_image',
       'locked' => '1',
     ),
+    'long_form_key_figure' => array(
+      'name' => 'Long Form Key Figure',
+      'bundle' => 'long_form_key_figure',
+      'locked' => '1',
+    ),
     'long_form_text' => array(
       'name' => 'Long Form Text',
       'bundle' => 'long_form_text',
