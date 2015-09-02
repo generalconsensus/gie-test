@@ -16,8 +16,6 @@
           $isSuperfish = ($mainMenu.hasClass('sf-menu')) ? true : false,
           $isMegaMenu = ($mainMenu.hasClass('tb-megamenu-nav')) ? true : false;
 
-          console.log($mainMenu);
-
       // Only create mobile menu if there is a main menu.
       if ($mainMenu.length > 0) {
 

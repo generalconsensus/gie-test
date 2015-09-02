@@ -4,7 +4,7 @@
 &lt;main id=&quot;main&quot; class=&quot;main&quot; role=&quot;main&quot; tabindex=&quot;-1&quot;&gt;
   &lt;div class=&quot;region-content&quot;&gt;
 
-    &lt;div class=&quot;l-panels-landing preface-empty title sidebar-empty main&quot;&gt;
+    &lt;div class=&quot;l-panels-landing preface-empty title sidebar main&quot;&gt;
       &lt;div class=&quot;l-preface layout-constrain&quot;&gt;&lt;/div&gt;
       &lt;div class=&quot;l-title region-landing-title&quot;&gt;
         &lt;div class=&quot;layout-constrain&quot;&gt;
@@ -13,7 +13,9 @@
       &lt;/div&gt;
       &lt;div class=&quot;l-wrapper region-landing-content&quot;&gt;
         &lt;div class=&quot;layout-constrain&quot;&gt;
-          
+           &lt;aside class=&quot;l-sidebar&quot;&gt;
+            {{&gt; molecules-filters }}
+          &lt;/aside&gt;
           &lt;div class=&quot;l-main&quot;&gt;
 
             &lt;div class=&quot;pane pane--wanteds-search&quot;&gt;
@@ -26,8 +28,8 @@
                 &lt;/form&gt;
               &lt;/div&gt;
             &lt;/div&gt;
-            
-            &lt;div class=&quot;pane&quot;&gt;      
+
+            &lt;div class=&quot;pane&quot;&gt;
               &lt;div class=&quot;pane__content&quot;&gt;
                 &lt;div class=&quot;view view--needs-listing-pages&quot;&gt;
                    {{# listItems.nine }}
