@@ -42,6 +42,11 @@ function gie_long_form_content_node_info() {
  */
 function gie_long_form_content_paragraphs_info() {
   $items = array(
+    'long_form_aside' => array(
+      'name' => 'Long Form Aside',
+      'bundle' => 'long_form_aside',
+      'locked' => '1',
+    ),
     'long_form_image' => array(
       'name' => 'Long form image',
       'bundle' => 'long_form_image',
