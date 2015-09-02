@@ -8,16 +8,12 @@ $tb-max-width: 264px;
 
 
 $iconList : (
-'has-icon-innovation' : ('icon-innov-browse-41-54-blue', 'icon-innov-browse-41-54-darkblue' ),
-'has-icon-add' : ('icon-innov-add-32-32-blue', 'icon-innov-add-32-32-darkblue' ),
-'has-icon-innovator' : ('icon-innov-collaborate-56-56-blue', 'icon-innov-collaborate-56-56-darkblue' ),
-'has-icon-funding' : ('icon-fund-browse-52-52-blue', 'icon-fund-browse-52-52-darkblue' ),
-'has-icon-resources' : ('icon-resources-browse-52-52-blue', 'icon-resources-browse-52-52-darkblue' ),
-
+'has-icon-innovation' : 'icon-innov-browse-41-54-darkblue' ,
+'has-icon-add' :  'icon-innov-add-32-32-darkblue',
+'has-icon-innovator' :  'icon-innov-collaborate-56-56-darkblue',
+'has-icon-funding' : 'icon-fund-browse-52-52-darkblue',
+'has-icon-resources' : 'icon-resources-browse-52-52-darkblue',
 );
-
-
-
 
 
 .tb-megamenu-big-button {
@@ -77,13 +73,13 @@ $iconList : (
 //Add addtional class names and icons to $iconList variable
 @each $iconList, $iconName in $iconList {
     .#{$iconList}:before {
-      @include svg-background(nth($iconName, 2));
+      @include transition(opacity 0.2s linear);
+      @include svg-background($iconName);
       opacity: 0.6;
     }
     .#{$iconList}:focus:before,
     .#{$iconList}:hover:before,
     .#{$iconList}:active:before {
-      @include svg-background(nth($iconName, 2));
       opacity: 1;
     }
 
