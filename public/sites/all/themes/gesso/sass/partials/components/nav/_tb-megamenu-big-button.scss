@@ -4,7 +4,7 @@
 
 $tb-icon-width: 20px;
 $tb-icon-padding: 75px;
-$tb-max-width: 264px;
+$tb-max-width: 360px;
 
 
 $iconList : (
@@ -52,19 +52,14 @@ $iconList : (
   right: 10px;
   top: 19px;
   }
+  &:last-child {
+    margin-bottom: 0;
+  }
 }
 
 .tb-megamenu-big-button {
   .lt-ie9 &{
     width: $tb-max-width;
-  }
-
-  .tb-megamenu-item--funding & {
-    max-width: em(360px, 16px);
-  }
-
-  .lt-ie9 .tb-megamenu-item--funding & {
-    width: 360px;
   }
 }
 
@@ -82,7 +77,6 @@ $iconList : (
     .#{$iconList}:active:before {
       opacity: 1;
     }
-
 }
 
 
@@ -123,3 +117,6 @@ $iconList : (
     margin-left: $tb-icon-padding;
   }
 }
+
+
+
