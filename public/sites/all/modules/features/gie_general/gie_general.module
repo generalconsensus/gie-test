@@ -81,7 +81,7 @@ function _gie_general_contents($block_id) {
           '#title' => t('Browse all innovations'),
           '#href' => 'innovations',
           '#attributes' => array(
-            'class' => array('button--major has-icon-innovation'),
+            'class' => array('tb-megamenu-big-button has-icon-innovation'),
           ),
         ),
       );
@@ -92,7 +92,7 @@ function _gie_general_contents($block_id) {
             '#title' => t('Add an innovation'),
             '#href' => 'node/add/innovation',
             '#attributes' => array(
-              'class' => array('button--major has-icon-add'),
+              'class' => array('tb-megamenu-big-button has-icon-add'),
             ),
           ),
         );
@@ -103,7 +103,7 @@ function _gie_general_contents($block_id) {
           '#title' => t('Find other innovators'),
           '#href' => 'members/field_user_type/29',
           '#attributes' => array(
-            'class' => array('button--major has-icon-innovator'),
+            'class' => array('tb-megamenu-big-button has-icon-innovator'),
           ),
         ),
       );
