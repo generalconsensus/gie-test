@@ -39,8 +39,10 @@
           }
 
           if ($(this).is('.tb-megamenu-submenu')) {
-            $(this).addClass('nav--subnav');
-
+            $(this).attr('class','nav--subnav').removeAttr("style");
+            $(this).find(".block a").each(function(){
+              $(this).wrap("<div class='nav__item'></div>");
+            });
           }
 
           if ($(this).is('.view')) {
