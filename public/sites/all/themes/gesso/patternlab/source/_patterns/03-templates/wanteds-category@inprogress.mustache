@@ -4,7 +4,7 @@
 <main id="main" class="main" role="main" tabindex="-1">
   <div class="region-content">
 
-    <div class="l-panels-landing preface-empty title sidebar-empty main">
+    <div class="l-panels-landing preface-empty title sidebar main">
       <div class="l-preface layout-constrain"></div>
       <div class="l-title region-landing-title">
         <div class="layout-constrain">
@@ -13,7 +13,9 @@
       </div>
       <div class="l-wrapper region-landing-content">
         <div class="layout-constrain">
-          
+           <aside class="l-sidebar">
+            {{> molecules-filters }}
+          </aside>
           <div class="l-main">
 
             <div class="pane pane--wanteds-search">
@@ -26,8 +28,8 @@
                 </form>
               </div>
             </div>
-            
-            <div class="pane">      
+
+            <div class="pane">
               <div class="pane__content">
                 <div class="view view--needs-listing-pages">
                    {{# listItems.nine }}
