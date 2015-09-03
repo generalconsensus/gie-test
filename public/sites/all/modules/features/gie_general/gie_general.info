@@ -135,6 +135,7 @@ features[page_manager_pages][] = homepage
 features[pane_container][] = about_the_exchange
 features[panelizer_defaults][] = node:error_page:default
 features[rules_config][] = rules_new_comment_notify
+features[user_role][] = Intern
 features[variable][] = additional_settings__active_tab_error_page
 features[variable][] = admin_menu_cache_client
 features[variable][] = admin_menu_components
