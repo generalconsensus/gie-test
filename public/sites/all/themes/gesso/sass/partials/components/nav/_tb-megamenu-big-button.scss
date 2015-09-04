@@ -4,15 +4,14 @@
 
 $tb-icon-width: 20px;
 $tb-icon-padding: 75px;
-$tb-max-width: 360px;
-
+$tb-max-width: 380px;
 
 $iconList : (
-'has-icon-innovation' : 'icon-innov-browse-41-54-darkblue' ,
-'has-icon-add' :  'icon-innov-add-32-32-darkblue',
-'has-icon-innovator' :  'icon-innov-collaborate-56-56-darkblue',
-'has-icon-funding' : 'icon-fund-browse-52-52-darkblue',
-'has-icon-resources' : 'icon-resources-browse-52-52-darkblue',
+  'has-icon-innovation' : 'icon-innov-browse-41-54-darkblue' ,
+  'has-icon-add' :  'icon-innov-add-32-32-darkblue',
+  'has-icon-innovator' :  'icon-innov-collaborate-56-56-darkblue',
+  'has-icon-funding' : 'icon-fund-browse-52-52-darkblue',
+  'has-icon-resources' : 'icon-resources-browse-52-52-darkblue',
 );
 
 
@@ -20,37 +19,40 @@ $iconList : (
   @extend %button;
   background: $lightblue;
   border: 0;
-  font-size: em(15px, 16px);
+  font-size: em(15px);
   margin-left: $tb-icon-padding;
-  padding: em(17px, 15px);
+  min-width: 280px;
+  max-width: $tb-max-width;
+  padding: 16px 35px 16px 16px !important;
   position: relative;
   text-align: left;
   text-transform: uppercase;
-  max-width: em($tb-max-width, 16px) ;
+  
   &:focus,
-  &:hover{
+  &:hover {
     background: $blue;
   }
-&:before {
-  background-repeat: no-repeat;
-  background-position: left center;
-  display: block;
-  content: "\a0";
-  position: absolute;
-  height: 54px;
-  left: -#{$tb-icon-padding};
-  top: 1px;
-  width: $tb-icon-padding;
-}
+  
+  &:before {
+    background-repeat: no-repeat;
+    background-position: left center;
+    display: block;
+    content: "\a0";
+    position: absolute;
+    height: 54px;
+    left: -#{$tb-icon-padding};
+    top: 1px;
+    width: $tb-icon-padding;
+  }
 
-&:after {
-  @include image-replace(16px,16px);
-  @include svg-background(chevron-thin-right2);
-  content: '';
-  display: inline-block;
-  position: absolute;
-  right: 10px;
-  top: 19px;
+  &:after {
+    @include image-replace(16px,16px);
+    @include svg-background(chevron-thin-right2);
+    content: '';
+    display: inline-block;
+    position: absolute;
+    right: 10px;
+    top: 18px;
   }
   &:last-child {
     margin-bottom: 0;
@@ -111,7 +113,7 @@ $iconList : (
 
 .tb-megamenu-big-button {
   .tb-megamenu .dropdown-menu & {
-    padding: em(18px, 15px);
+    //padding: em(18px, 15px);
   }
   + .tb-megamenu-big-button {
     margin-left: $tb-icon-padding;
