@@ -62,6 +62,11 @@ function gie_long_form_content_paragraphs_info() {
       'bundle' => 'long_form_pullquote',
       'locked' => '1',
     ),
+    'long_form_section_break_image' => array(
+      'name' => 'Long Form Section Break Image',
+      'bundle' => 'long_form_section_break_image',
+      'locked' => '1',
+    ),
     'long_form_text' => array(
       'name' => 'Long Form Text',
       'bundle' => 'long_form_text',
