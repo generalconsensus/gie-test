@@ -146,6 +146,7 @@ function gie_long_form_content_field_default_field_instances() {
         'long_form_aside' => -1,
         'long_form_image' => -1,
         'long_form_key_figure' => -1,
+        'long_form_pullquote' => -1,
         'long_form_text' => -1,
         'long_form_video' => -1,
       ),
@@ -153,6 +154,7 @@ function gie_long_form_content_field_default_field_instances() {
         'long_form_aside' => 7,
         'long_form_image' => 2,
         'long_form_key_figure' => 9,
+        'long_form_pullquote' => -10,
         'long_form_text' => 5,
         'long_form_video' => -10,
       ),
@@ -1049,6 +1051,140 @@ function gie_long_form_content_field_default_field_instances() {
   );
 
   // Exported field_instance:
+  // 'paragraphs_item-long_form_pullquote-field_para_pullquote_author'
+  $field_instances['paragraphs_item-long_form_pullquote-field_para_pullquote_author'] = array(
+    'bundle' => 'long_form_pullquote',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'hidden',
+        'module' => 'text',
+        'settings' => array(
+          'field_delimiter' => '',
+          'linked_field' => array(
+            'advanced' => array(
+              'class' => '',
+              'rel' => '',
+              'target' => '',
+              'text' => '',
+              'title' => '',
+            ),
+            'destination' => '',
+            'linked' => 0,
+          ),
+        ),
+        'type' => 'text_default',
+        'weight' => 1,
+      ),
+      'paragraphs_full_width' => array(
+        'label' => 'hidden',
+        'module' => 'text',
+        'settings' => array(
+          'field_delimiter' => '',
+          'linked_field' => array(
+            'advanced' => array(
+              'class' => '',
+              'rel' => '',
+              'target' => '',
+              'text' => '',
+              'title' => '',
+            ),
+            'destination' => '',
+            'linked' => 0,
+          ),
+        ),
+        'type' => 'text_default',
+        'weight' => 1,
+      ),
+    ),
+    'entity_type' => 'paragraphs_item',
+    'field_name' => 'field_para_pullquote_author',
+    'label' => 'Author',
+    'required' => FALSE,
+    'settings' => array(
+      'text_processing' => 0,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'module' => 'text',
+      'settings' => array(
+        'size' => 60,
+      ),
+      'type' => 'text_textfield',
+      'weight' => 2,
+    ),
+  );
+
+  // Exported field_instance:
+  // 'paragraphs_item-long_form_pullquote-field_paragraph_pullquote'
+  $field_instances['paragraphs_item-long_form_pullquote-field_paragraph_pullquote'] = array(
+    'bundle' => 'long_form_pullquote',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'hidden',
+        'module' => 'text',
+        'settings' => array(
+          'field_delimiter' => '',
+          'linked_field' => array(
+            'advanced' => array(
+              'class' => '',
+              'rel' => '',
+              'target' => '',
+              'text' => '',
+              'title' => '',
+            ),
+            'destination' => '',
+            'linked' => 0,
+          ),
+        ),
+        'type' => 'text_default',
+        'weight' => 0,
+      ),
+      'paragraphs_full_width' => array(
+        'label' => 'hidden',
+        'module' => 'text',
+        'settings' => array(
+          'field_delimiter' => '',
+          'linked_field' => array(
+            'advanced' => array(
+              'class' => '',
+              'rel' => '',
+              'target' => '',
+              'text' => '',
+              'title' => '',
+            ),
+            'destination' => '',
+            'linked' => 0,
+          ),
+        ),
+        'type' => 'text_default',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'paragraphs_item',
+    'field_name' => 'field_paragraph_pullquote',
+    'label' => 'Pullquote Text',
+    'required' => FALSE,
+    'settings' => array(
+      'text_processing' => 0,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'module' => 'text',
+      'settings' => array(
+        'rows' => 5,
+      ),
+      'type' => 'text_textarea',
+      'weight' => 1,
+    ),
+  );
+
+  // Exported field_instance:
   // 'paragraphs_item-long_form_text-field_paragraph_text'
   $field_instances['paragraphs_item-long_form_text-field_paragraph_text'] = array(
     'bundle' => 'long_form_text',
@@ -1620,12 +1756,14 @@ function gie_long_form_content_field_default_field_instances() {
   // Translatables
   // Included for use with string extractors like potx.
   t('Alignment');
+  t('Author');
   t('Body');
   t('Caption');
   t('Explanation');
   t('Image');
   t('Key Figure');
   t('Long form block');
+  t('Pullquote Text');
   t('Text');
   t('Title');
   t('Video');
