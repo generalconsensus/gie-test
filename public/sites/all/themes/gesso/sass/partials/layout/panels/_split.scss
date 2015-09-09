@@ -1,0 +1,35 @@
+// @file
+// Panels layout: split
+// Media queries use: http://breakpoint-sass.com
+// Media queries use: github.com/Team-Sass/breakpoint/wiki/No-Query-Fallbacks
+// Grid via: singularity.gs
+
+.l-panels-split {
+  @include add-grid(12 at 700px);
+  @include add-gutter(2);
+  @include breakpoint(700px, $no-query: true) {
+    &.first.second {
+      .l-first {
+        @include grid-span(6,1);
+      }
+      .l-second {
+        @include grid-span(6,7);
+      }
+    }
+  }
+}
+
+.l-panels-split {
+  @include clearfix;
+  .l-preface,
+  .l-first,
+  .l-second,
+  .l-wrapper {
+    @include clearfix;
+    
+    @if $panels-admin {
+      @include border-box;
+    }
+  }
+}
+

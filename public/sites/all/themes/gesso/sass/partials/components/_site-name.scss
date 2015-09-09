@@ -9,4 +9,8 @@
   @include image-replace(179px,36px);
   @include svg-background(logo);
   display: block;
+
+  .site-name--simple & {
+    @include svg-background(logo-simple);
+  }
 }

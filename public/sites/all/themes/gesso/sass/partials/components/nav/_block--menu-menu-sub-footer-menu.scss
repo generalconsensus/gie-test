@@ -10,6 +10,11 @@
       font-weight: normal;
     }
 
+    .footer-simple & {
+      margin: 0;
+    }
+
+    .footer-simple &,
     .region-footer & { // layout when in footer
       @include breakpoint(max-width 699px) {
         text-align: center;
