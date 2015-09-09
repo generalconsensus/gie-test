@@ -364,8 +364,17 @@ h3 {
 }
 
 h4 {
-  font-size: 1em;
+  font-size: 0.8125em;
   margin: 0 0 1.625em;
+  background-color: #d31145;
+  color: #FFF;
+  display: inline-block;
+  padding: 2px 5px;
+  text-transform: uppercase;
+}
+h4 a {
+  color: #FFF;
+  text-decoration: none;
 }
 
 h5 {
@@ -1449,24 +1458,34 @@ input.throbbing {
   background: #d31145 url("../images/header-background.png") no-repeat;
   color: #FFF;
   display: block;
-  padding: 7em 0 5em 0;
+  padding: 8em 0 5em 0;
   text-align: center;
 }
 
 .page-header__subtext {
   font-size: 21px;
-  text-decoration: underline;
   text-transform: uppercase;
+}
+.page-header__subtext:after {
+  border-top: 2px #FFF solid;
+  content: " ";
+  display: block;
+  margin: 0 auto;
+  margin-top: 12px;
+  width: 20%;
 }
 
 .page-header__headline {
   font-size: 3.5em;
+  line-height: 1em;
   text-transform: uppercase;
   padding: 1em 0;
+  word-break: keep-all;
 }
 
 .page-header__author img {
   border-radius: 50%;
+  border: 2px #FFF solid;
 }
 
 .page-header__description {
@@ -1600,6 +1619,18 @@ blockquote:before {
 }
 blockquote p {
   font-style: italic;
+}
+
+q {
+  border-top: 1px solid #d31145;
+  border-bottom: 1px solid #d31145;
+  color: #d31145;
+  display: block;
+  width: 75%;
+  font-size: 18px;
+  font-style: italic;
+  margin: 0 auto;
+  text-align: center;
 }
 
 .region-navigation {
