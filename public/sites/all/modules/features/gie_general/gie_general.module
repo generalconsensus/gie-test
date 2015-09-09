@@ -37,3 +37,37 @@ function _gie_general_welcome() {
   }
 }
 
+/**
+ * Implements hook_node_presave().
+ * - Set node author to Point of Contact for
+ * - new innovations/programs/organizations when
+ * - point of contact field is empty upon node creation.
+ */
+function gie_general_node_presave($node) {
+  switch($node->type) {
+    case 'innovation':
+      $wrapper = entity_metadata_wrapper('node', $node);
+      $poc = $wrapper->field_innovation_poc->value();
+      if (!$poc && !$node->nid) {
+        $user = user_load($node->uid);
+        $wrapper->field_innovation_poc->set($user);
+      }
+      break;
+    case 'program':
+      $wrapper = entity_metadata_wrapper('node', $node);
+      $poc = $wrapper->field_program_poc->value();
+      if (!$poc && !$node->nid) {
+        $user = user_load($node->uid);
+        $wrapper->field_program_poc->set($user);
+      }
+      break;
+    case 'organization':
+      $wrapper = entity_metadata_wrapper('node', $node);
+      $poc = $wrapper->field_org_poc->value();
+      if (!$poc && !$node->nid) {
+        $user = user_load($node->uid);
+        $wrapper->field_org_poc->set($user);
+      }
+      break;
+  }
+}

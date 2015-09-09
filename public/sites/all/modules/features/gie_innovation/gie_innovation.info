@@ -25,6 +25,7 @@ dependencies[] = gie_user
 dependencies[] = image
 dependencies[] = link
 dependencies[] = list
+dependencies[] = maxlength
 dependencies[] = number
 dependencies[] = options
 dependencies[] = page_manager

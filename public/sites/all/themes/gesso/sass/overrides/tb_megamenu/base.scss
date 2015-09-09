@@ -328,12 +328,12 @@
   right: 0;
 }
 .tb-megamenu .mega-align-center > .dropdown-menu {
-  // left: 50%;
-  // transform: translate(-50%);
-  // -webkit-transform: translate(-50%);
-  // -moz-transform: translate(-50%);
-  // -ms-transform: translate(-50%);
-  // -o-transform: translate(-50%);
+  left: 50%;
+  transform: translate(-50%);
+  -webkit-transform: translate(-50%);
+  -moz-transform: translate(-50%);
+  -ms-transform: translate(-50%);
+  -o-transform: translate(-50%);
 }
 .tb-megamenu .dropdown-submenu.mega-align-left > .dropdown-menu {
   left: 100%;

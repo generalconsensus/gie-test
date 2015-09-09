@@ -25,18 +25,18 @@
 }
 
 /* line 9, ../sass/partials/global/helpers/_clearfix.scss */
-.clearfix:after, .layout-grid__row:after, .card__list--split:after, .card--listing .card__meta:after, .field--funding-deadline:after, .pane--homepage-views-personas-pane .pane__content .view--homepage-views:after, .pane--landing-intro:after, .quicktabs-tabs.quicktabs-style-nostyle:after, .region-footer:after, .view__header:after, .view--homepage-cardflip:after, .view--wanteds-cardflip:after {
+.clearfix:after, .layout-grid__row:after, .card__list--split:after, .card--listing .card__meta:after, .field--funding-deadline:after, .pane--homepage-views-personas-pane .pane__content .view--homepage-views:after, .pane--landing-intro:after, .pane--wanteds-search:after, .quicktabs-tabs.quicktabs-style-nostyle:after, .region-footer:after, .view__header:after, .view--homepage-cardflip:after, .view--wanteds-cardflip:after {
   display: table;
   content: "";
 }
 /* line 14, ../sass/partials/global/helpers/_clearfix.scss */
-.clearfix:after, .layout-grid__row:after, .card__list--split:after, .card--listing .card__meta:after, .field--funding-deadline:after, .pane--homepage-views-personas-pane .pane__content .view--homepage-views:after, .pane--landing-intro:after, .quicktabs-tabs.quicktabs-style-nostyle:after, .region-footer:after, .view__header:after, .view--homepage-cardflip:after, .view--wanteds-cardflip:after {
+.clearfix:after, .layout-grid__row:after, .card__list--split:after, .card--listing .card__meta:after, .field--funding-deadline:after, .pane--homepage-views-personas-pane .pane__content .view--homepage-views:after, .pane--landing-intro:after, .pane--wanteds-search:after, .quicktabs-tabs.quicktabs-style-nostyle:after, .region-footer:after, .view__header:after, .view--homepage-cardflip:after, .view--wanteds-cardflip:after {
   clear: both;
 }
 
 /* line 36, ../sass/partials/global/extendables/_button.scss */
 .button, .card__button a, #edit-lr-social-login-links .lr_providericons.lr_linkedin, #edit-lr-social-login-links .lr_providericons.lr_facebook, #edit-lr-social-login-links .lr_providericons.lr_twitter, #edit-lr-social-login-links .lr_providericons.lr_google, .flag-abuse-node a, .flag-favorite a, .flag-follow a,
-.flag-follow-taxonomy a, .sharethis-buttons .st_sharethis_custom {
+.flag-follow-taxonomy a, .tb-megamenu-big-button, .sharethis-buttons .st_sharethis_custom {
   font-size: 0.875em;
   line-height: 1.85714em;
   -moz-border-radius: 0;
@@ -56,8 +56,8 @@
 }
 /* line 25, ../sass/partials/global/extendables/_button.scss */
 .button:focus, .card__button a:focus, #edit-lr-social-login-links .lr_providericons.lr_linkedin:focus, #edit-lr-social-login-links .lr_providericons.lr_facebook:focus, #edit-lr-social-login-links .lr_providericons.lr_twitter:focus, #edit-lr-social-login-links .lr_providericons.lr_google:focus, .flag-abuse-node a:focus, .flag-favorite a:focus, .flag-follow a:focus,
-.flag-follow-taxonomy a:focus, .sharethis-buttons .st_sharethis_custom:focus, .button:hover, .card__button a:hover, #edit-lr-social-login-links .lr_providericons.lr_linkedin:hover, #edit-lr-social-login-links .lr_providericons.lr_facebook:hover, #edit-lr-social-login-links .lr_providericons.lr_twitter:hover, #edit-lr-social-login-links .lr_providericons.lr_google:hover, .flag-abuse-node a:hover, .flag-favorite a:hover, .flag-follow a:hover,
-.flag-follow-taxonomy a:hover, .sharethis-buttons .st_sharethis_custom:hover {
+.flag-follow-taxonomy a:focus, .tb-megamenu-big-button:focus, .sharethis-buttons .st_sharethis_custom:focus, .button:hover, .card__button a:hover, #edit-lr-social-login-links .lr_providericons.lr_linkedin:hover, #edit-lr-social-login-links .lr_providericons.lr_facebook:hover, #edit-lr-social-login-links .lr_providericons.lr_twitter:hover, #edit-lr-social-login-links .lr_providericons.lr_google:hover, .flag-abuse-node a:hover, .flag-favorite a:hover, .flag-follow a:hover,
+.flag-follow-taxonomy a:hover, .tb-megamenu-big-button:hover, .sharethis-buttons .st_sharethis_custom:hover {
   background-color: #001f36;
   border-color: #001f36;
   color: #fff !important;
@@ -66,23 +66,23 @@
 }
 /* line 39, ../sass/partials/global/extendables/_button.scss */
 .button + .button, .card__button a + .button, #edit-lr-social-login-links .lr_providericons.lr_linkedin + .button, #edit-lr-social-login-links .lr_providericons.lr_facebook + .button, #edit-lr-social-login-links .lr_providericons.lr_twitter + .button, #edit-lr-social-login-links .lr_providericons.lr_google + .button, .flag-abuse-node a + .button, .flag-favorite a + .button, .flag-follow a + .button,
-.flag-follow-taxonomy a + .button, .sharethis-buttons .st_sharethis_custom + .button, .card__button .button + a, .card__button a + a, #edit-lr-social-login-links .card__button .lr_providericons.lr_linkedin + a, .card__button #edit-lr-social-login-links .lr_providericons.lr_linkedin + a, #edit-lr-social-login-links .card__button .lr_providericons.lr_facebook + a, .card__button #edit-lr-social-login-links .lr_providericons.lr_facebook + a, #edit-lr-social-login-links .card__button .lr_providericons.lr_twitter + a, .card__button #edit-lr-social-login-links .lr_providericons.lr_twitter + a, #edit-lr-social-login-links .card__button .lr_providericons.lr_google + a, .card__button #edit-lr-social-login-links .lr_providericons.lr_google + a, .flag-abuse-node .card__button a + a, .card__button .flag-abuse-node a + a, .flag-favorite .card__button a + a, .card__button .flag-favorite a + a, .flag-follow .card__button a + a, .card__button .flag-follow a + a,
+.flag-follow-taxonomy a + .button, .tb-megamenu-big-button + .button, .sharethis-buttons .st_sharethis_custom + .button, .card__button .button + a, .card__button a + a, #edit-lr-social-login-links .card__button .lr_providericons.lr_linkedin + a, .card__button #edit-lr-social-login-links .lr_providericons.lr_linkedin + a, #edit-lr-social-login-links .card__button .lr_providericons.lr_facebook + a, .card__button #edit-lr-social-login-links .lr_providericons.lr_facebook + a, #edit-lr-social-login-links .card__button .lr_providericons.lr_twitter + a, .card__button #edit-lr-social-login-links .lr_providericons.lr_twitter + a, #edit-lr-social-login-links .card__button .lr_providericons.lr_google + a, .card__button #edit-lr-social-login-links .lr_providericons.lr_google + a, .flag-abuse-node .card__button a + a, .card__button .flag-abuse-node a + a, .flag-favorite .card__button a + a, .card__button .flag-favorite a + a, .flag-follow .card__button a + a, .card__button .flag-follow a + a,
 .flag-follow-taxonomy .card__button a + a,
-.card__button .flag-follow-taxonomy a + a, .sharethis-buttons .card__button .st_sharethis_custom + a, .card__button .sharethis-buttons .st_sharethis_custom + a, #edit-lr-social-login-links .button + .lr_providericons.lr_linkedin, .card__button #edit-lr-social-login-links a + .lr_providericons.lr_linkedin, #edit-lr-social-login-links .card__button a + .lr_providericons.lr_linkedin, #edit-lr-social-login-links .lr_providericons.lr_linkedin + .lr_providericons.lr_linkedin, #edit-lr-social-login-links .lr_providericons.lr_facebook + .lr_providericons.lr_linkedin, #edit-lr-social-login-links .lr_providericons.lr_twitter + .lr_providericons.lr_linkedin, #edit-lr-social-login-links .lr_providericons.lr_google + .lr_providericons.lr_linkedin, .flag-abuse-node #edit-lr-social-login-links a + .lr_providericons.lr_linkedin, #edit-lr-social-login-links .flag-abuse-node a + .lr_providericons.lr_linkedin, .flag-favorite #edit-lr-social-login-links a + .lr_providericons.lr_linkedin, #edit-lr-social-login-links .flag-favorite a + .lr_providericons.lr_linkedin, .flag-follow #edit-lr-social-login-links a + .lr_providericons.lr_linkedin, #edit-lr-social-login-links .flag-follow a + .lr_providericons.lr_linkedin,
+.card__button .flag-follow-taxonomy a + a, .card__button .tb-megamenu-big-button + a, .sharethis-buttons .card__button .st_sharethis_custom + a, .card__button .sharethis-buttons .st_sharethis_custom + a, #edit-lr-social-login-links .button + .lr_providericons.lr_linkedin, .card__button #edit-lr-social-login-links a + .lr_providericons.lr_linkedin, #edit-lr-social-login-links .card__button a + .lr_providericons.lr_linkedin, #edit-lr-social-login-links .lr_providericons.lr_linkedin + .lr_providericons.lr_linkedin, #edit-lr-social-login-links .lr_providericons.lr_facebook + .lr_providericons.lr_linkedin, #edit-lr-social-login-links .lr_providericons.lr_twitter + .lr_providericons.lr_linkedin, #edit-lr-social-login-links .lr_providericons.lr_google + .lr_providericons.lr_linkedin, .flag-abuse-node #edit-lr-social-login-links a + .lr_providericons.lr_linkedin, #edit-lr-social-login-links .flag-abuse-node a + .lr_providericons.lr_linkedin, .flag-favorite #edit-lr-social-login-links a + .lr_providericons.lr_linkedin, #edit-lr-social-login-links .flag-favorite a + .lr_providericons.lr_linkedin, .flag-follow #edit-lr-social-login-links a + .lr_providericons.lr_linkedin, #edit-lr-social-login-links .flag-follow a + .lr_providericons.lr_linkedin,
 .flag-follow-taxonomy #edit-lr-social-login-links a + .lr_providericons.lr_linkedin,
-#edit-lr-social-login-links .flag-follow-taxonomy a + .lr_providericons.lr_linkedin, .sharethis-buttons #edit-lr-social-login-links .st_sharethis_custom + .lr_providericons.lr_linkedin, #edit-lr-social-login-links .sharethis-buttons .st_sharethis_custom + .lr_providericons.lr_linkedin, #edit-lr-social-login-links .button + .lr_providericons.lr_facebook, .card__button #edit-lr-social-login-links a + .lr_providericons.lr_facebook, #edit-lr-social-login-links .card__button a + .lr_providericons.lr_facebook, #edit-lr-social-login-links .lr_providericons.lr_linkedin + .lr_providericons.lr_facebook, #edit-lr-social-login-links .lr_providericons.lr_facebook + .lr_providericons.lr_facebook, #edit-lr-social-login-links .lr_providericons.lr_twitter + .lr_providericons.lr_facebook, #edit-lr-social-login-links .lr_providericons.lr_google + .lr_providericons.lr_facebook, .flag-abuse-node #edit-lr-social-login-links a + .lr_providericons.lr_facebook, #edit-lr-social-login-links .flag-abuse-node a + .lr_providericons.lr_facebook, .flag-favorite #edit-lr-social-login-links a + .lr_providericons.lr_facebook, #edit-lr-social-login-links .flag-favorite a + .lr_providericons.lr_facebook, .flag-follow #edit-lr-social-login-links a + .lr_providericons.lr_facebook, #edit-lr-social-login-links .flag-follow a + .lr_providericons.lr_facebook,
+#edit-lr-social-login-links .flag-follow-taxonomy a + .lr_providericons.lr_linkedin, #edit-lr-social-login-links .tb-megamenu-big-button + .lr_providericons.lr_linkedin, .sharethis-buttons #edit-lr-social-login-links .st_sharethis_custom + .lr_providericons.lr_linkedin, #edit-lr-social-login-links .sharethis-buttons .st_sharethis_custom + .lr_providericons.lr_linkedin, #edit-lr-social-login-links .button + .lr_providericons.lr_facebook, .card__button #edit-lr-social-login-links a + .lr_providericons.lr_facebook, #edit-lr-social-login-links .card__button a + .lr_providericons.lr_facebook, #edit-lr-social-login-links .lr_providericons.lr_linkedin + .lr_providericons.lr_facebook, #edit-lr-social-login-links .lr_providericons.lr_facebook + .lr_providericons.lr_facebook, #edit-lr-social-login-links .lr_providericons.lr_twitter + .lr_providericons.lr_facebook, #edit-lr-social-login-links .lr_providericons.lr_google + .lr_providericons.lr_facebook, .flag-abuse-node #edit-lr-social-login-links a + .lr_providericons.lr_facebook, #edit-lr-social-login-links .flag-abuse-node a + .lr_providericons.lr_facebook, .flag-favorite #edit-lr-social-login-links a + .lr_providericons.lr_facebook, #edit-lr-social-login-links .flag-favorite a + .lr_providericons.lr_facebook, .flag-follow #edit-lr-social-login-links a + .lr_providericons.lr_facebook, #edit-lr-social-login-links .flag-follow a + .lr_providericons.lr_facebook,
 .flag-follow-taxonomy #edit-lr-social-login-links a + .lr_providericons.lr_facebook,
-#edit-lr-social-login-links .flag-follow-taxonomy a + .lr_providericons.lr_facebook, .sharethis-buttons #edit-lr-social-login-links .st_sharethis_custom + .lr_providericons.lr_facebook, #edit-lr-social-login-links .sharethis-buttons .st_sharethis_custom + .lr_providericons.lr_facebook, #edit-lr-social-login-links .button + .lr_providericons.lr_twitter, .card__button #edit-lr-social-login-links a + .lr_providericons.lr_twitter, #edit-lr-social-login-links .card__button a + .lr_providericons.lr_twitter, #edit-lr-social-login-links .lr_providericons.lr_linkedin + .lr_providericons.lr_twitter, #edit-lr-social-login-links .lr_providericons.lr_facebook + .lr_providericons.lr_twitter, #edit-lr-social-login-links .lr_providericons.lr_twitter + .lr_providericons.lr_twitter, #edit-lr-social-login-links .lr_providericons.lr_google + .lr_providericons.lr_twitter, .flag-abuse-node #edit-lr-social-login-links a + .lr_providericons.lr_twitter, #edit-lr-social-login-links .flag-abuse-node a + .lr_providericons.lr_twitter, .flag-favorite #edit-lr-social-login-links a + .lr_providericons.lr_twitter, #edit-lr-social-login-links .flag-favorite a + .lr_providericons.lr_twitter, .flag-follow #edit-lr-social-login-links a + .lr_providericons.lr_twitter, #edit-lr-social-login-links .flag-follow a + .lr_providericons.lr_twitter,
+#edit-lr-social-login-links .flag-follow-taxonomy a + .lr_providericons.lr_facebook, #edit-lr-social-login-links .tb-megamenu-big-button + .lr_providericons.lr_facebook, .sharethis-buttons #edit-lr-social-login-links .st_sharethis_custom + .lr_providericons.lr_facebook, #edit-lr-social-login-links .sharethis-buttons .st_sharethis_custom + .lr_providericons.lr_facebook, #edit-lr-social-login-links .button + .lr_providericons.lr_twitter, .card__button #edit-lr-social-login-links a + .lr_providericons.lr_twitter, #edit-lr-social-login-links .card__button a + .lr_providericons.lr_twitter, #edit-lr-social-login-links .lr_providericons.lr_linkedin + .lr_providericons.lr_twitter, #edit-lr-social-login-links .lr_providericons.lr_facebook + .lr_providericons.lr_twitter, #edit-lr-social-login-links .lr_providericons.lr_twitter + .lr_providericons.lr_twitter, #edit-lr-social-login-links .lr_providericons.lr_google + .lr_providericons.lr_twitter, .flag-abuse-node #edit-lr-social-login-links a + .lr_providericons.lr_twitter, #edit-lr-social-login-links .flag-abuse-node a + .lr_providericons.lr_twitter, .flag-favorite #edit-lr-social-login-links a + .lr_providericons.lr_twitter, #edit-lr-social-login-links .flag-favorite a + .lr_providericons.lr_twitter, .flag-follow #edit-lr-social-login-links a + .lr_providericons.lr_twitter, #edit-lr-social-login-links .flag-follow a + .lr_providericons.lr_twitter,
 .flag-follow-taxonomy #edit-lr-social-login-links a + .lr_providericons.lr_twitter,
-#edit-lr-social-login-links .flag-follow-taxonomy a + .lr_providericons.lr_twitter, .sharethis-buttons #edit-lr-social-login-links .st_sharethis_custom + .lr_providericons.lr_twitter, #edit-lr-social-login-links .sharethis-buttons .st_sharethis_custom + .lr_providericons.lr_twitter, #edit-lr-social-login-links .button + .lr_providericons.lr_google, .card__button #edit-lr-social-login-links a + .lr_providericons.lr_google, #edit-lr-social-login-links .card__button a + .lr_providericons.lr_google, #edit-lr-social-login-links .lr_providericons.lr_linkedin + .lr_providericons.lr_google, #edit-lr-social-login-links .lr_providericons.lr_facebook + .lr_providericons.lr_google, #edit-lr-social-login-links .lr_providericons.lr_twitter + .lr_providericons.lr_google, #edit-lr-social-login-links .lr_providericons.lr_google + .lr_providericons.lr_google, .flag-abuse-node #edit-lr-social-login-links a + .lr_providericons.lr_google, #edit-lr-social-login-links .flag-abuse-node a + .lr_providericons.lr_google, .flag-favorite #edit-lr-social-login-links a + .lr_providericons.lr_google, #edit-lr-social-login-links .flag-favorite a + .lr_providericons.lr_google, .flag-follow #edit-lr-social-login-links a + .lr_providericons.lr_google, #edit-lr-social-login-links .flag-follow a + .lr_providericons.lr_google,
+#edit-lr-social-login-links .flag-follow-taxonomy a + .lr_providericons.lr_twitter, #edit-lr-social-login-links .tb-megamenu-big-button + .lr_providericons.lr_twitter, .sharethis-buttons #edit-lr-social-login-links .st_sharethis_custom + .lr_providericons.lr_twitter, #edit-lr-social-login-links .sharethis-buttons .st_sharethis_custom + .lr_providericons.lr_twitter, #edit-lr-social-login-links .button + .lr_providericons.lr_google, .card__button #edit-lr-social-login-links a + .lr_providericons.lr_google, #edit-lr-social-login-links .card__button a + .lr_providericons.lr_google, #edit-lr-social-login-links .lr_providericons.lr_linkedin + .lr_providericons.lr_google, #edit-lr-social-login-links .lr_providericons.lr_facebook + .lr_providericons.lr_google, #edit-lr-social-login-links .lr_providericons.lr_twitter + .lr_providericons.lr_google, #edit-lr-social-login-links .lr_providericons.lr_google + .lr_providericons.lr_google, .flag-abuse-node #edit-lr-social-login-links a + .lr_providericons.lr_google, #edit-lr-social-login-links .flag-abuse-node a + .lr_providericons.lr_google, .flag-favorite #edit-lr-social-login-links a + .lr_providericons.lr_google, #edit-lr-social-login-links .flag-favorite a + .lr_providericons.lr_google, .flag-follow #edit-lr-social-login-links a + .lr_providericons.lr_google, #edit-lr-social-login-links .flag-follow a + .lr_providericons.lr_google,
 .flag-follow-taxonomy #edit-lr-social-login-links a + .lr_providericons.lr_google,
-#edit-lr-social-login-links .flag-follow-taxonomy a + .lr_providericons.lr_google, .sharethis-buttons #edit-lr-social-login-links .st_sharethis_custom + .lr_providericons.lr_google, #edit-lr-social-login-links .sharethis-buttons .st_sharethis_custom + .lr_providericons.lr_google, .flag-abuse-node .button + a, .card__button .flag-abuse-node a + a, .flag-abuse-node .card__button a + a, #edit-lr-social-login-links .flag-abuse-node .lr_providericons.lr_linkedin + a, .flag-abuse-node #edit-lr-social-login-links .lr_providericons.lr_linkedin + a, #edit-lr-social-login-links .flag-abuse-node .lr_providericons.lr_facebook + a, .flag-abuse-node #edit-lr-social-login-links .lr_providericons.lr_facebook + a, #edit-lr-social-login-links .flag-abuse-node .lr_providericons.lr_twitter + a, .flag-abuse-node #edit-lr-social-login-links .lr_providericons.lr_twitter + a, #edit-lr-social-login-links .flag-abuse-node .lr_providericons.lr_google + a, .flag-abuse-node #edit-lr-social-login-links .lr_providericons.lr_google + a, .flag-abuse-node a + a, .flag-favorite .flag-abuse-node a + a, .flag-abuse-node .flag-favorite a + a, .flag-follow .flag-abuse-node a + a, .flag-abuse-node .flag-follow a + a,
+#edit-lr-social-login-links .flag-follow-taxonomy a + .lr_providericons.lr_google, #edit-lr-social-login-links .tb-megamenu-big-button + .lr_providericons.lr_google, .sharethis-buttons #edit-lr-social-login-links .st_sharethis_custom + .lr_providericons.lr_google, #edit-lr-social-login-links .sharethis-buttons .st_sharethis_custom + .lr_providericons.lr_google, .flag-abuse-node .button + a, .card__button .flag-abuse-node a + a, .flag-abuse-node .card__button a + a, #edit-lr-social-login-links .flag-abuse-node .lr_providericons.lr_linkedin + a, .flag-abuse-node #edit-lr-social-login-links .lr_providericons.lr_linkedin + a, #edit-lr-social-login-links .flag-abuse-node .lr_providericons.lr_facebook + a, .flag-abuse-node #edit-lr-social-login-links .lr_providericons.lr_facebook + a, #edit-lr-social-login-links .flag-abuse-node .lr_providericons.lr_twitter + a, .flag-abuse-node #edit-lr-social-login-links .lr_providericons.lr_twitter + a, #edit-lr-social-login-links .flag-abuse-node .lr_providericons.lr_google + a, .flag-abuse-node #edit-lr-social-login-links .lr_providericons.lr_google + a, .flag-abuse-node a + a, .flag-favorite .flag-abuse-node a + a, .flag-abuse-node .flag-favorite a + a, .flag-follow .flag-abuse-node a + a, .flag-abuse-node .flag-follow a + a,
 .flag-follow-taxonomy .flag-abuse-node a + a,
-.flag-abuse-node .flag-follow-taxonomy a + a, .sharethis-buttons .flag-abuse-node .st_sharethis_custom + a, .flag-abuse-node .sharethis-buttons .st_sharethis_custom + a, .flag-favorite .button + a, .card__button .flag-favorite a + a, .flag-favorite .card__button a + a, #edit-lr-social-login-links .flag-favorite .lr_providericons.lr_linkedin + a, .flag-favorite #edit-lr-social-login-links .lr_providericons.lr_linkedin + a, #edit-lr-social-login-links .flag-favorite .lr_providericons.lr_facebook + a, .flag-favorite #edit-lr-social-login-links .lr_providericons.lr_facebook + a, #edit-lr-social-login-links .flag-favorite .lr_providericons.lr_twitter + a, .flag-favorite #edit-lr-social-login-links .lr_providericons.lr_twitter + a, #edit-lr-social-login-links .flag-favorite .lr_providericons.lr_google + a, .flag-favorite #edit-lr-social-login-links .lr_providericons.lr_google + a, .flag-abuse-node .flag-favorite a + a, .flag-favorite .flag-abuse-node a + a, .flag-favorite a + a, .flag-follow .flag-favorite a + a, .flag-favorite .flag-follow a + a,
+.flag-abuse-node .flag-follow-taxonomy a + a, .flag-abuse-node .tb-megamenu-big-button + a, .sharethis-buttons .flag-abuse-node .st_sharethis_custom + a, .flag-abuse-node .sharethis-buttons .st_sharethis_custom + a, .flag-favorite .button + a, .card__button .flag-favorite a + a, .flag-favorite .card__button a + a, #edit-lr-social-login-links .flag-favorite .lr_providericons.lr_linkedin + a, .flag-favorite #edit-lr-social-login-links .lr_providericons.lr_linkedin + a, #edit-lr-social-login-links .flag-favorite .lr_providericons.lr_facebook + a, .flag-favorite #edit-lr-social-login-links .lr_providericons.lr_facebook + a, #edit-lr-social-login-links .flag-favorite .lr_providericons.lr_twitter + a, .flag-favorite #edit-lr-social-login-links .lr_providericons.lr_twitter + a, #edit-lr-social-login-links .flag-favorite .lr_providericons.lr_google + a, .flag-favorite #edit-lr-social-login-links .lr_providericons.lr_google + a, .flag-abuse-node .flag-favorite a + a, .flag-favorite .flag-abuse-node a + a, .flag-favorite a + a, .flag-follow .flag-favorite a + a, .flag-favorite .flag-follow a + a,
 .flag-follow-taxonomy .flag-favorite a + a,
-.flag-favorite .flag-follow-taxonomy a + a, .sharethis-buttons .flag-favorite .st_sharethis_custom + a, .flag-favorite .sharethis-buttons .st_sharethis_custom + a, .flag-follow .button + a, .card__button .flag-follow a + a, .flag-follow .card__button a + a, #edit-lr-social-login-links .flag-follow .lr_providericons.lr_linkedin + a, .flag-follow #edit-lr-social-login-links .lr_providericons.lr_linkedin + a, #edit-lr-social-login-links .flag-follow .lr_providericons.lr_facebook + a, .flag-follow #edit-lr-social-login-links .lr_providericons.lr_facebook + a, #edit-lr-social-login-links .flag-follow .lr_providericons.lr_twitter + a, .flag-follow #edit-lr-social-login-links .lr_providericons.lr_twitter + a, #edit-lr-social-login-links .flag-follow .lr_providericons.lr_google + a, .flag-follow #edit-lr-social-login-links .lr_providericons.lr_google + a, .flag-abuse-node .flag-follow a + a, .flag-follow .flag-abuse-node a + a, .flag-favorite .flag-follow a + a, .flag-follow .flag-favorite a + a, .flag-follow a + a,
+.flag-favorite .flag-follow-taxonomy a + a, .flag-favorite .tb-megamenu-big-button + a, .sharethis-buttons .flag-favorite .st_sharethis_custom + a, .flag-favorite .sharethis-buttons .st_sharethis_custom + a, .flag-follow .button + a, .card__button .flag-follow a + a, .flag-follow .card__button a + a, #edit-lr-social-login-links .flag-follow .lr_providericons.lr_linkedin + a, .flag-follow #edit-lr-social-login-links .lr_providericons.lr_linkedin + a, #edit-lr-social-login-links .flag-follow .lr_providericons.lr_facebook + a, .flag-follow #edit-lr-social-login-links .lr_providericons.lr_facebook + a, #edit-lr-social-login-links .flag-follow .lr_providericons.lr_twitter + a, .flag-follow #edit-lr-social-login-links .lr_providericons.lr_twitter + a, #edit-lr-social-login-links .flag-follow .lr_providericons.lr_google + a, .flag-follow #edit-lr-social-login-links .lr_providericons.lr_google + a, .flag-abuse-node .flag-follow a + a, .flag-follow .flag-abuse-node a + a, .flag-favorite .flag-follow a + a, .flag-follow .flag-favorite a + a, .flag-follow a + a,
 .flag-follow-taxonomy .flag-follow a + a,
-.flag-follow .flag-follow-taxonomy a + a, .sharethis-buttons .flag-follow .st_sharethis_custom + a, .flag-follow .sharethis-buttons .st_sharethis_custom + a,
+.flag-follow .flag-follow-taxonomy a + a, .flag-follow .tb-megamenu-big-button + a, .sharethis-buttons .flag-follow .st_sharethis_custom + a, .flag-follow .sharethis-buttons .st_sharethis_custom + a,
 .flag-follow-taxonomy .button + a,
 .card__button .flag-follow-taxonomy a + a,
 .flag-follow-taxonomy .card__button a + a,
@@ -101,48 +101,50 @@
 .flag-follow .flag-follow-taxonomy a + a,
 .flag-follow-taxonomy .flag-follow a + a,
 .flag-follow-taxonomy a + a,
+.flag-follow-taxonomy .tb-megamenu-big-button + a,
 .sharethis-buttons .flag-follow-taxonomy .st_sharethis_custom + a,
-.flag-follow-taxonomy .sharethis-buttons .st_sharethis_custom + a, .sharethis-buttons .button + .st_sharethis_custom, .card__button .sharethis-buttons a + .st_sharethis_custom, .sharethis-buttons .card__button a + .st_sharethis_custom, #edit-lr-social-login-links .sharethis-buttons .lr_providericons.lr_linkedin + .st_sharethis_custom, .sharethis-buttons #edit-lr-social-login-links .lr_providericons.lr_linkedin + .st_sharethis_custom, #edit-lr-social-login-links .sharethis-buttons .lr_providericons.lr_facebook + .st_sharethis_custom, .sharethis-buttons #edit-lr-social-login-links .lr_providericons.lr_facebook + .st_sharethis_custom, #edit-lr-social-login-links .sharethis-buttons .lr_providericons.lr_twitter + .st_sharethis_custom, .sharethis-buttons #edit-lr-social-login-links .lr_providericons.lr_twitter + .st_sharethis_custom, #edit-lr-social-login-links .sharethis-buttons .lr_providericons.lr_google + .st_sharethis_custom, .sharethis-buttons #edit-lr-social-login-links .lr_providericons.lr_google + .st_sharethis_custom, .flag-abuse-node .sharethis-buttons a + .st_sharethis_custom, .sharethis-buttons .flag-abuse-node a + .st_sharethis_custom, .flag-favorite .sharethis-buttons a + .st_sharethis_custom, .sharethis-buttons .flag-favorite a + .st_sharethis_custom, .flag-follow .sharethis-buttons a + .st_sharethis_custom, .sharethis-buttons .flag-follow a + .st_sharethis_custom,
+.flag-follow-taxonomy .sharethis-buttons .st_sharethis_custom + a, .button + .tb-megamenu-big-button, .card__button a + .tb-megamenu-big-button, #edit-lr-social-login-links .lr_providericons.lr_linkedin + .tb-megamenu-big-button, #edit-lr-social-login-links .lr_providericons.lr_facebook + .tb-megamenu-big-button, #edit-lr-social-login-links .lr_providericons.lr_twitter + .tb-megamenu-big-button, #edit-lr-social-login-links .lr_providericons.lr_google + .tb-megamenu-big-button, .flag-abuse-node a + .tb-megamenu-big-button, .flag-favorite a + .tb-megamenu-big-button, .flag-follow a + .tb-megamenu-big-button,
+.flag-follow-taxonomy a + .tb-megamenu-big-button, .tb-megamenu-big-button + .tb-megamenu-big-button, .sharethis-buttons .st_sharethis_custom + .tb-megamenu-big-button, .sharethis-buttons .button + .st_sharethis_custom, .card__button .sharethis-buttons a + .st_sharethis_custom, .sharethis-buttons .card__button a + .st_sharethis_custom, #edit-lr-social-login-links .sharethis-buttons .lr_providericons.lr_linkedin + .st_sharethis_custom, .sharethis-buttons #edit-lr-social-login-links .lr_providericons.lr_linkedin + .st_sharethis_custom, #edit-lr-social-login-links .sharethis-buttons .lr_providericons.lr_facebook + .st_sharethis_custom, .sharethis-buttons #edit-lr-social-login-links .lr_providericons.lr_facebook + .st_sharethis_custom, #edit-lr-social-login-links .sharethis-buttons .lr_providericons.lr_twitter + .st_sharethis_custom, .sharethis-buttons #edit-lr-social-login-links .lr_providericons.lr_twitter + .st_sharethis_custom, #edit-lr-social-login-links .sharethis-buttons .lr_providericons.lr_google + .st_sharethis_custom, .sharethis-buttons #edit-lr-social-login-links .lr_providericons.lr_google + .st_sharethis_custom, .flag-abuse-node .sharethis-buttons a + .st_sharethis_custom, .sharethis-buttons .flag-abuse-node a + .st_sharethis_custom, .flag-favorite .sharethis-buttons a + .st_sharethis_custom, .sharethis-buttons .flag-favorite a + .st_sharethis_custom, .flag-follow .sharethis-buttons a + .st_sharethis_custom, .sharethis-buttons .flag-follow a + .st_sharethis_custom,
 .flag-follow-taxonomy .sharethis-buttons a + .st_sharethis_custom,
-.sharethis-buttons .flag-follow-taxonomy a + .st_sharethis_custom, .sharethis-buttons .st_sharethis_custom + .st_sharethis_custom {
+.sharethis-buttons .flag-follow-taxonomy a + .st_sharethis_custom, .sharethis-buttons .tb-megamenu-big-button + .st_sharethis_custom, .sharethis-buttons .st_sharethis_custom + .st_sharethis_custom {
   margin-left: 1em;
 }
 /* line 42, ../sass/partials/global/extendables/_button.scss */
 [dir="rtl"] .button + .button, [dir="rtl"] .card__button a + .button, .card__button [dir="rtl"] a + .button, [dir="rtl"] #edit-lr-social-login-links .lr_providericons.lr_linkedin + .button, #edit-lr-social-login-links [dir="rtl"] .lr_providericons.lr_linkedin + .button, [dir="rtl"] #edit-lr-social-login-links .lr_providericons.lr_facebook + .button, #edit-lr-social-login-links [dir="rtl"] .lr_providericons.lr_facebook + .button, [dir="rtl"] #edit-lr-social-login-links .lr_providericons.lr_twitter + .button, #edit-lr-social-login-links [dir="rtl"] .lr_providericons.lr_twitter + .button, [dir="rtl"] #edit-lr-social-login-links .lr_providericons.lr_google + .button, #edit-lr-social-login-links [dir="rtl"] .lr_providericons.lr_google + .button, [dir="rtl"] .flag-abuse-node a + .button, .flag-abuse-node [dir="rtl"] a + .button, [dir="rtl"] .flag-favorite a + .button, .flag-favorite [dir="rtl"] a + .button, [dir="rtl"] .flag-follow a + .button, .flag-follow [dir="rtl"] a + .button,
 [dir="rtl"] .flag-follow-taxonomy a + .button,
-.flag-follow-taxonomy [dir="rtl"] a + .button, [dir="rtl"] .sharethis-buttons .st_sharethis_custom + .button, .sharethis-buttons [dir="rtl"] .st_sharethis_custom + .button, [dir="rtl"] .card__button .button + a, .card__button [dir="rtl"] .button + a, [dir="rtl"] .card__button a + a, .card__button [dir="rtl"] a + a, [dir="rtl"] #edit-lr-social-login-links .card__button .lr_providericons.lr_linkedin + a, .card__button [dir="rtl"] #edit-lr-social-login-links .lr_providericons.lr_linkedin + a, #edit-lr-social-login-links [dir="rtl"] .card__button .lr_providericons.lr_linkedin + a, .card__button #edit-lr-social-login-links [dir="rtl"] .lr_providericons.lr_linkedin + a, [dir="rtl"] #edit-lr-social-login-links .card__button .lr_providericons.lr_facebook + a, .card__button [dir="rtl"] #edit-lr-social-login-links .lr_providericons.lr_facebook + a, #edit-lr-social-login-links [dir="rtl"] .card__button .lr_providericons.lr_facebook + a, .card__button #edit-lr-social-login-links [dir="rtl"] .lr_providericons.lr_facebook + a, [dir="rtl"] #edit-lr-social-login-links .card__button .lr_providericons.lr_twitter + a, .card__button [dir="rtl"] #edit-lr-social-login-links .lr_providericons.lr_twitter + a, #edit-lr-social-login-links [dir="rtl"] .card__button .lr_providericons.lr_twitter + a, .card__button #edit-lr-social-login-links [dir="rtl"] .lr_providericons.lr_twitter + a, [dir="rtl"] #edit-lr-social-login-links .card__button .lr_providericons.lr_google + a, .card__button [dir="rtl"] #edit-lr-social-login-links .lr_providericons.lr_google + a, #edit-lr-social-login-links [dir="rtl"] .card__button .lr_providericons.lr_google + a, .card__button #edit-lr-social-login-links [dir="rtl"] .lr_providericons.lr_google + a, [dir="rtl"] .flag-abuse-node .card__button a + a, .card__button [dir="rtl"] .flag-abuse-node a + a, .flag-abuse-node [dir="rtl"] .card__button a + a, .card__button .flag-abuse-node [dir="rtl"] a + a, [dir="rtl"] .flag-favorite .card__button a + a, .card__button [dir="rtl"] .flag-favorite a + a, .flag-favorite [dir="rtl"] .card__button a + a, .card__button .flag-favorite [dir="rtl"] a + a, [dir="rtl"] .flag-follow .card__button a + a, .card__button [dir="rtl"] .flag-follow a + a, .flag-follow [dir="rtl"] .card__button a + a, .card__button .flag-follow [dir="rtl"] a + a,
+.flag-follow-taxonomy [dir="rtl"] a + .button, [dir="rtl"] .tb-megamenu-big-button + .button, [dir="rtl"] .sharethis-buttons .st_sharethis_custom + .button, .sharethis-buttons [dir="rtl"] .st_sharethis_custom + .button, [dir="rtl"] .card__button .button + a, .card__button [dir="rtl"] .button + a, [dir="rtl"] .card__button a + a, .card__button [dir="rtl"] a + a, [dir="rtl"] #edit-lr-social-login-links .card__button .lr_providericons.lr_linkedin + a, .card__button [dir="rtl"] #edit-lr-social-login-links .lr_providericons.lr_linkedin + a, #edit-lr-social-login-links [dir="rtl"] .card__button .lr_providericons.lr_linkedin + a, .card__button #edit-lr-social-login-links [dir="rtl"] .lr_providericons.lr_linkedin + a, [dir="rtl"] #edit-lr-social-login-links .card__button .lr_providericons.lr_facebook + a, .card__button [dir="rtl"] #edit-lr-social-login-links .lr_providericons.lr_facebook + a, #edit-lr-social-login-links [dir="rtl"] .card__button .lr_providericons.lr_facebook + a, .card__button #edit-lr-social-login-links [dir="rtl"] .lr_providericons.lr_facebook + a, [dir="rtl"] #edit-lr-social-login-links .card__button .lr_providericons.lr_twitter + a, .card__button [dir="rtl"] #edit-lr-social-login-links .lr_providericons.lr_twitter + a, #edit-lr-social-login-links [dir="rtl"] .card__button .lr_providericons.lr_twitter + a, .card__button #edit-lr-social-login-links [dir="rtl"] .lr_providericons.lr_twitter + a, [dir="rtl"] #edit-lr-social-login-links .card__button .lr_providericons.lr_google + a, .card__button [dir="rtl"] #edit-lr-social-login-links .lr_providericons.lr_google + a, #edit-lr-social-login-links [dir="rtl"] .card__button .lr_providericons.lr_google + a, .card__button #edit-lr-social-login-links [dir="rtl"] .lr_providericons.lr_google + a, [dir="rtl"] .flag-abuse-node .card__button a + a, .card__button [dir="rtl"] .flag-abuse-node a + a, .flag-abuse-node [dir="rtl"] .card__button a + a, .card__button .flag-abuse-node [dir="rtl"] a + a, [dir="rtl"] .flag-favorite .card__button a + a, .card__button [dir="rtl"] .flag-favorite a + a, .flag-favorite [dir="rtl"] .card__button a + a, .card__button .flag-favorite [dir="rtl"] a + a, [dir="rtl"] .flag-follow .card__button a + a, .card__button [dir="rtl"] .flag-follow a + a, .flag-follow [dir="rtl"] .card__button a + a, .card__button .flag-follow [dir="rtl"] a + a,
 [dir="rtl"] .flag-follow-taxonomy .card__button a + a,
 .card__button [dir="rtl"] .flag-follow-taxonomy a + a,
 .flag-follow-taxonomy [dir="rtl"] .card__button a + a,
-.card__button .flag-follow-taxonomy [dir="rtl"] a + a, [dir="rtl"] .sharethis-buttons .card__button .st_sharethis_custom + a, .card__button [dir="rtl"] .sharethis-buttons .st_sharethis_custom + a, .sharethis-buttons [dir="rtl"] .card__button .st_sharethis_custom + a, .card__button .sharethis-buttons [dir="rtl"] .st_sharethis_custom + a, [dir="rtl"] #edit-lr-social-login-links .button + .lr_providericons.lr_linkedin, #edit-lr-social-login-links [dir="rtl"] .button + .lr_providericons.lr_linkedin, [dir="rtl"] .card__button #edit-lr-social-login-links a + .lr_providericons.lr_linkedin, #edit-lr-social-login-links [dir="rtl"] .card__button a + .lr_providericons.lr_linkedin, .card__button [dir="rtl"] #edit-lr-social-login-links a + .lr_providericons.lr_linkedin, #edit-lr-social-login-links .card__button [dir="rtl"] a + .lr_providericons.lr_linkedin, [dir="rtl"] #edit-lr-social-login-links .lr_providericons.lr_linkedin + .lr_providericons.lr_linkedin, #edit-lr-social-login-links [dir="rtl"] .lr_providericons.lr_linkedin + .lr_providericons.lr_linkedin, [dir="rtl"] #edit-lr-social-login-links .lr_providericons.lr_facebook + .lr_providericons.lr_linkedin, #edit-lr-social-login-links [dir="rtl"] .lr_providericons.lr_facebook + .lr_providericons.lr_linkedin, [dir="rtl"] #edit-lr-social-login-links .lr_providericons.lr_twitter + .lr_providericons.lr_linkedin, #edit-lr-social-login-links [dir="rtl"] .lr_providericons.lr_twitter + .lr_providericons.lr_linkedin, [dir="rtl"] #edit-lr-social-login-links .lr_providericons.lr_google + .lr_providericons.lr_linkedin, #edit-lr-social-login-links [dir="rtl"] .lr_providericons.lr_google + .lr_providericons.lr_linkedin, [dir="rtl"] .flag-abuse-node #edit-lr-social-login-links a + .lr_providericons.lr_linkedin, #edit-lr-social-login-links [dir="rtl"] .flag-abuse-node a + .lr_providericons.lr_linkedin, .flag-abuse-node [dir="rtl"] #edit-lr-social-login-links a + .lr_providericons.lr_linkedin, #edit-lr-social-login-links .flag-abuse-node [dir="rtl"] a + .lr_providericons.lr_linkedin, [dir="rtl"] .flag-favorite #edit-lr-social-login-links a + .lr_providericons.lr_linkedin, #edit-lr-social-login-links [dir="rtl"] .flag-favorite a + .lr_providericons.lr_linkedin, .flag-favorite [dir="rtl"] #edit-lr-social-login-links a + .lr_providericons.lr_linkedin, #edit-lr-social-login-links .flag-favorite [dir="rtl"] a + .lr_providericons.lr_linkedin, [dir="rtl"] .flag-follow #edit-lr-social-login-links a + .lr_providericons.lr_linkedin, #edit-lr-social-login-links [dir="rtl"] .flag-follow a + .lr_providericons.lr_linkedin, .flag-follow [dir="rtl"] #edit-lr-social-login-links a + .lr_providericons.lr_linkedin, #edit-lr-social-login-links .flag-follow [dir="rtl"] a + .lr_providericons.lr_linkedin,
+.card__button .flag-follow-taxonomy [dir="rtl"] a + a, [dir="rtl"] .card__button .tb-megamenu-big-button + a, .card__button [dir="rtl"] .tb-megamenu-big-button + a, [dir="rtl"] .sharethis-buttons .card__button .st_sharethis_custom + a, .card__button [dir="rtl"] .sharethis-buttons .st_sharethis_custom + a, .sharethis-buttons [dir="rtl"] .card__button .st_sharethis_custom + a, .card__button .sharethis-buttons [dir="rtl"] .st_sharethis_custom + a, [dir="rtl"] #edit-lr-social-login-links .button + .lr_providericons.lr_linkedin, #edit-lr-social-login-links [dir="rtl"] .button + .lr_providericons.lr_linkedin, [dir="rtl"] .card__button #edit-lr-social-login-links a + .lr_providericons.lr_linkedin, #edit-lr-social-login-links [dir="rtl"] .card__button a + .lr_providericons.lr_linkedin, .card__button [dir="rtl"] #edit-lr-social-login-links a + .lr_providericons.lr_linkedin, #edit-lr-social-login-links .card__button [dir="rtl"] a + .lr_providericons.lr_linkedin, [dir="rtl"] #edit-lr-social-login-links .lr_providericons.lr_linkedin + .lr_providericons.lr_linkedin, #edit-lr-social-login-links [dir="rtl"] .lr_providericons.lr_linkedin + .lr_providericons.lr_linkedin, [dir="rtl"] #edit-lr-social-login-links .lr_providericons.lr_facebook + .lr_providericons.lr_linkedin, #edit-lr-social-login-links [dir="rtl"] .lr_providericons.lr_facebook + .lr_providericons.lr_linkedin, [dir="rtl"] #edit-lr-social-login-links .lr_providericons.lr_twitter + .lr_providericons.lr_linkedin, #edit-lr-social-login-links [dir="rtl"] .lr_providericons.lr_twitter + .lr_providericons.lr_linkedin, [dir="rtl"] #edit-lr-social-login-links .lr_providericons.lr_google + .lr_providericons.lr_linkedin, #edit-lr-social-login-links [dir="rtl"] .lr_providericons.lr_google + .lr_providericons.lr_linkedin, [dir="rtl"] .flag-abuse-node #edit-lr-social-login-links a + .lr_providericons.lr_linkedin, #edit-lr-social-login-links [dir="rtl"] .flag-abuse-node a + .lr_providericons.lr_linkedin, .flag-abuse-node [dir="rtl"] #edit-lr-social-login-links a + .lr_providericons.lr_linkedin, #edit-lr-social-login-links .flag-abuse-node [dir="rtl"] a + .lr_providericons.lr_linkedin, [dir="rtl"] .flag-favorite #edit-lr-social-login-links a + .lr_providericons.lr_linkedin, #edit-lr-social-login-links [dir="rtl"] .flag-favorite a + .lr_providericons.lr_linkedin, .flag-favorite [dir="rtl"] #edit-lr-social-login-links a + .lr_providericons.lr_linkedin, #edit-lr-social-login-links .flag-favorite [dir="rtl"] a + .lr_providericons.lr_linkedin, [dir="rtl"] .flag-follow #edit-lr-social-login-links a + .lr_providericons.lr_linkedin, #edit-lr-social-login-links [dir="rtl"] .flag-follow a + .lr_providericons.lr_linkedin, .flag-follow [dir="rtl"] #edit-lr-social-login-links a + .lr_providericons.lr_linkedin, #edit-lr-social-login-links .flag-follow [dir="rtl"] a + .lr_providericons.lr_linkedin,
 [dir="rtl"] .flag-follow-taxonomy #edit-lr-social-login-links a + .lr_providericons.lr_linkedin,
 #edit-lr-social-login-links [dir="rtl"] .flag-follow-taxonomy a + .lr_providericons.lr_linkedin,
 .flag-follow-taxonomy [dir="rtl"] #edit-lr-social-login-links a + .lr_providericons.lr_linkedin,
-#edit-lr-social-login-links .flag-follow-taxonomy [dir="rtl"] a + .lr_providericons.lr_linkedin, [dir="rtl"] .sharethis-buttons #edit-lr-social-login-links .st_sharethis_custom + .lr_providericons.lr_linkedin, #edit-lr-social-login-links [dir="rtl"] .sharethis-buttons .st_sharethis_custom + .lr_providericons.lr_linkedin, .sharethis-buttons [dir="rtl"] #edit-lr-social-login-links .st_sharethis_custom + .lr_providericons.lr_linkedin, #edit-lr-social-login-links .sharethis-buttons [dir="rtl"] .st_sharethis_custom + .lr_providericons.lr_linkedin, [dir="rtl"] #edit-lr-social-login-links .button + .lr_providericons.lr_facebook, #edit-lr-social-login-links [dir="rtl"] .button + .lr_providericons.lr_facebook, [dir="rtl"] .card__button #edit-lr-social-login-links a + .lr_providericons.lr_facebook, #edit-lr-social-login-links [dir="rtl"] .card__button a + .lr_providericons.lr_facebook, .card__button [dir="rtl"] #edit-lr-social-login-links a + .lr_providericons.lr_facebook, #edit-lr-social-login-links .card__button [dir="rtl"] a + .lr_providericons.lr_facebook, [dir="rtl"] #edit-lr-social-login-links .lr_providericons.lr_linkedin + .lr_providericons.lr_facebook, #edit-lr-social-login-links [dir="rtl"] .lr_providericons.lr_linkedin + .lr_providericons.lr_facebook, [dir="rtl"] #edit-lr-social-login-links .lr_providericons.lr_facebook + .lr_providericons.lr_facebook, #edit-lr-social-login-links [dir="rtl"] .lr_providericons.lr_facebook + .lr_providericons.lr_facebook, [dir="rtl"] #edit-lr-social-login-links .lr_providericons.lr_twitter + .lr_providericons.lr_facebook, #edit-lr-social-login-links [dir="rtl"] .lr_providericons.lr_twitter + .lr_providericons.lr_facebook, [dir="rtl"] #edit-lr-social-login-links .lr_providericons.lr_google + .lr_providericons.lr_facebook, #edit-lr-social-login-links [dir="rtl"] .lr_providericons.lr_google + .lr_providericons.lr_facebook, [dir="rtl"] .flag-abuse-node #edit-lr-social-login-links a + .lr_providericons.lr_facebook, #edit-lr-social-login-links [dir="rtl"] .flag-abuse-node a + .lr_providericons.lr_facebook, .flag-abuse-node [dir="rtl"] #edit-lr-social-login-links a + .lr_providericons.lr_facebook, #edit-lr-social-login-links .flag-abuse-node [dir="rtl"] a + .lr_providericons.lr_facebook, [dir="rtl"] .flag-favorite #edit-lr-social-login-links a + .lr_providericons.lr_facebook, #edit-lr-social-login-links [dir="rtl"] .flag-favorite a + .lr_providericons.lr_facebook, .flag-favorite [dir="rtl"] #edit-lr-social-login-links a + .lr_providericons.lr_facebook, #edit-lr-social-login-links .flag-favorite [dir="rtl"] a + .lr_providericons.lr_facebook, [dir="rtl"] .flag-follow #edit-lr-social-login-links a + .lr_providericons.lr_facebook, #edit-lr-social-login-links [dir="rtl"] .flag-follow a + .lr_providericons.lr_facebook, .flag-follow [dir="rtl"] #edit-lr-social-login-links a + .lr_providericons.lr_facebook, #edit-lr-social-login-links .flag-follow [dir="rtl"] a + .lr_providericons.lr_facebook,
+#edit-lr-social-login-links .flag-follow-taxonomy [dir="rtl"] a + .lr_providericons.lr_linkedin, [dir="rtl"] #edit-lr-social-login-links .tb-megamenu-big-button + .lr_providericons.lr_linkedin, #edit-lr-social-login-links [dir="rtl"] .tb-megamenu-big-button + .lr_providericons.lr_linkedin, [dir="rtl"] .sharethis-buttons #edit-lr-social-login-links .st_sharethis_custom + .lr_providericons.lr_linkedin, #edit-lr-social-login-links [dir="rtl"] .sharethis-buttons .st_sharethis_custom + .lr_providericons.lr_linkedin, .sharethis-buttons [dir="rtl"] #edit-lr-social-login-links .st_sharethis_custom + .lr_providericons.lr_linkedin, #edit-lr-social-login-links .sharethis-buttons [dir="rtl"] .st_sharethis_custom + .lr_providericons.lr_linkedin, [dir="rtl"] #edit-lr-social-login-links .button + .lr_providericons.lr_facebook, #edit-lr-social-login-links [dir="rtl"] .button + .lr_providericons.lr_facebook, [dir="rtl"] .card__button #edit-lr-social-login-links a + .lr_providericons.lr_facebook, #edit-lr-social-login-links [dir="rtl"] .card__button a + .lr_providericons.lr_facebook, .card__button [dir="rtl"] #edit-lr-social-login-links a + .lr_providericons.lr_facebook, #edit-lr-social-login-links .card__button [dir="rtl"] a + .lr_providericons.lr_facebook, [dir="rtl"] #edit-lr-social-login-links .lr_providericons.lr_linkedin + .lr_providericons.lr_facebook, #edit-lr-social-login-links [dir="rtl"] .lr_providericons.lr_linkedin + .lr_providericons.lr_facebook, [dir="rtl"] #edit-lr-social-login-links .lr_providericons.lr_facebook + .lr_providericons.lr_facebook, #edit-lr-social-login-links [dir="rtl"] .lr_providericons.lr_facebook + .lr_providericons.lr_facebook, [dir="rtl"] #edit-lr-social-login-links .lr_providericons.lr_twitter + .lr_providericons.lr_facebook, #edit-lr-social-login-links [dir="rtl"] .lr_providericons.lr_twitter + .lr_providericons.lr_facebook, [dir="rtl"] #edit-lr-social-login-links .lr_providericons.lr_google + .lr_providericons.lr_facebook, #edit-lr-social-login-links [dir="rtl"] .lr_providericons.lr_google + .lr_providericons.lr_facebook, [dir="rtl"] .flag-abuse-node #edit-lr-social-login-links a + .lr_providericons.lr_facebook, #edit-lr-social-login-links [dir="rtl"] .flag-abuse-node a + .lr_providericons.lr_facebook, .flag-abuse-node [dir="rtl"] #edit-lr-social-login-links a + .lr_providericons.lr_facebook, #edit-lr-social-login-links .flag-abuse-node [dir="rtl"] a + .lr_providericons.lr_facebook, [dir="rtl"] .flag-favorite #edit-lr-social-login-links a + .lr_providericons.lr_facebook, #edit-lr-social-login-links [dir="rtl"] .flag-favorite a + .lr_providericons.lr_facebook, .flag-favorite [dir="rtl"] #edit-lr-social-login-links a + .lr_providericons.lr_facebook, #edit-lr-social-login-links .flag-favorite [dir="rtl"] a + .lr_providericons.lr_facebook, [dir="rtl"] .flag-follow #edit-lr-social-login-links a + .lr_providericons.lr_facebook, #edit-lr-social-login-links [dir="rtl"] .flag-follow a + .lr_providericons.lr_facebook, .flag-follow [dir="rtl"] #edit-lr-social-login-links a + .lr_providericons.lr_facebook, #edit-lr-social-login-links .flag-follow [dir="rtl"] a + .lr_providericons.lr_facebook,
 [dir="rtl"] .flag-follow-taxonomy #edit-lr-social-login-links a + .lr_providericons.lr_facebook,
 #edit-lr-social-login-links [dir="rtl"] .flag-follow-taxonomy a + .lr_providericons.lr_facebook,
 .flag-follow-taxonomy [dir="rtl"] #edit-lr-social-login-links a + .lr_providericons.lr_facebook,
-#edit-lr-social-login-links .flag-follow-taxonomy [dir="rtl"] a + .lr_providericons.lr_facebook, [dir="rtl"] .sharethis-buttons #edit-lr-social-login-links .st_sharethis_custom + .lr_providericons.lr_facebook, #edit-lr-social-login-links [dir="rtl"] .sharethis-buttons .st_sharethis_custom + .lr_providericons.lr_facebook, .sharethis-buttons [dir="rtl"] #edit-lr-social-login-links .st_sharethis_custom + .lr_providericons.lr_facebook, #edit-lr-social-login-links .sharethis-buttons [dir="rtl"] .st_sharethis_custom + .lr_providericons.lr_facebook, [dir="rtl"] #edit-lr-social-login-links .button + .lr_providericons.lr_twitter, #edit-lr-social-login-links [dir="rtl"] .button + .lr_providericons.lr_twitter, [dir="rtl"] .card__button #edit-lr-social-login-links a + .lr_providericons.lr_twitter, #edit-lr-social-login-links [dir="rtl"] .card__button a + .lr_providericons.lr_twitter, .card__button [dir="rtl"] #edit-lr-social-login-links a + .lr_providericons.lr_twitter, #edit-lr-social-login-links .card__button [dir="rtl"] a + .lr_providericons.lr_twitter, [dir="rtl"] #edit-lr-social-login-links .lr_providericons.lr_linkedin + .lr_providericons.lr_twitter, #edit-lr-social-login-links [dir="rtl"] .lr_providericons.lr_linkedin + .lr_providericons.lr_twitter, [dir="rtl"] #edit-lr-social-login-links .lr_providericons.lr_facebook + .lr_providericons.lr_twitter, #edit-lr-social-login-links [dir="rtl"] .lr_providericons.lr_facebook + .lr_providericons.lr_twitter, [dir="rtl"] #edit-lr-social-login-links .lr_providericons.lr_twitter + .lr_providericons.lr_twitter, #edit-lr-social-login-links [dir="rtl"] .lr_providericons.lr_twitter + .lr_providericons.lr_twitter, [dir="rtl"] #edit-lr-social-login-links .lr_providericons.lr_google + .lr_providericons.lr_twitter, #edit-lr-social-login-links [dir="rtl"] .lr_providericons.lr_google + .lr_providericons.lr_twitter, [dir="rtl"] .flag-abuse-node #edit-lr-social-login-links a + .lr_providericons.lr_twitter, #edit-lr-social-login-links [dir="rtl"] .flag-abuse-node a + .lr_providericons.lr_twitter, .flag-abuse-node [dir="rtl"] #edit-lr-social-login-links a + .lr_providericons.lr_twitter, #edit-lr-social-login-links .flag-abuse-node [dir="rtl"] a + .lr_providericons.lr_twitter, [dir="rtl"] .flag-favorite #edit-lr-social-login-links a + .lr_providericons.lr_twitter, #edit-lr-social-login-links [dir="rtl"] .flag-favorite a + .lr_providericons.lr_twitter, .flag-favorite [dir="rtl"] #edit-lr-social-login-links a + .lr_providericons.lr_twitter, #edit-lr-social-login-links .flag-favorite [dir="rtl"] a + .lr_providericons.lr_twitter, [dir="rtl"] .flag-follow #edit-lr-social-login-links a + .lr_providericons.lr_twitter, #edit-lr-social-login-links [dir="rtl"] .flag-follow a + .lr_providericons.lr_twitter, .flag-follow [dir="rtl"] #edit-lr-social-login-links a + .lr_providericons.lr_twitter, #edit-lr-social-login-links .flag-follow [dir="rtl"] a + .lr_providericons.lr_twitter,
+#edit-lr-social-login-links .flag-follow-taxonomy [dir="rtl"] a + .lr_providericons.lr_facebook, [dir="rtl"] #edit-lr-social-login-links .tb-megamenu-big-button + .lr_providericons.lr_facebook, #edit-lr-social-login-links [dir="rtl"] .tb-megamenu-big-button + .lr_providericons.lr_facebook, [dir="rtl"] .sharethis-buttons #edit-lr-social-login-links .st_sharethis_custom + .lr_providericons.lr_facebook, #edit-lr-social-login-links [dir="rtl"] .sharethis-buttons .st_sharethis_custom + .lr_providericons.lr_facebook, .sharethis-buttons [dir="rtl"] #edit-lr-social-login-links .st_sharethis_custom + .lr_providericons.lr_facebook, #edit-lr-social-login-links .sharethis-buttons [dir="rtl"] .st_sharethis_custom + .lr_providericons.lr_facebook, [dir="rtl"] #edit-lr-social-login-links .button + .lr_providericons.lr_twitter, #edit-lr-social-login-links [dir="rtl"] .button + .lr_providericons.lr_twitter, [dir="rtl"] .card__button #edit-lr-social-login-links a + .lr_providericons.lr_twitter, #edit-lr-social-login-links [dir="rtl"] .card__button a + .lr_providericons.lr_twitter, .card__button [dir="rtl"] #edit-lr-social-login-links a + .lr_providericons.lr_twitter, #edit-lr-social-login-links .card__button [dir="rtl"] a + .lr_providericons.lr_twitter, [dir="rtl"] #edit-lr-social-login-links .lr_providericons.lr_linkedin + .lr_providericons.lr_twitter, #edit-lr-social-login-links [dir="rtl"] .lr_providericons.lr_linkedin + .lr_providericons.lr_twitter, [dir="rtl"] #edit-lr-social-login-links .lr_providericons.lr_facebook + .lr_providericons.lr_twitter, #edit-lr-social-login-links [dir="rtl"] .lr_providericons.lr_facebook + .lr_providericons.lr_twitter, [dir="rtl"] #edit-lr-social-login-links .lr_providericons.lr_twitter + .lr_providericons.lr_twitter, #edit-lr-social-login-links [dir="rtl"] .lr_providericons.lr_twitter + .lr_providericons.lr_twitter, [dir="rtl"] #edit-lr-social-login-links .lr_providericons.lr_google + .lr_providericons.lr_twitter, #edit-lr-social-login-links [dir="rtl"] .lr_providericons.lr_google + .lr_providericons.lr_twitter, [dir="rtl"] .flag-abuse-node #edit-lr-social-login-links a + .lr_providericons.lr_twitter, #edit-lr-social-login-links [dir="rtl"] .flag-abuse-node a + .lr_providericons.lr_twitter, .flag-abuse-node [dir="rtl"] #edit-lr-social-login-links a + .lr_providericons.lr_twitter, #edit-lr-social-login-links .flag-abuse-node [dir="rtl"] a + .lr_providericons.lr_twitter, [dir="rtl"] .flag-favorite #edit-lr-social-login-links a + .lr_providericons.lr_twitter, #edit-lr-social-login-links [dir="rtl"] .flag-favorite a + .lr_providericons.lr_twitter, .flag-favorite [dir="rtl"] #edit-lr-social-login-links a + .lr_providericons.lr_twitter, #edit-lr-social-login-links .flag-favorite [dir="rtl"] a + .lr_providericons.lr_twitter, [dir="rtl"] .flag-follow #edit-lr-social-login-links a + .lr_providericons.lr_twitter, #edit-lr-social-login-links [dir="rtl"] .flag-follow a + .lr_providericons.lr_twitter, .flag-follow [dir="rtl"] #edit-lr-social-login-links a + .lr_providericons.lr_twitter, #edit-lr-social-login-links .flag-follow [dir="rtl"] a + .lr_providericons.lr_twitter,
 [dir="rtl"] .flag-follow-taxonomy #edit-lr-social-login-links a + .lr_providericons.lr_twitter,
 #edit-lr-social-login-links [dir="rtl"] .flag-follow-taxonomy a + .lr_providericons.lr_twitter,
 .flag-follow-taxonomy [dir="rtl"] #edit-lr-social-login-links a + .lr_providericons.lr_twitter,
-#edit-lr-social-login-links .flag-follow-taxonomy [dir="rtl"] a + .lr_providericons.lr_twitter, [dir="rtl"] .sharethis-buttons #edit-lr-social-login-links .st_sharethis_custom + .lr_providericons.lr_twitter, #edit-lr-social-login-links [dir="rtl"] .sharethis-buttons .st_sharethis_custom + .lr_providericons.lr_twitter, .sharethis-buttons [dir="rtl"] #edit-lr-social-login-links .st_sharethis_custom + .lr_providericons.lr_twitter, #edit-lr-social-login-links .sharethis-buttons [dir="rtl"] .st_sharethis_custom + .lr_providericons.lr_twitter, [dir="rtl"] #edit-lr-social-login-links .button + .lr_providericons.lr_google, #edit-lr-social-login-links [dir="rtl"] .button + .lr_providericons.lr_google, [dir="rtl"] .card__button #edit-lr-social-login-links a + .lr_providericons.lr_google, #edit-lr-social-login-links [dir="rtl"] .card__button a + .lr_providericons.lr_google, .card__button [dir="rtl"] #edit-lr-social-login-links a + .lr_providericons.lr_google, #edit-lr-social-login-links .card__button [dir="rtl"] a + .lr_providericons.lr_google, [dir="rtl"] #edit-lr-social-login-links .lr_providericons.lr_linkedin + .lr_providericons.lr_google, #edit-lr-social-login-links [dir="rtl"] .lr_providericons.lr_linkedin + .lr_providericons.lr_google, [dir="rtl"] #edit-lr-social-login-links .lr_providericons.lr_facebook + .lr_providericons.lr_google, #edit-lr-social-login-links [dir="rtl"] .lr_providericons.lr_facebook + .lr_providericons.lr_google, [dir="rtl"] #edit-lr-social-login-links .lr_providericons.lr_twitter + .lr_providericons.lr_google, #edit-lr-social-login-links [dir="rtl"] .lr_providericons.lr_twitter + .lr_providericons.lr_google, [dir="rtl"] #edit-lr-social-login-links .lr_providericons.lr_google + .lr_providericons.lr_google, #edit-lr-social-login-links [dir="rtl"] .lr_providericons.lr_google + .lr_providericons.lr_google, [dir="rtl"] .flag-abuse-node #edit-lr-social-login-links a + .lr_providericons.lr_google, #edit-lr-social-login-links [dir="rtl"] .flag-abuse-node a + .lr_providericons.lr_google, .flag-abuse-node [dir="rtl"] #edit-lr-social-login-links a + .lr_providericons.lr_google, #edit-lr-social-login-links .flag-abuse-node [dir="rtl"] a + .lr_providericons.lr_google, [dir="rtl"] .flag-favorite #edit-lr-social-login-links a + .lr_providericons.lr_google, #edit-lr-social-login-links [dir="rtl"] .flag-favorite a + .lr_providericons.lr_google, .flag-favorite [dir="rtl"] #edit-lr-social-login-links a + .lr_providericons.lr_google, #edit-lr-social-login-links .flag-favorite [dir="rtl"] a + .lr_providericons.lr_google, [dir="rtl"] .flag-follow #edit-lr-social-login-links a + .lr_providericons.lr_google, #edit-lr-social-login-links [dir="rtl"] .flag-follow a + .lr_providericons.lr_google, .flag-follow [dir="rtl"] #edit-lr-social-login-links a + .lr_providericons.lr_google, #edit-lr-social-login-links .flag-follow [dir="rtl"] a + .lr_providericons.lr_google,
+#edit-lr-social-login-links .flag-follow-taxonomy [dir="rtl"] a + .lr_providericons.lr_twitter, [dir="rtl"] #edit-lr-social-login-links .tb-megamenu-big-button + .lr_providericons.lr_twitter, #edit-lr-social-login-links [dir="rtl"] .tb-megamenu-big-button + .lr_providericons.lr_twitter, [dir="rtl"] .sharethis-buttons #edit-lr-social-login-links .st_sharethis_custom + .lr_providericons.lr_twitter, #edit-lr-social-login-links [dir="rtl"] .sharethis-buttons .st_sharethis_custom + .lr_providericons.lr_twitter, .sharethis-buttons [dir="rtl"] #edit-lr-social-login-links .st_sharethis_custom + .lr_providericons.lr_twitter, #edit-lr-social-login-links .sharethis-buttons [dir="rtl"] .st_sharethis_custom + .lr_providericons.lr_twitter, [dir="rtl"] #edit-lr-social-login-links .button + .lr_providericons.lr_google, #edit-lr-social-login-links [dir="rtl"] .button + .lr_providericons.lr_google, [dir="rtl"] .card__button #edit-lr-social-login-links a + .lr_providericons.lr_google, #edit-lr-social-login-links [dir="rtl"] .card__button a + .lr_providericons.lr_google, .card__button [dir="rtl"] #edit-lr-social-login-links a + .lr_providericons.lr_google, #edit-lr-social-login-links .card__button [dir="rtl"] a + .lr_providericons.lr_google, [dir="rtl"] #edit-lr-social-login-links .lr_providericons.lr_linkedin + .lr_providericons.lr_google, #edit-lr-social-login-links [dir="rtl"] .lr_providericons.lr_linkedin + .lr_providericons.lr_google, [dir="rtl"] #edit-lr-social-login-links .lr_providericons.lr_facebook + .lr_providericons.lr_google, #edit-lr-social-login-links [dir="rtl"] .lr_providericons.lr_facebook + .lr_providericons.lr_google, [dir="rtl"] #edit-lr-social-login-links .lr_providericons.lr_twitter + .lr_providericons.lr_google, #edit-lr-social-login-links [dir="rtl"] .lr_providericons.lr_twitter + .lr_providericons.lr_google, [dir="rtl"] #edit-lr-social-login-links .lr_providericons.lr_google + .lr_providericons.lr_google, #edit-lr-social-login-links [dir="rtl"] .lr_providericons.lr_google + .lr_providericons.lr_google, [dir="rtl"] .flag-abuse-node #edit-lr-social-login-links a + .lr_providericons.lr_google, #edit-lr-social-login-links [dir="rtl"] .flag-abuse-node a + .lr_providericons.lr_google, .flag-abuse-node [dir="rtl"] #edit-lr-social-login-links a + .lr_providericons.lr_google, #edit-lr-social-login-links .flag-abuse-node [dir="rtl"] a + .lr_providericons.lr_google, [dir="rtl"] .flag-favorite #edit-lr-social-login-links a + .lr_providericons.lr_google, #edit-lr-social-login-links [dir="rtl"] .flag-favorite a + .lr_providericons.lr_google, .flag-favorite [dir="rtl"] #edit-lr-social-login-links a + .lr_providericons.lr_google, #edit-lr-social-login-links .flag-favorite [dir="rtl"] a + .lr_providericons.lr_google, [dir="rtl"] .flag-follow #edit-lr-social-login-links a + .lr_providericons.lr_google, #edit-lr-social-login-links [dir="rtl"] .flag-follow a + .lr_providericons.lr_google, .flag-follow [dir="rtl"] #edit-lr-social-login-links a + .lr_providericons.lr_google, #edit-lr-social-login-links .flag-follow [dir="rtl"] a + .lr_providericons.lr_google,
 [dir="rtl"] .flag-follow-taxonomy #edit-lr-social-login-links a + .lr_providericons.lr_google,
 #edit-lr-social-login-links [dir="rtl"] .flag-follow-taxonomy a + .lr_providericons.lr_google,
 .flag-follow-taxonomy [dir="rtl"] #edit-lr-social-login-links a + .lr_providericons.lr_google,
-#edit-lr-social-login-links .flag-follow-taxonomy [dir="rtl"] a + .lr_providericons.lr_google, [dir="rtl"] .sharethis-buttons #edit-lr-social-login-links .st_sharethis_custom + .lr_providericons.lr_google, #edit-lr-social-login-links [dir="rtl"] .sharethis-buttons .st_sharethis_custom + .lr_providericons.lr_google, .sharethis-buttons [dir="rtl"] #edit-lr-social-login-links .st_sharethis_custom + .lr_providericons.lr_google, #edit-lr-social-login-links .sharethis-buttons [dir="rtl"] .st_sharethis_custom + .lr_providericons.lr_google, [dir="rtl"] .flag-abuse-node .button + a, .flag-abuse-node [dir="rtl"] .button + a, [dir="rtl"] .card__button .flag-abuse-node a + a, .flag-abuse-node [dir="rtl"] .card__button a + a, .card__button [dir="rtl"] .flag-abuse-node a + a, .flag-abuse-node .card__button [dir="rtl"] a + a, [dir="rtl"] #edit-lr-social-login-links .flag-abuse-node .lr_providericons.lr_linkedin + a, .flag-abuse-node [dir="rtl"] #edit-lr-social-login-links .lr_providericons.lr_linkedin + a, #edit-lr-social-login-links [dir="rtl"] .flag-abuse-node .lr_providericons.lr_linkedin + a, .flag-abuse-node #edit-lr-social-login-links [dir="rtl"] .lr_providericons.lr_linkedin + a, [dir="rtl"] #edit-lr-social-login-links .flag-abuse-node .lr_providericons.lr_facebook + a, .flag-abuse-node [dir="rtl"] #edit-lr-social-login-links .lr_providericons.lr_facebook + a, #edit-lr-social-login-links [dir="rtl"] .flag-abuse-node .lr_providericons.lr_facebook + a, .flag-abuse-node #edit-lr-social-login-links [dir="rtl"] .lr_providericons.lr_facebook + a, [dir="rtl"] #edit-lr-social-login-links .flag-abuse-node .lr_providericons.lr_twitter + a, .flag-abuse-node [dir="rtl"] #edit-lr-social-login-links .lr_providericons.lr_twitter + a, #edit-lr-social-login-links [dir="rtl"] .flag-abuse-node .lr_providericons.lr_twitter + a, .flag-abuse-node #edit-lr-social-login-links [dir="rtl"] .lr_providericons.lr_twitter + a, [dir="rtl"] #edit-lr-social-login-links .flag-abuse-node .lr_providericons.lr_google + a, .flag-abuse-node [dir="rtl"] #edit-lr-social-login-links .lr_providericons.lr_google + a, #edit-lr-social-login-links [dir="rtl"] .flag-abuse-node .lr_providericons.lr_google + a, .flag-abuse-node #edit-lr-social-login-links [dir="rtl"] .lr_providericons.lr_google + a, [dir="rtl"] .flag-abuse-node a + a, .flag-abuse-node [dir="rtl"] a + a, [dir="rtl"] .flag-favorite .flag-abuse-node a + a, .flag-abuse-node [dir="rtl"] .flag-favorite a + a, .flag-favorite [dir="rtl"] .flag-abuse-node a + a, .flag-abuse-node .flag-favorite [dir="rtl"] a + a, [dir="rtl"] .flag-follow .flag-abuse-node a + a, .flag-abuse-node [dir="rtl"] .flag-follow a + a, .flag-follow [dir="rtl"] .flag-abuse-node a + a, .flag-abuse-node .flag-follow [dir="rtl"] a + a,
+#edit-lr-social-login-links .flag-follow-taxonomy [dir="rtl"] a + .lr_providericons.lr_google, [dir="rtl"] #edit-lr-social-login-links .tb-megamenu-big-button + .lr_providericons.lr_google, #edit-lr-social-login-links [dir="rtl"] .tb-megamenu-big-button + .lr_providericons.lr_google, [dir="rtl"] .sharethis-buttons #edit-lr-social-login-links .st_sharethis_custom + .lr_providericons.lr_google, #edit-lr-social-login-links [dir="rtl"] .sharethis-buttons .st_sharethis_custom + .lr_providericons.lr_google, .sharethis-buttons [dir="rtl"] #edit-lr-social-login-links .st_sharethis_custom + .lr_providericons.lr_google, #edit-lr-social-login-links .sharethis-buttons [dir="rtl"] .st_sharethis_custom + .lr_providericons.lr_google, [dir="rtl"] .flag-abuse-node .button + a, .flag-abuse-node [dir="rtl"] .button + a, [dir="rtl"] .card__button .flag-abuse-node a + a, .flag-abuse-node [dir="rtl"] .card__button a + a, .card__button [dir="rtl"] .flag-abuse-node a + a, .flag-abuse-node .card__button [dir="rtl"] a + a, [dir="rtl"] #edit-lr-social-login-links .flag-abuse-node .lr_providericons.lr_linkedin + a, .flag-abuse-node [dir="rtl"] #edit-lr-social-login-links .lr_providericons.lr_linkedin + a, #edit-lr-social-login-links [dir="rtl"] .flag-abuse-node .lr_providericons.lr_linkedin + a, .flag-abuse-node #edit-lr-social-login-links [dir="rtl"] .lr_providericons.lr_linkedin + a, [dir="rtl"] #edit-lr-social-login-links .flag-abuse-node .lr_providericons.lr_facebook + a, .flag-abuse-node [dir="rtl"] #edit-lr-social-login-links .lr_providericons.lr_facebook + a, #edit-lr-social-login-links [dir="rtl"] .flag-abuse-node .lr_providericons.lr_facebook + a, .flag-abuse-node #edit-lr-social-login-links [dir="rtl"] .lr_providericons.lr_facebook + a, [dir="rtl"] #edit-lr-social-login-links .flag-abuse-node .lr_providericons.lr_twitter + a, .flag-abuse-node [dir="rtl"] #edit-lr-social-login-links .lr_providericons.lr_twitter + a, #edit-lr-social-login-links [dir="rtl"] .flag-abuse-node .lr_providericons.lr_twitter + a, .flag-abuse-node #edit-lr-social-login-links [dir="rtl"] .lr_providericons.lr_twitter + a, [dir="rtl"] #edit-lr-social-login-links .flag-abuse-node .lr_providericons.lr_google + a, .flag-abuse-node [dir="rtl"] #edit-lr-social-login-links .lr_providericons.lr_google + a, #edit-lr-social-login-links [dir="rtl"] .flag-abuse-node .lr_providericons.lr_google + a, .flag-abuse-node #edit-lr-social-login-links [dir="rtl"] .lr_providericons.lr_google + a, [dir="rtl"] .flag-abuse-node a + a, .flag-abuse-node [dir="rtl"] a + a, [dir="rtl"] .flag-favorite .flag-abuse-node a + a, .flag-abuse-node [dir="rtl"] .flag-favorite a + a, .flag-favorite [dir="rtl"] .flag-abuse-node a + a, .flag-abuse-node .flag-favorite [dir="rtl"] a + a, [dir="rtl"] .flag-follow .flag-abuse-node a + a, .flag-abuse-node [dir="rtl"] .flag-follow a + a, .flag-follow [dir="rtl"] .flag-abuse-node a + a, .flag-abuse-node .flag-follow [dir="rtl"] a + a,
 [dir="rtl"] .flag-follow-taxonomy .flag-abuse-node a + a,
 .flag-abuse-node [dir="rtl"] .flag-follow-taxonomy a + a,
 .flag-follow-taxonomy [dir="rtl"] .flag-abuse-node a + a,
-.flag-abuse-node .flag-follow-taxonomy [dir="rtl"] a + a, [dir="rtl"] .sharethis-buttons .flag-abuse-node .st_sharethis_custom + a, .flag-abuse-node [dir="rtl"] .sharethis-buttons .st_sharethis_custom + a, .sharethis-buttons [dir="rtl"] .flag-abuse-node .st_sharethis_custom + a, .flag-abuse-node .sharethis-buttons [dir="rtl"] .st_sharethis_custom + a, [dir="rtl"] .flag-favorite .button + a, .flag-favorite [dir="rtl"] .button + a, [dir="rtl"] .card__button .flag-favorite a + a, .flag-favorite [dir="rtl"] .card__button a + a, .card__button [dir="rtl"] .flag-favorite a + a, .flag-favorite .card__button [dir="rtl"] a + a, [dir="rtl"] #edit-lr-social-login-links .flag-favorite .lr_providericons.lr_linkedin + a, .flag-favorite [dir="rtl"] #edit-lr-social-login-links .lr_providericons.lr_linkedin + a, #edit-lr-social-login-links [dir="rtl"] .flag-favorite .lr_providericons.lr_linkedin + a, .flag-favorite #edit-lr-social-login-links [dir="rtl"] .lr_providericons.lr_linkedin + a, [dir="rtl"] #edit-lr-social-login-links .flag-favorite .lr_providericons.lr_facebook + a, .flag-favorite [dir="rtl"] #edit-lr-social-login-links .lr_providericons.lr_facebook + a, #edit-lr-social-login-links [dir="rtl"] .flag-favorite .lr_providericons.lr_facebook + a, .flag-favorite #edit-lr-social-login-links [dir="rtl"] .lr_providericons.lr_facebook + a, [dir="rtl"] #edit-lr-social-login-links .flag-favorite .lr_providericons.lr_twitter + a, .flag-favorite [dir="rtl"] #edit-lr-social-login-links .lr_providericons.lr_twitter + a, #edit-lr-social-login-links [dir="rtl"] .flag-favorite .lr_providericons.lr_twitter + a, .flag-favorite #edit-lr-social-login-links [dir="rtl"] .lr_providericons.lr_twitter + a, [dir="rtl"] #edit-lr-social-login-links .flag-favorite .lr_providericons.lr_google + a, .flag-favorite [dir="rtl"] #edit-lr-social-login-links .lr_providericons.lr_google + a, #edit-lr-social-login-links [dir="rtl"] .flag-favorite .lr_providericons.lr_google + a, .flag-favorite #edit-lr-social-login-links [dir="rtl"] .lr_providericons.lr_google + a, [dir="rtl"] .flag-abuse-node .flag-favorite a + a, .flag-favorite [dir="rtl"] .flag-abuse-node a + a, .flag-abuse-node [dir="rtl"] .flag-favorite a + a, .flag-favorite .flag-abuse-node [dir="rtl"] a + a, [dir="rtl"] .flag-favorite a + a, .flag-favorite [dir="rtl"] a + a, [dir="rtl"] .flag-follow .flag-favorite a + a, .flag-favorite [dir="rtl"] .flag-follow a + a, .flag-follow [dir="rtl"] .flag-favorite a + a, .flag-favorite .flag-follow [dir="rtl"] a + a,
+.flag-abuse-node .flag-follow-taxonomy [dir="rtl"] a + a, [dir="rtl"] .flag-abuse-node .tb-megamenu-big-button + a, .flag-abuse-node [dir="rtl"] .tb-megamenu-big-button + a, [dir="rtl"] .sharethis-buttons .flag-abuse-node .st_sharethis_custom + a, .flag-abuse-node [dir="rtl"] .sharethis-buttons .st_sharethis_custom + a, .sharethis-buttons [dir="rtl"] .flag-abuse-node .st_sharethis_custom + a, .flag-abuse-node .sharethis-buttons [dir="rtl"] .st_sharethis_custom + a, [dir="rtl"] .flag-favorite .button + a, .flag-favorite [dir="rtl"] .button + a, [dir="rtl"] .card__button .flag-favorite a + a, .flag-favorite [dir="rtl"] .card__button a + a, .card__button [dir="rtl"] .flag-favorite a + a, .flag-favorite .card__button [dir="rtl"] a + a, [dir="rtl"] #edit-lr-social-login-links .flag-favorite .lr_providericons.lr_linkedin + a, .flag-favorite [dir="rtl"] #edit-lr-social-login-links .lr_providericons.lr_linkedin + a, #edit-lr-social-login-links [dir="rtl"] .flag-favorite .lr_providericons.lr_linkedin + a, .flag-favorite #edit-lr-social-login-links [dir="rtl"] .lr_providericons.lr_linkedin + a, [dir="rtl"] #edit-lr-social-login-links .flag-favorite .lr_providericons.lr_facebook + a, .flag-favorite [dir="rtl"] #edit-lr-social-login-links .lr_providericons.lr_facebook + a, #edit-lr-social-login-links [dir="rtl"] .flag-favorite .lr_providericons.lr_facebook + a, .flag-favorite #edit-lr-social-login-links [dir="rtl"] .lr_providericons.lr_facebook + a, [dir="rtl"] #edit-lr-social-login-links .flag-favorite .lr_providericons.lr_twitter + a, .flag-favorite [dir="rtl"] #edit-lr-social-login-links .lr_providericons.lr_twitter + a, #edit-lr-social-login-links [dir="rtl"] .flag-favorite .lr_providericons.lr_twitter + a, .flag-favorite #edit-lr-social-login-links [dir="rtl"] .lr_providericons.lr_twitter + a, [dir="rtl"] #edit-lr-social-login-links .flag-favorite .lr_providericons.lr_google + a, .flag-favorite [dir="rtl"] #edit-lr-social-login-links .lr_providericons.lr_google + a, #edit-lr-social-login-links [dir="rtl"] .flag-favorite .lr_providericons.lr_google + a, .flag-favorite #edit-lr-social-login-links [dir="rtl"] .lr_providericons.lr_google + a, [dir="rtl"] .flag-abuse-node .flag-favorite a + a, .flag-favorite [dir="rtl"] .flag-abuse-node a + a, .flag-abuse-node [dir="rtl"] .flag-favorite a + a, .flag-favorite .flag-abuse-node [dir="rtl"] a + a, [dir="rtl"] .flag-favorite a + a, .flag-favorite [dir="rtl"] a + a, [dir="rtl"] .flag-follow .flag-favorite a + a, .flag-favorite [dir="rtl"] .flag-follow a + a, .flag-follow [dir="rtl"] .flag-favorite a + a, .flag-favorite .flag-follow [dir="rtl"] a + a,
 [dir="rtl"] .flag-follow-taxonomy .flag-favorite a + a,
 .flag-favorite [dir="rtl"] .flag-follow-taxonomy a + a,
 .flag-follow-taxonomy [dir="rtl"] .flag-favorite a + a,
-.flag-favorite .flag-follow-taxonomy [dir="rtl"] a + a, [dir="rtl"] .sharethis-buttons .flag-favorite .st_sharethis_custom + a, .flag-favorite [dir="rtl"] .sharethis-buttons .st_sharethis_custom + a, .sharethis-buttons [dir="rtl"] .flag-favorite .st_sharethis_custom + a, .flag-favorite .sharethis-buttons [dir="rtl"] .st_sharethis_custom + a, [dir="rtl"] .flag-follow .button + a, .flag-follow [dir="rtl"] .button + a, [dir="rtl"] .card__button .flag-follow a + a, .flag-follow [dir="rtl"] .card__button a + a, .card__button [dir="rtl"] .flag-follow a + a, .flag-follow .card__button [dir="rtl"] a + a, [dir="rtl"] #edit-lr-social-login-links .flag-follow .lr_providericons.lr_linkedin + a, .flag-follow [dir="rtl"] #edit-lr-social-login-links .lr_providericons.lr_linkedin + a, #edit-lr-social-login-links [dir="rtl"] .flag-follow .lr_providericons.lr_linkedin + a, .flag-follow #edit-lr-social-login-links [dir="rtl"] .lr_providericons.lr_linkedin + a, [dir="rtl"] #edit-lr-social-login-links .flag-follow .lr_providericons.lr_facebook + a, .flag-follow [dir="rtl"] #edit-lr-social-login-links .lr_providericons.lr_facebook + a, #edit-lr-social-login-links [dir="rtl"] .flag-follow .lr_providericons.lr_facebook + a, .flag-follow #edit-lr-social-login-links [dir="rtl"] .lr_providericons.lr_facebook + a, [dir="rtl"] #edit-lr-social-login-links .flag-follow .lr_providericons.lr_twitter + a, .flag-follow [dir="rtl"] #edit-lr-social-login-links .lr_providericons.lr_twitter + a, #edit-lr-social-login-links [dir="rtl"] .flag-follow .lr_providericons.lr_twitter + a, .flag-follow #edit-lr-social-login-links [dir="rtl"] .lr_providericons.lr_twitter + a, [dir="rtl"] #edit-lr-social-login-links .flag-follow .lr_providericons.lr_google + a, .flag-follow [dir="rtl"] #edit-lr-social-login-links .lr_providericons.lr_google + a, #edit-lr-social-login-links [dir="rtl"] .flag-follow .lr_providericons.lr_google + a, .flag-follow #edit-lr-social-login-links [dir="rtl"] .lr_providericons.lr_google + a, [dir="rtl"] .flag-abuse-node .flag-follow a + a, .flag-follow [dir="rtl"] .flag-abuse-node a + a, .flag-abuse-node [dir="rtl"] .flag-follow a + a, .flag-follow .flag-abuse-node [dir="rtl"] a + a, [dir="rtl"] .flag-favorite .flag-follow a + a, .flag-follow [dir="rtl"] .flag-favorite a + a, .flag-favorite [dir="rtl"] .flag-follow a + a, .flag-follow .flag-favorite [dir="rtl"] a + a, [dir="rtl"] .flag-follow a + a, .flag-follow [dir="rtl"] a + a,
+.flag-favorite .flag-follow-taxonomy [dir="rtl"] a + a, [dir="rtl"] .flag-favorite .tb-megamenu-big-button + a, .flag-favorite [dir="rtl"] .tb-megamenu-big-button + a, [dir="rtl"] .sharethis-buttons .flag-favorite .st_sharethis_custom + a, .flag-favorite [dir="rtl"] .sharethis-buttons .st_sharethis_custom + a, .sharethis-buttons [dir="rtl"] .flag-favorite .st_sharethis_custom + a, .flag-favorite .sharethis-buttons [dir="rtl"] .st_sharethis_custom + a, [dir="rtl"] .flag-follow .button + a, .flag-follow [dir="rtl"] .button + a, [dir="rtl"] .card__button .flag-follow a + a, .flag-follow [dir="rtl"] .card__button a + a, .card__button [dir="rtl"] .flag-follow a + a, .flag-follow .card__button [dir="rtl"] a + a, [dir="rtl"] #edit-lr-social-login-links .flag-follow .lr_providericons.lr_linkedin + a, .flag-follow [dir="rtl"] #edit-lr-social-login-links .lr_providericons.lr_linkedin + a, #edit-lr-social-login-links [dir="rtl"] .flag-follow .lr_providericons.lr_linkedin + a, .flag-follow #edit-lr-social-login-links [dir="rtl"] .lr_providericons.lr_linkedin + a, [dir="rtl"] #edit-lr-social-login-links .flag-follow .lr_providericons.lr_facebook + a, .flag-follow [dir="rtl"] #edit-lr-social-login-links .lr_providericons.lr_facebook + a, #edit-lr-social-login-links [dir="rtl"] .flag-follow .lr_providericons.lr_facebook + a, .flag-follow #edit-lr-social-login-links [dir="rtl"] .lr_providericons.lr_facebook + a, [dir="rtl"] #edit-lr-social-login-links .flag-follow .lr_providericons.lr_twitter + a, .flag-follow [dir="rtl"] #edit-lr-social-login-links .lr_providericons.lr_twitter + a, #edit-lr-social-login-links [dir="rtl"] .flag-follow .lr_providericons.lr_twitter + a, .flag-follow #edit-lr-social-login-links [dir="rtl"] .lr_providericons.lr_twitter + a, [dir="rtl"] #edit-lr-social-login-links .flag-follow .lr_providericons.lr_google + a, .flag-follow [dir="rtl"] #edit-lr-social-login-links .lr_providericons.lr_google + a, #edit-lr-social-login-links [dir="rtl"] .flag-follow .lr_providericons.lr_google + a, .flag-follow #edit-lr-social-login-links [dir="rtl"] .lr_providericons.lr_google + a, [dir="rtl"] .flag-abuse-node .flag-follow a + a, .flag-follow [dir="rtl"] .flag-abuse-node a + a, .flag-abuse-node [dir="rtl"] .flag-follow a + a, .flag-follow .flag-abuse-node [dir="rtl"] a + a, [dir="rtl"] .flag-favorite .flag-follow a + a, .flag-follow [dir="rtl"] .flag-favorite a + a, .flag-favorite [dir="rtl"] .flag-follow a + a, .flag-follow .flag-favorite [dir="rtl"] a + a, [dir="rtl"] .flag-follow a + a, .flag-follow [dir="rtl"] a + a,
 [dir="rtl"] .flag-follow-taxonomy .flag-follow a + a,
 .flag-follow [dir="rtl"] .flag-follow-taxonomy a + a,
 .flag-follow-taxonomy [dir="rtl"] .flag-follow a + a,
-.flag-follow .flag-follow-taxonomy [dir="rtl"] a + a, [dir="rtl"] .sharethis-buttons .flag-follow .st_sharethis_custom + a, .flag-follow [dir="rtl"] .sharethis-buttons .st_sharethis_custom + a, .sharethis-buttons [dir="rtl"] .flag-follow .st_sharethis_custom + a, .flag-follow .sharethis-buttons [dir="rtl"] .st_sharethis_custom + a,
+.flag-follow .flag-follow-taxonomy [dir="rtl"] a + a, [dir="rtl"] .flag-follow .tb-megamenu-big-button + a, .flag-follow [dir="rtl"] .tb-megamenu-big-button + a, [dir="rtl"] .sharethis-buttons .flag-follow .st_sharethis_custom + a, .flag-follow [dir="rtl"] .sharethis-buttons .st_sharethis_custom + a, .sharethis-buttons [dir="rtl"] .flag-follow .st_sharethis_custom + a, .flag-follow .sharethis-buttons [dir="rtl"] .st_sharethis_custom + a,
 [dir="rtl"] .flag-follow-taxonomy .button + a,
 .flag-follow-taxonomy [dir="rtl"] .button + a,
 [dir="rtl"] .card__button .flag-follow-taxonomy a + a,
@@ -179,14 +181,18 @@
 .flag-follow-taxonomy .flag-follow [dir="rtl"] a + a,
 [dir="rtl"] .flag-follow-taxonomy a + a,
 .flag-follow-taxonomy [dir="rtl"] a + a,
+[dir="rtl"] .flag-follow-taxonomy .tb-megamenu-big-button + a,
+.flag-follow-taxonomy [dir="rtl"] .tb-megamenu-big-button + a,
 [dir="rtl"] .sharethis-buttons .flag-follow-taxonomy .st_sharethis_custom + a,
 .flag-follow-taxonomy [dir="rtl"] .sharethis-buttons .st_sharethis_custom + a,
 .sharethis-buttons [dir="rtl"] .flag-follow-taxonomy .st_sharethis_custom + a,
-.flag-follow-taxonomy .sharethis-buttons [dir="rtl"] .st_sharethis_custom + a, [dir="rtl"] .sharethis-buttons .button + .st_sharethis_custom, .sharethis-buttons [dir="rtl"] .button + .st_sharethis_custom, [dir="rtl"] .card__button .sharethis-buttons a + .st_sharethis_custom, .sharethis-buttons [dir="rtl"] .card__button a + .st_sharethis_custom, .card__button [dir="rtl"] .sharethis-buttons a + .st_sharethis_custom, .sharethis-buttons .card__button [dir="rtl"] a + .st_sharethis_custom, [dir="rtl"] #edit-lr-social-login-links .sharethis-buttons .lr_providericons.lr_linkedin + .st_sharethis_custom, .sharethis-buttons [dir="rtl"] #edit-lr-social-login-links .lr_providericons.lr_linkedin + .st_sharethis_custom, #edit-lr-social-login-links [dir="rtl"] .sharethis-buttons .lr_providericons.lr_linkedin + .st_sharethis_custom, .sharethis-buttons #edit-lr-social-login-links [dir="rtl"] .lr_providericons.lr_linkedin + .st_sharethis_custom, [dir="rtl"] #edit-lr-social-login-links .sharethis-buttons .lr_providericons.lr_facebook + .st_sharethis_custom, .sharethis-buttons [dir="rtl"] #edit-lr-social-login-links .lr_providericons.lr_facebook + .st_sharethis_custom, #edit-lr-social-login-links [dir="rtl"] .sharethis-buttons .lr_providericons.lr_facebook + .st_sharethis_custom, .sharethis-buttons #edit-lr-social-login-links [dir="rtl"] .lr_providericons.lr_facebook + .st_sharethis_custom, [dir="rtl"] #edit-lr-social-login-links .sharethis-buttons .lr_providericons.lr_twitter + .st_sharethis_custom, .sharethis-buttons [dir="rtl"] #edit-lr-social-login-links .lr_providericons.lr_twitter + .st_sharethis_custom, #edit-lr-social-login-links [dir="rtl"] .sharethis-buttons .lr_providericons.lr_twitter + .st_sharethis_custom, .sharethis-buttons #edit-lr-social-login-links [dir="rtl"] .lr_providericons.lr_twitter + .st_sharethis_custom, [dir="rtl"] #edit-lr-social-login-links .sharethis-buttons .lr_providericons.lr_google + .st_sharethis_custom, .sharethis-buttons [dir="rtl"] #edit-lr-social-login-links .lr_providericons.lr_google + .st_sharethis_custom, #edit-lr-social-login-links [dir="rtl"] .sharethis-buttons .lr_providericons.lr_google + .st_sharethis_custom, .sharethis-buttons #edit-lr-social-login-links [dir="rtl"] .lr_providericons.lr_google + .st_sharethis_custom, [dir="rtl"] .flag-abuse-node .sharethis-buttons a + .st_sharethis_custom, .sharethis-buttons [dir="rtl"] .flag-abuse-node a + .st_sharethis_custom, .flag-abuse-node [dir="rtl"] .sharethis-buttons a + .st_sharethis_custom, .sharethis-buttons .flag-abuse-node [dir="rtl"] a + .st_sharethis_custom, [dir="rtl"] .flag-favorite .sharethis-buttons a + .st_sharethis_custom, .sharethis-buttons [dir="rtl"] .flag-favorite a + .st_sharethis_custom, .flag-favorite [dir="rtl"] .sharethis-buttons a + .st_sharethis_custom, .sharethis-buttons .flag-favorite [dir="rtl"] a + .st_sharethis_custom, [dir="rtl"] .flag-follow .sharethis-buttons a + .st_sharethis_custom, .sharethis-buttons [dir="rtl"] .flag-follow a + .st_sharethis_custom, .flag-follow [dir="rtl"] .sharethis-buttons a + .st_sharethis_custom, .sharethis-buttons .flag-follow [dir="rtl"] a + .st_sharethis_custom,
+.flag-follow-taxonomy .sharethis-buttons [dir="rtl"] .st_sharethis_custom + a, [dir="rtl"] .button + .tb-megamenu-big-button, [dir="rtl"] .card__button a + .tb-megamenu-big-button, .card__button [dir="rtl"] a + .tb-megamenu-big-button, [dir="rtl"] #edit-lr-social-login-links .lr_providericons.lr_linkedin + .tb-megamenu-big-button, #edit-lr-social-login-links [dir="rtl"] .lr_providericons.lr_linkedin + .tb-megamenu-big-button, [dir="rtl"] #edit-lr-social-login-links .lr_providericons.lr_facebook + .tb-megamenu-big-button, #edit-lr-social-login-links [dir="rtl"] .lr_providericons.lr_facebook + .tb-megamenu-big-button, [dir="rtl"] #edit-lr-social-login-links .lr_providericons.lr_twitter + .tb-megamenu-big-button, #edit-lr-social-login-links [dir="rtl"] .lr_providericons.lr_twitter + .tb-megamenu-big-button, [dir="rtl"] #edit-lr-social-login-links .lr_providericons.lr_google + .tb-megamenu-big-button, #edit-lr-social-login-links [dir="rtl"] .lr_providericons.lr_google + .tb-megamenu-big-button, [dir="rtl"] .flag-abuse-node a + .tb-megamenu-big-button, .flag-abuse-node [dir="rtl"] a + .tb-megamenu-big-button, [dir="rtl"] .flag-favorite a + .tb-megamenu-big-button, .flag-favorite [dir="rtl"] a + .tb-megamenu-big-button, [dir="rtl"] .flag-follow a + .tb-megamenu-big-button, .flag-follow [dir="rtl"] a + .tb-megamenu-big-button,
+[dir="rtl"] .flag-follow-taxonomy a + .tb-megamenu-big-button,
+.flag-follow-taxonomy [dir="rtl"] a + .tb-megamenu-big-button, [dir="rtl"] .tb-megamenu-big-button + .tb-megamenu-big-button, [dir="rtl"] .sharethis-buttons .st_sharethis_custom + .tb-megamenu-big-button, .sharethis-buttons [dir="rtl"] .st_sharethis_custom + .tb-megamenu-big-button, [dir="rtl"] .sharethis-buttons .button + .st_sharethis_custom, .sharethis-buttons [dir="rtl"] .button + .st_sharethis_custom, [dir="rtl"] .card__button .sharethis-buttons a + .st_sharethis_custom, .sharethis-buttons [dir="rtl"] .card__button a + .st_sharethis_custom, .card__button [dir="rtl"] .sharethis-buttons a + .st_sharethis_custom, .sharethis-buttons .card__button [dir="rtl"] a + .st_sharethis_custom, [dir="rtl"] #edit-lr-social-login-links .sharethis-buttons .lr_providericons.lr_linkedin + .st_sharethis_custom, .sharethis-buttons [dir="rtl"] #edit-lr-social-login-links .lr_providericons.lr_linkedin + .st_sharethis_custom, #edit-lr-social-login-links [dir="rtl"] .sharethis-buttons .lr_providericons.lr_linkedin + .st_sharethis_custom, .sharethis-buttons #edit-lr-social-login-links [dir="rtl"] .lr_providericons.lr_linkedin + .st_sharethis_custom, [dir="rtl"] #edit-lr-social-login-links .sharethis-buttons .lr_providericons.lr_facebook + .st_sharethis_custom, .sharethis-buttons [dir="rtl"] #edit-lr-social-login-links .lr_providericons.lr_facebook + .st_sharethis_custom, #edit-lr-social-login-links [dir="rtl"] .sharethis-buttons .lr_providericons.lr_facebook + .st_sharethis_custom, .sharethis-buttons #edit-lr-social-login-links [dir="rtl"] .lr_providericons.lr_facebook + .st_sharethis_custom, [dir="rtl"] #edit-lr-social-login-links .sharethis-buttons .lr_providericons.lr_twitter + .st_sharethis_custom, .sharethis-buttons [dir="rtl"] #edit-lr-social-login-links .lr_providericons.lr_twitter + .st_sharethis_custom, #edit-lr-social-login-links [dir="rtl"] .sharethis-buttons .lr_providericons.lr_twitter + .st_sharethis_custom, .sharethis-buttons #edit-lr-social-login-links [dir="rtl"] .lr_providericons.lr_twitter + .st_sharethis_custom, [dir="rtl"] #edit-lr-social-login-links .sharethis-buttons .lr_providericons.lr_google + .st_sharethis_custom, .sharethis-buttons [dir="rtl"] #edit-lr-social-login-links .lr_providericons.lr_google + .st_sharethis_custom, #edit-lr-social-login-links [dir="rtl"] .sharethis-buttons .lr_providericons.lr_google + .st_sharethis_custom, .sharethis-buttons #edit-lr-social-login-links [dir="rtl"] .lr_providericons.lr_google + .st_sharethis_custom, [dir="rtl"] .flag-abuse-node .sharethis-buttons a + .st_sharethis_custom, .sharethis-buttons [dir="rtl"] .flag-abuse-node a + .st_sharethis_custom, .flag-abuse-node [dir="rtl"] .sharethis-buttons a + .st_sharethis_custom, .sharethis-buttons .flag-abuse-node [dir="rtl"] a + .st_sharethis_custom, [dir="rtl"] .flag-favorite .sharethis-buttons a + .st_sharethis_custom, .sharethis-buttons [dir="rtl"] .flag-favorite a + .st_sharethis_custom, .flag-favorite [dir="rtl"] .sharethis-buttons a + .st_sharethis_custom, .sharethis-buttons .flag-favorite [dir="rtl"] a + .st_sharethis_custom, [dir="rtl"] .flag-follow .sharethis-buttons a + .st_sharethis_custom, .sharethis-buttons [dir="rtl"] .flag-follow a + .st_sharethis_custom, .flag-follow [dir="rtl"] .sharethis-buttons a + .st_sharethis_custom, .sharethis-buttons .flag-follow [dir="rtl"] a + .st_sharethis_custom,
 [dir="rtl"] .flag-follow-taxonomy .sharethis-buttons a + .st_sharethis_custom,
 .sharethis-buttons [dir="rtl"] .flag-follow-taxonomy a + .st_sharethis_custom,
 .flag-follow-taxonomy [dir="rtl"] .sharethis-buttons a + .st_sharethis_custom,
-.sharethis-buttons .flag-follow-taxonomy [dir="rtl"] a + .st_sharethis_custom, [dir="rtl"] .sharethis-buttons .st_sharethis_custom + .st_sharethis_custom, .sharethis-buttons [dir="rtl"] .st_sharethis_custom + .st_sharethis_custom {
+.sharethis-buttons .flag-follow-taxonomy [dir="rtl"] a + .st_sharethis_custom, [dir="rtl"] .sharethis-buttons .tb-megamenu-big-button + .st_sharethis_custom, .sharethis-buttons [dir="rtl"] .tb-megamenu-big-button + .st_sharethis_custom, [dir="rtl"] .sharethis-buttons .st_sharethis_custom + .st_sharethis_custom, .sharethis-buttons [dir="rtl"] .st_sharethis_custom + .st_sharethis_custom {
   margin-left: 0;
   margin-right: 1em;
 }
@@ -224,7 +230,7 @@
 
 /* line 72, ../sass/partials/global/extendables/_button.scss */
 .button--white, .pane--homepage-footer-callout .pane__content .pane__text .button, .pane--homepage-header .pane__content .button {
-  background: #fff;
+  background: #fff !important;
   border: 0;
   color: #dc5606 !important;
   margin-bottom: 0;
@@ -233,21 +239,22 @@
 }
 /* line 79, ../sass/partials/global/extendables/_button.scss */
 .button--white:hover, .pane--homepage-footer-callout .pane__content .pane__text .button:hover, .pane--homepage-header .pane__content .button:hover, .button--white:focus, .pane--homepage-footer-callout .pane__content .pane__text .button:focus, .pane--homepage-header .pane__content .button:focus {
+  color: #dc5606 !important;
   opacity: 1;
 }
 
-/* line 84, ../sass/partials/global/extendables/_button.scss */
+/* line 85, ../sass/partials/global/extendables/_button.scss */
 .button--orange {
   background: #ed7d3a;
   border-color: #ed7d3a;
 }
-/* line 87, ../sass/partials/global/extendables/_button.scss */
+/* line 88, ../sass/partials/global/extendables/_button.scss */
 .button--orange:hover, .button--orange:focus {
   background: #dc5606;
   border-color: #dc5606;
 }
 
-/* line 93, ../sass/partials/global/extendables/_button.scss */
+/* line 94, ../sass/partials/global/extendables/_button.scss */
 .sharethis-buttons .st_sharethis_custom, .flag-favorite a, .button--add, .button--member, .flag-follow a,
 .flag-follow-taxonomy a, .button--edit, .button--flag, .flag-abuse-node a {
   padding-left: 50px;
@@ -255,7 +262,7 @@
   position: relative;
   text-transform: uppercase;
 }
-/* line 98, ../sass/partials/global/extendables/_button.scss */
+/* line 99, ../sass/partials/global/extendables/_button.scss */
 .sharethis-buttons .st_sharethis_custom:before, .flag-favorite a:before, .button--add:before, .button--member:before, .flag-follow a:before,
 .flag-follow-taxonomy a:before, .button--edit:before, .button--flag:before, .flag-abuse-node a:before {
   height: 20px;
@@ -276,7 +283,7 @@
   width: 0;
 }
 
-/* line 110, ../sass/partials/global/extendables/_button.scss */
+/* line 111, ../sass/partials/global/extendables/_button.scss */
 .sharethis-buttons .st_sharethis_custom:before {
   background-image: url('../images/bg/icon-share-18-21-white.png');
   background-image: -webkit-linear-gradient(transparent, transparent), url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4NCjwhLS0gR2VuZXJhdGVkIGJ5IEljb01vb24uaW8gLS0+DQo8IURPQ1RZUEUgc3ZnIFBVQkxJQyAiLS8vVzNDLy9EVEQgU1ZHIDEuMS8vRU4iICJodHRwOi8vd3d3LnczLm9yZy9HcmFwaGljcy9TVkcvMS4xL0RURC9zdmcxMS5kdGQiPg0KPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHdpZHRoPSIxOCIgaGVpZ2h0PSIyMSIgdmlld0JveD0iMCAwIDE4IDIxIj4NCjxwYXRoIGZpbGw9IiNmZmZmZmYiIGQ9Ik0xNC45MjEgMTQuNTg5Yy0wLjg4NCAwLTEuNzY4IDAuNDQyLTIuMzIxIDAuOTk1bC02LjQxMS0zLjk3OWMwLjExMS0wLjMzMiAwLjIyMS0wLjc3NCAwLjIyMS0xLjEwNSAwLTAuNDQyLTAuMTExLTAuNzc0LTAuMjIxLTEuMjE2bDYuNTIxLTMuNzU4YzAuNTUzIDAuNTUzIDEuNDM3IDAuOTk1IDIuMzIxIDAuOTk1IDEuNzY4IDAgMy4yMDUtMS40MzcgMy4yMDUtMy4yMDVzLTEuNTQ3LTMuMzE2LTMuMzE2LTMuMzE2LTMuMjA1IDEuNDM3LTMuMjA1IDMuMjA1YzAgMC40NDIgMC4xMTEgMC43NzQgMC4yMjEgMS4yMTZsLTYuNDExIDMuNzU4Yy0wLjU1My0wLjY2My0xLjQzNy0wLjk5NS0yLjMyMS0wLjk5NS0xLjc2OCAwLTMuMjA1IDEuNDM3LTMuMjA1IDMuMjA1czEuNDM3IDMuMjA1IDMuMjA1IDMuMjA1YzAuODg0IDAgMS43NjgtMC4zMzIgMi4zMjEtMC45OTVsNi40MTEgMy45NzljLTAuMTExIDAuMzMyLTAuMjIxIDAuNjYzLTAuMjIxIDEuMTA1IDAgMS43NjggMS40MzcgMy4yMDUgMy4yMDUgMy4yMDVzMy4yMDUtMS40MzcgMy4yMDUtMy4yMDUtMS40MzctMy4wOTUtMy4yMDUtMy4wOTV6TTE0LjkyMSAxLjMyNmMxLjEwNSAwIDEuODc5IDAuODg0IDEuODc5IDEuODc5cy0wLjg4NCAxLjg3OS0xLjg3OSAxLjg3OS0xLjg3OS0wLjg4NC0xLjg3OS0xLjg3OSAwLjg4NC0xLjg3OSAxLjg3OS0xLjg3OXpNMy4yMDUgMTIuMzc5Yy0xLjEwNSAwLTEuODc5LTAuODg0LTEuODc5LTEuODc5czAuODg0LTEuOTg5IDEuODc5LTEuOTg5YzAuNjYzIDAgMS4yMTYgMC4zMzIgMS41NDcgMC43NzQgMCAwIDAgMCAwIDAuMTExIDAgMCAwIDAgMC4xMTEgMC4xMTEgMC4yMjEgMC4zMzIgMC4zMzIgMC42NjMgMC4zMzIgMC45OTVzLTAuMTExIDAuNzc0LTAuMzMyIDAuOTk1YzAgMCAwIDAgMCAwczAgMCAwIDBjLTAuMzMyIDAuNTUzLTAuOTk1IDAuODg0LTEuNjU4IDAuODg0ek0xNC45MjEgMTkuNjc0Yy0xLjEwNSAwLTEuODc5LTAuODg0LTEuODc5LTEuODc5IDAtMC4zMzIgMC4xMTEtMC42NjMgMC4yMjEtMC45OTUgMCAwIDAgMCAwIDBzMCAwIDAgMGMwLjMzMi0wLjU1MyAwLjk5NS0wLjg4NCAxLjY1OC0wLjg4NCAxLjEwNSAwIDEuODc5IDAuODg0IDEuODc5IDEuODc5IDAuMTExIDAuOTk1LTAuNzc0IDEuODc5LTEuODc5IDEuODc5eiI+PC9wYXRoPg0KPC9zdmc+DQo=');
@@ -285,7 +292,7 @@
   width: 18px;
 }
 
-/* line 119, ../sass/partials/global/extendables/_button.scss */
+/* line 120, ../sass/partials/global/extendables/_button.scss */
 .flag-favorite a:before {
   background-image: url('../images/bg/icon-favorite-19-18-white.png');
   background-image: -webkit-linear-gradient(transparent, transparent), url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4NCjwhLS0gR2VuZXJhdGVkIGJ5IEljb01vb24uaW8gLS0+DQo8IURPQ1RZUEUgc3ZnIFBVQkxJQyAiLS8vVzNDLy9EVEQgU1ZHIDEuMS8vRU4iICJodHRwOi8vd3d3LnczLm9yZy9HcmFwaGljcy9TVkcvMS4xL0RURC9zdmcxMS5kdGQiPg0KPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHdpZHRoPSIxOSIgaGVpZ2h0PSIxOCIgdmlld0JveD0iMCAwIDE5IDE4Ij4NCjxwYXRoIGZpbGw9IiNmZmZmZmYiIGQ9Ik05LjU4NiAxOGMtMC4xMDcgMC0wLjMyLTAuMTA3LTAuNDI2LTAuMjEzLTAuMzItMC4zMi03LjM0OS02LjkyMy04LjczNC0xMC43NTctMC4zMi0wLjUzMy0wLjQyNi0xLjI3OC0wLjQyNi0xLjkxNyAwLTIuODc2IDIuMzQzLTUuMTEyIDUuMTEyLTUuMTEyIDEuOTE3IDAgMy42MjEgMS4wNjUgNC40NzMgMi42NjMgMC44NTItMS41OTggMi41NTYtMi42NjMgNC40NzMtMi42NjMgMi44NzYgMCA1LjExMiAyLjIzNyA1LjExMiA1LjExMiAwIDAuNjM5LTAuMTA3IDEuMzg1LTAuNDI2IDIuMDI0LTEuMzg1IDMuODM0LTguNDE0IDEwLjQzOC04LjczNCAxMC43NTctMC4xMDcgMC0wLjMyIDAuMTA3LTAuNDI2IDAuMTA3ek01LjExMiAxLjI3OGMtMi4xMyAwLTMuODM0IDEuNzA0LTMuODM0IDMuODM0IDAgMC41MzMgMC4xMDcgMS4wNjUgMC4zMiAxLjQ5MSAxLjE3MiAzLjA4OSA2LjQ5NyA4LjQxNCA3Ljk4OCA5LjkwNSAxLjU5OC0xLjQ5MSA2LjkyMy02LjgxNyA3Ljk4OC05LjkwNSAwLjIxMy0wLjUzMyAwLjMyLTEuMDY1IDAuMzItMS40OTEgMC0yLjEzLTEuNzA0LTMuODM0LTMuODM0LTMuODM0LTIuMDI0IDAtMy44MzQgMS43MDQtMy44MzQgMy43MjggMCAwLjMyLTAuMzIgMC42MzktMC42MzkgMC42MzlzLTAuNjM5LTAuMzItMC42MzktMC42MzljMC0yLjAyNC0xLjgxMS0zLjcyOC0zLjgzNC0zLjcyOHoiPjwvcGF0aD4NCjwvc3ZnPg0K');
@@ -296,11 +303,11 @@
   top: 12px;
 }
 
-/* line 128, ../sass/partials/global/extendables/_button.scss */
+/* line 129, ../sass/partials/global/extendables/_button.scss */
 .button--add {
   padding-left: 40px;
 }
-/* line 131, ../sass/partials/global/extendables/_button.scss */
+/* line 132, ../sass/partials/global/extendables/_button.scss */
 .button--add:before {
   background-image: url('../images/bg/icon-plus-12-12-white.png');
   background-image: -webkit-linear-gradient(transparent, transparent), url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4NCjwhLS0gR2VuZXJhdGVkIGJ5IEljb01vb24uaW8gLS0+DQo8IURPQ1RZUEUgc3ZnIFBVQkxJQyAiLS8vVzNDLy9EVEQgU1ZHIDEuMS8vRU4iICJodHRwOi8vd3d3LnczLm9yZy9HcmFwaGljcy9TVkcvMS4xL0RURC9zdmcxMS5kdGQiPg0KPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHdpZHRoPSIxMiIgaGVpZ2h0PSIxMiIgdmlld0JveD0iMCAwIDEyIDEyIj4NCjxwYXRoIGZpbGw9IiNmZmZmZmYiIGQ9Ik0xMS40IDUuNGgtNC44di00LjhjMC0wLjMtMC4zLTAuNi0wLjYtMC42cy0wLjYgMC4zLTAuNiAwLjZ2NC45aC00LjhjLTAuMy0wLjEtMC42IDAuMi0wLjYgMC41czAuMyAwLjYgMC42IDAuNmg0Ljl2NC45Yy0wLjEgMC4yIDAuMiAwLjUgMC41IDAuNXMwLjYtMC4zIDAuNi0wLjZ2LTQuOGg0LjljMC4yIDAgMC41LTAuMyAwLjUtMC42cy0wLjMtMC42LTAuNi0wLjZ6Ij48L3BhdGg+DQo8L3N2Zz4NCg==');
@@ -310,12 +317,12 @@
   width: 12px;
 }
 
-/* line 139, ../sass/partials/global/extendables/_button.scss */
+/* line 140, ../sass/partials/global/extendables/_button.scss */
 .button--member, .flag-follow a,
 .flag-follow-taxonomy a {
   padding-left: 40px;
 }
-/* line 142, ../sass/partials/global/extendables/_button.scss */
+/* line 143, ../sass/partials/global/extendables/_button.scss */
 .button--member:before, .flag-follow a:before,
 .flag-follow-taxonomy a:before {
   background-image: url('../images/bg/icon-member-18-18-white.png');
@@ -326,11 +333,11 @@
   width: 18px;
 }
 
-/* line 150, ../sass/partials/global/extendables/_button.scss */
+/* line 151, ../sass/partials/global/extendables/_button.scss */
 .button--edit {
   padding-left: 40px;
 }
-/* line 153, ../sass/partials/global/extendables/_button.scss */
+/* line 154, ../sass/partials/global/extendables/_button.scss */
 .button--edit:before {
   background-image: url('../images/bg/icon-edit-22-22-white.png');
   background-image: -webkit-linear-gradient(transparent, transparent), url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4NCjwhLS0gR2VuZXJhdGVkIGJ5IEljb01vb24uaW8gLS0+DQo8IURPQ1RZUEUgc3ZnIFBVQkxJQyAiLS8vVzNDLy9EVEQgU1ZHIDEuMS8vRU4iICJodHRwOi8vd3d3LnczLm9yZy9HcmFwaGljcy9TVkcvMS4xL0RURC9zdmcxMS5kdGQiPg0KPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHdpZHRoPSIyMiIgaGVpZ2h0PSIyMiIgdmlld0JveD0iMCAwIDIyIDIyIj4NCjxwYXRoIGZpbGw9IiNmZmZmZmYiIGQ9Ik03LjM0MyAxMi41MTdsLTEuNTE5IDMuODk4IDMuODMxLTEuNTg2LTIuMzEyLTIuMzEyek0xOC40NjMgNC4xOTJsLTAuNDg2LTAuNDg2Yy0wLjUzNi0wLjUzNy0xLjQwNy0wLjUzNy0xLjk0NCAwbC0wLjk3MiAwLjk3MiAyLjQzIDIuNDMxIDAuOTcyLTAuOTcyYzAuNTM4LTAuNTM3IDAuNTM4LTEuNDA4IDAtMS45NDV6TTcuNDIgMTIuMzE5bDAuMzQ4LTAuMzQ4IDIuNDMgMi40MyA2LjgwNi02LjgwNi0yLjQzLTIuNDMgMC40ODYtMC40ODctNy42NCA3LjY0MXpNMTUuODE1IDE3Ljg3OGwtMTEuNzA1IDAuMDA0IDAuMDAyLTExLjcwNSA4LjE5Ni0wLjAwMyAxLjI4NC0xLjM2MWgtMTAuMTc4Yy0wLjM3OSAwLTAuNjg4IDAuMzA3LTAuNjg4IDAuNjg4djEzLjA2M2MwIDAuMzggMC4zMDggMC42ODggMC42ODggMC42ODhoMTMuMDYzYzAuMzggMCAwLjY4OC0wLjMwNyAwLjY4OC0wLjY4OHYtOS42NjVsLTEuMzg1IDEuMzU5IDAuMDM3IDcuNjIxeiI+PC9wYXRoPg0KPC9zdmc+DQo=');
@@ -340,14 +347,14 @@
   width: 22px;
 }
 
-/* line 161, ../sass/partials/global/extendables/_button.scss */
+/* line 162, ../sass/partials/global/extendables/_button.scss */
 .button--flag, .flag-abuse-node a {
   background-color: #fff;
   border: 1px solid #565a5c;
   color: #565a5c !important;
   padding-left: 55px;
 }
-/* line 167, ../sass/partials/global/extendables/_button.scss */
+/* line 168, ../sass/partials/global/extendables/_button.scss */
 .button--flag:before, .flag-abuse-node a:before {
   background-image: url('../images/bg/icon-flag-19-20.png');
   background-image: -webkit-linear-gradient(transparent, transparent), url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4NCjwhLS0gR2VuZXJhdGVkIGJ5IEljb01vb24uaW8gLS0+DQo8IURPQ1RZUEUgc3ZnIFBVQkxJQyAiLS8vVzNDLy9EVEQgU1ZHIDEuMS8vRU4iICJodHRwOi8vd3d3LnczLm9yZy9HcmFwaGljcy9TVkcvMS4xL0RURC9zdmcxMS5kdGQiPg0KPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHdpZHRoPSIxOSIgaGVpZ2h0PSIyMCIgdmlld0JveD0iMCAwIDE5IDIwIj4NCjxwYXRoIGZpbGw9IiMwMDAwMDAiIGQ9Ik0xOC4zODIgMTAuMjg5bC0zLjkzMS00LjUwOSAzLjkzMS00LjUwOWMwLjIzMS0wLjIzMSAwLjIzMS0wLjQ2MiAwLjExNi0wLjgwOS0wLjExNi0wLjIzMS0wLjM0Ny0wLjQ2Mi0wLjY5NC0wLjQ2MiAwIDAtMTUuNzIzIDAtMTUuNzIzIDAtMC4zNDcgMC0wLjY5NCAwLjM0Ny0wLjY5NCAwLjY5NHYxNy45MTloLTAuNjk0Yy0wLjM0NyAwLTAuNjk0IDAuMzQ3LTAuNjk0IDAuNjk0czAuMzQ3IDAuNjk0IDAuNjk0IDAuNjk0aDIuODljMC4zNDcgMCAwLjY5NC0wLjM0NyAwLjY5NC0wLjY5NHMtMC4zNDctMC42OTQtMC42OTQtMC42OTRoLTAuNjk0di03LjE2OGgxNS4wMjljMC4yMzEgMCAwLjU3OC0wLjExNiAwLjY5NC0wLjQ2MiAwLTAuMjMxIDAtMC40NjItMC4yMzEtMC42OTR6TTIuODkgMTAuMDU4di04LjU1NWgxMy40MWwtMy4yMzcgMy44MTVjLTAuMjMxIDAuMjMxLTAuMjMxIDAuNjk0IDAgMC45MjVsMy4yMzcgMy44MTVoLTEzLjQxeiI+PC9wYXRoPg0KPC9zdmc+DQo=');
@@ -358,13 +365,13 @@
   top: 9px;
   width: 19px;
 }
-/* line 175, ../sass/partials/global/extendables/_button.scss */
+/* line 176, ../sass/partials/global/extendables/_button.scss */
 .button--flag:hover, .flag-abuse-node a:hover, .button--flag:focus, .flag-abuse-node a:focus {
   background-color: #f1f1f1;
   border-color: #000;
   color: #000 !important;
 }
-/* line 179, ../sass/partials/global/extendables/_button.scss */
+/* line 180, ../sass/partials/global/extendables/_button.scss */
 .button--flag:hover:before, .flag-abuse-node a:hover:before, .button--flag:focus:before, .flag-abuse-node a:focus:before {
   opacity: 0.9;
 }
@@ -3942,51 +3949,52 @@ header.header {
 .block--tb-megamenu-main-menu .tb-megamenu-main-menu .tb-megamenu-nav > .tb-megamenu-item .tb-megamenu-submenu .view .view__header a, .block--tb-megamenu-main-menu .tb-megamenu-main-menu .tb-megamenu-nav > .tb-megamenu-item .tb-megamenu-submenu .view .view__header h2 {
   border-bottom: 1px solid #cecfcb;
   color: #dc5606;
-  margin: 0 0 0.5em 0;
-  padding: 0 0 0.5em 0;
+  margin: 0 0 0.25em 0;
+  padding: 0 0 0.25em 0;
 }
 /* line 192, ../sass/partials/components/nav/_block--tb-megamenu-main-menu.scss */
 .block--tb-megamenu-main-menu .tb-megamenu-main-menu .tb-megamenu-nav > .tb-megamenu-item .tb-megamenu-submenu .view .item-list ul .views-row {
+  line-height: 1.3;
   margin: 0;
-  padding: 0.5em 0 0.5em 0;
+  padding: 0.25em 0;
 }
-/* line 195, ../sass/partials/components/nav/_block--tb-megamenu-main-menu.scss */
+/* line 196, ../sass/partials/components/nav/_block--tb-megamenu-main-menu.scss */
 .block--tb-megamenu-main-menu .tb-megamenu-main-menu .tb-megamenu-nav > .tb-megamenu-item .tb-megamenu-submenu .view .item-list ul .views-row a {
   padding: 0;
   white-space: normal;
 }
-/* line 203, ../sass/partials/components/nav/_block--tb-megamenu-main-menu.scss */
+/* line 204, ../sass/partials/components/nav/_block--tb-megamenu-main-menu.scss */
 .block--tb-megamenu-main-menu .tb-megamenu-main-menu .tb-megamenu-nav > .tb-megamenu-item .tb-megamenu-submenu .view .view__footer {
-  padding: 0.5em 0 1em 0;
+  padding: 0.5em 0;
 }
-/* line 205, ../sass/partials/components/nav/_block--tb-megamenu-main-menu.scss */
+/* line 206, ../sass/partials/components/nav/_block--tb-megamenu-main-menu.scss */
 .block--tb-megamenu-main-menu .tb-megamenu-main-menu .tb-megamenu-nav > .tb-megamenu-item .tb-megamenu-submenu .view .view__footer p {
   margin: 0;
 }
-/* line 208, ../sass/partials/components/nav/_block--tb-megamenu-main-menu.scss */
+/* line 209, ../sass/partials/components/nav/_block--tb-megamenu-main-menu.scss */
 .block--tb-megamenu-main-menu .tb-megamenu-main-menu .tb-megamenu-nav > .tb-megamenu-item .tb-megamenu-submenu .view .view__footer a {
   color: #dc5606;
   display: block;
   padding: 0 0 1em 0;
   text-decoration: underline;
 }
-/* line 213, ../sass/partials/components/nav/_block--tb-megamenu-main-menu.scss */
+/* line 214, ../sass/partials/components/nav/_block--tb-megamenu-main-menu.scss */
 .block--tb-megamenu-main-menu .tb-megamenu-main-menu .tb-megamenu-nav > .tb-megamenu-item .tb-megamenu-submenu .view .view__footer a:hover, .block--tb-megamenu-main-menu .tb-megamenu-main-menu .tb-megamenu-nav > .tb-megamenu-item .tb-megamenu-submenu .view .view__footer a:focus {
   color: #aa4305;
 }
-/* line 217, ../sass/partials/components/nav/_block--tb-megamenu-main-menu.scss */
+/* line 218, ../sass/partials/components/nav/_block--tb-megamenu-main-menu.scss */
 .block--tb-megamenu-main-menu .tb-megamenu-main-menu .tb-megamenu-nav > .tb-megamenu-item .tb-megamenu-submenu .view .view__footer .add-new {
   color: #999;
   font-size: 0.8125em;
-  padding-top: 0.5em;
+  padding-top: 0.25em;
   text-decoration: none;
 }
-/* line 222, ../sass/partials/components/nav/_block--tb-megamenu-main-menu.scss */
+/* line 223, ../sass/partials/components/nav/_block--tb-megamenu-main-menu.scss */
 .block--tb-megamenu-main-menu .tb-megamenu-main-menu .tb-megamenu-nav > .tb-megamenu-item .tb-megamenu-submenu .view .view__footer .add-new:hover, .block--tb-megamenu-main-menu .tb-megamenu-main-menu .tb-megamenu-nav > .tb-megamenu-item .tb-megamenu-submenu .view .view__footer .add-new:focus {
   color: #333;
   text-decoration: underline;
 }
-/* line 232, ../sass/partials/components/nav/_block--tb-megamenu-main-menu.scss */
+/* line 233, ../sass/partials/components/nav/_block--tb-megamenu-main-menu.scss */
 .block--tb-megamenu-main-menu .tb-megamenu-main-menu .tb-megamenu-nav > .tb-megamenu-item .tb-megamenu-submenu .span12 .view .item-list ul,
 .block--tb-megamenu-main-menu .tb-megamenu-main-menu .tb-megamenu-nav > .tb-megamenu-item .tb-megamenu-submenu .span .view .item-list ul {
   -moz-column-count: 3;
@@ -3996,7 +4004,7 @@ header.header {
   -webkit-column-gap: 1em;
   column-gap: 1em;
 }
-/* line 235, ../sass/partials/components/nav/_block--tb-megamenu-main-menu.scss */
+/* line 236, ../sass/partials/components/nav/_block--tb-megamenu-main-menu.scss */
 .block--tb-megamenu-main-menu .tb-megamenu-main-menu .tb-megamenu-nav > .tb-megamenu-item .tb-megamenu-submenu .span12 .view .item-list ul li,
 .block--tb-megamenu-main-menu .tb-megamenu-main-menu .tb-megamenu-nav > .tb-megamenu-item .tb-megamenu-submenu .span .view .item-list ul li {
   -moz-page-break-inside: avoid;
@@ -4006,7 +4014,7 @@ header.header {
   width: 100%;
   break-inside: avoid-column;
 }
-/* line 247, ../sass/partials/components/nav/_block--tb-megamenu-main-menu.scss */
+/* line 248, ../sass/partials/components/nav/_block--tb-megamenu-main-menu.scss */
 .block--tb-megamenu-main-menu .tb-megamenu-main-menu .tb-megamenu-nav > .tb-megamenu-item .tb-megamenu-submenu .has-icon-discussions .view__header a:before, .block--tb-megamenu-main-menu .tb-megamenu-main-menu .tb-megamenu-nav > .tb-megamenu-item .tb-megamenu-submenu .has-icon-discussions .view__header h2:before {
   background-image: url('../images/bg/icon-discussions-26-20-orange.png');
   background-image: -webkit-linear-gradient(transparent, transparent), url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4NCjwhLS0gR2VuZXJhdGVkIGJ5IEljb01vb24uaW8gLS0+DQo8IURPQ1RZUEUgc3ZnIFBVQkxJQyAiLS8vVzNDLy9EVEQgU1ZHIDEuMS8vRU4iICJodHRwOi8vd3d3LnczLm9yZy9HcmFwaGljcy9TVkcvMS4xL0RURC9zdmcxMS5kdGQiPg0KPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHdpZHRoPSIyNiIgaGVpZ2h0PSIyMCIgdmlld0JveD0iMCAwIDI2IDIwIj4NCjxwYXRoIGZpbGw9IiNkYzU2MDYiIGQ9Ik0yMS40MTIgMjBjLTAuMjM1IDAtMC4zNTMtMC4xMTgtMC40NzEtMC4yMzVsLTEuNzY1LTEuNzY1aC04LjcwNmMtMC4zNTMgMC0wLjcwNi0wLjM1My0wLjcwNi0wLjcwNnYtMi41ODhoMS40MTJ2MS44ODJoOC4yMzVjMC4yMzUgMCAwLjM1MyAwLjExOCAwLjQ3MSAwLjIzNWwwLjgyNCAwLjgyNHYtMC4zNTNjMC0wLjM1MyAwLjM1My0wLjcwNiAwLjcwNi0wLjcwNmgzLjA1OXYtOC43MDZoLTR2LTEuNDEyaDQuNzA2YzAuMzUzIDAgMC43MDYgMC4zNTMgMC43MDYgMC43MDZ2MTAuMTE4YzAgMC4zNTMtMC4zNTMgMC43MDYtMC43MDYgMC43MDZoLTMuMDU5djEuMjk0YzAgMC4yMzUtMC4xMTggMC41ODgtMC40NzEgMC41ODgtMC4xMTggMC4xMTgtMC4xMTggMC4xMTgtMC4yMzUgMC4xMTh6Ij48L3BhdGg+DQo8cGF0aCBmaWxsPSIjZGM1NjA2IiBkPSJNMy41MjkgMTYuMTE4Yy0wLjExOCAwLTAuMjM1IDAtMC4yMzUgMC0wLjIzNS0wLjExOC0wLjQ3MS0wLjM1My0wLjQ3MS0wLjU4OHYtMS43NjVoLTIuMTE4Yy0wLjM1My0wLjExOC0wLjcwNi0wLjM1My0wLjcwNi0wLjgyNHYtMTIuMjM1YzAtMC4zNTMgMC4zNTMtMC43MDYgMC43MDYtMC43MDZoMTcuODgyYzAuMzUzIDAgMC43MDYgMC4zNTMgMC43MDYgMC43MDZ2MTIuMjM1YzAgMC4zNTMtMC4zNTMgMC43MDYtMC43MDYgMC43MDZoLTEyLjM1M2wtMi4yMzUgMi4yMzVjLTAuMTE4IDAuMTE4LTAuMzUzIDAuMjM1LTAuNDcxIDAuMjM1ek0xLjQxMiAxMi4zNTNoMi4xMThjMC4zNTMgMCAwLjcwNiAwLjM1MyAwLjcwNiAwLjcwNnYwLjcwNmwxLjE3Ni0xLjE3NmMwLjExOC0wLjExOCAwLjM1My0wLjIzNSAwLjQ3MS0wLjIzNWgxMnYtMTAuOTQxaC0xNi40NzF2MTAuOTQxeiI+PC9wYXRoPg0KPC9zdmc+DQo=');
@@ -4015,7 +4023,7 @@ header.header {
   height: 20px;
   width: 26px;
 }
-/* line 259, ../sass/partials/components/nav/_block--tb-megamenu-main-menu.scss */
+/* line 260, ../sass/partials/components/nav/_block--tb-megamenu-main-menu.scss */
 .block--tb-megamenu-main-menu .tb-megamenu-main-menu .tb-megamenu-nav > .tb-megamenu-item .tb-megamenu-submenu .has-icon-sectors .view__header a:before, .block--tb-megamenu-main-menu .tb-megamenu-main-menu .tb-megamenu-nav > .tb-megamenu-item .tb-megamenu-submenu .has-icon-sectors .view__header h2:before {
   background-image: url('../images/bg/icon-sectors-20-20-orange.png');
   background-image: -webkit-linear-gradient(transparent, transparent), url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4NCjwhLS0gR2VuZXJhdGVkIGJ5IEljb01vb24uaW8gLS0+DQo8IURPQ1RZUEUgc3ZnIFBVQkxJQyAiLS8vVzNDLy9EVEQgU1ZHIDEuMS8vRU4iICJodHRwOi8vd3d3LnczLm9yZy9HcmFwaGljcy9TVkcvMS4xL0RURC9zdmcxMS5kdGQiPg0KPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHdpZHRoPSIyMCIgaGVpZ2h0PSIyMCIgdmlld0JveD0iMCAwIDIwIDIwIj4NCjxwYXRoIGZpbGw9IiNkYzU2MDYiIGQ9Ik05LjMzMyAxMS4yMzhjLTAuMTkgMC0wLjI4Ni0wLjA5NS0wLjM4MS0wLjE5LTAuMTktMC4xOS0wLjE5LTAuNDc2LTAuMDk1LTAuNjY3bDUuNzE0LTEwLjA5NWMwLTAuMTkgMC4xOS0wLjI4NiAwLjM4MS0wLjI4NnMwLjM4MSAwIDAuNDc2IDAuMTlsNC4zODEgNC4zODFjMC4xOSAwLjA5NSAwLjE5IDAuMjg2IDAuMTkgMC40NzZzLTAuMDk1IDAuMjg2LTAuMjg2IDAuMzgxbC0xMC4wOTUgNS43MTRjLTAuMDk1IDAuMDk1LTAuMTkgMC4wOTUtMC4yODYgMC4wOTV6TTE1LjE0MyAxLjUyNGwtNC4zODEgNy43MTQgNy43MTQtNC4zODEtMy4zMzMtMy4zMzN6Ij48L3BhdGg+DQo8cGF0aCBmaWxsPSIjZGM1NjA2IiBkPSJNOS4zMzMgMjBjLTUuMTQzIDAtOS4zMzMtNC4xOS05LjMzMy05LjMzM3M0LjE5LTkuMzMzIDkuMzMzLTkuMzMzYzAuOTUyIDAgMS45MDUgMC4xOSAyLjg1NyAwLjQ3NmwtMC4zODEgMS4wNDhjLTAuNzYyLTAuMjg2LTEuNjE5LTAuMzgxLTIuNDc2LTAuMzgxLTQuNTcxIDAtOC4xOSAzLjcxNC04LjE5IDguMTkgMCA0LjU3MSAzLjcxNCA4LjE5IDguMTkgOC4xOXM4LjE5LTMuNzE0IDguMTktOC4xOWMwLTAuODU3LTAuMDk1LTEuNzE0LTAuMzgxLTIuNDc2bDEuMDQ4LTAuMzgxYzAuMjg2IDAuOTUyIDAuNDc2IDEuOTA1IDAuNDc2IDIuODU3IDAgNS4xNDMtNC4xOSA5LjMzMy05LjMzMyA5LjMzM3oiPjwvcGF0aD4NCjxwYXRoIGZpbGw9IiNkYzU2MDYiIGQ9Ik05LjMzMyAxNS42MTljLTIuNzYyIDAtNC45NTItMi4xOS00Ljk1Mi00Ljk1MnMyLjE5LTQuOTUyIDQuOTUyLTQuOTUyYzAuMDk1IDAgMC4xOSAwIDAuMjg2IDBoMC4wOTVsLTAuMDk1IDEuMTQzaC0wLjE5Yy0wLjA5NSAwLTAuMDk1IDAtMC4xOSAwLTIuMDk1IDAtMy44MSAxLjcxNC0zLjgxIDMuODFzMS43MTQgMy44MSAzLjgxIDMuODEgMy44MS0xLjcxNCAzLjgxLTMuODFjMC0wLjA5NSAwLTAuMDk1IDAtMC4xOXYtMC4xOWwxLjE0My0wLjA5NXYwLjA5NWMwIDAuMDk1IDAgMC4xOSAwIDAuMjg2IDAuMDk1IDIuODU3LTIuMDk1IDUuMDQ4LTQuODU3IDUuMDQ4eiI+PC9wYXRoPg0KPC9zdmc+DQo=');
@@ -4024,7 +4032,7 @@ header.header {
   height: 20px;
   width: 20px;
 }
-/* line 270, ../sass/partials/components/nav/_block--tb-megamenu-main-menu.scss */
+/* line 271, ../sass/partials/components/nav/_block--tb-megamenu-main-menu.scss */
 .block--tb-megamenu-main-menu .tb-megamenu-main-menu .tb-megamenu-nav > .tb-megamenu-item .tb-megamenu-submenu .has-icon-topics .view__header a:before, .block--tb-megamenu-main-menu .tb-megamenu-main-menu .tb-megamenu-nav > .tb-megamenu-item .tb-megamenu-submenu .has-icon-topics .view__header h2:before {
   background-image: url('../images/bg/icon-topics-23-20-orange.png');
   background-image: -webkit-linear-gradient(transparent, transparent), url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4NCjwhLS0gR2VuZXJhdGVkIGJ5IEljb01vb24uaW8gLS0+DQo8IURPQ1RZUEUgc3ZnIFBVQkxJQyAiLS8vVzNDLy9EVEQgU1ZHIDEuMS8vRU4iICJodHRwOi8vd3d3LnczLm9yZy9HcmFwaGljcy9TVkcvMS4xL0RURC9zdmcxMS5kdGQiPg0KPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHdpZHRoPSIyMyIgaGVpZ2h0PSIyMCIgdmlld0JveD0iMCAwIDIzIDIwIj4NCjxwYXRoIGZpbGw9IiNkYzU2MDYiIGQ9Ik0wLjgxNiAyMGMtMC4yNzIgMC0wLjQwOC0wLjEzNi0wLjU0NC0wLjI3MnMtMC4yNzItMC4yNzItMC4yNzItMC41NDR2LTIuODU3YzAtMC40MDggMC40MDgtMC44MTYgMC44MTYtMC44MTYgMi44NTcgMCA1LjE3LTIuMDQxIDUuNTc4LTQuNzYyaC01LjU3OGMtMC40MDggMC0wLjgxNi0wLjI3Mi0wLjgxNi0wLjY4di05LjI1MmMwLTAuNDA4IDAuNDA4LTAuODE2IDAuODE2LTAuODE2aDkuMjUyYzAuNDA4IDAgMC44MTYgMC40MDggMC44MTYgMC44MTZ2OS4yNTJjLTAuMTM2IDUuNDQyLTQuNjI2IDkuOTMyLTEwLjA2OCA5LjkzMiAwIDAgMCAwIDAgMHpNMS42MzMgMTcuMTQzdjEuMjI0YzQuMjE4LTAuNDA4IDcuNjE5LTMuOTQ2IDcuNjE5LTguNDM1di04LjI5OWgtNy42MTl2Ny42MTloNS41NzhjMC40MDggMCAwLjY4IDAuMjcyIDAuODE2IDAuNjggMCAwIDAgMC4xMzYgMCAwLjEzNiAwIDMuNjczLTIuODU3IDYuNjY3LTYuMzk1IDcuMDc1eiI+PC9wYXRoPg0KPHBhdGggZmlsbD0iI2RjNTYwNiIgZD0iTTEzLjA2MSAyMGMtMC4yNzIgMC0wLjQwOC0wLjEzNi0wLjU0NC0wLjI3MnMtMC4yNzItMC40MDgtMC4yNzItMC41NDR2LTIuODU3YzAtMC40MDggMC40MDgtMC44MTYgMC44MTYtMC44MTYgMi44NTcgMCA1LjE3LTIuMDQxIDUuNTc4LTQuNzYyaC01LjU3OGMtMC40MDggMC0wLjgxNi0wLjQwOC0wLjgxNi0wLjgxNnYtOS4xMTZjMC4xMzYtMC40MDggMC40MDgtMC44MTYgMC44MTYtMC44MTZoOS4yNTJjMC40MDggMCAwLjgxNiAwLjQwOCAwLjgxNiAwLjgxNnY5LjI1MmMwIDUuNDQyLTQuNDkgOS45MzItMTAuMDY4IDkuOTMyIDAgMCAwIDAgMCAwek0xMy44NzggMTcuMTQzdjEuMjI0YzQuMjE4LTAuNDA4IDcuNjE5LTMuOTQ2IDcuNjE5LTguNDM1di04LjI5OWgtNy42MTl2Ny42MTloNS41NzhjMC40MDggMCAwLjY4IDAuMjcyIDAuODE2IDAuNjggMCAwIDAgMC4xMzYgMCAwLjEzNiAwIDMuNjczLTIuNzIxIDYuNjY3LTYuMzk1IDcuMDc1eiI+PC9wYXRoPg0KPC9zdmc+DQo=');
@@ -4033,7 +4041,7 @@ header.header {
   height: 20px;
   width: 23px;
 }
-/* line 281, ../sass/partials/components/nav/_block--tb-megamenu-main-menu.scss */
+/* line 282, ../sass/partials/components/nav/_block--tb-megamenu-main-menu.scss */
 .block--tb-megamenu-main-menu .tb-megamenu-main-menu .tb-megamenu-nav > .tb-megamenu-item .tb-megamenu-submenu .has-icon-locations .view__header a:before, .block--tb-megamenu-main-menu .tb-megamenu-main-menu .tb-megamenu-nav > .tb-megamenu-item .tb-megamenu-submenu .has-icon-locations .view__header h2:before {
   background-image: url('../images/bg/icon-locations-15-20-orange.png');
   background-image: -webkit-linear-gradient(transparent, transparent), url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4NCjwhLS0gR2VuZXJhdGVkIGJ5IEljb01vb24uaW8gLS0+DQo8IURPQ1RZUEUgc3ZnIFBVQkxJQyAiLS8vVzNDLy9EVEQgU1ZHIDEuMS8vRU4iICJodHRwOi8vd3d3LnczLm9yZy9HcmFwaGljcy9TVkcvMS4xL0RURC9zdmcxMS5kdGQiPg0KPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHdpZHRoPSIxNSIgaGVpZ2h0PSIyMCIgdmlld0JveD0iMCAwIDE1IDIwIj4NCjxwYXRoIGZpbGw9IiNkYzU2MDYiIGQ9Ik03LjU1OSAyMGMtMC4yMzIgMC0wLjQ2NS0wLjExNi0wLjU4MS0wLjM0OWwtNS44MTQtOC43MjFjLTAuODE0LTEuMDQ2LTEuMTYzLTIuMzI1LTEuMTYzLTMuNjA1IDAtNC4wNzAgMy4zNzItNy4zMjUgNy41NTktNy4zMjVzNy41NTkgMy4yNTYgNy41NTkgNy4zMjVjMCAxLjI3OS0wLjM0OSAyLjY3NS0xLjA0NiAzLjcyMWwtNS45MyA4LjcyMWMtMC4xMTYgMC4xMTYtMC4zNDkgMC4yMzMtMC41ODEgMC4yMzMgMCAwIDAgMCAwIDB6TTcuNTU5IDEuMzk1Yy0zLjM3MyAwLTYuMDQ2IDIuNTU5LTYuMDQ2IDUuODE0IDAgMS4wNDYgMC4zNDkgMi4wOTMgMC44MTQgMy4wMjRsNS4yMzIgNy43OTEgNS4yMzMtNy43OTFjMC41ODEtMC45MyAwLjgxNC0xLjg2IDAuODE0LTMuMDI0IDAtMy4xNC0yLjY3NS01LjgxNC02LjA0Ni01LjgxNHoiPjwvcGF0aD4NCjxwYXRoIGZpbGw9IiNkYzU2MDYiIGQ9Ik03LjU1OSAxMC44MTRjLTEuOTc2IDAtMy42MDUtMS42MjctMy42MDUtMy40ODlzMS42MjctMy40ODkgMy42MDUtMy40ODkgMy42MDUgMS42MjcgMy42MDUgMy40ODktMS42MjcgMy40ODktMy42MDUgMy40ODl6TTcuNTU5IDUuMjMyYy0xLjE2MiAwLTIuMjA5IDAuOTMtMi4yMDkgMi4wOTJzMC45MyAyLjA5MiAyLjIwOSAyLjA5MiAyLjIwOS0wLjkzIDIuMjA5LTIuMDkyYzAtMS4xNjItMS4wNDYtMi4wOTItMi4yMDktMi4wOTJ6Ij48L3BhdGg+DQo8L3N2Zz4NCg==');
@@ -4042,7 +4050,7 @@ header.header {
   height: 20px;
   width: 15px;
 }
-/* line 292, ../sass/partials/components/nav/_block--tb-megamenu-main-menu.scss */
+/* line 293, ../sass/partials/components/nav/_block--tb-megamenu-main-menu.scss */
 .block--tb-megamenu-main-menu .tb-megamenu-main-menu .tb-megamenu-nav > .tb-megamenu-item .tb-megamenu-submenu .has-icon-programs .view__header a:before, .block--tb-megamenu-main-menu .tb-megamenu-main-menu .tb-megamenu-nav > .tb-megamenu-item .tb-megamenu-submenu .has-icon-programs .view__header h2:before {
   background-image: url('../images/bg/icon-programs-23-20-orange.png');
   background-image: -webkit-linear-gradient(transparent, transparent), url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4NCjwhLS0gR2VuZXJhdGVkIGJ5IEljb01vb24uaW8gLS0+DQo8IURPQ1RZUEUgc3ZnIFBVQkxJQyAiLS8vVzNDLy9EVEQgU1ZHIDEuMS8vRU4iICJodHRwOi8vd3d3LnczLm9yZy9HcmFwaGljcy9TVkcvMS4xL0RURC9zdmcxMS5kdGQiPg0KPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHdpZHRoPSIyMyIgaGVpZ2h0PSIyMCIgdmlld0JveD0iMCAwIDIzIDIwIj4NCjxwYXRoIGZpbGw9IiNkYzU2MDYiIGQ9Ik0xMi41MjkgMGwtMS4wMzQgMS4wMzQtMS4wMzQtMS4wMzRoLTEwLjQ2djIwaDEwLjQ2bDEuMDM0LTEuMDM0IDEuMDM0IDEuMDM0aDEwLjQ2di0yMGgtMTAuNDZ6TTEwLjgwNSAxNy44MTZsLTAuODA1IDAuODA1aC04LjYyMXYtMTcuMjQxaDguNjIxbDAuOTIgMC45MnYxNS41MTd6TTIxLjYwOSAxOC42MjFoLTguNjIxbC0wLjgwNS0wLjgwNXYtMTUuNjMybDAuOTItMC45Mmg4LjYyMXYxNy4zNTd6Ij48L3BhdGg+DQo8cGF0aCBmaWxsPSIjZGM1NjA2IiBkPSJNMTMuNzkzIDMuNTYzaDYuMjA3djEuMzc5aC02LjIwN3YtMS4zNzl6Ij48L3BhdGg+DQo8cGF0aCBmaWxsPSIjZGM1NjA2IiBkPSJNMTMuNzkzIDcuMzU3aDYuMjA3djEuMzc5aC02LjIwN3YtMS4zNzl6Ij48L3BhdGg+DQo8cGF0aCBmaWxsPSIjZGM1NjA2IiBkPSJNMTMuNzkzIDExLjI2NGg2LjIwN3YxLjM3OWgtNi4yMDd2LTEuMzc5eiI+PC9wYXRoPg0KPHBhdGggZmlsbD0iI2RjNTYwNiIgZD0iTTEzLjc5MyAxNS4wNTdoNi4yMDd2MS4zNzloLTYuMjA3di0xLjM3OXoiPjwvcGF0aD4NCjwvc3ZnPg0K');
@@ -4051,7 +4059,7 @@ header.header {
   height: 20px;
   width: 23px;
 }
-/* line 303, ../sass/partials/components/nav/_block--tb-megamenu-main-menu.scss */
+/* line 304, ../sass/partials/components/nav/_block--tb-megamenu-main-menu.scss */
 .block--tb-megamenu-main-menu .tb-megamenu-main-menu .tb-megamenu-nav > .tb-megamenu-item .tb-megamenu-submenu .has-icon-organizations .view__header a:before, .block--tb-megamenu-main-menu .tb-megamenu-main-menu .tb-megamenu-nav > .tb-megamenu-item .tb-megamenu-submenu .has-icon-organizations .view__header h2:before {
   background-image: url('../images/bg/icon-organization-20-20-orange.png');
   background-image: -webkit-linear-gradient(transparent, transparent), url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4NCjwhLS0gR2VuZXJhdGVkIGJ5IEljb01vb24uaW8gLS0+DQo8IURPQ1RZUEUgc3ZnIFBVQkxJQyAiLS8vVzNDLy9EVEQgU1ZHIDEuMS8vRU4iICJodHRwOi8vd3d3LnczLm9yZy9HcmFwaGljcy9TVkcvMS4xL0RURC9zdmcxMS5kdGQiPg0KPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHdpZHRoPSIyMCIgaGVpZ2h0PSIyMCIgdmlld0JveD0iMCAwIDIwIDIwIj4NCjxwYXRoIGZpbGw9IiNkYzU2MDYiIGQ9Ik0xOS40MjkgNi44NTdsLTIuMDk1LTMuNzE0aC0zLjYxOWwtMS44MS0zLjE0M2gtNC4yODZsLTEuODEgMy4xNDNoLTMuNzE0bC0yLjA5NSAzLjcxNCAxLjgxIDMuMTQzLTEuODEgMy4xNDMgMi4wOTUgMy43MTRoMy42MTlsMS45MDUgMy4xNDNoNC4yODZsMS44MS0zLjE0M2gzLjYxOWwyLjA5NS0zLjcxNC0xLjgxLTMuMTQzIDEuODEtMy4xNDN6TTE4LjE5IDYuODU3bC0xLjUyNCAyLjU3MWgtMi45NTJsLTEuNTI0LTIuNTcxIDEuNTI0LTIuNTcxaDIuOTUybDEuNTI0IDIuNTcxek04LjI4NiAxMi41NzFsLTEuNTI0LTIuNTcxIDEuNTI0LTIuNTcxaDIuOTUybDEuNTI0IDIuNTcxLTEuNTI0IDIuNTcxaC0yLjk1MnpNOC4yODYgMS4xNDNoMi45NTJsMS41MjQgMi41NzEtMS41MjQgMi41NzFoLTIuOTUybC0xLjUyNC0yLjU3MSAxLjUyNC0yLjU3MXpNMi43NjIgNC4yODZoMi45NTJsMS41MjQgMi41NzEtMS40MjkgMi41NzFoLTMuMDQ4bC0xLjQyOS0yLjU3MSAxLjQyOS0yLjU3MXpNMS4zMzMgMTMuMTQzbDEuNTI0LTIuNTcxaDIuOTUybDEuNTI0IDIuNTcxLTEuNTI0IDIuNTcxaC0zLjA0OGwtMS40MjktMi41NzF6TTExLjIzOCAxOC44NTdoLTIuOTUybC0xLjUyNC0yLjU3MSAxLjUyNC0yLjU3MWgyLjk1MmwxLjUyNCAyLjU3MS0xLjUyNCAyLjU3MXpNMTYuNjY3IDE1LjcxNGgtMi45NTJsLTEuNTI0LTIuNTcxIDEuNTI0LTIuNTcxaDIuOTUybDEuNTI0IDIuNTcxLTEuNTI0IDIuNTcxeiI+PC9wYXRoPg0KPC9zdmc+DQo=');
@@ -4060,7 +4068,7 @@ header.header {
   height: 20px;
   width: 20px;
 }
-/* line 314, ../sass/partials/components/nav/_block--tb-megamenu-main-menu.scss */
+/* line 315, ../sass/partials/components/nav/_block--tb-megamenu-main-menu.scss */
 .block--tb-megamenu-main-menu .tb-megamenu-main-menu .tb-megamenu-nav > .tb-megamenu-item .tb-megamenu-submenu .has-icon-members .view__header a:before, .block--tb-megamenu-main-menu .tb-megamenu-main-menu .tb-megamenu-nav > .tb-megamenu-item .tb-megamenu-submenu .has-icon-members .view__header h2:before {
   background-image: url('../images/bg/icon-members-20-20-orange.png');
   background-image: -webkit-linear-gradient(transparent, transparent), url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4NCjwhLS0gR2VuZXJhdGVkIGJ5IEljb01vb24uaW8gLS0+DQo8IURPQ1RZUEUgc3ZnIFBVQkxJQyAiLS8vVzNDLy9EVEQgU1ZHIDEuMS8vRU4iICJodHRwOi8vd3d3LnczLm9yZy9HcmFwaGljcy9TVkcvMS4xL0RURC9zdmcxMS5kdGQiPg0KPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHdpZHRoPSIyMCIgaGVpZ2h0PSIyMCIgdmlld0JveD0iMCAwIDIwIDIwIj4NCjxwYXRoIGZpbGw9IiNkYzU2MDYiIGQ9Ik0xMC4xMDYgMTEuNzAyYy0zLjE5MSAwLTUuODUxLTIuNjYtNS44NTEtNS44NTFzMi42Ni01Ljg1MSA1Ljg1MS01Ljg1MWMzLjE5MSAwIDUuODUxIDIuNjYgNS44NTEgNS44NTFzLTIuNjYgNS44NTEtNS44NTEgNS44NTF6TTEwLjEwNiAxLjI3N2MtMi41NTMgMC00LjU3NCAyLjAyMS00LjU3NCA0LjU3NHMyLjAyMSA0LjU3NCA0LjU3NCA0LjU3NCA0LjU3NC0yLjAyMSA0LjU3NC00LjU3NGMwLTIuNTUzLTIuMDIxLTQuNTc0LTQuNTc0LTQuNTc0eiI+PC9wYXRoPg0KPHBhdGggZmlsbD0iI2RjNTYwNiIgZD0iTTE5LjU3NCAyMGgtMTguOTM2Yy0wLjMxOSAwLTAuNjM4LTAuMzE5LTAuNjM4LTAuNjM4di00LjI1NWMwLTAuMTA2IDAtMC4yMTMgMC0wLjIxM3MwIDAgMC0wLjEwNmMwLTEuNDg5IDEuMTctMi42NiAyLjY2LTIuNjZoMTQuODk0YzEuNDg5IDAgMi42NiAxLjE3IDIuNjYgMi42NiAwIDAuMTA2IDAgMC4yMTMgMCAwLjIxM3MwIDAgMCAwLjEwNnY0LjM2MmMwIDAuMjEzLTAuMzE5IDAuNTMyLTAuNjM4IDAuNTMyek0xLjI3NyAxOC43MjNoMTcuNzY2di0zLjYxN2MwIDAgMC0wLjIxMyAwLTAuMjEzczAtMC4xMDYgMC0wLjEwNmMwLTAuNzQ1LTAuNjM4LTEuMzgzLTEuMzgzLTEuMzgzaC0xNC44OTRjLTAuNzQ1IDAtMS4zODMgMC42MzgtMS4zODMgMS4zODN2MC4xMDZjMCAwIDAgMC4yMTMgMCAwLjIxM2wtMC4xMDYgMy42MTd6Ij48L3BhdGg+DQo8L3N2Zz4NCg==');
@@ -4069,7 +4077,7 @@ header.header {
   height: 20px;
   width: 20px;
 }
-/* line 325, ../sass/partials/components/nav/_block--tb-megamenu-main-menu.scss */
+/* line 326, ../sass/partials/components/nav/_block--tb-megamenu-main-menu.scss */
 .block--tb-megamenu-main-menu .tb-megamenu-main-menu .tb-megamenu-nav > .tb-megamenu-item .tb-megamenu-submenu .has-icon-events .view__header a:before, .block--tb-megamenu-main-menu .tb-megamenu-main-menu .tb-megamenu-nav > .tb-megamenu-item .tb-megamenu-submenu .has-icon-events .view__header h2:before {
   background-image: url('../images/bg/icon-events-19-20-orange.png');
   background-image: -webkit-linear-gradient(transparent, transparent), url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4NCjwhLS0gR2VuZXJhdGVkIGJ5IEljb01vb24uaW8gLS0+DQo8IURPQ1RZUEUgc3ZnIFBVQkxJQyAiLS8vVzNDLy9EVEQgU1ZHIDEuMS8vRU4iICJodHRwOi8vd3d3LnczLm9yZy9HcmFwaGljcy9TVkcvMS4xL0RURC9zdmcxMS5kdGQiPg0KPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHdpZHRoPSIxOSIgaGVpZ2h0PSIyMCIgdmlld0JveD0iMCAwIDE5IDIwIj4NCjxwYXRoIGZpbGw9IiNkYzU2MDYiIGQ9Ik00LjcyNyAyLjA5MWg5LjcyN3YxLjA5MWgtOS43Mjd2LTEuMDkxeiI+PC9wYXRoPg0KPHBhdGggZmlsbD0iI2RjNTYwNiIgZD0iTTE4LjgxOCAyMGgtMTguMTgyYy0wLjM2NCAwLTAuNjM2LTAuMjczLTAuNjM2LTAuNTQ1di0xNi44MThjMC0wLjI3MyAwLjI3My0wLjU0NSAwLjU0NS0wLjU0NWgxLjgxOHYxLjA5MWgtMS4yNzN2MTUuNzI3aDE3LjA5MXYtMTUuNzI3aC0xLjQ1NXYtMS4wOTFoMmMwLjI3MyAwIDAuNTQ1IDAuMjczIDAuNTQ1IDAuNTQ1djE2LjgxOGMwLjA5MSAwLjI3My0wLjE4MiAwLjU0NS0wLjQ1NSAwLjU0NXoiPjwvcGF0aD4NCjxwYXRoIGZpbGw9IiNkYzU2MDYiIGQ9Ik0zLjU0NSA0LjcyN2MtMC4zNjQgMC0wLjU0NS0wLjE4Mi0wLjU0NS0wLjU0NXYtMy42MzZjMC0wLjI3MyAwLjE4Mi0wLjU0NSAwLjU0NS0wLjU0NSAwLjI3MyAwIDAuNTQ1IDAuMjczIDAuNTQ1IDAuNTQ1djMuNjM2YzAgMC4zNjQtMC4yNzMgMC41NDUtMC41NDUgMC41NDV6Ij48L3BhdGg+DQo8cGF0aCBmaWxsPSIjZGM1NjA2IiBkPSJNMTUuNjM2IDQuNzI3Yy0wLjI3MyAwLTAuNTQ1LTAuMjczLTAuNTQ1LTAuNTQ1di0zLjYzNmMwLTAuMjczIDAuMjczLTAuNTQ1IDAuNTQ1LTAuNTQ1czAuNTQ1IDAuMjczIDAuNTQ1IDAuNTQ1djMuNjM2YzAgMC4zNjQtMC4yNzMgMC41NDUtMC41NDUgMC41NDV6Ij48L3BhdGg+DQo8cGF0aCBmaWxsPSIjZGM1NjA2IiBkPSJNNS40NTUgMTQuMzY0Yy0wLjQ1NS0wLjU0NS0wLjYzNi0xLjE4Mi0wLjYzNi0xLjkwOWgxYzAgMC41NDUgMC4xODIgMC45MDkgMC4yNzMgMS4wOTEgMC4yNzMgMC40NTUgMC43MjcgMC42MzYgMS4zNjQgMC42MzYgMC41NDUgMCAwLjkwOS0wLjE4MiAxLjI3My0wLjQ1NSAwLjI3My0wLjI3MyAwLjQ1NS0wLjYzNiAwLjQ1NS0xLjA5MSAwLTAuNTQ1LTAuMTgyLTAuOTA5LTAuNTQ1LTEuMTgyLTAuMzY0LTAuMTgyLTAuODE4LTAuMzY0LTEuMzY0LTAuMzY0LTAuMDkxIDAtMC4wOTEgMC0wLjE4MiAwcy0wLjE4MiAwLTAuMTgyIDB2LTAuOTA5YzAuMDkxIDAgMC4xODIgMCAwLjI3MyAwczAuMTgyIDAgMC4xODIgMGMwLjM2NCAwIDAuNjM2LTAuMDkxIDAuOTA5LTAuMTgyIDAuNTQ1IDAgMC43MjctMC4zNjQgMC43MjctMC45MDkgMC0wLjM2NC0wLjE4Mi0wLjcyNy0wLjQ1NS0wLjkwOXMtMC41NDUtMC4zNjQtMC45MDktMC4zNjRjLTAuNjM2IDAtMS4wOTEgMC4xODItMS4zNjQgMC42MzYtMC4xODIgMC4yNzMtMC4yNzMgMC42MzYtMC4yNzMgMS4wOTFoLTFjMC0wLjYzNiAwLjA5MS0xLjA5MSAwLjM2NC0xLjU0NSAwLjM2NC0wLjcyNyAxLjA5MS0xLjA5MSAyLjA5MS0xLjA5MSAwLjgxOCAwIDEuNDU1IDAuMTgyIDEuOTA5IDAuNTQ1czAuNjM2IDAuOTA5IDAuNjM2IDEuNTQ1YzAgMC40NTUtMC4wOTEgMC45MDktMC4zNjQgMS4xODItMC4xODIgMC4xODItMC4zNjQgMC4zNjQtMC42MzYgMC40NTUgMC40NTUgMC4wOTEgMC43MjcgMC4zNjQgMSAwLjYzNnMwLjM2NCAwLjcyNyAwLjM2NCAxLjE4MmMwIDAuNzI3LTAuMjczIDEuMzY0LTAuNzI3IDEuODE4cy0xLjE4MiAwLjcyNy0yLjA5MSAwLjcyN2MtMSAwLjA5MS0xLjcyNy0wLjE4Mi0yLjA5MS0wLjYzNnoiPjwvcGF0aD4NCjxwYXRoIGZpbGw9IiNkYzU2MDYiIGQ9Ik0xMS40NTUgOS4yNzN2LTAuNzI3YzAuNzI3LTAuMDkxIDEuMTgyLTAuMTgyIDEuNTQ1LTAuMzY0IDAuMjczLTAuMTgyIDAuNDU1LTAuNTQ1IDAuNjM2LTEuMTgyaDAuODE4djcuOTA5aC0xLjA5MXYtNS42MzZoLTEuOTA5eiI+PC9wYXRoPg0KPC9zdmc+DQo=');
@@ -4130,7 +4138,7 @@ header.header {
 .nav--mobile-menu .nav__link:focus, .nav--mobile-menu .nav__link:hover, .nav--mobile-menu .nav__link:active, .nav--mobile-menu .nav__link.is-active {
   color: #000000;
 }
-/* line 59, ../sass/partials/components/nav/_nav--mobile-menu.scss */
+/* line 47, ../sass/partials/components/nav/_nav--mobile-menu.scss */
 .nav--mobile-menu .nav__header {
   background-color: transparent;
   border: 0;
@@ -4148,7 +4156,7 @@ header.header {
   white-space: normal;
   z-index: 1;
 }
-/* line 77, ../sass/partials/components/nav/_nav--mobile-menu.scss */
+/* line 65, ../sass/partials/components/nav/_nav--mobile-menu.scss */
 .nav--mobile-menu .nav__subnav-arrow,
 .nav--mobile-menu .nav__lvl2subnav-arrow {
   background: none;
@@ -4180,29 +4188,29 @@ header.header {
   height: 150%;
   width: 0;
 }
-/* line 93, ../sass/partials/components/nav/_nav--mobile-menu.scss */
+/* line 81, ../sass/partials/components/nav/_nav--mobile-menu.scss */
 .nav--mobile-menu .nav__subnav-arrow:focus,
 .nav--mobile-menu .nav__lvl2subnav-arrow:focus {
   outline: thin dotted;
 }
-/* line 96, ../sass/partials/components/nav/_nav--mobile-menu.scss */
+/* line 84, ../sass/partials/components/nav/_nav--mobile-menu.scss */
 .nav--mobile-menu .nav__subnav-arrow.is-active,
 .nav--mobile-menu .nav__lvl2subnav-arrow.is-active {
   background-image: url('../images/bg/arrow-up.png');
   background-image: -webkit-linear-gradient(transparent, transparent), url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4NCjwhLS0gR2VuZXJhdGVkIGJ5IEljb01vb24uaW8gLS0+DQo8IURPQ1RZUEUgc3ZnIFBVQkxJQyAiLS8vVzNDLy9EVEQgU1ZHIDEuMS8vRU4iICJodHRwOi8vd3d3LnczLm9yZy9HcmFwaGljcy9TVkcvMS4xL0RURC9zdmcxMS5kdGQiPg0KPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHdpZHRoPSIxOSIgaGVpZ2h0PSIxMiIgdmlld0JveD0iMCAwIDE5IDEyIj4NCjxwYXRoIGZpbGw9IiNiY2JjYmMiIGQ9Ik0yLjI3IDEybDcuNDU5LTcuNDU5IDcuNDU5IDcuNDU5IDIuMjctMi4yNy05LjczLTkuNzMtOS43MyA5LjczIDIuMjcgMi4yN3oiPjwvcGF0aD4NCjwvc3ZnPg0K');
   background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0)), url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4NCjwhLS0gR2VuZXJhdGVkIGJ5IEljb01vb24uaW8gLS0+DQo8IURPQ1RZUEUgc3ZnIFBVQkxJQyAiLS8vVzNDLy9EVEQgU1ZHIDEuMS8vRU4iICJodHRwOi8vd3d3LnczLm9yZy9HcmFwaGljcy9TVkcvMS4xL0RURC9zdmcxMS5kdGQiPg0KPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHdpZHRoPSIxOSIgaGVpZ2h0PSIxMiIgdmlld0JveD0iMCAwIDE5IDEyIj4NCjxwYXRoIGZpbGw9IiNiY2JjYmMiIGQ9Ik0yLjI3IDEybDcuNDU5LTcuNDU5IDcuNDU5IDcuNDU5IDIuMjctMi4yNy05LjczLTkuNzMtOS43MyA5LjczIDIuMjcgMi4yN3oiPjwvcGF0aD4NCjwvc3ZnPg0K');
 }
-/* line 99, ../sass/partials/components/nav/_nav--mobile-menu.scss */
+/* line 87, ../sass/partials/components/nav/_nav--mobile-menu.scss */
 [dir="rtl"] .nav--mobile-menu .nav__subnav-arrow, [dir="rtl"]
 .nav--mobile-menu .nav__lvl2subnav-arrow {
   left: 0;
   right: auto;
 }
-/* line 105, ../sass/partials/components/nav/_nav--mobile-menu.scss */
+/* line 93, ../sass/partials/components/nav/_nav--mobile-menu.scss */
 .nav--mobile-menu .nav__toggler {
   display: none;
 }
-/* line 110, ../sass/partials/components/nav/_nav--mobile-menu.scss */
+/* line 98, ../sass/partials/components/nav/_nav--mobile-menu.scss */
 .nav--mobile-menu .nav--subnav,
 .nav--mobile-menu .nav--lvl2subnav,
 .nav--mobile-menu .nav__toggler {
@@ -4210,14 +4218,19 @@ header.header {
   margin: 0;
   padding: 0;
 }
-/* line 121, ../sass/partials/components/nav/_nav--mobile-menu.scss */
+/* line 107, ../sass/partials/components/nav/_nav--mobile-menu.scss */
 .nav--mobile-menu .nav--subnav .nav__link,
 .nav--mobile-menu .nav--lvl2subnav .nav__link,
 .nav--mobile-menu .nav__toggler .nav__link {
+  -moz-hyphens: none;
+  -ms-hyphens: none;
+  -webkit-hyphens: none;
+  hyphens: none;
+  break-word: normal;
   color: #555559;
   padding-left: 2em;
 }
-/* line 125, ../sass/partials/components/nav/_nav--mobile-menu.scss */
+/* line 112, ../sass/partials/components/nav/_nav--mobile-menu.scss */
 .nav--mobile-menu .nav--subnav .nav__link:focus, .nav--mobile-menu .nav--subnav .nav__link:hover, .nav--mobile-menu .nav--subnav .nav__link:active,
 .nav--mobile-menu .nav--lvl2subnav .nav__link:focus,
 .nav--mobile-menu .nav--lvl2subnav .nav__link:hover,
@@ -4227,17 +4240,17 @@ header.header {
 .nav--mobile-menu .nav__toggler .nav__link:active {
   color: #000000;
 }
-/* line 133, ../sass/partials/components/nav/_nav--mobile-menu.scss */
+/* line 120, ../sass/partials/components/nav/_nav--mobile-menu.scss */
 .nav--mobile-menu .nav--lvl2subnav {
   display: none;
 }
-/* line 135, ../sass/partials/components/nav/_nav--mobile-menu.scss */
+/* line 122, ../sass/partials/components/nav/_nav--mobile-menu.scss */
 .nav--mobile-menu .nav--lvl2subnav .nav__link {
   font-size: 16px;
   font-weight: normal;
   padding-left: 3em;
 }
-/* line 140, ../sass/partials/components/nav/_nav--mobile-menu.scss */
+/* line 127, ../sass/partials/components/nav/_nav--mobile-menu.scss */
 .nav--mobile-menu .nav--lvl2subnav .nav__link--view-all {
   font-weight: bold;
 }
@@ -4254,6 +4267,194 @@ header.header {
   .nav--secondary-local-tasks {
     display: none;
   }
+}
+
+/* line 18, ../sass/partials/components/nav/_tb-megamenu-big-button.scss */
+.tb-megamenu-big-button {
+  background: #7090b7;
+  border: 0;
+  font-size: 0.9375em;
+  margin-left: 75px;
+  min-width: 280px;
+  max-width: 380px;
+  padding: 16px 35px 16px 16px !important;
+  position: relative;
+  text-align: left;
+  text-transform: uppercase;
+}
+/* line 31, ../sass/partials/components/nav/_tb-megamenu-big-button.scss */
+.tb-megamenu-big-button:focus, .tb-megamenu-big-button:hover {
+  background: #003359;
+}
+/* line 36, ../sass/partials/components/nav/_tb-megamenu-big-button.scss */
+.tb-megamenu-big-button:before {
+  background-repeat: no-repeat;
+  background-position: left center;
+  display: block;
+  content: "\a0";
+  position: absolute;
+  height: 54px;
+  left: -75px;
+  top: 1px;
+  width: 75px;
+}
+/* line 48, ../sass/partials/components/nav/_tb-megamenu-big-button.scss */
+.tb-megamenu-big-button:after {
+  height: 16px;
+  overflow: hidden;
+  width: 16px;
+  background-image: url('../images/bg/chevron-thin-right2.png');
+  background-image: -webkit-linear-gradient(transparent, transparent), url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4NCjwhLS0gR2VuZXJhdGVkIGJ5IEljb01vb24uaW8gLS0+DQo8IURPQ1RZUEUgc3ZnIFBVQkxJQyAiLS8vVzNDLy9EVEQgU1ZHIDEuMS8vRU4iICJodHRwOi8vd3d3LnczLm9yZy9HcmFwaGljcy9TVkcvMS4xL0RURC9zdmcxMS5kdGQiPg0KPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHdpZHRoPSIxNiIgaGVpZ2h0PSIxNiIgdmlld0JveD0iMCAwIDE2IDE2Ij4NCjxwYXRoIGZpbGw9IiNmZmZmZmYiIGQ9Ik0xMC42IDhsLTUuNzEzLTUuOTM2Yy0wLjIxNC0wLjIxNi0wLjIxNC0wLjU2NiAwLTAuNzgzIDAuMjE0LTAuMjE2IDAuNTYxLTAuMjE2IDAuNzc1IDBsNi4yNjQgNi4zMjZjMC4yMTQgMC4yMTcgMC4yMTQgMC41NjcgMCAwLjc4M2wtNi4yNjQgNi4zMjZjLTAuMjE0IDAuMjE3LTAuNTYxIDAuMjE2LTAuNzc1IDBzLTAuMjE0LTAuNTY2IDAtMC43ODNsNS43MTMtNS45MzR6Ij48L3BhdGg+DQo8L3N2Zz4NCg==');
+  background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0)), url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4NCjwhLS0gR2VuZXJhdGVkIGJ5IEljb01vb24uaW8gLS0+DQo8IURPQ1RZUEUgc3ZnIFBVQkxJQyAiLS8vVzNDLy9EVEQgU1ZHIDEuMS8vRU4iICJodHRwOi8vd3d3LnczLm9yZy9HcmFwaGljcy9TVkcvMS4xL0RURC9zdmcxMS5kdGQiPg0KPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHdpZHRoPSIxNiIgaGVpZ2h0PSIxNiIgdmlld0JveD0iMCAwIDE2IDE2Ij4NCjxwYXRoIGZpbGw9IiNmZmZmZmYiIGQ9Ik0xMC42IDhsLTUuNzEzLTUuOTM2Yy0wLjIxNC0wLjIxNi0wLjIxNC0wLjU2NiAwLTAuNzgzIDAuMjE0LTAuMjE2IDAuNTYxLTAuMjE2IDAuNzc1IDBsNi4yNjQgNi4zMjZjMC4yMTQgMC4yMTcgMC4yMTQgMC41NjcgMCAwLjc4M2wtNi4yNjQgNi4zMjZjLTAuMjE0IDAuMjE3LTAuNTYxIDAuMjE2LTAuNzc1IDBzLTAuMjE0LTAuNTY2IDAtMC43ODNsNS43MTMtNS45MzR6Ij48L3BhdGg+DQo8L3N2Zz4NCg==');
+  content: '';
+  display: inline-block;
+  position: absolute;
+  right: 10px;
+  top: 18px;
+}
+/* line 14, ../sass/partials/global/helpers/_image-replace.scss */
+.tb-megamenu-big-button:after:before {
+  content: "";
+  display: block;
+  height: 150%;
+  width: 0;
+}
+/* line 57, ../sass/partials/components/nav/_tb-megamenu-big-button.scss */
+.tb-megamenu-big-button:last-child {
+  margin-bottom: 0;
+}
+
+/* line 63, ../sass/partials/components/nav/_tb-megamenu-big-button.scss */
+.lt-ie9 .tb-megamenu-big-button {
+  width: 380px;
+}
+
+/* line 72, ../sass/partials/components/nav/_tb-megamenu-big-button.scss */
+.has-icon-innovation:before {
+  -moz-transition: opacity 0.2s linear;
+  -o-transition: opacity 0.2s linear;
+  -webkit-transition: opacity 0.2s linear;
+  transition: opacity 0.2s linear;
+  background-image: url('../images/bg/icon-innov-browse-41-54-darkblue.png');
+  background-image: -webkit-linear-gradient(transparent, transparent), url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4NCjwhLS0gR2VuZXJhdG9yOiBBZG9iZSBJbGx1c3RyYXRvciAxOS4xLjAsIFNWRyBFeHBvcnQgUGx1Zy1JbiAuIFNWRyBWZXJzaW9uOiA2LjAwIEJ1aWxkIDApICAtLT4NCjxzdmcgdmVyc2lvbj0iMS4xIiBpZD0iTGF5ZXJfMSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgeD0iMHB4IiB5PSIwcHgiDQoJIHZpZXdCb3g9IjAgMCA0NC44IDYwLjUiIHN0eWxlPSJlbmFibGUtYmFja2dyb3VuZDpuZXcgMCAwIDQ0LjggNjAuNTsiIHhtbDpzcGFjZT0icHJlc2VydmUiPg0KPGc+DQoJPGc+DQoJCTxyZWN0IHg9IjE3IiB5PSI1Mi43IiBzdHlsZT0iZmlsbDojMDAzMzU5OyIgd2lkdGg9IjEwLjkiIGhlaWdodD0iMyIvPg0KCTwvZz4NCgk8Zz4NCgkJPHJlY3QgeD0iMTciIHk9IjU3LjUiIHN0eWxlPSJmaWxsOiMwMDMzNTk7IiB3aWR0aD0iMTAuOSIgaGVpZ2h0PSIzIi8+DQoJPC9nPg0KCTxnPg0KCQk8cGF0aCBzdHlsZT0iZmlsbDojMDAzMzU5OyIgZD0iTTMwLjMsNTEuMkgxNC4zTDEyLjgsNDJDNSwzOC40LDAsMzAuNiwwLDIyLjFDMCw5LjksMTAsMCwyMi40LDBjMTIuNCwwLDIyLjQsOS45LDIyLjQsMjIuMQ0KCQkJYzAsOC42LTUsMTYuMy0xMi44LDIwTDMwLjMsNTEuMnogTTE2LjksNDguMmgxMC45bDEuNi04LjNsMC43LTAuM2M3LjEtMywxMS43LTkuOSwxMS43LTE3LjVDNDEuOCwxMS42LDMzLjEsMywyMi40LDMNCgkJCUMxMS43LDMsMywxMS42LDMsMjIuMWMwLDcuNiw0LjYsMTQuNSwxMS43LDE3LjVsMC44LDAuM0wxNi45LDQ4LjJ6IE0yMi40LDM1LjFsLTMuNy03LjRsLTguNC0xLjJsNi01LjhMMTUsMTIuNWw3LjQsMy45bDcuNC0zLjkNCgkJCWwtMS40LDguMmw2LDUuOGwtOC40LDEuMkwyMi40LDM1LjF6IE0xNi44LDI0LjRsMy44LDAuNWwxLjcsMy41bDEuNy0zLjVsMy44LTAuNWwtMi44LTIuN2wwLjctMy44bC0zLjUsMS44bC0zLjUtMS44bDAuNywzLjgNCgkJCUwxNi44LDI0LjR6Ii8+DQoJPC9nPg0KPC9nPg0KPC9zdmc+DQo=');
+  background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0)), url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4NCjwhLS0gR2VuZXJhdG9yOiBBZG9iZSBJbGx1c3RyYXRvciAxOS4xLjAsIFNWRyBFeHBvcnQgUGx1Zy1JbiAuIFNWRyBWZXJzaW9uOiA2LjAwIEJ1aWxkIDApICAtLT4NCjxzdmcgdmVyc2lvbj0iMS4xIiBpZD0iTGF5ZXJfMSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgeD0iMHB4IiB5PSIwcHgiDQoJIHZpZXdCb3g9IjAgMCA0NC44IDYwLjUiIHN0eWxlPSJlbmFibGUtYmFja2dyb3VuZDpuZXcgMCAwIDQ0LjggNjAuNTsiIHhtbDpzcGFjZT0icHJlc2VydmUiPg0KPGc+DQoJPGc+DQoJCTxyZWN0IHg9IjE3IiB5PSI1Mi43IiBzdHlsZT0iZmlsbDojMDAzMzU5OyIgd2lkdGg9IjEwLjkiIGhlaWdodD0iMyIvPg0KCTwvZz4NCgk8Zz4NCgkJPHJlY3QgeD0iMTciIHk9IjU3LjUiIHN0eWxlPSJmaWxsOiMwMDMzNTk7IiB3aWR0aD0iMTAuOSIgaGVpZ2h0PSIzIi8+DQoJPC9nPg0KCTxnPg0KCQk8cGF0aCBzdHlsZT0iZmlsbDojMDAzMzU5OyIgZD0iTTMwLjMsNTEuMkgxNC4zTDEyLjgsNDJDNSwzOC40LDAsMzAuNiwwLDIyLjFDMCw5LjksMTAsMCwyMi40LDBjMTIuNCwwLDIyLjQsOS45LDIyLjQsMjIuMQ0KCQkJYzAsOC42LTUsMTYuMy0xMi44LDIwTDMwLjMsNTEuMnogTTE2LjksNDguMmgxMC45bDEuNi04LjNsMC43LTAuM2M3LjEtMywxMS43LTkuOSwxMS43LTE3LjVDNDEuOCwxMS42LDMzLjEsMywyMi40LDMNCgkJCUMxMS43LDMsMywxMS42LDMsMjIuMWMwLDcuNiw0LjYsMTQuNSwxMS43LDE3LjVsMC44LDAuM0wxNi45LDQ4LjJ6IE0yMi40LDM1LjFsLTMuNy03LjRsLTguNC0xLjJsNi01LjhMMTUsMTIuNWw3LjQsMy45bDcuNC0zLjkNCgkJCWwtMS40LDguMmw2LDUuOGwtOC40LDEuMkwyMi40LDM1LjF6IE0xNi44LDI0LjRsMy44LDAuNWwxLjcsMy41bDEuNy0zLjVsMy44LTAuNWwtMi44LTIuN2wwLjctMy44bC0zLjUsMS44bC0zLjUtMS44bDAuNywzLjgNCgkJCUwxNi44LDI0LjR6Ii8+DQoJPC9nPg0KPC9nPg0KPC9zdmc+DQo=');
+  opacity: 0.6;
+}
+
+/* line 77, ../sass/partials/components/nav/_tb-megamenu-big-button.scss */
+.has-icon-innovation:focus:before,
+.has-icon-innovation:hover:before,
+.has-icon-innovation:active:before {
+  opacity: 1;
+}
+
+/* line 72, ../sass/partials/components/nav/_tb-megamenu-big-button.scss */
+.has-icon-add:before {
+  -moz-transition: opacity 0.2s linear;
+  -o-transition: opacity 0.2s linear;
+  -webkit-transition: opacity 0.2s linear;
+  transition: opacity 0.2s linear;
+  background-image: url('../images/bg/icon-innov-add-32-32-darkblue.png');
+  background-image: -webkit-linear-gradient(transparent, transparent), url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4NCjwhLS0gR2VuZXJhdG9yOiBBZG9iZSBJbGx1c3RyYXRvciAxOS4xLjAsIFNWRyBFeHBvcnQgUGx1Zy1JbiAuIFNWRyBWZXJzaW9uOiA2LjAwIEJ1aWxkIDApICAtLT4NCjxzdmcgdmVyc2lvbj0iMS4xIiBpZD0iTGF5ZXJfMSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgeD0iMHB4IiB5PSIwcHgiDQoJIHZpZXdCb3g9Ii00NjMgMjY1IDMyIDMyIiBzdHlsZT0iZW5hYmxlLWJhY2tncm91bmQ6bmV3IC00NjMgMjY1IDMyIDMyOyIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSI+DQo8c3R5bGUgdHlwZT0idGV4dC9jc3MiPg0KCS5zdDB7ZmlsbDojMDAzMzU5O30NCjwvc3R5bGU+DQo8cGF0aCBjbGFzcz0ic3QwIiBkPSJNLTQzMiwyNzdoLTExdi0xMWMwLTAuNi0wLjQtMS0xLTFoLTZjLTAuNiwwLTEsMC40LTEsMXYxMWgtMTFjLTAuNiwwLTEsMC40LTEsMXY2YzAsMC42LDAuNCwxLDEsMWgxMXYxMQ0KCWMwLDAuNiwwLjQsMSwxLDFoNmMwLjYsMCwxLTAuNCwxLTF2LTExaDExYzAuNiwwLDEtMC40LDEtMXYtNkMtNDMxLDI3Ny40LTQzMS40LDI3Ny00MzIsMjc3eiIvPg0KPC9zdmc+DQo=');
+  background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0)), url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4NCjwhLS0gR2VuZXJhdG9yOiBBZG9iZSBJbGx1c3RyYXRvciAxOS4xLjAsIFNWRyBFeHBvcnQgUGx1Zy1JbiAuIFNWRyBWZXJzaW9uOiA2LjAwIEJ1aWxkIDApICAtLT4NCjxzdmcgdmVyc2lvbj0iMS4xIiBpZD0iTGF5ZXJfMSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgeD0iMHB4IiB5PSIwcHgiDQoJIHZpZXdCb3g9Ii00NjMgMjY1IDMyIDMyIiBzdHlsZT0iZW5hYmxlLWJhY2tncm91bmQ6bmV3IC00NjMgMjY1IDMyIDMyOyIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSI+DQo8c3R5bGUgdHlwZT0idGV4dC9jc3MiPg0KCS5zdDB7ZmlsbDojMDAzMzU5O30NCjwvc3R5bGU+DQo8cGF0aCBjbGFzcz0ic3QwIiBkPSJNLTQzMiwyNzdoLTExdi0xMWMwLTAuNi0wLjQtMS0xLTFoLTZjLTAuNiwwLTEsMC40LTEsMXYxMWgtMTFjLTAuNiwwLTEsMC40LTEsMXY2YzAsMC42LDAuNCwxLDEsMWgxMXYxMQ0KCWMwLDAuNiwwLjQsMSwxLDFoNmMwLjYsMCwxLTAuNCwxLTF2LTExaDExYzAuNiwwLDEtMC40LDEtMXYtNkMtNDMxLDI3Ny40LTQzMS40LDI3Ny00MzIsMjc3eiIvPg0KPC9zdmc+DQo=');
+  opacity: 0.6;
+}
+
+/* line 77, ../sass/partials/components/nav/_tb-megamenu-big-button.scss */
+.has-icon-add:focus:before,
+.has-icon-add:hover:before,
+.has-icon-add:active:before {
+  opacity: 1;
+}
+
+/* line 72, ../sass/partials/components/nav/_tb-megamenu-big-button.scss */
+.has-icon-innovator:before {
+  -moz-transition: opacity 0.2s linear;
+  -o-transition: opacity 0.2s linear;
+  -webkit-transition: opacity 0.2s linear;
+  transition: opacity 0.2s linear;
+  background-image: url('../images/bg/icon-innov-collaborate-56-56-darkblue.png');
+  background-image: -webkit-linear-gradient(transparent, transparent), url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4NCjwhLS0gR2VuZXJhdG9yOiBBZG9iZSBJbGx1c3RyYXRvciAxOS4xLjAsIFNWRyBFeHBvcnQgUGx1Zy1JbiAuIFNWRyBWZXJzaW9uOiA2LjAwIEJ1aWxkIDApICAtLT4NCjxzdmcgdmVyc2lvbj0iMS4xIiBpZD0iTGF5ZXJfMSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgeD0iMHB4IiB5PSIwcHgiDQoJIHZpZXdCb3g9IjAgMCA1My40IDUzLjEiIHN0eWxlPSJlbmFibGUtYmFja2dyb3VuZDpuZXcgMCAwIDUzLjQgNTMuMTsiIHhtbDpzcGFjZT0icHJlc2VydmUiPg0KPHBhdGggc3R5bGU9ImZpbGw6IzAwMzM1OTsiIGQ9Ik0yMy45LDI3LjZjNy42LDAsMTMuOC02LjIsMTMuOC0xMy44YzAtNy42LTYuMi0xMy44LTEzLjgtMTMuOGMtNy42LDAtMTMuOCw2LjItMTMuOCwxMy44DQoJQzEwLjEsMjEuNCwxNi4zLDI3LjYsMjMuOSwyNy42eiBNMjMuOSwyLjljNiwwLDEwLjksNC45LDEwLjksMTAuOWMwLDYtNC45LDEwLjktMTAuOSwxMC45Yy02LDAtMTAuOS00LjktMTAuOS0xMC45DQoJQzEzLjEsNy44LDE3LjksMi45LDIzLjksMi45eiIvPg0KPHBhdGggc3R5bGU9ImZpbGw6IzAwMzM1OTsiIGQ9Ik0zLDQ0LjNjMCwwLDAtOS4zLDAtOS4zbDAtMC4zYzAtMS44LDEuNS0zLjQsMy40LTMuNGgzNS4yYzAuOSwwLDEuNywwLjQsMi40LDFoMy41DQoJYy0wLjktMi4zLTMuMi0zLjktNS44LTMuOUg2LjNjLTMuNSwwLTYuMywyLjgtNi4zLDYuNGMwLDAuMSwwLDAuMywwLDAuMmMwLDAuMiwwLDAuMywwLDAuNnYxMC4xYzAsMC44LDAuNywxLjUsMS41LDEuNWgzMC43di0zSDN6Ig0KCS8+DQo8Zz4NCgk8cGF0aCBzdHlsZT0iZmlsbDojMDAzMzU5OyIgZD0iTTQ5LjMsNDMuNWMwLDAuNS0wLjEsMS0wLjYsMWgtNC4xdjQuMWMwLDAuNS0wLjUsMC42LTEsMC42Yy0wLjUsMC0xLDAtMS0wLjZ2LTQuMWgtNC4xDQoJCWMtMC41LDAtMC42LTAuNC0wLjYtMWMwLTAuNSwwLTEsMC42LTFoNC4xdi00LjFjMC0wLjUsMC40LTAuNiwxLTAuNmMwLjUsMCwxLDAsMSwwLjZ2NC4xaDQuMUM0OS4zLDQyLjUsNDkuMyw0Mi45LDQ5LjMsNDMuNXoiLz4NCjwvZz4NCjxnPg0KCTxwYXRoIHN0eWxlPSJmaWxsOiMwMDMzNTk7IiBkPSJNNDguMSw1My4xSDM0LjFWMzMuOGgxOS40djE0LjFDNTMuNCw1MC44LDUxLDUzLjEsNDguMSw1My4xeiBNMzYuMSw1MS4xaDEyLjENCgkJYzEuOCwwLDMuMy0xLjUsMy4zLTMuM1YzNS44SDM2LjFWNTEuMXoiLz4NCjwvZz4NCjwvc3ZnPg0K');
+  background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0)), url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4NCjwhLS0gR2VuZXJhdG9yOiBBZG9iZSBJbGx1c3RyYXRvciAxOS4xLjAsIFNWRyBFeHBvcnQgUGx1Zy1JbiAuIFNWRyBWZXJzaW9uOiA2LjAwIEJ1aWxkIDApICAtLT4NCjxzdmcgdmVyc2lvbj0iMS4xIiBpZD0iTGF5ZXJfMSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgeD0iMHB4IiB5PSIwcHgiDQoJIHZpZXdCb3g9IjAgMCA1My40IDUzLjEiIHN0eWxlPSJlbmFibGUtYmFja2dyb3VuZDpuZXcgMCAwIDUzLjQgNTMuMTsiIHhtbDpzcGFjZT0icHJlc2VydmUiPg0KPHBhdGggc3R5bGU9ImZpbGw6IzAwMzM1OTsiIGQ9Ik0yMy45LDI3LjZjNy42LDAsMTMuOC02LjIsMTMuOC0xMy44YzAtNy42LTYuMi0xMy44LTEzLjgtMTMuOGMtNy42LDAtMTMuOCw2LjItMTMuOCwxMy44DQoJQzEwLjEsMjEuNCwxNi4zLDI3LjYsMjMuOSwyNy42eiBNMjMuOSwyLjljNiwwLDEwLjksNC45LDEwLjksMTAuOWMwLDYtNC45LDEwLjktMTAuOSwxMC45Yy02LDAtMTAuOS00LjktMTAuOS0xMC45DQoJQzEzLjEsNy44LDE3LjksMi45LDIzLjksMi45eiIvPg0KPHBhdGggc3R5bGU9ImZpbGw6IzAwMzM1OTsiIGQ9Ik0zLDQ0LjNjMCwwLDAtOS4zLDAtOS4zbDAtMC4zYzAtMS44LDEuNS0zLjQsMy40LTMuNGgzNS4yYzAuOSwwLDEuNywwLjQsMi40LDFoMy41DQoJYy0wLjktMi4zLTMuMi0zLjktNS44LTMuOUg2LjNjLTMuNSwwLTYuMywyLjgtNi4zLDYuNGMwLDAuMSwwLDAuMywwLDAuMmMwLDAuMiwwLDAuMywwLDAuNnYxMC4xYzAsMC44LDAuNywxLjUsMS41LDEuNWgzMC43di0zSDN6Ig0KCS8+DQo8Zz4NCgk8cGF0aCBzdHlsZT0iZmlsbDojMDAzMzU5OyIgZD0iTTQ5LjMsNDMuNWMwLDAuNS0wLjEsMS0wLjYsMWgtNC4xdjQuMWMwLDAuNS0wLjUsMC42LTEsMC42Yy0wLjUsMC0xLDAtMS0wLjZ2LTQuMWgtNC4xDQoJCWMtMC41LDAtMC42LTAuNC0wLjYtMWMwLTAuNSwwLTEsMC42LTFoNC4xdi00LjFjMC0wLjUsMC40LTAuNiwxLTAuNmMwLjUsMCwxLDAsMSwwLjZ2NC4xaDQuMUM0OS4zLDQyLjUsNDkuMyw0Mi45LDQ5LjMsNDMuNXoiLz4NCjwvZz4NCjxnPg0KCTxwYXRoIHN0eWxlPSJmaWxsOiMwMDMzNTk7IiBkPSJNNDguMSw1My4xSDM0LjFWMzMuOGgxOS40djE0LjFDNTMuNCw1MC44LDUxLDUzLjEsNDguMSw1My4xeiBNMzYuMSw1MS4xaDEyLjENCgkJYzEuOCwwLDMuMy0xLjUsMy4zLTMuM1YzNS44SDM2LjFWNTEuMXoiLz4NCjwvZz4NCjwvc3ZnPg0K');
+  opacity: 0.6;
+}
+
+/* line 77, ../sass/partials/components/nav/_tb-megamenu-big-button.scss */
+.has-icon-innovator:focus:before,
+.has-icon-innovator:hover:before,
+.has-icon-innovator:active:before {
+  opacity: 1;
+}
+
+/* line 72, ../sass/partials/components/nav/_tb-megamenu-big-button.scss */
+.has-icon-funding:before {
+  -moz-transition: opacity 0.2s linear;
+  -o-transition: opacity 0.2s linear;
+  -webkit-transition: opacity 0.2s linear;
+  transition: opacity 0.2s linear;
+  background-image: url('../images/bg/icon-fund-browse-52-52-darkblue.png');
+  background-image: -webkit-linear-gradient(transparent, transparent), url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4NCjwhLS0gR2VuZXJhdG9yOiBBZG9iZSBJbGx1c3RyYXRvciAxOS4xLjAsIFNWRyBFeHBvcnQgUGx1Zy1JbiAuIFNWRyBWZXJzaW9uOiA2LjAwIEJ1aWxkIDApICAtLT4NCjxzdmcgdmVyc2lvbj0iMS4xIiBpZD0iTGF5ZXJfMSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgeD0iMHB4IiB5PSIwcHgiDQoJIHZpZXdCb3g9Ii00NTEgMjU1IDUyIDUyIiBzdHlsZT0iZW5hYmxlLWJhY2tncm91bmQ6bmV3IC00NTEgMjU1IDUyIDUyOyIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSI+DQo8Zz4NCgk8Zz4NCgkJPHBhdGggc3R5bGU9ImZpbGw6IzAwMzM1OTsiIGQ9Ik0tNDI1LDMwNC43Yy0xMy4xLDAtMjMuNy0xMC43LTIzLjctMjMuN2MwLTEzLjEsMTAuNy0yMy43LDIzLjctMjMuN3MyMy43LDEwLjcsMjMuNywyMy43DQoJCQlDLTQwMS4zLDI5NC4xLTQxMS45LDMwNC43LTQyNSwzMDQuN3ogTS00MjUsMjYwLjFjLTExLjYsMC0yMC45LDkuNS0yMC45LDIwLjljMCwxMS42LDkuNSwyMC45LDIwLjksMjAuOQ0KCQkJYzExLjYsMCwyMC45LTkuNSwyMC45LTIwLjlDLTQwNC4xLDI2OS40LTQxMy40LDI2MC4xLTQyNSwyNjAuMXoiLz4NCgk8L2c+DQoJPHBhdGggc3R5bGU9ImZpbGw6IzAwMzM1OTsiIGQ9Ik0tNDE3LjYsMjgyLjljLTAuNC0xLTEtMS43LTEuNy0yLjFjLTAuNy0wLjQtMS40LTEtMi40LTEuMmMtMC43LTAuMy0xLjQtMC40LTIuMS0wLjd2LTcuNQ0KCQljMC4zLDAsMC43LDAsMSwwLjNjMC40LDAuMywxLDAuNCwxLjIsMC43YzAuMywwLjMsMC40LDAuNywwLjcsMWMwLjMsMC40LDAuMywxLDAuMywxLjRsMi44LTAuM2MwLTEtMC4zLTEuOS0wLjQtMi42DQoJCWMtMC4zLTAuNy0xLTEuNC0xLjQtMS45Yy0wLjctMC40LTEuNC0xLTIuMS0xLjJjLTAuNC0wLjMtMS4yLTAuMy0xLjctMC4zdi0xLjRoLTIuOHYxLjRjLTAuNywwLTEuMiwwLjMtMS43LDAuMw0KCQljLTEsMC40LTEuNywwLjctMi4xLDEuNGMtMC43LDAuNC0xLjIsMS4yLTEuNywxLjljLTAuMywxLTAuNCwxLjctMC40LDIuNmMwLDEsMC4zLDEuOSwwLjQsMi44YzAuNCwwLjcsMSwxLjQsMS40LDEuOQ0KCQljMC43LDAuNCwxLjQsMSwyLjQsMS4yYzAuNCwwLjMsMSwwLjQsMS43LDAuNHY4LjVjLTAuNy0wLjMtMS43LTAuNC0yLjEtMWMtMC43LTAuNC0xLjItMS40LTEuNC0yLjRjMC0wLjMsMC0wLjQsMC0wLjRWMjg1DQoJCWwtMi44LDAuM3YwLjdjMCwwLjMsMCwwLjQsMCwxYzAuNCwxLjksMS4yLDMuMywyLjYsNC4zYzEsMC43LDIuNCwxLjIsMy44LDEuNHYyLjZoMi44di0yLjZjMC43LDAsMS4yLTAuMywxLjktMC40DQoJCWMxLTAuMywxLjctMC43LDIuNC0xLjJjMC43LTAuNCwxLjItMS4yLDEuNy0xLjljMC40LTAuNywwLjctMS43LDAuNy0yLjhDLTQxNy4yLDI4NC44LTQxNy4yLDI4My44LTQxNy42LDI4Mi45eiBNLTQyNy4xLDI3Ny45DQoJCWMtMC43LTAuMy0xLTAuNC0xLjQtMC43Yy0wLjMtMC4zLTAuNC0wLjctMC43LTFjLTAuMy0wLjQtMC4zLTEtMC4zLTEuN2MwLTAuNCwwLTEsMC4zLTEuNGMwLjMtMC40LDAuNC0wLjcsMS0xLjINCgkJYzAuMy0wLjMsMC43LTAuNCwxLjItMC43YzAuMywwLDAuNC0wLjMsMC43LTAuM3Y2LjhDLTQyNi43LDI3OC4yLTQyNi45LDI3Ny45LTQyNy4xLDI3Ny45eiBNLTQyMC4zLDI4Ny40Yy0wLjMsMC40LTAuNCwxLTEsMS4yDQoJCWMtMC40LDAuMy0xLDAuNC0xLjQsMC43Yy0wLjMsMC0wLjcsMC4zLTEsMC4zdi03LjhjMC40LDAsMSwwLjMsMS4yLDAuM2MwLjQsMC4zLDEsMC40LDEuNCwwLjdjMC4zLDAuMywwLjQsMC43LDAuNywxLjINCgkJYzAuMywwLjQsMC4zLDEuMiwwLjMsMS45Qy00MTkuOCwyODYuNC00MjAsMjg3LTQyMC4zLDI4Ny40eiIvPg0KPC9nPg0KPC9zdmc+DQo=');
+  background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0)), url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4NCjwhLS0gR2VuZXJhdG9yOiBBZG9iZSBJbGx1c3RyYXRvciAxOS4xLjAsIFNWRyBFeHBvcnQgUGx1Zy1JbiAuIFNWRyBWZXJzaW9uOiA2LjAwIEJ1aWxkIDApICAtLT4NCjxzdmcgdmVyc2lvbj0iMS4xIiBpZD0iTGF5ZXJfMSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgeD0iMHB4IiB5PSIwcHgiDQoJIHZpZXdCb3g9Ii00NTEgMjU1IDUyIDUyIiBzdHlsZT0iZW5hYmxlLWJhY2tncm91bmQ6bmV3IC00NTEgMjU1IDUyIDUyOyIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSI+DQo8Zz4NCgk8Zz4NCgkJPHBhdGggc3R5bGU9ImZpbGw6IzAwMzM1OTsiIGQ9Ik0tNDI1LDMwNC43Yy0xMy4xLDAtMjMuNy0xMC43LTIzLjctMjMuN2MwLTEzLjEsMTAuNy0yMy43LDIzLjctMjMuN3MyMy43LDEwLjcsMjMuNywyMy43DQoJCQlDLTQwMS4zLDI5NC4xLTQxMS45LDMwNC43LTQyNSwzMDQuN3ogTS00MjUsMjYwLjFjLTExLjYsMC0yMC45LDkuNS0yMC45LDIwLjljMCwxMS42LDkuNSwyMC45LDIwLjksMjAuOQ0KCQkJYzExLjYsMCwyMC45LTkuNSwyMC45LTIwLjlDLTQwNC4xLDI2OS40LTQxMy40LDI2MC4xLTQyNSwyNjAuMXoiLz4NCgk8L2c+DQoJPHBhdGggc3R5bGU9ImZpbGw6IzAwMzM1OTsiIGQ9Ik0tNDE3LjYsMjgyLjljLTAuNC0xLTEtMS43LTEuNy0yLjFjLTAuNy0wLjQtMS40LTEtMi40LTEuMmMtMC43LTAuMy0xLjQtMC40LTIuMS0wLjd2LTcuNQ0KCQljMC4zLDAsMC43LDAsMSwwLjNjMC40LDAuMywxLDAuNCwxLjIsMC43YzAuMywwLjMsMC40LDAuNywwLjcsMWMwLjMsMC40LDAuMywxLDAuMywxLjRsMi44LTAuM2MwLTEtMC4zLTEuOS0wLjQtMi42DQoJCWMtMC4zLTAuNy0xLTEuNC0xLjQtMS45Yy0wLjctMC40LTEuNC0xLTIuMS0xLjJjLTAuNC0wLjMtMS4yLTAuMy0xLjctMC4zdi0xLjRoLTIuOHYxLjRjLTAuNywwLTEuMiwwLjMtMS43LDAuMw0KCQljLTEsMC40LTEuNywwLjctMi4xLDEuNGMtMC43LDAuNC0xLjIsMS4yLTEuNywxLjljLTAuMywxLTAuNCwxLjctMC40LDIuNmMwLDEsMC4zLDEuOSwwLjQsMi44YzAuNCwwLjcsMSwxLjQsMS40LDEuOQ0KCQljMC43LDAuNCwxLjQsMSwyLjQsMS4yYzAuNCwwLjMsMSwwLjQsMS43LDAuNHY4LjVjLTAuNy0wLjMtMS43LTAuNC0yLjEtMWMtMC43LTAuNC0xLjItMS40LTEuNC0yLjRjMC0wLjMsMC0wLjQsMC0wLjRWMjg1DQoJCWwtMi44LDAuM3YwLjdjMCwwLjMsMCwwLjQsMCwxYzAuNCwxLjksMS4yLDMuMywyLjYsNC4zYzEsMC43LDIuNCwxLjIsMy44LDEuNHYyLjZoMi44di0yLjZjMC43LDAsMS4yLTAuMywxLjktMC40DQoJCWMxLTAuMywxLjctMC43LDIuNC0xLjJjMC43LTAuNCwxLjItMS4yLDEuNy0xLjljMC40LTAuNywwLjctMS43LDAuNy0yLjhDLTQxNy4yLDI4NC44LTQxNy4yLDI4My44LTQxNy42LDI4Mi45eiBNLTQyNy4xLDI3Ny45DQoJCWMtMC43LTAuMy0xLTAuNC0xLjQtMC43Yy0wLjMtMC4zLTAuNC0wLjctMC43LTFjLTAuMy0wLjQtMC4zLTEtMC4zLTEuN2MwLTAuNCwwLTEsMC4zLTEuNGMwLjMtMC40LDAuNC0wLjcsMS0xLjINCgkJYzAuMy0wLjMsMC43LTAuNCwxLjItMC43YzAuMywwLDAuNC0wLjMsMC43LTAuM3Y2LjhDLTQyNi43LDI3OC4yLTQyNi45LDI3Ny45LTQyNy4xLDI3Ny45eiBNLTQyMC4zLDI4Ny40Yy0wLjMsMC40LTAuNCwxLTEsMS4yDQoJCWMtMC40LDAuMy0xLDAuNC0xLjQsMC43Yy0wLjMsMC0wLjcsMC4zLTEsMC4zdi03LjhjMC40LDAsMSwwLjMsMS4yLDAuM2MwLjQsMC4zLDEsMC40LDEuNCwwLjdjMC4zLDAuMywwLjQsMC43LDAuNywxLjINCgkJYzAuMywwLjQsMC4zLDEuMiwwLjMsMS45Qy00MTkuOCwyODYuNC00MjAsMjg3LTQyMC4zLDI4Ny40eiIvPg0KPC9nPg0KPC9zdmc+DQo=');
+  opacity: 0.6;
+}
+
+/* line 77, ../sass/partials/components/nav/_tb-megamenu-big-button.scss */
+.has-icon-funding:focus:before,
+.has-icon-funding:hover:before,
+.has-icon-funding:active:before {
+  opacity: 1;
+}
+
+/* line 72, ../sass/partials/components/nav/_tb-megamenu-big-button.scss */
+.has-icon-resources:before {
+  -moz-transition: opacity 0.2s linear;
+  -o-transition: opacity 0.2s linear;
+  -webkit-transition: opacity 0.2s linear;
+  transition: opacity 0.2s linear;
+  background-image: url('../images/bg/icon-resources-browse-52-52-darkblue.png');
+  background-image: -webkit-linear-gradient(transparent, transparent), url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4NCjwhLS0gR2VuZXJhdG9yOiBBZG9iZSBJbGx1c3RyYXRvciAxOS4xLjAsIFNWRyBFeHBvcnQgUGx1Zy1JbiAuIFNWRyBWZXJzaW9uOiA2LjAwIEJ1aWxkIDApICAtLT4NCjxzdmcgdmVyc2lvbj0iMS4xIiBpZD0iTGF5ZXJfMSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgeD0iMHB4IiB5PSIwcHgiDQoJIHZpZXdCb3g9Ii00NTEgMjU1IDUyIDUyIiBzdHlsZT0iZW5hYmxlLWJhY2tncm91bmQ6bmV3IC00NTEgMjU1IDUyIDUyOyIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSI+DQo8Zz4NCgk8cG9seWdvbiBzdHlsZT0iZmlsbDojMDAzMzU5OyIgcG9pbnRzPSItNDA0LjksMjYyIC00MDUuNywyNTkuNyAtNDI1LDI2Ni45IC00NDQuMywyNTkuNyAtNDQ1LjEsMjYyIC00MjUsMjY5LjYgCSIvPg0KCTxwYXRoIHN0eWxlPSJmaWxsOiMwMDMzNTk7IiBkPSJNLTQwMi4xLDI2My41Yy0wLjQtMC4yLTAuOS0wLjItMS4xLTAuMmwtMjEuOCw3LjhsLTIxLjYtNy44Yy0wLjQtMC4yLTAuOSwwLTEuMSwwLjINCgkJYy0wLjQsMC4yLTAuNiwwLjYtMC42LDEuMXYyOC4zYzAsMC40LDAuNCwxLjEsMC45LDEuMmwyMiw4LjFsMCwwaDAuMmMwLDAsMCwwLDAuMiwwbDAsMGwwLDBjMCwwLDAsMCwwLjIsMGgwLjJsMCwwbDIyLTguMQ0KCQljMC40LTAuMiwwLjktMC42LDAuOS0xLjJ2LTI4LjNDLTQwMS43LDI2NC4yLTQwMS45LDI2My43LTQwMi4xLDI2My41eiBNLTQyNi4yLDI5OS4xbC0xOS41LTcuMnYtMjUuNmwxOS41LDdWMjk5LjF6IE0tNDA0LjIsMjkyLjENCgkJbC0xOS41LDcuMnYtMjYuMWwxOS41LTdWMjkyLjF6Ii8+DQo8L2c+DQo8L3N2Zz4NCg==');
+  background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0)), url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4NCjwhLS0gR2VuZXJhdG9yOiBBZG9iZSBJbGx1c3RyYXRvciAxOS4xLjAsIFNWRyBFeHBvcnQgUGx1Zy1JbiAuIFNWRyBWZXJzaW9uOiA2LjAwIEJ1aWxkIDApICAtLT4NCjxzdmcgdmVyc2lvbj0iMS4xIiBpZD0iTGF5ZXJfMSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgeD0iMHB4IiB5PSIwcHgiDQoJIHZpZXdCb3g9Ii00NTEgMjU1IDUyIDUyIiBzdHlsZT0iZW5hYmxlLWJhY2tncm91bmQ6bmV3IC00NTEgMjU1IDUyIDUyOyIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSI+DQo8Zz4NCgk8cG9seWdvbiBzdHlsZT0iZmlsbDojMDAzMzU5OyIgcG9pbnRzPSItNDA0LjksMjYyIC00MDUuNywyNTkuNyAtNDI1LDI2Ni45IC00NDQuMywyNTkuNyAtNDQ1LjEsMjYyIC00MjUsMjY5LjYgCSIvPg0KCTxwYXRoIHN0eWxlPSJmaWxsOiMwMDMzNTk7IiBkPSJNLTQwMi4xLDI2My41Yy0wLjQtMC4yLTAuOS0wLjItMS4xLTAuMmwtMjEuOCw3LjhsLTIxLjYtNy44Yy0wLjQtMC4yLTAuOSwwLTEuMSwwLjINCgkJYy0wLjQsMC4yLTAuNiwwLjYtMC42LDEuMXYyOC4zYzAsMC40LDAuNCwxLjEsMC45LDEuMmwyMiw4LjFsMCwwaDAuMmMwLDAsMCwwLDAuMiwwbDAsMGwwLDBjMCwwLDAsMCwwLjIsMGgwLjJsMCwwbDIyLTguMQ0KCQljMC40LTAuMiwwLjktMC42LDAuOS0xLjJ2LTI4LjNDLTQwMS43LDI2NC4yLTQwMS45LDI2My43LTQwMi4xLDI2My41eiBNLTQyNi4yLDI5OS4xbC0xOS41LTcuMnYtMjUuNmwxOS41LDdWMjk5LjF6IE0tNDA0LjIsMjkyLjENCgkJbC0xOS41LDcuMnYtMjYuMWwxOS41LTdWMjkyLjF6Ii8+DQo8L2c+DQo8L3N2Zz4NCg==');
+  opacity: 0.6;
+}
+
+/* line 77, ../sass/partials/components/nav/_tb-megamenu-big-button.scss */
+.has-icon-resources:focus:before,
+.has-icon-resources:hover:before,
+.has-icon-resources:active:before {
+  opacity: 1;
+}
+
+/* line 87, ../sass/partials/components/nav/_tb-megamenu-big-button.scss */
+.tb-megamenu-big-button.has-icon-add:before {
+  height: 32px;
+  left: -72px;
+  top: 13px;
+}
+/* line 92, ../sass/partials/components/nav/_tb-megamenu-big-button.scss */
+.tb-megamenu-big-button.has-icon-innovator:before {
+  left: -81px;
+  height: 56px;
+  width: 81px;
+  top: 0;
+}
+/* line 98, ../sass/partials/components/nav/_tb-megamenu-big-button.scss */
+.tb-megamenu-big-button.has-icon-resources:before {
+  left: -83px;
+  height: 56px;
+  width: 83px;
+  top: 0;
+}
+/* line 104, ../sass/partials/components/nav/_tb-megamenu-big-button.scss */
+.tb-megamenu-big-button.has-icon-funding:before {
+  left: -83px;
+  height: 56px;
+  width: 83px;
+  top: 0;
+}
+
+/* line 118, ../sass/partials/components/nav/_tb-megamenu-big-button.scss */
+.tb-megamenu-big-button + .tb-megamenu-big-button {
+  margin-left: 75px;
 }
 
 /* line 3, ../sass/partials/components/_node.scss */
@@ -5246,6 +5447,70 @@ div[class*="pane--facetapi-"] .pane__content ul li a {
 .pane--userfield-user-motto .pane__content {
   font-size: 1.125em;
   font-style: italic;
+}
+
+/* line 9, ../sass/partials/components/pane/_pane--wanteds-search.scss */
+.pane--wanteds-search .form-item--textfield {
+  float: left;
+  display: inline-block;
+  margin-top: 0;
+  width: calc(100% - 45px);
+}
+/* line 16, ../sass/partials/components/pane/_pane--wanteds-search.scss */
+.pane--wanteds-search .form-text {
+  background-color: #e6eaf0;
+  height: 40px;
+  line-height: 40px;
+  padding: 12px;
+  width: 100%;
+}
+/* line 22, ../sass/partials/components/pane/_pane--wanteds-search.scss */
+.pane--wanteds-search .form-text:focus {
+  border-color: #7090b7;
+  border-right: 0;
+}
+/* line 27, ../sass/partials/components/pane/_pane--wanteds-search.scss */
+.pane--wanteds-search .form-text::-webkit-input-placeholder {
+  font-style: italic;
+  color: #565a5c;
+}
+/* line 32, ../sass/partials/components/pane/_pane--wanteds-search.scss */
+.pane--wanteds-search .form-text:-moz-placeholder {
+  font-style: italic;
+  color: #565a5c;
+}
+/* line 37, ../sass/partials/components/pane/_pane--wanteds-search.scss */
+.pane--wanteds-search .form-text::-moz-placeholder {
+  font-style: italic;
+  color: #565a5c;
+}
+/* line 42, ../sass/partials/components/pane/_pane--wanteds-search.scss */
+.pane--wanteds-search .form-text:-ms-input-placeholder {
+  font-style: italic;
+  color: #565a5c;
+}
+/* line 49, ../sass/partials/components/pane/_pane--wanteds-search.scss */
+.pane--wanteds-search .button--submit {
+  color: transparent;
+  font: 0/0 a;
+  height: 40px;
+  text-shadow: none;
+  width: 45px;
+  background-image: url('../images/bg/search.png');
+  background-image: -webkit-linear-gradient(transparent, transparent), url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4NCjwhLS0gR2VuZXJhdGVkIGJ5IEljb01vb24uaW8gLS0+DQo8IURPQ1RZUEUgc3ZnIFBVQkxJQyAiLS8vVzNDLy9EVEQgU1ZHIDEuMS8vRU4iICJodHRwOi8vd3d3LnczLm9yZy9HcmFwaGljcy9TVkcvMS4xL0RURC9zdmcxMS5kdGQiPg0KPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHdpZHRoPSIxNyIgaGVpZ2h0PSIxNyIgdmlld0JveD0iMCAwIDE3IDE3Ij4NCjxwYXRoIGQ9Ik03LjA4MyAwLjcwOHExLjI5NSAwIDIuNDc2IDAuNTA2dDIuMDM0IDEuMzU5IDEuMzU5IDIuMDM0IDAuNTA2IDIuNDc2cTAgMS4xMTItMC4zNjIgMi4xMzF0LTEuMDMyIDEuODQ4bDQuMDIzIDQuMDE4cTAuMjA1IDAuMjA1IDAuMjA1IDAuNTA0IDAgMC4zMDQtMC4yMDIgMC41MDZ0LTAuNTA2IDAuMjAycS0wLjI5OSAwLTAuNTA0LTAuMjA1bC00LjAxOC00LjAyM3EtMC44MyAwLjY3LTEuODQ4IDEuMDMydC0yLjEzMSAwLjM2MnEtMS4yOTUgMC0yLjQ3Ni0wLjUwNnQtMi4wMzQtMS4zNTktMS4zNTktMi4wMzQtMC41MDYtMi40NzYgMC41MDYtMi40NzYgMS4zNTktMi4wMzQgMi4wMzQtMS4zNTkgMi40NzYtMC41MDZ6TTcuMDgzIDIuMTI1cS0xLjAwNyAwLTEuOTI2IDAuMzkzdC0xLjU4MyAxLjA1Ny0xLjA1NyAxLjU4My0wLjM5MyAxLjkyNiAwLjM5MyAxLjkyNiAxLjA1NyAxLjU4MyAxLjU4MyAxLjA1NyAxLjkyNiAwLjM5MyAxLjkyNi0wLjM5MyAxLjU4My0xLjA1NyAxLjA1Ny0xLjU4MyAwLjM5My0xLjkyNi0wLjM5My0xLjkyNi0xLjA1Ny0xLjU4My0xLjU4My0xLjA1Ny0xLjkyNi0wLjM5M3oiIGZpbGw9IiNmZmZmZmYiPjwvcGF0aD4NCjwvc3ZnPg0K');
+  background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0)), url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4NCjwhLS0gR2VuZXJhdGVkIGJ5IEljb01vb24uaW8gLS0+DQo8IURPQ1RZUEUgc3ZnIFBVQkxJQyAiLS8vVzNDLy9EVEQgU1ZHIDEuMS8vRU4iICJodHRwOi8vd3d3LnczLm9yZy9HcmFwaGljcy9TVkcvMS4xL0RURC9zdmcxMS5kdGQiPg0KPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHdpZHRoPSIxNyIgaGVpZ2h0PSIxNyIgdmlld0JveD0iMCAwIDE3IDE3Ij4NCjxwYXRoIGQ9Ik03LjA4MyAwLjcwOHExLjI5NSAwIDIuNDc2IDAuNTA2dDIuMDM0IDEuMzU5IDEuMzU5IDIuMDM0IDAuNTA2IDIuNDc2cTAgMS4xMTItMC4zNjIgMi4xMzF0LTEuMDMyIDEuODQ4bDQuMDIzIDQuMDE4cTAuMjA1IDAuMjA1IDAuMjA1IDAuNTA0IDAgMC4zMDQtMC4yMDIgMC41MDZ0LTAuNTA2IDAuMjAycS0wLjI5OSAwLTAuNTA0LTAuMjA1bC00LjAxOC00LjAyM3EtMC44MyAwLjY3LTEuODQ4IDEuMDMydC0yLjEzMSAwLjM2MnEtMS4yOTUgMC0yLjQ3Ni0wLjUwNnQtMi4wMzQtMS4zNTktMS4zNTktMi4wMzQtMC41MDYtMi40NzYgMC41MDYtMi40NzYgMS4zNTktMi4wMzQgMi4wMzQtMS4zNTkgMi40NzYtMC41MDZ6TTcuMDgzIDIuMTI1cS0xLjAwNyAwLTEuOTI2IDAuMzkzdC0xLjU4MyAxLjA1Ny0xLjA1NyAxLjU4My0wLjM5MyAxLjkyNiAwLjM5MyAxLjkyNiAxLjA1NyAxLjU4MyAxLjU4MyAxLjA1NyAxLjkyNiAwLjM5MyAxLjkyNi0wLjM5MyAxLjU4My0xLjA1NyAxLjA1Ny0xLjU4MyAwLjM5My0xLjkyNi0wLjM5My0xLjkyNi0xLjA1Ny0xLjU4My0xLjU4My0xLjA1Ny0xLjkyNi0wLjM5M3oiIGZpbGw9IiNmZmZmZmYiPjwvcGF0aD4NCjwvc3ZnPg0K');
+  background-color: #ed7d3a;
+  background-repeat: no-repeat;
+  background-size: 20px auto;
+  background-position: center center;
+  border-color: #eb6e23;
+  float: right;
+  display: inline-block;
+  height: 40px;
+}
+/* line 60, ../sass/partials/components/pane/_pane--wanteds-search.scss */
+.pane--wanteds-search .button--submit:focus, .pane--wanteds-search .button--submit:hover {
+  background-color: #dc5606;
 }
 
 /* line 1, ../sass/partials/components/_profile-thumb.scss */
