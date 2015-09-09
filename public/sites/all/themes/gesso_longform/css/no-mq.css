@@ -1523,11 +1523,11 @@ q {
   border-bottom: 1px solid #d31145;
   color: #d31145;
   display: block;
-  width: 75%;
   font-size: 18px;
   font-style: italic;
-  margin: 0 auto;
+  margin: .5em auto;
   text-align: center;
+  width: 75%;
 }
 
 .region-navigation {
