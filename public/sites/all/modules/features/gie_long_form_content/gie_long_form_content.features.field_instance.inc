@@ -1648,6 +1648,26 @@ function gie_long_form_content_field_default_field_instances() {
         'type' => 'text_default',
         'weight' => 1,
       ),
+      'full' => array(
+        'label' => 'hidden',
+        'module' => 'text',
+        'settings' => array(
+          'field_delimiter' => '',
+          'linked_field' => array(
+            'advanced' => array(
+              'class' => '',
+              'rel' => '',
+              'target' => '',
+              'text' => '',
+              'title' => '',
+            ),
+            'destination' => '',
+            'linked' => 0,
+          ),
+        ),
+        'type' => 'text_default',
+        'weight' => 1,
+      ),
       'paragraphs_editor_preview' => array(
         'label' => 'above',
         'settings' => array(),
@@ -1716,9 +1736,23 @@ function gie_long_form_content_field_default_field_instances() {
       ),
       'view_mode_selector' => array(
         'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 0,
+        'module' => 'text',
+        'settings' => array(
+          'field_delimiter' => '',
+          'linked_field' => array(
+            'advanced' => array(
+              'class' => '',
+              'rel' => '',
+              'target' => '',
+              'text' => '',
+              'title' => '',
+            ),
+            'destination' => '',
+            'linked' => 0,
+          ),
+        ),
+        'type' => 'text_default',
+        'weight' => 1,
       ),
     ),
     'ds_extras_field_template' => '',
@@ -1781,7 +1815,6 @@ function gie_long_form_content_field_default_field_instances() {
         'module' => 'entityreference',
         'settings' => array(
           'field_delimiter' => '',
-          'link' => FALSE,
           'linked_field' => array(
             'advanced' => array(
               'class' => '',
@@ -1793,8 +1826,32 @@ function gie_long_form_content_field_default_field_instances() {
             'destination' => '',
             'linked' => 0,
           ),
+          'links' => 1,
+          'view_mode' => 'long_form_asset',
         ),
-        'type' => 'entityreference_label',
+        'type' => 'entityreference_entity_view',
+        'weight' => 0,
+      ),
+      'full' => array(
+        'label' => 'hidden',
+        'module' => 'entityreference',
+        'settings' => array(
+          'field_delimiter' => '',
+          'linked_field' => array(
+            'advanced' => array(
+              'class' => '',
+              'rel' => '',
+              'target' => '',
+              'text' => '',
+              'title' => '',
+            ),
+            'destination' => '',
+            'linked' => 0,
+          ),
+          'links' => 1,
+          'view_mode' => 'default',
+        ),
+        'type' => 'entityreference_entity_view',
         'weight' => 0,
       ),
       'paragraphs_editor_preview' => array(
@@ -1870,9 +1927,25 @@ function gie_long_form_content_field_default_field_instances() {
         'weight' => 0,
       ),
       'view_mode_selector' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
+        'label' => 'hidden',
+        'module' => 'entityreference',
+        'settings' => array(
+          'field_delimiter' => '',
+          'linked_field' => array(
+            'advanced' => array(
+              'class' => '',
+              'rel' => '',
+              'target' => '',
+              'text' => '',
+              'title' => '',
+            ),
+            'destination' => '',
+            'linked' => 0,
+          ),
+          'links' => 1,
+          'view_mode' => 'default',
+        ),
+        'type' => 'entityreference_entity_view',
         'weight' => 0,
       ),
     ),
@@ -1901,99 +1974,6 @@ function gie_long_form_content_field_default_field_instances() {
       ),
       'type' => 'entityreference_autocomplete',
       'weight' => 0,
-    ),
-  );
-
-  // Exported field_instance:
-  // 'paragraphs_item-long_form_video-field_paragraphs_view'
-  $field_instances['paragraphs_item-long_form_video-field_paragraphs_view'] = array(
-    'bundle' => 'long_form_video',
-    'default_value' => array(
-      0 => array(
-        'value' => 'paragraphs_full_width',
-      ),
-    ),
-    'deleted' => 0,
-    'description' => '',
-    'display' => array(
-      'default' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 2,
-      ),
-      'paragraphs_editor_preview' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 0,
-      ),
-      'paragraphs_full_width' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 2,
-      ),
-      'paragraphs_left_align' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 2,
-      ),
-      'paragraphs_right_align' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 2,
-      ),
-      'view_mode_selector' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 0,
-      ),
-    ),
-    'ds_extras_field_template' => '',
-    'entity_type' => 'paragraphs_item',
-    'field_name' => 'field_paragraphs_view',
-    'label' => 'Alignment',
-    'required' => 0,
-    'settings' => array(
-      'description_display' => 'after',
-      'user_register_form' => FALSE,
-      'view_modes' => array(
-        'default' => array(
-          'enable' => 0,
-        ),
-        'diff_standard' => array(
-          'enable' => 0,
-        ),
-        'full' => array(
-          'enable' => 0,
-        ),
-        'paragraphs_editor_preview' => array(
-          'enable' => 0,
-        ),
-        'paragraphs_full_width' => array(
-          'enable' => 1,
-        ),
-        'paragraphs_left_align' => array(
-          'enable' => 1,
-        ),
-        'paragraphs_right_align' => array(
-          'enable' => 1,
-        ),
-        'token' => array(
-          'enable' => 0,
-        ),
-      ),
-    ),
-    'widget' => array(
-      'active' => 0,
-      'module' => 'view_mode_selector',
-      'settings' => array(),
-      'type' => 'view_mode_selector_select',
-      'weight' => 2,
     ),
   );
 
