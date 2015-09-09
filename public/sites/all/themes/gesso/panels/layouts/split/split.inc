@@ -11,8 +11,8 @@ function gesso_split_panels_layouts() {
     'admin css' => '../../../css/panels-admin/split.css',
     'regions' => array(
       'preface' => t('Preface'),
-      'main' => t('First'),
-      'sidebar' => t('Second'),
+      'first' => t('First'),
+      'second' => t('Second'),
     ),
   );
 
