@@ -289,6 +289,33 @@ function gie_long_form_content_ds_layout_settings_info() {
   );
   $export['paragraphs_item|long_form_image|paragraphs_right_align'] = $ds_layout;
 
+  $ds_layout = new stdClass();
+  $ds_layout->api_version = 1;
+  $ds_layout->id = 'paragraphs_item|long_form_text|full';
+  $ds_layout->entity_type = 'paragraphs_item';
+  $ds_layout->bundle = 'long_form_text';
+  $ds_layout->view_mode = 'full';
+  $ds_layout->layout = 'ds_reset';
+  $ds_layout->settings = array(
+    'regions' => array(
+      'ds_content' => array(
+        0 => 'field_paragraph_text',
+      ),
+    ),
+    'fields' => array(
+      'field_paragraph_text' => 'ds_content',
+    ),
+    'classes' => array(),
+    'wrappers' => array(),
+    'layout_wrapper' => 'div',
+    'layout_attributes' => '',
+    'layout_attributes_merge' => TRUE,
+    'layout_link_attribute' => FALSE,
+    'layout_link_custom' => '',
+    'layout_disable_css' => FALSE,
+  );
+  $export['paragraphs_item|long_form_text|full'] = $ds_layout;
+
   return $export;
 }
 
