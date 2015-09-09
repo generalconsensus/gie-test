@@ -1,0 +1,9 @@
+.header-simple {
+  @extend %clearfix;
+  background: #00111F;
+  background: rgba(0,0,0,0.5);
+  border-bottom: 1px solid #fff;
+  .block {
+    float: right;
+  }
+}
