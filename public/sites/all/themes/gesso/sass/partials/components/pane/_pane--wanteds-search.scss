@@ -1,0 +1,66 @@
+// @file
+// Styling for wanteds search
+
+$search-button-width: 45px;
+$search-bar-height: 40px;
+
+.pane--wanteds-search {
+  @extend %clearfix;
+  .form-item--textfield {
+    float: left;
+    display: inline-block;
+    margin-top: 0;
+    width: calc(100% - #{$search-button-width});
+
+  }
+  .form-text {
+    background-color: $smoke;
+    height: 40px;
+    line-height: $search-bar-height;
+    padding: 12px;
+    width: 100%;
+    &:focus{
+      border-color: $lightblue;
+      border-right: 0;
+    }
+
+    &::-webkit-input-placeholder {
+      font-style: italic;
+      color: $primary-text-color;
+    }
+
+    &:-moz-placeholder {
+      font-style: italic;
+      color: $primary-text-color;
+    }
+
+    &::-moz-placeholder {
+       font-style: italic;
+       color: $primary-text-color;
+    }
+
+    &:-ms-input-placeholder {
+       font-style: italic;
+       color: $primary-text-color;
+    }
+
+  }
+
+  .button--submit {
+    @include image-replace-alt($search-button-width, $search-bar-height);
+    @include svg-background(search);
+    background-color: $lightorange;
+    background-repeat: no-repeat;
+    background-size: 20px auto;
+    background-position: center center;
+    border-color: darken($lightorange, 5%);
+    float: right;
+    display: inline-block;
+    height: $search-bar-height;
+    &:focus,
+    &:hover {
+      background-color: $orange;
+    }
+  }
+}
+

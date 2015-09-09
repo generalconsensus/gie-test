@@ -1,0 +1,124 @@
+// @file
+// Styles Mega Menu Buttons.
+
+
+$tb-icon-width: 20px;
+$tb-icon-padding: 75px;
+$tb-max-width: 380px;
+
+$iconList : (
+  'has-icon-innovation' : 'icon-innov-browse-41-54-darkblue' ,
+  'has-icon-add' :  'icon-innov-add-32-32-darkblue',
+  'has-icon-innovator' :  'icon-innov-collaborate-56-56-darkblue',
+  'has-icon-funding' : 'icon-fund-browse-52-52-darkblue',
+  'has-icon-resources' : 'icon-resources-browse-52-52-darkblue',
+);
+
+
+.tb-megamenu-big-button {
+  @extend %button;
+  background: $lightblue;
+  border: 0;
+  font-size: em(15px);
+  margin-left: $tb-icon-padding;
+  min-width: 280px;
+  max-width: $tb-max-width;
+  padding: 16px 35px 16px 16px !important;
+  position: relative;
+  text-align: left;
+  text-transform: uppercase;
+  
+  &:focus,
+  &:hover {
+    background: $blue;
+  }
+  
+  &:before {
+    background-repeat: no-repeat;
+    background-position: left center;
+    display: block;
+    content: "\a0";
+    position: absolute;
+    height: 54px;
+    left: -#{$tb-icon-padding};
+    top: 1px;
+    width: $tb-icon-padding;
+  }
+
+  &:after {
+    @include image-replace(16px,16px);
+    @include svg-background(chevron-thin-right2);
+    content: '';
+    display: inline-block;
+    position: absolute;
+    right: 10px;
+    top: 18px;
+  }
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.tb-megamenu-big-button {
+  .lt-ie9 &{
+    width: $tb-max-width;
+  }
+}
+
+
+
+//Add addtional class names and icons to $iconList variable
+@each $iconList, $iconName in $iconList {
+    .#{$iconList}:before {
+      @include transition(opacity 0.2s linear);
+      @include svg-background($iconName);
+      opacity: 0.6;
+    }
+    .#{$iconList}:focus:before,
+    .#{$iconList}:hover:before,
+    .#{$iconList}:active:before {
+      opacity: 1;
+    }
+}
+
+
+//Icon positioning overrides
+.tb-megamenu-big-button {
+  &.has-icon-add:before {
+    height: 32px;
+    left: -#{$tb-icon-padding - 3px};
+    top: 13px;
+  }
+  &.has-icon-innovator:before {
+    left: -#{$tb-icon-padding + 6px};
+    height: 56px;
+    width: $tb-icon-padding + 6px;
+    top: 0;
+  }
+  &.has-icon-resources:before {
+    left: -#{$tb-icon-padding + 8px};
+    height: 56px;
+    width: $tb-icon-padding + 8px;
+    top: 0;
+  }
+  &.has-icon-funding:before {
+    left: -#{$tb-icon-padding + 8px};
+    height: 56px;
+    width: $tb-icon-padding + 8px;
+    top: 0;
+  }
+
+}
+
+
+.tb-megamenu-big-button {
+  .tb-megamenu .dropdown-menu & {
+    //padding: em(18px, 15px);
+  }
+  + .tb-megamenu-big-button {
+    margin-left: $tb-icon-padding;
+  }
+}
+
+
+

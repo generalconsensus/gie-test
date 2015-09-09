@@ -10,7 +10,7 @@ include_once 'gie_user.features.inc';
  * Implements hook_ds_fields_info().
  * - Create Full Name display field.
  * - Create Member Since display field.
- * - Create Send Note (email) field.
+ * - Create Contact (email) field.
  */
 function gie_user_ds_fields_info($entity_type) {
   $fields = array();
@@ -37,7 +37,7 @@ function gie_user_ds_fields_info($entity_type) {
     );
 
     $fields['user_email'] = array(
-      'title' => t('Send Note'),
+      'title' => t('Contact'),
       'field_type' => DS_FIELD_TYPE_FUNCTION,
       'ui_limit' => array('user|*'),
       'function' => '_gie_user_user_email',
@@ -100,20 +100,20 @@ function _gie_user_user_member_since($field) {
 }
 
 /**
- * Render function for Send Note (email) field
+ * Render function for Contact (email) field
  */
 function _gie_user_user_email($field) {
-  $wrapper = entity_metadata_wrapper('user', $field['entity']);
-  $uid = $wrapper->uid->value();
+  $account = $field['entity'];
+  $uid = $account->uid;
 
   global $user;
-  if ($user->uid == $uid) {
-    // do not show on own user page
-    return;
-  }
+  // do not show on own user page OR if the requested user has disabled their contact form OR permission check
+  if ($user->uid == $uid || empty($account->data['contact']) || !user_access('access user contact forms')) {
+    return null;
+  };
 
-  $email = $wrapper->mail->value();
-  $link = l(t('Send Email'), 'mailto:' . $email, array(
+  // Setup link for display
+  $link = l(t('Contact'), 'user/' . $uid . '/contact', array(
     'attributes' => array(
       'class' => array('button')
     ),
@@ -206,4 +206,22 @@ Function gie_user_views_query_alter(&$view, &$query) {
       )
     );
   }
+}
+
+/**
+ * Implements hook_views_pre_render().
+ */
+function gie_user_views_pre_render(&$view) {
+  // Add 'Create your account' link to user menu view for anonymous users.
+  if ($view->name == 'communities_user_menu' && user_is_anonymous()) {
+    $view->footer['area']->options['content'] .= '<a class="add-new" href="/user/register">Create Your Account</a>';
+  }
+}
+
+/**
+ * Implements hook_menu_alter().
+ * - Remove Contact item from Tab menu.
+ */
+function gie_user_menu_alter(&$items) {
+  $items['user/%user/contact']['type'] = MENU_CALLBACK;
 }
