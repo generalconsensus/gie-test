@@ -79,7 +79,7 @@ function gie_homepage_welcome_count($field) {
                 if($count>1000000000) $count = round(($count/1000000000),1).' B';
                 else if($count>1000000) $count = round(($count/1000000),1).' M';
                 else if($count>1000) $count = round(($count/1000),1).' T';
-                return '<h1 class="welcome__count"><a href="/funding">$' . $count . '</h1><br><h4>Available</h4>';
+                return '<h1 class="welcome__count">$' . $count . '</h1><br><h4>Available</h4>';
                 break;
             case "user":
                 $count = db_query('SELECT COUNT(uid) FROM {users} WHERE status > :status', array(':status' => 0))->fetchField();
