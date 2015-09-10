@@ -1,3 +1,4 @@
+@charset "UTF-8";
 .element-focusable, .element-invisible, .breadcrumb__title {
   border: 0;
   clip: rect(0 0 0 0);
@@ -361,6 +362,7 @@ h2 {
 h3 {
   font-size: 1.125em;
   margin: 0 0 1.44444em;
+  color: #d31145;
 }
 
 h4 {
@@ -476,11 +478,16 @@ textarea {
 }
 
 ul {
+  list-style-type: none;
   margin: 0 0 1.625em;
   padding: 0 0 0 1.2em;
 }
 [dir="rtl"] ul {
   padding: 0 1.2em 0 0;
+}
+ul li:before {
+  content: "► ";
+  color: #d31145;
 }
 ul ol,
 ul ul {
