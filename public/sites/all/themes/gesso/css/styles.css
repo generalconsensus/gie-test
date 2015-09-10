@@ -1653,6 +1653,28 @@ input.throbbing {
   padding: 0 0 0.5em 0;
 }
 
+/* line 3, ../sass/partials/components/block/_block--login-form.scss */
+.header-simple .block--login-form {
+  float: right;
+  max-width: 450px;
+}
+/* line 8, ../sass/partials/components/block/_block--login-form.scss */
+.block--login-form .form-actions {
+  float: left;
+  width: 20%;
+}
+/* line 13, ../sass/partials/components/block/_block--login-form.scss */
+.block--login-form .form-item-name,
+.block--login-form .form-item-pass {
+  float: left;
+  width: 40%;
+}
+/* line 17, ../sass/partials/components/block/_block--login-form.scss */
+.block--login-form .form-item-name input,
+.block--login-form .form-item-pass input {
+  color: #000;
+}
+
 /* line 2, ../sass/partials/components/block/_block--pane-about-the-exchange.scss */
 .block--pane-about-the-exchange .block__content p {
   font-size: 0.875em;
