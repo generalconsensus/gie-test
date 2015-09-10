@@ -19,6 +19,12 @@ function gie_homepage_ds_fields_info($entity_type) {
             'ui_limit' => array('persona|listing'),
             'function' => 'gie_homepage_title_count',
         );
+        $fields['welcome_count'] = array(
+            'title' => t('Welcome Count'),
+            'field_type' => DS_FIELD_TYPE_FUNCTION,
+            'ui_limit' => array('persona|teaser'),
+            'function' => 'gie_homepage_welcome_count',
+        );
         return array($entity_type => $fields);
     }
     return;
@@ -47,6 +53,37 @@ function gie_homepage_title_count($field) {
             case "user":
                 $count = db_query('SELECT COUNT(uid) FROM {users} WHERE status > :status', array(':status' => 0))->fetchField();
                 return '<h1 class="card__title"><a href="/members">' . $count . ' Collaborators</a></h1>';
+                break;
+        }
+
+        return $result;
+
+    }
+}
+
+/*
+ * Custom function to return Title and Count based on Persona type
+ */
+function gie_homepage_welcome_count($field) {
+    $persona_type = field_get_items('node', $field['entity'], 'field_persona_type');
+
+    if (isset($persona_type)) {
+
+        switch ($persona_type[0]['value']) {
+            case "innovation":
+                $count = db_query('SELECT COUNT(nid) FROM {node} WHERE type = :type AND status = :status', array(':type' => 'innovation', ':status' => 1))->fetchField();
+                return '<h1 class="welcome__count">' . $count . '</h1><br><h4>Innovations</h4>';
+                break;
+            case "funding":
+                $count = db_query('SELECT SUM(field_funding_grant_award_value_value) FROM {field_data_field_funding_grant_award_value} WHERE deleted = :deleted', array(':deleted' => 0))->fetchField();
+                if($count>1000000000) $count = round(($count/1000000000),1).' B';
+                else if($count>1000000) $count = round(($count/1000000),1).' M';
+                else if($count>1000) $count = round(($count/1000),1).' T';
+                return '<h1 class="welcome__count"><a href="/funding">$' . $count . '</h1><br><h4>Available</h4>';
+                break;
+            case "user":
+                $count = db_query('SELECT COUNT(uid) FROM {users} WHERE status > :status', array(':status' => 0))->fetchField();
+                return '<h1 class="welcome__count">' . $count . '</h1><br><h4>Collaborators</h4>';
                 break;
         }
 
