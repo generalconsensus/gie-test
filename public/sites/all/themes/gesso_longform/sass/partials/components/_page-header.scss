@@ -1,0 +1,45 @@
+// @file
+// Styles for the longform page header.
+.page-header {
+  background: $red url('../images/header-background.png') no-repeat;
+  color: $white;
+  display: block;
+  padding: 8em 0 5em 0;
+  text-align: center;
+}
+
+.page-header__subtext {
+  font-size:$font-size-xl;
+  text-transform: uppercase;
+  &:after{
+    border-top: 2px #FFF solid;
+    content: " ";
+    display: block;
+    margin: 0 auto;
+    margin-top: 12px;
+    width: 20%;
+  }
+}
+
+.page-header__headline {
+  font-size:3.5em;
+  line-height: 1em;
+  text-transform: uppercase;
+  padding: 1em 0;
+  word-break: keep-all;
+}
+
+.page-header__author {
+  img{
+    border-radius: 50%;
+    border: 2px $white solid;
+  } 
+}
+
+.page-header__description {
+  font-size: $font-size-md;
+  font-style: italic;
+  // text-transform: capitalize;
+}
+
+.page-header__scroll-button {}

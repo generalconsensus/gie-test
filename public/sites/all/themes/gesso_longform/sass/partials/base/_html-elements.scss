@@ -64,6 +64,8 @@ b {}
 
 blockquote {
   margin: 0 1.5em rhythm(1);
+  color: $lightred;
+  font-size: $font-size-lg;
 }
 
 body {
@@ -161,8 +163,19 @@ h3 {
 
 h4 {
   @extend %hN;
-  font-size: em($font-size-normal);
+  font-size: em($font-size-sm);
   margin: 0 0 rhythm(1, $font-size-normal);
+  background-color: $red;
+  color: $white;
+  display: inline-block;
+  padding: 2px 5px;
+  text-transform: uppercase;
+  a{
+    color: $white;
+    text-decoration: none;
+  }
+  
+
 }
 
 h5 {

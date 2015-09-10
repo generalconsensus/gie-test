@@ -1,0 +1,24 @@
+//@file
+// Quotes
+
+blockquote {
+	&:before {
+		@include circleicon(2em, $lightred, #FFF);
+		content: open-quote;
+	}
+	p{
+		font-style: italic;
+	}
+}
+
+q {
+	border-top:1px solid $red;
+	border-bottom:1px solid $red;
+  color:$red;
+  display: block;
+  font-size: $font-size-lg;
+  font-style: italic;
+  margin: .5em auto;
+	text-align: center;
+	width: 75%;
+}
