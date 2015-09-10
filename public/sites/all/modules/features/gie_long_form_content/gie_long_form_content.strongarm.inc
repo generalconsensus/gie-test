@@ -215,6 +215,41 @@ function gie_long_form_content_strongarm() {
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
+  $strongarm->name = 'field_bundle_settings_paragraphs_item__long_form_key_figure';
+  $strongarm->value = array(
+    'view_modes' => array(
+      'paragraphs_editor_preview' => array(
+        'custom_settings' => TRUE,
+      ),
+      'view_mode_selector' => array(
+        'custom_settings' => FALSE,
+      ),
+      'paragraphs_full_width' => array(
+        'custom_settings' => TRUE,
+      ),
+      'paragraphs_left_align' => array(
+        'custom_settings' => TRUE,
+      ),
+      'paragraphs_right_align' => array(
+        'custom_settings' => TRUE,
+      ),
+      'full' => array(
+        'custom_settings' => FALSE,
+      ),
+      'token' => array(
+        'custom_settings' => FALSE,
+      ),
+    ),
+    'extra_fields' => array(
+      'form' => array(),
+      'display' => array(),
+    ),
+  );
+  $export['field_bundle_settings_paragraphs_item__long_form_key_figure'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
   $strongarm->name = 'field_bundle_settings_paragraphs_item__long_form_pullquote';
   $strongarm->value = array(
     'view_modes' => array(
