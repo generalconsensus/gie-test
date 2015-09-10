@@ -575,7 +575,7 @@ function gie_user_field_default_field_instances() {
       ),
       'show_interest_groups' => 0,
       'unsubscribe_on_delete' => 1,
-      'user_register_form' => 1,
+      'user_register_form' => 0,
     ),
     'widget' => array(
       'active' => 0,
@@ -1108,7 +1108,7 @@ function gie_user_field_default_field_instances() {
     'required' => 0,
     'settings' => array(
       'description_display' => 'before',
-      'user_register_form' => 1,
+      'user_register_form' => 0,
     ),
     'widget' => array(
       'active' => 0,
@@ -2424,7 +2424,7 @@ function gie_user_field_default_field_instances() {
       'title_field_default' => '',
       'title_field_hide' => 0,
       'title_field_update_on_edit' => 0,
-      'user_register_form' => 1,
+      'user_register_form' => 0,
     ),
     'widget' => array(
       'active' => 1,

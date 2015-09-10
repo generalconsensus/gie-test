@@ -312,6 +312,10 @@ function gie_homepage_strongarm() {
             'weight' => '10',
             'visible' => FALSE,
           ),
+          'teaser' => array(
+            'weight' => '8',
+            'visible' => FALSE,
+          ),
         ),
       ),
     ),
