@@ -17,23 +17,23 @@ function gie_homepage_ds_fields_info($entity_type) {
             'title' => t('Title Count'),
             'field_type' => DS_FIELD_TYPE_FUNCTION,
             'ui_limit' => array('persona|listing'),
-            'function' => 'gie_homepage_title_count',
+            'function' => '_gie_homepage_title_count',
         );
         $fields['welcome_count'] = array(
             'title' => t('Welcome Count'),
             'field_type' => DS_FIELD_TYPE_FUNCTION,
             'ui_limit' => array('persona|teaser'),
-            'function' => 'gie_homepage_welcome_count',
+            'function' => '_gie_homepage_welcome_count',
         );
         return array($entity_type => $fields);
     }
     return;
 }
 
-/*
+/**
  * Custom function to return Title and Count based on Persona type
  */
-function gie_homepage_title_count($field) {
+function _gie_homepage_title_count($field) {
     $persona_type = field_get_items('node', $field['entity'], 'field_persona_type');
 
     if (isset($persona_type)) {
@@ -61,10 +61,10 @@ function gie_homepage_title_count($field) {
     }
 }
 
-/*
+/**
  * Custom function to return Title and Count based on Persona type
  */
-function gie_homepage_welcome_count($field) {
+function _gie_homepage_welcome_count($field) {
     $persona_type = field_get_items('node', $field['entity'], 'field_persona_type');
 
     if (isset($persona_type)) {
@@ -72,22 +72,61 @@ function gie_homepage_welcome_count($field) {
         switch ($persona_type[0]['value']) {
             case "innovation":
                 $count = db_query('SELECT COUNT(nid) FROM {node} WHERE type = :type AND status = :status', array(':type' => 'innovation', ':status' => 1))->fetchField();
-                return '<h1 class="welcome__count">' . $count . '</h1><br><h4>Innovations</h4>';
+                return '<h1 class="welcome__count">' . $count . '</h1><h4>Innovations</h4>';
                 break;
             case "funding":
                 $count = db_query('SELECT SUM(field_funding_grant_award_value_value) FROM {field_data_field_funding_grant_award_value} WHERE deleted = :deleted', array(':deleted' => 0))->fetchField();
                 if($count>1000000000) $count = round(($count/1000000000),1).' B';
                 else if($count>1000000) $count = round(($count/1000000),1).' M';
                 else if($count>1000) $count = round(($count/1000),1).' T';
-                return '<h1 class="welcome__count">$' . $count . '</h1><br><h4>Available</h4>';
+                return '<h1 class="welcome__count">$' . $count . '</h1><h4>Available</h4>';
                 break;
             case "user":
                 $count = db_query('SELECT COUNT(uid) FROM {users} WHERE status > :status', array(':status' => 0))->fetchField();
-                return '<h1 class="welcome__count">' . $count . '</h1><br><h4>Collaborators</h4>';
+                return '<h1 class="welcome__count">' . $count . '</h1><h4>Collaborators</h4>';
                 break;
         }
 
         return $result;
 
     }
+}
+
+/**
+ * Implements hook_form_FORM_ID_alter().
+ */
+function gie_homepage_form_user_register_form_alter(&$form, &$form_state, $form_id) {
+  // Customize registration form on Welcome page
+  if (current_path() == 'user/register' || current_path() == 'welcome') {
+    $lang = $form['field_user_firstname']['#language'];
+    // Remove field descriptions
+    unset($form['account']['name']['#description']);
+    unset($form['account']['mail']['#description']);
+    unset($form['account']['pass']['#description']);
+
+    // Hide field labels
+    $form['field_user_firstname'][$lang][0]['value']['#title_display'] = 'invisible';
+    $form['field_user_lastname'][$lang][0]['value']['#title_display'] = 'invisible';
+    $form['account']['name']['#title_display'] = 'invisible';
+    $form['account']['mail']['#title_display'] = 'invisible';
+    $form['account']['pass']['#title_display'] = 'invisible';
+
+    // Set placeholder text for text inputs
+    $form['field_user_firstname'][$lang][0]['value']['#attributes']['placeholder'] = t('First Name');
+    $form['field_user_lastname'][$lang][0]['value']['#attributes']['placeholder'] = t('Last Name');
+    $form['account']['name']['#attributes']['placeholder'] = t('Username');
+    $form['account']['mail']['#attributes']['placeholder'] = t('Email Address');
+    $form['account']['pass']['#attributes']['placeholder'] = t('Password');
+
+    // Set group labels to 'do not display'
+    $form['#groups']['group_about']->format_settings['instance_settings']['show_label'] = 0;
+    $form['#groups']['group_account']->format_settings['instance_settings']['show_label'] = 0;
+
+    // hide User Notifications field
+    $form['field_user_notifications']['#access'] = FALSE;
+
+    // disable Confirm Password field
+    $form['account']['pass']['#type'] = 'password';
+    $form['account']['pass']['#title'] = 'Password';
+  }
 }
