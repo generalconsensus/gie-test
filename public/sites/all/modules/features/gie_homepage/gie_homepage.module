@@ -128,5 +128,58 @@ function gie_homepage_form_user_register_form_alter(&$form, &$form_state, $form_
     // disable Confirm Password field
     $form['account']['pass']['#type'] = 'password';
     $form['account']['pass']['#title'] = 'Password';
+
+    // Set terms and conditions text before submit button
+    $form['actions']['submit']['#prefix'] = '<p>By creating an account, you agree to our <a href="/terms-use">terms and conditions</a>.</p>';
   }
+}
+
+/**
+ * Implements hook_block_info().
+ */
+function gie_homepage_block_info() {
+  $blocks = array();
+
+  $blocks['welcome_login'] = array(
+    'info' => t('Welcome Login block')
+  );
+
+  return $blocks;
+}
+
+/**
+ * Implements hook_block_view().
+ */
+function gie_homepage_block_view($delta = '') {
+  $block = array();
+
+  switch ($delta) {
+    case 'welcome_login':
+      if (user_is_anonymous()) {
+        //Load in user login form
+        $form = drupal_get_form('user_login_block');
+
+        // Hide social login and additional links
+        unset($form['lr_social_login_links']);
+        unset($form['links']);
+
+        // Hide field labels and set placeholder text
+        $form['name']['#title_display'] = 'invisible';
+        $form['pass']['#title_display'] = 'invisible';
+        $form['name']['#attributes']['placeholder'] = t('Username');
+        $form['pass']['#attributes']['placeholder'] = t('Password');
+
+        // Add Forgot Password link after submit
+        $form['actions']['submit']['#suffix'] = t('<div>Forgot your <a href="/user/password" title="Request new password via e-mail.">Password</a></div>');
+
+        // Set redirect destination as user page
+        $form['#action'] = '/user/register?destination=user';
+
+        $block['subject'] = '';
+        $block['content'] = $form;
+      }
+      break;
+  }
+
+  return $block;
 }
