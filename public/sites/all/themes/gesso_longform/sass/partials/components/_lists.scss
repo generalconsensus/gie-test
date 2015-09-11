@@ -1,5 +1,6 @@
 //@file
 // Ordered and Unordered Lists
+$ol-bullet-size: 80px;
 
 ol {
 	margin-left: 3em;
@@ -7,11 +8,11 @@ ol {
 	list-style-type: none;
 	li{
 		// margin-bottom: 20px;
-		min-height: 80px;
+		min-height: $ol-bullet-size * 1.20;
 		padding-left: 20px;
 		position: relative;
 		ol{
-			padding-top: 60px;
+			padding-top: $ol-bullet-size;
 		}
 	}
   li:before {
@@ -23,12 +24,12 @@ ol {
     float: left;
     font-size: 1.5em;
     left: -70px;
-    line-height: 60px;
-    height: 60px;
+    line-height: $ol-bullet-size;
+    height: $ol-bullet-size;
     position: absolute;
     text-align: center;
     top: 0;
-    width: 60px;
+    width: $ol-bullet-size;
   }
 }
 
@@ -36,7 +37,7 @@ ul {
 	list-style: outside;
   list-style-type: none;
   li {
-		padding-left: 20px;
+		padding-left: 1em;
     text-align: left;
     position: relative;
   }
