@@ -1,0 +1,53 @@
+//@file
+// Ordered and Unordered Lists
+
+ol {
+	margin-left: 3em;
+	counter-reset: li-counter;
+	list-style-type: none;
+	li{
+		// margin-bottom: 20px;
+		min-height: 80px;
+		padding-left: 20px;
+		position: relative;
+		ol{
+			padding-top: 60px;
+		}
+	}
+  li:before {
+    background-color: $blue;
+    color: $white;
+    content: counter(li-counter);
+    counter-increment: li-counter;
+    display: block;
+    float: left;
+    font-size: 1.5em;
+    left: -70px;
+    line-height: 60px;
+    height: 60px;
+    position: absolute;
+    text-align: center;
+    top: 0;
+    width: 60px;
+  }
+}
+
+ul {
+	list-style: outside;
+  list-style-type: none;
+  li {
+		padding-left: 20px;
+    text-align: left;
+    position: relative;
+  }
+  li:before {
+  	content: "► ";
+    color: $red;
+    display: block;
+    float: left;
+    left: -20px;
+    padding-right: 10px;
+    position: absolute;
+    top: 0;
+  }
+}

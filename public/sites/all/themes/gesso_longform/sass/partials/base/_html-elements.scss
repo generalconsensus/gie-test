@@ -386,19 +386,10 @@ tr {}
 u {}
 
 ul {
-  list-style-type: none;
   margin: 0 0 rhythm(1);
   padding: 0 0 0 1.2em; // LTR
-
   [dir="rtl"] & {
     padding: 0 1.2em 0 0;
-  }
-  li {
-
-  }
-  li:before {
-    content: "► ";
-    color: $red;
   }
   ol,
   ul {

@@ -478,16 +478,11 @@ textarea {
 }
 
 ul {
-  list-style-type: none;
   margin: 0 0 1.625em;
   padding: 0 0 0 1.2em;
 }
 [dir="rtl"] ul {
   padding: 0 1.2em 0 0;
-}
-ul li:before {
-  content: "► ";
-  color: #d31145;
 }
 ul ol,
 ul ul {
@@ -833,6 +828,18 @@ input.throbbing {
   background-position: left 0.5em top -47px;
 }
 
+blockquote {
+  border-top: 1px solid #d31145;
+  border-bottom: 1px solid #d31145;
+  color: #d31145;
+  display: block;
+  font-size: 18px;
+  font-style: italic;
+  margin: .5em auto;
+  text-align: center;
+  width: 75%;
+}
+
 .breadcrumb {
   margin: 1.625em 0;
 }
@@ -1005,6 +1012,56 @@ input.throbbing {
 .form-textarea:focus {
   border-color: #4d4d4d;
   outline: 0;
+}
+
+ol {
+  margin-left: 3em;
+  counter-reset: li-counter;
+  list-style-type: none;
+}
+ol li {
+  min-height: 80px;
+  padding-left: 20px;
+  position: relative;
+}
+ol li ol {
+  padding-top: 60px;
+}
+ol li:before {
+  background-color: #003359;
+  color: #FFF;
+  content: counter(li-counter);
+  counter-increment: li-counter;
+  display: block;
+  float: left;
+  font-size: 1.5em;
+  left: -70px;
+  line-height: 60px;
+  height: 60px;
+  position: absolute;
+  text-align: center;
+  top: 0;
+  width: 60px;
+}
+
+ul {
+  list-style: outside;
+  list-style-type: none;
+}
+ul li {
+  padding-left: 20px;
+  text-align: left;
+  position: relative;
+}
+ul li:before {
+  content: "► ";
+  color: #d31145;
+  display: block;
+  float: left;
+  left: -20px;
+  padding-right: 10px;
+  position: absolute;
+  top: 0;
 }
 
 .messages {
@@ -1606,38 +1663,6 @@ input.throbbing {
 }
 .progress--small .progress__bar {
   height: 0.5em;
-}
-
-blockquote:before {
-  background: #ff1352;
-  border-radius: 50%;
-  color: #FFF;
-  display: block;
-  float: left;
-  font-size: 2em;
-  height: 2em;
-  line-height: 2em;
-  margin-right: 1em;
-  margin-bottom: 1em;
-  text-align: center;
-  vertical-align: middle;
-  width: 2em;
-  content: open-quote;
-}
-blockquote p {
-  font-style: italic;
-}
-
-q {
-  border-top: 1px solid #d31145;
-  border-bottom: 1px solid #d31145;
-  color: #d31145;
-  display: block;
-  font-size: 18px;
-  font-style: italic;
-  margin: .5em auto;
-  text-align: center;
-  width: 75%;
 }
 
 .region-navigation {
