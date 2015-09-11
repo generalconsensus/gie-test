@@ -304,12 +304,12 @@
     });
   }
 
-  function mainmenuDropdown() { // adds responsive width for main menu dropdown based on screen size
-    $('.tb-megamenu-submenu.dropdown-menu').each(function(){
-      var site = $('.region-navigation .region__inner').eq(0).width();
-      $(this).css("width",site);
-    });
-  }
+  // function mainmenuDropdown() { // adds responsive width for main menu dropdown based on screen size
+  //   $('.tb-megamenu-submenu.dropdown-menu').each(function(){
+  //     var site = $('.region-navigation .region__inner').eq(0).width();
+  //     $(this).css("width",site);
+  //   });
+  // }
   
 
   // Generic function that runs on window resize.
@@ -318,7 +318,7 @@
     cardFlip();
     homepageFooterCallout();
     homepagePersonasCards();
-    mainmenuDropdown();
+    //mainmenuDropdown();
   }
 
 
