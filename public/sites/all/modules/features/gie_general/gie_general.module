@@ -46,6 +46,12 @@ function gie_general_block_info() {
   $blocks['innovation_submenu'] = array(
     'info' => t('GIE Innovation submenu'),
   );
+  $blocks['resource_submenu'] = array(
+    'info' => t('GIE Resource submenu'),
+  );
+  $blocks['funding_submenu'] = array(
+    'info' => t('GIE Funding submenu'),
+  );
 
   return $blocks;
 }
@@ -58,6 +64,14 @@ function gie_general_block_view($delta = '') {
 
   switch($delta) {
     case 'innovation_submenu':
+      $block['subject'] = '';
+      $block['content'] = _gie_general_contents($delta);
+      break;
+    case 'resource_submenu':
+      $block['subject'] = '';
+      $block['content'] = _gie_general_contents($delta);
+      break;
+    case 'funding_submenu':
       $block['subject'] = '';
       $block['content'] = _gie_general_contents($delta);
       break;
@@ -85,18 +99,16 @@ function _gie_general_contents($block_id) {
           ),
         ),
       );
-      if (user_access('create innovation content')) {
-        $block += array(
-          'add_innovation' => array(
-            '#type' => 'link',
-            '#title' => t('Add an innovation'),
-            '#href' => 'node/add/innovation',
-            '#attributes' => array(
-              'class' => array('tb-megamenu-big-button has-icon-add'),
-            ),
+      $block += array(
+        'add_innovation' => array(
+          '#type' => 'link',
+          '#title' => t('Add an innovation'),
+          '#href' => 'node/add/innovation',
+          '#attributes' => array(
+            'class' => array('tb-megamenu-big-button has-icon-add'),
           ),
-        );
-      }
+        ),
+      );
       $block += array(
         'find_innovations' => array(
           '#type' => 'link',
@@ -104,6 +116,50 @@ function _gie_general_contents($block_id) {
           '#href' => 'members/field_user_type/29',
           '#attributes' => array(
             'class' => array('tb-megamenu-big-button has-icon-innovator'),
+          ),
+        ),
+      );
+      break;
+    case 'resource_submenu':
+      $block = array(
+        'browse_all' => array(
+          '#type' => 'link',
+          '#title' => t('Browse resources'),
+          '#href' => 'resources',
+          '#attributes' => array(
+            'class' => array('tb-megamenu-big-button has-icon-resources'),
+          ),
+        ),
+      );
+      $block += array(
+        'add_resource' => array(
+          '#type' => 'link',
+          '#title' => t('Add new resource'),
+          '#href' => 'node/add/resource',
+          '#attributes' => array(
+            'class' => array('tb-megamenu-big-button has-icon-add'),
+          ),
+        ),
+      );
+      break;
+    case 'funding_submenu':
+      $block = array(
+        'browse_all' => array(
+          '#type' => 'link',
+          '#title' => t('Browse funding ops'),
+          '#href' => 'funding',
+          '#attributes' => array(
+            'class' => array('tb-megamenu-big-button has-icon-funding'),
+          ),
+        ),
+      );
+      $block += array(
+        'add_funding' => array(
+          '#type' => 'link',
+          '#title' => t('Add new funding op'),
+          '#href' => 'node/add/funding',
+          '#attributes' => array(
+            'class' => array('tb-megamenu-big-button has-icon-add'),
           ),
         ),
       );
