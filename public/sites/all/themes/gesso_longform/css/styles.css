@@ -815,6 +815,31 @@ ul.panels-ipe-linkbar li {
   clear: both;
 }
 
+.aside {
+  border: 3px #ff1352 solid;
+  margin: 1em;
+  padding: 0 1em;
+  width: 300px;
+}
+.aside .aside__title {
+  color: #ff1352;
+  font-weight: bold;
+  line-height: 1em;
+  padding: 1em 0 0 0;
+  text-transform: uppercase;
+}
+.aside .aside__title:after {
+  border-bottom: 1px #ff1352 solid;
+  content: " ";
+  display: block;
+  padding: .5em 0;
+  width: 100%;
+}
+.aside .aside__body {
+  line-height: 1.2em;
+  padding: 1em 0;
+}
+
 #autocomplete {
   border: 1px solid #ccc;
   overflow: hidden;
@@ -907,7 +932,7 @@ blockquote p {
   box-shadow: 0 0px 2px 1px rgba(0, 0, 0, 0.4);
   margin: 1em;
   padding: 0 1em;
-  width: 250px;
+  width: 300px;
 }
 .card .card__title {
   color: #ff1352;
