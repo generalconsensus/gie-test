@@ -879,6 +879,28 @@ blockquote p {
   background: #d31145;
 }
 
+.card {
+  box-shadow: 0 0px 2px 1px rgba(0, 0, 0, 0.4);
+  margin: 1em;
+  padding: 0 1em;
+  width: 250px;
+}
+.card .card__title {
+  color: #ff1352;
+  font-weight: bold;
+}
+.card .card__title:before {
+  border-top: 8px #ff1352 solid;
+  content: " ";
+  display: block;
+  padding: .5em 0;
+  width: 40%;
+}
+.card .card__body {
+  line-height: 1.2em;
+  padding: 1em 0;
+}
+
 .p__dropcap:first-letter {
   background-color: #d31145;
   color: #FFF;

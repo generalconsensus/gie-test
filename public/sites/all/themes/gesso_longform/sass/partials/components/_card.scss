@@ -1,5 +1,24 @@
 // @file
 // Card styles
-.card{}
-.card__title{}
-.card__body{}
+
+.card {
+	@include box-shadow(0 0px 2px 1px rgba(0, 0, 0, 0.4));
+	margin: 1em;
+	padding: 0 1em;
+	width: 250px;
+	.card__title {
+		color: $lightred;
+		font-weight: bold;
+		&:before {
+			border-top: 8px $lightred solid;
+			content: " ";
+			display: block;
+			padding: .5em 0;
+			width: 40%;
+		}
+	}
+	.card__body {
+		line-height: 1.2em;
+		padding: 1em 0;
+	}
+}
