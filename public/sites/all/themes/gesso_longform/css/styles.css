@@ -322,6 +322,31 @@ button {
   overflow: visible;
 }
 
+caption, .caption {
+  font-size: 13px;
+  text-align: center;
+  padding: 1em;
+}
+caption:before, .caption:before {
+  content: "Caption: ";
+  font-weight: bold;
+}
+caption:after, .caption:after {
+  border-bottom: 1px solid #d31145;
+  content: " ";
+  display: block;
+  margin: 0 auto;
+  padding: .5em;
+  width: 50%;
+}
+
+cite:before {
+  content: "- ";
+}
+cite .cite__author {
+  font-weight: bold;
+}
+
 dd {
   margin-bottom: 1.625em;
 }
@@ -487,6 +512,11 @@ ul {
 ul ol,
 ul ul {
   margin: 0;
+}
+
+video {
+  display: block;
+  margin: 0 auto;
 }
 
 @media print {
@@ -839,6 +869,10 @@ blockquote {
   text-align: center;
   width: 75%;
 }
+blockquote p {
+  margin: 0;
+  padding: .5em 0;
+}
 
 .breadcrumb {
   margin: 1.625em 0;
@@ -1034,6 +1068,31 @@ blockquote {
   margin: 0 auto;
   margin-bottom: 20px;
   width: 20%;
+}
+
+.key-figure {
+  color: #d31145;
+  display: block;
+  padding: 0 .5em;
+  text-align: center;
+}
+.key-figure .key-figure__number {
+  font-size: 100px;
+  line-height: 1em;
+}
+.key-figure .key-figure__body {
+  font-size: 24px;
+  line-height: 1em;
+  padding: .5em 0;
+}
+.key-figure .key-figure__source {
+  color: #565a5c;
+  font-size: 13px;
+  line-height: 1em;
+}
+.key-figure .key-figure__source:before {
+  content: "Source: ";
+  font-weight: bold;
 }
 
 ol {

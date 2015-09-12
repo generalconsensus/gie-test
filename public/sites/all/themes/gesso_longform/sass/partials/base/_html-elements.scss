@@ -84,9 +84,32 @@ button {
 
 canvas {}
 
-caption {}
+caption, .caption {
+  font-size: $font-size-sm;
+  text-align: center;
+  padding: 1em;
+  &:before{
+    content: "Caption: ";
+    font-weight: bold;
+  }
+  &:after{
+    border-bottom: 1px solid $red;
+    content: " ";
+    display: block;
+    margin: 0 auto;
+    padding: .5em;
+    width: 50%;
+  }
+}
 
-cite {}
+cite {
+  &:before{
+    content: "- ";
+  }
+  .cite__author{
+    font-weight: bold;
+  }
+}
 
 code {}
 
@@ -399,7 +422,10 @@ ul {
 
 var {}
 
-video {}
+video {
+  display: block;
+  margin: 0 auto;
+}
 
 // Default print styles
 @media print {
