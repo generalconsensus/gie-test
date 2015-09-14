@@ -1,0 +1,11 @@
+<?php
+
+/**
+ * Implements hook_update_n
+ * Deleted alignment field from video paragraph bundle
+ */
+
+function gie_long_form_content_update_7000() {
+  $instance = field_info_instance('paragraphs_item', 'field_paragraphs_view', 'long_form_video');
+  field_delete_instance($instance);
+}

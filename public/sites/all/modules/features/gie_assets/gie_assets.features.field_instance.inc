@@ -618,6 +618,12 @@ function gie_assets_field_default_field_instances() {
         'type' => 'text_default',
         'weight' => 1,
       ),
+      'long_form_asset' => array(
+        'label' => 'hidden',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 1,
+      ),
       'small' => array(
         'label' => 'hidden',
         'module' => 'text',
@@ -769,6 +775,28 @@ function gie_assets_field_default_field_instances() {
             'linked' => 0,
           ),
           'width' => 640,
+        ),
+        'type' => 'emvideo_video',
+        'weight' => 0,
+      ),
+      'long_form_asset' => array(
+        'label' => 'hidden',
+        'module' => 'emvideo',
+        'settings' => array(
+          'field_delimiter' => '',
+          'height' => 470,
+          'linked_field' => array(
+            'advanced' => array(
+              'class' => '',
+              'rel' => '',
+              'target' => '',
+              'text' => '',
+              'title' => '',
+            ),
+            'destination' => '',
+            'linked' => 0,
+          ),
+          'width' => 835,
         ),
         'type' => 'emvideo_video',
         'weight' => 0,

@@ -1,12 +1,18 @@
 .site-name {
-  left: 10px; // offset layout-constrain padding
-  position: absolute;
-  top: 12px;
-  z-index: 3;
+  .region-navigation & {
+    left: 10px; // offset layout-constrain padding
+    position: absolute;
+    top: 12px;
+    z-index: 3;
+  }
 }
 
 .site-name__link {
   @include image-replace(179px,36px);
   @include svg-background(logo);
   display: block;
+
+  .site-name--simple & {
+    @include svg-background(logo-simple);
+  }
 }
