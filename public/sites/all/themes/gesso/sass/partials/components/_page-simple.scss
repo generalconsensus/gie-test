@@ -1,4 +1,24 @@
 .page-simple {
-  background: url(../images/page-simple-bg.jpg) repeat 0 0; 
+  // background: url(../images/page-simple-bg.jpg) repeat 0 0;
   color: #fff;
+}
+
+
+.page-simple__inner {
+    background: url(../images/page-simple-bg.jpg) repeat-y 0 0;
+    -webkit-animation: backgroundScroll 139s linear infinite;
+    animation: backgroundScroll 139s linear infinite;
+}
+
+
+
+
+@-webkit-keyframes backgroundScroll {
+from {background-position: 0 0;}
+to {background-position:  0 -1246px;}
+}
+
+@keyframes backgroundScroll {
+from {background-position: 0 0;}
+to {background-position:  0 -1246px;}
 }
