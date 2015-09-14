@@ -1,0 +1,22 @@
+.block--gie-homepage-welcome-login {
+  
+  .header-simple & {
+    float: right;
+    max-width: 450px;
+  }
+  
+  .form-actions {
+    float: left;
+    width: 20%;
+  }
+
+  .form-item-name,
+  .form-item-pass {
+    float: left;
+    width: 40%;
+    input {
+      color: #000;
+    }
+  }
+  
+}
