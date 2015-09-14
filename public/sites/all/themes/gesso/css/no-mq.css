@@ -1574,25 +1574,25 @@ input.throbbing {
   padding: 0 0 0.5em 0;
 }
 
-/* line 2, ../sass/partials/components/block/_block--login-form.scss */
-.header-simple .block--login-form {
+/* line 3, ../sass/partials/components/block/_block--login-form.scss */
+.header-simple .block--gie-homepage-welcome-login {
   float: right;
   max-width: 450px;
 }
-/* line 7, ../sass/partials/components/block/_block--login-form.scss */
-.block--login-form .form-actions {
+/* line 8, ../sass/partials/components/block/_block--login-form.scss */
+.block--gie-homepage-welcome-login .form-actions {
   float: left;
   width: 20%;
 }
-/* line 12, ../sass/partials/components/block/_block--login-form.scss */
-.block--login-form .form-item-name,
-.block--login-form .form-item-pass {
+/* line 13, ../sass/partials/components/block/_block--login-form.scss */
+.block--gie-homepage-welcome-login .form-item-name,
+.block--gie-homepage-welcome-login .form-item-pass {
   float: left;
   width: 40%;
 }
-/* line 16, ../sass/partials/components/block/_block--login-form.scss */
-.block--login-form .form-item-name input,
-.block--login-form .form-item-pass input {
+/* line 17, ../sass/partials/components/block/_block--login-form.scss */
+.block--gie-homepage-welcome-login .form-item-name input,
+.block--gie-homepage-welcome-login .form-item-pass input {
   color: #000;
 }
 
