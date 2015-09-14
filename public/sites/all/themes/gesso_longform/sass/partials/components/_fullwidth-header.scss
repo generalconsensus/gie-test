@@ -1,0 +1,23 @@
+//@file
+// Fullwidth Header
+.fullwidth-header {
+	background: $red url('../images/header-background.png') no-repeat;
+  color: $white;
+  display: block;
+  padding: 8em 1em;
+  text-align: center;
+}
+
+.fullwidth-header__caption {
+	font-size:$font-size-header;
+	text-transform: capitalize;
+	line-height: 1em;
+	&:before {
+		border: 2px $blue solid;
+		content:" ";
+		display: block;
+		margin: 0 auto;
+		margin-bottom: 20px;
+		width: 20%;
+	}
+}

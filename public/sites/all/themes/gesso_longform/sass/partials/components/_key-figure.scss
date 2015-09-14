@@ -1,0 +1,27 @@
+//@file
+// Key Figure Block
+
+.key-figure {
+	color: $red;
+	display: block;
+	padding: 0 .5em;
+	text-align: center;
+	.key-figure__number {
+		font-size:$font-size-key-figure;
+		line-height: 1em;
+	}
+	.key-figure__body {
+		font-size:$font-size-xxl;
+		line-height: 1em;
+		padding: .5em 0;
+	}
+	.key-figure__source {
+		color:$primary-text-color;
+		font-size:$font-size-sm;
+		line-height: 1em;
+		&:before{
+			content: "Source: ";
+			font-weight: bold;
+		}
+	}
+}

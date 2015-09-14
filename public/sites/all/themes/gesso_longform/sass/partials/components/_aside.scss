@@ -1,0 +1,27 @@
+//@file
+// Aside Block
+
+.aside {
+	border: 3px $lightred solid; 
+	margin: 1em;
+	padding: 0 1em;
+	width: 300px;
+	.aside__title {
+		color: $lightred;
+		font-weight: bold;
+		line-height: 1em;
+		padding: 1em 0 0 0;
+		text-transform: uppercase;
+		&:after {
+			border-bottom: 1px $lightred solid;
+			content: " ";
+			display: block;
+			padding: .5em 0;
+			width: 100%;
+		}
+	}
+	.aside__body {
+		line-height: 1.2em;
+		padding: 1em 0;
+	}
+}

@@ -1,17 +1,17 @@
 //@file
 // Quotes
 
-blockquote {
-	&:before {
-		@include circleicon(2em, $lightred, #FFF);
-		content: open-quote;
-	}
-	p{
-		font-style: italic;
-	}
-}
+// q {
+// 	&:before {
+// 		@include circleicon(2em, $lightred, #FFF);
+// 		content: open-quote;
+// 	}
+// 	p{
+// 		font-style: italic;
+// 	}
+// }
 
-q {
+blockquote {
 	border-top:1px solid $red;
 	border-bottom:1px solid $red;
   color:$red;
@@ -21,4 +21,8 @@ q {
   margin: .5em auto;
 	text-align: center;
 	width: 75%;
+	p{
+		margin: 0;
+		padding: .5em 0;
+	}
 }

@@ -1,3 +1,4 @@
+@charset "UTF-8";
 .element-focusable, .element-invisible, .breadcrumb__title {
   border: 0;
   clip: rect(0 0 0 0);
@@ -303,6 +304,31 @@ button {
   overflow: visible;
 }
 
+caption, .caption {
+  font-size: 13px;
+  text-align: center;
+  padding: 1em;
+}
+caption:before, .caption:before {
+  content: "Caption: ";
+  font-weight: bold;
+}
+caption:after, .caption:after {
+  border-bottom: 1px solid #d31145;
+  content: " ";
+  display: block;
+  margin: 0 auto;
+  padding: .5em;
+  width: 50%;
+}
+
+cite:before {
+  content: "- ";
+}
+cite .cite__author {
+  font-weight: bold;
+}
+
 dd {
   margin-bottom: 1.625em;
 }
@@ -341,6 +367,7 @@ h2 {
 h3 {
   font-size: 1.125em;
   margin: 0 0 1.44444em;
+  color: #d31145;
 }
 
 h4 {
@@ -462,6 +489,11 @@ ul {
 ul ol,
 ul ul {
   margin: 0;
+}
+
+video {
+  display: block;
+  margin: 0 auto;
 }
 
 @media print {
@@ -753,6 +785,31 @@ ul.panels-ipe-linkbar li {
   clear: both;
 }
 
+.aside {
+  border: 3px #ff1352 solid;
+  margin: 1em;
+  padding: 0 1em;
+  width: 300px;
+}
+.aside .aside__title {
+  color: #ff1352;
+  font-weight: bold;
+  line-height: 1em;
+  padding: 1em 0 0 0;
+  text-transform: uppercase;
+}
+.aside .aside__title:after {
+  border-bottom: 1px #ff1352 solid;
+  content: " ";
+  display: block;
+  padding: .5em 0;
+  width: 100%;
+}
+.aside .aside__body {
+  line-height: 1.2em;
+  padding: 1em 0;
+}
+
 #autocomplete {
   border: 1px solid #ccc;
   overflow: hidden;
@@ -804,6 +861,22 @@ input.throbbing {
   background-position: 0 -47px;
 }
 
+blockquote {
+  border-top: 1px solid #d31145;
+  border-bottom: 1px solid #d31145;
+  color: #d31145;
+  display: block;
+  font-size: 18px;
+  font-style: italic;
+  margin: .5em auto;
+  text-align: center;
+  width: 75%;
+}
+blockquote p {
+  margin: 0;
+  padding: .5em 0;
+}
+
 .breadcrumb {
   margin: 1.625em 0;
 }
@@ -829,6 +902,28 @@ input.throbbing {
 
 .button--share {
   background: #d31145;
+}
+
+.card {
+  box-shadow: 0 0px 2px 1px rgba(0, 0, 0, 0.4);
+  margin: 1em;
+  padding: 0 1em;
+  width: 300px;
+}
+.card .card__title {
+  color: #ff1352;
+  font-weight: bold;
+}
+.card .card__title:before {
+  border-top: 8px #ff1352 solid;
+  content: " ";
+  display: block;
+  padding: .5em 0;
+  width: 40%;
+}
+.card .card__body {
+  line-height: 1.2em;
+  padding: 1em 0;
 }
 
 .p__dropcap:first-letter {
@@ -974,6 +1069,103 @@ input.throbbing {
 .form-textarea:focus {
   border-color: #4d4d4d;
   outline: 0;
+}
+
+.fullwidth-header {
+  background: #d31145 url("../images/header-background.png") no-repeat;
+  color: #FFF;
+  display: block;
+  padding: 8em 1em;
+  text-align: center;
+}
+
+.fullwidth-header__caption {
+  font-size: 45px;
+  text-transform: capitalize;
+  line-height: 1em;
+}
+.fullwidth-header__caption:before {
+  border: 2px #003359 solid;
+  content: " ";
+  display: block;
+  margin: 0 auto;
+  margin-bottom: 20px;
+  width: 20%;
+}
+
+.key-figure {
+  color: #d31145;
+  display: block;
+  padding: 0 .5em;
+  text-align: center;
+}
+.key-figure .key-figure__number {
+  font-size: 100px;
+  line-height: 1em;
+}
+.key-figure .key-figure__body {
+  font-size: 24px;
+  line-height: 1em;
+  padding: .5em 0;
+}
+.key-figure .key-figure__source {
+  color: #565a5c;
+  font-size: 13px;
+  line-height: 1em;
+}
+.key-figure .key-figure__source:before {
+  content: "Source: ";
+  font-weight: bold;
+}
+
+ol {
+  margin-left: 3em;
+  counter-reset: li-counter;
+  list-style-type: none;
+}
+ol li {
+  min-height: 96px;
+  padding-left: 20px;
+  position: relative;
+}
+ol li ol {
+  padding-top: 80px;
+}
+ol li:before {
+  background-color: #003359;
+  color: #FFF;
+  content: counter(li-counter);
+  counter-increment: li-counter;
+  display: block;
+  float: left;
+  font-size: 1.5em;
+  left: -70px;
+  line-height: 80px;
+  height: 80px;
+  position: absolute;
+  text-align: center;
+  top: 0;
+  width: 80px;
+}
+
+ul {
+  list-style: outside;
+  list-style-type: none;
+}
+ul li {
+  padding-left: 1em;
+  text-align: left;
+  position: relative;
+}
+ul li:before {
+  content: "► ";
+  color: #d31145;
+  display: block;
+  float: left;
+  left: -20px;
+  padding-right: 10px;
+  position: absolute;
+  top: 0;
 }
 
 .messages {
@@ -1375,6 +1567,7 @@ input.throbbing {
   color: #FFF;
   display: block;
   padding: 8em 0 5em 0;
+  position: relative;
   text-align: center;
 }
 
@@ -1407,6 +1600,27 @@ input.throbbing {
 .page-header__description {
   font-size: 14px;
   font-style: italic;
+}
+
+.page-header__scroll-button {
+  display: block;
+  height: 75px;
+  overflow: hidden;
+  width: 75px;
+  background: transparent url("../images/bg/icon-header-down.png") no-repeat;
+}
+.page-header__scroll-button:before {
+  content: "";
+  display: block;
+  height: 150%;
+  width: 0;
+}
+.page-header__scroll-button img {
+  bottom: -35px;
+  height: 75px;
+  margin: 0 auto;
+  position: absolute;
+  width: 75px;
 }
 
 .pager {
@@ -1498,41 +1712,53 @@ input.throbbing {
   height: 0.5em;
 }
 
-blockquote:before {
-  background: #ff1352;
-  border-radius: 50%;
-  color: #FFF;
-  display: block;
-  float: left;
-  font-size: 2em;
-  height: 2em;
-  line-height: 2em;
-  margin-right: 1em;
-  margin-bottom: 1em;
-  text-align: center;
-  vertical-align: middle;
-  width: 2em;
-  content: open-quote;
-}
-blockquote p {
-  font-style: italic;
-}
-
-q {
-  border-top: 1px solid #d31145;
-  border-bottom: 1px solid #d31145;
-  color: #d31145;
-  display: block;
-  font-size: 18px;
-  font-style: italic;
-  margin: .5em auto;
-  text-align: center;
-  width: 75%;
-}
-
 .region-navigation {
   display: none;
   display: block;
+}
+
+.section-header {
+  background: #d31145 url("../images/header-background.png") no-repeat;
+  color: #FFF;
+  display: block;
+  padding: 8em 1em 10em 1em;
+  text-align: left;
+}
+
+.section-header__title {
+  font-size: 24px;
+  line-height: 1em;
+  padding: 0 15%;
+}
+
+.section-header__headline {
+  font-size: 45px;
+  line-height: 1em;
+  padding: 0 15%;
+  text-transform: uppercase;
+}
+
+.share-block {
+  display: block;
+  width: 100px;
+}
+
+.share-block__icon {
+  display: block;
+  width: 75px;
+  height: 75px;
+}
+
+.share-block__icon--share {
+  background: transparent url("../images/bg/icon-share.png") no-repeat;
+}
+
+.share-block__icon--fav {
+  background: transparent url("../images/bg/icon-fav.png") no-repeat;
+}
+
+.share-block__icon--print {
+  background: transparent url("../images/bg/icon-print.png") no-repeat;
 }
 
 .skiplinks {

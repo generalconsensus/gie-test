@@ -1,0 +1,23 @@
+//@file
+// Share Block
+.share-block {
+  display: block;
+  width: 100px;
+}
+.share-block__icon {
+	display: block;
+	width: 75px;
+	height: 75px;
+}
+.share-block__icon--share {
+	// @include svg-background(icon-share);
+	background: transparent url('../images/bg/icon-share.png') no-repeat;
+}
+.share-block__icon--fav {
+	// @include svg-background(icon-fav);
+	background: transparent url('../images/bg/icon-fav.png') no-repeat;
+}
+.share-block__icon--print {
+	// @include svg-background(icon-print);
+	background: transparent url('../images/bg/icon-print.png') no-repeat;
+}
