@@ -1118,20 +1118,20 @@ blockquote p {
   font-weight: bold;
 }
 
-ol {
+.component ol {
   margin-left: 3em;
   counter-reset: li-counter;
   list-style-type: none;
 }
-ol li {
+.component ol li {
   min-height: 96px;
   padding-left: 20px;
   position: relative;
 }
-ol li ol {
+.component ol li ol {
   padding-top: 80px;
 }
-ol li:before {
+.component ol li:before {
   background-color: #003359;
   color: #FFF;
   content: counter(li-counter);
@@ -1148,16 +1148,16 @@ ol li:before {
   width: 80px;
 }
 
-ul {
+.component ul {
   list-style: outside;
   list-style-type: none;
 }
-ul li {
+.component ul li {
   padding-left: 1em;
   text-align: left;
   position: relative;
 }
-ul li:before {
+.component ul li:before {
   content: "► ";
   color: #d31145;
   display: block;

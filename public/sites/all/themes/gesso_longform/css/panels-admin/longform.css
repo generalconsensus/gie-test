@@ -1,0 +1,69 @@
+/*
+Error: File to import not found or unreadable: ../partials/layout/panels/longform.
+       Load paths:
+         Compass::SpriteImporter
+         /Applications/MAMP/htdocs/F1/dai/public/sites/all/themes/gesso_longform/sass
+         /Users/dmoon/.rvm/gems/ruby-2.2.1/gems/compass-core-1.0.3/stylesheets
+         /Users/dmoon/.rvm/gems/ruby-2.2.1/gems/sassy-maps-0.4.0/sass
+         /Users/dmoon/.rvm/gems/ruby-2.2.1/gems/breakpoint-2.5.0/stylesheets
+         /Users/dmoon/.rvm/gems/ruby-2.2.1/gems/singularitygs-1.6.2/stylesheets
+         Sass::Globbing::Importer
+        on line 7 of /Applications/MAMP/htdocs/F1/dai/public/sites/all/themes/gesso_longform/sass/panels-admin/longform.scss
+
+2: // Admin syles for Panels layout: longform
+3: 
+4: $panels-admin: true;
+5: 
+6: @import '../partials/global';
+7: @import '../partials/layout/panels/longform';
+
+Backtrace:
+/Applications/MAMP/htdocs/F1/dai/public/sites/all/themes/gesso_longform/sass/panels-admin/longform.scss:7
+/Users/dmoon/.rvm/gems/ruby-2.2.1/gems/sass-3.4.15/lib/sass/tree/import_node.rb:67:in `rescue in import'
+/Users/dmoon/.rvm/gems/ruby-2.2.1/gems/sass-3.4.15/lib/sass/tree/import_node.rb:45:in `import'
+/Users/dmoon/.rvm/gems/ruby-2.2.1/gems/sass-3.4.15/lib/sass/tree/import_node.rb:28:in `imported_file'
+/Users/dmoon/.rvm/gems/ruby-2.2.1/gems/sass-3.4.15/lib/sass/tree/import_node.rb:37:in `css_import?'
+/Users/dmoon/.rvm/gems/ruby-2.2.1/gems/sass-3.4.15/lib/sass/tree/visitors/perform.rb:311:in `visit_import'
+/Users/dmoon/.rvm/gems/ruby-2.2.1/gems/sass-3.4.15/lib/sass/tree/visitors/base.rb:36:in `visit'
+/Users/dmoon/.rvm/gems/ruby-2.2.1/gems/sass-3.4.15/lib/sass/tree/visitors/perform.rb:158:in `block in visit'
+/Users/dmoon/.rvm/gems/ruby-2.2.1/gems/sass-3.4.15/lib/sass/stack.rb:79:in `block in with_base'
+/Users/dmoon/.rvm/gems/ruby-2.2.1/gems/sass-3.4.15/lib/sass/stack.rb:115:in `with_frame'
+/Users/dmoon/.rvm/gems/ruby-2.2.1/gems/sass-3.4.15/lib/sass/stack.rb:79:in `with_base'
+/Users/dmoon/.rvm/gems/ruby-2.2.1/gems/sass-3.4.15/lib/sass/tree/visitors/perform.rb:158:in `visit'
+/Users/dmoon/.rvm/gems/ruby-2.2.1/gems/sass-3.4.15/lib/sass/tree/visitors/base.rb:52:in `block in visit_children'
+/Users/dmoon/.rvm/gems/ruby-2.2.1/gems/sass-3.4.15/lib/sass/tree/visitors/base.rb:52:in `map'
+/Users/dmoon/.rvm/gems/ruby-2.2.1/gems/sass-3.4.15/lib/sass/tree/visitors/base.rb:52:in `visit_children'
+/Users/dmoon/.rvm/gems/ruby-2.2.1/gems/sass-3.4.15/lib/sass/tree/visitors/perform.rb:167:in `block in visit_children'
+/Users/dmoon/.rvm/gems/ruby-2.2.1/gems/sass-3.4.15/lib/sass/tree/visitors/perform.rb:179:in `with_environment'
+/Users/dmoon/.rvm/gems/ruby-2.2.1/gems/sass-3.4.15/lib/sass/tree/visitors/perform.rb:166:in `visit_children'
+/Users/dmoon/.rvm/gems/ruby-2.2.1/gems/sass-3.4.15/lib/sass/tree/visitors/base.rb:36:in `block in visit'
+/Users/dmoon/.rvm/gems/ruby-2.2.1/gems/sass-3.4.15/lib/sass/tree/visitors/perform.rb:186:in `visit_root'
+/Users/dmoon/.rvm/gems/ruby-2.2.1/gems/sass-3.4.15/lib/sass/tree/visitors/base.rb:36:in `visit'
+/Users/dmoon/.rvm/gems/ruby-2.2.1/gems/sass-3.4.15/lib/sass/tree/visitors/perform.rb:157:in `visit'
+/Users/dmoon/.rvm/gems/ruby-2.2.1/gems/sass-3.4.15/lib/sass/tree/visitors/perform.rb:8:in `visit'
+/Users/dmoon/.rvm/gems/ruby-2.2.1/gems/sass-3.4.15/lib/sass/tree/root_node.rb:36:in `css_tree'
+/Users/dmoon/.rvm/gems/ruby-2.2.1/gems/sass-3.4.15/lib/sass/tree/root_node.rb:29:in `render_with_sourcemap'
+/Users/dmoon/.rvm/gems/ruby-2.2.1/gems/sass-3.4.15/lib/sass/engine.rb:378:in `_render_with_sourcemap'
+/Users/dmoon/.rvm/gems/ruby-2.2.1/gems/sass-3.4.15/lib/sass/engine.rb:295:in `render_with_sourcemap'
+/Users/dmoon/.rvm/gems/ruby-2.2.1/gems/sass-3.4.15/lib/sass/plugin/compiler.rb:490:in `update_stylesheet'
+/Users/dmoon/.rvm/gems/ruby-2.2.1/gems/sass-3.4.15/lib/sass/plugin/compiler.rb:215:in `block in update_stylesheets'
+/Users/dmoon/.rvm/gems/ruby-2.2.1/gems/sass-3.4.15/lib/sass/plugin/compiler.rb:209:in `each'
+/Users/dmoon/.rvm/gems/ruby-2.2.1/gems/sass-3.4.15/lib/sass/plugin/compiler.rb:209:in `update_stylesheets'
+/Users/dmoon/.rvm/gems/ruby-2.2.1/gems/compass-1.0.3/lib/compass/sass_compiler.rb:40:in `compile!'
+/Users/dmoon/.rvm/gems/ruby-2.2.1/gems/compass-1.0.3/lib/compass/commands/update_project.rb:49:in `perform'
+/Users/dmoon/.rvm/gems/ruby-2.2.1/gems/compass-1.0.3/lib/compass/commands/base.rb:18:in `execute'
+/Users/dmoon/.rvm/gems/ruby-2.2.1/gems/compass-1.0.3/lib/compass/commands/project_base.rb:19:in `execute'
+/Users/dmoon/.rvm/gems/ruby-2.2.1/gems/compass-1.0.3/lib/compass/exec/sub_command_ui.rb:43:in `perform!'
+/Users/dmoon/.rvm/gems/ruby-2.2.1/gems/compass-1.0.3/lib/compass/exec/sub_command_ui.rb:15:in `run!'
+/Users/dmoon/.rvm/gems/ruby-2.2.1/gems/compass-1.0.3/bin/compass:30:in `block in <top (required)>'
+/Users/dmoon/.rvm/gems/ruby-2.2.1/gems/compass-1.0.3/bin/compass:44:in `call'
+/Users/dmoon/.rvm/gems/ruby-2.2.1/gems/compass-1.0.3/bin/compass:44:in `<top (required)>'
+/Users/dmoon/.rvm/gems/ruby-2.2.1/bin/compass:23:in `load'
+/Users/dmoon/.rvm/gems/ruby-2.2.1/bin/compass:23:in `<main>'
+/Users/dmoon/.rvm/gems/ruby-2.2.1/bin/ruby_executable_hooks:15:in `eval'
+/Users/dmoon/.rvm/gems/ruby-2.2.1/bin/ruby_executable_hooks:15:in `<main>'
+*/
+body:before {
+  white-space: pre;
+  font-family: monospace;
+  content: "Error: File to import not found or unreadable: ../partials/layout/panels/longform.\A        Load paths:\A          Compass::SpriteImporter\A          /Applications/MAMP/htdocs/F1/dai/public/sites/all/themes/gesso_longform/sass\A          /Users/dmoon/.rvm/gems/ruby-2.2.1/gems/compass-core-1.0.3/stylesheets\A          /Users/dmoon/.rvm/gems/ruby-2.2.1/gems/sassy-maps-0.4.0/sass\A          /Users/dmoon/.rvm/gems/ruby-2.2.1/gems/breakpoint-2.5.0/stylesheets\A          /Users/dmoon/.rvm/gems/ruby-2.2.1/gems/singularitygs-1.6.2/stylesheets\A          Sass::Globbing::Importer\A         on line 7 of /Applications/MAMP/htdocs/F1/dai/public/sites/all/themes/gesso_longform/sass/panels-admin/longform.scss\A \A 2: // Admin syles for Panels layout: longform\A 3: \A 4: $panels-admin: true;\A 5: \A 6: @import '../partials/global';\A 7: @import '../partials/layout/panels/longform';"; }

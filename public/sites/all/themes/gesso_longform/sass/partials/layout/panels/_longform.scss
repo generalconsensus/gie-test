@@ -1,0 +1,20 @@
+// @file
+// Panels layout: longform styles
+// Media queries use: http://breakpoint-sass.com
+// Media queries use: github.com/Team-Sass/breakpoint/wiki/No-Query-Fallbacks
+// Grid via: singularity.gs
+
+.layout-panels-longform {
+}
+
+.layout-panels-longform {
+  @include clearfix;
+  .layout-preface,
+  .layout-main {
+    @include clearfix;
+
+    @if $panels-admin {
+      @include border-box;
+    }
+  }
+}
