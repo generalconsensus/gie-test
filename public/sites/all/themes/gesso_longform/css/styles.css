@@ -1653,6 +1653,7 @@ ul li:before {
   color: #FFF;
   display: block;
   padding: 8em 0 5em 0;
+  position: relative;
   text-align: center;
 }
 
@@ -1685,6 +1686,27 @@ ul li:before {
 .page-header__description {
   font-size: 14px;
   font-style: italic;
+}
+
+.page-header__scroll-button {
+  display: block;
+  height: 75px;
+  overflow: hidden;
+  width: 75px;
+  background: transparent url("../images/bg/icon-header-down.png") no-repeat;
+}
+.page-header__scroll-button:before {
+  content: "";
+  display: block;
+  height: 150%;
+  width: 0;
+}
+.page-header__scroll-button img {
+  bottom: -35px;
+  height: 75px;
+  margin: 0 auto;
+  position: absolute;
+  width: 75px;
 }
 
 .pager {
@@ -1825,22 +1847,26 @@ ul li:before {
   text-transform: uppercase;
 }
 
-.share_block {
+.share-block {
   display: block;
   width: 100px;
 }
-.share_block .share_block__icon {
+
+.share-block__icon {
   display: block;
   width: 75px;
   height: 75px;
 }
-.share_block .share_block__icon-share {
+
+.share-block__icon--share {
   background: transparent url("../images/bg/icon-share.png") no-repeat;
 }
-.share_block .share_block__icon-fav {
+
+.share-block__icon--fav {
   background: transparent url("../images/bg/icon-fav.png") no-repeat;
 }
-.share_block .share_block__icon-print {
+
+.share-block__icon--print {
   background: transparent url("../images/bg/icon-print.png") no-repeat;
 }
 
