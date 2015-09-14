@@ -1716,6 +1716,25 @@ ul li:before {
   text-transform: uppercase;
 }
 
+.share_block {
+  display: block;
+  width: 100px;
+}
+.share_block .share_block__icon {
+  display: block;
+  width: 75px;
+  height: 75px;
+}
+.share_block .share_block__icon-share {
+  background: transparent url("../images/bg/icon-share.png") no-repeat;
+}
+.share_block .share_block__icon-fav {
+  background: transparent url("../images/bg/icon-fav.png") no-repeat;
+}
+.share_block .share_block__icon-print {
+  background: transparent url("../images/bg/icon-print.png") no-repeat;
+}
+
 .skiplinks {
   left: 50%;
   margin-left: -7em;
