@@ -1,22 +1,54 @@
+$input-height: 30px;
+
+
 .block--gie-homepage-welcome-login {
-  
+  font-size: em(14px, 16px);
+
   .header-simple & {
-    float: right;
-    max-width: 450px;
+     @include breakpoint(700px , $no-query: true) {
+      float: right;
+      max-width: 450px;
+    }
   }
-  
+
   .form-actions {
     float: left;
-    width: 20%;
+    width: 25%;
+    min-width: 88px;
   }
 
   .form-item-name,
   .form-item-pass {
     float: left;
-    width: 40%;
+    width: 35%;
+    margin: 0 2% 2% 0;
     input {
       color: #000;
     }
   }
-  
+
+  .form-item > input,
+  .button {
+    height: $input-height;
+  }
+
+  .forgot-password {
+    clear: left;
+  }
+
+  .form-item {
+    > input[type=text],
+    > input[type=password] {
+      width: 100%;
+    }
+  }
+
+  .button {
+    line-height: $input-height;
+    margin-bottom: 0;
+    padding-top: 0;
+    padding-bottom: 0;
+
+  }
+
 }
