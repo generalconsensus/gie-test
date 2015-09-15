@@ -892,7 +892,8 @@ function gie_user_views_default_views() {
   $handler->display->display_options['arguments']['uid']['table'] = 'node';
   $handler->display->display_options['arguments']['uid']['field'] = 'uid';
   $handler->display->display_options['arguments']['uid']['default_action'] = 'default';
-  $handler->display->display_options['arguments']['uid']['default_argument_type'] = 'current_user';
+  $handler->display->display_options['arguments']['uid']['default_argument_type'] = 'user';
+  $handler->display->display_options['arguments']['uid']['default_argument_options']['user'] = FALSE;
   $handler->display->display_options['arguments']['uid']['summary']['number_of_records'] = '0';
   $handler->display->display_options['arguments']['uid']['summary']['format'] = 'default_summary';
   $handler->display->display_options['arguments']['uid']['summary_options']['items_per_page'] = '25';
@@ -901,7 +902,8 @@ function gie_user_views_default_views() {
   $handler->display->display_options['arguments']['field_innovation_team_target_id']['table'] = 'field_data_field_innovation_team';
   $handler->display->display_options['arguments']['field_innovation_team_target_id']['field'] = 'field_innovation_team_target_id';
   $handler->display->display_options['arguments']['field_innovation_team_target_id']['default_action'] = 'default';
-  $handler->display->display_options['arguments']['field_innovation_team_target_id']['default_argument_type'] = 'current_user';
+  $handler->display->display_options['arguments']['field_innovation_team_target_id']['default_argument_type'] = 'user';
+  $handler->display->display_options['arguments']['field_innovation_team_target_id']['default_argument_options']['user'] = FALSE;
   $handler->display->display_options['arguments']['field_innovation_team_target_id']['summary']['number_of_records'] = '0';
   $handler->display->display_options['arguments']['field_innovation_team_target_id']['summary']['format'] = 'default_summary';
   $handler->display->display_options['arguments']['field_innovation_team_target_id']['summary_options']['items_per_page'] = '25';
@@ -1666,7 +1668,7 @@ function gie_user_views_default_views() {
   $handler->display->display_options['fields']['field_user_facebook']['field'] = 'field_user_facebook';
   $handler->display->display_options['fields']['field_user_facebook']['label'] = '';
   $handler->display->display_options['fields']['field_user_facebook']['alter']['alter_text'] = TRUE;
-  $handler->display->display_options['fields']['field_user_facebook']['alter']['text'] = '<a href="[field_user_facebook]" class="connect__link connect__link--facebook" title="Facebook">Facebook</a>';
+  $handler->display->display_options['fields']['field_user_facebook']['alter']['text'] = '<a href="[field_user_facebook]" class="connect__link connect__link--facebook" title="Facebook" target="_blank">Facebook</a>';
   $handler->display->display_options['fields']['field_user_facebook']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['field_user_facebook']['element_default_classes'] = FALSE;
   $handler->display->display_options['fields']['field_user_facebook']['hide_empty'] = TRUE;
@@ -1690,7 +1692,7 @@ function gie_user_views_default_views() {
   $handler->display->display_options['fields']['field_user_twitter']['field'] = 'field_user_twitter';
   $handler->display->display_options['fields']['field_user_twitter']['label'] = '';
   $handler->display->display_options['fields']['field_user_twitter']['alter']['alter_text'] = TRUE;
-  $handler->display->display_options['fields']['field_user_twitter']['alter']['text'] = '<a href="[field_user_twitter]" class="connect__link connect__link--twitter" title="Twitter">Twitter</a>';
+  $handler->display->display_options['fields']['field_user_twitter']['alter']['text'] = '<a href="[field_user_twitter]" class="connect__link connect__link--twitter" title="Twitter" target="_blank">Twitter</a>';
   $handler->display->display_options['fields']['field_user_twitter']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['field_user_twitter']['element_default_classes'] = FALSE;
   $handler->display->display_options['fields']['field_user_twitter']['hide_empty'] = TRUE;
@@ -1714,7 +1716,7 @@ function gie_user_views_default_views() {
   $handler->display->display_options['fields']['field_user_linkedin']['field'] = 'field_user_linkedin';
   $handler->display->display_options['fields']['field_user_linkedin']['label'] = '';
   $handler->display->display_options['fields']['field_user_linkedin']['alter']['alter_text'] = TRUE;
-  $handler->display->display_options['fields']['field_user_linkedin']['alter']['text'] = '<a href="[field_user_linkedin]" title="Linked In" class="connect__link connect__link--linkedin">Linked In</a>';
+  $handler->display->display_options['fields']['field_user_linkedin']['alter']['text'] = '<a href="[field_user_linkedin]" title="Linked In" class="connect__link connect__link--linkedin" target="_blank">Linked In</a>';
   $handler->display->display_options['fields']['field_user_linkedin']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['field_user_linkedin']['element_default_classes'] = FALSE;
   $handler->display->display_options['fields']['field_user_linkedin']['hide_empty'] = TRUE;

@@ -32,7 +32,8 @@
     <script src="../../drupal/misc/jquery.once.js?v=1.2"></script>
     <script src="../../drupal/misc/drupal.js?v=7.33"></script>
     <script src="../../../../js/modernizr.latest.js?0"></script>
-
+    <script src="../../../../../../modules/contrib/tb_megamenu/js/tb-megamenu-frontend.js?0"></script>
+    <script src="../../../../../../modules/contrib/tb_megamenu/js/tb-megamenu-touch.js?0"></script>
     <script src="../../../../js/mobile-menu.js?0"></script>
     <script src="../../../../js/scripts.js?0"></script>
     <!-- Begin Pattern Lab (Required for Pattern Lab to run properly) -->
@@ -76,143 +77,101 @@
       <div role="navigation" class="tb-megamenu tb-megamenu-main-menu">
         <ul class="tb-megamenu-nav nav">
           <!-- ABOUT -->
-          <li class="tb-megamenu-item level-1 mega tb-megamenu-item--about dropdown">
-            <a href="/about-exchange"> About </a>
-            <div class="tb-megamenu-submenu dropdown-menu mega-dropdown-menu nav-child">
+          <li class="tb-megamenu-item level-1 mega tb-megamenu-item--about">
+            <a href="#"> About </a>
+          </li>
+          <!-- INNOVATIONS -->
+          <li class="tb-megamenu-item level-1 mega mega-align-center tb-megamenu-item--innovations dropdown">
+            <a href="#"> Innovations </a>
+            <div class="tb-megamenu-submenu dropdown-menu mega-align-center mega-dropdown-menu nav-child">
               <div class="mega-dropdown-inner">
                 <div class="tb-megamenu-row row-fluid">
-                  <div class="tb-megamenu-column span12 mega-col-nav">
+                  <div class="tb-megamenu-column span12 mega-col-nav" data-width="12">
                     <div class="tb-megamenu-column-inner mega-inner clearfix">
-                      <ul role="list" class="tb-megamenu-subnav mega-nav level-1 items-1">
-                        <li class="tb-megamenu-item level-2 mega">
-                          <a class="" href="/frequently-asked-questions">
-                            Frequently Asked Questions
-                          </a>
-                        </li>
-                      </ul>
+                      <div class="tb-megamenu-block tb-block tb-megamenu-block">
+                        <div class="block-inner">
+                          <div class="block block-gie-general-innovation-submenu block--gie-general block--gie-general-innovation-submenu">
+                            <a class="tb-megamenu-big-button has-icon-innovation" href="#">Browse all innovations</a>
+                            <a class="tb-megamenu-big-button has-icon-add" href="#">Add an innovation</a>
+                            <a class="tb-megamenu-big-button has-icon-innovator" href="#">Find other innovators</a>
+                          </div>
+                        </div>
+                      </div>
                     </div>
                   </div>
                 </div>
               </div>
             </div>
           </li>
-          <!-- INNOVATIONS -->
-          <li class="tb-megamenu-item level-1 mega tb-megamenu-item--innovations">
-            <a class="" href="/innovations">
-              Innovations
-            </a>
-          </li>
           <!-- FUNDING -->
-          <li class="tb-megamenu-item level-1 mega tb-megamenu-item--funding">
-            <a class="" href="/funding">
-              Funding
-            </a>
-          </li>
-          <!-- RESOURCES -->
-          <li class="tb-megamenu-item level-1 mega tb-megamenu-item--resources">
-            <a class="" href="/resources">
-              Resources
-            </a>
-          </li>
-          <!-- COMMUNITIES -->
-          <li class="tb-megamenu-item level-1 mega tb-megamenu-item--communities mega-align-right dropdown">
-            <a href="/">
-              Communities
-            </a>
+          <li class="tb-megamenu-item level-1 mega mega-align-center tb-megamenu-item--funding dropdown">
+            <a href="#"> Funding </a>
             <div class="tb-megamenu-submenu dropdown-menu mega-dropdown-menu nav-child">
               <div class="mega-dropdown-inner">
                 <div class="tb-megamenu-row row-fluid">
-                  <div class="tb-megamenu-column span12  mega-col-nav has-icon-discussions">
+                  <div class="tb-megamenu-column span12 mega-col-nav" data-width="12">
                     <div class="tb-megamenu-column-inner mega-inner clearfix">
                       <div class="tb-megamenu-block tb-block tb-megamenu-block">
                         <div class="block-inner">
-                          <div class="block">
-                            <div class="view view--communities-content-types-menu view--display-id-discussions view--simple-list view-communities-content-types-menu">
-                              <div class="view__header">
-                                <h2>Discussions</h2>
-                              </div>
-                              <div class="item-list">
-                                <ul>
-                                  <li class="views-row views-row-1 views-row-odd views-row-first">
-                                    <div class="views-field views-field-title">
-                                      <span class="field-content"><a href="/discussions/initial-impressions-exchange">Initial Impressions of the Exchange</a></span>
-                                    </div>
-                                  </li>
-                                  <li class="views-row views-row-2 views-row-even">
-                                    <div class="views-field views-field-title">
-                                      <span class="field-content"><a href="/discussions/discussion-topic-number-two">Discussion Topic Number Two</a></span>
-                                    </div>
-                                  </li>
-                                  <li class="views-row views-row-3 views-row-odd">
-                                    <div class="views-field views-field-title">
-                                      <span class="field-content"><a href="/discussions/discussion-topic-number-three">Discussion Topic Number Three</a></span>
-                                    </div>
-                                  </li>
-                                  <li class="views-row views-row-4 views-row-even">
-                                    <div class="views-field views-field-title">
-                                      <span class="field-content"><a href="/discussions/discussion-topic-number-four">Discussion Topic Number Four</a></span>
-                                    </div>
-                                  </li>
-                                  <li class="views-row views-row-5 views-row-odd">
-                                    <div class="views-field views-field-title">
-                                      <span class="field-content"><a href="/discussions/discussion-topic-number-five">Discussion Topic Number Five</a></span>
-                                    </div>
-                                  </li>
-                                  <li class="views-row views-row-6 views-row-even">
-                                    <div class="views-field views-field-title">
-                                      <span class="field-content"><a href="/discussions/discussion-topic-number-six">Discussion Topic Number Six</a></span>
-                                    </div>
-                                  </li>
-                                  <li class="views-row views-row-7 views-row-odd">
-                                    <div class="views-field views-field-title">
-                                      <span class="field-content"><a href="/discussions/discussion-topic-number-seven">Discussion Topic Number Seven</a></span>
-                                    </div>
-                                  </li>
-                                  <li class="views-row views-row-8 views-row-even views-row-last">
-                                    <div class="views-field views-field-title">
-                                      <span class="field-content"><a href="/discussions/discussion-topic-number-eight">Discussion Topic Number Eight</a></span>
-                                    </div>
-                                  </li>
-                                </ul>
-                              </div>
-                              <div class="view__footer">
-                                <p><a href="discussions">View All</a></p>
-                              </div>
-                            </div>
+                          <div class="block block-gie-general-innovation-submenu block--gie-general block--gie-general-innovation-submenu">
+                            <a class="tb-megamenu-big-button has-icon-funding" href="#">Browse all Funding Opportunities</a>
+                            <a class="tb-megamenu-big-button has-icon-add" href="#">Add a Funding Opportunity</a>
                           </div>
                         </div>
                       </div>
                     </div>
                   </div>
                 </div>
+              </div>
+            </div
+          </li>
+          <!-- RESOURCES -->
+          <li class="tb-megamenu-item level-1 mega mega-align-center tb-megamenu-item--resources dropdown">
+            <a href="#"> Resources </a>
+            <div class="tb-megamenu-submenu dropdown-menu mega-dropdown-menu nav-child">
+              <div class="mega-dropdown-inner">
                 <div class="tb-megamenu-row row-fluid">
-                  <div class="tb-megamenu-column span6  mega-col-nav has-icon-sectors">
+                  <div class="tb-megamenu-column span12 mega-col-nav" data-width="12">
+                    <div class="tb-megamenu-column-inner mega-inner clearfix">
+                      <div class="tb-megamenu-block tb-block tb-megamenu-block">
+                        <div class="block-inner">
+                          <div class="block block-gie-general-innovation-submenu block--gie-general block--gie-general-innovation-submenu">
+                            <a class="tb-megamenu-big-button has-icon-resources" href="#">Browse all Resources</a>
+                            <a class="tb-megamenu-big-button has-icon-add" href="#">Add a Resource</a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </li>
+          <!-- ENGINES -->
+          <li class="tb-megamenu-item level-1 mega tb-megamenu-item--communities mega-align-right dropdown">
+            <a href="#"> Engines </a>
+            <div class="tb-megamenu-submenu dropdown-menu mega-dropdown-menu nav-child" data-width="900">
+              <div class="mega-dropdown-inner">
+                <div class="tb-megamenu-row row-fluid">
+                  <div class="tb-megamenu-column span6 mega-col-nav has-icon-sectors" data-width="6">
                     <div class="tb-megamenu-column-inner mega-inner clearfix">
                       <div class="tb-megamenu-block tb-block tb-megamenu-block">
                         <div class="block-inner">
                           <div class="block block-views-communities-terms-menu-sectors block--views block--views-communities-terms-menu-sectors">
                             <div class="view view--communities-terms-menu view--id-communities_terms_menu view--display-id-sectors view--simple-list view-communities-terms-menu view-id-communities_terms_menu view-display-id-sectors">
                               <div class="view__header">
-                                <h2>Sectors</h2>
+                                <div><a href="#">Sectors</a></div>
                               </div>
                               <div class="item-list">
                                 <ul>
-                                  <li class="views-row views-row-1 views-row-odd views-row-first">
-                                    <a href="/sector/adolescent-health">Adolescent Health</a>
-                                  </li>
-                                  <li class="views-row views-row-2 views-row-even">
-                                    <a href="/sector/ageing">Ageing</a>
-                                  </li>
-                                  <li class="views-row views-row-3 views-row-odd">
-                                    <a href="/sector/agribusiness-smse">Agribusiness (SMSE)</a>
-                                  </li>
-                                  <li class="views-row views-row-4 views-row-even views-row-last">
-                                    <a href="/sector/agricultural-water-management">Agricultural Water Management</a>
-                                  </li>
+                                  <li class="views-row views-row-1 views-row-odd views-row-first"> <a href="#">Adolescent Health</a>  </li>
+                                  <li class="views-row views-row-2 views-row-even"> <a href="#">Ageing</a>  </li>
+                                  <li class="views-row views-row-3 views-row-odd"> <a href="#">Agribusiness (SMSE)</a>  </li>
+                                  <li class="views-row views-row-4 views-row-even views-row-last"> <a href="#">Agricultural Water Management</a>  </li>
                                 </ul>
                               </div>
                               <div class="view__footer">
-                                <p><a href="sectors">View All</a></p>
+                                <p><a href="#">View All</a></p>
                               </div>
                             </div>
                           </div>
@@ -220,33 +179,25 @@
                       </div>
                     </div>
                   </div>
-                  <div class="tb-megamenu-column span6 mega-col-nav has-icon-topics">
+                  <div class="tb-megamenu-column span6 mega-col-nav has-icon-topics" data-width="6">
                     <div class="tb-megamenu-column-inner mega-inner clearfix">
                       <div class="tb-megamenu-block tb-block tb-megamenu-block">
                         <div class="block-inner">
                           <div class="block block-views-communities-terms-menu-topics block--views block--views-communities-terms-menu-topics">
                             <div class="view view--communities-terms-menu view--id-communities_terms_menu view--display-id-topics view--simple-list view-communities-terms-menu view-id-communities_terms_menu view-display-id-topics">
                               <div class="view__header">
-                                <h2>Topics</h2>
+                                <div><a href="#">Topics</a></div>
                               </div>
                               <div class="item-list">
                                 <ul>
-                                  <li class="views-row views-row-1 views-row-odd views-row-first">
-                                    <a href="/topic/acceleration">Acceleration</a>
-                                  </li>
-                                  <li class="views-row views-row-2 views-row-even">
-                                    <a href="/topic/communications-and-media">Communications and Media</a>
-                                  </li>
-                                  <li class="views-row views-row-3 views-row-odd">
-                                    <a href="/topic/data-development">Data for Development</a>
-                                  </li>
-                                  <li class="views-row views-row-4 views-row-even views-row-last">
-                                    <a href="/topic/digital-development">Digital Development</a>
-                                  </li>
+                                  <li class="views-row views-row-1 views-row-odd views-row-first"> <a href="#">Acceleration</a>  </li>
+                                  <li class="views-row views-row-2 views-row-even"> <a href="#">Communications and Media</a>  </li>
+                                  <li class="views-row views-row-3 views-row-odd"> <a href="#">Data for Development</a>  </li>
+                                  <li class="views-row views-row-4 views-row-even views-row-last"> <a href="#">Digital Development</a>  </li>
                                 </ul>
                               </div>
                               <div class="view__footer">
-                                <p><a href="topics">View All</a></p>
+                                <p><a href="#">View All</a></p>
                               </div>
                             </div>
                           </div>
@@ -256,33 +207,28 @@
                   </div>
                 </div>
                 <div class="tb-megamenu-row row-fluid">
-                  <div class="tb-megamenu-column span6 mega-col-nav has-icon-locations">
+                  <div class="tb-megamenu-column span6 mega-col-nav has-icon-locations" data-width="6">
                     <div class="tb-megamenu-column-inner mega-inner clearfix">
                       <div class="tb-megamenu-block tb-block tb-megamenu-block">
                         <div class="block-inner">
                           <div class="block block--views">
-                            <div class="view view--communities-terms-menu view--id-communities_terms_menu view--display-id-locations view-communities-terms-menu view-id-communities_terms_menu view-display-id-locations">
+                            <div class="view view--communities-terms-menu view--id-communities_terms_menu view--display-id-locations view--simple-list view-communities-terms-menu view-id-communities_terms_menu view-display-id-locations">
                               <div class="view__header">
-                                <h2>Locations</h2>
+                                <div><a href="#">Locations</a></div>
                               </div>
                               <div class="item-list">
                                 <ul>
-                                  <li class="views-row views-row-1 views-row-odd views-row-first">
-                                    <a href="/region/africa">Africa</a>
-                                  </li>
-                                  <li class="views-row views-row-2 views-row-even">
-                                    <a href="/region/asia-pacific">Asia Pacific</a>
-                                  </li>
+                                  <li class="views-row views-row-1 views-row-odd views-row-first"> <a href="#">Africa</a>  </li>
+                                  <li class="views-row views-row-2 views-row-even"> <a href="#">Asia Pacific</a>  </li>
                                   <li class="views-row views-row-3 views-row-odd">
-                                    <a href="/region/europe-and-eurasia">Europe and Eurasia</a>
+                                    <a href="#">Europe and Eurasia</a>
                                   </li>
                                   <li class="views-row views-row-4 views-row-even views-row-last">
-                                    <a href="/region/global">Global</a>
-                                  </li>
+                                    <a href="#">Global</a>  </li>
                                 </ul>
                               </div>
                               <div class="view__footer">
-                                <p><a href="locations">View All</a></p>
+                                <p><a href="#">View All</a></p>
                               </div>
                             </div>
                           </div>
@@ -290,43 +236,87 @@
                       </div>
                     </div>
                   </div>
-                  <div class="tb-megamenu-column span6  mega-col-nav has-icon-programs">
+                  <div class="tb-megamenu-column span6 mega-col-nav has-icon-programs" data-width="6">
                     <div class="tb-megamenu-column-inner mega-inner clearfix">
                       <div class="tb-megamenu-block tb-block tb-megamenu-block">
                         <div class="block-inner">
                           <div class="block block--views">
                             <div class="view view--communities-content-types-menu view--id-communities_content_types_menu view--display-id-programs view--simple-list view-communities-content-types-menu view-id-communities_content_types_menu view-display-id-programs">
                               <div class="view__header">
-                                <h2>Programs</h2>
+                                <div><a href="#">Programs</a></div>
                               </div>
                               <div class="item-list">
                                 <ul>
                                   <li class="views-row views-row-1 views-row-odd views-row-first">
                                     <div class="views-field views-field-title">
-                                      <span class="field-content"><a href="/programs/powering-ag">Powering Ag</a></span>
+                                      <span class="field-content"><a href="#">Powering Agriculture: An Energy Grand Challenge for Development</a></span>
                                     </div>
                                   </li>
                                   <li class="views-row views-row-2 views-row-even">
                                     <div class="views-field views-field-title">
-                                      <span class="field-content"><a href="/programs/div-development-innovation-ventures">DIV (Development Innovation Ventures)</a></span>
+                                      <span class="field-content"><a href="#">Development Innovation Ventures (DIV)</a></span>
                                     </div>
                                   </li>
                                   <li class="views-row views-row-3 views-row-odd">
                                     <div class="views-field views-field-title">
-                                      <span class="field-content"><a href="/programs/skoll-world-forum">Skoll World Forum</a></span>
+                                      <span class="field-content"><a href="#">Skoll World Forum</a></span>
                                     </div>
                                   </li>
                                   <li class="views-row views-row-4 views-row-even views-row-last">
                                     <div class="views-field views-field-title">
-                                      <span class="field-content"><a href="/programs/hesn-higher-education-solutions-network">HESN (Higher Education Solutions Network)</a></span>
+                                      <span class="field-content"><a href="#">HESN (Higher Education Solutions Network)</a></span>
                                     </div>
                                   </li>
                                 </ul>
                               </div>
                               <div class="view__footer">
-                                <p><a href="programs">View All</a></p>
+                                <p><a href="#">View All</a><a href="#" class="add-new">Add New Program</a></p>
                               </div>
-                             </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="tb-megamenu-row row-fluid">
+                  <div class="tb-megamenu-column span mega-col-nav has-icon-discussions">
+                    <div class="tb-megamenu-column-inner mega-inner clearfix">
+                      <div class="tb-megamenu-block tb-block tb-megamenu-block">
+                        <div class="block-inner">
+                          <div class="block block--views">
+                            <div class="view view--communities-content-types-menu view--id-communities_content_types_menu view--display-id-discussions view--simple-list view-communities-content-types-menu view-id-communities_content_types_menu view-display-id-discussions">
+                              <div class="view__header">
+                                <div><a href="#">Discussions</a></div>
+                              </div>
+                              <div class="item-list">
+                                <ul>
+                                  <li class="views-row views-row-1 views-row-odd views-row-first">
+                                    <div class="views-field views-field-title">
+                                      <span class="field-content"><a href="#">Initial Impressions of the Exchange</a></span>
+                                    </div>
+                                  </li>
+                                  <li class="views-row views-row-2 views-row-even">
+                                    <div class="views-field views-field-title">
+                                      <span class="field-content"><a href="#">Welcome to the HESN Community</a></span>
+                                    </div>
+                                  </li>
+                                  <li class="views-row views-row-3 views-row-odd">
+                                    <div class="views-field views-field-title">
+                                      <span class="field-content"><a href="#">Indonesia Innovation</a></span>
+                                    </div>
+                                  </li>
+                                  <li class="views-row views-row-4 views-row-even views-row-last">
+                                    <div class="views-field views-field-title">
+                                      <span class="field-content"><a href="#">Makers in Indonesia</a></span>
+                                    </div>
+                                  </li>
+                                </ul>
+                              </div>
+                              <div class="view__footer">
+                                <p><a href="#">View All</a><a href="#" class="add-new">Add New Discussion</a></p>
+                              </div>
+                            </div>
                           </div>
                         </div>
                       </div>
@@ -338,87 +328,45 @@
           </li>
           <!-- MORE -->
           <li class="tb-megamenu-item level-1 mega tb-megamenu-item--more mega-align-right dropdown">
-            <a class="" href="/"> More </a>
-            <div class="tb-megamenu-submenu dropdown-menu mega-dropdown-menu nav-child">
+            <a href="#"> More </a>
+            <div class="tb-megamenu-submenu dropdown-menu mega-dropdown-menu nav-child" data-width="900">
               <div class="mega-dropdown-inner">
                 <div class="tb-megamenu-row row-fluid">
-                  <div class="tb-megamenu-column span4 mega-col-nav has-icon-programs">
-                    <div class="tb-megamenu-column-inner mega-inner clearfix">
-                      <div class="tb-megamenu-block tb-block tb-megamenu-block">
-                        <div class="block-inner">
-                          <div class="block">
-                            <div class="view view--communities-content-types-menu view--id-communities_content_types_menu view--display-id-programs view--simple-list view-communities-content-types-menu view-id-communities_content_types_menu view-display-id-programs">
-                              <div class="view__header">
-                                <h2>Programs</h2>
-                              </div>
-                              <div class="item-list">
-                                <ul>
-                                  <li class="views-row views-row-1 views-row-odd views-row-first">
-                                    <div class="views-field views-field-title">
-                                      <span class="field-content"><a href="/programs/powering-ag">Powering Ag</a></span>
-                                    </div>
-                                  </li>
-                                  <li class="views-row views-row-2 views-row-even">
-                                    <div class="views-field views-field-title">
-                                      <span class="field-content"><a href="/programs/div-development-innovation-ventures">DIV (Development Innovation Ventures)</a></span>
-                                    </div>
-                                  </li>
-                                  <li class="views-row views-row-3 views-row-odd">
-                                    <div class="views-field views-field-title">
-                                      <span class="field-content"><a href="/programs/skoll-world-forum">Skoll World Forum</a></span>
-                                    </div>
-                                  </li>
-                                  <li class="views-row views-row-4 views-row-even views-row-last">
-                                    <div class="views-field views-field-title">
-                                      <span class="field-content"><a href="/programs/hesn-higher-education-solutions-network">HESN (Higher Education Solutions Network)</a></span>
-                                    </div>
-                                  </li>
-                                </ul>
-                              </div>
-                              <div class="view__footer">
-                                <p><a href="programs">View All</a></p>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="tb-megamenu-column span4 mega-col-nav has-icon-organizations">
+                  <div class="tb-megamenu-column span3 mega-col-nav has-icon-organizations" data-width="3">
                     <div class="tb-megamenu-column-inner mega-inner clearfix">
                       <div class="tb-megamenu-block tb-block tb-megamenu-block">
                         <div class="block-inner">
                           <div class="block block--views">
                             <div class="view view--communities-content-types-menu view--id-communities_content_types_menu view--display-id-organizations view--simple-list view-communities-content-types-menu view-id-communities_content_types_menu view-display-id-organizations">
                               <div class="view__header">
-                                <h2>Organizations</h2>
+                                <div><a href="#">Organizations</a></div>
                               </div>
                               <div class="item-list">
                                 <ul>
                                   <li class="views-row views-row-1 views-row-odd views-row-first">
                                     <div class="views-field views-field-title">
-                                      <span class="field-content"><a href="/organizations/usaid-us-agency-international-development">USAID (U.S. Agency for International Development)</a></span>
+                                      <span class="field-content"><a href="#">USAID (U.S. Agency for International Development)</a></span>
                                     </div>
                                   </li>
                                   <li class="views-row views-row-2 views-row-even">
                                     <div class="views-field views-field-title">
-                                      <span class="field-content"><a href="/organizations/us-global-development-lab">U.S. Global Development Lab</a></span>
+                                      <span class="field-content"><a href="#">U.S. Global Development Lab</a></span>
                                     </div>
                                   </li>
                                   <li class="views-row views-row-3 views-row-odd">
                                     <div class="views-field views-field-title">
-                                      <span class="field-content"><a href="/organizations/global-integrity">Global Integrity</a></span>
+                                      <span class="field-content"><a href="#">Global Integrity</a></span>
                                     </div>
                                   </li>
                                   <li class="views-row views-row-4 views-row-even views-row-last">
                                     <div class="views-field views-field-title">
-                                      <span class="field-content"><a href="/organizations/bill-and-melinda-gates-foundation">Bill and Melinda Gates Foundation</a></span>
+                                      <span class="field-content"><a href="#">Bill and Melinda Gates Foundation</a></span>
                                     </div>
                                   </li>
                                 </ul>
                               </div>
                               <div class="view__footer">
-                                <p><a href="organizations">View All</a></p>
+                                <p><a href="/organizations">View All</a><a href="#" class="add-new">Add New Organization</a></p>
                               </div>
                             </div>
                           </div>
@@ -426,33 +374,109 @@
                       </div>
                     </div>
                   </div>
-                  <div class="tb-megamenu-column span4  mega-col-nav has-icon-members">
+                  <div class="tb-megamenu-column span3 mega-col-nav" data-width="3">
                     <div class="tb-megamenu-column-inner mega-inner clearfix">
                       <div class="tb-megamenu-block tb-block tb-megamenu-block">
                         <div class="block-inner">
-                          <div class="block block-views-communities-user-menu-members block--views block--views-communities-user-menu-members">
-                            <div class="view view--communities-user-menu view--id-communities_user_menu view--display-id-members view--simple-list view-communities-user-menu view-id-communities_user_menu view-display-id-members">
+                          <div class="block block-views-events-listing-event-mega block--views block--views-events-listing-event-mega">
+                            <div class="view view--events-listing view--id-events_listing view--display-id-event_mega view-events-listing view-id-events_listing view-display-id-event_mega">
                               <div class="view__header">
-                                <h2>Members</h2>
+                                <div><a href="#">Events</a></div>
                               </div>
                               <div class="item-list">
                                 <ul>
                                   <li class="views-row views-row-1 views-row-odd views-row-first">
-                                    <a href="members/forumone">Matt Burge</a>
+                                    <div class="views-field views-field-title">
+                                      <span class="field-content"><a href="#">International Social Innovation Research Conference 2015</a></span>
+                                    </div>
                                   </li>
                                   <li class="views-row views-row-2 views-row-even">
-                                    <a href="members/abonnell">Alexis Bonnell</a>
+                                    <div class="views-field views-field-title">
+                                      <span class="field-content"><a href="#">International Conference: Integrating International Research, Policy and Practice in Developing Welfare Services</a></span>
+                                    </div>
                                   </li>
                                   <li class="views-row views-row-3 views-row-odd">
-                                    <a href="members/kshipley">Katie Shipley</a>
+                                    <div class="views-field views-field-title">
+                                      <span class="field-content"><a href="#">Clinton Global Initiative Annual Meeting</a></span>
+                                    </div>
                                   </li>
                                   <li class="views-row views-row-4 views-row-even views-row-last">
-                                    <a href="members/mdrayer">Mike Drayer</a>
+                                    <div class="views-field views-field-title">
+                                      <span class="field-content"><a href="#">Social Good Summit</a></span>
+                                    </div>
                                   </li>
                                 </ul>
                               </div>
                               <div class="view__footer">
-                                <p><a href="members">View All</a></p>
+                                <p><a href="#">View All</a><a href="#" class="add-new">Add New Event</a></p>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="tb-megamenu-column span3 mega-col-nav has-icon-programs" data-width="3">
+                    <div class="tb-megamenu-column-inner mega-inner clearfix">
+                      <div class="tb-megamenu-block tb-block tb-megamenu-block">
+                        <div class="block-inner">
+                          <div class="block block--views">
+                            <div class="view view--communities-content-types-menu view--id-communities_content_types_menu view--display-id-programs view--simple-list view-communities-content-types-menu view-id-communities_content_types_menu view-display-id-programs">
+                              <div class="view__header">
+                                <div><a href="#">Programs</a></div>
+                              </div>
+                              <div class="item-list">
+                                <ul>
+                                  <li class="views-row views-row-1 views-row-odd views-row-first">
+                                    <div class="views-field views-field-title">
+                                      <span class="field-content"><a href="#">Powering Agriculture: An Energy Grand Challenge for Development</a></span>
+                                    </div>
+                                  </li>
+                                  <li class="views-row views-row-2 views-row-even">
+                                    <div class="views-field views-field-title">
+                                      <span class="field-content"><a href="#">Development Innovation Ventures (DIV)</a></span>
+                                    </div>
+                                  </li>
+                                  <li class="views-row views-row-3 views-row-odd">
+                                    <div class="views-field views-field-title">
+                                      <span class="field-content"><a href="#">Skoll World Forum</a></span>
+                                    </div>
+                                  </li>
+                                  <li class="views-row views-row-4 views-row-even views-row-last">
+                                    <div class="views-field views-field-title">
+                                      <span class="field-content"><a href="#">HESN (Higher Education Solutions Network)</a></span>
+                                    </div>
+                                  </li>
+                                </ul>
+                              </div>
+                              <div class="view__footer">
+                                <p><a href="#">View All</a><a href="#" class="add-new">Add New Program</a></p>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="tb-megamenu-column span3 mega-col-nav has-icon-members" data-width="3">
+                    <div class="tb-megamenu-column-inner mega-inner clearfix">
+                      <div class="tb-megamenu-block tb-block tb-megamenu-block">
+                        <div class="block-inner">
+                          <div class="block  block-views-communities-user-menu-members block--views block--views-communities-user-menu-members">
+                            <div class="view view--communities-user-menu view--id-communities_user_menu view--display-id-members view--simple-list view-communities-user-menu view-id-communities_user_menu view-display-id-members">
+                              <div class="view__header">
+                                <div><a href="#">Members</a></div>
+                              </div>
+                              <div class="item-list">
+                                <ul>
+                                  <li class="views-row views-row-1 views-row-odd views-row-first"> <a href="#">Matt Burge</a>  </li>
+                                  <li class="views-row views-row-2 views-row-even"> <a href="#">Alexis Bonnell</a>  </li>
+                                  <li class="views-row views-row-3 views-row-odd"> <a href="#">Katie Shipley</a>  </li>
+                                  <li class="views-row views-row-4 views-row-even views-row-last"> <a href="#">Mike Drayer</a>  </li>
+                                </ul>
+                              </div>
+                              <div class="view__footer">
+                                <p><a href="#">View All</a><a href="#" class="add-new">Create Your Account</a></p>
                               </div>
                             </div>
                           </div>
@@ -466,7 +490,8 @@
           </li>
         </ul>
       </div>
-    </div>    <div class="block block--search block--search-api-page-node-search">    
+    </div>
+    <div class="block block--search block--search-api-page-node-search">    
       <h2 class="block__title">Node Search</h2>
       <form accept-charset="UTF-8">
         <div class="form-item form-item--textfield">

@@ -151,6 +151,58 @@ function gie_general_strongarm() {
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
+  $strongarm->name = 'contact_plus_path_1';
+  $strongarm->value = '<front>';
+  $export['contact_plus_path_1'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'contact_plus_site_copy';
+  $strongarm->value = 1;
+  $export['contact_plus_site_copy'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'contact_plus_site_mail';
+  $strongarm->value = 'vset';
+  $export['contact_plus_site_mail'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'contact_plus_site_name';
+  $strongarm->value = 'leave';
+  $export['contact_plus_site_name'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'contact_plus_site_subj';
+  $strongarm->value = 0;
+  $export['contact_plus_site_subj'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'contact_plus_site_text';
+  $strongarm->value = array(
+    'value' => '',
+    'format' => 'filtered_html',
+  );
+  $export['contact_plus_site_text'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'contact_plus_site_title';
+  $strongarm->value = '';
+  $export['contact_plus_site_title'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
   $strongarm->name = 'date_format_day';
   $strongarm->value = 'd';
   $export['date_format_day'] = $strongarm;
@@ -386,6 +438,13 @@ function gie_general_strongarm() {
   $strongarm->name = 'node_submitted_error_page';
   $strongarm->value = 0;
   $export['node_submitted_error_page'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'page_manager_contact_site_disabled';
+  $strongarm->value = FALSE;
+  $export['page_manager_contact_site_disabled'] = $strongarm;
 
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */

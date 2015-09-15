@@ -13,6 +13,102 @@ function gie_general_default_page_manager_handlers() {
   $handler = new stdClass();
   $handler->disabled = FALSE; /* Edit this to true to make a default handler disabled initially */
   $handler->api_version = 1;
+  $handler->name = 'contact_site__contact_page';
+  $handler->task = 'contact_site';
+  $handler->subtask = '';
+  $handler->handler = 'panel_context';
+  $handler->weight = 0;
+  $handler->conf = array(
+    'title' => 'Contact page',
+    'no_blocks' => 0,
+    'pipeline' => 'standard',
+    'body_classes_to_remove' => '',
+    'body_classes_to_add' => '',
+    'css_id' => '',
+    'css' => '',
+    'contexts' => array(),
+    'relationships' => array(),
+    'name' => 'contact_page',
+  );
+  $display = new panels_display();
+  $display->layout = 'detail';
+  $display->layout_settings = array();
+  $display->panel_settings = array(
+    'style_settings' => array(
+      'default' => NULL,
+      'title' => NULL,
+      'main' => NULL,
+      'main_sidebar' => NULL,
+      'center' => NULL,
+      'box_first' => NULL,
+      'box_second' => NULL,
+      'box_third' => NULL,
+      'bottom_sidebar' => NULL,
+      'bottom' => NULL,
+    ),
+  );
+  $display->cache = array();
+  $display->title = 'Contact Global Innovation Exchange';
+  $display->uuid = 'b74bb388-bfac-4a0f-8378-4760e2bb3836';
+  $display->content = array();
+  $display->panels = array();
+    $pane = new stdClass();
+    $pane->pid = 'new-6420bf98-0744-49ac-affa-6f0f051ff0d4';
+    $pane->panel = 'main';
+    $pane->type = 'contact';
+    $pane->subtype = 'contact';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array(
+      'override_title' => 1,
+      'override_title_text' => '',
+      'override_title_heading' => 'h2',
+    );
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
+    $pane->css = array();
+    $pane->extras = array();
+    $pane->position = 0;
+    $pane->locks = array();
+    $pane->uuid = '6420bf98-0744-49ac-affa-6f0f051ff0d4';
+    $display->content['new-6420bf98-0744-49ac-affa-6f0f051ff0d4'] = $pane;
+    $display->panels['main'][0] = 'new-6420bf98-0744-49ac-affa-6f0f051ff0d4';
+    $pane = new stdClass();
+    $pane->pid = 'new-44c4336f-5a2c-4252-81de-48e5addffd73';
+    $pane->panel = 'title';
+    $pane->type = 'page_title';
+    $pane->subtype = 'page_title';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array(
+      'markup' => 'h1',
+      'class' => '',
+      'id' => '',
+      'override_title' => 0,
+      'override_title_text' => '',
+      'override_title_heading' => 'h2',
+    );
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
+    $pane->css = array();
+    $pane->extras = array();
+    $pane->position = 0;
+    $pane->locks = array();
+    $pane->uuid = '44c4336f-5a2c-4252-81de-48e5addffd73';
+    $display->content['new-44c4336f-5a2c-4252-81de-48e5addffd73'] = $pane;
+    $display->panels['title'][0] = 'new-44c4336f-5a2c-4252-81de-48e5addffd73';
+  $display->hide_title = PANELS_TITLE_FIXED;
+  $display->title_pane = 'new-44c4336f-5a2c-4252-81de-48e5addffd73';
+  $handler->conf['display'] = $display;
+  $export['contact_site__contact_page'] = $handler;
+
+  $handler = new stdClass();
+  $handler->disabled = FALSE; /* Edit this to true to make a default handler disabled initially */
+  $handler->api_version = 1;
   $handler->name = 'node_edit__add_edit_forms';
   $handler->task = 'node_edit';
   $handler->subtask = '';
@@ -106,6 +202,104 @@ function gie_general_default_page_manager_handlers() {
   $display->title_pane = 'new-e1b03668-52fe-4016-ac73-24e99ff9393c';
   $handler->conf['display'] = $display;
   $export['node_edit__add_edit_forms'] = $handler;
+
+  $handler = new stdClass();
+  $handler->disabled = FALSE; /* Edit this to true to make a default handler disabled initially */
+  $handler->api_version = 1;
+  $handler->name = 'pm_existing_pages_node_abuse_form__node_abuse_form';
+  $handler->task = 'pm_existing_pages';
+  $handler->subtask = 'node_abuse_form';
+  $handler->handler = 'panel_context';
+  $handler->weight = 0;
+  $handler->conf = array(
+    'title' => 'Node Abuse Form',
+    'no_blocks' => 0,
+    'pipeline' => 'standard',
+    'body_classes_to_remove' => '',
+    'body_classes_to_add' => '',
+    'css_id' => '',
+    'css' => '',
+    'contexts' => array(),
+    'relationships' => array(),
+    'name' => 'node_abuse_form',
+  );
+  $display = new panels_display();
+  $display->layout = 'detail';
+  $display->layout_settings = array();
+  $display->panel_settings = array(
+    'style_settings' => array(
+      'default' => NULL,
+      'title' => NULL,
+      'main' => NULL,
+      'main_sidebar' => NULL,
+      'center' => NULL,
+      'box_first' => NULL,
+      'box_second' => NULL,
+      'box_third' => NULL,
+      'bottom_sidebar' => NULL,
+      'bottom' => NULL,
+    ),
+  );
+  $display->cache = array();
+  $display->title = 'Flag %node:title as Inappropriate';
+  $display->uuid = '5da69921-7c08-434b-8179-58cc8da6ce93';
+  $display->content = array();
+  $display->panels = array();
+    $pane = new stdClass();
+    $pane->pid = 'new-0b348870-66d4-46fb-9cdb-8b56f9b22cf0';
+    $pane->panel = 'main';
+    $pane->type = 'pm_existing_pages';
+    $pane->subtype = 'pm_existing_pages';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array(
+      0 => 'task_id',
+      'task_id' => 'node_abuse_form',
+      'override_title' => 1,
+      'override_title_text' => '',
+      'override_title_heading' => 'h2',
+    );
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
+    $pane->css = array();
+    $pane->extras = array();
+    $pane->position = 0;
+    $pane->locks = array();
+    $pane->uuid = '0b348870-66d4-46fb-9cdb-8b56f9b22cf0';
+    $display->content['new-0b348870-66d4-46fb-9cdb-8b56f9b22cf0'] = $pane;
+    $display->panels['main'][0] = 'new-0b348870-66d4-46fb-9cdb-8b56f9b22cf0';
+    $pane = new stdClass();
+    $pane->pid = 'new-33ddb038-f147-4534-90db-796826c75254';
+    $pane->panel = 'title';
+    $pane->type = 'page_title';
+    $pane->subtype = 'page_title';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array(
+      'markup' => 'h1',
+      'class' => '',
+      'id' => '',
+      'override_title' => 0,
+      'override_title_text' => '',
+      'override_title_heading' => 'h2',
+    );
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
+    $pane->css = array();
+    $pane->extras = array();
+    $pane->position = 0;
+    $pane->locks = array();
+    $pane->uuid = '33ddb038-f147-4534-90db-796826c75254';
+    $display->content['new-33ddb038-f147-4534-90db-796826c75254'] = $pane;
+    $display->panels['title'][0] = 'new-33ddb038-f147-4534-90db-796826c75254';
+  $display->hide_title = PANELS_TITLE_FIXED;
+  $display->title_pane = 'new-33ddb038-f147-4534-90db-796826c75254';
+  $handler->conf['display'] = $display;
+  $export['pm_existing_pages_node_abuse_form__node_abuse_form'] = $handler;
 
   return $export;
 }
