@@ -5,24 +5,25 @@
 	display: block;
 	margin: 0 auto;
 	padding: 0;
+	text-align: center;
+	.container {
+		display: inline-block;
+    margin: 0 auto;
+    overflow: hidden;
+	}
 }
 
 .card--has1 {}
 .card--has2 {}
-.card--has3 {
-	width: 100%;
-}
+.card--has3 {}
 
 .card__item {
 	@include box-shadow(0 0px 2px 1px rgba(0, 0, 0, 0.4));
 	float: left;
 	margin: 1em;
 	padding: 0 1em;
+	text-align: left;
 	width: em(300px);
-	// .card--has3 & {
-	// 	width: 33%;
-	// }
-	
 }
 
 .card__title {

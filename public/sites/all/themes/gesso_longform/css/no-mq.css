@@ -806,10 +806,12 @@ blockquote p {
   display: block;
   margin: 0 auto;
   padding: 0;
+  text-align: center;
 }
-
-.card--has3 {
-  width: 100%;
+.card .container {
+  display: inline-block;
+  margin: 0 auto;
+  overflow: hidden;
 }
 
 .card__item {
@@ -817,6 +819,7 @@ blockquote p {
   float: left;
   margin: 1em;
   padding: 0 1em;
+  text-align: left;
   width: 18.75em;
 }
 
@@ -840,6 +843,7 @@ blockquote p {
 .component {
   clear: both;
   display: block;
+  padding: 2em 0;
 }
 
 .p__dropcap:first-letter {
@@ -1519,7 +1523,9 @@ blockquote p {
 }
 
 .page-header__scroll-button {
-  display: block;
+  bottom: -8em;
+  display: inline-block;
+  position: relative;
   height: 75px;
   overflow: hidden;
   width: 75px;
@@ -1735,6 +1741,10 @@ tr.drag {
 
 tr.drag-previous {
   background-color: #ffb;
+}
+
+.text-block {
+  padding: 0 .5em;
 }
 
 .throbber {
