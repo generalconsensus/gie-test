@@ -1,0 +1,30 @@
+.layout-panels-longform {
+  *zoom: 1;
+}
+.layout-panels-longform:after {
+  display: table;
+  content: "";
+}
+.layout-panels-longform:after {
+  clear: both;
+}
+.layout-panels-longform .layout-preface,
+.layout-panels-longform .layout-main {
+  *zoom: 1;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  *box-sizing: content-box;
+  *behavior: url("/sites/all/themes/gesso_longform/polyfills/boxsizing.htc");
+}
+.layout-panels-longform .layout-preface:after,
+.layout-panels-longform .layout-main:after {
+  display: table;
+  content: "";
+}
+.layout-panels-longform .layout-preface:after,
+.layout-panels-longform .layout-main:after {
+  clear: both;
+}
+
+/*# sourceMappingURL=longform.css.map */
