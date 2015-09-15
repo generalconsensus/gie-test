@@ -5,9 +5,12 @@
 
 
 .page-simple__inner {
-    background: url(../images/page-simple-bg.jpg) repeat-y 0 0;
+    background-color: #0c304b;
+    @include breakpoint(700px , $no-query: true) {
+    background: #0c304b url(../images/page-simple-bg.jpg) repeat-y 0 0;
     -webkit-animation: backgroundScroll 139s linear infinite;
     animation: backgroundScroll 139s linear infinite;
+    }
 }
 
 

@@ -1,5 +1,6 @@
 %lr_providericon_replacement {
   @extend %button;
+  display: block;
   background-image: none;
   border: 0;
   height: auto;
@@ -17,8 +18,8 @@
 }
 
 #edit-lr-social-login-links {
-  margin-bottom: 3em;
-  > label { 
+  margin:0 0 1em;
+  > label {
     @include hyphens(none);
     border-bottom: 1px solid #cecfcb;
     font-size: 32px;
@@ -32,10 +33,12 @@
     text-align: center;
     .lr_icons_box {
       display: inline-block;
+      min-width: 190px;
       float: none;
+      margin: 0 2px 8px 2px;
     }
   }
-  .lr_providericons {   
+  .lr_providericons {
     &.lr_linkedin {
       @extend %lr_providericon_replacement;
       background-color: #0077b5;
