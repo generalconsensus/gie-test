@@ -9,3 +9,11 @@ function gie_long_form_content_update_7000() {
   $instance = field_info_instance('paragraphs_item', 'field_paragraphs_view', 'long_form_video');
   field_delete_instance($instance);
 }
+
+/**
+ * Deleted alignment field from video paragraph bundle
+ */
+function gie_long_form_content_update_7001() {
+  $instance = field_info_instance('paragraphs_item', 'field_para_section_break_image', 'long_form_section_break_image');
+  field_delete_instance($instance);
+}
