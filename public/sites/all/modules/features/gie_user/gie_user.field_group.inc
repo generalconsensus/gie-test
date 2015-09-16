@@ -33,6 +33,7 @@ function gie_user_field_group_info() {
       7 => 'field_assistance_offered',
       8 => 'field_user_parent',
       9 => 'field_user_assistance',
+      10 => 'field_user_notifications',
     ),
     'format_type' => 'div',
     'format_settings' => array(
