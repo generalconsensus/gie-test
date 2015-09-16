@@ -30,7 +30,7 @@ function gie_long_form_content_panelizer_defaults() {
   $panelizer->link_to_entity = TRUE;
   $panelizer->extra = array();
   $display = new panels_display();
-  $display->layout = 'landing';
+  $display->layout = 'longform';
   $display->layout_settings = array();
   $display->panel_settings = array(
     'style_settings' => array(
@@ -98,7 +98,7 @@ function gie_long_form_content_panelizer_defaults() {
     $display->panels['main'][1] = 'new-54d4bac6-adb8-4ea6-89a8-27bd59841695';
     $pane = new stdClass();
     $pane->pid = 'new-e035fdf4-35bb-4fc7-874f-01ddb6b0cf82';
-    $pane->panel = 'title';
+    $pane->panel = 'preface';
     $pane->type = 'page_title';
     $pane->subtype = 'page_title';
     $pane->shown = TRUE;
@@ -121,7 +121,7 @@ function gie_long_form_content_panelizer_defaults() {
     $pane->locks = array();
     $pane->uuid = 'e035fdf4-35bb-4fc7-874f-01ddb6b0cf82';
     $display->content['new-e035fdf4-35bb-4fc7-874f-01ddb6b0cf82'] = $pane;
-    $display->panels['title'][0] = 'new-e035fdf4-35bb-4fc7-874f-01ddb6b0cf82';
+    $display->panels['preface'][0] = 'new-e035fdf4-35bb-4fc7-874f-01ddb6b0cf82';
   $display->hide_title = PANELS_TITLE_FIXED;
   $display->title_pane = '0';
   $panelizer->display = $display;

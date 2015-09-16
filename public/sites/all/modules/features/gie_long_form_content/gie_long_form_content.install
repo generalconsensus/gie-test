@@ -17,3 +17,10 @@ function gie_long_form_content_update_7001() {
   $instance = field_info_instance('paragraphs_item', 'field_para_section_break_image', 'long_form_section_break_image');
   field_delete_instance($instance);
 }
+
+/**
+ * Enable gesso_longform theme
+ */
+function gie_long_form_content_update_7002() {
+  theme_enable(array('gesso_longform'));
+}

@@ -83,3 +83,31 @@ function gie_long_form_content_paragraphs_info() {
   );
   return $items;
 }
+
+/**
+ * Implements hook_themekey_features_rule_chain().
+ */
+function gie_long_form_content_themekey_features_rule_chain() {
+if (!defined('THEMEKEY_PAGECACHE_UNSUPPORTED')) {
+    define('THEMEKEY_PAGECACHE_UNSUPPORTED', 0);
+    define('THEMEKEY_PAGECACHE_SUPPORTED', 1);
+    define('THEMEKEY_PAGECACHE_TIMEBASED', 2);
+  }
+$rules = array(
+  0 => array(
+    'rule' => array(
+      'property' => 'node:type',
+      'operator' => '=',
+      'value' => 'long_form_page',
+      'theme' => 'gesso_longform',
+      'enabled' => 1,
+      'wildcards' => 'a:0:{}',
+      'module' => 'gie_long_form_content',
+    ),
+    'string' => '"node:type = long_form_page >>> gesso_longform"',
+    'childs' => array(),
+  ),
+);
+
+return $rules;
+}
