@@ -1596,7 +1596,7 @@ function gie_funding_field_default_field_instances() {
     'bundle' => 'funding',
     'default_value' => NULL,
     'deleted' => 0,
-    'description' => 'The URL to the application or additional information about the opportunity.',
+    'description' => 'The URL to the application or additional information about the opportunity. Provide the full URL, for example: http://www.example.com',
     'display' => array(
       'at_a_glance' => array(
         'label' => 'above',
@@ -2998,7 +2998,7 @@ function gie_funding_field_default_field_instances() {
   t('Select the corresponding regions that apply for the selected countries.');
   t('Share a funding photo. If you don\'t upload your photo, one will be automatically assigned!');
   t('Subject');
-  t('The URL to the application or additional information about the opportunity.');
+  t('The URL to the application or additional information about the opportunity. Provide the full URL, for example: http://www.example.com');
   t('The deadline for submission. If it is a rolling deadline, please leave blank.');
   t('The organization that is sponsoring the funding opportunity. The organization must have profile on the Exchange to be included on this line. Start typing the organization name to see if it has a profile on the Exchange yet. If it doesn\'t appear, please contact the organization and encourage them to create an organization profile. ');
   t('The title of the funding opportunity. ');
