@@ -1413,7 +1413,7 @@ function gie_organization_field_default_field_instances() {
     'bundle' => 'organization',
     'default_value' => NULL,
     'deleted' => 0,
-    'description' => 'The point of contact must be someone with a user profile in the Exchange. Start writing a name (first name initial last name e.g. kshipley) to see if it comes up in the Exchange member directory. If not, create a profile or email the person to invite them to create a profile. If no point of contact is listed, there will be no point of contact listed on the innovation profile.',
+    'description' => 'The point of contact must be someone with a user profile in the Exchange. Start writing the full name to see if it comes up in the Exchange member directory. If not, contact the person to invite them to create a profile. If no point of contact is listed, there will be no point of contact listed on the organization profile.',
     'display' => array(
       'at_a_glance' => array(
         'label' => 'above',
@@ -3189,7 +3189,7 @@ function gie_organization_field_default_field_instances() {
   t('Telephone number for your organization including country code');
   t('The mailing address of your organization');
   t('The mission of your organization');
-  t('The point of contact must be someone with a user profile in the Exchange. Start writing a name (first name initial last name e.g. kshipley) to see if it comes up in the Exchange member directory. If not, create a profile or email the person to invite them to create a profile. If no point of contact is listed, there will be no point of contact listed on the innovation profile.');
+  t('The point of contact must be someone with a user profile in the Exchange. Start writing the full name to see if it comes up in the Exchange member directory. If not, contact the person to invite them to create a profile. If no point of contact is listed, there will be no point of contact listed on the organization profile.');
   t('The title of the organization');
   t('Twitter');
   t('Type the organizations that this program is partnered with. They must have an organization profile in order to appear on your page. Please encourage your partners to create organization profiles and user profiles on the Exchange if they don\'t appear.');

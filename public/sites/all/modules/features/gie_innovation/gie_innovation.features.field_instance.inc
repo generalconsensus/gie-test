@@ -2600,7 +2600,7 @@ Using the selector below, highlight the area of the image you would like to feat
     'bundle' => 'innovation',
     'default_value' => NULL,
     'deleted' => 0,
-    'description' => 'The point of contact must be a member of the Global Innovation Exchange. You may search on First Name or Last Name and select the relevant user from the search results.',
+    'description' => 'The point of contact must be someone with a user profile in the Exchange. Start writing the full name to see if it comes up in the Exchange member directory. If not, contact the person to invite them to create a profile. If no point of contact is listed, there will be no point of contact listed on the innovation profile.',
     'display' => array(
       'at_a_glance' => array(
         'label' => 'above',
@@ -5903,7 +5903,7 @@ Using the selector below, highlight the area of the image you would like to feat
   t('Strategy for expanding use of your innovation');
   t('Subject');
   t('Tell us who is using and/or testing your innovation right now');
-  t('The point of contact must be a member of the Global Innovation Exchange. You may search on First Name or Last Name and select the relevant user from the search results.');
+  t('The point of contact must be someone with a user profile in the Exchange. Start writing the full name to see if it comes up in the Exchange member directory. If not, contact the person to invite them to create a profile. If no point of contact is listed, there will be no point of contact listed on the innovation profile.');
   t('Title');
   t('Topic');
   t('Topics are issues that may be of interest to Exchange users. Select any (or none) topics that you think apply to your innovation (i.e. social impact investing)');
