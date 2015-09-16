@@ -936,6 +936,59 @@ blockquote p {
   display: none;
 }
 
+.footer {
+  overflow: hidden;
+  position: relative;
+}
+.footer .region-footer {
+  margin-top: 10em;
+}
+
+.footer__download-link {
+  background-color: #ff1352;
+  height: 60px;
+  position: relative;
+}
+.footer__download-link a {
+  color: #FFF;
+  position: relative;
+  padding-top: 20px;
+  padding-left: 5%;
+  top: 15px;
+}
+.footer__download-link a:after {
+  content: "> ";
+  font-weight: bold;
+  padding-left: .5em;
+  text-decoration: none;
+}
+
+.footer__download-image {
+  border: 2px #ff1352 solid;
+  background-color: white;
+  display: block;
+  height: 150px;
+  position: absolute;
+  right: 15%;
+  bottom: 0;
+  width: 150px;
+}
+
+.footer__menu ul {
+  list-style: none;
+}
+.footer__menu ul li {
+  border-right: 2px solid #4d4d4f;
+  display: inline-block;
+  padding: 0 1em;
+}
+.footer__menu ul li:last-child {
+  border: none;
+}
+.footer__menu ul li a {
+  color: #4d4d4f;
+}
+
 .form-item {
   margin: 1.625em 0;
 }
