@@ -904,7 +904,7 @@ function gie_resource_field_default_field_instances() {
     'bundle' => 'resource',
     'default_value' => NULL,
     'deleted' => 0,
-    'description' => 'The URL that directly links to the resource. ',
+    'description' => 'The URL that directly links to the resource. Provide the full URL, for example: http://www.example.com',
     'display' => array(
       'at_a_glance' => array(
         'label' => 'above',
@@ -1290,7 +1290,7 @@ function gie_resource_field_default_field_instances() {
     'bundle' => 'resource',
     'default_value' => NULL,
     'deleted' => 0,
-    'description' => 'If your resource is hosted on another website, you can add that website here.',
+    'description' => 'If your resource is hosted on another website, you can add that website here. Provide the full URL, for example: http://www.example.com',
     'display' => array(
       'at_a_glance' => array(
         'label' => 'above',
@@ -2337,7 +2337,7 @@ function gie_resource_field_default_field_instances() {
   t('Date Added');
   t('Description');
   t('Enter a short description of your innovation. How can this resource help others? Who should read it/use it?');
-  t('If your resource is hosted on another website, you can add that website here.');
+  t('If your resource is hosted on another website, you can add that website here. Provide the full URL, for example: http://www.example.com');
   t('In what areas can this resource help innovators, organizations, and programs?');
   t('Name');
   t('Organizations');
@@ -2353,7 +2353,7 @@ function gie_resource_field_default_field_instances() {
   t('Select the region that corresponds to the countries listed. ');
   t('Source URL');
   t('Subject');
-  t('The URL that directly links to the resource. ');
+  t('The URL that directly links to the resource. Provide the full URL, for example: http://www.example.com');
   t('The organization that is associated with this resource. The organization must have profile on the Exchange to be included on this line. Start typing the organization name to see if it has a profile on the Exchange yet. If it doesn\'t appear, please contact the organization and encourage them to create an organization profile. ');
   t('The program that is associated with this resource. The program must have profile on the Exchange to be included on this line. Start typing the program name to see if it has a profile on the Exchange yet. If it doesn\'t appear, please contact the program and encourage them to create an program profile. ');
   t('The source author must be someone with a user profile in the Exchange. Start writing a name ( (first name initial last name e.g. kshipley) to see if it comes up in the Exchange member directory. If not, create a profile or email the person to invite them to create a profile. If no resource author is listed, there will be no author listed on the innovation profile.');

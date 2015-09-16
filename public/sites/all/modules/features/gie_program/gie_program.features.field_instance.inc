@@ -665,7 +665,7 @@ function gie_program_field_default_field_instances() {
     'bundle' => 'program',
     'default_value' => NULL,
     'deleted' => 0,
-    'description' => 'Link to your program\'s website.',
+    'description' => 'Link to your program\'s website. Provide the full URL, for example: http://www.example.com',
     'display' => array(
       'at_a_glance' => array(
         'label' => 'above',
@@ -2332,7 +2332,7 @@ function gie_program_field_default_field_instances() {
   t('Expected End Date');
   t('Funding Type');
   t('Link URL');
-  t('Link to your program\'s website.');
+  t('Link to your program\'s website. Provide the full URL, for example: http://www.example.com');
   t('Logo');
   t('Objectives');
   t('Parent Organization');
