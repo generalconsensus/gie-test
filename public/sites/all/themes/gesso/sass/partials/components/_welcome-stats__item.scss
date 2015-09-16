@@ -3,15 +3,18 @@
 
 .welcome-stats__item {
   text-align: center;
-  font-size: em(16px, 16px);
-}
 
-.welcome-stats__number {
-  font-size: em(48px);
-  margin-bottom: em(20px, 48px);
-}
 
-.welcome-stats__label {
-  color: $lightorange;
-  text-transform: uppercase;
+
+  .welcome-stats__number {
+    color: #FFF;
+    font-size: em(46px);
+    margin-bottom: em(20px, 46px);
+  }
+
+  .welcome-stats__label {
+    color: $lightorange;
+    text-transform: uppercase;
+    font-size: em(16px, 16px);
+  }
 }

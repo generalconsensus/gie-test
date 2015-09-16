@@ -19,6 +19,7 @@
 
 #edit-lr-social-login-links {
   margin:0 0 1em;
+  line-height: 0;
   > label {
     @include hyphens(none);
     border-bottom: 1px solid #cecfcb;

@@ -8,8 +8,8 @@
   @include breakpoint(700px , $no-query: true) {
     margin-bottom: em(80px, 16px);
     margin-top: em(80px, 16px);
-    padding-left: 4%;
-    padding-right: 4%;
+    // padding-left: 4%;
+    // padding-right: 4%;
   }
   h1 {
     color: #fff;
