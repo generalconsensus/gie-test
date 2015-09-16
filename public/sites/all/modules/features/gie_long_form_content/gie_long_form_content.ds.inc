@@ -441,6 +441,92 @@ function gie_long_form_content_ds_layout_settings_info() {
 
   $ds_layout = new stdClass();
   $ds_layout->api_version = 1;
+  $ds_layout->id = 'paragraphs_item|long_form_callout_card|default';
+  $ds_layout->entity_type = 'paragraphs_item';
+  $ds_layout->bundle = 'long_form_callout_card';
+  $ds_layout->view_mode = 'default';
+  $ds_layout->layout = 'ds_reset';
+  $ds_layout->settings = array(
+    'regions' => array(
+      'ds_content' => array(
+        0 => 'field_para_callout_title_1',
+        1 => 'field_para_callout_body_1',
+        2 => 'field_para_callout_title_2',
+        3 => 'field_para_callout_body_2',
+        4 => 'field_para_callout_title_3',
+        5 => 'field_para_callout_body_3',
+      ),
+    ),
+    'fields' => array(
+      'field_para_callout_title_1' => 'ds_content',
+      'field_para_callout_body_1' => 'ds_content',
+      'field_para_callout_title_2' => 'ds_content',
+      'field_para_callout_body_2' => 'ds_content',
+      'field_para_callout_title_3' => 'ds_content',
+      'field_para_callout_body_3' => 'ds_content',
+    ),
+    'classes' => array(),
+    'wrappers' => array(
+      'ds_content' => 'div',
+    ),
+    'layout_wrapper' => 'div',
+    'layout_attributes' => '',
+    'layout_attributes_merge' => TRUE,
+    'layout_link_attribute' => FALSE,
+    'layout_link_custom' => '',
+  );
+  $export['paragraphs_item|long_form_callout_card|default'] = $ds_layout;
+
+  $ds_layout = new stdClass();
+  $ds_layout->api_version = 1;
+  $ds_layout->id = 'paragraphs_item|long_form_callout_card|form';
+  $ds_layout->entity_type = 'paragraphs_item';
+  $ds_layout->bundle = 'long_form_callout_card';
+  $ds_layout->view_mode = 'form';
+  $ds_layout->layout = 'ds_reset';
+  $ds_layout->settings = array(
+    'regions' => array(
+      'ds_content' => array(
+        0 => 'group_para_callout_1',
+        1 => 'field_para_callout_title_1',
+        2 => 'field_para_callout_body_1',
+        3 => 'field_para_callout_title_2',
+        4 => 'field_para_callout_body_2',
+        5 => 'group_para_callout_2',
+        6 => 'field_para_callout_title_3',
+        7 => 'field_para_callout_body_3',
+        8 => 'group_para_callout_3',
+      ),
+      'hidden' => array(
+        9 => '_add_existing_field',
+      ),
+    ),
+    'fields' => array(
+      'group_para_callout_1' => 'ds_content',
+      'field_para_callout_title_1' => 'ds_content',
+      'field_para_callout_body_1' => 'ds_content',
+      'field_para_callout_title_2' => 'ds_content',
+      'field_para_callout_body_2' => 'ds_content',
+      'group_para_callout_2' => 'ds_content',
+      'field_para_callout_title_3' => 'ds_content',
+      'field_para_callout_body_3' => 'ds_content',
+      'group_para_callout_3' => 'ds_content',
+      '_add_existing_field' => 'hidden',
+    ),
+    'classes' => array(),
+    'wrappers' => array(
+      'ds_content' => 'div',
+    ),
+    'layout_wrapper' => 'div',
+    'layout_attributes' => '',
+    'layout_attributes_merge' => TRUE,
+    'layout_link_attribute' => FALSE,
+    'layout_link_custom' => '',
+  );
+  $export['paragraphs_item|long_form_callout_card|form'] = $ds_layout;
+
+  $ds_layout = new stdClass();
+  $ds_layout->api_version = 1;
   $ds_layout->id = 'paragraphs_item|long_form_image|default';
   $ds_layout->entity_type = 'paragraphs_item';
   $ds_layout->bundle = 'long_form_image';
