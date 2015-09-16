@@ -214,6 +214,21 @@ function gie_long_form_content_ds_field_settings_info() {
 
   $ds_fieldsetting = new stdClass();
   $ds_fieldsetting->api_version = 1;
+  $ds_fieldsetting->id = 'paragraphs_item|long_form_section_header_image|paragraphs_full_width';
+  $ds_fieldsetting->entity_type = 'paragraphs_item';
+  $ds_fieldsetting->bundle = 'long_form_section_header_image';
+  $ds_fieldsetting->view_mode = 'paragraphs_full_width';
+  $ds_fieldsetting->settings = array(
+    'field_para_sctn_head_image' => array(
+      'formatter_settings' => array(
+        'ft' => array(),
+      ),
+    ),
+  );
+  $export['paragraphs_item|long_form_section_header_image|paragraphs_full_width'] = $ds_fieldsetting;
+
+  $ds_fieldsetting = new stdClass();
+  $ds_fieldsetting->api_version = 1;
   $ds_fieldsetting->id = 'paragraphs_item|long_form_text|default';
   $ds_fieldsetting->entity_type = 'paragraphs_item';
   $ds_fieldsetting->bundle = 'long_form_text';
@@ -737,6 +752,100 @@ function gie_long_form_content_ds_layout_settings_info() {
 
   $ds_layout = new stdClass();
   $ds_layout->api_version = 1;
+  $ds_layout->id = 'paragraphs_item|long_form_section_header_image|default';
+  $ds_layout->entity_type = 'paragraphs_item';
+  $ds_layout->bundle = 'long_form_section_header_image';
+  $ds_layout->view_mode = 'default';
+  $ds_layout->layout = 'ds_reset';
+  $ds_layout->settings = array(
+    'regions' => array(
+      'ds_content' => array(
+        0 => 'field_para_sctn_head_sctn_title',
+        1 => 'field_para_sctn_head_title',
+        2 => 'field_para_sctn_head_image',
+      ),
+    ),
+    'fields' => array(
+      'field_para_sctn_head_sctn_title' => 'ds_content',
+      'field_para_sctn_head_title' => 'ds_content',
+      'field_para_sctn_head_image' => 'ds_content',
+    ),
+    'classes' => array(),
+    'wrappers' => array(),
+    'layout_wrapper' => 'div',
+    'layout_attributes' => '',
+    'layout_attributes_merge' => TRUE,
+    'layout_link_attribute' => FALSE,
+    'layout_link_custom' => '',
+    'layout_disable_css' => FALSE,
+  );
+  $export['paragraphs_item|long_form_section_header_image|default'] = $ds_layout;
+
+  $ds_layout = new stdClass();
+  $ds_layout->api_version = 1;
+  $ds_layout->id = 'paragraphs_item|long_form_section_header_image|form';
+  $ds_layout->entity_type = 'paragraphs_item';
+  $ds_layout->bundle = 'long_form_section_header_image';
+  $ds_layout->view_mode = 'form';
+  $ds_layout->layout = 'ds_reset';
+  $ds_layout->settings = array(
+    'regions' => array(
+      'ds_content' => array(
+        0 => 'field_para_sctn_head_sctn_title',
+        1 => 'field_para_sctn_head_title',
+        2 => 'field_para_sctn_head_image',
+      ),
+    ),
+    'fields' => array(
+      'field_para_sctn_head_sctn_title' => 'ds_content',
+      'field_para_sctn_head_title' => 'ds_content',
+      'field_para_sctn_head_image' => 'ds_content',
+    ),
+    'classes' => array(),
+    'wrappers' => array(),
+    'layout_wrapper' => 'div',
+    'layout_attributes' => '',
+    'layout_attributes_merge' => TRUE,
+    'layout_link_attribute' => FALSE,
+    'layout_link_custom' => '',
+    'layout_disable_css' => FALSE,
+  );
+  $export['paragraphs_item|long_form_section_header_image|form'] = $ds_layout;
+
+  $ds_layout = new stdClass();
+  $ds_layout->api_version = 1;
+  $ds_layout->id = 'paragraphs_item|long_form_section_header_image|paragraphs_full_width';
+  $ds_layout->entity_type = 'paragraphs_item';
+  $ds_layout->bundle = 'long_form_section_header_image';
+  $ds_layout->view_mode = 'paragraphs_full_width';
+  $ds_layout->layout = 'ds_reset';
+  $ds_layout->settings = array(
+    'regions' => array(
+      'ds_content' => array(
+        0 => 'field_para_sctn_head_sctn_title',
+        1 => 'field_para_sctn_head_title',
+        2 => 'field_para_sctn_head_image',
+      ),
+    ),
+    'fields' => array(
+      'field_para_sctn_head_sctn_title' => 'ds_content',
+      'field_para_sctn_head_title' => 'ds_content',
+      'field_para_sctn_head_image' => 'ds_content',
+    ),
+    'classes' => array(),
+    'wrappers' => array(
+      'ds_content' => 'div',
+    ),
+    'layout_wrapper' => 'div',
+    'layout_attributes' => '',
+    'layout_attributes_merge' => TRUE,
+    'layout_link_attribute' => FALSE,
+    'layout_link_custom' => '',
+  );
+  $export['paragraphs_item|long_form_section_header_image|paragraphs_full_width'] = $ds_layout;
+
+  $ds_layout = new stdClass();
+  $ds_layout->api_version = 1;
   $ds_layout->id = 'paragraphs_item|long_form_text|default';
   $ds_layout->entity_type = 'paragraphs_item';
   $ds_layout->bundle = 'long_form_text';
@@ -837,6 +946,15 @@ function gie_long_form_content_ds_view_modes_info() {
     'asset' => 'asset',
   );
   $export['long_form_asset'] = $ds_view_mode;
+
+  $ds_view_mode = new stdClass();
+  $ds_view_mode->api_version = 1;
+  $ds_view_mode->view_mode = 'long_form_section_header_image';
+  $ds_view_mode->label = 'Long Form Section Header Image';
+  $ds_view_mode->entities = array(
+    'asset' => 'asset',
+  );
+  $export['long_form_section_header_image'] = $ds_view_mode;
 
   $ds_view_mode = new stdClass();
   $ds_view_mode->api_version = 1;
