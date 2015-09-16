@@ -72,18 +72,18 @@ function _gie_homepage_welcome_count($field) {
         switch ($persona_type[0]['value']) {
             case "innovation":
                 $count = db_query('SELECT COUNT(nid) FROM {node} WHERE type = :type AND status = :status', array(':type' => 'innovation', ':status' => 1))->fetchField();
-                return '<h1 class="welcome__count">' . $count . '</h1><h4>Innovations</h4>';
+                return '<h2 class="welcome-stats__number">' . $count . '</h2><h3 class="welcome-stats__label">Innovations</h3>';
                 break;
             case "funding":
                 $count = db_query('SELECT SUM(field_funding_grant_award_value_value) FROM {field_data_field_funding_grant_award_value} WHERE deleted = :deleted', array(':deleted' => 0))->fetchField();
                 if($count>1000000000) $count = round(($count/1000000000),1).' B';
                 else if($count>1000000) $count = round(($count/1000000),1).' M';
                 else if($count>1000) $count = round(($count/1000),1).' T';
-                return '<h1 class="welcome__count">$' . $count . '</h1><h4>Available</h4>';
+                return '<h2 class="welcome-stats__number">$' . $count . '</h2><h3 class="welcome-stats__label">Available</h3>';
                 break;
             case "user":
                 $count = db_query('SELECT COUNT(uid) FROM {users} WHERE status > :status', array(':status' => 0))->fetchField();
-                return '<h1 class="welcome__count">' . $count . '</h1><h4>Collaborators</h4>';
+                return '<h2 class="welcome-stats__number">' . $count . '</h2><h3 class="welcome-stats__label">Collaborators</h3>';
                 break;
         }
 

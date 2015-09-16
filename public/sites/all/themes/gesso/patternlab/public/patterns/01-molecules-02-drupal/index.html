@@ -584,38 +584,56 @@
 					<div id="molecules-login-form" class="sg-pattern">
 						<h2 class="sg-pattern-head" ><a href="../../patterns/01-molecules-02-drupal-login-form/01-molecules-02-drupal-login-form.html" class="patternLink" data-patternpartial="molecules-login-form">Login Form</a></h2>
 						<div class="sg-pattern-body">
-							<div class="block block--gie-homepage-welcome-login">
-  <form>
-    <div class="form-item form-type-textfield form-item-name">
-      <input type="text" class="form-text is-required" maxlength="60" size="15" placeholder="Username">
+							<div id="block-gie-homepage-welcome-login" class="block  block-gie-homepage-welcome-login block--gie-homepage block--gie-homepage-welcome-login">
+    <form action="" method="post" id="user-login-form" accept-charset="UTF-8">
+      <div class="form-item form-type-textfield form-item-name">
+        <label class="element-invisible" for="edit-name--2">Username <span class="form-item__required-marker">
+          <span class="element-invisible">This field is required.</span></span>
+        </label>
+        <input placeholder="Username" autocapitalize="off" autocorrect="off" id="edit-name--2" name="name" value="" size="15" maxlength="60" class="form-text is-required" type="text">
     </div>
     <div class="form-item form-type-password form-item-pass">
-      <input type="password" class="form-text is-required" maxlength="128" size="15"placeholder="Password">
+        <label class="element-invisible" for="edit-pass--2">Password <span class="form-item__required-marker">
+        <span class="element-invisible">This field is required.</span></span>
+        </label>
+        <input placeholder="Password" autocapitalize="off" autocorrect="off" id="edit-pass--2" name="pass" size="15" maxlength="128" class="form-text is-required" type="password">
     </div>
-    <div id="edit-actions" class="form-actions">
-      <input type="submit" class="button button--submit" value="Log in" id="edit-submit--2">
-    </div>
-    <p class="forgot-password"><a href="#">Forgot your password?</a></p>
-  </form>
+        <input name="form_build_id" value="form-HDaNsUKqvCQinadPOzWplzRKYpILDLw8D-b5OMFW-Hc" type="hidden">
+      <input name="form_id" value="user_login_block" type="hidden">
+      <div class="form-actions" id="edit-actions--2"><input id="edit-submit--2" name="op" value="Log in" class="button button--submit" type="submit">
+        <div>Forgot your <a href="/user/password" title="Request new password via e-mail.">Password</a>
+        </div>
+      </div>
+    </form>
 </div>
+
 							<div class="sg-code" style="display: none">
 								<h3 class="sg-code-head">HTML</h3>
 								<pre class="sg-code-html">
 									<code>
-										&lt;div class=&quot;block block--gie-homepage-welcome-login&quot;&gt;
-  &lt;form&gt;
-    &lt;div class=&quot;form-item form-type-textfield form-item-name&quot;&gt;
-      &lt;input type=&quot;text&quot; class=&quot;form-text is-required&quot; maxlength=&quot;60&quot; size=&quot;15&quot; placeholder=&quot;Username&quot;&gt;
+										&lt;div id=&quot;block-gie-homepage-welcome-login&quot; class=&quot;block  block-gie-homepage-welcome-login block--gie-homepage block--gie-homepage-welcome-login&quot;&gt;
+    &lt;form action=&quot;&quot; method=&quot;post&quot; id=&quot;user-login-form&quot; accept-charset=&quot;UTF-8&quot;&gt;
+      &lt;div class=&quot;form-item form-type-textfield form-item-name&quot;&gt;
+        &lt;label class=&quot;element-invisible&quot; for=&quot;edit-name--2&quot;&gt;Username &lt;span class=&quot;form-item__required-marker&quot;&gt;
+          &lt;span class=&quot;element-invisible&quot;&gt;This field is required.&lt;/span&gt;&lt;/span&gt;
+        &lt;/label&gt;
+        &lt;input placeholder=&quot;Username&quot; autocapitalize=&quot;off&quot; autocorrect=&quot;off&quot; id=&quot;edit-name--2&quot; name=&quot;name&quot; value=&quot;&quot; size=&quot;15&quot; maxlength=&quot;60&quot; class=&quot;form-text is-required&quot; type=&quot;text&quot;&gt;
     &lt;/div&gt;
     &lt;div class=&quot;form-item form-type-password form-item-pass&quot;&gt;
-      &lt;input type=&quot;password&quot; class=&quot;form-text is-required&quot; maxlength=&quot;128&quot; size=&quot;15&quot;placeholder=&quot;Password&quot;&gt;
+        &lt;label class=&quot;element-invisible&quot; for=&quot;edit-pass--2&quot;&gt;Password &lt;span class=&quot;form-item__required-marker&quot;&gt;
+        &lt;span class=&quot;element-invisible&quot;&gt;This field is required.&lt;/span&gt;&lt;/span&gt;
+        &lt;/label&gt;
+        &lt;input placeholder=&quot;Password&quot; autocapitalize=&quot;off&quot; autocorrect=&quot;off&quot; id=&quot;edit-pass--2&quot; name=&quot;pass&quot; size=&quot;15&quot; maxlength=&quot;128&quot; class=&quot;form-text is-required&quot; type=&quot;password&quot;&gt;
     &lt;/div&gt;
-    &lt;div id=&quot;edit-actions&quot; class=&quot;form-actions&quot;&gt;
-      &lt;input type=&quot;submit&quot; class=&quot;button button--submit&quot; value=&quot;Log in&quot; id=&quot;edit-submit--2&quot;&gt;
-    &lt;/div&gt;
-    &lt;p class=&quot;forgot-password&quot;&gt;&lt;a href=&quot;#&quot;&gt;Forgot your password?&lt;/a&gt;&lt;/p&gt;
-  &lt;/form&gt;
+        &lt;input name=&quot;form_build_id&quot; value=&quot;form-HDaNsUKqvCQinadPOzWplzRKYpILDLw8D-b5OMFW-Hc&quot; type=&quot;hidden&quot;&gt;
+      &lt;input name=&quot;form_id&quot; value=&quot;user_login_block&quot; type=&quot;hidden&quot;&gt;
+      &lt;div class=&quot;form-actions&quot; id=&quot;edit-actions--2&quot;&gt;&lt;input id=&quot;edit-submit--2&quot; name=&quot;op&quot; value=&quot;Log in&quot; class=&quot;button button--submit&quot; type=&quot;submit&quot;&gt;
+        &lt;div&gt;Forgot your &lt;a href=&quot;/user/password&quot; title=&quot;Request new password via e-mail.&quot;&gt;Password&lt;/a&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/form&gt;
 &lt;/div&gt;
+
 									</code>
 								</pre>
 							</div>

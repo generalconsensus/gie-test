@@ -55,27 +55,36 @@
     <div class="skiplinks">
       <a href="#main" class="skiplinks__link element-invisible element-focusable">Skip to main content</a>
     </div>
-<div class="block block--gie-homepage-welcome-login">
-  <form>
-    <div class="form-item form-type-textfield form-item-name">
-      <input type="text" class="form-text is-required" maxlength="60" size="15" placeholder="Username">
+<div id="block-gie-homepage-welcome-login" class="block  block-gie-homepage-welcome-login block--gie-homepage block--gie-homepage-welcome-login">
+    <form action="" method="post" id="user-login-form" accept-charset="UTF-8">
+      <div class="form-item form-type-textfield form-item-name">
+        <label class="element-invisible" for="edit-name--2">Username <span class="form-item__required-marker">
+          <span class="element-invisible">This field is required.</span></span>
+        </label>
+        <input placeholder="Username" autocapitalize="off" autocorrect="off" id="edit-name--2" name="name" value="" size="15" maxlength="60" class="form-text is-required" type="text">
     </div>
     <div class="form-item form-type-password form-item-pass">
-      <input type="password" class="form-text is-required" maxlength="128" size="15"placeholder="Password">
+        <label class="element-invisible" for="edit-pass--2">Password <span class="form-item__required-marker">
+        <span class="element-invisible">This field is required.</span></span>
+        </label>
+        <input placeholder="Password" autocapitalize="off" autocorrect="off" id="edit-pass--2" name="pass" size="15" maxlength="128" class="form-text is-required" type="password">
     </div>
-    <div id="edit-actions" class="form-actions">
-      <input type="submit" class="button button--submit" value="Log in" id="edit-submit--2">
-    </div>
-    <p class="forgot-password"><a href="#">Forgot your password?</a></p>
-  </form>
+        <input name="form_build_id" value="form-HDaNsUKqvCQinadPOzWplzRKYpILDLw8D-b5OMFW-Hc" type="hidden">
+      <input name="form_id" value="user_login_block" type="hidden">
+      <div class="form-actions" id="edit-actions--2"><input id="edit-submit--2" name="op" value="Log in" class="button button--submit" type="submit">
+        <div>Forgot your <a href="/user/password" title="Request new password via e-mail.">Password</a>
+        </div>
+      </div>
+    </form>
 </div>
+
     <!--DO NOT REMOVE-->
     	
 	<script>
 		// handle injection of items from PHP
 		var patternPartial = "molecules-login-form";
 		var lineage        = [];
-		var lineageR       = [{"lineagePattern":"organisms-header-simple","lineagePath":"..\/..\/patterns\/02-organisms-00-regions-04-header-simple\/02-organisms-00-regions-04-header-simple.html","lineageState":"inprogress"}];
+		var lineageR       = [{"lineagePattern":"organisms-header-simple","lineagePath":"..\/..\/patterns\/02-organisms-00-regions-04-header-simple\/02-organisms-00-regions-04-header-simple.html","lineageState":"inprogress"},{"lineagePattern":"organisms-navigation-welcome-page","lineagePath":"..\/..\/patterns\/02-organisms-00-regions-06-navigation-welcome-page\/02-organisms-00-regions-06-navigation-welcome-page.html","lineageState":"inprogress"}];
 		var patternState   = "inprogress";
 		var cssEnabled     = false;
 	</script>
