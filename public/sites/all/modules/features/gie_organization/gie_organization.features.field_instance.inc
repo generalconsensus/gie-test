@@ -764,7 +764,7 @@ function gie_organization_field_default_field_instances() {
     'bundle' => 'organization',
     'default_value' => NULL,
     'deleted' => 0,
-    'description' => 'Link to your organization\'s website',
+    'description' => 'Link to your organization\'s website. Provide the full URL, for example: http://www.example.com',
     'display' => array(
       'at_a_glance' => array(
         'label' => 'hidden',
@@ -1804,7 +1804,7 @@ function gie_organization_field_default_field_instances() {
     'bundle' => 'organization',
     'default_value' => NULL,
     'deleted' => 0,
-    'description' => 'Paste your organization\'s Facebook page URL so that users can go directly there',
+    'description' => 'Paste your organization\'s Facebook page URL so that users can go directly there. For example: https://www.facebook.com/example',
     'display' => array(
       'at_a_glance' => array(
         'label' => 'above',
@@ -1925,7 +1925,7 @@ function gie_organization_field_default_field_instances() {
     'bundle' => 'organization',
     'default_value' => NULL,
     'deleted' => 0,
-    'description' => 'Paste your organization\'s LinkedIn URL so that users can go directly there',
+    'description' => 'Paste your organization\'s LinkedIn URL so that users can go directly there. For example: https://www.linkedin.com/company/example',
     'display' => array(
       'at_a_glance' => array(
         'label' => 'above',
@@ -2046,7 +2046,7 @@ function gie_organization_field_default_field_instances() {
     'bundle' => 'organization',
     'default_value' => NULL,
     'deleted' => 0,
-    'description' => 'Paste your organization\'s Twitter URL so that users can go directly there',
+    'description' => 'Paste your organization\'s Twitter URL so that users can go directly there. For example: https://twitter.com/globalinnovationexchange',
     'display' => array(
       'at_a_glance' => array(
         'label' => 'above',
@@ -3159,7 +3159,7 @@ function gie_organization_field_default_field_instances() {
   t('Facebook');
   t('Featured');
   t('Link URL');
-  t('Link to your organization\'s website');
+  t('Link to your organization\'s website. Provide the full URL, for example: http://www.example.com');
   t('LinkedIn');
   t('List the type of expertise your organization and its staff provide');
   t('List your organizaton\'s areas of focus ');
@@ -3171,9 +3171,9 @@ function gie_organization_field_default_field_instances() {
   t('Parent Organization');
   t('Partner');
   t('Partners');
-  t('Paste your organization\'s Facebook page URL so that users can go directly there');
-  t('Paste your organization\'s LinkedIn URL so that users can go directly there');
-  t('Paste your organization\'s Twitter URL so that users can go directly there');
+  t('Paste your organization\'s Facebook page URL so that users can go directly there. For example: https://www.facebook.com/example');
+  t('Paste your organization\'s LinkedIn URL so that users can go directly there. For example: https://www.linkedin.com/company/example');
+  t('Paste your organization\'s Twitter URL so that users can go directly there. For example: https://twitter.com/globalinnovationexchange');
   t('Please select the sectors and sub-sectors related to your innovation. Click on the plus (+) icon on the different sectors to access sub sectors. Be sure to select the sectors and subsectors that apply. Do not select a sub-sector without also selecting the corresponding sector. ');
   t('Point of Contact');
   t('Region');

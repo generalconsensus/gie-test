@@ -990,7 +990,7 @@ function events_field_default_field_instances() {
     'bundle' => 'event',
     'default_value' => NULL,
     'deleted' => 0,
-    'description' => '',
+    'description' => 'Provide the full URL, for example: http://www.example.com',
     'display' => array(
       'at_a_glance' => array(
         'label' => 'above',
@@ -1058,7 +1058,7 @@ function events_field_default_field_instances() {
         'target' => '_blank',
         'title' => '',
       ),
-      'description_display' => 'after',
+      'description_display' => 'before',
       'display' => array(
         'url_cutoff' => 80,
       ),
@@ -1254,7 +1254,7 @@ function events_field_default_field_instances() {
     'bundle' => 'event',
     'default_value' => NULL,
     'deleted' => 0,
-    'description' => '',
+    'description' => 'Provide the full URL, for example: http://www.example.com',
     'display' => array(
       'at_a_glance' => array(
         'label' => 'above',
@@ -1322,7 +1322,7 @@ function events_field_default_field_instances() {
         'target' => '_blank',
         'title' => '',
       ),
-      'description_display' => 'after',
+      'description_display' => 'before',
       'display' => array(
         'url_cutoff' => 80,
       ),
@@ -2184,6 +2184,7 @@ function events_field_default_field_instances() {
   t('If you would like to assign someone as the point of contact for this event in the Exchange start typing their name to search. They will not appear unless they have an existing profile on the Exchange.');
   t('Location');
   t('Name');
+  t('Provide the full URL, for example: http://www.example.com');
   t('RSVP URL');
   t('Regions ');
   t('Related Organization');

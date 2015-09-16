@@ -2363,7 +2363,7 @@ Using the selector below, highlight the area of the image you would like to feat
     'bundle' => 'innovation',
     'default_value' => NULL,
     'deleted' => 0,
-    'description' => 'Share any articles, blogs, or other news items that showcase your innovation',
+    'description' => 'Share any articles, blogs, or other news items that showcase your innovation.',
     'display' => array(
       'at_a_glance' => array(
         'label' => 'above',
@@ -4719,7 +4719,7 @@ Using the selector below, highlight the area of the image you would like to feat
     'bundle' => 'innovation',
     'default_value' => NULL,
     'deleted' => 0,
-    'description' => 'Share the URL for your innovation website ',
+    'description' => 'Share the URL for your innovation website. Provide the full URL, for example: http://www.example.com',
     'display' => array(
       'at_a_glance' => array(
         'label' => 'hidden',
@@ -5893,9 +5893,9 @@ Using the selector below, highlight the area of the image you would like to feat
   t('Select the countries where your innovation was created');
   t('Select the regions that include the countries selected for this innovation. ');
   t('Select the stage that best describes the current status of your innovation');
-  t('Share any articles, blogs, or other news items that showcase your innovation');
+  t('Share any articles, blogs, or other news items that showcase your innovation.');
   t('Share more details about how the innovation works');
-  t('Share the URL for your innovation website ');
+  t('Share the URL for your innovation website. Provide the full URL, for example: http://www.example.com');
   t('Share the latest status and activities of your innovation ');
   t('Share your next steps for growing your innovation');
   t('Short Description');
