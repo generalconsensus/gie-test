@@ -1284,7 +1284,7 @@ function gie_program_field_default_field_instances() {
     'bundle' => 'program',
     'default_value' => NULL,
     'deleted' => 0,
-    'description' => 'The point of contact must be someone with a user profile in the Exchange. Start writing a name  (first name initial last name e.g. kshipley) to see if it comes up in the Exchange member directory. If not, create a profile or email the person to invite them to create a profile. If no point of contact is listed, there will be no point of contact listed on the program profile.',
+    'description' => 'The point of contact must be someone with a user profile in the Exchange. Start writing the full name to see if it comes up in the Exchange member directory. If not, contact the person to invite them to create a profile. If no point of contact is listed, there will be no point of contact listed on the program profile.',
     'display' => array(
       'at_a_glance' => array(
         'label' => 'above',
@@ -2354,7 +2354,7 @@ function gie_program_field_default_field_instances() {
   t('The latest activities of your program. ');
   t('The mailing address of your program. ');
   t('The objectives of your program.');
-  t('The point of contact must be someone with a user profile in the Exchange. Start writing a name  (first name initial last name e.g. kshipley) to see if it comes up in the Exchange member directory. If not, create a profile or email the person to invite them to create a profile. If no point of contact is listed, there will be no point of contact listed on the program profile.');
+  t('The point of contact must be someone with a user profile in the Exchange. Start writing the full name to see if it comes up in the Exchange member directory. If not, contact the person to invite them to create a profile. If no point of contact is listed, there will be no point of contact listed on the program profile.');
   t('The start date of your program, if applicable. ');
   t('The title of the program.');
   t('The total budget of your program, if applicable. ');

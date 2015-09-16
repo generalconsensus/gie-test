@@ -1250,7 +1250,7 @@ function gie_needs_field_default_field_instances() {
     'bundle' => 'needs',
     'default_value' => NULL,
     'deleted' => 0,
-    'description' => '',
+    'description' => ' The point of contact must be someone with a user profile in the Exchange. Start writing the full name to see if it comes up in the Exchange member directory. If not, contact the person to invite them to create a profile. If no point of contact is listed, there will be no point of contact listed on the needs profile.',
     'display' => array(
       'default' => array(
         'label' => 'above',
@@ -1313,28 +1313,28 @@ function gie_needs_field_default_field_instances() {
     ),
     'ds_extras_field_template' => '',
     'entity_type' => 'node',
-    'entityconnect_unload_add' => 0,
-    'entityconnect_unload_edit' => 0,
+    'entityconnect_unload_add' => 1,
+    'entityconnect_unload_edit' => 1,
     'field_name' => 'field_needs_point_of_contact',
     'label' => 'Point of Contact',
     'required' => 0,
     'settings' => array(
-      'description_display' => 'after',
+      'description_display' => 'before',
       'user_register_form' => FALSE,
     ),
     'widget' => array(
       'active' => 1,
-      'module' => 'entityreference',
+      'module' => 'entityreference_view_widget',
       'settings' => array(
-        'match_operator' => 'CONTAINS',
-        'path' => '',
-        'references_dialog_add' => 0,
-        'references_dialog_edit' => 0,
-        'references_dialog_search' => 0,
-        'references_dialog_search_view' => '',
-        'size' => 60,
+        'allow_duplicates' => 0,
+        'close_modal' => 1,
+        'pass_argument' => 0,
+        'pass_arguments' => '',
+        'rendered_entity' => 0,
+        'view' => 'user_reference|entityreference_view_widget_1',
+        'view_mode' => 'full',
       ),
-      'type' => 'entityreference_autocomplete',
+      'type' => 'entityreference_view_widget',
       'weight' => 8,
     ),
   );
@@ -2465,6 +2465,7 @@ function gie_needs_field_default_field_instances() {
 
   // Translatables
   // Included for use with string extractors like potx.
+  t(' The point of contact must be someone with a user profile in the Exchange. Start writing the full name to see if it comes up in the Exchange member directory. If not, contact the person to invite them to create a profile. If no point of contact is listed, there will be no point of contact listed on the needs profile.');
   t('Additional Info');
   t('Amount - Items Needed');
   t('Amount - Monetary Value');
