@@ -457,7 +457,7 @@ function gie_organization_field_default_field_instances() {
         'label' => 'above',
         'module' => 'taxonomy',
         'settings' => array(
-          'field_delimiter' => '',
+          'field_delimiter' => ', ',
           'linked_field' => array(
             'advanced' => array(
               'class' => '',
