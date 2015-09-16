@@ -366,6 +366,34 @@ function gie_long_form_content_ds_layout_settings_info() {
 
   $ds_layout = new stdClass();
   $ds_layout->api_version = 1;
+  $ds_layout->id = 'paragraphs_item|long_form_aside|default';
+  $ds_layout->entity_type = 'paragraphs_item';
+  $ds_layout->bundle = 'long_form_aside';
+  $ds_layout->view_mode = 'default';
+  $ds_layout->layout = 'ds_reset';
+  $ds_layout->settings = array(
+    'regions' => array(
+      'ds_content' => array(
+        0 => 'field_paragraph_aside_text',
+      ),
+    ),
+    'fields' => array(
+      'field_paragraph_aside_text' => 'ds_content',
+    ),
+    'classes' => array(),
+    'wrappers' => array(
+      'ds_content' => 'div',
+    ),
+    'layout_wrapper' => 'div',
+    'layout_attributes' => '',
+    'layout_attributes_merge' => TRUE,
+    'layout_link_attribute' => FALSE,
+    'layout_link_custom' => '',
+  );
+  $export['paragraphs_item|long_form_aside|default'] = $ds_layout;
+
+  $ds_layout = new stdClass();
+  $ds_layout->api_version = 1;
   $ds_layout->id = 'paragraphs_item|long_form_aside|paragraphs_full_width';
   $ds_layout->entity_type = 'paragraphs_item';
   $ds_layout->bundle = 'long_form_aside';
@@ -664,6 +692,125 @@ function gie_long_form_content_ds_layout_settings_info() {
 
   $ds_layout = new stdClass();
   $ds_layout->api_version = 1;
+  $ds_layout->id = 'paragraphs_item|long_form_key_figure|default';
+  $ds_layout->entity_type = 'paragraphs_item';
+  $ds_layout->bundle = 'long_form_key_figure';
+  $ds_layout->view_mode = 'default';
+  $ds_layout->layout = 'ds_reset';
+  $ds_layout->settings = array(
+    'regions' => array(
+      'ds_content' => array(
+        0 => 'field_paragraph_key_figure',
+        1 => 'field_para_key_fig_explanation',
+      ),
+    ),
+    'fields' => array(
+      'field_paragraph_key_figure' => 'ds_content',
+      'field_para_key_fig_explanation' => 'ds_content',
+    ),
+    'classes' => array(),
+    'wrappers' => array(
+      'ds_content' => 'div',
+    ),
+    'layout_wrapper' => 'div',
+    'layout_attributes' => '',
+    'layout_attributes_merge' => TRUE,
+    'layout_link_attribute' => FALSE,
+    'layout_link_custom' => '',
+  );
+  $export['paragraphs_item|long_form_key_figure|default'] = $ds_layout;
+
+  $ds_layout = new stdClass();
+  $ds_layout->api_version = 1;
+  $ds_layout->id = 'paragraphs_item|long_form_key_figure|paragraphs_full_width';
+  $ds_layout->entity_type = 'paragraphs_item';
+  $ds_layout->bundle = 'long_form_key_figure';
+  $ds_layout->view_mode = 'paragraphs_full_width';
+  $ds_layout->layout = 'ds_reset';
+  $ds_layout->settings = array(
+    'regions' => array(
+      'ds_content' => array(
+        0 => 'field_paragraph_key_figure',
+        1 => 'field_para_key_fig_explanation',
+      ),
+    ),
+    'fields' => array(
+      'field_paragraph_key_figure' => 'ds_content',
+      'field_para_key_fig_explanation' => 'ds_content',
+    ),
+    'classes' => array(),
+    'wrappers' => array(
+      'ds_content' => 'div',
+    ),
+    'layout_wrapper' => 'div',
+    'layout_attributes' => '',
+    'layout_attributes_merge' => TRUE,
+    'layout_link_attribute' => FALSE,
+    'layout_link_custom' => '',
+  );
+  $export['paragraphs_item|long_form_key_figure|paragraphs_full_width'] = $ds_layout;
+
+  $ds_layout = new stdClass();
+  $ds_layout->api_version = 1;
+  $ds_layout->id = 'paragraphs_item|long_form_key_figure|paragraphs_left_align';
+  $ds_layout->entity_type = 'paragraphs_item';
+  $ds_layout->bundle = 'long_form_key_figure';
+  $ds_layout->view_mode = 'paragraphs_left_align';
+  $ds_layout->layout = 'ds_reset';
+  $ds_layout->settings = array(
+    'regions' => array(
+      'ds_content' => array(
+        0 => 'field_paragraph_key_figure',
+        1 => 'field_para_key_fig_explanation',
+      ),
+    ),
+    'fields' => array(
+      'field_paragraph_key_figure' => 'ds_content',
+      'field_para_key_fig_explanation' => 'ds_content',
+    ),
+    'classes' => array(),
+    'wrappers' => array(),
+    'layout_wrapper' => 'div',
+    'layout_attributes' => '',
+    'layout_attributes_merge' => TRUE,
+    'layout_link_attribute' => FALSE,
+    'layout_link_custom' => '',
+    'layout_disable_css' => FALSE,
+  );
+  $export['paragraphs_item|long_form_key_figure|paragraphs_left_align'] = $ds_layout;
+
+  $ds_layout = new stdClass();
+  $ds_layout->api_version = 1;
+  $ds_layout->id = 'paragraphs_item|long_form_key_figure|paragraphs_right_align';
+  $ds_layout->entity_type = 'paragraphs_item';
+  $ds_layout->bundle = 'long_form_key_figure';
+  $ds_layout->view_mode = 'paragraphs_right_align';
+  $ds_layout->layout = 'ds_reset';
+  $ds_layout->settings = array(
+    'regions' => array(
+      'ds_content' => array(
+        0 => 'field_paragraph_key_figure',
+        1 => 'field_para_key_fig_explanation',
+      ),
+    ),
+    'fields' => array(
+      'field_paragraph_key_figure' => 'ds_content',
+      'field_para_key_fig_explanation' => 'ds_content',
+    ),
+    'classes' => array(),
+    'wrappers' => array(
+      'ds_content' => 'div',
+    ),
+    'layout_wrapper' => 'div',
+    'layout_attributes' => '',
+    'layout_attributes_merge' => TRUE,
+    'layout_link_attribute' => FALSE,
+    'layout_link_custom' => '',
+  );
+  $export['paragraphs_item|long_form_key_figure|paragraphs_right_align'] = $ds_layout;
+
+  $ds_layout = new stdClass();
+  $ds_layout->api_version = 1;
   $ds_layout->id = 'paragraphs_item|long_form_pullquote|default';
   $ds_layout->entity_type = 'paragraphs_item';
   $ds_layout->bundle = 'long_form_pullquote';
@@ -691,6 +838,35 @@ function gie_long_form_content_ds_layout_settings_info() {
     'layout_link_custom' => '',
   );
   $export['paragraphs_item|long_form_pullquote|default'] = $ds_layout;
+
+  $ds_layout = new stdClass();
+  $ds_layout->api_version = 1;
+  $ds_layout->id = 'paragraphs_item|long_form_pullquote|paragraphs_full_width';
+  $ds_layout->entity_type = 'paragraphs_item';
+  $ds_layout->bundle = 'long_form_pullquote';
+  $ds_layout->view_mode = 'paragraphs_full_width';
+  $ds_layout->layout = 'ds_reset';
+  $ds_layout->settings = array(
+    'regions' => array(
+      'ds_content' => array(
+        0 => 'field_paragraph_pullquote',
+        1 => 'field_para_pullquote_author',
+      ),
+    ),
+    'fields' => array(
+      'field_paragraph_pullquote' => 'ds_content',
+      'field_para_pullquote_author' => 'ds_content',
+    ),
+    'classes' => array(),
+    'wrappers' => array(),
+    'layout_wrapper' => 'div',
+    'layout_attributes' => '',
+    'layout_attributes_merge' => TRUE,
+    'layout_link_attribute' => FALSE,
+    'layout_link_custom' => '',
+    'layout_disable_css' => FALSE,
+  );
+  $export['paragraphs_item|long_form_pullquote|paragraphs_full_width'] = $ds_layout;
 
   $ds_layout = new stdClass();
   $ds_layout->api_version = 1;
@@ -901,6 +1077,90 @@ function gie_long_form_content_ds_layout_settings_info() {
 
   $ds_layout = new stdClass();
   $ds_layout->api_version = 1;
+  $ds_layout->id = 'paragraphs_item|long_form_text|paragraphs_full_width';
+  $ds_layout->entity_type = 'paragraphs_item';
+  $ds_layout->bundle = 'long_form_text';
+  $ds_layout->view_mode = 'paragraphs_full_width';
+  $ds_layout->layout = 'ds_reset';
+  $ds_layout->settings = array(
+    'regions' => array(
+      'ds_content' => array(
+        0 => 'field_paragraph_text',
+      ),
+    ),
+    'fields' => array(
+      'field_paragraph_text' => 'ds_content',
+    ),
+    'classes' => array(),
+    'wrappers' => array(
+      'ds_content' => 'div',
+    ),
+    'layout_wrapper' => 'div',
+    'layout_attributes' => '',
+    'layout_attributes_merge' => TRUE,
+    'layout_link_attribute' => FALSE,
+    'layout_link_custom' => '',
+  );
+  $export['paragraphs_item|long_form_text|paragraphs_full_width'] = $ds_layout;
+
+  $ds_layout = new stdClass();
+  $ds_layout->api_version = 1;
+  $ds_layout->id = 'paragraphs_item|long_form_text|paragraphs_left_align';
+  $ds_layout->entity_type = 'paragraphs_item';
+  $ds_layout->bundle = 'long_form_text';
+  $ds_layout->view_mode = 'paragraphs_left_align';
+  $ds_layout->layout = 'ds_reset';
+  $ds_layout->settings = array(
+    'regions' => array(
+      'ds_content' => array(
+        0 => 'field_paragraph_text',
+      ),
+    ),
+    'fields' => array(
+      'field_paragraph_text' => 'ds_content',
+    ),
+    'classes' => array(),
+    'wrappers' => array(
+      'ds_content' => 'div',
+    ),
+    'layout_wrapper' => 'div',
+    'layout_attributes' => '',
+    'layout_attributes_merge' => TRUE,
+    'layout_link_attribute' => FALSE,
+    'layout_link_custom' => '',
+  );
+  $export['paragraphs_item|long_form_text|paragraphs_left_align'] = $ds_layout;
+
+  $ds_layout = new stdClass();
+  $ds_layout->api_version = 1;
+  $ds_layout->id = 'paragraphs_item|long_form_text|paragraphs_right_align';
+  $ds_layout->entity_type = 'paragraphs_item';
+  $ds_layout->bundle = 'long_form_text';
+  $ds_layout->view_mode = 'paragraphs_right_align';
+  $ds_layout->layout = 'ds_reset';
+  $ds_layout->settings = array(
+    'regions' => array(
+      'ds_content' => array(
+        0 => 'field_paragraph_text',
+      ),
+    ),
+    'fields' => array(
+      'field_paragraph_text' => 'ds_content',
+    ),
+    'classes' => array(),
+    'wrappers' => array(
+      'ds_content' => 'div',
+    ),
+    'layout_wrapper' => 'div',
+    'layout_attributes' => '',
+    'layout_attributes_merge' => TRUE,
+    'layout_link_attribute' => FALSE,
+    'layout_link_custom' => '',
+  );
+  $export['paragraphs_item|long_form_text|paragraphs_right_align'] = $ds_layout;
+
+  $ds_layout = new stdClass();
+  $ds_layout->api_version = 1;
   $ds_layout->id = 'paragraphs_item|long_form_video|default';
   $ds_layout->entity_type = 'paragraphs_item';
   $ds_layout->bundle = 'long_form_video';
@@ -928,6 +1188,96 @@ function gie_long_form_content_ds_layout_settings_info() {
     'layout_link_custom' => '',
   );
   $export['paragraphs_item|long_form_video|default'] = $ds_layout;
+
+  $ds_layout = new stdClass();
+  $ds_layout->api_version = 1;
+  $ds_layout->id = 'paragraphs_item|long_form_video|paragraphs_full_width';
+  $ds_layout->entity_type = 'paragraphs_item';
+  $ds_layout->bundle = 'long_form_video';
+  $ds_layout->view_mode = 'paragraphs_full_width';
+  $ds_layout->layout = 'ds_reset';
+  $ds_layout->settings = array(
+    'regions' => array(
+      'ds_content' => array(
+        0 => 'field_paragraphs_video',
+        1 => 'field_paragraphs_caption',
+      ),
+    ),
+    'fields' => array(
+      'field_paragraphs_video' => 'ds_content',
+      'field_paragraphs_caption' => 'ds_content',
+    ),
+    'classes' => array(),
+    'wrappers' => array(
+      'ds_content' => 'div',
+    ),
+    'layout_wrapper' => 'div',
+    'layout_attributes' => '',
+    'layout_attributes_merge' => TRUE,
+    'layout_link_attribute' => FALSE,
+    'layout_link_custom' => '',
+  );
+  $export['paragraphs_item|long_form_video|paragraphs_full_width'] = $ds_layout;
+
+  $ds_layout = new stdClass();
+  $ds_layout->api_version = 1;
+  $ds_layout->id = 'paragraphs_item|long_form_video|paragraphs_left_align';
+  $ds_layout->entity_type = 'paragraphs_item';
+  $ds_layout->bundle = 'long_form_video';
+  $ds_layout->view_mode = 'paragraphs_left_align';
+  $ds_layout->layout = 'ds_reset';
+  $ds_layout->settings = array(
+    'regions' => array(
+      'ds_content' => array(
+        0 => 'field_paragraphs_video',
+        1 => 'field_paragraphs_caption',
+      ),
+    ),
+    'fields' => array(
+      'field_paragraphs_video' => 'ds_content',
+      'field_paragraphs_caption' => 'ds_content',
+    ),
+    'classes' => array(),
+    'wrappers' => array(
+      'ds_content' => 'div',
+    ),
+    'layout_wrapper' => 'div',
+    'layout_attributes' => '',
+    'layout_attributes_merge' => TRUE,
+    'layout_link_attribute' => FALSE,
+    'layout_link_custom' => '',
+  );
+  $export['paragraphs_item|long_form_video|paragraphs_left_align'] = $ds_layout;
+
+  $ds_layout = new stdClass();
+  $ds_layout->api_version = 1;
+  $ds_layout->id = 'paragraphs_item|long_form_video|paragraphs_right_align';
+  $ds_layout->entity_type = 'paragraphs_item';
+  $ds_layout->bundle = 'long_form_video';
+  $ds_layout->view_mode = 'paragraphs_right_align';
+  $ds_layout->layout = 'ds_reset';
+  $ds_layout->settings = array(
+    'regions' => array(
+      'ds_content' => array(
+        0 => 'field_paragraphs_video',
+        1 => 'field_paragraphs_caption',
+      ),
+    ),
+    'fields' => array(
+      'field_paragraphs_video' => 'ds_content',
+      'field_paragraphs_caption' => 'ds_content',
+    ),
+    'classes' => array(),
+    'wrappers' => array(
+      'ds_content' => 'div',
+    ),
+    'layout_wrapper' => 'div',
+    'layout_attributes' => '',
+    'layout_attributes_merge' => TRUE,
+    'layout_link_attribute' => FALSE,
+    'layout_link_custom' => '',
+  );
+  $export['paragraphs_item|long_form_video|paragraphs_right_align'] = $ds_layout;
 
   return $export;
 }
