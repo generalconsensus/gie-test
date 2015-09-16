@@ -4,7 +4,7 @@ $input-height: 30px;
 .block--gie-homepage-welcome-login {
   font-size: em(14px, 16px);
 
-  .header-simple & {
+  .page-simple & {
      @include breakpoint(700px , $no-query: true) {
       float: right;
       max-width: 450px;

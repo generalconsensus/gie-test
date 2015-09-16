@@ -12,7 +12,7 @@
   @include svg-background(logo);
   display: block;
 
-  .site-name--simple & {
+  .page-simple & {
     @include svg-background(logo-simple);
     margin-bottom: em(18px, 16px);
     @include breakpoint(700px , $no-query: true) {
