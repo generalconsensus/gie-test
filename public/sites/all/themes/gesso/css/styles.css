@@ -4622,14 +4622,13 @@ header.header {
 .page-simple {
   color: #fff;
 }
-
-/* line 7, ../sass/partials/components/_page-simple.scss */
-.main {
+/* line 4, ../sass/partials/components/_page-simple.scss */
+.page-simple .main {
   background-color: #0c304b;
 }
 @media (min-width: 43.75em) {
-  /* line 7, ../sass/partials/components/_page-simple.scss */
-  .main {
+  /* line 4, ../sass/partials/components/_page-simple.scss */
+  .page-simple .main {
     background: #0c304b url(../images/page-simple-bg.jpg) repeat-y 0 0;
     -webkit-animation: backgroundScroll 139s linear infinite;
     animation: backgroundScroll 139s linear infinite;
@@ -6590,6 +6589,10 @@ tr.drag-previous {
   font-size: 0.875em;
   font-weight: 200;
   text-align: left;
+}
+/* line 103, ../sass/partials/components/_user-register-form.scss */
+#user-register-form .form-item-honeypot {
+  display: none;
 }
 
 /* line 4, ../sass/partials/components/_vertical-tabs.scss */
