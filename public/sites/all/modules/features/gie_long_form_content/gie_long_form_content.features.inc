@@ -11,12 +11,71 @@ function gie_long_form_content_ctools_plugin_api($module = NULL, $api = NULL) {
   if ($module == "ds" && $api == "ds") {
     return array("version" => "1");
   }
+  if ($module == "field_group" && $api == "field_group") {
+    return array("version" => "1");
+  }
   if ($module == "panelizer" && $api == "panelizer") {
     return array("version" => "1");
   }
   if ($module == "strongarm" && $api == "strongarm") {
     return array("version" => "1");
   }
+}
+
+/**
+ * Implements hook_image_default_styles().
+ */
+function gie_long_form_content_image_default_styles() {
+  $styles = array();
+
+  // Exported image style: long_from_section_header.
+  $styles['long_from_section_header'] = array(
+    'label' => 'Long From Section Header',
+    'effects' => array(
+      4 => array(
+        'name' => 'image_crop',
+        'data' => array(
+          'width' => 1440,
+          'height' => 550,
+          'anchor' => 'center-center',
+        ),
+        'weight' => -10,
+      ),
+      6 => array(
+        'name' => 'canvasactions_definecanvas',
+        'data' => array(
+          'RGB' => array(
+            'HEX' => '#000000',
+          ),
+          'under' => 0,
+          'exact' => array(
+            'width' => 1440,
+            'height' => 550,
+            'xpos' => 'center',
+            'ypos' => 'center',
+          ),
+          'relative' => array(
+            'leftdiff' => '',
+            'rightdiff' => '',
+            'topdiff' => '',
+            'bottomdiff' => '',
+          ),
+        ),
+        'weight' => -9,
+      ),
+      8 => array(
+        'name' => 'canvasactions_source2canvas',
+        'data' => array(
+          'xpos' => 'center',
+          'ypos' => 'center',
+          'alpha' => 50,
+        ),
+        'weight' => 3,
+      ),
+    ),
+  );
+
+  return $styles;
 }
 
 /**
@@ -65,6 +124,11 @@ function gie_long_form_content_paragraphs_info() {
     'long_form_section_break_image' => array(
       'name' => 'Long Form Section Break Image',
       'bundle' => 'long_form_section_break_image',
+      'locked' => '1',
+    ),
+    'long_form_section_header_image' => array(
+      'name' => 'Long Form Section Header Image',
+      'bundle' => 'long_form_section_header_image',
       'locked' => '1',
     ),
     'long_form_text' => array(

@@ -254,7 +254,7 @@ function gie_long_form_content_strongarm() {
   $strongarm->value = array(
     'view_modes' => array(
       'full' => array(
-        'custom_settings' => FALSE,
+        'custom_settings' => TRUE,
       ),
       'paragraphs_editor_preview' => array(
         'custom_settings' => TRUE,
