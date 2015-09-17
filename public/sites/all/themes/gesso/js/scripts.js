@@ -66,6 +66,43 @@
     $('html').addClass('no-transformstylepreserve3d').removeClass('transformstylepreserve3d'); 
   }
 
+
+  Drupal.behaviors.general = {
+    attach: function(context) {
+
+      /* form input placeholder fix for browsers that do not support placeholder="". */
+      /* see: https://gist.github.com/379601 */
+      if (!Modernizr.input.placeholder) {
+        $('[placeholder]').focus(function() {
+          var input = $(this);
+          if (input.val() == input.attr('placeholder')) {
+            input.val('');
+            input.removeClass('placeholder');
+          }
+        }).blur(function() {
+          var input = $(this);
+          if (input.val() == '' || input.val() == input.attr('placeholder')) {
+            input.addClass('placeholder');
+            input.val(input.attr('placeholder'));
+          }
+        }).blur().parents('form').submit(function() {
+          $(this).find('[placeholder]').each(function() {
+            var input = $(this);
+            if (input.val() == input.attr('placeholder')) {
+              input.val('');
+            }
+          })
+        });
+      }
+
+
+      $('.toggle-button').click(function(){
+        $('.toggle-text').slideToggle();
+      });
+    
+    }
+  }
+
   Drupal.behaviors.mainSearch = {
     attach: function (context) {
       var $button = $('<button class="block--search__button">Open Search</button>'),
@@ -76,16 +113,6 @@
         $block.toggleClass('is-open');
         $form.find('.form-text').focus();
       });
-    }
-  }
-
-  Drupal.behaviors.general = {
-    attach: function(context) {
-
-      $('.toggle-button').click(function(){
-        $('.toggle-text').slideToggle();
-      });
-    
     }
   }
 

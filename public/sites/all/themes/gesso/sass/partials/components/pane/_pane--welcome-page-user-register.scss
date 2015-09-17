@@ -1,0 +1,24 @@
+// @file
+// Styles for Welcome Form Pane
+
+
+.pane--welcome-page-user-register {
+  margin-top: em(40px, 16px);
+  @include breakpoint(700px , $no-query: true) {
+    margin-bottom: em(80px, 16px);
+    margin-top: em(80px, 16px);
+    padding-left: 4%;
+    padding-right: 4%;
+    position: relative;
+    &:before {
+      content: "";
+      height: 100%;
+      left: -4.75%;
+      position: absolute;
+      top: 2px;
+      width: 1%;
+      border-left: 1px solid #fff;
+    }
+  }
+}
+
