@@ -16,9 +16,6 @@ dependencies[] = panelizer
 dependencies[] = paragraphs
 dependencies[] = strongarm
 dependencies[] = text
-dependencies[] = themekey
-dependencies[] = themekey_features
-dependencies[] = themekey_ui
 dependencies[] = view_mode_selector
 features[ckeditor_profile][] = Long_form_filtered
 features[ctools][] = ds:ds:1
@@ -122,7 +119,6 @@ features[paragraphs][] = long_form_pullquote
 features[paragraphs][] = long_form_section_break_image
 features[paragraphs][] = long_form_text
 features[paragraphs][] = long_form_video
-features[themekey_features_rule_chain][] = node:type = long_form_page >>> gesso_longform
 features[user_permission][] = use text format long_form_filtered
 features[variable][] = comment_anonymous_long_form_page
 features[variable][] = comment_default_mode_long_form_page

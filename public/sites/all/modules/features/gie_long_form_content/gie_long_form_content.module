@@ -5,3 +5,20 @@
  */
 
 include_once 'gie_long_form_content.features.inc';
+
+/**
+ *  Implements hook_menu_alter()
+ *  Switches themes based on node type
+ */
+function gie_long_form_content_menu_alter(&$items) {
+  $items['node/%node']['theme callback'] = 'gie_long_form_content_node_theme';
+  $items['node/%node/edit']['theme arguments'] = array(1);
+}
+
+/**
+ * Callback to change the theme for longform nodes
+ */
+function gie_long_form_content_node_theme($node) {
+  global $custom_theme;
+  return $node->type == 'long_form_page' ? 'gesso_longform' : $custom_theme;
+}
