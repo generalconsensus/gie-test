@@ -3,11 +3,12 @@
 
 
 .pane--welcome-page-info {
-  margin-top: em(40px, 16px);
+  padding-top: em(40px, 16px);
 
   @include breakpoint(700px , $no-query: true) {
     margin-bottom: em(80px, 16px);
     margin-top: em(80px, 16px);
+    padding-top: 0
     // padding-left: 4%;
     // padding-right: 4%;
   }
