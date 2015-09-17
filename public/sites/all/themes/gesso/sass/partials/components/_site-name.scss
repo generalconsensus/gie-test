@@ -5,14 +5,28 @@
     top: 12px;
     z-index: 3;
   }
+
+  .page-simple & {
+    position: static;
+    display: block;
+    margin-bottom: em(24px, 16px);
+    @include breakpoint(700px , $no-query: true) {
+      float: left;
+    }
+  }
 }
+
+
+
 
 .site-name__link {
   @include image-replace(179px,36px);
   @include svg-background(logo);
   display: block;
 
-  .site-name--simple & {
+  .page-simple & {
     @include svg-background(logo-simple);
+
+
   }
 }
