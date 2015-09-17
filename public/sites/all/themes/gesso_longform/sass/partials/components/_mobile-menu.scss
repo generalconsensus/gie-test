@@ -19,10 +19,11 @@
 .mobile-menu__button {
   @include border-radius(0);
   @include box-shadow(none);
-  background-color: transparent;
+  background-color: $lightred;
   border: 0;
   color: $mobile-menu-text-color;
   display: inline-block;
+  float: right;
   font-family: $mobile-menu-font-family;
   font-size: $font-size-normal;
   font-weight: bold;
@@ -38,8 +39,10 @@
 }
 
 .mobile-menu__button--menu {
+  border-left: 1px solid $mobile-menu-border-color;
   border-right: 1px solid $mobile-menu-border-color;
-  float: left;
+  float: right;
+  margin-right: 18%;
 }
 
 .mobile-menu__button--search {

@@ -84,9 +84,32 @@ button {
 
 canvas {}
 
-caption {}
+caption, .caption {
+  font-size: $font-size-sm;
+  text-align: center;
+  padding: 1em;
+  &:before{
+    content: "Caption: ";
+    font-weight: bold;
+  }
+  &:after{
+    border-bottom: 1px solid $red;
+    content: " ";
+    display: block;
+    margin: 0 auto;
+    padding: .5em;
+    width: 50%;
+  }
+}
 
-cite {}
+cite {
+  &:before{
+    content: "- ";
+  }
+  .cite__author{
+    font-weight: bold;
+  }
+}
 
 code {}
 
@@ -159,6 +182,7 @@ h3 {
   @extend %hN;
   font-size: em($font-size-lg);
   margin: 0 0 rhythm(1, $font-size-lg);
+  color: $red;
 }
 
 h4 {
@@ -301,7 +325,6 @@ ol {
   [dir="rtl"] & {
     padding: 0 1.5em 0 0;
   }
-
   ol,
   ul {
     margin: 0;
@@ -388,11 +411,9 @@ u {}
 ul {
   margin: 0 0 rhythm(1);
   padding: 0 0 0 1.2em; // LTR
-
   [dir="rtl"] & {
     padding: 0 1.2em 0 0;
   }
-
   ol,
   ul {
     margin: 0;
@@ -401,7 +422,10 @@ ul {
 
 var {}
 
-video {}
+video {
+  display: block;
+  margin: 0 auto;
+}
 
 // Default print styles
 @media print {

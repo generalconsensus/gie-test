@@ -5,6 +5,7 @@
   color: $white;
   display: block;
   padding: 8em 0 5em 0;
+  position: relative;
   text-align: center;
 }
 
@@ -42,4 +43,13 @@
   // text-transform: capitalize;
 }
 
-.page-header__scroll-button {}
+.page-header__scroll-button {
+  @include image-replace(75px, 75px);
+  // bottom: -8em;
+  display: inline-block;
+  position: absolute;
+  bottom: -37px;
+  left: 50%;
+  margin-left: -37px;
+  background: transparent url('../images/bg/icon-header-down.png') no-repeat;
+}
