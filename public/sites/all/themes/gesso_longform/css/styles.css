@@ -826,21 +826,35 @@ blockquote p {
   padding: 0;
   text-align: center;
 }
-.card .container {
-  display: inline-block;
-  margin: 0 auto;
-  overflow: hidden;
-}
 
 .card__item {
   -moz-box-shadow: 0 0px 2px 1px rgba(0, 0, 0, 0.4);
   -webkit-box-shadow: 0 0px 2px 1px rgba(0, 0, 0, 0.4);
   box-shadow: 0 0px 2px 1px rgba(0, 0, 0, 0.4);
   float: left;
-  margin: 1em;
   padding: 0 1em;
   text-align: left;
-  width: 18.75em;
+}
+.card--has3 .card__item {
+  margin: 0 1%;
+  width: 31.3333%;
+}
+.card--has3 .card__item:first-child {
+  margin-left: 0;
+  margin-right: 2%;
+}
+.card--has3 .card__item:last-child {
+  margin-left: 2%;
+  margin-right: 0;
+}
+.card--has2 .card__item {
+  width: 48%;
+}
+.card--has2 .card__item:first-child {
+  margin: 0 2% 0 0;
+}
+.card--has2 .card__item:last-child {
+  margin: 0 0 0 2%;
 }
 
 .card__title {
@@ -863,7 +877,7 @@ blockquote p {
 .component {
   clear: both;
   display: block;
-  padding: 2em 0;
+  padding: 6em 0;
 }
 
 .p__dropcap:first-letter {
@@ -942,6 +956,59 @@ blockquote p {
 }
 .fieldset--collapsible.is-collapsed .fieldset__content {
   display: none;
+}
+
+.footer {
+  overflow: hidden;
+  position: relative;
+}
+.footer .region-footer {
+  margin-top: 10em;
+}
+
+.footer__download-link {
+  background-color: #ff1352;
+  height: 60px;
+  position: relative;
+}
+.footer__download-link a {
+  color: #FFF;
+  position: relative;
+  padding-top: 20px;
+  padding-left: 5%;
+  top: 15px;
+}
+.footer__download-link a:after {
+  content: "> ";
+  font-weight: bold;
+  padding-left: .5em;
+  text-decoration: none;
+}
+
+.footer__download-image {
+  border: 2px #ff1352 solid;
+  background-color: white;
+  display: block;
+  height: 150px;
+  position: absolute;
+  right: 15%;
+  bottom: 0;
+  width: 150px;
+}
+
+.footer__menu ul {
+  list-style: none;
+}
+.footer__menu ul li {
+  border-right: 2px solid #4d4d4f;
+  display: inline-block;
+  padding: 0 1em;
+}
+.footer__menu ul li:last-child {
+  border: none;
+}
+.footer__menu ul li a {
+  color: #4d4d4f;
 }
 
 .form-item {
@@ -1186,8 +1253,8 @@ blockquote p {
 }
 
 .mobile-menu__bar {
-  background-color: rgba(243, 243, 243, 0.98);
-  border-bottom: 1px solid #dadada;
+  background-color: rgba(77, 77, 79, 0.8);
+  border-bottom: 1px solid #696966;
   -moz-box-shadow: 0 0px 2px 1px rgba(0, 0, 0, 0.4);
   -webkit-box-shadow: 0 0px 2px 1px rgba(0, 0, 0, 0.4);
   box-shadow: 0 0px 2px 1px rgba(0, 0, 0, 0.4);
@@ -1202,10 +1269,11 @@ blockquote p {
   -moz-box-shadow: none;
   -webkit-box-shadow: none;
   box-shadow: none;
-  background-color: transparent;
+  background-color: #ff1352;
   border: 0;
   color: #555559;
   display: inline-block;
+  float: right;
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 16px;
   font-weight: bold;
@@ -1220,12 +1288,14 @@ blockquote p {
 }
 
 .mobile-menu__button--menu {
-  border-right: 1px solid #dadada;
-  float: left;
+  border-left: 1px solid #696966;
+  border-right: 1px solid #696966;
+  float: right;
+  margin-right: 18%;
 }
 
 .mobile-menu__button--search {
-  border-left: 1px solid #dadada;
+  border-left: 1px solid #696966;
   float: right;
 }
 
@@ -1271,7 +1341,7 @@ blockquote p {
 
 .mobile-menu__links {
   background-color: #f3f3f3;
-  background-color: rgba(243, 243, 243, 0.98);
+  background-color: rgba(77, 77, 79, 0.8);
   color: #555559;
   position: absolute;
   width: 100%;
@@ -1605,12 +1675,14 @@ blockquote p {
 }
 
 .page-header__scroll-button {
-  bottom: -8em;
-  display: inline-block;
-  position: relative;
   height: 75px;
   overflow: hidden;
   width: 75px;
+  display: inline-block;
+  position: absolute;
+  bottom: -37px;
+  left: 50%;
+  margin-left: -37px;
   background: transparent url("../images/bg/icon-header-down.png") no-repeat;
 }
 .page-header__scroll-button:before {
@@ -1618,13 +1690,6 @@ blockquote p {
   display: block;
   height: 150%;
   width: 0;
-}
-.page-header__scroll-button img {
-  bottom: -35px;
-  height: 75px;
-  margin: 0 auto;
-  position: absolute;
-  width: 75px;
 }
 
 .pager {
@@ -1748,6 +1813,8 @@ blockquote p {
   background: #d31145 url("../images/header-background.png") no-repeat;
   color: #FFF;
   display: block;
+  margin: 5em 0;
+  overflow: hidden;
   padding: 8em 1em 10em 1em;
   text-align: left;
 }
