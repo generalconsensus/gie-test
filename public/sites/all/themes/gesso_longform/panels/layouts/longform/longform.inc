@@ -4,7 +4,7 @@
  */
 function gesso_longform_longform_panels_layouts() {
   $items['longform'] = array(
-    'title' => t('Preface and right longform'),
+    'title' => t('Longform'),
     'category' => t('Responsive'),
     'icon' => 'longform.png',
     'theme' => 'longform',
