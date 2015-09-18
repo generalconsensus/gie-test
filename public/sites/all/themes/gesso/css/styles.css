@@ -5700,6 +5700,11 @@ div[class*="pane--facetapi-"] .pane__content ul li a {
   background-color: #dc5606;
 }
 
+/* line 4, ../sass/partials/components/pane/_pane--welcome-explore-link.scss */
+.pane--welcome-explore-link {
+  text-align: center;
+}
+
 /* line 5, ../sass/partials/components/pane/_pane--welcome-page-info.scss */
 .pane--welcome-page-info {
   padding-top: 2.5em;
@@ -5740,7 +5745,7 @@ div[class*="pane--facetapi-"] .pane__content ul li a {
 @media (min-width: 43.75em) {
   /* line 5, ../sass/partials/components/pane/_pane--welcome-page-user-register.scss */
   .pane--welcome-page-user-register {
-    margin-bottom: 5em;
+    margin-bottom: 3em;
     margin-top: 5em;
     padding-left: 4%;
     padding-right: 4%;
@@ -7548,8 +7553,8 @@ aside .view__all, .region-footer .view__all {
 /* line 9, ../sass/partials/components/_welcome-stats__item.scss */
 .welcome-stats__item .welcome-stats__number {
   color: #FFF;
-  font-size: 2.875em;
-  margin-bottom: 0.43478em;
+  font-size: 2.125em;
+  margin-bottom: 0.52941em;
 }
 /* line 15, ../sass/partials/components/_welcome-stats__item.scss */
 .welcome-stats__item .welcome-stats__label {
