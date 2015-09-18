@@ -129,6 +129,15 @@ function gie_assets_strongarm() {
       'org_teaser' => array(
         'custom_settings' => TRUE,
       ),
+      'long_form_section_header_image' => array(
+        'custom_settings' => TRUE,
+      ),
+      'download' => array(
+        'custom_settings' => FALSE,
+      ),
+      'long_form_asset' => array(
+        'custom_settings' => FALSE,
+      ),
     ),
     'extra_fields' => array(
       'form' => array(
