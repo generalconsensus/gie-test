@@ -198,14 +198,40 @@ function gie_long_form_content_ds_field_settings_info() {
     'field_para_pullquote_author' => array(
       'formatter_settings' => array(
         'ft' => array(
-          'func' => 'theme_ds_field_minimal',
+          'func' => 'theme_ds_field_expert',
+          'ow' => TRUE,
+          'ow-el' => 'div',
+          'ow-cl' => 'pullquote__author',
+          'ow-def-cl' => FALSE,
+          'ow-at' => '',
+          'ow-def-at' => FALSE,
+          'fi' => TRUE,
+          'fi-el' => 'cite',
+          'fi-cl' => '',
+          'fi-at' => '',
+          'fi-def-at' => FALSE,
+          'fi-odd-even' => FALSE,
+          'fi-first-last' => FALSE,
         ),
       ),
     ),
     'field_paragraph_pullquote' => array(
       'formatter_settings' => array(
         'ft' => array(
-          'func' => 'theme_ds_field_minimal',
+          'func' => 'theme_ds_field_expert',
+          'ow' => TRUE,
+          'ow-el' => 'div',
+          'ow-cl' => 'pullquote__text',
+          'ow-def-cl' => FALSE,
+          'ow-at' => '',
+          'ow-def-at' => FALSE,
+          'fi' => TRUE,
+          'fi-el' => 'blockquote',
+          'fi-cl' => '',
+          'fi-at' => '',
+          'fi-def-at' => FALSE,
+          'fi-odd-even' => FALSE,
+          'fi-first-last' => FALSE,
         ),
       ),
     ),
@@ -237,7 +263,13 @@ function gie_long_form_content_ds_field_settings_info() {
     'field_paragraph_text' => array(
       'formatter_settings' => array(
         'ft' => array(
-          'func' => 'theme_ds_field_minimal',
+          'func' => 'theme_ds_field_expert',
+          'ow' => TRUE,
+          'ow-el' => 'div',
+          'ow-cl' => 'p__dropcap',
+          'ow-def-cl' => FALSE,
+          'ow-at' => '',
+          'ow-def-at' => FALSE,
         ),
       ),
     ),
@@ -254,14 +286,20 @@ function gie_long_form_content_ds_field_settings_info() {
     'field_paragraphs_caption' => array(
       'formatter_settings' => array(
         'ft' => array(
-          'func' => 'theme_ds_field_minimal',
+          'func' => 'theme_ds_field_expert',
+          'ow' => TRUE,
+          'ow-el' => 'div',
+          'ow-cl' => 'video__caption caption',
+          'ow-def-cl' => FALSE,
+          'ow-at' => '',
+          'ow-def-at' => FALSE,
         ),
       ),
     ),
     'field_paragraphs_video' => array(
       'formatter_settings' => array(
         'ft' => array(
-          'func' => 'theme_ds_field_minimal',
+          'func' => 'theme_ds_field_expert',
         ),
       ),
     ),
@@ -578,12 +616,14 @@ function gie_long_form_content_ds_layout_settings_info() {
   $ds_layout->settings = array(
     'regions' => array(
       'ds_content' => array(
-        0 => 'field_paragraphs_image',
-        1 => 'field_paragraphs_caption',
-        2 => 'field_paragraphs_view',
+        0 => 'group_image',
+        1 => 'field_paragraphs_image',
+        2 => 'field_paragraphs_caption',
+        3 => 'field_paragraphs_view',
       ),
     ),
     'fields' => array(
+      'group_image' => 'ds_content',
       'field_paragraphs_image' => 'ds_content',
       'field_paragraphs_caption' => 'ds_content',
       'field_paragraphs_view' => 'ds_content',
@@ -700,11 +740,13 @@ function gie_long_form_content_ds_layout_settings_info() {
   $ds_layout->settings = array(
     'regions' => array(
       'ds_content' => array(
-        0 => 'field_paragraph_key_figure',
-        1 => 'field_para_key_fig_explanation',
+        0 => 'group_key_figure',
+        1 => 'field_paragraph_key_figure',
+        2 => 'field_para_key_fig_explanation',
       ),
     ),
     'fields' => array(
+      'group_key_figure' => 'ds_content',
       'field_paragraph_key_figure' => 'ds_content',
       'field_para_key_fig_explanation' => 'ds_content',
     ),
@@ -730,11 +772,13 @@ function gie_long_form_content_ds_layout_settings_info() {
   $ds_layout->settings = array(
     'regions' => array(
       'ds_content' => array(
-        0 => 'field_paragraph_key_figure',
-        1 => 'field_para_key_fig_explanation',
+        0 => 'group_key_figure',
+        1 => 'field_paragraph_key_figure',
+        2 => 'field_para_key_fig_explanation',
       ),
     ),
     'fields' => array(
+      'group_key_figure' => 'ds_content',
       'field_paragraph_key_figure' => 'ds_content',
       'field_para_key_fig_explanation' => 'ds_content',
     ),
@@ -819,11 +863,13 @@ function gie_long_form_content_ds_layout_settings_info() {
   $ds_layout->settings = array(
     'regions' => array(
       'ds_content' => array(
-        0 => 'field_paragraph_pullquote',
-        1 => 'field_para_pullquote_author',
+        0 => 'group_pullquote',
+        1 => 'field_paragraph_pullquote',
+        2 => 'field_para_pullquote_author',
       ),
     ),
     'fields' => array(
+      'group_pullquote' => 'ds_content',
       'field_paragraph_pullquote' => 'ds_content',
       'field_para_pullquote_author' => 'ds_content',
     ),
@@ -936,24 +982,27 @@ function gie_long_form_content_ds_layout_settings_info() {
   $ds_layout->settings = array(
     'regions' => array(
       'ds_content' => array(
-        0 => 'field_para_sctn_head_sctn_title',
-        1 => 'field_para_sctn_head_title',
-        2 => 'field_para_sctn_head_image',
+        0 => 'group_section_header',
+        1 => 'field_para_sctn_head_sctn_title',
+        2 => 'field_para_sctn_head_title',
+        3 => 'field_para_sctn_head_image',
       ),
     ),
     'fields' => array(
+      'group_section_header' => 'ds_content',
       'field_para_sctn_head_sctn_title' => 'ds_content',
       'field_para_sctn_head_title' => 'ds_content',
       'field_para_sctn_head_image' => 'ds_content',
     ),
     'classes' => array(),
-    'wrappers' => array(),
+    'wrappers' => array(
+      'ds_content' => 'div',
+    ),
     'layout_wrapper' => 'div',
     'layout_attributes' => '',
     'layout_attributes_merge' => TRUE,
     'layout_link_attribute' => FALSE,
     'layout_link_custom' => '',
-    'layout_disable_css' => FALSE,
   );
   $export['paragraphs_item|long_form_section_header_image|default'] = $ds_layout;
 
@@ -1030,10 +1079,12 @@ function gie_long_form_content_ds_layout_settings_info() {
   $ds_layout->settings = array(
     'regions' => array(
       'ds_content' => array(
-        0 => 'field_paragraph_text',
+        0 => 'group_text',
+        1 => 'field_paragraph_text',
       ),
     ),
     'fields' => array(
+      'group_text' => 'ds_content',
       'field_paragraph_text' => 'ds_content',
     ),
     'classes' => array(),
@@ -1169,11 +1220,13 @@ function gie_long_form_content_ds_layout_settings_info() {
   $ds_layout->settings = array(
     'regions' => array(
       'ds_content' => array(
-        0 => 'field_paragraphs_video',
-        1 => 'field_paragraphs_caption',
+        0 => 'group_video',
+        1 => 'field_paragraphs_video',
+        2 => 'field_paragraphs_caption',
       ),
     ),
     'fields' => array(
+      'group_video' => 'ds_content',
       'field_paragraphs_video' => 'ds_content',
       'field_paragraphs_caption' => 'ds_content',
     ),
