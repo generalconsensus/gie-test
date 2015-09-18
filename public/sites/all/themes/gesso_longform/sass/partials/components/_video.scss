@@ -1,6 +1,14 @@
 //@file
-// Video Block
+// Video Component
 
 .video {
-	
+	.video__video {
+		display: block;
+		text-align: center;
+		object {
+			display: block;
+			margin: 0 auto;
+		}
+	}
+	.video__caption {}
 }

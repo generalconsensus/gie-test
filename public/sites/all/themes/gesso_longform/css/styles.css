@@ -720,7 +720,8 @@ ul.panels-ipe-linkbar li {
 .aside {
   border: 3px #ff1352 solid;
   margin: 1em;
-  padding: 0 1em;
+  overflow: hidden;
+  padding: 0 1em !important;
   width: 300px;
 }
 .aside .aside__title {
@@ -740,6 +741,14 @@ ul.panels-ipe-linkbar li {
 .aside .aside__body {
   line-height: 1.2em;
   padding: 1em 0;
+}
+
+.aside-center {
+  margin: 3em auto;
+}
+
+.aside-right {
+  float: right;
 }
 
 #autocomplete {
@@ -815,6 +824,7 @@ input.throbbing {
 .card {
   display: block;
   margin: 0 auto;
+  overflow: hidden;
   padding: 0;
   text-align: center;
 }
@@ -1076,7 +1086,9 @@ input.throbbing {
   background: #d31145 url("../images/header-background.png") no-repeat;
   color: #FFF;
   display: block;
-  padding: 8em 1em;
+  margin: 4em 0;
+  overflow: hidden;
+  padding: 6em 1em;
   text-align: center;
 }
 
@@ -2038,6 +2050,15 @@ tr.drag-previous {
 
 .vertical-tabs .form-type-textfield input {
   width: 100%;
+}
+
+.video .video__video {
+  display: block;
+  text-align: center;
+}
+.video .video__video object {
+  display: block;
+  margin: 0 auto;
 }
 
 .view__filters {

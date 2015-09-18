@@ -54,14 +54,26 @@ function gie_long_form_content_ds_field_settings_info() {
     'field_paragraph_aside_text' => array(
       'formatter_settings' => array(
         'ft' => array(
-          'func' => 'theme_ds_field_minimal',
+          'func' => 'theme_ds_field_expert',
+          'ow' => TRUE,
+          'ow-el' => 'div',
+          'ow-cl' => 'aside__body',
+          'ow-def-cl' => FALSE,
+          'ow-at' => '',
+          'ow-def-at' => FALSE,
         ),
       ),
     ),
     'field_paragraphs_aside_title' => array(
       'formatter_settings' => array(
         'ft' => array(
-          'func' => 'theme_ds_field_minimal',
+          'func' => 'theme_ds_field_expert',
+          'ow' => TRUE,
+          'ow-el' => 'div',
+          'ow-cl' => 'aside__title',
+          'ow-def-cl' => FALSE,
+          'ow-at' => '',
+          'ow-def-at' => FALSE,
         ),
       ),
     ),
@@ -300,6 +312,12 @@ function gie_long_form_content_ds_field_settings_info() {
       'formatter_settings' => array(
         'ft' => array(
           'func' => 'theme_ds_field_expert',
+          'ow' => TRUE,
+          'ow-el' => 'div',
+          'ow-cl' => 'video__video',
+          'ow-def-cl' => FALSE,
+          'ow-at' => '',
+          'ow-def-at' => FALSE,
         ),
       ),
     ),
@@ -412,10 +430,14 @@ function gie_long_form_content_ds_layout_settings_info() {
   $ds_layout->settings = array(
     'regions' => array(
       'ds_content' => array(
-        0 => 'field_paragraph_aside_text',
+        0 => 'group_aside',
+        1 => 'field_paragraphs_aside_title',
+        2 => 'field_paragraph_aside_text',
       ),
     ),
     'fields' => array(
+      'group_aside' => 'ds_content',
+      'field_paragraphs_aside_title' => 'ds_content',
       'field_paragraph_aside_text' => 'ds_content',
     ),
     'classes' => array(),
@@ -440,11 +462,13 @@ function gie_long_form_content_ds_layout_settings_info() {
   $ds_layout->settings = array(
     'regions' => array(
       'ds_content' => array(
-        0 => 'field_paragraphs_aside_title',
-        1 => 'field_paragraph_aside_text',
+        0 => 'group_aside',
+        1 => 'field_paragraphs_aside_title',
+        2 => 'field_paragraph_aside_text',
       ),
     ),
     'fields' => array(
+      'group_aside' => 'ds_content',
       'field_paragraphs_aside_title' => 'ds_content',
       'field_paragraph_aside_text' => 'ds_content',
     ),
@@ -924,13 +948,13 @@ function gie_long_form_content_ds_layout_settings_info() {
   $ds_layout->settings = array(
     'regions' => array(
       'ds_content' => array(
-        0 => 'field_para_section_break_title',
-        1 => 'field_para_section_break_image',
+        0 => 'group_fullwidth_header',
+        1 => 'field_para_section_break_title',
       ),
     ),
     'fields' => array(
+      'group_fullwidth_header' => 'ds_content',
       'field_para_section_break_title' => 'ds_content',
-      'field_para_section_break_image' => 'ds_content',
     ),
     'classes' => array(),
     'wrappers' => array(
