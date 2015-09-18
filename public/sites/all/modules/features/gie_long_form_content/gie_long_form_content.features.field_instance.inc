@@ -1229,7 +1229,7 @@ function gie_long_form_content_field_default_field_instances() {
           ),
         ),
         'type' => 'text_default',
-        'weight' => 1,
+        'weight' => 2,
       ),
       'paragraphs_full_width' => array(
         'label' => 'hidden',
@@ -1352,7 +1352,7 @@ function gie_long_form_content_field_default_field_instances() {
         'module' => 'entityreference',
         'settings' => array(
           'field_delimiter' => '',
-          'link' => FALSE,
+          'link' => 0,
           'linked_field' => array(
             'advanced' => array(
               'class' => '',
@@ -1366,7 +1366,7 @@ function gie_long_form_content_field_default_field_instances() {
           ),
         ),
         'type' => 'entityreference_label',
-        'weight' => 0,
+        'weight' => 1,
       ),
       'paragraphs_full_width' => array(
         'label' => 'hidden',
@@ -1581,7 +1581,7 @@ function gie_long_form_content_field_default_field_instances() {
           ),
         ),
         'type' => 'text_default',
-        'weight' => 1,
+        'weight' => 2,
       ),
       'paragraphs_editor_preview' => array(
         'label' => 'above',
@@ -1607,7 +1607,7 @@ function gie_long_form_content_field_default_field_instances() {
           ),
         ),
         'type' => 'text_default',
-        'weight' => 1,
+        'weight' => 2,
       ),
       'paragraphs_left_align' => array(
         'label' => 'hidden',
@@ -1700,7 +1700,7 @@ function gie_long_form_content_field_default_field_instances() {
           ),
         ),
         'type' => 'text_default',
-        'weight' => 0,
+        'weight' => 1,
       ),
       'paragraphs_editor_preview' => array(
         'label' => 'above',
@@ -1726,7 +1726,7 @@ function gie_long_form_content_field_default_field_instances() {
           ),
         ),
         'type' => 'text_default',
-        'weight' => 0,
+        'weight' => 1,
       ),
       'paragraphs_left_align' => array(
         'label' => 'hidden',
@@ -1809,7 +1809,7 @@ function gie_long_form_content_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 2,
+        'weight' => 3,
       ),
       'paragraphs_editor_preview' => array(
         'label' => 'above',
@@ -1821,7 +1821,7 @@ function gie_long_form_content_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 2,
+        'weight' => 3,
       ),
       'paragraphs_left_align' => array(
         'label' => 'above',
@@ -1912,7 +1912,7 @@ function gie_long_form_content_field_default_field_instances() {
           ),
         ),
         'type' => 'text_default',
-        'weight' => 1,
+        'weight' => 2,
       ),
       'paragraphs_editor_preview' => array(
         'label' => 'above',
@@ -1991,7 +1991,7 @@ function gie_long_form_content_field_default_field_instances() {
           ),
         ),
         'type' => 'text_default',
-        'weight' => 0,
+        'weight' => 1,
       ),
       'paragraphs_editor_preview' => array(
         'label' => 'above',
@@ -2041,111 +2041,6 @@ function gie_long_form_content_field_default_field_instances() {
       ),
       'type' => 'text_textarea',
       'weight' => 1,
-    ),
-  );
-
-  // Exported field_instance:
-  // 'paragraphs_item-long_form_section_break_image-field_para_section_break_image'
-  $field_instances['paragraphs_item-long_form_section_break_image-field_para_section_break_image'] = array(
-    'bundle' => 'long_form_section_break_image',
-    'deleted' => 0,
-    'description' => '',
-    'display' => array(
-      'default' => array(
-        'label' => 'hidden',
-        'module' => 'image',
-        'settings' => array(
-          'field_delimiter' => '',
-          'image_link' => '',
-          'image_style' => '',
-          'linked_field' => array(
-            'advanced' => array(
-              'class' => '',
-              'rel' => '',
-              'target' => '',
-              'text' => '',
-              'title' => '',
-            ),
-            'destination' => '',
-            'linked' => 0,
-          ),
-        ),
-        'type' => 'image',
-        'weight' => 1,
-      ),
-      'paragraphs_editor_preview' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 0,
-      ),
-      'paragraphs_full_width' => array(
-        'label' => 'hidden',
-        'module' => 'image',
-        'settings' => array(
-          'field_delimiter' => '',
-          'image_link' => '',
-          'image_style' => '',
-          'linked_field' => array(
-            'advanced' => array(
-              'class' => '',
-              'rel' => '',
-              'target' => '',
-              'text' => '',
-              'title' => '',
-            ),
-            'destination' => '',
-            'linked' => 0,
-          ),
-        ),
-        'type' => 'image',
-        'weight' => 1,
-      ),
-      'view_mode_selector' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 0,
-      ),
-    ),
-    'ds_extras_field_template' => '',
-    'entity_type' => 'paragraphs_item',
-    'field_name' => 'field_para_section_break_image',
-    'label' => 'Image',
-    'required' => 0,
-    'settings' => array(
-      'alt_field' => 0,
-      'alt_field_default' => '',
-      'alt_field_hide' => 0,
-      'alt_field_sync_title' => 0,
-      'alt_field_update_on_edit' => 0,
-      'default_image' => 0,
-      'description_display' => 'after',
-      'file_directory' => '',
-      'file_extensions' => 'png jpg jpeg',
-      'focus' => 0,
-      'focus_lock_ratio' => 0,
-      'focus_min_size' => '',
-      'max_filesize' => '',
-      'max_resolution' => '',
-      'min_resolution' => '',
-      'random_default' => 0,
-      'random_default_path' => '',
-      'title_field' => 0,
-      'title_field_default' => '',
-      'title_field_hide' => 0,
-      'title_field_update_on_edit' => 0,
-      'user_register_form' => FALSE,
-    ),
-    'widget' => array(
-      'active' => 1,
-      'module' => 'image',
-      'settings' => array(
-        'preview_image_style' => 'thumbnail',
-        'progress_indicator' => 'throbber',
-      ),
-      'type' => 'image_image',
-      'weight' => 2,
     ),
   );
 
@@ -2331,7 +2226,13 @@ function gie_long_form_content_field_default_field_instances() {
           ),
         ),
         'type' => 'entityreference_label',
-        'weight' => 2,
+        'weight' => 3,
+      ),
+      'paragraphs_editor_preview' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
       ),
       'paragraphs_full_width' => array(
         'label' => 'hidden',
@@ -2354,6 +2255,12 @@ function gie_long_form_content_field_default_field_instances() {
         ),
         'type' => 'entityreference_entity_view',
         'weight' => 2,
+      ),
+      'view_mode_selector' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
       ),
     ),
     'ds_extras_field_template' => '',
@@ -2410,6 +2317,12 @@ function gie_long_form_content_field_default_field_instances() {
           ),
         ),
         'type' => 'text_default',
+        'weight' => 1,
+      ),
+      'paragraphs_editor_preview' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
         'weight' => 0,
       ),
       'paragraphs_full_width' => array(
@@ -2430,6 +2343,12 @@ function gie_long_form_content_field_default_field_instances() {
           ),
         ),
         'type' => 'text_default',
+        'weight' => 0,
+      ),
+      'view_mode_selector' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
         'weight' => 0,
       ),
     ),
@@ -2512,7 +2431,13 @@ function gie_long_form_content_field_default_field_instances() {
           ),
         ),
         'type' => 'text_default',
-        'weight' => 1,
+        'weight' => 2,
+      ),
+      'paragraphs_editor_preview' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
       ),
       'paragraphs_full_width' => array(
         'label' => 'hidden',
@@ -2533,6 +2458,12 @@ function gie_long_form_content_field_default_field_instances() {
         ),
         'type' => 'text_default',
         'weight' => 1,
+      ),
+      'view_mode_selector' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
       ),
     ),
     'entity_type' => 'paragraphs_item',
@@ -2579,7 +2510,7 @@ function gie_long_form_content_field_default_field_instances() {
           ),
         ),
         'type' => 'text_default',
-        'weight' => 0,
+        'weight' => 1,
       ),
       'full' => array(
         'label' => 'hidden',
@@ -2733,23 +2664,9 @@ function gie_long_form_content_field_default_field_instances() {
     'display' => array(
       'default' => array(
         'label' => 'above',
-        'module' => 'view_mode_selector',
-        'settings' => array(
-          'field_delimiter' => '',
-          'linked_field' => array(
-            'advanced' => array(
-              'class' => '',
-              'rel' => '',
-              'target' => '',
-              'text' => '',
-              'title' => '',
-            ),
-            'destination' => '',
-            'linked' => 0,
-          ),
-        ),
-        'type' => 'view_mode_selector',
-        'weight' => 1,
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 2,
       ),
       'full' => array(
         'label' => 'above',
@@ -2849,7 +2766,7 @@ function gie_long_form_content_field_default_field_instances() {
           ),
         ),
         'type' => 'text_default',
-        'weight' => 1,
+        'weight' => 2,
       ),
       'full' => array(
         'label' => 'hidden',
@@ -3033,7 +2950,7 @@ function gie_long_form_content_field_default_field_instances() {
           'view_mode' => 'long_form_asset',
         ),
         'type' => 'entityreference_entity_view',
-        'weight' => 0,
+        'weight' => 1,
       ),
       'full' => array(
         'label' => 'hidden',
@@ -3196,7 +3113,7 @@ function gie_long_form_content_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 2,
+        'weight' => 3,
       ),
       'paragraphs_editor_preview' => array(
         'label' => 'above',
