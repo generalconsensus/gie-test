@@ -288,6 +288,28 @@ function gie_assets_field_default_field_instances() {
         'type' => 'image',
         'weight' => 0,
       ),
+      'long_form_section_header_image' => array(
+        'label' => 'hidden',
+        'module' => 'image',
+        'settings' => array(
+          'field_delimiter' => '',
+          'image_link' => '',
+          'image_style' => 'long_from_section_header',
+          'linked_field' => array(
+            'advanced' => array(
+              'class' => '',
+              'rel' => '',
+              'target' => '',
+              'text' => '',
+              'title' => '',
+            ),
+            'destination' => '[asset:field-asset-image-link:url]',
+            'linked' => 0,
+          ),
+        ),
+        'type' => 'image',
+        'weight' => 0,
+      ),
       'org_teaser' => array(
         'label' => 'hidden',
         'module' => 'image',
@@ -417,6 +439,12 @@ function gie_assets_field_default_field_instances() {
         'type' => 'hidden',
         'weight' => 1,
       ),
+      'long_form_section_header_image' => array(
+        'label' => 'hidden',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 2,
+      ),
       'org_teaser' => array(
         'label' => 'hidden',
         'settings' => array(),
@@ -515,6 +543,12 @@ function gie_assets_field_default_field_instances() {
         'settings' => array(),
         'type' => 'hidden',
         'weight' => 2,
+      ),
+      'long_form_section_header_image' => array(
+        'label' => 'inline',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 1,
       ),
       'org_teaser' => array(
         'label' => 'inline',
