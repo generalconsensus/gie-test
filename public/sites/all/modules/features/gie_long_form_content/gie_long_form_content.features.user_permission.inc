@@ -19,5 +19,14 @@ function gie_long_form_content_user_default_permissions() {
     'module' => 'filter',
   );
 
+  // Exported permission: 'use text format long_form_full'.
+  $permissions['use text format long_form_full'] = array(
+    'name' => 'use text format long_form_full',
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
+    'module' => 'filter',
+  );
+
   return $permissions;
 }
