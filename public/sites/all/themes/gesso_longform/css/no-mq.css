@@ -1072,6 +1072,10 @@ input.throbbing {
   width: 20%;
 }
 
+.image .image__image {
+  text-align: center;
+}
+
 .key-figure {
   color: #d31145;
   display: block;
