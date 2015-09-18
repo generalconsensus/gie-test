@@ -331,9 +331,10 @@ function gie_long_form_content_field_default_field_instances() {
       'better_formats' => array(
         'allowed_formats' => array(
           'comments_filtered' => 0,
-          'filtered_html' => 'filtered_html',
+          'filtered_html' => 0,
           'full_html' => 0,
           'long_form_filtered' => 0,
+          'long_form_full' => 'long_form_full',
           'plain_text' => 0,
         ),
         'allowed_formats_toggle' => 1,
@@ -350,6 +351,9 @@ function gie_long_form_content_field_default_field_instances() {
               'weight' => 1,
             ),
             'long_form_filtered' => array(
+              'weight' => 0,
+            ),
+            'long_form_full' => array(
               'weight' => 0,
             ),
             'plain_text' => array(
