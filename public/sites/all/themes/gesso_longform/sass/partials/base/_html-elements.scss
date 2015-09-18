@@ -64,8 +64,16 @@ b {}
 
 blockquote {
   margin: 0 1.5em rhythm(1);
-  color: $lightred;
+  border-top:1px solid $red;
+  border-bottom:1px solid $red;
+  color:$lightred;
+  display: block;
   font-size: $font-size-lg;
+  font-style: italic;
+  margin: .5em auto;
+  padding: 1em 0;
+  text-align: center;
+  width: 75%;
 }
 
 body {
@@ -89,7 +97,7 @@ caption, .caption {
   text-align: center;
   padding: 1em;
   &:before{
-    content: "Caption: ";
+    content: "Caption:  ";
     font-weight: bold;
   }
   &:after{
