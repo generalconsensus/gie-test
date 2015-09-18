@@ -306,8 +306,16 @@ abbr:hover {
 
 blockquote {
   margin: 0 1.5em 1.625em;
+  border-top: 1px solid #d31145;
+  border-bottom: 1px solid #d31145;
   color: #ff1352;
+  display: block;
   font-size: 18px;
+  font-style: italic;
+  margin: .5em auto;
+  padding: 1em 0;
+  text-align: center;
+  width: 75%;
 }
 
 body {
@@ -328,7 +336,7 @@ caption, .caption {
   padding: 1em;
 }
 caption:before, .caption:before {
-  content: "Caption: ";
+  content: "Caption:  ";
   font-weight: bold;
 }
 caption:after, .caption:after {
@@ -775,22 +783,6 @@ input.throbbing {
 }
 [dir="rtl"] input.throbbing {
   background-position: left 0.5em top -47px;
-}
-
-blockquote {
-  border-top: 1px solid #d31145;
-  border-bottom: 1px solid #d31145;
-  color: #d31145;
-  display: block;
-  font-size: 18px;
-  font-style: italic;
-  margin: .5em auto;
-  text-align: center;
-  width: 75%;
-}
-blockquote p {
-  margin: 0;
-  padding: .5em 0;
 }
 
 .breadcrumb {
@@ -1798,6 +1790,11 @@ blockquote p {
 }
 .progress--small .progress__bar {
   height: 0.5em;
+}
+
+.pullquote .pullquote__author {
+  display: block;
+  text-align: center;
 }
 
 .region-navigation {
