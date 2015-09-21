@@ -1106,8 +1106,13 @@ input.throbbing {
   width: 20%;
 }
 
-.image .image__image {
+.image {
   text-align: center;
+}
+.image .image__title {
+  font-weight: bold;
+  padding-bottom: 1em;
+  text-transform: uppercase;
 }
 
 .key-figure {

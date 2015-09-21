@@ -1,6 +1,12 @@
 .image {
+	text-align: center;
+	.image__title {
+		font-weight: bold;
+		padding-bottom: 1em;
+		text-transform: uppercase;
+	}
 	.image__image {
-		text-align: center;
+		// text-align: center;
 	}
 	.image__caption {}
 }
