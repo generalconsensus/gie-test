@@ -47,6 +47,7 @@ features[facetapi][] = search_api@default_node_index::field_innovation_ref_avail
 features[facetapi][] = search_api@default_node_index::field_innovation_related_org
 features[facetapi][] = search_api@default_node_index::field_innovation_stage
 features[facetapi][] = search_api@default_node_index::field_innovation_type
+features[facetapi][] = search_api@default_node_index::field_needs_date_needed
 features[facetapi][] = search_api@default_node_index::field_needs_related_organization
 features[facetapi][] = search_api@default_node_index::field_needs_status
 features[facetapi][] = search_api@default_node_index::field_resource_org

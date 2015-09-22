@@ -1,0 +1,20 @@
+// @file
+// Styles for Welcome Stats Item
+
+.welcome-stats__item {
+  text-align: center;
+
+
+
+  .welcome-stats__number {
+    color: #FFF;
+    font-size: em(34px);
+    margin-bottom: em(18px, 34px);
+  }
+
+  .welcome-stats__label {
+    color: $lightorange;
+    text-transform: uppercase;
+    font-size: em(16px, 16px);
+  }
+}

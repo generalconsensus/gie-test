@@ -302,6 +302,20 @@ function gie_homepage_views_default_views() {
   $handler->display->display_options['filters']['field_funding_deadline_value']['field'] = 'field_funding_deadline_value';
   $handler->display->display_options['filters']['field_funding_deadline_value']['operator'] = '>=';
   $handler->display->display_options['filters']['field_funding_deadline_value']['default_date'] = 'now';
+
+  /* Display: Welcome Page Counts */
+  $handler = $view->new_display('panel_pane', 'Welcome Page Counts', 'panel_pane_1');
+  $handler->display->display_options['defaults']['title'] = FALSE;
+  $handler->display->display_options['defaults']['hide_admin_links'] = FALSE;
+  $handler->display->display_options['hide_admin_links'] = TRUE;
+  $handler->display->display_options['defaults']['style_plugin'] = FALSE;
+  $handler->display->display_options['style_plugin'] = 'default';
+  $handler->display->display_options['style_options']['row_class_special'] = FALSE;
+  $handler->display->display_options['defaults']['style_options'] = FALSE;
+  $handler->display->display_options['defaults']['row_plugin'] = FALSE;
+  $handler->display->display_options['row_plugin'] = 'entity';
+  $handler->display->display_options['row_options']['view_mode'] = 'teaser';
+  $handler->display->display_options['defaults']['row_options'] = FALSE;
   $export['homepage_views'] = $view;
 
   return $export;
