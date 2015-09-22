@@ -31,7 +31,7 @@ function gie_long_form_content_field_group_info() {
       'label' => 'Aside',
       'instance_settings' => array(
         'id' => '',
-        'classes' => 'aside component  aside-center',
+        'classes' => 'aside component  aside-center layout-constrain',
         'description' => '',
         'show_label' => '0',
         'label_element' => 'h3',
@@ -97,7 +97,7 @@ function gie_long_form_content_field_group_info() {
       'label' => 'Aside',
       'instance_settings' => array(
         'id' => '',
-        'classes' => 'aside component',
+        'classes' => 'aside component layout-constrain',
         'description' => '',
         'show_label' => '0',
         'label_element' => 'h3',
@@ -130,7 +130,7 @@ function gie_long_form_content_field_group_info() {
       'label' => 'Aside',
       'instance_settings' => array(
         'id' => '',
-        'classes' => 'aside component aside-right',
+        'classes' => 'aside component aside-right layout-constrain',
         'description' => '',
         'show_label' => '0',
         'label_element' => 'h3',
@@ -222,10 +222,8 @@ function gie_long_form_content_field_group_info() {
   $field_group->parent_name = '';
   $field_group->data = array(
     'label' => 'Fullwidth Header',
-    'weight' => '0',
-    'children' => array(
-      0 => 'field_para_section_break_title',
-    ),
+    'weight' => '4',
+    'children' => array(),
     'format_type' => 'div',
     'format_settings' => array(
       'label' => 'Fullwidth Header',
@@ -492,6 +490,39 @@ function gie_long_form_content_field_group_info() {
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
   $field_group->api_version = 1;
+  $field_group->identifier = 'group_section_break|paragraphs_item|long_form_section_break_image|default';
+  $field_group->group_name = 'group_section_break';
+  $field_group->entity_type = 'paragraphs_item';
+  $field_group->bundle = 'long_form_section_break_image';
+  $field_group->mode = 'default';
+  $field_group->parent_name = '';
+  $field_group->data = array(
+    'label' => 'Section Break',
+    'weight' => '0',
+    'children' => array(
+      0 => 'field_para_section_break_title',
+      1 => 'field_para_section_brk_image',
+    ),
+    'format_type' => 'div',
+    'format_settings' => array(
+      'label' => 'Section Break',
+      'instance_settings' => array(
+        'id' => '',
+        'classes' => 'section-break component',
+        'description' => '',
+        'show_label' => '0',
+        'label_element' => 'h3',
+        'effect' => 'none',
+        'speed' => 'none',
+      ),
+      'formatter' => 'open',
+    ),
+  );
+  $export['group_section_break|paragraphs_item|long_form_section_break_image|default'] = $field_group;
+
+  $field_group = new stdClass();
+  $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
+  $field_group->api_version = 1;
   $field_group->identifier = 'group_section_header|paragraphs_item|long_form_section_header_image|default';
   $field_group->group_name = 'group_section_header';
   $field_group->entity_type = 'paragraphs_item';
@@ -502,9 +533,9 @@ function gie_long_form_content_field_group_info() {
     'label' => 'Section header',
     'weight' => '0',
     'children' => array(
-      0 => 'field_para_sctn_head_sctn_title',
-      1 => 'field_para_sctn_head_title',
-      2 => 'field_para_sctn_head_image',
+      0 => 'field_para_sctn_head_image',
+      1 => 'field_para_sctn_head_sctn_title',
+      2 => 'field_para_sctn_head_title',
     ),
     'format_type' => 'div',
     'format_settings' => array(

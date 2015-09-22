@@ -994,12 +994,14 @@ function gie_long_form_content_ds_layout_settings_info() {
   $ds_layout->settings = array(
     'regions' => array(
       'ds_content' => array(
-        0 => 'group_fullwidth_header',
-        1 => 'field_para_section_break_title',
+        0 => 'group_section_break',
+        1 => 'field_para_section_brk_image',
+        2 => 'field_para_section_break_title',
       ),
     ),
     'fields' => array(
-      'group_fullwidth_header' => 'ds_content',
+      'group_section_break' => 'ds_content',
+      'field_para_section_brk_image' => 'ds_content',
       'field_para_section_break_title' => 'ds_content',
     ),
     'classes' => array(),
@@ -1053,16 +1055,16 @@ function gie_long_form_content_ds_layout_settings_info() {
     'regions' => array(
       'ds_content' => array(
         0 => 'group_section_header',
-        1 => 'field_para_sctn_head_sctn_title',
-        2 => 'field_para_sctn_head_title',
-        3 => 'field_para_sctn_head_image',
+        1 => 'field_para_sctn_head_image',
+        2 => 'field_para_sctn_head_sctn_title',
+        3 => 'field_para_sctn_head_title',
       ),
     ),
     'fields' => array(
       'group_section_header' => 'ds_content',
+      'field_para_sctn_head_image' => 'ds_content',
       'field_para_sctn_head_sctn_title' => 'ds_content',
       'field_para_sctn_head_title' => 'ds_content',
-      'field_para_sctn_head_image' => 'ds_content',
     ),
     'classes' => array(),
     'wrappers' => array(
