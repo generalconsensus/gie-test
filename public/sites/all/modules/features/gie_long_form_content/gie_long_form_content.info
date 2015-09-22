@@ -111,6 +111,7 @@ features[field_group][] = group_para_callout_1|paragraphs_item|long_form_callout
 features[field_group][] = group_para_callout_2|paragraphs_item|long_form_callout_card|form
 features[field_group][] = group_para_callout_3|paragraphs_item|long_form_callout_card|form
 features[field_group][] = group_pullquote|paragraphs_item|long_form_pullquote|default
+features[field_group][] = group_section_break|paragraphs_item|long_form_section_break_image|default
 features[field_group][] = group_section_header|paragraphs_item|long_form_section_header_image|default
 features[field_group][] = group_text|paragraphs_item|long_form_text|default
 features[field_group][] = group_video|paragraphs_item|long_form_video|default
