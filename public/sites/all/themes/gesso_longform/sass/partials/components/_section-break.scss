@@ -1,19 +1,25 @@
 //@file
 // Fullwidth Header
-.fullwidth-header {
-	background: $red url('../images/header-background.png') no-repeat;
+.section-break {
+	background: $red url('../images/header-background.png') repeat repeat;
   color: $white;
   display: block;
-  padding: 8em 1em;
+  margin: 4em 0;
+  overflow: hidden;
+  padding: 6em 1em;
   text-align: center;
 }
 
-.fullwidth-header__caption {
+.section-break__image{
+
+}
+
+.section-break__caption {
 	font-size:$font-size-header;
 	text-transform: capitalize;
 	line-height: 1em;
 	&:before {
-		border: 2px $blue solid;
+		border: 2px $red solid;
 		content:" ";
 		display: block;
 		margin: 0 auto;

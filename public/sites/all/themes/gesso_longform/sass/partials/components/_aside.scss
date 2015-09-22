@@ -4,7 +4,8 @@
 .aside {
 	border: 3px $lightred solid; 
 	margin: 1em;
-	padding: 0 1em;
+	overflow: hidden;
+	padding: 0 1em !important;
 	width: 300px;
 	.aside__title {
 		color: $lightred;
@@ -24,4 +25,10 @@
 		line-height: 1.2em;
 		padding: 1em 0;
 	}
+}
+.aside-center { 
+	margin: 3em auto;
+}
+.aside-right {
+	float: right;
 }

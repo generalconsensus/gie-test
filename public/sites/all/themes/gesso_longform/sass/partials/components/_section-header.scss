@@ -1,7 +1,7 @@
 // @file
 // Styles for the section page header.
 .section-header {
-	background: $red url('../images/header-background.png') no-repeat;
+	background: $red url('../images/header-background.png') repeat repeat;
   color: $white;
   display: block;
   margin: 5em 0;
