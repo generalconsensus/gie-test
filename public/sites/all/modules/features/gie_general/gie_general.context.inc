@@ -17,9 +17,9 @@ function gie_general_context_default_contexts() {
   $context->description = '';
   $context->tag = '';
   $context->conditions = array(
-    'sitewide' => array(
+    'default' => array(
       'values' => array(
-        1 => 1,
+        'context_condition_default' => 'context_condition_default',
       ),
     ),
   );
@@ -91,6 +91,63 @@ function gie_general_context_default_contexts() {
   );
   $context->condition_mode = 0;
   $export['sitewide'] = $context;
+
+  $context = new stdClass();
+  $context->disabled = FALSE; /* Edit this to true to make a default context disabled initially */
+  $context->api_version = 3;
+  $context->name = 'welcome_page';
+  $context->description = 'This is the welcome page context. ';
+  $context->tag = '';
+  $context->conditions = array(
+    'path' => array(
+      'values' => array(
+        'user/register' => 'user/register',
+        'welcome' => 'welcome',
+      ),
+    ),
+  );
+  $context->reactions = array(
+    'block' => array(
+      'blocks' => array(
+        'blockify-blockify-site-name' => array(
+          'module' => 'blockify',
+          'delta' => 'blockify-site-name',
+          'region' => 'navigation',
+          'weight' => '-67',
+        ),
+        'gie_homepage-welcome_login' => array(
+          'module' => 'gie_homepage',
+          'delta' => 'welcome_login',
+          'region' => 'navigation',
+          'weight' => '-10',
+        ),
+        'blockify-blockify-messages' => array(
+          'module' => 'blockify',
+          'delta' => 'blockify-messages',
+          'region' => 'preface',
+          'weight' => '-10',
+        ),
+        'pane-welcome_footer' => array(
+          'module' => 'pane',
+          'delta' => 'welcome_footer',
+          'region' => 'footer',
+          'weight' => '-10',
+        ),
+        'menu-menu-sub-footer-menu' => array(
+          'module' => 'menu',
+          'delta' => 'menu-sub-footer-menu',
+          'region' => 'footer',
+          'weight' => '-9',
+        ),
+      ),
+    ),
+  );
+  $context->condition_mode = 1;
+
+  // Translatables
+  // Included for use with string extractors like potx.
+  t('This is the welcome page context. ');
+  $export['welcome_page'] = $context;
 
   return $export;
 }

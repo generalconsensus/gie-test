@@ -225,3 +225,11 @@ function gie_user_views_pre_render(&$view) {
 function gie_user_menu_alter(&$items) {
   $items['user/%user/contact']['type'] = MENU_CALLBACK;
 }
+
+/**
+ * Implements hook_form_FORM_ID_alter().
+ */
+function gie_user_form_user_profile_form_alter(&$form, &$form_state, $form_id) {
+  // Hide "Select the types of assistance..." field
+  $form['field_assistance_offered']['#access'] = FALSE;
+}

@@ -20,7 +20,7 @@
   <?php endif; ?>
 
   <?php if ($exposed): ?>
-    <div class="view__filters">
+    <div class="view__filters view-filters">
       <?php print $exposed; ?>
     </div>
   <?php endif; ?>

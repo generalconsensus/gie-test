@@ -236,8 +236,8 @@ function gie_funding_field_default_field_instances() {
     ),
     'ds_extras_field_template' => '',
     'entity_type' => 'node',
-    'entityconnect_unload_add' => 0,
-    'entityconnect_unload_edit' => 0,
+    'entityconnect_unload_add' => 1,
+    'entityconnect_unload_edit' => 1,
     'field_name' => 'field_funding_author',
     'label' => 'Funding Author',
     'required' => 0,
@@ -247,17 +247,17 @@ function gie_funding_field_default_field_instances() {
     ),
     'widget' => array(
       'active' => 1,
-      'module' => 'entityreference',
+      'module' => 'entityreference_view_widget',
       'settings' => array(
-        'match_operator' => 'CONTAINS',
-        'path' => '',
-        'references_dialog_add' => 0,
-        'references_dialog_edit' => 0,
-        'references_dialog_search' => 0,
-        'references_dialog_search_view' => '',
-        'size' => 60,
+        'allow_duplicates' => 0,
+        'close_modal' => 0,
+        'pass_argument' => 0,
+        'pass_arguments' => '',
+        'rendered_entity' => 0,
+        'view' => 'user_reference|multi_view_widget',
+        'view_mode' => 'full',
       ),
-      'type' => 'entityreference_autocomplete',
+      'type' => 'entityreference_view_widget',
       'weight' => 9,
     ),
   );
@@ -1596,7 +1596,7 @@ function gie_funding_field_default_field_instances() {
     'bundle' => 'funding',
     'default_value' => NULL,
     'deleted' => 0,
-    'description' => 'The URL to the application or additional information about the opportunity.',
+    'description' => 'The URL to the application or additional information about the opportunity. Provide the full URL, for example: http://www.example.com',
     'display' => array(
       'at_a_glance' => array(
         'label' => 'above',
@@ -2998,7 +2998,7 @@ function gie_funding_field_default_field_instances() {
   t('Select the corresponding regions that apply for the selected countries.');
   t('Share a funding photo. If you don\'t upload your photo, one will be automatically assigned!');
   t('Subject');
-  t('The URL to the application or additional information about the opportunity.');
+  t('The URL to the application or additional information about the opportunity. Provide the full URL, for example: http://www.example.com');
   t('The deadline for submission. If it is a rolling deadline, please leave blank.');
   t('The organization that is sponsoring the funding opportunity. The organization must have profile on the Exchange to be included on this line. Start typing the organization name to see if it has a profile on the Exchange yet. If it doesn\'t appear, please contact the organization and encourage them to create an organization profile. ');
   t('The title of the funding opportunity. ');
