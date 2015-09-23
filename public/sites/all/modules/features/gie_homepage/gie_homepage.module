@@ -162,9 +162,6 @@ function gie_homepage_block_view($delta = '') {
         //Load in user login form
         $form = drupal_get_form('user_login_block');
 
-        // Prefix the form with the help text
-        $form['#prefix'] = t('<div class="user-login-helptext">Did you receive a username and password? We are in open beta now so you no longer need that! Join the Exchange below!</div>');
-
         // Hide social login and additional links
         unset($form['lr_social_login_links']);
         unset($form['links']);
