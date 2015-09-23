@@ -878,7 +878,7 @@ input.throbbing {
   }
 }
 .card--has1 .card__item {
-  width: 50%;
+  width: 100%;
 }
 @media (min-width: 54.375em) {
   .card--has1 .card__item {

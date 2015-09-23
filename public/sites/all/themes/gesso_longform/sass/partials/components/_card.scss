@@ -56,7 +56,7 @@
    	}
  	}
  	.card--has1 & {
- 			width: 50%;
+ 			width: 100%;
  			@include breakpoint($mobile-menu-bp, $no-query: true) {
  				width: 50%;
  			}
