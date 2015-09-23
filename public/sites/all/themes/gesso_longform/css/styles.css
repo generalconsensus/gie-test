@@ -719,16 +719,15 @@ ul.panels-ipe-linkbar li {
 
 .aside {
   border: 3px #ff1352 solid;
-  margin: 1em;
+  margin: 6em auto;
   overflow: hidden;
-  padding: 0 1em !important;
-  width: 300px;
+  padding: 2em;
+  width: 50%;
 }
 .aside .aside__title {
   color: #ff1352;
   font-weight: bold;
   line-height: 1em;
-  padding: 1em 0 0 0;
   text-transform: uppercase;
 }
 .aside .aside__title:after {
@@ -740,15 +739,7 @@ ul.panels-ipe-linkbar li {
 }
 .aside .aside__body {
   line-height: 1.2em;
-  padding: 1em 0;
-}
-
-.aside-center {
-  margin: 3em auto;
-}
-
-.aside-right {
-  float: right;
+  padding-top: 1em;
 }
 
 #autocomplete {
@@ -962,6 +953,7 @@ input.throbbing {
 
 .footer {
   overflow: hidden;
+  min-height: 400px;
   position: relative;
 }
 .footer .region-footer {
@@ -994,10 +986,13 @@ input.throbbing {
   height: 150px;
   position: absolute;
   right: 15%;
-  bottom: 0;
+  top: 0;
   width: 150px;
 }
 
+.footer__menu {
+  float: right;
+}
 .footer__menu ul {
   list-style: none;
 }
@@ -1250,6 +1245,10 @@ input.throbbing {
   color: #555559;
   height: 3.4375em;
   text-align: center;
+  width: 100%;
+  position: relative;
+  top: 0;
+  z-index: 10;
 }
 
 .mobile-menu__button {
@@ -1814,9 +1813,10 @@ input.throbbing {
 }
 
 .section-break__caption {
-  font-size: 45px;
-  text-transform: capitalize;
+  font-size: 36px;
+  text-transform: uppercase;
   line-height: 1em;
+  padding: 0 15%;
 }
 .section-break__caption:before {
   border: 2px #d31145 solid;
@@ -2064,6 +2064,10 @@ tr.drag-previous {
 .video .video__video object {
   display: block;
   margin: 0 auto;
+}
+.video .video__video .asset {
+  background-color: white;
+  border-color: white;
 }
 
 .view__filters {
