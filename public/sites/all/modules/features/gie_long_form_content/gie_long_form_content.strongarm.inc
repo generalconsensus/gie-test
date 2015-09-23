@@ -149,16 +149,16 @@ function gie_long_form_content_strongarm() {
   $strongarm->value = array(
     'view_modes' => array(
       'paragraphs_editor_preview' => array(
-        'custom_settings' => TRUE,
+        'custom_settings' => FALSE,
       ),
       'paragraphs_full_width' => array(
-        'custom_settings' => TRUE,
+        'custom_settings' => FALSE,
       ),
       'paragraphs_left_align' => array(
-        'custom_settings' => TRUE,
+        'custom_settings' => FALSE,
       ),
       'paragraphs_right_align' => array(
-        'custom_settings' => TRUE,
+        'custom_settings' => FALSE,
       ),
       'full' => array(
         'custom_settings' => FALSE,
@@ -167,6 +167,9 @@ function gie_long_form_content_strongarm() {
         'custom_settings' => FALSE,
       ),
       'view_mode_selector' => array(
+        'custom_settings' => FALSE,
+      ),
+      'diff_standard' => array(
         'custom_settings' => FALSE,
       ),
     ),
@@ -222,13 +225,13 @@ function gie_long_form_content_strongarm() {
   $strongarm->value = array(
     'view_modes' => array(
       'paragraphs_full_width' => array(
-        'custom_settings' => TRUE,
+        'custom_settings' => FALSE,
       ),
       'paragraphs_left_align' => array(
-        'custom_settings' => TRUE,
+        'custom_settings' => FALSE,
       ),
       'paragraphs_right_align' => array(
-        'custom_settings' => TRUE,
+        'custom_settings' => FALSE,
       ),
       'full' => array(
         'custom_settings' => FALSE,
@@ -240,6 +243,9 @@ function gie_long_form_content_strongarm() {
         'custom_settings' => FALSE,
       ),
       'view_mode_selector' => array(
+        'custom_settings' => FALSE,
+      ),
+      'diff_standard' => array(
         'custom_settings' => FALSE,
       ),
     ),
@@ -295,7 +301,7 @@ function gie_long_form_content_strongarm() {
   $strongarm->value = array(
     'view_modes' => array(
       'paragraphs_editor_preview' => array(
-        'custom_settings' => TRUE,
+        'custom_settings' => FALSE,
       ),
       'full' => array(
         'custom_settings' => FALSE,
@@ -315,6 +321,9 @@ function gie_long_form_content_strongarm() {
       'paragraphs_right_align' => array(
         'custom_settings' => FALSE,
       ),
+      'diff_standard' => array(
+        'custom_settings' => FALSE,
+      ),
     ),
     'extra_fields' => array(
       'form' => array(),
@@ -330,7 +339,7 @@ function gie_long_form_content_strongarm() {
   $strongarm->value = array(
     'view_modes' => array(
       'paragraphs_full_width' => array(
-        'custom_settings' => TRUE,
+        'custom_settings' => FALSE,
       ),
       'full' => array(
         'custom_settings' => FALSE,
@@ -368,7 +377,7 @@ function gie_long_form_content_strongarm() {
   $strongarm->value = array(
     'view_modes' => array(
       'paragraphs_full_width' => array(
-        'custom_settings' => TRUE,
+        'custom_settings' => FALSE,
       ),
       'full' => array(
         'custom_settings' => FALSE,
@@ -444,7 +453,7 @@ function gie_long_form_content_strongarm() {
         'custom_settings' => FALSE,
       ),
       'paragraphs_editor_preview' => array(
-        'custom_settings' => TRUE,
+        'custom_settings' => FALSE,
       ),
       'token' => array(
         'custom_settings' => FALSE,
@@ -459,6 +468,9 @@ function gie_long_form_content_strongarm() {
         'custom_settings' => FALSE,
       ),
       'paragraphs_right_align' => array(
+        'custom_settings' => FALSE,
+      ),
+      'diff_standard' => array(
         'custom_settings' => FALSE,
       ),
     ),
