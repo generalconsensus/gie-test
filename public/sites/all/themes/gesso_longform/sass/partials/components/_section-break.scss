@@ -15,9 +15,10 @@
 }
 
 .section-break__caption {
-	font-size:$font-size-header;
-	text-transform: capitalize;
+	font-size:$font-size-xxxl;
+	text-transform: uppercase;
 	line-height: 1em;
+	padding: 0 15%;
 	&:before {
 		border: 2px $red solid;
 		content:" ";
