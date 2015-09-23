@@ -146,9 +146,6 @@ function gie_homepage_block_info() {
   $blocks['welcome_login'] = array(
     'info' => t('Welcome Login block')
   );
-  $blocks['welcome_extra_text'] = array(
-    'info' => t('Welcome extra text block')
-  );
 
   return $blocks;
 }
@@ -164,6 +161,9 @@ function gie_homepage_block_view($delta = '') {
       if (user_is_anonymous()) {
         //Load in user login form
         $form = drupal_get_form('user_login_block');
+
+        // Prefix the form with the help text
+        $form['#prefix'] = t('<div class="user-login-helptext">Did you receive a username and password? We are in open beta now so you no longer need that! Join the Exchange below!</div>');
 
         // Hide social login and additional links
         unset($form['lr_social_login_links']);
@@ -183,12 +183,6 @@ function gie_homepage_block_view($delta = '') {
 
         $block['subject'] = '';
         $block['content'] = $form;
-      }
-      break;
-    case 'welcome_extra_text':
-      if (user_is_anonymous()) {
-        $block['subject'] = '';
-        $block['content'] = '<div>Did you receive a username and password? We are in open beta now so you no longer need that! Join the Exchange below!</div>';
       }
       break;
   }

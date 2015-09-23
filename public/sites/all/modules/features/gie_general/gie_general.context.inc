@@ -115,12 +115,6 @@ function gie_general_context_default_contexts() {
           'region' => 'navigation',
           'weight' => '-10',
         ),
-        'gie_homepage-welcome_extra_text' => array(
-          'module' => 'gie_homepage',
-          'delta' => 'welcome_extra_text',
-          'region' => 'navigation',
-          'weight' => '-9',
-        ),
         'gie_homepage-welcome_login' => array(
           'module' => 'gie_homepage',
           'delta' => 'welcome_login',
