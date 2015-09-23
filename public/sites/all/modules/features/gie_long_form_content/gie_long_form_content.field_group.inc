@@ -467,8 +467,8 @@ function gie_long_form_content_field_group_info() {
     'label' => 'Pullquote',
     'weight' => '0',
     'children' => array(
-      0 => 'field_para_pullquote_author',
-      1 => 'field_paragraph_pullquote',
+      0 => 'field_paragraph_pullquote',
+      1 => 'field_para_pullquote_author',
     ),
     'format_type' => 'div',
     'format_settings' => array(
@@ -533,9 +533,9 @@ function gie_long_form_content_field_group_info() {
     'label' => 'Section header',
     'weight' => '0',
     'children' => array(
-      0 => 'field_para_sctn_head_image',
-      1 => 'field_para_sctn_head_sctn_title',
-      2 => 'field_para_sctn_head_title',
+      0 => 'field_para_sctn_head_sctn_title',
+      1 => 'field_para_sctn_head_title',
+      2 => 'field_para_sctn_head_image',
     ),
     'format_type' => 'div',
     'format_settings' => array(
