@@ -6,7 +6,10 @@
 	margin: 6em auto;
 	overflow: hidden;
 	padding: 2em;
-	width: 50%;
+	width: 90%;
+	@include breakpoint($mobile-menu-bp, $no-query: true) {
+    width: 50%;
+  }
 	.aside__title {
 		color: $lightred;
 		font-weight: bold;

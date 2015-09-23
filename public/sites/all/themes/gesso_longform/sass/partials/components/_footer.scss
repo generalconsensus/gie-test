@@ -13,6 +13,7 @@
 .footer__download-link {
 	background-color: $lightred;
 	height: 60px;
+	margin: 2em;
 	position: relative;
 	a{
 		color: $white;
@@ -30,14 +31,12 @@
 	}
 }
 .footer__download-image {
-	  border: 2px $lightred solid;
-    background-color: white;
+    @include image-replace(261px, 165px);
+		background: transparent url('../images/footer-fact-sheet.png') no-repeat;
     display: block;
-    height: 150px;
     position: absolute;
     right: 15%;
-    top: 0;
-    width: 150px;
+    top: 65px;
 }
 
 .footer-about {
@@ -52,7 +51,33 @@
 }
 
 .footer__sponsor {
+	width: 60%;
 	float: right;
+	&:before {
+		content: "POWERED BY";
+		display: block;
+		font-style: italic;
+		text-align: right;
+    width: 100%;
+    padding-right: 4em;
+	}
+	.footer-sponsor__image { 
+		display: inline-block;
+		float: left;
+		margin-right: 20px;
+	}
+	.footer-sponsor__image-usaid {
+		@include image-replace(166px, 55px);
+		background: transparent url('../images/logo-usaid.png') no-repeat;
+	}
+	.footer-sponsor__image-usgd {
+		@include image-replace(207px, 54px);
+		background: transparent url('../images/logo-uslab.png') no-repeat;
+	}
+	.footer-sponsor__image-gix {
+		@include image-replace(222px, 63px);
+		background: transparent url('../images/logo-gix.png') no-repeat;
+	}
 }
 
 .footer__menu {

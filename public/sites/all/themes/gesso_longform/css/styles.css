@@ -722,7 +722,12 @@ ul.panels-ipe-linkbar li {
   margin: 6em auto;
   overflow: hidden;
   padding: 2em;
-  width: 50%;
+  width: 90%;
+}
+@media (min-width: 54.375em) {
+  .aside {
+    width: 50%;
+  }
 }
 .aside .aside__title {
   color: #ff1352;
@@ -818,36 +823,67 @@ input.throbbing {
   overflow: hidden;
   padding: 0;
   text-align: center;
+  width: 100%;
 }
 
 .card__item {
   -moz-box-shadow: 0 0px 2px 1px rgba(0, 0, 0, 0.4);
   -webkit-box-shadow: 0 0px 2px 1px rgba(0, 0, 0, 0.4);
   box-shadow: 0 0px 2px 1px rgba(0, 0, 0, 0.4);
-  float: left;
+  margin: 1em auto;
   padding: 0 1em;
   text-align: left;
 }
 .card--has3 .card__item {
-  margin: 0 1%;
-  width: 31.3333%;
+  float: left;
+  width: 100%;
+}
+@media (min-width: 54.375em) {
+  .card--has3 .card__item {
+    margin: 0 1%;
+    width: 31.3333%;
+  }
 }
 .card--has3 .card__item:first-child {
   margin-left: 0;
   margin-right: 2%;
 }
 .card--has3 .card__item:last-child {
-  margin-left: 2%;
-  margin-right: 0;
+  margin-left: 0;
+}
+@media (min-width: 54.375em) {
+  .card--has3 .card__item:last-child {
+    margin-left: 2%;
+    margin-right: 0;
+  }
 }
 .card--has2 .card__item {
-  width: 48%;
+  float: left;
+  width: 100%;
+}
+@media (min-width: 54.375em) {
+  .card--has2 .card__item {
+    width: 48%;
+  }
 }
 .card--has2 .card__item:first-child {
   margin: 0 2% 0 0;
 }
 .card--has2 .card__item:last-child {
-  margin: 0 0 0 2%;
+  margin-left: 0;
+}
+@media (min-width: 54.375em) {
+  .card--has2 .card__item:last-child {
+    margin: 0 0 0 2%;
+  }
+}
+.card--has1 .card__item {
+  width: 50%;
+}
+@media (min-width: 54.375em) {
+  .card--has1 .card__item {
+    width: 50%;
+  }
 }
 
 .card__title {
@@ -963,6 +999,7 @@ input.throbbing {
 .footer__download-link {
   background-color: #ff1352;
   height: 60px;
+  margin: 2em;
   position: relative;
 }
 .footer__download-link a {
@@ -980,14 +1017,20 @@ input.throbbing {
 }
 
 .footer__download-image {
-  border: 2px #ff1352 solid;
-  background-color: white;
+  height: 165px;
+  overflow: hidden;
+  width: 261px;
+  background: transparent url("../images/footer-fact-sheet.png") no-repeat;
   display: block;
-  height: 150px;
   position: absolute;
   right: 15%;
-  top: 0;
-  width: 150px;
+  top: 65px;
+}
+.footer__download-image:before {
+  content: "";
+  display: block;
+  height: 150%;
+  width: 0;
 }
 
 .footer-about {
@@ -999,7 +1042,57 @@ input.throbbing {
 }
 
 .footer__sponsor {
+  width: 60%;
   float: right;
+}
+.footer__sponsor:before {
+  content: "POWERED BY";
+  display: block;
+  font-style: italic;
+  text-align: right;
+  width: 100%;
+  padding-right: 4em;
+}
+.footer__sponsor .footer-sponsor__image {
+  display: inline-block;
+  float: left;
+  margin-right: 20px;
+}
+.footer__sponsor .footer-sponsor__image-usaid {
+  height: 55px;
+  overflow: hidden;
+  width: 166px;
+  background: transparent url("../images/logo-usaid.png") no-repeat;
+}
+.footer__sponsor .footer-sponsor__image-usaid:before {
+  content: "";
+  display: block;
+  height: 150%;
+  width: 0;
+}
+.footer__sponsor .footer-sponsor__image-usgd {
+  height: 54px;
+  overflow: hidden;
+  width: 207px;
+  background: transparent url("../images/logo-uslab.png") no-repeat;
+}
+.footer__sponsor .footer-sponsor__image-usgd:before {
+  content: "";
+  display: block;
+  height: 150%;
+  width: 0;
+}
+.footer__sponsor .footer-sponsor__image-gix {
+  height: 63px;
+  overflow: hidden;
+  width: 222px;
+  background: transparent url("../images/logo-gix.png") no-repeat;
+}
+.footer__sponsor .footer-sponsor__image-gix:before {
+  content: "";
+  display: block;
+  height: 150%;
+  width: 0;
 }
 
 .footer__menu {
