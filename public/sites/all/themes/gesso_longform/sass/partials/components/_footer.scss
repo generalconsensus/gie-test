@@ -39,8 +39,21 @@
     top: 0;
     width: 150px;
 }
-.footer-about {}
-.footer-sponsor {}
+
+.footer-about {
+		float: left;
+		width: 30%;
+		.footer-about__title {
+			text-transform: uppercase;
+		}
+		.footer-about__content {
+			.button--highlight{}
+		}
+}
+
+.footer__sponsor {
+	float: right;
+}
 
 .footer__menu {
 	float: right;

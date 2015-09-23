@@ -968,6 +968,18 @@ input.throbbing {
   width: 150px;
 }
 
+.footer-about {
+  float: left;
+  width: 30%;
+}
+.footer-about .footer-about__title {
+  text-transform: uppercase;
+}
+
+.footer__sponsor {
+  float: right;
+}
+
 .footer__menu {
   float: right;
 }
