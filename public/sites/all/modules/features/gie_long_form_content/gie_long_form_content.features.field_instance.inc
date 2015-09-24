@@ -1478,7 +1478,6 @@ function gie_long_form_content_field_default_field_instances() {
         'module' => 'entityreference',
         'settings' => array(
           'field_delimiter' => '',
-          'link' => 0,
           'linked_field' => array(
             'advanced' => array(
               'class' => '',
@@ -1490,8 +1489,10 @@ function gie_long_form_content_field_default_field_instances() {
             'destination' => '',
             'linked' => 0,
           ),
+          'links' => 1,
+          'view_mode' => 'long_form_asset',
         ),
-        'type' => 'entityreference_label',
+        'type' => 'entityreference_entity_view',
         'weight' => 1,
       ),
       'paragraphs_full_width' => array(

@@ -42,6 +42,7 @@ function gie_long_form_content_views_default_views() {
   $handler->display->display_options['fields']['title']['table'] = 'asset';
   $handler->display->display_options['fields']['title']['field'] = 'title';
   $handler->display->display_options['fields']['title']['asset_tooltip'] = 0;
+  $handler->display->display_options['fields']['title']['link_to_asset'] = FALSE;
   /* Field: Media Asset: Date changed */
   $handler->display->display_options['fields']['changed']['id'] = 'changed';
   $handler->display->display_options['fields']['changed']['table'] = 'asset';
