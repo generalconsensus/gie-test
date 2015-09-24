@@ -119,7 +119,7 @@ function gie_long_form_content_paragraphs_info() {
       'locked' => '1',
     ),
     'long_form_image' => array(
-      'name' => 'Long form image',
+      'name' => 'Long Form Image',
       'bundle' => 'long_form_image',
       'locked' => '1',
     ),
