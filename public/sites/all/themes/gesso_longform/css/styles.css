@@ -747,6 +747,10 @@ ul.panels-ipe-linkbar li {
   padding-top: 1em;
 }
 
+.aside.component {
+  padding: 2em;
+}
+
 #autocomplete {
   border: 1px solid #ccc;
   overflow: hidden;
@@ -1057,6 +1061,8 @@ input.throbbing {
   display: inline-block;
   float: left;
   margin-right: 20px;
+  max-width: 160px;
+  max-height: 55px;
 }
 .footer__sponsor .footer-sponsor__image-usaid {
   height: 55px;
@@ -1189,6 +1195,14 @@ input.throbbing {
   font-weight: bold;
   padding-bottom: 1em;
   text-transform: uppercase;
+}
+.image .image__caption {
+  margin: 0 auto;
+  max-width: 75%;
+}
+.image .asset {
+  background-color: white;
+  border-color: white;
 }
 
 .key-figure {
@@ -1957,13 +1971,28 @@ input.throbbing {
 
 .share-block {
   display: block;
-  width: 100px;
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+@media (min-width: 54.375em) {
+  .share-block {
+    top: 5%;
+    right: 5%;
+    width: 100px;
+  }
 }
 
 .share-block__icon {
   display: block;
+  float: left;
   width: 75px;
   height: 75px;
+}
+@media (min-width: 54.375em) {
+  .share-block__icon {
+    float: none;
+  }
 }
 
 .share-block__icon--share {
