@@ -24,3 +24,14 @@ function gie_long_form_content_update_7001() {
 function gie_long_form_content_update_7002() {
   theme_enable(array('gesso_longform'));
 }
+
+/**
+ * Deleted alignment field from image, aside and text paragraph bundle
+ */
+function gie_long_form_content_update_7003() {
+  $bundles = array('long_form_text', 'long_form_image', 'long_form_aside', 'long_form_key_figure');
+  foreach ($bundles as $bundle) {
+    $instance = field_info_instance('paragraphs_item', 'field_paragraphs_view', $bundle);
+    field_delete_instance($instance);
+  }
+}
