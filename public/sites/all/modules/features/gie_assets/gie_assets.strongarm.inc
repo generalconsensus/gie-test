@@ -136,7 +136,7 @@ function gie_assets_strongarm() {
         'custom_settings' => FALSE,
       ),
       'long_form_asset' => array(
-        'custom_settings' => FALSE,
+        'custom_settings' => TRUE,
       ),
     ),
     'extra_fields' => array(

@@ -35,9 +35,25 @@ function gie_long_form_content_views_api($module = NULL, $api = NULL) {
 function gie_long_form_content_image_default_styles() {
   $styles = array();
 
-  // Exported image style: long_from_section_header.
-  $styles['long_from_section_header'] = array(
-    'label' => 'Long From Section Header',
+  // Exported image style: long_form_image.
+  $styles['long_form_image'] = array(
+    'label' => 'Long form image',
+    'effects' => array(
+      4 => array(
+        'name' => 'image_scale',
+        'data' => array(
+          'width' => 850,
+          'height' => '',
+          'upscale' => 0,
+        ),
+        'weight' => 1,
+      ),
+    ),
+  );
+
+  // Exported image style: long_form_section_header.
+  $styles['long_form_section_header'] = array(
+    'label' => 'Long Form Section Header',
     'effects' => array(
       4 => array(
         'name' => 'image_crop',
