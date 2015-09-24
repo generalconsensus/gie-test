@@ -1,10 +1,5 @@
 .view-homepage-views {
   .page-simple & {
-    @extend %clearfix;
-    margin-top: em(50px, 16px);
-    @include breakpoint($mobile-menu-bp , $no-query: true) {
-    margin-top: em(108px, 16px);
-  }
     > .views-row {
       @include breakpoint($mobile-menu-bp , $no-query: true) {
       width: percentage(1/3);
