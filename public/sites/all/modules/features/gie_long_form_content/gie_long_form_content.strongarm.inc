@@ -278,13 +278,13 @@ function gie_long_form_content_strongarm() {
         'custom_settings' => FALSE,
       ),
       'paragraphs_full_width' => array(
-        'custom_settings' => TRUE,
+        'custom_settings' => FALSE,
       ),
       'paragraphs_left_align' => array(
-        'custom_settings' => TRUE,
+        'custom_settings' => FALSE,
       ),
       'paragraphs_right_align' => array(
-        'custom_settings' => TRUE,
+        'custom_settings' => FALSE,
       ),
     ),
     'extra_fields' => array(
@@ -415,10 +415,10 @@ function gie_long_form_content_strongarm() {
   $strongarm->value = array(
     'view_modes' => array(
       'full' => array(
-        'custom_settings' => TRUE,
+        'custom_settings' => FALSE,
       ),
       'paragraphs_editor_preview' => array(
-        'custom_settings' => TRUE,
+        'custom_settings' => FALSE,
       ),
       'token' => array(
         'custom_settings' => FALSE,

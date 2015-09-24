@@ -527,20 +527,5 @@ function gie_long_form_content_field_default_field_bases() {
     'type' => 'entityreference',
   );
 
-  // Exported field_base: 'field_paragraphs_view'
-  $field_bases['field_paragraphs_view'] = array(
-    'active' => 1,
-    'cardinality' => 1,
-    'deleted' => 0,
-    'entity_types' => array(),
-    'field_name' => 'field_paragraphs_view',
-    'indexes' => array(),
-    'locked' => 0,
-    'module' => 'view_mode_selector',
-    'settings' => array(),
-    'translatable' => 0,
-    'type' => 'view_mode_selector',
-  );
-
   return $field_bases;
 }
