@@ -12,6 +12,23 @@ function gie_long_form_content_ds_field_settings_info() {
 
   $ds_fieldsetting = new stdClass();
   $ds_fieldsetting->api_version = 1;
+  $ds_fieldsetting->id = 'asset|image|long_form_asset';
+  $ds_fieldsetting->entity_type = 'asset';
+  $ds_fieldsetting->bundle = 'image';
+  $ds_fieldsetting->view_mode = 'long_form_asset';
+  $ds_fieldsetting->settings = array(
+    'field_asset_image' => array(
+      'formatter_settings' => array(
+        'ft' => array(
+          'func' => 'theme_ds_field_minimal',
+        ),
+      ),
+    ),
+  );
+  $export['asset|image|long_form_asset'] = $ds_fieldsetting;
+
+  $ds_fieldsetting = new stdClass();
+  $ds_fieldsetting->api_version = 1;
   $ds_fieldsetting->id = 'asset|video|long_form_asset';
   $ds_fieldsetting->entity_type = 'asset';
   $ds_fieldsetting->bundle = 'video';
@@ -170,6 +187,34 @@ function gie_long_form_content_ds_field_settings_info() {
  */
 function gie_long_form_content_ds_layout_settings_info() {
   $export = array();
+
+  $ds_layout = new stdClass();
+  $ds_layout->api_version = 1;
+  $ds_layout->id = 'asset|image|long_form_asset';
+  $ds_layout->entity_type = 'asset';
+  $ds_layout->bundle = 'image';
+  $ds_layout->view_mode = 'long_form_asset';
+  $ds_layout->layout = 'ds_reset';
+  $ds_layout->settings = array(
+    'regions' => array(
+      'ds_content' => array(
+        0 => 'field_asset_image',
+      ),
+    ),
+    'fields' => array(
+      'field_asset_image' => 'ds_content',
+    ),
+    'classes' => array(),
+    'wrappers' => array(
+      'ds_content' => 'div',
+    ),
+    'layout_wrapper' => 'div',
+    'layout_attributes' => '',
+    'layout_attributes_merge' => TRUE,
+    'layout_link_attribute' => FALSE,
+    'layout_link_custom' => '',
+  );
+  $export['asset|image|long_form_asset'] = $ds_layout;
 
   $ds_layout = new stdClass();
   $ds_layout->api_version = 1;
@@ -397,14 +442,12 @@ function gie_long_form_content_ds_layout_settings_info() {
         0 => 'group_image',
         1 => 'field_paragraphs_image',
         2 => 'field_paragraphs_caption',
-        3 => 'field_paragraphs_view',
       ),
     ),
     'fields' => array(
       'group_image' => 'ds_content',
       'field_paragraphs_image' => 'ds_content',
       'field_paragraphs_caption' => 'ds_content',
-      'field_paragraphs_view' => 'ds_content',
     ),
     'classes' => array(),
     'wrappers' => array(

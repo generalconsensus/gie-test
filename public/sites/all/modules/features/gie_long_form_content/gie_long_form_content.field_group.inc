@@ -157,7 +157,6 @@ function gie_long_form_content_field_group_info() {
     'children' => array(
       0 => 'field_paragraphs_caption',
       1 => 'field_paragraphs_image',
-      2 => 'field_paragraphs_view',
     ),
     'format_type' => 'div',
     'format_settings' => array(
