@@ -834,54 +834,54 @@ input.throbbing {
   padding: 0 1em;
   text-align: left;
 }
-.card--has3 .card__item {
+.cols-3 .card__item {
   float: left;
   width: 100%;
 }
 @media (min-width: 54.375em) {
-  .card--has3 .card__item {
+  .cols-3 .card__item {
     margin: 0 1%;
     width: 31.3333%;
   }
 }
-.card--has3 .card__item:first-child {
+.cols-3 .card__item:first-child {
   margin-left: 0;
   margin-right: 2%;
 }
-.card--has3 .card__item:last-child {
+.cols-3 .card__item:last-child {
   margin-left: 0;
 }
 @media (min-width: 54.375em) {
-  .card--has3 .card__item:last-child {
+  .cols-3 .card__item:last-child {
     margin-left: 2%;
     margin-right: 0;
   }
 }
-.card--has2 .card__item {
+.cols-2 .card__item {
   float: left;
   width: 100%;
 }
 @media (min-width: 54.375em) {
-  .card--has2 .card__item {
+  .cols-2 .card__item {
     width: 48%;
   }
 }
-.card--has2 .card__item:first-child {
+.cols-2 .card__item:first-child {
   margin: 0 2% 0 0;
 }
-.card--has2 .card__item:last-child {
+.cols-2 .card__item:last-child {
   margin-left: 0;
 }
 @media (min-width: 54.375em) {
-  .card--has2 .card__item:last-child {
+  .cols-2 .card__item:last-child {
     margin: 0 0 0 2%;
   }
 }
-.card--has1 .card__item {
+.cols-1 .card__item {
   width: 100%;
 }
 @media (min-width: 54.375em) {
-  .card--has1 .card__item {
+  .cols-1 .card__item {
     width: 50%;
   }
 }
