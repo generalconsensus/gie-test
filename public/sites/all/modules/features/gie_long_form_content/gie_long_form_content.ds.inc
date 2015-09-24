@@ -41,6 +41,15 @@ function gie_long_form_content_ds_field_settings_info() {
         ),
       ),
     ),
+    'field_longform_byline' => array(
+      'formatter_settings' => array(
+        'ft' => array(
+          'func' => 'theme_ds_field_expert',
+          'lb' => 'Brought to you by',
+          'lb-col' => TRUE,
+        ),
+      ),
+    ),
   );
   $export['node|long_form_page|full'] = $ds_fieldsetting;
 
@@ -231,10 +240,14 @@ function gie_long_form_content_ds_layout_settings_info() {
   $ds_layout->settings = array(
     'regions' => array(
       'ds_content' => array(
-        0 => 'field_long_form_block',
+        0 => 'field_long_form_subtitle',
+        1 => 'field_longform_byline',
+        2 => 'field_long_form_block',
       ),
     ),
     'fields' => array(
+      'field_long_form_subtitle' => 'ds_content',
+      'field_longform_byline' => 'ds_content',
       'field_long_form_block' => 'ds_content',
     ),
     'classes' => array(),
