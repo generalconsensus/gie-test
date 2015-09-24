@@ -7,7 +7,6 @@ project = gie_long_form_content
 dependencies[] = ckeditor
 dependencies[] = field_group
 dependencies[] = paragraphs
-dependencies[] = view_mode_selector
 features[ckeditor_profile][] = Long_form_filtered
 features[ckeditor_profile][] = Long_form_full
 features[ctools][] = ds:ds:1
