@@ -174,7 +174,7 @@ function gie_long_form_content_field_group_info() {
         'effect' => 'none',
         'speed' => 'none',
       ),
-      'formatter' => 'collapsible',
+      'formatter' => 'open',
     ),
   );
   $export['group_card_item|paragraphs_item|long_form_callout_card|default'] = $field_group;
@@ -206,7 +206,7 @@ function gie_long_form_content_field_group_info() {
         'effect' => 'none',
         'speed' => 'none',
       ),
-      'formatter' => 'collapsible',
+      'formatter' => 'open',
     ),
   );
   $export['group_card|paragraphs_item|long_form_callout_card|default'] = $field_group;
