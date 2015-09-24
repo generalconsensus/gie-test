@@ -41,200 +41,17 @@ function gie_long_form_content_ds_field_settings_info() {
         ),
       ),
     ),
-  );
-  $export['node|long_form_page|full'] = $ds_fieldsetting;
-
-  $ds_fieldsetting = new stdClass();
-  $ds_fieldsetting->api_version = 1;
-  $ds_fieldsetting->id = 'paragraphs_item|long_form_aside|paragraphs_full_width';
-  $ds_fieldsetting->entity_type = 'paragraphs_item';
-  $ds_fieldsetting->bundle = 'long_form_aside';
-  $ds_fieldsetting->view_mode = 'paragraphs_full_width';
-  $ds_fieldsetting->settings = array(
-    'field_paragraph_aside_text' => array(
+    'field_longform_byline' => array(
       'formatter_settings' => array(
         'ft' => array(
           'func' => 'theme_ds_field_expert',
-          'ow' => TRUE,
-          'ow-el' => 'div',
-          'ow-cl' => 'aside__body',
-          'ow-def-cl' => FALSE,
-          'ow-at' => '',
-          'ow-def-at' => FALSE,
-        ),
-      ),
-    ),
-    'field_paragraphs_aside_title' => array(
-      'formatter_settings' => array(
-        'ft' => array(
-          'func' => 'theme_ds_field_expert',
-          'ow' => TRUE,
-          'ow-el' => 'div',
-          'ow-cl' => 'aside__title',
-          'ow-def-cl' => FALSE,
-          'ow-at' => '',
-          'ow-def-at' => FALSE,
+          'lb' => 'Brought to you by',
+          'lb-col' => TRUE,
         ),
       ),
     ),
   );
-  $export['paragraphs_item|long_form_aside|paragraphs_full_width'] = $ds_fieldsetting;
-
-  $ds_fieldsetting = new stdClass();
-  $ds_fieldsetting->api_version = 1;
-  $ds_fieldsetting->id = 'paragraphs_item|long_form_aside|paragraphs_left_align';
-  $ds_fieldsetting->entity_type = 'paragraphs_item';
-  $ds_fieldsetting->bundle = 'long_form_aside';
-  $ds_fieldsetting->view_mode = 'paragraphs_left_align';
-  $ds_fieldsetting->settings = array(
-    'field_paragraph_aside_text' => array(
-      'formatter_settings' => array(
-        'ft' => array(
-          'func' => 'theme_ds_field_expert',
-          'ow' => TRUE,
-          'ow-el' => 'div ',
-          'ow-cl' => 'aside__body',
-          'ow-def-cl' => FALSE,
-          'ow-at' => '',
-          'ow-def-at' => FALSE,
-        ),
-      ),
-    ),
-    'field_paragraphs_aside_title' => array(
-      'formatter_settings' => array(
-        'ft' => array(
-          'func' => 'theme_ds_field_expert',
-          'ow' => TRUE,
-          'ow-el' => 'div',
-          'ow-cl' => 'aside__title',
-          'ow-def-cl' => FALSE,
-          'ow-at' => '',
-          'ow-def-at' => FALSE,
-        ),
-      ),
-    ),
-  );
-  $export['paragraphs_item|long_form_aside|paragraphs_left_align'] = $ds_fieldsetting;
-
-  $ds_fieldsetting = new stdClass();
-  $ds_fieldsetting->api_version = 1;
-  $ds_fieldsetting->id = 'paragraphs_item|long_form_aside|paragraphs_right_align';
-  $ds_fieldsetting->entity_type = 'paragraphs_item';
-  $ds_fieldsetting->bundle = 'long_form_aside';
-  $ds_fieldsetting->view_mode = 'paragraphs_right_align';
-  $ds_fieldsetting->settings = array(
-    'field_paragraph_aside_text' => array(
-      'formatter_settings' => array(
-        'ft' => array(
-          'func' => 'theme_ds_field_expert',
-          'ow' => TRUE,
-          'ow-el' => 'div',
-          'ow-cl' => 'aside__body',
-          'ow-def-cl' => FALSE,
-          'ow-at' => '',
-          'ow-def-at' => FALSE,
-        ),
-      ),
-    ),
-    'field_paragraphs_aside_title' => array(
-      'formatter_settings' => array(
-        'ft' => array(
-          'func' => 'theme_ds_field_expert',
-          'ow' => TRUE,
-          'ow-el' => 'div',
-          'ow-cl' => 'aside__title',
-          'ow-def-cl' => FALSE,
-          'ow-at' => '',
-          'ow-def-at' => FALSE,
-        ),
-      ),
-    ),
-  );
-  $export['paragraphs_item|long_form_aside|paragraphs_right_align'] = $ds_fieldsetting;
-
-  $ds_fieldsetting = new stdClass();
-  $ds_fieldsetting->api_version = 1;
-  $ds_fieldsetting->id = 'paragraphs_item|long_form_image|paragraphs_full_width';
-  $ds_fieldsetting->entity_type = 'paragraphs_item';
-  $ds_fieldsetting->bundle = 'long_form_image';
-  $ds_fieldsetting->view_mode = 'paragraphs_full_width';
-  $ds_fieldsetting->settings = array(
-    'field_paragraphs_caption' => array(
-      'formatter_settings' => array(
-        'ft' => array(
-          'func' => 'theme_ds_field_expert',
-          'ow' => TRUE,
-          'ow-el' => 'div',
-          'ow-cl' => 'image__caption',
-          'ow-def-cl' => FALSE,
-          'ow-at' => '',
-          'ow-def-at' => FALSE,
-        ),
-      ),
-    ),
-    'field_paragraphs_image' => array(
-      'formatter_settings' => array(
-        'ft' => array(
-          'func' => 'theme_ds_field_expert',
-          'ow' => TRUE,
-          'ow-el' => 'div',
-          'ow-cl' => 'image__image',
-          'ow-def-cl' => FALSE,
-          'ow-at' => '',
-          'ow-def-at' => FALSE,
-        ),
-      ),
-    ),
-  );
-  $export['paragraphs_item|long_form_image|paragraphs_full_width'] = $ds_fieldsetting;
-
-  $ds_fieldsetting = new stdClass();
-  $ds_fieldsetting->api_version = 1;
-  $ds_fieldsetting->id = 'paragraphs_item|long_form_image|paragraphs_left_align';
-  $ds_fieldsetting->entity_type = 'paragraphs_item';
-  $ds_fieldsetting->bundle = 'long_form_image';
-  $ds_fieldsetting->view_mode = 'paragraphs_left_align';
-  $ds_fieldsetting->settings = array(
-    'field_paragraphs_image' => array(
-      'formatter_settings' => array(
-        'ft' => array(
-          'func' => 'theme_ds_field_minimal',
-        ),
-      ),
-    ),
-    'field_paragraphs_caption' => array(
-      'formatter_settings' => array(
-        'ft' => array(
-          'func' => 'theme_ds_field_minimal',
-        ),
-      ),
-    ),
-  );
-  $export['paragraphs_item|long_form_image|paragraphs_left_align'] = $ds_fieldsetting;
-
-  $ds_fieldsetting = new stdClass();
-  $ds_fieldsetting->api_version = 1;
-  $ds_fieldsetting->id = 'paragraphs_item|long_form_image|paragraphs_right_align';
-  $ds_fieldsetting->entity_type = 'paragraphs_item';
-  $ds_fieldsetting->bundle = 'long_form_image';
-  $ds_fieldsetting->view_mode = 'paragraphs_right_align';
-  $ds_fieldsetting->settings = array(
-    'field_paragraphs_image' => array(
-      'formatter_settings' => array(
-        'ft' => array(
-          'func' => 'theme_ds_field_minimal',
-        ),
-      ),
-    ),
-    'field_paragraphs_caption' => array(
-      'formatter_settings' => array(
-        'ft' => array(
-          'func' => 'theme_ds_field_minimal',
-        ),
-      ),
-    ),
-  );
-  $export['paragraphs_item|long_form_image|paragraphs_right_align'] = $ds_fieldsetting;
+  $export['node|long_form_page|full'] = $ds_fieldsetting;
 
   $ds_fieldsetting = new stdClass();
   $ds_fieldsetting->api_version = 1;
@@ -243,26 +60,6 @@ function gie_long_form_content_ds_field_settings_info() {
   $ds_fieldsetting->bundle = 'long_form_pullquote';
   $ds_fieldsetting->view_mode = 'default';
   $ds_fieldsetting->settings = array(
-    'field_para_pullquote_author' => array(
-      'formatter_settings' => array(
-        'ft' => array(
-          'func' => 'theme_ds_field_expert',
-          'ow' => TRUE,
-          'ow-el' => 'div',
-          'ow-cl' => 'pullquote__author',
-          'ow-def-cl' => FALSE,
-          'ow-at' => '',
-          'ow-def-at' => FALSE,
-          'fi' => TRUE,
-          'fi-el' => 'cite',
-          'fi-cl' => '',
-          'fi-at' => '',
-          'fi-def-at' => FALSE,
-          'fi-odd-even' => FALSE,
-          'fi-first-last' => FALSE,
-        ),
-      ),
-    ),
     'field_paragraph_pullquote' => array(
       'formatter_settings' => array(
         'ft' => array(
@@ -283,23 +80,28 @@ function gie_long_form_content_ds_field_settings_info() {
         ),
       ),
     ),
-  );
-  $export['paragraphs_item|long_form_pullquote|default'] = $ds_fieldsetting;
-
-  $ds_fieldsetting = new stdClass();
-  $ds_fieldsetting->api_version = 1;
-  $ds_fieldsetting->id = 'paragraphs_item|long_form_section_header_image|paragraphs_full_width';
-  $ds_fieldsetting->entity_type = 'paragraphs_item';
-  $ds_fieldsetting->bundle = 'long_form_section_header_image';
-  $ds_fieldsetting->view_mode = 'paragraphs_full_width';
-  $ds_fieldsetting->settings = array(
-    'field_para_sctn_head_image' => array(
+    'field_para_pullquote_author' => array(
       'formatter_settings' => array(
-        'ft' => array(),
+        'ft' => array(
+          'func' => 'theme_ds_field_expert',
+          'ow' => TRUE,
+          'ow-el' => 'div',
+          'ow-cl' => 'pullquote__author',
+          'ow-def-cl' => FALSE,
+          'ow-at' => '',
+          'ow-def-at' => FALSE,
+          'fi' => TRUE,
+          'fi-el' => 'cite',
+          'fi-cl' => '',
+          'fi-at' => '',
+          'fi-def-at' => FALSE,
+          'fi-odd-even' => FALSE,
+          'fi-first-last' => FALSE,
+        ),
       ),
     ),
   );
-  $export['paragraphs_item|long_form_section_header_image|paragraphs_full_width'] = $ds_fieldsetting;
+  $export['paragraphs_item|long_form_pullquote|default'] = $ds_fieldsetting;
 
   $ds_fieldsetting = new stdClass();
   $ds_fieldsetting->api_version = 1;
@@ -438,10 +240,14 @@ function gie_long_form_content_ds_layout_settings_info() {
   $ds_layout->settings = array(
     'regions' => array(
       'ds_content' => array(
-        0 => 'field_long_form_block',
+        0 => 'field_long_form_subtitle',
+        1 => 'field_longform_byline',
+        2 => 'field_long_form_block',
       ),
     ),
     'fields' => array(
+      'field_long_form_subtitle' => 'ds_content',
+      'field_longform_byline' => 'ds_content',
       'field_long_form_block' => 'ds_content',
     ),
     'classes' => array(),
@@ -490,107 +296,11 @@ function gie_long_form_content_ds_layout_settings_info() {
 
   $ds_layout = new stdClass();
   $ds_layout->api_version = 1;
-  $ds_layout->id = 'paragraphs_item|long_form_aside|paragraphs_full_width';
-  $ds_layout->entity_type = 'paragraphs_item';
-  $ds_layout->bundle = 'long_form_aside';
-  $ds_layout->view_mode = 'paragraphs_full_width';
-  $ds_layout->layout = 'ds_reset';
-  $ds_layout->settings = array(
-    'regions' => array(
-      'ds_content' => array(
-        0 => 'group_aside',
-        1 => 'field_paragraphs_aside_title',
-        2 => 'field_paragraph_aside_text',
-      ),
-    ),
-    'fields' => array(
-      'group_aside' => 'ds_content',
-      'field_paragraphs_aside_title' => 'ds_content',
-      'field_paragraph_aside_text' => 'ds_content',
-    ),
-    'classes' => array(),
-    'wrappers' => array(
-      'ds_content' => 'div',
-    ),
-    'layout_wrapper' => 'div',
-    'layout_attributes' => '',
-    'layout_attributes_merge' => TRUE,
-    'layout_link_attribute' => FALSE,
-    'layout_link_custom' => '',
-  );
-  $export['paragraphs_item|long_form_aside|paragraphs_full_width'] = $ds_layout;
-
-  $ds_layout = new stdClass();
-  $ds_layout->api_version = 1;
-  $ds_layout->id = 'paragraphs_item|long_form_aside|paragraphs_left_align';
-  $ds_layout->entity_type = 'paragraphs_item';
-  $ds_layout->bundle = 'long_form_aside';
-  $ds_layout->view_mode = 'paragraphs_left_align';
-  $ds_layout->layout = 'ds_reset';
-  $ds_layout->settings = array(
-    'regions' => array(
-      'ds_content' => array(
-        0 => 'group_aside',
-        1 => 'field_paragraphs_aside_title',
-        2 => 'field_paragraph_aside_text',
-      ),
-    ),
-    'fields' => array(
-      'group_aside' => 'ds_content',
-      'field_paragraphs_aside_title' => 'ds_content',
-      'field_paragraph_aside_text' => 'ds_content',
-    ),
-    'classes' => array(),
-    'wrappers' => array(
-      'ds_content' => 'div',
-    ),
-    'layout_wrapper' => 'div',
-    'layout_attributes' => '',
-    'layout_attributes_merge' => TRUE,
-    'layout_link_attribute' => FALSE,
-    'layout_link_custom' => '',
-  );
-  $export['paragraphs_item|long_form_aside|paragraphs_left_align'] = $ds_layout;
-
-  $ds_layout = new stdClass();
-  $ds_layout->api_version = 1;
-  $ds_layout->id = 'paragraphs_item|long_form_aside|paragraphs_right_align';
-  $ds_layout->entity_type = 'paragraphs_item';
-  $ds_layout->bundle = 'long_form_aside';
-  $ds_layout->view_mode = 'paragraphs_right_align';
-  $ds_layout->layout = 'ds_reset';
-  $ds_layout->settings = array(
-    'regions' => array(
-      'ds_content' => array(
-        0 => 'group_aside',
-        1 => 'field_paragraphs_aside_title',
-        2 => 'field_paragraph_aside_text',
-      ),
-    ),
-    'fields' => array(
-      'group_aside' => 'ds_content',
-      'field_paragraphs_aside_title' => 'ds_content',
-      'field_paragraph_aside_text' => 'ds_content',
-    ),
-    'classes' => array(),
-    'wrappers' => array(
-      'ds_content' => 'div',
-    ),
-    'layout_wrapper' => 'div',
-    'layout_attributes' => '',
-    'layout_attributes_merge' => TRUE,
-    'layout_link_attribute' => FALSE,
-    'layout_link_custom' => '',
-  );
-  $export['paragraphs_item|long_form_aside|paragraphs_right_align'] = $ds_layout;
-
-  $ds_layout = new stdClass();
-  $ds_layout->api_version = 1;
   $ds_layout->id = 'paragraphs_item|long_form_callout_card|default';
   $ds_layout->entity_type = 'paragraphs_item';
   $ds_layout->bundle = 'long_form_callout_card';
   $ds_layout->view_mode = 'default';
-  $ds_layout->layout = 'ds_reset';
+  $ds_layout->layout = 'ds_1col';
   $ds_layout->settings = array(
     'regions' => array(
       'ds_content' => array(
@@ -620,8 +330,8 @@ function gie_long_form_content_ds_layout_settings_info() {
     ),
     'layout_wrapper' => 'div',
     'layout_attributes' => '',
-    'layout_attributes_merge' => TRUE,
-    'layout_link_attribute' => FALSE,
+    'layout_attributes_merge' => 1,
+    'layout_link_attribute' => '',
     'layout_link_custom' => '',
   );
   $export['paragraphs_item|long_form_callout_card|default'] = $ds_layout;
@@ -710,98 +420,6 @@ function gie_long_form_content_ds_layout_settings_info() {
 
   $ds_layout = new stdClass();
   $ds_layout->api_version = 1;
-  $ds_layout->id = 'paragraphs_item|long_form_image|paragraphs_full_width';
-  $ds_layout->entity_type = 'paragraphs_item';
-  $ds_layout->bundle = 'long_form_image';
-  $ds_layout->view_mode = 'paragraphs_full_width';
-  $ds_layout->layout = 'ds_reset';
-  $ds_layout->settings = array(
-    'regions' => array(
-      'ds_content' => array(
-        0 => 'group_image',
-        1 => 'field_paragraphs_image',
-        2 => 'field_paragraphs_caption',
-      ),
-    ),
-    'fields' => array(
-      'group_image' => 'ds_content',
-      'field_paragraphs_image' => 'ds_content',
-      'field_paragraphs_caption' => 'ds_content',
-    ),
-    'classes' => array(),
-    'wrappers' => array(
-      'ds_content' => 'div',
-    ),
-    'layout_wrapper' => 'div',
-    'layout_attributes' => '',
-    'layout_attributes_merge' => TRUE,
-    'layout_link_attribute' => FALSE,
-    'layout_link_custom' => '',
-  );
-  $export['paragraphs_item|long_form_image|paragraphs_full_width'] = $ds_layout;
-
-  $ds_layout = new stdClass();
-  $ds_layout->api_version = 1;
-  $ds_layout->id = 'paragraphs_item|long_form_image|paragraphs_left_align';
-  $ds_layout->entity_type = 'paragraphs_item';
-  $ds_layout->bundle = 'long_form_image';
-  $ds_layout->view_mode = 'paragraphs_left_align';
-  $ds_layout->layout = 'ds_reset';
-  $ds_layout->settings = array(
-    'regions' => array(
-      'ds_content' => array(
-        0 => 'field_paragraphs_image',
-        1 => 'field_paragraphs_caption',
-      ),
-    ),
-    'fields' => array(
-      'field_paragraphs_image' => 'ds_content',
-      'field_paragraphs_caption' => 'ds_content',
-    ),
-    'classes' => array(),
-    'wrappers' => array(
-      'ds_content' => 'div',
-    ),
-    'layout_wrapper' => 'div',
-    'layout_attributes' => '',
-    'layout_attributes_merge' => TRUE,
-    'layout_link_attribute' => FALSE,
-    'layout_link_custom' => '',
-  );
-  $export['paragraphs_item|long_form_image|paragraphs_left_align'] = $ds_layout;
-
-  $ds_layout = new stdClass();
-  $ds_layout->api_version = 1;
-  $ds_layout->id = 'paragraphs_item|long_form_image|paragraphs_right_align';
-  $ds_layout->entity_type = 'paragraphs_item';
-  $ds_layout->bundle = 'long_form_image';
-  $ds_layout->view_mode = 'paragraphs_right_align';
-  $ds_layout->layout = 'ds_reset';
-  $ds_layout->settings = array(
-    'regions' => array(
-      'ds_content' => array(
-        0 => 'field_paragraphs_image',
-        1 => 'field_paragraphs_caption',
-      ),
-    ),
-    'fields' => array(
-      'field_paragraphs_image' => 'ds_content',
-      'field_paragraphs_caption' => 'ds_content',
-    ),
-    'classes' => array(),
-    'wrappers' => array(
-      'ds_content' => 'div',
-    ),
-    'layout_wrapper' => 'div',
-    'layout_attributes' => '',
-    'layout_attributes_merge' => TRUE,
-    'layout_link_attribute' => FALSE,
-    'layout_link_custom' => '',
-  );
-  $export['paragraphs_item|long_form_image|paragraphs_right_align'] = $ds_layout;
-
-  $ds_layout = new stdClass();
-  $ds_layout->api_version = 1;
   $ds_layout->id = 'paragraphs_item|long_form_key_figure|default';
   $ds_layout->entity_type = 'paragraphs_item';
   $ds_layout->bundle = 'long_form_key_figure';
@@ -831,97 +449,6 @@ function gie_long_form_content_ds_layout_settings_info() {
     'layout_link_custom' => '',
   );
   $export['paragraphs_item|long_form_key_figure|default'] = $ds_layout;
-
-  $ds_layout = new stdClass();
-  $ds_layout->api_version = 1;
-  $ds_layout->id = 'paragraphs_item|long_form_key_figure|paragraphs_full_width';
-  $ds_layout->entity_type = 'paragraphs_item';
-  $ds_layout->bundle = 'long_form_key_figure';
-  $ds_layout->view_mode = 'paragraphs_full_width';
-  $ds_layout->layout = 'ds_reset';
-  $ds_layout->settings = array(
-    'regions' => array(
-      'ds_content' => array(
-        0 => 'group_key_figure',
-        1 => 'field_paragraph_key_figure',
-        2 => 'field_para_key_fig_explanation',
-      ),
-    ),
-    'fields' => array(
-      'group_key_figure' => 'ds_content',
-      'field_paragraph_key_figure' => 'ds_content',
-      'field_para_key_fig_explanation' => 'ds_content',
-    ),
-    'classes' => array(),
-    'wrappers' => array(
-      'ds_content' => 'div',
-    ),
-    'layout_wrapper' => 'div',
-    'layout_attributes' => '',
-    'layout_attributes_merge' => TRUE,
-    'layout_link_attribute' => FALSE,
-    'layout_link_custom' => '',
-  );
-  $export['paragraphs_item|long_form_key_figure|paragraphs_full_width'] = $ds_layout;
-
-  $ds_layout = new stdClass();
-  $ds_layout->api_version = 1;
-  $ds_layout->id = 'paragraphs_item|long_form_key_figure|paragraphs_left_align';
-  $ds_layout->entity_type = 'paragraphs_item';
-  $ds_layout->bundle = 'long_form_key_figure';
-  $ds_layout->view_mode = 'paragraphs_left_align';
-  $ds_layout->layout = 'ds_reset';
-  $ds_layout->settings = array(
-    'regions' => array(
-      'ds_content' => array(
-        0 => 'field_paragraph_key_figure',
-        1 => 'field_para_key_fig_explanation',
-      ),
-    ),
-    'fields' => array(
-      'field_paragraph_key_figure' => 'ds_content',
-      'field_para_key_fig_explanation' => 'ds_content',
-    ),
-    'classes' => array(),
-    'wrappers' => array(),
-    'layout_wrapper' => 'div',
-    'layout_attributes' => '',
-    'layout_attributes_merge' => TRUE,
-    'layout_link_attribute' => FALSE,
-    'layout_link_custom' => '',
-    'layout_disable_css' => FALSE,
-  );
-  $export['paragraphs_item|long_form_key_figure|paragraphs_left_align'] = $ds_layout;
-
-  $ds_layout = new stdClass();
-  $ds_layout->api_version = 1;
-  $ds_layout->id = 'paragraphs_item|long_form_key_figure|paragraphs_right_align';
-  $ds_layout->entity_type = 'paragraphs_item';
-  $ds_layout->bundle = 'long_form_key_figure';
-  $ds_layout->view_mode = 'paragraphs_right_align';
-  $ds_layout->layout = 'ds_reset';
-  $ds_layout->settings = array(
-    'regions' => array(
-      'ds_content' => array(
-        0 => 'field_paragraph_key_figure',
-        1 => 'field_para_key_fig_explanation',
-      ),
-    ),
-    'fields' => array(
-      'field_paragraph_key_figure' => 'ds_content',
-      'field_para_key_fig_explanation' => 'ds_content',
-    ),
-    'classes' => array(),
-    'wrappers' => array(
-      'ds_content' => 'div',
-    ),
-    'layout_wrapper' => 'div',
-    'layout_attributes' => '',
-    'layout_attributes_merge' => TRUE,
-    'layout_link_attribute' => FALSE,
-    'layout_link_custom' => '',
-  );
-  $export['paragraphs_item|long_form_key_figure|paragraphs_right_align'] = $ds_layout;
 
   $ds_layout = new stdClass();
   $ds_layout->api_version = 1;
@@ -957,35 +484,6 @@ function gie_long_form_content_ds_layout_settings_info() {
 
   $ds_layout = new stdClass();
   $ds_layout->api_version = 1;
-  $ds_layout->id = 'paragraphs_item|long_form_pullquote|paragraphs_full_width';
-  $ds_layout->entity_type = 'paragraphs_item';
-  $ds_layout->bundle = 'long_form_pullquote';
-  $ds_layout->view_mode = 'paragraphs_full_width';
-  $ds_layout->layout = 'ds_reset';
-  $ds_layout->settings = array(
-    'regions' => array(
-      'ds_content' => array(
-        0 => 'field_paragraph_pullquote',
-        1 => 'field_para_pullquote_author',
-      ),
-    ),
-    'fields' => array(
-      'field_paragraph_pullquote' => 'ds_content',
-      'field_para_pullquote_author' => 'ds_content',
-    ),
-    'classes' => array(),
-    'wrappers' => array(),
-    'layout_wrapper' => 'div',
-    'layout_attributes' => '',
-    'layout_attributes_merge' => TRUE,
-    'layout_link_attribute' => FALSE,
-    'layout_link_custom' => '',
-    'layout_disable_css' => FALSE,
-  );
-  $export['paragraphs_item|long_form_pullquote|paragraphs_full_width'] = $ds_layout;
-
-  $ds_layout = new stdClass();
-  $ds_layout->api_version = 1;
   $ds_layout->id = 'paragraphs_item|long_form_section_break_image|default';
   $ds_layout->entity_type = 'paragraphs_item';
   $ds_layout->bundle = 'long_form_section_break_image';
@@ -1015,34 +513,6 @@ function gie_long_form_content_ds_layout_settings_info() {
     'layout_link_custom' => '',
   );
   $export['paragraphs_item|long_form_section_break_image|default'] = $ds_layout;
-
-  $ds_layout = new stdClass();
-  $ds_layout->api_version = 1;
-  $ds_layout->id = 'paragraphs_item|long_form_section_break_image|paragraphs_full_width';
-  $ds_layout->entity_type = 'paragraphs_item';
-  $ds_layout->bundle = 'long_form_section_break_image';
-  $ds_layout->view_mode = 'paragraphs_full_width';
-  $ds_layout->layout = 'ds_reset';
-  $ds_layout->settings = array(
-    'regions' => array(
-      'ds_content' => array(
-        0 => 'field_para_section_break_title',
-        1 => 'field_para_section_break_image',
-      ),
-    ),
-    'fields' => array(
-      'field_para_section_break_title' => 'ds_content',
-      'field_para_section_break_image' => 'ds_content',
-    ),
-    'classes' => array(),
-    'wrappers' => array(),
-    'layout_wrapper' => 'div',
-    'layout_attributes' => '',
-    'layout_attributes_merge' => TRUE,
-    'layout_link_attribute' => FALSE,
-    'layout_link_custom' => '',
-  );
-  $export['paragraphs_item|long_form_section_break_image|paragraphs_full_width'] = $ds_layout;
 
   $ds_layout = new stdClass();
   $ds_layout->api_version = 1;
@@ -1080,69 +550,6 @@ function gie_long_form_content_ds_layout_settings_info() {
 
   $ds_layout = new stdClass();
   $ds_layout->api_version = 1;
-  $ds_layout->id = 'paragraphs_item|long_form_section_header_image|form';
-  $ds_layout->entity_type = 'paragraphs_item';
-  $ds_layout->bundle = 'long_form_section_header_image';
-  $ds_layout->view_mode = 'form';
-  $ds_layout->layout = 'ds_reset';
-  $ds_layout->settings = array(
-    'regions' => array(
-      'ds_content' => array(
-        0 => 'field_para_sctn_head_sctn_title',
-        1 => 'field_para_sctn_head_title',
-        2 => 'field_para_sctn_head_image',
-      ),
-    ),
-    'fields' => array(
-      'field_para_sctn_head_sctn_title' => 'ds_content',
-      'field_para_sctn_head_title' => 'ds_content',
-      'field_para_sctn_head_image' => 'ds_content',
-    ),
-    'classes' => array(),
-    'wrappers' => array(),
-    'layout_wrapper' => 'div',
-    'layout_attributes' => '',
-    'layout_attributes_merge' => TRUE,
-    'layout_link_attribute' => FALSE,
-    'layout_link_custom' => '',
-    'layout_disable_css' => FALSE,
-  );
-  $export['paragraphs_item|long_form_section_header_image|form'] = $ds_layout;
-
-  $ds_layout = new stdClass();
-  $ds_layout->api_version = 1;
-  $ds_layout->id = 'paragraphs_item|long_form_section_header_image|paragraphs_full_width';
-  $ds_layout->entity_type = 'paragraphs_item';
-  $ds_layout->bundle = 'long_form_section_header_image';
-  $ds_layout->view_mode = 'paragraphs_full_width';
-  $ds_layout->layout = 'ds_reset';
-  $ds_layout->settings = array(
-    'regions' => array(
-      'ds_content' => array(
-        0 => 'field_para_sctn_head_sctn_title',
-        1 => 'field_para_sctn_head_title',
-        2 => 'field_para_sctn_head_image',
-      ),
-    ),
-    'fields' => array(
-      'field_para_sctn_head_sctn_title' => 'ds_content',
-      'field_para_sctn_head_title' => 'ds_content',
-      'field_para_sctn_head_image' => 'ds_content',
-    ),
-    'classes' => array(),
-    'wrappers' => array(
-      'ds_content' => 'div',
-    ),
-    'layout_wrapper' => 'div',
-    'layout_attributes' => '',
-    'layout_attributes_merge' => TRUE,
-    'layout_link_attribute' => FALSE,
-    'layout_link_custom' => '',
-  );
-  $export['paragraphs_item|long_form_section_header_image|paragraphs_full_width'] = $ds_layout;
-
-  $ds_layout = new stdClass();
-  $ds_layout->api_version = 1;
   $ds_layout->id = 'paragraphs_item|long_form_text|default';
   $ds_layout->entity_type = 'paragraphs_item';
   $ds_layout->bundle = 'long_form_text';
@@ -1170,117 +577,6 @@ function gie_long_form_content_ds_layout_settings_info() {
     'layout_link_custom' => '',
   );
   $export['paragraphs_item|long_form_text|default'] = $ds_layout;
-
-  $ds_layout = new stdClass();
-  $ds_layout->api_version = 1;
-  $ds_layout->id = 'paragraphs_item|long_form_text|full';
-  $ds_layout->entity_type = 'paragraphs_item';
-  $ds_layout->bundle = 'long_form_text';
-  $ds_layout->view_mode = 'full';
-  $ds_layout->layout = 'ds_reset';
-  $ds_layout->settings = array(
-    'regions' => array(
-      'ds_content' => array(
-        0 => 'field_paragraph_text',
-      ),
-    ),
-    'fields' => array(
-      'field_paragraph_text' => 'ds_content',
-    ),
-    'classes' => array(),
-    'wrappers' => array(),
-    'layout_wrapper' => 'div',
-    'layout_attributes' => '',
-    'layout_attributes_merge' => TRUE,
-    'layout_link_attribute' => FALSE,
-    'layout_link_custom' => '',
-    'layout_disable_css' => FALSE,
-  );
-  $export['paragraphs_item|long_form_text|full'] = $ds_layout;
-
-  $ds_layout = new stdClass();
-  $ds_layout->api_version = 1;
-  $ds_layout->id = 'paragraphs_item|long_form_text|paragraphs_full_width';
-  $ds_layout->entity_type = 'paragraphs_item';
-  $ds_layout->bundle = 'long_form_text';
-  $ds_layout->view_mode = 'paragraphs_full_width';
-  $ds_layout->layout = 'ds_reset';
-  $ds_layout->settings = array(
-    'regions' => array(
-      'ds_content' => array(
-        0 => 'field_paragraph_text',
-      ),
-    ),
-    'fields' => array(
-      'field_paragraph_text' => 'ds_content',
-    ),
-    'classes' => array(),
-    'wrappers' => array(
-      'ds_content' => 'div',
-    ),
-    'layout_wrapper' => 'div',
-    'layout_attributes' => '',
-    'layout_attributes_merge' => TRUE,
-    'layout_link_attribute' => FALSE,
-    'layout_link_custom' => '',
-  );
-  $export['paragraphs_item|long_form_text|paragraphs_full_width'] = $ds_layout;
-
-  $ds_layout = new stdClass();
-  $ds_layout->api_version = 1;
-  $ds_layout->id = 'paragraphs_item|long_form_text|paragraphs_left_align';
-  $ds_layout->entity_type = 'paragraphs_item';
-  $ds_layout->bundle = 'long_form_text';
-  $ds_layout->view_mode = 'paragraphs_left_align';
-  $ds_layout->layout = 'ds_reset';
-  $ds_layout->settings = array(
-    'regions' => array(
-      'ds_content' => array(
-        0 => 'field_paragraph_text',
-      ),
-    ),
-    'fields' => array(
-      'field_paragraph_text' => 'ds_content',
-    ),
-    'classes' => array(),
-    'wrappers' => array(
-      'ds_content' => 'div',
-    ),
-    'layout_wrapper' => 'div',
-    'layout_attributes' => '',
-    'layout_attributes_merge' => TRUE,
-    'layout_link_attribute' => FALSE,
-    'layout_link_custom' => '',
-  );
-  $export['paragraphs_item|long_form_text|paragraphs_left_align'] = $ds_layout;
-
-  $ds_layout = new stdClass();
-  $ds_layout->api_version = 1;
-  $ds_layout->id = 'paragraphs_item|long_form_text|paragraphs_right_align';
-  $ds_layout->entity_type = 'paragraphs_item';
-  $ds_layout->bundle = 'long_form_text';
-  $ds_layout->view_mode = 'paragraphs_right_align';
-  $ds_layout->layout = 'ds_reset';
-  $ds_layout->settings = array(
-    'regions' => array(
-      'ds_content' => array(
-        0 => 'field_paragraph_text',
-      ),
-    ),
-    'fields' => array(
-      'field_paragraph_text' => 'ds_content',
-    ),
-    'classes' => array(),
-    'wrappers' => array(
-      'ds_content' => 'div',
-    ),
-    'layout_wrapper' => 'div',
-    'layout_attributes' => '',
-    'layout_attributes_merge' => TRUE,
-    'layout_link_attribute' => FALSE,
-    'layout_link_custom' => '',
-  );
-  $export['paragraphs_item|long_form_text|paragraphs_right_align'] = $ds_layout;
 
   $ds_layout = new stdClass();
   $ds_layout->api_version = 1;
@@ -1314,96 +610,6 @@ function gie_long_form_content_ds_layout_settings_info() {
   );
   $export['paragraphs_item|long_form_video|default'] = $ds_layout;
 
-  $ds_layout = new stdClass();
-  $ds_layout->api_version = 1;
-  $ds_layout->id = 'paragraphs_item|long_form_video|paragraphs_full_width';
-  $ds_layout->entity_type = 'paragraphs_item';
-  $ds_layout->bundle = 'long_form_video';
-  $ds_layout->view_mode = 'paragraphs_full_width';
-  $ds_layout->layout = 'ds_reset';
-  $ds_layout->settings = array(
-    'regions' => array(
-      'ds_content' => array(
-        0 => 'field_paragraphs_video',
-        1 => 'field_paragraphs_caption',
-      ),
-    ),
-    'fields' => array(
-      'field_paragraphs_video' => 'ds_content',
-      'field_paragraphs_caption' => 'ds_content',
-    ),
-    'classes' => array(),
-    'wrappers' => array(
-      'ds_content' => 'div',
-    ),
-    'layout_wrapper' => 'div',
-    'layout_attributes' => '',
-    'layout_attributes_merge' => TRUE,
-    'layout_link_attribute' => FALSE,
-    'layout_link_custom' => '',
-  );
-  $export['paragraphs_item|long_form_video|paragraphs_full_width'] = $ds_layout;
-
-  $ds_layout = new stdClass();
-  $ds_layout->api_version = 1;
-  $ds_layout->id = 'paragraphs_item|long_form_video|paragraphs_left_align';
-  $ds_layout->entity_type = 'paragraphs_item';
-  $ds_layout->bundle = 'long_form_video';
-  $ds_layout->view_mode = 'paragraphs_left_align';
-  $ds_layout->layout = 'ds_reset';
-  $ds_layout->settings = array(
-    'regions' => array(
-      'ds_content' => array(
-        0 => 'field_paragraphs_video',
-        1 => 'field_paragraphs_caption',
-      ),
-    ),
-    'fields' => array(
-      'field_paragraphs_video' => 'ds_content',
-      'field_paragraphs_caption' => 'ds_content',
-    ),
-    'classes' => array(),
-    'wrappers' => array(
-      'ds_content' => 'div',
-    ),
-    'layout_wrapper' => 'div',
-    'layout_attributes' => '',
-    'layout_attributes_merge' => TRUE,
-    'layout_link_attribute' => FALSE,
-    'layout_link_custom' => '',
-  );
-  $export['paragraphs_item|long_form_video|paragraphs_left_align'] = $ds_layout;
-
-  $ds_layout = new stdClass();
-  $ds_layout->api_version = 1;
-  $ds_layout->id = 'paragraphs_item|long_form_video|paragraphs_right_align';
-  $ds_layout->entity_type = 'paragraphs_item';
-  $ds_layout->bundle = 'long_form_video';
-  $ds_layout->view_mode = 'paragraphs_right_align';
-  $ds_layout->layout = 'ds_reset';
-  $ds_layout->settings = array(
-    'regions' => array(
-      'ds_content' => array(
-        0 => 'field_paragraphs_video',
-        1 => 'field_paragraphs_caption',
-      ),
-    ),
-    'fields' => array(
-      'field_paragraphs_video' => 'ds_content',
-      'field_paragraphs_caption' => 'ds_content',
-    ),
-    'classes' => array(),
-    'wrappers' => array(
-      'ds_content' => 'div',
-    ),
-    'layout_wrapper' => 'div',
-    'layout_attributes' => '',
-    'layout_attributes_merge' => TRUE,
-    'layout_link_attribute' => FALSE,
-    'layout_link_custom' => '',
-  );
-  $export['paragraphs_item|long_form_video|paragraphs_right_align'] = $ds_layout;
-
   return $export;
 }
 
@@ -1430,33 +636,6 @@ function gie_long_form_content_ds_view_modes_info() {
     'asset' => 'asset',
   );
   $export['long_form_section_header_image'] = $ds_view_mode;
-
-  $ds_view_mode = new stdClass();
-  $ds_view_mode->api_version = 1;
-  $ds_view_mode->view_mode = 'paragraphs_full_width';
-  $ds_view_mode->label = 'Paragraphs full width';
-  $ds_view_mode->entities = array(
-    'paragraphs_item' => 'paragraphs_item',
-  );
-  $export['paragraphs_full_width'] = $ds_view_mode;
-
-  $ds_view_mode = new stdClass();
-  $ds_view_mode->api_version = 1;
-  $ds_view_mode->view_mode = 'paragraphs_left_align';
-  $ds_view_mode->label = 'Paragraphs left align';
-  $ds_view_mode->entities = array(
-    'paragraphs_item' => 'paragraphs_item',
-  );
-  $export['paragraphs_left_align'] = $ds_view_mode;
-
-  $ds_view_mode = new stdClass();
-  $ds_view_mode->api_version = 1;
-  $ds_view_mode->view_mode = 'paragraphs_right_align';
-  $ds_view_mode->label = 'Paragraphs right align';
-  $ds_view_mode->entities = array(
-    'paragraphs_item' => 'paragraphs_item',
-  );
-  $export['paragraphs_right_align'] = $ds_view_mode;
 
   return $export;
 }

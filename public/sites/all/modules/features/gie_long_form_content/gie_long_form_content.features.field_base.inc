@@ -46,6 +46,46 @@ function gie_long_form_content_field_default_field_bases() {
     'type' => 'paragraphs',
   );
 
+  // Exported field_base: 'field_long_form_subtitle'
+  $field_bases['field_long_form_subtitle'] = array(
+    'active' => 1,
+    'cardinality' => 1,
+    'deleted' => 0,
+    'entity_types' => array(),
+    'field_name' => 'field_long_form_subtitle',
+    'indexes' => array(
+      'format' => array(
+        0 => 'format',
+      ),
+    ),
+    'locked' => 0,
+    'module' => 'text',
+    'settings' => array(),
+    'translatable' => 0,
+    'type' => 'text_long',
+  );
+
+  // Exported field_base: 'field_longform_byline'
+  $field_bases['field_longform_byline'] = array(
+    'active' => 1,
+    'cardinality' => 1,
+    'deleted' => 0,
+    'entity_types' => array(),
+    'field_name' => 'field_longform_byline',
+    'indexes' => array(
+      'format' => array(
+        0 => 'format',
+      ),
+    ),
+    'locked' => 0,
+    'module' => 'text',
+    'settings' => array(
+      'max_length' => 255,
+    ),
+    'translatable' => 0,
+    'type' => 'text',
+  );
+
   // Exported field_base: 'field_para_callout_body_1'
   $field_bases['field_para_callout_body_1'] = array(
     'active' => 1,
@@ -525,21 +565,6 @@ function gie_long_form_content_field_default_field_bases() {
     ),
     'translatable' => 0,
     'type' => 'entityreference',
-  );
-
-  // Exported field_base: 'field_paragraphs_view'
-  $field_bases['field_paragraphs_view'] = array(
-    'active' => 1,
-    'cardinality' => 1,
-    'deleted' => 0,
-    'entity_types' => array(),
-    'field_name' => 'field_paragraphs_view',
-    'indexes' => array(),
-    'locked' => 0,
-    'module' => 'view_mode_selector',
-    'settings' => array(),
-    'translatable' => 0,
-    'type' => 'view_mode_selector',
   );
 
   return $field_bases;
