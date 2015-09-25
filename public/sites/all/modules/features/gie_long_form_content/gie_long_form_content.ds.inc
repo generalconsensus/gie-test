@@ -99,6 +99,11 @@ function gie_long_form_content_ds_field_settings_info() {
         ),
       ),
     ),
+    'field_pdf_screenshot' => array(
+      'formatter_settings' => array(
+        'ft' => array(),
+      ),
+    ),
   );
   $export['node|long_form_page|full'] = $ds_fieldsetting;
 
@@ -579,21 +584,24 @@ function gie_long_form_content_ds_layout_settings_info() {
         0 => 'body',
         1 => 'field_long_form_block',
         2 => 'sharethis',
+        3 => 'field_partner_logos',
       ),
     ),
     'fields' => array(
       'body' => 'ds_content',
       'field_long_form_block' => 'ds_content',
       'sharethis' => 'ds_content',
+      'field_partner_logos' => 'ds_content',
     ),
     'classes' => array(),
-    'wrappers' => array(),
+    'wrappers' => array(
+      'ds_content' => 'div',
+    ),
     'layout_wrapper' => 'div',
     'layout_attributes' => '',
     'layout_attributes_merge' => TRUE,
     'layout_link_attribute' => FALSE,
     'layout_link_custom' => '',
-    'layout_disable_css' => FALSE,
   );
   $export['node|long_form_page|default'] = $ds_layout;
 
@@ -611,6 +619,10 @@ function gie_long_form_content_ds_layout_settings_info() {
         1 => 'field_long_form_subtitle',
         2 => 'field_long_form_block',
         3 => 'field_longform_byline',
+        4 => 'field_pdf_screenshot',
+        5 => 'field_longform_description',
+        6 => 'field_learn_more_link',
+        7 => 'field_partner_logos',
       ),
     ),
     'fields' => array(
@@ -618,6 +630,10 @@ function gie_long_form_content_ds_layout_settings_info() {
       'field_long_form_subtitle' => 'ds_content',
       'field_long_form_block' => 'ds_content',
       'field_longform_byline' => 'ds_content',
+      'field_pdf_screenshot' => 'ds_content',
+      'field_longform_description' => 'ds_content',
+      'field_learn_more_link' => 'ds_content',
+      'field_partner_logos' => 'ds_content',
     ),
     'classes' => array(),
     'wrappers' => array(
