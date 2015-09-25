@@ -274,21 +274,24 @@ function gie_long_form_content_ds_layout_settings_info() {
         0 => 'body',
         1 => 'field_long_form_block',
         2 => 'sharethis',
+        3 => 'field_partner_logos',
       ),
     ),
     'fields' => array(
       'body' => 'ds_content',
       'field_long_form_block' => 'ds_content',
       'sharethis' => 'ds_content',
+      'field_partner_logos' => 'ds_content',
     ),
     'classes' => array(),
-    'wrappers' => array(),
+    'wrappers' => array(
+      'ds_content' => 'div',
+    ),
     'layout_wrapper' => 'div',
     'layout_attributes' => '',
     'layout_attributes_merge' => TRUE,
     'layout_link_attribute' => FALSE,
     'layout_link_custom' => '',
-    'layout_disable_css' => FALSE,
   );
   $export['node|long_form_page|default'] = $ds_layout;
 
@@ -305,12 +308,14 @@ function gie_long_form_content_ds_layout_settings_info() {
         0 => 'field_long_form_subtitle',
         1 => 'field_longform_byline',
         2 => 'field_long_form_block',
+        3 => 'field_partner_logos',
       ),
     ),
     'fields' => array(
       'field_long_form_subtitle' => 'ds_content',
       'field_longform_byline' => 'ds_content',
       'field_long_form_block' => 'ds_content',
+      'field_partner_logos' => 'ds_content',
     ),
     'classes' => array(),
     'wrappers' => array(
