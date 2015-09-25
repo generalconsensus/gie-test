@@ -309,7 +309,8 @@ function gie_long_form_content_ds_layout_settings_info() {
         1 => 'field_longform_byline',
         2 => 'field_long_form_block',
         3 => 'field_longform_description',
-        4 => 'field_partner_logos',
+        4 => 'field_learn_more_link',
+        5 => 'field_partner_logos',
       ),
     ),
     'fields' => array(
@@ -317,6 +318,7 @@ function gie_long_form_content_ds_layout_settings_info() {
       'field_longform_byline' => 'ds_content',
       'field_long_form_block' => 'ds_content',
       'field_longform_description' => 'ds_content',
+      'field_learn_more_link' => 'ds_content',
       'field_partner_logos' => 'ds_content',
     ),
     'classes' => array(),
