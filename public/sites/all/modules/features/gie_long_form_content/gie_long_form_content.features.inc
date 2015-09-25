@@ -35,6 +35,22 @@ function gie_long_form_content_views_api($module = NULL, $api = NULL) {
 function gie_long_form_content_image_default_styles() {
   $styles = array();
 
+  // Exported image style: footer_logo.
+  $styles['footer_logo'] = array(
+    'label' => 'Footer Logo',
+    'effects' => array(
+      5 => array(
+        'name' => 'image_scale',
+        'data' => array(
+          'width' => 160,
+          'height' => 55,
+          'upscale' => 0,
+        ),
+        'weight' => 1,
+      ),
+    ),
+  );
+
   // Exported image style: long_form_image.
   $styles['long_form_image'] = array(
     'label' => 'Long form image',
@@ -94,6 +110,22 @@ function gie_long_form_content_image_default_styles() {
           'alpha' => 50,
         ),
         'weight' => 3,
+      ),
+    ),
+  );
+
+  // Exported image style: pdf_screenshot.
+  $styles['pdf_screenshot'] = array(
+    'label' => 'PDF Screenshot',
+    'effects' => array(
+      6 => array(
+        'name' => 'image_scale',
+        'data' => array(
+          'width' => 250,
+          'height' => 150,
+          'upscale' => 0,
+        ),
+        'weight' => 1,
       ),
     ),
   );
