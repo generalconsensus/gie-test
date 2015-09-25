@@ -67,6 +67,11 @@ function gie_long_form_content_ds_field_settings_info() {
         ),
       ),
     ),
+    'field_pdf_screenshot' => array(
+      'formatter_settings' => array(
+        'ft' => array(),
+      ),
+    ),
   );
   $export['node|long_form_page|full'] = $ds_fieldsetting;
 
@@ -308,15 +313,17 @@ function gie_long_form_content_ds_layout_settings_info() {
         0 => 'field_long_form_subtitle',
         1 => 'field_longform_byline',
         2 => 'field_long_form_block',
-        3 => 'field_longform_description',
-        4 => 'field_learn_more_link',
-        5 => 'field_partner_logos',
+        3 => 'field_pdf_screenshot',
+        4 => 'field_longform_description',
+        5 => 'field_learn_more_link',
+        6 => 'field_partner_logos',
       ),
     ),
     'fields' => array(
       'field_long_form_subtitle' => 'ds_content',
       'field_longform_byline' => 'ds_content',
       'field_long_form_block' => 'ds_content',
+      'field_pdf_screenshot' => 'ds_content',
       'field_longform_description' => 'ds_content',
       'field_learn_more_link' => 'ds_content',
       'field_partner_logos' => 'ds_content',

@@ -291,6 +291,35 @@ function gie_long_form_content_field_group_info() {
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
   $field_group->api_version = 1;
+  $field_group->identifier = 'group_pdf|node|long_form_page|form';
+  $field_group->group_name = 'group_pdf';
+  $field_group->entity_type = 'node';
+  $field_group->bundle = 'long_form_page';
+  $field_group->mode = 'form';
+  $field_group->parent_name = '';
+  $field_group->data = array(
+    'label' => 'PDF',
+    'weight' => '7',
+    'children' => array(
+      0 => 'field_pdf_file',
+      1 => 'field_pdf_screenshot',
+    ),
+    'format_type' => 'fieldset',
+    'format_settings' => array(
+      'label' => 'PDF',
+      'instance_settings' => array(
+        'required_fields' => 1,
+        'classes' => 'group-pdf field-group-fieldset',
+        'description' => '',
+      ),
+      'formatter' => 'open',
+    ),
+  );
+  $export['group_pdf|node|long_form_page|form'] = $field_group;
+
+  $field_group = new stdClass();
+  $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
+  $field_group->api_version = 1;
   $field_group->identifier = 'group_pullquote|paragraphs_item|long_form_pullquote|default';
   $field_group->group_name = 'group_pullquote';
   $field_group->entity_type = 'paragraphs_item';

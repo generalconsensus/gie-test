@@ -162,7 +162,7 @@ function gie_long_form_content_field_default_field_instances() {
         'label' => 'hidden',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 15,
+        'weight' => 17,
       ),
       'teaser' => array(
         'label' => 'hidden',
@@ -251,7 +251,7 @@ function gie_long_form_content_field_default_field_instances() {
           ),
         ),
         'type' => 'link_default',
-        'weight' => 4,
+        'weight' => 5,
       ),
     ),
     'ds_extras_field_template' => '',
@@ -288,7 +288,7 @@ function gie_long_form_content_field_default_field_instances() {
       'module' => 'link',
       'settings' => array(),
       'type' => 'link_field',
-      'weight' => 8,
+      'weight' => 9,
     ),
   );
 
@@ -615,7 +615,7 @@ function gie_long_form_content_field_default_field_instances() {
           ),
         ),
         'type' => 'text_default',
-        'weight' => 3,
+        'weight' => 4,
       ),
     ),
     'ds_extras_field_template' => '',
@@ -673,7 +673,7 @@ function gie_long_form_content_field_default_field_instances() {
         'rows' => 5,
       ),
       'type' => 'text_textarea',
-      'weight' => 7,
+      'weight' => 8,
     ),
   );
 
@@ -724,7 +724,7 @@ function gie_long_form_content_field_default_field_instances() {
           'view_mode' => 'full',
         ),
         'type' => 'field_collection_fields',
-        'weight' => 5,
+        'weight' => 6,
       ),
     ),
     'ds_extras_field_template' => '',
@@ -741,7 +741,153 @@ function gie_long_form_content_field_default_field_instances() {
       'module' => 'field_collection',
       'settings' => array(),
       'type' => 'field_collection_embed',
-      'weight' => 9,
+      'weight' => 10,
+    ),
+  );
+
+  // Exported field_instance: 'node-long_form_page-field_pdf_file'
+  $field_instances['node-long_form_page-field_pdf_file'] = array(
+    'bundle' => 'long_form_page',
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'file',
+        'settings' => array(
+          'field_delimiter' => '',
+          'linked_field' => array(
+            'advanced' => array(
+              'class' => '',
+              'rel' => '',
+              'target' => '',
+              'text' => '',
+              'title' => '',
+            ),
+            'destination' => '',
+            'linked' => 0,
+          ),
+        ),
+        'type' => 'file_default',
+        'weight' => 17,
+      ),
+      'full' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 13,
+      ),
+    ),
+    'ds_extras_field_template' => '',
+    'entity_type' => 'node',
+    'field_name' => 'field_pdf_file',
+    'label' => 'File',
+    'required' => 0,
+    'settings' => array(
+      'description_display' => 'after',
+      'description_field' => 0,
+      'file_directory' => 'long-form-pdfs',
+      'file_extensions' => 'pdf',
+      'max_filesize' => '',
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'file',
+      'settings' => array(
+        'progress_indicator' => 'throbber',
+      ),
+      'type' => 'file_generic',
+      'weight' => 13,
+    ),
+  );
+
+  // Exported field_instance: 'node-long_form_page-field_pdf_screenshot'
+  $field_instances['node-long_form_page-field_pdf_screenshot'] = array(
+    'bundle' => 'long_form_page',
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'image',
+        'settings' => array(
+          'field_delimiter' => '',
+          'image_link' => '',
+          'image_style' => '',
+          'linked_field' => array(
+            'advanced' => array(
+              'class' => '',
+              'rel' => '',
+              'target' => '',
+              'text' => '',
+              'title' => '',
+            ),
+            'destination' => '',
+            'linked' => 0,
+          ),
+        ),
+        'type' => 'image',
+        'weight' => 18,
+      ),
+      'full' => array(
+        'label' => 'hidden',
+        'module' => 'image',
+        'settings' => array(
+          'field_delimiter' => '',
+          'image_link' => '',
+          'image_style' => 'pdf_screenshot',
+          'linked_field' => array(
+            'advanced' => array(
+              'class' => '',
+              'rel' => '',
+              'target' => '',
+              'text' => '',
+              'title' => '',
+            ),
+            'destination' => '[node:field-pdf-file:file:url]',
+            'linked' => 1,
+          ),
+        ),
+        'type' => 'image',
+        'weight' => 3,
+      ),
+    ),
+    'entity_type' => 'node',
+    'field_name' => 'field_pdf_screenshot',
+    'label' => 'Screenshot',
+    'required' => FALSE,
+    'settings' => array(
+      'alt_field' => 0,
+      'alt_field_default' => '',
+      'alt_field_hide' => 0,
+      'alt_field_sync_title' => 0,
+      'alt_field_update_on_edit' => 0,
+      'default_image' => 0,
+      'file_directory' => '',
+      'file_extensions' => 'png gif jpg jpeg',
+      'focus' => 0,
+      'focus_lock_ratio' => 0,
+      'focus_min_size' => '',
+      'max_filesize' => '',
+      'max_resolution' => '',
+      'min_resolution' => '',
+      'random_default' => 0,
+      'random_default_path' => '',
+      'title_field' => 0,
+      'title_field_default' => '',
+      'title_field_hide' => 0,
+      'title_field_update_on_edit' => 0,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'module' => 'image',
+      'settings' => array(
+        'preview_image_style' => 'thumbnail',
+        'progress_indicator' => 'throbber',
+      ),
+      'type' => 'image_image',
+      'weight' => 12,
     ),
   );
 
@@ -762,7 +908,7 @@ function gie_long_form_content_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 14,
+        'weight' => 16,
       ),
     ),
     'entity_type' => 'node',
@@ -3314,6 +3460,7 @@ function gie_long_form_content_field_default_field_instances() {
   t('Byline');
   t('Caption');
   t('Explanation');
+  t('File');
   t('Image');
   t('Key Figure');
   t('Learn More Link');
@@ -3323,6 +3470,7 @@ function gie_long_form_content_field_default_field_instances() {
   t('Partner Logos');
   t('Pullquote Text');
   t('Report Description');
+  t('Screenshot');
   t('Section Title');
   t('Subtitle');
   t('Text');

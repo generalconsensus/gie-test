@@ -114,6 +114,22 @@ function gie_long_form_content_image_default_styles() {
     ),
   );
 
+  // Exported image style: pdf_screenshot.
+  $styles['pdf_screenshot'] = array(
+    'label' => 'PDF Screenshot',
+    'effects' => array(
+      6 => array(
+        'name' => 'image_scale',
+        'data' => array(
+          'width' => 250,
+          'height' => 150,
+          'upscale' => 0,
+        ),
+        'weight' => 1,
+      ),
+    ),
+  );
+
   return $styles;
 }
 
