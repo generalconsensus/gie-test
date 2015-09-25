@@ -14,6 +14,10 @@
   color: $mobile-menu-text-color;
   height: em(55px);
   text-align: center;
+  width: 100%;
+  position: relative;
+  top: 0;
+  z-index: 10;
 }
 
 .mobile-menu__button {
