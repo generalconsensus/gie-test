@@ -717,6 +717,10 @@ ul.panels-ipe-linkbar li {
   padding-top: 1em;
 }
 
+.aside.component {
+  padding: 2em;
+}
+
 #autocomplete {
   border: 1px solid #ccc;
   overflow: hidden;
@@ -810,35 +814,35 @@ input.throbbing {
   padding: 0 1em;
   text-align: left;
 }
-.card--has3 .card__item {
+.cols-3 .card__item {
   float: left;
   width: 100%;
   margin: 0 1%;
   width: 31.3333%;
 }
-.card--has3 .card__item:first-child {
+.cols-3 .card__item:first-child {
   margin-left: 0;
   margin-right: 2%;
 }
-.card--has3 .card__item:last-child {
+.cols-3 .card__item:last-child {
   margin-left: 0;
   margin-left: 2%;
   margin-right: 0;
 }
-.card--has2 .card__item {
+.cols-2 .card__item {
   float: left;
   width: 100%;
   width: 48%;
 }
-.card--has2 .card__item:first-child {
+.cols-2 .card__item:first-child {
   margin: 0 2% 0 0;
 }
-.card--has2 .card__item:last-child {
+.cols-2 .card__item:last-child {
   margin-left: 0;
   margin: 0 0 0 2%;
 }
-.card--has1 .card__item {
-  width: 50%;
+.cols-1 .card__item {
+  width: 100%;
   width: 50%;
 }
 
@@ -977,8 +981,14 @@ input.throbbing {
   background: transparent url("../images/footer-fact-sheet.png") no-repeat;
   display: block;
   position: absolute;
+  left: 25%;
+  right: 25%;
+  z-index: -10;
+  top: 2%;
+  left: initial;
   right: 15%;
   top: 65px;
+  z-index: 0;
 }
 .footer__download-image:before {
   content: "";
@@ -989,6 +999,7 @@ input.throbbing {
 
 .footer-about {
   float: left;
+  width: 100%;
   width: 30%;
 }
 .footer-about .footer-about__title {
@@ -996,8 +1007,10 @@ input.throbbing {
 }
 
 .footer__sponsor {
-  width: 60%;
+  width: 100%;
+  float: left;
   float: right;
+  width: 60%;
 }
 .footer__sponsor:before {
   content: "POWERED BY";
@@ -1009,8 +1022,10 @@ input.throbbing {
 }
 .footer__sponsor .footer-sponsor__image {
   display: inline-block;
-  float: left;
+  float: right;
   margin-right: 20px;
+  max-width: 33.33333%;
+  max-height: 55px;
 }
 .footer__sponsor .footer-sponsor__image-usaid {
   height: 55px;
@@ -1051,9 +1066,11 @@ input.throbbing {
 
 .footer__menu {
   float: right;
+  padding: 2em 0;
 }
 .footer__menu ul {
   list-style: none;
+  width: 100%;
 }
 .footer__menu ul li {
   border-right: 2px solid #4d4d4f;
@@ -1143,6 +1160,14 @@ input.throbbing {
   font-weight: bold;
   padding-bottom: 1em;
   text-transform: uppercase;
+}
+.image .image__caption {
+  margin: 0 auto;
+  max-width: 75%;
+}
+.image .asset {
+  background-color: white;
+  border-color: white;
 }
 
 .key-figure {
@@ -1828,13 +1853,20 @@ input.throbbing {
 
 .share-block {
   display: block;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  top: 5%;
+  right: 5%;
   width: 100px;
 }
 
 .share-block__icon {
   display: block;
+  float: left;
   width: 75px;
   height: 75px;
+  float: none;
 }
 
 .share-block__icon--share {

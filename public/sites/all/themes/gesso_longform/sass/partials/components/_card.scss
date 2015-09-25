@@ -10,17 +10,13 @@
 	width: 100%;
 }
 
-.card--has1 {}
-.card--has2 {}
-.card--has3 {}
-
 .card__item {
 	@include box-shadow(0 0px 2px 1px rgba(0, 0, 0, 0.4));
 	margin: 1em auto;
 	padding: 0 1em;
 	text-align: left;
 	// width: percentage(1/3);
-	.card--has3 & {
+	.cols-3 & {
   	float: left;
 		width: 100%;
    	@include breakpoint($mobile-menu-bp, $no-query: true) {
@@ -39,7 +35,7 @@
      	}
    	}
  	}
- 	.card--has2 & {
+ 	.cols-2 & {
  		float: left;
  		width: 100%;
   	@include breakpoint($mobile-menu-bp, $no-query: true) {
@@ -55,8 +51,8 @@
      	}
    	}
  	}
- 	.card--has1 & {
- 			width: 50%;
+ 	.cols-1 & {
+ 			width: 100%;
  			@include breakpoint($mobile-menu-bp, $no-query: true) {
  				width: 50%;
  			}
