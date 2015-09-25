@@ -37,7 +37,20 @@ function gie_long_form_content_ds_field_settings_info() {
     'field_long_form_block' => array(
       'formatter_settings' => array(
         'ft' => array(
-          'func' => 'theme_ds_field_minimal',
+          'func' => 'theme_ds_field_expert',
+        ),
+      ),
+    ),
+    'field_long_form_subtitle' => array(
+      'formatter_settings' => array(
+        'ft' => array(
+          'func' => 'theme_ds_field_expert',
+          'ow' => TRUE,
+          'ow-el' => 'div',
+          'ow-cl' => 'page-header__headline layout-constrain',
+          'ow-def-cl' => FALSE,
+          'ow-at' => '',
+          'ow-def-at' => FALSE,
         ),
       ),
     ),
@@ -45,8 +58,12 @@ function gie_long_form_content_ds_field_settings_info() {
       'formatter_settings' => array(
         'ft' => array(
           'func' => 'theme_ds_field_expert',
-          'lb' => 'Brought to you by',
-          'lb-col' => TRUE,
+          'ow' => TRUE,
+          'ow-el' => 'div',
+          'ow-cl' => 'page-header__description layout-constrain',
+          'ow-def-cl' => FALSE,
+          'ow-at' => '',
+          'ow-def-at' => FALSE,
         ),
       ),
     ),
@@ -60,26 +77,6 @@ function gie_long_form_content_ds_field_settings_info() {
   $ds_fieldsetting->bundle = 'long_form_pullquote';
   $ds_fieldsetting->view_mode = 'default';
   $ds_fieldsetting->settings = array(
-    'field_paragraph_pullquote' => array(
-      'formatter_settings' => array(
-        'ft' => array(
-          'func' => 'theme_ds_field_expert',
-          'ow' => TRUE,
-          'ow-el' => 'div',
-          'ow-cl' => 'pullquote__text',
-          'ow-def-cl' => FALSE,
-          'ow-at' => '',
-          'ow-def-at' => FALSE,
-          'fi' => TRUE,
-          'fi-el' => 'blockquote',
-          'fi-cl' => '',
-          'fi-at' => '',
-          'fi-def-at' => FALSE,
-          'fi-odd-even' => FALSE,
-          'fi-first-last' => FALSE,
-        ),
-      ),
-    ),
     'field_para_pullquote_author' => array(
       'formatter_settings' => array(
         'ft' => array(
@@ -92,6 +89,26 @@ function gie_long_form_content_ds_field_settings_info() {
           'ow-def-at' => FALSE,
           'fi' => TRUE,
           'fi-el' => 'cite',
+          'fi-cl' => '',
+          'fi-at' => '',
+          'fi-def-at' => FALSE,
+          'fi-odd-even' => FALSE,
+          'fi-first-last' => FALSE,
+        ),
+      ),
+    ),
+    'field_paragraph_pullquote' => array(
+      'formatter_settings' => array(
+        'ft' => array(
+          'func' => 'theme_ds_field_expert',
+          'ow' => TRUE,
+          'ow-el' => 'div',
+          'ow-cl' => 'pullquote__text',
+          'ow-def-cl' => FALSE,
+          'ow-at' => '',
+          'ow-def-at' => FALSE,
+          'fi' => TRUE,
+          'fi-el' => 'blockquote',
           'fi-cl' => '',
           'fi-at' => '',
           'fi-def-at' => FALSE,
@@ -240,15 +257,17 @@ function gie_long_form_content_ds_layout_settings_info() {
   $ds_layout->settings = array(
     'regions' => array(
       'ds_content' => array(
-        0 => 'field_long_form_subtitle',
-        1 => 'field_longform_byline',
+        0 => 'group_page_header',
+        1 => 'field_long_form_subtitle',
         2 => 'field_long_form_block',
+        3 => 'field_longform_byline',
       ),
     ),
     'fields' => array(
+      'group_page_header' => 'ds_content',
       'field_long_form_subtitle' => 'ds_content',
-      'field_longform_byline' => 'ds_content',
       'field_long_form_block' => 'ds_content',
+      'field_longform_byline' => 'ds_content',
     ),
     'classes' => array(),
     'wrappers' => array(
@@ -397,14 +416,12 @@ function gie_long_form_content_ds_layout_settings_info() {
         0 => 'group_image',
         1 => 'field_paragraphs_image',
         2 => 'field_paragraphs_caption',
-        3 => 'field_paragraphs_view',
       ),
     ),
     'fields' => array(
       'group_image' => 'ds_content',
       'field_paragraphs_image' => 'ds_content',
       'field_paragraphs_caption' => 'ds_content',
-      'field_paragraphs_view' => 'ds_content',
     ),
     'classes' => array(),
     'wrappers' => array(

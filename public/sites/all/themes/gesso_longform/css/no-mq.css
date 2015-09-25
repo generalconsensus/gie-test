@@ -981,8 +981,14 @@ input.throbbing {
   background: transparent url("../images/footer-fact-sheet.png") no-repeat;
   display: block;
   position: absolute;
+  left: 25%;
+  right: 25%;
+  z-index: -10;
+  top: 2%;
+  left: initial;
   right: 15%;
   top: 65px;
+  z-index: 0;
 }
 .footer__download-image:before {
   content: "";
@@ -993,6 +999,7 @@ input.throbbing {
 
 .footer-about {
   float: left;
+  width: 100%;
   width: 30%;
 }
 .footer-about .footer-about__title {
@@ -1000,8 +1007,10 @@ input.throbbing {
 }
 
 .footer__sponsor {
-  width: 60%;
+  width: 100%;
+  float: left;
   float: right;
+  width: 60%;
 }
 .footer__sponsor:before {
   content: "POWERED BY";
@@ -1013,9 +1022,9 @@ input.throbbing {
 }
 .footer__sponsor .footer-sponsor__image {
   display: inline-block;
-  float: left;
+  float: right;
   margin-right: 20px;
-  max-width: 160px;
+  max-width: 33.33333%;
   max-height: 55px;
 }
 .footer__sponsor .footer-sponsor__image-usaid {
@@ -1057,9 +1066,11 @@ input.throbbing {
 
 .footer__menu {
   float: right;
+  padding: 2em 0;
 }
 .footer__menu ul {
   list-style: none;
+  width: 100%;
 }
 .footer__menu ul li {
   border-right: 2px solid #4d4d4f;

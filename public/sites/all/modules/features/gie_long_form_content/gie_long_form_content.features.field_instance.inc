@@ -41,7 +41,7 @@ function gie_long_form_content_field_default_field_instances() {
         'label' => 'hidden',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 12,
+        'weight' => 11,
       ),
       'teaser' => array(
         'label' => 'hidden',
@@ -129,10 +129,10 @@ function gie_long_form_content_field_default_field_instances() {
             'destination' => '',
             'linked' => 0,
           ),
-          'view_mode' => 'view_mode_selector',
+          'view_mode' => 'full',
         ),
         'type' => 'paragraphs_view',
-        'weight' => 2,
+        'weight' => 1,
       ),
     ),
     'ds_extras_field_template' => '',
@@ -224,7 +224,7 @@ function gie_long_form_content_field_default_field_instances() {
           ),
         ),
         'type' => 'text_plain',
-        'weight' => 0,
+        'weight' => 1,
       ),
     ),
     'ds_extras_field_template' => '',
@@ -331,7 +331,7 @@ function gie_long_form_content_field_default_field_instances() {
           ),
         ),
         'type' => 'text_plain',
-        'weight' => 1,
+        'weight' => 2,
       ),
     ),
     'ds_extras_field_template' => '',
@@ -1354,7 +1354,7 @@ function gie_long_form_content_field_default_field_instances() {
             'linked' => 0,
           ),
         ),
-        'type' => 'text_default',
+        'type' => 'text_plain',
         'weight' => 2,
       ),
       'paragraphs_full_width' => array(
@@ -1478,7 +1478,6 @@ function gie_long_form_content_field_default_field_instances() {
         'module' => 'entityreference',
         'settings' => array(
           'field_delimiter' => '',
-          'link' => 0,
           'linked_field' => array(
             'advanced' => array(
               'class' => '',
@@ -1490,8 +1489,10 @@ function gie_long_form_content_field_default_field_instances() {
             'destination' => '',
             'linked' => 0,
           ),
+          'links' => TRUE,
+          'view_mode' => 'default',
         ),
-        'type' => 'entityreference_label',
+        'type' => 'entityreference_entity_view',
         'weight' => 1,
       ),
       'paragraphs_full_width' => array(

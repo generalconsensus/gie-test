@@ -31,7 +31,7 @@ function gie_long_form_content_field_group_info() {
       'label' => 'Aside',
       'instance_settings' => array(
         'id' => '',
-        'classes' => 'aside component  aside-center layout-constrain',
+        'classes' => 'aside layout-constrain component',
         'description' => '',
         'show_label' => '0',
         'label_element' => 'h3',
@@ -54,7 +54,7 @@ function gie_long_form_content_field_group_info() {
   $field_group->parent_name = 'group_card';
   $field_group->data = array(
     'label' => 'Card item',
-    'weight' => '7',
+    'weight' => '1',
     'children' => array(
       0 => 'field_para_callout_body_1',
       1 => 'field_para_callout_body_2',
@@ -157,7 +157,6 @@ function gie_long_form_content_field_group_info() {
     'children' => array(
       0 => 'field_paragraphs_caption',
       1 => 'field_paragraphs_image',
-      2 => 'field_paragraphs_view',
     ),
     'format_type' => 'div',
     'format_settings' => array(
@@ -192,17 +191,55 @@ function gie_long_form_content_field_group_info() {
       0 => 'field_para_key_fig_explanation',
       1 => 'field_paragraph_key_figure',
     ),
-    'format_type' => 'fieldset',
+    'format_type' => 'div',
     'format_settings' => array(
       'label' => 'Key Figure',
       'instance_settings' => array(
         'classes' => 'key-figure component',
         'description' => '',
+        'show_label' => 1,
+        'label_element' => 'h3',
+        'effect' => 'none',
+        'speed' => 'fast',
+        'id' => '',
       ),
       'formatter' => 'open',
     ),
   );
   $export['group_key_figure|paragraphs_item|long_form_key_figure|default'] = $field_group;
+
+  $field_group = new stdClass();
+  $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
+  $field_group->api_version = 1;
+  $field_group->identifier = 'group_page_header|node|long_form_page|full';
+  $field_group->group_name = 'group_page_header';
+  $field_group->entity_type = 'node';
+  $field_group->bundle = 'long_form_page';
+  $field_group->mode = 'full';
+  $field_group->parent_name = '';
+  $field_group->data = array(
+    'label' => 'Page Header',
+    'weight' => '0',
+    'children' => array(
+      0 => 'field_long_form_subtitle',
+      1 => 'field_longform_byline',
+    ),
+    'format_type' => 'div',
+    'format_settings' => array(
+      'label' => 'Page Header',
+      'instance_settings' => array(
+        'id' => '',
+        'classes' => 'page-header component',
+        'description' => '',
+        'show_label' => '0',
+        'label_element' => 'h3',
+        'effect' => 'none',
+        'speed' => 'none',
+      ),
+      'formatter' => 'open',
+    ),
+  );
+  $export['group_page_header|node|long_form_page|full'] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -302,8 +339,8 @@ function gie_long_form_content_field_group_info() {
     'label' => 'Pullquote',
     'weight' => '0',
     'children' => array(
-      0 => 'field_paragraph_pullquote',
-      1 => 'field_para_pullquote_author',
+      0 => 'field_para_pullquote_author',
+      1 => 'field_paragraph_pullquote',
     ),
     'format_type' => 'div',
     'format_settings' => array(
@@ -368,9 +405,9 @@ function gie_long_form_content_field_group_info() {
     'label' => 'Section header',
     'weight' => '0',
     'children' => array(
-      0 => 'field_para_sctn_head_sctn_title',
-      1 => 'field_para_sctn_head_title',
-      2 => 'field_para_sctn_head_image',
+      0 => 'field_para_sctn_head_image',
+      1 => 'field_para_sctn_head_sctn_title',
+      2 => 'field_para_sctn_head_title',
     ),
     'format_type' => 'div',
     'format_settings' => array(
