@@ -46,6 +46,72 @@ function gie_long_form_content_field_group_info() {
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
   $field_group->api_version = 1;
+  $field_group->identifier = 'group_card_item_2|paragraphs_item|long_form_callout_card|default';
+  $field_group->group_name = 'group_card_item_2';
+  $field_group->entity_type = 'paragraphs_item';
+  $field_group->bundle = 'long_form_callout_card';
+  $field_group->mode = 'default';
+  $field_group->parent_name = 'group_card';
+  $field_group->data = array(
+    'label' => 'Card item 2',
+    'weight' => '16',
+    'children' => array(
+      0 => 'field_para_callout_body_2',
+      1 => 'field_para_callout_title_2',
+    ),
+    'format_type' => 'div',
+    'format_settings' => array(
+      'label' => 'Card item 2',
+      'instance_settings' => array(
+        'id' => '',
+        'classes' => 'card__item',
+        'description' => '',
+        'show_label' => '0',
+        'label_element' => 'h3',
+        'effect' => 'none',
+        'speed' => 'none',
+      ),
+      'formatter' => 'open',
+    ),
+  );
+  $export['group_card_item_2|paragraphs_item|long_form_callout_card|default'] = $field_group;
+
+  $field_group = new stdClass();
+  $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
+  $field_group->api_version = 1;
+  $field_group->identifier = 'group_card_item_3|paragraphs_item|long_form_callout_card|default';
+  $field_group->group_name = 'group_card_item_3';
+  $field_group->entity_type = 'paragraphs_item';
+  $field_group->bundle = 'long_form_callout_card';
+  $field_group->mode = 'default';
+  $field_group->parent_name = 'group_card';
+  $field_group->data = array(
+    'label' => 'Card item 3',
+    'weight' => '17',
+    'children' => array(
+      0 => 'field_para_callout_body_3',
+      1 => 'field_para_callout_title_3',
+    ),
+    'format_type' => 'div',
+    'format_settings' => array(
+      'label' => 'Card item 3',
+      'instance_settings' => array(
+        'id' => '',
+        'classes' => 'card__item',
+        'description' => '',
+        'show_label' => '0',
+        'label_element' => 'h3',
+        'effect' => 'none',
+        'speed' => 'none',
+      ),
+      'formatter' => 'open',
+    ),
+  );
+  $export['group_card_item_3|paragraphs_item|long_form_callout_card|default'] = $field_group;
+
+  $field_group = new stdClass();
+  $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
+  $field_group->api_version = 1;
   $field_group->identifier = 'group_card_item|paragraphs_item|long_form_callout_card|default';
   $field_group->group_name = 'group_card_item';
   $field_group->entity_type = 'paragraphs_item';
@@ -54,21 +120,17 @@ function gie_long_form_content_field_group_info() {
   $field_group->parent_name = 'group_card';
   $field_group->data = array(
     'label' => 'Card item',
-    'weight' => '1',
+    'weight' => '15',
     'children' => array(
       0 => 'field_para_callout_body_1',
-      1 => 'field_para_callout_body_2',
-      2 => 'field_para_callout_body_3',
-      3 => 'field_para_callout_title_1',
-      4 => 'field_para_callout_title_2',
-      5 => 'field_para_callout_title_3',
+      1 => 'field_para_callout_title_1',
     ),
     'format_type' => 'div',
     'format_settings' => array(
       'label' => 'Card item',
       'instance_settings' => array(
         'id' => '',
-        'classes' => 'card-item',
+        'classes' => 'card__item',
         'description' => '',
         'show_label' => '0',
         'label_element' => 'h3',
@@ -94,13 +156,15 @@ function gie_long_form_content_field_group_info() {
     'weight' => '0',
     'children' => array(
       0 => 'group_card_item',
+      1 => 'group_card_item_2',
+      2 => 'group_card_item_3',
     ),
     'format_type' => 'div',
     'format_settings' => array(
       'label' => 'Card',
       'instance_settings' => array(
         'id' => '',
-        'classes' => 'card component',
+        'classes' => 'card component layout-constrain',
         'description' => '',
         'show_label' => '0',
         'label_element' => 'h3',
