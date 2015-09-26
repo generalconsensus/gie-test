@@ -1386,7 +1386,7 @@ function gie_long_form_content_field_default_field_instances() {
           ),
         ),
         'type' => 'text_default',
-        'weight' => 11,
+        'weight' => 12,
       ),
       'paragraphs_editor_preview' => array(
         'label' => 'above',
@@ -1502,7 +1502,7 @@ function gie_long_form_content_field_default_field_instances() {
           ),
         ),
         'type' => 'text_default',
-        'weight' => 13,
+        'weight' => 15,
       ),
       'paragraphs_editor_preview' => array(
         'label' => 'above',
@@ -1697,7 +1697,7 @@ function gie_long_form_content_field_default_field_instances() {
           ),
         ),
         'type' => 'text_default',
-        'weight' => 10,
+        'weight' => 11,
       ),
       'paragraphs_editor_preview' => array(
         'label' => 'above',
@@ -1776,7 +1776,7 @@ function gie_long_form_content_field_default_field_instances() {
           ),
         ),
         'type' => 'text_default',
-        'weight' => 12,
+        'weight' => 14,
       ),
       'paragraphs_editor_preview' => array(
         'label' => 'above',
