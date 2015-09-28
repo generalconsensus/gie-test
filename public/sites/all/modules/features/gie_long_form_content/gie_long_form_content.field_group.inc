@@ -179,6 +179,38 @@ function gie_long_form_content_field_group_info() {
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
   $field_group->api_version = 1;
+  $field_group->identifier = 'group_footer|node|long_form_page|full';
+  $field_group->group_name = 'group_footer';
+  $field_group->entity_type = 'node';
+  $field_group->bundle = 'long_form_page';
+  $field_group->mode = 'full';
+  $field_group->parent_name = '';
+  $field_group->data = array(
+    'label' => 'Footer',
+    'weight' => '5',
+    'children' => array(
+      0 => 'field_partner_logos',
+    ),
+    'format_type' => 'div',
+    'format_settings' => array(
+      'label' => 'Footer',
+      'instance_settings' => array(
+        'id' => '',
+        'classes' => 'footer',
+        'description' => '',
+        'show_label' => '0',
+        'label_element' => 'h3',
+        'effect' => 'none',
+        'speed' => 'none',
+      ),
+      'formatter' => 'open',
+    ),
+  );
+  $export['group_footer|node|long_form_page|full'] = $field_group;
+
+  $field_group = new stdClass();
+  $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
+  $field_group->api_version = 1;
   $field_group->identifier = 'group_fullwidth_header|paragraphs_item|long_form_section_break_image|default';
   $field_group->group_name = 'group_fullwidth_header';
   $field_group->entity_type = 'paragraphs_item';

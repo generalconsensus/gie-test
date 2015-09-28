@@ -1155,6 +1155,7 @@ input.throbbing {
 }
 
 .image {
+  position: relative;
   text-align: center;
 }
 .image .image__title {
@@ -1835,8 +1836,20 @@ input.throbbing {
   display: block;
   margin: 5em 0;
   overflow: hidden;
+  position: relative;
   padding: 8em 1em 10em 1em;
   text-align: left;
+  z-index: -2;
+}
+.section-header .asset {
+  background-color: transparent;
+}
+
+.section-header__image {
+  left: 0;
+  position: absolute;
+  top: 0;
+  z-index: -1;
 }
 
 .section-header__title {
