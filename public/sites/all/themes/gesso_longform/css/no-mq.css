@@ -1155,6 +1155,7 @@ input.throbbing {
 }
 
 .image {
+  position: relative;
   text-align: center;
 }
 .image .image__title {
