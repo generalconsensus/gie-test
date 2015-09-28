@@ -7,6 +7,14 @@
   padding: 8em 0 5em 0;
   position: relative;
   text-align: center;
+  z-index: -2;
+}
+
+.page-header__image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
 }
 
 .page-header__subtext {
