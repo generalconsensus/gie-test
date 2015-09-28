@@ -10,7 +10,7 @@
 	}
 }
 
-.footer__download-link {
+.footer__download-link {  
 	background-color: $lightred;
 	height: 60px;
 	margin: 2em;
@@ -46,7 +46,7 @@
   }
 }
 
-.footer-about {
+.footer-about {  //block--pane-about-the-exchange on LIVE site
 		float: left;
 		width: 100%;
 		@include breakpoint($mobile-menu-bp, $no-query: true) {
@@ -96,7 +96,7 @@
 	}
 }
 
-.footer__menu {
+.footer__menu {  // block--menu-menu-sub-footer-menu 
 	float: right;
 	padding: 2em 0;
 	ul {
