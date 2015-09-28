@@ -840,7 +840,7 @@ input.throbbing {
 }
 .cols-3 .card__item {
   float: left;
-  width: 99%;
+  width: 98%;
   margin-left: 1%;
 }
 @media (min-width: 54.375em) {
@@ -854,7 +854,7 @@ input.throbbing {
   margin-right: 1%;
 }
 .cols-3 .card__item:last-child {
-  margin-left: 0;
+  margin-left: 1%;
 }
 @media (min-width: 54.375em) {
   .cols-3 .card__item:last-child {
@@ -864,7 +864,7 @@ input.throbbing {
 }
 .cols-2 .card__item {
   float: left;
-  width: 100%;
+  width: 98%;
 }
 @media (min-width: 54.375em) {
   .cols-2 .card__item {
