@@ -320,6 +320,7 @@ caption, .caption {
 caption:before, .caption:before {
   content: "Caption:  ";
   font-weight: bold;
+  float: left;
 }
 caption:after, .caption:after {
   border-bottom: 1px solid #d31145;
