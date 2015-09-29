@@ -78,6 +78,29 @@ function gie_innovation_taxonomy_default_vocabularies() {
         ),
       ),
     ),
+    'sustainable_development_goals' => array(
+      'name' => 'Sustainable Development Goals',
+      'machine_name' => 'sustainable_development_goals',
+      'description' => '',
+      'hierarchy' => 0,
+      'module' => 'taxonomy',
+      'weight' => 0,
+      'rdf_mapping' => array(
+        'rdftype' => array(
+          0 => 'skos:ConceptScheme',
+        ),
+        'name' => array(
+          'predicates' => array(
+            0 => 'dc:title',
+          ),
+        ),
+        'description' => array(
+          'predicates' => array(
+            0 => 'rdfs:comment',
+          ),
+        ),
+      ),
+    ),
     'testing_phase' => array(
       'name' => 'Testing Phase',
       'machine_name' => 'testing_phase',
