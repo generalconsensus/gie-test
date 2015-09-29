@@ -477,5 +477,493 @@ function gie_innovation_panelizer_defaults() {
   $panelizer->display = $display;
   $export['node:innovation:default'] = $panelizer;
 
+  $panelizer = new stdClass();
+  $panelizer->disabled = FALSE; /* Edit this to true to make a default panelizer disabled initially */
+  $panelizer->api_version = 1;
+  $panelizer->name = 'taxonomy_term:sustainable_development_goals:default';
+  $panelizer->title = 'Default';
+  $panelizer->panelizer_type = 'taxonomy_term';
+  $panelizer->panelizer_key = 'sustainable_development_goals';
+  $panelizer->no_blocks = FALSE;
+  $panelizer->css_id = '';
+  $panelizer->css = '';
+  $panelizer->pipeline = 'standard';
+  $panelizer->contexts = array();
+  $panelizer->relationships = array();
+  $panelizer->access = array();
+  $panelizer->view_mode = 'page_manager';
+  $panelizer->css_class = '';
+  $panelizer->title_element = 'H2';
+  $panelizer->link_to_entity = TRUE;
+  $panelizer->extra = array();
+  $display = new panels_display();
+  $display->layout = 'sidebar_left';
+  $display->layout_settings = array();
+  $display->panel_settings = array(
+    'style_settings' => array(
+      'default' => NULL,
+      'center' => NULL,
+      'preface' => NULL,
+      'title' => NULL,
+      'sidebar' => NULL,
+      'main' => NULL,
+    ),
+  );
+  $display->cache = array();
+  $display->title = '';
+  $display->uuid = '57702414-c21a-4de7-9399-cf71a49ccd86';
+  $display->content = array();
+  $display->panels = array();
+    $pane = new stdClass();
+    $pane->pid = 'new-62e9cd73-fb4e-4f57-aa9d-6b87efc2c36e';
+    $pane->panel = 'main';
+    $pane->type = 'views_panes';
+    $pane->subtype = 'sdg_listing_page-sdg';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array(
+      'arguments' => array(
+        'field_term_sector' => '',
+      ),
+      'exposed' => array(
+        'field_term_sector' => array(
+          283 => '283',
+          287 => '287',
+        ),
+      ),
+    );
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
+    $pane->css = array();
+    $pane->extras = array();
+    $pane->position = 0;
+    $pane->locks = array();
+    $pane->uuid = '62e9cd73-fb4e-4f57-aa9d-6b87efc2c36e';
+    $display->content['new-62e9cd73-fb4e-4f57-aa9d-6b87efc2c36e'] = $pane;
+    $display->panels['main'][0] = 'new-62e9cd73-fb4e-4f57-aa9d-6b87efc2c36e';
+    $pane = new stdClass();
+    $pane->pid = 'new-29433409-1ff4-4c7d-ae71-f4e9bbaa4e62';
+    $pane->panel = 'sidebar';
+    $pane->type = 'pane';
+    $pane->subtype = 'facet_pane';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array(
+      'override_title' => 1,
+      'override_title_text' => '',
+      'override_title_heading' => 'h2',
+    );
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
+    $pane->css = array();
+    $pane->extras = array();
+    $pane->position = 0;
+    $pane->locks = array();
+    $pane->uuid = '29433409-1ff4-4c7d-ae71-f4e9bbaa4e62';
+    $display->content['new-29433409-1ff4-4c7d-ae71-f4e9bbaa4e62'] = $pane;
+    $display->panels['sidebar'][0] = 'new-29433409-1ff4-4c7d-ae71-f4e9bbaa4e62';
+    $pane = new stdClass();
+    $pane->pid = 'new-1db2605a-65e4-4d2b-b331-440485a5b1d1';
+    $pane->panel = 'sidebar';
+    $pane->type = 'block';
+    $pane->subtype = 'facetapi-6vSkkV34eaABxf2XK4OOc36N6IAyohwH';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array(
+      'override_title' => 1,
+      'override_title_text' => 'Assistance Sought',
+      'override_title_heading' => 'h2',
+    );
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
+    $pane->css = array();
+    $pane->extras = array();
+    $pane->position = 1;
+    $pane->locks = array();
+    $pane->uuid = '1db2605a-65e4-4d2b-b331-440485a5b1d1';
+    $display->content['new-1db2605a-65e4-4d2b-b331-440485a5b1d1'] = $pane;
+    $display->panels['sidebar'][1] = 'new-1db2605a-65e4-4d2b-b331-440485a5b1d1';
+    $pane = new stdClass();
+    $pane->pid = 'new-533c39a6-d7ad-435c-af92-a6f9eccd003a';
+    $pane->panel = 'sidebar';
+    $pane->type = 'block';
+    $pane->subtype = 'facetapi-I2gfwaROyft1BxMlakuZNCCqh5BFwoXV';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array(
+      'override_title' => 1,
+      'override_title_text' => 'Sectors',
+      'override_title_heading' => 'h2',
+    );
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
+    $pane->css = array();
+    $pane->extras = array();
+    $pane->position = 2;
+    $pane->locks = array();
+    $pane->uuid = '533c39a6-d7ad-435c-af92-a6f9eccd003a';
+    $display->content['new-533c39a6-d7ad-435c-af92-a6f9eccd003a'] = $pane;
+    $display->panels['sidebar'][2] = 'new-533c39a6-d7ad-435c-af92-a6f9eccd003a';
+    $pane = new stdClass();
+    $pane->pid = 'new-0a8199d0-3e6e-453f-a2a1-52ba4b59cfd3';
+    $pane->panel = 'sidebar';
+    $pane->type = 'block';
+    $pane->subtype = 'facetapi-bCPjY27nCxBH4nkThoEY1wSC0gxiyVjh';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array(
+      'override_title' => 1,
+      'override_title_text' => 'Topics',
+      'override_title_heading' => 'h2',
+    );
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
+    $pane->css = array();
+    $pane->extras = array();
+    $pane->position = 3;
+    $pane->locks = array();
+    $pane->uuid = '0a8199d0-3e6e-453f-a2a1-52ba4b59cfd3';
+    $display->content['new-0a8199d0-3e6e-453f-a2a1-52ba4b59cfd3'] = $pane;
+    $display->panels['sidebar'][3] = 'new-0a8199d0-3e6e-453f-a2a1-52ba4b59cfd3';
+    $pane = new stdClass();
+    $pane->pid = 'new-ff7a5cbe-83f7-4438-9bf8-2057c29ec6b2';
+    $pane->panel = 'sidebar';
+    $pane->type = 'block';
+    $pane->subtype = 'facetapi-jWOrowuJcP6z1XdY0q08kJJiGa7o50Ot';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array(
+      'override_title' => 1,
+      'override_title_text' => 'Stage of Innovation',
+      'override_title_heading' => 'h2',
+    );
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
+    $pane->css = array();
+    $pane->extras = array();
+    $pane->position = 4;
+    $pane->locks = array();
+    $pane->uuid = 'ff7a5cbe-83f7-4438-9bf8-2057c29ec6b2';
+    $display->content['new-ff7a5cbe-83f7-4438-9bf8-2057c29ec6b2'] = $pane;
+    $display->panels['sidebar'][4] = 'new-ff7a5cbe-83f7-4438-9bf8-2057c29ec6b2';
+    $pane = new stdClass();
+    $pane->pid = 'new-12cdd59a-efad-4d51-b559-b1f8bb5f4d96';
+    $pane->panel = 'sidebar';
+    $pane->type = 'block';
+    $pane->subtype = 'facetapi-NFNUK8O1tQr4zVcwWwH4RFAgN7zCSaKE';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array(
+      'override_title' => 1,
+      'override_title_text' => 'Type of Innovation',
+      'override_title_heading' => 'h2',
+    );
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
+    $pane->css = array();
+    $pane->extras = array();
+    $pane->position = 5;
+    $pane->locks = array();
+    $pane->uuid = '12cdd59a-efad-4d51-b559-b1f8bb5f4d96';
+    $display->content['new-12cdd59a-efad-4d51-b559-b1f8bb5f4d96'] = $pane;
+    $display->panels['sidebar'][5] = 'new-12cdd59a-efad-4d51-b559-b1f8bb5f4d96';
+    $pane = new stdClass();
+    $pane->pid = 'new-e77aada7-964a-4447-8c74-12c37213f872';
+    $pane->panel = 'sidebar';
+    $pane->type = 'block';
+    $pane->subtype = 'facetapi-pzIdAjEwyyn4wyhOsDVQbjEGiyDhivpx';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array(
+      'override_title' => 1,
+      'override_title_text' => 'Program',
+      'override_title_heading' => 'h2',
+    );
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
+    $pane->css = array();
+    $pane->extras = array();
+    $pane->position = 6;
+    $pane->locks = array();
+    $pane->uuid = 'e77aada7-964a-4447-8c74-12c37213f872';
+    $display->content['new-e77aada7-964a-4447-8c74-12c37213f872'] = $pane;
+    $display->panels['sidebar'][6] = 'new-e77aada7-964a-4447-8c74-12c37213f872';
+    $pane = new stdClass();
+    $pane->pid = 'new-3a73eaeb-0bf0-4614-8e6b-57beb55b9b81';
+    $pane->panel = 'sidebar';
+    $pane->type = 'block';
+    $pane->subtype = 'facetapi-DWXXyf4Sf7KbO6qt5tvdO201sGvEOwbE';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array(
+      'override_title' => 1,
+      'override_title_text' => 'Regions',
+      'override_title_heading' => 'h2',
+    );
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
+    $pane->css = array();
+    $pane->extras = array();
+    $pane->position = 7;
+    $pane->locks = array();
+    $pane->uuid = '3a73eaeb-0bf0-4614-8e6b-57beb55b9b81';
+    $display->content['new-3a73eaeb-0bf0-4614-8e6b-57beb55b9b81'] = $pane;
+    $display->panels['sidebar'][7] = 'new-3a73eaeb-0bf0-4614-8e6b-57beb55b9b81';
+    $pane = new stdClass();
+    $pane->pid = 'new-e13a0552-d657-4de0-8973-b13dbba827dd';
+    $pane->panel = 'sidebar';
+    $pane->type = 'block';
+    $pane->subtype = 'facetapi-Ht1zazGYQlFq0mTXgeskLoTnytOD5w8k';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array(
+      'override_title' => 1,
+      'override_title_text' => 'Country Created In',
+      'override_title_heading' => 'h2',
+    );
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
+    $pane->css = array();
+    $pane->extras = array();
+    $pane->position = 8;
+    $pane->locks = array();
+    $pane->uuid = 'e13a0552-d657-4de0-8973-b13dbba827dd';
+    $display->content['new-e13a0552-d657-4de0-8973-b13dbba827dd'] = $pane;
+    $display->panels['sidebar'][8] = 'new-e13a0552-d657-4de0-8973-b13dbba827dd';
+    $pane = new stdClass();
+    $pane->pid = 'new-e1f8cc64-5636-473a-8c01-712553f9e4b4';
+    $pane->panel = 'sidebar';
+    $pane->type = 'block';
+    $pane->subtype = 'facetapi-25DXP0VUKOVQKQuwGI4a2R6StCZmLaIE';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array(
+      'override_title' => 1,
+      'override_title_text' => 'Country Implemented In',
+      'override_title_heading' => 'h2',
+    );
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
+    $pane->css = array();
+    $pane->extras = array();
+    $pane->position = 9;
+    $pane->locks = array();
+    $pane->uuid = 'e1f8cc64-5636-473a-8c01-712553f9e4b4';
+    $display->content['new-e1f8cc64-5636-473a-8c01-712553f9e4b4'] = $pane;
+    $display->panels['sidebar'][9] = 'new-e1f8cc64-5636-473a-8c01-712553f9e4b4';
+    $pane = new stdClass();
+    $pane->pid = 'new-6dffc910-d61f-4d79-aa06-e16614544bb0';
+    $pane->panel = 'sidebar';
+    $pane->type = 'block';
+    $pane->subtype = 'facetapi-uR9FoZDVqXbAs25w1uggMNvmo0UEboLf';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array(
+      'override_title' => 1,
+      'override_title_text' => 'Evidence Available?',
+      'override_title_heading' => 'h2',
+    );
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
+    $pane->css = array();
+    $pane->extras = array();
+    $pane->position = 10;
+    $pane->locks = array();
+    $pane->uuid = '6dffc910-d61f-4d79-aa06-e16614544bb0';
+    $display->content['new-6dffc910-d61f-4d79-aa06-e16614544bb0'] = $pane;
+    $display->panels['sidebar'][10] = 'new-6dffc910-d61f-4d79-aa06-e16614544bb0';
+    $pane = new stdClass();
+    $pane->pid = 'new-b9242630-2698-45b1-b031-08c273bb5fef';
+    $pane->panel = 'sidebar';
+    $pane->type = 'block';
+    $pane->subtype = 'facetapi-I8HfvJeK0DfBGyCDWBxx7z5sby7VftjQ';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array(
+      'override_title' => 1,
+      'override_title_text' => 'References Available?',
+      'override_title_heading' => 'h2',
+    );
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
+    $pane->css = array();
+    $pane->extras = array();
+    $pane->position = 11;
+    $pane->locks = array();
+    $pane->uuid = 'b9242630-2698-45b1-b031-08c273bb5fef';
+    $display->content['new-b9242630-2698-45b1-b031-08c273bb5fef'] = $pane;
+    $display->panels['sidebar'][11] = 'new-b9242630-2698-45b1-b031-08c273bb5fef';
+    $pane = new stdClass();
+    $pane->pid = 'new-529436f9-7c91-43bb-9d2c-f9eec33455da';
+    $pane->panel = 'sidebar';
+    $pane->type = 'block';
+    $pane->subtype = 'facetapi-PcG2dvVTqp1uY6fcA8KAdTP2cPwseIaj';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array(
+      'override_title' => 1,
+      'override_title_text' => 'Organizations',
+      'override_title_heading' => 'h2',
+    );
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
+    $pane->css = array();
+    $pane->extras = array();
+    $pane->position = 12;
+    $pane->locks = array();
+    $pane->uuid = '529436f9-7c91-43bb-9d2c-f9eec33455da';
+    $display->content['new-529436f9-7c91-43bb-9d2c-f9eec33455da'] = $pane;
+    $display->panels['sidebar'][12] = 'new-529436f9-7c91-43bb-9d2c-f9eec33455da';
+    $pane = new stdClass();
+    $pane->pid = 'new-5fe00341-4d49-40aa-8a7b-8a8b09b81ac9';
+    $pane->panel = 'sidebar';
+    $pane->type = 'block';
+    $pane->subtype = 'facetapi-RIvy9Ez5fCrFPD0MdyV8Pg8p5XHEdXHD';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array(
+      'override_title' => 1,
+      'override_title_text' => 'Funding Partners',
+      'override_title_heading' => 'h2',
+    );
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
+    $pane->css = array();
+    $pane->extras = array();
+    $pane->position = 13;
+    $pane->locks = array();
+    $pane->uuid = '5fe00341-4d49-40aa-8a7b-8a8b09b81ac9';
+    $display->content['new-5fe00341-4d49-40aa-8a7b-8a8b09b81ac9'] = $pane;
+    $display->panels['sidebar'][13] = 'new-5fe00341-4d49-40aa-8a7b-8a8b09b81ac9';
+    $pane = new stdClass();
+    $pane->pid = 'new-d83e359c-7f49-4f50-aea4-8a1ea1ee4ef4';
+    $pane->panel = 'sidebar';
+    $pane->type = 'block';
+    $pane->subtype = 'facetapi-JT1HavDEPAJ0zpsxMAVdEVlFuEkR3pm4';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array(
+      'override_title' => 1,
+      'override_title_text' => 'Cost Per Unit',
+      'override_title_heading' => 'h2',
+    );
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
+    $pane->css = array();
+    $pane->extras = array();
+    $pane->position = 14;
+    $pane->locks = array();
+    $pane->uuid = 'd83e359c-7f49-4f50-aea4-8a1ea1ee4ef4';
+    $display->content['new-d83e359c-7f49-4f50-aea4-8a1ea1ee4ef4'] = $pane;
+    $display->panels['sidebar'][14] = 'new-d83e359c-7f49-4f50-aea4-8a1ea1ee4ef4';
+    $pane = new stdClass();
+    $pane->pid = 'new-7ea6eee4-059a-4ccb-b4d9-aed39ea380fd';
+    $pane->panel = 'sidebar';
+    $pane->type = 'block';
+    $pane->subtype = 'facetapi-h1bU0yba646Lz9zjcyTa95EJUuZ98J17';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array(
+      'override_title' => 1,
+      'override_title_text' => 'Funding Raised',
+      'override_title_heading' => 'h2',
+    );
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
+    $pane->css = array();
+    $pane->extras = array();
+    $pane->position = 15;
+    $pane->locks = array();
+    $pane->uuid = '7ea6eee4-059a-4ccb-b4d9-aed39ea380fd';
+    $display->content['new-7ea6eee4-059a-4ccb-b4d9-aed39ea380fd'] = $pane;
+    $display->panels['sidebar'][15] = 'new-7ea6eee4-059a-4ccb-b4d9-aed39ea380fd';
+    $pane = new stdClass();
+    $pane->pid = 'new-6a1ceb05-3ab7-4043-857b-58d6f9cf790e';
+    $pane->panel = 'sidebar';
+    $pane->type = 'block';
+    $pane->subtype = 'facetapi-Yxpyh7CA8sktr00XrjyNkkBXpxjXVBD1';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array(
+      'override_title' => 1,
+      'override_title_text' => 'Funding Goal',
+      'override_title_heading' => 'h2',
+    );
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
+    $pane->css = array();
+    $pane->extras = array();
+    $pane->position = 16;
+    $pane->locks = array();
+    $pane->uuid = '6a1ceb05-3ab7-4043-857b-58d6f9cf790e';
+    $display->content['new-6a1ceb05-3ab7-4043-857b-58d6f9cf790e'] = $pane;
+    $display->panels['sidebar'][16] = 'new-6a1ceb05-3ab7-4043-857b-58d6f9cf790e';
+    $pane = new stdClass();
+    $pane->pid = 'new-bfc1833c-3a26-4cef-81fa-e95f506253e0';
+    $pane->panel = 'title';
+    $pane->type = 'pane';
+    $pane->subtype = 'sdg_listing_page_introduction';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array(
+      'override_title' => 1,
+      'override_title_text' => '',
+      'override_title_heading' => 'h2',
+    );
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
+    $pane->css = array(
+      'css_id' => '',
+      'css_class' => 'pane pane--landing-intro',
+    );
+    $pane->extras = array();
+    $pane->position = 0;
+    $pane->locks = array();
+    $pane->uuid = 'bfc1833c-3a26-4cef-81fa-e95f506253e0';
+    $display->content['new-bfc1833c-3a26-4cef-81fa-e95f506253e0'] = $pane;
+    $display->panels['title'][0] = 'new-bfc1833c-3a26-4cef-81fa-e95f506253e0';
+  $display->hide_title = PANELS_TITLE_FIXED;
+  $display->title_pane = '0';
+  $panelizer->display = $display;
+  $export['taxonomy_term:sustainable_development_goals:default'] = $panelizer;
+
   return $export;
 }
