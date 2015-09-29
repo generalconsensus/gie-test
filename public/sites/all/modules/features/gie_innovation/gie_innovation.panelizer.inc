@@ -526,10 +526,7 @@ function gie_innovation_panelizer_defaults() {
         'field_term_sector' => '',
       ),
       'exposed' => array(
-        'field_term_sector' => array(
-          283 => '283',
-          287 => '287',
-        ),
+        'field_term_sector' => array(),
       ),
     );
     $pane->cache = array();
