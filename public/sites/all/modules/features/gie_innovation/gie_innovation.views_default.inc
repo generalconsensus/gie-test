@@ -1361,7 +1361,7 @@ function gie_innovation_views_default_views() {
 
   /* Display: Master */
   $handler = $view->new_display('default', 'Master', 'default');
-  $handler->display->display_options['css_class'] = 'view--card-view-4col';
+  $handler->display->display_options['css_class'] = 'view--wanteds-cardflip';
   $handler->display->display_options['use_more_always'] = FALSE;
   $handler->display->display_options['access']['type'] = 'perm';
   $handler->display->display_options['cache']['type'] = 'none';
@@ -1379,6 +1379,7 @@ function gie_innovation_views_default_views() {
   $handler->display->display_options['fields']['title']['alter']['word_boundary'] = FALSE;
   $handler->display->display_options['fields']['title']['alter']['ellipsis'] = FALSE;
   $handler->display->display_options['fields']['title']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['title']['link_to_node'] = FALSE;
   /* Field: Content: Description */
   $handler->display->display_options['fields']['field_action_description']['id'] = 'field_action_description';
   $handler->display->display_options['fields']['field_action_description']['table'] = 'field_data_field_action_description';
@@ -1427,6 +1428,7 @@ function gie_innovation_views_default_views() {
   $handler->display->display_options['fields']['field_action_link']['table'] = 'field_data_field_action_link';
   $handler->display->display_options['fields']['field_action_link']['field'] = 'field_action_link';
   $handler->display->display_options['fields']['field_action_link']['label'] = '';
+  $handler->display->display_options['fields']['field_action_link']['exclude'] = TRUE;
   $handler->display->display_options['fields']['field_action_link']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['field_action_link']['click_sort_column'] = 'url';
   $handler->display->display_options['fields']['field_action_link']['settings'] = array(
@@ -1450,11 +1452,11 @@ function gie_innovation_views_default_views() {
   $handler->display->display_options['fields']['nothing']['alter']['text'] = '<div class="cardflip" style="height: 180px;">
                       <div class="cardflip__card" style="height: 180px;">
                         <div class="cardflip__1" style="height: 180px;">
-                          <div class="cardflip__title">[title]</div>
+                          <div class="cardflip__title"></div>
                           <div class="cardflip__image">[field_action_image]</div>
                         </div>
                         <div class="cardflip__2" style="height: 180px;">
-                          <div class="cardflip__title">[title]</div>
+                          <div class="cardflip__title"></div>
                           <div class="cardflip__description">[field_action_description]</div>
                           <div class="cardflip__link"><a href="#">[field_action_link]</a></div>
                           <div class="cardflip__image">[field_action_image]</div>
