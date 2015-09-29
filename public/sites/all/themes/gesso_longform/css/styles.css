@@ -338,6 +338,7 @@ caption, .caption {
 caption:before, .caption:before {
   content: "Caption:  ";
   font-weight: bold;
+  float: left;
 }
 caption:after, .caption:after {
   border-bottom: 1px solid #d31145;
@@ -840,45 +841,46 @@ input.throbbing {
 }
 .cols-3 .card__item {
   float: left;
-  width: 100%;
+  width: 98%;
+  margin-left: 1%;
 }
 @media (min-width: 54.375em) {
   .cols-3 .card__item {
     margin: 0 1%;
-    width: 31.3333%;
+    width: 30.3333%;
   }
 }
 .cols-3 .card__item:first-child {
-  margin-left: 0;
-  margin-right: 2%;
+  margin-left: 1%;
+  margin-right: 1%;
 }
 .cols-3 .card__item:last-child {
-  margin-left: 0;
+  margin-left: 1%;
 }
 @media (min-width: 54.375em) {
   .cols-3 .card__item:last-child {
-    margin-left: 2%;
+    margin-left: 1%;
     margin-right: 0;
   }
 }
 .cols-2 .card__item {
   float: left;
-  width: 100%;
+  width: 98%;
 }
 @media (min-width: 54.375em) {
   .cols-2 .card__item {
-    width: 48%;
+    width: 46%;
   }
 }
 .cols-2 .card__item:first-child {
-  margin: 0 2% 0 0;
+  margin: 0 1% 0 1%;
 }
 .cols-2 .card__item:last-child {
-  margin-left: 0;
+  margin: 1%;
 }
 @media (min-width: 54.375em) {
   .cols-2 .card__item:last-child {
-    margin: 0 0 0 2%;
+    margin: 0 1% 0 1%;
   }
 }
 .cols-1 .card__item {
@@ -1212,6 +1214,7 @@ input.throbbing {
 }
 
 .image {
+  position: relative;
   text-align: center;
 }
 .image .image__title {
@@ -1231,7 +1234,7 @@ input.throbbing {
 .key-figure {
   color: #d31145;
   display: block;
-  padding: 0 .5em;
+  padding: 6em .5em;
   text-align: center;
 }
 .key-figure .key-figure__number {
@@ -1771,6 +1774,14 @@ input.throbbing {
   padding: 8em 0 5em 0;
   position: relative;
   text-align: center;
+  z-index: -2;
+}
+
+.page-header__image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
 }
 
 .page-header__subtext {
@@ -1975,8 +1986,20 @@ input.throbbing {
   display: block;
   margin: 5em 0;
   overflow: hidden;
+  position: relative;
   padding: 8em 1em 10em 1em;
   text-align: left;
+  z-index: -2;
+}
+.section-header .asset {
+  background-color: transparent;
+}
+
+.section-header__image {
+  left: 0;
+  position: absolute;
+  top: 0;
+  z-index: -1;
 }
 
 .section-header__title {
