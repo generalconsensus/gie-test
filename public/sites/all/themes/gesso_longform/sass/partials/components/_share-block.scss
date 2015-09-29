@@ -5,6 +5,7 @@
   position: fixed;
   top: 0;
   width: 100%;
+  z-index: 10;
   @include breakpoint($mobile-menu-bp, $no-query: true) {
   	top: 5%;
   	right: 5%;

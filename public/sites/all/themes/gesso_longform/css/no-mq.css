@@ -320,7 +320,6 @@ caption, .caption {
 caption:before, .caption:before {
   content: "Caption:  ";
   font-weight: bold;
-  float: left;
 }
 caption:after, .caption:after {
   border-bottom: 1px solid #d31145;
@@ -1879,6 +1878,7 @@ input.throbbing {
   position: fixed;
   top: 0;
   width: 100%;
+  z-index: 10;
   top: 5%;
   right: 5%;
   width: 100px;
