@@ -55,38 +55,50 @@
     <div class="skiplinks">
       <a href="#main" class="skiplinks__link element-invisible element-focusable">Skip to main content</a>
     </div>
-<div class="pane">
-  <h2 class="pane__title">Point of Contact</h2>  
-  <div class="pane__content">
-    <article role="article" class="layout-slat profile-thumb">
-        <div class="layout-slat__media"> 
-          <div class="profile-thumb__image--rounded">
-            <a href="#"><img alt="" src="../../images-patternlab/gordon-78-78.jpg"></a>
-          </div>
-          <div class="profile-thumb__name">
-            <a href="#">Gordon Clark</a>  
-          </div>
-        </div>
-        <div class="layout-slat__content">
-          <div class="profile-thumb__summary">
-            A personal computer, like any other computer, is just a nothing box full of electronic switches and hardware.
-          </div>
-        </div>
-    </article>
-  </div>
-</div> 
- 
-    <!--DO NOT REMOVE-->
-    	
-	<script>
-		// handle injection of items from PHP
-		var patternPartial = "molecules-point-of-contact";
-		var lineage        = [];
-		var lineageR       = [{"lineagePattern":"organisms-innovation","lineagePath":"..\/..\/patterns\/02-organisms-01-content-types-innovation\/02-organisms-01-content-types-innovation.html","lineageState":"inprogress"}];
-		var patternState   = "inprogress";
-		var cssEnabled     = false;
-	</script>
+		
+		<!-- View All Patterns in a Pattern Sub-Type -->
+		<div class="sg-main" role="main">
+			
+			<!-- Patterns -->
+			<div id="sg-patterns">
+					<div id="atoms-video" class="sg-pattern">
+						<h2 class="sg-pattern-head" ><a href="../../patterns/00-atoms-08-media-00-video/00-atoms-08-media-00-video.html" class="patternLink" data-patternpartial="atoms-video">Video</a></h2>
+						<div class="sg-pattern-body">
+							<video width="640" height="360" controls="">
+<source src="http://clips.vorwaerts-gmbh.de/VfE_html5.mp4" type="video/mp4">
+  <source src="http://clips.vorwaerts-gmbh.de/VfE.webm" type="video/webm">
+  <source src="http://clips.vorwaerts-gmbh.de/VfE.ogv" type="video/ogg">
+  <img src="" width="640" height="360" alt="Big Buck Bunny" title="No video playback capabilities, please download">
+</video>
+							<div class="sg-code" style="display: none">
+								<h3 class="sg-code-head">HTML</h3>
+								<pre class="sg-code-html">
+									<code>
+										&lt;video width=&quot;640&quot; height=&quot;360&quot; controls=&quot;&quot;&gt;
+&lt;source src=&quot;http://clips.vorwaerts-gmbh.de/VfE_html5.mp4&quot; type=&quot;video/mp4&quot;&gt;
+  &lt;source src=&quot;http://clips.vorwaerts-gmbh.de/VfE.webm&quot; type=&quot;video/webm&quot;&gt;
+  &lt;source src=&quot;http://clips.vorwaerts-gmbh.de/VfE.ogv&quot; type=&quot;video/ogg&quot;&gt;
+  &lt;img src=&quot;&quot; width=&quot;640&quot; height=&quot;360&quot; alt=&quot;Big Buck Bunny&quot; title=&quot;No video playback capabilities, please download&quot;&gt;
+&lt;/video&gt;
+									</code>
+								</pre>
+							</div>
+						</div>
+					</div>
+			</div> <!--end #sg-patterns-->
+	
+		</div><!--end .sg-main-->
+		
+		<!-- JS to hook everything together and do annotations -->
 		<script>
+			// handle injection of items from PHP
+			var patternPartial = "viewall-atoms-media";
+			var lineage = "";
+		</script>
+		
+
+    <!--DO NOT REMOVE-->
+    	<script>
 		/*!
 		 * scriptLoader - v0.1
 		 *
