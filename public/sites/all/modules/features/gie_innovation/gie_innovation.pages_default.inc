@@ -504,6 +504,112 @@ function gie_innovation_default_page_manager_pages() {
   $page->default_handlers[$handler->name] = $handler;
   $pages['innovations'] = $page;
 
+  $page = new stdClass();
+  $page->disabled = FALSE; /* Edit this to true to make a default page disabled initially */
+  $page->api_version = 1;
+  $page->name = 'sdg_landing_page';
+  $page->task = 'page';
+  $page->admin_title = 'SDG Landing Page';
+  $page->admin_description = '';
+  $page->path = 'sdg';
+  $page->access = array();
+  $page->menu = array();
+  $page->arguments = array();
+  $page->conf = array(
+    'admin_paths' => FALSE,
+  );
+  $page->default_handlers = array();
+  $handler = new stdClass();
+  $handler->disabled = FALSE; /* Edit this to true to make a default handler disabled initially */
+  $handler->api_version = 1;
+  $handler->name = 'page_sdg_landing_page__panel_context_a70e8770-5a2e-4270-be13-085c711113e7';
+  $handler->task = 'page';
+  $handler->subtask = 'sdg_landing_page';
+  $handler->handler = 'panel_context';
+  $handler->weight = 0;
+  $handler->conf = array(
+    'title' => 'Panel',
+    'no_blocks' => 0,
+    'pipeline' => 'standard',
+    'body_classes_to_remove' => '',
+    'body_classes_to_add' => '',
+    'css_id' => '',
+    'css' => '',
+    'contexts' => array(),
+    'relationships' => array(),
+  );
+  $display = new panels_display();
+  $display->layout = 'sidebar_left';
+  $display->layout_settings = array();
+  $display->panel_settings = array(
+    'style_settings' => array(
+      'default' => NULL,
+      'preface' => NULL,
+      'title' => NULL,
+      'sidebar' => NULL,
+      'main' => NULL,
+    ),
+  );
+  $display->cache = array();
+  $display->title = '';
+  $display->uuid = '3cbd6349-a23e-4d52-b5dd-20dc2b2413e7';
+  $display->content = array();
+  $display->panels = array();
+    $pane = new stdClass();
+    $pane->pid = 'new-676a86ee-10d8-4f3d-88fa-d9124f9e6eb2';
+    $pane->panel = 'main';
+    $pane->type = 'pane';
+    $pane->subtype = 'sdg_landing_page';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array(
+      'override_title' => 1,
+      'override_title_text' => '',
+      'override_title_heading' => 'h2',
+    );
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
+    $pane->css = array();
+    $pane->extras = array();
+    $pane->position = 0;
+    $pane->locks = array();
+    $pane->uuid = '676a86ee-10d8-4f3d-88fa-d9124f9e6eb2';
+    $display->content['new-676a86ee-10d8-4f3d-88fa-d9124f9e6eb2'] = $pane;
+    $display->panels['main'][0] = 'new-676a86ee-10d8-4f3d-88fa-d9124f9e6eb2';
+    $pane = new stdClass();
+    $pane->pid = 'new-7b19ec3c-1227-436b-a7c8-2779d38ee424';
+    $pane->panel = 'title';
+    $pane->type = 'pane';
+    $pane->subtype = 'sdg_landing_page_title';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array(
+      'override_title' => 1,
+      'override_title_text' => '',
+      'override_title_heading' => 'h2',
+    );
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
+    $pane->css = array(
+      'css_id' => '',
+      'css_class' => 'pane--landing-intro',
+    );
+    $pane->extras = array();
+    $pane->position = 0;
+    $pane->locks = array();
+    $pane->uuid = '7b19ec3c-1227-436b-a7c8-2779d38ee424';
+    $display->content['new-7b19ec3c-1227-436b-a7c8-2779d38ee424'] = $pane;
+    $display->panels['title'][0] = 'new-7b19ec3c-1227-436b-a7c8-2779d38ee424';
+  $display->hide_title = PANELS_TITLE_FIXED;
+  $display->title_pane = 'new-7b19ec3c-1227-436b-a7c8-2779d38ee424';
+  $handler->conf['display'] = $display;
+  $page->default_handlers[$handler->name] = $handler;
+  $pages['sdg_landing_page'] = $page;
+
   return $pages;
 
 }
