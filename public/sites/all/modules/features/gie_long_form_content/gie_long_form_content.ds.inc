@@ -251,6 +251,19 @@ function gie_long_form_content_ds_field_settings_info() {
   $ds_fieldsetting->bundle = 'long_form_image';
   $ds_fieldsetting->view_mode = 'default';
   $ds_fieldsetting->settings = array(
+    'field_paragraphs_caption' => array(
+      'formatter_settings' => array(
+        'ft' => array(
+          'func' => 'theme_ds_field_expert',
+          'ow' => TRUE,
+          'ow-el' => 'div',
+          'ow-cl' => 'caption image__caption',
+          'ow-def-cl' => FALSE,
+          'ow-at' => '',
+          'ow-def-at' => FALSE,
+        ),
+      ),
+    ),
     'field_paragraphs_image' => array(
       'formatter_settings' => array(
         'ft' => array(
