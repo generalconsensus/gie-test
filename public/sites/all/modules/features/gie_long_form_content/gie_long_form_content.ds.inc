@@ -126,13 +126,33 @@ function gie_long_form_content_ds_field_settings_info() {
         ),
       ),
     ),
+    'field_learn_more_link' => array(
+      'formatter_settings' => array(
+        'ft' => array(
+          'func' => 'theme_ds_field_expert',
+          'ow' => TRUE,
+          'ow-el' => 'div',
+          'ow-cl' => 'pre-footer__download-link',
+          'ow-def-cl' => FALSE,
+          'ow-at' => '',
+          'ow-def-at' => FALSE,
+        ),
+      ),
+    ),
+    'field_longform_description' => array(
+      'formatter_settings' => array(
+        'ft' => array(
+          'func' => 'theme_ds_field_expert',
+        ),
+      ),
+    ),
     'field_partner_logos' => array(
       'formatter_settings' => array(
         'ft' => array(
           'func' => 'theme_ds_field_expert',
           'ow' => TRUE,
           'ow-el' => 'div',
-          'ow-cl' => 'footer-sponsor',
+          'ow-cl' => 'footer__sponsor',
           'ow-def-cl' => FALSE,
           'ow-at' => '',
           'ow-def-at' => FALSE,
@@ -141,6 +161,19 @@ function gie_long_form_content_ds_field_settings_info() {
           'fis-cl' => 'footer-sponsor__image',
           'fis-at' => '',
           'fis-def-at' => FALSE,
+        ),
+      ),
+    ),
+    'field_pdf_screenshot' => array(
+      'formatter_settings' => array(
+        'ft' => array(
+          'func' => 'theme_ds_field_expert',
+          'ow' => TRUE,
+          'ow-el' => 'div',
+          'ow-cl' => 'pre-footer__download-image',
+          'ow-def-cl' => FALSE,
+          'ow-at' => '',
+          'ow-def-at' => FALSE,
         ),
       ),
     ),
@@ -713,13 +746,13 @@ function gie_long_form_content_ds_layout_settings_info() {
       'group_page_header' => 'ds_content',
       'field_long_form_subtitle' => 'ds_content',
       'field_long_form_block' => 'ds_content',
-      'field_pdf_screenshot' => 'ds_content',
       'field_longform_byline' => 'ds_content',
-      'scroll_button' => 'ds_content',
-      'field_longform_description' => 'ds_content',
-      'field_learn_more_link' => 'ds_content',
       'group_footer' => 'ds_content',
+      'field_learn_more_link' => 'ds_content',
       'field_partner_logos' => 'ds_content',
+      'field_pdf_screenshot' => 'ds_content',
+      'field_longform_description' => 'ds_content',
+      'scroll_button' => 'ds_content',
     ),
     'classes' => array(),
     'wrappers' => array(
