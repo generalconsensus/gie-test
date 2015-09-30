@@ -320,6 +320,8 @@ function gie_long_form_content_field_group_info() {
     'children' => array(
       0 => 'field_long_form_subtitle',
       1 => 'field_longform_byline',
+      2 => 'scroll_button',
+      3 => 'title',
     ),
     'format_type' => 'div',
     'format_settings' => array(
