@@ -136,7 +136,7 @@ function gie_long_form_content_strongarm() {
             'visible' => TRUE,
           ),
           'full' => array(
-            'weight' => '18',
+            'weight' => '16',
             'visible' => FALSE,
           ),
         ),

@@ -1,0 +1,39 @@
+.pre-footer {
+  position: relative;
+}
+
+.pre-footer__download-link {  
+	background-color: $lightred;
+	height: 60px;
+	margin-bottom: 2em;
+	position: relative;
+	a{
+		color: $white;
+    position: relative;
+    padding-top: 20px;
+    padding-left: 5%;
+    top: 15px;
+    &:after{
+    	content: "> ";
+    	font-weight: bold;
+    	padding-left: .5em;
+    	text-decoration: none;
+    }
+	}
+}
+.pre-footer__download-image {
+	@include image-replace(261px, 165px);
+	background: transparent url('../images/footer-fact-sheet.png') no-repeat;
+  display: block;
+  position: absolute;
+  left: 25%;
+  right: 25%;
+  z-index: -10;
+  top: 2%;
+	@include breakpoint($mobile-menu-bp, $no-query: true) {
+    left: initial;
+    right: 15%;
+    top: 65px;
+    z-index: 0;
+  }
+}
