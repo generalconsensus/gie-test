@@ -1831,6 +1831,7 @@ input.throbbing {
   position: relative;
   padding-top: 20px;
   padding-left: 5%;
+  text-decoration: underline;
   top: 15px;
 }
 .pre-footer__download-link a:after {
