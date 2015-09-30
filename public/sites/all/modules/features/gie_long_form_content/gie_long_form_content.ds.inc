@@ -66,6 +66,33 @@ function gie_long_form_content_ds_field_settings_info() {
   $ds_fieldsetting->bundle = 'long_form_page';
   $ds_fieldsetting->view_mode = 'full';
   $ds_fieldsetting->settings = array(
+    'scroll_button' => array(
+      'weight' => '3',
+      'label' => 'hidden',
+      'format' => 'default',
+      'formatter_settings' => array(
+        'ft' => array(
+          'func' => 'theme_ds_field_minimal',
+        ),
+        'field_delimiter' => '',
+        'linked_field' => array(
+          'linked' => 0,
+          'destination' => '',
+          'advanced' => array(
+            'title' => '',
+            'target' => '',
+            'class' => '',
+            'rel' => '',
+            'text' => '',
+          ),
+        ),
+      ),
+    ),
+    'title' => array(
+      'weight' => '0',
+      'label' => 'hidden',
+      'format' => 'default',
+    ),
     'field_long_form_block' => array(
       'formatter_settings' => array(
         'ft' => array(
@@ -99,13 +126,33 @@ function gie_long_form_content_ds_field_settings_info() {
         ),
       ),
     ),
+    'field_learn_more_link' => array(
+      'formatter_settings' => array(
+        'ft' => array(
+          'func' => 'theme_ds_field_expert',
+          'ow' => TRUE,
+          'ow-el' => 'div',
+          'ow-cl' => 'pre-footer__download-link',
+          'ow-def-cl' => FALSE,
+          'ow-at' => '',
+          'ow-def-at' => FALSE,
+        ),
+      ),
+    ),
+    'field_longform_description' => array(
+      'formatter_settings' => array(
+        'ft' => array(
+          'func' => 'theme_ds_field_expert',
+        ),
+      ),
+    ),
     'field_partner_logos' => array(
       'formatter_settings' => array(
         'ft' => array(
           'func' => 'theme_ds_field_expert',
           'ow' => TRUE,
           'ow-el' => 'div',
-          'ow-cl' => 'footer-sponsor',
+          'ow-cl' => 'footer__sponsor',
           'ow-def-cl' => FALSE,
           'ow-at' => '',
           'ow-def-at' => FALSE,
@@ -114,6 +161,19 @@ function gie_long_form_content_ds_field_settings_info() {
           'fis-cl' => 'footer-sponsor__image',
           'fis-at' => '',
           'fis-def-at' => FALSE,
+        ),
+      ),
+    ),
+    'field_pdf_screenshot' => array(
+      'formatter_settings' => array(
+        'ft' => array(
+          'func' => 'theme_ds_field_expert',
+          'ow' => TRUE,
+          'ow-el' => 'div',
+          'ow-cl' => 'pre-footer__download-image',
+          'ow-def-cl' => FALSE,
+          'ow-at' => '',
+          'ow-def-at' => FALSE,
         ),
       ),
     ),
@@ -508,6 +568,33 @@ function gie_long_form_content_ds_field_settings_info() {
 }
 
 /**
+ * Implements hook_ds_custom_fields_info().
+ */
+function gie_long_form_content_ds_custom_fields_info() {
+  $export = array();
+
+  $ds_field = new stdClass();
+  $ds_field->api_version = 1;
+  $ds_field->field = 'scroll_button';
+  $ds_field->label = 'Long form scroll button';
+  $ds_field->field_type = 5;
+  $ds_field->entities = array(
+    'node' => 'node',
+  );
+  $ds_field->ui_limit = 'long_form_page|full';
+  $ds_field->properties = array(
+    'code' => array(
+      'value' => '<div class="page-header__scroll-button">scroll</div>',
+      'format' => 'full_html',
+    ),
+    'use_token' => 0,
+  );
+  $export['scroll_button'] = $ds_field;
+
+  return $export;
+}
+
+/**
  * Implements hook_ds_layout_settings_info().
  */
 function gie_long_form_content_ds_layout_settings_info() {
@@ -641,27 +728,31 @@ function gie_long_form_content_ds_layout_settings_info() {
   $ds_layout->settings = array(
     'regions' => array(
       'ds_content' => array(
-        0 => 'group_page_header',
-        1 => 'field_long_form_subtitle',
-        2 => 'field_longform_byline',
+        0 => 'title',
+        1 => 'group_page_header',
+        2 => 'field_long_form_subtitle',
         3 => 'field_long_form_block',
         4 => 'field_pdf_screenshot',
-        5 => 'field_longform_description',
-        6 => 'field_learn_more_link',
-        7 => 'group_footer',
-        8 => 'field_partner_logos',
+        5 => 'field_longform_byline',
+        6 => 'scroll_button',
+        7 => 'field_longform_description',
+        8 => 'field_learn_more_link',
+        9 => 'group_footer',
+        10 => 'field_partner_logos',
       ),
     ),
     'fields' => array(
+      'title' => 'ds_content',
       'group_page_header' => 'ds_content',
       'field_long_form_subtitle' => 'ds_content',
-      'field_longform_byline' => 'ds_content',
       'field_long_form_block' => 'ds_content',
+      'field_longform_byline' => 'ds_content',
+      'group_footer' => 'ds_content',
+      'field_learn_more_link' => 'ds_content',
+      'field_partner_logos' => 'ds_content',
       'field_pdf_screenshot' => 'ds_content',
       'field_longform_description' => 'ds_content',
-      'field_learn_more_link' => 'ds_content',
-      'group_footer' => 'ds_content',
-      'field_partner_logos' => 'ds_content',
+      'scroll_button' => 'ds_content',
     ),
     'classes' => array(),
     'wrappers' => array(

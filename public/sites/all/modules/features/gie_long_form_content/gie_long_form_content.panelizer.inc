@@ -97,20 +97,13 @@ function gie_long_form_content_panelizer_defaults() {
     $display->content['new-54d4bac6-adb8-4ea6-89a8-27bd59841695'] = $pane;
     $display->panels['main'][1] = 'new-54d4bac6-adb8-4ea6-89a8-27bd59841695';
     $pane = new stdClass();
-    $pane->pid = 'new-e035fdf4-35bb-4fc7-874f-01ddb6b0cf82';
+    $pane->pid = 'new-006ee152-ee76-48d2-b8d7-06580898a08b';
     $pane->panel = 'preface';
-    $pane->type = 'page_title';
-    $pane->subtype = 'page_title';
+    $pane->type = 'page_messages';
+    $pane->subtype = 'page_messages';
     $pane->shown = TRUE;
     $pane->access = array();
-    $pane->configuration = array(
-      'markup' => 'h1',
-      'class' => '',
-      'id' => '',
-      'override_title' => 0,
-      'override_title_text' => '',
-      'override_title_heading' => 'h2',
-    );
+    $pane->configuration = array();
     $pane->cache = array();
     $pane->style = array(
       'settings' => NULL,
@@ -119,9 +112,9 @@ function gie_long_form_content_panelizer_defaults() {
     $pane->extras = array();
     $pane->position = 0;
     $pane->locks = array();
-    $pane->uuid = 'e035fdf4-35bb-4fc7-874f-01ddb6b0cf82';
-    $display->content['new-e035fdf4-35bb-4fc7-874f-01ddb6b0cf82'] = $pane;
-    $display->panels['preface'][0] = 'new-e035fdf4-35bb-4fc7-874f-01ddb6b0cf82';
+    $pane->uuid = '006ee152-ee76-48d2-b8d7-06580898a08b';
+    $display->content['new-006ee152-ee76-48d2-b8d7-06580898a08b'] = $pane;
+    $display->panels['preface'][0] = 'new-006ee152-ee76-48d2-b8d7-06580898a08b';
   $display->hide_title = PANELS_TITLE_FIXED;
   $display->title_pane = '0';
   $panelizer->display = $display;
