@@ -1,8 +1,8 @@
-.footer-about, .block--pane-about-the-exchange {  //block--pane-about-the-exchange on LIVE site
+.block--pane-about-the-exchange {  //block--pane-about-the-exchange on LIVE site
 		float: left;
 		width: 100%;
 		@include breakpoint($mobile-menu-bp, $no-query: true) {
-			width: 30%;
+			width: 50%;
 		}
 		.footer-about__title, .block__title {
 			border-bottom: 1px solid #cecfcb;

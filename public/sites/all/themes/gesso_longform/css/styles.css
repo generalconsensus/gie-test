@@ -992,41 +992,41 @@ input.throbbing {
   display: none;
 }
 
-.footer-about, .block--pane-about-the-exchange {
+.block--pane-about-the-exchange {
   float: left;
   width: 100%;
 }
 @media (min-width: 54.375em) {
-  .footer-about, .block--pane-about-the-exchange {
-    width: 30%;
+  .block--pane-about-the-exchange {
+    width: 50%;
   }
 }
-.footer-about .footer-about__title, .footer-about .block__title, .block--pane-about-the-exchange .footer-about__title, .block--pane-about-the-exchange .block__title {
+.block--pane-about-the-exchange .footer-about__title, .block--pane-about-the-exchange .block__title {
   border-bottom: 1px solid #cecfcb;
   text-transform: uppercase;
 }
-.footer-about .footer-about__content .button--highlight, .footer-about .block__content .button--highlight, .block--pane-about-the-exchange .footer-about__content .button--highlight, .block--pane-about-the-exchange .block__content .button--highlight {
+.block--pane-about-the-exchange .footer-about__content .button--highlight, .block--pane-about-the-exchange .block__content .button--highlight {
   background-color: #b71234;
   border-color: #b71234;
 }
 
-.footer__menu {
+.block--menu-menu-sub-footer-menu {
   float: right;
   padding: 2em 0;
 }
-.footer__menu ul {
+.block--menu-menu-sub-footer-menu ul {
   list-style: none;
   width: 100%;
 }
-.footer__menu ul li {
+.block--menu-menu-sub-footer-menu ul li {
   border-right: 2px solid #4d4d4f;
   display: inline-block;
   padding: 0 1em;
 }
-.footer__menu ul li:last-child {
+.block--menu-menu-sub-footer-menu ul li:last-child {
   border: none;
 }
-.footer__menu ul li a {
+.block--menu-menu-sub-footer-menu ul li a {
   color: #4d4d4f;
 }
 
