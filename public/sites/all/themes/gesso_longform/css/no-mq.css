@@ -946,65 +946,38 @@ input.throbbing {
   display: none;
 }
 
-.footer {
-  overflow: hidden;
-  min-height: 400px;
-  position: relative;
-}
-.footer .region-footer {
-  margin-top: 10em;
-}
-
-.footer__download-link {
-  background-color: #ff1352;
-  height: 60px;
-  margin: 2em;
-  position: relative;
-}
-.footer__download-link a {
-  color: #FFF;
-  position: relative;
-  padding-top: 20px;
-  padding-left: 5%;
-  top: 15px;
-}
-.footer__download-link a:after {
-  content: "> ";
-  font-weight: bold;
-  padding-left: .5em;
-  text-decoration: none;
-}
-
-.footer__download-image {
-  height: 165px;
-  overflow: hidden;
-  width: 261px;
-  background: transparent url("../images/footer-fact-sheet.png") no-repeat;
-  display: block;
-  position: absolute;
-  left: 25%;
-  right: 25%;
-  z-index: -10;
-  top: 2%;
-  left: initial;
-  right: 15%;
-  top: 65px;
-  z-index: 0;
-}
-.footer__download-image:before {
-  content: "";
-  display: block;
-  height: 150%;
-  width: 0;
-}
-
-.footer-about {
+.footer-about, .block--pane-about-the-exchange {
   float: left;
   width: 100%;
   width: 30%;
 }
-.footer-about .footer-about__title {
+.footer-about .footer-about__title, .footer-about .block__title, .block--pane-about-the-exchange .footer-about__title, .block--pane-about-the-exchange .block__title {
+  border-bottom: 1px solid #cecfcb;
   text-transform: uppercase;
+}
+.footer-about .footer-about__content .button--highlight, .footer-about .block__content .button--highlight, .block--pane-about-the-exchange .footer-about__content .button--highlight, .block--pane-about-the-exchange .block__content .button--highlight {
+  background-color: #b71234;
+  border-color: #b71234;
+}
+
+.footer__menu {
+  float: right;
+  padding: 2em 0;
+}
+.footer__menu ul {
+  list-style: none;
+  width: 100%;
+}
+.footer__menu ul li {
+  border-right: 2px solid #4d4d4f;
+  display: inline-block;
+  padding: 0 1em;
+}
+.footer__menu ul li:last-child {
+  border: none;
+}
+.footer__menu ul li a {
+  color: #4d4d4f;
 }
 
 .footer__sponsor {
@@ -1065,24 +1038,12 @@ input.throbbing {
   width: 0;
 }
 
-.footer__menu {
-  float: right;
-  padding: 2em 0;
+.footer {
+  overflow: hidden;
+  position: relative;
 }
-.footer__menu ul {
-  list-style: none;
-  width: 100%;
-}
-.footer__menu ul li {
-  border-right: 2px solid #4d4d4f;
-  display: inline-block;
-  padding: 0 1em;
-}
-.footer__menu ul li:last-child {
-  border: none;
-}
-.footer__menu ul li a {
-  color: #4d4d4f;
+.footer .region-footer {
+  margin-top: 10em;
 }
 
 .form-item {
@@ -1739,6 +1700,53 @@ input.throbbing {
 
 .pager__link--last:before {
   content: "\00BB|";
+}
+
+.pre-footer {
+  position: relative;
+}
+
+.pre-footer__download-link {
+  background-color: #ff1352;
+  height: 60px;
+  margin-bottom: 2em;
+  position: relative;
+}
+.pre-footer__download-link a {
+  color: #FFF;
+  position: relative;
+  padding-top: 20px;
+  padding-left: 5%;
+  top: 15px;
+}
+.pre-footer__download-link a:after {
+  content: "> ";
+  font-weight: bold;
+  padding-left: .5em;
+  text-decoration: none;
+}
+
+.pre-footer__download-image {
+  height: 165px;
+  overflow: hidden;
+  width: 261px;
+  background: transparent url("../images/footer-fact-sheet.png") no-repeat;
+  display: block;
+  position: absolute;
+  left: 25%;
+  right: 25%;
+  z-index: -10;
+  top: 2%;
+  left: initial;
+  right: 15%;
+  top: 65px;
+  z-index: 0;
+}
+.pre-footer__download-image:before {
+  content: "";
+  display: block;
+  height: 150%;
+  width: 0;
 }
 
 .progress {
