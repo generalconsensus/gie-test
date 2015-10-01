@@ -218,7 +218,7 @@ function gie_user_default_page_manager_handlers() {
     'no_blocks' => 0,
     'pipeline' => 'standard',
     'body_classes_to_remove' => '',
-    'body_classes_to_add' => '',
+    'body_classes_to_add' => 'page-simple',
     'css_id' => '',
     'css' => '',
     'contexts' => array(),
@@ -226,7 +226,7 @@ function gie_user_default_page_manager_handlers() {
     'name' => 'user_registration',
   );
   $display = new panels_display();
-  $display->layout = 'detail';
+  $display->layout = 'split';
   $display->layout_settings = array();
   $display->panel_settings = array(
     'style_settings' => array(
@@ -241,6 +241,12 @@ function gie_user_default_page_manager_handlers() {
       'box_third' => NULL,
       'bottom_sidebar' => NULL,
       'bottom' => NULL,
+      'left' => NULL,
+      'right' => NULL,
+      'preface' => NULL,
+      'sidebar' => NULL,
+      'first' => NULL,
+      'second' => NULL,
     ),
   );
   $display->cache = array();
@@ -249,8 +255,56 @@ function gie_user_default_page_manager_handlers() {
   $display->content = array();
   $display->panels = array();
     $pane = new stdClass();
+    $pane->pid = 'new-fa2f59f8-2a7e-47e1-aa5e-eca8ffa214c9';
+    $pane->panel = 'first';
+    $pane->type = 'pane';
+    $pane->subtype = 'welcome_page_';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array(
+      'override_title' => 1,
+      'override_title_text' => '',
+      'override_title_heading' => 'h2',
+    );
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
+    $pane->css = array(
+      'css_id' => '',
+      'css_class' => 'pane--welcome-page-info',
+    );
+    $pane->extras = array();
+    $pane->position = 0;
+    $pane->locks = array();
+    $pane->uuid = 'fa2f59f8-2a7e-47e1-aa5e-eca8ffa214c9';
+    $display->content['new-fa2f59f8-2a7e-47e1-aa5e-eca8ffa214c9'] = $pane;
+    $display->panels['first'][0] = 'new-fa2f59f8-2a7e-47e1-aa5e-eca8ffa214c9';
+    $pane = new stdClass();
+    $pane->pid = 'new-e3adee68-53d5-4e46-b23e-d5c4bf0cfa1a';
+    $pane->panel = 'first';
+    $pane->type = 'views_panes';
+    $pane->subtype = 'homepage_views-panel_pane_1';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array();
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
+    $pane->css = array(
+      'css_id' => '',
+      'css_class' => 'pane--welcome-stats',
+    );
+    $pane->extras = array();
+    $pane->position = 1;
+    $pane->locks = array();
+    $pane->uuid = 'e3adee68-53d5-4e46-b23e-d5c4bf0cfa1a';
+    $display->content['new-e3adee68-53d5-4e46-b23e-d5c4bf0cfa1a'] = $pane;
+    $display->panels['first'][1] = 'new-e3adee68-53d5-4e46-b23e-d5c4bf0cfa1a';
+    $pane = new stdClass();
     $pane->pid = 'new-ee6d06f2-0db1-4f93-848f-ac56edec09ca';
-    $pane->panel = 'main';
+    $pane->panel = 'second';
     $pane->type = 'block';
     $pane->subtype = 'formblock-user_register';
     $pane->shown = TRUE;
@@ -264,51 +318,25 @@ function gie_user_default_page_manager_handlers() {
     $pane->style = array(
       'settings' => NULL,
     );
-    $pane->css = array();
+    $pane->css = array(
+      'css_id' => '',
+      'css_class' => 'pane--welcome-page-user-register',
+    );
     $pane->extras = array();
     $pane->position = 0;
     $pane->locks = array();
     $pane->uuid = 'ee6d06f2-0db1-4f93-848f-ac56edec09ca';
     $display->content['new-ee6d06f2-0db1-4f93-848f-ac56edec09ca'] = $pane;
-    $display->panels['main'][0] = 'new-ee6d06f2-0db1-4f93-848f-ac56edec09ca';
+    $display->panels['second'][0] = 'new-ee6d06f2-0db1-4f93-848f-ac56edec09ca';
     $pane = new stdClass();
-    $pane->pid = 'new-0680aa8f-56b3-4fee-98e7-baa6cd3eea59';
-    $pane->panel = 'main';
-    $pane->type = 'custom';
-    $pane->subtype = 'custom';
+    $pane->pid = 'new-c055813e-a03d-4040-bc23-f64b50002271';
+    $pane->panel = 'second';
+    $pane->type = 'pane';
+    $pane->subtype = 'welcome_explore_link';
     $pane->shown = TRUE;
     $pane->access = array();
     $pane->configuration = array(
-      'admin_title' => '',
-      'title' => 'Legal Disclaimer',
-      'body' => 'The partners and sponsors of the Global Innovation Exchange ("Exchange") make no warranties or representations and do not endorse, recommend, or confirm any information or statements made on this Exchange. The Exchange is an open and free market of ideas and information, and information contained on the Exchange does not necessarily reflect the views of the partners or sponsors of the Exchange. Participants and readers of the Exchange should conduct appropriate due diligence when considering information, innovations, and other resources found on the Exchange.&nbsp;<br />
-',
-      'format' => 'filtered_html',
-      'substitute' => TRUE,
-    );
-    $pane->cache = array();
-    $pane->style = array(
-      'settings' => NULL,
-    );
-    $pane->css = array();
-    $pane->extras = array();
-    $pane->position = 1;
-    $pane->locks = array();
-    $pane->uuid = '0680aa8f-56b3-4fee-98e7-baa6cd3eea59';
-    $display->content['new-0680aa8f-56b3-4fee-98e7-baa6cd3eea59'] = $pane;
-    $display->panels['main'][1] = 'new-0680aa8f-56b3-4fee-98e7-baa6cd3eea59';
-    $pane = new stdClass();
-    $pane->pid = 'new-031308b6-8e61-4d26-b63c-89deecaf793f';
-    $pane->panel = 'title';
-    $pane->type = 'page_title';
-    $pane->subtype = 'page_title';
-    $pane->shown = TRUE;
-    $pane->access = array();
-    $pane->configuration = array(
-      'markup' => 'h1',
-      'class' => '',
-      'id' => '',
-      'override_title' => 0,
+      'override_title' => 1,
       'override_title_text' => '',
       'override_title_heading' => 'h2',
     );
@@ -318,11 +346,11 @@ function gie_user_default_page_manager_handlers() {
     );
     $pane->css = array();
     $pane->extras = array();
-    $pane->position = 0;
+    $pane->position = 1;
     $pane->locks = array();
-    $pane->uuid = '031308b6-8e61-4d26-b63c-89deecaf793f';
-    $display->content['new-031308b6-8e61-4d26-b63c-89deecaf793f'] = $pane;
-    $display->panels['title'][0] = 'new-031308b6-8e61-4d26-b63c-89deecaf793f';
+    $pane->uuid = 'c055813e-a03d-4040-bc23-f64b50002271';
+    $display->content['new-c055813e-a03d-4040-bc23-f64b50002271'] = $pane;
+    $display->panels['second'][1] = 'new-c055813e-a03d-4040-bc23-f64b50002271';
   $display->hide_title = PANELS_TITLE_FIXED;
   $display->title_pane = '0';
   $handler->conf['display'] = $display;

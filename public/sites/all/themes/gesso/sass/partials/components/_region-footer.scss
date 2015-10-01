@@ -6,4 +6,7 @@
     font-size: em(18px);
     text-transform: uppercase;
   }
+  .page-simple & {
+    padding-top: 0;
+  }
 }

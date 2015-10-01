@@ -1,78 +1,118 @@
 <div class="l-panels-split preface-empty first second">
   <div class="l-wrapper layout-constrain">
     <div class="l-first">
-      <h1>How Will Your Idea Change The World?</h1>
-      <h2>Why Join The Exchange?</h2>
-      <p>The Exchange is the world's leading place for the world's most innovative ideas. The Exchange is for innovators, collaborators, and funders who want help solving the world's biggest challenges.
-      </p>
-      <p>
-        Join today and help us <a href="#">Exchange the world!</a>
-      </p>
-      <div class="welcome-stats">
-        <div class="welcome-stats__item">
-          <div class="welcome-stats__number">90</div>
-          <div class="welcome-stats__label">Innovations</div>
-        </div>
-        <div class="welcome-stats__item">
-          <div class="welcome-stats__number">740k</div>
-          <div class="welcome-stats__label">In Funding</div>
-        </div>
-        <div class="welcome-stats__item">
-          <div class="welcome-stats__number">55%</div>
-          <div class="welcome-stats__label">Funded</div>
+
+      <div class="pane pane--welcome-page-info">
+        <div class="pane__content">
+          <h1>How Will Your Idea Change The World?</h1>
+          <h2>Why Join The Exchange?</h2>
+          <p>The Exchange is the world's leading place for the world's most innovative ideas. The Exchange is for innovators, collaborators, and funders who want help solving the world's biggest challenges.
+          </p>
+          <p>
+            Join today and help us <a href="#">Exchange the world!</a>
+          </p>
+          <div class="pane--welcome-stats">
+            <div class="view view--welcome-stats">
+              <div class="views-row welcome-stats__item">
+                <div class="welcome-stats__number">90</div>
+                <div class="welcome-stats__label">Innovations</div>
+              </div>
+              <div class="views-row welcome-stats__item">
+                <div class="welcome-stats__number">740k</div>
+                <div class="welcome-stats__label">In Funding</div>
+              </div>
+              <div class="views-row welcome-stats__item">
+                <div class="welcome-stats__number">55%</div>
+                <div class="welcome-stats__label">Funded</div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
+
     </div>
     <aside class="l-second">
-      <h1>Sign Up</h1>
-      <form>
-        <div id="edit-lr-social-login-links" class="form-item form-type-item">
-          <label>Sign up with social:</label>
-          <div class="lr_singleglider_200 interface_container">     
-            <div class="lr_icons_box">       
-              <div style="width:100%">    
-                <span alt="Sign in with Google" title="Google" class="lr_providericons lr_google">    
-                </span>       
-              </div>     
-            </div>        
-            <div class="lr_icons_box">       
-              <div style="width:100%">    
-                <span alt="Sign in with Twitter" title="Twitter" class="lr_providericons lr_twitter">    
-                </span>       
-              </div>     
-            </div>        
-            <div class="lr_icons_box">       
-              <div style="width:100%">    
-                <span alt="Sign in with LinkedIn" title="LinkedIn" class="lr_providericons lr_linkedin">    
-                </span>       
-              </div>     
-            </div>   
-          </div>
-          <div style="clear:both"></div>
+
+      <div class="pane pane--welcome-page-user-register">
+        <div class="pane__content">
+
+          <form id="user-register-form">
+
+            <div id="edit-lr-social-login-links" class="form-item form-type-item">
+              <label>Login with Social ID:</label>
+              <div class="lr_singleglider_200 interface_container">
+                <div class="lr_icons_box">
+                  <div style="width:100%">
+                    <span alt="Sign in with Google" title="Google" class="lr_providericons lr_google">
+                    </span>
+                  </div>
+                </div>
+                <div class="lr_icons_box">
+                  <div style="width:100%">
+                    <span alt="Sign in with Twitter" title="Twitter" class="lr_providericons lr_twitter">
+                    </span>
+                  </div>
+                </div>
+                <div class="lr_icons_box">
+                  <div style="width:100%">
+                    <span alt="Sign in with LinkedIn" title="LinkedIn" class="lr_providericons lr_linkedin">
+                    </span>
+                  </div>
+                </div>
+              </div>
+              <div style="clear:both"></div>
+            </div>
+
+            <div class="required-fields">
+              <div id="edit-field-user-firstname" class="field-type-text field-name-field-user-firstname field-widget-text-textfield">
+                <div id="field-user-firstname-add-more-wrapper">
+                  <div class="form-item form-type-textfield">
+                    <label class="element-invisible">First Name <span class="form-item__required-marker"><span class="element-invisible">This field is required.</span></span></label>
+                    <input type="text" maxlength="255" size="60" value="" autocorrect="off" autocapitalize="off" placeholder="First Name" class="text-full form-text is-required">
+                  </div>
+                </div>
+              </div>
+              <div id="edit-field-user-lastname" class="field-type-text field-name-field-user-lastname field-widget-text-textfield">
+                <div id="field-user-lastname-add-more-wrapper">
+                  <div class="form-item form-type-textfield">
+                    <label class="element-invisible">Last Name <span class="form-item__required-marker"><span class="element-invisible">This field is required.</span></span></label>
+                    <input type="text" maxlength="255" size="60" value="" autocorrect="off" autocapitalize="off" placeholder="Last Name" class="text-full form-text is-required">
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="required-fields">
+              <div id="edit-account">
+                <div class="form-item form-type-textfield form-item-name">
+                  <label class="element-invisible">Username <span class="form-item__required-marker"><span class="element-invisible">This field is required.</span></span></label>
+                  <input type="text" maxlength="60" size="60" value="" name="name" id="edit-name" autocorrect="off" autocapitalize="off" placeholder="Username" class="username form-text is-required">
+                </div>
+                <div class="form-item form-item--emailfield form-item--mail is-required">
+                  <label class="form-item__label element-invisible">E-mail address <span class="form-item__required-marker"><span class="element-invisible">This field is required.</span></span></label>
+                  <input type="email" class="form-text form-email required" maxlength="254" size="60" value="" name="mail" id="edit-mail" placeholder="Email Address">
+                </div>
+                <div class="form-item form-type-password form-item-pass">
+                  <label class="element-invisible">Password <span class="form-item__required-marker"><span class="element-invisible">This field is required.</span></span></label>
+                  <input type="password" class="form-text is-required" maxlength="128" size="25" name="pass" id="edit-pass" autocorrect="off" autocapitalize="off" placeholder="Password">
+                </div>
+              </div>
+            </div>
+            <div id="edit-actions" class="form-actions">
+              <p>By creating an account, you agree to our <a href="#">terms and conditions</a>.</p>
+              <input type="submit" value="Activate Your Account" id="edit-submit" class="button--highlight button button--submit">
+            </div>
+            <div class="honeypot-textfield">
+              <div class="form-item form-type-textfield form-item-honeypot">
+                <label for="edit-honeypot">Leave this field blank </label>
+                <input type="text" class="form-text" maxlength="128" size="20" value="" name="honeypot" id="edit-honeypot" autocorrect="off" autocapitalize="off" autocomplete="off">
+              </div>
+            </div>
+
+          </form>
+
         </div>
-        <p class="login-title">Sign up with email:</p>
-        <div class="form-item form-type-textfield">
-          <input type="text" class="form-text is-required" maxlength="60" size="50"placeholder="First Name">
-        </div>
-        <div class="form-item form-type-textfield">
-          <input type="text" class="form-text is-required" maxlength="60" size="50"placeholder="Last Name">
-        </div>
-        <div class="form-item form-type-textfield">
-          <input type="text" class="form-text is-required" maxlength="60" size="50"placeholder="Email Address">
-        </div>
-        <div class="form-item form-type-textfield">
-          <input type="text" class="form-text is-required" maxlength="60" size="50"placeholder="Password">
-        </div>
-        <p>
-          By creating an account, you agree to our <a title="Get a new password" href="#">terms and conditions.</a>
-        </p>
-        <div class="form-actions">
-          <input type="submit" class="button button--submit" value="Sign Up">
-        </div>
-        <p>
-          Continue as <a href="#">Guest</a>
-        </p>
-      </form>
+      </div>
+
     </aside>
   </div>
 </div>
