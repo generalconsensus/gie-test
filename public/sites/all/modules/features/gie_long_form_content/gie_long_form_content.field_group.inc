@@ -187,7 +187,7 @@ function gie_long_form_content_field_group_info() {
   $field_group->parent_name = '';
   $field_group->data = array(
     'label' => 'Footer',
-    'weight' => '2',
+    'weight' => '6',
     'children' => array(
       0 => 'field_learn_more_link',
       1 => 'field_pdf_screenshot',
@@ -316,7 +316,7 @@ function gie_long_form_content_field_group_info() {
   $field_group->parent_name = '';
   $field_group->data = array(
     'label' => 'Page Header',
-    'weight' => '0',
+    'weight' => '4',
     'children' => array(
       0 => 'field_long_form_subtitle',
       1 => 'field_longform_byline',
