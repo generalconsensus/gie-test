@@ -186,18 +186,20 @@ function gie_long_form_content_field_group_info() {
   $field_group->mode = 'full';
   $field_group->parent_name = '';
   $field_group->data = array(
-    'label' => 'Footer',
+    'label' => 'Pre-Footer',
     'weight' => '2',
     'children' => array(
       0 => 'field_learn_more_link',
-      1 => 'field_pdf_screenshot',
+      1 => 'field_longform_description',
+      2 => 'field_partner_logos',
+      3 => 'field_pdf_screenshot',
     ),
     'format_type' => 'div',
     'format_settings' => array(
-      'label' => 'Footer',
+      'label' => 'Pre-Footer',
       'instance_settings' => array(
         'id' => '',
-        'classes' => 'pre-footer',
+        'classes' => 'pre-footer component',
         'description' => '',
         'show_label' => '0',
         'label_element' => 'h3',

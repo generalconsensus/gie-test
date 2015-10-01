@@ -11,29 +11,31 @@
 		color: $white;
     position: relative;
     padding-top: 20px;
-    padding-left: 5%;
+    padding-left: 20%;
+    text-decoration: underline;
     top: 15px;
     &:after{
-    	content: "> ";
-    	font-weight: bold;
-    	padding-left: .5em;
-    	text-decoration: none;
+    	// content: "> ";
+    	// font-weight: bold;
+    	// padding-left: .5em;
+    	// text-decoration: none;
     }
 	}
 }
+
 .pre-footer__download-image {
 	@include image-replace(261px, 165px);
 	background: transparent url('../images/footer-fact-sheet.png') no-repeat;
-  display: block;
-  position: absolute;
+  display: block;  
   left: 25%;
+  position: absolute;
   right: 25%;
-  z-index: -10;
-  top: 2%;
+  top: 1px;
+  z-index: 0;
 	@include breakpoint($mobile-menu-bp, $no-query: true) {
     left: initial;
     right: 15%;
-    top: 65px;
+    top: 1px;
     z-index: 0;
   }
 }
