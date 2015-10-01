@@ -221,7 +221,7 @@
 								<h3 class="sg-code-head">HTML</h3>
 								<pre class="sg-code-html">
 									<code>
-										&lt;p&gt;A paragraph (from the Greek paragraphos, &acirc;Äúto write beside&acirc;Äù or &acirc;Äúwritten beside&acirc;Äù) is a self-contained unit of a discourse in writing dealing with a particular point or idea. A paragraph consists of one or more sentences. Though not required by the syntax of any language, paragraphs are usually an expected part of formal writing, used to organize longer prose.&lt;/p&gt;
+										&lt;p&gt;A paragraph (from the Greek paragraphos, &ldquo;to write beside&rdquo; or &ldquo;written beside&rdquo;) is a self-contained unit of a discourse in writing dealing with a particular point or idea. A paragraph consists of one or more sentences. Though not required by the syntax of any language, paragraphs are usually an expected part of formal writing, used to organize longer prose.&lt;/p&gt;
 &lt;p&gt;This is what a successive paragraph looks like. Some people prefer a space between paragraphs, while others prefer sucessive paragraphs indented with no margins between them.&lt;/p&gt;
 
 									</code>
@@ -312,7 +312,7 @@
 
 &lt;p&gt;&lt;s&gt;This text has a strikethrough&lt;/s&gt;&lt;/p&gt;
 
-&lt;p&gt;Superscript&lt;sup&gt;&Acirc;&reg;&lt;/sup&gt;&lt;/p&gt;
+&lt;p&gt;Superscript&lt;sup&gt;&reg;&lt;/sup&gt;&lt;/p&gt;
 
 &lt;p&gt;Subscript for things like H&lt;sub&gt;2&lt;/sub&gt;O&lt;/p&gt;
 
@@ -1392,7 +1392,7 @@ p q r s t u v w x y z { | } ~
 					<div id="atoms-site-name-simple" class="sg-pattern">
 						<h2 class="sg-pattern-head" ><a href="../../patterns/00-atoms-10-page-elements-01-site-name-simple/00-atoms-10-page-elements-01-site-name-simple.html" class="patternLink" data-patternpartial="atoms-site-name-simple">Site Name Simple</a></h2>
 						<div class="sg-pattern-body">
-							<span class="site-name site-name--simple">
+							<span class="site-name">
   <a class="site-name__link" href="#" rel="home">
     <h1 class="site-name__text">Global Innovation Exchange</h1>
   </a>
@@ -1402,7 +1402,7 @@ p q r s t u v w x y z { | } ~
 								<h3 class="sg-code-head">HTML</h3>
 								<pre class="sg-code-html">
 									<code>
-										&lt;span class=&quot;site-name site-name--simple&quot;&gt;
+										&lt;span class=&quot;site-name&quot;&gt;
   &lt;a class=&quot;site-name__link&quot; href=&quot;#&quot; rel=&quot;home&quot;&gt;
     &lt;h1 class=&quot;site-name__text&quot;&gt;Global Innovation Exchange&lt;/h1&gt;
   &lt;/a&gt;
@@ -2020,46 +2020,56 @@ p q r s t u v w x y z { | } ~
 					<div id="molecules-login-form" class="sg-pattern">
 						<h2 class="sg-pattern-head" ><a href="../../patterns/01-molecules-02-drupal-login-form/01-molecules-02-drupal-login-form.html" class="patternLink" data-patternpartial="molecules-login-form">Login Form</a></h2>
 						<div class="sg-pattern-body">
-							<div class="block">
-  <form>
-    <div class="form-item form-type-textfield form-item-name">
-      <input type="text" class="form-text is-required" maxlength="60" size="50" placeholder="USERNAME">
+							<div id="block-gie-homepage-welcome-login" class="block  block-gie-homepage-welcome-login block--gie-homepage block--gie-homepage-welcome-login">
+    <form action="" method="post" id="user-login-form" accept-charset="UTF-8">
+      <div class="form-item form-type-textfield form-item-name">
+        <label class="element-invisible" for="edit-name--2">Username <span class="form-item__required-marker">
+          <span class="element-invisible">This field is required.</span></span>
+        </label>
+        <input placeholder="Username" autocapitalize="off" autocorrect="off" id="edit-name--2" name="name" value="" size="15" maxlength="60" class="form-text is-required" type="text">
     </div>
     <div class="form-item form-type-password form-item-pass">
-      <input type="password" class="form-text is-required" maxlength="128" size="50"placeholder="PASSWORD">
+        <label class="element-invisible" for="edit-pass--2">Password <span class="form-item__required-marker">
+        <span class="element-invisible">This field is required.</span></span>
+        </label>
+        <input placeholder="Password" autocapitalize="off" autocorrect="off" id="edit-pass--2" name="pass" size="15" maxlength="128" class="form-text is-required" type="password">
     </div>
-    <div id="edit-actions" class="form-actions">
-      <input type="submit" class="button button--submit" value="Log in" name="op" id="edit-submit">
-    </div>
-    <div class="form-item form-type-checkbox">
-      <input type="checkbox" class="form-checkbox">  
-      <label>Keep me logged in</label>
-    </div>
-    <p class="forgot-password"><a href="#">Forgot your password?</a></p>
-  </form>
+        <input name="form_build_id" value="form-HDaNsUKqvCQinadPOzWplzRKYpILDLw8D-b5OMFW-Hc" type="hidden">
+      <input name="form_id" value="user_login_block" type="hidden">
+      <div class="form-actions" id="edit-actions--2"><input id="edit-submit--2" name="op" value="Log in" class="button button--submit" type="submit">
+        <div>Forgot your <a href="/user/password" title="Request new password via e-mail.">Password</a>
+        </div>
+      </div>
+    </form>
 </div>
+
 							<div class="sg-code" style="display: none">
 								<h3 class="sg-code-head">HTML</h3>
 								<pre class="sg-code-html">
 									<code>
-										&lt;div class=&quot;block&quot;&gt;
-  &lt;form&gt;
-    &lt;div class=&quot;form-item form-type-textfield form-item-name&quot;&gt;
-      &lt;input type=&quot;text&quot; class=&quot;form-text is-required&quot; maxlength=&quot;60&quot; size=&quot;50&quot; placeholder=&quot;USERNAME&quot;&gt;
+										&lt;div id=&quot;block-gie-homepage-welcome-login&quot; class=&quot;block  block-gie-homepage-welcome-login block--gie-homepage block--gie-homepage-welcome-login&quot;&gt;
+    &lt;form action=&quot;&quot; method=&quot;post&quot; id=&quot;user-login-form&quot; accept-charset=&quot;UTF-8&quot;&gt;
+      &lt;div class=&quot;form-item form-type-textfield form-item-name&quot;&gt;
+        &lt;label class=&quot;element-invisible&quot; for=&quot;edit-name--2&quot;&gt;Username &lt;span class=&quot;form-item__required-marker&quot;&gt;
+          &lt;span class=&quot;element-invisible&quot;&gt;This field is required.&lt;/span&gt;&lt;/span&gt;
+        &lt;/label&gt;
+        &lt;input placeholder=&quot;Username&quot; autocapitalize=&quot;off&quot; autocorrect=&quot;off&quot; id=&quot;edit-name--2&quot; name=&quot;name&quot; value=&quot;&quot; size=&quot;15&quot; maxlength=&quot;60&quot; class=&quot;form-text is-required&quot; type=&quot;text&quot;&gt;
     &lt;/div&gt;
     &lt;div class=&quot;form-item form-type-password form-item-pass&quot;&gt;
-      &lt;input type=&quot;password&quot; class=&quot;form-text is-required&quot; maxlength=&quot;128&quot; size=&quot;50&quot;placeholder=&quot;PASSWORD&quot;&gt;
+        &lt;label class=&quot;element-invisible&quot; for=&quot;edit-pass--2&quot;&gt;Password &lt;span class=&quot;form-item__required-marker&quot;&gt;
+        &lt;span class=&quot;element-invisible&quot;&gt;This field is required.&lt;/span&gt;&lt;/span&gt;
+        &lt;/label&gt;
+        &lt;input placeholder=&quot;Password&quot; autocapitalize=&quot;off&quot; autocorrect=&quot;off&quot; id=&quot;edit-pass--2&quot; name=&quot;pass&quot; size=&quot;15&quot; maxlength=&quot;128&quot; class=&quot;form-text is-required&quot; type=&quot;password&quot;&gt;
     &lt;/div&gt;
-    &lt;div id=&quot;edit-actions&quot; class=&quot;form-actions&quot;&gt;
-      &lt;input type=&quot;submit&quot; class=&quot;button button--submit&quot; value=&quot;Log in&quot; name=&quot;op&quot; id=&quot;edit-submit&quot;&gt;
-    &lt;/div&gt;
-    &lt;div class=&quot;form-item form-type-checkbox&quot;&gt;
-      &lt;input type=&quot;checkbox&quot; class=&quot;form-checkbox&quot;&gt;  
-      &lt;label&gt;Keep me logged in&lt;/label&gt;
-    &lt;/div&gt;
-    &lt;p class=&quot;forgot-password&quot;&gt;&lt;a href=&quot;#&quot;&gt;Forgot your password?&lt;/a&gt;&lt;/p&gt;
-  &lt;/form&gt;
+        &lt;input name=&quot;form_build_id&quot; value=&quot;form-HDaNsUKqvCQinadPOzWplzRKYpILDLw8D-b5OMFW-Hc&quot; type=&quot;hidden&quot;&gt;
+      &lt;input name=&quot;form_id&quot; value=&quot;user_login_block&quot; type=&quot;hidden&quot;&gt;
+      &lt;div class=&quot;form-actions&quot; id=&quot;edit-actions--2&quot;&gt;&lt;input id=&quot;edit-submit--2&quot; name=&quot;op&quot; value=&quot;Log in&quot; class=&quot;button button--submit&quot; type=&quot;submit&quot;&gt;
+        &lt;div&gt;Forgot your &lt;a href=&quot;/user/password&quot; title=&quot;Request new password via e-mail.&quot;&gt;Password&lt;/a&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/form&gt;
 &lt;/div&gt;
+
 									</code>
 								</pre>
 							</div>
@@ -4910,13 +4920,13 @@ p q r s t u v w x y z { | } ~
           <div class="layout-slat layout-slat--small">
             <div class="layout-slat__media">      
               <div class="view__author-image">
-                <img src="../../images-patternlab/scully-35-35.jpg">
+                <img src="../../images-patternlab/cameron-35-35.jpg">
               </div>
             </div>
             <div class="layout-slat__content">
-              <div class="view__title"><a href="#">Whatever swag accusamus occupy, gentrify butcher tote bag</a></div>
+              <div class="view__title"><a href="#">Rebel Mission to Ord Mantell</a></div>
               <div class="view__meta">
-                Posted by <strong>Dana Scully</strong> | April 13 at 10:14am
+                Posted by <strong>Cameron Howe</strong> | September 4 at 9:04am
               </div>
             </div>
           </div>
@@ -4969,13 +4979,13 @@ p q r s t u v w x y z { | } ~
           &lt;div class=&quot;layout-slat layout-slat--small&quot;&gt;
             &lt;div class=&quot;layout-slat__media&quot;&gt;      
               &lt;div class=&quot;view__author-image&quot;&gt;
-                &lt;img src=&quot;../../images-patternlab/scully-35-35.jpg&quot;&gt;
+                &lt;img src=&quot;../../images-patternlab/cameron-35-35.jpg&quot;&gt;
               &lt;/div&gt;
             &lt;/div&gt;
             &lt;div class=&quot;layout-slat__content&quot;&gt;
-              &lt;div class=&quot;view__title&quot;&gt;&lt;a href=&quot;#&quot;&gt;Whatever swag accusamus occupy, gentrify butcher tote bag&lt;/a&gt;&lt;/div&gt;
+              &lt;div class=&quot;view__title&quot;&gt;&lt;a href=&quot;#&quot;&gt;Rebel Mission to Ord Mantell&lt;/a&gt;&lt;/div&gt;
               &lt;div class=&quot;view__meta&quot;&gt;
-                Posted by &lt;strong&gt;Dana Scully&lt;/strong&gt; | April 13 at 10:14am
+                Posted by &lt;strong&gt;Cameron Howe&lt;/strong&gt; | September 4 at 9:04am
               &lt;/div&gt;
             &lt;/div&gt;
           &lt;/div&gt;
@@ -6835,67 +6845,77 @@ p q r s t u v w x y z { | } ~
 					<div id="organisms-header-simple" class="sg-pattern">
 						<h2 class="sg-pattern-head" ><a href="../../patterns/02-organisms-00-regions-04-header-simple/02-organisms-00-regions-04-header-simple.html" class="patternLink" data-patternpartial="organisms-header-simple">Header Simple</a></h2>
 						<div class="sg-pattern-body">
-							<header class="header-simple" role="banner">
+							<header class="header" role="banner">
   <div class="layout-constrain">
-    <span class="site-name site-name--simple">
+    <span class="site-name">
       <a class="site-name__link" href="#" rel="home">
         <h1 class="site-name__text">Global Innovation Exchange</h1>
       </a>
     </span>
-    <div class="block">
-      <form>
-        <div class="form-item form-type-textfield form-item-name">
-          <input type="text" class="form-text is-required" maxlength="60" size="50" placeholder="USERNAME">
+    <div id="block-gie-homepage-welcome-login" class="block  block-gie-homepage-welcome-login block--gie-homepage block--gie-homepage-welcome-login">
+        <form action="" method="post" id="user-login-form" accept-charset="UTF-8">
+          <div class="form-item form-type-textfield form-item-name">
+            <label class="element-invisible" for="edit-name--2">Username <span class="form-item__required-marker">
+              <span class="element-invisible">This field is required.</span></span>
+            </label>
+            <input placeholder="Username" autocapitalize="off" autocorrect="off" id="edit-name--2" name="name" value="" size="15" maxlength="60" class="form-text is-required" type="text">
         </div>
         <div class="form-item form-type-password form-item-pass">
-          <input type="password" class="form-text is-required" maxlength="128" size="50"placeholder="PASSWORD">
+            <label class="element-invisible" for="edit-pass--2">Password <span class="form-item__required-marker">
+            <span class="element-invisible">This field is required.</span></span>
+            </label>
+            <input placeholder="Password" autocapitalize="off" autocorrect="off" id="edit-pass--2" name="pass" size="15" maxlength="128" class="form-text is-required" type="password">
         </div>
-        <div id="edit-actions" class="form-actions">
-          <input type="submit" class="button button--submit" value="Log in" name="op" id="edit-submit">
-        </div>
-        <div class="form-item form-type-checkbox">
-          <input type="checkbox" class="form-checkbox">  
-          <label>Keep me logged in</label>
-        </div>
-        <p class="forgot-password"><a href="#">Forgot your password?</a></p>
-      </form>
-    </div>  </div>
+            <input name="form_build_id" value="form-HDaNsUKqvCQinadPOzWplzRKYpILDLw8D-b5OMFW-Hc" type="hidden">
+          <input name="form_id" value="user_login_block" type="hidden">
+          <div class="form-actions" id="edit-actions--2"><input id="edit-submit--2" name="op" value="Log in" class="button button--submit" type="submit">
+            <div>Forgot your <a href="/user/password" title="Request new password via e-mail.">Password</a>
+            </div>
+          </div>
+        </form>
+    </div>
+  </div>
 </header>
 
 							<div class="sg-code" style="display: none">
 									<div class="sg-code-contains">
 										This pattern contains: 
-											<a href="../../patterns/00-atoms-10-page-elements-01-site-name-simple/00-atoms-10-page-elements-01-site-name-simple.html"><code>atoms-site-name-simple</code></a>
+											<a href="../../patterns/00-atoms-10-page-elements-00-site-name/00-atoms-10-page-elements-00-site-name.html"><code>atoms-site-name</code></a>
 											<a href="../../patterns/01-molecules-02-drupal-login-form/01-molecules-02-drupal-login-form.html"><code>molecules-login-form</code></a>
 									</div>
 								<h3 class="sg-code-head">HTML</h3>
 								<pre class="sg-code-html">
 									<code>
-										&lt;header class=&quot;header-simple&quot; role=&quot;banner&quot;&gt;
+										&lt;header class=&quot;header&quot; role=&quot;banner&quot;&gt;
   &lt;div class=&quot;layout-constrain&quot;&gt;
-    &lt;span class=&quot;site-name site-name--simple&quot;&gt;
+    &lt;span class=&quot;site-name&quot;&gt;
       &lt;a class=&quot;site-name__link&quot; href=&quot;#&quot; rel=&quot;home&quot;&gt;
         &lt;h1 class=&quot;site-name__text&quot;&gt;Global Innovation Exchange&lt;/h1&gt;
       &lt;/a&gt;
     &lt;/span&gt;
-    &lt;div class=&quot;block&quot;&gt;
-      &lt;form&gt;
-        &lt;div class=&quot;form-item form-type-textfield form-item-name&quot;&gt;
-          &lt;input type=&quot;text&quot; class=&quot;form-text is-required&quot; maxlength=&quot;60&quot; size=&quot;50&quot; placeholder=&quot;USERNAME&quot;&gt;
+    &lt;div id=&quot;block-gie-homepage-welcome-login&quot; class=&quot;block  block-gie-homepage-welcome-login block--gie-homepage block--gie-homepage-welcome-login&quot;&gt;
+        &lt;form action=&quot;&quot; method=&quot;post&quot; id=&quot;user-login-form&quot; accept-charset=&quot;UTF-8&quot;&gt;
+          &lt;div class=&quot;form-item form-type-textfield form-item-name&quot;&gt;
+            &lt;label class=&quot;element-invisible&quot; for=&quot;edit-name--2&quot;&gt;Username &lt;span class=&quot;form-item__required-marker&quot;&gt;
+              &lt;span class=&quot;element-invisible&quot;&gt;This field is required.&lt;/span&gt;&lt;/span&gt;
+            &lt;/label&gt;
+            &lt;input placeholder=&quot;Username&quot; autocapitalize=&quot;off&quot; autocorrect=&quot;off&quot; id=&quot;edit-name--2&quot; name=&quot;name&quot; value=&quot;&quot; size=&quot;15&quot; maxlength=&quot;60&quot; class=&quot;form-text is-required&quot; type=&quot;text&quot;&gt;
         &lt;/div&gt;
         &lt;div class=&quot;form-item form-type-password form-item-pass&quot;&gt;
-          &lt;input type=&quot;password&quot; class=&quot;form-text is-required&quot; maxlength=&quot;128&quot; size=&quot;50&quot;placeholder=&quot;PASSWORD&quot;&gt;
+            &lt;label class=&quot;element-invisible&quot; for=&quot;edit-pass--2&quot;&gt;Password &lt;span class=&quot;form-item__required-marker&quot;&gt;
+            &lt;span class=&quot;element-invisible&quot;&gt;This field is required.&lt;/span&gt;&lt;/span&gt;
+            &lt;/label&gt;
+            &lt;input placeholder=&quot;Password&quot; autocapitalize=&quot;off&quot; autocorrect=&quot;off&quot; id=&quot;edit-pass--2&quot; name=&quot;pass&quot; size=&quot;15&quot; maxlength=&quot;128&quot; class=&quot;form-text is-required&quot; type=&quot;password&quot;&gt;
         &lt;/div&gt;
-        &lt;div id=&quot;edit-actions&quot; class=&quot;form-actions&quot;&gt;
-          &lt;input type=&quot;submit&quot; class=&quot;button button--submit&quot; value=&quot;Log in&quot; name=&quot;op&quot; id=&quot;edit-submit&quot;&gt;
-        &lt;/div&gt;
-        &lt;div class=&quot;form-item form-type-checkbox&quot;&gt;
-          &lt;input type=&quot;checkbox&quot; class=&quot;form-checkbox&quot;&gt;  
-          &lt;label&gt;Keep me logged in&lt;/label&gt;
-        &lt;/div&gt;
-        &lt;p class=&quot;forgot-password&quot;&gt;&lt;a href=&quot;#&quot;&gt;Forgot your password?&lt;/a&gt;&lt;/p&gt;
-      &lt;/form&gt;
-    &lt;/div&gt;  &lt;/div&gt;
+            &lt;input name=&quot;form_build_id&quot; value=&quot;form-HDaNsUKqvCQinadPOzWplzRKYpILDLw8D-b5OMFW-Hc&quot; type=&quot;hidden&quot;&gt;
+          &lt;input name=&quot;form_id&quot; value=&quot;user_login_block&quot; type=&quot;hidden&quot;&gt;
+          &lt;div class=&quot;form-actions&quot; id=&quot;edit-actions--2&quot;&gt;&lt;input id=&quot;edit-submit--2&quot; name=&quot;op&quot; value=&quot;Log in&quot; class=&quot;button button--submit&quot; type=&quot;submit&quot;&gt;
+            &lt;div&gt;Forgot your &lt;a href=&quot;/user/password&quot; title=&quot;Request new password via e-mail.&quot;&gt;Password&lt;/a&gt;
+            &lt;/div&gt;
+          &lt;/div&gt;
+        &lt;/form&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
 &lt;/header&gt;
 
 									</code>
@@ -6944,6 +6964,87 @@ p q r s t u v w x y z { | } ~
 
 
  
+									</code>
+								</pre>
+							</div>
+						</div>
+					</div>
+					<div id="organisms-navigation-welcome-page" class="sg-pattern">
+						<h2 class="sg-pattern-head" ><a href="../../patterns/02-organisms-00-regions-06-navigation-welcome-page/02-organisms-00-regions-06-navigation-welcome-page.html" class="patternLink" data-patternpartial="organisms-navigation-welcome-page">Navigation Welcome Page</a></h2>
+						<div class="sg-pattern-body">
+							<div class="region-navigation">
+  <div class="region__inner">
+    <span class="site-name">
+      <a class="site-name__link" href="#" rel="home">
+        <h1 class="site-name__text">Global Innovation Exchange</h1>
+      </a>
+    </span>
+    <div id="block-gie-homepage-welcome-login" class="block  block-gie-homepage-welcome-login block--gie-homepage block--gie-homepage-welcome-login">
+        <form action="" method="post" id="user-login-form" accept-charset="UTF-8">
+          <div class="form-item form-type-textfield form-item-name">
+            <label class="element-invisible" for="edit-name--2">Username <span class="form-item__required-marker">
+              <span class="element-invisible">This field is required.</span></span>
+            </label>
+            <input placeholder="Username" autocapitalize="off" autocorrect="off" id="edit-name--2" name="name" value="" size="15" maxlength="60" class="form-text is-required" type="text">
+        </div>
+        <div class="form-item form-type-password form-item-pass">
+            <label class="element-invisible" for="edit-pass--2">Password <span class="form-item__required-marker">
+            <span class="element-invisible">This field is required.</span></span>
+            </label>
+            <input placeholder="Password" autocapitalize="off" autocorrect="off" id="edit-pass--2" name="pass" size="15" maxlength="128" class="form-text is-required" type="password">
+        </div>
+            <input name="form_build_id" value="form-HDaNsUKqvCQinadPOzWplzRKYpILDLw8D-b5OMFW-Hc" type="hidden">
+          <input name="form_id" value="user_login_block" type="hidden">
+          <div class="form-actions" id="edit-actions--2"><input id="edit-submit--2" name="op" value="Log in" class="button button--submit" type="submit">
+            <div>Forgot your <a href="/user/password" title="Request new password via e-mail.">Password</a>
+            </div>
+          </div>
+        </form>
+    </div>
+  </div>
+</div>
+
+							<div class="sg-code" style="display: none">
+									<div class="sg-code-contains">
+										This pattern contains: 
+											<a href="../../patterns/00-atoms-10-page-elements-00-site-name/00-atoms-10-page-elements-00-site-name.html"><code>atoms-site-name</code></a>
+											<a href="../../patterns/01-molecules-02-drupal-login-form/01-molecules-02-drupal-login-form.html"><code>molecules-login-form</code></a>
+									</div>
+								<h3 class="sg-code-head">HTML</h3>
+								<pre class="sg-code-html">
+									<code>
+										&lt;div class=&quot;region-navigation&quot;&gt;
+  &lt;div class=&quot;region__inner&quot;&gt;
+    &lt;span class=&quot;site-name&quot;&gt;
+      &lt;a class=&quot;site-name__link&quot; href=&quot;#&quot; rel=&quot;home&quot;&gt;
+        &lt;h1 class=&quot;site-name__text&quot;&gt;Global Innovation Exchange&lt;/h1&gt;
+      &lt;/a&gt;
+    &lt;/span&gt;
+    &lt;div id=&quot;block-gie-homepage-welcome-login&quot; class=&quot;block  block-gie-homepage-welcome-login block--gie-homepage block--gie-homepage-welcome-login&quot;&gt;
+        &lt;form action=&quot;&quot; method=&quot;post&quot; id=&quot;user-login-form&quot; accept-charset=&quot;UTF-8&quot;&gt;
+          &lt;div class=&quot;form-item form-type-textfield form-item-name&quot;&gt;
+            &lt;label class=&quot;element-invisible&quot; for=&quot;edit-name--2&quot;&gt;Username &lt;span class=&quot;form-item__required-marker&quot;&gt;
+              &lt;span class=&quot;element-invisible&quot;&gt;This field is required.&lt;/span&gt;&lt;/span&gt;
+            &lt;/label&gt;
+            &lt;input placeholder=&quot;Username&quot; autocapitalize=&quot;off&quot; autocorrect=&quot;off&quot; id=&quot;edit-name--2&quot; name=&quot;name&quot; value=&quot;&quot; size=&quot;15&quot; maxlength=&quot;60&quot; class=&quot;form-text is-required&quot; type=&quot;text&quot;&gt;
+        &lt;/div&gt;
+        &lt;div class=&quot;form-item form-type-password form-item-pass&quot;&gt;
+            &lt;label class=&quot;element-invisible&quot; for=&quot;edit-pass--2&quot;&gt;Password &lt;span class=&quot;form-item__required-marker&quot;&gt;
+            &lt;span class=&quot;element-invisible&quot;&gt;This field is required.&lt;/span&gt;&lt;/span&gt;
+            &lt;/label&gt;
+            &lt;input placeholder=&quot;Password&quot; autocapitalize=&quot;off&quot; autocorrect=&quot;off&quot; id=&quot;edit-pass--2&quot; name=&quot;pass&quot; size=&quot;15&quot; maxlength=&quot;128&quot; class=&quot;form-text is-required&quot; type=&quot;password&quot;&gt;
+        &lt;/div&gt;
+            &lt;input name=&quot;form_build_id&quot; value=&quot;form-HDaNsUKqvCQinadPOzWplzRKYpILDLw8D-b5OMFW-Hc&quot; type=&quot;hidden&quot;&gt;
+          &lt;input name=&quot;form_id&quot; value=&quot;user_login_block&quot; type=&quot;hidden&quot;&gt;
+          &lt;div class=&quot;form-actions&quot; id=&quot;edit-actions--2&quot;&gt;&lt;input id=&quot;edit-submit--2&quot; name=&quot;op&quot; value=&quot;Log in&quot; class=&quot;button button--submit&quot; type=&quot;submit&quot;&gt;
+            &lt;div&gt;Forgot your &lt;a href=&quot;/user/password&quot; title=&quot;Request new password via e-mail.&quot;&gt;Password&lt;/a&gt;
+            &lt;/div&gt;
+          &lt;/div&gt;
+        &lt;/form&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+
 									</code>
 								</pre>
 							</div>
@@ -7076,12 +7177,12 @@ p q r s t u v w x y z { | } ~
                 <article class="card card--background">
                   <div class="card__content">
                     <h2 class="card__type">Toolkit</h2>
-                    <h3 class="card__title"><a href="http://www.malevole.com/mv/misc/text/">Thunder, thunder, thundercats, Ho!</a></h3>
+                    <h3 class="card__title"><a href="http://hipsteripsum.me/">Whatever swag accusamus occupy, gentrify butcher tote bag</a></h3>
                     <div class="card__author">
                       <div class="card__author-inner">
-                        <div class="card__author-image"><img src="../../images-patternlab/tyrion-35-35.jpg"></div>
-                        <div class="card__author-name">Tyrion Lannister</div>
-                        <div class="card__author-date">6/08/2015</div>    
+                        <div class="card__author-image"><img src="../../images-patternlab/scully-35-35.jpg"></div>
+                        <div class="card__author-name">Dana Scully</div>
+                        <div class="card__author-date">4/13/2015</div>    
                       </div>
                     </div>
                   </div>
@@ -7104,12 +7205,12 @@ p q r s t u v w x y z { | } ~
                 <article class="card card--background">
                   <div class="card__content">
                     <h2 class="card__type">Toolkit</h2>
-                    <h3 class="card__title"><a href="http://veggieipsum.com">Veggies sunt bona vobis, proinde vos postulo</a></h3>
+                    <h3 class="card__title"><a href="http://www.cheeseipsum.co.uk/">Cottage cheese brie lancashire. Boursin when the cheese comes out.</a></h3>
                     <div class="card__author">
                       <div class="card__author-inner">
-                        <div class="card__author-image"><img src="../../images-patternlab/watson-35-35.jpg"></div>
-                        <div class="card__author-name">Dr. John Watson, M.D.</div>
-                        <div class="card__author-date">2/10/2015</div>    
+                        <div class="card__author-image"><img src="../../images-patternlab/buttercup-35-35.jpg"></div>
+                        <div class="card__author-name">Princess Buttercup</div>
+                        <div class="card__author-date">12/28/2015</div>    
                       </div>
                     </div>
                   </div>
@@ -7197,27 +7298,27 @@ p q r s t u v w x y z { | } ~
               <div class="views-row">
                 <article class="card card--icons">
                   <div class="card__image">
-                    <a href="http://hipsteripsum.me/"><img src="http://lorempixel.com/500/300/business/3/" alt="Card 5:3" height="300" width="500">
+                    <a href="http://chrisvalleskey.com/fillerama/"><img src="http://lorempixel.com/500/300/transport/3/" alt="Card 5:3" height="300" width="500">
 </a>
                   </div>
                   <div class="card__content">
-                    <h3 class="card__title"><a href="http://hipsteripsum.me/">Whatever swag accusamus occupy, gentrify butcher tote bag</a></h3>
-                    <div><p>Fanny pack ullamco et veniam semiotics. Shoreditch PBR reprehenderit cliche, magna Tonx aesthetic. Narwhal photo booth DIY aute post-ironic anim. Vice cliche brunch est before they sold out fap, street art Odd Future fashion axe messenger bag nihil Tonx tattooed. Nihil hashtag incididunt, do eu art party Banksy jean shorts four loko typewriter.</p></div>
+                    <h3 class="card__title"><a href="http://chrisvalleskey.com/fillerama/">Rebel Mission to Ord Mantell</a></h3>
+                    <div><p>I find your lack of faith disturbing. A tremor in the Force. The last time I felt it was in the presence of my old master. Don't act so surprised, Your Highness. You weren't on any mercy mission this time. Several transmissions were beamed to this ship by Rebel spies. I want to know what happened to the plans they sent you. The plans you refer to will soon be back in our hands.</p></div>
                     <div class="card__counts">
                       <div class="view">
-                        <div class="has-icon--evidence" title="Evidence">2</div>
+                        <div class="has-icon--evidence" title="Evidence">25</div>
                       </div>
                       <div class="view">
-                        <div class="has-icon--comment" title="Comments">5</div>
+                        <div class="has-icon--comment" title="Comments">36</div>
                       </div>
                       <div class="view">
-                        <div class="has-icon--funding" title="Funding">104</div>
+                        <div class="has-icon--funding" title="Funding">225</div>
                       </div>
                       <div class="view">
-                        <div class="has-icon--favorite" title="Favorites">3</div>
+                        <div class="has-icon--favorite" title="Favorites">20</div>
                       </div>
                       <div class="view">
-                        <div class="has-icon--assistance" title="Assistance">305</div>
+                        <div class="has-icon--assistance" title="Assistance">678</div>
                       </div>
                     </div>
                   </div>
@@ -7258,9 +7359,9 @@ p q r s t u v w x y z { | } ~
                     </div>
                   </div>
                 </article>
-                
-                
-                
+
+
+
                  
                  
                  
@@ -7289,9 +7390,9 @@ p q r s t u v w x y z { | } ~
                     </div>
                   </div>
                 </article>
-                
-                
-                
+
+
+
                  
                  
                  
@@ -7300,11 +7401,11 @@ p q r s t u v w x y z { | } ~
                 <article class="card card--icons">
                   <div class="card__content">
                     <h2 class="card__type">Toolkit</h2>
-                    <h3 class="card__primary-title"><a href="http://hipsteripsum.me/">Whatever swag accusamus occupy, gentrify butcher tote bag</a></h3>
+                    <h3 class="card__primary-title"><a href="http://chrisvalleskey.com/fillerama/">Rebel Mission to Ord Mantell</a></h3>
                     <div class="card__author">
-                      <div class="card__author-image"><img src="../../images-patternlab/scully-35-35.jpg"></div>
-                      <div class="card__author-name">Dana Scully</div>
-                      <div class="card__author-date">4/13/2015</div>    
+                      <div class="card__author-image"><img src="../../images-patternlab/cameron-35-35.jpg"></div>
+                      <div class="card__author-name">Cameron Howe</div>
+                      <div class="card__author-date">9/04/2015</div>    
                     </div>
                     <div class="card__list">
                       <span class="card__list-label">Sectors:</span> 
@@ -7312,17 +7413,17 @@ p q r s t u v w x y z { | } ~
                     </div>
                     <div class="card__counts">
                       <div class="view">
-                        <div class="has-icon--comment" title="Comments">5</div>
+                        <div class="has-icon--comment" title="Comments">36</div>
                       </div>
                       <div class="view">
-                        <div class="has-icon--favorite" title="Favorites">3</div>
+                        <div class="has-icon--favorite" title="Favorites">20</div>
                       </div>
                     </div>
                   </div>
                 </article>
-                
-                
-                
+
+
+
                  
                  
                  
@@ -7371,9 +7472,9 @@ p q r s t u v w x y z { | } ~
                     </div>
                   </div>
                 </article>
-                
-                
-                
+
+
+
                  
                  
                  
@@ -7411,24 +7512,24 @@ p q r s t u v w x y z { | } ~
                     </div>
                   </div>
                 </article>
-                
-                
-                
+
+
+
                  
                  
                  
               </div>
               <div class="views-row">
                 <article class="card card--icons">
-                  <div class="card__number">256,000</div>
+                  <div class="card__number">2,500,000</div>
                   <div class="card__image">
-                    <a href="http://hipsteripsum.me/"><img src="http://lorempixel.com/500/300/business/3/" alt="Card 5:3" height="300" width="500">
+                    <a href="http://chrisvalleskey.com/fillerama/"><img src="http://lorempixel.com/500/300/transport/3/" alt="Card 5:3" height="300" width="500">
 </a>
                   </div>
                   <div class="card__content">
-                    <h3 class="card__primary-title"><a href="http://hipsteripsum.me/">Whatever swag accusamus occupy, gentrify butcher tote bag</a></h3>
+                    <h3 class="card__primary-title"><a href="http://chrisvalleskey.com/fillerama/">Rebel Mission to Ord Mantell</a></h3>
                     <div class="card__list">
-                      <div class="card__list-label">Due by:</div> 4/13/2015
+                      <div class="card__list-label">Due by:</div> 9/04/2015
                     </div> 
                     <div class="card__list">
                       <div class="card__list-label">Eligibility:</div> <span class="has-icon-member" title="Member">Member</span> <span class="has-icon-community" title="Organization">Organization</span>
@@ -7443,17 +7544,17 @@ p q r s t u v w x y z { | } ~
                     </div>
                     <div class="card__counts">
                       <div class="view">
-                        <div class="has-icon--comment" title="Comments">5</div>
+                        <div class="has-icon--comment" title="Comments">36</div>
                       </div>
                       <div class="view">
-                        <div class="has-icon--favorite" title="Favorites">3</div>
+                        <div class="has-icon--favorite" title="Favorites">20</div>
                       </div>
                     </div>
                   </div>
                 </article>
-                
-                
-                
+
+
+
                  
                  
                  
@@ -7487,7 +7588,7 @@ p q r s t u v w x y z { | } ~
            </div>
          </div>
        </div>
-       
+
          
        <div class="pane pane--recent-conversations-recent-conversations">
          <h2 class="pane__title">Recent Conversations</h2>  
@@ -7527,13 +7628,13 @@ p q r s t u v w x y z { | } ~
                  <div class="layout-slat layout-slat--small">
                    <div class="layout-slat__media">      
                      <div class="view__author-image">
-                       <img src="../../images-patternlab/scully-35-35.jpg">
+                       <img src="../../images-patternlab/cameron-35-35.jpg">
                      </div>
                    </div>
                    <div class="layout-slat__content">
-                     <div class="view__title"><a href="#">Whatever swag accusamus occupy, gentrify butcher tote bag</a></div>
+                     <div class="view__title"><a href="#">Rebel Mission to Ord Mantell</a></div>
                      <div class="view__meta">
-                       Posted by <strong>Dana Scully</strong> | April 13 at 10:14am
+                       Posted by <strong>Cameron Howe</strong> | September 4 at 9:04am
                      </div>
                    </div>
                  </div>
@@ -7603,12 +7704,12 @@ p q r s t u v w x y z { | } ~
                 &lt;article class=&quot;card card--background&quot;&gt;
                   &lt;div class=&quot;card__content&quot;&gt;
                     &lt;h2 class=&quot;card__type&quot;&gt;Toolkit&lt;/h2&gt;
-                    &lt;h3 class=&quot;card__title&quot;&gt;&lt;a href=&quot;http://www.malevole.com/mv/misc/text/&quot;&gt;Thunder, thunder, thundercats, Ho!&lt;/a&gt;&lt;/h3&gt;
+                    &lt;h3 class=&quot;card__title&quot;&gt;&lt;a href=&quot;http://hipsteripsum.me/&quot;&gt;Whatever swag accusamus occupy, gentrify butcher tote bag&lt;/a&gt;&lt;/h3&gt;
                     &lt;div class=&quot;card__author&quot;&gt;
                       &lt;div class=&quot;card__author-inner&quot;&gt;
-                        &lt;div class=&quot;card__author-image&quot;&gt;&lt;img src=&quot;../../images-patternlab/tyrion-35-35.jpg&quot;&gt;&lt;/div&gt;
-                        &lt;div class=&quot;card__author-name&quot;&gt;Tyrion Lannister&lt;/div&gt;
-                        &lt;div class=&quot;card__author-date&quot;&gt;6/08/2015&lt;/div&gt;    
+                        &lt;div class=&quot;card__author-image&quot;&gt;&lt;img src=&quot;../../images-patternlab/scully-35-35.jpg&quot;&gt;&lt;/div&gt;
+                        &lt;div class=&quot;card__author-name&quot;&gt;Dana Scully&lt;/div&gt;
+                        &lt;div class=&quot;card__author-date&quot;&gt;4/13/2015&lt;/div&gt;    
                       &lt;/div&gt;
                     &lt;/div&gt;
                   &lt;/div&gt;
@@ -7631,12 +7732,12 @@ p q r s t u v w x y z { | } ~
                 &lt;article class=&quot;card card--background&quot;&gt;
                   &lt;div class=&quot;card__content&quot;&gt;
                     &lt;h2 class=&quot;card__type&quot;&gt;Toolkit&lt;/h2&gt;
-                    &lt;h3 class=&quot;card__title&quot;&gt;&lt;a href=&quot;http://veggieipsum.com&quot;&gt;Veggies sunt bona vobis, proinde vos postulo&lt;/a&gt;&lt;/h3&gt;
+                    &lt;h3 class=&quot;card__title&quot;&gt;&lt;a href=&quot;http://www.cheeseipsum.co.uk/&quot;&gt;Cottage cheese brie lancashire. Boursin when the cheese comes out.&lt;/a&gt;&lt;/h3&gt;
                     &lt;div class=&quot;card__author&quot;&gt;
                       &lt;div class=&quot;card__author-inner&quot;&gt;
-                        &lt;div class=&quot;card__author-image&quot;&gt;&lt;img src=&quot;../../images-patternlab/watson-35-35.jpg&quot;&gt;&lt;/div&gt;
-                        &lt;div class=&quot;card__author-name&quot;&gt;Dr. John Watson, M.D.&lt;/div&gt;
-                        &lt;div class=&quot;card__author-date&quot;&gt;2/10/2015&lt;/div&gt;    
+                        &lt;div class=&quot;card__author-image&quot;&gt;&lt;img src=&quot;../../images-patternlab/buttercup-35-35.jpg&quot;&gt;&lt;/div&gt;
+                        &lt;div class=&quot;card__author-name&quot;&gt;Princess Buttercup&lt;/div&gt;
+                        &lt;div class=&quot;card__author-date&quot;&gt;12/28/2015&lt;/div&gt;    
                       &lt;/div&gt;
                     &lt;/div&gt;
                   &lt;/div&gt;
@@ -7724,27 +7825,27 @@ p q r s t u v w x y z { | } ~
               &lt;div class=&quot;views-row&quot;&gt;
                 &lt;article class=&quot;card card--icons&quot;&gt;
                   &lt;div class=&quot;card__image&quot;&gt;
-                    &lt;a href=&quot;http://hipsteripsum.me/&quot;&gt;&lt;img src=&quot;http://lorempixel.com/500/300/business/3/&quot; alt=&quot;Card 5:3&quot; height=&quot;300&quot; width=&quot;500&quot;&gt;
+                    &lt;a href=&quot;http://chrisvalleskey.com/fillerama/&quot;&gt;&lt;img src=&quot;http://lorempixel.com/500/300/transport/3/&quot; alt=&quot;Card 5:3&quot; height=&quot;300&quot; width=&quot;500&quot;&gt;
 &lt;/a&gt;
                   &lt;/div&gt;
                   &lt;div class=&quot;card__content&quot;&gt;
-                    &lt;h3 class=&quot;card__title&quot;&gt;&lt;a href=&quot;http://hipsteripsum.me/&quot;&gt;Whatever swag accusamus occupy, gentrify butcher tote bag&lt;/a&gt;&lt;/h3&gt;
-                    &lt;div&gt;&lt;p&gt;Fanny pack ullamco et veniam semiotics. Shoreditch PBR reprehenderit cliche, magna Tonx aesthetic. Narwhal photo booth DIY aute post-ironic anim. Vice cliche brunch est before they sold out fap, street art Odd Future fashion axe messenger bag nihil Tonx tattooed. Nihil hashtag incididunt, do eu art party Banksy jean shorts four loko typewriter.&lt;/p&gt;&lt;/div&gt;
+                    &lt;h3 class=&quot;card__title&quot;&gt;&lt;a href=&quot;http://chrisvalleskey.com/fillerama/&quot;&gt;Rebel Mission to Ord Mantell&lt;/a&gt;&lt;/h3&gt;
+                    &lt;div&gt;&lt;p&gt;I find your lack of faith disturbing. A tremor in the Force. The last time I felt it was in the presence of my old master. Don't act so surprised, Your Highness. You weren't on any mercy mission this time. Several transmissions were beamed to this ship by Rebel spies. I want to know what happened to the plans they sent you. The plans you refer to will soon be back in our hands.&lt;/p&gt;&lt;/div&gt;
                     &lt;div class=&quot;card__counts&quot;&gt;
                       &lt;div class=&quot;view&quot;&gt;
-                        &lt;div class=&quot;has-icon--evidence&quot; title=&quot;Evidence&quot;&gt;2&lt;/div&gt;
+                        &lt;div class=&quot;has-icon--evidence&quot; title=&quot;Evidence&quot;&gt;25&lt;/div&gt;
                       &lt;/div&gt;
                       &lt;div class=&quot;view&quot;&gt;
-                        &lt;div class=&quot;has-icon--comment&quot; title=&quot;Comments&quot;&gt;5&lt;/div&gt;
+                        &lt;div class=&quot;has-icon--comment&quot; title=&quot;Comments&quot;&gt;36&lt;/div&gt;
                       &lt;/div&gt;
                       &lt;div class=&quot;view&quot;&gt;
-                        &lt;div class=&quot;has-icon--funding&quot; title=&quot;Funding&quot;&gt;104&lt;/div&gt;
+                        &lt;div class=&quot;has-icon--funding&quot; title=&quot;Funding&quot;&gt;225&lt;/div&gt;
                       &lt;/div&gt;
                       &lt;div class=&quot;view&quot;&gt;
-                        &lt;div class=&quot;has-icon--favorite&quot; title=&quot;Favorites&quot;&gt;3&lt;/div&gt;
+                        &lt;div class=&quot;has-icon--favorite&quot; title=&quot;Favorites&quot;&gt;20&lt;/div&gt;
                       &lt;/div&gt;
                       &lt;div class=&quot;view&quot;&gt;
-                        &lt;div class=&quot;has-icon--assistance&quot; title=&quot;Assistance&quot;&gt;305&lt;/div&gt;
+                        &lt;div class=&quot;has-icon--assistance&quot; title=&quot;Assistance&quot;&gt;678&lt;/div&gt;
                       &lt;/div&gt;
                     &lt;/div&gt;
                   &lt;/div&gt;
@@ -7785,9 +7886,9 @@ p q r s t u v w x y z { | } ~
                     &lt;/div&gt;
                   &lt;/div&gt;
                 &lt;/article&gt;
-                
-                
-                
+
+
+
                  
                  
                  
@@ -7816,9 +7917,9 @@ p q r s t u v w x y z { | } ~
                     &lt;/div&gt;
                   &lt;/div&gt;
                 &lt;/article&gt;
-                
-                
-                
+
+
+
                  
                  
                  
@@ -7827,11 +7928,11 @@ p q r s t u v w x y z { | } ~
                 &lt;article class=&quot;card card--icons&quot;&gt;
                   &lt;div class=&quot;card__content&quot;&gt;
                     &lt;h2 class=&quot;card__type&quot;&gt;Toolkit&lt;/h2&gt;
-                    &lt;h3 class=&quot;card__primary-title&quot;&gt;&lt;a href=&quot;http://hipsteripsum.me/&quot;&gt;Whatever swag accusamus occupy, gentrify butcher tote bag&lt;/a&gt;&lt;/h3&gt;
+                    &lt;h3 class=&quot;card__primary-title&quot;&gt;&lt;a href=&quot;http://chrisvalleskey.com/fillerama/&quot;&gt;Rebel Mission to Ord Mantell&lt;/a&gt;&lt;/h3&gt;
                     &lt;div class=&quot;card__author&quot;&gt;
-                      &lt;div class=&quot;card__author-image&quot;&gt;&lt;img src=&quot;../../images-patternlab/scully-35-35.jpg&quot;&gt;&lt;/div&gt;
-                      &lt;div class=&quot;card__author-name&quot;&gt;Dana Scully&lt;/div&gt;
-                      &lt;div class=&quot;card__author-date&quot;&gt;4/13/2015&lt;/div&gt;    
+                      &lt;div class=&quot;card__author-image&quot;&gt;&lt;img src=&quot;../../images-patternlab/cameron-35-35.jpg&quot;&gt;&lt;/div&gt;
+                      &lt;div class=&quot;card__author-name&quot;&gt;Cameron Howe&lt;/div&gt;
+                      &lt;div class=&quot;card__author-date&quot;&gt;9/04/2015&lt;/div&gt;    
                     &lt;/div&gt;
                     &lt;div class=&quot;card__list&quot;&gt;
                       &lt;span class=&quot;card__list-label&quot;&gt;Sectors:&lt;/span&gt; 
@@ -7839,17 +7940,17 @@ p q r s t u v w x y z { | } ~
                     &lt;/div&gt;
                     &lt;div class=&quot;card__counts&quot;&gt;
                       &lt;div class=&quot;view&quot;&gt;
-                        &lt;div class=&quot;has-icon--comment&quot; title=&quot;Comments&quot;&gt;5&lt;/div&gt;
+                        &lt;div class=&quot;has-icon--comment&quot; title=&quot;Comments&quot;&gt;36&lt;/div&gt;
                       &lt;/div&gt;
                       &lt;div class=&quot;view&quot;&gt;
-                        &lt;div class=&quot;has-icon--favorite&quot; title=&quot;Favorites&quot;&gt;3&lt;/div&gt;
+                        &lt;div class=&quot;has-icon--favorite&quot; title=&quot;Favorites&quot;&gt;20&lt;/div&gt;
                       &lt;/div&gt;
                     &lt;/div&gt;
                   &lt;/div&gt;
                 &lt;/article&gt;
-                
-                
-                
+
+
+
                  
                  
                  
@@ -7898,9 +7999,9 @@ p q r s t u v w x y z { | } ~
                     &lt;/div&gt;
                   &lt;/div&gt;
                 &lt;/article&gt;
-                
-                
-                
+
+
+
                  
                  
                  
@@ -7938,24 +8039,24 @@ p q r s t u v w x y z { | } ~
                     &lt;/div&gt;
                   &lt;/div&gt;
                 &lt;/article&gt;
-                
-                
-                
+
+
+
                  
                  
                  
               &lt;/div&gt;
               &lt;div class=&quot;views-row&quot;&gt;
                 &lt;article class=&quot;card card--icons&quot;&gt;
-                  &lt;div class=&quot;card__number&quot;&gt;256,000&lt;/div&gt;
+                  &lt;div class=&quot;card__number&quot;&gt;2,500,000&lt;/div&gt;
                   &lt;div class=&quot;card__image&quot;&gt;
-                    &lt;a href=&quot;http://hipsteripsum.me/&quot;&gt;&lt;img src=&quot;http://lorempixel.com/500/300/business/3/&quot; alt=&quot;Card 5:3&quot; height=&quot;300&quot; width=&quot;500&quot;&gt;
+                    &lt;a href=&quot;http://chrisvalleskey.com/fillerama/&quot;&gt;&lt;img src=&quot;http://lorempixel.com/500/300/transport/3/&quot; alt=&quot;Card 5:3&quot; height=&quot;300&quot; width=&quot;500&quot;&gt;
 &lt;/a&gt;
                   &lt;/div&gt;
                   &lt;div class=&quot;card__content&quot;&gt;
-                    &lt;h3 class=&quot;card__primary-title&quot;&gt;&lt;a href=&quot;http://hipsteripsum.me/&quot;&gt;Whatever swag accusamus occupy, gentrify butcher tote bag&lt;/a&gt;&lt;/h3&gt;
+                    &lt;h3 class=&quot;card__primary-title&quot;&gt;&lt;a href=&quot;http://chrisvalleskey.com/fillerama/&quot;&gt;Rebel Mission to Ord Mantell&lt;/a&gt;&lt;/h3&gt;
                     &lt;div class=&quot;card__list&quot;&gt;
-                      &lt;div class=&quot;card__list-label&quot;&gt;Due by:&lt;/div&gt; 4/13/2015
+                      &lt;div class=&quot;card__list-label&quot;&gt;Due by:&lt;/div&gt; 9/04/2015
                     &lt;/div&gt; 
                     &lt;div class=&quot;card__list&quot;&gt;
                       &lt;div class=&quot;card__list-label&quot;&gt;Eligibility:&lt;/div&gt; &lt;span class=&quot;has-icon-member&quot; title=&quot;Member&quot;&gt;Member&lt;/span&gt; &lt;span class=&quot;has-icon-community&quot; title=&quot;Organization&quot;&gt;Organization&lt;/span&gt;
@@ -7970,17 +8071,17 @@ p q r s t u v w x y z { | } ~
                     &lt;/div&gt;
                     &lt;div class=&quot;card__counts&quot;&gt;
                       &lt;div class=&quot;view&quot;&gt;
-                        &lt;div class=&quot;has-icon--comment&quot; title=&quot;Comments&quot;&gt;5&lt;/div&gt;
+                        &lt;div class=&quot;has-icon--comment&quot; title=&quot;Comments&quot;&gt;36&lt;/div&gt;
                       &lt;/div&gt;
                       &lt;div class=&quot;view&quot;&gt;
-                        &lt;div class=&quot;has-icon--favorite&quot; title=&quot;Favorites&quot;&gt;3&lt;/div&gt;
+                        &lt;div class=&quot;has-icon--favorite&quot; title=&quot;Favorites&quot;&gt;20&lt;/div&gt;
                       &lt;/div&gt;
                     &lt;/div&gt;
                   &lt;/div&gt;
                 &lt;/article&gt;
-                
-                
-                
+
+
+
                  
                  
                  
@@ -8014,7 +8115,7 @@ p q r s t u v w x y z { | } ~
            &lt;/div&gt;
          &lt;/div&gt;
        &lt;/div&gt;
-       
+
          
        &lt;div class=&quot;pane pane--recent-conversations-recent-conversations&quot;&gt;
          &lt;h2 class=&quot;pane__title&quot;&gt;Recent Conversations&lt;/h2&gt;  
@@ -8054,13 +8155,13 @@ p q r s t u v w x y z { | } ~
                  &lt;div class=&quot;layout-slat layout-slat--small&quot;&gt;
                    &lt;div class=&quot;layout-slat__media&quot;&gt;      
                      &lt;div class=&quot;view__author-image&quot;&gt;
-                       &lt;img src=&quot;../../images-patternlab/scully-35-35.jpg&quot;&gt;
+                       &lt;img src=&quot;../../images-patternlab/cameron-35-35.jpg&quot;&gt;
                      &lt;/div&gt;
                    &lt;/div&gt;
                    &lt;div class=&quot;layout-slat__content&quot;&gt;
-                     &lt;div class=&quot;view__title&quot;&gt;&lt;a href=&quot;#&quot;&gt;Whatever swag accusamus occupy, gentrify butcher tote bag&lt;/a&gt;&lt;/div&gt;
+                     &lt;div class=&quot;view__title&quot;&gt;&lt;a href=&quot;#&quot;&gt;Rebel Mission to Ord Mantell&lt;/a&gt;&lt;/div&gt;
                      &lt;div class=&quot;view__meta&quot;&gt;
-                       Posted by &lt;strong&gt;Dana Scully&lt;/strong&gt; | April 13 at 10:14am
+                       Posted by &lt;strong&gt;Cameron Howe&lt;/strong&gt; | September 4 at 9:04am
                      &lt;/div&gt;
                    &lt;/div&gt;
                  &lt;/div&gt;
@@ -8163,7 +8264,7 @@ p q r s t u v w x y z { | } ~
             <input type="submit" class="button button--submit" value="Comment">
           </div>
         </form>
-      
+
           
         <div class="layout-slat comment view-mode-full">
           <div class="layout-slat__media">
@@ -8470,7 +8571,7 @@ p q r s t u v w x y z { | } ~
             &lt;input type=&quot;submit&quot; class=&quot;button button--submit&quot; value=&quot;Comment&quot;&gt;
           &lt;/div&gt;
         &lt;/form&gt;
-      
+
           
         &lt;div class=&quot;layout-slat comment view-mode-full&quot;&gt;
           &lt;div class=&quot;layout-slat__media&quot;&gt;
@@ -8886,7 +8987,7 @@ p q r s t u v w x y z { | } ~
                   <input type="submit" class="button button--submit" value="Comment">
                 </div>
               </form>
-            
+
                 
               <div class="layout-slat comment view-mode-full">
                 <div class="layout-slat__media">
@@ -9268,12 +9369,12 @@ p q r s t u v w x y z { | } ~
           
             &lt;div class=&quot;field&quot;&gt;
               &lt;h2 class=&quot;field__label field__label--above&quot;&gt;Eligibility&lt;/h2&gt;
-              &lt;p&gt;Zombies reversus ab inferno, nam malum cerebro. De carne animata corpora quaeritis. Summus sit&acirc;Äã&acirc;Äã, morbo vel maleficia? De Apocalypsi undead dictum mauris. Hi mortuis soulless creaturas, imo monstra adventus vultus comedat cerebella viventium. Qui offenderit rapto, terribilem incessu. The voodoo sacerdos suscitat mortuos comedere carnem. Search for solum oculi eorum defunctis cerebro. Nescio an malus.&lt;/p&gt;
+              &lt;p&gt;Zombies reversus ab inferno, nam malum cerebro. De carne animata corpora quaeritis. Summus sit‚Äã‚Äã, morbo vel maleficia? De Apocalypsi undead dictum mauris. Hi mortuis soulless creaturas, imo monstra adventus vultus comedat cerebella viventium. Qui offenderit rapto, terribilem incessu. The voodoo sacerdos suscitat mortuos comedere carnem. Search for solum oculi eorum defunctis cerebro. Nescio an malus.&lt;/p&gt;
             &lt;/div&gt;
 
             &lt;div class=&quot;field&quot;&gt;
               &lt;h2 class=&quot;field__label field__label--above&quot;&gt;Application Guidance&lt;/h2&gt;
-              &lt;p&gt;Zombies reversus ab inferno, nam malum cerebro. De carne animata corpora quaeritis. Summus sit&acirc;Äã&acirc;Äã, morbo vel maleficia? De Apocalypsi undead dictum mauris. Hi mortuis soulless creaturas, imo monstra adventus vultus comedat cerebella viventium. Qui offenderit rapto, terribilem incessu. The voodoo sacerdos suscitat mortuos comedere carnem. Search for solum oculi eorum defunctis cerebro. Nescio an malus.&lt;/p&gt;
+              &lt;p&gt;Zombies reversus ab inferno, nam malum cerebro. De carne animata corpora quaeritis. Summus sit‚Äã‚Äã, morbo vel maleficia? De Apocalypsi undead dictum mauris. Hi mortuis soulless creaturas, imo monstra adventus vultus comedat cerebella viventium. Qui offenderit rapto, terribilem incessu. The voodoo sacerdos suscitat mortuos comedere carnem. Search for solum oculi eorum defunctis cerebro. Nescio an malus.&lt;/p&gt;
             &lt;/div&gt;
          
 
@@ -9317,7 +9418,7 @@ p q r s t u v w x y z { | } ~
                   &lt;input type=&quot;submit&quot; class=&quot;button button--submit&quot; value=&quot;Comment&quot;&gt;
                 &lt;/div&gt;
               &lt;/form&gt;
-            
+
                 
               &lt;div class=&quot;layout-slat comment view-mode-full&quot;&gt;
                 &lt;div class=&quot;layout-slat__media&quot;&gt;
@@ -9852,7 +9953,7 @@ p q r s t u v w x y z { | } ~
                   <input type="submit" class="button button--submit" value="Comment">
                 </div>
               </form>
-            
+
                 
               <div class="layout-slat comment view-mode-full">
                 <div class="layout-slat__media">
@@ -10120,7 +10221,7 @@ p q r s t u v w x y z { | } ~
                     </div>
                   </div>
                 </div>
-      
+
                 <div class="layout-grid__column layout-grid__column--2 profile-thumb">
                   <div class="user-profile">
                     <div class="field profile-thumb__image--rounded">
@@ -10137,7 +10238,7 @@ p q r s t u v w x y z { | } ~
           </div>
         </div>
       </div>
-      
+
       <div class="pane">
         <h2 class="pane__title">Funded By</h2>
         <div class="pane__content">
@@ -10198,7 +10299,7 @@ p q r s t u v w x y z { | } ~
           </div>
         </div>
       </div>
-      
+
         
     </aside>
   </div>
@@ -10434,15 +10535,15 @@ p q r s t u v w x y z { | } ~
           
             &lt;div class=&quot;field field--innovation-status-update&quot;&gt;
               &lt;h2 class=&quot;field__label field__label--above&quot;&gt;Status Update&lt;/h2&gt;
-              &lt;p&gt;Zombies reversus ab inferno, nam malum cerebro. De carne animata corpora quaeritis. Summus sit&acirc;Äã&acirc;Äã, morbo vel maleficia? De Apocalypsi undead dictum mauris. Hi mortuis soulless creaturas, imo monstra adventus vultus comedat cerebella viventium. Qui offenderit rapto, terribilem incessu. The voodoo sacerdos suscitat mortuos comedere carnem. Search for solum oculi eorum defunctis cerebro. Nescio an malus.&lt;/p&gt;
+              &lt;p&gt;Zombies reversus ab inferno, nam malum cerebro. De carne animata corpora quaeritis. Summus sit‚Äã‚Äã, morbo vel maleficia? De Apocalypsi undead dictum mauris. Hi mortuis soulless creaturas, imo monstra adventus vultus comedat cerebella viventium. Qui offenderit rapto, terribilem incessu. The voodoo sacerdos suscitat mortuos comedere carnem. Search for solum oculi eorum defunctis cerebro. Nescio an malus.&lt;/p&gt;
             &lt;/div&gt;
             &lt;div class=&quot;field field--innovation-works&quot;&gt;
               &lt;h2 class=&quot;field__label field__label--above&quot;&gt;How it Works&lt;/h2&gt;
-              &lt;p&gt;Zombies reversus ab inferno, nam malum cerebro. De carne animata corpora quaeritis. Summus sit&acirc;Äã&acirc;Äã, morbo vel maleficia? De Apocalypsi undead dictum mauris. Hi mortuis soulless creaturas, imo monstra adventus vultus comedat cerebella viventium. Qui offenderit rapto, terribilem incessu. The voodoo sacerdos suscitat mortuos comedere carnem. Search for solum oculi eorum defunctis cerebro. Nescio an malus.&lt;/p&gt;
+              &lt;p&gt;Zombies reversus ab inferno, nam malum cerebro. De carne animata corpora quaeritis. Summus sit‚Äã‚Äã, morbo vel maleficia? De Apocalypsi undead dictum mauris. Hi mortuis soulless creaturas, imo monstra adventus vultus comedat cerebella viventium. Qui offenderit rapto, terribilem incessu. The voodoo sacerdos suscitat mortuos comedere carnem. Search for solum oculi eorum defunctis cerebro. Nescio an malus.&lt;/p&gt;
             &lt;/div&gt;
             &lt;div class=&quot;field field--innovation-evidence&quot;&gt;
               &lt;h2 class=&quot;field__label field__label--above&quot;&gt;Evidence it Works&lt;/h2&gt;
-              &lt;p&gt;Zombies reversus ab inferno, nam malum cerebro. De carne animata corpora quaeritis. Summus sit&acirc;Äã&acirc;Äã, morbo vel maleficia? De Apocalypsi undead dictum mauris. Hi mortuis soulless creaturas, imo monstra adventus vultus comedat cerebella viventium. Qui offenderit rapto, terribilem incessu. The voodoo sacerdos suscitat mortuos comedere carnem. Search for solum oculi eorum defunctis cerebro. Nescio an malus.&lt;/p&gt;
+              &lt;p&gt;Zombies reversus ab inferno, nam malum cerebro. De carne animata corpora quaeritis. Summus sit‚Äã‚Äã, morbo vel maleficia? De Apocalypsi undead dictum mauris. Hi mortuis soulless creaturas, imo monstra adventus vultus comedat cerebella viventium. Qui offenderit rapto, terribilem incessu. The voodoo sacerdos suscitat mortuos comedere carnem. Search for solum oculi eorum defunctis cerebro. Nescio an malus.&lt;/p&gt;
             &lt;/div&gt;
             &lt;div class=&quot;field field--innovation-proof-evidence&quot;&gt;
               &lt;h2 class=&quot;field__label field__label--above&quot;&gt;Proof of Evidence&lt;/h2&gt;
@@ -10453,15 +10554,15 @@ p q r s t u v w x y z { | } ~
             &lt;/div&gt;
             &lt;div class=&quot;field field--innovation-testers&quot;&gt;
               &lt;h2 class=&quot;field__label field__label--above&quot;&gt;Current Users / Testers Include&lt;/h2&gt;
-              &lt;p&gt;Zombies reversus ab inferno, nam malum cerebro. De carne animata corpora quaeritis. Summus sit&acirc;Äã&acirc;Äã, morbo vel maleficia? De Apocalypsi undead dictum mauris. Hi mortuis soulless creaturas, imo monstra adventus vultus comedat cerebella viventium. Qui offenderit rapto, terribilem incessu. The voodoo sacerdos suscitat mortuos comedere carnem. Search for solum oculi eorum defunctis cerebro. Nescio an malus.&lt;/p&gt;
+              &lt;p&gt;Zombies reversus ab inferno, nam malum cerebro. De carne animata corpora quaeritis. Summus sit‚Äã‚Äã, morbo vel maleficia? De Apocalypsi undead dictum mauris. Hi mortuis soulless creaturas, imo monstra adventus vultus comedat cerebella viventium. Qui offenderit rapto, terribilem incessu. The voodoo sacerdos suscitat mortuos comedere carnem. Search for solum oculi eorum defunctis cerebro. Nescio an malus.&lt;/p&gt;
             &lt;/div&gt;
             &lt;div class=&quot;field field--innovation-impact&quot;&gt;
               &lt;h2 class=&quot;field__label field__label--above&quot;&gt;Path and Impact of Scale&lt;/h2&gt;
-              &lt;p&gt;Zombies reversus ab inferno, nam malum cerebro. De carne animata corpora quaeritis. Summus sit&acirc;Äã&acirc;Äã, morbo vel maleficia? De Apocalypsi undead dictum mauris. Hi mortuis soulless creaturas, imo monstra adventus vultus comedat cerebella viventium. Qui offenderit rapto, terribilem incessu. The voodoo sacerdos suscitat mortuos comedere carnem. Search for solum oculi eorum defunctis cerebro. Nescio an malus.&lt;/p&gt;
+              &lt;p&gt;Zombies reversus ab inferno, nam malum cerebro. De carne animata corpora quaeritis. Summus sit‚Äã‚Äã, morbo vel maleficia? De Apocalypsi undead dictum mauris. Hi mortuis soulless creaturas, imo monstra adventus vultus comedat cerebella viventium. Qui offenderit rapto, terribilem incessu. The voodoo sacerdos suscitat mortuos comedere carnem. Search for solum oculi eorum defunctis cerebro. Nescio an malus.&lt;/p&gt;
             &lt;/div&gt;
             &lt;div class=&quot;field field--innovation-steps&quot;&gt;
               &lt;h2 class=&quot;field__label field__label--above&quot;&gt;Next Steps&lt;/h2&gt;
-              &lt;p&gt;Zombies reversus ab inferno, nam malum cerebro. De carne animata corpora quaeritis. Summus sit&acirc;Äã&acirc;Äã, morbo vel maleficia? De Apocalypsi undead dictum mauris. Hi mortuis soulless creaturas, imo monstra adventus vultus comedat cerebella viventium. Qui offenderit rapto, terribilem incessu. The voodoo sacerdos suscitat mortuos comedere carnem. Search for solum oculi eorum defunctis cerebro. Nescio an malus.&lt;/p&gt;
+              &lt;p&gt;Zombies reversus ab inferno, nam malum cerebro. De carne animata corpora quaeritis. Summus sit‚Äã‚Äã, morbo vel maleficia? De Apocalypsi undead dictum mauris. Hi mortuis soulless creaturas, imo monstra adventus vultus comedat cerebella viventium. Qui offenderit rapto, terribilem incessu. The voodoo sacerdos suscitat mortuos comedere carnem. Search for solum oculi eorum defunctis cerebro. Nescio an malus.&lt;/p&gt;
             &lt;/div&gt;
             &lt;div class=&quot;field field--innovation-news field--border&quot;&gt;
               &lt;h2 class=&quot;field__label field__label--above&quot;&gt;In the News&lt;/h2&gt;
@@ -10518,7 +10619,7 @@ p q r s t u v w x y z { | } ~
                   &lt;input type=&quot;submit&quot; class=&quot;button button--submit&quot; value=&quot;Comment&quot;&gt;
                 &lt;/div&gt;
               &lt;/form&gt;
-            
+
                 
               &lt;div class=&quot;layout-slat comment view-mode-full&quot;&gt;
                 &lt;div class=&quot;layout-slat__media&quot;&gt;
@@ -10786,7 +10887,7 @@ p q r s t u v w x y z { | } ~
                     &lt;/div&gt;
                   &lt;/div&gt;
                 &lt;/div&gt;
-      
+
                 &lt;div class=&quot;layout-grid__column layout-grid__column--2 profile-thumb&quot;&gt;
                   &lt;div class=&quot;user-profile&quot;&gt;
                     &lt;div class=&quot;field profile-thumb__image--rounded&quot;&gt;
@@ -10803,7 +10904,7 @@ p q r s t u v w x y z { | } ~
           &lt;/div&gt;
         &lt;/div&gt;
       &lt;/div&gt;
-      
+
       &lt;div class=&quot;pane&quot;&gt;
         &lt;h2 class=&quot;pane__title&quot;&gt;Funded By&lt;/h2&gt;
         &lt;div class=&quot;pane__content&quot;&gt;
@@ -10864,7 +10965,7 @@ p q r s t u v w x y z { | } ~
           &lt;/div&gt;
         &lt;/div&gt;
       &lt;/div&gt;
-      
+
         
     &lt;/aside&gt;
   &lt;/div&gt;
@@ -11085,7 +11186,7 @@ p q r s t u v w x y z { | } ~
           </div>
         </div>
       </div>
-      
+
         
       <div class="pane pane--recent-conversations-recent-conversations">
         <h2 class="pane__title">Recent Conversations</h2>  
@@ -11125,13 +11226,13 @@ p q r s t u v w x y z { | } ~
                 <div class="layout-slat layout-slat--small">
                   <div class="layout-slat__media">      
                     <div class="view__author-image">
-                      <img src="../../images-patternlab/scully-35-35.jpg">
+                      <img src="../../images-patternlab/cameron-35-35.jpg">
                     </div>
                   </div>
                   <div class="layout-slat__content">
-                    <div class="view__title"><a href="#">Whatever swag accusamus occupy, gentrify butcher tote bag</a></div>
+                    <div class="view__title"><a href="#">Rebel Mission to Ord Mantell</a></div>
                     <div class="view__meta">
-                      Posted by <strong>Dana Scully</strong> | April 13 at 10:14am
+                      Posted by <strong>Cameron Howe</strong> | September 4 at 9:04am
                     </div>
                   </div>
                 </div>
@@ -11416,7 +11517,7 @@ p q r s t u v w x y z { | } ~
           &lt;/div&gt;
         &lt;/div&gt;
       &lt;/div&gt;
-      
+
         
       &lt;div class=&quot;pane pane--recent-conversations-recent-conversations&quot;&gt;
         &lt;h2 class=&quot;pane__title&quot;&gt;Recent Conversations&lt;/h2&gt;  
@@ -11456,13 +11557,13 @@ p q r s t u v w x y z { | } ~
                 &lt;div class=&quot;layout-slat layout-slat--small&quot;&gt;
                   &lt;div class=&quot;layout-slat__media&quot;&gt;      
                     &lt;div class=&quot;view__author-image&quot;&gt;
-                      &lt;img src=&quot;../../images-patternlab/scully-35-35.jpg&quot;&gt;
+                      &lt;img src=&quot;../../images-patternlab/cameron-35-35.jpg&quot;&gt;
                     &lt;/div&gt;
                   &lt;/div&gt;
                   &lt;div class=&quot;layout-slat__content&quot;&gt;
-                    &lt;div class=&quot;view__title&quot;&gt;&lt;a href=&quot;#&quot;&gt;Whatever swag accusamus occupy, gentrify butcher tote bag&lt;/a&gt;&lt;/div&gt;
+                    &lt;div class=&quot;view__title&quot;&gt;&lt;a href=&quot;#&quot;&gt;Rebel Mission to Ord Mantell&lt;/a&gt;&lt;/div&gt;
                     &lt;div class=&quot;view__meta&quot;&gt;
-                      Posted by &lt;strong&gt;Dana Scully&lt;/strong&gt; | April 13 at 10:14am
+                      Posted by &lt;strong&gt;Cameron Howe&lt;/strong&gt; | September 4 at 9:04am
                     &lt;/div&gt;
                   &lt;/div&gt;
                 &lt;/div&gt;
@@ -11607,78 +11708,118 @@ p q r s t u v w x y z { | } ~
 							<div class="l-panels-split preface-empty first second">
   <div class="l-wrapper layout-constrain">
     <div class="l-first">
-      <h1>How Will Your Idea Change The World?</h1>
-      <h2>Why Join The Exchange?</h2>
-      <p>The Exchange is the world's leading place for the world's most innovative ideas. The Exchange is for innovators, collaborators, and funders who want help solving the world's biggest challenges.
-      </p>
-      <p>
-        Join today and help us <a href="#">Exchange the world!</a>
-      </p>
-      <div class="welcome-stats">
-        <div class="welcome-stats__item">
-          <div class="welcome-stats__number">90</div>
-          <div class="welcome-stats__label">Innovations</div>
-        </div>
-        <div class="welcome-stats__item">
-          <div class="welcome-stats__number">740k</div>
-          <div class="welcome-stats__label">In Funding</div>
-        </div>
-        <div class="welcome-stats__item">
-          <div class="welcome-stats__number">55%</div>
-          <div class="welcome-stats__label">Funded</div>
+
+      <div class="pane pane--welcome-page-info">
+        <div class="pane__content">
+          <h1>How Will Your Idea Change The World?</h1>
+          <h2>Why Join The Exchange?</h2>
+          <p>The Exchange is the world's leading place for the world's most innovative ideas. The Exchange is for innovators, collaborators, and funders who want help solving the world's biggest challenges.
+          </p>
+          <p>
+            Join today and help us <a href="#">Exchange the world!</a>
+          </p>
+          <div class="pane--welcome-stats">
+            <div class="view view--welcome-stats">
+              <div class="views-row welcome-stats__item">
+                <div class="welcome-stats__number">90</div>
+                <div class="welcome-stats__label">Innovations</div>
+              </div>
+              <div class="views-row welcome-stats__item">
+                <div class="welcome-stats__number">740k</div>
+                <div class="welcome-stats__label">In Funding</div>
+              </div>
+              <div class="views-row welcome-stats__item">
+                <div class="welcome-stats__number">55%</div>
+                <div class="welcome-stats__label">Funded</div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
+
     </div>
     <aside class="l-second">
-      <h1>Sign Up</h1>
-      <form>
-        <div id="edit-lr-social-login-links" class="form-item form-type-item">
-          <label>Sign up with social:</label>
-          <div class="lr_singleglider_200 interface_container">     
-            <div class="lr_icons_box">       
-              <div style="width:100%">    
-                <span alt="Sign in with Google" title="Google" class="lr_providericons lr_google">    
-                </span>       
-              </div>     
-            </div>        
-            <div class="lr_icons_box">       
-              <div style="width:100%">    
-                <span alt="Sign in with Twitter" title="Twitter" class="lr_providericons lr_twitter">    
-                </span>       
-              </div>     
-            </div>        
-            <div class="lr_icons_box">       
-              <div style="width:100%">    
-                <span alt="Sign in with LinkedIn" title="LinkedIn" class="lr_providericons lr_linkedin">    
-                </span>       
-              </div>     
-            </div>   
-          </div>
-          <div style="clear:both"></div>
+
+      <div class="pane pane--welcome-page-user-register">
+        <div class="pane__content">
+
+          <form id="user-register-form">
+
+            <div id="edit-lr-social-login-links" class="form-item form-type-item">
+              <label>Login with Social ID:</label>
+              <div class="lr_singleglider_200 interface_container">
+                <div class="lr_icons_box">
+                  <div style="width:100%">
+                    <span alt="Sign in with Google" title="Google" class="lr_providericons lr_google">
+                    </span>
+                  </div>
+                </div>
+                <div class="lr_icons_box">
+                  <div style="width:100%">
+                    <span alt="Sign in with Twitter" title="Twitter" class="lr_providericons lr_twitter">
+                    </span>
+                  </div>
+                </div>
+                <div class="lr_icons_box">
+                  <div style="width:100%">
+                    <span alt="Sign in with LinkedIn" title="LinkedIn" class="lr_providericons lr_linkedin">
+                    </span>
+                  </div>
+                </div>
+              </div>
+              <div style="clear:both"></div>
+            </div>
+
+            <div class="required-fields">
+              <div id="edit-field-user-firstname" class="field-type-text field-name-field-user-firstname field-widget-text-textfield">
+                <div id="field-user-firstname-add-more-wrapper">
+                  <div class="form-item form-type-textfield">
+                    <label class="element-invisible">First Name <span class="form-item__required-marker"><span class="element-invisible">This field is required.</span></span></label>
+                    <input type="text" maxlength="255" size="60" value="" autocorrect="off" autocapitalize="off" placeholder="First Name" class="text-full form-text is-required">
+                  </div>
+                </div>
+              </div>
+              <div id="edit-field-user-lastname" class="field-type-text field-name-field-user-lastname field-widget-text-textfield">
+                <div id="field-user-lastname-add-more-wrapper">
+                  <div class="form-item form-type-textfield">
+                    <label class="element-invisible">Last Name <span class="form-item__required-marker"><span class="element-invisible">This field is required.</span></span></label>
+                    <input type="text" maxlength="255" size="60" value="" autocorrect="off" autocapitalize="off" placeholder="Last Name" class="text-full form-text is-required">
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="required-fields">
+              <div id="edit-account">
+                <div class="form-item form-type-textfield form-item-name">
+                  <label class="element-invisible">Username <span class="form-item__required-marker"><span class="element-invisible">This field is required.</span></span></label>
+                  <input type="text" maxlength="60" size="60" value="" name="name" id="edit-name" autocorrect="off" autocapitalize="off" placeholder="Username" class="username form-text is-required">
+                </div>
+                <div class="form-item form-item--emailfield form-item--mail is-required">
+                  <label class="form-item__label element-invisible">E-mail address <span class="form-item__required-marker"><span class="element-invisible">This field is required.</span></span></label>
+                  <input type="email" class="form-text form-email required" maxlength="254" size="60" value="" name="mail" id="edit-mail" placeholder="Email Address">
+                </div>
+                <div class="form-item form-type-password form-item-pass">
+                  <label class="element-invisible">Password <span class="form-item__required-marker"><span class="element-invisible">This field is required.</span></span></label>
+                  <input type="password" class="form-text is-required" maxlength="128" size="25" name="pass" id="edit-pass" autocorrect="off" autocapitalize="off" placeholder="Password">
+                </div>
+              </div>
+            </div>
+            <div id="edit-actions" class="form-actions">
+              <p>By creating an account, you agree to our <a href="#">terms and conditions</a>.</p>
+              <input type="submit" value="Activate Your Account" id="edit-submit" class="button--highlight button button--submit">
+            </div>
+            <div class="honeypot-textfield">
+              <div class="form-item form-type-textfield form-item-honeypot">
+                <label for="edit-honeypot">Leave this field blank </label>
+                <input type="text" class="form-text" maxlength="128" size="20" value="" name="honeypot" id="edit-honeypot" autocorrect="off" autocapitalize="off" autocomplete="off">
+              </div>
+            </div>
+
+          </form>
+
         </div>
-        <p class="login-title">Sign up with email:</p>
-        <div class="form-item form-type-textfield">
-          <input type="text" class="form-text is-required" maxlength="60" size="50"placeholder="First Name">
-        </div>
-        <div class="form-item form-type-textfield">
-          <input type="text" class="form-text is-required" maxlength="60" size="50"placeholder="Last Name">
-        </div>
-        <div class="form-item form-type-textfield">
-          <input type="text" class="form-text is-required" maxlength="60" size="50"placeholder="Email Address">
-        </div>
-        <div class="form-item form-type-textfield">
-          <input type="text" class="form-text is-required" maxlength="60" size="50"placeholder="Password">
-        </div>
-        <p>
-          By creating an account, you agree to our <a title="Get a new password" href="#">terms and conditions.</a>
-        </p>
-        <div class="form-actions">
-          <input type="submit" class="button button--submit" value="Sign Up">
-        </div>
-        <p>
-          Continue as <a href="#">Guest</a>
-        </p>
-      </form>
+      </div>
+
     </aside>
   </div>
 </div>
@@ -11690,78 +11831,118 @@ p q r s t u v w x y z { | } ~
 										&lt;div class=&quot;l-panels-split preface-empty first second&quot;&gt;
   &lt;div class=&quot;l-wrapper layout-constrain&quot;&gt;
     &lt;div class=&quot;l-first&quot;&gt;
-      &lt;h1&gt;How Will Your Idea Change The World?&lt;/h1&gt;
-      &lt;h2&gt;Why Join The Exchange?&lt;/h2&gt;
-      &lt;p&gt;The Exchange is the world's leading place for the world's most innovative ideas. The Exchange is for innovators, collaborators, and funders who want help solving the world's biggest challenges.
-      &lt;/p&gt;
-      &lt;p&gt;
-        Join today and help us &lt;a href=&quot;#&quot;&gt;Exchange the world!&lt;/a&gt;
-      &lt;/p&gt;
-      &lt;div class=&quot;welcome-stats&quot;&gt;
-        &lt;div class=&quot;welcome-stats__item&quot;&gt;
-          &lt;div class=&quot;welcome-stats__number&quot;&gt;90&lt;/div&gt;
-          &lt;div class=&quot;welcome-stats__label&quot;&gt;Innovations&lt;/div&gt;
-        &lt;/div&gt;
-        &lt;div class=&quot;welcome-stats__item&quot;&gt;
-          &lt;div class=&quot;welcome-stats__number&quot;&gt;740k&lt;/div&gt;
-          &lt;div class=&quot;welcome-stats__label&quot;&gt;In Funding&lt;/div&gt;
-        &lt;/div&gt;
-        &lt;div class=&quot;welcome-stats__item&quot;&gt;
-          &lt;div class=&quot;welcome-stats__number&quot;&gt;55%&lt;/div&gt;
-          &lt;div class=&quot;welcome-stats__label&quot;&gt;Funded&lt;/div&gt;
+
+      &lt;div class=&quot;pane pane--welcome-page-info&quot;&gt;
+        &lt;div class=&quot;pane__content&quot;&gt;
+          &lt;h1&gt;How Will Your Idea Change The World?&lt;/h1&gt;
+          &lt;h2&gt;Why Join The Exchange?&lt;/h2&gt;
+          &lt;p&gt;The Exchange is the world's leading place for the world's most innovative ideas. The Exchange is for innovators, collaborators, and funders who want help solving the world's biggest challenges.
+          &lt;/p&gt;
+          &lt;p&gt;
+            Join today and help us &lt;a href=&quot;#&quot;&gt;Exchange the world!&lt;/a&gt;
+          &lt;/p&gt;
+          &lt;div class=&quot;pane--welcome-stats&quot;&gt;
+            &lt;div class=&quot;view view--welcome-stats&quot;&gt;
+              &lt;div class=&quot;views-row welcome-stats__item&quot;&gt;
+                &lt;div class=&quot;welcome-stats__number&quot;&gt;90&lt;/div&gt;
+                &lt;div class=&quot;welcome-stats__label&quot;&gt;Innovations&lt;/div&gt;
+              &lt;/div&gt;
+              &lt;div class=&quot;views-row welcome-stats__item&quot;&gt;
+                &lt;div class=&quot;welcome-stats__number&quot;&gt;740k&lt;/div&gt;
+                &lt;div class=&quot;welcome-stats__label&quot;&gt;In Funding&lt;/div&gt;
+              &lt;/div&gt;
+              &lt;div class=&quot;views-row welcome-stats__item&quot;&gt;
+                &lt;div class=&quot;welcome-stats__number&quot;&gt;55%&lt;/div&gt;
+                &lt;div class=&quot;welcome-stats__label&quot;&gt;Funded&lt;/div&gt;
+              &lt;/div&gt;
+            &lt;/div&gt;
+          &lt;/div&gt;
         &lt;/div&gt;
       &lt;/div&gt;
+
     &lt;/div&gt;
     &lt;aside class=&quot;l-second&quot;&gt;
-      &lt;h1&gt;Sign Up&lt;/h1&gt;
-      &lt;form&gt;
-        &lt;div id=&quot;edit-lr-social-login-links&quot; class=&quot;form-item form-type-item&quot;&gt;
-          &lt;label&gt;Sign up with social:&lt;/label&gt;
-          &lt;div class=&quot;lr_singleglider_200 interface_container&quot;&gt;     
-            &lt;div class=&quot;lr_icons_box&quot;&gt;       
-              &lt;div style=&quot;width:100%&quot;&gt;    
-                &lt;span alt=&quot;Sign in with Google&quot; title=&quot;Google&quot; class=&quot;lr_providericons lr_google&quot;&gt;    
-                &lt;/span&gt;       
-              &lt;/div&gt;     
-            &lt;/div&gt;        
-            &lt;div class=&quot;lr_icons_box&quot;&gt;       
-              &lt;div style=&quot;width:100%&quot;&gt;    
-                &lt;span alt=&quot;Sign in with Twitter&quot; title=&quot;Twitter&quot; class=&quot;lr_providericons lr_twitter&quot;&gt;    
-                &lt;/span&gt;       
-              &lt;/div&gt;     
-            &lt;/div&gt;        
-            &lt;div class=&quot;lr_icons_box&quot;&gt;       
-              &lt;div style=&quot;width:100%&quot;&gt;    
-                &lt;span alt=&quot;Sign in with LinkedIn&quot; title=&quot;LinkedIn&quot; class=&quot;lr_providericons lr_linkedin&quot;&gt;    
-                &lt;/span&gt;       
-              &lt;/div&gt;     
-            &lt;/div&gt;   
-          &lt;/div&gt;
-          &lt;div style=&quot;clear:both&quot;&gt;&lt;/div&gt;
+
+      &lt;div class=&quot;pane pane--welcome-page-user-register&quot;&gt;
+        &lt;div class=&quot;pane__content&quot;&gt;
+
+          &lt;form id=&quot;user-register-form&quot;&gt;
+
+            &lt;div id=&quot;edit-lr-social-login-links&quot; class=&quot;form-item form-type-item&quot;&gt;
+              &lt;label&gt;Login with Social ID:&lt;/label&gt;
+              &lt;div class=&quot;lr_singleglider_200 interface_container&quot;&gt;
+                &lt;div class=&quot;lr_icons_box&quot;&gt;
+                  &lt;div style=&quot;width:100%&quot;&gt;
+                    &lt;span alt=&quot;Sign in with Google&quot; title=&quot;Google&quot; class=&quot;lr_providericons lr_google&quot;&gt;
+                    &lt;/span&gt;
+                  &lt;/div&gt;
+                &lt;/div&gt;
+                &lt;div class=&quot;lr_icons_box&quot;&gt;
+                  &lt;div style=&quot;width:100%&quot;&gt;
+                    &lt;span alt=&quot;Sign in with Twitter&quot; title=&quot;Twitter&quot; class=&quot;lr_providericons lr_twitter&quot;&gt;
+                    &lt;/span&gt;
+                  &lt;/div&gt;
+                &lt;/div&gt;
+                &lt;div class=&quot;lr_icons_box&quot;&gt;
+                  &lt;div style=&quot;width:100%&quot;&gt;
+                    &lt;span alt=&quot;Sign in with LinkedIn&quot; title=&quot;LinkedIn&quot; class=&quot;lr_providericons lr_linkedin&quot;&gt;
+                    &lt;/span&gt;
+                  &lt;/div&gt;
+                &lt;/div&gt;
+              &lt;/div&gt;
+              &lt;div style=&quot;clear:both&quot;&gt;&lt;/div&gt;
+            &lt;/div&gt;
+
+            &lt;div class=&quot;required-fields&quot;&gt;
+              &lt;div id=&quot;edit-field-user-firstname&quot; class=&quot;field-type-text field-name-field-user-firstname field-widget-text-textfield&quot;&gt;
+                &lt;div id=&quot;field-user-firstname-add-more-wrapper&quot;&gt;
+                  &lt;div class=&quot;form-item form-type-textfield&quot;&gt;
+                    &lt;label class=&quot;element-invisible&quot;&gt;First Name &lt;span class=&quot;form-item__required-marker&quot;&gt;&lt;span class=&quot;element-invisible&quot;&gt;This field is required.&lt;/span&gt;&lt;/span&gt;&lt;/label&gt;
+                    &lt;input type=&quot;text&quot; maxlength=&quot;255&quot; size=&quot;60&quot; value=&quot;&quot; autocorrect=&quot;off&quot; autocapitalize=&quot;off&quot; placeholder=&quot;First Name&quot; class=&quot;text-full form-text is-required&quot;&gt;
+                  &lt;/div&gt;
+                &lt;/div&gt;
+              &lt;/div&gt;
+              &lt;div id=&quot;edit-field-user-lastname&quot; class=&quot;field-type-text field-name-field-user-lastname field-widget-text-textfield&quot;&gt;
+                &lt;div id=&quot;field-user-lastname-add-more-wrapper&quot;&gt;
+                  &lt;div class=&quot;form-item form-type-textfield&quot;&gt;
+                    &lt;label class=&quot;element-invisible&quot;&gt;Last Name &lt;span class=&quot;form-item__required-marker&quot;&gt;&lt;span class=&quot;element-invisible&quot;&gt;This field is required.&lt;/span&gt;&lt;/span&gt;&lt;/label&gt;
+                    &lt;input type=&quot;text&quot; maxlength=&quot;255&quot; size=&quot;60&quot; value=&quot;&quot; autocorrect=&quot;off&quot; autocapitalize=&quot;off&quot; placeholder=&quot;Last Name&quot; class=&quot;text-full form-text is-required&quot;&gt;
+                  &lt;/div&gt;
+                &lt;/div&gt;
+              &lt;/div&gt;
+            &lt;/div&gt;
+            &lt;div class=&quot;required-fields&quot;&gt;
+              &lt;div id=&quot;edit-account&quot;&gt;
+                &lt;div class=&quot;form-item form-type-textfield form-item-name&quot;&gt;
+                  &lt;label class=&quot;element-invisible&quot;&gt;Username &lt;span class=&quot;form-item__required-marker&quot;&gt;&lt;span class=&quot;element-invisible&quot;&gt;This field is required.&lt;/span&gt;&lt;/span&gt;&lt;/label&gt;
+                  &lt;input type=&quot;text&quot; maxlength=&quot;60&quot; size=&quot;60&quot; value=&quot;&quot; name=&quot;name&quot; id=&quot;edit-name&quot; autocorrect=&quot;off&quot; autocapitalize=&quot;off&quot; placeholder=&quot;Username&quot; class=&quot;username form-text is-required&quot;&gt;
+                &lt;/div&gt;
+                &lt;div class=&quot;form-item form-item--emailfield form-item--mail is-required&quot;&gt;
+                  &lt;label class=&quot;form-item__label element-invisible&quot;&gt;E-mail address &lt;span class=&quot;form-item__required-marker&quot;&gt;&lt;span class=&quot;element-invisible&quot;&gt;This field is required.&lt;/span&gt;&lt;/span&gt;&lt;/label&gt;
+                  &lt;input type=&quot;email&quot; class=&quot;form-text form-email required&quot; maxlength=&quot;254&quot; size=&quot;60&quot; value=&quot;&quot; name=&quot;mail&quot; id=&quot;edit-mail&quot; placeholder=&quot;Email Address&quot;&gt;
+                &lt;/div&gt;
+                &lt;div class=&quot;form-item form-type-password form-item-pass&quot;&gt;
+                  &lt;label class=&quot;element-invisible&quot;&gt;Password &lt;span class=&quot;form-item__required-marker&quot;&gt;&lt;span class=&quot;element-invisible&quot;&gt;This field is required.&lt;/span&gt;&lt;/span&gt;&lt;/label&gt;
+                  &lt;input type=&quot;password&quot; class=&quot;form-text is-required&quot; maxlength=&quot;128&quot; size=&quot;25&quot; name=&quot;pass&quot; id=&quot;edit-pass&quot; autocorrect=&quot;off&quot; autocapitalize=&quot;off&quot; placeholder=&quot;Password&quot;&gt;
+                &lt;/div&gt;
+              &lt;/div&gt;
+            &lt;/div&gt;
+            &lt;div id=&quot;edit-actions&quot; class=&quot;form-actions&quot;&gt;
+              &lt;p&gt;By creating an account, you agree to our &lt;a href=&quot;#&quot;&gt;terms and conditions&lt;/a&gt;.&lt;/p&gt;
+              &lt;input type=&quot;submit&quot; value=&quot;Activate Your Account&quot; id=&quot;edit-submit&quot; class=&quot;button--highlight button button--submit&quot;&gt;
+            &lt;/div&gt;
+            &lt;div class=&quot;honeypot-textfield&quot;&gt;
+              &lt;div class=&quot;form-item form-type-textfield form-item-honeypot&quot;&gt;
+                &lt;label for=&quot;edit-honeypot&quot;&gt;Leave this field blank &lt;/label&gt;
+                &lt;input type=&quot;text&quot; class=&quot;form-text&quot; maxlength=&quot;128&quot; size=&quot;20&quot; value=&quot;&quot; name=&quot;honeypot&quot; id=&quot;edit-honeypot&quot; autocorrect=&quot;off&quot; autocapitalize=&quot;off&quot; autocomplete=&quot;off&quot;&gt;
+              &lt;/div&gt;
+            &lt;/div&gt;
+
+          &lt;/form&gt;
+
         &lt;/div&gt;
-        &lt;p class=&quot;login-title&quot;&gt;Sign up with email:&lt;/p&gt;
-        &lt;div class=&quot;form-item form-type-textfield&quot;&gt;
-          &lt;input type=&quot;text&quot; class=&quot;form-text is-required&quot; maxlength=&quot;60&quot; size=&quot;50&quot;placeholder=&quot;First Name&quot;&gt;
-        &lt;/div&gt;
-        &lt;div class=&quot;form-item form-type-textfield&quot;&gt;
-          &lt;input type=&quot;text&quot; class=&quot;form-text is-required&quot; maxlength=&quot;60&quot; size=&quot;50&quot;placeholder=&quot;Last Name&quot;&gt;
-        &lt;/div&gt;
-        &lt;div class=&quot;form-item form-type-textfield&quot;&gt;
-          &lt;input type=&quot;text&quot; class=&quot;form-text is-required&quot; maxlength=&quot;60&quot; size=&quot;50&quot;placeholder=&quot;Email Address&quot;&gt;
-        &lt;/div&gt;
-        &lt;div class=&quot;form-item form-type-textfield&quot;&gt;
-          &lt;input type=&quot;text&quot; class=&quot;form-text is-required&quot; maxlength=&quot;60&quot; size=&quot;50&quot;placeholder=&quot;Password&quot;&gt;
-        &lt;/div&gt;
-        &lt;p&gt;
-          By creating an account, you agree to our &lt;a title=&quot;Get a new password&quot; href=&quot;#&quot;&gt;terms and conditions.&lt;/a&gt;
-        &lt;/p&gt;
-        &lt;div class=&quot;form-actions&quot;&gt;
-          &lt;input type=&quot;submit&quot; class=&quot;button button--submit&quot; value=&quot;Sign Up&quot;&gt;
-        &lt;/div&gt;
-        &lt;p&gt;
-          Continue as &lt;a href=&quot;#&quot;&gt;Guest&lt;/a&gt;
-        &lt;/p&gt;
-      &lt;/form&gt;
+      &lt;/div&gt;
+
     &lt;/aside&gt;
   &lt;/div&gt;
 &lt;/div&gt;
