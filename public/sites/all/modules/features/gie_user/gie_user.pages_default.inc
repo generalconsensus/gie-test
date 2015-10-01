@@ -515,6 +515,44 @@ function gie_user_default_page_manager_pages() {
   $display->content = array();
   $display->panels = array();
     $pane = new stdClass();
+    $pane->pid = 'new-c98eab6c-9b7d-4596-a56e-6ad4b8a3db27';
+    $pane->panel = 'main';
+    $pane->type = 'block';
+    $pane->subtype = 'views--exp-user_listing-listing_pane';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array(
+      'inherit_path' => 1,
+      'override_title' => 1,
+      'override_title_text' => '',
+      'override_title_heading' => 'h2',
+    );
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => array(
+        'clean_markup' => array(
+          'pane_wrapper' => 'div',
+          'additional_pane_classes' => 'panel-pane',
+          'additional_pane_attributes' => '',
+          'enable_inner_div' => 0,
+          'title_wrapper' => 'h2',
+          'title_hide' => 0,
+          'content_wrapper' => 'none',
+        ),
+      ),
+      'style' => 'clean_element',
+    );
+    $pane->css = array(
+      'css_id' => '',
+      'css_class' => 'pane--wanteds-search',
+    );
+    $pane->extras = array();
+    $pane->position = 0;
+    $pane->locks = array();
+    $pane->uuid = 'c98eab6c-9b7d-4596-a56e-6ad4b8a3db27';
+    $display->content['new-c98eab6c-9b7d-4596-a56e-6ad4b8a3db27'] = $pane;
+    $display->panels['main'][0] = 'new-c98eab6c-9b7d-4596-a56e-6ad4b8a3db27';
+    $pane = new stdClass();
     $pane->pid = 'new-9476b114-b324-411b-ae93-16dd0ccae5dc';
     $pane->panel = 'main';
     $pane->type = 'views_panes';
@@ -528,11 +566,11 @@ function gie_user_default_page_manager_pages() {
     );
     $pane->css = array();
     $pane->extras = array();
-    $pane->position = 0;
+    $pane->position = 1;
     $pane->locks = array();
     $pane->uuid = '9476b114-b324-411b-ae93-16dd0ccae5dc';
     $display->content['new-9476b114-b324-411b-ae93-16dd0ccae5dc'] = $pane;
-    $display->panels['main'][0] = 'new-9476b114-b324-411b-ae93-16dd0ccae5dc';
+    $display->panels['main'][1] = 'new-9476b114-b324-411b-ae93-16dd0ccae5dc';
     $pane = new stdClass();
     $pane->pid = 'new-381880a8-ec27-4440-b3e3-8e1fbbeb368e';
     $pane->panel = 'sidebar';
