@@ -33,3 +33,9 @@
     z-index: 0;
   }
 }
+
+.pre-footer__description {
+  width: 100%;
+  @include breakpoint($mobile-menu-bp, $no-query: true) {
+  }
+}
