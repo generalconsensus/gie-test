@@ -1,0 +1,35 @@
+// @file
+// Styles for Welcome Page Info
+
+
+.pane--welcome-page-info {
+  padding-top: em(40px, 16px);
+
+  @include breakpoint(700px , $no-query: true) {
+    margin-bottom: em(40px, 16px);
+    margin-top: em(40px, 16px);
+    padding-top: 0
+    // padding-left: 4%;
+    // padding-right: 4%;
+  }
+  h1 {
+    color: #fff;
+    font-weight: 400;
+    font-size: em(40px, 16px);
+    margin-bottom: rhythm(.75);
+    text-transform: uppercase;
+  }
+  h2 {
+    color: $lightorange;
+    font-size: em(30px, 16px);
+    margin-bottom: rhythm(.75);
+    text-transform: uppercase;
+  }
+
+  p {
+    font-size: em(18px, 16px);
+    margin-bottom: rhythm(1);
+
+  }
+}
+

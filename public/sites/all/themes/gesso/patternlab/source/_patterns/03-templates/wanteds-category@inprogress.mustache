@@ -20,11 +20,13 @@
 
             <div class="pane pane--wanteds-search">
               <div class="pane__content">
-                <form accept-charset="UTF-8">
-                  <div class="form-item form-item--textfield">
-                    <input type="text" placeholder="Search the Wanted ads..." class="form-text">
+                <form action="/members" method="get" id="views-exposed-form-user-listing-listing-pane" accept-charset="UTF-8">      <div id="edit-search-api-views-fulltext" class="views-widget views-widget--filter-search_api_views_fulltext">
+                  <div class="form-item form-type-textfield form-item-search-api-views-fulltext">
+                    <input autocapitalize="off" autocorrect="off" id="edit-search-api-views-fulltext" name="search_api_views_fulltext" value="" size="30" maxlength="128" class="form-text" type="text">
                   </div>
-                  <input type="submit" value="Search" class="button button--submit">
+                </div>
+                <div class="views-widget views-widget--submit">
+                  <input id="edit-submit-user-listing" name="" value="Apply" class="button button--submit" type="submit">  </div>
                 </form>
               </div>
             </div>

@@ -11,6 +11,7 @@
     &.first.second {
       .l-first {
         @include grid-span(6,1);
+        margin-right: 0;
       }
       .l-second {
         @include grid-span(6,7);
@@ -26,7 +27,7 @@
   .l-second,
   .l-wrapper {
     @include clearfix;
-    
+
     @if $panels-admin {
       @include border-box;
     }

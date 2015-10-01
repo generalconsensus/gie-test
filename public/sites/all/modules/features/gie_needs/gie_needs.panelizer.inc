@@ -225,7 +225,7 @@ function gie_needs_panelizer_defaults() {
   $panelizer->relationships = array();
   $panelizer->access = array();
   $panelizer->view_mode = 'page_manager';
-  $panelizer->css_class = '';
+  $panelizer->css_class = 'section-wanteds';
   $panelizer->title_element = 'H2';
   $panelizer->link_to_entity = TRUE;
   $panelizer->extra = array();
@@ -247,6 +247,33 @@ function gie_needs_panelizer_defaults() {
   $display->content = array();
   $display->panels = array();
     $pane = new stdClass();
+    $pane->pid = 'new-25fc06b7-9749-4755-a4e8-4921cbdd27fe';
+    $pane->panel = 'main';
+    $pane->type = 'block';
+    $pane->subtype = 'views-11f2e62e9ba498b3fbfc12e9adf560f4';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array(
+      'inherit_path' => 1,
+      'override_title' => 1,
+      'override_title_text' => '',
+      'override_title_heading' => 'h2',
+    );
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
+    $pane->css = array(
+      'css_id' => '',
+      'css_class' => 'pane--wanteds-search',
+    );
+    $pane->extras = array();
+    $pane->position = 0;
+    $pane->locks = array();
+    $pane->uuid = '25fc06b7-9749-4755-a4e8-4921cbdd27fe';
+    $display->content['new-25fc06b7-9749-4755-a4e8-4921cbdd27fe'] = $pane;
+    $display->panels['main'][0] = 'new-25fc06b7-9749-4755-a4e8-4921cbdd27fe';
+    $pane = new stdClass();
     $pane->pid = 'new-ecc33213-d1ae-4755-a921-f73e53d496e9';
     $pane->panel = 'main';
     $pane->type = 'views_panes';
@@ -260,11 +287,11 @@ function gie_needs_panelizer_defaults() {
     );
     $pane->css = array();
     $pane->extras = array();
-    $pane->position = 0;
+    $pane->position = 1;
     $pane->locks = array();
     $pane->uuid = 'ecc33213-d1ae-4755-a921-f73e53d496e9';
     $display->content['new-ecc33213-d1ae-4755-a921-f73e53d496e9'] = $pane;
-    $display->panels['main'][0] = 'new-ecc33213-d1ae-4755-a921-f73e53d496e9';
+    $display->panels['main'][1] = 'new-ecc33213-d1ae-4755-a921-f73e53d496e9';
     $pane = new stdClass();
     $pane->pid = 'new-2f98ad98-03d7-46bf-b367-0b6d2137eea9';
     $pane->panel = 'sidebar';
