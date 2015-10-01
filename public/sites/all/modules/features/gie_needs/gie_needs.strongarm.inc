@@ -108,7 +108,7 @@ function gie_needs_strongarm() {
         'custom_settings' => TRUE,
       ),
       'search_listing' => array(
-        'custom_settings' => FALSE,
+        'custom_settings' => TRUE,
       ),
       'revision' => array(
         'custom_settings' => FALSE,
@@ -152,6 +152,10 @@ function gie_needs_strongarm() {
             'weight' => '10',
             'visible' => TRUE,
           ),
+          'search_listing' => array(
+            'weight' => '10',
+            'visible' => TRUE,
+          ),
         ),
         'sharethis' => array(
           'default' => array(
@@ -178,6 +182,10 @@ function gie_needs_strongarm() {
             'weight' => '23',
             'visible' => FALSE,
           ),
+          'search_listing' => array(
+            'weight' => '25',
+            'visible' => FALSE,
+          ),
         ),
         'content_author_entity_poc_photo' => array(
           'listing' => array(
@@ -201,6 +209,10 @@ function gie_needs_strongarm() {
             'visible' => FALSE,
           ),
           'needs_list' => array(
+            'weight' => '10',
+            'visible' => TRUE,
+          ),
+          'search_listing' => array(
             'weight' => '10',
             'visible' => TRUE,
           ),
@@ -230,6 +242,10 @@ function gie_needs_strongarm() {
             'weight' => '17',
             'visible' => FALSE,
           ),
+          'search_listing' => array(
+            'weight' => '23',
+            'visible' => FALSE,
+          ),
         ),
         'needs_point_of_contact_needs_profile_button' => array(
           'page_header' => array(
@@ -256,11 +272,23 @@ function gie_needs_strongarm() {
             'weight' => '18',
             'visible' => FALSE,
           ),
+          'search_listing' => array(
+            'weight' => '17',
+            'visible' => FALSE,
+          ),
         ),
         'wanted_counts_entity_view_1' => array(
           'listing' => array(
             'weight' => '7',
             'visible' => TRUE,
+          ),
+          'default' => array(
+            'weight' => '10',
+            'visible' => TRUE,
+          ),
+          'search_listing' => array(
+            'weight' => '18',
+            'visible' => FALSE,
           ),
         ),
         'wanted_counts_comments' => array(
@@ -268,10 +296,26 @@ function gie_needs_strongarm() {
             'weight' => '6',
             'visible' => TRUE,
           ),
+          'default' => array(
+            'weight' => '10',
+            'visible' => TRUE,
+          ),
+          'search_listing' => array(
+            'weight' => '19',
+            'visible' => FALSE,
+          ),
         ),
         'flag_abuse_node' => array(
           'listing' => array(
             'weight' => '19',
+            'visible' => FALSE,
+          ),
+          'default' => array(
+            'weight' => '10',
+            'visible' => TRUE,
+          ),
+          'search_listing' => array(
+            'weight' => '21',
             'visible' => FALSE,
           ),
         ),
@@ -280,11 +324,27 @@ function gie_needs_strongarm() {
             'weight' => '9',
             'visible' => TRUE,
           ),
+          'default' => array(
+            'weight' => '10',
+            'visible' => TRUE,
+          ),
+          'search_listing' => array(
+            'weight' => '20',
+            'visible' => FALSE,
+          ),
         ),
         'wanted_counts_wanted_funding_available' => array(
           'listing' => array(
             'weight' => '8',
             'visible' => TRUE,
+          ),
+          'default' => array(
+            'weight' => '10',
+            'visible' => TRUE,
+          ),
+          'search_listing' => array(
+            'weight' => '22',
+            'visible' => FALSE,
           ),
         ),
       ),

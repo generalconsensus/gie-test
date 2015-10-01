@@ -2363,7 +2363,7 @@ Using the selector below, highlight the area of the image you would like to feat
     'bundle' => 'innovation',
     'default_value' => NULL,
     'deleted' => 0,
-    'description' => 'Share any articles, blogs, or other news items that showcase your innovation',
+    'description' => 'Share any articles, blogs, or other news items that showcase your innovation.',
     'display' => array(
       'at_a_glance' => array(
         'label' => 'above',
@@ -2600,7 +2600,7 @@ Using the selector below, highlight the area of the image you would like to feat
     'bundle' => 'innovation',
     'default_value' => NULL,
     'deleted' => 0,
-    'description' => 'The point of contact must be a member of the Global Innovation Exchange. You may search on First Name or Last Name and select the relevant user from the search results.',
+    'description' => 'The point of contact must be someone with a user profile in the Exchange. Start writing the full name to see if it comes up in the Exchange member directory. If not, contact the person to invite them to create a profile. If no point of contact is listed, there will be no point of contact listed on the innovation profile.',
     'display' => array(
       'at_a_glance' => array(
         'label' => 'above',
@@ -3634,6 +3634,7 @@ Using the selector below, highlight the area of the image you would like to feat
         'weight' => 36,
       ),
     ),
+    'ds_extras_field_template' => '',
     'entity_type' => 'node',
     'entityconnect_unload_add' => 1,
     'entityconnect_unload_edit' => 1,
@@ -3641,21 +3642,22 @@ Using the selector below, highlight the area of the image you would like to feat
     'label' => 'Exchange References',
     'required' => 0,
     'settings' => array(
+      'description_display' => 'after',
       'user_register_form' => FALSE,
     ),
     'widget' => array(
       'active' => 1,
-      'module' => 'entityreference',
+      'module' => 'entityreference_view_widget',
       'settings' => array(
-        'match_operator' => 'CONTAINS',
-        'path' => '',
-        'references_dialog_add' => 0,
-        'references_dialog_edit' => 0,
-        'references_dialog_search' => 0,
-        'references_dialog_search_view' => '',
-        'size' => 60,
+        'allow_duplicates' => 0,
+        'close_modal' => 0,
+        'pass_argument' => 0,
+        'pass_arguments' => '',
+        'rendered_entity' => 0,
+        'view' => 'user_reference|multi_view_widget',
+        'view_mode' => 'full',
       ),
-      'type' => 'entityreference_autocomplete',
+      'type' => 'entityreference_view_widget',
       'weight' => 11,
     ),
   );
@@ -4410,17 +4412,17 @@ Using the selector below, highlight the area of the image you would like to feat
     ),
     'widget' => array(
       'active' => 1,
-      'module' => 'entityreference',
+      'module' => 'entityreference_view_widget',
       'settings' => array(
-        'match_operator' => 'CONTAINS',
-        'path' => '',
-        'references_dialog_add' => 0,
-        'references_dialog_edit' => 0,
-        'references_dialog_search' => 0,
-        'references_dialog_search_view' => '',
-        'size' => 60,
+        'allow_duplicates' => 0,
+        'close_modal' => 0,
+        'pass_argument' => 0,
+        'pass_arguments' => '',
+        'rendered_entity' => 0,
+        'view' => 'user_reference|multi_view_widget',
+        'view_mode' => 'full',
       ),
-      'type' => 'entityreference_autocomplete',
+      'type' => 'entityreference_view_widget',
       'weight' => 9,
     ),
   );
@@ -4717,7 +4719,7 @@ Using the selector below, highlight the area of the image you would like to feat
     'bundle' => 'innovation',
     'default_value' => NULL,
     'deleted' => 0,
-    'description' => 'Share the URL for your innovation website ',
+    'description' => 'Share the URL for your innovation website. Provide the full URL, for example: http://www.example.com',
     'display' => array(
       'at_a_glance' => array(
         'label' => 'hidden',
@@ -5758,6 +5760,82 @@ Using the selector below, highlight the area of the image you would like to feat
     ),
   );
 
+  // Exported field_instance:
+  // 'taxonomy_term-sustainable_development_goals-description_field'
+  $field_instances['taxonomy_term-sustainable_development_goals-description_field'] = array(
+    'bundle' => 'sustainable_development_goals',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 1,
+      ),
+    ),
+    'entity_type' => 'taxonomy_term',
+    'field_name' => 'description_field',
+    'label' => 'Description',
+    'required' => FALSE,
+    'settings' => array(
+      'display_summary' => 0,
+      'hide_label' => array(
+        'entity' => 0,
+        'page' => 0,
+      ),
+      'text_processing' => 1,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'module' => 'text',
+      'settings' => array(
+        'rows' => 20,
+        'summary_rows' => 5,
+      ),
+      'type' => 'text_textarea_with_summary',
+      'weight' => -5,
+    ),
+  );
+
+  // Exported field_instance:
+  // 'taxonomy_term-sustainable_development_goals-name_field'
+  $field_instances['taxonomy_term-sustainable_development_goals-name_field'] = array(
+    'bundle' => 'sustainable_development_goals',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'taxonomy_term',
+    'field_name' => 'name_field',
+    'label' => 'Name',
+    'required' => TRUE,
+    'settings' => array(
+      'hide_label' => array(
+        'entity' => 0,
+        'page' => 0,
+      ),
+      'text_processing' => 0,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'module' => 'text',
+      'settings' => array(
+        'size' => 60,
+      ),
+      'type' => 'text_textfield',
+      'weight' => -5,
+    ),
+  );
+
   // Exported field_instance: 'taxonomy_term-testing_phase-description_field'
   $field_instances['taxonomy_term-testing_phase-description_field'] = array(
     'bundle' => 'testing_phase',
@@ -5891,9 +5969,9 @@ Using the selector below, highlight the area of the image you would like to feat
   t('Select the countries where your innovation was created');
   t('Select the regions that include the countries selected for this innovation. ');
   t('Select the stage that best describes the current status of your innovation');
-  t('Share any articles, blogs, or other news items that showcase your innovation');
+  t('Share any articles, blogs, or other news items that showcase your innovation.');
   t('Share more details about how the innovation works');
-  t('Share the URL for your innovation website ');
+  t('Share the URL for your innovation website. Provide the full URL, for example: http://www.example.com');
   t('Share the latest status and activities of your innovation ');
   t('Share your next steps for growing your innovation');
   t('Short Description');
@@ -5901,7 +5979,7 @@ Using the selector below, highlight the area of the image you would like to feat
   t('Strategy for expanding use of your innovation');
   t('Subject');
   t('Tell us who is using and/or testing your innovation right now');
-  t('The point of contact must be a member of the Global Innovation Exchange. You may search on First Name or Last Name and select the relevant user from the search results.');
+  t('The point of contact must be someone with a user profile in the Exchange. Start writing the full name to see if it comes up in the Exchange member directory. If not, contact the person to invite them to create a profile. If no point of contact is listed, there will be no point of contact listed on the innovation profile.');
   t('Title');
   t('Topic');
   t('Topics are issues that may be of interest to Exchange users. Select any (or none) topics that you think apply to your innovation (i.e. social impact investing)');

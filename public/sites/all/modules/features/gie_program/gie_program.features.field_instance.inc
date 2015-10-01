@@ -665,7 +665,7 @@ function gie_program_field_default_field_instances() {
     'bundle' => 'program',
     'default_value' => NULL,
     'deleted' => 0,
-    'description' => 'Link to your program\'s website.',
+    'description' => 'Link to your program\'s website. Provide the full URL, for example: http://www.example.com',
     'display' => array(
       'at_a_glance' => array(
         'label' => 'above',
@@ -1284,7 +1284,7 @@ function gie_program_field_default_field_instances() {
     'bundle' => 'program',
     'default_value' => NULL,
     'deleted' => 0,
-    'description' => 'The point of contact must be someone with a user profile in the Exchange. Start writing a name  (first name initial last name e.g. kshipley) to see if it comes up in the Exchange member directory. If not, create a profile or email the person to invite them to create a profile. If no point of contact is listed, there will be no point of contact listed on the program profile.',
+    'description' => 'The point of contact must be someone with a user profile in the Exchange. Start writing the full name to see if it comes up in the Exchange member directory. If not, contact the person to invite them to create a profile. If no point of contact is listed, there will be no point of contact listed on the program profile.',
     'display' => array(
       'at_a_glance' => array(
         'label' => 'above',
@@ -1385,17 +1385,17 @@ function gie_program_field_default_field_instances() {
     ),
     'widget' => array(
       'active' => 1,
-      'module' => 'entityreference',
+      'module' => 'entityreference_view_widget',
       'settings' => array(
-        'match_operator' => 'CONTAINS',
-        'path' => '',
-        'references_dialog_add' => 0,
-        'references_dialog_edit' => 0,
-        'references_dialog_search' => 0,
-        'references_dialog_search_view' => '',
-        'size' => 60,
+        'allow_duplicates' => 0,
+        'close_modal' => 1,
+        'pass_argument' => 0,
+        'pass_arguments' => '',
+        'rendered_entity' => 0,
+        'view' => 'user_reference|entityreference_view_widget_1',
+        'view_mode' => 'full',
       ),
-      'type' => 'entityreference_autocomplete',
+      'type' => 'entityreference_view_widget',
       'weight' => 9,
     ),
   );
@@ -2332,7 +2332,7 @@ function gie_program_field_default_field_instances() {
   t('Expected End Date');
   t('Funding Type');
   t('Link URL');
-  t('Link to your program\'s website.');
+  t('Link to your program\'s website. Provide the full URL, for example: http://www.example.com');
   t('Logo');
   t('Objectives');
   t('Parent Organization');
@@ -2354,7 +2354,7 @@ function gie_program_field_default_field_instances() {
   t('The latest activities of your program. ');
   t('The mailing address of your program. ');
   t('The objectives of your program.');
-  t('The point of contact must be someone with a user profile in the Exchange. Start writing a name  (first name initial last name e.g. kshipley) to see if it comes up in the Exchange member directory. If not, create a profile or email the person to invite them to create a profile. If no point of contact is listed, there will be no point of contact listed on the program profile.');
+  t('The point of contact must be someone with a user profile in the Exchange. Start writing the full name to see if it comes up in the Exchange member directory. If not, contact the person to invite them to create a profile. If no point of contact is listed, there will be no point of contact listed on the program profile.');
   t('The start date of your program, if applicable. ');
   t('The title of the program.');
   t('The total budget of your program, if applicable. ');

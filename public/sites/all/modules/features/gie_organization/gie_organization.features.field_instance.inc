@@ -457,7 +457,7 @@ function gie_organization_field_default_field_instances() {
         'label' => 'above',
         'module' => 'taxonomy',
         'settings' => array(
-          'field_delimiter' => '',
+          'field_delimiter' => ', ',
           'linked_field' => array(
             'advanced' => array(
               'class' => '',
@@ -764,7 +764,7 @@ function gie_organization_field_default_field_instances() {
     'bundle' => 'organization',
     'default_value' => NULL,
     'deleted' => 0,
-    'description' => 'Link to your organization\'s website',
+    'description' => 'Link to your organization\'s website. Provide the full URL, for example: http://www.example.com',
     'display' => array(
       'at_a_glance' => array(
         'label' => 'hidden',
@@ -1413,7 +1413,7 @@ function gie_organization_field_default_field_instances() {
     'bundle' => 'organization',
     'default_value' => NULL,
     'deleted' => 0,
-    'description' => 'The point of contact must be someone with a user profile in the Exchange. Start writing a name (first name initial last name e.g. kshipley) to see if it comes up in the Exchange member directory. If not, create a profile or email the person to invite them to create a profile. If no point of contact is listed, there will be no point of contact listed on the innovation profile.',
+    'description' => 'The point of contact must be someone with a user profile in the Exchange. Start writing the full name to see if it comes up in the Exchange member directory. If not, contact the person to invite them to create a profile. If no point of contact is listed, there will be no point of contact listed on the organization profile.',
     'display' => array(
       'at_a_glance' => array(
         'label' => 'above',
@@ -1514,17 +1514,17 @@ function gie_organization_field_default_field_instances() {
     ),
     'widget' => array(
       'active' => 1,
-      'module' => 'entityreference',
+      'module' => 'entityreference_view_widget',
       'settings' => array(
-        'match_operator' => 'CONTAINS',
-        'path' => '',
-        'references_dialog_add' => 0,
-        'references_dialog_edit' => 0,
-        'references_dialog_search' => 0,
-        'references_dialog_search_view' => '',
-        'size' => 60,
+        'allow_duplicates' => 0,
+        'close_modal' => 1,
+        'pass_argument' => 0,
+        'pass_arguments' => '',
+        'rendered_entity' => 0,
+        'view' => 'user_reference|entityreference_view_widget_1',
+        'view_mode' => 'full',
       ),
-      'type' => 'entityreference_autocomplete',
+      'type' => 'entityreference_view_widget',
       'weight' => 11,
     ),
   );
@@ -1804,7 +1804,7 @@ function gie_organization_field_default_field_instances() {
     'bundle' => 'organization',
     'default_value' => NULL,
     'deleted' => 0,
-    'description' => 'Paste your organization\'s Facebook page URL so that users can go directly there',
+    'description' => 'Paste your organization\'s Facebook page URL so that users can go directly there. For example: https://www.facebook.com/example',
     'display' => array(
       'at_a_glance' => array(
         'label' => 'above',
@@ -1925,7 +1925,7 @@ function gie_organization_field_default_field_instances() {
     'bundle' => 'organization',
     'default_value' => NULL,
     'deleted' => 0,
-    'description' => 'Paste your organization\'s LinkedIn URL so that users can go directly there',
+    'description' => 'Paste your organization\'s LinkedIn URL so that users can go directly there. For example: https://www.linkedin.com/company/example',
     'display' => array(
       'at_a_glance' => array(
         'label' => 'above',
@@ -2046,7 +2046,7 @@ function gie_organization_field_default_field_instances() {
     'bundle' => 'organization',
     'default_value' => NULL,
     'deleted' => 0,
-    'description' => 'Paste your organization\'s Twitter URL so that users can go directly there',
+    'description' => 'Paste your organization\'s Twitter URL so that users can go directly there. For example: https://twitter.com/globalinnovationexchange',
     'display' => array(
       'at_a_glance' => array(
         'label' => 'above',
@@ -3159,7 +3159,7 @@ function gie_organization_field_default_field_instances() {
   t('Facebook');
   t('Featured');
   t('Link URL');
-  t('Link to your organization\'s website');
+  t('Link to your organization\'s website. Provide the full URL, for example: http://www.example.com');
   t('LinkedIn');
   t('List the type of expertise your organization and its staff provide');
   t('List your organizaton\'s areas of focus ');
@@ -3171,9 +3171,9 @@ function gie_organization_field_default_field_instances() {
   t('Parent Organization');
   t('Partner');
   t('Partners');
-  t('Paste your organization\'s Facebook page URL so that users can go directly there');
-  t('Paste your organization\'s LinkedIn URL so that users can go directly there');
-  t('Paste your organization\'s Twitter URL so that users can go directly there');
+  t('Paste your organization\'s Facebook page URL so that users can go directly there. For example: https://www.facebook.com/example');
+  t('Paste your organization\'s LinkedIn URL so that users can go directly there. For example: https://www.linkedin.com/company/example');
+  t('Paste your organization\'s Twitter URL so that users can go directly there. For example: https://twitter.com/globalinnovationexchange');
   t('Please select the sectors and sub-sectors related to your innovation. Click on the plus (+) icon on the different sectors to access sub sectors. Be sure to select the sectors and subsectors that apply. Do not select a sub-sector without also selecting the corresponding sector. ');
   t('Point of Contact');
   t('Region');
@@ -3189,7 +3189,7 @@ function gie_organization_field_default_field_instances() {
   t('Telephone number for your organization including country code');
   t('The mailing address of your organization');
   t('The mission of your organization');
-  t('The point of contact must be someone with a user profile in the Exchange. Start writing a name (first name initial last name e.g. kshipley) to see if it comes up in the Exchange member directory. If not, create a profile or email the person to invite them to create a profile. If no point of contact is listed, there will be no point of contact listed on the innovation profile.');
+  t('The point of contact must be someone with a user profile in the Exchange. Start writing the full name to see if it comes up in the Exchange member directory. If not, contact the person to invite them to create a profile. If no point of contact is listed, there will be no point of contact listed on the organization profile.');
   t('The title of the organization');
   t('Twitter');
   t('Type the organizations that this program is partnered with. They must have an organization profile in order to appear on your page. Please encourage your partners to create organization profiles and user profiles on the Exchange if they don\'t appear.');

@@ -475,7 +475,7 @@ function gie_user_field_default_field_instances() {
         'track_list' => 0,
       ),
       'type' => 'term_reference_tree',
-      'weight' => 6,
+      'weight' => 7,
     ),
   );
 
@@ -997,7 +997,7 @@ function gie_user_field_default_field_instances() {
         'track_list' => 0,
       ),
       'type' => 'term_reference_tree',
-      'weight' => 7,
+      'weight' => 8,
     ),
   );
 
@@ -1244,7 +1244,7 @@ function gie_user_field_default_field_instances() {
     'bundle' => 'user',
     'default_value' => NULL,
     'deleted' => 0,
-    'description' => 'Provide the Facebook URL for your profile. ',
+    'description' => 'Provide the Facebook URL for your profile. For example: https://www.facebook.com/example',
     'display' => array(
       'default' => array(
         'label' => 'hidden',
@@ -1346,11 +1346,9 @@ function gie_user_field_default_field_instances() {
       'user_register_form' => 0,
     ),
     'widget' => array(
-      'active' => 1,
+      'active' => 0,
       'module' => 'html5_tools',
-      'settings' => array(
-        'size' => 256,
-      ),
+      'settings' => array(),
       'type' => 'urlwidget',
       'weight' => 10,
     ),
@@ -1696,7 +1694,7 @@ function gie_user_field_default_field_instances() {
     'bundle' => 'user',
     'default_value' => NULL,
     'deleted' => 0,
-    'description' => 'Provide the LinkedIn URL for your profile. ',
+    'description' => 'Provide the LinkedIn URL for your profile. For example: https://www.linkedin.com/in/example',
     'display' => array(
       'default' => array(
         'label' => 'hidden',
@@ -1798,11 +1796,9 @@ function gie_user_field_default_field_instances() {
       'user_register_form' => 0,
     ),
     'widget' => array(
-      'active' => 1,
+      'active' => 0,
       'module' => 'html5_tools',
-      'settings' => array(
-        'size' => 256,
-      ),
+      'settings' => array(),
       'type' => 'urlwidget',
       'weight' => 9,
     ),
@@ -1937,7 +1933,7 @@ function gie_user_field_default_field_instances() {
         'size' => 60,
       ),
       'type' => 'text_textfield',
-      'weight' => 11,
+      'weight' => 12,
     ),
   );
 
@@ -2037,7 +2033,7 @@ function gie_user_field_default_field_instances() {
         'size' => 60,
       ),
       'type' => 'entityreference_autocomplete',
-      'weight' => 8,
+      'weight' => 9,
     ),
   );
 
@@ -2228,7 +2224,7 @@ function gie_user_field_default_field_instances() {
         'size' => 60,
       ),
       'type' => 'entityreference_autocomplete',
-      'weight' => 9,
+      'weight' => 10,
     ),
   );
 
@@ -2771,7 +2767,7 @@ function gie_user_field_default_field_instances() {
         'rows' => 5,
       ),
       'type' => 'text_textarea',
-      'weight' => 12,
+      'weight' => 13,
     ),
   );
 
@@ -2916,7 +2912,7 @@ function gie_user_field_default_field_instances() {
         'size' => 60,
       ),
       'type' => 'text_textfield',
-      'weight' => 10,
+      'weight' => 11,
     ),
   );
 
@@ -2925,7 +2921,7 @@ function gie_user_field_default_field_instances() {
     'bundle' => 'user',
     'default_value' => NULL,
     'deleted' => 0,
-    'description' => 'Provide the Twitter URL for your profile. ',
+    'description' => 'Provide the Twitter URL for your profile. For example: https://twitter.com/globalinnovationexchange',
     'display' => array(
       'default' => array(
         'label' => 'hidden',
@@ -3027,11 +3023,9 @@ function gie_user_field_default_field_instances() {
       'user_register_form' => 0,
     ),
     'widget' => array(
-      'active' => 1,
+      'active' => 0,
       'module' => 'html5_tools',
-      'settings' => array(
-        'size' => 256,
-      ),
+      'settings' => array(),
       'type' => 'urlwidget',
       'weight' => 8,
     ),
@@ -3176,9 +3170,9 @@ function gie_user_field_default_field_instances() {
   t('Please type in any programs/Projects you are associated with. The program must have a profile on the Exchange before you can include it. If the program is not there, please contact the program and ask them to add a profile on the Exchange. Then you can come back and tag it. Programs are often funded or implemented by organizations, have a set budget, and a start and end date.');
   t('Profile Photo');
   t('Programs');
-  t('Provide the Facebook URL for your profile. ');
-  t('Provide the LinkedIn URL for your profile. ');
-  t('Provide the Twitter URL for your profile. ');
+  t('Provide the Facebook URL for your profile. For example: https://www.facebook.com/example');
+  t('Provide the LinkedIn URL for your profile. For example: https://www.linkedin.com/in/example');
+  t('Provide the Twitter URL for your profile. For example: https://twitter.com/globalinnovationexchange');
   t('Receive email alerts about new funding opportunities, innovations, people, events, and other content coming into the Exchange that is relevant to you based on your profile. We will also send you occasional updates on new features and opportunities in the Exchange. ');
   t('Select as many types that apply to your current role and expertise.');
   t('Select the region where you are based. ');
