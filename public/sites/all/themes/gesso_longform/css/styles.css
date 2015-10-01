@@ -1030,16 +1030,6 @@ input.throbbing {
   color: #4d4d4f;
 }
 
-.footer-sponsor {
-  width: 100%;
-  float: left;
-}
-@media (min-width: 54.375em) {
-  .footer-sponsor {
-    float: right;
-    width: 60%;
-  }
-}
 .footer-sponsor:before {
   content: "POWERED BY";
   display: block;
@@ -1830,7 +1820,6 @@ input.throbbing {
   color: #FFF;
   position: relative;
   padding-top: 20px;
-  padding-left: 20%;
   text-decoration: underline;
   top: 15px;
 }
@@ -1860,6 +1849,10 @@ input.throbbing {
     top: 1px;
     z-index: 0;
   }
+}
+
+.pre-footer__description {
+  width: 100%;
 }
 
 .progress {

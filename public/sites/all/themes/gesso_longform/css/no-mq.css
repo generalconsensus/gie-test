@@ -980,12 +980,6 @@ input.throbbing {
   color: #4d4d4f;
 }
 
-.footer-sponsor {
-  width: 100%;
-  float: left;
-  float: right;
-  width: 60%;
-}
 .footer-sponsor:before {
   content: "POWERED BY";
   display: block;
@@ -1716,7 +1710,6 @@ input.throbbing {
   color: #FFF;
   position: relative;
   padding-top: 20px;
-  padding-left: 20%;
   text-decoration: underline;
   top: 15px;
 }
@@ -1742,6 +1735,10 @@ input.throbbing {
   display: block;
   height: 150%;
   width: 0;
+}
+
+.pre-footer__description {
+  width: 100%;
 }
 
 .progress {

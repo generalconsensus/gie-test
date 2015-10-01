@@ -11,15 +11,9 @@
 		color: $white;
     position: relative;
     padding-top: 20px;
-    padding-left: 20%;
     text-decoration: underline;
     top: 15px;
-    &:after{
-    	// content: "> ";
-    	// font-weight: bold;
-    	// padding-left: .5em;
-    	// text-decoration: none;
-    }
+    &:after{}
 	}
 }
 
@@ -37,5 +31,11 @@
     right: 15%;
     top: 1px;
     z-index: 0;
+  }
+}
+
+.pre-footer__description {
+  width: 100%;
+  @include breakpoint($mobile-menu-bp, $no-query: true) {
   }
 }
