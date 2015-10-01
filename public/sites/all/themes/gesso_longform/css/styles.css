@@ -1851,7 +1851,7 @@ input.throbbing {
   left: 25%;
   right: 25%;
   z-index: -10;
-  top: 2%;
+  top: 0;
 }
 .pre-footer__download-image:before {
   content: "";
@@ -1863,7 +1863,7 @@ input.throbbing {
   .pre-footer__download-image {
     left: initial;
     right: 15%;
-    top: 65px;
+    top: 1px;
     z-index: 0;
   }
 }

@@ -199,7 +199,7 @@ function gie_long_form_content_field_group_info() {
       'label' => 'Pre-Footer',
       'instance_settings' => array(
         'id' => '',
-        'classes' => 'pre-footer',
+        'classes' => 'pre-footer component',
         'description' => '',
         'show_label' => '0',
         'label_element' => 'h3',

@@ -30,11 +30,11 @@
   left: 25%;
   right: 25%;
   z-index: -10;
-  top: 2%;
+  top: 0;
 	@include breakpoint($mobile-menu-bp, $no-query: true) {
     left: initial;
     right: 15%;
-    top: 65px;
+    top: 1px;
     z-index: 0;
   }
 }
