@@ -951,11 +951,11 @@ input.throbbing {
   width: 100%;
   width: 50%;
 }
-.block--pane-about-the-exchange .footer-about__title, .block--pane-about-the-exchange .block__title {
+.block--pane-about-the-exchange .block__title {
   border-bottom: 1px solid #cecfcb;
   text-transform: uppercase;
 }
-.block--pane-about-the-exchange .footer-about__content .button--highlight, .block--pane-about-the-exchange .block__content .button--highlight {
+.block--pane-about-the-exchange .block__content .button--highlight {
   background-color: #b71234;
   border-color: #b71234;
 }
@@ -980,13 +980,13 @@ input.throbbing {
   color: #4d4d4f;
 }
 
-.footer__sponsor {
+.footer-sponsor {
   width: 100%;
   float: left;
   float: right;
   width: 60%;
 }
-.footer__sponsor:before {
+.footer-sponsor:before {
   content: "POWERED BY";
   display: block;
   font-style: italic;
@@ -994,44 +994,44 @@ input.throbbing {
   width: 100%;
   padding-right: 4em;
 }
-.footer__sponsor .footer-sponsor__image {
+.footer-sponsor .footer-sponsor__image {
   display: inline-block;
   float: right;
   margin-right: 20px;
   max-width: 33.33333%;
   max-height: 55px;
 }
-.footer__sponsor .footer-sponsor__image-usaid {
+.footer-sponsor .footer-sponsor__image-usaid {
   height: 55px;
   overflow: hidden;
   width: 166px;
   background: transparent url("../images/logo-usaid.png") no-repeat;
 }
-.footer__sponsor .footer-sponsor__image-usaid:before {
+.footer-sponsor .footer-sponsor__image-usaid:before {
   content: "";
   display: block;
   height: 150%;
   width: 0;
 }
-.footer__sponsor .footer-sponsor__image-usgd {
+.footer-sponsor .footer-sponsor__image-usgd {
   height: 54px;
   overflow: hidden;
   width: 207px;
   background: transparent url("../images/logo-uslab.png") no-repeat;
 }
-.footer__sponsor .footer-sponsor__image-usgd:before {
+.footer-sponsor .footer-sponsor__image-usgd:before {
   content: "";
   display: block;
   height: 150%;
   width: 0;
 }
-.footer__sponsor .footer-sponsor__image-gix {
+.footer-sponsor .footer-sponsor__image-gix {
   height: 63px;
   overflow: hidden;
   width: 222px;
   background: transparent url("../images/logo-gix.png") no-repeat;
 }
-.footer__sponsor .footer-sponsor__image-gix:before {
+.footer-sponsor .footer-sponsor__image-gix:before {
   content: "";
   display: block;
   height: 150%;
@@ -1716,15 +1716,9 @@ input.throbbing {
   color: #FFF;
   position: relative;
   padding-top: 20px;
-  padding-left: 5%;
+  padding-left: 20%;
   text-decoration: underline;
   top: 15px;
-}
-.pre-footer__download-link a:after {
-  content: "> ";
-  font-weight: bold;
-  padding-left: .5em;
-  text-decoration: none;
 }
 
 .pre-footer__download-image {
@@ -1733,11 +1727,11 @@ input.throbbing {
   width: 261px;
   background: transparent url("../images/footer-fact-sheet.png") no-repeat;
   display: block;
-  position: absolute;
   left: 25%;
+  position: absolute;
   right: 25%;
-  z-index: -10;
-  top: 0;
+  top: 1px;
+  z-index: 0;
   left: initial;
   right: 15%;
   top: 1px;

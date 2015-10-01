@@ -4,11 +4,11 @@
 		@include breakpoint($mobile-menu-bp, $no-query: true) {
 			width: 50%;
 		}
-		.footer-about__title, .block__title {
+		.block__title {
 			border-bottom: 1px solid #cecfcb;
 			text-transform: uppercase;
 		}
-		.footer-about__content, .block__content  {
+		.block__content  {
 			.button--highlight{
 				background-color: #b71234;
     		border-color: #b71234;
