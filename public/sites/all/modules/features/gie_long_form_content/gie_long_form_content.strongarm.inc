@@ -136,13 +136,13 @@ function gie_long_form_content_strongarm() {
             'visible' => TRUE,
           ),
           'full' => array(
-            'weight' => '1',
+            'weight' => '16',
             'visible' => TRUE,
           ),
         ),
         'flag_favorite' => array(
           'full' => array(
-            'weight' => '2',
+            'weight' => '17',
             'visible' => TRUE,
           ),
         ),
