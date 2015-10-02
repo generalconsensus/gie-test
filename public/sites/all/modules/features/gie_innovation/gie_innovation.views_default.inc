@@ -1349,5 +1349,246 @@ function gie_innovation_views_default_views() {
   $handler->display->display_options['allow']['fields_override'] = 0;
   $export['non_exchange_references'] = $view;
 
+  $view = new view();
+  $view->name = 'sdg_landing_page';
+  $view->description = '';
+  $view->tag = 'default';
+  $view->base_table = 'node';
+  $view->human_name = 'SDG Landing Page';
+  $view->core = 7;
+  $view->api_version = '3.0';
+  $view->disabled = FALSE; /* Edit this to true to make a default view disabled initially */
+
+  /* Display: Master */
+  $handler = $view->new_display('default', 'Master', 'default');
+  $handler->display->display_options['css_class'] = 'view--wanteds-cardflip';
+  $handler->display->display_options['use_more_always'] = FALSE;
+  $handler->display->display_options['access']['type'] = 'perm';
+  $handler->display->display_options['cache']['type'] = 'none';
+  $handler->display->display_options['query']['type'] = 'views_query';
+  $handler->display->display_options['exposed_form']['type'] = 'basic';
+  $handler->display->display_options['pager']['type'] = 'full';
+  $handler->display->display_options['style_plugin'] = 'default';
+  $handler->display->display_options['row_plugin'] = 'fields';
+  /* Field: Content: Title */
+  $handler->display->display_options['fields']['title']['id'] = 'title';
+  $handler->display->display_options['fields']['title']['table'] = 'node';
+  $handler->display->display_options['fields']['title']['field'] = 'title';
+  $handler->display->display_options['fields']['title']['label'] = '';
+  $handler->display->display_options['fields']['title']['exclude'] = TRUE;
+  $handler->display->display_options['fields']['title']['alter']['word_boundary'] = FALSE;
+  $handler->display->display_options['fields']['title']['alter']['ellipsis'] = FALSE;
+  $handler->display->display_options['fields']['title']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['title']['link_to_node'] = FALSE;
+  /* Field: Content: Description */
+  $handler->display->display_options['fields']['field_action_description']['id'] = 'field_action_description';
+  $handler->display->display_options['fields']['field_action_description']['table'] = 'field_data_field_action_description';
+  $handler->display->display_options['fields']['field_action_description']['field'] = 'field_action_description';
+  $handler->display->display_options['fields']['field_action_description']['label'] = '';
+  $handler->display->display_options['fields']['field_action_description']['exclude'] = TRUE;
+  $handler->display->display_options['fields']['field_action_description']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_action_description']['settings'] = array(
+    'linked_field' => array(
+      'linked' => 0,
+      'destination' => '',
+      'advanced' => array(
+        'title' => '',
+        'target' => '',
+        'class' => '',
+        'rel' => '',
+        'text' => '',
+      ),
+    ),
+  );
+  /* Field: Content: Image */
+  $handler->display->display_options['fields']['field_action_image']['id'] = 'field_action_image';
+  $handler->display->display_options['fields']['field_action_image']['table'] = 'field_data_field_action_image';
+  $handler->display->display_options['fields']['field_action_image']['field'] = 'field_action_image';
+  $handler->display->display_options['fields']['field_action_image']['label'] = '';
+  $handler->display->display_options['fields']['field_action_image']['exclude'] = TRUE;
+  $handler->display->display_options['fields']['field_action_image']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_action_image']['click_sort_column'] = 'fid';
+  $handler->display->display_options['fields']['field_action_image']['settings'] = array(
+    'image_style' => '',
+    'image_link' => '',
+    'linked_field' => array(
+      'linked' => 0,
+      'destination' => '',
+      'advanced' => array(
+        'title' => '',
+        'target' => '',
+        'class' => '',
+        'rel' => '',
+        'text' => '',
+      ),
+    ),
+  );
+  /* Field: Content: Link */
+  $handler->display->display_options['fields']['field_action_link']['id'] = 'field_action_link';
+  $handler->display->display_options['fields']['field_action_link']['table'] = 'field_data_field_action_link';
+  $handler->display->display_options['fields']['field_action_link']['field'] = 'field_action_link';
+  $handler->display->display_options['fields']['field_action_link']['label'] = '';
+  $handler->display->display_options['fields']['field_action_link']['exclude'] = TRUE;
+  $handler->display->display_options['fields']['field_action_link']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_action_link']['click_sort_column'] = 'url';
+  $handler->display->display_options['fields']['field_action_link']['settings'] = array(
+    'linked_field' => array(
+      'linked' => 0,
+      'destination' => '',
+      'advanced' => array(
+        'title' => '',
+        'target' => '',
+        'class' => '',
+        'rel' => '',
+        'text' => '',
+      ),
+    ),
+  );
+  /* Field: Global: Custom text */
+  $handler->display->display_options['fields']['nothing']['id'] = 'nothing';
+  $handler->display->display_options['fields']['nothing']['table'] = 'views';
+  $handler->display->display_options['fields']['nothing']['field'] = 'nothing';
+  $handler->display->display_options['fields']['nothing']['label'] = '';
+  $handler->display->display_options['fields']['nothing']['alter']['text'] = '<div class="cardflip" style="height: 180px;">
+                      <div class="cardflip__card" style="height: 180px;">
+                        <div class="cardflip__1" style="height: 180px;">
+                          <div class="cardflip__title"></div>
+                          <div class="cardflip__image">[field_action_image]</div>
+                        </div>
+                        <div class="cardflip__2" style="height: 180px;">
+                          <div class="cardflip__title"></div>
+                          <div class="cardflip__description">[field_action_description]</div>
+                          <div class="cardflip__link"><a href="#">[field_action_link]</a></div>
+                          <div class="cardflip__image">[field_action_image]</div>
+                        </div>
+                      </div>
+                    </div>';
+  $handler->display->display_options['fields']['nothing']['element_label_colon'] = FALSE;
+  /* Sort criterion: Arguments: Multi-item Argument Order */
+  $handler->display->display_options['sorts']['weight']['id'] = 'weight';
+  $handler->display->display_options['sorts']['weight']['table'] = 'views_sort_by_arg_order';
+  $handler->display->display_options['sorts']['weight']['field'] = 'weight';
+  $handler->display->display_options['sorts']['weight']['order'] = 'DESC';
+  $handler->display->display_options['sorts']['weight']['inherit_type'] = 0;
+  $handler->display->display_options['sorts']['weight']['null_below'] = 0;
+  $handler->display->display_options['sorts']['weight']['argument_number'] = '0';
+  /* Contextual filter: Content: Nid */
+  $handler->display->display_options['arguments']['nid']['id'] = 'nid';
+  $handler->display->display_options['arguments']['nid']['table'] = 'node';
+  $handler->display->display_options['arguments']['nid']['field'] = 'nid';
+  $handler->display->display_options['arguments']['nid']['default_action'] = 'not found';
+  $handler->display->display_options['arguments']['nid']['default_argument_type'] = 'fixed';
+  $handler->display->display_options['arguments']['nid']['summary']['number_of_records'] = '0';
+  $handler->display->display_options['arguments']['nid']['summary']['format'] = 'default_summary';
+  $handler->display->display_options['arguments']['nid']['summary_options']['items_per_page'] = '25';
+  $handler->display->display_options['arguments']['nid']['break_phrase'] = TRUE;
+  /* Filter criterion: Content: Published */
+  $handler->display->display_options['filters']['status']['id'] = 'status';
+  $handler->display->display_options['filters']['status']['table'] = 'node';
+  $handler->display->display_options['filters']['status']['field'] = 'status';
+  $handler->display->display_options['filters']['status']['value'] = '1';
+  $handler->display->display_options['filters']['status']['group'] = 1;
+  $handler->display->display_options['filters']['status']['expose']['operator_id'] = '';
+  $handler->display->display_options['filters']['status']['expose']['label'] = 'Published';
+  $handler->display->display_options['filters']['status']['expose']['operator'] = 'status_op';
+  $handler->display->display_options['filters']['status']['expose']['identifier'] = 'status';
+  $handler->display->display_options['filters']['status']['expose']['required'] = TRUE;
+  /* Filter criterion: Content: Type */
+  $handler->display->display_options['filters']['type']['id'] = 'type';
+  $handler->display->display_options['filters']['type']['table'] = 'node';
+  $handler->display->display_options['filters']['type']['field'] = 'type';
+  $handler->display->display_options['filters']['type']['value'] = array(
+    'action_card' => 'action_card',
+  );
+
+  /* Display: Content pane */
+  $handler = $view->new_display('panel_pane', 'Content pane', 'sdg_landing');
+  $handler->display->display_options['argument_input'] = array(
+    'nid' => array(
+      'type' => 'wildcard',
+      'context' => 'entity:asset_type.id',
+      'context_optional' => 0,
+      'panel' => '0',
+      'fixed' => '',
+      'label' => 'Content: Nid',
+    ),
+  );
+  $export['sdg_landing_page'] = $view;
+
+  $view = new view();
+  $view->name = 'sdg_listing_page';
+  $view->description = '';
+  $view->tag = 'default';
+  $view->base_table = 'search_api_index_default_node_index';
+  $view->human_name = 'SDG Listing Page';
+  $view->core = 7;
+  $view->api_version = '3.0';
+  $view->disabled = FALSE; /* Edit this to true to make a default view disabled initially */
+
+  /* Display: Master */
+  $handler = $view->new_display('default', 'Master', 'default');
+  $handler->display->display_options['css_class'] = 'view--card-view-3col';
+  $handler->display->display_options['use_more_always'] = FALSE;
+  $handler->display->display_options['access']['type'] = 'none';
+  $handler->display->display_options['cache']['type'] = 'none';
+  $handler->display->display_options['query']['type'] = 'views_query';
+  $handler->display->display_options['exposed_form']['type'] = 'basic';
+  $handler->display->display_options['pager']['type'] = 'full';
+  $handler->display->display_options['style_plugin'] = 'default';
+  $handler->display->display_options['row_plugin'] = 'entity';
+  $handler->display->display_options['row_options']['view_mode'] = 'listing';
+  /* Filter criterion: Indexed Node: Content type */
+  $handler->display->display_options['filters']['type']['id'] = 'type';
+  $handler->display->display_options['filters']['type']['table'] = 'search_api_index_default_node_index';
+  $handler->display->display_options['filters']['type']['field'] = 'type';
+  $handler->display->display_options['filters']['type']['value'] = array(
+    'innovation' => 'innovation',
+  );
+  /* Filter criterion: Indexed Node: Related Sectors */
+  $handler->display->display_options['filters']['field_term_sector']['id'] = 'field_term_sector';
+  $handler->display->display_options['filters']['field_term_sector']['table'] = 'search_api_index_default_node_index';
+  $handler->display->display_options['filters']['field_term_sector']['field'] = 'field_term_sector';
+  $handler->display->display_options['filters']['field_term_sector']['value'] = array();
+  $handler->display->display_options['filters']['field_term_sector']['exposed'] = TRUE;
+  $handler->display->display_options['filters']['field_term_sector']['expose']['operator_id'] = 'field_term_sector_op';
+  $handler->display->display_options['filters']['field_term_sector']['expose']['label'] = 'Related Sectors';
+  $handler->display->display_options['filters']['field_term_sector']['expose']['operator'] = 'field_term_sector_op';
+  $handler->display->display_options['filters']['field_term_sector']['expose']['identifier'] = 'field_term_sector';
+  $handler->display->display_options['filters']['field_term_sector']['expose']['multiple'] = TRUE;
+  $handler->display->display_options['filters']['field_term_sector']['expose']['remember_roles'] = array(
+    2 => '2',
+    1 => 0,
+    8 => 0,
+    6 => 0,
+    7 => 0,
+    4 => 0,
+    3 => 0,
+    5 => 0,
+  );
+  $handler->display->display_options['filters']['field_term_sector']['expose']['reduce'] = 0;
+
+  /* Display: Content pane */
+  $handler = $view->new_display('panel_pane', 'Content pane', 'sdg');
+  $handler->display->display_options['allow']['use_pager'] = 0;
+  $handler->display->display_options['allow']['items_per_page'] = 0;
+  $handler->display->display_options['allow']['offset'] = 0;
+  $handler->display->display_options['allow']['link_to_view'] = 0;
+  $handler->display->display_options['allow']['more_link'] = 0;
+  $handler->display->display_options['allow']['path_override'] = 0;
+  $handler->display->display_options['allow']['title_override'] = 0;
+  $handler->display->display_options['allow']['exposed_form'] = 'exposed_form';
+  $handler->display->display_options['allow']['fields_override'] = 0;
+  $handler->display->display_options['argument_input'] = array(
+    'field_term_sector' => array(
+      'type' => 'none',
+      'context' => 'entity:asset_type.id',
+      'context_optional' => 0,
+      'panel' => '0',
+      'fixed' => '',
+      'label' => 'Related Sectors',
+    ),
+  );
+  $export['sdg_listing_page'] = $view;
+
   return $export;
 }
