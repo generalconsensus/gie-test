@@ -2,9 +2,9 @@
 // Styles for the mobile menu.
 
 .mobile-menu {
-  @include breakpoint($mobile-menu-bp, $no-query: true) {
-    display: none;
-  }
+  // @include breakpoint($mobile-menu-bp, $no-query: true) {
+  //   display: none;
+  // }
 }
 
 .mobile-menu__bar {
@@ -12,7 +12,7 @@
   border-bottom: 1px solid $mobile-menu-border-color;
   @include box-shadow(0 0px 2px 1px rgba(0, 0, 0, 0.4));
   color: $mobile-menu-text-color;
-  height: em(55px);
+  height: em(40px);
   text-align: center;
   width: 100%;
   position: relative;
@@ -31,8 +31,8 @@
   font-family: $mobile-menu-font-family;
   font-size: $font-size-normal;
   font-weight: bold;
-  height: em(55px);
-  line-height: em(55px);
+  height: em(40px);
+  line-height: em(40px);
   margin: 0;
   padding: 0 1em;
   text-decoration: none;
@@ -46,7 +46,10 @@
   border-left: 1px solid $mobile-menu-border-color;
   border-right: 1px solid $mobile-menu-border-color;
   float: right;
-  margin-right: 18%;
+  margin-right: 0;
+  @include breakpoint($mobile-menu-bp, $no-query: true) {
+    margin-right: 18%;
+  }
 }
 
 .mobile-menu__button--search {
@@ -55,12 +58,12 @@
 }
 
 .mobile-menu__icon {
-  @include image-replace(22px, 22px);
+  @include image-replace(20px, 20px);
   background-position: 50% 50%;
   background-repeat: no-repeat;
-  background-size: 22px 22px;
+  background-size: 20px 20px;
   display: inline-block;
-  margin-top: 1em;
+  height: 18px;
 }
 
 %mobile-menu__icon--close {
@@ -69,8 +72,8 @@
 
 .mobile-menu__icon--menu {
   @include svg-background(mobile-menu);
-  background-size: 33px 22px;
-  width: 33px;
+  background-size: 20px 20px;
+  width: 20px;
 
   .is-active & {
     @extend %mobile-menu__icon--close;
