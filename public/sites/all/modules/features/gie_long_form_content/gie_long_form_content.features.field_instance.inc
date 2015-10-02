@@ -339,7 +339,7 @@ function gie_long_form_content_field_default_field_instances() {
           'view_mode' => 'view_mode_selector',
         ),
         'type' => 'paragraphs_view',
-        'weight' => 1,
+        'weight' => 2,
       ),
     ),
     'ds_extras_field_template' => '',

@@ -187,7 +187,7 @@ function gie_long_form_content_field_group_info() {
   $field_group->parent_name = '';
   $field_group->data = array(
     'label' => 'Pre-Footer',
-    'weight' => '2',
+    'weight' => '3',
     'children' => array(
       0 => 'field_learn_more_link',
       1 => 'field_longform_description',
@@ -318,7 +318,7 @@ function gie_long_form_content_field_group_info() {
   $field_group->parent_name = '';
   $field_group->data = array(
     'label' => 'Page Header',
-    'weight' => '0',
+    'weight' => '1',
     'children' => array(
       0 => 'field_long_form_subtitle',
       1 => 'field_longform_byline',
@@ -555,6 +555,40 @@ function gie_long_form_content_field_group_info() {
     ),
   );
   $export['group_section_header|paragraphs_item|long_form_section_header_image|default'] = $field_group;
+
+  $field_group = new stdClass();
+  $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
+  $field_group->api_version = 1;
+  $field_group->identifier = 'group_share|node|long_form_page|full';
+  $field_group->group_name = 'group_share';
+  $field_group->entity_type = 'node';
+  $field_group->bundle = 'long_form_page';
+  $field_group->mode = 'full';
+  $field_group->parent_name = '';
+  $field_group->data = array(
+    'label' => 'share',
+    'weight' => '0',
+    'children' => array(
+      0 => 'flag_favorite',
+      1 => 'sharethis',
+      2 => 'print_button',
+    ),
+    'format_type' => 'div',
+    'format_settings' => array(
+      'label' => 'share',
+      'instance_settings' => array(
+        'id' => '',
+        'classes' => 'share-block component',
+        'description' => '',
+        'show_label' => '0',
+        'label_element' => 'h3',
+        'effect' => 'none',
+        'speed' => 'none',
+      ),
+      'formatter' => 'open',
+    ),
+  );
+  $export['group_share|node|long_form_page|full'] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
