@@ -66,14 +66,6 @@ function gie_long_form_content_ds_field_settings_info() {
   $ds_fieldsetting->bundle = 'long_form_page';
   $ds_fieldsetting->view_mode = 'full';
   $ds_fieldsetting->settings = array(
-    'print_button' => array(
-      'weight' => '3',
-      'label' => 'hidden',
-      'format' => 'default',
-      'formatter_settings' => array(
-        'ft' => array(),
-      ),
-    ),
     'scroll_button' => array(
       'weight' => '3',
       'label' => 'hidden',
@@ -134,6 +126,26 @@ function gie_long_form_content_ds_field_settings_info() {
         ),
       ),
     ),
+    'field_learn_more_link' => array(
+      'formatter_settings' => array(
+        'ft' => array(
+          'func' => 'theme_ds_field_expert',
+          'ow' => TRUE,
+          'ow-el' => 'div',
+          'ow-cl' => 'pre-footer__download-link',
+          'ow-def-cl' => FALSE,
+          'ow-at' => '',
+          'ow-def-at' => FALSE,
+        ),
+      ),
+    ),
+    'field_longform_description' => array(
+      'formatter_settings' => array(
+        'ft' => array(
+          'func' => 'theme_ds_field_expert',
+        ),
+      ),
+    ),
     'field_partner_logos' => array(
       'formatter_settings' => array(
         'ft' => array(
@@ -149,26 +161,6 @@ function gie_long_form_content_ds_field_settings_info() {
           'fis-cl' => 'footer-sponsor__image',
           'fis-at' => '',
           'fis-def-at' => FALSE,
-        ),
-      ),
-    ),
-    'field_longform_description' => array(
-      'formatter_settings' => array(
-        'ft' => array(
-          'func' => 'theme_ds_field_expert',
-        ),
-      ),
-    ),
-    'field_learn_more_link' => array(
-      'formatter_settings' => array(
-        'ft' => array(
-          'func' => 'theme_ds_field_expert',
-          'ow' => TRUE,
-          'ow-el' => 'div',
-          'ow-cl' => 'pre-footer__download-link',
-          'ow-def-cl' => FALSE,
-          'ow-at' => '',
-          'ow-def-at' => FALSE,
         ),
       ),
     ),
@@ -583,25 +575,6 @@ function gie_long_form_content_ds_custom_fields_info() {
 
   $ds_field = new stdClass();
   $ds_field->api_version = 1;
-  $ds_field->field = 'print_button';
-  $ds_field->label = 'Print Button';
-  $ds_field->field_type = 5;
-  $ds_field->entities = array(
-    'node' => 'node',
-  );
-  $ds_field->ui_limit = 'long_form_page|full';
-  $ds_field->properties = array(
-    'code' => array(
-      'value' => '<div class="share-block__icon share-block__icon--print"><a href="javascript:window.print()"></a></div>
-',
-      'format' => 'ds_code',
-    ),
-    'use_token' => 0,
-  );
-  $export['print_button'] = $ds_field;
-
-  $ds_field = new stdClass();
-  $ds_field->api_version = 1;
   $ds_field->field = 'scroll_button';
   $ds_field->label = 'Long form scroll button';
   $ds_field->field_type = 5;
@@ -724,15 +697,13 @@ function gie_long_form_content_ds_layout_settings_info() {
         0 => 'body',
         1 => 'field_long_form_block',
         2 => 'sharethis',
-        3 => 'links',
-        4 => 'field_partner_logos',
+        3 => 'field_partner_logos',
       ),
     ),
     'fields' => array(
       'body' => 'ds_content',
       'field_long_form_block' => 'ds_content',
       'sharethis' => 'ds_content',
-      'links' => 'ds_content',
       'field_partner_logos' => 'ds_content',
     ),
     'classes' => array(),
@@ -758,38 +729,30 @@ function gie_long_form_content_ds_layout_settings_info() {
     'regions' => array(
       'ds_content' => array(
         0 => 'title',
-        1 => 'group_share',
-        2 => 'sharethis',
-        3 => 'field_long_form_subtitle',
-        4 => 'field_longform_byline',
-        5 => 'flag_favorite',
-        6 => 'print_button',
-        7 => 'field_learn_more_link',
-        8 => 'scroll_button',
-        9 => 'field_pdf_screenshot',
-        10 => 'group_page_header',
-        11 => 'field_long_form_block',
-        12 => 'group_footer',
-        13 => 'field_partner_logos',
-        14 => 'field_longform_description',
+        1 => 'group_page_header',
+        2 => 'field_long_form_subtitle',
+        3 => 'field_long_form_block',
+        4 => 'field_pdf_screenshot',
+        5 => 'field_longform_byline',
+        6 => 'scroll_button',
+        7 => 'field_longform_description',
+        8 => 'field_learn_more_link',
+        9 => 'group_footer',
+        10 => 'field_partner_logos',
       ),
     ),
     'fields' => array(
       'title' => 'ds_content',
-      'group_share' => 'ds_content',
-      'sharethis' => 'ds_content',
-      'field_long_form_subtitle' => 'ds_content',
-      'field_longform_byline' => 'ds_content',
-      'flag_favorite' => 'ds_content',
-      'print_button' => 'ds_content',
-      'field_learn_more_link' => 'ds_content',
-      'scroll_button' => 'ds_content',
-      'field_pdf_screenshot' => 'ds_content',
       'group_page_header' => 'ds_content',
+      'field_long_form_subtitle' => 'ds_content',
       'field_long_form_block' => 'ds_content',
+      'field_longform_byline' => 'ds_content',
       'group_footer' => 'ds_content',
+      'field_learn_more_link' => 'ds_content',
       'field_partner_logos' => 'ds_content',
+      'field_pdf_screenshot' => 'ds_content',
       'field_longform_description' => 'ds_content',
+      'scroll_button' => 'ds_content',
     ),
     'classes' => array(),
     'wrappers' => array(
