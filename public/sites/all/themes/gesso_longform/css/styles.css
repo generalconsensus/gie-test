@@ -1423,6 +1423,7 @@ input.throbbing {
   background-color: #f3f3f3;
   background-color: rgba(0, 0, 0, 0.8);
   color: #FFFFFF;
+  margin-top: 2.5em;
   position: absolute;
   width: 100%;
   z-index: 100;
@@ -2038,7 +2039,7 @@ input.throbbing {
   height: 2.5em;
   position: fixed;
   top: 0;
-  width: 100%;
+  width: 50%;
   z-index: 10;
 }
 @media (min-width: 54.375em) {
