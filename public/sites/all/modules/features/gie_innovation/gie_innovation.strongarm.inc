@@ -535,6 +535,29 @@ function gie_innovation_strongarm() {
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
+  $strongarm->name = 'panelizer_defaults_taxonomy_term_sustainable_development_goals';
+  $strongarm->value = array(
+    'status' => 1,
+    'view modes' => array(
+      'page_manager' => array(
+        'status' => 1,
+        'substitute' => '',
+        'default' => 1,
+        'choice' => 0,
+      ),
+      'default' => array(
+        'status' => 0,
+        'substitute' => 0,
+        'default' => 0,
+        'choice' => 0,
+      ),
+    ),
+  );
+  $export['panelizer_defaults_taxonomy_term_sustainable_development_goals'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
   $strongarm->name = 'panelizer_node:innovation:default_selection';
   $strongarm->value = 0;
   $export['panelizer_node:innovation:default_selection'] = $strongarm;
@@ -559,6 +582,13 @@ function gie_innovation_strongarm() {
   $strongarm->name = 'panelizer_node:innovation:teaser_selection';
   $strongarm->value = 0;
   $export['panelizer_node:innovation:teaser_selection'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'panelizer_taxonomy_term:sustainable_development_goals:page_manager_selection';
+  $strongarm->value = 'taxonomy_term:sustainable_development_goals:default';
+  $export['panelizer_taxonomy_term:sustainable_development_goals:page_manager_selection'] = $strongarm;
 
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */

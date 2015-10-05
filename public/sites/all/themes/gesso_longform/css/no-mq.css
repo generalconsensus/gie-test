@@ -946,47 +946,41 @@ input.throbbing {
   display: none;
 }
 
-.footer-about, .block--pane-about-the-exchange {
+.block--pane-about-the-exchange {
   float: left;
   width: 100%;
-  width: 30%;
+  width: 50%;
 }
-.footer-about .footer-about__title, .footer-about .block__title, .block--pane-about-the-exchange .footer-about__title, .block--pane-about-the-exchange .block__title {
+.block--pane-about-the-exchange .block__title {
   border-bottom: 1px solid #cecfcb;
   text-transform: uppercase;
 }
-.footer-about .footer-about__content .button--highlight, .footer-about .block__content .button--highlight, .block--pane-about-the-exchange .footer-about__content .button--highlight, .block--pane-about-the-exchange .block__content .button--highlight {
+.block--pane-about-the-exchange .block__content .button--highlight {
   background-color: #b71234;
   border-color: #b71234;
 }
 
-.footer__menu {
+.block--menu-menu-sub-footer-menu {
   float: right;
   padding: 2em 0;
 }
-.footer__menu ul {
+.block--menu-menu-sub-footer-menu ul {
   list-style: none;
   width: 100%;
 }
-.footer__menu ul li {
+.block--menu-menu-sub-footer-menu ul li {
   border-right: 2px solid #4d4d4f;
   display: inline-block;
   padding: 0 1em;
 }
-.footer__menu ul li:last-child {
+.block--menu-menu-sub-footer-menu ul li:last-child {
   border: none;
 }
-.footer__menu ul li a {
+.block--menu-menu-sub-footer-menu ul li a {
   color: #4d4d4f;
 }
 
-.footer__sponsor {
-  width: 100%;
-  float: left;
-  float: right;
-  width: 60%;
-}
-.footer__sponsor:before {
+.footer-sponsor:before {
   content: "POWERED BY";
   display: block;
   font-style: italic;
@@ -994,44 +988,44 @@ input.throbbing {
   width: 100%;
   padding-right: 4em;
 }
-.footer__sponsor .footer-sponsor__image {
+.footer-sponsor .footer-sponsor__image {
   display: inline-block;
   float: right;
   margin-right: 20px;
   max-width: 33.33333%;
   max-height: 55px;
 }
-.footer__sponsor .footer-sponsor__image-usaid {
+.footer-sponsor .footer-sponsor__image-usaid {
   height: 55px;
   overflow: hidden;
   width: 166px;
   background: transparent url("../images/logo-usaid.png") no-repeat;
 }
-.footer__sponsor .footer-sponsor__image-usaid:before {
+.footer-sponsor .footer-sponsor__image-usaid:before {
   content: "";
   display: block;
   height: 150%;
   width: 0;
 }
-.footer__sponsor .footer-sponsor__image-usgd {
+.footer-sponsor .footer-sponsor__image-usgd {
   height: 54px;
   overflow: hidden;
   width: 207px;
   background: transparent url("../images/logo-uslab.png") no-repeat;
 }
-.footer__sponsor .footer-sponsor__image-usgd:before {
+.footer-sponsor .footer-sponsor__image-usgd:before {
   content: "";
   display: block;
   height: 150%;
   width: 0;
 }
-.footer__sponsor .footer-sponsor__image-gix {
+.footer-sponsor .footer-sponsor__image-gix {
   height: 63px;
   overflow: hidden;
   width: 222px;
   background: transparent url("../images/logo-gix.png") no-repeat;
 }
-.footer__sponsor .footer-sponsor__image-gix:before {
+.footer-sponsor .footer-sponsor__image-gix:before {
   content: "";
   display: block;
   height: 150%;
@@ -1625,6 +1619,17 @@ input.throbbing {
   left: 0;
   z-index: -1;
 }
+.page-header__image:before {
+  background: rgba(0, 0, 0, 0.5);
+  content: " ";
+  display: block;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  position: absolute;
+  z-index: 0;
+}
 
 .page-header__subtext {
   font-size: 21px;
@@ -1716,15 +1721,8 @@ input.throbbing {
   color: #FFF;
   position: relative;
   padding-top: 20px;
-  padding-left: 5%;
   text-decoration: underline;
   top: 15px;
-}
-.pre-footer__download-link a:after {
-  content: "> ";
-  font-weight: bold;
-  padding-left: .5em;
-  text-decoration: none;
 }
 
 .pre-footer__download-image {
@@ -1733,14 +1731,14 @@ input.throbbing {
   width: 261px;
   background: transparent url("../images/footer-fact-sheet.png") no-repeat;
   display: block;
-  position: absolute;
   left: 25%;
+  position: absolute;
   right: 25%;
-  z-index: -10;
-  top: 2%;
+  top: 1px;
+  z-index: 0;
   left: initial;
   right: 15%;
-  top: 65px;
+  top: 1px;
   z-index: 0;
 }
 .pre-footer__download-image:before {
@@ -1748,6 +1746,10 @@ input.throbbing {
   display: block;
   height: 150%;
   width: 0;
+}
+
+.pre-footer__description {
+  width: 100%;
 }
 
 .progress {
@@ -1867,6 +1869,17 @@ input.throbbing {
   position: absolute;
   top: 0;
   z-index: -1;
+}
+.section-header__image:before {
+  background: rgba(0, 0, 0, 0.5);
+  content: " ";
+  display: block;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  position: absolute;
+  z-index: 0;
 }
 
 .section-header__title {
