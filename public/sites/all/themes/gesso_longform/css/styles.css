@@ -1728,6 +1728,17 @@ input.throbbing {
   left: 0;
   z-index: -1;
 }
+.page-header__image:before {
+  background: rgba(0, 0, 0, 0.5);
+  content: " ";
+  display: block;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  position: absolute;
+  z-index: 0;
+}
 
 .page-header__subtext {
   font-size: 21px;
@@ -1994,6 +2005,17 @@ input.throbbing {
   position: absolute;
   top: 0;
   z-index: -1;
+}
+.section-header__image:before {
+  background: rgba(0, 0, 0, 0.5);
+  content: " ";
+  display: block;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  position: absolute;
+  z-index: 0;
 }
 
 .section-header__title {
