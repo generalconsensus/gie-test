@@ -143,6 +143,12 @@ function gie_general_views_default_views() {
   $handler->display->display_options['footer']['area']['field'] = 'area';
   $handler->display->display_options['footer']['area']['content'] = '<a href="/organizations">View All</a><a class="add-new" href="/node/add/organization">Add New Organization</a>';
   $handler->display->display_options['footer']['area']['format'] = 'full_html';
+  $handler->display->display_options['defaults']['relationships'] = FALSE;
+  /* Relationship: Entity Reference: Referencing entity */
+  $handler->display->display_options['relationships']['reverse_field_homepage_organizations_node']['id'] = 'reverse_field_homepage_organizations_node';
+  $handler->display->display_options['relationships']['reverse_field_homepage_organizations_node']['table'] = 'node';
+  $handler->display->display_options['relationships']['reverse_field_homepage_organizations_node']['field'] = 'reverse_field_homepage_organizations_node';
+  $handler->display->display_options['relationships']['reverse_field_homepage_organizations_node']['required'] = TRUE;
 
   /* Display: Programs */
   $handler = $view->new_display('block', 'Programs', 'programs');
@@ -160,6 +166,12 @@ function gie_general_views_default_views() {
   $handler->display->display_options['footer']['area']['field'] = 'area';
   $handler->display->display_options['footer']['area']['content'] = '<a href="/programs">View All</a><a class="add-new" href="/node/add/program">Add New Program</a>';
   $handler->display->display_options['footer']['area']['format'] = 'full_html';
+  $handler->display->display_options['defaults']['relationships'] = FALSE;
+  /* Relationship: Entity Reference: Referencing entity */
+  $handler->display->display_options['relationships']['reverse_field_homepage_programs_node']['id'] = 'reverse_field_homepage_programs_node';
+  $handler->display->display_options['relationships']['reverse_field_homepage_programs_node']['table'] = 'node';
+  $handler->display->display_options['relationships']['reverse_field_homepage_programs_node']['field'] = 'reverse_field_homepage_programs_node';
+  $handler->display->display_options['relationships']['reverse_field_homepage_programs_node']['required'] = TRUE;
   $handler->display->display_options['defaults']['filter_groups'] = FALSE;
   $handler->display->display_options['defaults']['filters'] = FALSE;
   /* Filter criterion: Content: Published */
@@ -197,6 +209,12 @@ function gie_general_views_default_views() {
   $handler->display->display_options['footer']['area']['field'] = 'area';
   $handler->display->display_options['footer']['area']['content'] = '<a href="/discussions">View All</a><a class="add-new" href="/node/add/discussion">Add New Discussion</a>';
   $handler->display->display_options['footer']['area']['format'] = 'full_html';
+  $handler->display->display_options['defaults']['relationships'] = FALSE;
+  /* Relationship: Entity Reference: Referencing entity */
+  $handler->display->display_options['relationships']['reverse_field_homepage_discussions_node']['id'] = 'reverse_field_homepage_discussions_node';
+  $handler->display->display_options['relationships']['reverse_field_homepage_discussions_node']['table'] = 'node';
+  $handler->display->display_options['relationships']['reverse_field_homepage_discussions_node']['field'] = 'reverse_field_homepage_discussions_node';
+  $handler->display->display_options['relationships']['reverse_field_homepage_discussions_node']['required'] = TRUE;
   $handler->display->display_options['defaults']['filter_groups'] = FALSE;
   $handler->display->display_options['defaults']['filters'] = FALSE;
   /* Filter criterion: Content: Published */
@@ -212,6 +230,45 @@ function gie_general_views_default_views() {
   $handler->display->display_options['filters']['type']['field'] = 'type';
   $handler->display->display_options['filters']['type']['value'] = array(
     'discussion' => 'discussion',
+  );
+
+  /* Display: Events */
+  $handler = $view->new_display('block', 'Events', 'events');
+  $handler->display->display_options['defaults']['header'] = FALSE;
+  /* Header: Global: Text area */
+  $handler->display->display_options['header']['area']['id'] = 'area';
+  $handler->display->display_options['header']['area']['table'] = 'views';
+  $handler->display->display_options['header']['area']['field'] = 'area';
+  $handler->display->display_options['header']['area']['content'] = '<div><a href="/events">Events</a></div>';
+  $handler->display->display_options['header']['area']['format'] = 'full_html';
+  $handler->display->display_options['defaults']['footer'] = FALSE;
+  /* Footer: Global: Text area */
+  $handler->display->display_options['footer']['area']['id'] = 'area';
+  $handler->display->display_options['footer']['area']['table'] = 'views';
+  $handler->display->display_options['footer']['area']['field'] = 'area';
+  $handler->display->display_options['footer']['area']['content'] = '<a href="/events">View All</a><a class="add-new" href="/node/add/event">Add New Event</a>';
+  $handler->display->display_options['footer']['area']['format'] = 'full_html';
+  $handler->display->display_options['defaults']['relationships'] = FALSE;
+  /* Relationship: Entity Reference: Referencing entity */
+  $handler->display->display_options['relationships']['reverse_field_homepage_events_node']['id'] = 'reverse_field_homepage_events_node';
+  $handler->display->display_options['relationships']['reverse_field_homepage_events_node']['table'] = 'node';
+  $handler->display->display_options['relationships']['reverse_field_homepage_events_node']['field'] = 'reverse_field_homepage_events_node';
+  $handler->display->display_options['relationships']['reverse_field_homepage_events_node']['required'] = TRUE;
+  $handler->display->display_options['defaults']['filter_groups'] = FALSE;
+  $handler->display->display_options['defaults']['filters'] = FALSE;
+  /* Filter criterion: Content: Published */
+  $handler->display->display_options['filters']['status']['id'] = 'status';
+  $handler->display->display_options['filters']['status']['table'] = 'node';
+  $handler->display->display_options['filters']['status']['field'] = 'status';
+  $handler->display->display_options['filters']['status']['value'] = 1;
+  $handler->display->display_options['filters']['status']['group'] = 1;
+  $handler->display->display_options['filters']['status']['expose']['operator'] = FALSE;
+  /* Filter criterion: Content: Type */
+  $handler->display->display_options['filters']['type']['id'] = 'type';
+  $handler->display->display_options['filters']['type']['table'] = 'node';
+  $handler->display->display_options['filters']['type']['field'] = 'type';
+  $handler->display->display_options['filters']['type']['value'] = array(
+    'event' => 'event',
   );
   $export['communities_content_types_menu'] = $view;
 
@@ -260,10 +317,6 @@ function gie_general_views_default_views() {
   $handler->display->display_options['fields']['name']['alter']['word_boundary'] = FALSE;
   $handler->display->display_options['fields']['name']['alter']['ellipsis'] = FALSE;
   $handler->display->display_options['fields']['name']['link_to_taxonomy'] = TRUE;
-  /* Sort criterion: Taxonomy term: Name */
-  $handler->display->display_options['sorts']['name']['id'] = 'name';
-  $handler->display->display_options['sorts']['name']['table'] = 'taxonomy_term_data';
-  $handler->display->display_options['sorts']['name']['field'] = 'name';
   /* Filter criterion: Taxonomy term: Vocabulary */
   $handler->display->display_options['filters']['vid']['id'] = 'vid';
   $handler->display->display_options['filters']['vid']['table'] = 'taxonomy_term_data';
@@ -281,6 +334,12 @@ function gie_general_views_default_views() {
   $handler->display->display_options['footer']['area']['field'] = 'area';
   $handler->display->display_options['footer']['area']['content'] = '<a href="/locations">View All</a>';
   $handler->display->display_options['footer']['area']['format'] = 'full_html';
+  $handler->display->display_options['defaults']['relationships'] = FALSE;
+  /* Relationship: Taxonomy term: Content using Featured Locations (regions) */
+  $handler->display->display_options['relationships']['reverse_field_homepage_regions_node']['id'] = 'reverse_field_homepage_regions_node';
+  $handler->display->display_options['relationships']['reverse_field_homepage_regions_node']['table'] = 'taxonomy_term_data';
+  $handler->display->display_options['relationships']['reverse_field_homepage_regions_node']['field'] = 'reverse_field_homepage_regions_node';
+  $handler->display->display_options['relationships']['reverse_field_homepage_regions_node']['required'] = TRUE;
 
   /* Display: sectors */
   $handler = $view->new_display('block', 'sectors', 'sectors');
@@ -298,6 +357,12 @@ function gie_general_views_default_views() {
   $handler->display->display_options['footer']['area']['field'] = 'area';
   $handler->display->display_options['footer']['area']['content'] = '<a href="/sectors">View All</a>';
   $handler->display->display_options['footer']['area']['format'] = 'full_html';
+  $handler->display->display_options['defaults']['relationships'] = FALSE;
+  /* Relationship: Taxonomy term: Content using Featured Sectors */
+  $handler->display->display_options['relationships']['reverse_field_homepage_sectors_node']['id'] = 'reverse_field_homepage_sectors_node';
+  $handler->display->display_options['relationships']['reverse_field_homepage_sectors_node']['table'] = 'taxonomy_term_data';
+  $handler->display->display_options['relationships']['reverse_field_homepage_sectors_node']['field'] = 'reverse_field_homepage_sectors_node';
+  $handler->display->display_options['relationships']['reverse_field_homepage_sectors_node']['required'] = TRUE;
   $handler->display->display_options['defaults']['filter_groups'] = FALSE;
   $handler->display->display_options['defaults']['filters'] = FALSE;
   /* Filter criterion: Taxonomy term: Vocabulary */
@@ -324,6 +389,12 @@ function gie_general_views_default_views() {
   $handler->display->display_options['footer']['area']['field'] = 'area';
   $handler->display->display_options['footer']['area']['content'] = '<a href="/topics">View All</a>';
   $handler->display->display_options['footer']['area']['format'] = 'full_html';
+  $handler->display->display_options['defaults']['relationships'] = FALSE;
+  /* Relationship: Taxonomy term: Content using Featured Topics */
+  $handler->display->display_options['relationships']['reverse_field_homepage_topics_node']['id'] = 'reverse_field_homepage_topics_node';
+  $handler->display->display_options['relationships']['reverse_field_homepage_topics_node']['table'] = 'taxonomy_term_data';
+  $handler->display->display_options['relationships']['reverse_field_homepage_topics_node']['field'] = 'reverse_field_homepage_topics_node';
+  $handler->display->display_options['relationships']['reverse_field_homepage_topics_node']['required'] = TRUE;
   $handler->display->display_options['defaults']['filter_groups'] = FALSE;
   $handler->display->display_options['defaults']['filters'] = FALSE;
   /* Filter criterion: Taxonomy term: Vocabulary */
@@ -371,6 +442,11 @@ function gie_general_views_default_views() {
   $handler->display->display_options['footer']['area']['field'] = 'area';
   $handler->display->display_options['footer']['area']['content'] = '<a href="/members">View All</a>';
   $handler->display->display_options['footer']['area']['format'] = 'full_html';
+  /* Relationship: Entity Reference: Referencing entity */
+  $handler->display->display_options['relationships']['reverse_field_homepage_members_node']['id'] = 'reverse_field_homepage_members_node';
+  $handler->display->display_options['relationships']['reverse_field_homepage_members_node']['table'] = 'users';
+  $handler->display->display_options['relationships']['reverse_field_homepage_members_node']['field'] = 'reverse_field_homepage_members_node';
+  $handler->display->display_options['relationships']['reverse_field_homepage_members_node']['required'] = TRUE;
   /* Field: User: First Name */
   $handler->display->display_options['fields']['field_user_firstname']['id'] = 'field_user_firstname';
   $handler->display->display_options['fields']['field_user_firstname']['table'] = 'field_data_field_user_firstname';

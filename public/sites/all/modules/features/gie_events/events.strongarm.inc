@@ -129,9 +129,15 @@ function events_strongarm() {
         'custom_settings' => FALSE,
       ),
       'search_listing' => array(
-        'custom_settings' => FALSE,
+        'custom_settings' => TRUE,
       ),
       'revision' => array(
+        'custom_settings' => FALSE,
+      ),
+      'highlights' => array(
+        'custom_settings' => FALSE,
+      ),
+      'needs_list' => array(
         'custom_settings' => FALSE,
       ),
     ),
@@ -166,6 +172,10 @@ function events_strongarm() {
             'weight' => '1',
             'visible' => TRUE,
           ),
+          'search_listing' => array(
+            'weight' => '15',
+            'visible' => FALSE,
+          ),
         ),
         'events_at_a_glance_comments' => array(
           'at_a_glance' => array(
@@ -178,6 +188,14 @@ function events_strongarm() {
           ),
           'listing' => array(
             'weight' => '27',
+            'visible' => FALSE,
+          ),
+          'default' => array(
+            'weight' => '10',
+            'visible' => TRUE,
+          ),
+          'search_listing' => array(
+            'weight' => '24',
             'visible' => FALSE,
           ),
         ),
@@ -194,6 +212,14 @@ function events_strongarm() {
             'weight' => '32',
             'visible' => FALSE,
           ),
+          'default' => array(
+            'weight' => '10',
+            'visible' => TRUE,
+          ),
+          'search_listing' => array(
+            'weight' => '21',
+            'visible' => FALSE,
+          ),
         ),
         'events_at_a_glance_amount' => array(
           'at_a_glance' => array(
@@ -208,6 +234,14 @@ function events_strongarm() {
             'weight' => '31',
             'visible' => FALSE,
           ),
+          'default' => array(
+            'weight' => '10',
+            'visible' => TRUE,
+          ),
+          'search_listing' => array(
+            'weight' => '18',
+            'visible' => FALSE,
+          ),
         ),
         'events_at_a_glance_entity_view_1' => array(
           'listing' => array(
@@ -218,12 +252,21 @@ function events_strongarm() {
             'weight' => '14',
             'visible' => FALSE,
           ),
+          'default' => array(
+            'weight' => '10',
+            'visible' => TRUE,
+          ),
+          'search_listing' => array(
+            'weight' => '22',
+            'visible' => FALSE,
+          ),
         ),
         'events_at_a_glance_event_attending_flag' => array(
           'full' => array(
             'weight' => '12',
             'visible' => FALSE,
           ),
+          'search_listing' => NULL,
         ),
         'events_at_a_glance_related_org_card_event' => array(
           'listing' => array(
@@ -234,10 +277,26 @@ function events_strongarm() {
             'weight' => '10',
             'visible' => FALSE,
           ),
+          'default' => array(
+            'weight' => '10',
+            'visible' => TRUE,
+          ),
+          'search_listing' => array(
+            'weight' => '19',
+            'visible' => FALSE,
+          ),
         ),
         'flag_abuse_node' => array(
           'listing' => array(
             'weight' => '13',
+            'visible' => FALSE,
+          ),
+          'default' => array(
+            'weight' => '10',
+            'visible' => TRUE,
+          ),
+          'search_listing' => array(
+            'weight' => '20',
             'visible' => FALSE,
           ),
         ),

@@ -6,6 +6,7 @@ version = 7.x-1.0
 project = gie_program
 dependencies[] = ctools
 dependencies[] = entity
+dependencies[] = entityreference_view_widget
 dependencies[] = eva
 dependencies[] = features
 dependencies[] = field_group

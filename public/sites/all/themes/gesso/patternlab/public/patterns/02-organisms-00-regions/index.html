@@ -1135,67 +1135,77 @@
 					<div id="organisms-header-simple" class="sg-pattern">
 						<h2 class="sg-pattern-head" ><a href="../../patterns/02-organisms-00-regions-04-header-simple/02-organisms-00-regions-04-header-simple.html" class="patternLink" data-patternpartial="organisms-header-simple">Header Simple</a></h2>
 						<div class="sg-pattern-body">
-							<header class="header-simple" role="banner">
+							<header class="header" role="banner">
   <div class="layout-constrain">
-    <span class="site-name site-name--simple">
+    <span class="site-name">
       <a class="site-name__link" href="#" rel="home">
         <h1 class="site-name__text">Global Innovation Exchange</h1>
       </a>
     </span>
-    <div class="block">
-      <form>
-        <div class="form-item form-type-textfield form-item-name">
-          <input type="text" class="form-text is-required" maxlength="60" size="50" placeholder="USERNAME">
+    <div id="block-gie-homepage-welcome-login" class="block  block-gie-homepage-welcome-login block--gie-homepage block--gie-homepage-welcome-login">
+        <form action="" method="post" id="user-login-form" accept-charset="UTF-8">
+          <div class="form-item form-type-textfield form-item-name">
+            <label class="element-invisible" for="edit-name--2">Username <span class="form-item__required-marker">
+              <span class="element-invisible">This field is required.</span></span>
+            </label>
+            <input placeholder="Username" autocapitalize="off" autocorrect="off" id="edit-name--2" name="name" value="" size="15" maxlength="60" class="form-text is-required" type="text">
         </div>
         <div class="form-item form-type-password form-item-pass">
-          <input type="password" class="form-text is-required" maxlength="128" size="50"placeholder="PASSWORD">
+            <label class="element-invisible" for="edit-pass--2">Password <span class="form-item__required-marker">
+            <span class="element-invisible">This field is required.</span></span>
+            </label>
+            <input placeholder="Password" autocapitalize="off" autocorrect="off" id="edit-pass--2" name="pass" size="15" maxlength="128" class="form-text is-required" type="password">
         </div>
-        <div id="edit-actions" class="form-actions">
-          <input type="submit" class="button button--submit" value="Log in" name="op" id="edit-submit">
-        </div>
-        <div class="form-item form-type-checkbox">
-          <input type="checkbox" class="form-checkbox">  
-          <label>Keep me logged in</label>
-        </div>
-        <p class="forgot-password"><a href="#">Forgot your password?</a></p>
-      </form>
-    </div>  </div>
+            <input name="form_build_id" value="form-HDaNsUKqvCQinadPOzWplzRKYpILDLw8D-b5OMFW-Hc" type="hidden">
+          <input name="form_id" value="user_login_block" type="hidden">
+          <div class="form-actions" id="edit-actions--2"><input id="edit-submit--2" name="op" value="Log in" class="button button--submit" type="submit">
+            <div>Forgot your <a href="/user/password" title="Request new password via e-mail.">Password</a>
+            </div>
+          </div>
+        </form>
+    </div>
+  </div>
 </header>
 
 							<div class="sg-code" style="display: none">
 									<div class="sg-code-contains">
 										This pattern contains: 
-											<a href="../../patterns/00-atoms-10-page-elements-01-site-name-simple/00-atoms-10-page-elements-01-site-name-simple.html"><code>atoms-site-name-simple</code></a>
+											<a href="../../patterns/00-atoms-10-page-elements-00-site-name/00-atoms-10-page-elements-00-site-name.html"><code>atoms-site-name</code></a>
 											<a href="../../patterns/01-molecules-02-drupal-login-form/01-molecules-02-drupal-login-form.html"><code>molecules-login-form</code></a>
 									</div>
 								<h3 class="sg-code-head">HTML</h3>
 								<pre class="sg-code-html">
 									<code>
-										&lt;header class=&quot;header-simple&quot; role=&quot;banner&quot;&gt;
+										&lt;header class=&quot;header&quot; role=&quot;banner&quot;&gt;
   &lt;div class=&quot;layout-constrain&quot;&gt;
-    &lt;span class=&quot;site-name site-name--simple&quot;&gt;
+    &lt;span class=&quot;site-name&quot;&gt;
       &lt;a class=&quot;site-name__link&quot; href=&quot;#&quot; rel=&quot;home&quot;&gt;
         &lt;h1 class=&quot;site-name__text&quot;&gt;Global Innovation Exchange&lt;/h1&gt;
       &lt;/a&gt;
     &lt;/span&gt;
-    &lt;div class=&quot;block&quot;&gt;
-      &lt;form&gt;
-        &lt;div class=&quot;form-item form-type-textfield form-item-name&quot;&gt;
-          &lt;input type=&quot;text&quot; class=&quot;form-text is-required&quot; maxlength=&quot;60&quot; size=&quot;50&quot; placeholder=&quot;USERNAME&quot;&gt;
+    &lt;div id=&quot;block-gie-homepage-welcome-login&quot; class=&quot;block  block-gie-homepage-welcome-login block--gie-homepage block--gie-homepage-welcome-login&quot;&gt;
+        &lt;form action=&quot;&quot; method=&quot;post&quot; id=&quot;user-login-form&quot; accept-charset=&quot;UTF-8&quot;&gt;
+          &lt;div class=&quot;form-item form-type-textfield form-item-name&quot;&gt;
+            &lt;label class=&quot;element-invisible&quot; for=&quot;edit-name--2&quot;&gt;Username &lt;span class=&quot;form-item__required-marker&quot;&gt;
+              &lt;span class=&quot;element-invisible&quot;&gt;This field is required.&lt;/span&gt;&lt;/span&gt;
+            &lt;/label&gt;
+            &lt;input placeholder=&quot;Username&quot; autocapitalize=&quot;off&quot; autocorrect=&quot;off&quot; id=&quot;edit-name--2&quot; name=&quot;name&quot; value=&quot;&quot; size=&quot;15&quot; maxlength=&quot;60&quot; class=&quot;form-text is-required&quot; type=&quot;text&quot;&gt;
         &lt;/div&gt;
         &lt;div class=&quot;form-item form-type-password form-item-pass&quot;&gt;
-          &lt;input type=&quot;password&quot; class=&quot;form-text is-required&quot; maxlength=&quot;128&quot; size=&quot;50&quot;placeholder=&quot;PASSWORD&quot;&gt;
+            &lt;label class=&quot;element-invisible&quot; for=&quot;edit-pass--2&quot;&gt;Password &lt;span class=&quot;form-item__required-marker&quot;&gt;
+            &lt;span class=&quot;element-invisible&quot;&gt;This field is required.&lt;/span&gt;&lt;/span&gt;
+            &lt;/label&gt;
+            &lt;input placeholder=&quot;Password&quot; autocapitalize=&quot;off&quot; autocorrect=&quot;off&quot; id=&quot;edit-pass--2&quot; name=&quot;pass&quot; size=&quot;15&quot; maxlength=&quot;128&quot; class=&quot;form-text is-required&quot; type=&quot;password&quot;&gt;
         &lt;/div&gt;
-        &lt;div id=&quot;edit-actions&quot; class=&quot;form-actions&quot;&gt;
-          &lt;input type=&quot;submit&quot; class=&quot;button button--submit&quot; value=&quot;Log in&quot; name=&quot;op&quot; id=&quot;edit-submit&quot;&gt;
-        &lt;/div&gt;
-        &lt;div class=&quot;form-item form-type-checkbox&quot;&gt;
-          &lt;input type=&quot;checkbox&quot; class=&quot;form-checkbox&quot;&gt;  
-          &lt;label&gt;Keep me logged in&lt;/label&gt;
-        &lt;/div&gt;
-        &lt;p class=&quot;forgot-password&quot;&gt;&lt;a href=&quot;#&quot;&gt;Forgot your password?&lt;/a&gt;&lt;/p&gt;
-      &lt;/form&gt;
-    &lt;/div&gt;  &lt;/div&gt;
+            &lt;input name=&quot;form_build_id&quot; value=&quot;form-HDaNsUKqvCQinadPOzWplzRKYpILDLw8D-b5OMFW-Hc&quot; type=&quot;hidden&quot;&gt;
+          &lt;input name=&quot;form_id&quot; value=&quot;user_login_block&quot; type=&quot;hidden&quot;&gt;
+          &lt;div class=&quot;form-actions&quot; id=&quot;edit-actions--2&quot;&gt;&lt;input id=&quot;edit-submit--2&quot; name=&quot;op&quot; value=&quot;Log in&quot; class=&quot;button button--submit&quot; type=&quot;submit&quot;&gt;
+            &lt;div&gt;Forgot your &lt;a href=&quot;/user/password&quot; title=&quot;Request new password via e-mail.&quot;&gt;Password&lt;/a&gt;
+            &lt;/div&gt;
+          &lt;/div&gt;
+        &lt;/form&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
 &lt;/header&gt;
 
 									</code>
@@ -1244,6 +1254,87 @@
 
 
  
+									</code>
+								</pre>
+							</div>
+						</div>
+					</div>
+					<div id="organisms-navigation-welcome-page" class="sg-pattern">
+						<h2 class="sg-pattern-head" ><a href="../../patterns/02-organisms-00-regions-06-navigation-welcome-page/02-organisms-00-regions-06-navigation-welcome-page.html" class="patternLink" data-patternpartial="organisms-navigation-welcome-page">Navigation Welcome Page</a></h2>
+						<div class="sg-pattern-body">
+							<div class="region-navigation">
+  <div class="region__inner">
+    <span class="site-name">
+      <a class="site-name__link" href="#" rel="home">
+        <h1 class="site-name__text">Global Innovation Exchange</h1>
+      </a>
+    </span>
+    <div id="block-gie-homepage-welcome-login" class="block  block-gie-homepage-welcome-login block--gie-homepage block--gie-homepage-welcome-login">
+        <form action="" method="post" id="user-login-form" accept-charset="UTF-8">
+          <div class="form-item form-type-textfield form-item-name">
+            <label class="element-invisible" for="edit-name--2">Username <span class="form-item__required-marker">
+              <span class="element-invisible">This field is required.</span></span>
+            </label>
+            <input placeholder="Username" autocapitalize="off" autocorrect="off" id="edit-name--2" name="name" value="" size="15" maxlength="60" class="form-text is-required" type="text">
+        </div>
+        <div class="form-item form-type-password form-item-pass">
+            <label class="element-invisible" for="edit-pass--2">Password <span class="form-item__required-marker">
+            <span class="element-invisible">This field is required.</span></span>
+            </label>
+            <input placeholder="Password" autocapitalize="off" autocorrect="off" id="edit-pass--2" name="pass" size="15" maxlength="128" class="form-text is-required" type="password">
+        </div>
+            <input name="form_build_id" value="form-HDaNsUKqvCQinadPOzWplzRKYpILDLw8D-b5OMFW-Hc" type="hidden">
+          <input name="form_id" value="user_login_block" type="hidden">
+          <div class="form-actions" id="edit-actions--2"><input id="edit-submit--2" name="op" value="Log in" class="button button--submit" type="submit">
+            <div>Forgot your <a href="/user/password" title="Request new password via e-mail.">Password</a>
+            </div>
+          </div>
+        </form>
+    </div>
+  </div>
+</div>
+
+							<div class="sg-code" style="display: none">
+									<div class="sg-code-contains">
+										This pattern contains: 
+											<a href="../../patterns/00-atoms-10-page-elements-00-site-name/00-atoms-10-page-elements-00-site-name.html"><code>atoms-site-name</code></a>
+											<a href="../../patterns/01-molecules-02-drupal-login-form/01-molecules-02-drupal-login-form.html"><code>molecules-login-form</code></a>
+									</div>
+								<h3 class="sg-code-head">HTML</h3>
+								<pre class="sg-code-html">
+									<code>
+										&lt;div class=&quot;region-navigation&quot;&gt;
+  &lt;div class=&quot;region__inner&quot;&gt;
+    &lt;span class=&quot;site-name&quot;&gt;
+      &lt;a class=&quot;site-name__link&quot; href=&quot;#&quot; rel=&quot;home&quot;&gt;
+        &lt;h1 class=&quot;site-name__text&quot;&gt;Global Innovation Exchange&lt;/h1&gt;
+      &lt;/a&gt;
+    &lt;/span&gt;
+    &lt;div id=&quot;block-gie-homepage-welcome-login&quot; class=&quot;block  block-gie-homepage-welcome-login block--gie-homepage block--gie-homepage-welcome-login&quot;&gt;
+        &lt;form action=&quot;&quot; method=&quot;post&quot; id=&quot;user-login-form&quot; accept-charset=&quot;UTF-8&quot;&gt;
+          &lt;div class=&quot;form-item form-type-textfield form-item-name&quot;&gt;
+            &lt;label class=&quot;element-invisible&quot; for=&quot;edit-name--2&quot;&gt;Username &lt;span class=&quot;form-item__required-marker&quot;&gt;
+              &lt;span class=&quot;element-invisible&quot;&gt;This field is required.&lt;/span&gt;&lt;/span&gt;
+            &lt;/label&gt;
+            &lt;input placeholder=&quot;Username&quot; autocapitalize=&quot;off&quot; autocorrect=&quot;off&quot; id=&quot;edit-name--2&quot; name=&quot;name&quot; value=&quot;&quot; size=&quot;15&quot; maxlength=&quot;60&quot; class=&quot;form-text is-required&quot; type=&quot;text&quot;&gt;
+        &lt;/div&gt;
+        &lt;div class=&quot;form-item form-type-password form-item-pass&quot;&gt;
+            &lt;label class=&quot;element-invisible&quot; for=&quot;edit-pass--2&quot;&gt;Password &lt;span class=&quot;form-item__required-marker&quot;&gt;
+            &lt;span class=&quot;element-invisible&quot;&gt;This field is required.&lt;/span&gt;&lt;/span&gt;
+            &lt;/label&gt;
+            &lt;input placeholder=&quot;Password&quot; autocapitalize=&quot;off&quot; autocorrect=&quot;off&quot; id=&quot;edit-pass--2&quot; name=&quot;pass&quot; size=&quot;15&quot; maxlength=&quot;128&quot; class=&quot;form-text is-required&quot; type=&quot;password&quot;&gt;
+        &lt;/div&gt;
+            &lt;input name=&quot;form_build_id&quot; value=&quot;form-HDaNsUKqvCQinadPOzWplzRKYpILDLw8D-b5OMFW-Hc&quot; type=&quot;hidden&quot;&gt;
+          &lt;input name=&quot;form_id&quot; value=&quot;user_login_block&quot; type=&quot;hidden&quot;&gt;
+          &lt;div class=&quot;form-actions&quot; id=&quot;edit-actions--2&quot;&gt;&lt;input id=&quot;edit-submit--2&quot; name=&quot;op&quot; value=&quot;Log in&quot; class=&quot;button button--submit&quot; type=&quot;submit&quot;&gt;
+            &lt;div&gt;Forgot your &lt;a href=&quot;/user/password&quot; title=&quot;Request new password via e-mail.&quot;&gt;Password&lt;/a&gt;
+            &lt;/div&gt;
+          &lt;/div&gt;
+        &lt;/form&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+
 									</code>
 								</pre>
 							</div>
