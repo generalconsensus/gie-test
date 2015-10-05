@@ -569,9 +569,9 @@ function gie_long_form_content_field_group_info() {
     'label' => 'share',
     'weight' => '0',
     'children' => array(
-      0 => 'flag_favorite',
-      1 => 'sharethis',
-      2 => 'print_button',
+      0 => 'print_button',
+      1 => 'group_favorite',
+      2 => 'group_share_btn',
     ),
     'format_type' => 'div',
     'format_settings' => array(
