@@ -20,16 +20,21 @@
 	@include breakpoint($mobile-menu-bp, $no-query: true) {
 		float: none;
 	}
+	a{
+		display: block;
+		height: 100%;
+		width: 100%;
+	}
 }
 .share-block__icon--share {
-	// @include svg-background(icon-share);
-	background: transparent url('../images/bg/icon-share.png') no-repeat;
+	@include svg-background(longform-share-icon);
+	// background: transparent url('../images/bg/icon-share.png') no-repeat;
 }
 .share-block__icon--fav {
-	// @include svg-background(icon-fav);
-	background: transparent url('../images/bg/icon-fav.png') no-repeat;
+	@include svg-background(longform-favorite-icon);
+	// background: transparent url('../images/bg/icon-fav.png') no-repeat;
 }
 .share-block__icon--print {
-	// @include svg-background(icon-print);
-	background: transparent url('../images/bg/icon-print.png') no-repeat;
+	@include svg-background(longform-print-icon);
+	// background: transparent url('../images/bg/icon-print.png') no-repeat;
 }
