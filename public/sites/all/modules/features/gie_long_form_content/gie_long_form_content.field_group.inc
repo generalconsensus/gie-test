@@ -179,6 +179,38 @@ function gie_long_form_content_field_group_info() {
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
   $field_group->api_version = 1;
+  $field_group->identifier = 'group_favorite|node|long_form_page|full';
+  $field_group->group_name = 'group_favorite';
+  $field_group->entity_type = 'node';
+  $field_group->bundle = 'long_form_page';
+  $field_group->mode = 'full';
+  $field_group->parent_name = 'group_share';
+  $field_group->data = array(
+    'label' => 'Favorite',
+    'weight' => '23',
+    'children' => array(
+      0 => 'flag_favorite',
+    ),
+    'format_type' => 'div',
+    'format_settings' => array(
+      'label' => 'Favorite',
+      'instance_settings' => array(
+        'id' => '',
+        'classes' => 'share-block__icon share-block__icon--fav',
+        'description' => '',
+        'show_label' => '0',
+        'label_element' => 'h3',
+        'effect' => 'none',
+        'speed' => 'none',
+      ),
+      'formatter' => 'open',
+    ),
+  );
+  $export['group_favorite|node|long_form_page|full'] = $field_group;
+
+  $field_group = new stdClass();
+  $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
+  $field_group->api_version = 1;
   $field_group->identifier = 'group_footer|node|long_form_page|full';
   $field_group->group_name = 'group_footer';
   $field_group->entity_type = 'node';
@@ -555,6 +587,38 @@ function gie_long_form_content_field_group_info() {
     ),
   );
   $export['group_section_header|paragraphs_item|long_form_section_header_image|default'] = $field_group;
+
+  $field_group = new stdClass();
+  $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
+  $field_group->api_version = 1;
+  $field_group->identifier = 'group_share_btn|node|long_form_page|full';
+  $field_group->group_name = 'group_share_btn';
+  $field_group->entity_type = 'node';
+  $field_group->bundle = 'long_form_page';
+  $field_group->mode = 'full';
+  $field_group->parent_name = 'group_share';
+  $field_group->data = array(
+    'label' => 'ShareThis Button',
+    'weight' => '21',
+    'children' => array(
+      0 => 'sharethis',
+    ),
+    'format_type' => 'div',
+    'format_settings' => array(
+      'label' => 'ShareThis Button',
+      'instance_settings' => array(
+        'id' => '',
+        'classes' => 'share-block__icon share-block__icon--share ',
+        'description' => '',
+        'show_label' => '0',
+        'label_element' => 'h3',
+        'effect' => 'none',
+        'speed' => 'none',
+      ),
+      'formatter' => 'open',
+    ),
+  );
+  $export['group_share_btn|node|long_form_page|full'] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
