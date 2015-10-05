@@ -510,7 +510,7 @@ function gie_long_form_content_field_default_field_instances() {
           ),
         ),
         'type' => 'text_plain',
-        'weight' => 2,
+        'weight' => 3,
       ),
     ),
     'ds_extras_field_template' => '',
