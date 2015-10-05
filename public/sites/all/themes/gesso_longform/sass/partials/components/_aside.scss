@@ -3,15 +3,17 @@
 
 .aside {
 	border: 3px $lightred solid; 
-	margin: 1em;
+	margin: 6em auto;
 	overflow: hidden;
-	padding: 0 1em !important;
-	width: 300px;
+	padding: 2em;
+	width: 90%;
+	@include breakpoint($mobile-menu-bp, $no-query: true) {
+    width: 50%;
+  }
 	.aside__title {
 		color: $lightred;
 		font-weight: bold;
 		line-height: 1em;
-		padding: 1em 0 0 0;
 		text-transform: uppercase;
 		&:after {
 			border-bottom: 1px $lightred solid;
@@ -23,12 +25,15 @@
 	}
 	.aside__body {
 		line-height: 1.2em;
-		padding: 1em 0;
+		padding-top: 1em;
 	}
 }
-.aside-center { 
-	margin: 3em auto;
+.aside.component{
+	padding: 2em;
 }
-.aside-right {
-	float: right;
-}
+// .aside-center { 
+// 	margin: 3em auto;
+// }
+// .aside-right {
+// 	float: right;
+// }

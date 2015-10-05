@@ -2,12 +2,24 @@
 // Share Block
 .share-block {
   display: block;
-  width: 100px;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 10;
+  @include breakpoint($mobile-menu-bp, $no-query: true) {
+  	top: 5%;
+  	right: 5%;
+  	width: 100px;
+  }
 }
 .share-block__icon {
 	display: block;
+	float: left;
 	width: 75px;
 	height: 75px;
+	@include breakpoint($mobile-menu-bp, $no-query: true) {
+		float: none;
+	}
 }
 .share-block__icon--share {
 	// @include svg-background(icon-share);

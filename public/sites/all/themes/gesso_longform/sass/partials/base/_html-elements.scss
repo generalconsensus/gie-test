@@ -99,6 +99,7 @@ caption, .caption {
   &:before{
     content: "Caption:  ";
     font-weight: bold;
+    // float: left;
   }
   &:after{
     border-bottom: 1px solid $red;

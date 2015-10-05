@@ -7,6 +7,25 @@
   padding: 8em 0 5em 0;
   position: relative;
   text-align: center;
+  z-index: -2;
+}
+
+.page-header__image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  &:before { // CSS Color Overlay
+    background: rgba(0,0,0, 0.5);
+    content: " ";
+    display: block;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    position: absolute;
+    z-index: 0;
+  }
 }
 
 .page-header__subtext {

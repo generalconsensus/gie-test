@@ -3,60 +3,15 @@
 
 .footer {
 	overflow: hidden;
+	// min-height: 400px;
 	position: relative;
 	.region-footer{
 		margin-top: 10em;
 	}
 }
 
-.footer__download-link {
-	background-color: $lightred;
-	height: 60px;
-	position: relative;
-	a{
-		color: $white;
-    position: relative;
-    padding-top: 20px;
-    padding-left: 5%;
-    top: 15px;
-    &:after{
-    	content: "> ";
-    	font-weight: bold;
-    	padding-left: .5em;
-    	text-decoration: none;
-    }
-		
-	}
-}
-.footer__download-image {
-	  border: 2px $lightred solid;
-    background-color: white;
-    display: block;
-    height: 150px;
-    position: absolute;
-    right: 15%;
-    bottom: 0;
-    width: 150px;
-}
-.footer__about {}
-.footer__partners {}
 
-.footer__menu {
-	ul {
-			list-style: none;
-		li{
-			border-right: 2px solid $grey;
-			display: inline-block;
-			padding: 0 1em;
-			&:before {
-				
-			}
-			&:last-child {
-				border: none;
-			}
-			a{
-				color: $grey;
-			}
-		}
-	}
-}
+
+
+
+

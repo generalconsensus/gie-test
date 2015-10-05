@@ -14,20 +14,20 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 
     <!--[if gte IE 9]><!-->
-    <link rel="stylesheet" href="../../../../css/styles.css?1442883920" media="all">
+    <link rel="stylesheet" href="../../../../css/styles.css?1443829592" media="all">
     <link href='http://fonts.googleapis.com/css?family=Lato:400,400italic,700,700italic,300italic,300' rel='stylesheet' type='text/css'>
     <!--<![endif]-->
 
     <!--[if lt IE 9]>
-    <link rel="stylesheet" href="../../../../css/no-mq.css?1442883920" media="all">
+    <link rel="stylesheet" href="../../../../css/no-mq.css?1443829592" media="all">
     <![endif]-->
 
     <script src="../../drupal/misc/jquery.js?v=1.4.4"></script>
     <script src="../../drupal/misc/jquery.once.js?v=1.2"></script>
     <script src="../../drupal/misc/drupal.js?v=7.33"></script>
-    <script src="../../../../js/modernizr.latest.js?1442883920"></script>
+    <script src="../../../../js/modernizr.latest.js?1443829592"></script>
 
-    <script src="../../../../js/mobile-menu.js?1442883920"></script>
+    <script src="../../../../js/mobile-menu.js?1443829592"></script>
 
     <!-- Begin Pattern Lab (Required for Pattern Lab to run properly) -->
     		<!-- never cache patterns -->
@@ -37,8 +37,8 @@
 		<meta http-equiv="expires" content="Tue, 01 Jan 1980 1:00:00 GMT" />
 		<meta http-equiv="pragma" content="no-cache" />
 		
-		<link rel="stylesheet" href="../../styleguide/css/styleguide.css?1442883920" media="all">
-		<link rel="stylesheet" href="../../styleguide/css/styleguide-specific.css?1442883920" media="all" />
+		<link rel="stylesheet" href="../../styleguide/css/styleguide.css?1443829592" media="all">
+		<link rel="stylesheet" href="../../styleguide/css/styleguide-specific.css?1443829592" media="all" />
 		
 
     <!-- End Pattern Lab -->
@@ -124,10 +124,8 @@
   <nav class="block  block--menu-block" role="navigation">
     <h2 class="element-invisible block__title">Main menu</h2>
     <ul class="nav nav--main-menu">
-      <li class="nav__item"><a class="nav__link" href="#">Home</a></li>
-      <li class="nav__item"><a class="nav__link" href="#">About</a></li>
-      <li class="nav__item"><a class="nav__link" href="#">Blog</a></li>
-      <li class="nav__item"><a class="nav__link" href="#">Contact</a></li>
+      <li class="nav__item"><a class="nav__link" href="#">Join the Exchange</a></li>
+      <li class="nav__item"><a class="nav__link" href="#">Log In</a></li>
     </ul>
   </nav>
 </div>
@@ -144,10 +142,8 @@
   &lt;nav class=&quot;block  block--menu-block&quot; role=&quot;navigation&quot;&gt;
     &lt;h2 class=&quot;element-invisible block__title&quot;&gt;Main menu&lt;/h2&gt;
     &lt;ul class=&quot;nav nav--main-menu&quot;&gt;
-      &lt;li class=&quot;nav__item&quot;&gt;&lt;a class=&quot;nav__link&quot; href=&quot;#&quot;&gt;Home&lt;/a&gt;&lt;/li&gt;
-      &lt;li class=&quot;nav__item&quot;&gt;&lt;a class=&quot;nav__link&quot; href=&quot;#&quot;&gt;About&lt;/a&gt;&lt;/li&gt;
-      &lt;li class=&quot;nav__item&quot;&gt;&lt;a class=&quot;nav__link&quot; href=&quot;#&quot;&gt;Blog&lt;/a&gt;&lt;/li&gt;
-      &lt;li class=&quot;nav__item&quot;&gt;&lt;a class=&quot;nav__link&quot; href=&quot;#&quot;&gt;Contact&lt;/a&gt;&lt;/li&gt;
+      &lt;li class=&quot;nav__item&quot;&gt;&lt;a class=&quot;nav__link&quot; href=&quot;#&quot;&gt;Join the Exchange&lt;/a&gt;&lt;/li&gt;
+      &lt;li class=&quot;nav__item&quot;&gt;&lt;a class=&quot;nav__link&quot; href=&quot;#&quot;&gt;Log In&lt;/a&gt;&lt;/li&gt;
     &lt;/ul&gt;
   &lt;/nav&gt;
 &lt;/div&gt;
@@ -214,13 +210,14 @@
 					<div id="layouts-footer-region" class="sg-pattern">
 						<h2 class="sg-pattern-head" ><a href="../../patterns/02-layouts-regions-05-footer-region/02-layouts-regions-05-footer-region.html" class="patternLink" data-patternpartial="layouts-footer-region">Footer Region</a></h2>
 						<div class="sg-pattern-body">
-							<footer class="footer" role="contentinfo">
+							<footer class="footer layout-constrain" role="contentinfo">
   <div class="region-footer">
-  	<div class="footer__download-link"><a href="#" target="_blank">For more on digital finance download a copy of our fact sheet</a></div>
-  	<div class="footer__download-image"></div>
-  	<div class="footer__about layout-constrain"></div>
-  	<div class="footer__partners layout-constrain"></div>
-  	<div class="footer__menu layout-constrain"><nav class="block  block--menu-block" role="navigation">
+  	<div class="footer__about block--pane-about-the-exchange"><div class="footer-about">
+	<div class="footer-about__title">About The Exchange</div>
+	<div class="footer-about__content">The Innovation Exchange is a marketplace that connects funders, innovators, users and solution seekers and gives them the tools to maximize their ability to meet the largest, most pressing development challenges.</div>
+	<a class="button join__button" href="#">Join the Community</a>
+</div></div>
+  	<div class="footer__menu block--menu-menu-sub-footer-menu"><nav class="block  block--menu-block" role="navigation">
   <h2 class="element-invisible block__title">Footer menu</h2>
   <ul class="nav nav--menu-footer">
     <li class="nav__item"><a class="nav__link" href="#">Credits</a></li>
@@ -232,21 +229,26 @@
   </div>
 </footer>
 
+
+
+
 							<div class="sg-code" style="display: none">
 									<div class="sg-code-contains">
 										This pattern contains: 
+											<a href="../../patterns/01-components-01-page-elements-footer-about/01-components-01-page-elements-footer-about.html"><code>components-footer-about</code></a>
 											<a href="../../patterns/01-components-01-navigation-05-footer-menu/01-components-01-navigation-05-footer-menu.html"><code>components-footer-menu</code></a>
 									</div>
 								<h3 class="sg-code-head">HTML</h3>
 								<pre class="sg-code-html">
 									<code>
-										&lt;footer class=&quot;footer&quot; role=&quot;contentinfo&quot;&gt;
+										&lt;footer class=&quot;footer layout-constrain&quot; role=&quot;contentinfo&quot;&gt;
   &lt;div class=&quot;region-footer&quot;&gt;
-  	&lt;div class=&quot;footer__download-link&quot;&gt;&lt;a href=&quot;#&quot; target=&quot;_blank&quot;&gt;For more on digital finance download a copy of our fact sheet&lt;/a&gt;&lt;/div&gt;
-  	&lt;div class=&quot;footer__download-image&quot;&gt;&lt;/div&gt;
-  	&lt;div class=&quot;footer__about layout-constrain&quot;&gt;&lt;/div&gt;
-  	&lt;div class=&quot;footer__partners layout-constrain&quot;&gt;&lt;/div&gt;
-  	&lt;div class=&quot;footer__menu layout-constrain&quot;&gt;&lt;nav class=&quot;block  block--menu-block&quot; role=&quot;navigation&quot;&gt;
+  	&lt;div class=&quot;footer__about block--pane-about-the-exchange&quot;&gt;&lt;div class=&quot;footer-about&quot;&gt;
+	&lt;div class=&quot;footer-about__title&quot;&gt;About The Exchange&lt;/div&gt;
+	&lt;div class=&quot;footer-about__content&quot;&gt;The Innovation Exchange is a marketplace that connects funders, innovators, users and solution seekers and gives them the tools to maximize their ability to meet the largest, most pressing development challenges.&lt;/div&gt;
+	&lt;a class=&quot;button join__button&quot; href=&quot;#&quot;&gt;Join the Community&lt;/a&gt;
+&lt;/div&gt;&lt;/div&gt;
+  	&lt;div class=&quot;footer__menu block--menu-menu-sub-footer-menu&quot;&gt;&lt;nav class=&quot;block  block--menu-block&quot; role=&quot;navigation&quot;&gt;
   &lt;h2 class=&quot;element-invisible block__title&quot;&gt;Footer menu&lt;/h2&gt;
   &lt;ul class=&quot;nav nav--menu-footer&quot;&gt;
     &lt;li class=&quot;nav__item&quot;&gt;&lt;a class=&quot;nav__link&quot; href=&quot;#&quot;&gt;Credits&lt;/a&gt;&lt;/li&gt;
@@ -257,6 +259,9 @@
 &lt;/div&gt;
   &lt;/div&gt;
 &lt;/footer&gt;
+
+
+
 
 									</code>
 								</pre>
@@ -308,10 +313,10 @@
 			
 		}
 	</script>
-	<script id="pl-js-polyfill-insert-1442883920">
+	<script id="pl-js-polyfill-insert-1443829592">
 		(function() {
 			if (self != top) {
-				var cb = '1442883920';
+				var cb = '1443829592';
 				var js = [];
 				if (typeof document !== "undefined" && !("classList" in document.documentElement)) {
 					js.push("styleguide/js/vendor/classlist-polyfill.js");
@@ -320,10 +325,10 @@
 			}
 		})();
 	</script>
-	<script id="pl-js-insert-1442883920">
+	<script id="pl-js-insert-1443829592">
 		(function() {
 			if (self != top) {
-				var cb = '1442883920';
+				var cb = '1443829592';
 				var js = [ { "src": "styleguide/js/vendor/jwerty.js", "dep": [ "styleguide/js/postmessage.js", { "src": "data/annotations.js", "dep": [ "styleguide/js/annotations-pattern.js" ] }, "styleguide/js/code-pattern.js" ] } ];
 				scriptLoader.run(js,cb,'pl-js-insert');
 			}

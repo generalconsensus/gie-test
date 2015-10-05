@@ -113,13 +113,13 @@ function gie_general_context_default_contexts() {
           'module' => 'blockify',
           'delta' => 'blockify-site-name',
           'region' => 'navigation',
-          'weight' => '-67',
+          'weight' => '-10',
         ),
         'gie_homepage-welcome_login' => array(
           'module' => 'gie_homepage',
           'delta' => 'welcome_login',
           'region' => 'navigation',
-          'weight' => '-10',
+          'weight' => '-8',
         ),
         'blockify-blockify-messages' => array(
           'module' => 'blockify',

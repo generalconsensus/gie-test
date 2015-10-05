@@ -1,12 +1,18 @@
 .image {
+	position: relative;
 	text-align: center;
 	.image__title {
 		font-weight: bold;
 		padding-bottom: 1em;
 		text-transform: uppercase;
 	}
-	.image__image {
-		// text-align: center;
+	.image__image {}
+	.image__caption {
+		margin: 0 auto;
+		max-width: 75%;
 	}
-	.image__caption {}
+	.asset {
+			background-color: white;
+    	border-color: white;
+	}
 }

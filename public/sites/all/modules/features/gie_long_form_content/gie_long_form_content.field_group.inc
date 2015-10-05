@@ -31,7 +31,7 @@ function gie_long_form_content_field_group_info() {
       'label' => 'Aside',
       'instance_settings' => array(
         'id' => '',
-        'classes' => 'aside component  aside-center layout-constrain',
+        'classes' => 'aside layout-constrain component',
         'description' => '',
         'show_label' => '0',
         'label_element' => 'h3',
@@ -46,6 +46,72 @@ function gie_long_form_content_field_group_info() {
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
   $field_group->api_version = 1;
+  $field_group->identifier = 'group_card_item_2|paragraphs_item|long_form_callout_card|default';
+  $field_group->group_name = 'group_card_item_2';
+  $field_group->entity_type = 'paragraphs_item';
+  $field_group->bundle = 'long_form_callout_card';
+  $field_group->mode = 'default';
+  $field_group->parent_name = 'group_card';
+  $field_group->data = array(
+    'label' => 'Card item 2',
+    'weight' => '16',
+    'children' => array(
+      0 => 'field_para_callout_body_2',
+      1 => 'field_para_callout_title_2',
+    ),
+    'format_type' => 'div',
+    'format_settings' => array(
+      'label' => 'Card item 2',
+      'instance_settings' => array(
+        'id' => '',
+        'classes' => 'card__item',
+        'description' => '',
+        'show_label' => '0',
+        'label_element' => 'h3',
+        'effect' => 'none',
+        'speed' => 'none',
+      ),
+      'formatter' => 'open',
+    ),
+  );
+  $export['group_card_item_2|paragraphs_item|long_form_callout_card|default'] = $field_group;
+
+  $field_group = new stdClass();
+  $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
+  $field_group->api_version = 1;
+  $field_group->identifier = 'group_card_item_3|paragraphs_item|long_form_callout_card|default';
+  $field_group->group_name = 'group_card_item_3';
+  $field_group->entity_type = 'paragraphs_item';
+  $field_group->bundle = 'long_form_callout_card';
+  $field_group->mode = 'default';
+  $field_group->parent_name = 'group_card';
+  $field_group->data = array(
+    'label' => 'Card item 3',
+    'weight' => '17',
+    'children' => array(
+      0 => 'field_para_callout_body_3',
+      1 => 'field_para_callout_title_3',
+    ),
+    'format_type' => 'div',
+    'format_settings' => array(
+      'label' => 'Card item 3',
+      'instance_settings' => array(
+        'id' => '',
+        'classes' => 'card__item',
+        'description' => '',
+        'show_label' => '0',
+        'label_element' => 'h3',
+        'effect' => 'none',
+        'speed' => 'none',
+      ),
+      'formatter' => 'open',
+    ),
+  );
+  $export['group_card_item_3|paragraphs_item|long_form_callout_card|default'] = $field_group;
+
+  $field_group = new stdClass();
+  $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
+  $field_group->api_version = 1;
   $field_group->identifier = 'group_card_item|paragraphs_item|long_form_callout_card|default';
   $field_group->group_name = 'group_card_item';
   $field_group->entity_type = 'paragraphs_item';
@@ -54,21 +120,17 @@ function gie_long_form_content_field_group_info() {
   $field_group->parent_name = 'group_card';
   $field_group->data = array(
     'label' => 'Card item',
-    'weight' => '7',
+    'weight' => '15',
     'children' => array(
       0 => 'field_para_callout_body_1',
-      1 => 'field_para_callout_body_2',
-      2 => 'field_para_callout_body_3',
-      3 => 'field_para_callout_title_1',
-      4 => 'field_para_callout_title_2',
-      5 => 'field_para_callout_title_3',
+      1 => 'field_para_callout_title_1',
     ),
     'format_type' => 'div',
     'format_settings' => array(
       'label' => 'Card item',
       'instance_settings' => array(
         'id' => '',
-        'classes' => 'card-item',
+        'classes' => 'card__item',
         'description' => '',
         'show_label' => '0',
         'label_element' => 'h3',
@@ -94,13 +156,15 @@ function gie_long_form_content_field_group_info() {
     'weight' => '0',
     'children' => array(
       0 => 'group_card_item',
+      1 => 'group_card_item_2',
+      2 => 'group_card_item_3',
     ),
     'format_type' => 'div',
     'format_settings' => array(
       'label' => 'Card',
       'instance_settings' => array(
         'id' => '',
-        'classes' => 'card component',
+        'classes' => 'card component layout-constrain',
         'description' => '',
         'show_label' => '0',
         'label_element' => 'h3',
@@ -111,6 +175,41 @@ function gie_long_form_content_field_group_info() {
     ),
   );
   $export['group_card|paragraphs_item|long_form_callout_card|default'] = $field_group;
+
+  $field_group = new stdClass();
+  $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
+  $field_group->api_version = 1;
+  $field_group->identifier = 'group_footer|node|long_form_page|full';
+  $field_group->group_name = 'group_footer';
+  $field_group->entity_type = 'node';
+  $field_group->bundle = 'long_form_page';
+  $field_group->mode = 'full';
+  $field_group->parent_name = '';
+  $field_group->data = array(
+    'label' => 'Pre-Footer',
+    'weight' => '3',
+    'children' => array(
+      0 => 'field_learn_more_link',
+      1 => 'field_longform_description',
+      2 => 'field_partner_logos',
+      3 => 'field_pdf_screenshot',
+    ),
+    'format_type' => 'div',
+    'format_settings' => array(
+      'label' => 'Pre-Footer',
+      'instance_settings' => array(
+        'id' => '',
+        'classes' => 'pre-footer component',
+        'description' => '',
+        'show_label' => '0',
+        'label_element' => 'h3',
+        'effect' => 'none',
+        'speed' => 'none',
+      ),
+      'formatter' => 'open',
+    ),
+  );
+  $export['group_footer|node|long_form_page|full'] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -191,17 +290,57 @@ function gie_long_form_content_field_group_info() {
       0 => 'field_para_key_fig_explanation',
       1 => 'field_paragraph_key_figure',
     ),
-    'format_type' => 'fieldset',
+    'format_type' => 'div',
     'format_settings' => array(
       'label' => 'Key Figure',
       'instance_settings' => array(
         'classes' => 'key-figure component',
         'description' => '',
+        'show_label' => 1,
+        'label_element' => 'h3',
+        'effect' => 'none',
+        'speed' => 'fast',
+        'id' => '',
       ),
       'formatter' => 'open',
     ),
   );
   $export['group_key_figure|paragraphs_item|long_form_key_figure|default'] = $field_group;
+
+  $field_group = new stdClass();
+  $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
+  $field_group->api_version = 1;
+  $field_group->identifier = 'group_page_header|node|long_form_page|full';
+  $field_group->group_name = 'group_page_header';
+  $field_group->entity_type = 'node';
+  $field_group->bundle = 'long_form_page';
+  $field_group->mode = 'full';
+  $field_group->parent_name = '';
+  $field_group->data = array(
+    'label' => 'Page Header',
+    'weight' => '1',
+    'children' => array(
+      0 => 'field_long_form_subtitle',
+      1 => 'field_longform_byline',
+      2 => 'scroll_button',
+      3 => 'title',
+    ),
+    'format_type' => 'div',
+    'format_settings' => array(
+      'label' => 'Page Header',
+      'instance_settings' => array(
+        'id' => '',
+        'classes' => 'page-header component',
+        'description' => '',
+        'show_label' => '0',
+        'label_element' => 'h3',
+        'effect' => 'none',
+        'speed' => 'none',
+      ),
+      'formatter' => 'open',
+    ),
+  );
+  $export['group_page_header|node|long_form_page|full'] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -330,8 +469,8 @@ function gie_long_form_content_field_group_info() {
     'label' => 'Pullquote',
     'weight' => '0',
     'children' => array(
-      0 => 'field_paragraph_pullquote',
-      1 => 'field_para_pullquote_author',
+      0 => 'field_para_pullquote_author',
+      1 => 'field_paragraph_pullquote',
     ),
     'format_type' => 'div',
     'format_settings' => array(
@@ -396,9 +535,9 @@ function gie_long_form_content_field_group_info() {
     'label' => 'Section header',
     'weight' => '0',
     'children' => array(
-      0 => 'field_para_sctn_head_sctn_title',
-      1 => 'field_para_sctn_head_title',
-      2 => 'field_para_sctn_head_image',
+      0 => 'field_para_sctn_head_image',
+      1 => 'field_para_sctn_head_sctn_title',
+      2 => 'field_para_sctn_head_title',
     ),
     'format_type' => 'div',
     'format_settings' => array(
@@ -416,6 +555,40 @@ function gie_long_form_content_field_group_info() {
     ),
   );
   $export['group_section_header|paragraphs_item|long_form_section_header_image|default'] = $field_group;
+
+  $field_group = new stdClass();
+  $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
+  $field_group->api_version = 1;
+  $field_group->identifier = 'group_share|node|long_form_page|full';
+  $field_group->group_name = 'group_share';
+  $field_group->entity_type = 'node';
+  $field_group->bundle = 'long_form_page';
+  $field_group->mode = 'full';
+  $field_group->parent_name = '';
+  $field_group->data = array(
+    'label' => 'share',
+    'weight' => '0',
+    'children' => array(
+      0 => 'flag_favorite',
+      1 => 'sharethis',
+      2 => 'print_button',
+    ),
+    'format_type' => 'div',
+    'format_settings' => array(
+      'label' => 'share',
+      'instance_settings' => array(
+        'id' => '',
+        'classes' => 'share-block component',
+        'description' => '',
+        'show_label' => '0',
+        'label_element' => 'h3',
+        'effect' => 'none',
+        'speed' => 'none',
+      ),
+      'formatter' => 'open',
+    ),
+  );
+  $export['group_share|node|long_form_page|full'] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
