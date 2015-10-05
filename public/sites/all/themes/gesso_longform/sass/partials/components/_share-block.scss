@@ -2,9 +2,10 @@
 // Share Block
 .share-block {
   display: block;
+  height: em(40px);
   position: fixed;
   top: 0;
-  width: 100%;
+  width: 50%;
   z-index: 10;
   @include breakpoint($mobile-menu-bp, $no-query: true) {
   	top: 5%;
@@ -15,9 +16,11 @@
 .share-block__icon {
 	display: block;
 	float: left;
-	width: 75px;
-	height: 75px;
+	width: em(40px);
+	height: em(40px);
 	@include breakpoint($mobile-menu-bp, $no-query: true) {
+		width: 75px;
+		height: 75px;
 		float: none;
 	}
 	a{
@@ -27,14 +30,23 @@
 	}
 }
 .share-block__icon--share {
-	@include svg-background(longform-share-icon);
-	// background: transparent url('../images/bg/icon-share.png') no-repeat;
+	@include svg-background(longform-share-icon-square);
+	@include breakpoint($mobile-menu-bp, $no-query: true) {
+		@include svg-background(longform-share-icon);
+	}
 }
 .share-block__icon--fav {
-	@include svg-background(longform-favorite-icon);
-	// background: transparent url('../images/bg/icon-fav.png') no-repeat;
+	@include svg-background(longform-favorite-icon-square);
+	@include breakpoint($mobile-menu-bp, $no-query: true) {
+		@include image-replace (75px, 75px);
+		@include svg-background(longform-favorite-icon);
+	}
+
 }
 .share-block__icon--print {
-	@include svg-background(longform-print-icon);
-	// background: transparent url('../images/bg/icon-print.png') no-repeat;
+	@include svg-background(longform-print-icon-square);
+	@include breakpoint($mobile-menu-bp, $no-query: true) {
+		@include svg-background(longform-favorite-icon);
+	}
+
 }
