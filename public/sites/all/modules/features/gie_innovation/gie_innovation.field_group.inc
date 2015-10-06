@@ -225,7 +225,8 @@ function gie_innovation_field_group_info() {
     'weight' => '1',
     'children' => array(
       0 => 'comment_body',
-      1 => 'post_date',
+      1 => 'field_innovation_comment_type',
+      2 => 'post_date',
     ),
     'format_type' => 'div',
     'format_settings' => array(

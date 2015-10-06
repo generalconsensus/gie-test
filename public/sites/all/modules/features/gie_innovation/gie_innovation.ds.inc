@@ -27,6 +27,20 @@ function gie_innovation_ds_field_settings_info() {
       'label' => 'hidden',
       'format' => 'ds_post_date_short',
     ),
+    'field_innovation_comment_type' => array(
+      'formatter_settings' => array(
+        'ft' => array(
+          'func' => 'theme_ds_field_expert',
+          'fi' => TRUE,
+          'fi-el' => 'h3',
+          'fi-cl' => '',
+          'fi-at' => '',
+          'fi-def-at' => FALSE,
+          'fi-odd-even' => FALSE,
+          'fi-first-last' => FALSE,
+        ),
+      ),
+    ),
   );
   $export['comment|comment_node_innovation|default'] = $ds_fieldsetting;
 
@@ -472,16 +486,18 @@ function gie_innovation_ds_layout_settings_info() {
       'main_content' => array(
         1 => 'group_comment_content',
         2 => 'post_date',
-        3 => 'comment_body',
+        3 => 'field_innovation_comment_type',
         4 => 'links',
+        5 => 'comment_body',
       ),
     ),
     'fields' => array(
       'comment_author_entity_view_1' => 'media',
       'group_comment_content' => 'main_content',
       'post_date' => 'main_content',
-      'comment_body' => 'main_content',
+      'field_innovation_comment_type' => 'main_content',
       'links' => 'main_content',
+      'comment_body' => 'main_content',
     ),
     'classes' => array(
       'layout_class' => array(
@@ -512,20 +528,26 @@ function gie_innovation_ds_layout_settings_info() {
     'regions' => array(
       'ds_content' => array(
         0 => 'author',
-        1 => 'comment_body',
+        1 => 'field_innovation_comment_type',
+        2 => 'comment_body',
       ),
       'hidden' => array(
-        2 => 'subject_field',
-        3 => '_add_existing_field',
+        3 => 'subject_field',
+        4 => '_add_existing_field',
       ),
     ),
     'fields' => array(
       'author' => 'ds_content',
+      'field_innovation_comment_type' => 'ds_content',
       'comment_body' => 'ds_content',
       'subject_field' => 'hidden',
       '_add_existing_field' => 'hidden',
     ),
-    'classes' => array(),
+    'classes' => array(
+      'layout_class' => array(
+        '' => '',
+      ),
+    ),
     'wrappers' => array(
       'ds_content' => 'div',
     ),
