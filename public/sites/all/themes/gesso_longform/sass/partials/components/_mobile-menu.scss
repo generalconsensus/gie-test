@@ -96,7 +96,7 @@
   background-color: $mobile-menu-bg-color;
   color: $mobile-menu-text-color;
   margin-top: em(40px);
-  position: absolute;
+  position: fixed;
   width: 100%;
   z-index: 100;
 }
