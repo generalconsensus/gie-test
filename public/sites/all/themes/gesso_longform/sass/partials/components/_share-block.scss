@@ -37,6 +37,7 @@
 }
 .share-block__icon--fav {
 	@include svg-background(longform-favorite-icon-square);
+	@include image-replace (40px, 40px);
 	@include breakpoint($mobile-menu-bp, $no-query: true) {
 		@include image-replace (75px, 75px);
 		@include svg-background(longform-favorite-icon);
@@ -46,7 +47,7 @@
 .share-block__icon--print {
 	@include svg-background(longform-print-icon-square);
 	@include breakpoint($mobile-menu-bp, $no-query: true) {
-		@include svg-background(longform-favorite-icon);
+		@include svg-background(longform-print-icon);
 	}
 
 }
