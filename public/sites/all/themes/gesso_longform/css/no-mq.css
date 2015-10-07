@@ -1519,7 +1519,7 @@ input.throbbing {
   margin: 0;
   padding: 0.59722em 1.25em;
   position: relative;
-  text-align: left;
+  text-align: right;
   text-decoration: none;
   white-space: normal;
   width: auto;
@@ -1820,7 +1820,6 @@ input.throbbing {
 }
 
 .region-navigation {
-  display: none;
   display: block;
 }
 
