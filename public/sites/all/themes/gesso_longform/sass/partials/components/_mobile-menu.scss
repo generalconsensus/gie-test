@@ -7,6 +7,13 @@
   // }
 }
 
+.block--system-user-menu{
+  display: none;
+}
+.skip-link{
+  display: none;
+}
+
 .mobile-menu__bar {
   background-color: $mobile-menu-bg-color;
   border-bottom: 1px solid $mobile-menu-border-color;
@@ -96,7 +103,7 @@
   background-color: $mobile-menu-bg-color;
   color: $mobile-menu-text-color;
   margin-top: em(40px);
-  position: absolute;
+  position: fixed;
   width: 100%;
   z-index: 100;
 }

@@ -123,10 +123,10 @@ function gie_long_form_content_strongarm() {
     'extra_fields' => array(
       'form' => array(
         'path' => array(
-          'weight' => '5',
+          'weight' => '6',
         ),
         'rabbit_hole' => array(
-          'weight' => '4',
+          'weight' => '5',
         ),
       ),
       'display' => array(
@@ -144,6 +144,10 @@ function gie_long_form_content_strongarm() {
           'full' => array(
             'weight' => '24',
             'visible' => TRUE,
+          ),
+          'default' => array(
+            'weight' => '13',
+            'visible' => FALSE,
           ),
         ),
       ),
