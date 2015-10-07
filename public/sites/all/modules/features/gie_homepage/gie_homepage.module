@@ -17,17 +17,23 @@ function gie_homepage_ds_fields_info($entity_type) {
             'title' => t('Title Count'),
             'field_type' => DS_FIELD_TYPE_FUNCTION,
             'ui_limit' => array('persona|listing'),
-            'function' => 'gie_homepage_title_count',
+            'function' => '_gie_homepage_title_count',
+        );
+        $fields['welcome_count'] = array(
+            'title' => t('Welcome Count'),
+            'field_type' => DS_FIELD_TYPE_FUNCTION,
+            'ui_limit' => array('persona|teaser'),
+            'function' => '_gie_homepage_welcome_count',
         );
         return array($entity_type => $fields);
     }
     return;
 }
 
-/*
+/**
  * Custom function to return Title and Count based on Persona type
  */
-function gie_homepage_title_count($field) {
+function _gie_homepage_title_count($field) {
     $persona_type = field_get_items('node', $field['entity'], 'field_persona_type');
 
     if (isset($persona_type)) {
@@ -39,9 +45,9 @@ function gie_homepage_title_count($field) {
                 break;
             case "funding":
                 $count = db_query('SELECT SUM(field_funding_grant_award_value_value) FROM {field_data_field_funding_grant_award_value} WHERE deleted = :deleted', array(':deleted' => 0))->fetchField();
-                if($count>1000000000) $count = round(($count/1000000000),1).' B';
-                else if($count>1000000) $count = round(($count/1000000),1).' M';
-                else if($count>1000) $count = round(($count/1000),1).' T';
+                if($count>1000000000) $count = round(($count/1000000000),1).'B';
+                else if($count>1000000) $count = round(($count/1000000),1).'M';
+                else if($count>1000) $count = round(($count/1000),1).'T';
                 return '<h1 class="card__title"><a href="/funding">$' . $count . ' Available</a></h1>';
                 break;
             case "user":
@@ -53,4 +59,130 @@ function gie_homepage_title_count($field) {
         return $result;
 
     }
+}
+
+/**
+ * Custom function to return Title and Count based on Persona type
+ */
+function _gie_homepage_welcome_count($field) {
+    $persona_type = field_get_items('node', $field['entity'], 'field_persona_type');
+
+    if (isset($persona_type)) {
+
+        switch ($persona_type[0]['value']) {
+            case "innovation":
+                $count = db_query('SELECT COUNT(nid) FROM {node} WHERE type = :type AND status = :status', array(':type' => 'innovation', ':status' => 1))->fetchField();
+                return '<div class="welcome-stats__item"><h2 class="welcome-stats__number">' . $count . '</h2><h3 class="welcome-stats__label">Innovations</h3></div>';
+                break;
+            case "funding":
+                $count = db_query('SELECT SUM(field_funding_grant_award_value_value) FROM {field_data_field_funding_grant_award_value} WHERE deleted = :deleted', array(':deleted' => 0))->fetchField();
+                if($count>1000000000) $count = round(($count/1000000000),1).' B';
+                else if($count>1000000) $count = round(($count/1000000),1).' M';
+                else if($count>1000) $count = round(($count/1000),1).' T';
+                return '<div class="welcome-stats__item"><h2 class="welcome-stats__number">$' . $count . '</h2><h3 class="welcome-stats__label">Available</h3></div>';
+                break;
+            case "user":
+                $count = db_query('SELECT COUNT(uid) FROM {users} WHERE status > :status', array(':status' => 0))->fetchField();
+                return '<div class="welcome-stats__item"><h2 class="welcome-stats__number">' . $count . '</h2><h3 class="welcome-stats__label">Collaborators</h3></div>';
+                break;
+        }
+
+        return $result;
+
+    }
+}
+
+/**
+ * Implements hook_form_FORM_ID_alter().
+ */
+function gie_homepage_form_user_register_form_alter(&$form, &$form_state, $form_id) {
+  // Customize registration form on Welcome page
+  if (current_path() == 'user/register' || current_path() == 'welcome') {
+    $lang = $form['field_user_firstname']['#language'];
+    // Remove field descriptions
+    unset($form['account']['name']['#description']);
+    unset($form['account']['mail']['#description']);
+    unset($form['account']['pass']['#description']);
+
+    // Hide field labels
+    $form['field_user_firstname'][$lang][0]['value']['#title_display'] = 'invisible';
+    $form['field_user_lastname'][$lang][0]['value']['#title_display'] = 'invisible';
+    $form['account']['name']['#title_display'] = 'invisible';
+    $form['account']['mail']['#title_display'] = 'invisible';
+    $form['account']['pass']['#title_display'] = 'invisible';
+
+    // Set placeholder text for text inputs
+    $form['field_user_firstname'][$lang][0]['value']['#attributes']['placeholder'] = t('First Name');
+    $form['field_user_lastname'][$lang][0]['value']['#attributes']['placeholder'] = t('Last Name');
+    $form['account']['name']['#attributes']['placeholder'] = t('Username');
+    $form['account']['mail']['#attributes']['placeholder'] = t('Email Address');
+    $form['account']['pass']['#attributes']['placeholder'] = t('Password');
+
+    // Set group labels to 'do not display'
+    $form['#groups']['group_about']->format_settings['instance_settings']['show_label'] = 0;
+    $form['#groups']['group_account']->format_settings['instance_settings']['show_label'] = 0;
+
+    // hide User Notifications field
+    $form['field_user_notifications']['#access'] = FALSE;
+
+    // disable Confirm Password field
+    $form['account']['pass']['#type'] = 'password';
+    $form['account']['pass']['#title'] = 'Password';
+
+    // Unset fixed size for Password field
+    unset($form['account']['pass']['#size']);
+
+    // Set terms and conditions text before submit button
+    $form['actions']['submit']['#prefix'] = '<p>By creating an account, you agree to our <a href="/terms-use">terms and conditions</a>.</p>';
+  }
+}
+
+/**
+ * Implements hook_block_info().
+ */
+function gie_homepage_block_info() {
+  $blocks = array();
+
+  $blocks['welcome_login'] = array(
+    'info' => t('Welcome Login block')
+  );
+
+  return $blocks;
+}
+
+/**
+ * Implements hook_block_view().
+ */
+function gie_homepage_block_view($delta = '') {
+  $block = array();
+
+  switch ($delta) {
+    case 'welcome_login':
+      if (user_is_anonymous()) {
+        //Load in user login form
+        $form = drupal_get_form('user_login_block');
+
+        // Hide social login and additional links
+        unset($form['lr_social_login_links']);
+        unset($form['links']);
+
+        // Hide field labels and set placeholder text
+        $form['name']['#title_display'] = 'invisible';
+        $form['pass']['#title_display'] = 'invisible';
+        $form['name']['#attributes']['placeholder'] = t('Username');
+        $form['pass']['#attributes']['placeholder'] = t('Password');
+
+        // Add Forgot Password link after submit
+        $form['actions']['submit']['#suffix'] = t('<div>Forgot your <a href="/user/password" title="Request new password via e-mail.">Password</a></div>');
+
+        // Set redirect destination as user page
+        $form['#action'] = '/user/register?destination=user';
+
+        $block['subject'] = '';
+        $block['content'] = $form;
+      }
+      break;
+  }
+
+  return $block;
 }

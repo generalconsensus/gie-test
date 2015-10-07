@@ -6,8 +6,9 @@
     margin-right: -100%;
     margin-left: 0;
     clear: none;
+    margin-right: 0;
   }
-  /* line 15, ../../sass/partials/layout/panels/_split.scss */
+  /* line 16, ../../sass/partials/layout/panels/_split.scss */
   .l-panels-split.first.second .l-second {
     width: 47.05882%;
     float: right;
@@ -17,7 +18,7 @@
   }
 }
 
-/* line 22, ../../sass/partials/layout/panels/_split.scss */
+/* line 23, ../../sass/partials/layout/panels/_split.scss */
 .l-panels-split {
   *zoom: 1;
 }
@@ -30,7 +31,7 @@
 .l-panels-split:after {
   clear: both;
 }
-/* line 24, ../../sass/partials/layout/panels/_split.scss */
+/* line 25, ../../sass/partials/layout/panels/_split.scss */
 .l-panels-split .l-preface,
 .l-panels-split .l-first,
 .l-panels-split .l-second,

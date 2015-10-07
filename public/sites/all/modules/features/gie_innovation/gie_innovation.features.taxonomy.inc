@@ -32,6 +32,29 @@ function gie_innovation_taxonomy_default_vocabularies() {
         ),
       ),
     ),
+    'comment_type' => array(
+      'name' => 'Comment Type',
+      'machine_name' => 'comment_type',
+      'description' => 'This determines the types of comments that can be left on Innovations',
+      'hierarchy' => 0,
+      'module' => 'taxonomy',
+      'weight' => 0,
+      'rdf_mapping' => array(
+        'rdftype' => array(
+          0 => 'skos:ConceptScheme',
+        ),
+        'name' => array(
+          'predicates' => array(
+            0 => 'dc:title',
+          ),
+        ),
+        'description' => array(
+          'predicates' => array(
+            0 => 'rdfs:comment',
+          ),
+        ),
+      ),
+    ),
     'innovation_stage' => array(
       'name' => 'Innovation Stage',
       'machine_name' => 'innovation_stage',
@@ -58,6 +81,29 @@ function gie_innovation_taxonomy_default_vocabularies() {
     'solution_type' => array(
       'name' => 'Solution Type',
       'machine_name' => 'solution_type',
+      'description' => '',
+      'hierarchy' => 0,
+      'module' => 'taxonomy',
+      'weight' => 0,
+      'rdf_mapping' => array(
+        'rdftype' => array(
+          0 => 'skos:ConceptScheme',
+        ),
+        'name' => array(
+          'predicates' => array(
+            0 => 'dc:title',
+          ),
+        ),
+        'description' => array(
+          'predicates' => array(
+            0 => 'rdfs:comment',
+          ),
+        ),
+      ),
+    ),
+    'sustainable_development_goals' => array(
+      'name' => 'Sustainable Development Goals',
+      'machine_name' => 'sustainable_development_goals',
       'description' => '',
       'hierarchy' => 0,
       'module' => 'taxonomy',

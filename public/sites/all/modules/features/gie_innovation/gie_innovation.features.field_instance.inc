@@ -35,7 +35,7 @@ function gie_innovation_field_default_field_instances() {
           ),
         ),
         'type' => 'text_default',
-        'weight' => 3,
+        'weight' => 4,
       ),
     ),
     'entity_type' => 'comment',
@@ -79,6 +79,58 @@ function gie_innovation_field_default_field_instances() {
         'rows' => 5,
       ),
       'type' => 'text_textarea',
+      'weight' => 2,
+    ),
+  );
+
+  // Exported field_instance:
+  // 'comment-comment_node_innovation-field_innovation_comment_type'
+  $field_instances['comment-comment_node_innovation-field_innovation_comment_type'] = array(
+    'bundle' => 'comment_node_innovation',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'hidden',
+        'module' => 'entityreference',
+        'settings' => array(
+          'field_delimiter' => '',
+          'link' => 0,
+          'linked_field' => array(
+            'advanced' => array(
+              'class' => '',
+              'rel' => '',
+              'target' => '',
+              'text' => '',
+              'title' => '',
+            ),
+            'destination' => '',
+            'linked' => 0,
+          ),
+        ),
+        'type' => 'entityreference_label',
+        'weight' => 3,
+      ),
+    ),
+    'ds_extras_field_template' => '',
+    'entity_type' => 'comment',
+    'entityconnect_unload_add' => 1,
+    'entityconnect_unload_edit' => 1,
+    'field_name' => 'field_innovation_comment_type',
+    'label' => 'Select a comment type:',
+    'required' => 1,
+    'settings' => array(
+      'description_display' => 'after',
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'options',
+      'settings' => array(
+        'apply_chosen' => '',
+      ),
+      'type' => 'options_select',
       'weight' => 1,
     ),
   );
@@ -142,7 +194,7 @@ function gie_innovation_field_default_field_instances() {
         'size' => 60,
       ),
       'type' => 'text_textfield',
-      'weight' => 2,
+      'weight' => 3,
     ),
   );
 
@@ -5760,6 +5812,82 @@ Using the selector below, highlight the area of the image you would like to feat
     ),
   );
 
+  // Exported field_instance:
+  // 'taxonomy_term-sustainable_development_goals-description_field'
+  $field_instances['taxonomy_term-sustainable_development_goals-description_field'] = array(
+    'bundle' => 'sustainable_development_goals',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 1,
+      ),
+    ),
+    'entity_type' => 'taxonomy_term',
+    'field_name' => 'description_field',
+    'label' => 'Description',
+    'required' => FALSE,
+    'settings' => array(
+      'display_summary' => 0,
+      'hide_label' => array(
+        'entity' => 0,
+        'page' => 0,
+      ),
+      'text_processing' => 1,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'module' => 'text',
+      'settings' => array(
+        'rows' => 20,
+        'summary_rows' => 5,
+      ),
+      'type' => 'text_textarea_with_summary',
+      'weight' => -5,
+    ),
+  );
+
+  // Exported field_instance:
+  // 'taxonomy_term-sustainable_development_goals-name_field'
+  $field_instances['taxonomy_term-sustainable_development_goals-name_field'] = array(
+    'bundle' => 'sustainable_development_goals',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'taxonomy_term',
+    'field_name' => 'name_field',
+    'label' => 'Name',
+    'required' => TRUE,
+    'settings' => array(
+      'hide_label' => array(
+        'entity' => 0,
+        'page' => 0,
+      ),
+      'text_processing' => 0,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'module' => 'text',
+      'settings' => array(
+        'size' => 60,
+      ),
+      'type' => 'text_textfield',
+      'weight' => -5,
+    ),
+  );
+
   // Exported field_instance: 'taxonomy_term-testing_phase-description_field'
   $field_instances['taxonomy_term-testing_phase-description_field'] = array(
     'bundle' => 'testing_phase',
@@ -5889,6 +6017,7 @@ Using the selector below, highlight the area of the image you would like to feat
   t('Related Programs');
   t('Resources');
   t('Sector');
+  t('Select a comment type:');
   t('Select the countries where your innovation is being tested/used');
   t('Select the countries where your innovation was created');
   t('Select the regions that include the countries selected for this innovation. ');

@@ -15,6 +15,22 @@
   z-index: 3;
   > .region__inner {
     @extend .layout-constrain;
-    position: relative;    
+    position: relative;
+  }
+
+
+
+}
+
+
+div.region-navigation {
+  .page-simple & {
+    @include box-shadow(none);
+    display: block;
+    @extend %clearfix;
+    background: #00111F;
+    border-bottom: 1px solid #fff;
+    padding-top: em(30px, 16px);
+    height: auto;
   }
 }
