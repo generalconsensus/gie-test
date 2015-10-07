@@ -724,6 +724,7 @@ function gie_search_facetapi_default_facet_settings() {
     'dependencies' => array(
       'bundle' => 'none',
       'bundle_selected' => array(),
+      'roles' => array(),
     ),
     'facet_mincount' => '1',
     'facet_missing' => '0',
@@ -734,7 +735,7 @@ function gie_search_facetapi_default_facet_settings() {
     'default_true' => '1',
     'facet_search_ids' => array(),
     'exclude' => 0,
-    'pretty_paths_alias' => 'program',
+    'pretty_paths_alias' => 'programs',
   );
   $export['search_api@default_node_index::field_resource_program'] = $facet;
 
