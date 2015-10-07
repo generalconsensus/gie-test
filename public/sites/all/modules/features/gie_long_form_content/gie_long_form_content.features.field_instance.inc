@@ -202,22 +202,29 @@ function gie_long_form_content_field_default_field_instances() {
         'summary_rows' => 5,
       ),
       'type' => 'text_textarea_with_summary',
-      'weight' => 6,
+      'weight' => 7,
     ),
   );
 
-  // Exported field_instance: 'node-long_form_page-field_learn_more_link'
-  $field_instances['node-long_form_page-field_learn_more_link'] = array(
+  // Exported field_instance: 'node-long_form_page-field_header_image'
+  $field_instances['node-long_form_page-field_header_image'] = array(
     'bundle' => 'long_form_page',
-    'default_value' => NULL,
     'deleted' => 0,
     'description' => '',
     'display' => array(
       'default' => array(
         'label' => 'above',
-        'module' => 'link',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 11,
+      ),
+      'full' => array(
+        'label' => 'hidden',
+        'module' => 'image',
         'settings' => array(
           'field_delimiter' => '',
+          'image_link' => '',
+          'image_style' => '',
           'linked_field' => array(
             'advanced' => array(
               'class' => '',
@@ -230,8 +237,63 @@ function gie_long_form_content_field_default_field_instances() {
             'linked' => 0,
           ),
         ),
-        'type' => 'link_default',
-        'weight' => 16,
+        'type' => 'image',
+        'weight' => 2,
+      ),
+    ),
+    'ds_extras_field_template' => '',
+    'entity_type' => 'node',
+    'field_name' => 'field_header_image',
+    'label' => 'Header Image',
+    'required' => 0,
+    'settings' => array(
+      'alt_field' => 0,
+      'alt_field_default' => '',
+      'alt_field_hide' => 0,
+      'alt_field_sync_title' => 0,
+      'alt_field_update_on_edit' => 0,
+      'default_image' => 0,
+      'description_display' => 'after',
+      'file_directory' => '',
+      'file_extensions' => 'png gif jpg jpeg',
+      'focus' => 0,
+      'focus_lock_ratio' => 0,
+      'focus_min_size' => '',
+      'max_filesize' => '',
+      'max_resolution' => '',
+      'min_resolution' => '1400x800',
+      'random_default' => 0,
+      'random_default_path' => '',
+      'title_field' => 0,
+      'title_field_default' => '',
+      'title_field_hide' => 0,
+      'title_field_update_on_edit' => 0,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'image',
+      'settings' => array(
+        'preview_image_style' => 'thumbnail',
+        'progress_indicator' => 'throbber',
+      ),
+      'type' => 'image_image',
+      'weight' => 3,
+    ),
+  );
+
+  // Exported field_instance: 'node-long_form_page-field_learn_more_link'
+  $field_instances['node-long_form_page-field_learn_more_link'] = array(
+    'bundle' => 'long_form_page',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 18,
       ),
       'full' => array(
         'label' => 'hidden',
@@ -288,7 +350,7 @@ function gie_long_form_content_field_default_field_instances() {
       'module' => 'link',
       'settings' => array(),
       'type' => 'link_field',
-      'weight' => 9,
+      'weight' => 10,
     ),
   );
 
@@ -382,7 +444,7 @@ function gie_long_form_content_field_default_field_instances() {
       'module' => 'paragraphs',
       'settings' => array(),
       'type' => 'paragraphs_embed',
-      'weight' => 3,
+      'weight' => 4,
     ),
   );
 
@@ -397,7 +459,7 @@ function gie_long_form_content_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 13,
+        'weight' => 15,
       ),
       'full' => array(
         'label' => 'hidden',
@@ -490,7 +552,7 @@ function gie_long_form_content_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 14,
+        'weight' => 16,
       ),
       'full' => array(
         'label' => 'hidden',
@@ -510,7 +572,7 @@ function gie_long_form_content_field_default_field_instances() {
           ),
         ),
         'type' => 'text_plain',
-        'weight' => 3,
+        'weight' => 4,
       ),
     ),
     'ds_extras_field_template' => '',
@@ -579,23 +641,9 @@ function gie_long_form_content_field_default_field_instances() {
     'display' => array(
       'default' => array(
         'label' => 'above',
-        'module' => 'text',
-        'settings' => array(
-          'field_delimiter' => '',
-          'linked_field' => array(
-            'advanced' => array(
-              'class' => '',
-              'rel' => '',
-              'target' => '',
-              'text' => '',
-              'title' => '',
-            ),
-            'destination' => '',
-            'linked' => 0,
-          ),
-        ),
-        'type' => 'text_default',
-        'weight' => 15,
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 17,
       ),
       'full' => array(
         'label' => 'hidden',
@@ -673,7 +721,7 @@ function gie_long_form_content_field_default_field_instances() {
         'rows' => 5,
       ),
       'type' => 'text_textarea',
-      'weight' => 8,
+      'weight' => 9,
     ),
   );
 
@@ -741,7 +789,7 @@ function gie_long_form_content_field_default_field_instances() {
       'module' => 'field_collection',
       'settings' => array(),
       'type' => 'field_collection_embed',
-      'weight' => 10,
+      'weight' => 11,
     ),
   );
 
@@ -753,23 +801,9 @@ function gie_long_form_content_field_default_field_instances() {
     'display' => array(
       'default' => array(
         'label' => 'above',
-        'module' => 'file',
-        'settings' => array(
-          'field_delimiter' => '',
-          'linked_field' => array(
-            'advanced' => array(
-              'class' => '',
-              'rel' => '',
-              'target' => '',
-              'text' => '',
-              'title' => '',
-            ),
-            'destination' => '',
-            'linked' => 0,
-          ),
-        ),
-        'type' => 'file_default',
-        'weight' => 17,
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 19,
       ),
       'full' => array(
         'label' => 'above',
@@ -810,25 +844,9 @@ function gie_long_form_content_field_default_field_instances() {
     'display' => array(
       'default' => array(
         'label' => 'above',
-        'module' => 'image',
-        'settings' => array(
-          'field_delimiter' => '',
-          'image_link' => '',
-          'image_style' => '',
-          'linked_field' => array(
-            'advanced' => array(
-              'class' => '',
-              'rel' => '',
-              'target' => '',
-              'text' => '',
-              'title' => '',
-            ),
-            'destination' => '',
-            'linked' => 0,
-          ),
-        ),
-        'type' => 'image',
-        'weight' => 18,
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 20,
       ),
       'full' => array(
         'label' => 'hidden',
@@ -902,7 +920,7 @@ function gie_long_form_content_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 10,
+        'weight' => 14,
       ),
       'full' => array(
         'label' => 'above',
@@ -3461,6 +3479,7 @@ function gie_long_form_content_field_default_field_instances() {
   t('Caption');
   t('Explanation');
   t('File');
+  t('Header Image');
   t('Image');
   t('Key Figure');
   t('Learn More Link');
