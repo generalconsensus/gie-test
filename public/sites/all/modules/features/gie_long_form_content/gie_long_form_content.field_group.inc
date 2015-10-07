@@ -354,8 +354,9 @@ function gie_long_form_content_field_group_info() {
     'children' => array(
       0 => 'field_long_form_subtitle',
       1 => 'field_longform_byline',
-      2 => 'scroll_button',
-      3 => 'title',
+      2 => 'field_header_image',
+      3 => 'scroll_button',
+      4 => 'title',
     ),
     'format_type' => 'div',
     'format_settings' => array(
@@ -470,7 +471,7 @@ function gie_long_form_content_field_group_info() {
   $field_group->parent_name = '';
   $field_group->data = array(
     'label' => 'PDF',
-    'weight' => '7',
+    'weight' => '8',
     'children' => array(
       0 => 'field_pdf_file',
       1 => 'field_pdf_screenshot',
