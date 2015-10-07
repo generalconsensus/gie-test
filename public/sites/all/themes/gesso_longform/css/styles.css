@@ -2068,7 +2068,7 @@ input.throbbing {
     float: none;
   }
 }
-.share-block__icon a {
+.share-block__icon a, .share-block__icon span {
   display: block;
   height: 100%;
   width: 100%;
@@ -2081,6 +2081,9 @@ input.throbbing {
   height: 40px;
   overflow: hidden;
   width: 40px;
+  cursor: pointer;
+  position: relative;
+  z-index: 20;
 }
 .share-block__icon--share span.st_sharethis_custom:before {
   content: "";
