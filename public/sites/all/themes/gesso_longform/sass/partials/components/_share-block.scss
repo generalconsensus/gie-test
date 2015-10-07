@@ -25,24 +25,39 @@
 		height: 75px;
 		float: none;
 	}
-	a{
+	a, span{
 		display: block;
 		height: 100%;
 		width: 100%;
 	}
 }
 .share-block__icon--share {
-	@include svg-background(longform-share-icon-square);
-	@include breakpoint($mobile-menu-bp, $no-query: true) {
-		@include svg-background(longform-share-icon);
+	span.st_sharethis_custom {
+		@include svg-background(longform-share-icon-square);
+		@include image-replace (40px, 40px);
+		cursor: pointer;
+		position: relative;
+		z-index: 20;
+		@include breakpoint($mobile-menu-bp, $no-query: true) {
+			@include image-replace (75px, 75px);
+			@include svg-background(longform-share-icon);
+		}
 	}
 }
 .share-block__icon--fav {
-	@include svg-background(longform-favorite-icon-square);
-	@include image-replace (40px, 40px);
-	@include breakpoint($mobile-menu-bp, $no-query: true) {
-		@include image-replace (75px, 75px);
-		@include svg-background(longform-favorite-icon);
+	a.flag-link-toggle {
+		@include svg-background(longform-favorite-icon-square);
+		@include image-replace (40px, 40px);
+		@include breakpoint($mobile-menu-bp, $no-query: true) {
+			@include image-replace (75px, 75px);
+			@include svg-background(longform-favorite-icon);
+		}
+	}
+	a.unflagged {
+		@include breakpoint($mobile-menu-bp, $no-query: true) {
+			@include image-replace (75px, 75px);
+			@include svg-background(longform-favorite-icon);
+		}
 	}
 
 }
