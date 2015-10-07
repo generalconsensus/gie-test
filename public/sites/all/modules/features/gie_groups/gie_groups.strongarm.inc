@@ -42,7 +42,7 @@ function gie_groups_strongarm() {
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'comment_group';
-  $strongarm->value = '2';
+  $strongarm->value = '0';
   $export['comment_group'] = $strongarm;
 
   $strongarm = new stdClass();
@@ -81,7 +81,6 @@ function gie_groups_strongarm() {
   $strongarm->name = 'node_options_group';
   $strongarm->value = array(
     0 => 'status',
-    1 => 'promote',
   );
   $export['node_options_group'] = $strongarm;
 
@@ -96,7 +95,7 @@ function gie_groups_strongarm() {
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'node_submitted_group';
-  $strongarm->value = 1;
+  $strongarm->value = 0;
   $export['node_submitted_group'] = $strongarm;
 
   return $export;

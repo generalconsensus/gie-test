@@ -19,7 +19,7 @@ function gie_groups_ctools_plugin_api($module = NULL, $api = NULL) {
 function gie_groups_node_info() {
   $items = array(
     'group' => array(
-      'name' => t('Group'),
+      'name' => t('Microsite'),
       'base' => 'node_content',
       'description' => '',
       'has_title' => '1',
