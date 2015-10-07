@@ -1321,6 +1321,14 @@ input.throbbing {
   font-weight: bold;
 }
 
+.block--system-user-menu {
+  display: none;
+}
+
+.skip-link {
+  display: none;
+}
+
 .mobile-menu__bar {
   background-color: rgba(0, 0, 0, 0.8);
   border-bottom: 1px solid #696966;
@@ -2032,6 +2040,7 @@ input.throbbing {
 .share-block {
   display: block;
   height: 2.5em;
+  padding: 0;
   position: fixed;
   top: 0;
   width: 50%;
@@ -2041,6 +2050,7 @@ input.throbbing {
   .share-block {
     top: 5%;
     right: 5%;
+    padding: 3em 0;
     width: 100px;
   }
 }

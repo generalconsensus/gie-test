@@ -7,6 +7,13 @@
   // }
 }
 
+.block--system-user-menu{
+  display: none;
+}
+.skip-link{
+  display: none;
+}
+
 .mobile-menu__bar {
   background-color: $mobile-menu-bg-color;
   border-bottom: 1px solid $mobile-menu-border-color;
