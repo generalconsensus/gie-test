@@ -7,6 +7,13 @@
   // }
 }
 
+.block--system-user-menu{
+  display: none;
+}
+.skip-link{
+  display: none;
+}
+
 .mobile-menu__bar {
   background-color: $mobile-menu-bg-color;
   border-bottom: 1px solid $mobile-menu-border-color;
@@ -15,7 +22,7 @@
   height: em(40px);
   text-align: center;
   width: 100%;
-  position: relative;
+  position: fixed;
   top: 0;
   z-index: 10;
 }
@@ -47,6 +54,8 @@
   border-right: 1px solid $mobile-menu-border-color;
   float: right;
   margin-right: 0;
+  position: relative;
+  z-index: 15;
   @include breakpoint($mobile-menu-bp, $no-query: true) {
     margin-right: 18%;
   }
@@ -93,7 +102,8 @@
   background-color: $mobile-menu-fallback-bg-color;
   background-color: $mobile-menu-bg-color;
   color: $mobile-menu-text-color;
-  position: absolute;
+  margin-top: em(40px);
+  position: fixed;
   width: 100%;
   z-index: 100;
 }

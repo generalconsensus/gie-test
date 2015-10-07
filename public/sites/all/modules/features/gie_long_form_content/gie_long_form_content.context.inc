@@ -29,6 +29,12 @@ function gie_long_form_content_context_default_contexts() {
   $context->reactions = array(
     'block' => array(
       'blocks' => array(
+        'system-user-menu' => array(
+          'module' => 'system',
+          'delta' => 'user-menu',
+          'region' => 'navigation',
+          'weight' => '-10',
+        ),
         'blockify-blockify-messages' => array(
           'module' => 'blockify',
           'delta' => 'blockify-messages',
