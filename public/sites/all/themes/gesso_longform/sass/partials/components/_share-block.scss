@@ -3,6 +3,7 @@
 .share-block {
   display: block;
   height: em(40px);
+  padding: 0;
   position: fixed;
   top: 0;
   width: 50%;
@@ -10,6 +11,7 @@
   @include breakpoint($mobile-menu-bp, $no-query: true) {
   	top: 5%;
   	right: 5%;
+  	padding: 3em 0;
   	width: 100px;
   }
 }
