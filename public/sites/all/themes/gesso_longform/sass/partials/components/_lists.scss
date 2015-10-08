@@ -3,12 +3,12 @@
 $ol-bullet-size: 80px;
 
 ol {
-  .component & {
+  .text-block & {
   	margin-left: 3em;
   	counter-reset: li-counter;
   	list-style-type: none;
   	li{
-  		// margin-bottom: 20px;
+  		margin-bottom: 1em;
   		min-height: $ol-bullet-size * 1.20;
   		padding-left: 20px;
   		position: relative;
@@ -29,14 +29,14 @@ ol {
       height: $ol-bullet-size;
       position: absolute;
       text-align: center;
-      top: 0;
+      top: 4px;
       width: $ol-bullet-size;
     }
   }
 }
 
 ul {
-  .component & {
+  .text-block & {
   	list-style: outside;
     list-style-type: none;
     li {
