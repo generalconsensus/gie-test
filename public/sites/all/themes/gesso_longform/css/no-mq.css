@@ -963,6 +963,7 @@ input.throbbing {
 .block--menu-menu-sub-footer-menu {
   float: right;
   padding: 2em 0;
+  font-size: 13px;
 }
 .block--menu-menu-sub-footer-menu ul {
   list-style: none;
