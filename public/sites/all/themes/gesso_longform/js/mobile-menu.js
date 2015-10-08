@@ -44,11 +44,11 @@
           var $menuList = $(this).text().toLowerCase().replace(/\s+/, "_");
           
           //Add a link to the DOM item
-          var $newLink = $(this).prepend('<a name="' + $menuList + '" class="skip-link">&nbsp;</a>');
+          $(this).closest('.component').before('<a name="' + $menuList + '"></a>');
           
           //Add Link to Mobile Menu
           var $headerLink = '<li class="nav__item"><a href="#' + $menuList +'" class="nav__link">' + $menuText + '</a></li>';
-          $($mainMenu).append($headerLink);
+          $mainMenu.append($headerLink);
         });
 
         // Remove third level menu items.
@@ -118,6 +118,12 @@
           });
 
           e.preventDefault();
+        });
+
+        // Close mobile menu when any item is clicked
+        $('.nav--mobile-menu .nav__link', context).click(function (e) {
+          $('.js-mobile-menu-button').removeClass('is-active');
+          $mobileMenuWrapper.addClass('element-hidden');
         });
 
         // Open/close search bar.
