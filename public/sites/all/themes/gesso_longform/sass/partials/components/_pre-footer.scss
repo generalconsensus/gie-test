@@ -32,6 +32,17 @@
     top: 1px;
     z-index: 0;
   }
+  img {
+    border: 3px $lightred solid;
+    border-bottom: none;
+    display: block;
+    height: 100%;
+    left: 0;
+    max-height: 155px;
+    position: absolute;
+    top: 0;
+    width: 100%;
+  }
 }
 
 .pre-footer__description {

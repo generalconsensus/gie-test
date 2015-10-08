@@ -1763,6 +1763,17 @@ input.throbbing {
   height: 150%;
   width: 0;
 }
+.pre-footer__download-image img {
+  border: 3px #ff1352 solid;
+  border-bottom: none;
+  display: block;
+  height: 100%;
+  left: 0;
+  max-height: 155px;
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
 
 .pre-footer__description {
   width: 100%;
