@@ -23,6 +23,16 @@ function gie_organization_default_pane_container() {
   $template = new stdClass();
   $template->disabled = FALSE; /* Edit this to true to make a default template disabled initially */
   $template->api_version = 2;
+  $template->name = 'partner_introduction';
+  $template->title = 'Partner Introduction';
+  $template->plugin = 'text';
+  $template->description = 'This is the introduction page for the partners listing page. /partners';
+  $template->configuration = '';
+  $export['partner_introduction'] = $template;
+
+  $template = new stdClass();
+  $template->disabled = FALSE; /* Edit this to true to make a default template disabled initially */
+  $template->api_version = 2;
   $template->name = 'partners_listing_page';
   $template->title = 'Partners Listing Page';
   $template->plugin = 'entity_reference';
@@ -37,7 +47,7 @@ function gie_organization_default_pane_container() {
     'more_link' => '',
     'more_link_text' => '',
     'output_mode' => 'view',
-    'display_view' => 'partners_listing_page:partners_listing_page',
+    'display_view' => 'admin_views_node:default',
   );
   $export['partners_listing_page'] = $template;
 
@@ -58,7 +68,7 @@ function gie_organization_default_pane_container() {
     'more_link' => '',
     'more_link_text' => '',
     'output_mode' => 'view',
-    'display_view' => 'partners_listing_page:panel_pane_1',
+    'display_view' => 'admin_views_node:default',
   );
   $export['partners_listing_page_all'] = $template;
 
