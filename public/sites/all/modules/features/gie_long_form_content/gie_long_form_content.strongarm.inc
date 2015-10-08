@@ -448,6 +448,9 @@ function gie_long_form_content_strongarm() {
       'paragraphs_right_align' => array(
         'custom_settings' => FALSE,
       ),
+      'diff_standard' => array(
+        'custom_settings' => FALSE,
+      ),
     ),
     'extra_fields' => array(
       'form' => array(),
