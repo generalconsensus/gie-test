@@ -1624,14 +1624,15 @@ input.throbbing {
 
 .page-header__image {
   position: absolute;
-  top: 0;
-  left: 0;
+  top: -50%;
+  left: -50%;
   z-index: -1;
 }
 .page-header__image img {
   display: block;
-  height: 100%;
-  width: 100%;
+  position: fixed;
+  max-width: initial;
+  width: auto;
 }
 .page-header__image:before {
   background: rgba(0, 0, 0, 0.5);

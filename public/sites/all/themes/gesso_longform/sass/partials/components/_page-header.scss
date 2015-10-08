@@ -13,13 +13,11 @@
 
 .page-header__image {
   position: absolute;
-  top: 0;
-  left: 0;
+  top: -50%;
+  left: -50%;
   z-index: -1;
   img {
-   display: block;
-   height:100%;
-   width:100%;
+   max-width: initial;
   }
   &:before { // CSS Color Overlay
     background: rgba(0,0,0, 0.5);
