@@ -1616,6 +1616,7 @@ input.throbbing {
   color: #FFF;
   display: block;
   padding: 8em 0 5em 0;
+  overflow: hidden;
   position: relative;
   text-align: center;
   z-index: -2;
@@ -1627,8 +1628,14 @@ input.throbbing {
   left: 0;
   z-index: -1;
 }
+.page-header__image img {
+  display: block;
+  height: 100%;
+  width: 100%;
+}
 .page-header__image:before {
   background: rgba(0, 0, 0, 0.5);
+  background-size: cover;
   content: " ";
   display: block;
   top: 0;
@@ -1675,7 +1682,8 @@ input.throbbing {
   overflow: hidden;
   width: 75px;
   display: inline-block;
-  position: absolute;
+  position: relative;
+  top: -2em;
   bottom: -37px;
   left: 50%;
   margin-left: -37px;
