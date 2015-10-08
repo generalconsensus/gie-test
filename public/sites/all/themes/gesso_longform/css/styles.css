@@ -1203,21 +1203,21 @@ input.throbbing {
   font-weight: bold;
 }
 
-.component ol {
+.text-block ol {
   margin-left: 3em;
   counter-reset: li-counter;
   list-style-type: none;
 }
-.component ol li {
+.text-block ol li {
   margin-bottom: 1em;
   min-height: 96px;
   padding-left: 20px;
   position: relative;
 }
-.component ol li ol {
+.text-block ol li ol {
   padding-top: 80px;
 }
-.component ol li:before {
+.text-block ol li:before {
   background-color: #003359;
   color: #FFF;
   content: counter(li-counter);
@@ -1234,16 +1234,16 @@ input.throbbing {
   width: 80px;
 }
 
-.component ul {
+.text-block ul {
   list-style: outside;
   list-style-type: none;
 }
-.component ul li {
+.text-block ul li {
   padding-left: 1em;
   text-align: left;
   position: relative;
 }
-.component ul li:before {
+.text-block ul li:before {
   content: "► ";
   color: #d31145;
   display: block;
