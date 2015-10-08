@@ -1855,7 +1855,9 @@ input.throbbing {
   margin: 4em 0;
   overflow: hidden;
   padding: 6em 1em;
+  position: relative;
   text-align: center;
+  z-index: -2;
 }
 
 .section-break__image {
@@ -1866,6 +1868,20 @@ input.throbbing {
 }
 .section-break__image img {
   max-width: initial;
+}
+.section-break__image:before {
+  background: rgba(0, 0, 0, 0.5);
+  content: " ";
+  display: block;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  position: absolute;
+  z-index: 0;
+}
+.section-break__image .field__label {
+  display: none;
 }
 
 .section-break__caption {
