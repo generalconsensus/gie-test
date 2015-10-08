@@ -44,7 +44,7 @@
           var $menuList = $(this).text().toLowerCase().replace(/\s+/, "_");
           
           //Add a link to the DOM item
-          var $newLink = $(this).prepend('<a id="' + $menuList + '" class="skip-link">&nbsp;</a>');
+          var $newLink = $(this).prepend('<a name="' + $menuList + '" class="skip-link">&nbsp;</a>');
           
           //Add Link to Mobile Menu
           var $headerLink = '<li class="nav__item"><a href="#' + $menuList +'" class="nav__link">' + $menuText + '</a></li>';
