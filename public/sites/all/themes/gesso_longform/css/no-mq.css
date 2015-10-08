@@ -635,10 +635,10 @@ ul.panels-ipe-linkbar li {
 .layout-constrain {
   margin-left: auto;
   margin-right: auto;
-  max-width: 87.5em;
+  max-width: 68.75em;
   padding-left: 1em;
   padding-right: 1em;
-  width: 87.5em;
+  width: 68.75em;
 }
 
 .layout-slat:after {
@@ -963,6 +963,7 @@ input.throbbing {
 .block--menu-menu-sub-footer-menu {
   float: right;
   padding: 2em 0;
+  font-size: 13px;
 }
 .block--menu-menu-sub-footer-menu ul {
   list-style: none;
@@ -1152,20 +1153,21 @@ input.throbbing {
   font-weight: bold;
 }
 
-.component ol {
+.text-block ol {
   margin-left: 3em;
   counter-reset: li-counter;
   list-style-type: none;
 }
-.component ol li {
+.text-block ol li {
+  margin-bottom: 1em;
   min-height: 96px;
   padding-left: 20px;
   position: relative;
 }
-.component ol li ol {
+.text-block ol li ol {
   padding-top: 80px;
 }
-.component ol li:before {
+.text-block ol li:before {
   background-color: #003359;
   color: #FFF;
   content: counter(li-counter);
@@ -1178,20 +1180,20 @@ input.throbbing {
   height: 80px;
   position: absolute;
   text-align: center;
-  top: 0;
+  top: 4px;
   width: 80px;
 }
 
-.component ul {
+.text-block ul {
   list-style: outside;
   list-style-type: none;
 }
-.component ul li {
+.text-block ul li {
   padding-left: 1em;
   text-align: left;
   position: relative;
 }
-.component ul li:before {
+.text-block ul li:before {
   content: "► ";
   color: #d31145;
   display: block;
@@ -1616,6 +1618,7 @@ input.throbbing {
   color: #FFF;
   display: block;
   padding: 8em 0 5em 0;
+  overflow: hidden;
   position: relative;
   text-align: center;
   z-index: -2;
@@ -1623,12 +1626,16 @@ input.throbbing {
 
 .page-header__image {
   position: absolute;
-  top: 0;
-  left: 0;
+  top: -50%;
+  left: -50%;
   z-index: -1;
+}
+.page-header__image img {
+  max-width: initial;
 }
 .page-header__image:before {
   background: rgba(0, 0, 0, 0.5);
+  background-size: cover;
   content: " ";
   display: block;
   top: 0;
@@ -1675,7 +1682,8 @@ input.throbbing {
   overflow: hidden;
   width: 75px;
   display: inline-block;
-  position: absolute;
+  position: relative;
+  top: -2em;
   bottom: -37px;
   left: 50%;
   margin-left: -37px;
@@ -1754,6 +1762,17 @@ input.throbbing {
   display: block;
   height: 150%;
   width: 0;
+}
+.pre-footer__download-image img {
+  border: 3px #ff1352 solid;
+  border-bottom: none;
+  display: block;
+  height: 100%;
+  left: 0;
+  max-height: 155px;
+  position: absolute;
+  top: 0;
+  width: 100%;
 }
 
 .pre-footer__description {
