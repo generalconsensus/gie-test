@@ -635,10 +635,10 @@ ul.panels-ipe-linkbar li {
 .layout-constrain {
   margin-left: auto;
   margin-right: auto;
-  max-width: 87.5em;
+  max-width: 68.75em;
   padding-left: 1em;
   padding-right: 1em;
-  width: 87.5em;
+  width: 68.75em;
 }
 
 .layout-slat:after {
@@ -1158,6 +1158,7 @@ input.throbbing {
   list-style-type: none;
 }
 .component ol li {
+  margin-bottom: 1em;
   min-height: 96px;
   padding-left: 20px;
   position: relative;
@@ -1178,7 +1179,7 @@ input.throbbing {
   height: 80px;
   position: absolute;
   text-align: center;
-  top: 0;
+  top: 4px;
   width: 80px;
 }
 
@@ -1629,10 +1630,7 @@ input.throbbing {
   z-index: -1;
 }
 .page-header__image img {
-  display: block;
-  position: fixed;
   max-width: initial;
-  width: auto;
 }
 .page-header__image:before {
   background: rgba(0, 0, 0, 0.5);
