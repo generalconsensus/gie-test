@@ -219,7 +219,7 @@ function gie_long_form_content_field_group_info() {
   $field_group->parent_name = '';
   $field_group->data = array(
     'label' => 'Pre-Footer',
-    'weight' => '3',
+    'weight' => '4',
     'children' => array(
       0 => 'field_learn_more_link',
       1 => 'field_longform_description',
@@ -355,8 +355,7 @@ function gie_long_form_content_field_group_info() {
       0 => 'field_long_form_subtitle',
       1 => 'field_longform_byline',
       2 => 'field_header_image',
-      3 => 'scroll_button',
-      4 => 'title',
+      3 => 'title',
     ),
     'format_type' => 'div',
     'format_settings' => array(
