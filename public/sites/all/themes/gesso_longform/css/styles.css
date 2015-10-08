@@ -1209,7 +1209,7 @@ input.throbbing {
   list-style-type: none;
 }
 .text-block ol li {
-  margin-bottom: 1em;
+  margin-bottom: 2em;
   min-height: 96px;
   padding-left: 20px;
   position: relative;
