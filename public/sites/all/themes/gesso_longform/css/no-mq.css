@@ -808,6 +808,10 @@ input.throbbing {
   width: 100%;
 }
 
+.card.component {
+  padding: 2em 0;
+}
+
 .card__item {
   box-shadow: 0 0px 2px 1px rgba(0, 0, 0, 0.4);
   margin: 1em auto;
@@ -1159,7 +1163,7 @@ input.throbbing {
   list-style-type: none;
 }
 .text-block ol li {
-  margin-bottom: 1em;
+  margin-bottom: 2em;
   min-height: 96px;
   padding-left: 20px;
   position: relative;
@@ -1624,8 +1628,8 @@ input.throbbing {
 
 .page-header__image {
   position: absolute;
-  top: -50%;
-  left: -50%;
+  top: -25%;
+  left: -25%;
   z-index: -1;
 }
 .page-header__image img {
@@ -1661,7 +1665,7 @@ input.throbbing {
   font-size: 3.5em;
   line-height: 1em;
   text-transform: uppercase;
-  padding: 1em 0;
+  padding: 1em;
   word-break: keep-all;
 }
 
@@ -1855,7 +1859,33 @@ input.throbbing {
   margin: 4em 0;
   overflow: hidden;
   padding: 6em 1em;
+  position: relative;
   text-align: center;
+  z-index: -2;
+}
+
+.section-break__image {
+  left: 0;
+  position: absolute;
+  top: 0;
+  z-index: -1;
+}
+.section-break__image img {
+  max-width: initial;
+}
+.section-break__image:before {
+  background: rgba(0, 0, 0, 0.5);
+  content: " ";
+  display: block;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  position: absolute;
+  z-index: 0;
+}
+.section-break__image .field__label {
+  display: none;
 }
 
 .section-break__caption {
@@ -1893,6 +1923,9 @@ input.throbbing {
   position: absolute;
   top: 0;
   z-index: -1;
+}
+.section-header__image img {
+  max-width: initial;
 }
 .section-header__image:before {
   background: rgba(0, 0, 0, 0.5);

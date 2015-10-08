@@ -20,6 +20,9 @@
 	position: absolute;
 	top: 0;
 	z-index: -1;
+	img {
+   max-width: initial;
+  }
 	&:before { // CSS Color Overlay
 	  background: rgba(0,0,0, 0.5);
 	  content: " ";
