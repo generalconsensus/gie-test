@@ -261,7 +261,7 @@ function gie_long_form_content_field_default_field_instances() {
       'focus_min_size' => '',
       'max_filesize' => '',
       'max_resolution' => '',
-      'min_resolution' => '1400x800',
+      'min_resolution' => '3000x1500',
       'random_default' => 0,
       'random_default_path' => '',
       'title_field' => 0,

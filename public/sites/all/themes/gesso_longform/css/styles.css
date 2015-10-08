@@ -1744,8 +1744,8 @@ input.throbbing {
 
 .page-header__image {
   position: absolute;
-  top: -50%;
-  left: -50%;
+  top: -25%;
+  left: -25%;
   z-index: -1;
 }
 .page-header__image img {
@@ -2001,6 +2001,16 @@ input.throbbing {
   text-align: center;
 }
 
+.section-break__image {
+  left: 0;
+  position: absolute;
+  top: 0;
+  z-index: -1;
+}
+.section-break__image img {
+  max-width: initial;
+}
+
 .section-break__caption {
   font-size: 36px;
   text-transform: uppercase;
@@ -2036,6 +2046,9 @@ input.throbbing {
   position: absolute;
   top: 0;
   z-index: -1;
+}
+.section-header__image img {
+  max-width: initial;
 }
 .section-header__image:before {
   background: rgba(0, 0, 0, 0.5);
