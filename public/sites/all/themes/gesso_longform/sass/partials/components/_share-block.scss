@@ -45,7 +45,7 @@
   }
 }
 .share-block__icon--fav {
-  a.flag-link-toggle {
+  a.flagged {
     @include svg-background(longform-favorite-icon-square);
     @include image-replace (40px, 40px);
     @include breakpoint($mobile-menu-bp, $no-query: true) {
@@ -53,10 +53,12 @@
       @include svg-background(longform-favorite-icon);
     }
   }
-  a.unflagged {
+  a {
+    @include svg-background(longform-unfavorite-icon-square);
+    @include image-replace (40px, 40px);
     @include breakpoint($mobile-menu-bp, $no-query: true) {
       @include image-replace (75px, 75px);
-      @include svg-background(longform-favorite-icon);
+      @include svg-background(longform-unfavorite-icon);
     }
   }
 
