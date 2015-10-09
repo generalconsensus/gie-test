@@ -77,42 +77,11 @@ function gie_long_form_content_image_default_styles() {
       4 => array(
         'name' => 'image_crop',
         'data' => array(
-          'width' => 1440,
-          'height' => 550,
+          'width' => 2000,
+          'height' => 1600,
           'anchor' => 'center-center',
         ),
         'weight' => -10,
-      ),
-      6 => array(
-        'name' => 'canvasactions_definecanvas',
-        'data' => array(
-          'RGB' => array(
-            'HEX' => '#000000',
-          ),
-          'under' => 0,
-          'exact' => array(
-            'width' => 1440,
-            'height' => 550,
-            'xpos' => 'center',
-            'ypos' => 'center',
-          ),
-          'relative' => array(
-            'leftdiff' => '',
-            'rightdiff' => '',
-            'topdiff' => '',
-            'bottomdiff' => '',
-          ),
-        ),
-        'weight' => -9,
-      ),
-      8 => array(
-        'name' => 'canvasactions_source2canvas',
-        'data' => array(
-          'xpos' => 'center',
-          'ypos' => 'center',
-          'alpha' => 50,
-        ),
-        'weight' => 3,
       ),
     ),
   );
