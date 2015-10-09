@@ -41,7 +41,7 @@
         $(document).find('.section-break__caption, .section-header__title').each(function(){
           //Grab the Text for the Menu
           var $menuText = $(this).text();
-          var $menuList = $(this).text().toLowerCase().replace(/\s+/, "_");
+          var $menuList = $(this).text().toLowerCase().replace(/\s/g, "_");
           
           //Add a link to the DOM item
           $(this).closest('.component').before('<a name="' + $menuList + '"></a>');
