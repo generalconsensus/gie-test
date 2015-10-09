@@ -6,13 +6,12 @@
 
   Drupal.behaviors.mobileMenu = {
     attach: function (context) {
-
       // Create mobile menu container, create mobile bar, and clone the main
       // menu in the navigation region.
       var $mobileNav = $('<nav class="mobile-menu" role="navigation"></nav>'),
           $mobileBar = $('<div class="mobile-menu__bar"><button class="mobile-menu__button js-mobile-menu-button mobile-menu__button--menu"><span class="mobile-menu__icon mobile-menu__icon--menu">Menu</span></button></div>'),
           $mobileLinks = $('<div class="mobile-menu__links element-hidden"></div>'),
-          $mainMenu = $('.region-navigation', context).find('.nav--main-menu, .block--system-main-menu .nav, .block--superfish .sf-menu').not('.contextual-links').first().clone(),
+          $mainMenu = $('.region-navigation', context).find('.block--system-user-menu .nav').not('.contextual-links').first().clone(),
           $isSuperfish = ($mainMenu.hasClass('sf-menu')) ? true : false;
 
       // Only create mobile menu if there is a main menu.
@@ -37,6 +36,19 @@
           if ($isSuperfish) {
             $(this).removeAttr('style').addClass('nav--subnav').find('ul, li, a').removeAttr('style');
           }
+        });
+
+        $(document).find('.section-break__caption, .section-header__title').each(function(){
+          //Grab the Text for the Menu
+          var $menuText = $(this).text();
+          var $menuList = $(this).text().toLowerCase().replace(/\s+/, "_");
+          
+          //Add a link to the DOM item
+          $(this).closest('.component').before('<a name="' + $menuList + '"></a>');
+          
+          //Add Link to Mobile Menu
+          var $headerLink = '<li class="nav__item"><a href="#' + $menuList +'" class="nav__link">' + $menuText + '</a></li>';
+          $mainMenu.append($headerLink);
         });
 
         // Remove third level menu items.
@@ -106,6 +118,12 @@
           });
 
           e.preventDefault();
+        });
+
+        // Close mobile menu when any item is clicked
+        $('.nav--mobile-menu .nav__link', context).click(function (e) {
+          $('.js-mobile-menu-button').removeClass('is-active');
+          $mobileMenuWrapper.addClass('element-hidden');
         });
 
         // Open/close search bar.

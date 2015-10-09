@@ -5,6 +5,7 @@
   color: $white;
   display: block;
   padding: 8em 0 5em 0;
+  overflow: hidden;
   position: relative;
   text-align: center;
   z-index: -2;
@@ -12,11 +13,15 @@
 
 .page-header__image {
   position: absolute;
-  top: 0;
-  left: 0;
+  top: -25%;
+  left: -25%;
   z-index: -1;
+  img {
+   max-width: initial;
+  }
   &:before { // CSS Color Overlay
     background: rgba(0,0,0, 0.5);
+    background-size: cover;
     content: " ";
     display: block;
     top: 0;
@@ -45,7 +50,7 @@
   font-size:3.5em;
   line-height: 1em;
   text-transform: uppercase;
-  padding: 1em 0;
+  padding: 1em;
   word-break: keep-all;
 }
 
@@ -66,7 +71,8 @@
   @include image-replace(75px, 75px);
   // bottom: -8em;
   display: inline-block;
-  position: absolute;
+  position: relative;
+  top: -2em;
   bottom: -37px;
   left: 50%;
   margin-left: -37px;

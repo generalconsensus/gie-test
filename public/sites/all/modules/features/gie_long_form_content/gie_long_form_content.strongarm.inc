@@ -123,10 +123,10 @@ function gie_long_form_content_strongarm() {
     'extra_fields' => array(
       'form' => array(
         'path' => array(
-          'weight' => '5',
+          'weight' => '6',
         ),
         'rabbit_hole' => array(
-          'weight' => '4',
+          'weight' => '5',
         ),
       ),
       'display' => array(
@@ -136,14 +136,18 @@ function gie_long_form_content_strongarm() {
             'visible' => TRUE,
           ),
           'full' => array(
-            'weight' => '16',
+            'weight' => '22',
             'visible' => TRUE,
           ),
         ),
         'flag_favorite' => array(
           'full' => array(
-            'weight' => '17',
+            'weight' => '24',
             'visible' => TRUE,
+          ),
+          'default' => array(
+            'weight' => '13',
+            'visible' => FALSE,
           ),
         ),
       ),
@@ -442,6 +446,9 @@ function gie_long_form_content_strongarm() {
         'custom_settings' => FALSE,
       ),
       'paragraphs_right_align' => array(
+        'custom_settings' => FALSE,
+      ),
+      'diff_standard' => array(
         'custom_settings' => FALSE,
       ),
     ),
