@@ -1,7 +1,7 @@
 // @file
 // Styles for the longform page header.
 .page-header {
-  background: $red url('../images/header-background.png') no-repeat;
+  background: $red url('../images/header-background.png') repeat;
   color: $white;
   display: block;
   padding: 8em 0 5em 0;

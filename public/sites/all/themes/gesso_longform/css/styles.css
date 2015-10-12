@@ -1736,7 +1736,7 @@ input.throbbing {
 }
 
 .page-header {
-  background: #d31145 url("../images/header-background.png") no-repeat;
+  background: #d31145 url("../images/header-background.png") repeat;
   color: #FFF;
   display: block;
   padding: 8em 0 5em 0;
