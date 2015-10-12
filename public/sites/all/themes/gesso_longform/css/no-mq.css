@@ -1616,7 +1616,7 @@ input.throbbing {
 }
 
 .page-header {
-  background: #d31145 url("../images/header-background.png") repeat;
+  background: #d31145 url("../images/header-background.png") repeat repeat;
   color: #FFF;
   display: block;
   padding: 8em 0 5em 0;
@@ -1636,7 +1636,7 @@ input.throbbing {
   max-width: initial;
 }
 .page-header__image:before {
-  background: rgba(0, 0, 0, 0.5);
+  background: rgba(0, 0, 0, 0.7);
   background-size: cover;
   content: " ";
   display: block;
@@ -1874,7 +1874,7 @@ input.throbbing {
   max-width: initial;
 }
 .section-break__image:before {
-  background: rgba(0, 0, 0, 0.5);
+  background: rgba(0, 0, 0, 0.7);
   content: " ";
   display: block;
   top: 0;
@@ -1928,7 +1928,7 @@ input.throbbing {
   max-width: initial;
 }
 .section-header__image:before {
-  background: rgba(0, 0, 0, 0.5);
+  background: rgba(0, 0, 0, 0.7);
   content: " ";
   display: block;
   top: 0;
