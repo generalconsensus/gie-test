@@ -1476,7 +1476,7 @@ function gie_user_field_default_field_instances() {
     'bundle' => 'user',
     'default_value' => NULL,
     'deleted' => 0,
-    'description' => 'Topics include issue that may be of interest to Exchange users. Select any (or none) topics that you think apply to your innovation.',
+    'description' => 'Topics include issue that may be of interest to Exchange users. Select any (or none) topics that apply.',
     'display' => array(
       'default' => array(
         'label' => 'above',
@@ -3183,7 +3183,7 @@ function gie_user_field_default_field_instances() {
   t('Share your education background and degrees.');
   t('Share your mailing address');
   t('Skills');
-  t('Topics include issue that may be of interest to Exchange users. Select any (or none) topics that you think apply to your innovation.');
+  t('Topics include issue that may be of interest to Exchange users. Select any (or none) topics that apply.');
   t('Twitter');
   t('Your Company or Institution');
   t('Your Current Role and Expertise');
