@@ -316,7 +316,7 @@ function gie_assets_field_default_field_instances() {
         'settings' => array(
           'field_delimiter' => '',
           'image_link' => '',
-          'image_style' => 'long_from_section_header',
+          'image_style' => 'long_form_section_header',
           'linked_field' => array(
             'advanced' => array(
               'class' => '',
