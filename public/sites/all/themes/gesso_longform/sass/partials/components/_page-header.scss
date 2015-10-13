@@ -1,7 +1,7 @@
 // @file
 // Styles for the longform page header.
 .page-header {
-  background: $red url('../images/header-background.png') no-repeat;
+  background: $red url('../images/header-background.png') repeat repeat;
   color: $white;
   display: block;
   padding: 8em 0 5em 0;
@@ -20,7 +20,7 @@
    max-width: initial;
   }
   &:before { // CSS Color Overlay
-    background: rgba(0,0,0, 0.5);
+    background: rgba(0,0,0, 0.7);
     background-size: cover;
     content: " ";
     display: block;

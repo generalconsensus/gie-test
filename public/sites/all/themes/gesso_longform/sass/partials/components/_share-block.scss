@@ -68,5 +68,9 @@
   @include breakpoint($mobile-menu-bp, $no-query: true) {
     @include svg-background(longform-print-icon);
   }
+}
 
+//Hide Usabilla Live Button
+.usabilla_live_button_container{
+  display: none;
 }
