@@ -2240,6 +2240,10 @@ input.throbbing {
   }
 }
 
+.usabilla_live_button_container {
+  display: none;
+}
+
 .skiplinks {
   left: 50%;
   margin-left: -7em;
