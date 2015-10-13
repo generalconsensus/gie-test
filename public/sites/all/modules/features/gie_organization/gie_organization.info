@@ -120,6 +120,7 @@ features[node][] = organization
 features[page_manager_pages][] = organizations
 features[page_manager_pages][] = partners
 features[pane_container][] = organizations_introduction
+features[pane_container][] = partner_introduction
 features[pane_container][] = partners_listing_page
 features[pane_container][] = partners_listing_page_all
 features[panelizer_defaults][] = node:organization:default
