@@ -17,7 +17,7 @@ function gesso_longform_preprocess_region(&$vars) {
     case 'header':
     case 'navigation':
     case 'preface':
-    case 'content':
+    // case 'content':
     case 'postscript':
     case 'footer':
       $vars['classes_array'][] = 'layout-constrain';

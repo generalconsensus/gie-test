@@ -29,6 +29,10 @@
     "landscape": {
       "src": "http://fpoimg.com/800x450?text=Landscape 16:9",
       "alt": "Landscape 16:9"
+    },
+    "header": {
+      "src": "http://fpoimg.com/1400x450?text=Header 16:9",
+      "alt": "Header 16:9"
     }
   },
   "year": {

@@ -605,7 +605,7 @@ ini_set('post_max_size','20M');
 /**
 * Change memory limit
 */
-ini_set('memory_limit', '512M');
+ini_set('memory_limit', '1024M');
 
 /**
 * AWS

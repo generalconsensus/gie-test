@@ -1,0 +1,52 @@
+//@file
+// Fullwidth Header
+.section-break {
+	background: $red url('../images/header-background.png') repeat repeat;
+  color: $white;
+  display: block;
+  margin: 4em 0;
+  overflow: hidden;
+  padding: 6em 1em;
+  position: relative;
+  text-align: center;
+  z-index:-2;
+}
+
+.section-break__image{
+	left: 0;
+	position: absolute;
+	top: 0;
+	z-index: -1;
+	img {
+   max-width: initial;
+  }
+  &:before { // CSS Color Overlay
+	  background: rgba(0,0,0, 0.7);
+	  content: " ";
+	  display: block;
+	  top: 0;
+	  bottom: 0;
+	  left: 0;
+	  right: 0;
+	  position: absolute;
+	  z-index: 0;
+  }
+  .field__label{
+  	display: none;
+  }
+}
+
+.section-break__caption {
+	font-size:$font-size-xxxl;
+	text-transform: uppercase;
+	line-height: 1em;
+	padding: 0 15%;
+	&:before {
+		border: 2px $red solid;
+		content:" ";
+		display: block;
+		margin: 0 auto;
+		margin-bottom: 20px;
+		width: 20%;
+	}
+}

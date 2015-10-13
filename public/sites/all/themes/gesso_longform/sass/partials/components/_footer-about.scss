@@ -1,0 +1,17 @@
+.block--pane-about-the-exchange {  //block--pane-about-the-exchange on LIVE site
+		float: left;
+		width: 100%;
+		@include breakpoint($mobile-menu-bp, $no-query: true) {
+			width: 50%;
+		}
+		.block__title {
+			border-bottom: 1px solid #cecfcb;
+			text-transform: uppercase;
+		}
+		.block__content  {
+			.button--highlight{
+				background-color: #b71234;
+    		border-color: #b71234;
+			}
+		}
+}

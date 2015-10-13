@@ -2,9 +2,16 @@
 // Styles for the mobile menu.
 
 .mobile-menu {
-  @include breakpoint($mobile-menu-bp, $no-query: true) {
-    display: none;
-  }
+  // @include breakpoint($mobile-menu-bp, $no-query: true) {
+  //   display: none;
+  // }
+}
+
+.block--system-user-menu{
+  display: none;
+}
+.skip-link{
+  display: none;
 }
 
 .mobile-menu__bar {
@@ -12,24 +19,29 @@
   border-bottom: 1px solid $mobile-menu-border-color;
   @include box-shadow(0 0px 2px 1px rgba(0, 0, 0, 0.4));
   color: $mobile-menu-text-color;
-  height: em(55px);
+  height: em(40px);
   text-align: center;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  z-index: 10;
 }
 
 .mobile-menu__button {
   @include border-radius(0);
   @include box-shadow(none);
-  background-color: transparent;
+  background-color: $lightred;
   border: 0;
   color: $mobile-menu-text-color;
   display: inline-block;
+  float: right;
   font-family: $mobile-menu-font-family;
   font-size: $font-size-normal;
   font-weight: bold;
-  height: em(55px);
-  line-height: em(55px);
+  height: em(40px);
+  line-height: em(40px);
   margin: 0;
-  padding: 0 1em;
+  padding: 4px 1em;
   text-decoration: none;
 
   &:focus {
@@ -38,8 +50,15 @@
 }
 
 .mobile-menu__button--menu {
+  border-left: 1px solid $mobile-menu-border-color;
   border-right: 1px solid $mobile-menu-border-color;
-  float: left;
+  float: right;
+  margin-right: 0;
+  position: relative;
+  z-index: 15;
+  @include breakpoint($mobile-menu-bp, $no-query: true) {
+    margin-right: 5.5%; // to match share icons
+  }
 }
 
 .mobile-menu__button--search {
@@ -53,7 +72,8 @@
   background-repeat: no-repeat;
   background-size: 22px 22px;
   display: inline-block;
-  margin-top: 1em;
+  height: 22px;
+  width: 22px;
 }
 
 %mobile-menu__icon--close {
@@ -62,12 +82,9 @@
 
 .mobile-menu__icon--menu {
   @include svg-background(mobile-menu);
-  background-size: 33px 22px;
-  width: 33px;
 
   .is-active & {
     @extend %mobile-menu__icon--close;
-    background-size: 22px 22px;
   }
 }
 
@@ -83,7 +100,8 @@
   background-color: $mobile-menu-fallback-bg-color;
   background-color: $mobile-menu-bg-color;
   color: $mobile-menu-text-color;
-  position: absolute;
+  margin-top: em(40px);
+  position: fixed;
   width: 100%;
   z-index: 100;
 }
