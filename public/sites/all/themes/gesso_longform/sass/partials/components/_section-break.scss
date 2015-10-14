@@ -10,6 +10,10 @@
   position: relative;
   text-align: center;
   z-index:-2;
+  .asset {
+  	background-color: transparent;
+  	padding: 0;
+  }
 }
 
 .section-break__image{
