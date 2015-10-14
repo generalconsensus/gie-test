@@ -53,23 +53,11 @@ function gie_long_form_content_context_default_contexts() {
           'region' => 'footer',
           'weight' => '-10',
         ),
-        'views-partners-partners' => array(
-          'module' => 'views',
-          'delta' => 'partners-partners',
-          'region' => 'footer',
-          'weight' => '-9',
-        ),
         'menu-menu-sub-footer-menu' => array(
           'module' => 'menu',
           'delta' => 'menu-sub-footer-menu',
           'region' => 'footer',
           'weight' => '-8',
-        ),
-        'block-1' => array(
-          'module' => 'block',
-          'delta' => '1',
-          'region' => 'footer',
-          'weight' => '-7',
         ),
       ),
     ),
