@@ -957,7 +957,12 @@ input.throbbing {
 }
 .block--pane-about-the-exchange .block__title {
   border-bottom: 1px solid #cecfcb;
+  font-size: 1em;
+  padding-bottom: 1em;
   text-transform: uppercase;
+}
+.block--pane-about-the-exchange .block__content {
+  font-size: .9em;
 }
 .block--pane-about-the-exchange .block__content .button--highlight {
   background-color: #b71234;
@@ -1165,7 +1170,7 @@ input.throbbing {
 .text-block ol li {
   margin-bottom: 2em;
   min-height: 96px;
-  padding-left: 20px;
+  padding-left: 4em;
   position: relative;
 }
 .text-block ol li ol {
@@ -1863,6 +1868,10 @@ input.throbbing {
   text-align: center;
   z-index: -2;
 }
+.section-break .asset {
+  background-color: transparent;
+  padding: 0;
+}
 
 .section-break__image {
   left: 0;
@@ -1916,6 +1925,7 @@ input.throbbing {
 }
 .section-header .asset {
   background-color: transparent;
+  padding: 0;
 }
 
 .section-header__image {
