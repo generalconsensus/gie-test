@@ -1,0 +1,49 @@
+<?php
+/**
+ * @file
+ * Code for the GIE Long-form Content feature.
+ */
+
+include_once 'gie_long_form_content.features.inc';
+
+/**
+ *  Implements hook_menu_alter()
+ *  Switches themes based on node type
+ */
+function gie_long_form_content_menu_alter(&$items) {
+  $items['node/%node']['theme callback'] = 'gie_long_form_content_node_theme';
+  $items['node/%node/edit']['theme callback'] = 'gie_long_form_content_default_theme';
+  $items['node/%node']['theme arguments'] = array(1);
+}
+
+/**
+ * Callback to change the theme for longform nodes
+ */
+function gie_long_form_content_node_theme($node) {
+  global $theme;
+  return $node->type == 'long_form_page' ? 'gesso_longform' : $theme;
+}
+
+/**
+ * Callback to make sure the admin theme is used on node edit pages
+ */
+function gie_long_form_content_default_theme() {
+  global $theme;
+  return $theme;
+}
+
+/**
+ * Preprocess the callback card paragraphs bundle to add a count class
+ */
+function gie_long_form_content_preprocess_entity(&$vars) {
+  if (($vars['elements']['#entity_type'] == 'paragraphs_item') && ($vars['elements']['#bundle'] == 'long_form_callout_card')) {
+    // How many fields are in the bundle?
+    $count = count($vars['content']);
+    if ($count) {
+      // Do a little math to determine how many columns the theme should present
+      $cols = ceil($count/2);
+      // Add a class to the bundle's wrapper element
+      $vars['classes_array'][] = 'cols-' . $cols;
+    }
+  }
+}

@@ -1,0 +1,51 @@
+// @file
+// Styles for the section page header.
+.section-header {
+	background: $red url('../images/header-background.png') repeat repeat;
+  color: $white;
+  display: block;
+  margin: 5em 0;
+  overflow: hidden;
+  position: relative;
+  padding: 8em 1em 10em 1em;
+  text-align: left;
+  z-index: -2;
+  .asset {
+  	background-color: transparent;
+  	padding: 0;
+  }
+}
+
+.section-header__image {
+	left: 0;
+	position: absolute;
+	top: 0;
+	z-index: -1;
+	img {
+   max-width: initial;
+  }
+	&:before { // CSS Color Overlay
+	  background: rgba(0,0,0, 0.7);
+	  content: " ";
+	  display: block;
+	  top: 0;
+	  bottom: 0;
+	  left: 0;
+	  right: 0;
+	  position: absolute;
+	  z-index: 0;
+  }
+}
+
+.section-header__title{
+	font-size: $font-size-xxl;
+	line-height: 1em;
+	padding: 0 15%;
+}
+
+.section-header__headline{
+	font-size: $font-size-header;
+	line-height: 1em;
+	padding: 0 15%;
+	text-transform:uppercase;
+}

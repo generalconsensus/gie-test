@@ -57,6 +57,11 @@ function gie_feeds_feeds_importer_default() {
             'target' => 'field_asset_video_file:url',
             'unique' => FALSE,
           ),
+          3 => array(
+            'source' => 'Author',
+            'target' => 'uid',
+            'unique' => FALSE,
+          ),
         ),
         'update_existing' => '0',
         'input_format' => 'plain_text',
@@ -227,6 +232,16 @@ function gie_feeds_feeds_importer_default() {
           23 => array(
             'source' => 'Video',
             'target' => 'field_innovation_assets:label',
+            'unique' => FALSE,
+          ),
+          24 => array(
+            'source' => 'Funding Raised',
+            'target' => 'field_innovation_raised',
+            'unique' => FALSE,
+          ),
+          25 => array(
+            'source' => 'Innovation Stage',
+            'target' => 'field_innovation_stage',
             'unique' => FALSE,
           ),
         ),

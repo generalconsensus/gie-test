@@ -1,0 +1,20 @@
+//@file
+// Quotes
+
+// q {
+// 	&:before {
+// 		@include circleicon(2em, $lightred, #FFF);
+// 		content: open-quote;
+// 	}
+// 	p{
+// 		font-style: italic;
+// 	}
+// }
+.pullquote {
+	.pullquote__text {}
+	.pullquote__author {
+		display: block;
+		// font-weight: bold;
+		text-align: center;
+	}
+}

@@ -1,0 +1,25 @@
+.block--menu-menu-sub-footer-menu {  // block--menu-menu-sub-footer-menu 
+	float: right;
+	padding: 2em 0;
+	font-size: $font-size-sm;
+	ul {
+			list-style: none;
+			width: 100%;
+			@include breakpoint($mobile-menu-bp, $no-query: true) {
+			}
+		li{
+			border-right: 2px solid $grey;
+			display: inline-block;
+			padding: 0 1em;
+			&:before {
+				
+			}
+			&:last-child {
+				border: none;
+			}
+			a{
+				color: $grey;
+			}
+		}
+	}
+}

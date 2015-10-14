@@ -279,11 +279,21 @@ function gie_general_update_7026() {
 }
 
 /**
- * Enable GIE Groups feature.
+ * Enable GIE Long-form content feature.
  */
 function gie_general_update_7027() {
   $modules = array(
-    'gie_groups'
+    'gie_long_form_content'
+  );
+  module_enable($modules, TRUE);
+}
+
+/**
+ * Enable GIE Groups feature.
+ */
+function gie_general_update_7028() {
+  $modules = array(
+      'gie_groups'
   );
   module_enable($modules, TRUE);
 }
