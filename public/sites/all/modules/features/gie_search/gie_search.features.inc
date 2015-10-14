@@ -165,7 +165,7 @@ function gie_search_default_search_api_index() {
         "field_needs_status" : { "type" : "integer", "entity_type" : "taxonomy_term" },
         "field_needs_type" : { "type" : "list\\u003Cinteger\\u003E", "entity_type" : "taxonomy_term" },
         "field_needs_type:tid" : { "type" : "list\\u003Cinteger\\u003E" },
-        "field_org_expertise" : { "type" : "integer", "entity_type" : "taxonomy_term" },
+        "field_org_expertise" : { "type" : "list\\u003Cinteger\\u003E", "entity_type" : "taxonomy_term" },
         "field_org_featured" : { "type" : "boolean" },
         "field_org_partners" : { "type" : "list\\u003Cinteger\\u003E", "entity_type" : "node" },
         "field_org_poc" : { "type" : "integer", "entity_type" : "user" },
@@ -353,7 +353,9 @@ function gie_search_default_search_api_index() {
         "body:value" : { "type" : "text" },
         "field_discussion_desc:value" : { "type" : "text" },
         "field_funding_desc:value" : { "type" : "text" },
+        "field_funding_organization" : { "type" : "list\\u003Cinteger\\u003E", "entity_type" : "node" },
         "field_innovation_desc:value" : { "type" : "text" },
+        "field_innovation_related_org" : { "type" : "list\\u003Cinteger\\u003E", "entity_type" : "node" },
         "field_org_desc:value" : { "type" : "text" },
         "field_program_desc:value" : { "type" : "text" },
         "field_resource_desc:value" : { "type" : "text" },
@@ -362,7 +364,8 @@ function gie_search_default_search_api_index() {
         "field_term_sector" : { "type" : "list\\u003Cinteger\\u003E", "entity_type" : "taxonomy_term" },
         "field_term_topic" : { "type" : "list\\u003Cinteger\\u003E", "entity_type" : "taxonomy_term" },
         "search_api_language" : { "type" : "string" },
-        "title" : { "type" : "text" }
+        "title" : { "type" : "text" },
+        "type" : { "type" : "string" }
       }
     },
     "enabled" : "1",
