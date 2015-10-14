@@ -509,7 +509,7 @@ function gie_long_form_content_field_group_info() {
       'label' => 'Pullquote',
       'instance_settings' => array(
         'id' => '',
-        'classes' => 'pullquote component',
+        'classes' => 'pullquote component layout-constrain',
         'description' => '',
         'show_label' => '0',
         'label_element' => 'h3',
