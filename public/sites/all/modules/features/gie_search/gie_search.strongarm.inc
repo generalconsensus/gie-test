@@ -82,7 +82,7 @@ function gie_search_strongarm() {
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'search_api_solr_last_optimize';
-  $strongarm->value = 1442523090;
+  $strongarm->value = 1444829605;
   $export['search_api_solr_last_optimize'] = $strongarm;
 
   $strongarm = new stdClass();
