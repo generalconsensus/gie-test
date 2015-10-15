@@ -149,6 +149,7 @@ features[facetapi][] = search_api@search_node_index::field_term_sector
 features[facetapi][] = search_api@search_node_index::field_term_topic
 features[facetapi][] = search_api@search_node_index:block:field_funding_organization
 features[facetapi][] = search_api@search_node_index:block:field_innovation_related_org
+features[facetapi][] = search_api@search_node_index:block:field_innovation_related_org:field_funding_organization
 features[facetapi][] = search_api@search_node_index:block:field_term_country
 features[facetapi][] = search_api@search_node_index:block:field_term_region
 features[facetapi][] = search_api@search_node_index:block:field_term_sector

@@ -354,8 +354,13 @@ function gie_search_default_search_api_index() {
         "field_discussion_desc:value" : { "type" : "text" },
         "field_funding_desc:value" : { "type" : "text" },
         "field_funding_organization" : { "type" : "list\\u003Cinteger\\u003E", "entity_type" : "node" },
+        "field_funding_organization:title" : { "type" : "list\\u003Ctext\\u003E" },
         "field_innovation_desc:value" : { "type" : "text" },
         "field_innovation_related_org" : { "type" : "list\\u003Cinteger\\u003E", "entity_type" : "node" },
+        "field_innovation_related_org:field_funding_organization" : {
+          "type" : "list\\u003Clist\\u003Cinteger\\u003E\\u003E",
+          "entity_type" : "node"
+        },
         "field_org_desc:value" : { "type" : "text" },
         "field_program_desc:value" : { "type" : "text" },
         "field_resource_desc:value" : { "type" : "text" },
