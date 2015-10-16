@@ -3,7 +3,7 @@
   background-color: #000;
 }
 
-/* line 5, ../../../sass/overrides/tb_megamenu/default.scss */
+/* line 4, ../../../sass/overrides/tb_megamenu/default.scss */
 .tb-megamenu:before,
 .tb-megamenu:after {
   content: "";
@@ -37,7 +37,7 @@
   text-shadow: none;
 }
 
-/* line 29, ../../../sass/overrides/tb_megamenu/default.scss */
+/* line 28, ../../../sass/overrides/tb_megamenu/default.scss */
 .tb-megamenu .nav > li > a:focus,
 .tb-megamenu .nav > li > a:hover {
   background-color: #fff;
@@ -47,7 +47,7 @@
   outline: none;
 }
 
-/* line 38, ../../../sass/overrides/tb_megamenu/default.scss */
+/* line 36, ../../../sass/overrides/tb_megamenu/default.scss */
 .tb-megamenu .nav > .active > a,
 .tb-megamenu .nav > .active > a:hover,
 .tb-megamenu .nav > .active > a:focus {
@@ -75,7 +75,7 @@
   box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.1), 0 1px 0 rgba(255, 255, 255, 0.075);
 }
 
-/* line 65, ../../../sass/overrides/tb_megamenu/default.scss */
+/* line 60, ../../../sass/overrides/tb_megamenu/default.scss */
 .tb-megamenu .btn-navbar:hover,
 .tb-megamenu .btn-navbar:focus,
 .tb-megamenu .btn-navbar:active,
@@ -87,13 +87,13 @@
   *background-color: #cccccc;
 }
 
-/* line 71, ../../../sass/overrides/tb_megamenu/default.scss */
+/* line 70, ../../../sass/overrides/tb_megamenu/default.scss */
 .tb-megamenu .btn-navbar:active,
 .tb-megamenu .btn-navbar.active {
   background-color: #bfbfbf \9;
 }
 
-/* line 75, ../../../sass/overrides/tb_megamenu/default.scss */
+/* line 74, ../../../sass/overrides/tb_megamenu/default.scss */
 .tb-megamenu .btn-navbar [class^="icon-"],
 .tb-megamenu .btn-navbar [class^=" icon-"] {
   color: #666;
@@ -125,7 +125,7 @@
   border-top: 0;
 }
 
-/* line 97, ../../../sass/overrides/tb_megamenu/default.scss */
+/* line 96, ../../../sass/overrides/tb_megamenu/default.scss */
 .tb-megamenu .mega-nav > li:first-child > a,
 .tb-megamenu .dropdown-menu .mega-nav > li:first-child > a {
   margin-top: 0;
@@ -142,7 +142,7 @@
   display: none;
 }
 
-/* line 108, ../../../sass/overrides/tb_megamenu/default.scss */
+/* line 107, ../../../sass/overrides/tb_megamenu/default.scss */
 .tb-megamenu .dropdown-menu .disabled > a,
 .tb-megamenu .dropdown-menu .disabled > a:hover {
   color: #999;
@@ -159,7 +159,7 @@
   color: #e54e4b;
 }
 
-/* line 119, ../../../sass/overrides/tb_megamenu/default.scss */
+/* line 118, ../../../sass/overrides/tb_megamenu/default.scss */
 .tb-megamenu .nav li.dropdown.active > .dropdown-toggle,
 .tb-megamenu .nav li.dropdown.open.active > .dropdown-toggle {
   background-color: #e54e4b;
@@ -176,7 +176,7 @@
   border-top: 1px solid #ddd;
 }
 
-/* line 130, ../../../sass/overrides/tb_megamenu/default.scss */
+/* line 129, ../../../sass/overrides/tb_megamenu/default.scss */
 .tb-megamenu .mega-nav > li a,
 .tb-megamenu .dropdown-menu .mega-nav > li a {
   padding: 5px 0;
@@ -197,13 +197,13 @@
   text-transform: uppercase;
 }
 
-/* line 145, ../../../sass/overrides/tb_megamenu/default.scss */
+/* line 144, ../../../sass/overrides/tb_megamenu/default.scss */
 .tb-megamenu .tb-block ul,
 .tb-megamenu .tb-block .nav {
   margin: 0;
 }
 
-/* line 149, ../../../sass/overrides/tb_megamenu/default.scss */
+/* line 148, ../../../sass/overrides/tb_megamenu/default.scss */
 .tb-megamenu .tb-block ul li,
 .tb-megamenu .tb-block .nav li {
   background: none;
@@ -215,7 +215,7 @@
   border: 0;
 }
 
-/* line 159, ../../../sass/overrides/tb_megamenu/default.scss */
+/* line 158, ../../../sass/overrides/tb_megamenu/default.scss */
 .tb-megamenu .tb-block ul li a,
 .tb-megamenu .tb-block .nav li a {
   display: inline;
@@ -228,7 +228,7 @@
   white-space: normal;
 }
 
-/* line 174, ../../../sass/overrides/tb_megamenu/default.scss */
+/* line 169, ../../../sass/overrides/tb_megamenu/default.scss */
 .tb-megamenu .tb-block ul li a:hover,
 .tb-megamenu .tb-block ul li a:focus,
 .tb-megamenu .tb-block ul li a:active,
@@ -324,7 +324,7 @@
   white-space: nowrap;
 }
 
-/* line 253, ../../../sass/overrides/tb_megamenu/default.scss */
+/* line 251, ../../../sass/overrides/tb_megamenu/default.scss */
 .tb-megamenu .dropdown-menu li > a:hover,
 .tb-megamenu .dropdown-menu li > a:focus,
 .tb-megamenu .dropdown-submenu:hover > a {
@@ -335,7 +335,7 @@
   text-decoration: none;
 }
 
-/* line 261, ../../../sass/overrides/tb_megamenu/default.scss */
+/* line 260, ../../../sass/overrides/tb_megamenu/default.scss */
 .tb-megamenu .dropdown-menu .active > a,
 .tb-megamenu .dropdown-menu .active > a:hover {
   color: #eee;
@@ -344,7 +344,7 @@
   background-color: #e54e4b;
 }
 
-/* line 268, ../../../sass/overrides/tb_megamenu/default.scss */
+/* line 267, ../../../sass/overrides/tb_megamenu/default.scss */
 .tb-megamenu .dropdown-menu .disabled > a,
 .tb-megamenu .dropdown-menu .disabled > a:hover {
   color: #999;
@@ -368,7 +368,7 @@
   display: block;
 }
 
-/* line 285, ../../../sass/overrides/tb_megamenu/default.scss */
+/* line 283, ../../../sass/overrides/tb_megamenu/default.scss */
 .tb-megamenu .nav li.dropdown.active > .dropdown-toggle,
 .tb-megamenu .nav li.dropdown.open.active > .dropdown-toggle,
 .tb-megamenu .nav > li.dropdown.open.active > a:hover {
@@ -390,7 +390,7 @@
   border-bottom-color: #eee;
 }
 
-/* line 301, ../../../sass/overrides/tb_megamenu/default.scss */
+/* line 299, ../../../sass/overrides/tb_megamenu/default.scss */
 .tb-megamenu .nav li.dropdown.open > .dropdown-toggle .caret,
 .tb-megamenu .nav li.dropdown.active > .dropdown-toggle .caret,
 .tb-megamenu .nav li.dropdown.open.active > .dropdown-toggle .caret {
@@ -404,7 +404,7 @@
   left: auto;
 }
 
-/* line 310, ../../../sass/overrides/tb_megamenu/default.scss */
+/* line 309, ../../../sass/overrides/tb_megamenu/default.scss */
 .tb-megamenu .dropup .caret,
 .tb-megamenu .navbar-fixed-bottom .dropdown .caret {
   border-top: 0;
@@ -412,7 +412,7 @@
   content: "";
 }
 
-/* line 316, ../../../sass/overrides/tb_megamenu/default.scss */
+/* line 315, ../../../sass/overrides/tb_megamenu/default.scss */
 .tb-megamenu .dropup .dropdown-menu,
 .tb-megamenu .navbar-fixed-bottom .dropdown .dropdown-menu {
   top: auto;
@@ -509,7 +509,7 @@
     *zoom: 1;
   }
 
-  /* line 388, ../../../sass/overrides/tb_megamenu/default.scss */
+  /* line 387, ../../../sass/overrides/tb_megamenu/default.scss */
   .tb-megamenu .row:before,
   .tb-megamenu .row:after {
     display: table;
@@ -529,7 +529,7 @@
     margin-left: 40px;
   }
 
-  /* line 404, ../../../sass/overrides/tb_megamenu/default.scss */
+  /* line 401, ../../../sass/overrides/tb_megamenu/default.scss */
   .tb-megamenu .container,
   .tb-megamenu .navbar-static-top .container,
   .tb-megamenu .navbar-fixed-top .container,
@@ -663,7 +663,7 @@
     *zoom: 1;
   }
 
-  /* line 484, ../../../sass/overrides/tb_megamenu/default.scss */
+  /* line 483, ../../../sass/overrides/tb_megamenu/default.scss */
   .tb-megamenu .row-fluid:before,
   .tb-megamenu .row-fluid:after {
     display: table;
@@ -915,7 +915,7 @@
     *margin-left: 8.5836909871245%;
   }
 
-  /* line 655, ../../../sass/overrides/tb_megamenu/default.scss */
+  /* line 653, ../../../sass/overrides/tb_megamenu/default.scss */
   .tb-megamenu input,
   .tb-megamenu textarea,
   .tb-megamenu .uneditable-input {
@@ -1128,7 +1128,7 @@
     display: block !important;
   }
 
-  /* line 1486, ../../../sass/overrides/tb_megamenu/default.scss */
+  /* line 1485, ../../../sass/overrides/tb_megamenu/default.scss */
   .tb-megamenu.animate .mega.open > .mega-dropdown-menu,
   .tb-megamenu.animate .mega.animating.open > .mega-dropdown-menu {
     opacity: 1;
@@ -1268,7 +1268,7 @@
   padding: 0;
 }
 
-/* line 1639, ../../../sass/overrides/tb_megamenu/default.scss */
+/* line 1638, ../../../sass/overrides/tb_megamenu/default.scss */
 .tb-megamenu .block-view-demo a:hover,
 .tb-megamenu .block-view-demo a:focus {
   background: none !important;

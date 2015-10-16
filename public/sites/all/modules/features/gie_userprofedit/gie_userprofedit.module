@@ -9,9 +9,6 @@
  * Implements hook_form_FORM_ID_alter().
  */
 function gie_userprofedit_form_user_profile_form_alter(&$form, &$form_state, $form_id) {
-  
-  $form['submit']['#suffix'] = '&nbsp;&nbsp;&nbsp;&nbsp;';
-
-  $form['cancel']['#prefix'] = '&nbsp;&nbsp;&nbsp;&nbsp;',
-
+  $form['actions']['submit']['#suffix'] = '<span style="margin-left: 250px;"></span>';
 }
+

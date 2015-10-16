@@ -287,3 +287,13 @@ function gie_general_update_7027() {
   );
   module_enable($modules, TRUE);
 }
+
+/**
+ * Enable GIE User Profile Edit Page feature.
+ */
+function gie_general_update_7028() {
+  $modules = array(
+    'gie_userprofedit'
+  );
+  module_enable($modules, TRUE);
+}

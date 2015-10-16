@@ -4,3 +4,4 @@ core = 7.x
 package = GIE
 version = 7.x-1.0
 project = gie_userprofedit
+files[] = gie_userprofedit.module
