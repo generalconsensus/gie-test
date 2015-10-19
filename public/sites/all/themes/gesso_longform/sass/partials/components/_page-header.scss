@@ -68,6 +68,7 @@
 }
 
 .page-header__scroll-button {
+  // @include svg-background(icon-header-down);
   @include image-replace(75px, 75px);
   // bottom: -8em;
   display: inline-block;
