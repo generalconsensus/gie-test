@@ -1735,6 +1735,10 @@ input.throbbing {
   position: relative;
 }
 
+.pre-footer.component {
+  padding: 6em 0;
+}
+
 .pre-footer__download-link {
   background-color: #ff1352;
   height: 60px;
