@@ -1165,12 +1165,12 @@ input.throbbing {
 }
 .text-block ol li {
   margin-bottom: 2em;
-  min-height: 96px;
-  padding-left: 4em;
+  min-height: 72px;
+  padding-left: 2em;
   position: relative;
 }
 .text-block ol li ol {
-  padding-top: 80px;
+  padding-top: 60px;
 }
 .text-block ol li:before {
   background-color: #003359;
@@ -1181,12 +1181,12 @@ input.throbbing {
   float: left;
   font-size: 1.5em;
   left: -70px;
-  line-height: 80px;
-  height: 80px;
+  line-height: 60px;
+  height: 60px;
   position: absolute;
   text-align: center;
   top: 4px;
-  width: 80px;
+  width: 60px;
 }
 
 .text-block ul {
@@ -1194,7 +1194,7 @@ input.throbbing {
   list-style-type: none;
 }
 .text-block ul li {
-  padding-left: 1em;
+  padding: .5em 0 2em 4em;
   text-align: left;
   position: relative;
 }
@@ -1203,8 +1203,9 @@ input.throbbing {
   color: #d31145;
   display: block;
   float: left;
-  left: -20px;
-  padding-right: 10px;
+  font-size: 2em;
+  left: -1em;
+  padding: .25em .5em;
   position: absolute;
   top: 0;
 }
