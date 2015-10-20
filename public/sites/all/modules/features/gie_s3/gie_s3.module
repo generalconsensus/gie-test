@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the GIE S3 feature.
+ */
+
+include_once 'gie_s3.features.inc';
