@@ -67,10 +67,10 @@
 }
 
 .mobile-menu__icon {
-  @include image-replace(22px, 22px);
+  @include image-replace(36px, 36px);
   background-position: 50% 50%;
   background-repeat: no-repeat;
-  background-size: 22px 22px;
+  background-size: 36px 36px;
   display: inline-block;
   height: 22px;
   width: 22px;
@@ -81,7 +81,7 @@
 }
 
 .mobile-menu__icon--menu {
-  @include svg-background(mobile-menu);
+  @include svg-background(longform-menu-icon-square);
 
   .is-active & {
     @extend %mobile-menu__icon--close;
