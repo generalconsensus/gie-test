@@ -25,9 +25,10 @@ function gie_groups_field_default_field_instances() {
       ),
       'default' => array(
         'label' => 'above',
-        'module' => 'og_ui',
+        'module' => 'entityreference',
         'settings' => array(
           'field_delimiter' => '',
+          'link' => FALSE,
           'linked_field' => array(
             'advanced' => array(
               'class' => '',
@@ -40,7 +41,7 @@ function gie_groups_field_default_field_instances() {
             'linked' => 0,
           ),
         ),
-        'type' => 'og_list_default',
+        'type' => 'entityreference_label',
         'weight' => 31,
       ),
       'full' => array(
@@ -590,7 +591,7 @@ function gie_groups_field_default_field_instances() {
     'display' => array(
       'default' => array(
         'label' => 'above',
-        'module' => 'og_ui',
+        'module' => 'list',
         'settings' => array(
           'field_delimiter' => '',
           'field_name' => FALSE,
@@ -606,7 +607,7 @@ function gie_groups_field_default_field_instances() {
             'linked' => 0,
           ),
         ),
-        'type' => 'og_group_subscribe',
+        'type' => 'list_default',
         'weight' => 1,
       ),
       'teaser' => array(
@@ -713,9 +714,10 @@ function gie_groups_field_default_field_instances() {
       ),
       'default' => array(
         'label' => 'above',
-        'module' => 'og_ui',
+        'module' => 'entityreference',
         'settings' => array(
           'field_delimiter' => '',
+          'link' => FALSE,
           'linked_field' => array(
             'advanced' => array(
               'class' => '',
@@ -728,7 +730,7 @@ function gie_groups_field_default_field_instances() {
             'linked' => 0,
           ),
         ),
-        'type' => 'og_list_default',
+        'type' => 'entityreference_label',
         'weight' => 52,
       ),
       'full' => array(
@@ -833,9 +835,10 @@ function gie_groups_field_default_field_instances() {
       ),
       'default' => array(
         'label' => 'above',
-        'module' => 'og_ui',
+        'module' => 'entityreference',
         'settings' => array(
           'field_delimiter' => '',
+          'link' => FALSE,
           'linked_field' => array(
             'advanced' => array(
               'class' => '',
@@ -848,7 +851,7 @@ function gie_groups_field_default_field_instances() {
             'linked' => 0,
           ),
         ),
-        'type' => 'og_list_default',
+        'type' => 'entityreference_label',
         'weight' => 28,
       ),
       'full' => array(
@@ -941,9 +944,10 @@ function gie_groups_field_default_field_instances() {
       ),
       'default' => array(
         'label' => 'above',
-        'module' => 'og_ui',
+        'module' => 'entityreference',
         'settings' => array(
           'field_delimiter' => '',
+          'link' => FALSE,
           'linked_field' => array(
             'advanced' => array(
               'class' => '',
@@ -956,7 +960,7 @@ function gie_groups_field_default_field_instances() {
             'linked' => 0,
           ),
         ),
-        'type' => 'og_list_default',
+        'type' => 'entityreference_label',
         'weight' => 19,
       ),
       'details' => array(
@@ -1102,9 +1106,10 @@ function gie_groups_field_default_field_instances() {
     'display' => array(
       'default' => array(
         'label' => 'above',
-        'module' => 'og_ui',
+        'module' => 'entityreference',
         'settings' => array(
           'field_delimiter' => '',
+          'link' => FALSE,
           'linked_field' => array(
             'advanced' => array(
               'class' => '',
@@ -1117,7 +1122,7 @@ function gie_groups_field_default_field_instances() {
             'linked' => 0,
           ),
         ),
-        'type' => 'og_list_default',
+        'type' => 'entityreference_label',
         'weight' => 28,
       ),
       'full' => array(
