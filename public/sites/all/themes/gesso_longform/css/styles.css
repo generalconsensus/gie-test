@@ -1787,7 +1787,7 @@ input.throbbing {
   font-size: 3.5em;
   line-height: 1em;
   text-transform: uppercase;
-  padding: 1em;
+  padding-top: 1em;
   word-break: keep-all;
 }
 
@@ -2011,7 +2011,7 @@ input.throbbing {
   display: block;
   margin: 4em 0;
   overflow: hidden;
-  padding: 6em 1em;
+  padding: 12em 1em;
   position: relative;
   text-align: center;
   z-index: -2;
@@ -2068,7 +2068,7 @@ input.throbbing {
   margin: 5em 0;
   overflow: hidden;
   position: relative;
-  padding: 8em 1em 10em 1em;
+  padding: 10em 1em 12em 1em;
   text-align: left;
   z-index: -2;
 }
@@ -2324,7 +2324,7 @@ tr.drag-previous {
 }
 
 .text-block {
-  padding: 0;
+  padding: 0 1em;
 }
 
 .throbber {
