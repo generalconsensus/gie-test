@@ -1667,7 +1667,7 @@ input.throbbing {
   font-size: 3.5em;
   line-height: 1em;
   text-transform: uppercase;
-  padding: 1em;
+  padding-top: 1em;
   word-break: keep-all;
 }
 
@@ -1940,9 +1940,6 @@ input.throbbing {
   top: 0;
   z-index: -1;
 }
-.section-header__image img {
-  max-width: initial;
-}
 .section-header__image:before {
   background: rgba(0, 0, 0, 0.5);
   background-size: cover;
@@ -1954,6 +1951,9 @@ input.throbbing {
   right: 0;
   position: absolute;
   z-index: 0;
+}
+.section-header__image img {
+  max-width: initial;
 }
 
 .section-header__title {
@@ -2155,11 +2155,7 @@ tr.drag-previous {
 }
 
 .text-block {
-<<<<<<< HEAD
   padding: 0 1em;
-=======
-  padding: 0;
->>>>>>> 46144-decrease-component-spacing
 }
 
 .throbber {
