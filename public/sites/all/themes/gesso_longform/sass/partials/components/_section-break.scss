@@ -16,24 +16,14 @@
   }
 }
 
-.section-break__image{
+.section-break__image {
+	@include image-transparency(.5);
 	left: 0;
 	position: absolute;
 	top: 0;
 	z-index: -1;
 	img {
    max-width: initial;
-  }
-  &:before { // CSS Color Overlay
-	  background: rgba(0,0,0, 0.7);
-	  content: " ";
-	  display: block;
-	  top: 0;
-	  bottom: 0;
-	  left: 0;
-	  right: 0;
-	  position: absolute;
-	  z-index: 0;
   }
   .field__label{
   	display: none;
