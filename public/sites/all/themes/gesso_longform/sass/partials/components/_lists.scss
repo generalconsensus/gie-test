@@ -1,6 +1,6 @@
 //@file
 // Ordered and Unordered Lists
-$ol-bullet-size: 80px;
+$ol-bullet-size: 60px;
 
 ol {
   .text-block & {
@@ -10,7 +10,7 @@ ol {
   	li{
   		margin-bottom: 2em;
   		min-height: $ol-bullet-size * 1.20;
-  		padding-left: 4em;
+  		padding-left: 2em;
   		position: relative;
   		ol{
   			padding-top: $ol-bullet-size;
@@ -40,7 +40,7 @@ ul {
   	list-style: outside;
     list-style-type: none;
     li {
-  		padding-left: 1em;
+  		padding: .5em 0 2em 4em;
       text-align: left;
       position: relative;
     }
@@ -49,8 +49,9 @@ ul {
       color: $red;
       display: block;
       float: left;
-      left: -20px;
-      padding-right: 10px;
+      font-size: 2em;
+      left: -1em;
+      padding: .25em .5em;
       position: absolute;
       top: 0;
     }
