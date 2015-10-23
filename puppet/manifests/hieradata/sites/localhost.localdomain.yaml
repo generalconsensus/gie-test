@@ -1,4 +1,7 @@
 ---
+classes:
+  - elasticsearch
+
 forumone::databases: 
   web: 
     username: web
@@ -10,3 +13,13 @@ forumone::webserver::vhosts:
 forumone::solr::collections:  
   drupal: 
     order: 1
+
+elasticsearch::manage_repo: true
+elasticsearch::repo_version: '1.7'
+elasticsearch::instances:
+  es-01:
+    datadir: 
+      - /opt/elasticsearch
+
+forumone::ports:
+  - 9200
