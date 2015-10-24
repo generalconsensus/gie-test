@@ -608,6 +608,30 @@ $conf['search_api_override_mode'] = 'default';
 $conf['elasticsearch_index'] = array('machine_name' => 'dev');
 
 /**
+ * memcache configuration
+ */
+$conf['cache_backends'][] = 'sites/all/modules/contrib/memcache/memcache.inc';
+$conf['cache_default_class'] = 'MemCacheDrupal';
+$conf['cache_class_cache_form'] = 'DrupalDatabaseCache';
+$conf['memcache_key_prefix'] = 'gie_dev';
+
+/**
+ * Secure pages
+ */
+$conf['https'] = FALSE;
+$conf['securepages_secure'] = 0;
+
+/**
+ * Google Analytics
+ */
+$conf['googleanalytics_account'] = '';
+
+/**
+ * Disable core search
+ */
+$conf['search_cron_limit'] = 0;
+
+/**
  * Change file upload sizes
 */
 ini_set('upload_max_filesize','20M');
