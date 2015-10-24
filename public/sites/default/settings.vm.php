@@ -585,7 +585,14 @@ $conf['404_fast_html'] = '<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML+RDFa 1.0//EN"
  *
  * Configuration setting per Solr instance
  */
-$conf['search_api_solr_overrides'] = array(
+$conf['search_api_override_servers'] = array(
+  'elasticsearch' => array(
+    'options' => array(
+      '0' => array(
+        'host' => 'localhost',
+      ),
+    ),
+  ),
   'solr' => array(
     'name' => t('Solr Server (Overridden)'),
     'options' => array(
@@ -596,12 +603,16 @@ $conf['search_api_solr_overrides'] = array(
   )
 );
 
+$conf['search_api_override_mode'] = 'default';
+
+$conf['elasticsearch_index'] = array('machine_name' => 'vm');
+
 /**
  * memcache configuration
  */
-#$conf['cache_backends'][] = 'sites/all/modules/contrib/memcache/memcache.inc';
-#$conf['cache_default_class'] = 'MemCacheDrupal';
-#$conf['cache_class_cache_form'] = 'DrupalDatabaseCache';
+$conf['cache_backends'][] = 'sites/all/modules/contrib/memcache/memcache.inc';
+$conf['cache_default_class'] = 'MemCacheDrupal';
+$conf['cache_class_cache_form'] = 'DrupalDatabaseCache';
 
 /**
  * Secure pages
