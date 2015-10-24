@@ -585,7 +585,15 @@ $conf['404_fast_html'] = '<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML+RDFa 1.0//EN"
  *
  * Configuration setting per Solr instance
  */
-$conf['search_api_solr_overrides'] = array(
+$conf['search_api_override_servers'] = array(
+  'elasticsearch' => array(
+    'options' => array(
+      '0' => array(
+        'host' => 'search-giexchange-kfthj2b3nazu44oiywqn5emn5i.us-east-1.es.amazonaws.com',
+        'port' => '80',
+      ),
+    ),
+  ),
   'solr' => array(
     'name' => t('Solr Server (Overridden)'),
     'options' => array(
@@ -595,6 +603,34 @@ $conf['search_api_solr_overrides'] = array(
     )
   )
 );
+
+$conf['search_api_override_mode'] = 'default';
+
+$conf['elasticsearch_index'] = array('machine_name' => 'dev');
+
+/**
+ * memcache configuration
+ */
+$conf['cache_backends'][] = 'sites/all/modules/contrib/memcache/memcache.inc';
+$conf['cache_default_class'] = 'MemCacheDrupal';
+$conf['cache_class_cache_form'] = 'DrupalDatabaseCache';
+$conf['memcache_key_prefix'] = 'gie_dev';
+
+/**
+ * Secure pages
+ */
+$conf['https'] = FALSE;
+$conf['securepages_secure'] = 0;
+
+/**
+ * Google Analytics
+ */
+$conf['googleanalytics_account'] = '';
+
+/**
+ * Disable core search
+ */
+$conf['search_cron_limit'] = 0;
 
 /**
  * Change file upload sizes
