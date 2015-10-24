@@ -1,0 +1,14 @@
+<?php
+/**
+ * Implements hook_install
+ */
+function gie_search_install() {
+  
+}
+
+/**
+ * Enable search_api_elasticsearch_elastica
+ */
+function gie_search_update_7001() {
+  module_enable(array('search_api_elasticsearch_elastica'));
+}
