@@ -22,4 +22,12 @@ elasticsearch::instances:
       - /opt/elasticsearch
 
 forumone::ports:
+  - 80
+  - 8080
+  - 8081
+  - 8983
+  - 18983
+  - 3306
+  - 13306
+  - 1080
   - 9200
