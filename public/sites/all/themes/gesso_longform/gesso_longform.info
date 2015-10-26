@@ -1,4 +1,4 @@
-name = 'Gesso Longfrom'
+name = 'Gesso long form'
 description = 'Sass-based starter theme.'
 core = '7.x'
 engine = 'phptemplate'
