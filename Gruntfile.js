@@ -1,141 +1,77 @@
+/**
+ * Gruntfile
+ *
+ * This Node script is executed when you run `grunt`.
+ * It's purpose is to load the Grunt tasks in your project's `tasks`
+ * folder, and allow you to add and remove tasks as you see fit.
+ * For more information on how this works, check out the `README.md`
+ * file that was generated in your `tasks` folder.
+ *
+ * WARNING:
+ * Unless you know what you're doing, you shouldn't change this file.
+ * Check out the `tasks` directory instead.
+ */
+'use strict';
 module.exports = function(grunt) {
-  // Load grunt tasks automatically
+  // Load grunt contrib tasks automatically
   require('load-grunt-tasks')(grunt);
 
-  grunt
-      .initConfig({
-        pkg : grunt.file.readJSON('package.json'),
-        compass : { // Task
-          patternlab: {
-            options: {
-              basePath: 'public/sites/all/themes/gesso/',
-              bundleExec: true,  // use Bundler specified versions
-              outputStyle: 'expanded',
-            },
-          },
-          patternlablite: {
-            options: {
-              basePath: 'public/sites/all/themes/gesso/',
-              bundleExec: true,  // use Bundler specified versions
-              outputStyle: 'expanded',
-              specify: ['public/sites/all/themes/gesso/sass/*.scss'], // only compile primary files
-            },
-          },
-          longformpatternlab: {
-            options: {
-              basePath: 'public/sites/all/themes/gesso_longform/',
-              bundleExec: true,  // use Bundler specified versions
-              outputStyle: 'expanded',
-            },
-          },
-          dev : { // Target
-            options : { // Target options
-              basePath: 'public/sites/all/themes/gesso/',
-              outputStyle: 'expanded',
-              noLineComments: false,
-              bundleExec: true
-            }
-          },
-          staging : { // Target
-            options : { // Target options
-              basePath: 'public/sites/all/themes/gesso/',
-              outputStyle: 'compressed',
-              noLineComments: true,
-              force: true,
-              bundleExec: true
-            }
-          },
-        },
-        watch : {
-          compass : {
-            files : [ 'public/sites/all/themes/gesso/sass/*.scss', 'public/sites/all/themes/gesso/sass/**/*.scss' ],
-            tasks : [ 'compass:dev' ]
-          },
-          patternlabSass: {
-            files: [
-              'public/sites/all/themes/gesso/sass/**/*.scss'
-            ],
-            tasks: [
-              'compass:patternlab'
-            ],
-            options: {
-              spawn: false,
-              // livereload: true
-            },
-          },
-          patternlabliteSass: {
-            files: [
-              'public/sites/all/themes/gesso/sass/**/*.scss'
-            ],
-            tasks: [
-              'compass:patternlablite'
-            ],
-            options: {
-              spawn: false,
-              // livereload: true
-            }
-          },
-          longformpatternlabSass: {
-            files: [
-              'public/sites/all/themes/gesso_longform/sass/**/*.scss'
-            ],
-            tasks: [
-              'compass:longformpatternlab'
-            ],
-            options: {
-              spawn: false,
-              // livereload: true
-            },
-          },
-        },
-        concurrent: {
-          patternlab: {
-            tasks: [
-              'shell:patternlabWatchReload',
-              'simple-watch:patternlabSass'
-            ],
-            options: {
-              logConcurrentOutput: true
-            }
-          },
-          patternlablite: {
-            tasks: [
-              'shell:patternlabWatchReload',
-              'simple-watch:patternlabliteSass'
-            ],
-            options: {
-              logConcurrentOutput: true
-            }
-          },
-          longformpatternlab: {
-            tasks: [
-              'shell:longformpatternlabWatchReload',
-              'simple-watch:longformpatternlabSass'
-            ],
-            options: {
-              logConcurrentOutput: true
-            }
-          },
-        },
-        shell: {
-          // Generate patterns & use native watch/live reload feature
-          patternlabWatchReload: {
-            command: [
-              'php public/sites/all/themes/gesso/patternlab/core/builder.php -wr',
-            ].join('&&')
-          },
-           longformpatternlabWatchReload: {
-            command: [
-              'php public/sites/all/themes/gesso_longform/patternlab/core/builder.php -wr',
-            ].join('&&')
-          },
-        }
-      });
+  // Initialize configuration with package.json data
+  grunt.initConfig({
+    'pkg': grunt.file.readJSON('package.json')
+  });
 
-  var stage = grunt.option('stage') || 'dev';
+  // Load the include-all library in order to require all of our grunt
+  // configurations and task registrations dynamically.
+  var includeAll;
+  try {
+    includeAll = require('include-all');
+  } catch (e0) {
+    console.error('Could not find `include-all` module.');
+    console.error('Skipping grunt tasks...');
+    console.error('To fix this, please run:');
+    console.error('npm install include-all --save`');
+    console.error();
 
-  grunt.registerTask('default', [ ]);
-  grunt.registerTask('patternlab', ['compass:patternlab', 'concurrent:patternlab']);
-  grunt.registerTask('patternlablite', ['compass:patternlab', 'concurrent:patternlablite']);
-  grunt.registerTask('longformpatternlab', ['compass:longformpatternlab', 'concurrent:longformpatternlab']);
+    grunt.registerTask('default', []);
+    return;
+  }
+
+  /**
+   * Loads Grunt configuration modules from the specified
+   * relative path. These modules should export a function
+   * that, when run, should either load/configure or register
+   * a Grunt task.
+   */
+  function loadTasks(relPath) {
+    return includeAll({
+      dirname: require('path').resolve(__dirname, relPath),
+      filter: /(.+)\.js$/
+    }) || {};
+  }
+
+  /**
+   * Invokes the function from a Grunt configuration module with
+   * a single argument - the `grunt` object.
+   */
+  function invokeConfigFn(tasks) {
+    for (var taskName in tasks) {
+      if (tasks.hasOwnProperty(taskName)) {
+        tasks[taskName](grunt);
+      }
+    }
+  }
+
+  // Load task functions
+  var taskConfigurations = loadTasks('./tasks/config'),
+      registerDefinitions = loadTasks('./tasks/register');
+
+  // Ensure that a default task exists
+  if (!registerDefinitions.default) {
+    registerDefinitions.default = function (grunt) { grunt.registerTask('default', []); };
+  }
+
+  // Run task functions to configure Grunt.
+  invokeConfigFn(taskConfigurations);
+  invokeConfigFn(registerDefinitions);
 };

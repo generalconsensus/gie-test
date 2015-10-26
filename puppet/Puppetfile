@@ -1,5 +1,7 @@
 forge "https://forge.puppetlabs.com"
 
+mod 'elasticsearch/elasticsearch'
+
 mod "puppetlabs/mysql", 
   :git => "https://github.com/puppetlabs/puppetlabs-mysql.git",
   :ref => "0.9.0"
@@ -11,4 +13,4 @@ mod "arioch/percona",
   :ref => "master"
 mod "forumone/forumone",
   :git => "https://github.com/forumone/puppet-forumone.git",
-  :ref => "1.1.24"
+  :ref => "1.1.29"

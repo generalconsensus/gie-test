@@ -1,0 +1,18 @@
+//@file
+// Video Component
+
+.video {
+	.video__video {
+		display: block;
+		text-align: center;
+		object {
+			display: block;
+			margin: 0 auto;
+		}
+		.asset {
+			background-color: white;
+    	border-color: white;
+		}
+	}
+	.video__caption {}
+}

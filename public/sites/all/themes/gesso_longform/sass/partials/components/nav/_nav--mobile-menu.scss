@@ -3,6 +3,9 @@
 
 .nav--mobile-menu {
   margin: 0.75em 0 0 0;
+  @include breakpoint($mobile-menu-bp, $no-query: true) {
+    padding-right: 5.5%; // to match share icons
+  }
 
   .nav__item {
     margin: 0;
@@ -20,8 +23,11 @@
     line-height: 1.25;
     margin: 0;
     padding: em(10.75px, 18px) 1.25em;
+    @include breakpoint($mobile-menu-bp, $no-query: true) {
+      padding-right: 0; // to match share icons
+    }
     position: relative;
-    text-align: left;
+    text-align: right;
     text-decoration: none;
     white-space: normal;
     width: auto;

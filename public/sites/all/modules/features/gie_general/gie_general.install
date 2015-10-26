@@ -277,3 +277,30 @@ function gie_general_update_7026() {
   );
   module_enable($modules, TRUE);
 }
+
+/**
+ * Enable GIE Long-form content feature.
+ */
+function gie_general_update_7027() {
+  $modules = array(
+    'gie_long_form_content'
+  );
+  module_enable($modules, TRUE);
+}
+
+/**
+ * Enable GIE User Profile Edit Page feature.
+ */
+function gie_general_update_7028() {
+  $modules = array(
+    'gie_userprofedit'
+  );
+  module_enable($modules, TRUE);
+}
+
+/**
+ * Enable gesso_longform theme
+ */
+function gie_general_update_7029() {
+  theme_enable(array('gesso_longform'));
+}

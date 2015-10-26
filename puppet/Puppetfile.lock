@@ -16,7 +16,6 @@ FORGE
       puppetlabs/stdlib (>= 2.0.0)
     puppetlabs/ruby (0.4.0)
       puppetlabs/stdlib (< 5.0.0, >= 3.2.0)
-    puppetlabs/stdlib (4.5.1)
     stahnma/epel (0.0.5)
     thias/memcached (0.1.0)
     thias/php (0.3.12)
@@ -24,6 +23,9 @@ FORGE
 FORGE
   remote: https://forge.puppetlabs.com
   specs:
+    elasticsearch/elasticsearch (0.9.6)
+      puppetlabs/stdlib (< 5.0.0, >= 3.2.0)
+    puppetlabs/stdlib (4.9.0)
     thias/sysctl (0.3.0)
 
 GIT
@@ -35,10 +37,10 @@ GIT
 
 GIT
   remote: https://github.com/forumone/puppet-forumone.git
-  ref: 1.1.24
-  sha: bde35994628cb345238991319278f873f3d84b7b
+  ref: 1.1.29
+  sha: 317dff263cd881cab227dbbb6b891ad345334702
   specs:
-    forumone/forumone (1.1.24)
+    forumone/forumone (1.1.28)
       alup/rbenv (~> 1.2.0)
       fsalum/redis (= 0.0.11)
       puppetlabs/apache (= 1.0.1)
@@ -62,12 +64,13 @@ GIT
 GIT
   remote: https://github.com/thias/puppet-nginx.git
   ref: master
-  sha: e3dc41eabccc298e6cd5125c3bd267c1abdb2a62
+  sha: f3306eb295ad33186666f8acac7b97212417a99d
   specs:
     thias/nginx (0.0.1)
 
 DEPENDENCIES
   arioch/percona (>= 0)
+  elasticsearch/elasticsearch (>= 0)
   forumone/forumone (>= 0)
   puppetlabs/mysql (>= 0)
   thias/nginx (>= 0)
