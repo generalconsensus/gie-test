@@ -297,3 +297,10 @@ function gie_general_update_7028() {
   );
   module_enable($modules, TRUE);
 }
+
+/**
+ * Enable gesso_longform theme
+ */
+function gie_general_update_7029() {
+  theme_enable(array('gesso_longform'));
+}
