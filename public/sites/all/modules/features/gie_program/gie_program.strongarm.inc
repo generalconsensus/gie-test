@@ -386,6 +386,12 @@ function gie_program_strongarm() {
         'default' => 0,
         'choice' => 0,
       ),
+      'logo' => array(
+        'status' => 0,
+        'substitute' => 0,
+        'default' => 0,
+        'choice' => 0,
+      ),
       'search_listing' => array(
         'status' => 0,
         'substitute' => 0,
