@@ -208,7 +208,7 @@ function gie_needs_views_default_views() {
   $handler->display->display_options['pager']['type'] = 'full';
   $handler->display->display_options['style_plugin'] = 'default';
   $handler->display->display_options['row_plugin'] = 'fields';
-  /* Field: Indexed Node: Node ID */
+  /* Field: Indexed Content: Node ID */
   $handler->display->display_options['fields']['nid']['id'] = 'nid';
   $handler->display->display_options['fields']['nid']['table'] = 'search_api_index_default_node_index';
   $handler->display->display_options['fields']['nid']['field'] = 'nid';
@@ -224,7 +224,7 @@ function gie_needs_views_default_views() {
   $handler->display->display_options['defaults']['row_options'] = FALSE;
   $handler->display->display_options['exposed_block'] = TRUE;
   $handler->display->display_options['defaults']['relationships'] = FALSE;
-  /* Relationship: Indexed Node: Type of Need */
+  /* Relationship: Indexed Content: Type of Need */
   $handler->display->display_options['relationships']['field_needs_type']['id'] = 'field_needs_type';
   $handler->display->display_options['relationships']['field_needs_type']['table'] = 'search_api_index_default_node_index';
   $handler->display->display_options['relationships']['field_needs_type']['field'] = 'field_needs_type';
@@ -245,7 +245,7 @@ function gie_needs_views_default_views() {
   $handler->display->display_options['arguments']['field_needs_type_tid']['not'] = 0;
   $handler->display->display_options['defaults']['filter_groups'] = FALSE;
   $handler->display->display_options['defaults']['filters'] = FALSE;
-  /* Filter criterion: Indexed Node: Content type */
+  /* Filter criterion: Indexed Content: Content type */
   $handler->display->display_options['filters']['type']['id'] = 'type';
   $handler->display->display_options['filters']['type']['table'] = 'search_api_index_default_node_index';
   $handler->display->display_options['filters']['type']['field'] = 'type';
