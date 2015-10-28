@@ -476,13 +476,43 @@ function gie_funding_strongarm() {
         'default' => 0,
         'choice' => 0,
       ),
+      'full' => array(
+        'status' => 0,
+        'substitute' => 0,
+        'default' => 0,
+        'choice' => 0,
+      ),
       'teaser' => array(
         'status' => 0,
         'substitute' => 0,
         'default' => 0,
         'choice' => 0,
       ),
+      'highlights' => array(
+        'status' => 0,
+        'substitute' => 0,
+        'default' => 0,
+        'choice' => 0,
+      ),
+      'listing' => array(
+        'status' => 0,
+        'substitute' => 0,
+        'default' => 0,
+        'choice' => 0,
+      ),
       'teaser_date' => array(
+        'status' => 0,
+        'substitute' => 0,
+        'default' => 0,
+        'choice' => 0,
+      ),
+      'at_a_glance' => array(
+        'status' => 0,
+        'substitute' => 0,
+        'default' => 0,
+        'choice' => 0,
+      ),
+      'search_listing' => array(
         'status' => 0,
         'substitute' => 0,
         'default' => 0,
