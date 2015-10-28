@@ -455,6 +455,8 @@ function gie_search_default_search_api_index() {
         "field_funding_organization" : { "type" : "list\\u003Cinteger\\u003E", "entity_type" : "node" },
         "field_funding_organization:title" : { "type" : "list\\u003Ctext\\u003E" },
         "field_innovation_desc:value" : { "type" : "text" },
+        "field_innovation_funders" : { "type" : "list\\u003Cinteger\\u003E", "entity_type" : "node" },
+        "field_innovation_program" : { "type" : "list\\u003Cinteger\\u003E", "entity_type" : "node" },
         "field_innovation_related_org" : { "type" : "list\\u003Cinteger\\u003E", "entity_type" : "node" },
         "field_innovation_related_org:field_funding_organization" : {
           "type" : "list\\u003Clist\\u003Cinteger\\u003E\\u003E",
@@ -514,21 +516,7 @@ function gie_search_default_search_api_server() {
     "machine_name" : "elasticsearch",
     "description" : "",
     "class" : "search_api_elasticsearch_elastica_service",
-    "options" : {
-      "0" : {
-        "host" : "127.0.0.1",
-        "port" : "9200",
-        "headers" : { "http_user" : "", "http_pass" : "" },
-        "path" : "",
-        "url" : "",
-        "transport" : "Http",
-        "persistent" : 1,
-        "timeout" : "300",
-        "log" : 0,
-        "retryOnConflict" : "0"
-      },
-      "facet_limit" : "10"
-    },
+    "options" : { "0" : { "host" : "localhost" }, "facet_limit" : "10" },
     "enabled" : "1",
     "rdf_mapping" : []
   }');
