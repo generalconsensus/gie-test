@@ -226,16 +226,16 @@ function gie_resource_views_default_views() {
   $handler->display->display_options['style_options']['row_class_special'] = FALSE;
   $handler->display->display_options['row_plugin'] = 'entity';
   $handler->display->display_options['row_options']['view_mode'] = 'listing';
-  /* Field: Indexed Node: Node ID */
+  /* Field: Indexed Content: Node ID */
   $handler->display->display_options['fields']['nid']['id'] = 'nid';
   $handler->display->display_options['fields']['nid']['table'] = 'search_api_index_default_node_index';
   $handler->display->display_options['fields']['nid']['field'] = 'nid';
-  /* Sort criterion: Indexed Node: Date Added */
+  /* Sort criterion: Indexed Content: Date Added */
   $handler->display->display_options['sorts']['field_resource_date']['id'] = 'field_resource_date';
   $handler->display->display_options['sorts']['field_resource_date']['table'] = 'search_api_index_default_node_index';
   $handler->display->display_options['sorts']['field_resource_date']['field'] = 'field_resource_date';
   $handler->display->display_options['sorts']['field_resource_date']['order'] = 'DESC';
-  /* Filter criterion: Indexed Node: Content type */
+  /* Filter criterion: Indexed Content: Content type */
   $handler->display->display_options['filters']['type']['id'] = 'type';
   $handler->display->display_options['filters']['type']['table'] = 'search_api_index_default_node_index';
   $handler->display->display_options['filters']['type']['field'] = 'type';

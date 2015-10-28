@@ -381,7 +381,19 @@ function events_strongarm() {
         'default' => 0,
         'choice' => 0,
       ),
+      'page_header' => array(
+        'status' => 0,
+        'substitute' => 0,
+        'default' => 0,
+        'choice' => 0,
+      ),
       'at_a_glance' => array(
+        'status' => 0,
+        'substitute' => 0,
+        'default' => 0,
+        'choice' => 0,
+      ),
+      'search_listing' => array(
         'status' => 0,
         'substitute' => 0,
         'default' => 0,
