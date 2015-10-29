@@ -23,6 +23,58 @@ function gie_innovation_default_pane_container() {
   $template = new stdClass();
   $template->disabled = FALSE; /* Edit this to true to make a default template disabled initially */
   $template->api_version = 2;
+  $template->name = 'grants_introduction';
+  $template->title = 'Grants Introduction';
+  $template->plugin = 'text';
+  $template->description = 'This is the introduction for the Grants page';
+  $template->configuration = '';
+  $export['grants_introduction'] = $template;
+
+  $template = new stdClass();
+  $template->disabled = FALSE; /* Edit this to true to make a default template disabled initially */
+  $template->api_version = 2;
+  $template->name = 'grants_organizations';
+  $template->title = 'Grants Organizations';
+  $template->plugin = 'entity_reference';
+  $template->description = 'This pane selects the grants organization to which the list should be filtered for. ';
+  $template->configuration = array(
+    'mode' => 'bundle',
+    'entity' => 'node',
+    'target_bundles' => array(
+      'organization' => 'organization',
+    ),
+    'multiplicity' => 0,
+    'more_link' => '',
+    'more_link_text' => '',
+    'output_mode' => 'view',
+    'display_view' => 'grants_listing_page:grants_list',
+  );
+  $export['grants_organizations'] = $template;
+
+  $template = new stdClass();
+  $template->disabled = FALSE; /* Edit this to true to make a default template disabled initially */
+  $template->api_version = 2;
+  $template->name = 'grants_partners';
+  $template->title = 'Grants Partners';
+  $template->plugin = 'entity_reference';
+  $template->description = 'This pane selects the Grants partners at the top of the Grants page.';
+  $template->configuration = array(
+    'mode' => 'bundle',
+    'entity' => 'node',
+    'target_bundles' => array(
+      'organization' => 'organization',
+    ),
+    'multiplicity' => 0,
+    'more_link' => '',
+    'more_link_text' => '',
+    'output_mode' => 'view',
+    'display_view' => 'grants_organization_list:grants_organizations',
+  );
+  $export['grants_partners'] = $template;
+
+  $template = new stdClass();
+  $template->disabled = FALSE; /* Edit this to true to make a default template disabled initially */
+  $template->api_version = 2;
   $template->name = 'innovations_introduction';
   $template->title = 'Innovations Introduction';
   $template->plugin = 'text';
