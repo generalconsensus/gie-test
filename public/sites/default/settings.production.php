@@ -337,7 +337,7 @@ ini_set('session.cookie_lifetime', 2000000);
  * between your various domains. Make sure to always start the $cookie_domain
  * with a leading dot, as per RFC 2109.
  */
-$cookie_domain = '.globalinnovationexchange.com';
+#$cookie_domain = '.globalinnovationexchange.com';
 
 /**
  * Variable overrides:
@@ -585,7 +585,15 @@ $conf['404_fast_html'] = '<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML+RDFa 1.0//EN"
  *
  * Configuration setting per Solr instance
  */
-$conf['search_api_solr_overrides'] = array(
+$conf['search_api_override_servers'] = array(
+  'elasticsearch' => array(
+    'options' => array(
+      '0' => array(
+        'host' => 'search-giexchange-kfthj2b3nazu44oiywqn5emn5i.us-east-1.es.amazonaws.com',
+        'port' => '80',
+      ),
+    ),
+  ),
   'solr' => array(
     'name' => t('Solr Server (Overridden)'),
     'options' => array(
@@ -595,6 +603,10 @@ $conf['search_api_solr_overrides'] = array(
     )
   )
 );
+
+$conf['search_api_override_mode'] = 'default';
+
+$conf['elasticsearch_index'] = array('machine_name' => 'production');
 
 
 /* Ensures no content is indexed to core search */

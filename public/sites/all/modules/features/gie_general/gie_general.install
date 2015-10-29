@@ -289,11 +289,28 @@ function gie_general_update_7027() {
 }
 
 /**
- * Enable GIE Groups feature.
+ * Enable GIE User Profile Edit Page feature.
  */
 function gie_general_update_7028() {
   $modules = array(
-      'gie_groups'
+    'gie_userprofedit'
+  );
+  module_enable($modules, TRUE);
+}
+
+/**
+ * Enable gesso_longform theme
+ */
+function gie_general_update_7029() {
+  theme_enable(array('gesso_longform'));
+}
+
+/**
+ * Enable GIE Groups feature.
+ */
+function gie_general_update_7030() {
+  $modules = array(
+    'gie_groups'
   );
   module_enable($modules, TRUE);
 }

@@ -326,13 +326,13 @@ function gie_long_form_content_field_group_info() {
     'format_settings' => array(
       'label' => 'Key Figure',
       'instance_settings' => array(
-        'classes' => 'key-figure component',
+        'id' => '',
+        'classes' => 'key-figure component layout-constrain',
         'description' => '',
-        'show_label' => 1,
+        'show_label' => '1',
         'label_element' => 'h3',
         'effect' => 'none',
         'speed' => 'fast',
-        'id' => '',
       ),
       'formatter' => 'open',
     ),

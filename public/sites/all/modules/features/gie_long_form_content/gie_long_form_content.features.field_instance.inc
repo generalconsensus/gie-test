@@ -871,10 +871,11 @@ function gie_long_form_content_field_default_field_instances() {
         'weight' => 4,
       ),
     ),
+    'ds_extras_field_template' => '',
     'entity_type' => 'node',
     'field_name' => 'field_pdf_screenshot',
     'label' => 'Screenshot',
-    'required' => FALSE,
+    'required' => 0,
     'settings' => array(
       'alt_field' => 0,
       'alt_field_default' => '',
@@ -882,6 +883,7 @@ function gie_long_form_content_field_default_field_instances() {
       'alt_field_sync_title' => 0,
       'alt_field_update_on_edit' => 0,
       'default_image' => 0,
+      'description_display' => 'after',
       'file_directory' => '',
       'file_extensions' => 'png gif jpg jpeg',
       'focus' => 0,
@@ -899,6 +901,7 @@ function gie_long_form_content_field_default_field_instances() {
       'user_register_form' => FALSE,
     ),
     'widget' => array(
+      'active' => 1,
       'module' => 'image',
       'settings' => array(
         'preview_image_style' => 'thumbnail',

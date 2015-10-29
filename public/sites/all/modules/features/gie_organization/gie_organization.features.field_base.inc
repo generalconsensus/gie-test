@@ -162,7 +162,8 @@ function gie_organization_field_default_field_bases() {
     'locked' => 0,
     'module' => 'image',
     'settings' => array(
-      'uri_scheme' => 'public',
+      'default_image' => 43,
+      'uri_scheme' => 's3',
     ),
     'translatable' => 0,
     'type' => 'image',
