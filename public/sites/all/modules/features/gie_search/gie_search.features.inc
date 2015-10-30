@@ -429,13 +429,7 @@ function gie_search_default_search_api_server() {
     "machine_name" : "elasticsearch",
     "description" : "",
     "class" : "search_api_elasticsearch_elastica_service",
-    "options" : {
-      "0" : {
-        "host" : "search-giexchange-kfthj2b3nazu44oiywqn5emn5i.us-east-1.es.amazonaws.com",
-        "port" : "80"
-      },
-      "facet_limit" : "10"
-    },
+    "options" : { "0" : { "host" : "localhost" }, "facet_limit" : "10" },
     "enabled" : "1",
     "rdf_mapping" : []
   }');
@@ -449,7 +443,7 @@ function gie_search_default_search_api_server() {
       "site_hash" : true,
       "scheme" : "http",
       "host" : "localhost",
-      "port" : 8984,
+      "port" : 8983,
       "path" : "\\/solr\\/drupal",
       "http_user" : "",
       "http_pass" : "",
