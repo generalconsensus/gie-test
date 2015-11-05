@@ -19,7 +19,6 @@ features[variable][] = file_temporary_path
 features[variable][] = s3fs_awssdk2_access_key
 features[variable][] = s3fs_awssdk2_default_cache_config
 features[variable][] = s3fs_awssdk2_secret_key
-features[variable][] = s3fs_bucket
 features[variable][] = s3fs_cache_control_header
 features[variable][] = s3fs_domain
 features[variable][] = s3fs_hostname
