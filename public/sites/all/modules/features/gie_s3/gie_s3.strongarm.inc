@@ -72,13 +72,6 @@ function gie_s3_strongarm() {
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
-  $strongarm->name = 's3fs_bucket';
-  $strongarm->value = 'giexchange-dev';
-  $export['s3fs_bucket'] = $strongarm;
-
-  $strongarm = new stdClass();
-  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
-  $strongarm->api_version = 1;
   $strongarm->name = 's3fs_cache_control_header';
   $strongarm->value = '';
   $export['s3fs_cache_control_header'] = $strongarm;
