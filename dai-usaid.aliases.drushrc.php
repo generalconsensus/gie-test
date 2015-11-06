@@ -37,6 +37,21 @@ $aliases['dev'] = array(
   ),  
 );
 
+$aliases['microsite'] = array(
+  'uri' => 'feature.giexchange.forumone.com',
+  'root' => '/var/www/vhosts/giexchange.feature/public',
+  'remote-host' => 'giexchange.forumone.com',
+  'remote-user' => 'giexchange',
+  'path-aliases' => array(
+    '%files' => 'sites/default/files',
+  ),
+  'command-specific' => array(
+    'rsync' => array (
+      'mode' => 'rzv'
+    ),
+  ),
+);
+
 
 $aliases['stage'] = array(
   'uri' => 'stage.giexchange.forumone.com',
