@@ -188,6 +188,7 @@ features[views_view][] = communities
 features[views_view][] = expertise
 features[views_view][] = recent_conversations
 features[views_view][] = recently_posted
+features[views_view][] = team_listing_page
 features[views_view][] = user_connections
 features[views_view][] = user_funded_by
 features[views_view][] = user_innovations
