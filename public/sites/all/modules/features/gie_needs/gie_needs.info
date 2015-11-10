@@ -7,6 +7,7 @@ dependencies[] = entityreference_view_widget
 dependencies[] = eva
 dependencies[] = field_group
 dependencies[] = gie_funding
+dependencies[] = gie_long_form_content
 dependencies[] = gie_user
 dependencies[] = text
 dependencies[] = views

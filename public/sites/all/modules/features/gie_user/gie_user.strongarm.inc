@@ -130,6 +130,12 @@ function gie_user_strongarm() {
         'contact' => array(
           'weight' => '10',
         ),
+        'metatags' => array(
+          'weight' => '40',
+        ),
+        'xmlsitemap' => array(
+          'weight' => '30',
+        ),
       ),
       'display' => array(
         'summary' => array(
