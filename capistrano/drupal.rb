@@ -17,7 +17,9 @@ end
 namespace :drupal do
   desc "Install Drupal"
   task :install do
-    invoke 'drush:siteinstall'
+  	on roles(:db) do
+      invoke 'drush:siteinstall'
+    end
   end
   
   desc "Copy Drupal and web server configuration files"
