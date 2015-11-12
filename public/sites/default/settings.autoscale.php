@@ -218,7 +218,7 @@ $databases = array (
     'default' => 
     array (
       'database' => 'giexchange_www',
-      'username' => 'gie_www_user',
+      'username' => 'gieuser_www',
       'password' => '9aaY^BSHJMyNMkoO',
       'host' => 'giexchange.c06busiwruk7.us-east-1.rds.amazonaws.com',
       'port' => '',
