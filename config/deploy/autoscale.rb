@@ -16,7 +16,7 @@ end
 set :stage, :autoscale
 
 # An array containing site URL, used for Varnish bans
-set :site_url, %w{dev.giexchange.forumone.com}
+set :site_url, %w{www.gie.byf1.io}
 
 # An array containing drupal sites to copy settings files in
 set :site_folder, %w{default}
