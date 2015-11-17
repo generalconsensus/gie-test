@@ -47,12 +47,6 @@ function gie_long_form_content_context_default_contexts() {
           'region' => 'footerbar',
           'weight' => '-10',
         ),
-        'pane-about_the_exchange' => array(
-          'module' => 'pane',
-          'delta' => 'about_the_exchange',
-          'region' => 'footer',
-          'weight' => '-10',
-        ),
         'menu-menu-sub-footer-menu' => array(
           'module' => 'menu',
           'delta' => 'menu-sub-footer-menu',

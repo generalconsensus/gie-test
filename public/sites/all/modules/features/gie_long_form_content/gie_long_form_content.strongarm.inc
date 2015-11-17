@@ -129,10 +129,10 @@ function gie_long_form_content_strongarm() {
           'weight' => '5',
         ),
         'metatags' => array(
-          'weight' => '40',
+          'weight' => '13',
         ),
         'xmlsitemap' => array(
-          'weight' => '30',
+          'weight' => '12',
         ),
       ),
       'display' => array(
