@@ -481,7 +481,7 @@ function gie_long_form_content_field_group_info() {
       'instance_settings' => array(
         'required_fields' => 1,
         'classes' => 'group-pdf field-group-fieldset',
-        'description' => '',
+        'description' => 'Relate your long form report to an existing PDF report. Upload a screenshot and the report PDF. The screenshot you upload should serve as the visual representation of your report, for example an image of the 1st page of the report.',
       ),
       'formatter' => 'open',
     ),
