@@ -287,7 +287,7 @@ function gie_long_form_content_field_default_field_instances() {
     'bundle' => 'long_form_page',
     'default_value' => NULL,
     'deleted' => 0,
-    'description' => '',
+    'description' => 'This link will appear at the bottom of your long form report, sending readers to a related website. You could also put the link to the referenced PDF here.',
     'display' => array(
       'default' => array(
         'label' => 'above',
@@ -331,7 +331,7 @@ function gie_long_form_content_field_default_field_instances() {
         'target' => 'default',
         'title' => '',
       ),
-      'description_display' => 'after',
+      'description_display' => 'before',
       'display' => array(
         'url_cutoff' => 80,
       ),
@@ -637,7 +637,9 @@ function gie_long_form_content_field_default_field_instances() {
     'bundle' => 'long_form_page',
     'default_value' => NULL,
     'deleted' => 0,
-    'description' => '',
+    'description' => 'This description will appear in the footer of your report. This description could be about the organization posting the report, or background information about the report itself.
+
+',
     'display' => array(
       'default' => array(
         'label' => 'above',
@@ -706,7 +708,7 @@ function gie_long_form_content_field_default_field_instances() {
           ),
         ),
       ),
-      'description_display' => 'after',
+      'description_display' => 'before',
       'text_processing' => 1,
       'user_register_form' => FALSE,
     ),
@@ -3497,6 +3499,10 @@ function gie_long_form_content_field_default_field_instances() {
   t('Section Title');
   t('Subtitle');
   t('Text');
+  t('This description will appear in the footer of your report. This description could be about the organization posting the report, or background information about the report itself.
+
+');
+  t('This link will appear at the bottom of your long form report, sending readers to a related website. You could also put the link to the referenced PDF here.');
   t('Title');
   t('Title #1');
   t('Title #2');
