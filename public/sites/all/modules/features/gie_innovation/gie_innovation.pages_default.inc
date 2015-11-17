@@ -645,7 +645,7 @@ function gie_innovation_default_page_manager_pages() {
     $pane->access = array();
     $pane->configuration = array(
       'override_title' => 1,
-      'override_title_text' => 'Organizations',
+      'override_title_text' => 'Affiliated Organizations',
       'override_title_heading' => 'h2',
     );
     $pane->cache = array();
@@ -668,7 +668,7 @@ function gie_innovation_default_page_manager_pages() {
     $pane->access = array();
     $pane->configuration = array(
       'override_title' => 1,
-      'override_title_text' => 'Funding Partners',
+      'override_title_text' => 'Funded by',
       'override_title_heading' => 'h2',
     );
     $pane->cache = array();
