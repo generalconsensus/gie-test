@@ -158,6 +158,7 @@ features[features_api][] = api:2
 features[page_manager_existing_pages][] = solr_search
 features[page_manager_handlers][] = pm_existing_pages_solr_search__solr_search
 features[page_manager_handlers][] = search_node__solr_search
+features[search_api_index][] = api
 features[search_api_index][] = default_node_index
 features[search_api_index][] = default_user_index
 features[search_api_index][] = dev
