@@ -35,3 +35,22 @@ function gie_long_form_content_update_7003() {
     field_delete_instance($instance);
   }
 }
+
+/**
+ * Deleted alignment field from image, aside, key figure, video and text paragraph bundle
+ */
+function gie_long_form_content_update_7004() {
+  $fields = array(
+    'field_partner_logo',
+    'field_partner_link',
+    'field_partner_logos'
+  );
+  foreach ($fields as $field_name) {
+    field_delete_field($field_name);
+    watchdog('GIE', 'Deleted the :field_name field from all content type instances.', array(':field_name' =>
+      $field_name));
+  }
+  field_purge_batch(count($fields));
+}
+
+

@@ -654,3 +654,9 @@ ini_set('memory_limit', '512M');
  */
 ini_set('upload_max_filesize','20M');
 ini_set('post_max_size','20M');
+
+/**
+ * AWS Settings
+ */
+$conf['awssdk2_access_key'] = 'AKIAIPEI5YZN2LIY3Z5Q';
+$conf['awssdk2_secret_key'] = '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';
