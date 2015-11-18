@@ -78,9 +78,13 @@
 
 //ie9 break fix
 .ie9 .share-block__icon {
-  height: 40px;
-  width: 40px;
-  margin-left: 20px;
+  
+  @include breakpoint(700px, $no-query: true) {
+    height: 40px;
+    width: 40px;
+    margin-left: 20px;
+  }
+  
 }
 .ie9 .share-block__icon--share span.st_sharethis_custom {
   background-repeat: no-repeat;
@@ -90,7 +94,10 @@
 }
 .ie9 .share-block__icon--print {
   background-repeat: no-repeat;
-  margin-left: 20px;
+  @include breakpoint(700px, $no-query: true) {
+    margin-left: 20px;
+  }
+  
 }
 
 //Hide Usabilla Live Button
