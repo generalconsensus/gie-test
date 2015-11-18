@@ -4,5 +4,7 @@ module.exports = function (grunt) {
     'shell:patternlab',
     'copy:longform_patternlabStyleguide',
     'shell:longform_patternlab',
+    'copy:microsites_patternlabStyleguide',
+    'shell:microsites_patternlab',
   ]);
 };

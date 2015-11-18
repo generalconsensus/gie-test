@@ -26,6 +26,17 @@ module.exports = function(grunt) {
           livereload : true
         }
       }
+      microsites_compass: {
+        files : [ 'public/sites/all/themes/gesso_microsites/sass/**/*.scss' ],
+        tasks : [ 'compass:longform_' + environment ],
+      },
+      microsites_patternlab : {
+        files : [ 'public/sites/all/themes/gesso_microsites/patternlab/source/**/*' ],
+        tasks : [ 'shell:patternlab' ],
+        options : {
+          livereload : true
+        }
+      }
     }
   });
 

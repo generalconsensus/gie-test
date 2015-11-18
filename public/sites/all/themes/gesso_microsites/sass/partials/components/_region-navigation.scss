@@ -1,0 +1,7 @@
+// Hide navigation region while mobile menu is displayed.
+.region-navigation {
+  display: block;
+  // @include breakpoint($mobile-menu-bp, $no-query: true) {
+  //   display: block;
+  // }
+}

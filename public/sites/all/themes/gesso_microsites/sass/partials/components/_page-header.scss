@@ -1,0 +1,70 @@
+// @file
+// Styles for the longform page header.
+.page-header {
+  background: $red url('../images/default-report-feature.jpg') repeat repeat;
+  color: $white;
+  display: block;
+  padding: 8em 0 5em 0;
+  overflow: hidden;
+  position: relative;
+  text-align: center;
+  z-index: -2;
+}
+
+.page-header__image {
+  @include image-transparency(.5);
+  position: absolute;
+  top: -25%;
+  left: -25%;
+  z-index: -1;
+  img {
+   max-width: initial;
+  }
+}
+
+.page-header__subtext {
+  font-size:$font-size-xl;
+  text-transform: uppercase;
+  &:after{
+    border-top: 2px #FFF solid;
+    content: " ";
+    display: block;
+    margin: 0 auto;
+    margin-top: 12px;
+    width: 20%;
+  }
+}
+
+.page-header__headline {
+  font-size:3.5em;
+  line-height: 1em;
+  text-transform: uppercase;
+  padding-top: 1em;
+  word-break: keep-all;
+}
+
+.page-header__author {
+  img{
+    border-radius: 50%;
+    border: 2px $white solid;
+  } 
+}
+
+.page-header__description {
+  font-size: $font-size-md;
+  font-style: italic;
+  // text-transform: capitalize;
+}
+
+.page-header__scroll-button {
+  // @include svg-background(icon-header-down);
+  @include image-replace(75px, 75px);
+  // bottom: -8em;
+  display: inline-block;
+  position: relative;
+  top: -2em;
+  bottom: -37px;
+  left: 50%;
+  margin-left: -37px;
+  background: transparent url('../images/bg/icon-header-down.png') no-repeat;
+}

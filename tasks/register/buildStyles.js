@@ -5,5 +5,6 @@ module.exports = function (grunt) {
   grunt.registerTask('buildStyles', [
     'compass:' + environment,
     'compass:longform_' + environment
+    'compass:microsites_' + environment
   ]);
 };

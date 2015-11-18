@@ -1,0 +1,183 @@
+// @file
+// Button helpers
+
+@mixin button($bg-color: $button-bg-color, $text-color: $button-text-color, $font-size: $font-size-md, $font-family: $button-font-family) {
+  @include adjust-font-size-to($font-size);
+  @include border-radius(0);
+  background-color: $bg-color;
+  border: none;
+  color: $button-text-color !important;
+  cursor: pointer;
+  display: inline-block;
+  font-family: $base-font-family;
+  font-weight: normal;
+  margin: 0 0 rhythm(1);
+  padding: 0.5em 1.75em;
+  text-align: center;
+  text-decoration: none;
+  vertical-align: baseline;
+
+  @if support-legacy-browser('ie', '6', '7') {
+    *line-height: normal;
+    *zoom: 1;
+  }
+
+  &:focus,
+  &:hover {
+    background-color: darken($bg-color, 6.9%);
+    border-color: darken($bg-color, 6.9%);
+    color: $button-text-color !important;
+    outline: 0;
+    text-decoration: none;
+  }
+
+}
+
+%button {
+  @include button();
+
+  & + & {
+    margin-left: 1em; // LTR
+
+    [dir="rtl"] & {
+    margin-left: 0;
+    margin-right: 1em;
+    }
+  }
+}
+
+%button--large {
+  text-transform: uppercase;
+}
+
+%button--highlight {
+  background-color: $red;
+  border-color: $red;
+  &:hover, &:focus {
+    background-color: #822433;
+    border-color: #822433;
+  }
+}
+
+%button--light {
+  background-color: #fff;
+  border: 1px solid $primary-text-color;
+  color: $primary-text-color !important;
+  &:hover, &:focus {
+    background-color: $primary-text-color;
+    color: #fff !important;
+  }
+}
+
+%button--white {
+  background: #fff;
+  border: 0;
+  color: $orange !important;
+  margin-bottom: 0;
+  opacity: 0.75;
+  text-transform: uppercase;
+  &:hover, &:focus {
+    opacity: 1;
+  }
+}
+
+%button--orange {
+  background: $lightorange;
+  border-color: $lightorange;
+  &:hover, &:focus {
+    background: $orange;
+    border-color: $orange;
+  }
+}
+
+%button--icon {
+  padding-left: 50px;
+  padding-right: 2em;
+  position: relative;
+  text-transform: uppercase;
+  &:before {
+    @include image-replace(20px,20px);
+    content: "";
+    display: block;
+    left: 15px;
+    position: absolute;
+    top: 10px;
+  }
+}
+
+%button--share {
+  @extend %button--icon;
+ &:before {
+    @include svg-background(icon-share-18-21-white);
+    height: 21px;
+    width: 18px;
+  }
+}
+
+%button--favorite {
+  @extend %button--icon;
+  &:before {
+    @include svg-background(icon-favorite-19-18-white);
+    height: 18px;
+    left: 18px;
+    width: 19px;
+    top: 12px;
+  }
+}
+
+%button--add {
+  @extend %button--icon;
+  padding-left: 40px;
+  &:before {
+    @include svg-background(icon-plus-12-12-white);
+    height: 12px;
+    top: 13px;
+    width: 12px;
+  }
+}
+
+%button--member {
+  @extend %button--icon;
+  padding-left: 40px;
+  &:before {
+    @include svg-background(icon-member-18-18-white);
+    height: 18px;
+    top: 11px;
+    width: 18px;
+  }
+}
+
+%button--edit {
+  @extend %button--icon;
+  padding-left: 40px;
+  &:before {
+    @include svg-background(icon-edit-22-22-white);
+    height: 22px;
+    top: 8px;
+    width: 22px;
+  } 
+}
+
+%button--flag {
+  @extend %button--icon;
+  background-color: #fff;
+  border: 1px solid $primary-text-color;
+  color: $primary-text-color !important;
+  padding-left: 55px;
+  &:before {
+    @include svg-background(icon-flag-19-20);
+    height: 20px;
+    left: 20px;
+    opacity: 0.65;
+    top: 9px;
+    width: 19px;
+  } 
+  &:hover, &:focus {
+    background-color: #f1f1f1;
+    border-color: #000;
+    color: #000 !important;
+    &:before {
+      opacity: 0.9;
+    }
+  }
+}
