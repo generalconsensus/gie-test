@@ -51,7 +51,7 @@
   color: #333;
   cursor: pointer;
   display: inline-block;
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: Lato, "Helvetica Neue", Helvetica, Arial, sans-serif;
   margin: 0 0 1.3125em;
   padding: 0 0.5em;
   text-align: center;
@@ -322,7 +322,7 @@ figure {
 
 h1, h2, h3, h4, h5, h6 {
   color: #333;
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: Lato, "Helvetica Neue", Helvetica, Arial, sans-serif;
   -moz-hyphens: none;
   -ms-hyphens: none;
   -webkit-hyphens: none;
@@ -377,7 +377,7 @@ html {
   -ms-hyphens: auto;
   -webkit-hyphens: auto;
   hyphens: auto;
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: Lato, "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 100%;
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
@@ -481,7 +481,7 @@ ul ul {
 
   a[href]:after {
     content: " <" attr(href) ">";
-    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-family: Lato, "Helvetica Neue", Helvetica, Arial, sans-serif;
     font-size: 10pt;
     font-weight: normal;
     text-transform: lowercase;
@@ -1735,7 +1735,7 @@ tr.drag-previous {
   font-size: 0.875em;
   line-height: 1.5em;
   display: block;
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: Lato, "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
 /*# sourceMappingURL=styles.css.map */
