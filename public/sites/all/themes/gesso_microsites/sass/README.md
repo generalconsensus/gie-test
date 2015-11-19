@@ -128,7 +128,7 @@ later to move/re-factor these styles into their proper place.
 
 ### overrides/
 Stylesheets provided by Drupal modules that you want to completely override go
-here. Please update gesso_css_alter() in includes/css.inc to ensure the module’s
+here. Please update gesso_microsites_css_alter() in includes/css.inc to ensure the module’s
 stylesheet is not added and this stylesheet is added in its place.
 
 ### panels-admin/

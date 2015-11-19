@@ -1,6 +1,6 @@
-# Gesso
+# gesso
 
-Gesso is a [Sass](http://sass-lang.com/)-based starter theme that outputs
+gesso is a [Sass](http://sass-lang.com/)-based starter theme that outputs
 accessible HTML5 markup. It uses a mobile-first responsive approach and
 leverages [SMACSS](https://smacss.com/) to organize styles as outlined in the
 [Drupal 8 CSS architecture guidelines](https://www.drupal.org/node/1887918).
@@ -8,9 +8,9 @@ This encourages a component-based approach to theming through the creation of
 discrete, reusable UI elements.
 
 For a full description of this theme, view the
-[Gesso project page](https://drupal.org/project/gesso/). To submit bug reports
+[gesso_microsites project page](https://drupal.org/project/gesso/). To submit bug reports
 or feature requests, visit the
-[Gesso issue queue](https://drupal.org/project/issues/gesso/).
+[gesso_microsites issue queue](https://drupal.org/project/issues/gesso/).
 
 
 ## Requirements
@@ -46,19 +46,19 @@ Check out the README within the sass directory for more information.
 
 ## Installation
 
-1.  Place the Gesso theme in your site’s theme directory.
+1.  Place the gesso theme in your site’s theme directory.
     (e.g., sites/all/themes/gesso) Read documentation on
     [installing themes](https://drupal.org/getting-started/install-contrib/themes)
     for more information.
 
-2.  Because Gesso is a starter theme, it is not meant to be used directly.
-    Instead, you should rename the Gesso directory or copy its contents to a new
+2.  Because gesso is a starter theme, it is not meant to be used directly.
+    Instead, you should rename the gesso_microsites directory or copy its contents to a new
     custom theme directory.
 
     The easiest way to accomplish this is to use [Drush](https://github.com/drush-ops/drush).
-    Type `drush gesso --help` for more information.
+    Type `drush gesso_microsites --help` for more information.
 
-    If you can’t use Drush, then manually replace all instances of 'gesso'
+    If you can’t use Drush, then manually replace all instances of 'gesso_microsites'
     within this directory with a machine-readable name of your choice, including
     folder names, filenames, and all occurences within files. This custom name
     must start with a letter and may only contain lowercase letters, numbers,
@@ -71,8 +71,8 @@ Check out the README within the sass directory for more information.
 
 ## Configuration
 
-Gesso includes several theme-specific settings for managing classes output by
-Drupal, which you can change at admin/appearance/settings/gesso.
+gesso includes several theme-specific settings for managing classes output by
+Drupal, which you can change at admin/appearance/settings/gesso_microsites.
 
 ### Non-Drupal configuration files
 
@@ -108,7 +108,7 @@ based imports to Sass.
 
 ## Maintainers
 
-The Gesso theme is maintained by [Dan Mouyard](https://drupal.org/u/dcmouyard)
+The gesso theme is maintained by [Dan Mouyard](https://drupal.org/u/dcmouyard)
 ([@dcmouyard](http://twitter.com/dcmouyard)) and
 [Corey Lafferty](https://drupal.org/u/clafferty)
 ([@coreylafferty](http://twitter.com/coreylafferty)).

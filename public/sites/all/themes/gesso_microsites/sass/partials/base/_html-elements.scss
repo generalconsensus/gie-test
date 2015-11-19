@@ -64,16 +64,6 @@ b {}
 
 blockquote {
   margin: 0 1.5em rhythm(1);
-  border-top:1px solid $red;
-  border-bottom:1px solid $red;
-  color:$lightred;
-  display: block;
-  font-size: $font-size-lg;
-  font-style: italic;
-  margin: .5em auto;
-  padding: 1em 0;
-  text-align: center;
-  width: 75%;
 }
 
 body {
@@ -92,32 +82,9 @@ button {
 
 canvas {}
 
-caption, .caption {
-  font-size: $font-size-sm;
-  text-align: center;
-  padding: 1em;
-  &:before{
-    font-weight: bold;
-    // float: left;
-  }
-  &:after{
-    border-bottom: 1px solid $red;
-    content: " ";
-    display: block;
-    margin: 0 auto;
-    padding: .5em;
-    width: 50%;
-  }
-}
+caption {}
 
-cite {
-  &:before{
-    content: "- ";
-  }
-  .cite__author{
-    font-weight: bold;
-  }
-}
+cite {}
 
 code {}
 
@@ -190,24 +157,12 @@ h3 {
   @extend %hN;
   font-size: em($font-size-lg);
   margin: 0 0 rhythm(1, $font-size-lg);
-  color: $red;
 }
 
 h4 {
   @extend %hN;
-  font-size: em($font-size-sm);
+  font-size: em($font-size-normal);
   margin: 0 0 rhythm(1, $font-size-normal);
-  background-color: $red;
-  color: $white;
-  display: inline-block;
-  padding: 2px 5px;
-  text-transform: uppercase;
-  a{
-    color: $white;
-    text-decoration: none;
-  }
-  
-
 }
 
 h5 {
@@ -333,6 +288,7 @@ ol {
   [dir="rtl"] & {
     padding: 0 1.5em 0 0;
   }
+
   ol,
   ul {
     margin: 0;
@@ -419,9 +375,11 @@ u {}
 ul {
   margin: 0 0 rhythm(1);
   padding: 0 0 0 1.2em; // LTR
+
   [dir="rtl"] & {
     padding: 0 1.2em 0 0;
   }
+
   ol,
   ul {
     margin: 0;
@@ -430,10 +388,7 @@ ul {
 
 var {}
 
-video {
-  display: block;
-  margin: 0 auto;
-}
+video {}
 
 // Default print styles
 @media print {

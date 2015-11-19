@@ -7,10 +7,4 @@
 
 .button--large {
   @extend %button--large;
-  
-}
-
-.button--share{
-	@extend %button--share;
-	background: $red;
 }

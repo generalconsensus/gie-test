@@ -1,4 +1,4 @@
-name = 'Gesso long form'
+name = 'gesso_microsites'
 description = 'Sass-based starter theme.'
 core = '7.x'
 engine = 'phptemplate'
