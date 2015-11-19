@@ -1,0 +1,20 @@
+{{> layouts-header-region }}
+{{> layouts-navigation-region }}
+{{> layouts-preface-region }}
+
+<main id="main" class="main" role="main" tabindex="-1">
+  <div class="region-content layout-constrain">
+
+    {{> components-page-title }}
+
+    {{# listItems.five }}
+      {{> components-image-teaser }}
+    {{/ listItems.five }}
+
+    {{> components-pager }}
+
+  </div>
+</main>
+
+{{> layouts-postscript-region }}
+{{> layouts-footer-region }}

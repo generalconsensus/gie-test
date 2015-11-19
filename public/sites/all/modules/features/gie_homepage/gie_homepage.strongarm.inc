@@ -242,10 +242,16 @@ function gie_homepage_strongarm() {
     'extra_fields' => array(
       'form' => array(
         'path' => array(
-          'weight' => '1',
+          'weight' => '2',
         ),
         'rabbit_hole' => array(
-          'weight' => '0',
+          'weight' => '1',
+        ),
+        'metatags' => array(
+          'weight' => '20',
+        ),
+        'xmlsitemap' => array(
+          'weight' => '19',
         ),
       ),
       'display' => array(),

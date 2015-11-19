@@ -222,9 +222,10 @@ function gie_long_form_content_field_group_info() {
     'weight' => '4',
     'children' => array(
       0 => 'field_learn_more_link',
-      1 => 'field_longform_description',
-      2 => 'field_partner_logos',
-      3 => 'field_pdf_screenshot',
+      1 => 'field_pdf_screenshot',
+      2 => 'field_longform_partners',
+      3 => 'long_form_powered_by',
+      4 => 'group_longform_report_desc',
     ),
     'format_type' => 'div',
     'format_settings' => array(
@@ -342,6 +343,69 @@ function gie_long_form_content_field_group_info() {
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
   $field_group->api_version = 1;
+  $field_group->identifier = 'group_longform_report_desc|node|long_form_page|form';
+  $field_group->group_name = 'group_longform_report_desc';
+  $field_group->entity_type = 'node';
+  $field_group->bundle = 'long_form_page';
+  $field_group->mode = 'form';
+  $field_group->parent_name = '';
+  $field_group->data = array(
+    'label' => 'Report Description',
+    'weight' => '9',
+    'children' => array(
+      0 => 'field_learn_more_link',
+      1 => 'field_longform_description',
+      2 => 'field_longform_description_title',
+    ),
+    'format_type' => 'fieldset',
+    'format_settings' => array(
+      'label' => 'Report Description',
+      'instance_settings' => array(
+        'required_fields' => 1,
+        'classes' => 'group-longform-report-desc field-group-fieldset',
+        'description' => '',
+      ),
+      'formatter' => 'open',
+    ),
+  );
+  $export['group_longform_report_desc|node|long_form_page|form'] = $field_group;
+
+  $field_group = new stdClass();
+  $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
+  $field_group->api_version = 1;
+  $field_group->identifier = 'group_longform_report_desc|node|long_form_page|full';
+  $field_group->group_name = 'group_longform_report_desc';
+  $field_group->entity_type = 'node';
+  $field_group->bundle = 'long_form_page';
+  $field_group->mode = 'full';
+  $field_group->parent_name = 'group_footer';
+  $field_group->data = array(
+    'label' => 'Report Description',
+    'weight' => '5',
+    'children' => array(
+      0 => 'field_longform_description',
+      1 => 'field_longform_description_title',
+    ),
+    'format_type' => 'div',
+    'format_settings' => array(
+      'label' => 'Report Description',
+      'instance_settings' => array(
+        'id' => '',
+        'classes' => 'group-longform-report-desc field-group-div',
+        'description' => '',
+        'show_label' => '0',
+        'label_element' => 'h3',
+        'effect' => 'none',
+        'speed' => 'fast',
+      ),
+      'formatter' => 'open',
+    ),
+  );
+  $export['group_longform_report_desc|node|long_form_page|full'] = $field_group;
+
+  $field_group = new stdClass();
+  $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
+  $field_group->api_version = 1;
   $field_group->identifier = 'group_page_header|node|long_form_page|full';
   $field_group->group_name = 'group_page_header';
   $field_group->entity_type = 'node';
@@ -352,9 +416,9 @@ function gie_long_form_content_field_group_info() {
     'label' => 'Page Header',
     'weight' => '1',
     'children' => array(
-      0 => 'field_long_form_subtitle',
-      1 => 'field_longform_byline',
-      2 => 'field_header_image',
+      0 => 'field_header_image',
+      1 => 'field_long_form_subtitle',
+      2 => 'field_longform_byline',
       3 => 'title',
     ),
     'format_type' => 'div',
@@ -481,7 +545,7 @@ function gie_long_form_content_field_group_info() {
       'instance_settings' => array(
         'required_fields' => 1,
         'classes' => 'group-pdf field-group-fieldset',
-        'description' => '',
+        'description' => 'Relate your long form report to an existing PDF report. Upload a screenshot and the report PDF. The screenshot you upload should serve as the visual representation of your report, for example an image of the 1st page of the report.',
       ),
       'formatter' => 'open',
     ),

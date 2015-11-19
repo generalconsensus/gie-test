@@ -43,6 +43,9 @@ function _gie_general_welcome() {
 function gie_general_block_info() {
   $blocks = array();
 
+  $blocks['about_submenu'] = array(
+    'info' => t('GIE About submenu'),
+  );
   $blocks['innovation_submenu'] = array(
     'info' => t('GIE Innovation submenu'),
   );
@@ -63,6 +66,10 @@ function gie_general_block_view($delta = '') {
   $block = array();
 
   switch($delta) {
+    case 'about_submenu':
+      $block['subject'] = '';
+      $block['content'] = _gie_general_contents($delta);
+      break;
     case 'innovation_submenu':
       $block['subject'] = '';
       $block['content'] = _gie_general_contents($delta);
@@ -88,6 +95,58 @@ function _gie_general_contents($block_id) {
   $block = array();
 
   switch($block_id) {
+    case 'about_submenu':
+      $block = array(
+        'about_page' => array(
+          '#type' => 'link',
+          '#title' => t('About the Exchange'),
+          '#href' => 'about-exchange',
+          '#attributes' => array(
+            'class' => array('tb-megamenu-big-button has-icon-about'),
+          ),
+        ),
+      );
+      $block += array(
+        'faq_page' => array(
+          '#type' => 'link',
+          '#title' => t('FAQs'),
+          '#href' => 'frequently-asked-questions',
+          '#attributes' => array(
+            'class' => array('tb-megamenu-big-button has-icon-questions'),
+          ),
+        ),
+      );
+      $block += array(
+        'team_page' => array(
+          '#type' => 'link',
+          '#title' => t('Exchange Team'),
+          '#href' => 'team',
+          '#attributes' => array(
+            'class' => array('tb-megamenu-big-button has-icon-team'),
+          ),
+        ),
+      );
+      $block += array(
+        'partners_page' => array(
+          '#type' => 'link',
+          '#title' => t('Exchange Partners'),
+          '#href' => 'partners',
+          '#attributes' => array(
+            'class' => array('tb-megamenu-big-button has-icon-partners'),
+          ),
+        ),
+      );
+      $block += array(
+        'become_page' => array(
+          '#type' => 'link',
+          '#title' => t('Become a Partner'),
+          '#href' => 'team',
+          '#attributes' => array(
+            'class' => array('tb-megamenu-big-button has-icon-become'),
+          ),
+        ),
+      );
+      break;
     case 'innovation_submenu':
       $block = array(
         'browse_all' => array(
