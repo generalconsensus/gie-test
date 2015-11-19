@@ -50,7 +50,7 @@ function gie_innovation_panelizer_defaults() {
     ),
   );
   $display->cache = array();
-  $display->title = '%node_title';
+  $display->title = '%node:title';
   $display->uuid = '32c9fb80-dbca-45c3-90b1-028ef814b87f';
   $display->content = array();
   $display->panels = array();
