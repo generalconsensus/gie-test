@@ -128,6 +128,12 @@ function gie_long_form_content_strongarm() {
         'rabbit_hole' => array(
           'weight' => '5',
         ),
+        'metatags' => array(
+          'weight' => '13',
+        ),
+        'xmlsitemap' => array(
+          'weight' => '12',
+        ),
       ),
       'display' => array(
         'sharethis' => array(
