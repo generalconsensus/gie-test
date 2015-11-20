@@ -3,5 +3,4 @@ description = AngularJS data visualizations
 package = GIE
 core = 7.x
 
-dependencies[] = angularjs
 dependencies[] = jquery_update
