@@ -166,11 +166,17 @@ function gie_homepage_block_view($delta = '') {
         unset($form['lr_social_login_links']);
         unset($form['links']);
 
+        // Set custom titles
+        $form['name']['#title'] = t('Username or email');
+
         // Hide field labels and set placeholder text
         $form['name']['#title_display'] = 'invisible';
         $form['pass']['#title_display'] = 'invisible';
-        $form['name']['#attributes']['placeholder'] = t('Username');
-        $form['pass']['#attributes']['placeholder'] = t('Password');
+        $form['name']['#attributes']['placeholder'] = $form['name']['#title'];
+        $form['pass']['#attributes']['placeholder'] = $form['pass']['#title'];
+
+        // Auto-focus name field on page load
+        $form['name']['#attributes']['autofocus'] = 'autofocus';
 
         // Add Forgot Password link after submit
         $form['actions']['submit']['#suffix'] = t('<div>Forgot your <a href="/user/password" title="Request new password via e-mail.">Password</a></div>');
@@ -185,4 +191,31 @@ function gie_homepage_block_view($delta = '') {
   }
 
   return $block;
+}
+
+/**
+ * Implements hook_form_alter().
+ * - Include additional form validation to User Login Block
+ */
+function gie_homepage_form_alter(&$form, $form_state, $form_id) {
+  switch ($form_id) {
+    case 'user_login_block':
+      // Ensure a valid validate array
+      $form['#validate'] = is_array($form['#validate']) ? $form['#validate'] : array();
+      // Add super login email login validation and login redirect
+      array_unshift($form['#validate'],'super_login_user_login_validate');
+      $form['#validate'][] = '_gie_homepage_login_redirect';
+      break;
+  }
+}
+
+/**
+ * Custom form validation to redirect to login page if there were errors
+ */
+function _gie_homepage_login_redirect($form, &$form_state) {
+  $form = form_get_error($form['name']) . form_get_error($form['pass']);
+  if($form != '') {
+    $_GET['destination'] = 'user/login';
+    drupal_goto('user/login');
+  }
 }
