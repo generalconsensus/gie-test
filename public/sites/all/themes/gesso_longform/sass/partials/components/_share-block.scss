@@ -69,10 +69,8 @@
 .share-block__icon--print {
   z-index: 20;
   @include svg-background(longform-print-icon-square);
-  @include image-replace (40px, 40px);
   @include breakpoint($mobile-menu-bp, $no-query: true) {
     @include svg-background(longform-print-icon);
-    @include image-replace (75px, 75px);
   }
 }
 
