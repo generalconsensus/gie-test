@@ -2,12 +2,13 @@
 //Footer Partner Logos area
 
 .footer-partner {
-
+	float: right;
+	width: 100%;
 	@include breakpoint($mobile-menu-bp, $no-query: true) {
-
+		width: 70%;
 	}
 	&:before {
-		content: "POWERED BY";
+		content: "PARTNERS";
 		display: block;
 		font-style: italic;
 		text-align: right;
