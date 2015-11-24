@@ -15,6 +15,7 @@ dependencies[] = menu
 dependencies[] = og
 dependencies[] = og_menu_single
 dependencies[] = panelizer
+dependencies[] = paragraphs
 dependencies[] = text
 dependencies[] = views
 features[context][] = microsite

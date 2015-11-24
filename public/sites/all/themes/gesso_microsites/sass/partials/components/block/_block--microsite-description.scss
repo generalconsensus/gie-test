@@ -1,0 +1,15 @@
+.block--microsite-description {
+  @include breakpoint(1070px, $no-query: true) {
+    float: left;
+    margin-right: 1em;
+    max-width: 380px;
+  }
+  .block__title {
+    border-bottom: 1px solid #cecfcb;
+    color: #565a5c;
+    font-size: em($font-size-normal);
+    margin-bottom: 1em;
+    padding-bottom: 0.5em;
+    text-transform: uppercase;
+  }
+}

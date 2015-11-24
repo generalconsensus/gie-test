@@ -8,15 +8,16 @@
   <?php print render($page['utility']); ?>
 <?php endif; ?>
 
-<header class="header" role="banner">
-  <?php if ($page['header']): ?>
-    <?php print render($page['header']); ?>
-  <?php endif; ?>
+<header class="site-header" role="banner">
+  <div class="layout-constrain">
+    <?php if ($page['header']): ?>
+      <?php print render($page['header']); ?>
+    <?php endif; ?>
+    <?php if ($page['navigation']): ?>
+      <?php print render($page['navigation']); ?>
+    <?php endif; ?>
+  </div>
 </header>
-
-<?php if ($page['navigation']): ?>
-  <?php print render($page['navigation']); ?>
-<?php endif; ?>
 
 <?php if ($page['preface']): ?>
   <?php print render($page['preface']); ?>
@@ -33,7 +34,7 @@
 <?php endif; ?>
 
 <?php if ($page['footer']): ?>
-  <footer class="footer" role="contentinfo">
+  <footer class="site-footer" role="contentinfo">
     <?php print render($page['footer']); ?>
   </footer>
 <?php endif; ?>

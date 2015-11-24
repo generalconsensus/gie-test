@@ -32,13 +32,13 @@ function gie_groups_context_default_contexts() {
         'system-user-menu' => array(
           'module' => 'system',
           'delta' => 'user-menu',
-          'region' => 'header',
+          'region' => 'utility',
           'weight' => '-10',
         ),
         'views-59ece6cc1f2c71670512133b8215139d' => array(
           'module' => 'views',
           'delta' => '59ece6cc1f2c71670512133b8215139d',
-          'region' => 'navigation',
+          'region' => 'header',
           'weight' => '-10',
         ),
         'og_menu_single-menu' => array(
