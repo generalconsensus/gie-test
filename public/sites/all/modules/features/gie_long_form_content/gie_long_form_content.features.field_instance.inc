@@ -803,7 +803,7 @@ function gie_long_form_content_field_default_field_instances() {
           'view_mode' => 'logo',
         ),
         'type' => 'entityreference_entity_view',
-        'weight' => 7,
+        'weight' => 8,
       ),
     ),
     'ds_extras_field_template' => '',

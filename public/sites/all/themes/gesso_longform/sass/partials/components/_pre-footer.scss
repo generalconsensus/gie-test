@@ -11,13 +11,15 @@
 	height: 60px;
 	margin-bottom: 2em;
 	position: relative;
-	a{
-		color: $white;
-    position: relative;
-    padding-top: 20px;
-    text-decoration: underline;
-    top: 15px;
-    &:after{}
+	a {
+    display: none;
+    @include breakpoint(700px, $no-query: true) {
+      color: $white;
+      display: block;
+      position: relative;
+      text-decoration: underline;
+      top: 15px;
+    }
 	}
 }
 
@@ -25,7 +27,6 @@
 	@include image-replace(261px, 165px);
 	background: transparent url('../images/footer-fact-sheet.png') no-repeat;
   display: block;  
-  left: 25%;
   position: absolute;
   right: 25%;
   top: 1px;
@@ -52,5 +53,14 @@
 .pre-footer__description {
   width: 100%;
   @include breakpoint($mobile-menu-bp, $no-query: true) {
+  }
+}
+.pre-footer__description-title{
+  font-weight: bold;
+  padding-bottom: 10px;
+}
+.pre-footer__description-body{
+  .button {
+    margin-top: 10px;
   }
 }
