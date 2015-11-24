@@ -3,5 +3,6 @@
   display: none;
   @include breakpoint($mobile-menu-bp, $no-query: true) {
     display: block;
+    float: right;
   }
 }
