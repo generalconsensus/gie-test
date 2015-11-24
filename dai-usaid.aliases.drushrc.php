@@ -27,9 +27,6 @@ $aliases['dev'] = array(
   'root' => '/var/www/vhosts/giexchange.dev/public',
   'remote-host' => 'dev.giexchange.forumone.com',
   'remote-user' => 'giexchange',
-  'path-aliases' => array(
-    '%files' => 'sites/default/files',
-  ),
   'command-specific' => array(
     'rsync' => array ( 
       'mode' => 'rzv'
@@ -40,11 +37,8 @@ $aliases['dev'] = array(
 $aliases['microsite'] = array(
   'uri' => 'feature.giexchange.forumone.com',
   'root' => '/var/www/vhosts/giexchange.feature/public',
-  'remote-host' => 'giexchange.forumone.com',
+  'remote-host' => 'feature.giexchange.forumone.com',
   'remote-user' => 'giexchange',
-  'path-aliases' => array(
-    '%files' => 'sites/default/files',
-  ),
   'command-specific' => array(
     'rsync' => array (
       'mode' => 'rzv'
