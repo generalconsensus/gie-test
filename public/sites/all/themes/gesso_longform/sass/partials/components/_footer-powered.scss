@@ -1,0 +1,25 @@
+// @file
+// Footer Powered By block
+
+.footer-powered {
+	float: left;
+	width: 100%;
+	@include breakpoint($mobile-menu-bp, $no-query: true) {
+		width: 28%;
+	}
+	&:before {
+		content: "POWERED BY";
+		display: block;
+		font-style: italic;
+		text-align: left;
+    width: 100%;
+	}
+	a {
+		@include image-replace(261px, 165px);
+		background: transparent url('../images/logo-gix.png') no-repeat;
+		display: block;
+	}
+	p:first-child {
+		display: none;
+	}
+}
