@@ -11,13 +11,15 @@
 	height: 60px;
 	margin-bottom: 2em;
 	position: relative;
-	a{
-		color: $white;
-    position: relative;
-    padding-top: 20px;
-    text-decoration: underline;
-    top: 15px;
-    &:after{}
+	a {
+    display: none;
+    @include breakpoint(700px, $no-query: true) {
+      color: $white;
+      display: block;
+      position: relative;
+      text-decoration: underline;
+      top: 15px;
+    }
 	}
 }
 
@@ -54,3 +56,5 @@
   @include breakpoint($mobile-menu-bp, $no-query: true) {
   }
 }
+.pre-footer__description-title{}
+.pre-footer__description-body{}
