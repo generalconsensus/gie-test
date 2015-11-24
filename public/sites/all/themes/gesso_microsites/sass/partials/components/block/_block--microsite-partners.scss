@@ -1,0 +1,6 @@
+.block--microsite-partners {
+  @include breakpoint(1070px, $no-query: true) {
+    float: right;
+    margin-top: 4em;
+  }
+}

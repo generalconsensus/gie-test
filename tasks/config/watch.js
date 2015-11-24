@@ -27,7 +27,18 @@ module.exports = function(grunt) {
       },
       longform_patternlab : {
         files : [ 'public/sites/all/themes/gesso_longform/patternlab/source/**/*' ],
-        tasks : [ 'shell:patternlab' ],
+        tasks : [ 'shell:longform_patternlab' ],
+        options : {
+          livereload : true
+        }
+      },
+      microsites_compass: {
+        files : [ 'public/sites/all/themes/gesso_microsites/sass/**/*.scss' ],
+        tasks : [ 'compass:microsites_' + environment ],
+      },
+      microsites_patternlab : {
+        files : [ 'public/sites/all/themes/gesso_microsites/patternlab/source/**/*' ],
+        tasks : [ 'shell:microsites_patternlab' ],
         options : {
           livereload : true
         }
