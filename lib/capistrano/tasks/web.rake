@@ -17,6 +17,7 @@ Rake::Task["deploy:starting"].enhance ["web:load_platform"]
 namespace :load do
   task :defaults do
     set :platform, "drupal"
+    set :run_updates, true
   end
 end
 
@@ -70,6 +71,11 @@ namespace :deploy do
     invoke "deploy:published"
     invoke "deploy:finishing"
     invoke "deploy:finished"
+  end
+  
+  desc "Deploys files to remote host"
+  task :deploy_files => [:check, :starting, :started, :updating, :updated, :publishing, :published, :finishing, :finished] do
+  	
   end
   
   namespace :symlink do

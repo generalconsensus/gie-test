@@ -4,12 +4,17 @@ require 'net/ssh/proxy/command'
 autoscaling = Aws::AutoScaling::Client.new(region: 'us-east-1')
 ec2 = Aws::EC2::Client.new(region: 'us-east-1')
 
-servers = Array.new
-autoscaling.describe_auto_scaling_instances().data.auto_scaling_instances.each do |instance| 
-  instance = Aws::EC2::Instance.new(instance.instance_id, {
-  	region: 'us-east-1'
-  })
-  servers.push('gie@' + instance.data.private_ip_address)
+if ENV['server']
+  servers = [ENV['server']]
+  set :run_updates, false
+else
+  servers = Array.new
+  autoscaling.describe_auto_scaling_instances().data.auto_scaling_instances.each do |instance| 
+    instance = Aws::EC2::Instance.new(instance.instance_id, {
+  	  region: 'us-east-1'
+    })
+    servers.push('gie@' + instance.data.private_ip_address)
+  end
 end
 
 # The stage to use
