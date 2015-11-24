@@ -76,7 +76,7 @@
 
 //ie9 break fix
 .ie9 .share-block__icon {
-  
+  background-repeat: no-repeat;
   @include breakpoint(700px, $no-query: true) {
     height: 40px;
     width: 40px;
@@ -86,6 +86,8 @@
 }
 .ie9 .share-block__icon--share span.st_sharethis_custom {
   background-repeat: no-repeat;
+  height: 40px;
+  width: 40px;
 }
 .ie9 .share-block__icon--fav {
   background-repeat: no-repeat;
