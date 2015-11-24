@@ -82,6 +82,7 @@ namespace :deploy do
     desc "Set application webroot"
     task :web do
       on roles(:app) do
+        execute :chmod, '-R', 'u+rw', deploy_to + "/#{fetch(:webroot)}"
         execute :rm, '-rf', deploy_to + "/#{fetch(:webroot)}"
         execute :ln, '-s', "#{current_path}/#{fetch(:app_webroot, 'public')}", deploy_to + "/#{fetch(:webroot)}"
       end
