@@ -64,6 +64,7 @@ features[facetapi][] = search_api@default_node_index:block:changed
 features[facetapi][] = search_api@default_node_index:block:created
 features[facetapi][] = search_api@default_node_index:block:field_discussion_program
 features[facetapi][] = search_api@default_node_index:block:field_discussion_program_disc
+features[facetapi][] = search_api@default_node_index:block:field_event_cost
 features[facetapi][] = search_api@default_node_index:block:field_event_country
 features[facetapi][] = search_api@default_node_index:block:field_event_date:value
 features[facetapi][] = search_api@default_node_index:block:field_event_related_regions
