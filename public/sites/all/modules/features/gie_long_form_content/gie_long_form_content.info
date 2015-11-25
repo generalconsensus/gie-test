@@ -96,6 +96,7 @@ features[field_group][] = group_card_item_3|paragraphs_item|long_form_callout_ca
 features[field_group][] = group_card_item|paragraphs_item|long_form_callout_card|default
 features[field_group][] = group_card|paragraphs_item|long_form_callout_card|default
 features[field_group][] = group_favorite|node|long_form_page|full
+features[field_group][] = group_footer_group|node|long_form_page|full
 features[field_group][] = group_footer_partners|node|long_form_page|full
 features[field_group][] = group_footer|node|long_form_page|full
 features[field_group][] = group_fullwidth_header|paragraphs_item|long_form_section_break_image|default

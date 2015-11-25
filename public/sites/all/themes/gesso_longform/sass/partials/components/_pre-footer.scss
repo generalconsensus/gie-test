@@ -1,6 +1,15 @@
 .pre-footer {
   position: relative;
 }
+.group-footer-description,
+.group-footer-partners {
+  float: left;
+  padding-right: 2em;
+  width: 100%;
+  @include breakpoint(700px, $no-query: true) {
+    width: 50%;
+  }
+}
 
 .pre-footer.component {
   padding: 6em 0;
@@ -51,16 +60,22 @@
 }
 
 .pre-footer__description {
-  width: 100%;
+
   @include breakpoint($mobile-menu-bp, $no-query: true) {
   }
 }
 .pre-footer__description-title{
-  font-weight: bold;
-  padding-bottom: 10px;
+  border-bottom: 1px solid $lightgrey;
+  color: #565a5c;
+  font-weight: normal;
+  margin: 0 0 1em 0;
+  padding: 0 0 0.5em 0;
+  text-transform: uppercase;
 }
 .pre-footer__description-body{
   .button {
     margin-top: 10px;
+    background-color: $lightred;
+    border-color: $lightred;
   }
 }
