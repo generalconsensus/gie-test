@@ -4,17 +4,6 @@
 .footer-partner {
 	float: right;
 	width: 100%;
-	@include breakpoint($mobile-menu-bp, $no-query: true) {
-		width: 70%;
-	}
-	&:before {
-		content: "PARTNERS";
-		display: block;
-		font-style: italic;
-		text-align: right;
-    width: 100%;
-    padding-right: 4em;
-	}
 	.footer-partner__image { 
 		display: inline-block;
 		float: right;
