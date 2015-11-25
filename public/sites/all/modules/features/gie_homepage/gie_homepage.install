@@ -1,0 +1,23 @@
+<?php
+
+/**
+ * Implements hook_update_n
+ * run any updates here
+ */
+
+/**
+ * Imlpements hook_install().
+ */
+function gie_homepage_install() {
+
+
+}
+
+
+/**
+ * Delete Homepage Team Field.
+ */
+function gie_homepage_update_7000() {
+    field_delete_field('field_homepage_exchange_team');
+    field_purge_batch(1);
+}

@@ -78,6 +78,29 @@ function gie_user_taxonomy_default_vocabularies() {
         ),
       ),
     ),
+    'team' => array(
+      'name' => 'Team',
+      'machine_name' => 'team',
+      'description' => 'This taxonomy drives the Exchange Team section. ',
+      'hierarchy' => 0,
+      'module' => 'taxonomy',
+      'weight' => 0,
+      'rdf_mapping' => array(
+        'rdftype' => array(
+          0 => 'skos:ConceptScheme',
+        ),
+        'name' => array(
+          'predicates' => array(
+            0 => 'dc:title',
+          ),
+        ),
+        'description' => array(
+          'predicates' => array(
+            0 => 'rdfs:comment',
+          ),
+        ),
+      ),
+    ),
     'user_skills' => array(
       'name' => 'User Skills',
       'machine_name' => 'user_skills',
