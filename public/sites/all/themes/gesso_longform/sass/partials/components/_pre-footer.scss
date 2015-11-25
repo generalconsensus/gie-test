@@ -73,6 +73,9 @@
   text-transform: uppercase;
 }
 .pre-footer__description-body{
+  h2 {
+    display: none;
+  }
   .button {
     margin-top: 10px;
     background-color: $lightred;
