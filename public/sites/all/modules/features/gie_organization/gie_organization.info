@@ -105,6 +105,7 @@ features[field_instance][] = node-organization-field_organization_twitter
 features[field_instance][] = node-organization-field_organization_type
 features[field_instance][] = node-organization-field_partner
 features[field_instance][] = node-organization-field_role_on_the_exchange
+features[field_instance][] = node-organization-field_term_country
 features[field_instance][] = node-organization-field_term_region
 features[field_instance][] = node-organization-field_term_sector
 features[field_instance][] = node-organization-field_term_topic
