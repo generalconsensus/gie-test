@@ -7,6 +7,9 @@ module.exports = function(grunt) {
       compass: {
         files : [ '<%= pkg.themePath %>/sass/**/*.scss' ],
         tasks : [ 'compass:' + environment ],
+        options : {
+          livereload : true
+        }
       },
       patternlab : {
         files : [ '<%= pkg.themePath %>/patternlab/source/**/*' ],
@@ -18,6 +21,9 @@ module.exports = function(grunt) {
       longform_compass: {
         files : [ 'public/sites/all/themes/gesso_longform/sass/**/*.scss' ],
         tasks : [ 'compass:longform_' + environment ],
+        options : {
+          livereload : true
+        }
       },
       longform_patternlab : {
         files : [ 'public/sites/all/themes/gesso_longform/patternlab/source/**/*' ],

@@ -211,6 +211,72 @@ function gie_long_form_content_field_group_info() {
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
   $field_group->api_version = 1;
+  $field_group->identifier = 'group_footer_group|node|long_form_page|full';
+  $field_group->group_name = 'group_footer_group';
+  $field_group->entity_type = 'node';
+  $field_group->bundle = 'long_form_page';
+  $field_group->mode = 'full';
+  $field_group->parent_name = 'group_footer';
+  $field_group->data = array(
+    'label' => 'Pre-Footer Group',
+    'weight' => '5',
+    'children' => array(
+      0 => 'group_longform_report_desc',
+      1 => 'group_footer_partners',
+    ),
+    'format_type' => 'div',
+    'format_settings' => array(
+      'label' => 'Pre-Footer Group',
+      'instance_settings' => array(
+        'id' => '',
+        'classes' => 'group-pre-footer-group field-group-div layout-constrain',
+        'description' => '',
+        'show_label' => '0',
+        'label_element' => 'h2',
+        'effect' => 'none',
+        'speed' => 'none',
+      ),
+      'formatter' => 'open',
+    ),
+  );
+  $export['group_footer_group|node|long_form_page|full'] = $field_group;
+
+  $field_group = new stdClass();
+  $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
+  $field_group->api_version = 1;
+  $field_group->identifier = 'group_footer_partners|node|long_form_page|full';
+  $field_group->group_name = 'group_footer_partners';
+  $field_group->entity_type = 'node';
+  $field_group->bundle = 'long_form_page';
+  $field_group->mode = 'full';
+  $field_group->parent_name = 'group_footer_group';
+  $field_group->data = array(
+    'label' => 'Footer Partners',
+    'weight' => '7',
+    'children' => array(
+      0 => 'field_longform_partners',
+      1 => 'long_form_powered_by',
+    ),
+    'format_type' => 'div',
+    'format_settings' => array(
+      'label' => 'Footer Partners',
+      'instance_settings' => array(
+        'id' => '',
+        'classes' => 'group-footer-partners',
+        'description' => '',
+        'show_label' => '0',
+        'label_element' => 'h3',
+        'effect' => 'none',
+        'speed' => 'none',
+      ),
+      'formatter' => 'open',
+    ),
+  );
+  $export['group_footer_partners|node|long_form_page|full'] = $field_group;
+
+  $field_group = new stdClass();
+  $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
+  $field_group->api_version = 1;
   $field_group->identifier = 'group_footer|node|long_form_page|full';
   $field_group->group_name = 'group_footer';
   $field_group->entity_type = 'node';
@@ -223,9 +289,7 @@ function gie_long_form_content_field_group_info() {
     'children' => array(
       0 => 'field_learn_more_link',
       1 => 'field_pdf_screenshot',
-      2 => 'field_longform_partners',
-      3 => 'long_form_powered_by',
-      4 => 'group_longform_report_desc',
+      2 => 'group_footer_group',
     ),
     'format_type' => 'div',
     'format_settings' => array(
@@ -378,10 +442,10 @@ function gie_long_form_content_field_group_info() {
   $field_group->entity_type = 'node';
   $field_group->bundle = 'long_form_page';
   $field_group->mode = 'full';
-  $field_group->parent_name = 'group_footer';
+  $field_group->parent_name = 'group_footer_group';
   $field_group->data = array(
     'label' => 'Report Description',
-    'weight' => '5',
+    'weight' => '6',
     'children' => array(
       0 => 'field_longform_description',
       1 => 'field_longform_description_title',
@@ -391,12 +455,12 @@ function gie_long_form_content_field_group_info() {
       'label' => 'Report Description',
       'instance_settings' => array(
         'id' => '',
-        'classes' => 'group-longform-report-desc field-group-div',
+        'classes' => 'group-footer-description',
         'description' => '',
         'show_label' => '0',
         'label_element' => 'h3',
         'effect' => 'none',
-        'speed' => 'fast',
+        'speed' => 'none',
       ),
       'formatter' => 'open',
     ),
