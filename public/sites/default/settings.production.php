@@ -218,9 +218,9 @@ $databases = array (
     'default' => 
     array (
       'database' => 'giexchange_www',
-      'username' => 'gie_www_user',
-      'password' => '6lPs9LBytXKqYl',
-      'host' => 'localhost',
+      'username' => 'gieuser_www',
+      'password' => '9aaY^BSHJMyNMkoO',
+      'host' => 'giexchange.c06busiwruk7.us-east-1.rds.amazonaws.com',
       'port' => '',
       'driver' => 'mysql',
       'prefix' => '',
@@ -597,7 +597,7 @@ $conf['search_api_override_servers'] = array(
   'solr' => array(
     'name' => t('Solr Server (Overridden)'),
     'options' => array(
-      'host' => 'localhost',
+      'host' => '10.0.2.76',
       'port' => 8984,
       'path' => '/solr/giexchange_www'
     )
@@ -606,7 +606,7 @@ $conf['search_api_override_servers'] = array(
 
 $conf['search_api_override_mode'] = 'default';
 
-$conf['elasticsearch_index'] = array('machine_name' => 'production');
+$conf['elasticsearch_index'] = array('machine_name' => 'autoscale');
 
 
 /* Ensures no content is indexed to core search */
@@ -638,6 +638,7 @@ $conf['cache_backends'][] = 'sites/all/modules/contrib/memcache/memcache.inc';
 $conf['cache_default_class'] = 'MemCacheDrupal';
 $conf['cache_class_cache_form'] = 'DrupalDatabaseCache';
 $conf['memcache_key_prefix'] = 'gie_www';
+$conf['memcache_servers'] = array('10.0.2.76:11211' => 'default');
 
 /**
  * Google Analytics config
