@@ -783,14 +783,6 @@ input.throbbing {
   margin-right: 1em;
   max-width: 380px;
 }
-.block--microsite-description .block__title {
-  border-bottom: 1px solid #cecfcb;
-  color: #565a5c;
-  font-size: 1em;
-  margin-bottom: 1em;
-  padding-bottom: 0.5em;
-  text-transform: uppercase;
-}
 
 .block--microsite-partners {
   float: right;
@@ -1688,12 +1680,20 @@ tr.drag-previous {
   margin-bottom: 1.33333em;
 }
 
-.view--microsite-description .views-row {
+.view--microsite-description {
   color: #565a5c;
   font-size: 0.83333em;
 }
+.view--microsite-description .view__header h2 {
+  border-bottom: 1px solid #cecfcb;
+  color: #565a5c;
+  font-size: 1.2em;
+  margin-bottom: 1em;
+  padding-bottom: 0.5em;
+  text-transform: uppercase;
+}
 
-.view--microsite-logo .views-field-field-group-logo a {
+.view--microsite-logo a {
   display: block;
   line-height: 0;
 }
@@ -1706,8 +1706,11 @@ tr.drag-previous {
 }
 .view--microsite-partners .views-row {
   display: table-cell;
-  padding: 0 0 0 1em;
+  padding: 0 1em 0 0;
   vertical-align: bottom;
+}
+.view--microsite-partners .views-row:last-child {
+  padding-right: 0;
 }
 
 .views-widget {

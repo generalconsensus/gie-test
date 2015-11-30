@@ -1,6 +1,12 @@
 .view--microsite-description {
-  .views-row {
+  color: #565a5c;
+  font-size: em($font-size-sm + 1);
+  .view__header h2 {
+    border-bottom: 1px solid #cecfcb;
     color: #565a5c;
-    font-size: em($font-size-sm + 1);
+    font-size: em($font-size-normal, $font-size-sm + 1);
+    margin-bottom: 1em;
+    padding-bottom: 0.5em;
+    text-transform: uppercase;
   }
 }
