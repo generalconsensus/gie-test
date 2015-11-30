@@ -13,6 +13,38 @@ function gie_groups_strongarm() {
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
+  $strongarm->name = 'clean_markup_blocks--views-2d5a441f121661c9d440795219aa4605';
+  $strongarm->value = array(
+    'block_wrapper' => 'div',
+    'additional_block_classes' => 'block--microsite-description',
+    'additional_block_attributes' => '',
+    'enable_inner_div' => FALSE,
+    'title_wrapper' => 'h2',
+    'title_hide' => FALSE,
+    'content_wrapper' => 'none',
+    'block_html_id_as_class' => TRUE,
+  );
+  $export['clean_markup_blocks--views-2d5a441f121661c9d440795219aa4605'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'clean_markup_blocks--views-ddf3dc04961fdc41e773b652e35516f5';
+  $strongarm->value = array(
+    'block_wrapper' => 'div',
+    'additional_block_classes' => 'block--microsite-partners',
+    'additional_block_attributes' => '',
+    'enable_inner_div' => FALSE,
+    'title_wrapper' => 'h2',
+    'title_hide' => FALSE,
+    'content_wrapper' => 'none',
+    'block_html_id_as_class' => TRUE,
+  );
+  $export['clean_markup_blocks--views-ddf3dc04961fdc41e773b652e35516f5'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
   $strongarm->name = 'comment_anonymous_group';
   $strongarm->value = 0;
   $export['comment_anonymous_group'] = $strongarm;

@@ -3,8 +3,8 @@
 // http://sass-lang.com/docs/yardoc/file.SASS_REFERENCE.html#variables_
 
 // Theme
-$theme-primary: #cd1041;
-$theme-secondary: #00498f;
+$theme-primary: #00498f;
+$theme-secondary: #cd1041;
 $theme-header: #035b94;
 $theme-utility: #565a5c;
 
@@ -13,8 +13,8 @@ $primary-text-color: #333;
 $secondary-text-color: #555;
 $heading-text-color: $theme-header;
 $body-color: #fff;
-$link-color: $theme-secondary;
-$link-hover-color: darken($theme-secondary,20%);
+$link-color: $theme-primary;
+$link-hover-color: darken($theme-primary,20%);
 $selection-background: blue;
 $selection-foreground: #fff;
 $status-color: #4d8e4d;
@@ -25,7 +25,7 @@ $gradient-light: rgba(255, 255, 255, 0.2);
 $gradient-dark: rgba(0, 0, 0, 0.2);
 
 // Buttons
-$button-bg-color: #cd1041;
+$button-bg-color: $theme-secondary;
 $button-text-color: #fff;
 
 // Forms
