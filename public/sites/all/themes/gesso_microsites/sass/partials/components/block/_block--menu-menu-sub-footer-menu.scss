@@ -1,6 +1,7 @@
 .block--menu-menu-sub-footer-menu {
   @extend %clearfix;
   @include breakpoint(1070px, $no-query: true) {
+    clear: right;
     float: right;
   }
   margin-top: 2em;

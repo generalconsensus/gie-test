@@ -764,6 +764,7 @@ input.throbbing {
 }
 
 .block--menu-menu-sub-footer-menu {
+  clear: right;
   float: right;
   margin-top: 2em;
 }
