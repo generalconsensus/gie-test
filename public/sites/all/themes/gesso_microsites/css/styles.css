@@ -790,6 +790,7 @@ input.throbbing {
 }
 @media (min-width: 66.875em) {
   .block--menu-menu-sub-footer-menu {
+    clear: right;
     float: right;
   }
 }
