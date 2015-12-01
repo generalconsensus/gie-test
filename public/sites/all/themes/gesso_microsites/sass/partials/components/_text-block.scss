@@ -1,0 +1,15 @@
+.text-block {
+  h2 {
+    text-transform: uppercase;
+  }
+  ol {
+    @extend %fancy-list--ordered;
+  }
+  ul {
+    @extend %fancy-list;
+  }
+}
+
+.text-block--centered {
+  text-align: center;
+}

@@ -63,7 +63,15 @@ audio {}
 b {}
 
 blockquote {
-  margin: 0 1.5em rhythm(1);
+  border-top:1px solid $theme-secondary;
+  border-bottom:1px solid $theme-secondary;
+  color: $theme-secondary;
+  display: block;
+  font-size: em($font-size-lg);
+  font-style: italic;
+  margin: .5em 10%;
+  padding: 1em 0;
+  text-align: center;
 }
 
 body {
