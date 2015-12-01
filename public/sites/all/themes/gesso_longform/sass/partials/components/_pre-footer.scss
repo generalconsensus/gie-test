@@ -1,6 +1,15 @@
 .pre-footer {
   position: relative;
 }
+.group-footer-description,
+.group-footer-partners {
+  float: left;
+  padding-right: 2em;
+  width: 100%;
+  @include breakpoint(700px, $no-query: true) {
+    width: 50%;
+  }
+}
 
 .pre-footer.component {
   padding: 6em 0;
@@ -11,13 +20,15 @@
 	height: 60px;
 	margin-bottom: 2em;
 	position: relative;
-	a{
-		color: $white;
-    position: relative;
-    padding-top: 20px;
-    text-decoration: underline;
-    top: 15px;
-    &:after{}
+	a {
+    display: none;
+    @include breakpoint(700px, $no-query: true) {
+      color: $white;
+      display: block;
+      position: relative;
+      text-decoration: underline;
+      top: 15px;
+    }
 	}
 }
 
@@ -25,7 +36,6 @@
 	@include image-replace(261px, 165px);
 	background: transparent url('../images/footer-fact-sheet.png') no-repeat;
   display: block;  
-  left: 25%;
   position: absolute;
   right: 25%;
   top: 1px;
@@ -50,7 +60,25 @@
 }
 
 .pre-footer__description {
-  width: 100%;
+
   @include breakpoint($mobile-menu-bp, $no-query: true) {
+  }
+}
+.pre-footer__description-title{
+  border-bottom: 1px solid $lightgrey;
+  color: #565a5c;
+  font-weight: normal;
+  margin: 0 0 1em 0;
+  padding: 0 0 0.5em 0;
+  text-transform: uppercase;
+}
+.pre-footer__description-body{
+  h2 {
+    display: none;
+  }
+  .button {
+    margin-top: 10px;
+    background-color: $lightred;
+    border-color: $lightred;
   }
 }

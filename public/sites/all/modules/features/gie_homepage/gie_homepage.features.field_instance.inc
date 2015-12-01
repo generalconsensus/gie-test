@@ -616,69 +616,6 @@ function gie_homepage_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-homepage-field_homepage_exchange_team'
-  $field_instances['node-homepage-field_homepage_exchange_team'] = array(
-    'bundle' => 'homepage',
-    'default_value' => NULL,
-    'deleted' => 0,
-    'description' => '',
-    'display' => array(
-      'default' => array(
-        'label' => 'above',
-        'module' => 'entityreference',
-        'settings' => array(
-          'field_delimiter' => '',
-          'link' => FALSE,
-          'linked_field' => array(
-            'advanced' => array(
-              'class' => '',
-              'rel' => '',
-              'target' => '',
-              'text' => '',
-              'title' => '',
-            ),
-            'destination' => '',
-            'linked' => 0,
-          ),
-        ),
-        'type' => 'entityreference_label',
-        'weight' => 15,
-      ),
-      'teaser' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 0,
-      ),
-    ),
-    'ds_extras_field_template' => '',
-    'entity_type' => 'node',
-    'entityconnect_unload_add' => 0,
-    'entityconnect_unload_edit' => 0,
-    'field_name' => 'field_homepage_exchange_team',
-    'label' => 'Exchange Team',
-    'required' => 0,
-    'settings' => array(
-      'description_display' => 'after',
-      'user_register_form' => FALSE,
-    ),
-    'widget' => array(
-      'active' => 1,
-      'module' => 'entityreference',
-      'settings' => array(
-        'match_operator' => 'CONTAINS',
-        'path' => '',
-        'references_dialog_add' => 0,
-        'references_dialog_edit' => 0,
-        'references_dialog_search' => 0,
-        'references_dialog_search_view' => '',
-        'size' => 60,
-      ),
-      'type' => 'entityreference_autocomplete',
-      'weight' => 16,
-    ),
-  );
-
   // Exported field_instance: 'node-homepage-field_homepage_featured_partners'
   $field_instances['node-homepage-field_homepage_featured_partners'] = array(
     'bundle' => 'homepage',
@@ -1896,7 +1833,6 @@ function gie_homepage_field_default_field_instances() {
   t('All Partners');
   t('Comment');
   t('Description');
-  t('Exchange Team');
   t('Featured Discussions');
   t('Featured Events');
   t('Featured Locations (regions)');
