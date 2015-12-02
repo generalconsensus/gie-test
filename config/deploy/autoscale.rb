@@ -18,10 +18,10 @@ else
 end
 
 # The stage to use
-set :stage, :production
+set :stage, :autoscale
 
 # An array containing site URL, used for Varnish bans
-set :site_url, %w{www.globalinnovationexchange.org}
+set :site_url, %w{www.gie.byf1.io}
 
 # An array containing drupal sites to copy settings files in
 set :site_folder, %w{default}
@@ -36,7 +36,7 @@ set :deploy_to, '/var/www/vhosts/gie.www'
 set :tmp_dir, fetch(:deploy_to)
 
 # Which branch to deploy
-set :branch, "live"
+set :branch, "autoscale"
 
 rsync_options = %w[--recursive --chmod=Dug=rwx,Do=rx --perms --delete --delete-excluded --exclude=.git* --exclude=node_modules]
 rsync_options.unshift("-e 'ssh -o \"ProxyCommand ssh -A gie@utility.gie.byf1.io exec nc %h %p 2>/dev/null\"'")

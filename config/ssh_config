@@ -3,3 +3,8 @@ Host giexchange.forumone.com
 	user giexchange
 	StrictHostKeyChecking no
 	ForwardAgent yes
+	
+Host utility.gie.byf1.io
+	user gie
+	StrictHostKeyChecking no
+	ForwardAgent yes
