@@ -632,6 +632,9 @@ $conf['googleanalytics_account'] = '';
  */
 $conf['search_cron_limit'] = 0;
 
+/* Set maintenance mode theme */
+$conf['maintenance_theme'] = 'gesso';
+
 /**
  * Change file upload sizes
  */
