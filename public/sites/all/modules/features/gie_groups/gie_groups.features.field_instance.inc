@@ -637,7 +637,7 @@ function gie_groups_field_default_field_instances() {
             'destination' => '',
             'linked' => 0,
           ),
-          'view_mode' => 'full',
+          'view_mode' => 'view_mode_selector',
         ),
         'type' => 'paragraphs_view',
         'weight' => 8,
@@ -658,7 +658,7 @@ function gie_groups_field_default_field_instances() {
             'destination' => '',
             'linked' => 0,
           ),
-          'view_mode' => 'full',
+          'view_mode' => 'view_mode_selector',
         ),
         'type' => 'paragraphs_view',
         'weight' => 8,
@@ -783,6 +783,73 @@ function gie_groups_field_default_field_instances() {
       ),
       'type' => 'options_onoff',
       'weight' => 2,
+    ),
+  );
+
+  // Exported field_instance: 'node-group-og_group_ref'
+  $field_instances['node-group-og_group_ref'] = array(
+    'bundle' => 'group',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'entityreference',
+        'settings' => array(
+          'field_delimiter' => '',
+          'link' => FALSE,
+          'linked_field' => array(
+            'advanced' => array(
+              'class' => '',
+              'rel' => '',
+              'target' => '',
+              'text' => '',
+              'title' => '',
+            ),
+            'destination' => '',
+            'linked' => 0,
+          ),
+        ),
+        'type' => 'entityreference_label',
+        'weight' => 9,
+      ),
+      'full' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'ds_extras_field_template' => '',
+    'entity_type' => 'node',
+    'entityconnect_unload_add' => 0,
+    'entityconnect_unload_edit' => 0,
+    'field_name' => 'og_group_ref',
+    'label' => 'Groups audience',
+    'required' => 0,
+    'settings' => array(
+      'behaviors' => array(
+        'og_widget' => array(
+          'access_override' => 0,
+          'admin' => array(
+            'widget_type' => 'entityreference_autocomplete',
+          ),
+          'default' => array(
+            'widget_type' => 'options_select',
+          ),
+          'status' => TRUE,
+        ),
+      ),
+      'description_display' => 'after',
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 0,
+      'module' => 'og',
+      'settings' => array(),
+      'type' => 'og_complex',
+      'weight' => 12,
     ),
   );
 

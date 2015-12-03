@@ -48,6 +48,7 @@ features[field_instance][] = node-group-field_group_partners
 features[field_instance][] = node-group-field_group_partners_title
 features[field_instance][] = node-group-field_long_form_block
 features[field_instance][] = node-group-group_group
+features[field_instance][] = node-group-og_group_ref
 features[field_instance][] = node-group-title_field
 features[field_instance][] = node-innovation-og_group_ref
 features[field_instance][] = node-organization-og_group_ref

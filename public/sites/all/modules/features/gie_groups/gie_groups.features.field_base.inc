@@ -183,7 +183,9 @@ function gie_groups_field_default_field_bases() {
         'sort' => array(
           'type' => 'none',
         ),
-        'target_bundles' => array(),
+        'target_bundles' => array(
+          'group' => 'group',
+        ),
       ),
       'handler_submit' => 'Change handler',
       'target_type' => 'node',
