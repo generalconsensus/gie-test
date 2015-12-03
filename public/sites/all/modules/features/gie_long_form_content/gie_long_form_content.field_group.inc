@@ -193,16 +193,17 @@ function gie_long_form_content_field_group_info() {
     ),
     'format_type' => 'div',
     'format_settings' => array(
-      'formatter' => 'collapsible',
+      'label' => 'Content',
       'instance_settings' => array(
+        'id' => '',
+        'classes' => 'group-content field-group-div',
         'description' => '',
-        'show_label' => 1,
+        'show_label' => '0',
         'label_element' => 'h3',
         'effect' => 'none',
-        'speed' => 'fast',
-        'classes' => 'group-content field-group-div',
-        'id' => '',
+        'speed' => 'none',
       ),
+      'formatter' => 'open',
     ),
   );
   $export['group_content|paragraphs_item|long_form_featured_content|default'] = $field_group;
@@ -356,16 +357,17 @@ function gie_long_form_content_field_group_info() {
     ),
     'format_type' => 'div',
     'format_settings' => array(
-      'formatter' => 'collapsible',
+      'label' => 'Footer',
       'instance_settings' => array(
+        'id' => '',
+        'classes' => 'group-footer field-group-div',
         'description' => '',
-        'show_label' => 1,
+        'show_label' => '0',
         'label_element' => 'h3',
         'effect' => 'none',
-        'speed' => 'fast',
-        'classes' => 'group-footer field-group-div',
-        'id' => '',
+        'speed' => 'none',
       ),
+      'formatter' => 'open',
     ),
   );
   $export['group_footer|paragraphs_item|long_form_featured_content|default'] = $field_group;
@@ -881,6 +883,38 @@ function gie_long_form_content_field_group_info() {
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
   $field_group->api_version = 1;
+  $field_group->identifier = 'group_text|paragraphs_item|long_form_text|center_aligned';
+  $field_group->group_name = 'group_text';
+  $field_group->entity_type = 'paragraphs_item';
+  $field_group->bundle = 'long_form_text';
+  $field_group->mode = 'center_aligned';
+  $field_group->parent_name = '';
+  $field_group->data = array(
+    'label' => 'Text',
+    'weight' => '0',
+    'children' => array(
+      0 => 'field_paragraph_text',
+    ),
+    'format_type' => 'div',
+    'format_settings' => array(
+      'label' => 'Text',
+      'instance_settings' => array(
+        'id' => '',
+        'classes' => 'text-block text-block--centered layout-constrain component',
+        'description' => '',
+        'show_label' => '0',
+        'label_element' => 'h3',
+        'effect' => 'none',
+        'speed' => 'none',
+      ),
+      'formatter' => 'open',
+    ),
+  );
+  $export['group_text|paragraphs_item|long_form_text|center_aligned'] = $field_group;
+
+  $field_group = new stdClass();
+  $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
+  $field_group->api_version = 1;
   $field_group->identifier = 'group_text|paragraphs_item|long_form_text|default';
   $field_group->group_name = 'group_text';
   $field_group->entity_type = 'paragraphs_item';
@@ -913,6 +947,38 @@ function gie_long_form_content_field_group_info() {
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
   $field_group->api_version = 1;
+  $field_group->identifier = 'group_text|paragraphs_item|long_form_text|left_aligned';
+  $field_group->group_name = 'group_text';
+  $field_group->entity_type = 'paragraphs_item';
+  $field_group->bundle = 'long_form_text';
+  $field_group->mode = 'left_aligned';
+  $field_group->parent_name = '';
+  $field_group->data = array(
+    'label' => 'Text',
+    'weight' => '0',
+    'children' => array(
+      0 => 'field_paragraph_text',
+    ),
+    'format_type' => 'div',
+    'format_settings' => array(
+      'label' => 'Text',
+      'instance_settings' => array(
+        'id' => '',
+        'classes' => 'text-block layout-constrain component',
+        'description' => '',
+        'show_label' => '0',
+        'label_element' => 'h3',
+        'effect' => 'none',
+        'speed' => 'none',
+      ),
+      'formatter' => 'open',
+    ),
+  );
+  $export['group_text|paragraphs_item|long_form_text|left_aligned'] = $field_group;
+
+  $field_group = new stdClass();
+  $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
+  $field_group->api_version = 1;
   $field_group->identifier = 'group_title|paragraphs_item|long_form_featured_content|default';
   $field_group->group_name = 'group_title';
   $field_group->entity_type = 'paragraphs_item';
@@ -932,7 +998,7 @@ function gie_long_form_content_field_group_info() {
         'id' => '',
         'classes' => 'para-featured-content-title',
         'description' => '',
-        'show_label' => '1',
+        'show_label' => '0',
         'label_element' => 'h3',
         'effect' => 'none',
         'speed' => 'none',

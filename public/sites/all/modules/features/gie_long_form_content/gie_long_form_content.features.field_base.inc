@@ -553,6 +553,21 @@ function gie_long_form_content_field_default_field_bases() {
     'type' => 'text_long',
   );
 
+  // Exported field_base: 'field_paragraph_display_type'
+  $field_bases['field_paragraph_display_type'] = array(
+    'active' => 1,
+    'cardinality' => 1,
+    'deleted' => 0,
+    'entity_types' => array(),
+    'field_name' => 'field_paragraph_display_type',
+    'indexes' => array(),
+    'locked' => 0,
+    'module' => 'view_mode_selector',
+    'settings' => array(),
+    'translatable' => 0,
+    'type' => 'view_mode_selector',
+  );
+
   // Exported field_base: 'field_paragraph_key_figure'
   $field_bases['field_paragraph_key_figure'] = array(
     'active' => 1,

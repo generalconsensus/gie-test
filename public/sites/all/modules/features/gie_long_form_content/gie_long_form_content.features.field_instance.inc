@@ -2603,6 +2603,18 @@ function gie_long_form_content_field_default_field_instances() {
         'type' => 'image',
         'weight' => 5,
       ),
+      'paragraphs_editor_preview' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'view_mode_selector' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
     ),
     'ds_extras_field_template' => '',
     'entity_type' => 'paragraphs_item',
@@ -2672,6 +2684,18 @@ function gie_long_form_content_field_default_field_instances() {
         ),
         'type' => 'text_default',
         'weight' => 4,
+      ),
+      'paragraphs_editor_preview' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'view_mode_selector' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
       ),
     ),
     'ds_extras_field_template' => '',
@@ -2758,6 +2782,18 @@ function gie_long_form_content_field_default_field_instances() {
         ),
         'type' => 'text_default',
         'weight' => 6,
+      ),
+      'paragraphs_editor_preview' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'view_mode_selector' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
       ),
     ),
     'ds_extras_field_template' => '',
@@ -3917,6 +3953,87 @@ function gie_long_form_content_field_default_field_instances() {
   );
 
   // Exported field_instance:
+  // 'paragraphs_item-long_form_text-field_paragraph_display_type'
+  $field_instances['paragraphs_item-long_form_text-field_paragraph_display_type'] = array(
+    'bundle' => 'long_form_text',
+    'default_value' => array(
+      0 => array(
+        'value' => 'left_image',
+      ),
+    ),
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'center_aligned' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 2,
+      ),
+      'default' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 2,
+      ),
+      'left_aligned' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 1,
+      ),
+      'view_mode_selector' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 2,
+      ),
+    ),
+    'ds_extras_field_template' => '',
+    'entity_type' => 'paragraphs_item',
+    'field_name' => 'field_paragraph_display_type',
+    'label' => 'Display Type',
+    'required' => 0,
+    'settings' => array(
+      'description_display' => 'after',
+      'user_register_form' => FALSE,
+      'view_modes' => array(
+        'center_aligned' => array(
+          'enable' => 1,
+        ),
+        'default' => array(
+          'enable' => 0,
+        ),
+        'full' => array(
+          'enable' => 0,
+        ),
+        'left_aligned' => array(
+          'enable' => 1,
+        ),
+        'left_image' => array(
+          'enable' => 0,
+        ),
+        'paragraphs_editor_preview' => array(
+          'enable' => 0,
+        ),
+        'right_image' => array(
+          'enable' => 0,
+        ),
+        'token' => array(
+          'enable' => 0,
+        ),
+      ),
+    ),
+    'widget' => array(
+      'active' => 0,
+      'module' => 'view_mode_selector',
+      'settings' => array(),
+      'type' => 'view_mode_selector_select',
+      'weight' => 2,
+    ),
+  );
+
+  // Exported field_instance:
   // 'paragraphs_item-long_form_text-field_paragraph_text'
   $field_instances['paragraphs_item-long_form_text-field_paragraph_text'] = array(
     'bundle' => 'long_form_text',
@@ -3924,6 +4041,26 @@ function gie_long_form_content_field_default_field_instances() {
     'deleted' => 0,
     'description' => '',
     'display' => array(
+      'center_aligned' => array(
+        'label' => 'hidden',
+        'module' => 'text',
+        'settings' => array(
+          'field_delimiter' => '',
+          'linked_field' => array(
+            'advanced' => array(
+              'class' => '',
+              'rel' => '',
+              'target' => '',
+              'text' => '',
+              'title' => '',
+            ),
+            'destination' => '',
+            'linked' => 0,
+          ),
+        ),
+        'type' => 'text_default',
+        'weight' => 1,
+      ),
       'default' => array(
         'label' => 'hidden',
         'module' => 'text',
@@ -3963,6 +4100,26 @@ function gie_long_form_content_field_default_field_instances() {
         ),
         'type' => 'text_default',
         'weight' => 0,
+      ),
+      'left_aligned' => array(
+        'label' => 'hidden',
+        'module' => 'text',
+        'settings' => array(
+          'field_delimiter' => '',
+          'linked_field' => array(
+            'advanced' => array(
+              'class' => '',
+              'rel' => '',
+              'target' => '',
+              'text' => '',
+              'title' => '',
+            ),
+            'destination' => '',
+            'linked' => 0,
+          ),
+        ),
+        'type' => 'text_default',
+        'weight' => 1,
       ),
       'paragraphs_editor_preview' => array(
         'label' => 'above',
@@ -4029,6 +4186,26 @@ function gie_long_form_content_field_default_field_instances() {
         ),
         'type' => 'text_default',
         'weight' => 0,
+      ),
+      'view_mode_selector' => array(
+        'label' => 'hidden',
+        'module' => 'text',
+        'settings' => array(
+          'field_delimiter' => '',
+          'linked_field' => array(
+            'advanced' => array(
+              'class' => '',
+              'rel' => '',
+              'target' => '',
+              'text' => '',
+              'title' => '',
+            ),
+            'destination' => '',
+            'linked' => 0,
+          ),
+        ),
+        'type' => 'text_default',
+        'weight' => 1,
       ),
     ),
     'ds_extras_field_template' => '',
@@ -4448,6 +4625,7 @@ function gie_long_form_content_field_default_field_instances() {
   t('Body #3');
   t('Byline');
   t('Caption');
+  t('Display Type');
   t('Explanation');
   t('Featured Content');
   t('File');

@@ -686,6 +686,23 @@ function gie_long_form_content_ds_field_settings_info() {
 
   $ds_fieldsetting = new stdClass();
   $ds_fieldsetting->api_version = 1;
+  $ds_fieldsetting->id = 'paragraphs_item|long_form_text|center_aligned';
+  $ds_fieldsetting->entity_type = 'paragraphs_item';
+  $ds_fieldsetting->bundle = 'long_form_text';
+  $ds_fieldsetting->view_mode = 'center_aligned';
+  $ds_fieldsetting->settings = array(
+    'field_paragraph_text' => array(
+      'formatter_settings' => array(
+        'ft' => array(
+          'func' => 'theme_ds_field_expert',
+        ),
+      ),
+    ),
+  );
+  $export['paragraphs_item|long_form_text|center_aligned'] = $ds_fieldsetting;
+
+  $ds_fieldsetting = new stdClass();
+  $ds_fieldsetting->api_version = 1;
   $ds_fieldsetting->id = 'paragraphs_item|long_form_text|default';
   $ds_fieldsetting->entity_type = 'paragraphs_item';
   $ds_fieldsetting->bundle = 'long_form_text';
@@ -700,6 +717,23 @@ function gie_long_form_content_ds_field_settings_info() {
     ),
   );
   $export['paragraphs_item|long_form_text|default'] = $ds_fieldsetting;
+
+  $ds_fieldsetting = new stdClass();
+  $ds_fieldsetting->api_version = 1;
+  $ds_fieldsetting->id = 'paragraphs_item|long_form_text|left_aligned';
+  $ds_fieldsetting->entity_type = 'paragraphs_item';
+  $ds_fieldsetting->bundle = 'long_form_text';
+  $ds_fieldsetting->view_mode = 'left_aligned';
+  $ds_fieldsetting->settings = array(
+    'field_paragraph_text' => array(
+      'formatter_settings' => array(
+        'ft' => array(
+          'func' => 'theme_ds_field_expert',
+        ),
+      ),
+    ),
+  );
+  $export['paragraphs_item|long_form_text|left_aligned'] = $ds_fieldsetting;
 
   $ds_fieldsetting = new stdClass();
   $ds_fieldsetting->api_version = 1;
@@ -1213,8 +1247,8 @@ function gie_long_form_content_ds_layout_settings_info() {
     'regions' => array(
       'ds_content' => array(
         0 => 'group_title',
-        1 => 'group_content',
-        2 => 'field_paragraphs_featured_title',
+        1 => 'field_paragraphs_featured_title',
+        2 => 'group_content',
         3 => 'group_footer',
         4 => 'field_paragraphs_featred_content',
         5 => 'field_para_featured_more_link',
@@ -1222,8 +1256,8 @@ function gie_long_form_content_ds_layout_settings_info() {
     ),
     'fields' => array(
       'group_title' => 'ds_content',
-      'group_content' => 'ds_content',
       'field_paragraphs_featured_title' => 'ds_content',
+      'group_content' => 'ds_content',
       'group_footer' => 'ds_content',
       'field_paragraphs_featred_content' => 'ds_content',
       'field_para_featured_more_link' => 'ds_content',
@@ -1438,6 +1472,36 @@ function gie_long_form_content_ds_layout_settings_info() {
 
   $ds_layout = new stdClass();
   $ds_layout->api_version = 1;
+  $ds_layout->id = 'paragraphs_item|long_form_text|center_aligned';
+  $ds_layout->entity_type = 'paragraphs_item';
+  $ds_layout->bundle = 'long_form_text';
+  $ds_layout->view_mode = 'center_aligned';
+  $ds_layout->layout = 'ds_reset';
+  $ds_layout->settings = array(
+    'regions' => array(
+      'ds_content' => array(
+        0 => 'group_text',
+        1 => 'field_paragraph_text',
+      ),
+    ),
+    'fields' => array(
+      'group_text' => 'ds_content',
+      'field_paragraph_text' => 'ds_content',
+    ),
+    'classes' => array(),
+    'wrappers' => array(
+      'ds_content' => 'div',
+    ),
+    'layout_wrapper' => 'div',
+    'layout_attributes' => '',
+    'layout_attributes_merge' => TRUE,
+    'layout_link_attribute' => FALSE,
+    'layout_link_custom' => '',
+  );
+  $export['paragraphs_item|long_form_text|center_aligned'] = $ds_layout;
+
+  $ds_layout = new stdClass();
+  $ds_layout->api_version = 1;
   $ds_layout->id = 'paragraphs_item|long_form_text|default';
   $ds_layout->entity_type = 'paragraphs_item';
   $ds_layout->bundle = 'long_form_text';
@@ -1465,6 +1529,36 @@ function gie_long_form_content_ds_layout_settings_info() {
     'layout_link_custom' => '',
   );
   $export['paragraphs_item|long_form_text|default'] = $ds_layout;
+
+  $ds_layout = new stdClass();
+  $ds_layout->api_version = 1;
+  $ds_layout->id = 'paragraphs_item|long_form_text|left_aligned';
+  $ds_layout->entity_type = 'paragraphs_item';
+  $ds_layout->bundle = 'long_form_text';
+  $ds_layout->view_mode = 'left_aligned';
+  $ds_layout->layout = 'ds_reset';
+  $ds_layout->settings = array(
+    'regions' => array(
+      'ds_content' => array(
+        0 => 'group_text',
+        1 => 'field_paragraph_text',
+      ),
+    ),
+    'fields' => array(
+      'group_text' => 'ds_content',
+      'field_paragraph_text' => 'ds_content',
+    ),
+    'classes' => array(),
+    'wrappers' => array(
+      'ds_content' => 'div',
+    ),
+    'layout_wrapper' => 'div',
+    'layout_attributes' => '',
+    'layout_attributes_merge' => TRUE,
+    'layout_link_attribute' => FALSE,
+    'layout_link_custom' => '',
+  );
+  $export['paragraphs_item|long_form_text|left_aligned'] = $ds_layout;
 
   $ds_layout = new stdClass();
   $ds_layout->api_version = 1;
@@ -1506,6 +1600,24 @@ function gie_long_form_content_ds_layout_settings_info() {
  */
 function gie_long_form_content_ds_view_modes_info() {
   $export = array();
+
+  $ds_view_mode = new stdClass();
+  $ds_view_mode->api_version = 1;
+  $ds_view_mode->view_mode = 'center_aligned';
+  $ds_view_mode->label = 'Center Aligned';
+  $ds_view_mode->entities = array(
+    'paragraphs_item' => 'paragraphs_item',
+  );
+  $export['center_aligned'] = $ds_view_mode;
+
+  $ds_view_mode = new stdClass();
+  $ds_view_mode->api_version = 1;
+  $ds_view_mode->view_mode = 'left_aligned';
+  $ds_view_mode->label = 'Left Aligned';
+  $ds_view_mode->entities = array(
+    'paragraphs_item' => 'paragraphs_item',
+  );
+  $export['left_aligned'] = $ds_view_mode;
 
   $ds_view_mode = new stdClass();
   $ds_view_mode->api_version = 1;
