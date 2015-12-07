@@ -477,6 +477,26 @@ function gie_search_default_search_api_index() {
     "read_only" : "0",
     "rdf_mapping" : []
   }');
+  $items['terms'] = entity_import('search_api_index', '{
+    "name" : "Terms",
+    "machine_name" : "terms",
+    "description" : null,
+    "server" : "elasticsearch",
+    "item_type" : "taxonomy_term",
+    "options" : {
+      "index_directly" : 0,
+      "cron_limit" : "50",
+      "number_of_shards" : "1",
+      "number_of_replicas" : "0",
+      "fields" : {
+        "name" : { "type" : "string" },
+        "search_api_language" : { "type" : "string" }
+      }
+    },
+    "enabled" : "1",
+    "read_only" : "0",
+    "rdf_mapping" : []
+  }');
   return $items;
 }
 

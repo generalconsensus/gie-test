@@ -163,6 +163,7 @@ features[search_api_index][] = default_node_index
 features[search_api_index][] = default_user_index
 features[search_api_index][] = dev
 features[search_api_index][] = search_node_index
+features[search_api_index][] = terms
 features[search_api_page][] = node_search
 features[search_api_server][] = elasticsearch
 features[search_api_server][] = solr
