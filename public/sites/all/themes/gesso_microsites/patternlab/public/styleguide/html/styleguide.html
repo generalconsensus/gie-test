@@ -15,18 +15,18 @@
     <link href='https://fonts.googleapis.com/css?family=Lato:400,400italic,700,700italic,300italic,300' rel='stylesheet' type='text/css'>
 
     <!--[if gte IE 9]><!-->
-    <link rel="stylesheet" href="../../../../css/styles.css?1449009296" media="all">
+    <link rel="stylesheet" href="../../../../css/styles.css?1449612299" media="all">
     <!--<![endif]-->
 
     <!--[if lt IE 9]>
-    <link rel="stylesheet" href="../../../../css/no-mq.css?1449009296" media="all">
+    <link rel="stylesheet" href="../../../../css/no-mq.css?1449612299" media="all">
     <![endif]-->
 
     <script src="../../drupal/misc/jquery.js?v=1.4.4"></script>
     <script src="../../drupal/misc/jquery.once.js?v=1.2"></script>
     <script src="../../drupal/misc/drupal.js?v=7.33"></script>
 
-    <script src="../../../../js/mobile-menu.js?1449009296"></script>
+    <script src="../../../../js/mobile-menu.js?1449612299"></script>
 
     <!-- Begin Pattern Lab (Required for Pattern Lab to run properly) -->
     		<!-- never cache patterns -->
@@ -36,8 +36,8 @@
 		<meta http-equiv="expires" content="Tue, 01 Jan 1980 1:00:00 GMT" />
 		<meta http-equiv="pragma" content="no-cache" />
 		
-		<link rel="stylesheet" href="../../styleguide/css/styleguide.css?1449009296" media="all">
-		<link rel="stylesheet" href="../../styleguide/css/styleguide-specific.css?1449009296" media="all" />
+		<link rel="stylesheet" href="../../styleguide/css/styleguide.css?1449612299" media="all">
+		<link rel="stylesheet" href="../../styleguide/css/styleguide-specific.css?1449612299" media="all" />
 		
 
     <!-- End Pattern Lab -->
@@ -1695,44 +1695,70 @@ COMPONENT CLASSES/MARKUP:
 							</div>
 						</div>
 					</div>
-					<div id="components-text-block" class="sg-pattern">
-						<h2 class="sg-pattern-head" ><a href="../../patterns/01-components-01-paragraph-module-components-01-text-block/01-components-01-paragraph-module-components-01-text-block.html" class="patternLink" data-patternpartial="components-text-block">Text Block</a></h2>
+					<div id="components-featured-content" class="sg-pattern">
+						<h2 class="sg-pattern-head" ><a href="../../patterns/01-components-01-paragraphs-featured-content/01-components-01-paragraphs-featured-content.html" class="patternLink" data-patternpartial="components-featured-content">Featured Content</a></h2>
 						<div class="sg-pattern-body">
-							<div class="text-block layout-constrain component">
-  <h2>Header 2</h2>
-  <p>Lorem ipsum <strong>dolor </strong>sit amet, consectetur adipiscing elit. Integer pellentesque <u>tincidunt consectetur</u>. In tincidunt pharetra erat et maximus. In ante nisl, dignissim vitae dignissim vel, sodales auctor leo. Curabitur auctor porttitor felis, eget posuere ex placerat sit amet. Etiam fringilla odio dui, a iaculis est gravida id. <a href="http://google.com">Morbi bibendum</a>, sapien in interdum placerat, nibh ante finibus ex, <em>eget cursus mauris dolor at dolor</em>. Duis ullamcorper urna vitae metus mattis, sed ornare libero posuere. Donec eu ante at nulla condimentum sagittis. Curabitur nec orci at libero interdum facilisis. Proin feugiat ipsum a porta suscipit. Duis et nisi eget augue mattis tempor. Curabitur eget libero quis metus tincidunt interdum.</p>
-  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer pellentesque tincidunt consectetur. In tincidunt pharetra erat et maximus. In ante nisl, dignissim vitae dignissim vel, sodales auctor leo. &nbsp;DaenerysTargaryen</p>
-  <ol><li>Number 1</li>
-  <li>Number 2</li>
-  <li>Number 3</li>
-  <li>Number 4</li>
-  </ol>
-  <h3>Header 3</h3>
-  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer pellentesque tincidunt consectetur. In tincidunt pharetra erat et maximus. In ante nisl, dignissim vitae dignissim vel, sodales auctor leo.</p>
-  <ul><li>First list item</li>
-  <li>Second list item</li>
-  <li>Third list item</li>
-  </ul>
+							
+							<div class="sg-code" style="display: none">
+								<h3 class="sg-code-head">HTML</h3>
+								<pre class="sg-code-html">
+									<code>
+										
+									</code>
+								</pre>
+							</div>
+						</div>
+					</div>
+					<div id="components-page-header" class="sg-pattern">
+						<h2 class="sg-pattern-head" ><a href="../../patterns/01-components-01-paragraphs-page-header/01-components-01-paragraphs-page-header.html" class="patternLink" data-patternpartial="components-page-header">Page Header</a></h2>
+						<div class="sg-pattern-body">
+							<div class="component page-header" style="background-image: url('../../images/page-header.jpg');">
+  <div class="page-header__text">
+    <div class="page-header__text-inner">
+        <div class="page-header__subtext">A handbook for USAID staff</div>
+        <div class="page-header__headline">Digital Finance for Development</div>
+    </div>
+  </div>
+</div>
+
+<div class="layout-constrain">
+  <strong>Page Header Markup:</strong>
+  <xmp>
+    <div class="component page-header" style="background-image: url([imagename].jpg);">
+      <div class="page-header__text">
+        <div class="page-header__text-inner">
+          <div class="page-header__subtext">[content]</div>
+          <div class="page-header__headline">[content]</div>
+        </div>
+      </div>
+    </div>
+  </xmp>
 </div>
 							<div class="sg-code" style="display: none">
 								<h3 class="sg-code-head">HTML</h3>
 								<pre class="sg-code-html">
 									<code>
-										&lt;div class=&quot;text-block layout-constrain component&quot;&gt;
-  &lt;h2&gt;Header 2&lt;/h2&gt;
-  &lt;p&gt;Lorem ipsum &lt;strong&gt;dolor &lt;/strong&gt;sit amet, consectetur adipiscing elit. Integer pellentesque &lt;u&gt;tincidunt consectetur&lt;/u&gt;. In tincidunt pharetra erat et maximus. In ante nisl, dignissim vitae dignissim vel, sodales auctor leo. Curabitur auctor porttitor felis, eget posuere ex placerat sit amet. Etiam fringilla odio dui, a iaculis est gravida id. &lt;a href=&quot;http://google.com&quot;&gt;Morbi bibendum&lt;/a&gt;, sapien in interdum placerat, nibh ante finibus ex, &lt;em&gt;eget cursus mauris dolor at dolor&lt;/em&gt;. Duis ullamcorper urna vitae metus mattis, sed ornare libero posuere. Donec eu ante at nulla condimentum sagittis. Curabitur nec orci at libero interdum facilisis. Proin feugiat ipsum a porta suscipit. Duis et nisi eget augue mattis tempor. Curabitur eget libero quis metus tincidunt interdum.&lt;/p&gt;
-  &lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer pellentesque tincidunt consectetur. In tincidunt pharetra erat et maximus. In ante nisl, dignissim vitae dignissim vel, sodales auctor leo. &amp;nbsp;DaenerysTargaryen&lt;/p&gt;
-  &lt;ol&gt;&lt;li&gt;Number 1&lt;/li&gt;
-  &lt;li&gt;Number 2&lt;/li&gt;
-  &lt;li&gt;Number 3&lt;/li&gt;
-  &lt;li&gt;Number 4&lt;/li&gt;
-  &lt;/ol&gt;
-  &lt;h3&gt;Header 3&lt;/h3&gt;
-  &lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer pellentesque tincidunt consectetur. In tincidunt pharetra erat et maximus. In ante nisl, dignissim vitae dignissim vel, sodales auctor leo.&lt;/p&gt;
-  &lt;ul&gt;&lt;li&gt;First list item&lt;/li&gt;
-  &lt;li&gt;Second list item&lt;/li&gt;
-  &lt;li&gt;Third list item&lt;/li&gt;
-  &lt;/ul&gt;
+										&lt;div class=&quot;component page-header&quot; style=&quot;background-image: url('../../images/page-header.jpg');&quot;&gt;
+  &lt;div class=&quot;page-header__text&quot;&gt;
+    &lt;div class=&quot;page-header__text-inner&quot;&gt;
+        &lt;div class=&quot;page-header__subtext&quot;&gt;A handbook for USAID staff&lt;/div&gt;
+        &lt;div class=&quot;page-header__headline&quot;&gt;Digital Finance for Development&lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;layout-constrain&quot;&gt;
+  &lt;strong&gt;Page Header Markup:&lt;/strong&gt;
+  &lt;xmp&gt;
+    &lt;div class=&quot;component page-header&quot; style=&quot;background-image: url([imagename].jpg);&quot;&gt;
+      &lt;div class=&quot;page-header__text&quot;&gt;
+        &lt;div class=&quot;page-header__text-inner&quot;&gt;
+          &lt;div class=&quot;page-header__subtext&quot;&gt;[content]&lt;/div&gt;
+          &lt;div class=&quot;page-header__headline&quot;&gt;[content]&lt;/div&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/xmp&gt;
 &lt;/div&gt;
 									</code>
 								</pre>
@@ -1740,43 +1766,83 @@ COMPONENT CLASSES/MARKUP:
 						</div>
 					</div>
 					<div id="components-text-block-centered" class="sg-pattern">
-						<h2 class="sg-pattern-head" ><a href="../../patterns/01-components-01-paragraph-module-components-02-text-block-centered/01-components-01-paragraph-module-components-02-text-block-centered.html" class="patternLink" data-patternpartial="components-text-block-centered">Text Block Centered</a></h2>
+						<h2 class="sg-pattern-head" ><a href="../../patterns/01-components-01-paragraphs-text-block-centered/01-components-01-paragraphs-text-block-centered.html" class="patternLink" data-patternpartial="components-text-block-centered">Text Block Centered</a></h2>
 						<div class="sg-pattern-body">
-							<div class="text-block layout-constrain component text-block--centered">
-  <h2>Header 2</h2>
-  <p>Lorem ipsum <strong>dolor </strong>sit amet, consectetur adipiscing elit. Integer pellentesque <u>tincidunt consectetur</u>. In tincidunt pharetra erat et maximus. In ante nisl, dignissim vitae dignissim vel, sodales auctor leo. Curabitur auctor porttitor felis, eget posuere ex placerat sit amet. Etiam fringilla odio dui, a iaculis est gravida id. <a href="http://google.com">Morbi bibendum</a>, sapien in interdum placerat, nibh ante finibus ex, <em>eget cursus mauris dolor at dolor</em>. Duis ullamcorper urna vitae metus mattis, sed ornare libero posuere. Donec eu ante at nulla condimentum sagittis. Curabitur nec orci at libero interdum facilisis. Proin feugiat ipsum a porta suscipit. Duis et nisi eget augue mattis tempor. Curabitur eget libero quis metus tincidunt interdum.</p>
-  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer pellentesque tincidunt consectetur. In tincidunt pharetra erat et maximus. In ante nisl, dignissim vitae dignissim vel, sodales auctor leo. &nbsp;DaenerysTargaryen</p>
-  <ol><li>Number 1</li>
-  <li>Number 2</li>
-  <li>Number 3</li>
-  <li>Number 4</li>
-  </ol>
-  <h3>Header 3</h3>
-  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer pellentesque tincidunt consectetur. In tincidunt pharetra erat et maximus. In ante nisl, dignissim vitae dignissim vel, sodales auctor leo.</p>
-  <ul><li>First list item</li>
-  <li>Second list item</li>
-  <li>Third list item</li>
-  </ul>
+							<div class="component layout-constrain text-block text-block--centered">
+  <h2>DIV IS DOING DEVELOPMENT DIFFERENTLY</h2>
+  <p>DIV was founded on the belief that the next big development solution could come from anyone, anywhere. As an open innovation fund, DIV opens the door of USAID to both traditional and nontraditional partners everywhere, with goal of bridging the innovation gap for early stage development solutions. Inspired by the venture capital experience, DIV invests tiered funding catalyze innovations that work while avoiding long term investments in those that don’t. DIV funding allows innovators to test their ideas, gather rigorous evidence impact and cost-effectiveness, and scale their proven solutions to reach millions of people.</p>
+  <h3>We're looking for the next solution that can improve the lives of million of people.</h3>
+  <p><a href="#" class="button">Apply to Div</a></p>
+</div>
+
+<div class="layout-constrain">
+  <strong>Text Block Centered Markup:</strong>
+  <xmp>
+    <div class="component layout-constrain text-block text-block--centered">
+      [content]
+    </div>
+  </xmp>
 </div>
 							<div class="sg-code" style="display: none">
 								<h3 class="sg-code-head">HTML</h3>
 								<pre class="sg-code-html">
 									<code>
-										&lt;div class=&quot;text-block layout-constrain component text-block--centered&quot;&gt;
-  &lt;h2&gt;Header 2&lt;/h2&gt;
-  &lt;p&gt;Lorem ipsum &lt;strong&gt;dolor &lt;/strong&gt;sit amet, consectetur adipiscing elit. Integer pellentesque &lt;u&gt;tincidunt consectetur&lt;/u&gt;. In tincidunt pharetra erat et maximus. In ante nisl, dignissim vitae dignissim vel, sodales auctor leo. Curabitur auctor porttitor felis, eget posuere ex placerat sit amet. Etiam fringilla odio dui, a iaculis est gravida id. &lt;a href=&quot;http://google.com&quot;&gt;Morbi bibendum&lt;/a&gt;, sapien in interdum placerat, nibh ante finibus ex, &lt;em&gt;eget cursus mauris dolor at dolor&lt;/em&gt;. Duis ullamcorper urna vitae metus mattis, sed ornare libero posuere. Donec eu ante at nulla condimentum sagittis. Curabitur nec orci at libero interdum facilisis. Proin feugiat ipsum a porta suscipit. Duis et nisi eget augue mattis tempor. Curabitur eget libero quis metus tincidunt interdum.&lt;/p&gt;
-  &lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer pellentesque tincidunt consectetur. In tincidunt pharetra erat et maximus. In ante nisl, dignissim vitae dignissim vel, sodales auctor leo. &amp;nbsp;DaenerysTargaryen&lt;/p&gt;
-  &lt;ol&gt;&lt;li&gt;Number 1&lt;/li&gt;
-  &lt;li&gt;Number 2&lt;/li&gt;
-  &lt;li&gt;Number 3&lt;/li&gt;
-  &lt;li&gt;Number 4&lt;/li&gt;
-  &lt;/ol&gt;
-  &lt;h3&gt;Header 3&lt;/h3&gt;
-  &lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer pellentesque tincidunt consectetur. In tincidunt pharetra erat et maximus. In ante nisl, dignissim vitae dignissim vel, sodales auctor leo.&lt;/p&gt;
-  &lt;ul&gt;&lt;li&gt;First list item&lt;/li&gt;
-  &lt;li&gt;Second list item&lt;/li&gt;
-  &lt;li&gt;Third list item&lt;/li&gt;
-  &lt;/ul&gt;
+										&lt;div class=&quot;component layout-constrain text-block text-block--centered&quot;&gt;
+  &lt;h2&gt;DIV IS DOING DEVELOPMENT DIFFERENTLY&lt;/h2&gt;
+  &lt;p&gt;DIV was founded on the belief that the next big development solution could come from anyone, anywhere. As an open innovation fund, DIV opens the door of USAID to both traditional and nontraditional partners everywhere, with goal of bridging the innovation gap for early stage development solutions. Inspired by the venture capital experience, DIV invests tiered funding catalyze innovations that work while avoiding long term investments in those that don&rsquo;t. DIV funding allows innovators to test their ideas, gather rigorous evidence impact and cost-effectiveness, and scale their proven solutions to reach millions of people.&lt;/p&gt;
+  &lt;h3&gt;We're looking for the next solution that can improve the lives of million of people.&lt;/h3&gt;
+  &lt;p&gt;&lt;a href=&quot;#&quot; class=&quot;button&quot;&gt;Apply to Div&lt;/a&gt;&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;layout-constrain&quot;&gt;
+  &lt;strong&gt;Text Block Centered Markup:&lt;/strong&gt;
+  &lt;xmp&gt;
+    &lt;div class=&quot;component layout-constrain text-block text-block--centered&quot;&gt;
+      [content]
+    &lt;/div&gt;
+  &lt;/xmp&gt;
+&lt;/div&gt;
+									</code>
+								</pre>
+							</div>
+						</div>
+					</div>
+					<div id="components-text-block" class="sg-pattern">
+						<h2 class="sg-pattern-head" ><a href="../../patterns/01-components-01-paragraphs-text-block/01-components-01-paragraphs-text-block.html" class="patternLink" data-patternpartial="components-text-block">Text Block</a></h2>
+						<div class="sg-pattern-body">
+							<div class="component layout-constrain text-block">
+  <h2>DIV IS DOING DEVELOPMENT DIFFERENTLY</h2>
+  <p>DIV was founded on the belief that the next big development solution could come from anyone, anywhere. As an open innovation fund, DIV opens the door of USAID to both traditional and nontraditional partners everywhere, with goal of bridging the innovation gap for early stage development solutions. Inspired by the venture capital experience, DIV invests tiered funding catalyze innovations that work while avoiding long term investments in those that don’t. DIV funding allows innovators to test their ideas, gather rigorous evidence impact and cost-effectiveness, and scale their proven solutions to reach millions of people.</p>
+  <h3>We're looking for the next solution that can improve the lives of million of people.</h3>
+  <p><a href="#" class="button">Apply to Div</a></p>
+</div>
+
+<div class="layout-constrain">
+  <strong>Text Block Markup:</strong>
+  <xmp>
+    <div class="component layout-constrain text-block">
+      [content]
+    </div>
+  </xmp>
+</div>
+							<div class="sg-code" style="display: none">
+								<h3 class="sg-code-head">HTML</h3>
+								<pre class="sg-code-html">
+									<code>
+										&lt;div class=&quot;component layout-constrain text-block&quot;&gt;
+  &lt;h2&gt;DIV IS DOING DEVELOPMENT DIFFERENTLY&lt;/h2&gt;
+  &lt;p&gt;DIV was founded on the belief that the next big development solution could come from anyone, anywhere. As an open innovation fund, DIV opens the door of USAID to both traditional and nontraditional partners everywhere, with goal of bridging the innovation gap for early stage development solutions. Inspired by the venture capital experience, DIV invests tiered funding catalyze innovations that work while avoiding long term investments in those that don&rsquo;t. DIV funding allows innovators to test their ideas, gather rigorous evidence impact and cost-effectiveness, and scale their proven solutions to reach millions of people.&lt;/p&gt;
+  &lt;h3&gt;We're looking for the next solution that can improve the lives of million of people.&lt;/h3&gt;
+  &lt;p&gt;&lt;a href=&quot;#&quot; class=&quot;button&quot;&gt;Apply to Div&lt;/a&gt;&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;layout-constrain&quot;&gt;
+  &lt;strong&gt;Text Block Markup:&lt;/strong&gt;
+  &lt;xmp&gt;
+    &lt;div class=&quot;component layout-constrain text-block&quot;&gt;
+      [content]
+    &lt;/div&gt;
+  &lt;/xmp&gt;
 &lt;/div&gt;
 									</code>
 								</pre>
@@ -1887,28 +1953,6 @@ COMPONENT CLASSES/MARKUP:
   &lt;div class=&quot;progress__percentage&quot;&gt;57%&lt;/div&gt;
   &lt;div class=&quot;progress__description&quot;&gt;This is the description for this progress bar.&lt;/div&gt;
 &lt;/div&gt;
-
-									</code>
-								</pre>
-							</div>
-						</div>
-					</div>
-					<div id="components-basic-page" class="sg-pattern">
-						<h2 class="sg-pattern-head" ><a href="../../patterns/01-components-03-content-types-basic-page/01-components-03-content-types-basic-page.html" class="patternLink" data-patternpartial="components-basic-page">Basic Page</a></h2>
-						<div class="sg-pattern-body">
-							<article class="node node--page node--full" role="article">
-  <h1 class="node__title">Page Title</h1>
-  <p>This is the body content, which can contain <abbr title='Hyper Text Markup Language'>HTML</abbr> markup. There is no limit to how long this content can be.</p>
-</article>
-
-							<div class="sg-code" style="display: none">
-								<h3 class="sg-code-head">HTML</h3>
-								<pre class="sg-code-html">
-									<code>
-										&lt;article class=&quot;node node--page node--full&quot; role=&quot;article&quot;&gt;
-  &lt;h1 class=&quot;node__title&quot;&gt;Page Title&lt;/h1&gt;
-  &lt;p&gt;This is the body content, which can contain &lt;abbr title='Hyper Text Markup Language'&gt;HTML&lt;/abbr&gt; markup. There is no limit to how long this content can be.&lt;/p&gt;
-&lt;/article&gt;
 
 									</code>
 								</pre>
@@ -2358,10 +2402,10 @@ COMPONENT CLASSES/MARKUP:
 			
 		}
 	</script>
-	<script id="pl-js-polyfill-insert-1449009296">
+	<script id="pl-js-polyfill-insert-1449612299">
 		(function() {
 			if (self != top) {
-				var cb = '1449009296';
+				var cb = '1449612299';
 				var js = [];
 				if (typeof document !== "undefined" && !("classList" in document.documentElement)) {
 					js.push("styleguide/js/vendor/classlist-polyfill.js");
@@ -2370,10 +2414,10 @@ COMPONENT CLASSES/MARKUP:
 			}
 		})();
 	</script>
-	<script id="pl-js-insert-1449009296">
+	<script id="pl-js-insert-1449612299">
 		(function() {
 			if (self != top) {
-				var cb = '1449009296';
+				var cb = '1449612299';
 				var js = [ { "src": "styleguide/js/vendor/jwerty.js", "dep": [ "styleguide/js/postmessage.js", { "src": "data/annotations.js", "dep": [ "styleguide/js/annotations-pattern.js" ] }, "styleguide/js/code-pattern.js" ] } ];
 				scriptLoader.run(js,cb,'pl-js-insert');
 			}

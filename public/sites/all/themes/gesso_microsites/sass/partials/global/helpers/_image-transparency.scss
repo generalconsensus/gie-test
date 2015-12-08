@@ -1,0 +1,17 @@
+// @file
+// Transparent Image Overlay
+
+@mixin image-transparency($alpha){
+    &:before { // CSS Color Overlay
+    background: rgba(0,0,0, $alpha);
+    background-size: cover;
+    content: " ";
+    display: block;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    position: absolute;
+    z-index: 0;
+  }
+}
