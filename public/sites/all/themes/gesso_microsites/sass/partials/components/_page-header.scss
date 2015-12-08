@@ -1,0 +1,63 @@
+// @file
+// Styles for the longform page header.
+.page-header {
+  background-position: 50% 50%;
+  background-size: cover;
+  margin: 0 auto;
+  min-height: 300px;
+  max-height: 700px;
+  padding: 0;
+  position: relative;
+  text-align: center;
+  width: 100%;
+}
+
+.page-header__text {
+  @include hyphens(none);
+  color: #fff;
+  display: table;
+  font-weight: bold;
+  text-transform: uppercase;
+  vertical-align: middle;
+  width: 100%;
+}
+
+.page-header__text-inner {
+  display: table-cell;
+  vertical-align: middle;
+}
+
+.page-header__subtext {
+  font-size: 1.1em;
+  @include breakpoint(600px) {
+    font-size: 1.3em;
+  }
+  @include breakpoint(900px, $no-query: true) {
+    font-size: 1.6em;
+  }
+  margin: 0 auto;
+  max-width: $max-page-width;
+  padding: 5% 0 2% 0;
+  &:after {
+    border-top: 4px solid $theme-secondary;
+    content: "";
+    display: block;
+    margin: 0 auto;
+    width: 30%;
+  }
+}
+
+.page-header__headline {
+  font-size: 2em;
+  @include breakpoint(600px) {
+    font-size: 2.8em;
+  }
+  @include breakpoint(900px, $no-query: true) {
+  font-size: 3.8em;
+  }
+  line-height: 1.1;
+  margin: 0 auto;
+  max-width: $max-page-width;
+  padding: 0 0 5% 0;
+}
+ 
