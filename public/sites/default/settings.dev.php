@@ -218,9 +218,9 @@ $databases = array (
     'default' => 
     array (
       'database' => 'giexchange_dev',
-      'username' => 'gie_dev_user',
-      'password' => 'l4RtRaYUclF',
-      'host' => 'localhost',
+      'username' => 'gieuser_dev',
+      'password' => '27K^9I5t#7Fp',
+      'host' => 'giexchange.c06busiwruk7.us-east-1.rds.amazonaws.com',
       'port' => '',
       'driver' => 'mysql',
       'prefix' => '',
@@ -597,9 +597,9 @@ $conf['search_api_override_servers'] = array(
   'solr' => array(
     'name' => t('Solr Server (Overridden)'),
     'options' => array(
-      'host' => 'localhost',
+      'host' => '10.0.2.76',
       'port' => 8984,
-      'path' => '/solr/drupal'
+      'path' => '/solr/giexchange_dev'
     )
   )
 );

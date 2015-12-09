@@ -2,7 +2,7 @@
 set :stage, :dev
 
 # An array containing site URL, used for Varnish bans
-set :site_url, %w{dev.giexchange.forumone.com}
+set :site_url, %w{dev.gie.byf1.io}
 
 # An array containing drupal sites to copy settings files in
 set :site_folder, %w{default}
@@ -11,7 +11,7 @@ set :site_folder, %w{default}
 set :webroot, 'public'
 
 # The path to the project on the server
-set :deploy_to, '/var/www/vhosts/giexchange.dev'
+set :deploy_to, '/var/www/vhosts/gie.dev'
 
 # Where the temporary directory is
 set :tmp_dir, fetch(:deploy_to)
@@ -24,9 +24,9 @@ set :branch, "master"
 # Supports bulk-adding hosts to roles, the primary
 # server in each group is considered to be the first
 # unless any hosts have the primary property set.
-role :app, %w{giexchange@giexchange.forumone.com}, :primary => true
-role :web, %w{giexchange@giexchange.forumone.com}
-role :db,  %w{giexchange@giexchange.forumone.com}
+role :app, %w{gie@utility.gie.byf1.io}, :primary => true
+role :web, %w{gie@utility.gie.byf1.io}
+role :db,  %w{gie@utility.gie.byf1.io}
 
 # Extended Server Syntax
 # ======================
