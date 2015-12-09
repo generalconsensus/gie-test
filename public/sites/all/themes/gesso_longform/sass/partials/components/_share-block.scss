@@ -35,12 +35,15 @@
   span.st_sharethis_custom {
     @include svg-background(longform-share-icon-square);
     @include image-replace (40px, 40px);
+    background-repeat: no-repeat;
     cursor: pointer;
     position: relative;
-    z-index: 20;
+    z-index: 50;
     @include breakpoint($mobile-menu-bp, $no-query: true) {
       @include image-replace (75px, 75px);
       @include svg-background(longform-share-icon);
+      background-repeat: no-repeat;
+      z-index: 50;
     }
   }
 }
@@ -64,10 +67,46 @@
 
 }
 .share-block__icon--print {
+  z-index: 20;
   @include svg-background(longform-print-icon-square);
   @include breakpoint($mobile-menu-bp, $no-query: true) {
     @include svg-background(longform-print-icon);
   }
+}
+
+//ie9 break fix
+.ie9 .share-block__icon {
+  background-repeat: no-repeat;
+  height: 40px;
+  width: 40px;
+  @include breakpoint(700px, $no-query: true) {
+    height: 40px;
+    width: 40px;
+    margin-left: 20px;
+  }
+  
+}
+.ie9 .share-block__icon--share span.st_sharethis_custom {
+  background-repeat: no-repeat;
+  height: 40px;
+  width: 40px;
+}
+.ie9 .share-block__icon--fav {
+  background-repeat: no-repeat;
+  a, a.flagged {
+    background-repeat: no-repeat; 
+    background-size: 34px 34px;
+    height: 40px;
+    width: 40px;
+  }
+
+}
+.ie9 .share-block__icon--print {
+  background-repeat: no-repeat;
+  @include breakpoint(700px, $no-query: true) {
+    // margin-left: 20px;
+  }
+  
 }
 
 //Hide Usabilla Live Button

@@ -113,6 +113,15 @@ function gie_organization_strongarm() {
       'page_header' => array(
         'custom_settings' => TRUE,
       ),
+      'highlights' => array(
+        'custom_settings' => FALSE,
+      ),
+      'needs_list' => array(
+        'custom_settings' => FALSE,
+      ),
+      'details' => array(
+        'custom_settings' => FALSE,
+      ),
     ),
     'extra_fields' => array(
       'form' => array(
@@ -122,6 +131,12 @@ function gie_organization_strongarm() {
         'rabbit_hole' => array(
           'weight' => '0',
         ),
+        'metatags' => array(
+          'weight' => '40',
+        ),
+        'xmlsitemap' => array(
+          'weight' => '30',
+        ),
       ),
       'display' => array(
         'sharethis' => array(
@@ -130,7 +145,7 @@ function gie_organization_strongarm() {
             'visible' => FALSE,
           ),
           'default' => array(
-            'weight' => '10',
+            'weight' => '9',
             'visible' => TRUE,
           ),
           'full' => array(
@@ -176,7 +191,7 @@ function gie_organization_strongarm() {
             'visible' => FALSE,
           ),
           'default' => array(
-            'weight' => '10',
+            'weight' => '11',
             'visible' => TRUE,
           ),
           'teaser_image' => array(
@@ -260,7 +275,7 @@ function gie_organization_strongarm() {
             'visible' => FALSE,
           ),
           'default' => array(
-            'weight' => '10',
+            'weight' => '8',
             'visible' => TRUE,
           ),
           'teaser_image' => array(
@@ -336,7 +351,7 @@ function gie_organization_strongarm() {
             'visible' => FALSE,
           ),
           'default' => array(
-            'weight' => '10',
+            'weight' => '13',
             'visible' => TRUE,
           ),
           'logo' => array(
@@ -421,7 +436,7 @@ function gie_organization_strongarm() {
             'visible' => FALSE,
           ),
           'default' => array(
-            'weight' => '10',
+            'weight' => '12',
             'visible' => TRUE,
           ),
           'logo' => array(
@@ -447,6 +462,12 @@ function gie_organization_strongarm() {
           'listing' => array(
             'weight' => '13',
             'visible' => FALSE,
+          ),
+        ),
+        'flag_favorite' => array(
+          'default' => array(
+            'weight' => '14',
+            'visible' => TRUE,
           ),
         ),
       ),

@@ -209,14 +209,15 @@ function gie_search_default_search_api_index() {
         "field_term_sector" : { "type" : "list\\u003Cinteger\\u003E", "entity_type" : "taxonomy_term" },
         "field_user_address:country" : { "type" : "text" },
         "field_user_company" : { "type" : "integer", "entity_type" : "taxonomy_term" },
-        "field_user_firstname" : { "type" : "text" },
+        "field_user_firstname" : { "type" : "string" },
         "field_user_interests" : { "type" : "list\\u003Cinteger\\u003E", "entity_type" : "taxonomy_term" },
-        "field_user_lastname" : { "type" : "text" },
+        "field_user_lastname" : { "type" : "string" },
         "field_user_org" : { "type" : "list\\u003Cinteger\\u003E", "entity_type" : "node" },
         "field_user_programs" : { "type" : "list\\u003Cinteger\\u003E", "entity_type" : "node" },
         "field_user_title" : { "type" : "text" },
         "field_user_type" : { "type" : "list\\u003Cinteger\\u003E", "entity_type" : "taxonomy_term" },
         "name" : { "type" : "text" },
+        "search_api_aggregation_1" : { "type" : "text" },
         "search_api_language" : { "type" : "string" },
         "status" : { "type" : "integer" },
         "uid" : { "type" : "integer" }
@@ -232,7 +233,18 @@ function gie_search_default_search_api_index() {
         "search_api_alter_add_hierarchy" : { "status" : 0, "weight" : "0", "settings" : { "fields" : [] } },
         "search_api_alter_add_viewed_entity" : { "status" : 0, "weight" : "0", "settings" : { "mode" : "full" } },
         "search_api_alter_add_url" : { "status" : 0, "weight" : "0", "settings" : [] },
-        "search_api_alter_add_aggregation" : { "status" : 0, "weight" : "0", "settings" : [] }
+        "search_api_alter_add_aggregation" : {
+          "status" : 1,
+          "weight" : "0",
+          "settings" : { "fields" : { "search_api_aggregation_1" : {
+                "name" : "Full name",
+                "type" : "fulltext",
+                "fields" : [ "field_user_firstname", "field_user_lastname" ],
+                "description" : "A Fulltext aggregation of the following fields: First Name, Last Name."
+              }
+            }
+          }
+        }
       },
       "processors" : {
         "search_api_case_ignore" : { "status" : 0, "weight" : "0", "settings" : { "fields" : [] } },
