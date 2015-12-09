@@ -219,7 +219,7 @@ $databases = array (
     array (
       'database' => 'giexchange_dev',
       'username' => 'gieuser_dev',
-      'password' => '27K^9I5t#7Fp',
+      'password' => 'nLF#ivs37B*lmODP',
       'host' => 'giexchange.c06busiwruk7.us-east-1.rds.amazonaws.com',
       'port' => '',
       'driver' => 'mysql',
