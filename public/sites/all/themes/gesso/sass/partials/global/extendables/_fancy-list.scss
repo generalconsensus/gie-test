@@ -1,0 +1,86 @@
+%fancy-list {
+  list-style: none;
+  margin: 0 0 2em 0;
+  padding: 0 0 0 40px; // same as width of bullet offset
+  > li {
+    @extend %clearfix;
+    clear: both;
+    list-style: none;
+    margin: 0 0 1em 0;
+    padding: 0;
+  }
+  > li:before {
+    content: "►";
+    color: $theme-secondary;
+    display: inline-block;
+    //float: left;
+    //line-height: 1;
+    margin-left: -40px;
+    margin-right: 10px;
+    font-size: 30px;
+    position: relative;
+    top: 3px;
+    width: 30px;
+  }
+  ol &, ul {
+    margin: 0.5em 0;
+    padding: 0 0 0 25px; // same as width of bullet offset
+    > li:before {
+      //line-height: 1.75;
+      margin-left: -25px;
+      margin-right: 10px;
+      font-size: 15px;
+      top: 0;
+      width: 15px;
+    }
+  }
+}
+
+$ol-bullet-size: 60px;
+%fancy-list--ordered {
+  counter-reset: li-counter;
+  list-style: none;
+  margin: 0 0 1.5em 0;
+  padding: 0 0 0 $ol-bullet-size+10;
+  text-align: left;
+  > li {
+    @extend %clearfix;
+    clear: both;
+    line-height: 1.5;
+    list-style: none;
+    margin: 0 0 2em 0;
+    padding: 0;
+    li {
+      margin-bottom: 1em;
+    }
+  }
+  > li:before {
+    background-color: $theme-primary;
+    color: #fff;
+    content: counter(li-counter);
+    counter-increment: li-counter;
+    display: block;
+    float: left;
+    font-size: 20px;
+    line-height: $ol-bullet-size;
+    margin-left: -($ol-bullet-size+10);
+    min-height: $ol-bullet-size;
+    min-width: $ol-bullet-size;
+    position: relative;
+    text-align: center;
+  }
+  ul &, ol {
+    margin: 0.5em 0;
+    padding: 0 0 0 (($ol-bullet-size/2)+10);  
+    > li:before {
+      line-height: $ol-bullet-size/2;
+      font-size: 14px;
+      margin-left: -(($ol-bullet-size/2)+10);
+      min-height: $ol-bullet-size/2;
+      min-width: $ol-bullet-size/2;
+    }
+  }
+}
+
+
+ 

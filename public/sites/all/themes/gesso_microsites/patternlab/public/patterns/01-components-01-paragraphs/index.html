@@ -15,18 +15,18 @@
     <link href='https://fonts.googleapis.com/css?family=Lato:400,400italic,700,700italic,300italic,300' rel='stylesheet' type='text/css'>
 
     <!--[if gte IE 9]><!-->
-    <link rel="stylesheet" href="../../../../css/styles.css?1449612299" media="all">
+    <link rel="stylesheet" href="../../../../css/styles.css?1449700687" media="all">
     <!--<![endif]-->
 
     <!--[if lt IE 9]>
-    <link rel="stylesheet" href="../../../../css/no-mq.css?1449612299" media="all">
+    <link rel="stylesheet" href="../../../../css/no-mq.css?1449700687" media="all">
     <![endif]-->
 
     <script src="../../drupal/misc/jquery.js?v=1.4.4"></script>
     <script src="../../drupal/misc/jquery.once.js?v=1.2"></script>
     <script src="../../drupal/misc/drupal.js?v=7.33"></script>
 
-    <script src="../../../../js/mobile-menu.js?1449612299"></script>
+    <script src="../../../../js/mobile-menu.js?1449700687"></script>
 
     <!-- Begin Pattern Lab (Required for Pattern Lab to run properly) -->
     		<!-- never cache patterns -->
@@ -36,8 +36,8 @@
 		<meta http-equiv="expires" content="Tue, 01 Jan 1980 1:00:00 GMT" />
 		<meta http-equiv="pragma" content="no-cache" />
 		
-		<link rel="stylesheet" href="../../styleguide/css/styleguide.css?1449612299" media="all">
-		<link rel="stylesheet" href="../../styleguide/css/styleguide-specific.css?1449612299" media="all" />
+		<link rel="stylesheet" href="../../styleguide/css/styleguide.css?1449700687" media="all">
+		<link rel="stylesheet" href="../../styleguide/css/styleguide-specific.css?1449700687" media="all" />
 		
 
     <!-- End Pattern Lab -->
@@ -71,20 +71,21 @@
 						<h2 class="sg-pattern-head" ><a href="../../patterns/01-components-01-paragraphs-page-header/01-components-01-paragraphs-page-header.html" class="patternLink" data-patternpartial="components-page-header">Page Header</a></h2>
 						<div class="sg-pattern-body">
 							<div class="component page-header" style="background-image: url('../../images/page-header.jpg');">
-  <div class="page-header__text">
-    <div class="page-header__text-inner">
-        <div class="page-header__subtext">A handbook for USAID staff</div>
-        <div class="page-header__headline">Digital Finance for Development</div>
+  <div class="page-header__text-wrapper">
+    <div class="page-header__text">
+      <div class="page-header__subtext">A handbook for USAID staff</div>
+      <div class="page-header__headline">Digital Finance for Development</div>
     </div>
   </div>
 </div>
 
-<div class="layout-constrain">
+<div class="patternlab-markup">
+  <strong>Page Header image size: 1600x700</strong><br>
   <strong>Page Header Markup:</strong>
   <xmp>
     <div class="component page-header" style="background-image: url([imagename].jpg);">
-      <div class="page-header__text">
-        <div class="page-header__text-inner">
+      <div class="page-header__text-wrapper">
+        <div class="page-header__text">
           <div class="page-header__subtext">[content]</div>
           <div class="page-header__headline">[content]</div>
         </div>
@@ -97,20 +98,21 @@
 								<pre class="sg-code-html">
 									<code>
 										&lt;div class=&quot;component page-header&quot; style=&quot;background-image: url('../../images/page-header.jpg');&quot;&gt;
-  &lt;div class=&quot;page-header__text&quot;&gt;
-    &lt;div class=&quot;page-header__text-inner&quot;&gt;
-        &lt;div class=&quot;page-header__subtext&quot;&gt;A handbook for USAID staff&lt;/div&gt;
-        &lt;div class=&quot;page-header__headline&quot;&gt;Digital Finance for Development&lt;/div&gt;
+  &lt;div class=&quot;page-header__text-wrapper&quot;&gt;
+    &lt;div class=&quot;page-header__text&quot;&gt;
+      &lt;div class=&quot;page-header__subtext&quot;&gt;A handbook for USAID staff&lt;/div&gt;
+      &lt;div class=&quot;page-header__headline&quot;&gt;Digital Finance for Development&lt;/div&gt;
     &lt;/div&gt;
   &lt;/div&gt;
 &lt;/div&gt;
 
-&lt;div class=&quot;layout-constrain&quot;&gt;
+&lt;div class=&quot;patternlab-markup&quot;&gt;
+  &lt;strong&gt;Page Header image size: 1600x700&lt;/strong&gt;&lt;br&gt;
   &lt;strong&gt;Page Header Markup:&lt;/strong&gt;
   &lt;xmp&gt;
     &lt;div class=&quot;component page-header&quot; style=&quot;background-image: url([imagename].jpg);&quot;&gt;
-      &lt;div class=&quot;page-header__text&quot;&gt;
-        &lt;div class=&quot;page-header__text-inner&quot;&gt;
+      &lt;div class=&quot;page-header__text-wrapper&quot;&gt;
+        &lt;div class=&quot;page-header__text&quot;&gt;
           &lt;div class=&quot;page-header__subtext&quot;&gt;[content]&lt;/div&gt;
           &lt;div class=&quot;page-header__headline&quot;&gt;[content]&lt;/div&gt;
         &lt;/div&gt;
@@ -118,6 +120,34 @@
     &lt;/div&gt;
   &lt;/xmp&gt;
 &lt;/div&gt;
+									</code>
+								</pre>
+							</div>
+						</div>
+					</div>
+					<div id="components-section-break" class="sg-pattern">
+						<h2 class="sg-pattern-head" ><a href="../../patterns/01-components-01-paragraphs-section-break/01-components-01-paragraphs-section-break.html" class="patternLink" data-patternpartial="components-section-break">Section Break</a></h2>
+						<div class="sg-pattern-body">
+							<div class="component section-break" style="background-image: url('../../images/section-break.jpg');">
+  <div class="section-break__text-wrapper">
+    <div class="section-break__text">
+      Positively impacting the lives of the world's youth will ensure they'll grow up to be healthy productive adults.
+    </div>
+  </div>
+</div>
+
+							<div class="sg-code" style="display: none">
+								<h3 class="sg-code-head">HTML</h3>
+								<pre class="sg-code-html">
+									<code>
+										&lt;div class=&quot;component section-break&quot; style=&quot;background-image: url('../../images/section-break.jpg');&quot;&gt;
+  &lt;div class=&quot;section-break__text-wrapper&quot;&gt;
+    &lt;div class=&quot;section-break__text&quot;&gt;
+      Positively impacting the lives of the world's youth will ensure they'll grow up to be healthy productive adults.
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+
 									</code>
 								</pre>
 							</div>
@@ -133,7 +163,7 @@
   <p><a href="#" class="button">Apply to Div</a></p>
 </div>
 
-<div class="layout-constrain">
+<div class="patternlab-markup">
   <strong>Text Block Centered Markup:</strong>
   <xmp>
     <div class="component layout-constrain text-block text-block--centered">
@@ -152,7 +182,7 @@
   &lt;p&gt;&lt;a href=&quot;#&quot; class=&quot;button&quot;&gt;Apply to Div&lt;/a&gt;&lt;/p&gt;
 &lt;/div&gt;
 
-&lt;div class=&quot;layout-constrain&quot;&gt;
+&lt;div class=&quot;patternlab-markup&quot;&gt;
   &lt;strong&gt;Text Block Centered Markup:&lt;/strong&gt;
   &lt;xmp&gt;
     &lt;div class=&quot;component layout-constrain text-block text-block--centered&quot;&gt;
@@ -175,7 +205,7 @@
   <p><a href="#" class="button">Apply to Div</a></p>
 </div>
 
-<div class="layout-constrain">
+<div class="patternlab-markup">
   <strong>Text Block Markup:</strong>
   <xmp>
     <div class="component layout-constrain text-block">
@@ -194,7 +224,7 @@
   &lt;p&gt;&lt;a href=&quot;#&quot; class=&quot;button&quot;&gt;Apply to Div&lt;/a&gt;&lt;/p&gt;
 &lt;/div&gt;
 
-&lt;div class=&quot;layout-constrain&quot;&gt;
+&lt;div class=&quot;patternlab-markup&quot;&gt;
   &lt;strong&gt;Text Block Markup:&lt;/strong&gt;
   &lt;xmp&gt;
     &lt;div class=&quot;component layout-constrain text-block&quot;&gt;
@@ -252,10 +282,10 @@
 			
 		}
 	</script>
-	<script id="pl-js-polyfill-insert-1449612299">
+	<script id="pl-js-polyfill-insert-1449700687">
 		(function() {
 			if (self != top) {
-				var cb = '1449612299';
+				var cb = '1449700687';
 				var js = [];
 				if (typeof document !== "undefined" && !("classList" in document.documentElement)) {
 					js.push("styleguide/js/vendor/classlist-polyfill.js");
@@ -264,10 +294,10 @@
 			}
 		})();
 	</script>
-	<script id="pl-js-insert-1449612299">
+	<script id="pl-js-insert-1449700687">
 		(function() {
 			if (self != top) {
-				var cb = '1449612299';
+				var cb = '1449700687';
 				var js = [ { "src": "styleguide/js/vendor/jwerty.js", "dep": [ "styleguide/js/postmessage.js", { "src": "data/annotations.js", "dep": [ "styleguide/js/annotations-pattern.js" ] }, "styleguide/js/code-pattern.js" ] } ];
 				scriptLoader.run(js,cb,'pl-js-insert');
 			}

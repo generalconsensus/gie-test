@@ -638,7 +638,7 @@ ul.panels-ipe-linkbar li {
   width: 16.66667%;
 }
 
-.layout-constrain, .region-utility .region-inner {
+.layout-constrain, .patternlab-markup, .region-utility .region-inner {
   margin-left: auto;
   margin-right: auto;
   max-width: 61.11111em;
@@ -1489,12 +1489,36 @@ input.throbbing {
 .page-header {
   background-position: 50% 50%;
   background-size: cover;
-  margin: 0 auto;
-  min-height: 300px;
+  border-bottom: 6px solid #cd1041;
+  margin: 0 auto 3em auto;
+  min-height: 350px;
+  min-height: 700px;
   max-height: 700px;
   padding: 0;
   position: relative;
   text-align: center;
+  width: 100%;
+}
+.page-header:after {
+  bottom: -20px;
+  content: "";
+  display: block;
+  border-style: solid;
+  border-width: 20px 20px 0;
+  border-color: #cd1041 transparent transparent;
+  height: 0;
+  left: 50%;
+  margin-left: -20px;
+  position: absolute;
+  width: 0;
+  z-index: 2;
+  bottom: -35px;
+  border-width: 35px 35px 0;
+  margin-left: -35px;
+}
+
+.page-header__text-wrapper {
+  display: table;
   width: 100%;
 }
 
@@ -1502,40 +1526,38 @@ input.throbbing {
   -ms-hyphens: none;
   hyphens: none;
   color: #fff;
-  display: table;
+  display: table-cell;
   font-weight: bold;
+  height: 350px;
+  height: 700px;
   text-transform: uppercase;
   vertical-align: middle;
   width: 100%;
 }
 
-.page-header__text-inner {
-  display: table-cell;
-  vertical-align: middle;
-}
-
 .page-header__subtext {
   font-size: 1.1em;
-  font-size: 1.6em;
+  font-size: 1.5em;
   margin: 0 auto;
   max-width: 1100px;
-  padding: 5% 0 2% 0;
+  padding: 5% 2% 2% 2%;
 }
 .page-header__subtext:after {
   border-top: 4px solid #cd1041;
   content: "";
   display: block;
   margin: 0 auto;
+  width: 50%;
   width: 30%;
 }
 
 .page-header__headline {
-  font-size: 2em;
-  font-size: 3.8em;
+  font-size: 1.8em;
+  font-size: 3.6em;
   line-height: 1.1;
   margin: 0 auto;
   max-width: 1100px;
-  padding: 0 0 5% 0;
+  padding: 2% 2% 5% 2%;
 }
 
 .pager {
@@ -1563,6 +1585,25 @@ input.throbbing {
 
 .pager__link--last:before {
   content: "\00BB|";
+}
+
+.patternlab-markup {
+  display: none;
+  font-size: 12px;
+  margin-bottom: 1em;
+  margin-top: 1em;
+}
+.sg-pattern .patternlab-markup {
+  display: block;
+}
+.patternlab-markup strong {
+  font-size: 14px;
+}
+.patternlab-markup xmp {
+  background: #333;
+  color: #fff;
+  margin: 0;
+  padding: 1em;
 }
 
 .progress {
@@ -1647,6 +1688,49 @@ input.throbbing {
   display: none;
   display: block;
   padding: 1em 0;
+}
+
+.section-break {
+  background-color: #00498f;
+  background-position: 50% 50%;
+  background-size: cover;
+  min-height: 250px;
+  min-height: 500px;
+  max-height: 500px;
+  padding: 0;
+  position: relative;
+  text-align: center;
+  width: 100%;
+}
+
+.section-break__text-wrapper {
+  display: table;
+  margin: 0 auto;
+  max-width: 1100px;
+  width: 100%;
+}
+
+.section-break__text {
+  -ms-hyphens: none;
+  hyphens: none;
+  color: #fff;
+  display: table-cell;
+  font-size: 1.5em;
+  font-size: 2.2em;
+  height: 250px;
+  height: 500px;
+  line-height: 1.3;
+  padding: 5% 2% 2% 2%;
+  vertical-align: middle;
+  width: 100%;
+}
+.section-break__text:before {
+  border-top: 4px solid #cd1041;
+  content: "";
+  display: block;
+  margin: 0 auto;
+  width: 50%;
+  width: 30%;
 }
 
 .site-header {

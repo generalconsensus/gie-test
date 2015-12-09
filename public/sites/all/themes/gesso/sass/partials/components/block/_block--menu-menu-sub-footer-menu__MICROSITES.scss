@@ -1,0 +1,22 @@
+.block--menu-menu-sub-footer-menu {
+  @extend %clearfix;
+  @include breakpoint(1070px, $no-query: true) {
+    clear: right;
+    float: right;
+  }
+  margin-top: 2em;
+  .nav {
+    @extend %nav--pipeline;
+    font-size: em($font-size-sm);
+    .nav__item {
+      
+    }
+    .nav__link {
+      color: #333;
+      text-decoration: none;
+      &:hover, &:focus {
+        text-decoration: underline;
+      }
+    }
+  }
+}
