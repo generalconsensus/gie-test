@@ -32,13 +32,13 @@ function gie_groups_context_default_contexts() {
         'system-user-menu' => array(
           'module' => 'system',
           'delta' => 'user-menu',
-          'region' => 'utility',
-          'weight' => '-10',
+          'region' => 'header',
+          'weight' => '-9',
         ),
         'views-59ece6cc1f2c71670512133b8215139d' => array(
           'module' => 'views',
           'delta' => '59ece6cc1f2c71670512133b8215139d',
-          'region' => 'header',
+          'region' => 'navigation',
           'weight' => '-10',
         ),
         'og_menu_single-menu' => array(
@@ -72,6 +72,9 @@ function gie_groups_context_default_contexts() {
           'weight' => '-8',
         ),
       ),
+    ),
+    'theme_html' => array(
+      'class' => 'section--microsite',
     ),
   );
   $context->condition_mode = 0;

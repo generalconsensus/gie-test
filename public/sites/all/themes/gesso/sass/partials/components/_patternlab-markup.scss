@@ -1,0 +1,21 @@
+// only used in patternlab to demo component markup
+
+.patternlab-markup {
+  @extend .layout-constrain;
+  display: none;
+  .sg-pattern & {
+    display: block;
+  }
+  font-size: 12px;
+  margin-bottom: 1em;
+  margin-top: 1em;
+  strong {
+    font-size: 14px;
+  }
+  xmp {
+    background: #333;
+    color: #fff;
+    margin: 0;
+    padding: 1em;
+  }  
+}

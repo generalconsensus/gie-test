@@ -1,4 +1,5 @@
 .block--menu-menu-sub-footer-menu {
+  clear: right;
   > ul.nav {
     @extend %nav--pipeline;
     font-size: em(12px);
@@ -8,6 +9,12 @@
 
     .nav__link {
       font-weight: normal;
+      .section--microsite & {
+        &:hover,
+        &:focus {
+          color: darken($microsite-primary,20%);
+        }
+      }
     }
 
     .footer-simple & {
@@ -30,5 +37,6 @@
         float: right;
       }
     }
+
   }
 }

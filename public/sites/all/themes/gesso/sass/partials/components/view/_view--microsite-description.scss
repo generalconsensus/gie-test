@@ -1,0 +1,20 @@
+.view--microsite-description {
+  color: #565a5c;
+  font-size: em($font-size-md);
+  .view__header h2 {
+    border-bottom: 1px solid #cecfcb;
+    color: #565a5c;
+    font-size: em($font-size-lg,$font-size-md);
+    margin-bottom: 1em;
+    padding-bottom: 0.5em;
+    text-transform: uppercase;
+  }
+  .button {
+    background-color: $microsite-secondary;
+    border-color: $microsite-secondary;
+    &:hover, &:focus {
+       background-color: darken($microsite-secondary, 6.9%);
+       border-color: darken($microsite-secondary, 6.9%);
+    }
+  }
+}

@@ -1,0 +1,17 @@
+// Styles for the microsites paragraphs text block component
+.microsite-text {
+  @extend %microsite-component;
+  h2 {
+    text-transform: uppercase;
+  }
+  ol {
+    @extend %fancy-list--ordered;
+  }
+  ul {
+    @extend %fancy-list;
+  }
+}
+
+.microsite-text--centered {
+  text-align: center;
+}
