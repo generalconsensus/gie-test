@@ -6,6 +6,7 @@ $section-break-image-width: 1600px;
 $section-break-image-height: 500px;
 
 .microsite-break {
+  @extend %microsite-component;
   background-color: $microsite-primary;
   background-position: 50% 50%;
   background-size: cover;
@@ -26,7 +27,6 @@ $section-break-image-height: 500px;
     min-height: $section-break-image-height;
   }
   max-height: 500px;
-  padding: 0;
   position: relative;
   text-align: center;
   width: 100%;
@@ -40,7 +40,6 @@ $section-break-image-height: 500px;
 }
 
 .microsite-break__text {
-  @include hyphens(none);
   color: #fff;
   display: table-cell;
   font-size: 1.5em;

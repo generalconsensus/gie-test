@@ -28,7 +28,6 @@ $header-image-height: 700px;
     min-height: $header-image-height;
   }
   max-height: 700px;
-  padding: 0;
   position: relative;
   text-align: center;
   width: 100%;
@@ -54,12 +53,11 @@ $header-image-height: 700px;
 }
 
 .microsite-header__text-wrapper {
-  display: table;
+  display: table; 
   width: 100%;
 }
 
 .microsite-header__text {
-  @include hyphens(none);
   color: #fff;
   display: table-cell;
   font-weight: bold;
