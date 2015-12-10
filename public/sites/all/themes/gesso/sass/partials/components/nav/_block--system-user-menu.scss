@@ -12,6 +12,9 @@
     .nav__link {
       font-size: em(12px);
       font-weight: normal;
+      .section--microsite & {
+        color: #fff;
+      }
     }
   }
 }

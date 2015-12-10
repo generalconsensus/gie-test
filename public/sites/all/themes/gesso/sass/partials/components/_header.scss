@@ -11,6 +11,12 @@ header.header {
     display: none;
   }
 
+  .section--microsite & {
+    background: $microsite-site-header;
+    border: 0;
+    color: #fff;
+  }
+
 }
 
 

@@ -272,9 +272,6 @@ function _gie_general_node_theme($node){
     // Change theme for long form pages
     case 'long_form_page':
       return 'gesso_longform';
-    // Change theme for Microsites
-    //case 'group':
-    //  return 'gesso_microsites';
     default:
       return $theme;
   }

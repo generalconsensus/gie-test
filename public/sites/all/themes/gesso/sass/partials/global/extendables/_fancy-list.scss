@@ -11,7 +11,7 @@
   }
   > li:before {
     content: "►";
-    color: $theme-secondary;
+    color: $microsite-secondary;
     display: inline-block;
     //float: left;
     //line-height: 1;
@@ -55,7 +55,7 @@ $ol-bullet-size: 60px;
     }
   }
   > li:before {
-    background-color: $theme-primary;
+    background-color: $microsite-primary;
     color: #fff;
     content: counter(li-counter);
     counter-increment: li-counter;

@@ -1,7 +1,0 @@
-.block--microsite-description {
-  @include breakpoint(1070px, $no-query: true) {
-    float: left;
-    margin-right: 1em;
-    max-width: 380px;
-  }
-}

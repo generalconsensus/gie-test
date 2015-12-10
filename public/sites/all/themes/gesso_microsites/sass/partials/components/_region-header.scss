@@ -1,5 +1,0 @@
-.region-header {
-  @include breakpoint($mobile-menu-bp, $no-query: true) {
-    float: left;
-  }
-}
