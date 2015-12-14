@@ -26,6 +26,9 @@
   @include breakpoint(900px, $no-query: true) {
     width: 50%;
   }
+  img {
+    width: 100%;
+  }
 }
 
 .microsite-50-50--reversed {
