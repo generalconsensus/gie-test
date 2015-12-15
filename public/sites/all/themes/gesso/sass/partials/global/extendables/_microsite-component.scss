@@ -18,5 +18,8 @@
        border-color: darken($microsite-secondary, 6.9%);
     }
   }
+  p:last-child {
+    margin-bottom: 0;
+  }
 }
  

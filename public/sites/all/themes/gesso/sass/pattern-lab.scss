@@ -2,7 +2,7 @@
 // Styles for Pattern Lab.
 
 @import 'partials/global';
-@import 'partials/layout/page';
+@import 'partials/layout/layout-constrain';
 
 .sg-pattern {
   @extend .layout-constrain;

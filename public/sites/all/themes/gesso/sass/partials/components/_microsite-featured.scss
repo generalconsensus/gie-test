@@ -2,59 +2,56 @@ $featured-image-width: 500px;
 $featured-image-height: 300px;
 
 .microsite-featured {
-  @extend %microsite-component;
-  @extend %clearfix;
-  @include breakpoint(900px, $no-query: true) {
-    @include align-items(center);
-    @include display-flex(flex);
-    @include flex-direction(row);
-    @include justify-content(center);
-  }
-  color: #fff;
-  a, h1, h2, h3, h4, h5, h6 {
-    color: #fff;
-  }
-}
-
-.microsite-featured__item {
-  background-position: 50% 50%;
-  background-size: cover;
-  max-height: $featured-image-height;
-  max-width: $featured-image-width;
   position: relative;
-  width: 25%;
 }
 
-.microsite-featured__text-wrapper {
-  display: table; 
-  width: 100%;
+.microsite-featured__image {
+  line-height: 0;
+  img {
+    width: 100%;
+  }
+  &:after {
+    background: rgba(0,0,0,0.4);
+    bottom: 0;
+    content: "";
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
 }
 
 .microsite-featured__text {
   color: #fff;
-  display: table-cell;
-  font-weight: bold;
-  height: $featured-image-height * 0.5;
-  @include breakpoint($featured-image-width * 0.6) {
-    height: $featured-image-height * 0.6;
-  }
-  @include breakpoint($featured-image-width * 0.7) {
-    height: $featured-image-height * 0.7
-  }
-  @include breakpoint($featured-image-width * 0.8) {
-    height: $featured-image-height * 0.8;
-  }
-  @include breakpoint($featured-image-width * 0.9) {
-    height: $featured-image-height * 0.9;
-  }
-  @include breakpoint($featured-image-width, $no-query: true) {
-    height: $featured-image-height;
-  }
-  text-align: center;
-  text-transform: uppercase;
-  vertical-align: middle;
+  line-height: 1.1;
+  opacity: 0.8;
+  position: absolute;
+  text-align: center;                
+  top: 50%;                         
+  @include transform(translate(0, -50%));
   width: 100%;
+  .microsite-featured:hover & {
+    opacity: 1;
+  }
 }
 
+.microsite-featured__headline {
+  font-size: em(18px);
+  font-weight: bold;
+}
 
- 
+.microsite-featured__subtitle {
+  font-size: em(14px);
+}
+
+.microsite-featured__link {
+  color: #fff !important;
+  display: inline-block;
+  font-size: em(14px);
+  font-weight: normal;
+  margin-top: 5%;
+  text-decoration: underline;
+  &:hover, &:focus {
+
+  }
+}

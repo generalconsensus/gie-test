@@ -21,21 +21,44 @@ $gutter-width: 0.5em;
 }
 
 .layout-grid--cols-2 .layout-grid__column {
-  width: (1/2) * 100%;
+  width: percentage(1/2);
 }
 
 .layout-grid--cols-3 .layout-grid__column {
-  width: (1/3) * 100%;
+  width: percentage(1/3);
 }
 
 .layout-grid--cols-4 .layout-grid__column {
-  width: (1/4) * 100%;
+  width: percentage(1/4);
 }
 
 .layout-grid--cols-5 .layout-grid__column {
-  width: (1/5) * 100%;
+  width: percentage(1/5);
 }
 
 .layout-grid--cols-6 .layout-grid__column {
-  width: (1/6) * 100%;
+  width: percentage(1/6);
+}
+
+// featured items on microsite pages
+.layout-grid--microsite-featured { 
+
+  &.layout-grid--cols-4 .layout-grid__column {
+    width: percentage(1/1);
+    @include breakpoint(500px) {
+      width: percentage(1/2);
+    }
+    @include breakpoint(1000px, $no-query: true) {
+      width: percentage(1/4);
+    }
+  }
+
+  .layout-grid__row {
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  .layout-grid__column {
+    padding: 0;
+  }
 }
