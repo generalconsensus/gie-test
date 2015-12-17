@@ -321,3 +321,13 @@ function gie_general_update_7030() {
 function gie_general_update_7031() {
   field_delete_field('og_group_ref');
 }
+
+/**
+ * Enable GIE Groups feature.
+ */
+function gie_general_update_7032() {
+  $modules = array(
+    'gie_groups'
+  );
+  module_disable($modules, TRUE);
+}
