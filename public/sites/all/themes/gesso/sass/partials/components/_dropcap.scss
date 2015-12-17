@@ -1,0 +1,10 @@
+.dropcap {
+  &:first-letter { 
+    background-color: $microsite-secondary; 
+    color: #fff;
+    float: left; 
+    font-size: em($font-size-xxl); 
+    margin-right: 5px;
+    padding: .5em;
+  }
+}

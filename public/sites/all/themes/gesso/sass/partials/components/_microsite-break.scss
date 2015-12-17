@@ -1,0 +1,85 @@
+// @file
+// Styles for the microsites paragraphs section break component
+// background image native size: 1680x500
+
+$section-break-image-width: 1600px;
+$section-break-image-height: 500px;
+
+.microsite-break {
+  @extend %microsite-component;
+  background-color: $microsite-primary;
+  background-position: 50% 50%;
+  background-size: cover;
+  min-height: $section-break-image-height * 0.5;
+  @include breakpoint($section-break-image-width * 0.6) {
+    min-height: $section-break-image-height * 0.6;
+  }
+  @include breakpoint($section-break-image-width * 0.7) {
+    min-height: $section-break-image-height * 0.7
+  }
+  @include breakpoint($section-break-image-width * 0.8) {
+    min-height: $section-break-image-height * 0.8;
+  }
+  @include breakpoint($section-break-image-width * 0.9) {
+    min-height: $section-break-image-height * 0.9;
+  }
+  @include breakpoint($section-break-image-width, $no-query: true) {
+    min-height: $section-break-image-height;
+  }
+  max-height: 500px;
+  position: relative;
+  text-align: center;
+  width: 100%;
+}
+
+.microsite-break__text-wrapper {
+  display: table;
+  margin: 0 auto;
+  max-width: $max-page-width;
+  width: 100%;
+}
+
+.microsite-break__text {
+  color: #fff;
+  display: table-cell;
+  font-size: 1.5em;
+  @include breakpoint(600px) {
+    font-size: 1.75em;
+  }
+  @include breakpoint(900px, $no-query: true) {
+    font-size: 2.2em;
+  }
+  height: $section-break-image-height * 0.5;
+  @include breakpoint($section-break-image-width * 0.6) {
+    height: $section-break-image-height * 0.6;
+  }
+  @include breakpoint($section-break-image-width * 0.7) {
+    height: $section-break-image-height * 0.7
+  }
+  @include breakpoint($section-break-image-width * 0.8) {
+    height: $section-break-image-height * 0.8;
+  }
+  @include breakpoint($section-break-image-width * 0.9) {
+    height: $section-break-image-height * 0.9;
+  }
+  @include breakpoint($section-break-image-width, $no-query: true) {
+    height: $section-break-image-height;
+  }
+  line-height: 1.3;
+  padding: 5% 2% 2% 2%;
+  vertical-align: middle;
+  width: 100%;
+  &:before {
+    border-top: 4px solid $microsite-secondary;
+    content: "";
+    display: block;
+    margin: 0 auto 0.5em auto;
+    width: 50%;
+    @include breakpoint(500px, $no-query: true) {
+      width: 30%;
+    }
+  }
+}
+
+
+ 

@@ -16,6 +16,14 @@ module.exports = function(grunt) {
             cwd : 'public/sites/all/themes/gesso_longform/patternlab'
           }
         }
+      },
+      microsites_patternlab: {
+        command : 'php core/builder.php -g',
+        options : {
+          execOptions : {
+            cwd : 'public/sites/all/themes/gesso_microsites/patternlab'
+          }
+        }
       }
     }
   });

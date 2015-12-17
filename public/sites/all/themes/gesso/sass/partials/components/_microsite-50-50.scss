@@ -1,0 +1,38 @@
+.microsite-50-50 {
+  @extend %microsite-component;
+  @extend %clearfix;
+  @include breakpoint(900px, $no-query: true) {
+    @include align-items(center);
+    @include display-flex(flex);
+    @include flex-direction(row);
+    @include justify-content(center);
+  }
+  background: $microsite-secondary;
+  color: #fff;
+  a, h1, h2, h3, h4, h5, h6 {
+    color: #fff;
+  }
+}
+
+.microsite-50-50__text {
+  padding: 10%;
+  @include breakpoint(900px, $no-query: true) {
+    width: 50%;
+  }
+}
+
+.microsite-50-50__image {
+  line-height: 0;
+  @include breakpoint(900px, $no-query: true) {
+    width: 50%;
+  }
+  img {
+    width: 100%;
+  }
+}
+
+.microsite-50-50--reversed {
+  @include breakpoint(900px, $no-query: true) {
+    @include flex-direction(row-reverse);
+  }
+}

@@ -385,7 +385,7 @@ function gie_organization_views_default_views() {
   $handler->display->display_options['fields']['nid']['id'] = 'nid';
   $handler->display->display_options['fields']['nid']['table'] = 'search_api_index_default_node_index';
   $handler->display->display_options['fields']['nid']['field'] = 'nid';
-  /* Sort criterion: Indexed Content: Organization Title */
+  /* Sort criterion: Indexed Content: Title */
   $handler->display->display_options['sorts']['title_field']['id'] = 'title_field';
   $handler->display->display_options['sorts']['title_field']['table'] = 'search_api_index_default_node_index';
   $handler->display->display_options['sorts']['title_field']['field'] = 'title_field';
@@ -659,14 +659,15 @@ function gie_organization_views_default_views() {
   $handler->display->display_options['footer']['area']['table'] = 'views';
   $handler->display->display_options['footer']['area']['field'] = 'area';
   $handler->display->display_options['footer']['area']['content'] = '<div class="more-link">
-  <a href="/innovations/funded-by/162">
+  <a href="/innovations/funded-by/!1">
     Explore all innovations funded by this organization  </a>
 </div>
 <div class="more-link">
-  <a href="/innovations/innovation-related-org/162">
+  <a href="/innovations/innovation-related-org/!2">
     Explore all innovations associated with this organization  </a>
 </div>';
   $handler->display->display_options['footer']['area']['format'] = 'full_html';
+  $handler->display->display_options['footer']['area']['tokenize'] = TRUE;
   $handler->display->display_options['defaults']['relationships'] = FALSE;
   $handler->display->display_options['defaults']['sorts'] = FALSE;
   $handler->display->display_options['defaults']['arguments'] = FALSE;

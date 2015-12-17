@@ -128,6 +128,11 @@ function gie_long_form_content_node_info() {
  */
 function gie_long_form_content_paragraphs_info() {
   $items = array(
+    'long_form_50_50' => array(
+      'name' => 'Long Form 50 50',
+      'bundle' => 'long_form_50_50',
+      'locked' => '1',
+    ),
     'long_form_aside' => array(
       'name' => 'Long Form Aside',
       'bundle' => 'long_form_aside',
@@ -136,6 +141,16 @@ function gie_long_form_content_paragraphs_info() {
     'long_form_callout_card' => array(
       'name' => 'Long Form Callout Card',
       'bundle' => 'long_form_callout_card',
+      'locked' => '1',
+    ),
+    'long_form_featured_content' => array(
+      'name' => 'Long Form Featured Content',
+      'bundle' => 'long_form_featured_content',
+      'locked' => '1',
+    ),
+    'long_form_header' => array(
+      'name' => 'Long Form Header',
+      'bundle' => 'long_form_header',
       'locked' => '1',
     ),
     'long_form_image' => array(

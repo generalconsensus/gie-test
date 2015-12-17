@@ -12,6 +12,12 @@ module.exports = function(grunt) {
         cwd : 'public/sites/all/themes/gesso_longform/patternlab/core/styleguide/',
         src : '**',
         dest : 'public/sites/all/themes/gesso_longform/patternlab/public/styleguide/'
+      },
+      microsites_patternlabStyleguide : {
+        expand : true,
+        cwd : 'public/sites/all/themes/gesso_microsites/patternlab/core/styleguide/',
+        src : '**',
+        dest : 'public/sites/all/themes/gesso_microsites/patternlab/public/styleguide/'
       }
     }
   });
