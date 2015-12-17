@@ -262,3 +262,17 @@ function gie_general_node_presave($node) {
       break;
   }
 }
+
+/**
+ * Callback to change the theme for nodes.
+ */
+function _gie_general_node_theme($node){
+  global $theme;
+  switch ($node->type) {
+    // Change theme for long form pages
+    case 'long_form_page':
+      return 'gesso_longform';
+    default:
+      return $theme;
+  }
+}

@@ -117,6 +117,50 @@ function gie_basic_page_panelizer_defaults() {
     $display->content['new-c5281d10-57cc-4967-aa50-10e6f27064e6'] = $pane;
     $display->panels['main'][1] = 'new-c5281d10-57cc-4967-aa50-10e6f27064e6';
     $pane = new stdClass();
+    $pane->pid = 'new-34fbf877-ee86-4ca4-9e8c-28e464023d6f';
+    $pane->panel = 'main';
+    $pane->type = 'entity_field';
+    $pane->subtype = 'node:field_long_form_block';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array(
+      'label' => 'title',
+      'formatter' => 'paragraphs_view',
+      'delta_limit' => '0',
+      'delta_offset' => '0',
+      'delta_reversed' => 0,
+      'formatter_settings' => array(
+        'view_mode' => 'full',
+        'field_delimiter' => '',
+        'linked_field' => array(
+          'linked' => 0,
+          'destination' => '',
+          'advanced' => array(
+            'title' => '',
+            'target' => '',
+            'class' => '',
+            'rel' => '',
+            'text' => '',
+          ),
+        ),
+      ),
+      'context' => 'panelizer',
+      'override_title' => 1,
+      'override_title_text' => '',
+      'override_title_heading' => 'h2',
+    );
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
+    $pane->css = array();
+    $pane->extras = array();
+    $pane->position = 2;
+    $pane->locks = array();
+    $pane->uuid = '34fbf877-ee86-4ca4-9e8c-28e464023d6f';
+    $display->content['new-34fbf877-ee86-4ca4-9e8c-28e464023d6f'] = $pane;
+    $display->panels['main'][2] = 'new-34fbf877-ee86-4ca4-9e8c-28e464023d6f';
+    $pane = new stdClass();
     $pane->pid = 'new-4b6e0cc0-6ad5-446c-ad4c-f3a79fc28dfd';
     $pane->panel = 'main_sidebar';
     $pane->type = 'menu_tree';

@@ -13,13 +13,19 @@
   }
   position: relative;
   z-index: 3;
+  
   > .region__inner {
     @extend .layout-constrain;
     position: relative;
   }
 
-
-
+  .section--microsite & {
+    @extend %clearfix;
+    @include box-shadow(none);
+    height: auto;
+    padding: 1em 0;
+  }
+  
 }
 
 

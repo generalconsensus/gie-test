@@ -1,0 +1,57 @@
+$featured-image-width: 500px;
+$featured-image-height: 300px;
+
+.microsite-featured {
+  position: relative;
+}
+
+.microsite-featured__image {
+  line-height: 0;
+  img {
+    width: 100%;
+  }
+  &:after {
+    background: rgba(0,0,0,0.4);
+    bottom: 0;
+    content: "";
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+}
+
+.microsite-featured__text {
+  color: #fff;
+  line-height: 1.1;
+  opacity: 0.8;
+  position: absolute;
+  text-align: center;                
+  top: 50%;                         
+  @include transform(translate(0, -50%));
+  width: 100%;
+  .microsite-featured:hover & {
+    opacity: 1;
+  }
+}
+
+.microsite-featured__headline {
+  font-size: em(18px);
+  font-weight: bold;
+}
+
+.microsite-featured__subtitle {
+  font-size: em(14px);
+}
+
+.microsite-featured__link {
+  color: #fff !important;
+  display: inline-block;
+  font-size: em(14px);
+  font-weight: normal;
+  margin-top: 5%;
+  text-decoration: underline;
+  &:hover, &:focus {
+
+  }
+}
