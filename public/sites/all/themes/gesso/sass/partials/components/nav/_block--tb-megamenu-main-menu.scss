@@ -349,13 +349,43 @@
               }
             }
           }
+          .has-icon-resources .view__header {
+            a, h2 {
+              &:before {
+                @extend %tb-megamenu-submenu-icon;
+                @include svg-background(icon-resources-20-18-white);
+                background-size: 19px 20px;
+                height: 20px;
+                width: 19px;
+              }
+            }
+          }
+          .has-icon-wanteds .view__header {
+            a, h2 {
+              &:before {
+                @extend %tb-megamenu-submenu-icon;
+                @include svg-background(icon-wanteds-20-20-white);
+                background-size: 19px 20px;
+                height: 20px;
+                width: 19px;
+              }
+            }
+          }
         }
       }
     }
   }
 }
 
-//Dropdown Multi column overrvide
+//adjust spaceing for level 0 link psuedo elements
+.block-tb-megamenu-main-menu#block-tb-megamenu-main-menu {
+  ul.tb-megamenu-nav.level-0 > li > a:before  {
+    margin-right: 4px;
+ }
+}
+
+
+//Dropdown Multi column override
 
 .tb-megamenu-block .item-list {
   font-size: em(14px, 16px);

@@ -1,0 +1,15 @@
+.microsite-link-bar {
+  background: $microsite-primary;
+  text-align: center;
+  a {
+    background: $microsite-secondary;
+    color: #fff !important;
+    display: inline-block;
+    font-weight: 300;
+    padding: 0.5em 1em;
+    text-decoration: none;
+    &:hover, &:focus {
+      background: darken($microsite-secondary,10%);
+    } 
+  }
+}

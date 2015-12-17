@@ -1,8 +1,0 @@
-<?php
-
-/**
- * Enable gesso_microsites theme.
- */
-function gie_groups_update_7000() {
-  theme_enable(array('gesso_microsites'));
-}

@@ -228,4 +228,5 @@ features[views_view][] = communities_terms_menu
 features[views_view][] = communities_user_menu
 features_exclude[dependencies][asset] = asset
 features_exclude[dependencies][gie_organization] = gie_organization
+scripts[] = js/backbutton.js
 project path = sites/all/modules/features

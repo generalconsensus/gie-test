@@ -12,6 +12,11 @@ $iconList : (
   'has-icon-innovator' :  'icon-innov-collaborate-56-56-darkblue',
   'has-icon-funding' : 'icon-fund-browse-52-52-darkblue',
   'has-icon-resources' : 'icon-resources-browse-52-52-darkblue',
+  'has-icon-about' : 'icon-about-about-52-52-darkblue',
+  'has-icon-questions' : 'icon-about-about-52-52-darkblue',
+  'has-icon-team' : 'icon-about-members-52-52-darkblue',
+  'has-icon-partners' : 'icon-about-discussion-52-52-darkblue',
+  'has-icon-become' : 'icon-about-more-52-52-darkblue',
 );
 
 
@@ -27,12 +32,12 @@ $iconList : (
   position: relative;
   text-align: left;
   text-transform: uppercase;
-  
+
   &:focus,
   &:hover {
     background: $blue;
   }
-  
+
   &:before {
     background-repeat: no-repeat;
     background-position: left center;
@@ -106,6 +111,17 @@ $iconList : (
     height: 56px;
     width: $tb-icon-padding + 8px;
     top: 0;
+  }
+  &.has-icon-become:before,
+  &.has-icon-about:before,
+  &.has-icon-questions:before {
+    height: 53px;
+    top: 0;
+  }
+  &.has-icon-partners:before,
+  &.has-icon-team:before {
+    height: 47px;
+    top: 2px;
   }
 
 }
