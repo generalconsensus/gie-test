@@ -1,0 +1,58 @@
+.microsite-callout-card {
+  @extend %microsite-component;
+  margin-bottom: 2em;
+  margin-top: 2em;
+  padding: 2em 0;
+  text-align: center;
+}
+
+.microsite-callout-card__inner {
+  @include breakpoint(700px) {
+    @include align-items(center);
+    @include display-flex(flex);
+    @include flex-direction(row);
+    @include justify-content(center);
+  }
+}
+
+.microsite-callout-card__card {
+  .no-flexbox & {
+    display: block;
+  }
+  padding: 1em;
+  &:hover, &:focus {
+    .microsite-callout-card__image {
+      opacity: 1;
+    }  
+  }
+}
+
+.microsite-callout-card__image {
+  opacity: 0.9;
+}
+
+.microsite-callout-card__title {
+  font-size: em($font-size-lg);
+}
+
+.microsite-callout-card--2-cols {
+  .microsite-callout-card__card {
+    @include breakpoint(700px) {
+      .no-flexbox & {
+        float: left;
+      }
+      width: percentage(1/2);
+    }
+  }
+}
+
+.microsite-callout-card--3-cols {
+  .microsite-callout-card__card {
+    @include breakpoint(700px) {
+      .no-flexbox & {
+        float: left;
+      }
+      width: percentage(1/3);
+    }
+  }
+}

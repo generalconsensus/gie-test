@@ -29,6 +29,18 @@ $aliases['dev'] = array(
   'remote-user' => 'gie'
 );
 
+$aliases['microsite'] = array(
+  'uri' => 'feature.giexchange.forumone.com',
+  'root' => '/var/www/vhosts/giexchange.feature/public',
+  'remote-host' => 'feature.giexchange.forumone.com',
+  'remote-user' => 'giexchange',
+  'command-specific' => array(
+    'rsync' => array (
+      'mode' => 'rzv'
+    ),
+  ),
+);
+
 
 $aliases['stage'] = array(
   'uri' => 'stage.gie.byf1.io',

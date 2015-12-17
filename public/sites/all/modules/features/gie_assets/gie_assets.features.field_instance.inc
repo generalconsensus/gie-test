@@ -397,7 +397,7 @@ function gie_assets_field_default_field_instances() {
       'focus_min_size' => '',
       'max_filesize' => '',
       'max_resolution' => '',
-      'min_resolution' => '1100x687',
+      'min_resolution' => '',
       'random_default' => 0,
       'random_default_path' => '',
       'title_field' => 0,
