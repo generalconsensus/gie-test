@@ -218,9 +218,9 @@ $databases = array (
     'default' => 
     array (
       'database' => 'giexchange_stage',
-      'username' => 'gie_stage_user',
-      'password' => 'nx6TTTxn*Vnk',
-      'host' => 'localhost',
+      'username' => 'gieuser_stage',
+      'password' => 'CI1z!Qp1gE2!0ncx',
+      'host' => 'giexchange.c06busiwruk7.us-east-1.rds.amazonaws.com',
       'port' => '',
       'driver' => 'mysql',
       'prefix' => '',
@@ -597,9 +597,9 @@ $conf['search_api_override_servers'] = array(
   'solr' => array(
     'name' => t('Solr Server (Overridden)'),
     'options' => array(
-      'host' => 'localhost',
+      'host' => '10.0.2.76',
       'port' => 8984,
-      'path' => '/solr/drupal'
+      'path' => '/solr/giexchange_stage'
     )
   )
 );
@@ -631,6 +631,9 @@ $conf['googleanalytics_account'] = '';
  * Disable core search
  */
 $conf['search_cron_limit'] = 0;
+
+/* Set maintenance mode theme */
+$conf['maintenance_theme'] = 'gesso';
 
 /**
  * Change file upload sizes

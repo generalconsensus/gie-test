@@ -1,8 +1,27 @@
+require 'net/ssh/proxy/command'
+
+# Get autoscale group servers
+autoscaling = Aws::AutoScaling::Client.new(region: 'us-east-1')
+ec2 = Aws::EC2::Client.new(region: 'us-east-1')
+
+if ENV['server']
+  servers = [ENV['server']]
+  set :run_updates, false
+else
+  servers = Array.new
+  autoscaling.describe_auto_scaling_instances().data.auto_scaling_instances.each do |instance| 
+    instance = Aws::EC2::Instance.new(instance.instance_id, {
+  	  region: 'us-east-1'
+    })
+    servers.push('gie@' + instance.data.private_ip_address)
+  end
+end
+
 # The stage to use
-set :stage, :stage
+set :stage, :autoscale
 
 # An array containing site URL, used for Varnish bans
-set :site_url, %w{stage.gie.byf1.io}
+set :site_url, %w{www.gie.byf1.io}
 
 # An array containing drupal sites to copy settings files in
 set :site_folder, %w{default}
@@ -11,22 +30,36 @@ set :site_folder, %w{default}
 set :webroot, 'public'
 
 # The path to the project on the server
-set :deploy_to, '/var/www/vhosts/gie.stage'
+set :deploy_to, '/var/www/vhosts/gie.www'
 
 # Where the temporary directory is
 set :tmp_dir, fetch(:deploy_to)
 
 # Which branch to deploy
-set :branch, "stable"
+set :branch, "autoscale"
+
+rsync_options = %w[--recursive --chmod=Dug=rwx,Do=rx --perms --delete --delete-excluded --exclude=.git* --exclude=node_modules]
+rsync_options.unshift("-e 'ssh -o \"ProxyCommand ssh -A gie@utility.gie.byf1.io exec nc %h %p 2>/dev/null\"'")
+
+set :rsync_options, rsync_options
 
 # Simple Role Syntax
 # ==================
 # Supports bulk-adding hosts to roles, the primary
 # server in each group is considered to be the first
 # unless any hosts have the primary property set.
-role :app, %w{gie@utility.gie.byf1.io}, :primary => true
-role :web, %w{gie@utility.gie.byf1.io}
-role :db,  %w{gie@utility.gie.byf1.io}
+role :app, servers, :primary => true
+role :web, servers
+
+db = Array.new
+db.push(servers.at(0))
+
+role :db, db
+
+set :ssh_options, {
+  auth_methods: %w(publickey),
+  proxy: Net::SSH::Proxy::Command.new('ssh gie@utility.gie.byf1.io -W %h:%p 2>/dev/null'),
+}
 
 # Extended Server Syntax
 # ======================

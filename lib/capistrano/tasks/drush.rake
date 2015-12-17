@@ -55,7 +55,7 @@ namespace :drush do
 
   desc "Triggers drush site-install"
   task :siteinstall do
-    on roles(:app) do
+    on roles(:db) do
       command = "-y -r #{current_path}/#{fetch(:webroot, 'public')} site-install "
     
       if ENV['profile']
@@ -68,7 +68,7 @@ namespace :drush do
   
   desc "Triggers drush sql-sync to copy databases between environments"
   task :sqlsync do 
-    on roles(:app) do
+    on roles(:db) do
       if ENV['source']
         within "#{release_path}/#{fetch(:app_webroot, 'public')}" do
           execute :drush, "-p -r #{current_path}/#{fetch(:webroot, 'public')} -l #{fetch(:site_url)[0]} sql-sync #{ENV['source']} @self -y"
@@ -98,7 +98,7 @@ namespace :drush do
 
   desc "Creates database backup"
   task :sqldump do 
-    on roles(:app) do
+    on roles(:db) do
       unless test " [ -f #{release_path}/db.sql ]"
         within "#{release_path}/#{fetch(:app_webroot, 'public')}" do
           execute :drush, "-r #{current_path}/#{fetch(:webroot, 'public')} -l #{fetch(:site_url)[0]} sql-dump -y >> #{release_path}/db.sql"
@@ -109,7 +109,7 @@ namespace :drush do
   
   desc "Runs all pending update hooks"
   task :updatedb do
-    on roles(:app) do
+    on roles(:db) do
       within "#{release_path}/#{fetch(:app_webroot, 'public')}" do
         fetch(:site_url).each do |site|
           execute :drush, "-y -p -r #{current_path}/#{fetch(:webroot, 'public')} -l #{site}", 'updatedb'
@@ -120,7 +120,7 @@ namespace :drush do
 
   desc "Clears the Drupal cache"
   task :cc do
-    on roles(:app) do
+    on roles(:db) do
       within "#{release_path}/#{fetch(:app_webroot, 'public')}" do
         fetch(:site_url).each do |site|
           execute :drush, "-y -p -r #{current_path}/#{fetch(:webroot, 'public')} -l #{site}", 'cc all'
@@ -131,21 +131,23 @@ namespace :drush do
 
   desc "Runs pending updates"
   task :update do
-    # Run all pending database updates
-    if fetch(:drupal_db_updates)
-      invoke 'drush:updatedb'
-    end
+  	if fetch(:run_updates)
+      # Run all pending database updates
+      if fetch(:drupal_db_updates)
+        invoke 'drush:updatedb'
+      end
     
-    invoke 'drush:cc'
+      invoke 'drush:cc'
 	
-	# If we're using Features revert Features
-	if fetch(:drupal_features)
-      invoke 'drush:features:revert'
-    end
+	  # If we're using Features revert Features
+	  if fetch(:drupal_features)
+        invoke 'drush:features:revert'
+      end
     
-    # If we're using Drupal Configuration Management module synchronize the Configuration
-    if fetch(:drupal_cmi)
-      invoke 'drush:configuration:sync'
+      # If we're using Drupal Configuration Management module synchronize the Configuration
+      if fetch(:drupal_cmi)
+        invoke 'drush:configuration:sync'
+      end
     end
   end
   
@@ -165,7 +167,7 @@ namespace :drush do
   namespace :features do
     desc "Revert Features"
     task :revert do
-      on roles(:app) do
+      on roles(:db) do
         within "#{release_path}/#{fetch(:app_webroot, 'public')}" do
           # For each site
           fetch(:site_url).each do |site|
