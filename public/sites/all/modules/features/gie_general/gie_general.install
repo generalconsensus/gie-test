@@ -323,11 +323,23 @@ function gie_general_update_7031() {
 }
 
 /**
- * Enable GIE Groups feature.
+ * Disable GIE Groups feature.
  */
 function gie_general_update_7032() {
   $modules = array(
     'gie_groups'
+  );
+  module_disable($modules, TRUE);
+}
+
+/**
+ * Disable OG.
+ */
+function gie_general_update_7033() {
+  $modules = array(
+    'og_menu_single',
+    'og_ui',
+    'og'
   );
   module_disable($modules, TRUE);
 }
