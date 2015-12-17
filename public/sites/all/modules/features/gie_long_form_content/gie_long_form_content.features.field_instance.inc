@@ -1001,6 +1001,12 @@ function gie_long_form_content_field_default_field_instances() {
         'type' => 'image',
         'weight' => 0,
       ),
+      'paragraphs_editor_preview' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
       'right_image' => array(
         'label' => 'hidden',
         'module' => 'image',
@@ -1120,6 +1126,12 @@ function gie_long_form_content_field_default_field_instances() {
         ),
         'type' => 'text_default',
         'weight' => 2,
+      ),
+      'paragraphs_editor_preview' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
       ),
       'right_image' => array(
         'label' => 'hidden',
@@ -1264,6 +1276,12 @@ function gie_long_form_content_field_default_field_instances() {
         'type' => 'text_default',
         'weight' => 1,
       ),
+      'paragraphs_editor_preview' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
       'right_image' => array(
         'label' => 'hidden',
         'module' => 'text',
@@ -1384,6 +1402,12 @@ function gie_long_form_content_field_default_field_instances() {
         'weight' => 2,
       ),
       'left_image' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'paragraphs_editor_preview' => array(
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
