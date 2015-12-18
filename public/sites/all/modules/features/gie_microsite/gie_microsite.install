@@ -1,0 +1,31 @@
+<?php
+
+/**
+ * Implements hook_update_n
+ * run any updates here
+ */
+
+/**
+ * Imlpements hook_install().
+ */
+function gie_microsite_install() {
+
+
+}
+
+
+/**
+ * Delete Extra Paragraph fields. 
+ */
+function gie_microsite_update_7000() {
+    field_delete_field('field_paragraphs_5050_title');
+    field_delete_field('field_paragraphs_5050_text');
+    field_delete_field('field_paragraphs_5050_view_mode');
+    field_delete_field('field_paragraphs_5050_image');
+    field_delete_field('field_paragraphs_featured_title');   
+    field_delete_field('field_paragraphs_featred_content');        
+    field_delete_field('field_paragraphs_header_title');        
+    field_delete_field('field_paragraphs_header_subtitle');        
+    field_delete_field('field_paragraphs_header_image');        
+    field_purge_batch(1);
+}
