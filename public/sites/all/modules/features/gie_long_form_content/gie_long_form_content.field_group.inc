@@ -189,7 +189,8 @@ function gie_long_form_content_field_group_info() {
     'label' => 'Content',
     'weight' => '1',
     'children' => array(
-      0 => 'field_paragraphs_featred_content',
+      0 => 'microsite_featured_content_entity_view_1',
+      1 => 'group_title',
     ),
     'format_type' => 'div',
     'format_settings' => array(
@@ -352,9 +353,7 @@ function gie_long_form_content_field_group_info() {
   $field_group->data = array(
     'label' => 'Footer',
     'weight' => '2',
-    'children' => array(
-      0 => 'field_para_featured_more_link',
-    ),
+    'children' => array(),
     'format_type' => 'div',
     'format_settings' => array(
       'label' => 'Footer',
@@ -413,12 +412,8 @@ function gie_long_form_content_field_group_info() {
   $field_group->parent_name = '';
   $field_group->data = array(
     'label' => 'Header',
-    'weight' => '0',
-    'children' => array(
-      0 => 'field_paragraphs_header_title',
-      1 => 'field_paragraphs_header_subtitle',
-      2 => 'field_paragraphs_header_image',
-    ),
+    'weight' => '1',
+    'children' => array(),
     'format_type' => 'div',
     'format_settings' => array(
       'label' => 'Header',
@@ -984,13 +979,11 @@ function gie_long_form_content_field_group_info() {
   $field_group->entity_type = 'paragraphs_item';
   $field_group->bundle = 'long_form_featured_content';
   $field_group->mode = 'default';
-  $field_group->parent_name = '';
+  $field_group->parent_name = 'group_content';
   $field_group->data = array(
     'label' => 'Title',
     'weight' => '0',
-    'children' => array(
-      0 => 'field_paragraphs_featured_title',
-    ),
+    'children' => array(),
     'format_type' => 'div',
     'format_settings' => array(
       'label' => 'Title',
