@@ -347,7 +347,7 @@ function gie_general_update_7033() {
 /**
  * Enable GIE Microsite feature.
  */
-function gie_general_update_7035() {
+function gie_general_update_7034() {
   $modules = array(
     'gie_microsite'
   );
