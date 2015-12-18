@@ -29,3 +29,19 @@ function gie_microsite_update_7000() {
     field_delete_field('field_paragraphs_header_image');        
     field_purge_batch(1);
 }
+
+/**
+ * Delete Extra Paragraph fields. Running again as it did not update on stable.
+ */
+function gie_microsite_update_7001() {
+    field_delete_field('field_paragraphs_5050_title');
+    field_delete_field('field_paragraphs_5050_text');
+    field_delete_field('field_paragraphs_5050_view_mode');
+    field_delete_field('field_paragraphs_5050_image');
+    field_delete_field('field_paragraphs_featured_title');   
+    field_delete_field('field_paragraphs_featred_content');        
+    field_delete_field('field_paragraphs_header_title');        
+    field_delete_field('field_paragraphs_header_subtitle');        
+    field_delete_field('field_paragraphs_header_image');        
+    field_purge_batch(1);
+}
