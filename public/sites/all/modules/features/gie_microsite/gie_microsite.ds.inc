@@ -644,5 +644,41 @@ function gie_microsite_ds_view_modes_info() {
   );
   $export['callout_3'] = $ds_view_mode;
 
+  $ds_view_mode = new stdClass();
+  $ds_view_mode->api_version = 1;
+  $ds_view_mode->view_mode = 'center_aligned';
+  $ds_view_mode->label = 'Center Aligned';
+  $ds_view_mode->entities = array(
+    'paragraphs_item' => 'paragraphs_item',
+  );
+  $export['center_aligned'] = $ds_view_mode;
+
+  $ds_view_mode = new stdClass();
+  $ds_view_mode->api_version = 1;
+  $ds_view_mode->view_mode = 'left_aligned';
+  $ds_view_mode->label = 'Left Aligned';
+  $ds_view_mode->entities = array(
+    'paragraphs_item' => 'paragraphs_item',
+  );
+  $export['left_aligned'] = $ds_view_mode;
+
+  $ds_view_mode = new stdClass();
+  $ds_view_mode->api_version = 1;
+  $ds_view_mode->view_mode = 'left_image';
+  $ds_view_mode->label = 'Left Image';
+  $ds_view_mode->entities = array(
+    'paragraphs_item' => 'paragraphs_item',
+  );
+  $export['left_image'] = $ds_view_mode;
+
+  $ds_view_mode = new stdClass();
+  $ds_view_mode->api_version = 1;
+  $ds_view_mode->view_mode = 'right_image';
+  $ds_view_mode->label = 'Right Image';
+  $ds_view_mode->entities = array(
+    'paragraphs_item' => 'paragraphs_item',
+  );
+  $export['right_image'] = $ds_view_mode;
+
   return $export;
 }
