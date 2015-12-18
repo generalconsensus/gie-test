@@ -353,3 +353,14 @@ function gie_general_update_7034() {
   );
   module_enable($modules, TRUE);
 }
+
+/**
+ * Enable GIE Domains feature.
+ */
+function gie_general_update_7035() {
+  $modules = array(
+    'gie_domain'
+  );
+  module_enable($modules, TRUE);
+}
+
