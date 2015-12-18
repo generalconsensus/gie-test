@@ -1,74 +1,74 @@
 <?php
 /**
  * @file
- * gie_long_form_content.strongarm.inc
+ * gie_microsite.strongarm.inc
  */
 
 /**
  * Implements hook_strongarm().
  */
-function gie_long_form_content_strongarm() {
+function gie_microsite_strongarm() {
   $export = array();
 
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
-  $strongarm->name = 'comment_anonymous_long_form_page';
+  $strongarm->name = 'comment_anonymous_microsite_page';
   $strongarm->value = 0;
-  $export['comment_anonymous_long_form_page'] = $strongarm;
+  $export['comment_anonymous_microsite_page'] = $strongarm;
 
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
-  $strongarm->name = 'comment_default_mode_long_form_page';
+  $strongarm->name = 'comment_default_mode_microsite_page';
   $strongarm->value = 1;
-  $export['comment_default_mode_long_form_page'] = $strongarm;
+  $export['comment_default_mode_microsite_page'] = $strongarm;
 
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
-  $strongarm->name = 'comment_default_per_page_long_form_page';
+  $strongarm->name = 'comment_default_per_page_microsite_page';
   $strongarm->value = '50';
-  $export['comment_default_per_page_long_form_page'] = $strongarm;
+  $export['comment_default_per_page_microsite_page'] = $strongarm;
 
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
-  $strongarm->name = 'comment_form_location_long_form_page';
+  $strongarm->name = 'comment_form_location_microsite_page';
   $strongarm->value = 1;
-  $export['comment_form_location_long_form_page'] = $strongarm;
+  $export['comment_form_location_microsite_page'] = $strongarm;
 
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
-  $strongarm->name = 'comment_long_form_page';
+  $strongarm->name = 'comment_microsite_page';
   $strongarm->value = '0';
-  $export['comment_long_form_page'] = $strongarm;
+  $export['comment_microsite_page'] = $strongarm;
 
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
-  $strongarm->name = 'comment_preview_long_form_page';
-  $strongarm->value = '1';
-  $export['comment_preview_long_form_page'] = $strongarm;
+  $strongarm->name = 'comment_preview_microsite_page';
+  $strongarm->value = '0';
+  $export['comment_preview_microsite_page'] = $strongarm;
 
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
-  $strongarm->name = 'comment_subject_field_long_form_page';
+  $strongarm->name = 'comment_subject_field_microsite_page';
   $strongarm->value = 1;
-  $export['comment_subject_field_long_form_page'] = $strongarm;
+  $export['comment_subject_field_microsite_page'] = $strongarm;
 
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
-  $strongarm->name = 'field_bundle_settings_node__long_form_page';
+  $strongarm->name = 'field_bundle_settings_node__microsite_page';
   $strongarm->value = array(
     'view_modes' => array(
-      'full' => array(
+      'teaser' => array(
         'custom_settings' => TRUE,
       ),
-      'teaser' => array(
+      'full' => array(
         'custom_settings' => FALSE,
       ),
       'rss' => array(
@@ -116,96 +116,47 @@ function gie_long_form_content_strongarm() {
       'revision' => array(
         'custom_settings' => FALSE,
       ),
-      'diff_standard' => array(
-        'custom_settings' => FALSE,
-      ),
     ),
     'extra_fields' => array(
       'form' => array(
+        'metatags' => array(
+          'weight' => '40',
+        ),
         'path' => array(
-          'weight' => '6',
+          'weight' => '30',
         ),
         'rabbit_hole' => array(
-          'weight' => '5',
-        ),
-        'metatags' => array(
-          'weight' => '13',
+          'weight' => '0',
         ),
         'xmlsitemap' => array(
-          'weight' => '12',
+          'weight' => '30',
         ),
       ),
       'display' => array(
         'sharethis' => array(
           'default' => array(
-            'weight' => '2',
-            'visible' => TRUE,
-          ),
-          'full' => array(
-            'weight' => '22',
-            'visible' => TRUE,
-          ),
-        ),
-        'flag_favorite' => array(
-          'full' => array(
-            'weight' => '24',
-            'visible' => TRUE,
-          ),
-          'default' => array(
-            'weight' => '13',
+            'weight' => '1',
             'visible' => FALSE,
           ),
         ),
       ),
     ),
   );
-  $export['field_bundle_settings_node__long_form_page'] = $strongarm;
+  $export['field_bundle_settings_node__microsite_page'] = $strongarm;
 
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
-  $strongarm->name = 'field_bundle_settings_paragraphs_item__long_form_aside';
+  $strongarm->name = 'field_bundle_settings_paragraphs_item__long_form_50_50';
   $strongarm->value = array(
     'view_modes' => array(
-      'paragraphs_editor_preview' => array(
-        'custom_settings' => FALSE,
-      ),
-      'paragraphs_full_width' => array(
-        'custom_settings' => FALSE,
-      ),
-      'paragraphs_left_align' => array(
-        'custom_settings' => FALSE,
-      ),
-      'paragraphs_right_align' => array(
-        'custom_settings' => FALSE,
-      ),
-      'full' => array(
-        'custom_settings' => FALSE,
-      ),
-      'token' => array(
-        'custom_settings' => FALSE,
-      ),
       'view_mode_selector' => array(
-        'custom_settings' => FALSE,
+        'custom_settings' => TRUE,
       ),
-      'diff_standard' => array(
-        'custom_settings' => FALSE,
+      'left_image' => array(
+        'custom_settings' => TRUE,
       ),
-    ),
-    'extra_fields' => array(
-      'form' => array(),
-      'display' => array(),
-    ),
-  );
-  $export['field_bundle_settings_paragraphs_item__long_form_aside'] = $strongarm;
-
-  $strongarm = new stdClass();
-  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
-  $strongarm->api_version = 1;
-  $strongarm->name = 'field_bundle_settings_paragraphs_item__long_form_callout_card';
-  $strongarm->value = array(
-    'view_modes' => array(
-      'paragraphs_full_width' => array(
+      'right_image' => array(
         'custom_settings' => TRUE,
       ),
       'full' => array(
@@ -214,19 +165,13 @@ function gie_long_form_content_strongarm() {
       'paragraphs_editor_preview' => array(
         'custom_settings' => FALSE,
       ),
-      'diff_standard' => array(
-        'custom_settings' => FALSE,
-      ),
       'token' => array(
         'custom_settings' => FALSE,
       ),
-      'view_mode_selector' => array(
+      'center_aligned' => array(
         'custom_settings' => FALSE,
       ),
-      'paragraphs_left_align' => array(
-        'custom_settings' => FALSE,
-      ),
-      'paragraphs_right_align' => array(
+      'left_aligned' => array(
         'custom_settings' => FALSE,
       ),
     ),
@@ -235,202 +180,12 @@ function gie_long_form_content_strongarm() {
       'display' => array(),
     ),
   );
-  $export['field_bundle_settings_paragraphs_item__long_form_callout_card'] = $strongarm;
+  $export['field_bundle_settings_paragraphs_item__long_form_50_50'] = $strongarm;
 
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
-  $strongarm->name = 'field_bundle_settings_paragraphs_item__long_form_image';
-  $strongarm->value = array(
-    'view_modes' => array(
-      'paragraphs_full_width' => array(
-        'custom_settings' => FALSE,
-      ),
-      'paragraphs_left_align' => array(
-        'custom_settings' => FALSE,
-      ),
-      'paragraphs_right_align' => array(
-        'custom_settings' => FALSE,
-      ),
-      'full' => array(
-        'custom_settings' => FALSE,
-      ),
-      'paragraphs_editor_preview' => array(
-        'custom_settings' => FALSE,
-      ),
-      'token' => array(
-        'custom_settings' => FALSE,
-      ),
-      'view_mode_selector' => array(
-        'custom_settings' => FALSE,
-      ),
-      'diff_standard' => array(
-        'custom_settings' => FALSE,
-      ),
-    ),
-    'extra_fields' => array(
-      'form' => array(),
-      'display' => array(),
-    ),
-  );
-  $export['field_bundle_settings_paragraphs_item__long_form_image'] = $strongarm;
-
-  $strongarm = new stdClass();
-  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
-  $strongarm->api_version = 1;
-  $strongarm->name = 'field_bundle_settings_paragraphs_item__long_form_key_figure';
-  $strongarm->value = array(
-    'view_modes' => array(
-      'paragraphs_editor_preview' => array(
-        'custom_settings' => FALSE,
-      ),
-      'view_mode_selector' => array(
-        'custom_settings' => FALSE,
-      ),
-      'full' => array(
-        'custom_settings' => FALSE,
-      ),
-      'diff_standard' => array(
-        'custom_settings' => FALSE,
-      ),
-      'token' => array(
-        'custom_settings' => FALSE,
-      ),
-      'paragraphs_full_width' => array(
-        'custom_settings' => FALSE,
-      ),
-      'paragraphs_left_align' => array(
-        'custom_settings' => FALSE,
-      ),
-      'paragraphs_right_align' => array(
-        'custom_settings' => FALSE,
-      ),
-    ),
-    'extra_fields' => array(
-      'form' => array(),
-      'display' => array(),
-    ),
-  );
-  $export['field_bundle_settings_paragraphs_item__long_form_key_figure'] = $strongarm;
-
-  $strongarm = new stdClass();
-  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
-  $strongarm->api_version = 1;
-  $strongarm->name = 'field_bundle_settings_paragraphs_item__long_form_pullquote';
-  $strongarm->value = array(
-    'view_modes' => array(
-      'paragraphs_editor_preview' => array(
-        'custom_settings' => FALSE,
-      ),
-      'full' => array(
-        'custom_settings' => FALSE,
-      ),
-      'token' => array(
-        'custom_settings' => FALSE,
-      ),
-      'view_mode_selector' => array(
-        'custom_settings' => FALSE,
-      ),
-      'paragraphs_full_width' => array(
-        'custom_settings' => FALSE,
-      ),
-      'paragraphs_left_align' => array(
-        'custom_settings' => FALSE,
-      ),
-      'paragraphs_right_align' => array(
-        'custom_settings' => FALSE,
-      ),
-      'diff_standard' => array(
-        'custom_settings' => FALSE,
-      ),
-    ),
-    'extra_fields' => array(
-      'form' => array(),
-      'display' => array(),
-    ),
-  );
-  $export['field_bundle_settings_paragraphs_item__long_form_pullquote'] = $strongarm;
-
-  $strongarm = new stdClass();
-  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
-  $strongarm->api_version = 1;
-  $strongarm->name = 'field_bundle_settings_paragraphs_item__long_form_section_break_image';
-  $strongarm->value = array(
-    'view_modes' => array(
-      'paragraphs_full_width' => array(
-        'custom_settings' => FALSE,
-      ),
-      'full' => array(
-        'custom_settings' => FALSE,
-      ),
-      'paragraphs_editor_preview' => array(
-        'custom_settings' => FALSE,
-      ),
-      'diff_standard' => array(
-        'custom_settings' => FALSE,
-      ),
-      'token' => array(
-        'custom_settings' => FALSE,
-      ),
-      'view_mode_selector' => array(
-        'custom_settings' => FALSE,
-      ),
-      'paragraphs_left_align' => array(
-        'custom_settings' => FALSE,
-      ),
-      'paragraphs_right_align' => array(
-        'custom_settings' => FALSE,
-      ),
-    ),
-    'extra_fields' => array(
-      'form' => array(),
-      'display' => array(),
-    ),
-  );
-  $export['field_bundle_settings_paragraphs_item__long_form_section_break_image'] = $strongarm;
-
-  $strongarm = new stdClass();
-  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
-  $strongarm->api_version = 1;
-  $strongarm->name = 'field_bundle_settings_paragraphs_item__long_form_section_header_image';
-  $strongarm->value = array(
-    'view_modes' => array(
-      'paragraphs_full_width' => array(
-        'custom_settings' => FALSE,
-      ),
-      'full' => array(
-        'custom_settings' => FALSE,
-      ),
-      'paragraphs_editor_preview' => array(
-        'custom_settings' => FALSE,
-      ),
-      'diff_standard' => array(
-        'custom_settings' => FALSE,
-      ),
-      'token' => array(
-        'custom_settings' => FALSE,
-      ),
-      'view_mode_selector' => array(
-        'custom_settings' => FALSE,
-      ),
-      'paragraphs_left_align' => array(
-        'custom_settings' => FALSE,
-      ),
-      'paragraphs_right_align' => array(
-        'custom_settings' => FALSE,
-      ),
-    ),
-    'extra_fields' => array(
-      'form' => array(),
-      'display' => array(),
-    ),
-  );
-  $export['field_bundle_settings_paragraphs_item__long_form_section_header_image'] = $strongarm;
-
-  $strongarm = new stdClass();
-  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
-  $strongarm->api_version = 1;
-  $strongarm->name = 'field_bundle_settings_paragraphs_item__long_form_text';
+  $strongarm->name = 'field_bundle_settings_paragraphs_item__long_form_featured_content';
   $strongarm->value = array(
     'view_modes' => array(
       'full' => array(
@@ -445,30 +200,46 @@ function gie_long_form_content_strongarm() {
       'view_mode_selector' => array(
         'custom_settings' => FALSE,
       ),
-      'paragraphs_full_width' => array(
+      'callout_1' => array(
         'custom_settings' => FALSE,
       ),
-      'paragraphs_left_align' => array(
+      'callout_2' => array(
         'custom_settings' => FALSE,
       ),
-      'paragraphs_right_align' => array(
+      'callout_3' => array(
         'custom_settings' => FALSE,
       ),
-      'diff_standard' => array(
+      'center_aligned' => array(
+        'custom_settings' => FALSE,
+      ),
+      'left_aligned' => array(
+        'custom_settings' => FALSE,
+      ),
+      'left_image' => array(
+        'custom_settings' => FALSE,
+      ),
+      'right_image' => array(
         'custom_settings' => FALSE,
       ),
     ),
     'extra_fields' => array(
       'form' => array(),
-      'display' => array(),
+      'display' => array(
+        'microsite_featured_content_entity_view_1' => array(
+          'default' => array(
+            'weight' => '0',
+            'visible' => TRUE,
+          ),
+        ),
+      ),
     ),
   );
-  $export['field_bundle_settings_paragraphs_item__long_form_text'] = $strongarm;
+  $export['field_bundle_settings_paragraphs_item__long_form_featured_content'] = $strongarm;
 
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
-  $strongarm->name = 'field_bundle_settings_paragraphs_item__long_form_video';
+  $strongarm->name = 'field_bundle_settings_paragraphs_item__long_form_header';
   $strongarm->value = array(
     'view_modes' => array(
       'full' => array(
@@ -483,16 +254,25 @@ function gie_long_form_content_strongarm() {
       'view_mode_selector' => array(
         'custom_settings' => FALSE,
       ),
-      'paragraphs_full_width' => array(
+      'callout_1' => array(
         'custom_settings' => FALSE,
       ),
-      'paragraphs_left_align' => array(
+      'callout_2' => array(
         'custom_settings' => FALSE,
       ),
-      'paragraphs_right_align' => array(
+      'callout_3' => array(
         'custom_settings' => FALSE,
       ),
-      'diff_standard' => array(
+      'center_aligned' => array(
+        'custom_settings' => FALSE,
+      ),
+      'left_aligned' => array(
+        'custom_settings' => FALSE,
+      ),
+      'left_image' => array(
+        'custom_settings' => FALSE,
+      ),
+      'right_image' => array(
         'custom_settings' => FALSE,
       ),
     ),
@@ -501,51 +281,183 @@ function gie_long_form_content_strongarm() {
       'display' => array(),
     ),
   );
-  $export['field_bundle_settings_paragraphs_item__long_form_video'] = $strongarm;
+  $export['field_bundle_settings_paragraphs_item__long_form_header'] = $strongarm;
 
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
-  $strongarm->name = 'menu_options_long_form_page';
+  $strongarm->name = 'field_bundle_settings_paragraphs_item__microsite_callout_card';
+  $strongarm->value = array(
+    'view_modes' => array(
+      'paragraphs_editor_preview' => array(
+        'custom_settings' => FALSE,
+      ),
+      'view_mode_selector' => array(
+        'custom_settings' => TRUE,
+      ),
+      'full' => array(
+        'custom_settings' => FALSE,
+      ),
+      'token' => array(
+        'custom_settings' => FALSE,
+      ),
+      'callout_1' => array(
+        'custom_settings' => TRUE,
+      ),
+      'callout_2' => array(
+        'custom_settings' => TRUE,
+      ),
+      'callout_3' => array(
+        'custom_settings' => TRUE,
+      ),
+      'center_aligned' => array(
+        'custom_settings' => FALSE,
+      ),
+      'left_aligned' => array(
+        'custom_settings' => FALSE,
+      ),
+      'left_image' => array(
+        'custom_settings' => FALSE,
+      ),
+      'right_image' => array(
+        'custom_settings' => FALSE,
+      ),
+    ),
+    'extra_fields' => array(
+      'form' => array(),
+      'display' => array(),
+    ),
+  );
+  $export['field_bundle_settings_paragraphs_item__microsite_callout_card'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'field_bundle_settings_paragraphs_item__microsite_section_break_image';
+  $strongarm->value = array(
+    'view_modes' => array(
+      'full' => array(
+        'custom_settings' => FALSE,
+      ),
+      'paragraphs_editor_preview' => array(
+        'custom_settings' => FALSE,
+      ),
+      'token' => array(
+        'custom_settings' => FALSE,
+      ),
+      'view_mode_selector' => array(
+        'custom_settings' => FALSE,
+      ),
+      'callout_1' => array(
+        'custom_settings' => FALSE,
+      ),
+      'callout_2' => array(
+        'custom_settings' => FALSE,
+      ),
+      'callout_3' => array(
+        'custom_settings' => FALSE,
+      ),
+      'center_aligned' => array(
+        'custom_settings' => FALSE,
+      ),
+      'left_aligned' => array(
+        'custom_settings' => FALSE,
+      ),
+      'left_image' => array(
+        'custom_settings' => FALSE,
+      ),
+      'right_image' => array(
+        'custom_settings' => FALSE,
+      ),
+    ),
+    'extra_fields' => array(
+      'form' => array(),
+      'display' => array(),
+    ),
+  );
+  $export['field_bundle_settings_paragraphs_item__microsite_section_break_image'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'field_bundle_settings_paragraphs_item__microsite_text';
+  $strongarm->value = array(
+    'view_modes' => array(
+      'view_mode_selector' => array(
+        'custom_settings' => TRUE,
+      ),
+      'center_aligned' => array(
+        'custom_settings' => TRUE,
+      ),
+      'left_aligned' => array(
+        'custom_settings' => TRUE,
+      ),
+      'full' => array(
+        'custom_settings' => FALSE,
+      ),
+      'paragraphs_editor_preview' => array(
+        'custom_settings' => FALSE,
+      ),
+      'token' => array(
+        'custom_settings' => FALSE,
+      ),
+      'left_image' => array(
+        'custom_settings' => FALSE,
+      ),
+      'right_image' => array(
+        'custom_settings' => FALSE,
+      ),
+    ),
+    'extra_fields' => array(
+      'form' => array(),
+      'display' => array(),
+    ),
+  );
+  $export['field_bundle_settings_paragraphs_item__microsite_text'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'menu_options_microsite_page';
   $strongarm->value = array(
     0 => 'main-menu',
   );
-  $export['menu_options_long_form_page'] = $strongarm;
+  $export['menu_options_microsite_page'] = $strongarm;
 
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
-  $strongarm->name = 'menu_parent_long_form_page';
+  $strongarm->name = 'menu_parent_microsite_page';
   $strongarm->value = 'main-menu:0';
-  $export['menu_parent_long_form_page'] = $strongarm;
+  $export['menu_parent_microsite_page'] = $strongarm;
 
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
-  $strongarm->name = 'node_options_long_form_page';
+  $strongarm->name = 'node_options_microsite_page';
   $strongarm->value = array(
     0 => 'status',
   );
-  $export['node_options_long_form_page'] = $strongarm;
+  $export['node_options_microsite_page'] = $strongarm;
 
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
-  $strongarm->name = 'node_preview_long_form_page';
-  $strongarm->value = '1';
-  $export['node_preview_long_form_page'] = $strongarm;
+  $strongarm->name = 'node_preview_microsite_page';
+  $strongarm->value = '0';
+  $export['node_preview_microsite_page'] = $strongarm;
 
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
-  $strongarm->name = 'node_submitted_long_form_page';
+  $strongarm->name = 'node_submitted_microsite_page';
   $strongarm->value = 0;
-  $export['node_submitted_long_form_page'] = $strongarm;
+  $export['node_submitted_microsite_page'] = $strongarm;
 
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
-  $strongarm->name = 'panelizer_defaults_node_long_form_page';
+  $strongarm->name = 'panelizer_defaults_node_microsite_page';
   $strongarm->value = array(
     'status' => 1,
     'view modes' => array(
@@ -561,7 +473,7 @@ function gie_long_form_content_strongarm() {
         'default' => 0,
         'choice' => 0,
       ),
-      'full' => array(
+      'teaser' => array(
         'status' => 0,
         'substitute' => 0,
         'default' => 0,
@@ -569,14 +481,14 @@ function gie_long_form_content_strongarm() {
       ),
     ),
   );
-  $export['panelizer_defaults_node_long_form_page'] = $strongarm;
+  $export['panelizer_defaults_node_microsite_page'] = $strongarm;
 
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
-  $strongarm->name = 'panelizer_node:long_form_page:page_manager_selection';
-  $strongarm->value = 'node:long_form_page:default';
-  $export['panelizer_node:long_form_page:page_manager_selection'] = $strongarm;
+  $strongarm->name = 'panelizer_node:microsite_page:page_manager_selection';
+  $strongarm->value = 'node:microsite_page:default';
+  $export['panelizer_node:microsite_page:page_manager_selection'] = $strongarm;
 
   return $export;
 }
