@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the GIE Domain feature.
+ */
+
+include_once 'gie_domain.features.inc';

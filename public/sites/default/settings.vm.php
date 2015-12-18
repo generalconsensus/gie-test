@@ -638,3 +638,19 @@ $conf['maintenance_theme'] = 'gesso';
  */
 ini_set('upload_max_filesize','20M');
 ini_set('post_max_size','20M');
+
+/**
+ * Change memory limit
+ */
+ini_set('memory_limit', '1024M');
+
+/**
+ * AWS
+ */
+$conf['awssdk2_access_key'] = 'AKIAJMHZDHNBALI6RMMQ';
+$conf['awssdk2_secret_key'] = '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';
+
+/**
+ * Add the domain module setup routine.
+ */
+include DRUPAL_ROOT . '/sites/all/modules/contrib/domain/settings.inc';

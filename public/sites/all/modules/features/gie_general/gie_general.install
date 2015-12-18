@@ -347,9 +347,19 @@ function gie_general_update_7033() {
 /**
  * Enable GIE Microsite feature.
  */
-function gie_general_update_7034() {
+function gie_general_update_7035() {
   $modules = array(
     'gie_microsite'
+  );
+  module_enable($modules, TRUE);
+}
+
+/**
+ * Enable GIE Domains feature.
+ */
+function gie_general_update_7035() {
+  $modules = array(
+    'gie_domain'
   );
   module_enable($modules, TRUE);
 }
