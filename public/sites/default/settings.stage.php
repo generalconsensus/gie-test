@@ -651,3 +651,9 @@ ini_set('memory_limit', '1024M');
 */ 
 $conf['awssdk2_access_key'] = 'AKIAJJ7DUIDYQ7SDQ6NA';
 $conf['awssdk2_secret_key'] = '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';
+
+/**
+ * Add the domain module setup routine.
+ */
+include DRUPAL_ROOT . '/sites/all/modules/contrib/domain/settings.inc';
+
