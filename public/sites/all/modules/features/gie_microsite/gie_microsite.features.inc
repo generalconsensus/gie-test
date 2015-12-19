@@ -8,6 +8,9 @@
  * Implements hook_ctools_plugin_api().
  */
 function gie_microsite_ctools_plugin_api($module = NULL, $api = NULL) {
+  if ($module == "context" && $api == "context") {
+    return array("version" => "3");
+  }
   if ($module == "ds" && $api == "ds") {
     return array("version" => "1");
   }
@@ -34,6 +37,14 @@ function gie_microsite_views_api($module = NULL, $api = NULL) {
  */
 function gie_microsite_node_info() {
   $items = array(
+    'microsite' => array(
+      'name' => t('Microsite'),
+      'base' => 'node_content',
+      'description' => t('This content type drives microsites. Do not create content with this unless you are creating a microsite. '),
+      'has_title' => '1',
+      'title_label' => t('Title'),
+      'help' => '',
+    ),
     'microsite_page' => array(
       'name' => t('Microsite Page'),
       'base' => 'node_content',
