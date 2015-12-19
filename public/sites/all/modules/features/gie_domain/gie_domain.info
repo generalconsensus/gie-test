@@ -8,6 +8,7 @@ dependencies[] = ctools
 dependencies[] = domain
 dependencies[] = domain_conf
 dependencies[] = domain_content
+dependencies[] = domain_menu_access
 dependencies[] = domain_nav
 dependencies[] = domain_settings
 dependencies[] = domain_source
