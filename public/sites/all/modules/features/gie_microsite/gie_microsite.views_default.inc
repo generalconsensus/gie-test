@@ -264,7 +264,7 @@ function gie_microsite_views_default_views() {
   $handler->display->display_options['fields']['field_microsite_logo']['field'] = 'field_microsite_logo';
   $handler->display->display_options['fields']['field_microsite_logo']['label'] = '';
   $handler->display->display_options['fields']['field_microsite_logo']['alter']['make_link'] = TRUE;
-  $handler->display->display_options['fields']['field_microsite_logo']['alter']['path'] = '/home';
+  $handler->display->display_options['fields']['field_microsite_logo']['alter']['path'] = '<front>';
   $handler->display->display_options['fields']['field_microsite_logo']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['field_microsite_logo']['click_sort_column'] = 'fid';
   $handler->display->display_options['fields']['field_microsite_logo']['settings'] = array(
