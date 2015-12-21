@@ -77,6 +77,22 @@ function gie_feeds_feeds_tamper_default() {
   $feeds_tamper = new stdClass();
   $feeds_tamper->disabled = FALSE; /* Edit this to true to make a default feeds_tamper disabled initially */
   $feeds_tamper->api_version = 2;
+  $feeds_tamper->id = 'csv_importer-innovation_stage-explode';
+  $feeds_tamper->importer = 'csv_importer';
+  $feeds_tamper->source = 'Innovation Stage';
+  $feeds_tamper->plugin_id = 'explode';
+  $feeds_tamper->settings = array(
+    'separator' => ',',
+    'limit' => '',
+    'real_separator' => ',',
+  );
+  $feeds_tamper->weight = 0;
+  $feeds_tamper->description = 'Explode';
+  $export['csv_importer-innovation_stage-explode'] = $feeds_tamper;
+
+  $feeds_tamper = new stdClass();
+  $feeds_tamper->disabled = FALSE; /* Edit this to true to make a default feeds_tamper disabled initially */
+  $feeds_tamper->api_version = 2;
   $feeds_tamper->id = 'csv_importer-innovation_type-explode';
   $feeds_tamper->importer = 'csv_importer';
   $feeds_tamper->source = 'Innovation Type';

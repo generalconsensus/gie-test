@@ -151,21 +151,22 @@ function gie_microsite_field_group_info() {
     'label' => 'Card',
     'weight' => '10',
     'children' => array(
-      0 => 'group_content',
-      1 => 'group_content_2',
+      0 => 'group_content_2',
+      1 => 'group_content',
     ),
     'format_type' => 'div',
     'format_settings' => array(
-      'formatter' => 'collapsible',
+      'label' => 'Card',
       'instance_settings' => array(
+        'id' => '',
+        'classes' => 'microsite-callout-card__inner layout-constrain',
         'description' => '',
-        'show_label' => 1,
+        'show_label' => '0',
         'label_element' => 'h3',
         'effect' => 'none',
-        'speed' => 'fast',
-        'classes' => 'group-card field-group-div',
-        'id' => '',
+        'speed' => 'none',
       ),
+      'formatter' => 'open',
     ),
   );
   $export['group_card|paragraphs_item|microsite_callout_card|callout_2'] = $field_group;
