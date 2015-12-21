@@ -14,7 +14,7 @@ function gie_long_form_content_ckeditor_profile_defaults() {
       'settings' => array(
         'ss' => 2,
         'toolbar' => '[
-    [\'Format\',\'Bold\',\'Italic\',\'Underline\',\'NumberedList\',\'BulletedList\',\'Link\']
+    [\'Format\',\'Bold\',\'Italic\',\'Underline\',\'NumberedList\',\'BulletedList\',\'Anchor\',\'Link\']
 ]',
         'expand' => 't',
         'default' => 't',
