@@ -66,7 +66,7 @@ function gie_long_form_content_ckeditor_profile_defaults() {
       'settings' => array(
         'ss' => 2,
         'toolbar' => '[
-    [\'Format\',\'Bold\',\'Italic\',\'Underline\',\'NumberedList\',\'BulletedList\',\'Link\',\'Unlink\'],
+    [\'Format\',\'Bold\',\'Italic\',\'Underline\',\'NumberedList\',\'BulletedList\',\'Anchor\',\'Link\',\'Unlink\'],
     [\'Image\',\'asset_image\',\'assetSearch\',\'JustifyCenter\']
 ]',
         'expand' => 't',

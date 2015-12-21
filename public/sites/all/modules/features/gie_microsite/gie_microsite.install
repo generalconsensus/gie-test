@@ -45,3 +45,12 @@ function gie_microsite_update_7001() {
     field_delete_field('field_paragraphs_header_image');        
     field_purge_batch(1);
 }
+
+
+/**
+ * Delete Selector for the text field on Long Form. Not needed for Long Form project. 
+ */
+function gie_microsite_update_7002() {
+    field_delete_field('field_paragraph_display_type');     
+    field_purge_batch(1);
+}
