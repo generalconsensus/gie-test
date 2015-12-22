@@ -443,7 +443,7 @@ function gie_long_form_content_strongarm() {
         'custom_settings' => FALSE,
       ),
       'view_mode_selector' => array(
-        'custom_settings' => TRUE,
+        'custom_settings' => FALSE,
       ),
       'paragraphs_full_width' => array(
         'custom_settings' => FALSE,
@@ -455,18 +455,6 @@ function gie_long_form_content_strongarm() {
         'custom_settings' => FALSE,
       ),
       'diff_standard' => array(
-        'custom_settings' => FALSE,
-      ),
-      'center_aligned' => array(
-        'custom_settings' => TRUE,
-      ),
-      'left_aligned' => array(
-        'custom_settings' => TRUE,
-      ),
-      'left_image' => array(
-        'custom_settings' => FALSE,
-      ),
-      'right_image' => array(
         'custom_settings' => FALSE,
       ),
     ),

@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the GIE Microsite feature.
+ */
+
+include_once 'gie_microsite.features.inc';
