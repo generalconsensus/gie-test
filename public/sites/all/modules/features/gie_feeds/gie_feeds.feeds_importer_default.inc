@@ -244,6 +244,26 @@ function gie_feeds_feeds_importer_default() {
             'target' => 'field_innovation_stage',
             'unique' => FALSE,
           ),
+          26 => array(
+            'source' => 'Lives Impacted',
+            'target' => 'field_innovation_lives_impacted',
+            'unique' => FALSE,
+          ),
+          27 => array(
+            'source' => 'Next Steps',
+            'target' => 'field_innovation_steps',
+            'unique' => FALSE,
+          ),
+          28 => array(
+            'source' => 'Potential Lives Impacted',
+            'target' => 'field_innovation_potent_lives_im',
+            'unique' => FALSE,
+          ),
+          29 => array(
+            'source' => 'Strategy for expanding use of your innovation',
+            'target' => 'field_innovation_impact',
+            'unique' => FALSE,
+          ),
         ),
         'update_existing' => '0',
         'input_format' => 'filtered_html',
