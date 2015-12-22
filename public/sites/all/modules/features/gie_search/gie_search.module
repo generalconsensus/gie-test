@@ -22,13 +22,14 @@ function gie_search_form_search_api_page_search_form_alter(&$form, &$form_state,
 function gie_search_default_search_api_index_alter(array &$defaults) {
   $api_index = variable_get('elasticsearch_index', array());
 
-  if (TRUE === isset($defaults['api']) && $api_index) {
-    $defaults[$api_index['machine_name']] = clone $defaults['api'];
-    
-    foreach ($api_index as $key => $value) {
-      $defaults[$api_index['machine_name']]->{$key} = $value;
+  foreach ($api_index as $id => $index) {
+    if (TRUE === isset($defaults[$id])) {
+      $defaults[$index['machine_name']] = clone($defaults[$id]);
+      foreach ($index as $key => $value) {
+        $defaults[$index['machine_name']]->{$key} = $value;
+      }
+
+      unset($defaults[$id]);
     }
-    
-    unset($defaults['api']);
   }
 }

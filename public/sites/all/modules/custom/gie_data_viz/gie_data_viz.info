@@ -1,0 +1,6 @@
+name = GIE Data Visualizations
+description = AngularJS data visualizations
+package = GIE
+core = 7.x
+
+dependencies[] = jquery_update
