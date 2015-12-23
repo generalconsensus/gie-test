@@ -22,6 +22,12 @@ function gie_microsite_context_default_contexts() {
         2 => 2,
       ),
     ),
+    'path' => array(
+      'values' => array(
+        '~user/register' => '~user/register',
+        '~welcome' => '~welcome',
+      ),
+    ),
   );
   $context->reactions = array(
     'block' => array(
@@ -68,7 +74,7 @@ function gie_microsite_context_default_contexts() {
       'class' => 'section--microsite section-wanteds',
     ),
   );
-  $context->condition_mode = 0;
+  $context->condition_mode = 1;
   $export['microsite'] = $context;
 
   return $export;
