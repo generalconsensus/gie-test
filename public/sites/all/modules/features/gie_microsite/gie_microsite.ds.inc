@@ -17,14 +17,14 @@ function gie_microsite_ds_field_settings_info() {
   $ds_fieldsetting->bundle = 'long_form_50_50';
   $ds_fieldsetting->view_mode = 'left_image';
   $ds_fieldsetting->settings = array(
-    'field_para_5050_text' => array(
+    'field_para_5050_image' => array(
       'formatter_settings' => array(
         'ft' => array(
           'func' => 'theme_ds_field_expert',
         ),
       ),
     ),
-    'field_para_5050_image' => array(
+    'field_para_5050_text' => array(
       'formatter_settings' => array(
         'ft' => array(
           'func' => 'theme_ds_field_expert',
