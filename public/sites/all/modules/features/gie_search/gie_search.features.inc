@@ -40,19 +40,20 @@ function gie_search_default_search_api_index() {
       "index_directly" : 1,
       "cron_limit" : "50",
       "data_alter_callbacks" : {
+        "search_api_ranges_alter" : { "status" : 0, "weight" : "-50", "settings" : { "fields" : [] } },
         "search_api_alter_bundle_filter" : {
           "status" : 0,
           "weight" : "-10",
           "settings" : { "default" : "1", "bundles" : [] }
         },
         "search_api_alter_node_status" : { "status" : 0, "weight" : "0", "settings" : [] },
-        "search_api_alter_add_combined" : { "status" : 0, "weight" : "0", "settings" : [] },
         "panelizer" : { "status" : 0, "weight" : "0", "settings" : [] },
         "search_api_alter_node_access" : { "status" : 1, "weight" : "0", "settings" : [] },
-        "search_api_alter_add_hierarchy" : { "status" : 0, "weight" : "0", "settings" : { "fields" : [] } },
+        "search_api_alter_add_viewed_entity" : { "status" : 0, "weight" : "0", "settings" : { "mode" : "full" } },
         "search_api_alter_add_url" : { "status" : 0, "weight" : "0", "settings" : [] },
         "search_api_alter_add_aggregation" : { "status" : 0, "weight" : "0", "settings" : [] },
-        "search_api_alter_add_viewed_entity" : { "status" : 0, "weight" : "0", "settings" : { "mode" : "full" } }
+        "search_api_alter_node_domain_access" : { "status" : 0, "weight" : "0", "settings" : [] },
+        "search_api_alter_add_hierarchy" : { "status" : 0, "weight" : "0", "settings" : { "fields" : [] } }
       },
       "processors" : {
         "search_api_case_ignore" : {
@@ -127,7 +128,14 @@ function gie_search_default_search_api_index() {
         "body:value" : { "type" : "text" },
         "changed" : { "type" : "date" },
         "created" : { "type" : "date" },
+        "domain_domain_id" : { "type" : "list\\u003Cinteger\\u003E" },
+        "domain_domain_site" : { "type" : "boolean" },
+        "domain_machine_name" : { "type" : "list\\u003Ctext\\u003E" },
+        "domain_path" : { "type" : "list\\u003Ctext\\u003E" },
+        "domain_sitename" : { "type" : "list\\u003Ctext\\u003E" },
+        "domain_subdomain" : { "type" : "list\\u003Ctext\\u003E" },
         "field_discussion_program_disc" : { "type" : "list\\u003Cinteger\\u003E", "entity_type" : "taxonomy_term" },
+        "field_event_cost" : { "type" : "integer" },
         "field_event_date:value" : { "type" : "date" },
         "field_event_type" : { "type" : "integer", "entity_type" : "taxonomy_term" },
         "field_funding_author" : { "type" : "list\\u003Cinteger\\u003E", "entity_type" : "user" },
@@ -183,8 +191,9 @@ function gie_search_default_search_api_index() {
         "field_term_sector" : { "type" : "list\\u003Cinteger\\u003E", "entity_type" : "taxonomy_term" },
         "field_term_topic" : { "type" : "list\\u003Cinteger\\u003E", "entity_type" : "taxonomy_term" },
         "nid" : { "type" : "integer" },
+        "search_api_access_node" : { "type" : "list\\u003Cstring\\u003E" },
         "search_api_language" : { "type" : "string" },
-        "status" : { "type" : "integer" },
+        "status" : { "type" : "boolean" },
         "title" : { "type" : "text", "boost" : "5.0" },
         "title_field" : { "type" : "string" },
         "type" : { "type" : "string" }
@@ -204,6 +213,7 @@ function gie_search_default_search_api_index() {
       "index_directly" : 1,
       "cron_limit" : "50",
       "fields" : {
+        "domain_domain_id" : { "type" : "list\\u003Cinteger\\u003E" },
         "field_assistance_offered" : { "type" : "list\\u003Cinteger\\u003E", "entity_type" : "taxonomy_term" },
         "field_term_region" : { "type" : "list\\u003Cinteger\\u003E", "entity_type" : "taxonomy_term" },
         "field_term_sector" : { "type" : "list\\u003Cinteger\\u003E", "entity_type" : "taxonomy_term" },
@@ -245,93 +255,6 @@ function gie_search_default_search_api_index() {
             }
           }
         }
-      },
-      "processors" : {
-        "search_api_case_ignore" : { "status" : 0, "weight" : "0", "settings" : { "fields" : [] } },
-        "search_api_html_filter" : {
-          "status" : 0,
-          "weight" : "10",
-          "settings" : {
-            "fields" : [],
-            "title" : 0,
-            "alt" : 1,
-            "tags" : "h1 = 5\\r\\nh2 = 3\\r\\nh3 = 2\\r\\nstrong = 2\\r\\nb = 2\\r\\nem = 1.5\\r\\nu = 1.5"
-          }
-        },
-        "search_api_tokenizer" : {
-          "status" : 0,
-          "weight" : "20",
-          "settings" : { "fields" : [], "spaces" : "[^[:alnum:]]", "ignorable" : "[\\u0027]" }
-        },
-        "search_api_stopwords" : {
-          "status" : 0,
-          "weight" : "30",
-          "settings" : {
-            "fields" : [],
-            "file" : "",
-            "stopwords" : "but\\r\\ndid\\r\\nthe this that those\\r\\netc"
-          }
-        },
-        "search_api_highlighting" : {
-          "status" : 0,
-          "weight" : "35",
-          "settings" : {
-            "prefix" : "\\u003Cstrong\\u003E",
-            "suffix" : "\\u003C\\/strong\\u003E",
-            "excerpt" : 1,
-            "excerpt_length" : "256",
-            "exclude_fields" : [],
-            "highlight" : "always"
-          }
-        }
-      }
-    },
-    "enabled" : "1",
-    "read_only" : "0",
-    "rdf_mapping" : []
-  }');
-  $items['api'] = entity_import('search_api_index', '{
-    "name" : "api",
-    "machine_name" : "api",
-    "description" : null,
-    "server" : "elasticsearch",
-    "item_type" : "node",
-    "options" : {
-      "index_directly" : 0,
-      "cron_limit" : "50",
-      "number_of_shards" : "1",
-      "number_of_replicas" : "0",
-      "fields" : {
-        "nid" : { "type" : "integer" },
-        "search_api_language" : { "type" : "string" },
-        "type" : { "type" : "string" },
-        "url" : { "type" : "uri" }
-      },
-      "data_alter_callbacks" : {
-        "search_api_ranges_alter" : { "status" : 0, "weight" : "-50", "settings" : [] },
-        "search_api_alter_bundle_filter" : {
-          "status" : 1,
-          "weight" : "-10",
-          "settings" : {
-            "default" : "0",
-            "bundles" : {
-              "funding" : "funding",
-              "innovation" : "innovation",
-              "needs" : "needs",
-              "organization" : "organization",
-              "persona" : "persona",
-              "program" : "program",
-              "resource" : "resource"
-            }
-          }
-        },
-        "search_api_alter_node_status" : { "status" : 0, "weight" : "0", "settings" : [] },
-        "search_api_alter_node_access" : { "status" : 0, "weight" : "0", "settings" : [] },
-        "panelizer" : { "status" : 0, "weight" : "0", "settings" : [] },
-        "search_api_alter_add_hierarchy" : { "status" : 0, "weight" : "0", "settings" : { "fields" : [] } },
-        "search_api_alter_add_url" : { "status" : 0, "weight" : "0", "settings" : [] },
-        "search_api_alter_add_aggregation" : { "status" : 0, "weight" : "0", "settings" : [] },
-        "search_api_alter_add_viewed_entity" : { "status" : 0, "weight" : "0", "settings" : { "mode" : "full" } }
       },
       "processors" : {
         "search_api_case_ignore" : { "status" : 0, "weight" : "0", "settings" : { "fields" : [] } },
@@ -452,7 +375,16 @@ function gie_search_default_search_api_index() {
         "body:value" : { "type" : "text" },
         "field_discussion_desc:value" : { "type" : "text" },
         "field_funding_desc:value" : { "type" : "text" },
+        "field_funding_organization" : { "type" : "list\\u003Cinteger\\u003E", "entity_type" : "node" },
+        "field_funding_organization:title" : { "type" : "list\\u003Ctext\\u003E" },
         "field_innovation_desc:value" : { "type" : "text" },
+        "field_innovation_funders" : { "type" : "list\\u003Cinteger\\u003E", "entity_type" : "node" },
+        "field_innovation_program" : { "type" : "list\\u003Cinteger\\u003E", "entity_type" : "node" },
+        "field_innovation_related_org" : { "type" : "list\\u003Cinteger\\u003E", "entity_type" : "node" },
+        "field_innovation_related_org:field_funding_organization" : {
+          "type" : "list\\u003Clist\\u003Cinteger\\u003E\\u003E",
+          "entity_type" : "node"
+        },
         "field_org_desc:value" : { "type" : "text" },
         "field_program_desc:value" : { "type" : "text" },
         "field_resource_desc:value" : { "type" : "text" },
@@ -461,7 +393,8 @@ function gie_search_default_search_api_index() {
         "field_term_sector" : { "type" : "list\\u003Cinteger\\u003E", "entity_type" : "taxonomy_term" },
         "field_term_topic" : { "type" : "list\\u003Cinteger\\u003E", "entity_type" : "taxonomy_term" },
         "search_api_language" : { "type" : "string" },
-        "title" : { "type" : "text" }
+        "title" : { "type" : "text" },
+        "type" : { "type" : "string" }
       }
     },
     "enabled" : "1",
@@ -506,21 +439,7 @@ function gie_search_default_search_api_server() {
     "machine_name" : "elasticsearch",
     "description" : "",
     "class" : "search_api_elasticsearch_elastica_service",
-    "options" : {
-      "0" : {
-        "host" : "127.0.0.1",
-        "port" : "9200",
-        "headers" : { "http_user" : "", "http_pass" : "" },
-        "path" : "",
-        "url" : "",
-        "transport" : "Http",
-        "persistent" : 1,
-        "timeout" : "300",
-        "log" : 0,
-        "retryOnConflict" : "0"
-      },
-      "facet_limit" : "10"
-    },
+    "options" : { "0" : { "host" : "localhost" }, "facet_limit" : "10" },
     "enabled" : "1",
     "rdf_mapping" : []
   }');

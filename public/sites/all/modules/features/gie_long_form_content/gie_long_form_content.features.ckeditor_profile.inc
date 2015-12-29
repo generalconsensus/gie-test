@@ -14,7 +14,7 @@ function gie_long_form_content_ckeditor_profile_defaults() {
       'settings' => array(
         'ss' => 2,
         'toolbar' => '[
-    [\'Format\',\'Bold\',\'Italic\',\'Underline\',\'NumberedList\',\'BulletedList\',\'Link\']
+    [\'Format\',\'Bold\',\'Italic\',\'Underline\',\'NumberedList\',\'BulletedList\',\'Anchor\',\'Link\']
 ]',
         'expand' => 't',
         'default' => 't',
@@ -66,8 +66,8 @@ function gie_long_form_content_ckeditor_profile_defaults() {
       'settings' => array(
         'ss' => 2,
         'toolbar' => '[
-    [\'Format\',\'Bold\',\'Italic\',\'Underline\',\'NumberedList\',\'BulletedList\',\'Link\',\'Unlink\'],
-    [\'Image\',\'asset_image\',\'assetSearch\']
+    [\'Format\',\'Bold\',\'Italic\',\'Underline\',\'NumberedList\',\'BulletedList\',\'Anchor\',\'Link\',\'Unlink\'],
+    [\'Image\',\'asset_image\',\'assetSearch\',\'JustifyCenter\']
 ]',
         'expand' => 't',
         'default' => 't',
@@ -83,7 +83,7 @@ function gie_long_form_content_ckeditor_profile_defaults() {
         'enter_mode' => 'br',
         'shift_enter_mode' => 'br',
         'font_format' => 'p;div;pre;address;h1;h2;h3;h4;h5;h6',
-        'custom_formatting' => 'f',
+        'custom_formatting' => 't',
         'formatting' => array(
           'custom_formatting_options' => array(
             'indent' => 'indent',
@@ -143,6 +143,18 @@ function gie_long_form_content_ckeditor_profile_defaults() {
               ),
             ),
             'default' => 't',
+          ),
+          'mediaembed' => array(
+            'name' => 'mediaembed',
+            'desc' => 'Plugin for inserting Drupal embeded media',
+            'path' => '%plugin_dir%mediaembed/',
+            'buttons' => array(
+              'MediaEmbed' => array(
+                'label' => 'MediaEmbed',
+                'icon' => 'images/icon.png',
+              ),
+            ),
+            'default' => 'f',
           ),
         ),
       ),

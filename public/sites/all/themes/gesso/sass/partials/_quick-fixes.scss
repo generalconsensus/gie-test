@@ -3,3 +3,38 @@
 //
 // Deadlines happen, so put your quick fixes here. Hopefully there will be time
 // later to move/re-factor these styles into their proper place.
+
+.section--microsite {
+
+  header.header {
+    display: block;
+  }
+
+  .region-navigation {
+    display: block;
+  }
+
+  .microsite-text {
+    padding: 0 5%;
+
+    ul > li:before {
+      content: "►";
+      color: #cd1041;
+      display: inline-block;
+      margin: 0 10px 0 -21px;
+      font-size: 30px;
+      position: relative;
+      top: 3px;
+      width: 30px;
+    }
+  }
+
+  .microsite-50-50 {
+    margin-bottom: 5%;
+
+    .microsite-50-50__text {
+      padding: 2% 5%;
+    }
+  }
+
+}

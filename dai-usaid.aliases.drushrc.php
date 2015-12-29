@@ -23,42 +23,28 @@ $aliases['local'] = array(
 );
 
 $aliases['dev'] = array(
-  'uri' => 'dev.giexchange.forumone.com',
-  'root' => '/var/www/vhosts/giexchange.dev/public',
-  'remote-host' => 'dev.giexchange.forumone.com',
+  'uri' => 'dev.gie.byf1.io',
+  'root' => '/var/www/vhosts/gie.dev/public',
+  'remote-host' => 'dev.gie.byf1.io',
+  'remote-user' => 'gie'
+);
+
+$aliases['microsite'] = array(
+  'uri' => 'feature.giexchange.forumone.com',
+  'root' => '/var/www/vhosts/giexchange.feature/public',
+  'remote-host' => 'feature.giexchange.forumone.com',
   'remote-user' => 'giexchange',
-  'path-aliases' => array(
-    '%files' => 'sites/default/files',
-  ),
   'command-specific' => array(
-    'rsync' => array ( 
+    'rsync' => array (
       'mode' => 'rzv'
     ),
-  ),  
+  ),
 );
 
 
 $aliases['stage'] = array(
-  'uri' => 'stage.giexchange.forumone.com',
-  'root' => '/var/www/vhosts/giexchange.stage/public',
-  'remote-host' => 'stage.giexchange.forumone.com',
-  'remote-user' => 'giexchange',
-  'command-specific' => array(
-    'rsync' => array (
-      'mode' => 'rzv'
-    ),
-  ),
-);
-
-
-$aliases['prod'] = array(
-  'uri' => 'http://www.globalinnovationexchange.com/',
-  'root' => '/var/www/vhosts/giexchange.www/public',
-  'remote-host' => 'www.globalinnovationexchange.com',
-  'remote-user' => 'giexchange',
-  'command-specific' => array(
-    'rsync' => array (
-      'mode' => 'rzv'
-    ),
-  ),
+  'uri' => 'stage.gie.byf1.io',
+  'root' => '/var/www/vhosts/gie.stage/public',
+  'remote-host' => 'stage.gie.byf1.io',
+  'remote-user' => 'gie'
 );

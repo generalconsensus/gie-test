@@ -61,6 +61,21 @@ function gie_long_form_content_ds_field_settings_info() {
 
   $ds_fieldsetting = new stdClass();
   $ds_fieldsetting->api_version = 1;
+  $ds_fieldsetting->id = 'node|long_form_page|default';
+  $ds_fieldsetting->entity_type = 'node';
+  $ds_fieldsetting->bundle = 'long_form_page';
+  $ds_fieldsetting->view_mode = 'default';
+  $ds_fieldsetting->settings = array(
+    'field_long_form_block' => array(
+      'formatter_settings' => array(
+        'ft' => array(),
+      ),
+    ),
+  );
+  $export['node|long_form_page|default'] = $ds_fieldsetting;
+
+  $ds_fieldsetting = new stdClass();
+  $ds_fieldsetting->api_version = 1;
   $ds_fieldsetting->id = 'node|long_form_page|full';
   $ds_fieldsetting->entity_type = 'node';
   $ds_fieldsetting->bundle = 'long_form_page';
@@ -403,6 +418,21 @@ function gie_long_form_content_ds_field_settings_info() {
     ),
   );
   $export['paragraphs_item|long_form_callout_card|default'] = $ds_fieldsetting;
+
+  $ds_fieldsetting = new stdClass();
+  $ds_fieldsetting->api_version = 1;
+  $ds_fieldsetting->id = 'paragraphs_item|long_form_header|default';
+  $ds_fieldsetting->entity_type = 'paragraphs_item';
+  $ds_fieldsetting->bundle = 'long_form_header';
+  $ds_fieldsetting->view_mode = 'default';
+  $ds_fieldsetting->settings = array(
+    'microsite_header_image' => array(
+      'weight' => '0',
+      'label' => 'hidden',
+      'format' => 'default',
+    ),
+  );
+  $export['paragraphs_item|long_form_header|default'] = $ds_fieldsetting;
 
   $ds_fieldsetting = new stdClass();
   $ds_fieldsetting->api_version = 1;
@@ -834,14 +864,12 @@ function gie_long_form_content_ds_layout_settings_info() {
         0 => 'body',
         1 => 'field_long_form_block',
         2 => 'sharethis',
-        3 => 'field_partner_logos',
       ),
     ),
     'fields' => array(
       'body' => 'ds_content',
       'field_long_form_block' => 'ds_content',
       'sharethis' => 'ds_content',
-      'field_partner_logos' => 'ds_content',
     ),
     'classes' => array(),
     'wrappers' => array(

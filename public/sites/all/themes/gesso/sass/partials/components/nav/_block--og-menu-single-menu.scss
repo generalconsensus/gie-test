@@ -1,0 +1,27 @@
+// microsites main menu
+.block--og-menu-single-menu {
+  float: right;
+  margin-top: 1em;
+  .nav {
+    @extend %clearfix;
+    margin: 0;
+    padding: 0;
+    .nav__item {
+      display: block;
+      float: left;
+      font-size: em($font-size-md);
+      margin: 0;
+      padding: 0 0 0 1em;
+    }
+    .nav__link {
+      color: $microsite-primary;
+      font-weight: bold;
+      text-decoration: none;
+      text-transform: uppercase;
+      &:hover,
+      &:focus {
+        color: darken($microsite-primary,20%);
+      }
+    }
+  }
+}

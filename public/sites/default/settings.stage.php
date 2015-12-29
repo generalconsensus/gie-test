@@ -218,9 +218,9 @@ $databases = array (
     'default' => 
     array (
       'database' => 'giexchange_stage',
-      'username' => 'gie_stage_user',
-      'password' => 'nx6TTTxn*Vnk',
-      'host' => 'localhost',
+      'username' => 'gieuser_stage',
+      'password' => 'CI1z!Qp1gE2!0ncx',
+      'host' => 'giexchange.c06busiwruk7.us-east-1.rds.amazonaws.com',
       'port' => '',
       'driver' => 'mysql',
       'prefix' => '',
@@ -597,9 +597,9 @@ $conf['search_api_override_servers'] = array(
   'solr' => array(
     'name' => t('Solr Server (Overridden)'),
     'options' => array(
-      'host' => 'localhost',
+      'host' => '10.0.2.76',
       'port' => 8984,
-      'path' => '/solr/drupal'
+      'path' => '/solr/giexchange_stage'
     )
   )
 );
@@ -651,3 +651,9 @@ ini_set('memory_limit', '1024M');
 */ 
 $conf['awssdk2_access_key'] = 'AKIAJJ7DUIDYQ7SDQ6NA';
 $conf['awssdk2_secret_key'] = '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';
+
+/**
+ * Add the domain module setup routine.
+ */
+include DRUPAL_ROOT . '/sites/all/modules/contrib/domain/settings.inc';
+
