@@ -1256,6 +1256,15 @@ function gie_innovation_views_default_views() {
   $handler->display->display_options['sorts']['created']['table'] = 'search_api_index_default_node_index';
   $handler->display->display_options['sorts']['created']['field'] = 'created';
   $handler->display->display_options['sorts']['created']['order'] = 'DESC';
+  /* Contextual filter: Indexed Content: Domain ID */
+  $handler->display->display_options['arguments']['domain_domain_id']['id'] = 'domain_domain_id';
+  $handler->display->display_options['arguments']['domain_domain_id']['table'] = 'search_api_index_default_node_index';
+  $handler->display->display_options['arguments']['domain_domain_id']['field'] = 'domain_domain_id';
+  $handler->display->display_options['arguments']['domain_domain_id']['default_action'] = 'default';
+  $handler->display->display_options['arguments']['domain_domain_id']['default_argument_type'] = 'current_domain';
+  $handler->display->display_options['arguments']['domain_domain_id']['summary']['format'] = 'default_summary';
+  $handler->display->display_options['arguments']['domain_domain_id']['break_phrase'] = 1;
+  $handler->display->display_options['arguments']['domain_domain_id']['not'] = 0;
   /* Filter criterion: Indexed Content: Content type */
   $handler->display->display_options['filters']['type']['id'] = 'type';
   $handler->display->display_options['filters']['type']['table'] = 'search_api_index_default_node_index';
@@ -1549,7 +1558,7 @@ function gie_innovation_views_default_views() {
   $handler->display->display_options['filters']['type']['value'] = array(
     'innovation' => 'innovation',
   );
-  /* Filter criterion: Indexed Content: Related Sectors */
+  /* Filter criterion: Indexed Content: Sector */
   $handler->display->display_options['filters']['field_term_sector']['id'] = 'field_term_sector';
   $handler->display->display_options['filters']['field_term_sector']['table'] = 'search_api_index_default_node_index';
   $handler->display->display_options['filters']['field_term_sector']['field'] = 'field_term_sector';
