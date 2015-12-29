@@ -15,20 +15,13 @@
   }
 
   .microsite-text {
-    margin: 4em 0;
-    padding: 0 10%;
-
-    @include breakpoint($mobile-menu-bp, $no-query: true) {
-      padding: 0 5%;
-      margin: 0;
-    }
+    padding: 0 5%;
 
     ul > li:before {
       content: "►";
       color: #cd1041;
       display: inline-block;
-      margin-right: 10px;
-      margin-left: -21px;
+      margin: 0 10px 0 -21px;
       font-size: 30px;
       position: relative;
       top: 3px;
@@ -36,8 +29,12 @@
     }
   }
 
-  .microsite-50-50__text {
-    padding: 2% 5%;
+  .microsite-50-50 {
+    margin-bottom: 5%;
+
+    .microsite-50-50__text {
+      padding: 2% 5%;
+    }
   }
 
 }
