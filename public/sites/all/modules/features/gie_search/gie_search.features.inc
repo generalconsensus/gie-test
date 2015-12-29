@@ -40,19 +40,20 @@ function gie_search_default_search_api_index() {
       "index_directly" : 1,
       "cron_limit" : "50",
       "data_alter_callbacks" : {
+        "search_api_ranges_alter" : { "status" : 0, "weight" : "-50", "settings" : { "fields" : [] } },
         "search_api_alter_bundle_filter" : {
           "status" : 0,
           "weight" : "-10",
           "settings" : { "default" : "1", "bundles" : [] }
         },
         "search_api_alter_node_status" : { "status" : 0, "weight" : "0", "settings" : [] },
-        "search_api_alter_add_combined" : { "status" : 0, "weight" : "0", "settings" : [] },
         "panelizer" : { "status" : 0, "weight" : "0", "settings" : [] },
-        "search_api_alter_node_access" : { "status" : 1, "weight" : "0", "settings" : [] },
-        "search_api_alter_add_hierarchy" : { "status" : 0, "weight" : "0", "settings" : { "fields" : [] } },
+        "search_api_alter_node_access" : { "status" : 0, "weight" : "0", "settings" : [] },
+        "search_api_alter_add_viewed_entity" : { "status" : 0, "weight" : "0", "settings" : { "mode" : "full" } },
         "search_api_alter_add_url" : { "status" : 0, "weight" : "0", "settings" : [] },
         "search_api_alter_add_aggregation" : { "status" : 0, "weight" : "0", "settings" : [] },
-        "search_api_alter_add_viewed_entity" : { "status" : 0, "weight" : "0", "settings" : { "mode" : "full" } }
+        "search_api_alter_node_domain_access" : { "status" : 1, "weight" : "0", "settings" : [] },
+        "search_api_alter_add_hierarchy" : { "status" : 0, "weight" : "0", "settings" : { "fields" : [] } }
       },
       "processors" : {
         "search_api_case_ignore" : {
@@ -127,6 +128,12 @@ function gie_search_default_search_api_index() {
         "body:value" : { "type" : "text" },
         "changed" : { "type" : "date" },
         "created" : { "type" : "date" },
+        "domain_domain_id" : { "type" : "list\\u003Cinteger\\u003E" },
+        "domain_domain_site" : { "type" : "boolean" },
+        "domain_machine_name" : { "type" : "list\\u003Ctext\\u003E" },
+        "domain_path" : { "type" : "list\\u003Ctext\\u003E" },
+        "domain_sitename" : { "type" : "list\\u003Ctext\\u003E" },
+        "domain_subdomain" : { "type" : "list\\u003Ctext\\u003E" },
         "field_discussion_program_disc" : { "type" : "list\\u003Cinteger\\u003E", "entity_type" : "taxonomy_term" },
         "field_event_cost" : { "type" : "integer" },
         "field_event_date:value" : { "type" : "date" },
@@ -444,7 +451,7 @@ function gie_search_default_search_api_server() {
       "site_hash" : true,
       "scheme" : "http",
       "host" : "localhost",
-      "port" : "8983",
+      "port" : 8983,
       "path" : "\\/solr\\/drupal",
       "http_user" : "",
       "http_pass" : "",
