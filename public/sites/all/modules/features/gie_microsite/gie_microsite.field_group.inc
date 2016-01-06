@@ -218,8 +218,8 @@ function gie_microsite_field_group_info() {
     'label' => 'Container',
     'weight' => '0',
     'children' => array(
-      0 => 'group_text',
-      1 => 'group_image',
+      0 => 'group_image',
+      1 => 'group_text',
     ),
     'format_type' => 'div',
     'format_settings' => array(
@@ -554,7 +554,7 @@ function gie_microsite_field_group_info() {
         'effect' => 'none',
         'speed' => 'none',
       ),
-      'formatter' => 'collapsible',
+      'formatter' => 'open',
     ),
   );
   $export['group_text|paragraphs_item|long_form_50_50|left_image'] = $field_group;
