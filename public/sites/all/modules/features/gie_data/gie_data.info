@@ -15,6 +15,7 @@ features[ctools][] = views:views_default:3.0
 features[features_api][] = api:2
 features[page_manager_pages][] = data
 features[panels_mini][] = data_analytics_blocks
+features[views_view][] = data_page_users
 features[views_view][] = data_page_views
 features[views_view][] = ga
 features_exclude[dependencies][ctools] = ctools
