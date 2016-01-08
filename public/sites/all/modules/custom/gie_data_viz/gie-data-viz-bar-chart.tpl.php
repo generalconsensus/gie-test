@@ -1,0 +1,1 @@
+<div bar-chart></div>
