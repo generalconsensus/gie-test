@@ -271,6 +271,9 @@ function gie_homepage_strongarm() {
       'listing' => array(
         'custom_settings' => TRUE,
       ),
+      'data' => array(
+        'custom_settings' => TRUE,
+      ),
       'full' => array(
         'custom_settings' => FALSE,
       ),
