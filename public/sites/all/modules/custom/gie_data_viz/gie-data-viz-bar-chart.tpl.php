@@ -1,1 +1,1 @@
-<div bar-chart></div>
+<bar-chart></bar-chart>

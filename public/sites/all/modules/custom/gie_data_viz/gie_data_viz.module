@@ -19,38 +19,18 @@ function gie_data_viz_block_view($delta = '') {
 
   switch($delta) {
     case 'gie_data_viz_country_inno_chart':
-      //add app js
-      $path = drupal_get_path('module', 'gie_data_viz');
-      drupal_add_js($path . '/app/dependencies/d3.min.js');
-      drupal_add_js($path . '/app/dependencies/elasticsearch.min.js');
-      drupal_add_js($path . '/app/dependencies/elasticsearch.angular.min.js');
-      drupal_add_js($path . '/app/src/app.js');
-      angularjs_init_application('gieDataViz');
-
-      drupal_add_js($path . '/app/src/directives/barChart.js');
-      drupal_add_js($path . '/app/src/services/dataService.js');
-      drupal_add_js($path . '/app/src/services/es.js');
-      drupal_add_js($path . '/app/src/services/taxonomyTermService.js');
-
-      //pass index and site information to javascript for AngularJS app to use
-      drupal_add_js(array('gie_data_viz' =>
-        array(
-          'base' => 'elasticsearch_index_'. _gie_data_viz_get_database_name() . '_',
-          'indices' => variable_get('elasticsearch_index'),
-          'url' => _gie_data_viz_get_elastic_url(),
-        ),
-      ), array('type' => 'setting'));
-
+      _gie_data_viz_init();
       $block['subject'] = t('Countries with Most Innovations');
       $block['content'] = array(
         '#theme' => 'gie_data_viz_bar_chart',
+        '#prefix' => '<div data-ng-controller="CountryInnovationsController">',
+        '#suffix' => '</div>',
         '#attached' => array(
           'css' => array(
-            $path . '/gie_data_viz.css',
+            drupal_get_path('module', 'gie_data_viz') . '/gie_data_viz.css',
           ),
         ),
       );
-
       break;
   }
 
@@ -72,6 +52,35 @@ function _gie_data_viz_get_elastic_url() {
 function _gie_data_viz_get_database_name() {
   global $databases;
   return $databases['default']['default']['database'];
+}
+
+/**
+ * Helper function to add proper JS files
+ */
+function _gie_data_viz_init() {
+  //add app js
+  $path = drupal_get_path('module', 'gie_data_viz');
+  drupal_add_js($path . '/app/dependencies/d3.min.js');
+  drupal_add_js($path . '/app/dependencies/elasticsearch.min.js');
+  drupal_add_js($path . '/app/dependencies/elasticsearch.angular.min.js');
+  drupal_add_js($path . '/app/src/app.js');
+  angularjs_init_application('gieDataViz');
+
+  drupal_add_js($path . '/app/src/controllers/countryInnovationsController.js');
+  drupal_add_js($path . '/app/src/directives/barChart.js');
+  drupal_add_js($path . '/app/src/directives/groupedBarChart.js');
+  drupal_add_js($path . '/app/src/services/dataService.js');
+  drupal_add_js($path . '/app/src/services/es.js');
+  drupal_add_js($path . '/app/src/services/taxonomyTermService.js');
+
+  //pass index and site information to javascript for AngularJS app to use
+  drupal_add_js(array('gie_data_viz' =>
+    array(
+      'base' => 'elasticsearch_index_'. _gie_data_viz_get_database_name() . '_',
+      'indices' => variable_get('elasticsearch_index'),
+      'url' => _gie_data_viz_get_elastic_url(),
+    ),
+  ), array('type' => 'setting'));
 }
 
 /**

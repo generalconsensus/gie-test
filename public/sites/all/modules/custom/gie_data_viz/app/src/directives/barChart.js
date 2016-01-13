@@ -1,70 +1,21 @@
-angular.module('gieDataViz').directive('barChart', function($window, es, dataService, taxonomyTermService) {
-
-
-  var queryBody = {
-    index: Drupal.settings.gie_data_viz.base + Drupal.settings.gie_data_viz.indices.api.machine_name,
-    type: Drupal.settings.gie_data_viz.indices.api.machine_name,
-    size: 0,
-    body: {
-      "query": {
-        "match": {
-          "type": "innovation"
-        }
-      },
-      "aggs": {
-        "country_created_totals": {
-          "terms": {
-            "field": "field_innovation_created",
-            "size": 20
-          }
-        },
-        "country_implemented_totals": {
-          "terms": {
-            "field": "field_innovation_implemented",
-            "size": 20
-          }
-        }
-      }
-    }
-  };
+angular.module('gieDataViz').directive('barChart', function() {
 
   return {
-    restrict: 'EA',
-    template: "<svg class=\"chart\"></svg>",
+    restrict: 'E',
+    template: "<svg class=\"chart bar-chart vertical\" data=\"data\"></svg>",
+    replace: true,
+    scope: { data: "="},
     link: function (scope){
+      /**
+       * Data should come in as follows:
+       * - data: {id: number, value: number}
+       * - labels: {[id: number]: string}
+       */
+      scope.$watch('data', function(newValue,oldValue){
+        if (newValue) {
+          labels = newValue.labels;
 
-      dataService.getData(queryBody).then(function(results) {
-        scope.data = results;
-
-        var rawData = scope.data.aggregations.country_created_totals.buckets;
-
-        var data = [];
-        var createdData = [];
-        var implementedData = [];
-        var termKeys = [];
-
-        rawData.forEach(function(item) {
-          createdData.push({
-            name: item.key,
-            value: item.doc_count,
-          });
-          termKeys.push(item.key);
-        });
-
-        scope.data.aggregations.country_implemented_totals.buckets.forEach(function(item) {
-          implementedData.push({
-            name: item.key,
-            value: item.doc_count,
-          });
-          if (termKeys.indexOf(item.key) === -1 ) termKeys.push(item.key);
-        });
-
-        var terms = {};
-
-        taxonomyTermService.getTermNames(termKeys).then(function(result) {
-          terms = result;
-
-          data = createdData;
+          data = newValue.data;
 
           var margin = {top: 20, right: 30, bottom: 150, left: 40},
             width = 700 - margin.left - margin.right,
@@ -90,7 +41,7 @@ angular.module('gieDataViz').directive('barChart', function($window, es, dataSer
             .append("g")
             .attr("transform", "translate("+margin.left+","+margin.top+")");
 
-          x.domain(data.map(function(d) {return terms[d.name]; }));
+          x.domain(data.map(function(d) {return labels[d.id]; }));
           y.domain([0,d3.max(data, function(d) { return d.value; })]);
 
           chart.append("g")
@@ -120,13 +71,12 @@ angular.module('gieDataViz').directive('barChart', function($window, es, dataSer
             .data(data)
             .enter().append("rect")
             .attr("class", "bar")
-            .attr("x", function(d) { return x(terms[d.name]); })
+            .attr("x", function(d) { return x(labels[d.id]); })
             .attr("y", function(d) { return y(d.value); })
             .attr("height", function(d) { return height - y(d.value); })
             .attr("width", x.rangeBand());
-        });
+        }
       });
-
     }
   };
 });
