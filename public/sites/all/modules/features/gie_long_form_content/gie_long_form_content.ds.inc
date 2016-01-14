@@ -82,7 +82,7 @@ function gie_long_form_content_ds_field_settings_info() {
   $ds_fieldsetting->view_mode = 'full';
   $ds_fieldsetting->settings = array(
     'long_form_powered_by' => array(
-      'weight' => '17',
+      'weight' => '19',
       'label' => 'hidden',
       'format' => 'default',
       'formatter_settings' => array(
