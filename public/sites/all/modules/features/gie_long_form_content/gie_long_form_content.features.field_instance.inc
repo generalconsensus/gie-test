@@ -783,7 +783,7 @@ function gie_long_form_content_field_default_field_instances() {
             'linked' => 0,
           ),
           'links' => 1,
-          'view_mode' => 'logo',
+          'view_mode' => 'long_form_footer_logo',
         ),
         'type' => 'entityreference_entity_view',
         'weight' => 16,

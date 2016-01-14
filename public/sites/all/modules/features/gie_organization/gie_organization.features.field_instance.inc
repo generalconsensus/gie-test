@@ -163,6 +163,12 @@ function gie_organization_field_default_field_instances() {
         'type' => 'hidden',
         'weight' => 7,
       ),
+      'long_form_footer_logo' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 8,
+      ),
       'page_header' => array(
         'label' => 'above',
         'settings' => array(),
@@ -310,6 +316,12 @@ function gie_organization_field_default_field_instances() {
         'settings' => array(),
         'type' => 'hidden',
         'weight' => 2,
+      ),
+      'long_form_footer_logo' => array(
+        'label' => 'hidden',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 3,
       ),
       'page_header' => array(
         'label' => 'hidden',
@@ -485,6 +497,12 @@ function gie_organization_field_default_field_instances() {
         'type' => 'hidden',
         'weight' => 6,
       ),
+      'long_form_footer_logo' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 7,
+      ),
       'page_header' => array(
         'label' => 'above',
         'settings' => array(),
@@ -584,6 +602,12 @@ function gie_organization_field_default_field_instances() {
         'settings' => array(),
         'type' => 'hidden',
         'weight' => 13,
+      ),
+      'long_form_footer_logo' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 18,
       ),
       'page_header' => array(
         'label' => 'above',
@@ -692,6 +716,12 @@ function gie_organization_field_default_field_instances() {
         'settings' => array(),
         'type' => 'hidden',
         'weight' => 5,
+      ),
+      'long_form_footer_logo' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 6,
       ),
       'page_header' => array(
         'label' => 'above',
@@ -829,6 +859,12 @@ function gie_organization_field_default_field_instances() {
         'settings' => array(),
         'type' => 'hidden',
         'weight' => 3,
+      ),
+      'long_form_footer_logo' => array(
+        'label' => 'hidden',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 4,
       ),
       'page_header' => array(
         'label' => 'hidden',
@@ -977,6 +1013,28 @@ function gie_organization_field_default_field_instances() {
         'type' => 'image',
         'weight' => 24,
       ),
+      'long_form_footer_logo' => array(
+        'label' => 'hidden',
+        'module' => 'image',
+        'settings' => array(
+          'field_delimiter' => '',
+          'image_link' => 'content',
+          'image_style' => 'org_and_program_detail',
+          'linked_field' => array(
+            'advanced' => array(
+              'class' => '',
+              'rel' => '',
+              'target' => '',
+              'text' => '',
+              'title' => '',
+            ),
+            'destination' => '',
+            'linked' => 0,
+          ),
+        ),
+        'type' => 'image',
+        'weight' => 0,
+      ),
       'page_header' => array(
         'label' => 'hidden',
         'module' => 'image',
@@ -1039,7 +1097,6 @@ function gie_organization_field_default_field_instances() {
       'alt_field_hide' => 0,
       'alt_field_sync_title' => 1,
       'alt_field_update_on_edit' => 1,
-      'default_image' => 0,
       'description_display' => 'before',
       'file_directory' => '',
       'file_extensions' => 'png gif jpg jpeg',
@@ -1139,6 +1196,12 @@ function gie_organization_field_default_field_instances() {
         'settings' => array(),
         'type' => 'hidden',
         'weight' => 4,
+      ),
+      'long_form_footer_logo' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 5,
       ),
       'page_header' => array(
         'label' => 'above',
@@ -1264,6 +1327,12 @@ function gie_organization_field_default_field_instances() {
         'type' => 'hidden',
         'weight' => 0,
       ),
+      'long_form_footer_logo' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 29,
+      ),
       'page_header' => array(
         'label' => 'above',
         'settings' => array(),
@@ -1361,6 +1430,12 @@ function gie_organization_field_default_field_instances() {
         'settings' => array(),
         'type' => 'hidden',
         'weight' => 12,
+      ),
+      'long_form_footer_logo' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 17,
       ),
       'page_header' => array(
         'label' => 'above',
@@ -1483,6 +1558,12 @@ function gie_organization_field_default_field_instances() {
         'type' => 'hidden',
         'weight' => 8,
       ),
+      'long_form_footer_logo' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 9,
+      ),
       'page_header' => array(
         'label' => 'above',
         'settings' => array(),
@@ -1600,6 +1681,12 @@ function gie_organization_field_default_field_instances() {
         'settings' => array(),
         'type' => 'hidden',
         'weight' => 17,
+      ),
+      'long_form_footer_logo' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 22,
       ),
       'page_header' => array(
         'label' => 'above',
@@ -1736,6 +1823,12 @@ function gie_organization_field_default_field_instances() {
         'type' => 'hidden',
         'weight' => 18,
       ),
+      'long_form_footer_logo' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 23,
+      ),
       'page_header' => array(
         'label' => 'above',
         'settings' => array(),
@@ -1856,6 +1949,12 @@ function gie_organization_field_default_field_instances() {
         'settings' => array(),
         'type' => 'hidden',
         'weight' => 21,
+      ),
+      'long_form_footer_logo' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 26,
       ),
       'page_header' => array(
         'label' => 'above',
@@ -1978,6 +2077,12 @@ function gie_organization_field_default_field_instances() {
         'type' => 'hidden',
         'weight' => 22,
       ),
+      'long_form_footer_logo' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 27,
+      ),
       'page_header' => array(
         'label' => 'above',
         'settings' => array(),
@@ -2098,6 +2203,12 @@ function gie_organization_field_default_field_instances() {
         'settings' => array(),
         'type' => 'hidden',
         'weight' => 23,
+      ),
+      'long_form_footer_logo' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 28,
       ),
       'page_header' => array(
         'label' => 'above',
@@ -2220,6 +2331,12 @@ function gie_organization_field_default_field_instances() {
         'type' => 'hidden',
         'weight' => 19,
       ),
+      'long_form_footer_logo' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 24,
+      ),
       'page_header' => array(
         'label' => 'above',
         'settings' => array(),
@@ -2320,6 +2437,12 @@ function gie_organization_field_default_field_instances() {
         'type' => 'hidden',
         'weight' => 0,
       ),
+      'long_form_footer_logo' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 30,
+      ),
       'page_header' => array(
         'label' => 'above',
         'settings' => array(),
@@ -2415,6 +2538,12 @@ function gie_organization_field_default_field_instances() {
         'settings' => array(),
         'type' => 'hidden',
         'weight' => 20,
+      ),
+      'long_form_footer_logo' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 25,
       ),
       'page_header' => array(
         'label' => 'above',
@@ -2512,6 +2641,12 @@ function gie_organization_field_default_field_instances() {
         'type' => 'hidden',
         'weight' => 0,
       ),
+      'long_form_footer_logo' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 21,
+      ),
       'page_header' => array(
         'label' => 'above',
         'settings' => array(),
@@ -2608,6 +2743,12 @@ function gie_organization_field_default_field_instances() {
         'type' => 'hidden',
         'weight' => 16,
       ),
+      'long_form_footer_logo' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 20,
+      ),
       'page_header' => array(
         'label' => 'above',
         'settings' => array(),
@@ -2703,6 +2844,12 @@ function gie_organization_field_default_field_instances() {
         'settings' => array(),
         'type' => 'hidden',
         'weight' => 15,
+      ),
+      'long_form_footer_logo' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 19,
       ),
       'page_header' => array(
         'label' => 'above',
@@ -2808,6 +2955,12 @@ function gie_organization_field_default_field_instances() {
         'settings' => array(),
         'type' => 'hidden',
         'weight' => 0,
+      ),
+      'long_form_footer_logo' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 31,
       ),
       'page_header' => array(
         'label' => 'above',
@@ -2932,6 +3085,12 @@ function gie_organization_field_default_field_instances() {
         'settings' => array(),
         'type' => 'hidden',
         'weight' => 0,
+      ),
+      'long_form_footer_logo' => array(
+        'label' => 'hidden',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 1,
       ),
       'page_header' => array(
         'label' => 'hidden',
