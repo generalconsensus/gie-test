@@ -515,6 +515,33 @@ function gie_organization_ds_layout_settings_info() {
 
   $ds_layout = new stdClass();
   $ds_layout->api_version = 1;
+  $ds_layout->id = 'node|organization|long_form_footer_logo';
+  $ds_layout->entity_type = 'node';
+  $ds_layout->bundle = 'organization';
+  $ds_layout->view_mode = 'long_form_footer_logo';
+  $ds_layout->layout = 'ds_reset';
+  $ds_layout->settings = array(
+    'regions' => array(
+      'ds_content' => array(
+        0 => 'field_org_logo',
+      ),
+    ),
+    'fields' => array(
+      'field_org_logo' => 'ds_content',
+    ),
+    'classes' => array(),
+    'wrappers' => array(),
+    'layout_wrapper' => 'div',
+    'layout_attributes' => '',
+    'layout_attributes_merge' => TRUE,
+    'layout_link_attribute' => FALSE,
+    'layout_link_custom' => '',
+    'layout_disable_css' => FALSE,
+  );
+  $export['node|organization|long_form_footer_logo'] = $ds_layout;
+
+  $ds_layout = new stdClass();
+  $ds_layout->api_version = 1;
   $ds_layout->id = 'node|organization|page_header';
   $ds_layout->entity_type = 'node';
   $ds_layout->bundle = 'organization';
