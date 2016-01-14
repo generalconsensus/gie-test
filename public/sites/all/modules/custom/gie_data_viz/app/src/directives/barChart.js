@@ -2,24 +2,22 @@ angular.module('gieDataViz').directive('barChart', function() {
 
   return {
     restrict: 'E',
-    template: "<svg class=\"chart bar-chart vertical\" data=\"data\"></svg>",
+    template: "<svg class=\"chart bar-chart vertical\" id=\"bar_chart__{{$id}}\" data=\"data\"></svg>",
     replace: true,
     scope: { data: "="},
     link: function (scope){
-      /**
-       * Data should come in as follows:
-       * - data: {id: number, value: number}
-       * - labels: {[id: number]: string}
-       */
       scope.$watch('data', function(newValue,oldValue){
         if (newValue) {
-          labels = newValue.labels;
+          var xInfo = newValue.xInfo,
+              yInfo = newValue.yInfo,
+              data = newValue.data;
 
-          data = newValue.data;
-
-          var margin = {top: 20, right: 30, bottom: 150, left: 40},
+          var margin = {top: 20, right: 30, bottom: 100, left: 60},
             width = 700 - margin.left - margin.right,
             height = 500 - margin.top - margin.bottom;
+
+          // Format numbers to 3 digits. e.g. 100, 100k, 10m, etc.
+          var formatter = d3.format("s");
 
           var x = d3.scale.ordinal()
             .rangeRoundBands([0,width],.1);
@@ -33,15 +31,16 @@ angular.module('gieDataViz').directive('barChart', function() {
 
           var yAxis = d3.svg.axis()
             .scale(y)
-            .orient("left");
+            .orient("left")
+            .tickFormat(function(d) { return yInfo.prefix + formatter(d); });
 
-          var chart = d3.select(".chart")
+          var chart = d3.select('#bar_chart__'+scope.$id)
             .attr("width", width + margin.left + margin.right)
             .attr("height", height + margin.top + margin.bottom)
             .append("g")
             .attr("transform", "translate("+margin.left+","+margin.top+")");
 
-          x.domain(data.map(function(d) {return labels[d.id]; }));
+          x.domain(data.map(function(d) {return xInfo[d.id]; }));
           y.domain([0,d3.max(data, function(d) { return d.value; })]);
 
           chart.append("g")
@@ -60,18 +59,18 @@ angular.module('gieDataViz').directive('barChart', function() {
             .call(yAxis)
             .append("text")
             .attr("transform", "rotate(-90)")
-            .attr("y", -35)
+            .attr("y", -50)
             .attr("x", -(height/2))
             .attr("dy", ".71em")
             .style("text-anchor", "middle")
-            .text("Innovations");
+            .text(yInfo.label);
 
 
           chart.selectAll(".bar")
             .data(data)
             .enter().append("rect")
             .attr("class", "bar")
-            .attr("x", function(d) { return x(labels[d.id]); })
+            .attr("x", function(d) { return x(xInfo[d.id]); })
             .attr("y", function(d) { return y(d.value); })
             .attr("height", function(d) { return height - y(d.value); })
             .attr("width", x.rangeBand());

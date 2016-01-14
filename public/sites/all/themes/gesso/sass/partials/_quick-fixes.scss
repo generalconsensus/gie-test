@@ -44,3 +44,26 @@
   }
 
 }
+
+// Data visualization chart styling
+
+.chart {
+  .bar {
+    fill: #003359;
+  }
+
+  .axis text {
+    font: 10px sans-serif;
+  }
+
+  .axis path,
+  .axis line {
+    fill: none;
+    stroke: #000;
+    shape-rendering: crispEdges;
+  }
+
+  .x.axis path {
+    display: none;
+  }
+}

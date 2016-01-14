@@ -51,7 +51,11 @@ angular.module('gieDataViz').controller('CountryInnovationsController', function
     taxonomyTermService.getTermNames(termKeys).then(function(result) {
       $scope.data = {
         data: createdData,
-        labels: result,
+        xInfo: result,
+        yInfo: {
+          label: 'Innovations',
+          prefix: '',
+        }
       };
     });
 

@@ -7,6 +7,9 @@ function gie_data_viz_block_info() {
   $blocks['gie_data_viz_country_inno_chart'] = array(
     'info' => t('GIE Data Viz - Countries with Most Innovations'),
   );
+  $blocks['gie_data_viz_country_fund_chart'] = array(
+    'info' => t('GIE Data Viz - Countries with Most Funding'),
+  );
 
   return $blocks;
 }
@@ -22,14 +25,19 @@ function gie_data_viz_block_view($delta = '') {
       _gie_data_viz_init();
       $block['subject'] = t('Countries with Most Innovations');
       $block['content'] = array(
-        '#theme' => 'gie_data_viz_bar_chart',
+        '#type' => 'markup',
         '#prefix' => '<div data-ng-controller="CountryInnovationsController">',
+        '#markup' => '<bar-chart></bar-chart>',
         '#suffix' => '</div>',
-        '#attached' => array(
-          'css' => array(
-            drupal_get_path('module', 'gie_data_viz') . '/gie_data_viz.css',
-          ),
-        ),
+      );
+      break;
+    case 'gie_data_viz_country_fund_chart':
+      $block['subject'] = t('Countries with Most Funding');
+      $block['content'] = array(
+        '#type' => 'markup',
+        '#prefix' => '<div data-ng-controller="CountryFundingController">',
+        '#markup' => '<bar-chart></bar-chart>',
+        '#suffix' => '</div>',
       );
       break;
   }
@@ -67,6 +75,7 @@ function _gie_data_viz_init() {
   angularjs_init_application('gieDataViz');
 
   drupal_add_js($path . '/app/src/controllers/countryInnovationsController.js');
+  drupal_add_js($path . '/app/src/controllers/countryFundingController.js');
   drupal_add_js($path . '/app/src/directives/barChart.js');
   drupal_add_js($path . '/app/src/directives/groupedBarChart.js');
   drupal_add_js($path . '/app/src/services/dataService.js');
