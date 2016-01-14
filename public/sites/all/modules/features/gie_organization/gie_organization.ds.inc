@@ -641,5 +641,14 @@ function gie_organization_ds_view_modes_info() {
   );
   $export['logo'] = $ds_view_mode;
 
+  $ds_view_mode = new stdClass();
+  $ds_view_mode->api_version = 1;
+  $ds_view_mode->view_mode = 'long_form_footer_logo';
+  $ds_view_mode->label = 'Long Form Footer Logo';
+  $ds_view_mode->entities = array(
+    'node' => 'node',
+  );
+  $export['long_form_footer_logo'] = $ds_view_mode;
+
   return $export;
 }
