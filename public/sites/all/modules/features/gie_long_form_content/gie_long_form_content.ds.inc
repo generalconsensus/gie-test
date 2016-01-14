@@ -82,7 +82,7 @@ function gie_long_form_content_ds_field_settings_info() {
   $ds_fieldsetting->view_mode = 'full';
   $ds_fieldsetting->settings = array(
     'long_form_powered_by' => array(
-      'weight' => '19',
+      'weight' => '16',
       'label' => 'hidden',
       'format' => 'default',
       'formatter_settings' => array(
@@ -273,6 +273,7 @@ function gie_long_form_content_ds_field_settings_info() {
       ),
     ),
     'field_longform_partners' => array(
+      'weight' => '17',
       'formatter_settings' => array(
         'ft' => array(
           'func' => 'theme_ds_field_expert',
