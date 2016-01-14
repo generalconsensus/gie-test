@@ -52,6 +52,7 @@ features[ds_layout_settings][] = node|organization|contact
 features[ds_layout_settings][] = node|organization|full
 features[ds_layout_settings][] = node|organization|listing
 features[ds_layout_settings][] = node|organization|logo
+features[ds_layout_settings][] = node|organization|long_form_footer_logo
 features[ds_layout_settings][] = node|organization|page_header
 features[ds_layout_settings][] = node|organization|search_listing
 features[ds_layout_settings][] = node|organization|teaser
