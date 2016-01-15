@@ -77,7 +77,6 @@ function _gie_data_viz_init() {
   drupal_add_js($path . '/app/src/controllers/countryInnovationsController.js');
   drupal_add_js($path . '/app/src/controllers/countryFundingController.js');
   drupal_add_js($path . '/app/src/directives/barChart.js');
-  drupal_add_js($path . '/app/src/directives/groupedBarChart.js');
   drupal_add_js($path . '/app/src/services/dataService.js');
   drupal_add_js($path . '/app/src/services/es.js');
   drupal_add_js($path . '/app/src/services/taxonomyTermService.js');
