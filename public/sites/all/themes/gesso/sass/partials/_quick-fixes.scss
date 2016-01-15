@@ -54,6 +54,7 @@
 
   .axis text {
     font: 10px sans-serif;
+    font-family: $base-font-family;
   }
 
   .axis path,
@@ -74,9 +75,5 @@
   }
   .grid path {
     stroke-width: 0;
-  }
-  
-  .tick text {
-    font-family: $base-font-family;
   }
 }
