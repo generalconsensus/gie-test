@@ -9,11 +9,21 @@ if ENV['server']
   set :run_updates, false
 else
   servers = Array.new
-  autoscaling.describe_auto_scaling_instances().data.auto_scaling_instances.each do |instance| 
-    instance = Aws::EC2::Instance.new(instance.instance_id, {
-  	  region: 'us-east-1'
-    })
-    servers.push('gie@' + instance.data.private_ip_address)
+  # First load the autoscale groups by name
+  groups = autoscaling.describe_auto_scaling_groups({
+    auto_scaling_group_names: ["gie-test"],
+  })
+
+  # Then iterate through those
+  groups.data.auto_scaling_groups.each do |group|
+    # Then through each instance
+    group.instances.each do |instance|
+      # Load the details to get the private IP address
+      details = Aws::EC2::Instance.new(instance.instance_id, {
+        region: 'us-east-1'
+      })
+      servers.push('gie@' + details.data.private_ip_address)
+    end
   end
 end
 

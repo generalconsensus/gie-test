@@ -3,3 +3,14 @@
 //
 // Deadlines happen, so put your quick fixes here. Hopefully there will be time
 // later to move/re-factor these styles into their proper place.
+
+.page-header {
+  background: $red url('http://giexchange-www.s3.amazonaws.com/default-report-feature-long-form.jpg') repeat repeat;
+  color: $white;
+  display: block;
+  padding: 8em 0 5em 0;
+  overflow: hidden;
+  position: relative;
+  text-align: center;
+  z-index: -2;
+}
