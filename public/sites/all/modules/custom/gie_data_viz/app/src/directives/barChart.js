@@ -13,26 +13,30 @@ angular.module('gieDataViz').directive('barChart', function() {
               data = newValue.data;
 
           var margin = {top: 20, right: 30, bottom: 100, left: 60},
-            width = 700 - margin.left - margin.right,
-            height = 500 - margin.top - margin.bottom;
+            width = 600 - margin.left - margin.right,
+            height = 400 - margin.top - margin.bottom;
 
           // Format numbers to 3 digits. e.g. 100, 100k, 10m, etc.
           var formatter = d3.format("s");
 
           var x = d3.scale.ordinal()
-            .rangeRoundBands([0,width],.1);
+            .domain(data.map(function(d) {return xInfo[d.id]; }))
+            .rangeRoundBands([0,width],.5);
 
           var y = d3.scale.linear()
+            .domain([0,d3.max(data, function(d) { return d.value; })])
             .range([height, 0]);
 
           var xAxis = d3.svg.axis()
             .scale(x)
-            .orient("bottom");
+            .orient("bottom")
+            .tickSize(0,0);
 
           var yAxis = d3.svg.axis()
             .scale(y)
             .orient("left")
-            .tickFormat(function(d) { return yInfo.prefix + formatter(d); });
+            .tickFormat(function(d) { return yInfo.prefix + formatter(d); })
+            .tickSize(-width,0,0);
 
           var chart = d3.select('#bar_chart__'+scope.$id)
             .attr("width", width + margin.left + margin.right)
@@ -40,22 +44,19 @@ angular.module('gieDataViz').directive('barChart', function() {
             .append("g")
             .attr("transform", "translate("+margin.left+","+margin.top+")");
 
-          x.domain(data.map(function(d) {return xInfo[d.id]; }));
-          y.domain([0,d3.max(data, function(d) { return d.value; })]);
-
           chart.append("g")
             .attr("class", "x axis")
             .attr("transform", "translate(0," + height + ")")
             .call(xAxis)
             .selectAll("text")
             .style("text-anchor", "end")
-            .attr("dx", -8)
-            .attr("dy", -5)
+            .attr("dx", -5)
+            .attr("dy", 0)
             .attr("transform", "rotate(-90)");
 
 
           chart.append("g")
-            .attr("class", "y axis")
+            .attr("class", "y axis grid")
             .call(yAxis)
             .append("text")
             .attr("transform", "rotate(-90)")
