@@ -11,6 +11,9 @@ function gie_data_ctools_plugin_api($module = NULL, $api = NULL) {
   if ($module == "page_manager" && $api == "pages_default") {
     return array("version" => "1");
   }
+  if ($module == "pane" && $api == "pane") {
+    return array("version" => "2");
+  }
   if ($module == "panels_mini" && $api == "panels_default") {
     return array("version" => "1");
   }
