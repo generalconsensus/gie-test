@@ -64,7 +64,8 @@
     shape-rendering: crispEdges;
   }
 
-  .x.axis path {
+  .x.axis path,
+  .y.axis path {
     display: none;
   }
 

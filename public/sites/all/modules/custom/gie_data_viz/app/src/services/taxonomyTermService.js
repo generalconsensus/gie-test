@@ -7,6 +7,7 @@ angular.module('gieDataViz').factory('taxonomyTermService', function(es, dataSer
         type: Drupal.settings.gie_data_viz.indices.terms.machine_name,
         size: terms.length,
         body: {
+          "fields": ["name","id"],
           "query": {
             "filtered": {
               "filter": {
@@ -19,17 +20,17 @@ angular.module('gieDataViz').factory('taxonomyTermService', function(es, dataSer
         }
       };
 
-      $results = dataService.getData(queryBody).then(function (response) {
+      var results = dataService.getData(queryBody).then(function (response) {
         var terms = {};
 
         response.hits.hits.forEach(function(item) {
-          terms[item['_source'].id] = item['_source'].name;
+          terms[item.fields.id[0]] = item.fields.name[0];
         });
 
         return terms;
       });
 
-      return $results;
+      return results;
     }
   }
 });

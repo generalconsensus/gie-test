@@ -2,9 +2,9 @@ angular.module('gieDataViz').directive('barChart', function() {
 
   return {
     restrict: 'E',
-    template: "<svg class=\"chart bar-chart vertical\" id=\"bar_chart__{{$id}}\" data=\"data\"></svg>",
+    template: '<svg class="chart bar-chart vertical" id="bar_chart__{{$id}}" data="data"></svg>',
     replace: true,
-    scope: { data: "="},
+    scope: { data: "=" },
     link: function (scope){
       scope.$watch('data', function(newValue,oldValue){
         if (newValue) {
@@ -41,8 +41,8 @@ angular.module('gieDataViz').directive('barChart', function() {
             .tickSize(-width,0,0);
 
           var chart = d3.select('#bar_chart__'+scope.$id)
-              .attr("width", width + margin.left + margin.right)
-              .attr("height", height + margin.top + margin.bottom)
+              .attr("width", maxWidth)
+              .attr("height", maxHeight)
             .append("g")
               .attr("transform", "translate("+margin.left+","+margin.top+")");
 
@@ -55,7 +55,6 @@ angular.module('gieDataViz').directive('barChart', function() {
               .attr("dx", -5)
               .attr("dy", 0)
               .attr("transform", "rotate(-90)");
-
 
           chart.append("g")
               .attr("class", "y axis grid")
