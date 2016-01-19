@@ -2,9 +2,9 @@ angular.module('gieDataViz').directive('barChart', function() {
 
   return {
     restrict: 'E',
-    template: "<svg class=\"chart bar-chart vertical\" id=\"bar_chart__{{$id}}\" data=\"data\"></svg>",
+    template: '<svg class="chart bar-chart vertical" id="bar_chart__{{$id}}" data="data"></svg>',
     replace: true,
-    scope: { data: "="},
+    scope: { data: "=" },
     link: function (scope){
       scope.$watch('data', function(newValue,oldValue){
         if (newValue) {
@@ -12,9 +12,11 @@ angular.module('gieDataViz').directive('barChart', function() {
               yInfo = newValue.yInfo,
               data = newValue.data;
 
-          var margin = {top: 20, right: 30, bottom: 100, left: 60},
-            width = 600 - margin.left - margin.right,
-            height = 400 - margin.top - margin.bottom;
+          var maxWidth = 600,
+              maxHeight = 400,
+              margin = {top: 20, right: 30, bottom: 100, left: 60},
+              width = maxWidth - margin.left - margin.right,
+              height = maxHeight - margin.top - margin.bottom;
 
           // Format numbers to 3 digits. e.g. 100, 100k, 10m, etc.
           var formatter = d3.format("s");
@@ -39,42 +41,47 @@ angular.module('gieDataViz').directive('barChart', function() {
             .tickSize(-width,0,0);
 
           var chart = d3.select('#bar_chart__'+scope.$id)
-            .attr("width", width + margin.left + margin.right)
-            .attr("height", height + margin.top + margin.bottom)
+              .attr("width", maxWidth)
+              .attr("height", maxHeight)
             .append("g")
-            .attr("transform", "translate("+margin.left+","+margin.top+")");
+              .attr("transform", "translate("+margin.left+","+margin.top+")");
 
           chart.append("g")
-            .attr("class", "x axis")
-            .attr("transform", "translate(0," + height + ")")
-            .call(xAxis)
+              .attr("class", "x axis")
+              .attr("transform", "translate(0," + height + ")")
+              .call(xAxis)
             .selectAll("text")
-            .style("text-anchor", "end")
-            .attr("dx", -5)
-            .attr("dy", 0)
-            .attr("transform", "rotate(-90)");
-
+              .style("text-anchor", "end")
+              .attr("dx", -5)
+              .attr("dy", 0)
+              .attr("transform", "rotate(-90)");
 
           chart.append("g")
-            .attr("class", "y axis grid")
-            .call(yAxis)
+              .attr("class", "y axis grid")
+              .call(yAxis)
             .append("text")
-            .attr("transform", "rotate(-90)")
-            .attr("y", -50)
-            .attr("x", -(height/2))
-            .attr("dy", ".71em")
-            .style("text-anchor", "middle")
-            .text(yInfo.label);
+              .attr("transform", "rotate(-90)")
+              .attr("y", -50)
+              .attr("x", -(height/2))
+              .attr("dy", ".71em")
+              .style("text-anchor", "middle")
+              .text(yInfo.label);
 
 
-          chart.selectAll(".bar")
-            .data(data)
-            .enter().append("rect")
-            .attr("class", "bar")
-            .attr("x", function(d) { return x(xInfo[d.id]); })
-            .attr("y", function(d) { return y(d.value); })
-            .attr("height", function(d) { return height - y(d.value); })
-            .attr("width", x.rangeBand());
+          var bar = chart.selectAll(".bar")
+              .data(data);
+
+          bar.enter().append("rect")
+              .attr("class", "bar")
+              .attr("x", function(d) { return x(xInfo[d.id]); })
+              .attr("y", height)
+              .attr("height", 0 )
+              .attr("width", x.rangeBand())
+            .transition().duration(500)
+              .attr("y", function(d) { return y(d.value); })
+              .attr("height", function(d) { return height - y(d.value); });
+
+          bar.exit().remove();
         }
       });
     }

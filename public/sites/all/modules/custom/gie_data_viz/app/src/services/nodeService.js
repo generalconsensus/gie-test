@@ -1,18 +1,18 @@
-angular.module('gieDataViz').factory('taxonomyTermService', function(es, dataService) {
+angular.module('gieDataViz').factory('nodeService', function(es, dataService) {
   return {
-    getTermNames: function(terms) {
+    getNodeTitles: function(nodeKeys) {
 
       var queryBody = {
-        index: Drupal.settings.gie_data_viz.base + 'terms',
-        type: 'terms',
-        size: terms.length,
+        index: Drupal.settings.gie_data_viz.base + 'api',
+        type: 'api',
+        size: nodeKeys.length,
         body: {
-          "fields": ["name","id"],
+          "fields": ["title","id"],
           "query": {
             "filtered": {
               "filter": {
                 "terms": {
-                  "id": terms,
+                  "id": nodeKeys,
                 }
               }
             }
@@ -21,13 +21,13 @@ angular.module('gieDataViz').factory('taxonomyTermService', function(es, dataSer
       };
 
       var results = dataService.getData(queryBody).then(function (response) {
-        var terms = {};
+        var nodes = {};
 
         response.hits.hits.forEach(function(item) {
-          terms[item.fields.id[0]] = item.fields.name[0];
+          nodes[item.fields.id[0]] = item.fields.title[0];
         });
 
-        return terms;
+        return nodes;
       });
 
       return results;

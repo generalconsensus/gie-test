@@ -606,11 +606,6 @@ $conf['search_api_override_servers'] = array(
 
 $conf['search_api_override_mode'] = 'default';
 
-$conf['elasticsearch_index'] = array(
-  'api' => array('machine_name' => 'features_api'),
-  'terms' => array('machine_name' => 'features_terms'),
-);
-
 /**
  * memcache configuration
  */

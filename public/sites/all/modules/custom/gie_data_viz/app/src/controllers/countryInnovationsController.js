@@ -1,8 +1,8 @@
 angular.module('gieDataViz').controller('CountryInnovationsController', function($scope, es, dataService, taxonomyTermService) {
 
   var queryBody = {
-    index: Drupal.settings.gie_data_viz.base + Drupal.settings.gie_data_viz.indices.api.machine_name,
-    type: Drupal.settings.gie_data_viz.indices.api.machine_name,
+    index: Drupal.settings.gie_data_viz.base + 'api',
+    type: 'api',
     size: 0,
     body: {
       "query": {
