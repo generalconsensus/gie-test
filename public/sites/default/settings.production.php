@@ -606,11 +606,6 @@ $conf['search_api_override_servers'] = array(
 
 $conf['search_api_override_mode'] = 'default';
 
-$conf['elasticsearch_index'] = array(
-  'api' => array('machine_name' => 'autoscale_api'),
-  'terms' => array('machine_name' => 'autoscale_terms'),
-);
-
 /* Ensures no content is indexed to core search */
 $conf['search_cron_limit'] = 0;
 

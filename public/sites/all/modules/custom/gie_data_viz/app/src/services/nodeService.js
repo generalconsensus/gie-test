@@ -3,8 +3,8 @@ angular.module('gieDataViz').factory('nodeService', function(es, dataService) {
     getNodeTitles: function(nodeKeys) {
 
       var queryBody = {
-        index: Drupal.settings.gie_data_viz.base + Drupal.settings.gie_data_viz.indices.api.machine_name,
-        type: Drupal.settings.gie_data_viz.indices.api.machine_name,
+        index: Drupal.settings.gie_data_viz.base + 'api',
+        type: 'api',
         size: nodeKeys.length,
         body: {
           "fields": ["title","id"],

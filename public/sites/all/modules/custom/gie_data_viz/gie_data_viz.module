@@ -103,7 +103,6 @@ function _gie_data_viz_init() {
   drupal_add_js(array('gie_data_viz' =>
     array(
       'base' => 'elasticsearch_index_'. _gie_data_viz_get_database_name() . '_',
-      'indices' => variable_get('elasticsearch_index'),
       'url' => _gie_data_viz_get_elastic_url(),
     ),
   ), array('type' => 'setting'));

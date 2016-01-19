@@ -3,8 +3,8 @@ angular.module('gieDataViz').factory('taxonomyTermService', function(es, dataSer
     getTermNames: function(terms) {
 
       var queryBody = {
-        index: Drupal.settings.gie_data_viz.base + Drupal.settings.gie_data_viz.indices.terms.machine_name,
-        type: Drupal.settings.gie_data_viz.indices.terms.machine_name,
+        index: Drupal.settings.gie_data_viz.base + 'terms',
+        type: 'terms',
         size: terms.length,
         body: {
           "fields": ["name","id"],

@@ -53,6 +53,7 @@ function gie_search_default_search_api_index() {
         "field_term_topic" : { "type" : "list\\u003Cinteger\\u003E", "entity_type" : "taxonomy_term" },
         "nid" : { "type" : "integer" },
         "search_api_language" : { "type" : "string" },
+        "title" : { "type" : "string" },
         "type" : { "type" : "string" },
         "url" : { "type" : "uri" }
       },
