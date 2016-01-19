@@ -103,12 +103,18 @@ function gie_data_views_default_views() {
   $handler->display->display_options['fields']['field_funding_grant_award_value']['relationship'] = 'reverse_field_term_sector_node';
   $handler->display->display_options['fields']['field_funding_grant_award_value']['group_type'] = 'sum';
   $handler->display->display_options['fields']['field_funding_grant_award_value']['label'] = '';
-  $handler->display->display_options['fields']['field_funding_grant_award_value']['alter']['make_link'] = TRUE;
+  $handler->display->display_options['fields']['field_funding_grant_award_value']['alter']['alter_text'] = TRUE;
+  $handler->display->display_options['fields']['field_funding_grant_award_value']['alter']['text'] = '<a href="/funding/sector/[tid]">$[field_funding_grant_award_value]</a>';
   $handler->display->display_options['fields']['field_funding_grant_award_value']['alter']['path'] = 'funding/sector/[tid]';
   $handler->display->display_options['fields']['field_funding_grant_award_value']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_funding_grant_award_value']['type'] = 'short_scale_formatter';
   $handler->display->display_options['fields']['field_funding_grant_award_value']['settings'] = array(
-    'thousand_separator' => '',
-    'prefix_suffix' => 1,
+    'wrapper_element' => 'span',
+    'wrapper_title_text' => '',
+    'thousand' => 'K',
+    'million' => 'M',
+    'billion' => 'B',
+    'trillion' => 'T',
     'linked_field' => array(
       'linked' => 0,
       'destination' => '',
@@ -1014,10 +1020,17 @@ function gie_data_views_default_views() {
   $handler->display->display_options['fields']['field_funding_grant_award_value']['field'] = 'field_funding_grant_award_value';
   $handler->display->display_options['fields']['field_funding_grant_award_value']['group_type'] = 'sum';
   $handler->display->display_options['fields']['field_funding_grant_award_value']['label'] = '';
+  $handler->display->display_options['fields']['field_funding_grant_award_value']['alter']['alter_text'] = TRUE;
+  $handler->display->display_options['fields']['field_funding_grant_award_value']['alter']['text'] = '$[field_funding_grant_award_value]';
   $handler->display->display_options['fields']['field_funding_grant_award_value']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_funding_grant_award_value']['type'] = 'short_scale_formatter';
   $handler->display->display_options['fields']['field_funding_grant_award_value']['settings'] = array(
-    'thousand_separator' => '',
-    'prefix_suffix' => 1,
+    'wrapper_element' => 'span',
+    'wrapper_title_text' => '',
+    'thousand' => 'K',
+    'million' => 'M',
+    'billion' => 'B',
+    'trillion' => 'T',
     'linked_field' => array(
       'linked' => 0,
       'destination' => '',
@@ -1042,97 +1055,6 @@ function gie_data_views_default_views() {
   $handler->display->display_options['fields']['title']['alter']['word_boundary'] = FALSE;
   $handler->display->display_options['fields']['title']['alter']['ellipsis'] = FALSE;
   $handler->display->display_options['fields']['title']['element_label_colon'] = FALSE;
-  $handler->display->display_options['defaults']['sorts'] = FALSE;
-  /* Sort criterion: Content: Grant / Award Value (field_funding_grant_award_value) */
-  $handler->display->display_options['sorts']['field_funding_grant_award_value_value']['id'] = 'field_funding_grant_award_value_value';
-  $handler->display->display_options['sorts']['field_funding_grant_award_value_value']['table'] = 'field_data_field_funding_grant_award_value';
-  $handler->display->display_options['sorts']['field_funding_grant_award_value_value']['field'] = 'field_funding_grant_award_value_value';
-  $handler->display->display_options['sorts']['field_funding_grant_award_value_value']['group_type'] = 'sum';
-  $handler->display->display_options['sorts']['field_funding_grant_award_value_value']['order'] = 'DESC';
-
-  /* Display: Funding by Sector */
-  $handler = $view->new_display('panel_pane', 'Funding by Sector', 'funding_by_sector');
-  $handler->display->display_options['defaults']['title'] = FALSE;
-  $handler->display->display_options['title'] = 'Top Sectors';
-  $handler->display->display_options['defaults']['css_class'] = FALSE;
-  $handler->display->display_options['defaults']['group_by'] = FALSE;
-  $handler->display->display_options['group_by'] = TRUE;
-  $handler->display->display_options['defaults']['pager'] = FALSE;
-  $handler->display->display_options['pager']['type'] = 'some';
-  $handler->display->display_options['pager']['options']['items_per_page'] = '5';
-  $handler->display->display_options['pager']['options']['offset'] = '0';
-  $handler->display->display_options['defaults']['style_plugin'] = FALSE;
-  $handler->display->display_options['style_plugin'] = 'table';
-  $handler->display->display_options['style_options']['columns'] = array(
-    'title' => 'title',
-    'field_funding_grant_award_value' => 'field_funding_grant_award_value',
-  );
-  $handler->display->display_options['style_options']['default'] = '-1';
-  $handler->display->display_options['style_options']['info'] = array(
-    'title' => array(
-      'sortable' => 0,
-      'default_sort_order' => 'asc',
-      'align' => '',
-      'separator' => '',
-      'empty_column' => 0,
-    ),
-    'field_funding_grant_award_value' => array(
-      'sortable' => 0,
-      'default_sort_order' => 'asc',
-      'align' => '',
-      'separator' => '',
-      'empty_column' => 0,
-    ),
-  );
-  $handler->display->display_options['defaults']['style_options'] = FALSE;
-  $handler->display->display_options['defaults']['row_plugin'] = FALSE;
-  $handler->display->display_options['defaults']['row_options'] = FALSE;
-  $handler->display->display_options['defaults']['header'] = FALSE;
-  /* Header: Global: Text area */
-  $handler->display->display_options['header']['area']['id'] = 'area';
-  $handler->display->display_options['header']['area']['table'] = 'views';
-  $handler->display->display_options['header']['area']['field'] = 'area';
-  $handler->display->display_options['header']['area']['content'] = 'Measured in Millions of US Dollars';
-  $handler->display->display_options['header']['area']['format'] = 'filtered_html';
-  $handler->display->display_options['defaults']['relationships'] = FALSE;
-  /* Relationship: Field: Sector (field_term_sector) */
-  $handler->display->display_options['relationships']['field_term_sector_tid']['id'] = 'field_term_sector_tid';
-  $handler->display->display_options['relationships']['field_term_sector_tid']['table'] = 'field_data_field_term_sector';
-  $handler->display->display_options['relationships']['field_term_sector_tid']['field'] = 'field_term_sector_tid';
-  $handler->display->display_options['relationships']['field_term_sector_tid']['required'] = TRUE;
-  $handler->display->display_options['defaults']['fields'] = FALSE;
-  /* Field: Content: Grant / Award Value */
-  $handler->display->display_options['fields']['field_funding_grant_award_value']['id'] = 'field_funding_grant_award_value';
-  $handler->display->display_options['fields']['field_funding_grant_award_value']['table'] = 'field_data_field_funding_grant_award_value';
-  $handler->display->display_options['fields']['field_funding_grant_award_value']['field'] = 'field_funding_grant_award_value';
-  $handler->display->display_options['fields']['field_funding_grant_award_value']['group_type'] = 'sum';
-  $handler->display->display_options['fields']['field_funding_grant_award_value']['label'] = '';
-  $handler->display->display_options['fields']['field_funding_grant_award_value']['element_label_colon'] = FALSE;
-  $handler->display->display_options['fields']['field_funding_grant_award_value']['settings'] = array(
-    'thousand_separator' => '',
-    'prefix_suffix' => 1,
-    'linked_field' => array(
-      'linked' => 0,
-      'destination' => '',
-      'advanced' => array(
-        'title' => '',
-        'target' => '',
-        'class' => '',
-        'rel' => '',
-        'text' => '',
-      ),
-    ),
-  );
-  $handler->display->display_options['fields']['field_funding_grant_award_value']['group_columns'] = array(
-    'value' => 'value',
-  );
-  /* Field: Taxonomy term: Name */
-  $handler->display->display_options['fields']['name']['id'] = 'name';
-  $handler->display->display_options['fields']['name']['table'] = 'taxonomy_term_data';
-  $handler->display->display_options['fields']['name']['field'] = 'name';
-  $handler->display->display_options['fields']['name']['relationship'] = 'field_term_sector_tid';
-  $handler->display->display_options['fields']['name']['label'] = '';
-  $handler->display->display_options['fields']['name']['element_label_colon'] = FALSE;
   $handler->display->display_options['defaults']['sorts'] = FALSE;
   /* Sort criterion: Content: Grant / Award Value (field_funding_grant_award_value) */
   $handler->display->display_options['sorts']['field_funding_grant_award_value_value']['id'] = 'field_funding_grant_award_value_value';
@@ -1169,10 +1091,17 @@ function gie_data_views_default_views() {
   $handler->display->display_options['fields']['field_funding_grant_award_value']['group_type'] = 'sum';
   $handler->display->display_options['fields']['field_funding_grant_award_value']['label'] = '';
   $handler->display->display_options['fields']['field_funding_grant_award_value']['exclude'] = TRUE;
+  $handler->display->display_options['fields']['field_funding_grant_award_value']['alter']['alter_text'] = TRUE;
+  $handler->display->display_options['fields']['field_funding_grant_award_value']['alter']['text'] = '$[field_funding_grant_award_value] ';
   $handler->display->display_options['fields']['field_funding_grant_award_value']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_funding_grant_award_value']['type'] = 'short_scale_formatter';
   $handler->display->display_options['fields']['field_funding_grant_award_value']['settings'] = array(
-    'thousand_separator' => '',
-    'prefix_suffix' => 1,
+    'wrapper_element' => 'span',
+    'wrapper_title_text' => '',
+    'thousand' => 'K',
+    'million' => 'M',
+    'billion' => 'B',
+    'trillion' => 'T',
     'linked_field' => array(
       'linked' => 0,
       'destination' => '',
@@ -1243,12 +1172,15 @@ function gie_data_views_default_views() {
   $handler->display->display_options['pager']['type'] = 'none';
   $handler->display->display_options['style_plugin'] = 'default';
   $handler->display->display_options['row_plugin'] = 'fields';
-  /* Field: Broken/missing handler */
+  /* Field: Session calculated metrics: Avg. Session Duration */
   $handler->display->display_options['fields']['avgSessionDuration']['id'] = 'avgSessionDuration';
   $handler->display->display_options['fields']['avgSessionDuration']['table'] = 'google_analytics';
   $handler->display->display_options['fields']['avgSessionDuration']['field'] = 'avgSessionDuration';
   $handler->display->display_options['fields']['avgSessionDuration']['label'] = 'Average Session Time';
   $handler->display->display_options['fields']['avgSessionDuration']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['avgSessionDuration']['date_format'] = 'custom';
+  $handler->display->display_options['fields']['avgSessionDuration']['custom_date_format'] = 'i:s';
+  $handler->display->display_options['fields']['avgSessionDuration']['second_date_format'] = 'html5_tools_iso8601';
 
   /* Display: GA Data Sessions */
   $handler = $view->new_display('panel_pane', 'GA Data Sessions', 'session_length');
@@ -1261,7 +1193,7 @@ function gie_data_views_default_views() {
   $handler->display->display_options['footer']['area']['content'] = '<h3>Average Visit Length</h3>';
   $handler->display->display_options['footer']['area']['format'] = 'full_html';
   $handler->display->display_options['defaults']['fields'] = FALSE;
-  /* Field: Broken/missing handler */
+  /* Field: Session calculated metrics: Avg. Session Duration */
   $handler->display->display_options['fields']['avgSessionDuration']['id'] = 'avgSessionDuration';
   $handler->display->display_options['fields']['avgSessionDuration']['table'] = 'google_analytics';
   $handler->display->display_options['fields']['avgSessionDuration']['field'] = 'avgSessionDuration';
@@ -1269,6 +1201,9 @@ function gie_data_views_default_views() {
   $handler->display->display_options['fields']['avgSessionDuration']['element_type'] = 'h2';
   $handler->display->display_options['fields']['avgSessionDuration']['element_class'] = 'pane__title';
   $handler->display->display_options['fields']['avgSessionDuration']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['avgSessionDuration']['date_format'] = 'custom';
+  $handler->display->display_options['fields']['avgSessionDuration']['custom_date_format'] = 'i:s';
+  $handler->display->display_options['fields']['avgSessionDuration']['second_date_format'] = 'html5_tools_iso8601';
 
   /* Display: GA Data Users */
   $handler = $view->new_display('panel_pane', 'GA Data Users', 'user_count');
@@ -1281,7 +1216,7 @@ function gie_data_views_default_views() {
   $handler->display->display_options['footer']['area']['content'] = '<h3>Total Beta Visitors</h3>';
   $handler->display->display_options['footer']['area']['format'] = 'full_html';
   $handler->display->display_options['defaults']['fields'] = FALSE;
-  /* Field: Broken/missing handler */
+  /* Field: User metrics: Users */
   $handler->display->display_options['fields']['users']['id'] = 'users';
   $handler->display->display_options['fields']['users']['table'] = 'google_analytics';
   $handler->display->display_options['fields']['users']['field'] = 'users';
@@ -1289,6 +1224,7 @@ function gie_data_views_default_views() {
   $handler->display->display_options['fields']['users']['element_type'] = 'h2';
   $handler->display->display_options['fields']['users']['element_class'] = 'pane__title';
   $handler->display->display_options['fields']['users']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['users']['precision'] = '0';
 
   /* Display: GA Returning Users */
   $handler = $view->new_display('panel_pane', 'GA Returning Users', 'return_user_traffic');
@@ -1301,18 +1237,20 @@ function gie_data_views_default_views() {
   $handler->display->display_options['footer']['area']['content'] = '<h3>Returning User Traffic</h3>';
   $handler->display->display_options['footer']['area']['format'] = 'full_html';
   $handler->display->display_options['defaults']['fields'] = FALSE;
-  /* Field: Broken/missing handler */
+  /* Field: Session metrics: Sessions */
   $handler->display->display_options['fields']['sessions']['id'] = 'sessions';
   $handler->display->display_options['fields']['sessions']['table'] = 'google_analytics';
   $handler->display->display_options['fields']['sessions']['field'] = 'sessions';
-  $handler->display->display_options['fields']['sessions']['label'] = 'Sessions';
   $handler->display->display_options['fields']['sessions']['exclude'] = TRUE;
-  /* Field: Broken/missing handler */
+  $handler->display->display_options['fields']['sessions']['precision'] = '0';
+  $handler->display->display_options['fields']['sessions']['separator'] = '';
+  /* Field: User calculated metrics: % New Sessions */
   $handler->display->display_options['fields']['percentNewSessions']['id'] = 'percentNewSessions';
   $handler->display->display_options['fields']['percentNewSessions']['table'] = 'google_analytics';
   $handler->display->display_options['fields']['percentNewSessions']['field'] = 'percentNewSessions';
-  $handler->display->display_options['fields']['percentNewSessions']['label'] = '% New Sessions';
   $handler->display->display_options['fields']['percentNewSessions']['exclude'] = TRUE;
+  $handler->display->display_options['fields']['percentNewSessions']['precision'] = '0';
+  $handler->display->display_options['fields']['percentNewSessions']['separator'] = '';
   /* Field: Global: Math expression */
   $handler->display->display_options['fields']['expression']['id'] = 'expression';
   $handler->display->display_options['fields']['expression']['table'] = 'views';
@@ -1345,7 +1283,7 @@ function gie_data_views_default_views() {
   $handler->display->display_options['header']['area']['content'] = '<h1>Countries with Visitors</h1>';
   $handler->display->display_options['header']['area']['format'] = 'full_html';
   $handler->display->display_options['defaults']['fields'] = FALSE;
-  /* Field: Broken/missing handler */
+  /* Field: Geo network dimensions: Country / Territory */
   $handler->display->display_options['fields']['country']['id'] = 'country';
   $handler->display->display_options['fields']['country']['table'] = 'google_analytics';
   $handler->display->display_options['fields']['country']['field'] = 'country';
@@ -1356,7 +1294,7 @@ function gie_data_views_default_views() {
   $handler->display->display_options['fields']['country']['element_label_colon'] = FALSE;
   $handler->display->display_options['defaults']['filter_groups'] = FALSE;
   $handler->display->display_options['defaults']['filters'] = FALSE;
-  /* Filter criterion: Broken/missing handler */
+  /* Filter criterion: Geo network dimensions: Country / Territory */
   $handler->display->display_options['filters']['country']['id'] = 'country';
   $handler->display->display_options['filters']['country']['table'] = 'google_analytics';
   $handler->display->display_options['filters']['country']['field'] = 'country';
