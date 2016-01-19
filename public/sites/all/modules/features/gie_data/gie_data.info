@@ -6,6 +6,7 @@ dependencies[] = entity
 dependencies[] = page_manager
 dependencies[] = pane
 dependencies[] = panels_mini
+dependencies[] = short_scale_formatter
 dependencies[] = views
 dependencies[] = views_content
 features[ctools][] = page_manager:pages_default:1
