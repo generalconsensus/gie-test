@@ -10,12 +10,9 @@
     }
   }
   table {
-    tr {
-      padding-bottom: 0.5em;
-    }
     td {
-      //font-size: em($font-size-md);
       line-height: 1.3;
+      padding-bottom: 0.25em;
     }
     td:first-child {
       padding-right: 1em;
