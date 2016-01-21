@@ -1,0 +1,41 @@
+
+%callout-icon {
+  content: "";
+  display: block;
+  float: left;
+  margin-right: 20px;
+  position: relative;
+  top: 2px;
+}
+
+.callout {
+  @extend %h1;
+  padding: 5% 0;
+  &.has-icon-innovation {
+    &:before {
+      @include svg-background(icon-innov-browse-41-54-darkblue);
+      @extend %callout-icon;
+      background-size: 41px 54px;
+      height: 54px;
+      width: 41px;
+    }
+  }
+  &.has-icon-funding {    
+    &:before {
+      @include svg-background(icon-fund-browse-54-54-darkblue);
+      @extend %callout-icon;
+      background-size: 54px 54px;
+      height: 54px;
+      width: 54px;
+    }
+  }
+  &.has-icon-user {
+    &:before {
+      @include svg-background(icon-about-members-52-52-darkblue);
+      @extend %callout-icon;
+      background-size: 52px 52px;
+      height: 52px;
+      width: 52px;
+    }
+  }
+}

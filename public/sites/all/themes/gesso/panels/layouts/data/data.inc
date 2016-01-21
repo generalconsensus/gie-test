@@ -13,6 +13,7 @@ function gesso_data_panels_layouts() {
       'title' => t('Title'),
       'main' => t('Main'),
       'main_sidebar' => t('Main sidebar'),
+      'highlight' => t('Highlight'),
       'row1' => t('Row 1'),
       'row2_first' => t('Row 2 first'),
       'row2_second' => t('Row 2 second'),

@@ -71,19 +71,19 @@ $iconList : (
 }
 
 
-
-//Add addtional class names and icons to $iconList variable
+ 
+//Add additional class names and icons to $iconList variable
 @each $iconList, $iconName in $iconList {
-    .#{$iconList}:before {
-      @include transition(opacity 0.2s linear);
-      @include svg-background($iconName);
-      opacity: 0.6;
-    }
-    .#{$iconList}:focus:before,
-    .#{$iconList}:hover:before,
-    .#{$iconList}:active:before {
-      opacity: 1;
-    }
+  .tb-megamenu-big-button.#{$iconList}:before {
+    @include transition(opacity 0.2s linear);
+    @include svg-background($iconName);
+    opacity: 0.6;
+  }
+  .tb-megamenu-big-button.#{$iconList}:focus:before,
+  .tb-megamenu-big-button.#{$iconList}:hover:before,
+  .tb-megamenu-big-button.#{$iconList}:active:before {
+    opacity: 1;
+  }
 }
 
 

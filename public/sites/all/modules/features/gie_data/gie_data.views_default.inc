@@ -562,11 +562,7 @@ function gie_data_views_default_views() {
   $handler->display->display_options['fields']['nothing']['table'] = 'views';
   $handler->display->display_options['fields']['nothing']['field'] = 'nothing';
   $handler->display->display_options['fields']['nothing']['label'] = '';
-  $handler->display->display_options['fields']['nothing']['alter']['text'] = '<div class="pane pane--homepage-join-callout">
-     <div class="pane__content">
-           <h1><a href="/members">[uid]</a> collaborators, offering [tid] skills to innovators to help them change the world.</h1>
-     </div>
-</div>';
+  $handler->display->display_options['fields']['nothing']['alter']['text'] = '<div class="callout has-icon-user"><a href="/members">[uid]</a> collaborators, offering [tid] skills to innovators to help them change the world.</div>';
   $handler->display->display_options['fields']['nothing']['element_label_colon'] = FALSE;
   $export['data_page_users'] = $view;
 
@@ -707,11 +703,7 @@ function gie_data_views_default_views() {
   $handler->display->display_options['fields']['nothing']['table'] = 'views';
   $handler->display->display_options['fields']['nothing']['field'] = 'nothing';
   $handler->display->display_options['fields']['nothing']['label'] = '';
-  $handler->display->display_options['fields']['nothing']['alter']['text'] = '<div class="pane pane--homepage-join-callout">
-     <div class="pane__content">
-           <h1><a href="/innovations">[nid] Innovations</a> created in [field_innovation_created] countries and implemented in [field_innovation_implemented] countries across <a href ="/sectors">[field_term_sector] sectors</a> and sub sectors.</h1>
-     </div>
-</div>';
+  $handler->display->display_options['fields']['nothing']['alter']['text'] = '<div class="callout has-icon-innovation"><a href="/innovations">[nid] Innovations</a> created in [field_innovation_created] countries and implemented in [field_innovation_implemented] countries across <a href ="/sectors">[field_term_sector] sectors</a> and sub sectors.</div>';
   $handler->display->display_options['fields']['nothing']['element_label_colon'] = FALSE;
   $handler->display->display_options['defaults']['sorts'] = FALSE;
   $handler->display->display_options['defaults']['filter_groups'] = FALSE;
@@ -1128,11 +1120,7 @@ function gie_data_views_default_views() {
   $handler->display->display_options['fields']['nothing']['table'] = 'views';
   $handler->display->display_options['fields']['nothing']['field'] = 'nothing';
   $handler->display->display_options['fields']['nothing']['label'] = '';
-  $handler->display->display_options['fields']['nothing']['alter']['text'] = '<div class="pane pane--homepage-join-callout">
-     <div class="pane__content">
-           <h1><a href="/funding">[field_funding_grant_award_value] available</a> funding from over <a href ="/organizations">[nid]</a> funding organizations and individual donors.</h1>
-     </div>
-</div>';
+  $handler->display->display_options['fields']['nothing']['alter']['text'] = '<div class="callout has-icon-funding"><a href="/funding">[field_funding_grant_award_value] available</a> funding from over <a href ="/organizations">[nid]</a> funding organizations and individual donors.</div>';
   $handler->display->display_options['fields']['nothing']['element_label_colon'] = FALSE;
   $handler->display->display_options['defaults']['sorts'] = FALSE;
   $handler->display->display_options['defaults']['filter_groups'] = FALSE;

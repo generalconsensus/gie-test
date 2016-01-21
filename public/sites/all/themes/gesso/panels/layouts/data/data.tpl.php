@@ -40,6 +40,13 @@
       <?php endif; ?>
     </div>
   <?php endif; ?>
+  <?php if (!empty($content['highlight'])): ?>
+    <div class="l-highlight">
+      <div class="layout-constrain">
+        <?php print $content['highlight']; ?>
+      </div>
+    </div>
+  <?php endif; ?>
   <?php if (!empty($content['row1'])): ?>
     <div class="l-row1">
       <div class="layout-constrain">
