@@ -606,8 +606,6 @@ $conf['search_api_override_servers'] = array(
 
 $conf['search_api_override_mode'] = 'default';
 
-$conf['elasticsearch_index'] = array('machine_name' => 'stage');
-
 /**
  * memcache configuration
  */

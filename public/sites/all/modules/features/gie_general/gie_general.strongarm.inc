@@ -62,6 +62,36 @@ function gie_general_strongarm() {
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
+  $strongarm->name = 'angularjs_cdn';
+  $strongarm->value = '0';
+  $export['angularjs_cdn'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'angularjs_compression_type';
+  $strongarm->value = 'min';
+  $export['angularjs_compression_type'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'angularjs_files';
+  $strongarm->value = array(
+    0 => 'angular-resource',
+  );
+  $export['angularjs_files'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'angularjs_version';
+  $strongarm->value = '1.0.8';
+  $export['angularjs_version'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
   $strongarm->name = 'blockify_blocks';
   $strongarm->value = array(
     'blockify-logo' => 'blockify-logo',
