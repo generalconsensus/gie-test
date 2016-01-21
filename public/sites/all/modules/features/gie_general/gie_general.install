@@ -373,3 +373,13 @@ function gie_general_update_7036() {
   );
   module_enable($modules, TRUE);
 }
+
+/**
+ * Enable GIE Data feature.
+ */
+function gie_general_update_7037() {
+  $modules = array(
+    'gie_data'
+  );
+  module_enable($modules, TRUE);
+}
