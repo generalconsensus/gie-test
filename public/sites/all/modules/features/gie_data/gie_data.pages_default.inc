@@ -73,7 +73,7 @@ function gie_data_default_page_manager_pages() {
     ),
   );
   $display->cache = array();
-  $display->title = 'Data';
+  $display->title = 'Innovation by the Numbers';
   $display->uuid = 'a5dab807-c611-416f-af15-2581f30e545e';
   $display->content = array();
   $display->panels = array();
@@ -164,6 +164,29 @@ function gie_data_default_page_manager_pages() {
     $display->content['new-d7aceaca-2bcc-465f-b93b-711c88904a49'] = $pane;
     $display->panels['row1'][1] = 'new-d7aceaca-2bcc-465f-b93b-711c88904a49';
     $pane = new stdClass();
+    $pane->pid = 'new-3426f2f0-7dad-48da-89bc-132e62f47760';
+    $pane->panel = 'row2_first';
+    $pane->type = 'block';
+    $pane->subtype = 'gie_data_viz-gie_data_viz_country_inno_chart';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array(
+      'override_title' => 1,
+      'override_title_text' => 'Innovations by Country',
+      'override_title_heading' => 'h2',
+    );
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
+    $pane->css = array();
+    $pane->extras = array();
+    $pane->position = 0;
+    $pane->locks = array();
+    $pane->uuid = '3426f2f0-7dad-48da-89bc-132e62f47760';
+    $display->content['new-3426f2f0-7dad-48da-89bc-132e62f47760'] = $pane;
+    $display->panels['row2_first'][0] = 'new-3426f2f0-7dad-48da-89bc-132e62f47760';
+    $pane = new stdClass();
     $pane->pid = 'new-6d67bd93-271e-4101-bddd-d38f304061cb';
     $pane->panel = 'row2_second';
     $pane->type = 'views_panes';
@@ -220,6 +243,29 @@ function gie_data_default_page_manager_pages() {
     $pane->uuid = 'a22fdfe2-05ff-4911-9904-3a2350a4c9e8';
     $display->content['new-a22fdfe2-05ff-4911-9904-3a2350a4c9e8'] = $pane;
     $display->panels['row3'][0] = 'new-a22fdfe2-05ff-4911-9904-3a2350a4c9e8';
+    $pane = new stdClass();
+    $pane->pid = 'new-3b3a1122-7c66-4e65-9303-8629e36dfa27';
+    $pane->panel = 'row4_first';
+    $pane->type = 'block';
+    $pane->subtype = 'gie_data_viz-gie_data_viz_country_fund_chart';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array(
+      'override_title' => 1,
+      'override_title_text' => 'Funding by Country',
+      'override_title_heading' => 'h2',
+    );
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
+    $pane->css = array();
+    $pane->extras = array();
+    $pane->position = 0;
+    $pane->locks = array();
+    $pane->uuid = '3b3a1122-7c66-4e65-9303-8629e36dfa27';
+    $display->content['new-3b3a1122-7c66-4e65-9303-8629e36dfa27'] = $pane;
+    $display->panels['row4_first'][0] = 'new-3b3a1122-7c66-4e65-9303-8629e36dfa27';
     $pane = new stdClass();
     $pane->pid = 'new-350c933b-f781-475b-b951-dca311676519';
     $pane->panel = 'row4_second';
