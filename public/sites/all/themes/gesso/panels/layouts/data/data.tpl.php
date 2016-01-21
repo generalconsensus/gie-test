@@ -40,6 +40,13 @@
       <?php endif; ?>
     </div>
   <?php endif; ?>
+  <?php if (!empty($content['highlight'])): ?>
+    <div class="l-highlight">
+      <div class="layout-constrain">
+        <?php print $content['highlight']; ?>
+      </div>
+    </div>
+  <?php endif; ?>
   <?php if (!empty($content['row1'])): ?>
     <div class="l-row1">
       <div class="layout-constrain">
@@ -50,21 +57,23 @@
   <?php if (!empty($content['row2_first']) || !empty($content['row2_second']) || !empty($content['row2_third'])): ?>
     <div class="l-wrapper">
       <div class="layout-constrain">
-        <?php if (!empty($content['row2_first'])): ?>
-          <div class="l-row2-first">
-            <?php print $content['row2_first']; ?>
-          </div>
-        <?php endif; ?>
-        <?php if (!empty($content['row2_second'])): ?>
-          <div class="l-row2-second">
-            <?php print $content['row2_second']; ?>
-          </div>
-        <?php endif; ?>
-        <?php if (!empty($content['row2_third'])): ?>
-          <div class="l-row2-third">
-            <?php print $content['row2_third']; ?>
-          </div>
-        <?php endif; ?>
+        <div class="l-row-divider">
+          <?php if (!empty($content['row2_first'])): ?>
+            <div class="l-row2-first">
+              <?php print $content['row2_first']; ?>
+            </div>
+          <?php endif; ?>
+          <?php if (!empty($content['row2_second'])): ?>
+            <div class="l-row2-second">
+              <?php print $content['row2_second']; ?>
+            </div>
+          <?php endif; ?>
+          <?php if (!empty($content['row2_third'])): ?>
+            <div class="l-row2-third">
+              <?php print $content['row2_third']; ?>
+            </div>
+          <?php endif; ?>
+        </div>
       </div>
     </div>
   <?php endif; ?>
@@ -78,21 +87,23 @@
   <?php if (!empty($content['row4_first']) || !empty($content['row4_second']) || !empty($content['row4_third'])): ?>
     <div class="l-wrapper">
       <div class="layout-constrain">
-        <?php if (!empty($content['row4_first'])): ?>
-          <div class="l-row4-first">
-            <?php print $content['row4_first']; ?>
-          </div>
-        <?php endif; ?>
-        <?php if (!empty($content['row4_second'])): ?>
-          <div class="l-row4-second">
-            <?php print $content['row4_second']; ?>
-          </div>
-        <?php endif; ?>
-        <?php if (!empty($content['row4_third'])): ?>
-          <div class="l-row4-third">
-            <?php print $content['row4_third']; ?>
-          </div>
-        <?php endif; ?>
+        <div class="l-row-divider">
+          <?php if (!empty($content['row4_first'])): ?>
+            <div class="l-row4-first">
+              <?php print $content['row4_first']; ?>
+            </div>
+          <?php endif; ?>
+          <?php if (!empty($content['row4_second'])): ?>
+            <div class="l-row4-second">
+              <?php print $content['row4_second']; ?>
+            </div>
+          <?php endif; ?>
+          <?php if (!empty($content['row4_third'])): ?>
+            <div class="l-row4-third">
+              <?php print $content['row4_third']; ?>
+            </div>
+          <?php endif; ?>
+        </div>
       </div>
     </div>
   <?php endif; ?>
