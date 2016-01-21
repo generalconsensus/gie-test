@@ -19,6 +19,9 @@
     background: #f6f6f6;
   }
   .l-row1 {}
+  .l-row-divider {
+    border-bottom: 1px solid $border-color;
+  }
   &.row2-first {
     &.row2-second {
       &.row2-third { // 1, 2, 3 have content
@@ -117,6 +120,7 @@
   .l-main,
   .l-main-sidebar,
   .l-highlight,
+  .l-row-divider,
   .l-row1,
   .l-row2-first,
   .l-row2-second,
