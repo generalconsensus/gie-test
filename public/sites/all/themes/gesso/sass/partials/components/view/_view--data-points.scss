@@ -1,0 +1,17 @@
+// custom class added to view with 4 large data counts on /data
+
+.view--data-points {
+  @extend %clearfix;
+  .views-row {
+    border: 0;
+    float: left;
+    padding: 0 0 2em 0;
+    @include breakpoint(430px) {
+      width: percentage(1/2);
+    }
+    @include breakpoint(700px, $no-query: true) {
+      padding: 0;
+      width: percentage(1/4);
+    }
+  }
+}

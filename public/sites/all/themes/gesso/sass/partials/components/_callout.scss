@@ -10,7 +10,7 @@
 
 .callout {
   @extend %h1;
-  padding: 5% 0;
+  margin: 0;
   &.has-icon-innovation {
     &:before {
       @include svg-background(icon-innov-browse-41-54-darkblue);
