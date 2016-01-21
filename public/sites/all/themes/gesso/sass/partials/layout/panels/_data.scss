@@ -7,6 +7,7 @@
 .l-panels-data {
   @include add-grid(12 at 700px);
   @include add-gutter(2);
+  padding-bottom: 2em;
   &.main {
     &.main-sidebar { // 1, 2 have content
       @include breakpoint(700px) {
@@ -15,7 +16,21 @@
       }
     }
   }
+  .l-highlight {
+    background: #f6f6f6;
+    margin-bottom: 4em;
+    padding-bottom: 4em;
+    padding-top: 4em;
+    .pane {
+      margin-bottom: 0;
+    }
+  }
   .l-row1 {}
+  .l-row-divider {
+    border-bottom: 1px solid $border-color;
+    margin-bottom: 4em;
+    padding-bottom: 2em;
+  }
   &.row2-first {
     &.row2-second {
       &.row2-third { // 1, 2, 3 have content
@@ -113,6 +128,8 @@
   .l-title,
   .l-main,
   .l-main-sidebar,
+  .l-highlight,
+  .l-row-divider,
   .l-row1,
   .l-row2-first,
   .l-row2-second,
