@@ -367,7 +367,7 @@ function gie_general_update_7035() {
 /**
  * Enable GIE Data feature.
  */
-function gie_general_update_7036() {
+function gie_general_update_7037() {
   $modules = array(
     'gie_data'
   );
