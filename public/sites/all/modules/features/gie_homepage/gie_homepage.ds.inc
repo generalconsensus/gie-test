@@ -211,8 +211,7 @@ function gie_homepage_ds_layout_settings_info() {
     ),
     'classes' => array(
       'layout_class' => array(
-        'card' => 'card',
-        'card--center' => 'card--center',
+        '' => '',
       ),
     ),
     'wrappers' => array(
