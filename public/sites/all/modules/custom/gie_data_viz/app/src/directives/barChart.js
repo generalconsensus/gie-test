@@ -2,12 +2,16 @@ angular.module('gieDataViz').directive('barChart', function() {
 
   return {
     restrict: 'E',
-    template: '<svg class="chart bar-chart vertical" id="bar_chart__{{$id}}" data="data"></svg>',
+    template: '<div data="data" items="items" selection="selection">' +
+      '<h2 data-ng-if="data.chartTitle"> {{ data.chartTitle }} </h2>' +
+      '<select data-ng-if="items" ng-options="item as item.label for item in items track by item.id" data-ng-model="$parent.selection"></select>' +
+      '<div><svg class="chart bar-chart vertical" id="bar_chart__{{$id}}"></svg></div>' +
+      '</div>',
     replace: true,
-    scope: { data: "=" },
+    scope: { data: "=", items: "=", selection: "=", },
     link: function (scope){
       scope.$watch('data', function(newValue,oldValue){
-        if (newValue) {
+        if (newValue && typeof oldValue === 'undefined') {
           var xInfo = newValue.xInfo,
               yInfo = newValue.yInfo,
               data = newValue.data;
@@ -74,14 +78,55 @@ angular.module('gieDataViz').directive('barChart', function() {
           bar.enter().append("rect")
               .attr("class", "bar")
               .attr("x", function(d) { return x(xInfo[d.id]); })
-              .attr("y", height)
-              .attr("height", 0 )
+              .attr("y", y(0))
+              .attr("height", height - y(0))
               .attr("width", x.rangeBand())
             .transition().duration(500)
               .attr("y", function(d) { return y(d.value); })
               .attr("height", function(d) { return height - y(d.value); });
 
           bar.exit().remove();
+
+          scope.$watch('data.data', function(newValue,oldValue) {
+            if (newValue !== oldValue) {
+              redraw(newValue);
+            }
+          });
+
+          function redraw(data) {
+            x.domain(data.map(function(d) { return xInfo[d.id]; }));
+            y.domain([0,d3.max(data, function(d) { return d.value ; })]);
+            //update x axis labels
+            chart.select('.x.axis').transition().duration(500).call(xAxis);
+            //rotate x axis labels
+            chart.select('.x.axis')
+              .selectAll("text")
+                .style("text-anchor", "end")
+                .attr("dx", -5)
+                .attr("dy", 0)
+                .attr("transform", "rotate(-90)");
+            //update y axis
+            chart.select('.y.axis').transition().duration(500).call(yAxis);
+            //insert new bar data
+            var bars = chart.selectAll(".bar").data(data);
+            //remove unneeded bars
+            bars.exit()
+              .transition().duration(500)
+                .attr("y", y(0))
+                .attr("height", height - y(0))
+                .style('fill-opacity', 1e-6)
+                .remove();
+            //
+            bars.enter().append("rect")
+                .attr("class", "bar")
+                .attr("y", y(0))
+                .attr("height", height - y(0));
+
+            bars.transition().duration(500).attr("x", function(d) { return x(xInfo[d.id]); })
+                .attr("width", x.rangeBand())
+                .attr("y", function(d) { return y(d.value); })
+                .attr("height", function(d) { return height - y(d.value); });
+          }
         }
       });
     }
