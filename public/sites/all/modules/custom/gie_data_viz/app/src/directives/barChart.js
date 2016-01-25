@@ -14,11 +14,12 @@ angular.module('gieDataViz').directive('barChart', function() {
         if (newValue && typeof oldValue === 'undefined') {
           var xInfo = newValue.xInfo,
               yInfo = newValue.yInfo,
-              data = newValue.data;
+              data = newValue.data,
+              maxLength = d3.max(data, function(d) { return xInfo[d.id].length; }) + 2;
 
           var maxWidth = 600,
               maxHeight = 400,
-              margin = {top: 20, right: 30, bottom: 100, left: 60},
+              margin = {top: 20, right: 30, bottom: maxLength * 5, left: 60},
               width = maxWidth - margin.left - margin.right,
               height = maxHeight - margin.top - margin.bottom;
 
@@ -94,6 +95,12 @@ angular.module('gieDataViz').directive('barChart', function() {
           });
 
           function redraw(data) {
+            //update chart height
+            maxLength = d3.max(data, function(d) { return xInfo[d.id].length; });
+            margin.bottom = maxLength * 5;//new bottom margin to fit long labels, 5 per character
+            maxHeight = height+margin.top+margin.bottom;
+            d3.select('#bar_chart__'+scope.$id).transition().duration(500).attr("height",maxHeight) + 2;
+            //update x and y information
             x.domain(data.map(function(d) { return xInfo[d.id]; }));
             y.domain([0,d3.max(data, function(d) { return d.value ; })]);
             //update x axis labels
@@ -116,12 +123,12 @@ angular.module('gieDataViz').directive('barChart', function() {
                 .attr("height", height - y(0))
                 .style('fill-opacity', 1e-6)
                 .remove();
-            //
+            //append new bars
             bars.enter().append("rect")
                 .attr("class", "bar")
                 .attr("y", y(0))
                 .attr("height", height - y(0));
-
+            //transition bar information to correct height
             bars.transition().duration(500).attr("x", function(d) { return x(xInfo[d.id]); })
                 .attr("width", x.rangeBand())
                 .attr("y", function(d) { return y(d.value); })
