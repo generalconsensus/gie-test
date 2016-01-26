@@ -84,21 +84,8 @@ function _gie_data_viz_init() {
   drupal_add_js($path . '/app/dependencies/elasticsearch.min.js');
   drupal_add_js($path . '/app/dependencies/elasticsearch.angular.min.js');
   //add angular app
-  drupal_add_js($path . '/app/src/app.js');
+  drupal_add_js($path . '/app/build/global_innovation_exchange.js');
   angularjs_init_application('gieDataViz');
-  //add controllers
-  drupal_add_js($path . '/app/src/controllers/countryInnovationsController.js');
-  drupal_add_js($path . '/app/src/controllers/countryFundingController.js');
-  drupal_add_js($path . '/app/src/controllers/organizationInnovationsController.js');
-  //add directives
-  drupal_add_js($path . '/app/src/directives/barChart.js');
-  drupal_add_js($path . '/app/src/directives/horizontalBarChart.js');
-  //add services
-  drupal_add_js($path . '/app/src/services/dataService.js');
-  drupal_add_js($path . '/app/src/services/es.js');
-  drupal_add_js($path . '/app/src/services/nodeService.js');
-  drupal_add_js($path . '/app/src/services/taxonomyTermService.js');
-
   //pass index and site information to javascript for AngularJS app to use
   drupal_add_js(array('gie_data_viz' =>
     array(
