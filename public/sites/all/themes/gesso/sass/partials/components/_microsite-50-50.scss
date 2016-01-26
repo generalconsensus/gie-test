@@ -15,7 +15,7 @@
 }
 
 .microsite-50-50__text {
-  padding: 10%;
+  padding: 2% 5%;
   @include breakpoint(900px, $no-query: true) {
     width: 50%;
   }
