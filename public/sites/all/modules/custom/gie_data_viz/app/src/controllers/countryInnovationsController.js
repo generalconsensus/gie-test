@@ -1,4 +1,4 @@
-angular.module('gieDataViz').controller('CountryInnovationsController', function($scope, es, dataService, taxonomyTermService) {
+angular.module('gieDataViz').controller('CountryInnovationsController',['$scope', 'es', 'dataService', 'taxonomyTermService', function($scope, es, dataService, taxonomyTermService) {
 
   var queryBody = {
     index: Drupal.settings.gie_data_viz.base + 'api',
@@ -92,4 +92,4 @@ angular.module('gieDataViz').controller('CountryInnovationsController', function
       }
     });
   });
-});
+}]);

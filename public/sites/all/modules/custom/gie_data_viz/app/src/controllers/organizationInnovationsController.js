@@ -1,4 +1,4 @@
-angular.module('gieDataViz').controller('OrganizationInnovationsController', function($scope, es, dataService, nodeService) {
+angular.module('gieDataViz').controller('OrganizationInnovationsController',['$scope', 'es', 'dataService', 'nodeService', function($scope, es, dataService, nodeService) {
 
   var queryBody = {
     index: Drupal.settings.gie_data_viz.base + 'api',
@@ -44,4 +44,4 @@ angular.module('gieDataViz').controller('OrganizationInnovationsController', fun
       };
     });
   });
-});
+}]);

@@ -1,4 +1,4 @@
-angular.module('gieDataViz').factory('dataService', function (es, $q) {
+angular.module('gieDataViz').factory('dataService', ['es', '$q', function (es, $q) {
 
   return {
     getData: function(queryBody) {
@@ -17,4 +17,4 @@ angular.module('gieDataViz').factory('dataService', function (es, $q) {
       });
     }
   };
-});
+}]);

@@ -84,7 +84,7 @@ function _gie_data_viz_init() {
   drupal_add_js($path . '/app/dependencies/elasticsearch.min.js');
   drupal_add_js($path . '/app/dependencies/elasticsearch.angular.min.js');
   //add angular app
-  drupal_add_js($path . '/app/build/global_innovation_exchange.js');
+  drupal_add_js($path . '/app/build/global_innovation_exchange.min.js');
   angularjs_init_application('gieDataViz');
   //pass index and site information to javascript for AngularJS app to use
   drupal_add_js(array('gie_data_viz' =>

@@ -1,4 +1,4 @@
-angular.module('gieDataViz').factory('taxonomyTermService', function(es, dataService) {
+angular.module('gieDataViz').factory('taxonomyTermService',['es', 'dataService', function(es, dataService) {
   return {
     getTermNames: function(terms) {
 
@@ -33,4 +33,4 @@ angular.module('gieDataViz').factory('taxonomyTermService', function(es, dataSer
       return results;
     }
   }
-});
+}]);
