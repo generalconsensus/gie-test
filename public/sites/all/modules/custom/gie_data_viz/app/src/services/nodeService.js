@@ -1,4 +1,4 @@
-angular.module('gieDataViz').factory('nodeService', function(es, dataService) {
+angular.module('gieDataViz').factory('nodeService',['es', 'dataService', function(es, dataService) {
   return {
     getNodeTitles: function(nodeKeys) {
 
@@ -33,4 +33,4 @@ angular.module('gieDataViz').factory('nodeService', function(es, dataService) {
       return results;
     }
   }
-});
+}]);
