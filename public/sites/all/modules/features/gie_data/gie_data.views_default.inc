@@ -1059,41 +1059,7 @@ function gie_data_views_default_views() {
   $handler->display->display_options['row_plugin'] = 'fields';
   $handler->display->display_options['defaults']['row_options'] = FALSE;
   $handler->display->display_options['defaults']['relationships'] = FALSE;
-  /* Relationship: Entity Reference: Referenced Entity */
-  $handler->display->display_options['relationships']['field_funding_organization_target_id']['id'] = 'field_funding_organization_target_id';
-  $handler->display->display_options['relationships']['field_funding_organization_target_id']['table'] = 'field_data_field_funding_organization';
-  $handler->display->display_options['relationships']['field_funding_organization_target_id']['field'] = 'field_funding_organization_target_id';
   $handler->display->display_options['defaults']['fields'] = FALSE;
-  /* Field: Content: Grant / Award Value */
-  $handler->display->display_options['fields']['field_funding_grant_award_value']['id'] = 'field_funding_grant_award_value';
-  $handler->display->display_options['fields']['field_funding_grant_award_value']['table'] = 'field_data_field_funding_grant_award_value';
-  $handler->display->display_options['fields']['field_funding_grant_award_value']['field'] = 'field_funding_grant_award_value';
-  $handler->display->display_options['fields']['field_funding_grant_award_value']['group_type'] = 'sum';
-  $handler->display->display_options['fields']['field_funding_grant_award_value']['label'] = '';
-  $handler->display->display_options['fields']['field_funding_grant_award_value']['exclude'] = TRUE;
-  $handler->display->display_options['fields']['field_funding_grant_award_value']['alter']['alter_text'] = TRUE;
-  $handler->display->display_options['fields']['field_funding_grant_award_value']['alter']['text'] = '$[field_funding_grant_award_value] ';
-  $handler->display->display_options['fields']['field_funding_grant_award_value']['element_label_colon'] = FALSE;
-  $handler->display->display_options['fields']['field_funding_grant_award_value']['type'] = 'short_scale_formatter';
-  $handler->display->display_options['fields']['field_funding_grant_award_value']['settings'] = array(
-    'wrapper_element' => 'span',
-    'wrapper_title_text' => '',
-    'thousand' => 'K',
-    'million' => 'M',
-    'billion' => 'B',
-    'trillion' => 'T',
-    'linked_field' => array(
-      'linked' => 0,
-      'destination' => '',
-      'advanced' => array(
-        'title' => '',
-        'target' => '',
-        'class' => '',
-        'rel' => '',
-        'text' => '',
-      ),
-    ),
-  );
   /* Field: Content: Nid */
   $handler->display->display_options['fields']['nid']['id'] = 'nid';
   $handler->display->display_options['fields']['nid']['table'] = 'node';
@@ -1103,12 +1069,21 @@ function gie_data_views_default_views() {
   $handler->display->display_options['fields']['nid']['label'] = '';
   $handler->display->display_options['fields']['nid']['exclude'] = TRUE;
   $handler->display->display_options['fields']['nid']['element_label_colon'] = FALSE;
+  /* Field: Content: Organization */
+  $handler->display->display_options['fields']['field_funding_organization']['id'] = 'field_funding_organization';
+  $handler->display->display_options['fields']['field_funding_organization']['table'] = 'field_data_field_funding_organization';
+  $handler->display->display_options['fields']['field_funding_organization']['field'] = 'field_funding_organization';
+  $handler->display->display_options['fields']['field_funding_organization']['group_type'] = 'count_distinct';
+  $handler->display->display_options['fields']['field_funding_organization']['label'] = '';
+  $handler->display->display_options['fields']['field_funding_organization']['exclude'] = TRUE;
+  $handler->display->display_options['fields']['field_funding_organization']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_funding_organization']['separator'] = ', ';
   /* Field: Global: Custom text */
   $handler->display->display_options['fields']['nothing']['id'] = 'nothing';
   $handler->display->display_options['fields']['nothing']['table'] = 'views';
   $handler->display->display_options['fields']['nothing']['field'] = 'nothing';
   $handler->display->display_options['fields']['nothing']['label'] = '';
-  $handler->display->display_options['fields']['nothing']['alter']['text'] = '<div class="callout has-icon-funding"><a href="/funding">[field_funding_grant_award_value] available</a> funding from over <a href ="/organizations">[nid]</a> funding organizations and individual donors.</div>';
+  $handler->display->display_options['fields']['nothing']['alter']['text'] = '<div class="callout has-icon-funding"><a href="/funding">[nid] Funding Opportunities available</a> from over <a href ="/organizations">[field_funding_organization]</a> funding organizations and individual donors.</div>';
   $handler->display->display_options['fields']['nothing']['element_label_colon'] = FALSE;
   $handler->display->display_options['defaults']['sorts'] = FALSE;
   $handler->display->display_options['defaults']['filter_groups'] = FALSE;
