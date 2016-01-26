@@ -12,7 +12,7 @@
       var $mobileNav = $('<nav class="mobile-menu" role="navigation"></nav>'),
           $mobileBar = $('<div class="mobile-menu__bar"><button class="mobile-menu__button js-mobile-menu-button mobile-menu__button--menu"><span class="mobile-menu__icon mobile-menu__icon--menu">Menu</span></button><a class="mobile-menu__button mobile-menu__button--home" href="/" rel="home"><span class="mobile-menu__icon mobile-menu__icon--home">Home</span></a><button class="mobile-menu__button js-mobile-search-button mobile-menu__button--search"><span class="mobile-menu__icon mobile-menu__icon--search">Search</span></button></div>'),
           $mobileLinks = $('<div class="mobile-menu__links element-hidden"></div>'),
-          $mainMenu = $('.region-navigation', context).find('.nav--main-menu, .block--system-main-menu .nav, .block--tb-megamenu-main-menu .nav').not('.contextual-links').first().clone(),
+          $mainMenu = $('.region-navigation', context).find('.nav--main-menu, .block--system-main-menu .nav, .block--tb-megamenu-main-menu .nav, .block--menu-menu-microsite-menu .nav').not('.contextual-links').first().clone(),
           $isSuperfish = ($mainMenu.hasClass('sf-menu')) ? true : false,
           $isMegaMenu = ($mainMenu.hasClass('tb-megamenu-nav')) ? true : false;
 
