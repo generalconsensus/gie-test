@@ -1,0 +1,24 @@
+// large data output at top of /data
+
+.data-point {
+  font-size: em(50px);
+  line-height: 1.1;
+  text-transform: uppercase;
+  text-align: center;
+  a {
+    color: #464646;
+    display: block;
+    text-decoration: none;
+    span {
+      display: block;
+      color: $link-color;
+      font-size: em($font-size-normal,50px);
+    }
+    &:hover, &:focus {
+      color: darken(#464646,10%);
+      span {
+        color: $link-hover-color;
+      }
+    }
+  }
+}

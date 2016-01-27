@@ -606,9 +606,6 @@ $conf['search_api_override_servers'] = array(
 
 $conf['search_api_override_mode'] = 'default';
 
-$conf['elasticsearch_index'] = array('machine_name' => 'autoscale');
-
-
 /* Ensures no content is indexed to core search */
 $conf['search_cron_limit'] = 0;
 

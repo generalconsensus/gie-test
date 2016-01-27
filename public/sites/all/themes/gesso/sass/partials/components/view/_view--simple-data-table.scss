@@ -1,0 +1,25 @@
+// custom class to add to views with simple, 2 column layout.  examples on /data
+
+.view--simple-data-table {
+  .view__header {
+    p {
+      font-size: em($font-size-md);
+      font-weight: bold;
+      line-height: 1.3;
+      margin: 0 0 1em 0;
+    }
+  }
+  table {
+    td {
+      font-size: em($font-size-md);
+      line-height: 1.3;
+      padding-bottom: 0.25em;
+    }
+    td:first-child {
+      padding-right: 1em;
+    }
+    td:last-child {
+
+    }
+  }
+}

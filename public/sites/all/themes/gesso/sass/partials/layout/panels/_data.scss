@@ -5,74 +5,89 @@
 // Grid via: singularity.gs
 
 .l-panels-data {
-  @include add-grid(12 at 700px);
-  @include add-gutter(2);
+  @include add-grid(48 at 700px);
+  @include add-gutter(5);
+  padding-bottom: 2em;
   &.main {
     &.main-sidebar { // 1, 2 have content
       @include breakpoint(700px) {
-        .l-main { @include grid-span(8,1);}
-        .l-main-sidebar { @include grid-span (4,9)}
+        .l-main { @include grid-span(32,1);}
+        .l-main-sidebar { @include grid-span (16,33)}
       }
     }
   }
+  .l-highlight {
+    background: #f6f6f6;
+    margin-bottom: 4em;
+    padding-bottom: 4em;
+    padding-top: 4em;
+    .pane {
+      margin-bottom: 0;
+    }
+  }
   .l-row1 {}
+  .l-row-divider {
+    border-bottom: 1px solid $border-color;
+    margin-bottom: 4em;
+    padding-bottom: 2em;
+  }
   &.row2-first {
     &.row2-second {
       &.row2-third { // 1, 2, 3 have content
-        @include breakpoint(900px, $no-query: true) {
-          .l-row2-first { @include grid-span(6,1); }
-          .l-row2-second { @include grid-span(3,7); }
-          .l-row2-third { @include grid-span(3,10); }
+        @include breakpoint(1080px, $no-query: true) {
+          .l-row2-first { @include grid-span(26,1); }
+          .l-row2-second { @include grid-span(11,27); }
+          .l-row2-third { @include grid-span(11,38); }
         }
       }
       &.row2-third-empty { // 1, 2 have content
         @include breakpoint(700px, $no-query: true) {
-          .l-row2-first { @include grid-span(6,1); }
-          .l-row2-second { @include grid-span(6,7); }
+          .l-row2-first { @include grid-span(24,1); }
+          .l-row2-second { @include grid-span(24,25); }
         }
       }
     }
     &.row2-second-empty.row2-third { // 1, 3 have content
       @include breakpoint(700px, $no-query: true) {
-        .l-row2-first { @include grid-span(6,1); }
-        .l-row2-third { @include grid-span(6,7); }
+        .l-row2-first { @include grid-span(24,1); }
+        .l-row2-third { @include grid-span(24,25); }
       }
     }
   }
   &.row2-first-empty.row2-second.row2-third { // 2, 3 have content
     @include breakpoint(700px, $no-query: true) {
-      .l-row2-second { @include grid-span(6,1); }
-      .l-row2-third { @include grid-span(6,7); }
+      .l-row2-second { @include grid-span(24,1); }
+      .l-row2-third { @include grid-span(24,25); }
     }
   }
   .l-row3 {}
   &.row4-first {
     &.row4-second {
       &.row4-third { // 1, 2, 3 have content
-        @include breakpoint(900px, $no-query: true) {
-          .l-row4-first { @include grid-span(6,1); }
-          .l-row4-second { @include grid-span(3,7); }
-          .l-row4-third { @include grid-span(3,10); }
+        @include breakpoint(1080px, $no-query: true) {
+          .l-row4-first { @include grid-span(26,1); }
+          .l-row4-second { @include grid-span(11,27); }
+          .l-row4-third { @include grid-span(11,38); }
         }
       }
       &.row4-third-empty { // 1, 2 have content
         @include breakpoint(700px, $no-query: true) {
-          .l-row4-first { @include grid-span(6,1); }
-          .l-row4-second { @include grid-span(6,7); }
+          .l-row4-first { @include grid-span(24,1); }
+          .l-row4-second { @include grid-span(24,25); }
         }
       }
     }
     &.row4-second-empty.row4-third { // 1, 3 have content
       @include breakpoint(700px, $no-query: true) {
-        .l-row4-first { @include grid-span(6,1); }
-        .l-row4-third { @include grid-span(6,7); }
+        .l-row4-first { @include grid-span(24,1); }
+        .l-row4-third { @include grid-span(24,25); }
       }
     }
   }
   &.row4-first-empty.row4-second.row4-third { // 2, 3 have content
     @include breakpoint(700px, $no-query: true) {
-      .l-row4-second { @include grid-span(6,1); }
-      .l-row4-third { @include grid-span(6,7); }
+      .l-row4-second { @include grid-span(24,1); }
+      .l-row4-third { @include grid-span(24,25); }
     }
   }
   .l-row5 {}
@@ -80,29 +95,29 @@
     &.row6-second {
       &.row6-third { // 1, 2, 3 have content
         @include breakpoint(900px, $no-query: true) {
-          .l-row6-first { @include grid-span(6,1); }
-          .l-row6-second { @include grid-span(3,7); }
-          .l-row6-third { @include grid-span(3,10); }
+          .l-row6-first { @include grid-span(24,1); }
+          .l-row6-second { @include grid-span(12,25); }
+          .l-row6-third { @include grid-span(12,37); }
         }
       }
       &.row6-third-empty { // 1, 2 have content
         @include breakpoint(700px, $no-query: true) {
-          .l-row6-first { @include grid-span(6,1); }
-          .l-row6-second { @include grid-span(6,7); }
+          .l-row6-first { @include grid-span(25,1); }
+          .l-row6-second { @include grid-span(24,25); }
         }
       }
     }
     &.row6-second-empty.row6-third { // 1, 3 have content
       @include breakpoint(700px, $no-query: true) {
-        .l-row6-first { @include grid-span(6,1); }
-        .l-row6-third { @include grid-span(6,7); }
+        .l-row6-first { @include grid-span(24,1); }
+        .l-row6-third { @include grid-span(24,25); }
       }
     }
   }
   &.row6-first-empty.row6-second.row6-third { // 2, 3 have content
     @include breakpoint(700px, $no-query: true) {
-      .l-row6-second { @include grid-span(6,1); }
-      .l-row6-third { @include grid-span(6,7); }
+      .l-row6-second { @include grid-span(24,1); }
+      .l-row6-third { @include grid-span(24,25); }
     }
   }
 }
@@ -113,6 +128,8 @@
   .l-title,
   .l-main,
   .l-main-sidebar,
+  .l-highlight,
+  .l-row-divider,
   .l-row1,
   .l-row2-first,
   .l-row2-second,

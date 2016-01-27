@@ -31,7 +31,7 @@ function gie_homepage_ds_fields_info($entity_type) {
 }
 
 /**
- * Custom function to return Title and Count based on Persona type
+ * Custom function to return Title and Count based on Persona type for the homepage
  */
 function _gie_homepage_title_count($field) {
     $persona_type = field_get_items('node', $field['entity'], 'field_persona_type');
@@ -54,6 +54,10 @@ function _gie_homepage_title_count($field) {
                 $count = db_query('SELECT COUNT(uid) FROM {users} WHERE status > :status', array(':status' => 0))->fetchField();
                 return '<h1 class="card__title"><a href="/members">' . $count . ' Collaborators</a></h1>';
                 break;
+            case "org":
+                $count = db_query('SELECT COUNT(nid) FROM {node} WHERE type = :type AND status = :status', array(':type' => 'organization', ':status' => 1))->fetchField();
+                return '<h1 class="card__title"><a href="/organizations">' . $count . ' Organizations</a></h1>';
+                break;
         }
 
         return $result;
@@ -62,7 +66,7 @@ function _gie_homepage_title_count($field) {
 }
 
 /**
- * Custom function to return Title and Count based on Persona type
+ * Custom function to return Title and Count based on Persona type for the welcome page
  */
 function _gie_homepage_welcome_count($field) {
     $persona_type = field_get_items('node', $field['entity'], 'field_persona_type');
@@ -85,12 +89,18 @@ function _gie_homepage_welcome_count($field) {
                 $count = db_query('SELECT COUNT(uid) FROM {users} WHERE status > :status', array(':status' => 0))->fetchField();
                 return '<div class="welcome-stats__item"><h2 class="welcome-stats__number">' . $count . '</h2><h3 class="welcome-stats__label">Collaborators</h3></div>';
                 break;
+
+            case "org":
+                $count = db_query('SELECT COUNT(nid) FROM {node} WHERE type = :type AND status = :status', array(':type' => 'organization', ':status' => 1))->fetchField();
+                return '<div class="welcome-stats__item"><h2 class="welcome-stats__number">' . $count . '</h2><h3 class="welcome-stats__label">Organizations</h3></div>';
+                break;
         }
 
         return $result;
 
     }
 }
+
 
 /**
  * Implements hook_form_FORM_ID_alter().

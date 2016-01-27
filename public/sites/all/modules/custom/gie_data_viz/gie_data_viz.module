@@ -1,0 +1,96 @@
+<?php
+
+/**
+ * Implements hook_block_info().
+ */
+function gie_data_viz_block_info() {
+  $blocks['gie_data_viz_country_inno_chart'] = array(
+    'info' => t('GIE Data Viz - Countries with Most Innovations'),
+  );
+  $blocks['gie_data_viz_country_fund_chart'] = array(
+    'info' => t('GIE Data Viz - Countries with Most Funding'),
+  );
+  $blocks['gie_data_viz_org_inno_chart'] = array(
+    'info' => t('GIE Data Viz - Organizations with Most Innovations'),
+  );
+
+  return $blocks;
+}
+
+/**
+ * Implements hook_block_view().
+ */
+function gie_data_viz_block_view($delta = '') {
+  $block = array();
+
+  switch($delta) {
+    case 'gie_data_viz_country_inno_chart':
+      _gie_data_viz_init();
+      $block['subject'] = t('Countries with Most Innovations');
+      $block['content'] = array(
+        '#type' => 'markup',
+        '#prefix' => '<div data-ng-controller="CountryInnovationsController">',
+        '#markup' => '<bar-chart></bar-chart>',
+        '#suffix' => '</div>',
+      );
+      break;
+    case 'gie_data_viz_country_fund_chart':
+      $block['subject'] = t('Countries with Most Funding');
+      $block['content'] = array(
+        '#type' => 'markup',
+        '#prefix' => '<div data-ng-controller="CountryFundingController">',
+        '#markup' => '<bar-chart></bar-chart>',
+        '#suffix' => '</div>',
+      );
+      break;
+    case 'gie_data_viz_org_inno_chart':
+      $block['subject'] = t('Organizations with Most Innovations');
+      $block['content'] = array(
+        '#type' => 'markup',
+        '#prefix' => '<div data-ng-controller="OrganizationInnovationsController">',
+        '#markup' => '<horizontal-bar-chart></horizontal-bar-chart>',
+        '#suffix' => '</div>',
+      );
+      break;
+  }
+
+  return $block;
+}
+
+/**
+ * Helper function to get proper ElasticSearch URL.
+ */
+function _gie_data_viz_get_elastic_url() {
+  $servers = variable_get('search_api_override_servers');
+  $url = ($servers['elasticsearch']['options']['0']['host'] === 'localhost') ? 'http://localhost:9200' : 'http://search.gie.byf1.io';
+  return $url;
+}
+
+/**
+ * Helper function to get database name.
+ */
+function _gie_data_viz_get_database_name() {
+  global $databases;
+  return $databases['default']['default']['database'];
+}
+
+/**
+ * Helper function to add proper JS files
+ */
+function _gie_data_viz_init() {
+  $path = drupal_get_path('module', 'gie_data_viz');
+  //add dependencies
+  drupal_add_js($path . '/app/dependencies/d3.min.js');
+  drupal_add_js($path . '/app/dependencies/elasticsearch.min.js');
+  drupal_add_js($path . '/app/dependencies/elasticsearch.angular.min.js');
+  //add angular app
+  drupal_add_js($path . '/app/build/global_innovation_exchange.min.js');
+  angularjs_init_application('gieDataViz');
+  //pass index and site information to javascript for AngularJS app to use
+  drupal_add_js(array('gie_data_viz' =>
+    array(
+      'base' => 'elasticsearch_index_'. _gie_data_viz_get_database_name() . '_',
+      'url' => _gie_data_viz_get_elastic_url(),
+    ),
+  ), array('type' => 'setting'));
+}

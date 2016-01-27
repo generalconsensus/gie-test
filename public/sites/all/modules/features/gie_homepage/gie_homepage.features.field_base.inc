@@ -694,6 +694,7 @@ function gie_homepage_field_default_field_bases() {
         'innovation' => 'innovation',
         'funding' => 'funding',
         'user' => 'user',
+        'org' => 'org',
       ),
       'allowed_values_function' => '',
     ),

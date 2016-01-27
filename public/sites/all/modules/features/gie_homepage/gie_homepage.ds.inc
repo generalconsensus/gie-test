@@ -27,6 +27,38 @@ function gie_homepage_ds_field_settings_info() {
 
   $ds_fieldsetting = new stdClass();
   $ds_fieldsetting->api_version = 1;
+  $ds_fieldsetting->id = 'node|persona|data';
+  $ds_fieldsetting->entity_type = 'node';
+  $ds_fieldsetting->bundle = 'persona';
+  $ds_fieldsetting->view_mode = 'data';
+  $ds_fieldsetting->settings = array(
+    'data_count' => array(
+      'weight' => '1',
+      'label' => 'hidden',
+      'format' => 'default',
+      'formatter_settings' => array(
+        'ft' => array(
+          'func' => 'theme_ds_field_expert',
+        ),
+        'field_delimiter' => '',
+        'linked_field' => array(
+          'linked' => 0,
+          'destination' => '',
+          'advanced' => array(
+            'title' => '',
+            'target' => '',
+            'class' => '',
+            'rel' => '',
+            'text' => '',
+          ),
+        ),
+      ),
+    ),
+  );
+  $export['node|persona|data'] = $ds_fieldsetting;
+
+  $ds_fieldsetting = new stdClass();
+  $ds_fieldsetting->api_version = 1;
   $ds_fieldsetting->id = 'node|persona|listing';
   $ds_fieldsetting->entity_type = 'node';
   $ds_fieldsetting->bundle = 'persona';
@@ -161,6 +193,42 @@ function gie_homepage_ds_layout_settings_info() {
 
   $ds_layout = new stdClass();
   $ds_layout->api_version = 1;
+  $ds_layout->id = 'node|persona|data';
+  $ds_layout->entity_type = 'node';
+  $ds_layout->bundle = 'persona';
+  $ds_layout->view_mode = 'data';
+  $ds_layout->layout = 'article';
+  $ds_layout->settings = array(
+    'regions' => array(
+      'main_content' => array(
+        0 => 'group_content',
+        1 => 'data_count',
+      ),
+    ),
+    'fields' => array(
+      'group_content' => 'main_content',
+      'data_count' => 'main_content',
+    ),
+    'classes' => array(
+      'layout_class' => array(
+        '' => '',
+      ),
+    ),
+    'wrappers' => array(
+      'header' => 'div',
+      'main_content' => 'div',
+      'footer' => 'div',
+    ),
+    'layout_wrapper' => 'div',
+    'layout_attributes' => '',
+    'layout_attributes_merge' => 1,
+    'layout_link_attribute' => '',
+    'layout_link_custom' => '',
+  );
+  $export['node|persona|data'] = $ds_layout;
+
+  $ds_layout = new stdClass();
+  $ds_layout->api_version = 1;
   $ds_layout->id = 'node|persona|listing';
   $ds_layout->entity_type = 'node';
   $ds_layout->bundle = 'persona';
@@ -237,6 +305,24 @@ function gie_homepage_ds_layout_settings_info() {
     'layout_link_custom' => '',
   );
   $export['node|persona|teaser'] = $ds_layout;
+
+  return $export;
+}
+
+/**
+ * Implements hook_ds_view_modes_info().
+ */
+function gie_homepage_ds_view_modes_info() {
+  $export = array();
+
+  $ds_view_mode = new stdClass();
+  $ds_view_mode->api_version = 1;
+  $ds_view_mode->view_mode = 'data';
+  $ds_view_mode->label = 'Data';
+  $ds_view_mode->entities = array(
+    'node' => 'node',
+  );
+  $export['data'] = $ds_view_mode;
 
   return $export;
 }
