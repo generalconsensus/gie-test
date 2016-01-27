@@ -422,5 +422,26 @@ function gie_taxonomies_strongarm() {
   $strongarm->value = 'taxonomy_term:topic:default';
   $export['panelizer_taxonomy_term:topic:page_manager_selection'] = $strongarm;
 
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'pathauto_taxonomy_term_program_discussions_pattern';
+  $strongarm->value = '';
+  $export['pathauto_taxonomy_term_program_discussions_pattern'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'pathauto_taxonomy_term_region_pattern';
+  $strongarm->value = '';
+  $export['pathauto_taxonomy_term_region_pattern'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'pathauto_taxonomy_term_sector_pattern';
+  $strongarm->value = '';
+  $export['pathauto_taxonomy_term_sector_pattern'] = $strongarm;
+
   return $export;
 }
