@@ -19,6 +19,7 @@ dependencies[] = smart_trim
 dependencies[] = text
 dependencies[] = title
 dependencies[] = views
+dependencies[] = views_content_cache
 features[context][] = microsite
 features[ctools][] = context:context:3
 features[ctools][] = ds:ds:1

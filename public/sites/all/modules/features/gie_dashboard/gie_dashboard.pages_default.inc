@@ -16,7 +16,10 @@ function gie_dashboard_default_page_manager_pages() {
   $page->admin_title = 'Dashboard';
   $page->admin_description = 'This is the user dashboard page.';
   $page->path = 'dashboard';
-  $page->access = array();
+  $page->access = array(
+    'type' => 'none',
+    'settings' => NULL,
+  );
   $page->menu = array();
   $page->arguments = array();
   $page->conf = array(
