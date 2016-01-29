@@ -7,17 +7,22 @@
     @include flex-direction(row);
     @include justify-content(center);
   }
-  background: $microsite-secondary;
-  color: #fff;
-  a, h1, h2, h3, h4, h5, h6 {
-    color: #fff;
+  .microsite-palette1 & {
+    background: $microsite-palette1-secondary;
+  }
+  .microsite-palette2 & {
+    background: $microsite-palette2-secondary;
   }
 }
 
 .microsite-50-50__text {
+  color: #fff;
   padding: 2% 5%;
   @include breakpoint(900px, $no-query: true) {
     width: 50%;
+  }
+  a, h1, h2, h3, h4, h5, h6 {
+    color: #fff !important;
   }
 }
 

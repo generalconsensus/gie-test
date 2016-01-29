@@ -1,6 +1,12 @@
 .dropcap {
   &:first-letter { 
-    background-color: $microsite-secondary; 
+    background-color: #cd1041;
+    .microsite-palette1 & {
+      background-color: $microsite-palette1-secondary; 
+    }
+    .microsite-palette2 & {
+      background-color: $microsite-palette2-secondary; 
+    }
     color: #fff;
     float: left; 
     font-size: em($font-size-xxl); 
