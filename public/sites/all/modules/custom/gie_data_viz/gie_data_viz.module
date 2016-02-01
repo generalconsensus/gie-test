@@ -13,6 +13,9 @@ function gie_data_viz_block_info() {
   $blocks['gie_data_viz_org_inno_chart'] = array(
     'info' => t('GIE Data Viz - Organizations with Most Innovations'),
   );
+  $blocks['gie_data_viz_inno_type_chart'] = array(
+    'info' => t('GIE Data Viz - Innovation Types'),
+  );
 
   return $blocks;
 }
@@ -49,6 +52,15 @@ function gie_data_viz_block_view($delta = '') {
         '#type' => 'markup',
         '#prefix' => '<div data-ng-controller="OrganizationInnovationsController">',
         '#markup' => '<horizontal-bar-chart></horizontal-bar-chart>',
+        '#suffix' => '</div>',
+      );
+      break;
+    case 'gie_data_viz_inno_type_chart':
+      $block['subject'] = t('Innovations by Type');
+      $block['content'] = array(
+        '#type' => 'markup',
+        '#prefix' => '<div data-ng-controller="InnovationTypesController">',
+        '#markup' => '<bar-chart></bar-chart>',
         '#suffix' => '</div>',
       );
       break;
