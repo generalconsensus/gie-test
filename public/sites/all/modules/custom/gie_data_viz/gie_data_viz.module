@@ -13,6 +13,9 @@ function gie_data_viz_block_info() {
   $blocks['gie_data_viz_org_inno_chart'] = array(
     'info' => t('GIE Data Viz - Organizations with Most Innovations'),
   );
+  $blocks['gie_data_viz_fund_count_chart'] = array(
+    'info' => t('GIE Data Viz - Funding Counts chart'),
+  );
 
   return $blocks;
 }
@@ -49,6 +52,15 @@ function gie_data_viz_block_view($delta = '') {
         '#type' => 'markup',
         '#prefix' => '<div data-ng-controller="OrganizationInnovationsController">',
         '#markup' => '<horizontal-bar-chart></horizontal-bar-chart>',
+        '#suffix' => '</div>',
+      );
+      break;
+    case 'gie_data_viz_fund_count_chart':
+      $block['subject'] = t('Funding Counts Chart');
+      $block['content'] = array(
+        '#type' => 'markup',
+        '#prefix' => '<div data-ng-controller="FundingCountController">',
+        '#markup' => '<bar-chart></bar-chart>',
         '#suffix' => '</div>',
       );
       break;
