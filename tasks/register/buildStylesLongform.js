@@ -3,6 +3,8 @@ module.exports = function (grunt) {
   var environment = (grunt.option('prod') || grunt.option('production')) ? 'stage' : 'dev';
 
   grunt.registerTask('buildStylesLongform', [
-    'compass:longform_' + environment
+    'sass_globbing',
+    'sass',
+    'cssUrlEmbed'
   ]);
 };
