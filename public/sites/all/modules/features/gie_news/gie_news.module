@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the GIE News feature.
+ */
+
+include_once 'gie_news.features.inc';
