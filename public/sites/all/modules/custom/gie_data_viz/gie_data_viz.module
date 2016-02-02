@@ -19,6 +19,9 @@ function gie_data_viz_block_info() {
   $blocks['gie_data_viz_inno_type_chart'] = array(
     'info' => t('GIE Data Viz - Innovation Types'),
   );
+  $blocks['gie_data_viz_inno_stage_chart'] = array(
+    'info' => t('GIE Data Viz - Innovation Stages'),
+  );
 
   return $blocks;
 }
@@ -74,6 +77,15 @@ function gie_data_viz_block_view($delta = '') {
         '#prefix' => '<div data-ng-controller="InnovationTypesController">',
         '#markup' => '<bar-chart></bar-chart>',
         '#suffix' => '</div>',
+      );
+      break;
+    case 'gie_data_viz_inno_stage_chart':
+      $block['subject'] = t('Innovations by Stage');
+      $block['content'] = array(
+          '#type' => 'markup',
+          '#prefix' => '<div data-ng-controller="InnovationStagesController">',
+          '#markup' => '<horizontal-bar-chart></horizontal-bar-chart>',
+          '#suffix' => '</div>',
       );
       break;
   }
