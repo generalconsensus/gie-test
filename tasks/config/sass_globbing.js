@@ -9,7 +9,10 @@ module.exports = function(grunt) {
         '<%= pkg.themePath %>/sass/partials/glob/_helper-classes.scss' : '<%= pkg.themePath %>/sass/partials/helper-classes/**/*.scss',
         '<%= pkg.themePath %>/sass/partials/glob/_layout.scss' : '<%= pkg.themePath %>/sass/partials/layout/**/*.scss',
         '<%= pkg.themePath %>/sass/partials/glob/_components.scss' : '<%= pkg.themePath %>/sass/partials/components/**/*.scss',
+        '<%= pkg.themePath %>/sass/partials/glob/_block.scss' : '<%= pkg.themePath %>/sass/partials/components/block/**/*.scss',
         '<%= pkg.themePath %>/sass/partials/glob/_nav.scss' : '<%= pkg.themePath %>/sass/partials/components/nav/**/*.scss',
+        '<%= pkg.themePath %>/sass/partials/glob/_pane.scss' : '<%= pkg.themePath %>/sass/partials/components/pane/**/*.scss',
+        '<%= pkg.themePath %>/sass/partials/glob/_view.scss' : '<%= pkg.themePath %>/sass/partials/components/view/**/*.scss',
         '<%= pkg.themePath %>/sass/partials/glob/_module-tweaks.scss' : '<%= pkg.themePath %>/sass/partials/module_tweaks/**/*.scss'
       }
     }

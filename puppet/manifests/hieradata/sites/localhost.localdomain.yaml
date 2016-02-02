@@ -10,6 +10,10 @@ forumone::webserver::vhosts:
   vagrant: 
     path: "/vagrant/public"
 
+forumone::nodejs::modules:
+  - grunt-cli
+  - bower
+
 forumone::solr::collections:  
   drupal: 
     order: 1

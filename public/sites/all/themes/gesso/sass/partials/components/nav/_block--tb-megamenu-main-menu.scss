@@ -251,7 +251,7 @@
               @include column-count(3);
               @include column-gap(1em);
               li {
-                @include break-inside(avoid);
+                @include column-break-inside(avoid);
                 display: table; // firefox
                 width: 100%; // firefox
                 break-inside: avoid-column; // ie10

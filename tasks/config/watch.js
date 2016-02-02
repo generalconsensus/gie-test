@@ -6,10 +6,7 @@ module.exports = function(grunt) {
     watch : {
       compass: {
         files : [ '<%= pkg.themePath %>/sass/**/*.scss' ],
-        tasks : [ 'compass:' + environment ],
-        options : {
-          livereload : true
-        }
+        tasks : [ 'buildStyles' ],
       },
       patternlab : {
         files : [ '<%= pkg.themePath %>/patternlab/source/**/*' ],

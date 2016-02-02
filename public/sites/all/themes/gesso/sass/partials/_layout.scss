@@ -8,4 +8,4 @@
 // Variable to add special styles for Panels admin interface.
 $panels-admin: false;
 
-@import 'layout/**/*.*';
+@import 'glob/layout';

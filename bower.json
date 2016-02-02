@@ -1,5 +1,5 @@
 {
-  "name": "nmaahc",
+  "name": "dai-usaid",
   "description": "",
   "main": "",
   "license": "MIT",
@@ -14,7 +14,7 @@
     "tests"
   ],
   "dependencies": {
-    "compass-mixins": "~1.0.2",
+    "compass-mixins": "~0.12.7",
     "singularity": "~1.6.2"
   }
 }
