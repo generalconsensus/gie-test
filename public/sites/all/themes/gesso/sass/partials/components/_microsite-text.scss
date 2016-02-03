@@ -1,5 +1,5 @@
 // Styles for the microsites paragraphs text block component
-.microsite-text {
+.microsite-text { 
   @extend %microsite-component;
   padding: 0 5%;
   margin-bottom: 4em;
@@ -10,6 +10,9 @@
   ol {
     @extend %fancy-list--ordered;
   }
+}
+
+.microsite-text.microsite-text { // specificity hack to overcome basic bullets from _html-elements.
   ul {
     @extend %fancy-list;
   }
