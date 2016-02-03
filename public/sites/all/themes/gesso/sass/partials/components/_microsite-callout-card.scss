@@ -8,10 +8,10 @@
 
 .microsite-callout-card__inner {
   @include breakpoint(700px) {
-    @include align-items(center);
-    @include display-flex(flex);
-    @include flex-direction(row);
-    @include justify-content(center);
+    align-items: center;
+    display-flex: flex;
+    flex-direction: row;
+    justify-content: center;
   }
 }
 

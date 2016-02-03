@@ -8,7 +8,8 @@
 //@import 'compass';
 //@import 'breakpoint'; // github.com/Team-Sass/breakpoint
 //@import 'singularitygs'; // github.com/Team-Sass/Singularity
-@import 'compass-mixins/lib/compass';
+//@import 'compass-mixins/lib/compass';
+//$experimental-support-for-pie: false;
 @import 'breakpoint-sass/stylesheets/breakpoint'; // github.com/Team-Sass/breakpoint
 @import 'singularity/stylesheets/singularitygs'; // github.com/Team-Sass/Singularity
 // Custom partials to be shared with all .scss files. Imported with limited

@@ -2,10 +2,10 @@
 // Styles for Drupal messages.
 
 .messages {
-  @include border-radius();
-  @include adjust-font-size-to($font-size-md);
+  font-size: em($font-size-md);
   background-position: rhythm(0.5, $font-size-md) rhythm(0.5, $font-size-md); // LTR
   background-repeat: no-repeat;
+  border-radius: 5px;
   border-style: solid;
   border-width: 4px 1px;
   margin: rhythm(1, $font-size-md) 0;

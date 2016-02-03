@@ -16,11 +16,11 @@
 
   .description,
   .form-item__description {
-    @include adjust-font-size-to($font-size-md);
-    @include hyphens(none);
+    font-size: em($font-size-md);
     //color: $secondary-text-color;
     font-size: em($font-size-md);
     font-style: italic;
+    hyphens: none;
     line-height: 1.4;
     padding-bottom: 0.5em;
   }

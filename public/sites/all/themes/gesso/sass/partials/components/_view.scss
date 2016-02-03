@@ -58,8 +58,8 @@
 
 .view__author-image {
   img {
-    @include border-radius(50%);
     border: 1px solid $border-color;
+    border-radius: 50%;
   }
 }
 

@@ -75,7 +75,7 @@ $iconList : (
 //Add additional class names and icons to $iconList variable
 @each $iconList, $iconName in $iconList {
   .tb-megamenu-big-button.#{$iconList}:before {
-    @include transition(opacity 0.2s linear);
+    transition: opacity 0.2s linear;
     @include svg-background($iconName);
     opacity: 0.6;
   }

@@ -11,10 +11,10 @@
 }
 
 .fieldset__legend {
-    @include box-sizing(content-box);
     background: $form-bg-color;
     border: 1px solid $form-border-color;
     border-bottom: none;
+    box-sizing: content-box;
     color: #333;
     display: block;
     height: 2em;

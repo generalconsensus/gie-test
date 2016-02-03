@@ -4,23 +4,14 @@
 *,
 *:before,
 *:after {
-  // Box-sizing: border-box
   @include border-box;
 }
 
 * {
   // Universal transitions
-  @include transition-property(
-    background-color,
-    border-color,
-    box-shadow,
-    color,
-    opacity,
-    text-shadow,
-    transform
-  );
-  @include transition-duration(0.2s);
-  @include transition-timing-function(linear);
+  transition-duration: 0.2s;
+  transition-property: background-color, border-color, box-shadow, color, opacity, text-shadow, transform;
+  transition-timing-function:linear;
 }
 
 a {
@@ -142,7 +133,7 @@ form {
 %hN {
   color: $heading-text-color;
   font-family: $header-font-family;
-  @include hyphens(none);
+  hyphens: none;
   line-height: 1.1;
   text-rendering: optimizeLegibility;
 }
@@ -191,7 +182,7 @@ h6, %h6 {
 header {}
 
 hr {
-  @include box-sizing(content-box);
+  box-sizing: content-box;
   border: 1px solid $form-border-color;
   height: 0;
   margin: rhythm(1) 0;
@@ -199,10 +190,10 @@ hr {
 }
 
 html {
-  @include adjust-leading-to(1); 
-  @include hyphens(none);
   font-family: $base-font-family;
   font-size: 100% * ($base-font-size / 16px);
+  hyphens: none;
+  line-height: 1.625em;
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
 }
@@ -345,7 +336,7 @@ section {}
 select {}
 
 small {
-  @include adjust-font-size-to($font-size-md);
+  font-size: em($font-size-md);
 }
 
 strong {}

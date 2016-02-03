@@ -5,6 +5,6 @@ module.exports = function (grunt) {
   grunt.registerTask('buildStylesLongform', [
     'sass_globbing',
     'sass',
-    'cssUrlEmbed'
+    'postcss'
   ]);
 };

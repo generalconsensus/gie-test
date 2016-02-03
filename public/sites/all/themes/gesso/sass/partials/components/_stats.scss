@@ -10,8 +10,8 @@
   }
 
   .field {
-    @include hyphens(none);
     font-size: em(14px);
+    hyphens: none;
     line-height: 1.3;
     padding: 0 0 1.5em 0;
     .field-label {

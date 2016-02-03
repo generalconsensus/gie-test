@@ -1,7 +1,7 @@
 .card {
   background: #fff;
   border: 1px solid $card-border-color;
-  @include box-shadow(0 2px 0 0 $card-border-color);
+  box-shadow: 0 2px 0 0 $card-border-color;
   margin: 0 auto;
   max-width: 500px;
   position: relative;
@@ -97,8 +97,8 @@
     float: left;
     margin: 0 0.5em 0 0;
     img {
-      @include border-radius(50%);
       border: 1px solid $border-color;
+      border-radius: 50%;
     }
   }
   .card__author-name {
@@ -358,7 +358,7 @@
 .card--listing { // listing view mode
   background: none;
   border: 0;
-  @include box-shadow(none);
+  box-shadow: none;
   margin: 0;
   max-width: none;
   padding: 0 0 1em 0;

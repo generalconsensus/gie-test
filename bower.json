@@ -14,7 +14,6 @@
     "tests"
   ],
   "dependencies": {
-    "compass-mixins": "~0.12.7",
     "singularity": "~1.6.2"
   }
 }

@@ -1,6 +1,6 @@
 .pane--landing-intro {
   @extend %clearfix;
-  @include hyphens(none);
+  hyphens: none;
   margin: 0;
   padding: 25px 0 20px 0;
   @include breakpoint(900px, $no-query: true) {
