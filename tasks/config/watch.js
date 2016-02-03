@@ -16,26 +16,15 @@ module.exports = function(grunt) {
         }
       },
       longform_compass: {
-        files : [ 'public/sites/all/themes/gesso_longform/sass/**/*.scss' ],
+        files : [ '<%= pkg.longformThemePath %>/sass/**/*.scss' ],
         tasks : [ 'compass:longform_' + environment ],
         options : {
           livereload : true
         }
       },
       longform_patternlab : {
-        files : [ 'public/sites/all/themes/gesso_longform/patternlab/source/**/*' ],
+        files : [ '<%= pkg.longformThemePath %>/patternlab/source/**/*' ],
         tasks : [ 'shell:longform_patternlab' ],
-        options : {
-          livereload : true
-        }
-      },
-      microsites_compass: {
-        files : [ 'public/sites/all/themes/gesso_microsites/sass/**/*.scss' ],
-        tasks : [ 'compass:microsites_' + environment ],
-      },
-      microsites_patternlab : {
-        files : [ 'public/sites/all/themes/gesso_microsites/patternlab/source/**/*' ],
-        tasks : [ 'shell:microsites_patternlab' ],
         options : {
           livereload : true
         }

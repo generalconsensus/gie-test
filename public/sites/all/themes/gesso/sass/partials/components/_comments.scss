@@ -1,7 +1,7 @@
 .comments {
   border-top: 1px solid $border-color;
-  margin: rhythm(1) 0 0 0;
-  padding: rhythm(1.5) 0 0 0;
+  margin: $base-spacing 0 0 0;
+  padding: ($base-spacing * 2) 0 0 0;
 
   .comment-form {
     border-bottom: 1px solid $border-color;
@@ -14,7 +14,7 @@
   }
 
   .field-widget-text-textarea .text-format-wrapper .form-item {
-    margin: rhythm(1) 0;
+    margin: $base-spacing 0;
   }
 
   label {

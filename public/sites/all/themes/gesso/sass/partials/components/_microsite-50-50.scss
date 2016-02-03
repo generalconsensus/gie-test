@@ -3,7 +3,7 @@
   @extend %clearfix;
   @include breakpoint(900px, $no-query: true) {
     align-items: center;
-    display-flex: flex;
+    display: flex;
     flex-direction: row;
     justify-content: center;
   }

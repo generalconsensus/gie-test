@@ -3,8 +3,8 @@ module.exports = function (grunt) {
   var environment = (grunt.option('prod') || grunt.option('production')) ? 'stage' : 'dev';
 
   grunt.registerTask('buildStylesLongform', [
-    'sass_globbing',
-    'sass',
-    'postcss'
+    'sass_globbing:gesso_longform',
+    'sass:gesso_longform',
+    'postcss:gesso_longform'
   ]);
 };

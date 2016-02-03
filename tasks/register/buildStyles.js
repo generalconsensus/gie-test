@@ -3,8 +3,8 @@ module.exports = function (grunt) {
   var environment = (grunt.option('prod') || grunt.option('production')) ? 'stage' : 'dev';
 
   grunt.registerTask('buildStyles', [
-    'sass_globbing',
-    'sass',
-    'postcss'
+    'sass_globbing:gesso',
+    'sass:gesso',
+    'postcss:gesso'
   ]);
 };

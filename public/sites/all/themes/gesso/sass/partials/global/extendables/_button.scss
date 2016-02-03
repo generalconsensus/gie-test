@@ -11,7 +11,8 @@
   font-size: $font-size;
   font-family: $base-font-family;
   font-weight: normal;
-  margin: 0 0 rhythm(1);
+  line-height: $base-spacing;
+  margin: 0 0 $base-spacing;
   padding: 0.5em 1.75em;
   text-align: center;
   text-decoration: none;

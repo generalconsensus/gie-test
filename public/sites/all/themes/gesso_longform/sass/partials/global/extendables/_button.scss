@@ -2,16 +2,17 @@
 // Button helpers
 
 @mixin button($bg-color: $button-bg-color, $text-color: $button-text-color, $font-size: $font-size-md, $font-family: $button-font-family) {
-  @include adjust-font-size-to($font-size);
-  @include border-radius(0);
   background-color: $bg-color;
   border: none;
+  border-radius: 0;
   color: $button-text-color !important;
   cursor: pointer;
   display: inline-block;
   font-family: $base-font-family;
+  font-size: $font-size;
   font-weight: normal;
-  margin: 0 0 rhythm(1);
+  line-height: $base-spacing;
+  margin: 0 0 $base-spacing;
   padding: 0.5em 1.75em;
   text-align: center;
   text-decoration: none;

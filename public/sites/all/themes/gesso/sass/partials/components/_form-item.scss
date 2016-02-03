@@ -66,11 +66,11 @@
 }
 
 .form-item--password-confirm-pass-1 {
-  margin-bottom: rhythm(0.5);
+  margin-bottom: ($base-spacing / 2);
 }
 
 .form-item--password-confirm-pass-2 {
-  margin: rhythm(0.5) 0;
+  margin: ($base-spacing / 2) 0;
 }
 
 .form-select,
