@@ -68,16 +68,19 @@ function gie_news_strongarm() {
     'extra_fields' => array(
       'form' => array(
         'metatags' => array(
-          'weight' => '14',
+          'weight' => '15',
         ),
         'path' => array(
-          'weight' => '12',
+          'weight' => '13',
         ),
         'rabbit_hole' => array(
-          'weight' => '11',
+          'weight' => '12',
         ),
         'xmlsitemap' => array(
-          'weight' => '13',
+          'weight' => '14',
+        ),
+        'domain' => array(
+          'weight' => '1',
         ),
       ),
       'display' => array(),
