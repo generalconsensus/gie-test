@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the GIE Blog feature.
+ */
+
+include_once 'gie_blog.features.inc';
