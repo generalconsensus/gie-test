@@ -57,7 +57,7 @@ audio {}
 b {}
 
 blockquote {
-  margin: 0 1.5em $base-spacing;
+  margin: 0 1.5em 1.5em;
 }
 
 body {
@@ -92,7 +92,7 @@ colgroup {}
 datalist {}
 
 dd {
-  margin-bottom:$base-spacing;
+  margin-bottom: 1.5em;
 }
 
 del {}
@@ -104,7 +104,7 @@ dfn {
 }
 
 dl {
-  margin: 0 0 $base-spacing;
+  margin: 0 0 1.5em;
 }
 
 dt {}
@@ -118,7 +118,7 @@ fieldset {}
 figcaption {}
 
 figure {
-  margin: 0 0 $base-spacing;
+  margin: 0 0 1.5em;
 }
 
 footer {}
@@ -164,19 +164,19 @@ h3, %h3 {
 h4, %h4 {
   @extend %hN;
   font-size: em($font-size-lg);
-  margin: 0 0 $base-spacing;
+  margin: 0 0 1.5em;
 }
 
 h5, %h5 {
   @extend %hN;
   font-size: em($font-size-normal);
-  margin: 0 0 $base-spacing;
+  margin: 0 0 1.5em;
 }
 
 h6, %h6 {
   @extend %hN;
   font-size: em($font-size-md);
-  margin: 0 0 $base-spacing;
+  margin: 0 0 1.5em;
 }
 
 header {}
@@ -185,7 +185,7 @@ hr {
   box-sizing: content-box;
   border: 1px solid $form-border-color;
   height: 0;
-  margin: $base-spacing 0;
+  margin: 1.5em 0;
   padding-bottom: -1px;
 }
 
@@ -193,7 +193,7 @@ html {
   font-family: $base-font-family;
   font-size: 100% * ($base-font-size / 16px);
   hyphens: none;
-  line-height: $base-spacing;
+  line-height: $base-line-height;
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
 }
@@ -285,7 +285,7 @@ nav {}
 object {}
 
 ol {
-  margin: 0 0 $base-spacing;
+  margin: 0 0 1.5em;
   padding: 0 0 0 1.5em; // LTR
 
   [dir="rtl"] & {
@@ -307,13 +307,13 @@ option {}
 output {}
 
 p {
-  margin: 0 0 $base-spacing;
+  margin: 0 0 1.5em;
 }
 
 param {}
 
 pre {
-  margin: 0 0 $base-spacing;
+  margin: 0 0 1.5em;
   overflow: auto;
 
   @if support-legacy-browser('ie', '6', '7') {
@@ -381,7 +381,7 @@ tr {}
 u {}
 
 ul {
-  margin: 0 0 $base-spacing;
+  margin: 0 0 1.5em;
   padding: 0 0 0 1.2em; // LTR
 
   [dir="rtl"] & {

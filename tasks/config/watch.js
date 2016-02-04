@@ -4,7 +4,7 @@ module.exports = function(grunt) {
   
   grunt.config.merge({
     watch : {
-      compass: {
+      gesso: {
         files : [ '<%= pkg.themePath %>/sass/**/*.scss' ],
         tasks : [ 'buildStyles' ],
       },
@@ -15,14 +15,11 @@ module.exports = function(grunt) {
           livereload : true
         }
       },
-      longform_compass: {
+      gesso_longform: {
         files : [ '<%= pkg.longformThemePath %>/sass/**/*.scss' ],
-        tasks : [ 'compass:longform_' + environment ],
-        options : {
-          livereload : true
-        }
+        tasks : [ 'buildStylesLongform' ],
       },
-      longform_patternlab : {
+      gesso_longform_patternlab : {
         files : [ '<%= pkg.longformThemePath %>/patternlab/source/**/*' ],
         tasks : [ 'shell:longform_patternlab' ],
         options : {

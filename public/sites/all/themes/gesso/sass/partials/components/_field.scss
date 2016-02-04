@@ -1,9 +1,9 @@
 .field {
   .node--full > & {
-    margin: 0 0 $base-spacing 0;
-    padding: 0 0 ($base-spacing / 2) 0;
+    margin: 0 0 1.5em 0;
+    padding: 0 0 0.75em 0;
     > h2.field__label {
-      margin: 0 0 ($base-spacing /2) 0;
+      margin: 0 0 0.75em 0;
     }
     p:last-child, ul:last-child, ol:last-child {
       margin-bottom: 0;
@@ -15,7 +15,7 @@
 .field--border {
   .node--full > & {
     border-top: 1px solid $border-color;
-    padding-top: ($base-spacing * 1.5);
+    padding-top: 2em;
   }
 }
  
