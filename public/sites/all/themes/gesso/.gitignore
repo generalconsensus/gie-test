@@ -5,6 +5,7 @@
 # Generated files
 *.sass-cache/
 sass/partials/sass-globbing
+
 # Pattern Lab
 #patternlab/public/*
 #!patternlab/public/styleguide/
