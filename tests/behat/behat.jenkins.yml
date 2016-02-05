@@ -24,6 +24,7 @@ dev:
             drush:
               binary: '/usr/local/bin/drush'
               alias: 'ggc.dev'
+              global_options: '--alias-path=../../'
 stage:
     paths:
         features: 'features'
@@ -74,6 +75,7 @@ sauce-dev:
             drush:
               binary: '/usr/local/bin/drush'
               alias: 'ggc.dev'
+              global_options: '--alias-path=../../'
 sauce-stage:
     extensions:
         Behat\MinkExtension\Extension:
@@ -97,3 +99,4 @@ sauce-stage:
             drush:
               binary: '/usr/local/bin/drush'
               alias: 'ggc.stage'
+              global_options: '--alias-path=../../'
