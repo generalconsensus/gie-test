@@ -55,18 +55,18 @@ class FeatureContext extends Drupal\DrupalExtension\Context\DrupalContext {
 
   }
 
-  /**
-   * @AfterStep
-   */
-  public function dumpInfoAfterFailedStep(StepEvent $event) {
-
-    if ($event->getResult() === StepEvent::FAILED)
-    {
-      $this->saveScreenshot('failed.png');
-      exec('open ' . sys_get_temp_dir() . '/failed.png');
-      $this->iPutABreakpoint();
-    }
-  }
+//  /**
+//   * @AfterStep
+//   */
+//  public function dumpInfoAfterFailedStep(StepEvent $event) {
+//
+//    if ($event->getResult() === StepEvent::FAILED)
+//    {
+//      $this->saveScreenshot('failed.png');
+//      exec('open ' . sys_get_temp_dir() . '/failed.png');
+//      $this->iPutABreakpoint();
+//    }
+//  }
 
   /*
    * @BeforeSuite
