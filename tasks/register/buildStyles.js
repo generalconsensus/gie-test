@@ -5,6 +5,9 @@ module.exports = function (grunt) {
   grunt.registerTask('buildStyles', [
     'sass_globbing:gesso',
     'sass:gesso',
-    'postcss:gesso'
+    'postcss:gesso',
+    'sass_globbing:gesso_longform',
+    'sass:gesso_longform',
+    'postcss:gesso_longform'
   ]);
 };
