@@ -59,6 +59,9 @@ $ol-bullet-size: 60px;
       }
     }
   }
+}
+
+.microsite-text.microsite-text { // specificity hack to overcome basic bullets from _html-elements.
   ul {
     list-style: none;
     margin: 0 0 2em 0;
