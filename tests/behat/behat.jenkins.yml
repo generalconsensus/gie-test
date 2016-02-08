@@ -8,7 +8,7 @@ dev:
             selenium2:
               browser:              'chrome'
               capabilities:         { "browserName": "chrome", "browser": "chrome"}
-              wd_host:              'http://127.0.0.1:5555/wd/hub'
+              wd_host:              'http://127.0.0.1:8643/wd/hub'
             files_path: 'tests/behat/files/'
         Drupal\DrupalExtension\Extension:
             blackbox: ~
@@ -50,12 +50,14 @@ stage:
             api_driver: 'drush'
             drush:
               binary: '/usr/local/bin/drush'
-              alias: 'dai-usaid.dev'
+              alias: 'dai-usaid.stage'
+              global_options: '--alias-path=../../'
 
 sauce-dev:
     extensions:
         Behat\MinkExtension\Extension:
             base_url: http://forumone:f1dev@dev.gie.byf1.io/
+            goutte: ~
             selenium2:
               browser: chrome
               wd_host: dmcdermott:af313bc8-1daf-472d-8054-fc4b59449489@ondemand.saucelabs.com/wd/hub
@@ -80,6 +82,7 @@ sauce-stage:
     extensions:
         Behat\MinkExtension\Extension:
             base_url: http://forumone:f1dev@stage.gie.byf1.io/
+            goutte: ~
             selenium2:
               browser: chrome
               wd_host: dmcdermott:af313bc8-1daf-472d-8054-fc4b59449489@ondemand.saucelabs.com/wd/hub
