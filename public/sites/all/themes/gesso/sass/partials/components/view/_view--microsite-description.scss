@@ -10,11 +10,21 @@
     text-transform: uppercase;
   }
   .button {
-    background-color: $microsite-secondary;
-    border-color: $microsite-secondary;
-    &:hover, &:focus {
-       background-color: darken($microsite-secondary, 6.9%);
-       border-color: darken($microsite-secondary, 6.9%);
+    .microsite-palette1 & {
+      background-color: $microsite-palette1-secondary;
+      border-color: $microsite-palette1-secondary;
+      &:hover, &:focus {
+         background-color: darken($microsite-palette1-secondary, 6.9%);
+         border-color: darken($microsite-palette1-secondary, 6.9%);
+      }
+    }
+    .microsite-palette2 & {
+      background-color: $microsite-palette2-secondary;
+      border-color: $microsite-palette2-secondary;
+      &:hover, &:focus {
+         background-color: darken($microsite-palette2-secondary, 6.9%);
+         border-color: darken($microsite-palette2-secondary, 6.9%);
+      }
     }
   }
 }
