@@ -26,13 +26,25 @@ function gie_domain_color_selector_menu() {
  * @return mixed
  */
 function gie_domain_color_selector_form($form, &$form_state, $domain = array()) {
-  $color_option = array('microsite-palette1', 'microsite-palette2');
-  $form['color_selector'] = array(
-    '#type' => 'select',
-    '#options' => $color_option,
-    '#title' => t('Select the Color Profile for this Site'),
-    '#default_value' => 0
-  );
+  $body_class = variable_get('domain_' . $GLOBALS['_domain']['machine_name'] . '_gie_domain_color_selector_body_class', NULL);
+  $color_option = array('none', 'microsite-palette1', 'microsite-palette2');
+
+  if ($body_class) {
+    $form['color_selector'] = array(
+      '#type' => 'select',
+      '#options' => $color_option,
+      '#title' => t('Select the Color Profile for this Site'),
+      '#default_value' => array_search($body_class, $color_option)
+    );
+  } else {
+    $form['color_selector'] = array(
+      '#type' => 'select',
+      '#options' => $color_option,
+      '#title' => t('Select the Color Profile for this Site'),
+      '#default_value' => 0
+    );
+  }
+
   $form['domain'] = array('#type' => 'value', '#value' => $domain);
   $form['submit'] = array('#type' => 'submit', '#value' => t('Save'));
 
@@ -58,9 +70,9 @@ function gie_domain_color_selector_form_validate($form, &$form_state, $domain = 
  * @param array $arguments
  */
 function gie_domain_color_selector_form_submit($form, &$form_state, $domain = array(), $arguments = array()) {
-  $color_option = array('microsite-palette1', 'microsite-palette2');
+  $color_option = array('none', 'microsite-palette1', 'microsite-palette2');
   if (isset($form_state['values']['color_selector']) && is_numeric($form_state['values']['color_selector']) && !empty($form['domain']['#value']['machine_name'])) {
-    variable_set('domain_' . $form['domain']['#value']['machine_name'] . 'gie_domain_color_selector_body_class', $color_option[$form_state['values']['color_selector']]);
+    variable_set('domain_' . $form['domain']['#value']['machine_name'] . '_gie_domain_color_selector_body_class', $color_option[$form_state['values']['color_selector']]);
   }
 }
 
@@ -69,8 +81,10 @@ function gie_domain_color_selector_form_submit($form, &$form_state, $domain = ar
  * Implements template_preprocess_html().
  */
 function gie_domain_color_selector_preprocess_html(&$variables) {
-  $settings = variable_get('domain_' . $GLOBALS['_domain']['machine_name'] . 'gie_domain_color_selector_body_class', 'microsite-palette1');
-  $variables['classes_array'][] = $settings;
+  $settings = variable_get('domain_' . $GLOBALS['_domain']['machine_name'] . '_gie_domain_color_selector_body_class', NULL);
+  if ($settings && $settings != 'none') {
+    $variables['classes_array'][] = $settings;
+  }
 }
 
 /**
