@@ -55,7 +55,7 @@ function gie_blog_views_default_views() {
   );
 
   /* Display: Blog Posts */
-  $handler = $view->new_display('panel_pane', 'Blog Posts', 'discussion_listing');
+  $handler = $view->new_display('panel_pane', 'Blog Posts', 'blog_listing');
   $export['blog_listing'] = $view;
 
   return $export;
