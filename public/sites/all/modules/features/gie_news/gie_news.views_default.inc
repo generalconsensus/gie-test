@@ -12,7 +12,7 @@ function gie_news_views_default_views() {
 
   $view = new view();
   $view->name = 'news_listing';
-  $view->description = 'Discussions listing solr view';
+  $view->description = 'News listing solr view';
   $view->tag = 'default';
   $view->base_table = 'search_api_index_default_node_index';
   $view->human_name = 'News listing';
@@ -54,8 +54,8 @@ function gie_news_views_default_views() {
     'news' => 'news',
   );
 
-  /* Display: News */
-  $handler = $view->new_display('panel_pane', 'News', 'discussion_listing');
+  /* Display: News Listing */
+  $handler = $view->new_display('panel_pane', 'News Listing', 'news_listing');
   $export['news_listing'] = $view;
 
   return $export;
