@@ -1093,7 +1093,7 @@ function gie_user_views_default_views() {
   $handler->display->display_options['fields']['uid']['id'] = 'uid';
   $handler->display->display_options['fields']['uid']['table'] = 'search_api_index_default_user_index';
   $handler->display->display_options['fields']['uid']['field'] = 'uid';
-  /* Sort criterion: Broken/missing handler */
+  /* Sort criterion: Indexed User: Last Name */
   $handler->display->display_options['sorts']['field_user_lastname']['id'] = 'field_user_lastname';
   $handler->display->display_options['sorts']['field_user_lastname']['table'] = 'search_api_index_default_user_index';
   $handler->display->display_options['sorts']['field_user_lastname']['field'] = 'field_user_lastname';
