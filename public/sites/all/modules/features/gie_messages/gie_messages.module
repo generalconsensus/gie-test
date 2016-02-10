@@ -17,10 +17,10 @@ function gie_messages_comment_insert($comment) {
     return;
   }
 
-  // Get User Notifications frequency field
-  $notifier_name = _gie_messages_get_notifier_name($node->uid);
-  // Get "Notify comment" field
   $user = entity_metadata_wrapper('user', $node->uid);
+  // Get User Notifications frequency field
+  $notifier_name = _gie_messages_get_notifier_name($user);
+  // Get "Notify comment" field
   $notify_comment = $user->field_user_mail_comment->value();
 
   if ($notifier_name == 'do_not_send' || !$notify_comment) {
@@ -56,11 +56,10 @@ function gie_messages_flag_flag($flag, $content_id, $account, $flagging) {
         break;
       }
 
-      // Get notifier name based on node author
-      $notifier_name = _gie_messages_get_notifier_name($node->uid);
-
-      // Get "Notify content follow" field
       $user = entity_metadata_wrapper('user', $node->uid);
+      // Get User Notifications frequency field
+      $notifier_name = _gie_messages_get_notifier_name($user);
+      // Get "Notify content follow" field
       $notify_follow = $user->field_user_mail_content_follow->value();
 
       if ($notifier_name == 'do_not_send' || !$notify_follow) {
@@ -104,11 +103,10 @@ function gie_messages_flag_flag($flag, $content_id, $account, $flagging) {
         break;
       }
 
-      // Get notifier name based on user (content id)
-      $notifier_name = _gie_messages_get_notifier_name($content_id);
-
-      // Get "Notify user follow" field
       $user = entity_metadata_wrapper('user', $content_id);
+      // Get notifier name based on user (content id)
+      $notifier_name = _gie_messages_get_notifier_name($user);
+      // Get "Notify user follow" field
       $notify_follow = $user->field_user_mail_user_follow->value();
 
       if ($notifier_name == 'do_not_send' || !$notify_follow) {
@@ -173,11 +171,10 @@ function gie_messages_node_update($node) {
       continue;
     }
 
-    // Get notifier name based on user
-    $notifier_name = _gie_messages_get_notifier_name($uid);
-
-    // Get "Notify user follow" field
     $user = entity_metadata_wrapper('user', $uid);
+    // Get notifier name based on user
+    $notifier_name = _gie_messages_get_notifier_name($user);
+    // Get "Notify user follow" field
     $notify_edit = $user->field_user_mail_follow_edit->value();
 
     if ($notifier_name == 'do_not_send' || !$notify_edit) {
@@ -244,7 +241,8 @@ function gie_messages_node_insert($node) {
         }
 
         // Get notifier name based on user
-        $notifier_name = _gie_messages_get_notifier_name($uid);
+        $user = entity_metadata_wrapper('user', $uid);
+        $notifier_name = _gie_messages_get_notifier_name($user);
         if ($notifier_name == 'do_not_send') {
           // user set to not receive emails, skip to next user
           continue;
@@ -266,14 +264,12 @@ function gie_messages_node_insert($node) {
 
 /**
  * Helper function to get notifier name
- * @param $uid
- *   User ID
+ * @param $user
+ *   User object
  * @return string
  *   Notifier Name
  */
-function _gie_messages_get_notifier_name($uid) {
-  // Get User Notifications frequency field
-  $user = entity_metadata_wrapper('user', $uid);
+function _gie_messages_get_notifier_name($user) {
   $notification = $user->field_user_notifications->value();
 
   // Get notifier based on email message frequency of user
