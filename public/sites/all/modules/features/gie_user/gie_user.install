@@ -69,7 +69,6 @@ function gie_user_update_7006() {
 
     $wrapper->field_user_mail_user_follow->set(1);
     $wrapper->field_user_mail_follow_edit->set(1);
-    $wrapper->field_user_mail_follow_comment->set(1);
     $wrapper->field_user_mail_content_follow->set(1);
     $wrapper->field_user_mail_comment->set(1);
 
