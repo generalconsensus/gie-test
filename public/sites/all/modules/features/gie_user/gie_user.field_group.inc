@@ -21,7 +21,7 @@ function gie_user_field_group_info() {
   $field_group->parent_name = '';
   $field_group->data = array(
     'label' => 'Tell Us About You',
-    'weight' => '1',
+    'weight' => '0',
     'children' => array(
       0 => 'field_user_company',
       1 => 'field_user_firstname',
@@ -33,7 +33,6 @@ function gie_user_field_group_info() {
       7 => 'field_assistance_offered',
       8 => 'field_user_parent',
       9 => 'field_user_assistance',
-      10 => 'field_user_notifications',
     ),
     'format_type' => 'div',
     'format_settings' => array(
@@ -165,7 +164,7 @@ function gie_user_field_group_info() {
   $field_group->parent_name = '';
   $field_group->data = array(
     'label' => 'Where else can we connect with you?',
-    'weight' => '6',
+    'weight' => '7',
     'children' => array(
       0 => 'field_user_facebook',
       1 => 'field_user_linkedin',
@@ -200,7 +199,7 @@ function gie_user_field_group_info() {
   $field_group->parent_name = '';
   $field_group->data = array(
     'label' => 'What interests you about the Exchange?',
-    'weight' => '5',
+    'weight' => '6',
     'children' => array(
       0 => 'field_user_education',
       1 => 'field_user_interests',
@@ -261,6 +260,45 @@ function gie_user_field_group_info() {
     ),
   );
   $export['group_user_meta|user|user|full'] = $field_group;
+
+  $field_group = new stdClass();
+  $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
+  $field_group->api_version = 1;
+  $field_group->identifier = 'group_user_notifications|user|user|form';
+  $field_group->group_name = 'group_user_notifications';
+  $field_group->entity_type = 'user';
+  $field_group->bundle = 'user';
+  $field_group->mode = 'form';
+  $field_group->parent_name = '';
+  $field_group->data = array(
+    'label' => 'Notifications',
+    'weight' => '8',
+    'children' => array(
+      0 => 'field_user_notifications',
+      1 => 'field_user_mail_user_follow',
+      2 => 'field_user_mail_follow_edit',
+      3 => 'field_user_mail_follow_comment',
+      4 => 'field_user_mail_content_follow',
+      5 => 'field_user_mail_comment',
+      6 => 'field_user_notify_test',
+    ),
+    'format_type' => 'div',
+    'format_settings' => array(
+      'label' => 'Notifications',
+      'instance_settings' => array(
+        'required_fields' => 1,
+        'id' => '',
+        'classes' => '',
+        'description' => '',
+        'show_label' => '1',
+        'label_element' => 'h2',
+        'effect' => 'none',
+        'speed' => 'none',
+      ),
+      'formatter' => 'open',
+    ),
+  );
+  $export['group_user_notifications|user|user|form'] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
