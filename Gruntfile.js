@@ -36,28 +36,34 @@ module.exports = function(grunt) {
   grunt.registerTask('behatJenkinsTest', 'Execute Behat for BDD testing', function () {
     //TODO: Temporary solution -- create standardized markers
     var target = grunt.option('buildDisplay');
-    if (target.indexOf('dev') > 1){
-      grunt.config.merge({
-        behat: {
-          options: {
-            config: './tests/behat/behat.jenkins.yml',
-            flags: '-p dev'
+    if (target) {
+      if (target.indexOf('dev') > -1){
+        grunt.config.merge({
+          behat: {
+            options: {
+              config: './tests/behat/behat.jenkins.yml',
+              flags: '-p dev'
+            }
           }
-        }
-      });
-    } else if(target.indexOf('stage') > 1){
-      grunt.config.merge({
-        behat: {
-          options: {
-            config: './tests/behat/behat.jenkins.yml',
-            flags: '-p stage'
+        });
+      } else if(target.indexOf('stage') > -1) {
+        grunt.config.merge({
+          behat: {
+            options: {
+              config: './tests/behat/behat.jenkins.yml',
+              flags: '-p stage'
+            }
           }
-        }
-      });
+        });
+      } else {
+        grunt.fatal('Select either Dev or Stage Behat Profiles');
+      }
+      // Don't allow test to continue if it doesn't match either Behat Profiles
+    } else {
+      grunt.fatal('Select either Dev or Stage Behat Profiles');
     }
     grunt.task.run('behat')
   });
-
   grunt.registerTask('behatTest', 'Execute Behat for BDD testing', function () {
     grunt.config.merge({
       behat: {
