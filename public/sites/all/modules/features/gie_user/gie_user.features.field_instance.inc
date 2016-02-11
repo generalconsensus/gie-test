@@ -2012,7 +2012,7 @@ function gie_user_field_default_field_instances() {
     'ds_extras_field_template' => '',
     'entity_type' => 'user',
     'field_name' => 'field_user_mail_comment',
-    'label' => 'Notify comment',
+    'label' => 'Receive emails when someone comments on my content',
     'required' => 0,
     'settings' => array(
       'description_display' => 'after',
@@ -2106,7 +2106,7 @@ function gie_user_field_default_field_instances() {
     'ds_extras_field_template' => '',
     'entity_type' => 'user',
     'field_name' => 'field_user_mail_content_follow',
-    'label' => 'Notify content follow',
+    'label' => 'Receive emails when someone follows my content',
     'required' => 0,
     'settings' => array(
       'description_display' => 'after',
@@ -2200,7 +2200,7 @@ function gie_user_field_default_field_instances() {
     'ds_extras_field_template' => '',
     'entity_type' => 'user',
     'field_name' => 'field_user_mail_follow_edit',
-    'label' => 'Notify content edit',
+    'label' => 'Receive emails when content I follow is edited',
     'required' => 0,
     'settings' => array(
       'description_display' => 'after',
@@ -2294,7 +2294,7 @@ function gie_user_field_default_field_instances() {
     'ds_extras_field_template' => '',
     'entity_type' => 'user',
     'field_name' => 'field_user_mail_user_follow',
-    'label' => 'Notify user follow',
+    'label' => 'Receive emails when I am followed',
     'required' => 0,
     'settings' => array(
       'description_display' => 'after',
@@ -3673,10 +3673,6 @@ function gie_user_field_default_field_instances() {
   t('Members');
   t('My Motto');
   t('Name');
-  t('Notify comment');
-  t('Notify content edit');
-  t('Notify content follow');
-  t('Notify user follow');
   t('Other Interests');
   t('Please select the sectors and sub-sectors related to your innovation. Click on the plus (+) icon on the different sectors to access sub sectors. Be sure to select the sectors and subsectors that apply. Do not select a sub-sector without also selecting the corresponding sector.');
   t('Please type in any programs/Projects you are associated with. The program must have a profile on the Exchange before you can include it. If the program is not there, please contact the program and ask them to add a profile on the Exchange. Then you can come back and tag it. Programs are often funded or implemented by organizations, have a set budget, and a start and end date.');
@@ -3686,6 +3682,10 @@ function gie_user_field_default_field_instances() {
   t('Provide the LinkedIn URL for your profile. For example: https://www.linkedin.com/in/example');
   t('Provide the Twitter URL for your profile. For example: https://twitter.com/globalinnovationexchange');
   t('Receive email alerts about new funding opportunities, innovations, people, events, and other content coming into the Exchange that is relevant to you based on your profile. We will also send you occasional updates on new features and opportunities in the Exchange. ');
+  t('Receive emails when I am followed');
+  t('Receive emails when content I follow is edited');
+  t('Receive emails when someone comments on my content');
+  t('Receive emails when someone follows my content');
   t('Select as many types that apply to your current role and expertise.');
   t('Select the region where you are based. ');
   t('Select the types of assistance you can offer members and organizations of the Exchange');
