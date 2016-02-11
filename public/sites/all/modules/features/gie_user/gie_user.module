@@ -221,9 +221,23 @@ function gie_user_views_pre_render(&$view) {
 /**
  * Implements hook_menu_alter().
  * - Remove Contact item from Tab menu.
+ * - Use custom function for user notifications menu tab access.
  */
 function gie_user_menu_alter(&$items) {
   $items['user/%user/contact']['type'] = MENU_CALLBACK;
+  $items['user/%pm_arg/notifications']['access callback'] = '_gie_user_notifications_link_access';
+}
+
+/**
+ * Custom function to check access for Notifications link
+ */
+function _gie_user_notifications_link_access() {
+  // Only display Notifications menu link on own user profile
+  if (!user_is_anonymous() && arg(0) == 'user') {
+    global $user;
+    if ($user->uid == arg(1)) return true;
+    else return false;
+  } else return false;
 }
 
 /**

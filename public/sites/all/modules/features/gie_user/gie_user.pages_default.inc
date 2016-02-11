@@ -819,7 +819,18 @@ function gie_user_default_page_manager_pages() {
   $page->admin_description = 'Email notifications edit page';
   $page->path = 'user/%user/notifications';
   $page->access = array();
-  $page->menu = array();
+  $page->menu = array(
+    'type' => 'tab',
+    'title' => 'Notifications',
+    'name' => 'navigation',
+    'weight' => '2',
+    'parent' => array(
+      'type' => 'none',
+      'title' => '',
+      'name' => 'navigation',
+      'weight' => '0',
+    ),
+  );
   $page->arguments = array(
     'user' => array(
       'id' => 1,
@@ -877,6 +888,31 @@ function gie_user_default_page_manager_pages() {
   $display->content = array();
   $display->panels = array();
     $pane = new stdClass();
+    $pane->pid = 'new-b2954fd7-2dc8-4f0b-8c5f-41f0689aa707';
+    $pane->panel = 'main';
+    $pane->type = 'page_tabs';
+    $pane->subtype = 'page_tabs';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array(
+      'type' => 'both',
+      'id' => 'tabs',
+      'override_title' => 1,
+      'override_title_text' => '',
+      'override_title_heading' => 'h2',
+    );
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
+    $pane->css = array();
+    $pane->extras = array();
+    $pane->position = 0;
+    $pane->locks = array();
+    $pane->uuid = 'b2954fd7-2dc8-4f0b-8c5f-41f0689aa707';
+    $display->content['new-b2954fd7-2dc8-4f0b-8c5f-41f0689aa707'] = $pane;
+    $display->panels['main'][0] = 'new-b2954fd7-2dc8-4f0b-8c5f-41f0689aa707';
+    $pane = new stdClass();
     $pane->pid = 'new-9b082cda-ac32-4daa-80ab-4f5a53af0ed3';
     $pane->panel = 'main';
     $pane->type = 'block';
@@ -894,11 +930,11 @@ function gie_user_default_page_manager_pages() {
     );
     $pane->css = array();
     $pane->extras = array();
-    $pane->position = 0;
+    $pane->position = 1;
     $pane->locks = array();
     $pane->uuid = '9b082cda-ac32-4daa-80ab-4f5a53af0ed3';
     $display->content['new-9b082cda-ac32-4daa-80ab-4f5a53af0ed3'] = $pane;
-    $display->panels['main'][0] = 'new-9b082cda-ac32-4daa-80ab-4f5a53af0ed3';
+    $display->panels['main'][1] = 'new-9b082cda-ac32-4daa-80ab-4f5a53af0ed3';
     $pane = new stdClass();
     $pane->pid = 'new-32a4272e-0320-43d8-9b5c-31492f8738bd';
     $pane->panel = 'title';
