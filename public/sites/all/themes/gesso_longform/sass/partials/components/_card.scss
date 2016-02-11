@@ -13,7 +13,7 @@
 .card.component {}
 
 .card__item {
-	@include box-shadow(0 0px 2px 1px rgba(0, 0, 0, 0.4));
+	box-shadow: 0 0px 2px 1px rgba(0, 0, 0, 0.4);
 	margin: 1em auto;
 	padding: 0 1em;
 	text-align: left;

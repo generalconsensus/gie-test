@@ -21,10 +21,10 @@
   margin:0 0 1em;
   line-height: 0;
   > label {
-    @include hyphens(none);
     border-bottom: 1px solid #cecfcb;
     font-size: 32px;
     font-weight: bold;
+    hyphens: none;
     line-height: 1.1;
     margin: 0 0 1em 0;
     padding: 0 0 0.5em 0;

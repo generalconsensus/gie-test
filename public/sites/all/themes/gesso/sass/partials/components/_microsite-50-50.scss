@@ -2,10 +2,10 @@
   @extend %microsite-component;
   @extend %clearfix;
   @include breakpoint(900px, $no-query: true) {
-    @include align-items(center);
-    @include display-flex(flex);
-    @include flex-direction(row);
-    @include justify-content(center);
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
   }
   background: $microsite-secondary;
   color: #fff;
@@ -33,6 +33,6 @@
 
 .microsite-50-50--reversed {
   @include breakpoint(900px, $no-query: true) {
-    @include flex-direction(row-reverse);
+    flex-direction: row-reverse;
   }
 }

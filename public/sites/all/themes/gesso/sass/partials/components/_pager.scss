@@ -2,7 +2,7 @@
 // Styles for pagers.
 
 .pager {
-  @include box-shadow(1px 1px 1px 1px rgba(0,0,0,0.15));
+  box-shadow: 1px 1px 1px 1px rgba(0,0,0,0.15);
   clear: both;
   font-size: 0%;
   display: inline-block;
