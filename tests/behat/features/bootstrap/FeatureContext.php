@@ -55,6 +55,7 @@ class FeatureContext extends Drupal\DrupalExtension\Context\DrupalContext {
 
   }
 
+//  TODO: Figure a smarter place for this @@@@!!!!! For use with local setups only !!!!!@@@@
 //  /**
 //   * @AfterStep
 //   */
@@ -62,27 +63,33 @@ class FeatureContext extends Drupal\DrupalExtension\Context\DrupalContext {
 //
 //    if ($event->getResult() === StepEvent::FAILED)
 //    {
+//      $this->getSession()->getPage();
+//      $filename =  'failed.html';
+//      $filepath = (ini_get('upload_tmp_dir') ? ini_get('upload_tmp_dir') : sys_get_temp_dir());
+//      file_put_contents($filepath . '/' . $filename, $this->getSession()->getPage()->getHtml());
 //      $this->saveScreenshot('failed.png');
+//      exec('open ' . sys_get_temp_dir() . '/failed.html');
 //      exec('open ' . sys_get_temp_dir() . '/failed.png');
 //      $this->iPutABreakpoint();
 //    }
 //  }
 
-  /*
-   * @BeforeSuite
-   */
-  public function xdebug_start() {
-    $this->getSession()
-      ->executeScript('javascript:(/**%20%40version%200.5.2%20*/function()%20%7Bdocument.cookie%3D%27XDEBUG_SESSION%3D%27%2B%27PHPSTORM%27%2B%27%3Bpath%3D/%3B%27%3B%7D)()');
-  }
+//  /*
+//   * @BeforeSuite
+//   */
+//  public function xdebug_start() {
+//    $this->getSession()
+//      ->executeScript('javascript:(/**%20%40version%200.5.2%20*/function()%20%7Bdocument.cookie%3D%27XDEBUG_SESSION%3D%27%2B%27PHPSTORM%27%2B%27%3Bpath%3D/%3B%27%3B%7D)()');
+//  }
+//
+//  /*
+//   * @AfterSuite
+//   */
+//  public function xdebug_stop() {
+//    $this->getSession()
+//      ->executeScript('javascript:(/** %40version 0.5.2 */function() %7Bdocument.cookie%3D%27XDEBUG_SESSION%3D%27%2B%27%27%2B%27%3Bexpires%3DMon, 05 Jul 2000 00:00:00 GMT%3Bpath%3D/%3B%27%3B%7D)()');
+//  }
 
-  /*
-   * @AfterSuite
-   */
-  public function xdebug_stop() {
-    $this->getSession()
-      ->executeScript('javascript:(/** %40version 0.5.2 */function() %7Bdocument.cookie%3D%27XDEBUG_SESSION%3D%27%2B%27%27%2B%27%3Bexpires%3DMon, 05 Jul 2000 00:00:00 GMT%3Bpath%3D/%3B%27%3B%7D)()');
-  }
 
   /**
    * Pauses the scenario until the user presses a key. Useful when debugging a scenario.
