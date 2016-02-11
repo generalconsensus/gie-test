@@ -17,7 +17,65 @@ function gie_news_field_default_field_instances() {
     'deleted' => 0,
     'description' => '',
     'display' => array(
+      'at_a_glance' => array(
+        'label' => 'above',
+        'module' => 'text',
+        'settings' => array(
+          'field_delimiter' => '',
+          'linked_field' => array(
+            'advanced' => array(
+              'class' => '',
+              'rel' => '',
+              'target' => '',
+              'text' => '',
+              'title' => '',
+            ),
+            'destination' => '',
+            'linked' => 0,
+          ),
+        ),
+        'type' => 'text_default',
+        'weight' => 8,
+      ),
+      'contact' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 8,
+      ),
       'default' => array(
+        'label' => 'above',
+        'module' => 'text',
+        'settings' => array(
+          'field_delimiter' => '',
+          'linked_field' => array(
+            'advanced' => array(
+              'class' => '',
+              'rel' => '',
+              'target' => '',
+              'text' => '',
+              'title' => '',
+            ),
+            'destination' => '',
+            'linked' => 0,
+          ),
+        ),
+        'type' => 'text_default',
+        'weight' => 8,
+      ),
+      'details' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 3,
+      ),
+      'listing' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 8,
+      ),
+      'search_listing' => array(
         'label' => 'above',
         'module' => 'text',
         'settings' => array(
@@ -69,7 +127,80 @@ function gie_news_field_default_field_instances() {
     'deleted' => 0,
     'description' => '',
     'display' => array(
+      'at_a_glance' => array(
+        'label' => 'above',
+        'module' => 'text',
+        'settings' => array(
+          'field_delimiter' => '',
+          'linked_field' => array(
+            'advanced' => array(
+              'class' => '',
+              'rel' => '',
+              'target' => '',
+              'text' => '',
+              'title' => '',
+            ),
+            'destination' => '',
+            'linked' => 0,
+          ),
+        ),
+        'type' => 'text_default',
+        'weight' => 11,
+      ),
+      'contact' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 20,
+      ),
       'default' => array(
+        'label' => 'above',
+        'module' => 'text',
+        'settings' => array(
+          'field_delimiter' => '',
+          'linked_field' => array(
+            'advanced' => array(
+              'class' => '',
+              'rel' => '',
+              'target' => '',
+              'text' => '',
+              'title' => '',
+            ),
+            'destination' => '',
+            'linked' => 0,
+          ),
+        ),
+        'type' => 'text_default',
+        'weight' => 11,
+      ),
+      'details' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 18,
+      ),
+      'listing' => array(
+        'label' => 'inline',
+        'module' => 'text',
+        'settings' => array(
+          'field_delimiter' => '',
+          'linked_field' => array(
+            'advanced' => array(
+              'class' => '',
+              'rel' => '',
+              'target' => '',
+              'text' => '',
+              'title' => '',
+            ),
+            'destination' => '',
+            'linked' => 0,
+          ),
+          'trim_length' => 600,
+        ),
+        'type' => 'text_trimmed',
+        'weight' => 4,
+      ),
+      'search_listing' => array(
         'label' => 'above',
         'module' => 'text',
         'settings' => array(
@@ -123,7 +254,79 @@ function gie_news_field_default_field_instances() {
     'deleted' => 0,
     'description' => '',
     'display' => array(
+      'at_a_glance' => array(
+        'label' => 'above',
+        'module' => 'taxonomy',
+        'settings' => array(
+          'field_delimiter' => '',
+          'linked_field' => array(
+            'advanced' => array(
+              'class' => '',
+              'rel' => '',
+              'target' => '',
+              'text' => '',
+              'title' => '',
+            ),
+            'destination' => '',
+            'linked' => 0,
+          ),
+        ),
+        'type' => 'taxonomy_term_reference_link',
+        'weight' => 9,
+      ),
+      'contact' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 14,
+      ),
       'default' => array(
+        'label' => 'above',
+        'module' => 'taxonomy',
+        'settings' => array(
+          'field_delimiter' => '',
+          'linked_field' => array(
+            'advanced' => array(
+              'class' => '',
+              'rel' => '',
+              'target' => '',
+              'text' => '',
+              'title' => '',
+            ),
+            'destination' => '',
+            'linked' => 0,
+          ),
+        ),
+        'type' => 'taxonomy_term_reference_link',
+        'weight' => 9,
+      ),
+      'details' => array(
+        'label' => 'inline',
+        'module' => 'gie_innovation',
+        'settings' => array(
+          'field_delimiter' => '',
+          'linked_field' => array(
+            'advanced' => array(
+              'class' => '',
+              'rel' => '',
+              'target' => '',
+              'text' => '',
+              'title' => '',
+            ),
+            'destination' => '',
+            'linked' => 0,
+          ),
+        ),
+        'type' => 'gie_listing_link',
+        'weight' => 10,
+      ),
+      'listing' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 11,
+      ),
+      'search_listing' => array(
         'label' => 'above',
         'module' => 'taxonomy',
         'settings' => array(
@@ -176,7 +379,69 @@ function gie_news_field_default_field_instances() {
     'deleted' => 0,
     'description' => 'Upload an image that will represent your news story.',
     'display' => array(
+      'at_a_glance' => array(
+        'label' => 'above',
+        'module' => 'image',
+        'settings' => array(
+          'field_delimiter' => '',
+          'image_link' => '',
+          'image_style' => '',
+          'linked_field' => array(
+            'advanced' => array(
+              'class' => '',
+              'rel' => '',
+              'target' => '',
+              'text' => '',
+              'title' => '',
+            ),
+            'destination' => '',
+            'linked' => 0,
+          ),
+        ),
+        'type' => 'image',
+        'weight' => 2,
+      ),
+      'contact' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 10,
+      ),
       'default' => array(
+        'label' => 'above',
+        'module' => 'image',
+        'settings' => array(
+          'field_delimiter' => '',
+          'image_link' => '',
+          'image_style' => '',
+          'linked_field' => array(
+            'advanced' => array(
+              'class' => '',
+              'rel' => '',
+              'target' => '',
+              'text' => '',
+              'title' => '',
+            ),
+            'destination' => '',
+            'linked' => 0,
+          ),
+        ),
+        'type' => 'image',
+        'weight' => 2,
+      ),
+      'details' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 1,
+      ),
+      'listing' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 5,
+      ),
+      'search_listing' => array(
         'label' => 'above',
         'module' => 'image',
         'settings' => array(
@@ -253,7 +518,82 @@ function gie_news_field_default_field_instances() {
     'deleted' => 0,
     'description' => '',
     'display' => array(
+      'at_a_glance' => array(
+        'label' => 'above',
+        'module' => 'entityreference',
+        'settings' => array(
+          'field_delimiter' => '',
+          'link' => FALSE,
+          'linked_field' => array(
+            'advanced' => array(
+              'class' => '',
+              'rel' => '',
+              'target' => '',
+              'text' => '',
+              'title' => '',
+            ),
+            'destination' => '',
+            'linked' => 0,
+          ),
+        ),
+        'type' => 'entityreference_label',
+        'weight' => 7,
+      ),
+      'contact' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 13,
+      ),
       'default' => array(
+        'label' => 'above',
+        'module' => 'entityreference',
+        'settings' => array(
+          'field_delimiter' => '',
+          'link' => FALSE,
+          'linked_field' => array(
+            'advanced' => array(
+              'class' => '',
+              'rel' => '',
+              'target' => '',
+              'text' => '',
+              'title' => '',
+            ),
+            'destination' => '',
+            'linked' => 0,
+          ),
+        ),
+        'type' => 'entityreference_label',
+        'weight' => 7,
+      ),
+      'details' => array(
+        'label' => 'inline',
+        'module' => 'entityreference',
+        'settings' => array(
+          'field_delimiter' => '',
+          'link' => 0,
+          'linked_field' => array(
+            'advanced' => array(
+              'class' => '',
+              'rel' => '',
+              'target' => '',
+              'text' => '',
+              'title' => '',
+            ),
+            'destination' => '',
+            'linked' => 0,
+          ),
+        ),
+        'type' => 'entityreference_label',
+        'weight' => 14,
+      ),
+      'listing' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 10,
+      ),
+      'search_listing' => array(
         'label' => 'above',
         'module' => 'entityreference',
         'settings' => array(
@@ -311,7 +651,82 @@ function gie_news_field_default_field_instances() {
     'deleted' => 0,
     'description' => '',
     'display' => array(
+      'at_a_glance' => array(
+        'label' => 'above',
+        'module' => 'entityreference',
+        'settings' => array(
+          'field_delimiter' => '',
+          'link' => FALSE,
+          'linked_field' => array(
+            'advanced' => array(
+              'class' => '',
+              'rel' => '',
+              'target' => '',
+              'text' => '',
+              'title' => '',
+            ),
+            'destination' => '',
+            'linked' => 0,
+          ),
+        ),
+        'type' => 'entityreference_label',
+        'weight' => 6,
+      ),
+      'contact' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 12,
+      ),
       'default' => array(
+        'label' => 'above',
+        'module' => 'entityreference',
+        'settings' => array(
+          'field_delimiter' => '',
+          'link' => FALSE,
+          'linked_field' => array(
+            'advanced' => array(
+              'class' => '',
+              'rel' => '',
+              'target' => '',
+              'text' => '',
+              'title' => '',
+            ),
+            'destination' => '',
+            'linked' => 0,
+          ),
+        ),
+        'type' => 'entityreference_label',
+        'weight' => 6,
+      ),
+      'details' => array(
+        'label' => 'inline',
+        'module' => 'entityreference',
+        'settings' => array(
+          'field_delimiter' => '',
+          'link' => 0,
+          'linked_field' => array(
+            'advanced' => array(
+              'class' => '',
+              'rel' => '',
+              'target' => '',
+              'text' => '',
+              'title' => '',
+            ),
+            'destination' => '',
+            'linked' => 0,
+          ),
+        ),
+        'type' => 'entityreference_label',
+        'weight' => 13,
+      ),
+      'listing' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 9,
+      ),
+      'search_listing' => array(
         'label' => 'above',
         'module' => 'entityreference',
         'settings' => array(
@@ -369,7 +784,79 @@ function gie_news_field_default_field_instances() {
     'deleted' => 0,
     'description' => '',
     'display' => array(
+      'at_a_glance' => array(
+        'label' => 'above',
+        'module' => 'taxonomy',
+        'settings' => array(
+          'field_delimiter' => '',
+          'linked_field' => array(
+            'advanced' => array(
+              'class' => '',
+              'rel' => '',
+              'target' => '',
+              'text' => '',
+              'title' => '',
+            ),
+            'destination' => '',
+            'linked' => 0,
+          ),
+        ),
+        'type' => 'taxonomy_term_reference_link',
+        'weight' => 10,
+      ),
+      'contact' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 21,
+      ),
       'default' => array(
+        'label' => 'above',
+        'module' => 'taxonomy',
+        'settings' => array(
+          'field_delimiter' => '',
+          'linked_field' => array(
+            'advanced' => array(
+              'class' => '',
+              'rel' => '',
+              'target' => '',
+              'text' => '',
+              'title' => '',
+            ),
+            'destination' => '',
+            'linked' => 0,
+          ),
+        ),
+        'type' => 'taxonomy_term_reference_link',
+        'weight' => 10,
+      ),
+      'details' => array(
+        'label' => 'inline',
+        'module' => 'taxonomy',
+        'settings' => array(
+          'field_delimiter' => '',
+          'linked_field' => array(
+            'advanced' => array(
+              'class' => '',
+              'rel' => '',
+              'target' => '',
+              'text' => '',
+              'title' => '',
+            ),
+            'destination' => '',
+            'linked' => 0,
+          ),
+        ),
+        'type' => 'taxonomy_term_reference_link',
+        'weight' => 9,
+      ),
+      'listing' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 13,
+      ),
+      'search_listing' => array(
         'label' => 'above',
         'module' => 'taxonomy',
         'settings' => array(
@@ -423,7 +910,79 @@ function gie_news_field_default_field_instances() {
     'deleted' => 0,
     'description' => '',
     'display' => array(
+      'at_a_glance' => array(
+        'label' => 'above',
+        'module' => 'taxonomy',
+        'settings' => array(
+          'field_delimiter' => '',
+          'linked_field' => array(
+            'advanced' => array(
+              'class' => '',
+              'rel' => '',
+              'target' => '',
+              'text' => '',
+              'title' => '',
+            ),
+            'destination' => '',
+            'linked' => 0,
+          ),
+        ),
+        'type' => 'taxonomy_term_reference_link',
+        'weight' => 5,
+      ),
+      'contact' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 11,
+      ),
       'default' => array(
+        'label' => 'above',
+        'module' => 'taxonomy',
+        'settings' => array(
+          'field_delimiter' => '',
+          'linked_field' => array(
+            'advanced' => array(
+              'class' => '',
+              'rel' => '',
+              'target' => '',
+              'text' => '',
+              'title' => '',
+            ),
+            'destination' => '',
+            'linked' => 0,
+          ),
+        ),
+        'type' => 'taxonomy_term_reference_link',
+        'weight' => 5,
+      ),
+      'details' => array(
+        'label' => 'inline',
+        'module' => 'taxonomy',
+        'settings' => array(
+          'field_delimiter' => '',
+          'linked_field' => array(
+            'advanced' => array(
+              'class' => '',
+              'rel' => '',
+              'target' => '',
+              'text' => '',
+              'title' => '',
+            ),
+            'destination' => '',
+            'linked' => 0,
+          ),
+        ),
+        'type' => 'taxonomy_term_reference_link',
+        'weight' => 12,
+      ),
+      'listing' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 7,
+      ),
+      'search_listing' => array(
         'label' => 'above',
         'module' => 'taxonomy',
         'settings' => array(
@@ -450,17 +1009,30 @@ function gie_news_field_default_field_instances() {
         'weight' => 0,
       ),
     ),
+    'ds_extras_field_template' => '',
     'entity_type' => 'node',
     'field_name' => 'field_news_sector',
     'label' => 'News Sector',
-    'required' => FALSE,
+    'required' => 0,
     'settings' => array(
+      'description_display' => 'after',
       'user_register_form' => FALSE,
     ),
     'widget' => array(
-      'module' => 'multiple_selects',
-      'settings' => array(),
-      'type' => 'multiple_selects',
+      'active' => 1,
+      'module' => 'term_reference_tree',
+      'settings' => array(
+        'cascading_selection' => 0,
+        'filter_view' => '',
+        'leaves_only' => 0,
+        'max_depth' => '',
+        'parent_term_id' => '',
+        'select_parents' => 0,
+        'start_minimized' => 1,
+        'token_display' => '',
+        'track_list' => 0,
+      ),
+      'type' => 'term_reference_tree',
       'weight' => 5,
     ),
   );
@@ -472,7 +1044,79 @@ function gie_news_field_default_field_instances() {
     'deleted' => 0,
     'description' => 'The news source',
     'display' => array(
+      'at_a_glance' => array(
+        'label' => 'above',
+        'module' => 'text',
+        'settings' => array(
+          'field_delimiter' => '',
+          'linked_field' => array(
+            'advanced' => array(
+              'class' => '',
+              'rel' => '',
+              'target' => '',
+              'text' => '',
+              'title' => '',
+            ),
+            'destination' => '',
+            'linked' => 0,
+          ),
+        ),
+        'type' => 'text_default',
+        'weight' => 3,
+      ),
+      'contact' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 9,
+      ),
       'default' => array(
+        'label' => 'above',
+        'module' => 'text',
+        'settings' => array(
+          'field_delimiter' => '',
+          'linked_field' => array(
+            'advanced' => array(
+              'class' => '',
+              'rel' => '',
+              'target' => '',
+              'text' => '',
+              'title' => '',
+            ),
+            'destination' => '',
+            'linked' => 0,
+          ),
+        ),
+        'type' => 'text_default',
+        'weight' => 3,
+      ),
+      'details' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 2,
+      ),
+      'listing' => array(
+        'label' => 'hidden',
+        'module' => 'text',
+        'settings' => array(
+          'field_delimiter' => '',
+          'linked_field' => array(
+            'advanced' => array(
+              'class' => '',
+              'rel' => '',
+              'target' => '',
+              'text' => '',
+              'title' => '',
+            ),
+            'destination' => '',
+            'linked' => 0,
+          ),
+        ),
+        'type' => 'text_default',
+        'weight' => 1,
+      ),
+      'search_listing' => array(
         'label' => 'above',
         'module' => 'text',
         'settings' => array(
@@ -563,7 +1207,93 @@ function gie_news_field_default_field_instances() {
     'deleted' => 0,
     'description' => '',
     'display' => array(
+      'at_a_glance' => array(
+        'label' => 'above',
+        'module' => 'taxonomy',
+        'settings' => array(
+          'field_delimiter' => '',
+          'linked_field' => array(
+            'advanced' => array(
+              'class' => '',
+              'rel' => '',
+              'target' => '',
+              'text' => '',
+              'title' => '',
+            ),
+            'destination' => '',
+            'linked' => 0,
+          ),
+        ),
+        'type' => 'taxonomy_term_reference_link',
+        'weight' => 12,
+      ),
+      'contact' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 22,
+      ),
       'default' => array(
+        'label' => 'above',
+        'module' => 'taxonomy',
+        'settings' => array(
+          'field_delimiter' => '',
+          'linked_field' => array(
+            'advanced' => array(
+              'class' => '',
+              'rel' => '',
+              'target' => '',
+              'text' => '',
+              'title' => '',
+            ),
+            'destination' => '',
+            'linked' => 0,
+          ),
+        ),
+        'type' => 'taxonomy_term_reference_link',
+        'weight' => 12,
+      ),
+      'details' => array(
+        'label' => 'inline',
+        'module' => 'taxonomy',
+        'settings' => array(
+          'field_delimiter' => '',
+          'linked_field' => array(
+            'advanced' => array(
+              'class' => '',
+              'rel' => '',
+              'target' => '',
+              'text' => '',
+              'title' => '',
+            ),
+            'destination' => '',
+            'linked' => 0,
+          ),
+        ),
+        'type' => 'taxonomy_term_reference_link',
+        'weight' => 11,
+      ),
+      'listing' => array(
+        'label' => 'inline',
+        'module' => 'taxonomy',
+        'settings' => array(
+          'field_delimiter' => '',
+          'linked_field' => array(
+            'advanced' => array(
+              'class' => '',
+              'rel' => '',
+              'target' => '',
+              'text' => '',
+              'title' => '',
+            ),
+            'destination' => '',
+            'linked' => 0,
+          ),
+        ),
+        'type' => 'taxonomy_term_reference_link',
+        'weight' => 3,
+      ),
+      'search_listing' => array(
         'label' => 'above',
         'module' => 'taxonomy',
         'settings' => array(
@@ -625,7 +1355,54 @@ function gie_news_field_default_field_instances() {
     'deleted' => 0,
     'description' => '',
     'display' => array(
+      'at_a_glance' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'contact' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 24,
+      ),
       'default' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'details' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 19,
+      ),
+      'listing' => array(
+        'label' => 'hidden',
+        'module' => 'title',
+        'settings' => array(
+          'field_delimiter' => '',
+          'linked_field' => array(
+            'advanced' => array(
+              'class' => '',
+              'rel' => '',
+              'target' => '',
+              'text' => '',
+              'title' => '',
+            ),
+            'destination' => '',
+            'linked' => 0,
+          ),
+          'title_class' => '',
+          'title_link' => '',
+          'title_style' => '',
+        ),
+        'type' => 'title_linked',
+        'weight' => 2,
+      ),
+      'search_listing' => array(
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
