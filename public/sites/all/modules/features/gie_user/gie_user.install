@@ -54,3 +54,24 @@ function gie_user_update_7005() {
     user_save($user);
   }
 }
+
+/**
+ * [#48575] Set all Notification fields to true
+ */
+function gie_user_update_7006() {
+  // load all users
+  $users = entity_load('user');
+  foreach($users as $user) {
+    // skip anonymous and admin user
+    if ($user->uid == 0 || $user->uid == 1) continue;
+
+    $wrapper = entity_metadata_wrapper('user',$user);
+
+    $wrapper->field_user_mail_user_follow->set(1);
+    $wrapper->field_user_mail_follow_edit->set(1);
+    $wrapper->field_user_mail_content_follow->set(1);
+    $wrapper->field_user_mail_comment->set(1);
+
+    $wrapper->save();
+  }
+}

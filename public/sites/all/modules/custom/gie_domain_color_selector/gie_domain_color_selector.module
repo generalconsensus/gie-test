@@ -26,7 +26,7 @@ function gie_domain_color_selector_menu() {
  * @return mixed
  */
 function gie_domain_color_selector_form($form, &$form_state, $domain = array()) {
-  $body_class = variable_get('domain_' . $GLOBALS['_domain']['machine_name'] . '_gie_domain_color_selector_body_class', NULL);
+  $body_class = variable_get('domain_' . $domain['machine_name'] . '_gie_domain_color_selector_body_class', NULL);
   $color_option = array('none', 'microsite-palette1', 'microsite-palette2');
 
   if ($body_class) {

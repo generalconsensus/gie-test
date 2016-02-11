@@ -24,7 +24,7 @@ dev:
             drush:
               binary: '/usr/local/bin/drush'
               alias: 'dai-usaid.dev'
-              global_options: '--alias-path=../../'
+              global_options: '--alias-path="."'
 stage:
     paths:
         features: 'features'
@@ -51,7 +51,7 @@ stage:
             drush:
               binary: '/usr/local/bin/drush'
               alias: 'dai-usaid.stage'
-              global_options: '--alias-path=../../'
+              global_options: '--alias-path="."'
 
 sauce-dev:
     extensions:
@@ -77,7 +77,7 @@ sauce-dev:
             drush:
               binary: '/usr/local/bin/drush'
               alias: 'dai-usaid.dev'
-              global_options: '--alias-path=../../'
+              global_options: '--alias-path="."'
 sauce-stage:
     extensions:
         Behat\MinkExtension\Extension:
@@ -102,4 +102,4 @@ sauce-stage:
             drush:
               binary: '/usr/local/bin/drush'
               alias: 'dai-usaid.stage'
-              global_options: '--alias-path=../../'
+              global_options: '--alias-path="."'
