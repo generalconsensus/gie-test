@@ -39,8 +39,8 @@
     }
 
     > a {
-      @include border-radius(1em);
       border: 2px solid transparent;
+      border-radius: 1em;
       color: #fff;
       display: block;
       margin: 0;

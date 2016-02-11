@@ -1,6 +1,6 @@
 .pane--favorite-this {
   background: $gray url(../images/favorite_background.png) no-repeat 100% 0;
-  @include box-shadow(0 2px 4px 0px rgba(0,0,0,0.15));
+  box-shadow: 0 2px 4px 0px rgba(0,0,0,0.15);
   padding: 1em;
   .pane__title {
     border: 0;

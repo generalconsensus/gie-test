@@ -1,6 +1,6 @@
 .region-navigation {
   background: #fff;
-  @include box-shadow(0 8px 8px -6px rgba(0,0,0,0.15));
+  box-shadow: 0 8px 8px -6px rgba(0,0,0,0.15);
   display: none;
   @include breakpoint($mobile-menu-bp, $no-query: true) {
     display: block;
@@ -21,7 +21,7 @@
 
   .section--microsite & {
     @extend %clearfix;
-    @include box-shadow(none);
+    box-shadow: none;
     height: auto;
     padding: 1em 0;
   }
@@ -31,7 +31,7 @@
 
 div.region-navigation {
   .page-simple & {
-    @include box-shadow(none);
+    box-shadow: none;
     display: block;
     @extend %clearfix;
     background: #00111F;
