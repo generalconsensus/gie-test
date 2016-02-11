@@ -1,7 +1,7 @@
 Feature: Check that rules works properly
 
   @api @content @javascript
-  Scenario: As an Administrator User I can check if features cannot be reverted
+  Scenario: As an Administrator I want to make sure that a rule works properly
     Given I run drush "en rules rules_admin entity entity_token -y"
     Given I run drush "rap 'administrator' 'administer rules'"
     Given I am logged in as a user with the "administrator" role
