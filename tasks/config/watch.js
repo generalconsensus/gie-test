@@ -17,11 +17,11 @@ module.exports = function(grunt) {
       },
       gesso_longform: {
         files : [ '<%= pkg.longformThemePath %>/sass/**/*.scss' ],
-        tasks : [ 'buildStylesLongform' ],
+        tasks : [ 'buildStyles' ],
       },
       gesso_longform_patternlab : {
         files : [ '<%= pkg.longformThemePath %>/patternlab/source/**/*' ],
-        tasks : [ 'shell:longform_patternlab' ],
+        tasks : [ 'shell:patternlab' ],
         options : {
           livereload : true
         }
