@@ -2,7 +2,7 @@
 // Aside Block
 
 .aside {
-	border: 3px $lightred solid; 
+	border: 3px $red solid; 
 	margin: 6em auto;
 	overflow: hidden;
 	padding: 2em;
@@ -11,12 +11,12 @@
     width: 50%;
   }
 	.aside__title {
-		color: $lightred;
+		color: $red;
 		font-weight: bold;
 		line-height: 1em;
 		text-transform: uppercase;
 		&:after {
-			border-bottom: 1px $lightred solid;
+			border-bottom: 1px $red solid;
 			content: " ";
 			display: block;
 			padding: .5em 0;

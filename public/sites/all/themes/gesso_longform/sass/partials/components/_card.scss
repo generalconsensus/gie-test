@@ -63,10 +63,10 @@
 }
 
 .card__title {
-	color: $lightred;
+	color: $red;
 	font-weight: bold;
 	&:before {
-		border-top: 8px $lightred solid;
+		border-top: 8px $red solid;
 		content: " ";
 		display: block;
 		padding: .5em 0;
