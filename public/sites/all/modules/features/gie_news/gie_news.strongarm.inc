@@ -42,14 +42,14 @@ function gie_news_strongarm() {
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'comment_news';
-  $strongarm->value = '1';
+  $strongarm->value = '2';
   $export['comment_news'] = $strongarm;
 
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'comment_preview_news';
-  $strongarm->value = '1';
+  $strongarm->value = '0';
   $export['comment_preview_news'] = $strongarm;
 
   $strongarm = new stdClass();
@@ -72,7 +72,7 @@ function gie_news_strongarm() {
         'custom_settings' => TRUE,
       ),
       'full' => array(
-        'custom_settings' => FALSE,
+        'custom_settings' => TRUE,
       ),
       'rss' => array(
         'custom_settings' => FALSE,
@@ -93,7 +93,7 @@ function gie_news_strongarm() {
         'custom_settings' => FALSE,
       ),
       'page_header' => array(
-        'custom_settings' => FALSE,
+        'custom_settings' => TRUE,
       ),
       'teaser_date' => array(
         'custom_settings' => FALSE,
@@ -129,19 +129,19 @@ function gie_news_strongarm() {
     'extra_fields' => array(
       'form' => array(
         'metatags' => array(
-          'weight' => '15',
+          'weight' => '19',
         ),
         'path' => array(
-          'weight' => '13',
+          'weight' => '17',
         ),
         'rabbit_hole' => array(
-          'weight' => '12',
+          'weight' => '15',
         ),
         'xmlsitemap' => array(
-          'weight' => '14',
+          'weight' => '18',
         ),
         'domain' => array(
-          'weight' => '1',
+          'weight' => '16',
         ),
       ),
       'display' => array(
@@ -155,12 +155,12 @@ function gie_news_strongarm() {
             'visible' => FALSE,
           ),
           'at_a_glance' => array(
-            'weight' => '1',
-            'visible' => TRUE,
+            'weight' => '12',
+            'visible' => FALSE,
           ),
           'contact' => array(
-            'weight' => '1',
-            'visible' => TRUE,
+            'weight' => '9',
+            'visible' => FALSE,
           ),
           'details' => array(
             'weight' => '11',
@@ -169,6 +169,14 @@ function gie_news_strongarm() {
           'search_listing' => array(
             'weight' => '1',
             'visible' => TRUE,
+          ),
+          'full' => array(
+            'weight' => '2',
+            'visible' => FALSE,
+          ),
+          'page_header' => array(
+            'weight' => '2',
+            'visible' => FALSE,
           ),
         ),
         'sharethis' => array(
@@ -181,11 +189,11 @@ function gie_news_strongarm() {
             'visible' => FALSE,
           ),
           'at_a_glance' => array(
-            'weight' => '10',
-            'visible' => TRUE,
+            'weight' => '5',
+            'visible' => FALSE,
           ),
           'contact' => array(
-            'weight' => '23',
+            'weight' => '27',
             'visible' => FALSE,
           ),
           'details' => array(
@@ -196,6 +204,14 @@ function gie_news_strongarm() {
             'weight' => '10',
             'visible' => TRUE,
           ),
+          'full' => array(
+            'weight' => '8',
+            'visible' => FALSE,
+          ),
+          'page_header' => array(
+            'weight' => '9',
+            'visible' => FALSE,
+          ),
         ),
         'news_at_a_glance_comments' => array(
           'details' => array(
@@ -203,7 +219,23 @@ function gie_news_strongarm() {
             'visible' => FALSE,
           ),
           'contact' => array(
-            'weight' => '19',
+            'weight' => '23',
+            'visible' => FALSE,
+          ),
+          'at_a_glance' => array(
+            'weight' => '0',
+            'visible' => TRUE,
+          ),
+          'default' => array(
+            'weight' => '10',
+            'visible' => TRUE,
+          ),
+          'full' => array(
+            'weight' => '12',
+            'visible' => FALSE,
+          ),
+          'page_header' => array(
+            'weight' => '12',
             'visible' => FALSE,
           ),
         ),
@@ -213,7 +245,23 @@ function gie_news_strongarm() {
             'visible' => FALSE,
           ),
           'contact' => array(
-            'weight' => '18',
+            'weight' => '22',
+            'visible' => FALSE,
+          ),
+          'at_a_glance' => array(
+            'weight' => '1',
+            'visible' => TRUE,
+          ),
+          'default' => array(
+            'weight' => '10',
+            'visible' => TRUE,
+          ),
+          'full' => array(
+            'weight' => '11',
+            'visible' => FALSE,
+          ),
+          'page_header' => array(
+            'weight' => '13',
             'visible' => FALSE,
           ),
         ),
@@ -223,7 +271,23 @@ function gie_news_strongarm() {
             'visible' => FALSE,
           ),
           'contact' => array(
-            'weight' => '15',
+            'weight' => '19',
+            'visible' => FALSE,
+          ),
+          'at_a_glance' => array(
+            'weight' => '2',
+            'visible' => TRUE,
+          ),
+          'default' => array(
+            'weight' => '10',
+            'visible' => TRUE,
+          ),
+          'full' => array(
+            'weight' => '13',
+            'visible' => FALSE,
+          ),
+          'page_header' => array(
+            'weight' => '10',
             'visible' => FALSE,
           ),
         ),
@@ -233,7 +297,23 @@ function gie_news_strongarm() {
             'visible' => FALSE,
           ),
           'contact' => array(
-            'weight' => '16',
+            'weight' => '20',
+            'visible' => FALSE,
+          ),
+          'at_a_glance' => array(
+            'weight' => '13',
+            'visible' => FALSE,
+          ),
+          'default' => array(
+            'weight' => '10',
+            'visible' => TRUE,
+          ),
+          'full' => array(
+            'weight' => '14',
+            'visible' => FALSE,
+          ),
+          'page_header' => array(
+            'weight' => '7',
             'visible' => FALSE,
           ),
         ),
@@ -243,7 +323,23 @@ function gie_news_strongarm() {
             'visible' => FALSE,
           ),
           'contact' => array(
-            'weight' => '17',
+            'weight' => '21',
+            'visible' => FALSE,
+          ),
+          'at_a_glance' => array(
+            'weight' => '14',
+            'visible' => FALSE,
+          ),
+          'default' => array(
+            'weight' => '10',
+            'visible' => TRUE,
+          ),
+          'full' => array(
+            'weight' => '9',
+            'visible' => FALSE,
+          ),
+          'page_header' => array(
+            'weight' => '8',
             'visible' => FALSE,
           ),
         ),
@@ -290,6 +386,84 @@ function gie_news_strongarm() {
   $strongarm->name = 'node_submitted_news';
   $strongarm->value = 0;
   $export['node_submitted_news'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'panelizer_defaults_node_news';
+  $strongarm->value = array(
+    'status' => 1,
+    'view modes' => array(
+      'page_manager' => array(
+        'status' => 1,
+        'substitute' => '',
+        'default' => 1,
+        'choice' => 0,
+      ),
+      'default' => array(
+        'status' => 0,
+        'substitute' => 0,
+        'default' => 0,
+        'choice' => 0,
+      ),
+      'full' => array(
+        'status' => 0,
+        'substitute' => 0,
+        'default' => 0,
+        'choice' => 0,
+      ),
+      'teaser' => array(
+        'status' => 0,
+        'substitute' => 0,
+        'default' => 0,
+        'choice' => 0,
+      ),
+      'listing' => array(
+        'status' => 0,
+        'substitute' => 0,
+        'default' => 0,
+        'choice' => 0,
+      ),
+      'page_header' => array(
+        'status' => 0,
+        'substitute' => 0,
+        'default' => 0,
+        'choice' => 0,
+      ),
+      'at_a_glance' => array(
+        'status' => 0,
+        'substitute' => 0,
+        'default' => 0,
+        'choice' => 0,
+      ),
+      'contact' => array(
+        'status' => 0,
+        'substitute' => 0,
+        'default' => 0,
+        'choice' => 0,
+      ),
+      'details' => array(
+        'status' => 0,
+        'substitute' => 0,
+        'default' => 0,
+        'choice' => 0,
+      ),
+      'search_listing' => array(
+        'status' => 0,
+        'substitute' => 0,
+        'default' => 0,
+        'choice' => 0,
+      ),
+    ),
+  );
+  $export['panelizer_defaults_node_news'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'panelizer_node:news:page_manager_selection';
+  $strongarm->value = 'node:news:default';
+  $export['panelizer_node:news:page_manager_selection'] = $strongarm;
 
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
