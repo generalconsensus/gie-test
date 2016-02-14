@@ -17,25 +17,10 @@ function gie_blog_ds_field_settings_info() {
   $ds_fieldsetting->bundle = 'blog';
   $ds_fieldsetting->view_mode = 'contact';
   $ds_fieldsetting->settings = array(
-    'post_date' => array(
-      'weight' => '0',
-      'label' => 'hidden',
-      'format' => 'ds_post_date_short',
+    'field_blog_publish_date' => array(
       'formatter_settings' => array(
         'ft' => array(
           'lb' => 'Blog Published',
-        ),
-        'field_delimiter' => '',
-        'linked_field' => array(
-          'linked' => 0,
-          'destination' => '',
-          'advanced' => array(
-            'title' => '',
-            'target' => '',
-            'class' => '',
-            'rel' => '',
-            'text' => '',
-          ),
         ),
       ),
     ),
@@ -150,12 +135,14 @@ function gie_blog_ds_layout_settings_info() {
   $ds_layout->layout = 'slat';
   $ds_layout->settings = array(
     'regions' => array(
-      'media' => array(
-        0 => 'post_date',
+      'main_content' => array(
+        0 => 'field_blog_author',
+        1 => 'field_blog_publish_date',
       ),
     ),
     'fields' => array(
-      'post_date' => 'media',
+      'field_blog_author' => 'main_content',
+      'field_blog_publish_date' => 'main_content',
     ),
     'classes' => array(),
     'wrappers' => array(

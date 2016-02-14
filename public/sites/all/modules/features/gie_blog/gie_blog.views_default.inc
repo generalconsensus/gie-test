@@ -222,27 +222,12 @@ function gie_blog_views_default_views() {
   $handler->display->display_options['defaults']['row_options'] = FALSE;
   $handler->display->display_options['defaults']['relationships'] = FALSE;
   $handler->display->display_options['defaults']['fields'] = FALSE;
-  /* Field: Content: Related Country */
+  /* Field: Broken/missing handler */
   $handler->display->display_options['fields']['field_related_country']['id'] = 'field_related_country';
   $handler->display->display_options['fields']['field_related_country']['table'] = 'field_data_field_related_country';
   $handler->display->display_options['fields']['field_related_country']['field'] = 'field_related_country';
   $handler->display->display_options['fields']['field_related_country']['label'] = '';
   $handler->display->display_options['fields']['field_related_country']['element_label_colon'] = FALSE;
-  $handler->display->display_options['fields']['field_related_country']['settings'] = array(
-    'field_delimiter' => '',
-    'linked_field' => array(
-      'linked' => 0,
-      'destination' => '',
-      'advanced' => array(
-        'title' => '',
-        'target' => '',
-        'class' => '',
-        'rel' => '',
-        'text' => '',
-      ),
-    ),
-  );
-  $handler->display->display_options['fields']['field_related_country']['delta_offset'] = '0';
   $handler->display->display_options['defaults']['filter_groups'] = FALSE;
   $handler->display->display_options['defaults']['filters'] = FALSE;
   /* Filter criterion: Content: Published */
@@ -329,27 +314,12 @@ function gie_blog_views_default_views() {
   $handler->display->display_options['fields']['created']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['created']['date_format'] = 'long';
   $handler->display->display_options['fields']['created']['second_date_format'] = 'html5_tools_iso8601';
-  /* Field: Content: Related Country */
+  /* Field: Broken/missing handler */
   $handler->display->display_options['fields']['field_related_country']['id'] = 'field_related_country';
   $handler->display->display_options['fields']['field_related_country']['table'] = 'field_data_field_related_country';
   $handler->display->display_options['fields']['field_related_country']['field'] = 'field_related_country';
   $handler->display->display_options['fields']['field_related_country']['label'] = '';
   $handler->display->display_options['fields']['field_related_country']['element_label_colon'] = FALSE;
-  $handler->display->display_options['fields']['field_related_country']['settings'] = array(
-    'field_delimiter' => '',
-    'linked_field' => array(
-      'linked' => 0,
-      'destination' => '',
-      'advanced' => array(
-        'title' => '',
-        'target' => '',
-        'class' => '',
-        'rel' => '',
-        'text' => '',
-      ),
-    ),
-  );
-  $handler->display->display_options['fields']['field_related_country']['delta_offset'] = '0';
   $handler->display->display_options['defaults']['filter_groups'] = FALSE;
   $handler->display->display_options['defaults']['filters'] = FALSE;
   /* Filter criterion: Content: Published */

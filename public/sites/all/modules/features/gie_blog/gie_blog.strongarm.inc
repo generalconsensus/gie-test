@@ -21,7 +21,7 @@ function gie_blog_strongarm() {
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'comment_blog';
-  $strongarm->value = '1';
+  $strongarm->value = '2';
   $export['comment_blog'] = $strongarm;
 
   $strongarm = new stdClass();
@@ -49,7 +49,7 @@ function gie_blog_strongarm() {
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'comment_preview_blog';
-  $strongarm->value = '1';
+  $strongarm->value = '0';
   $export['comment_preview_blog'] = $strongarm;
 
   $strongarm = new stdClass();
@@ -72,7 +72,7 @@ function gie_blog_strongarm() {
         'custom_settings' => TRUE,
       ),
       'full' => array(
-        'custom_settings' => FALSE,
+        'custom_settings' => TRUE,
       ),
       'rss' => array(
         'custom_settings' => FALSE,
@@ -129,16 +129,19 @@ function gie_blog_strongarm() {
     'extra_fields' => array(
       'form' => array(
         'metatags' => array(
-          'weight' => '13',
+          'weight' => '20',
         ),
         'path' => array(
-          'weight' => '12',
+          'weight' => '19',
         ),
         'rabbit_hole' => array(
-          'weight' => '10',
+          'weight' => '17',
         ),
         'xmlsitemap' => array(
-          'weight' => '11',
+          'weight' => '18',
+        ),
+        'domain' => array(
+          'weight' => '16',
         ),
       ),
       'display' => array(
@@ -152,8 +155,8 @@ function gie_blog_strongarm() {
             'visible' => FALSE,
           ),
           'page_header' => array(
-            'weight' => '2',
-            'visible' => TRUE,
+            'weight' => '1',
+            'visible' => FALSE,
           ),
           'at_a_glance' => array(
             'weight' => '3',
@@ -168,7 +171,11 @@ function gie_blog_strongarm() {
             'visible' => FALSE,
           ),
           'contact' => array(
-            'weight' => '2',
+            'weight' => '15',
+            'visible' => FALSE,
+          ),
+          'full' => array(
+            'weight' => '16',
             'visible' => FALSE,
           ),
         ),
@@ -182,7 +189,7 @@ function gie_blog_strongarm() {
             'visible' => FALSE,
           ),
           'page_header' => array(
-            'weight' => '1',
+            'weight' => '0',
             'visible' => TRUE,
           ),
           'at_a_glance' => array(
@@ -198,7 +205,11 @@ function gie_blog_strongarm() {
             'visible' => FALSE,
           ),
           'contact' => array(
-            'weight' => '10',
+            'weight' => '18',
+            'visible' => FALSE,
+          ),
+          'full' => array(
+            'weight' => '20',
             'visible' => FALSE,
           ),
         ),
@@ -208,8 +219,8 @@ function gie_blog_strongarm() {
             'visible' => TRUE,
           ),
           'page_header' => array(
-            'weight' => '4',
-            'visible' => TRUE,
+            'weight' => '18',
+            'visible' => FALSE,
           ),
           'at_a_glance' => array(
             'weight' => '1',
@@ -224,7 +235,11 @@ function gie_blog_strongarm() {
             'visible' => FALSE,
           ),
           'contact' => array(
-            'weight' => '14',
+            'weight' => '22',
+            'visible' => FALSE,
+          ),
+          'full' => array(
+            'weight' => '25',
             'visible' => FALSE,
           ),
         ),
@@ -234,8 +249,8 @@ function gie_blog_strongarm() {
             'visible' => TRUE,
           ),
           'page_header' => array(
-            'weight' => '5',
-            'visible' => TRUE,
+            'weight' => '19',
+            'visible' => FALSE,
           ),
           'at_a_glance' => array(
             'weight' => '0',
@@ -250,7 +265,11 @@ function gie_blog_strongarm() {
             'visible' => FALSE,
           ),
           'contact' => array(
-            'weight' => '12',
+            'weight' => '20',
+            'visible' => FALSE,
+          ),
+          'full' => array(
+            'weight' => '23',
             'visible' => FALSE,
           ),
         ),
@@ -260,7 +279,7 @@ function gie_blog_strongarm() {
             'visible' => TRUE,
           ),
           'page_header' => array(
-            'weight' => '15',
+            'weight' => '24',
             'visible' => FALSE,
           ),
           'at_a_glance' => array(
@@ -276,7 +295,11 @@ function gie_blog_strongarm() {
             'visible' => FALSE,
           ),
           'contact' => array(
-            'weight' => '16',
+            'weight' => '24',
+            'visible' => FALSE,
+          ),
+          'full' => array(
+            'weight' => '24',
             'visible' => FALSE,
           ),
         ),
@@ -286,8 +309,8 @@ function gie_blog_strongarm() {
             'visible' => TRUE,
           ),
           'page_header' => array(
-            'weight' => '6',
-            'visible' => TRUE,
+            'weight' => '20',
+            'visible' => FALSE,
           ),
           'at_a_glance' => array(
             'weight' => '15',
@@ -302,7 +325,11 @@ function gie_blog_strongarm() {
             'visible' => FALSE,
           ),
           'contact' => array(
-            'weight' => '13',
+            'weight' => '21',
+            'visible' => FALSE,
+          ),
+          'full' => array(
+            'weight' => '22',
             'visible' => FALSE,
           ),
         ),
@@ -312,8 +339,8 @@ function gie_blog_strongarm() {
             'visible' => TRUE,
           ),
           'page_header' => array(
-            'weight' => '3',
-            'visible' => TRUE,
+            'weight' => '17',
+            'visible' => FALSE,
           ),
           'at_a_glance' => array(
             'weight' => '12',
@@ -328,7 +355,11 @@ function gie_blog_strongarm() {
             'visible' => FALSE,
           ),
           'contact' => array(
-            'weight' => '11',
+            'weight' => '19',
+            'visible' => FALSE,
+          ),
+          'full' => array(
+            'weight' => '21',
             'visible' => FALSE,
           ),
         ),
@@ -379,8 +410,93 @@ function gie_blog_strongarm() {
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
+  $strongarm->name = 'panelizer_defaults_node_blog';
+  $strongarm->value = array(
+    'status' => 1,
+    'view modes' => array(
+      'page_manager' => array(
+        'status' => 1,
+        'substitute' => '',
+        'default' => 1,
+        'choice' => 0,
+      ),
+      'default' => array(
+        'status' => 0,
+        'substitute' => 0,
+        'default' => 0,
+        'choice' => 0,
+      ),
+      'full' => array(
+        'status' => 0,
+        'substitute' => 0,
+        'default' => 0,
+        'choice' => 0,
+      ),
+      'teaser' => array(
+        'status' => 0,
+        'substitute' => 0,
+        'default' => 0,
+        'choice' => 0,
+      ),
+      'listing' => array(
+        'status' => 0,
+        'substitute' => 0,
+        'default' => 0,
+        'choice' => 0,
+      ),
+      'page_header' => array(
+        'status' => 0,
+        'substitute' => 0,
+        'default' => 0,
+        'choice' => 0,
+      ),
+      'at_a_glance' => array(
+        'status' => 0,
+        'substitute' => 0,
+        'default' => 0,
+        'choice' => 0,
+      ),
+      'contact' => array(
+        'status' => 0,
+        'substitute' => 0,
+        'default' => 0,
+        'choice' => 0,
+      ),
+      'details' => array(
+        'status' => 0,
+        'substitute' => 0,
+        'default' => 0,
+        'choice' => 0,
+      ),
+      'search_listing' => array(
+        'status' => 0,
+        'substitute' => 0,
+        'default' => 0,
+        'choice' => 0,
+      ),
+    ),
+  );
+  $export['panelizer_defaults_node_blog'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'panelizer_node:blog:page_manager_selection';
+  $strongarm->value = 'node:blog:default';
+  $export['panelizer_node:blog:page_manager_selection'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'pathauto_blog_pattern';
+  $strongarm->value = 'blogs/[user:name]';
+  $export['pathauto_blog_pattern'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
   $strongarm->name = 'pathauto_node_blog_pattern';
-  $strongarm->value = 'blog/[node:title]';
+  $strongarm->value = 'blogs/[node:title]';
   $export['pathauto_node_blog_pattern'] = $strongarm;
 
   return $export;
