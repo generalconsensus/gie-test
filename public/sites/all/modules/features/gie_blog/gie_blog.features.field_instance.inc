@@ -10,6 +10,128 @@
 function gie_blog_field_default_field_instances() {
   $field_instances = array();
 
+  // Exported field_instance: 'node-blog-field_blog_author'
+  $field_instances['node-blog-field_blog_author'] = array(
+    'bundle' => 'blog',
+    'deleted' => 0,
+    'description' => 'If you would like to assign someone as the point of contact for this blog post in the Exchange start typing their name to search. They will not appear unless they have an existing profile on the Exchange.',
+    'display' => array(
+      'at_a_glance' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'contact' => array(
+        'label' => 'hidden',
+        'module' => 'entityreference',
+        'settings' => array(
+          'field_delimiter' => '',
+          'linked_field' => array(
+            'advanced' => array(
+              'class' => '',
+              'rel' => '',
+              'target' => '',
+              'text' => '',
+              'title' => '',
+            ),
+            'destination' => '',
+            'linked' => 0,
+          ),
+          'links' => 1,
+          'view_mode' => 'user_teaser_summary',
+        ),
+        'type' => 'entityreference_entity_view',
+        'weight' => 0,
+      ),
+      'default' => array(
+        'label' => 'above',
+        'module' => 'entityreference',
+        'settings' => array(
+          'field_delimiter' => '',
+          'link' => FALSE,
+          'linked_field' => array(
+            'advanced' => array(
+              'class' => '',
+              'rel' => '',
+              'target' => '',
+              'text' => '',
+              'title' => '',
+            ),
+            'destination' => '',
+            'linked' => 0,
+          ),
+        ),
+        'type' => 'entityreference_label',
+        'weight' => 12,
+      ),
+      'details' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'full' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 13,
+      ),
+      'listing' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'page_header' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 14,
+      ),
+      'search_listing' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'ds_extras_field_template' => '',
+    'entity_type' => 'node',
+    'entityconnect_show_add_icon' => 0,
+    'entityconnect_show_edit_icon' => 0,
+    'entityconnect_unload_add' => 1,
+    'entityconnect_unload_edit' => 1,
+    'field_name' => 'field_blog_author',
+    'label' => 'Blog Author',
+    'required' => 0,
+    'settings' => array(
+      'description_display' => 'before',
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'entityreference_view_widget',
+      'settings' => array(
+        'allow_duplicates' => 0,
+        'close_modal' => 1,
+        'pass_argument' => 0,
+        'pass_arguments' => '',
+        'rendered_entity' => 0,
+        'view' => 'user_reference|entityreference_view_widget_1',
+        'view_mode' => 'full',
+      ),
+      'type' => 'entityreference_view_widget',
+      'weight' => 3,
+    ),
+  );
+
   // Exported field_instance: 'node-blog-field_blog_description'
   $field_instances['node-blog-field_blog_description'] = array(
     'bundle' => 'blog',
@@ -27,7 +149,7 @@ function gie_blog_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 15,
+        'weight' => 23,
       ),
       'default' => array(
         'label' => 'above',
@@ -55,6 +177,26 @@ function gie_blog_field_default_field_instances() {
         'type' => 'hidden',
         'weight' => 16,
       ),
+      'full' => array(
+        'label' => 'hidden',
+        'module' => 'text',
+        'settings' => array(
+          'field_delimiter' => '',
+          'linked_field' => array(
+            'advanced' => array(
+              'class' => '',
+              'rel' => '',
+              'target' => '',
+              'text' => '',
+              'title' => '',
+            ),
+            'destination' => '',
+            'linked' => 0,
+          ),
+        ),
+        'type' => 'text_default',
+        'weight' => 1,
+      ),
       'listing' => array(
         'label' => 'hidden',
         'module' => 'text',
@@ -78,32 +220,9 @@ function gie_blog_field_default_field_instances() {
       ),
       'page_header' => array(
         'label' => 'hidden',
-        'module' => 'smart_trim',
-        'settings' => array(
-          'field_delimiter' => '',
-          'linked_field' => array(
-            'advanced' => array(
-              'class' => '',
-              'rel' => '',
-              'target' => '',
-              'text' => '',
-              'title' => '',
-            ),
-            'destination' => '',
-            'linked' => 0,
-          ),
-          'more_link' => FALSE,
-          'more_text' => 'Read more',
-          'summary_handler' => 'full',
-          'trim_length' => 300,
-          'trim_link' => FALSE,
-          'trim_options' => array(),
-          'trim_preserve_tags' => '',
-          'trim_suffix' => '...',
-          'trim_type' => 'chars',
-        ),
-        'type' => 'smart_trim_format',
-        'weight' => 0,
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 16,
       ),
       'search_listing' => array(
         'label' => 'above',
@@ -191,14 +310,13 @@ function gie_blog_field_default_field_instances() {
         'summary_rows' => 5,
       ),
       'type' => 'text_textarea_with_summary',
-      'weight' => 1,
+      'weight' => 2,
     ),
   );
 
-  // Exported field_instance: 'node-blog-field_blog_related_innovation'
-  $field_instances['node-blog-field_blog_related_innovation'] = array(
+  // Exported field_instance: 'node-blog-field_blog_image'
+  $field_instances['node-blog-field_blog_image'] = array(
     'bundle' => 'blog',
-    'default_value' => NULL,
     'deleted' => 0,
     'description' => '',
     'display' => array(
@@ -206,20 +324,21 @@ function gie_blog_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 6,
+        'weight' => 0,
       ),
       'contact' => array(
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 4,
+        'weight' => 13,
       ),
       'default' => array(
         'label' => 'above',
-        'module' => 'entityreference',
+        'module' => 'image',
         'settings' => array(
           'field_delimiter' => '',
-          'link' => FALSE,
+          'image_link' => '',
+          'image_style' => '',
           'linked_field' => array(
             'advanced' => array(
               'class' => '',
@@ -232,33 +351,22 @@ function gie_blog_field_default_field_instances() {
             'linked' => 0,
           ),
         ),
-        'type' => 'entityreference_label',
-        'weight' => 4,
+        'type' => 'image',
+        'weight' => 11,
       ),
       'details' => array(
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 1,
+        'weight' => 0,
       ),
-      'listing' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 15,
-      ),
-      'page_header' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 9,
-      ),
-      'search_listing' => array(
-        'label' => 'above',
-        'module' => 'entityreference',
+      'full' => array(
+        'label' => 'hidden',
+        'module' => 'image',
         'settings' => array(
           'field_delimiter' => '',
-          'link' => FALSE,
+          'image_link' => '',
+          'image_style' => '',
           'linked_field' => array(
             'advanced' => array(
               'class' => '',
@@ -271,8 +379,26 @@ function gie_blog_field_default_field_instances() {
             'linked' => 0,
           ),
         ),
-        'type' => 'entityreference_label',
-        'weight' => 4,
+        'type' => 'image',
+        'weight' => 0,
+      ),
+      'listing' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'page_header' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 15,
+      ),
+      'search_listing' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -283,31 +409,173 @@ function gie_blog_field_default_field_instances() {
     ),
     'ds_extras_field_template' => '',
     'entity_type' => 'node',
-    'entityconnect_show_add_icon' => 0,
-    'entityconnect_show_edit_icon' => 0,
-    'entityconnect_unload_add' => 1,
-    'entityconnect_unload_edit' => 1,
-    'field_name' => 'field_blog_related_innovation',
-    'label' => 'Related Innovation',
+    'field_name' => 'field_blog_image',
+    'label' => 'Blog Image',
     'required' => 0,
     'settings' => array(
+      'alt_field' => 1,
+      'alt_field_default' => '',
+      'alt_field_hide' => 0,
+      'alt_field_sync_title' => 0,
+      'alt_field_update_on_edit' => 0,
+      'default_image' => 0,
       'description_display' => 'after',
+      'file_directory' => '',
+      'file_extensions' => 'png gif jpg jpeg',
+      'focus' => 0,
+      'focus_lock_ratio' => 0,
+      'focus_min_size' => '',
+      'max_filesize' => '',
+      'max_resolution' => '',
+      'min_resolution' => '',
+      'random_default' => 0,
+      'random_default_path' => '',
+      'title_field' => 0,
+      'title_field_default' => '',
+      'title_field_hide' => 0,
+      'title_field_update_on_edit' => 0,
       'user_register_form' => FALSE,
     ),
     'widget' => array(
       'active' => 1,
-      'module' => 'entityreference',
+      'module' => 'image',
       'settings' => array(
-        'match_operator' => 'CONTAINS',
-        'path' => '',
-        'references_dialog_add' => 0,
-        'references_dialog_edit' => 0,
-        'references_dialog_search' => 0,
-        'references_dialog_search_view' => '',
-        'size' => 60,
+        'preview_image_style' => 'thumbnail',
+        'progress_indicator' => 'throbber',
       ),
-      'type' => 'entityreference_autocomplete',
-      'weight' => 2,
+      'type' => 'image_image',
+      'weight' => 1,
+    ),
+  );
+
+  // Exported field_instance: 'node-blog-field_blog_publish_date'
+  $field_instances['node-blog-field_blog_publish_date'] = array(
+    'bundle' => 'blog',
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'at_a_glance' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'contact' => array(
+        'label' => 'above',
+        'module' => 'date',
+        'settings' => array(
+          'field_delimiter' => '',
+          'format_type' => 'short',
+          'fromto' => 'both',
+          'linked_field' => array(
+            'advanced' => array(
+              'class' => '',
+              'rel' => '',
+              'target' => '',
+              'text' => '',
+              'title' => '',
+            ),
+            'destination' => '',
+            'linked' => 0,
+          ),
+          'multiple_from' => '',
+          'multiple_number' => '',
+          'multiple_to' => '',
+          'show_remaining_days' => 0,
+        ),
+        'type' => 'date_default',
+        'weight' => 1,
+      ),
+      'default' => array(
+        'label' => 'above',
+        'module' => 'date',
+        'settings' => array(
+          'field_delimiter' => '',
+          'format_type' => 'long',
+          'fromto' => 'both',
+          'linked_field' => array(
+            'advanced' => array(
+              'class' => '',
+              'rel' => '',
+              'target' => '',
+              'text' => '',
+              'title' => '',
+            ),
+            'destination' => '',
+            'linked' => 0,
+          ),
+          'multiple_from' => '',
+          'multiple_number' => '',
+          'multiple_to' => '',
+          'show_remaining_days' => FALSE,
+        ),
+        'type' => 'date_default',
+        'weight' => 13,
+      ),
+      'details' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'full' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 15,
+      ),
+      'listing' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'page_header' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 9,
+      ),
+      'search_listing' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'ds_extras_field_template' => '',
+    'entity_type' => 'node',
+    'field_name' => 'field_blog_publish_date',
+    'label' => 'Publish Date',
+    'required' => 0,
+    'settings' => array(
+      'default_value' => 'now',
+      'default_value2' => 'same',
+      'default_value_code' => '',
+      'default_value_code2' => '',
+      'description_display' => 'before',
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'date',
+      'settings' => array(
+        'increment' => 15,
+        'input_format' => 'm/d/Y - g:i:sa',
+        'input_format_custom' => '',
+        'label_position' => 'above',
+        'no_fieldset' => 0,
+        'text_parts' => array(),
+        'year_range' => '-3:+3',
+      ),
+      'type' => 'date_popup',
+      'weight' => 4,
     ),
   );
 
@@ -328,7 +596,7 @@ function gie_blog_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 3,
+        'weight' => 16,
       ),
       'default' => array(
         'label' => 'above',
@@ -372,6 +640,12 @@ function gie_blog_field_default_field_instances() {
         'type' => 'entityreference_label',
         'weight' => 6,
       ),
+      'full' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 18,
+      ),
       'listing' => array(
         'label' => 'above',
         'settings' => array(),
@@ -382,7 +656,7 @@ function gie_blog_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 8,
+        'weight' => 22,
       ),
       'search_listing' => array(
         'label' => 'above',
@@ -438,7 +712,7 @@ function gie_blog_field_default_field_instances() {
         'size' => 60,
       ),
       'type' => 'entityreference_autocomplete',
-      'weight' => 4,
+      'weight' => 6,
     ),
   );
 
@@ -459,7 +733,7 @@ function gie_blog_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 1,
+        'weight' => 14,
       ),
       'default' => array(
         'label' => 'above',
@@ -503,6 +777,12 @@ function gie_blog_field_default_field_instances() {
         'type' => 'entityreference_label',
         'weight' => 5,
       ),
+      'full' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 17,
+      ),
       'listing' => array(
         'label' => 'above',
         'settings' => array(),
@@ -513,7 +793,7 @@ function gie_blog_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 7,
+        'weight' => 21,
       ),
       'search_listing' => array(
         'label' => 'above',
@@ -569,133 +849,7 @@ function gie_blog_field_default_field_instances() {
         'size' => 60,
       ),
       'type' => 'entityreference_autocomplete',
-      'weight' => 5,
-    ),
-  );
-
-  // Exported field_instance: 'node-blog-field_blog_related_region'
-  $field_instances['node-blog-field_blog_related_region'] = array(
-    'bundle' => 'blog',
-    'default_value' => NULL,
-    'deleted' => 0,
-    'description' => '',
-    'display' => array(
-      'at_a_glance' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 9,
-      ),
-      'contact' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 7,
-      ),
-      'default' => array(
-        'label' => 'above',
-        'module' => 'taxonomy',
-        'settings' => array(
-          'field_delimiter' => '',
-          'linked_field' => array(
-            'advanced' => array(
-              'class' => '',
-              'rel' => '',
-              'target' => '',
-              'text' => '',
-              'title' => '',
-            ),
-            'destination' => '',
-            'linked' => 0,
-          ),
-        ),
-        'type' => 'taxonomy_term_reference_link',
-        'weight' => 8,
-      ),
-      'details' => array(
-        'label' => 'inline',
-        'module' => 'taxonomy',
-        'settings' => array(
-          'field_delimiter' => '',
-          'linked_field' => array(
-            'advanced' => array(
-              'class' => '',
-              'rel' => '',
-              'target' => '',
-              'text' => '',
-              'title' => '',
-            ),
-            'destination' => '',
-            'linked' => 0,
-          ),
-        ),
-        'type' => 'taxonomy_term_reference_link',
-        'weight' => 1,
-      ),
-      'listing' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 13,
-      ),
-      'page_header' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 14,
-      ),
-      'search_listing' => array(
-        'label' => 'above',
-        'module' => 'taxonomy',
-        'settings' => array(
-          'field_delimiter' => '',
-          'linked_field' => array(
-            'advanced' => array(
-              'class' => '',
-              'rel' => '',
-              'target' => '',
-              'text' => '',
-              'title' => '',
-            ),
-            'destination' => '',
-            'linked' => 0,
-          ),
-        ),
-        'type' => 'taxonomy_term_reference_link',
-        'weight' => 8,
-      ),
-      'teaser' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 0,
-      ),
-    ),
-    'ds_extras_field_template' => '',
-    'entity_type' => 'node',
-    'field_name' => 'field_blog_related_region',
-    'label' => 'Related Region',
-    'required' => 0,
-    'settings' => array(
-      'description_display' => 'after',
-      'user_register_form' => FALSE,
-    ),
-    'widget' => array(
-      'active' => 1,
-      'module' => 'term_reference_tree',
-      'settings' => array(
-        'cascading_selection' => 0,
-        'filter_view' => '',
-        'leaves_only' => 0,
-        'max_depth' => '',
-        'parent_term_id' => '',
-        'select_parents' => 0,
-        'start_minimized' => 0,
-        'token_display' => '',
-        'track_list' => 0,
-      ),
-      'type' => 'term_reference_tree',
-      'weight' => 9,
+      'weight' => 7,
     ),
   );
 
@@ -716,7 +870,7 @@ function gie_blog_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 5,
+        'weight' => 17,
       ),
       'default' => array(
         'label' => 'above',
@@ -745,6 +899,12 @@ function gie_blog_field_default_field_instances() {
         'type' => 'hidden',
         'weight' => 2,
       ),
+      'full' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 19,
+      ),
       'listing' => array(
         'label' => 'above',
         'settings' => array(),
@@ -755,7 +915,7 @@ function gie_blog_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 10,
+        'weight' => 23,
       ),
       'search_listing' => array(
         'label' => 'above',
@@ -811,12 +971,12 @@ function gie_blog_field_default_field_instances() {
         'size' => 60,
       ),
       'type' => 'entityreference_autocomplete',
-      'weight' => 3,
+      'weight' => 5,
     ),
   );
 
-  // Exported field_instance: 'node-blog-field_blog_related_sector'
-  $field_instances['node-blog-field_blog_related_sector'] = array(
+  // Exported field_instance: 'node-blog-field_term_country'
+  $field_instances['node-blog-field_term_country'] = array(
     'bundle' => 'blog',
     'default_value' => NULL,
     'deleted' => 0,
@@ -826,7 +986,7 @@ function gie_blog_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 7,
+        'weight' => 0,
       ),
       'contact' => array(
         'label' => 'above',
@@ -852,59 +1012,37 @@ function gie_blog_field_default_field_instances() {
           ),
         ),
         'type' => 'taxonomy_term_reference_link',
-        'weight' => 6,
+        'weight' => 17,
       ),
       'details' => array(
-        'label' => 'inline',
-        'module' => 'taxonomy',
-        'settings' => array(
-          'field_delimiter' => '',
-          'linked_field' => array(
-            'advanced' => array(
-              'class' => '',
-              'rel' => '',
-              'target' => '',
-              'text' => '',
-              'title' => '',
-            ),
-            'destination' => '',
-            'linked' => 0,
-          ),
-        ),
-        'type' => 'taxonomy_term_reference_link',
-        'weight' => 4,
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
       ),
-      'listing' => array(
+      'full' => array(
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
         'weight' => 10,
       ),
+      'listing' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
       'page_header' => array(
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 11,
+        'weight' => 4,
       ),
       'search_listing' => array(
         'label' => 'above',
-        'module' => 'taxonomy',
-        'settings' => array(
-          'field_delimiter' => '',
-          'linked_field' => array(
-            'advanced' => array(
-              'class' => '',
-              'rel' => '',
-              'target' => '',
-              'text' => '',
-              'title' => '',
-            ),
-            'destination' => '',
-            'linked' => 0,
-          ),
-        ),
-        'type' => 'taxonomy_term_reference_link',
-        'weight' => 6,
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -915,8 +1053,8 @@ function gie_blog_field_default_field_instances() {
     ),
     'ds_extras_field_template' => '',
     'entity_type' => 'node',
-    'field_name' => 'field_blog_related_sector',
-    'label' => 'Related Sector',
+    'field_name' => 'field_term_country',
+    'label' => 'Country',
     'required' => 0,
     'settings' => array(
       'description_display' => 'after',
@@ -924,25 +1062,17 @@ function gie_blog_field_default_field_instances() {
     ),
     'widget' => array(
       'active' => 1,
-      'module' => 'term_reference_tree',
+      'module' => 'options',
       'settings' => array(
-        'cascading_selection' => 0,
-        'filter_view' => '',
-        'leaves_only' => 0,
-        'max_depth' => '',
-        'parent_term_id' => '',
-        'select_parents' => 0,
-        'start_minimized' => 1,
-        'token_display' => '',
-        'track_list' => 0,
+        'apply_chosen' => '',
       ),
-      'type' => 'term_reference_tree',
-      'weight' => 6,
+      'type' => 'options_select',
+      'weight' => 12,
     ),
   );
 
-  // Exported field_instance: 'node-blog-field_blog_related_topic'
-  $field_instances['node-blog-field_blog_related_topic'] = array(
+  // Exported field_instance: 'node-blog-field_term_region'
+  $field_instances['node-blog-field_term_region'] = array(
     'bundle' => 'blog',
     'default_value' => NULL,
     'deleted' => 0,
@@ -952,13 +1082,13 @@ function gie_blog_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 8,
+        'weight' => 0,
       ),
       'contact' => array(
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 8,
+        'weight' => 5,
       ),
       'default' => array(
         'label' => 'above',
@@ -978,73 +1108,37 @@ function gie_blog_field_default_field_instances() {
           ),
         ),
         'type' => 'taxonomy_term_reference_link',
-        'weight' => 7,
+        'weight' => 16,
       ),
       'details' => array(
-        'label' => 'inline',
-        'module' => 'taxonomy',
-        'settings' => array(
-          'field_delimiter' => '',
-          'linked_field' => array(
-            'advanced' => array(
-              'class' => '',
-              'rel' => '',
-              'target' => '',
-              'text' => '',
-              'title' => '',
-            ),
-            'destination' => '',
-            'linked' => 0,
-          ),
-        ),
-        'type' => 'taxonomy_term_reference_link',
-        'weight' => 3,
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'full' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 9,
       ),
       'listing' => array(
-        'label' => 'inline',
-        'module' => 'taxonomy',
-        'settings' => array(
-          'field_delimiter' => '',
-          'linked_field' => array(
-            'advanced' => array(
-              'class' => '',
-              'rel' => '',
-              'target' => '',
-              'text' => '',
-              'title' => '',
-            ),
-            'destination' => '',
-            'linked' => 0,
-          ),
-        ),
-        'type' => 'taxonomy_term_reference_link',
-        'weight' => 2,
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
       ),
       'page_header' => array(
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 13,
+        'weight' => 2,
       ),
       'search_listing' => array(
         'label' => 'above',
-        'module' => 'taxonomy',
-        'settings' => array(
-          'field_delimiter' => '',
-          'linked_field' => array(
-            'advanced' => array(
-              'class' => '',
-              'rel' => '',
-              'target' => '',
-              'text' => '',
-              'title' => '',
-            ),
-            'destination' => '',
-            'linked' => 0,
-          ),
-        ),
-        'type' => 'taxonomy_term_reference_link',
-        'weight' => 7,
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -1055,8 +1149,8 @@ function gie_blog_field_default_field_instances() {
     ),
     'ds_extras_field_template' => '',
     'entity_type' => 'node',
-    'field_name' => 'field_blog_related_topic',
-    'label' => 'Related Topic',
+    'field_name' => 'field_term_region',
+    'label' => 'Region',
     'required' => 0,
     'settings' => array(
       'description_display' => 'after',
@@ -1077,12 +1171,12 @@ function gie_blog_field_default_field_instances() {
         'track_list' => 0,
       ),
       'type' => 'term_reference_tree',
-      'weight' => 7,
+      'weight' => 11,
     ),
   );
 
-  // Exported field_instance: 'node-blog-field_related_country'
-  $field_instances['node-blog-field_related_country'] = array(
+  // Exported field_instance: 'node-blog-field_term_sector'
+  $field_instances['node-blog-field_term_sector'] = array(
     'bundle' => 'blog',
     'default_value' => NULL,
     'deleted' => 0,
@@ -1092,13 +1186,13 @@ function gie_blog_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 10,
+        'weight' => 0,
       ),
       'contact' => array(
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 9,
+        'weight' => 4,
       ),
       'default' => array(
         'label' => 'above',
@@ -1118,41 +1212,93 @@ function gie_blog_field_default_field_instances() {
           ),
         ),
         'type' => 'taxonomy_term_reference_link',
-        'weight' => 9,
+        'weight' => 14,
       ),
       'details' => array(
-        'label' => 'inline',
-        'module' => 'gie_innovation',
-        'settings' => array(
-          'field_delimiter' => '',
-          'linked_field' => array(
-            'advanced' => array(
-              'class' => '',
-              'rel' => '',
-              'target' => '',
-              'text' => '',
-              'title' => '',
-            ),
-            'destination' => '',
-            'linked' => 0,
-          ),
-        ),
-        'type' => 'gie_listing_link',
-        'weight' => 2,
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
       ),
-      'listing' => array(
+      'full' => array(
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
         'weight' => 14,
       ),
+      'listing' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
       'page_header' => array(
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 12,
+        'weight' => 8,
       ),
       'search_listing' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'ds_extras_field_template' => '',
+    'entity_type' => 'node',
+    'field_name' => 'field_term_sector',
+    'label' => 'Sector',
+    'required' => 0,
+    'settings' => array(
+      'description_display' => 'after',
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'term_reference_tree',
+      'settings' => array(
+        'cascading_selection' => 0,
+        'filter_view' => '',
+        'leaves_only' => 0,
+        'max_depth' => '',
+        'parent_term_id' => '',
+        'select_parents' => 0,
+        'start_minimized' => 1,
+        'token_display' => '',
+        'track_list' => 0,
+      ),
+      'type' => 'term_reference_tree',
+      'weight' => 10,
+    ),
+  );
+
+  // Exported field_instance: 'node-blog-field_term_topic'
+  $field_instances['node-blog-field_term_topic'] = array(
+    'bundle' => 'blog',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'at_a_glance' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'contact' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 2,
+      ),
+      'default' => array(
         'label' => 'above',
         'module' => 'taxonomy',
         'settings' => array(
@@ -1170,7 +1316,37 @@ function gie_blog_field_default_field_instances() {
           ),
         ),
         'type' => 'taxonomy_term_reference_link',
-        'weight' => 9,
+        'weight' => 15,
+      ),
+      'details' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'full' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 12,
+      ),
+      'listing' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'page_header' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 3,
+      ),
+      'search_listing' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -1181,19 +1357,29 @@ function gie_blog_field_default_field_instances() {
     ),
     'ds_extras_field_template' => '',
     'entity_type' => 'node',
-    'field_name' => 'field_related_country',
-    'label' => 'Related Country',
+    'field_name' => 'field_term_topic',
+    'label' => 'Topic',
     'required' => 0,
     'settings' => array(
       'description_display' => 'after',
       'user_register_form' => FALSE,
     ),
     'widget' => array(
-      'active' => 0,
-      'module' => 'multiple_selects',
-      'settings' => array(),
-      'type' => 'multiple_selects',
-      'weight' => 8,
+      'active' => 1,
+      'module' => 'term_reference_tree',
+      'settings' => array(
+        'cascading_selection' => 0,
+        'filter_view' => '',
+        'leaves_only' => 0,
+        'max_depth' => '',
+        'parent_term_id' => '',
+        'select_parents' => 0,
+        'start_minimized' => 0,
+        'token_display' => '',
+        'track_list' => 0,
+      ),
+      'type' => 'term_reference_tree',
+      'weight' => 9,
     ),
   );
 
@@ -1214,7 +1400,7 @@ function gie_blog_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 19,
+        'weight' => 25,
       ),
       'default' => array(
         'label' => 'above',
@@ -1227,6 +1413,12 @@ function gie_blog_field_default_field_instances() {
         'settings' => array(),
         'type' => 'hidden',
         'weight' => 18,
+      ),
+      'full' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 26,
       ),
       'listing' => array(
         'label' => 'hidden',
@@ -1255,7 +1447,7 @@ function gie_blog_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 16,
+        'weight' => 25,
       ),
       'search_listing' => array(
         'label' => 'above',
@@ -1294,17 +1486,20 @@ function gie_blog_field_default_field_instances() {
 
   // Translatables
   // Included for use with string extractors like potx.
+  t('Blog Author');
+  t('Blog Image');
   t('Body');
-  t('Related Country');
-  t('Related Innovation');
+  t('Country');
+  t('If you would like to assign someone as the point of contact for this blog post in the Exchange start typing their name to search. They will not appear unless they have an existing profile on the Exchange.');
+  t('Publish Date');
+  t('Region');
   t('Related Organization');
   t('Related Program');
-  t('Related Region');
   t('Related Resource');
-  t('Related Sector');
-  t('Related Topic');
+  t('Sector');
   t('Specify any related programs for this blog post. ');
   t('Title');
+  t('Topic');
 
   return $field_instances;
 }
