@@ -1,0 +1,4 @@
+name = GIE Domain Color Selector
+description = Domain Color Selector
+package = GIE
+core = 7.x
