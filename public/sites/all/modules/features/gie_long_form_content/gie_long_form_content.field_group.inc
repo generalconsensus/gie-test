@@ -487,7 +487,7 @@ function gie_long_form_content_field_group_info() {
         'id' => '',
         'classes' => 'key-figure component layout-constrain',
         'description' => '',
-        'show_label' => '1',
+        'show_label' => '0',
         'label_element' => 'h3',
         'effect' => 'none',
         'speed' => 'fast',
