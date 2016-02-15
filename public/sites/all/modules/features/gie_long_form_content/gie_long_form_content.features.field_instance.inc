@@ -367,7 +367,7 @@ function gie_long_form_content_field_default_field_instances() {
         'microsite_section_break_image' => 24,
         'microsite_text' => 25,
       ),
-      'default_edit_mode' => 'open',
+      'default_edit_mode' => 'closed',
       'description_display' => 'after',
       'title' => 'Paragraph',
       'title_multiple' => 'Paragraphs',
@@ -941,7 +941,7 @@ function gie_long_form_content_field_default_field_instances() {
     'bundle' => 'long_form_page',
     'default_value' => NULL,
     'deleted' => 0,
-    'description' => '',
+    'description' => 'Caution: updating the title of this content will update the URL of the long form post. If you would like the URL to be something specific regardless of the title, set a custom path below.',
     'display' => array(
       'default' => array(
         'label' => 'above',
