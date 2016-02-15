@@ -42,6 +42,19 @@ angular.module('gieDataViz').controller('CountryInnovationsController',['$scope'
             "field": "field_term_region",
             "size": 20
           }
+        },
+        "innovation_type": {
+          "terms": {
+            "field": "field_innovation_type",
+            "size": 20
+          }
+        },
+        "innovation_stage": {
+          "terms": {
+            "field": "field_innovation_stage",
+            "size": 20,
+            "order" : { "_term" : "asc" } //sort by key
+          }
         }
       }
     }
@@ -53,6 +66,8 @@ angular.module('gieDataViz').controller('CountryInnovationsController',['$scope'
         sectorData = [],
         topicData = [],
         regionData = [],
+        typeData = [],
+        stageData = [],
         termKeys = [];
 
     rawData.aggregations.country_created_totals.buckets.forEach(function(item) {
@@ -95,6 +110,22 @@ angular.module('gieDataViz').controller('CountryInnovationsController',['$scope'
       if (termKeys.indexOf(item.key) === -1 ) termKeys.push(item.key);
     });
 
+    rawData.aggregations.innovation_type.buckets.forEach(function(item) {
+      typeData.push({
+        id: item.key,
+        value: item.doc_count,
+      });
+      if (termKeys.indexOf(item.key) === -1 ) termKeys.push(item.key);
+    });
+
+    rawData.aggregations.innovation_stage.buckets.forEach(function(item) {
+      stageData.push({
+        id: item.key,
+        value: item.doc_count,
+      });
+      if (termKeys.indexOf(item.key) === -1 ) termKeys.push(item.key);
+    });
+
     taxonomyTermService.getTermNames(termKeys).then(function(result) {
 
       // Set select items
@@ -113,6 +144,12 @@ angular.module('gieDataViz').controller('CountryInnovationsController',['$scope'
       },{
         id: 'region',
         label: 'Region',
+      },{
+        id: 'type',
+        label: 'Type',
+      },{
+        id: 'stage',
+        label: 'Stage',
       }];
 
       $scope.selection = $scope.items[0];
@@ -134,6 +171,12 @@ angular.module('gieDataViz').controller('CountryInnovationsController',['$scope'
         'region': {
           data: regionData,
         },
+        'type': {
+          data: typeData,
+        },
+        'stage': {
+          data: stageData,
+        }
       };
 
       $scope.data = {
