@@ -507,7 +507,7 @@ function gie_microsite_field_default_field_instances() {
         'microsite_section_break_image' => 15,
         'microsite_text' => 16,
       ),
-      'default_edit_mode' => 'open',
+      'default_edit_mode' => 'closed',
       'description_display' => 'after',
       'title' => 'Paragraph',
       'title_multiple' => 'Paragraphs',
