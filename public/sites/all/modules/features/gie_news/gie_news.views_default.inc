@@ -222,7 +222,7 @@ function gie_news_views_default_views() {
   $handler->display->display_options['defaults']['row_options'] = FALSE;
   $handler->display->display_options['defaults']['relationships'] = FALSE;
   $handler->display->display_options['defaults']['fields'] = FALSE;
-  /* Field: Content: News Country */
+  /* Field: Content: Country */
   $handler->display->display_options['fields']['field_news_country']['id'] = 'field_news_country';
   $handler->display->display_options['fields']['field_news_country']['table'] = 'field_data_field_news_country';
   $handler->display->display_options['fields']['field_news_country']['field'] = 'field_news_country';
