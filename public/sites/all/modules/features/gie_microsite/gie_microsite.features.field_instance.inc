@@ -2356,27 +2356,20 @@ function gie_microsite_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance:
-  // 'paragraphs_item-microsite_text-field_para_text_orientation'
-  $field_instances['paragraphs_item-microsite_text-field_para_text_orientation'] = array(
+  // Exported field_instance: 'paragraphs_item-microsite_text-field_background'
+  $field_instances['paragraphs_item-microsite_text-field_background'] = array(
     'bundle' => 'microsite_text',
     'default_value' => array(
       0 => array(
-        'value' => 'default',
+        'tid' => 1897,
       ),
     ),
     'deleted' => 0,
     'description' => '',
     'display' => array(
       'center_aligned' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 2,
-      ),
-      'default' => array(
-        'label' => 'above',
-        'module' => 'view_mode_selector',
+        'label' => 'hidden',
+        'module' => 'gie_innovation',
         'settings' => array(
           'field_delimiter' => '',
           'linked_field' => array(
@@ -2391,16 +2384,30 @@ function gie_microsite_field_default_field_instances() {
             'linked' => 0,
           ),
         ),
-        'type' => 'view_mode_selector',
+        'type' => 'gie_listing_link',
+        'weight' => 1,
+      ),
+      'default' => array(
+        'label' => 'hidden',
+        'module' => 'gie_innovation',
+        'settings' => array(
+          'field_delimiter' => '',
+          'linked_field' => array(
+            'advanced' => array(
+              'class' => '',
+              'rel' => '',
+              'target' => '',
+              'text' => '',
+              'title' => '',
+            ),
+            'destination' => '',
+            'linked' => 0,
+          ),
+        ),
+        'type' => 'gie_listing_link',
         'weight' => 2,
       ),
       'left_aligned' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 1,
-      ),
-      'view_mode_selector' => array(
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
@@ -2409,45 +2416,73 @@ function gie_microsite_field_default_field_instances() {
     ),
     'ds_extras_field_template' => '',
     'entity_type' => 'paragraphs_item',
-    'field_name' => 'field_para_text_orientation',
-    'label' => 'Text Orientation',
+    'field_name' => 'field_background',
+    'label' => 'Background',
     'required' => 0,
     'settings' => array(
       'description_display' => 'after',
       'user_register_form' => FALSE,
-      'view_modes' => array(
-        'center_aligned' => array(
-          'enable' => 1,
-        ),
-        'default' => array(
-          'enable' => 0,
-        ),
-        'full' => array(
-          'enable' => 0,
-        ),
-        'left_aligned' => array(
-          'enable' => 1,
-        ),
-        'left_image' => array(
-          'enable' => 0,
-        ),
-        'paragraphs_editor_preview' => array(
-          'enable' => 0,
-        ),
-        'right_image' => array(
-          'enable' => 0,
-        ),
-        'token' => array(
-          'enable' => 0,
-        ),
-      ),
     ),
     'widget' => array(
-      'active' => 0,
-      'module' => 'view_mode_selector',
-      'settings' => array(),
-      'type' => 'view_mode_selector_select',
+      'active' => 1,
+      'module' => 'options',
+      'settings' => array(
+        'apply_chosen' => '',
+      ),
+      'type' => 'options_select',
       'weight' => 2,
+    ),
+  );
+
+  // Exported field_instance: 'paragraphs_item-microsite_text-field_orientation'
+  $field_instances['paragraphs_item-microsite_text-field_orientation'] = array(
+    'bundle' => 'microsite_text',
+    'default_value' => array(
+      0 => array(
+        'tid' => 1903,
+      ),
+    ),
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'hidden',
+        'module' => 'gie_innovation',
+        'settings' => array(
+          'field_delimiter' => '',
+          'linked_field' => array(
+            'advanced' => array(
+              'class' => '',
+              'rel' => '',
+              'target' => '',
+              'text' => '',
+              'title' => '',
+            ),
+            'destination' => '',
+            'linked' => 0,
+          ),
+        ),
+        'type' => 'gie_listing_link',
+        'weight' => 1,
+      ),
+    ),
+    'ds_extras_field_template' => '',
+    'entity_type' => 'paragraphs_item',
+    'field_name' => 'field_orientation',
+    'label' => 'Orientation',
+    'required' => 0,
+    'settings' => array(
+      'description_display' => 'after',
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'options',
+      'settings' => array(
+        'apply_chosen' => '',
+      ),
+      'type' => 'options_select',
+      'weight' => 1,
     ),
   );
 
@@ -2477,7 +2512,7 @@ function gie_microsite_field_default_field_instances() {
           ),
         ),
         'type' => 'text_default',
-        'weight' => 1,
+        'weight' => 0,
       ),
       'default' => array(
         'label' => 'hidden',
@@ -2497,7 +2532,7 @@ function gie_microsite_field_default_field_instances() {
           ),
         ),
         'type' => 'text_default',
-        'weight' => 1,
+        'weight' => 0,
       ),
       'full' => array(
         'label' => 'hidden',
@@ -2673,16 +2708,166 @@ function gie_microsite_field_default_field_instances() {
         'rows' => 5,
       ),
       'type' => 'text_textarea',
-      'weight' => 1,
+      'weight' => 0,
+    ),
+  );
+
+  // Exported field_instance: 'taxonomy_term-background-description_field'
+  $field_instances['taxonomy_term-background-description_field'] = array(
+    'bundle' => 'background',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 1,
+      ),
+    ),
+    'entity_type' => 'taxonomy_term',
+    'field_name' => 'description_field',
+    'label' => 'Description',
+    'required' => FALSE,
+    'settings' => array(
+      'display_summary' => 0,
+      'hide_label' => array(
+        'entity' => 0,
+        'page' => 0,
+      ),
+      'text_processing' => 1,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'module' => 'text',
+      'settings' => array(
+        'rows' => 20,
+        'summary_rows' => 5,
+      ),
+      'type' => 'text_textarea_with_summary',
+      'weight' => -5,
+    ),
+  );
+
+  // Exported field_instance: 'taxonomy_term-background-name_field'
+  $field_instances['taxonomy_term-background-name_field'] = array(
+    'bundle' => 'background',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'taxonomy_term',
+    'field_name' => 'name_field',
+    'label' => 'Name',
+    'required' => TRUE,
+    'settings' => array(
+      'hide_label' => array(
+        'entity' => 0,
+        'page' => 0,
+      ),
+      'text_processing' => 0,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'module' => 'text',
+      'settings' => array(
+        'size' => 60,
+      ),
+      'type' => 'text_textfield',
+      'weight' => -5,
+    ),
+  );
+
+  // Exported field_instance: 'taxonomy_term-text_orientation-description_field'
+  $field_instances['taxonomy_term-text_orientation-description_field'] = array(
+    'bundle' => 'text_orientation',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 1,
+      ),
+    ),
+    'entity_type' => 'taxonomy_term',
+    'field_name' => 'description_field',
+    'label' => 'Description',
+    'required' => FALSE,
+    'settings' => array(
+      'display_summary' => 0,
+      'hide_label' => array(
+        'entity' => 0,
+        'page' => 0,
+      ),
+      'text_processing' => 1,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'module' => 'text',
+      'settings' => array(
+        'rows' => 20,
+        'summary_rows' => 5,
+      ),
+      'type' => 'text_textarea_with_summary',
+      'weight' => -5,
+    ),
+  );
+
+  // Exported field_instance: 'taxonomy_term-text_orientation-name_field'
+  $field_instances['taxonomy_term-text_orientation-name_field'] = array(
+    'bundle' => 'text_orientation',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'taxonomy_term',
+    'field_name' => 'name_field',
+    'label' => 'Name',
+    'required' => TRUE,
+    'settings' => array(
+      'hide_label' => array(
+        'entity' => 0,
+        'page' => 0,
+      ),
+      'text_processing' => 0,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'module' => 'text',
+      'settings' => array(
+        'size' => 60,
+      ),
+      'type' => 'text_textfield',
+      'weight' => -5,
     ),
   );
 
   // Translatables
   // Included for use with string extractors like potx.
+  t('Background');
   t('Body');
   t('Body #1');
   t('Body #2');
   t('Body #3');
+  t('Description');
   t('Featured Content');
   t('Image');
   t('Microsite Footer Desc');
@@ -2690,11 +2875,12 @@ function gie_microsite_field_default_field_instances() {
   t('Microsite Logo');
   t('Microsite Page Sections');
   t('Microsite Partners');
+  t('Name');
+  t('Orientation');
   t('Read more Link');
   t('Style');
   t('Subtitle');
   t('Text');
-  t('Text Orientation');
   t('Title');
   t('Title #1');
   t('Title #2');
