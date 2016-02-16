@@ -462,13 +462,13 @@ function gie_microsite_strongarm() {
   $strongarm->value = array(
     'view_modes' => array(
       'view_mode_selector' => array(
-        'custom_settings' => TRUE,
+        'custom_settings' => FALSE,
       ),
       'center_aligned' => array(
-        'custom_settings' => TRUE,
+        'custom_settings' => FALSE,
       ),
       'left_aligned' => array(
-        'custom_settings' => TRUE,
+        'custom_settings' => FALSE,
       ),
       'full' => array(
         'custom_settings' => FALSE,
@@ -483,6 +483,15 @@ function gie_microsite_strongarm() {
         'custom_settings' => FALSE,
       ),
       'right_image' => array(
+        'custom_settings' => FALSE,
+      ),
+      'callout_1' => array(
+        'custom_settings' => FALSE,
+      ),
+      'callout_2' => array(
+        'custom_settings' => FALSE,
+      ),
+      'callout_3' => array(
         'custom_settings' => FALSE,
       ),
     ),
