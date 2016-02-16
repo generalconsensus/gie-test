@@ -125,7 +125,7 @@ function gie_news_panelizer_defaults() {
     );
     $pane->css = array(
       'css_id' => '',
-      'css_class' => 'pane--button',
+      'css_class' => 'pane--favorite-this',
     );
     $pane->extras = array();
     $pane->position = 0;

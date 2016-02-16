@@ -164,7 +164,7 @@ function gie_news_strongarm() {
           ),
           'details' => array(
             'weight' => '11',
-            'visible' => FALSE,
+            'visible' => TRUE,
           ),
           'search_listing' => array(
             'weight' => '1',
@@ -198,7 +198,7 @@ function gie_news_strongarm() {
           ),
           'details' => array(
             'weight' => '17',
-            'visible' => FALSE,
+            'visible' => TRUE,
           ),
           'search_listing' => array(
             'weight' => '10',
@@ -216,7 +216,7 @@ function gie_news_strongarm() {
         'news_at_a_glance_comments' => array(
           'details' => array(
             'weight' => '16',
-            'visible' => FALSE,
+            'visible' => TRUE,
           ),
           'contact' => array(
             'weight' => '23',
@@ -242,7 +242,7 @@ function gie_news_strongarm() {
         'news_at_a_glance_favorites' => array(
           'details' => array(
             'weight' => '15',
-            'visible' => FALSE,
+            'visible' => TRUE,
           ),
           'contact' => array(
             'weight' => '22',
@@ -268,7 +268,7 @@ function gie_news_strongarm() {
         'news_at_a_glance_amount' => array(
           'details' => array(
             'weight' => '12',
-            'visible' => FALSE,
+            'visible' => TRUE,
           ),
           'contact' => array(
             'weight' => '19',
@@ -294,7 +294,7 @@ function gie_news_strongarm() {
         'news_at_a_glance_entity_view_1' => array(
           'details' => array(
             'weight' => '13',
-            'visible' => FALSE,
+            'visible' => TRUE,
           ),
           'contact' => array(
             'weight' => '20',
@@ -320,7 +320,7 @@ function gie_news_strongarm() {
         'news_at_a_glance_related_org_card_event' => array(
           'details' => array(
             'weight' => '14',
-            'visible' => FALSE,
+            'visible' => TRUE,
           ),
           'contact' => array(
             'weight' => '21',
@@ -341,6 +341,18 @@ function gie_news_strongarm() {
           'page_header' => array(
             'weight' => '8',
             'visible' => FALSE,
+          ),
+        ),
+        'flag_favorite' => array(
+          'details' => array(
+            'weight' => '10',
+            'visible' => TRUE,
+          ),
+        ),
+        'flag_abuse_node' => array(
+          'details' => array(
+            'weight' => '10',
+            'visible' => TRUE,
           ),
         ),
       ),

@@ -23,6 +23,7 @@ dependencies[] = node
 dependencies[] = options
 dependencies[] = panelizer
 dependencies[] = search_api_views
+dependencies[] = smart_trim
 dependencies[] = strongarm
 dependencies[] = taxonomy
 dependencies[] = term_reference_tree

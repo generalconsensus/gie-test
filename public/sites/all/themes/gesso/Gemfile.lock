@@ -43,4 +43,4 @@ DEPENDENCIES
   singularitygs (~> 1.6.2)
 
 BUNDLED WITH
-   1.10.6
+   1.11.2
