@@ -461,7 +461,7 @@ function gie_blog_field_default_field_instances() {
         'weight' => 0,
       ),
       'contact' => array(
-        'label' => 'above',
+        'label' => 'inline',
         'module' => 'date',
         'settings' => array(
           'field_delimiter' => '',
