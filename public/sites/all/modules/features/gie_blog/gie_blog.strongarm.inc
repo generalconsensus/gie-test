@@ -363,6 +363,18 @@ function gie_blog_strongarm() {
             'visible' => FALSE,
           ),
         ),
+        'flag_favorite' => array(
+          'contact' => array(
+            'weight' => '10',
+            'visible' => FALSE,
+          ),
+        ),
+        'flag_abuse_node' => array(
+          'contact' => array(
+            'weight' => '10',
+            'visible' => FALSE,
+          ),
+        ),
       ),
     ),
   );
