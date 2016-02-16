@@ -182,6 +182,13 @@ function gie_microsite_ds_field_settings_info() {
   $ds_fieldsetting->bundle = 'microsite_text';
   $ds_fieldsetting->view_mode = 'center_aligned';
   $ds_fieldsetting->settings = array(
+    'field_para_text_orientation' => array(
+      'formatter_settings' => array(
+        'ft' => array(
+          'func' => 'theme_ds_field_reset',
+        ),
+      ),
+    ),
     'field_paragraph_text' => array(
       'formatter_settings' => array(
         'ft' => array(
@@ -189,8 +196,39 @@ function gie_microsite_ds_field_settings_info() {
         ),
       ),
     ),
+    'field_background' => array(
+      'formatter_settings' => array(
+        'ft' => array(
+          'func' => 'theme_ds_field_reset',
+        ),
+      ),
+    ),
   );
   $export['paragraphs_item|microsite_text|center_aligned'] = $ds_fieldsetting;
+
+  $ds_fieldsetting = new stdClass();
+  $ds_fieldsetting->api_version = 1;
+  $ds_fieldsetting->id = 'paragraphs_item|microsite_text|default';
+  $ds_fieldsetting->entity_type = 'paragraphs_item';
+  $ds_fieldsetting->bundle = 'microsite_text';
+  $ds_fieldsetting->view_mode = 'default';
+  $ds_fieldsetting->settings = array(
+    'field_background' => array(
+      'formatter_settings' => array(
+        'ft' => array(
+          'func' => 'theme_ds_field_reset',
+        ),
+      ),
+    ),
+    'field_orientation' => array(
+      'formatter_settings' => array(
+        'ft' => array(
+          'func' => 'theme_ds_field_reset',
+        ),
+      ),
+    ),
+  );
+  $export['paragraphs_item|microsite_text|default'] = $ds_fieldsetting;
 
   $ds_fieldsetting = new stdClass();
   $ds_fieldsetting->api_version = 1;
@@ -554,29 +592,63 @@ function gie_microsite_ds_layout_settings_info() {
   $ds_layout->entity_type = 'paragraphs_item';
   $ds_layout->bundle = 'microsite_text';
   $ds_layout->view_mode = 'center_aligned';
-  $ds_layout->layout = 'ds_reset';
+  $ds_layout->layout = 'microsite_text';
   $ds_layout->settings = array(
     'regions' => array(
-      'ds_content' => array(
-        0 => 'group_text',
-        1 => 'field_paragraph_text',
+      'main_content' => array(
+        0 => 'field_paragraph_text',
+        1 => 'field_background',
+        2 => 'field_para_text_orientation',
       ),
     ),
     'fields' => array(
-      'group_text' => 'ds_content',
-      'field_paragraph_text' => 'ds_content',
+      'field_paragraph_text' => 'main_content',
+      'field_background' => 'main_content',
+      'field_para_text_orientation' => 'main_content',
     ),
     'classes' => array(),
     'wrappers' => array(
-      'ds_content' => 'div',
+      'main_content' => 'div',
     ),
     'layout_wrapper' => 'div',
     'layout_attributes' => '',
-    'layout_attributes_merge' => TRUE,
-    'layout_link_attribute' => FALSE,
+    'layout_attributes_merge' => 1,
+    'layout_link_attribute' => '',
     'layout_link_custom' => '',
   );
   $export['paragraphs_item|microsite_text|center_aligned'] = $ds_layout;
+
+  $ds_layout = new stdClass();
+  $ds_layout->api_version = 1;
+  $ds_layout->id = 'paragraphs_item|microsite_text|default';
+  $ds_layout->entity_type = 'paragraphs_item';
+  $ds_layout->bundle = 'microsite_text';
+  $ds_layout->view_mode = 'default';
+  $ds_layout->layout = 'microsite_text';
+  $ds_layout->settings = array(
+    'regions' => array(
+      'main_content' => array(
+        0 => 'field_paragraph_text',
+        1 => 'field_orientation',
+        2 => 'field_background',
+      ),
+    ),
+    'fields' => array(
+      'field_paragraph_text' => 'main_content',
+      'field_orientation' => 'main_content',
+      'field_background' => 'main_content',
+    ),
+    'classes' => array(),
+    'wrappers' => array(
+      'main_content' => 'div',
+    ),
+    'layout_wrapper' => 'div',
+    'layout_attributes' => '',
+    'layout_attributes_merge' => 1,
+    'layout_link_attribute' => '',
+    'layout_link_custom' => '',
+  );
+  $export['paragraphs_item|microsite_text|default'] = $ds_layout;
 
   $ds_layout = new stdClass();
   $ds_layout->api_version = 1;
@@ -584,26 +656,26 @@ function gie_microsite_ds_layout_settings_info() {
   $ds_layout->entity_type = 'paragraphs_item';
   $ds_layout->bundle = 'microsite_text';
   $ds_layout->view_mode = 'left_aligned';
-  $ds_layout->layout = 'ds_reset';
+  $ds_layout->layout = 'microsite_text';
   $ds_layout->settings = array(
     'regions' => array(
-      'ds_content' => array(
+      'main_content' => array(
         0 => 'group_text',
         1 => 'field_paragraph_text',
       ),
     ),
     'fields' => array(
-      'group_text' => 'ds_content',
-      'field_paragraph_text' => 'ds_content',
+      'group_text' => 'main_content',
+      'field_paragraph_text' => 'main_content',
     ),
     'classes' => array(),
     'wrappers' => array(
-      'ds_content' => 'div',
+      'main_content' => 'div',
     ),
     'layout_wrapper' => 'div',
     'layout_attributes' => '',
-    'layout_attributes_merge' => TRUE,
-    'layout_link_attribute' => FALSE,
+    'layout_attributes_merge' => 1,
+    'layout_link_attribute' => '',
     'layout_link_custom' => '',
   );
   $export['paragraphs_item|microsite_text|left_aligned'] = $ds_layout;
