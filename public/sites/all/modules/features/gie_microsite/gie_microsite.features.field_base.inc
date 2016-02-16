@@ -10,6 +10,32 @@
 function gie_microsite_field_default_field_bases() {
   $field_bases = array();
 
+  // Exported field_base: 'field_background'
+  $field_bases['field_background'] = array(
+    'active' => 1,
+    'cardinality' => 1,
+    'deleted' => 0,
+    'entity_types' => array(),
+    'field_name' => 'field_background',
+    'indexes' => array(
+      'tid' => array(
+        0 => 'tid',
+      ),
+    ),
+    'locked' => 0,
+    'module' => 'taxonomy',
+    'settings' => array(
+      'allowed_values' => array(
+        0 => array(
+          'vocabulary' => 'background',
+          'parent' => 0,
+        ),
+      ),
+    ),
+    'translatable' => 0,
+    'type' => 'taxonomy_term_reference',
+  );
+
   // Exported field_base: 'field_microsite_footer_desc'
   $field_bases['field_microsite_footer_desc'] = array(
     'active' => 1,
@@ -121,6 +147,32 @@ function gie_microsite_field_default_field_bases() {
     ),
     'translatable' => 0,
     'type' => 'entityreference',
+  );
+
+  // Exported field_base: 'field_orientation'
+  $field_bases['field_orientation'] = array(
+    'active' => 1,
+    'cardinality' => 1,
+    'deleted' => 0,
+    'entity_types' => array(),
+    'field_name' => 'field_orientation',
+    'indexes' => array(
+      'tid' => array(
+        0 => 'tid',
+      ),
+    ),
+    'locked' => 0,
+    'module' => 'taxonomy',
+    'settings' => array(
+      'allowed_values' => array(
+        0 => array(
+          'vocabulary' => 'text_orientation',
+          'parent' => 0,
+        ),
+      ),
+    ),
+    'translatable' => 0,
+    'type' => 'taxonomy_term_reference',
   );
 
   // Exported field_base: 'field_para_5050_image'
@@ -363,21 +415,6 @@ function gie_microsite_field_default_field_bases() {
     ),
     'translatable' => 0,
     'type' => 'image',
-  );
-
-  // Exported field_base: 'field_para_text_orientation'
-  $field_bases['field_para_text_orientation'] = array(
-    'active' => 1,
-    'cardinality' => 1,
-    'deleted' => 0,
-    'entity_types' => array(),
-    'field_name' => 'field_para_text_orientation',
-    'indexes' => array(),
-    'locked' => 0,
-    'module' => 'view_mode_selector',
-    'settings' => array(),
-    'translatable' => 0,
-    'type' => 'view_mode_selector',
   );
 
   return $field_bases;
