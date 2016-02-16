@@ -132,7 +132,7 @@ angular.module('gieDataViz').controller('FundingCountController', ['$scope', 'es
       });
 
       function updateChartTitle() {
-        $scope.data.chartTitle = 'Funding count by '+$scope.selection.label;
+        $scope.data.chartTitle = 'Number of Funding Opportunities by '+$scope.selection.label;
       }
     });
   });
