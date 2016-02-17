@@ -137,7 +137,7 @@ function gie_blog_panelizer_defaults() {
     $pane->configuration = array(
       'view_mode' => 'contact',
       'context' => 'panelizer',
-      'override_title' => 1,
+      'override_title' => 0,
       'override_title_text' => 'Point of Contact',
       'override_title_heading' => 'h2',
     );
@@ -165,7 +165,7 @@ function gie_blog_panelizer_defaults() {
     $pane->configuration = array(
       'view_mode' => 'at_a_glance',
       'context' => 'panelizer',
-      'override_title' => 1,
+      'override_title' => 0,
       'override_title_text' => 'At a Glance',
       'override_title_heading' => 'h2',
     );

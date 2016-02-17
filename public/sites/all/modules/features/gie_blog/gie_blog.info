@@ -51,6 +51,7 @@ features[field_base][] = field_blog_publish_date
 features[field_base][] = field_blog_related_organization
 features[field_base][] = field_blog_related_program
 features[field_base][] = field_blog_related_resource
+features[field_group][] = group_blog_contact|node|blog|contact
 features[field_group][] = group_blog_stats|node|blog|details
 features[field_instance][] = node-blog-field_blog_author
 features[field_instance][] = node-blog-field_blog_description
