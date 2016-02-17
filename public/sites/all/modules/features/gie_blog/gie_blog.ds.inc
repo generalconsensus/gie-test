@@ -102,15 +102,17 @@ function gie_blog_ds_layout_settings_info() {
   $ds_layout->entity_type = 'node';
   $ds_layout->bundle = 'blog';
   $ds_layout->view_mode = 'at_a_glance';
-  $ds_layout->layout = 'ds_reset';
+  $ds_layout->layout = 'ds_1col';
   $ds_layout->settings = array(
     'regions' => array(
       'ds_content' => array(
-        0 => 'blog_at_a_glance_favorites',
-        1 => 'blog_at_a_glance_comments',
+        0 => 'group_blog_glance',
+        1 => 'blog_at_a_glance_favorites',
+        2 => 'blog_at_a_glance_comments',
       ),
     ),
     'fields' => array(
+      'group_blog_glance' => 'ds_content',
       'blog_at_a_glance_favorites' => 'ds_content',
       'blog_at_a_glance_comments' => 'ds_content',
     ),
@@ -120,8 +122,8 @@ function gie_blog_ds_layout_settings_info() {
     ),
     'layout_wrapper' => 'div',
     'layout_attributes' => '',
-    'layout_attributes_merge' => TRUE,
-    'layout_link_attribute' => FALSE,
+    'layout_attributes_merge' => 1,
+    'layout_link_attribute' => '',
     'layout_link_custom' => '',
   );
   $export['node|blog|at_a_glance'] = $ds_layout;
@@ -132,23 +134,23 @@ function gie_blog_ds_layout_settings_info() {
   $ds_layout->entity_type = 'node';
   $ds_layout->bundle = 'blog';
   $ds_layout->view_mode = 'contact';
-  $ds_layout->layout = 'slat';
+  $ds_layout->layout = 'ds_1col';
   $ds_layout->settings = array(
     'regions' => array(
-      'main_content' => array(
-        0 => 'field_blog_author',
-        1 => 'field_blog_publish_date',
+      'ds_content' => array(
+        0 => 'group_blog_contact',
+        1 => 'field_blog_author',
+        2 => 'field_blog_publish_date',
       ),
     ),
     'fields' => array(
-      'field_blog_author' => 'main_content',
-      'field_blog_publish_date' => 'main_content',
+      'group_blog_contact' => 'ds_content',
+      'field_blog_author' => 'ds_content',
+      'field_blog_publish_date' => 'ds_content',
     ),
     'classes' => array(),
     'wrappers' => array(
-      'header' => 'div',
-      'media' => 'div',
-      'main_content' => 'div',
+      'ds_content' => 'div',
     ),
     'layout_wrapper' => 'div',
     'layout_attributes' => '',

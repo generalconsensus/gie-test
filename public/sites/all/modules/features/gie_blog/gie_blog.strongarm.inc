@@ -159,7 +159,7 @@ function gie_blog_strongarm() {
             'visible' => FALSE,
           ),
           'at_a_glance' => array(
-            'weight' => '3',
+            'weight' => '18',
             'visible' => FALSE,
           ),
           'search_listing' => array(
@@ -171,7 +171,7 @@ function gie_blog_strongarm() {
             'visible' => FALSE,
           ),
           'contact' => array(
-            'weight' => '15',
+            'weight' => '16',
             'visible' => FALSE,
           ),
           'full' => array(
@@ -193,7 +193,7 @@ function gie_blog_strongarm() {
             'visible' => TRUE,
           ),
           'at_a_glance' => array(
-            'weight' => '13',
+            'weight' => '24',
             'visible' => FALSE,
           ),
           'search_listing' => array(
@@ -205,7 +205,7 @@ function gie_blog_strongarm() {
             'visible' => FALSE,
           ),
           'contact' => array(
-            'weight' => '18',
+            'weight' => '19',
             'visible' => FALSE,
           ),
           'full' => array(
@@ -223,7 +223,7 @@ function gie_blog_strongarm() {
             'visible' => FALSE,
           ),
           'at_a_glance' => array(
-            'weight' => '1',
+            'weight' => '2',
             'visible' => TRUE,
           ),
           'search_listing' => array(
@@ -235,7 +235,7 @@ function gie_blog_strongarm() {
             'visible' => FALSE,
           ),
           'contact' => array(
-            'weight' => '22',
+            'weight' => '23',
             'visible' => FALSE,
           ),
           'full' => array(
@@ -253,7 +253,7 @@ function gie_blog_strongarm() {
             'visible' => FALSE,
           ),
           'at_a_glance' => array(
-            'weight' => '0',
+            'weight' => '1',
             'visible' => TRUE,
           ),
           'search_listing' => array(
@@ -265,7 +265,7 @@ function gie_blog_strongarm() {
             'visible' => FALSE,
           ),
           'contact' => array(
-            'weight' => '20',
+            'weight' => '21',
             'visible' => FALSE,
           ),
           'full' => array(
@@ -283,7 +283,7 @@ function gie_blog_strongarm() {
             'visible' => FALSE,
           ),
           'at_a_glance' => array(
-            'weight' => '16',
+            'weight' => '27',
             'visible' => FALSE,
           ),
           'search_listing' => array(
@@ -295,7 +295,7 @@ function gie_blog_strongarm() {
             'visible' => FALSE,
           ),
           'contact' => array(
-            'weight' => '24',
+            'weight' => '25',
             'visible' => FALSE,
           ),
           'full' => array(
@@ -313,7 +313,7 @@ function gie_blog_strongarm() {
             'visible' => FALSE,
           ),
           'at_a_glance' => array(
-            'weight' => '15',
+            'weight' => '26',
             'visible' => FALSE,
           ),
           'search_listing' => array(
@@ -325,7 +325,7 @@ function gie_blog_strongarm() {
             'visible' => FALSE,
           ),
           'contact' => array(
-            'weight' => '21',
+            'weight' => '22',
             'visible' => FALSE,
           ),
           'full' => array(
@@ -343,7 +343,7 @@ function gie_blog_strongarm() {
             'visible' => FALSE,
           ),
           'at_a_glance' => array(
-            'weight' => '12',
+            'weight' => '23',
             'visible' => FALSE,
           ),
           'search_listing' => array(
@@ -355,7 +355,7 @@ function gie_blog_strongarm() {
             'visible' => FALSE,
           ),
           'contact' => array(
-            'weight' => '19',
+            'weight' => '20',
             'visible' => FALSE,
           ),
           'full' => array(
@@ -365,13 +365,21 @@ function gie_blog_strongarm() {
         ),
         'flag_favorite' => array(
           'contact' => array(
-            'weight' => '10',
+            'weight' => '12',
+            'visible' => FALSE,
+          ),
+          'at_a_glance' => array(
+            'weight' => '21',
             'visible' => FALSE,
           ),
         ),
         'flag_abuse_node' => array(
           'contact' => array(
-            'weight' => '10',
+            'weight' => '13',
+            'visible' => FALSE,
+          ),
+          'at_a_glance' => array(
+            'weight' => '22',
             'visible' => FALSE,
           ),
         ),
