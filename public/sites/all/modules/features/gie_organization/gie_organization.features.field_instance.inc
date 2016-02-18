@@ -169,6 +169,12 @@ function gie_organization_field_default_field_instances() {
         'type' => 'hidden',
         'weight' => 8,
       ),
+      'microsite_content_slider' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 16,
+      ),
       'page_header' => array(
         'label' => 'above',
         'settings' => array(),
@@ -321,6 +327,37 @@ function gie_organization_field_default_field_instances() {
         'label' => 'hidden',
         'settings' => array(),
         'type' => 'hidden',
+        'weight' => 3,
+      ),
+      'microsite_content_slider' => array(
+        'label' => 'hidden',
+        'module' => 'smart_trim',
+        'settings' => array(
+          'field_delimiter' => '',
+          'linked_field' => array(
+            'advanced' => array(
+              'class' => '',
+              'rel' => '',
+              'target' => '',
+              'text' => '',
+              'title' => '',
+            ),
+            'destination' => '',
+            'linked' => 0,
+          ),
+          'more_link' => 0,
+          'more_text' => '',
+          'summary_handler' => 'full',
+          'trim_length' => 300,
+          'trim_link' => 0,
+          'trim_options' => array(
+            'text' => 0,
+          ),
+          'trim_preserve_tags' => '',
+          'trim_suffix' => '...',
+          'trim_type' => 'chars',
+        ),
+        'type' => 'smart_trim_format',
         'weight' => 3,
       ),
       'page_header' => array(
@@ -503,6 +540,12 @@ function gie_organization_field_default_field_instances() {
         'type' => 'hidden',
         'weight' => 7,
       ),
+      'microsite_content_slider' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 15,
+      ),
       'page_header' => array(
         'label' => 'above',
         'settings' => array(),
@@ -608,6 +651,12 @@ function gie_organization_field_default_field_instances() {
         'settings' => array(),
         'type' => 'hidden',
         'weight' => 18,
+      ),
+      'microsite_content_slider' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 26,
       ),
       'page_header' => array(
         'label' => 'above',
@@ -722,6 +771,12 @@ function gie_organization_field_default_field_instances() {
         'settings' => array(),
         'type' => 'hidden',
         'weight' => 6,
+      ),
+      'microsite_content_slider' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 14,
       ),
       'page_header' => array(
         'label' => 'above',
@@ -865,6 +920,12 @@ function gie_organization_field_default_field_instances() {
         'settings' => array(),
         'type' => 'hidden',
         'weight' => 4,
+      ),
+      'microsite_content_slider' => array(
+        'label' => 'hidden',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 12,
       ),
       'page_header' => array(
         'label' => 'hidden',
@@ -1035,6 +1096,28 @@ function gie_organization_field_default_field_instances() {
         'type' => 'image',
         'weight' => 0,
       ),
+      'microsite_content_slider' => array(
+        'label' => 'hidden',
+        'module' => 'image',
+        'settings' => array(
+          'field_delimiter' => '',
+          'image_link' => 'content',
+          'image_style' => 'org_and_program_detail',
+          'linked_field' => array(
+            'advanced' => array(
+              'class' => '',
+              'rel' => '',
+              'target' => '',
+              'text' => '',
+              'title' => '',
+            ),
+            'destination' => '',
+            'linked' => 0,
+          ),
+        ),
+        'type' => 'image',
+        'weight' => 1,
+      ),
       'page_header' => array(
         'label' => 'hidden',
         'module' => 'image',
@@ -1097,7 +1180,7 @@ function gie_organization_field_default_field_instances() {
       'alt_field_hide' => 0,
       'alt_field_sync_title' => 1,
       'alt_field_update_on_edit' => 1,
-      'default_image' => 44,
+      'default_image' => 0,
       'description_display' => 'before',
       'file_directory' => '',
       'file_extensions' => 'png gif jpg jpeg',
@@ -1203,6 +1286,12 @@ function gie_organization_field_default_field_instances() {
         'settings' => array(),
         'type' => 'hidden',
         'weight' => 5,
+      ),
+      'microsite_content_slider' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 13,
       ),
       'page_header' => array(
         'label' => 'above',
@@ -1334,6 +1423,12 @@ function gie_organization_field_default_field_instances() {
         'type' => 'hidden',
         'weight' => 29,
       ),
+      'microsite_content_slider' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 37,
+      ),
       'page_header' => array(
         'label' => 'above',
         'settings' => array(),
@@ -1437,6 +1532,12 @@ function gie_organization_field_default_field_instances() {
         'settings' => array(),
         'type' => 'hidden',
         'weight' => 17,
+      ),
+      'microsite_content_slider' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 25,
       ),
       'page_header' => array(
         'label' => 'above',
@@ -1565,6 +1666,12 @@ function gie_organization_field_default_field_instances() {
         'type' => 'hidden',
         'weight' => 9,
       ),
+      'microsite_content_slider' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 17,
+      ),
       'page_header' => array(
         'label' => 'above',
         'settings' => array(),
@@ -1688,6 +1795,12 @@ function gie_organization_field_default_field_instances() {
         'settings' => array(),
         'type' => 'hidden',
         'weight' => 22,
+      ),
+      'microsite_content_slider' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 30,
       ),
       'page_header' => array(
         'label' => 'above',
@@ -1830,6 +1943,12 @@ function gie_organization_field_default_field_instances() {
         'type' => 'hidden',
         'weight' => 23,
       ),
+      'microsite_content_slider' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 31,
+      ),
       'page_header' => array(
         'label' => 'above',
         'settings' => array(),
@@ -1956,6 +2075,12 @@ function gie_organization_field_default_field_instances() {
         'settings' => array(),
         'type' => 'hidden',
         'weight' => 26,
+      ),
+      'microsite_content_slider' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 34,
       ),
       'page_header' => array(
         'label' => 'above',
@@ -2084,6 +2209,12 @@ function gie_organization_field_default_field_instances() {
         'type' => 'hidden',
         'weight' => 27,
       ),
+      'microsite_content_slider' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 35,
+      ),
       'page_header' => array(
         'label' => 'above',
         'settings' => array(),
@@ -2210,6 +2341,12 @@ function gie_organization_field_default_field_instances() {
         'settings' => array(),
         'type' => 'hidden',
         'weight' => 28,
+      ),
+      'microsite_content_slider' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 36,
       ),
       'page_header' => array(
         'label' => 'above',
@@ -2338,6 +2475,12 @@ function gie_organization_field_default_field_instances() {
         'type' => 'hidden',
         'weight' => 24,
       ),
+      'microsite_content_slider' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 32,
+      ),
       'page_header' => array(
         'label' => 'above',
         'settings' => array(),
@@ -2444,6 +2587,12 @@ function gie_organization_field_default_field_instances() {
         'type' => 'hidden',
         'weight' => 30,
       ),
+      'microsite_content_slider' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 38,
+      ),
       'page_header' => array(
         'label' => 'above',
         'settings' => array(),
@@ -2545,6 +2694,12 @@ function gie_organization_field_default_field_instances() {
         'settings' => array(),
         'type' => 'hidden',
         'weight' => 25,
+      ),
+      'microsite_content_slider' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 33,
       ),
       'page_header' => array(
         'label' => 'above',
@@ -2648,6 +2803,12 @@ function gie_organization_field_default_field_instances() {
         'type' => 'hidden',
         'weight' => 21,
       ),
+      'microsite_content_slider' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 29,
+      ),
       'page_header' => array(
         'label' => 'above',
         'settings' => array(),
@@ -2750,6 +2911,12 @@ function gie_organization_field_default_field_instances() {
         'type' => 'hidden',
         'weight' => 20,
       ),
+      'microsite_content_slider' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 28,
+      ),
       'page_header' => array(
         'label' => 'above',
         'settings' => array(),
@@ -2851,6 +3018,12 @@ function gie_organization_field_default_field_instances() {
         'settings' => array(),
         'type' => 'hidden',
         'weight' => 19,
+      ),
+      'microsite_content_slider' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 27,
       ),
       'page_header' => array(
         'label' => 'above',
@@ -2962,6 +3135,12 @@ function gie_organization_field_default_field_instances() {
         'settings' => array(),
         'type' => 'hidden',
         'weight' => 31,
+      ),
+      'microsite_content_slider' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 39,
       ),
       'page_header' => array(
         'label' => 'above',
@@ -3092,6 +3271,12 @@ function gie_organization_field_default_field_instances() {
         'settings' => array(),
         'type' => 'hidden',
         'weight' => 1,
+      ),
+      'microsite_content_slider' => array(
+        'label' => 'hidden',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 10,
       ),
       'page_header' => array(
         'label' => 'hidden',
