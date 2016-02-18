@@ -484,26 +484,5 @@ function gie_news_strongarm() {
   $strongarm->value = 'news/[node:title]';
   $export['pathauto_node_news_pattern'] = $strongarm;
 
-  $strongarm = new stdClass();
-  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
-  $strongarm->api_version = 1;
-  $strongarm->name = 'pathauto_taxonomy_term_region_pattern';
-  $strongarm->value = '';
-  $export['pathauto_taxonomy_term_region_pattern'] = $strongarm;
-
-  $strongarm = new stdClass();
-  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
-  $strongarm->api_version = 1;
-  $strongarm->name = 'pathauto_taxonomy_term_sector_pattern';
-  $strongarm->value = '';
-  $export['pathauto_taxonomy_term_sector_pattern'] = $strongarm;
-
-  $strongarm = new stdClass();
-  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
-  $strongarm->api_version = 1;
-  $strongarm->name = 'pathauto_taxonomy_term_topic_pattern';
-  $strongarm->value = '';
-  $export['pathauto_taxonomy_term_topic_pattern'] = $strongarm;
-
   return $export;
 }
