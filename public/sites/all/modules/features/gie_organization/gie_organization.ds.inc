@@ -542,6 +542,44 @@ function gie_organization_ds_layout_settings_info() {
 
   $ds_layout = new stdClass();
   $ds_layout->api_version = 1;
+  $ds_layout->id = 'node|organization|microsite_content_slider';
+  $ds_layout->entity_type = 'node';
+  $ds_layout->bundle = 'organization';
+  $ds_layout->view_mode = 'microsite_content_slider';
+  $ds_layout->layout = 'ds_reset';
+  $ds_layout->settings = array(
+    'regions' => array(
+      'ds_content' => array(
+        0 => 'group_image',
+        1 => 'field_org_logo',
+        2 => 'group_right_content',
+        3 => 'title',
+        4 => 'field_org_desc',
+        5 => 'node_link',
+      ),
+    ),
+    'fields' => array(
+      'group_image' => 'ds_content',
+      'field_org_logo' => 'ds_content',
+      'group_right_content' => 'ds_content',
+      'title' => 'ds_content',
+      'field_org_desc' => 'ds_content',
+      'node_link' => 'ds_content',
+    ),
+    'classes' => array(),
+    'wrappers' => array(
+      'ds_content' => 'div',
+    ),
+    'layout_wrapper' => 'div',
+    'layout_attributes' => '',
+    'layout_attributes_merge' => TRUE,
+    'layout_link_attribute' => FALSE,
+    'layout_link_custom' => '',
+  );
+  $export['node|organization|microsite_content_slider'] = $ds_layout;
+
+  $ds_layout = new stdClass();
+  $ds_layout->api_version = 1;
   $ds_layout->id = 'node|organization|page_header';
   $ds_layout->entity_type = 'node';
   $ds_layout->bundle = 'organization';
