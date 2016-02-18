@@ -128,6 +128,9 @@ function gie_organization_strongarm() {
       'data' => array(
         'custom_settings' => FALSE,
       ),
+      'microsite_content_slider' => array(
+        'custom_settings' => TRUE,
+      ),
     ),
     'extra_fields' => array(
       'form' => array(
@@ -190,6 +193,10 @@ function gie_organization_strongarm() {
             'weight' => '11',
             'visible' => FALSE,
           ),
+          'microsite_content_slider' => array(
+            'weight' => '19',
+            'visible' => FALSE,
+          ),
         ),
         'organization_counters_favorite_count' => array(
           'listing' => array(
@@ -236,6 +243,10 @@ function gie_organization_strongarm() {
             'weight' => '13',
             'visible' => FALSE,
           ),
+          'microsite_content_slider' => array(
+            'weight' => '21',
+            'visible' => FALSE,
+          ),
         ),
         'organization_counters_innovation_count' => array(
           'listing' => array(
@@ -279,6 +290,10 @@ function gie_organization_strongarm() {
             'visible' => FALSE,
           ),
           'long_form_footer_logo' => array(
+            'weight' => '10',
+            'visible' => TRUE,
+          ),
+          'microsite_content_slider' => array(
             'weight' => '10',
             'visible' => TRUE,
           ),
@@ -328,6 +343,10 @@ function gie_organization_strongarm() {
             'weight' => '10',
             'visible' => FALSE,
           ),
+          'microsite_content_slider' => array(
+            'weight' => '18',
+            'visible' => FALSE,
+          ),
         ),
         'organization_at_a_glance_innovation_count' => array(
           'at_a_glance' => array(
@@ -363,6 +382,10 @@ function gie_organization_strongarm() {
             'visible' => FALSE,
           ),
           'long_form_footer_logo' => array(
+            'weight' => '10',
+            'visible' => TRUE,
+          ),
+          'microsite_content_slider' => array(
             'weight' => '10',
             'visible' => TRUE,
           ),
@@ -408,6 +431,10 @@ function gie_organization_strongarm() {
             'weight' => '16',
             'visible' => FALSE,
           ),
+          'microsite_content_slider' => array(
+            'weight' => '23',
+            'visible' => FALSE,
+          ),
         ),
         'organization_at_a_glance_entity_view_1' => array(
           'at_a_glance' => array(
@@ -418,6 +445,7 @@ function gie_organization_strongarm() {
           'search_listing' => NULL,
           'page_header' => NULL,
           'long_form_footer_logo' => NULL,
+          'microsite_content_slider' => NULL,
         ),
         'organization_counters_partner_count' => array(
           'at_a_glance' => array(
@@ -458,6 +486,10 @@ function gie_organization_strongarm() {
           ),
           'long_form_footer_logo' => array(
             'weight' => '12',
+            'visible' => FALSE,
+          ),
+          'microsite_content_slider' => array(
+            'weight' => '20',
             'visible' => FALSE,
           ),
         ),
@@ -502,6 +534,10 @@ function gie_organization_strongarm() {
             'weight' => '14',
             'visible' => FALSE,
           ),
+          'microsite_content_slider' => array(
+            'weight' => '22',
+            'visible' => FALSE,
+          ),
         ),
         'flag_favorite' => array(
           'default' => array(
@@ -512,6 +548,10 @@ function gie_organization_strongarm() {
             'weight' => '15',
             'visible' => FALSE,
           ),
+          'microsite_content_slider' => array(
+            'weight' => '24',
+            'visible' => FALSE,
+          ),
         ),
         'domain' => array(
           'default' => array(
@@ -520,6 +560,10 @@ function gie_organization_strongarm() {
           ),
           'long_form_footer_logo' => array(
             'weight' => '2',
+            'visible' => FALSE,
+          ),
+          'microsite_content_slider' => array(
+            'weight' => '11',
             'visible' => FALSE,
           ),
         ),
