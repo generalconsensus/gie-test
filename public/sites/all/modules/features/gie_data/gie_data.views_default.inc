@@ -221,7 +221,7 @@ function gie_data_views_default_views() {
   $handler->display->display_options['css_class'] = 'view--simple-data-table';
   $handler->display->display_options['defaults']['pager'] = FALSE;
   $handler->display->display_options['pager']['type'] = 'some';
-  $handler->display->display_options['pager']['options']['items_per_page'] = '15';
+  $handler->display->display_options['pager']['options']['items_per_page'] = '18';
   $handler->display->display_options['pager']['options']['offset'] = '0';
   $handler->display->display_options['defaults']['style_plugin'] = FALSE;
   $handler->display->display_options['style_plugin'] = 'table';
@@ -1729,15 +1729,12 @@ function gie_data_views_default_views() {
   $handler->display->display_options['pager']['type'] = 'none';
   $handler->display->display_options['style_plugin'] = 'default';
   $handler->display->display_options['row_plugin'] = 'fields';
-  /* Field: Session calculated metrics: Avg. Session Duration */
+  /* Field: Broken/missing handler */
   $handler->display->display_options['fields']['avgSessionDuration']['id'] = 'avgSessionDuration';
   $handler->display->display_options['fields']['avgSessionDuration']['table'] = 'google_analytics';
   $handler->display->display_options['fields']['avgSessionDuration']['field'] = 'avgSessionDuration';
   $handler->display->display_options['fields']['avgSessionDuration']['label'] = 'Average Session Time';
   $handler->display->display_options['fields']['avgSessionDuration']['element_label_colon'] = FALSE;
-  $handler->display->display_options['fields']['avgSessionDuration']['date_format'] = 'custom';
-  $handler->display->display_options['fields']['avgSessionDuration']['custom_date_format'] = 'i:s';
-  $handler->display->display_options['fields']['avgSessionDuration']['second_date_format'] = 'html5_tools_iso8601';
 
   /* Display: GA Data Sessions */
   $handler = $view->new_display('panel_pane', 'GA Data Sessions', 'session_length');
@@ -1750,7 +1747,7 @@ function gie_data_views_default_views() {
   $handler->display->display_options['footer']['area']['content'] = '<h3>Average Visit Length</h3>';
   $handler->display->display_options['footer']['area']['format'] = 'full_html';
   $handler->display->display_options['defaults']['fields'] = FALSE;
-  /* Field: Session calculated metrics: Avg. Session Duration */
+  /* Field: Broken/missing handler */
   $handler->display->display_options['fields']['avgSessionDuration']['id'] = 'avgSessionDuration';
   $handler->display->display_options['fields']['avgSessionDuration']['table'] = 'google_analytics';
   $handler->display->display_options['fields']['avgSessionDuration']['field'] = 'avgSessionDuration';
@@ -1758,9 +1755,6 @@ function gie_data_views_default_views() {
   $handler->display->display_options['fields']['avgSessionDuration']['element_type'] = 'h2';
   $handler->display->display_options['fields']['avgSessionDuration']['element_class'] = 'pane__title';
   $handler->display->display_options['fields']['avgSessionDuration']['element_label_colon'] = FALSE;
-  $handler->display->display_options['fields']['avgSessionDuration']['date_format'] = 'custom';
-  $handler->display->display_options['fields']['avgSessionDuration']['custom_date_format'] = 'i:s';
-  $handler->display->display_options['fields']['avgSessionDuration']['second_date_format'] = 'html5_tools_iso8601';
 
   /* Display: GA Data Users */
   $handler = $view->new_display('panel_pane', 'GA Data Users', 'user_count');
@@ -1773,7 +1767,7 @@ function gie_data_views_default_views() {
   $handler->display->display_options['footer']['area']['content'] = '<h3>Total Beta Visitors</h3>';
   $handler->display->display_options['footer']['area']['format'] = 'full_html';
   $handler->display->display_options['defaults']['fields'] = FALSE;
-  /* Field: User metrics: Users */
+  /* Field: Broken/missing handler */
   $handler->display->display_options['fields']['users']['id'] = 'users';
   $handler->display->display_options['fields']['users']['table'] = 'google_analytics';
   $handler->display->display_options['fields']['users']['field'] = 'users';
@@ -1781,7 +1775,6 @@ function gie_data_views_default_views() {
   $handler->display->display_options['fields']['users']['element_type'] = 'h2';
   $handler->display->display_options['fields']['users']['element_class'] = 'pane__title';
   $handler->display->display_options['fields']['users']['element_label_colon'] = FALSE;
-  $handler->display->display_options['fields']['users']['precision'] = '0';
 
   /* Display: GA Returning Users */
   $handler = $view->new_display('panel_pane', 'GA Returning Users', 'return_user_traffic');
@@ -1794,20 +1787,16 @@ function gie_data_views_default_views() {
   $handler->display->display_options['footer']['area']['content'] = '<h3>Returning User Traffic</h3>';
   $handler->display->display_options['footer']['area']['format'] = 'full_html';
   $handler->display->display_options['defaults']['fields'] = FALSE;
-  /* Field: Session metrics: Sessions */
+  /* Field: Broken/missing handler */
   $handler->display->display_options['fields']['sessions']['id'] = 'sessions';
   $handler->display->display_options['fields']['sessions']['table'] = 'google_analytics';
   $handler->display->display_options['fields']['sessions']['field'] = 'sessions';
   $handler->display->display_options['fields']['sessions']['exclude'] = TRUE;
-  $handler->display->display_options['fields']['sessions']['precision'] = '0';
-  $handler->display->display_options['fields']['sessions']['separator'] = '';
-  /* Field: User calculated metrics: % New Sessions */
+  /* Field: Broken/missing handler */
   $handler->display->display_options['fields']['percentNewSessions']['id'] = 'percentNewSessions';
   $handler->display->display_options['fields']['percentNewSessions']['table'] = 'google_analytics';
   $handler->display->display_options['fields']['percentNewSessions']['field'] = 'percentNewSessions';
   $handler->display->display_options['fields']['percentNewSessions']['exclude'] = TRUE;
-  $handler->display->display_options['fields']['percentNewSessions']['precision'] = '0';
-  $handler->display->display_options['fields']['percentNewSessions']['separator'] = '';
   /* Field: Global: Math expression */
   $handler->display->display_options['fields']['expression']['id'] = 'expression';
   $handler->display->display_options['fields']['expression']['table'] = 'views';
@@ -1840,7 +1829,7 @@ function gie_data_views_default_views() {
   $handler->display->display_options['header']['area']['content'] = '<h1>Countries with Visitors</h1>';
   $handler->display->display_options['header']['area']['format'] = 'full_html';
   $handler->display->display_options['defaults']['fields'] = FALSE;
-  /* Field: Geo network dimensions: Country / Territory */
+  /* Field: Broken/missing handler */
   $handler->display->display_options['fields']['country']['id'] = 'country';
   $handler->display->display_options['fields']['country']['table'] = 'google_analytics';
   $handler->display->display_options['fields']['country']['field'] = 'country';
@@ -1851,7 +1840,7 @@ function gie_data_views_default_views() {
   $handler->display->display_options['fields']['country']['element_label_colon'] = FALSE;
   $handler->display->display_options['defaults']['filter_groups'] = FALSE;
   $handler->display->display_options['defaults']['filters'] = FALSE;
-  /* Filter criterion: Geo network dimensions: Country / Territory */
+  /* Filter criterion: Broken/missing handler */
   $handler->display->display_options['filters']['country']['id'] = 'country';
   $handler->display->display_options['filters']['country']['table'] = 'google_analytics';
   $handler->display->display_options['filters']['country']['field'] = 'country';
