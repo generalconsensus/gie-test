@@ -255,6 +255,16 @@ function gie_resource_views_default_views() {
   $handler->display->display_options['row_plugin'] = 'entity';
   $handler->display->display_options['row_options']['view_mode'] = 'listing';
   $handler->display->display_options['defaults']['row_options'] = FALSE;
+  $handler->display->display_options['defaults']['arguments'] = FALSE;
+  /* Contextual filter: Indexed Content: Domain ID */
+  $handler->display->display_options['arguments']['domain_domain_id']['id'] = 'domain_domain_id';
+  $handler->display->display_options['arguments']['domain_domain_id']['table'] = 'search_api_index_default_node_index';
+  $handler->display->display_options['arguments']['domain_domain_id']['field'] = 'domain_domain_id';
+  $handler->display->display_options['arguments']['domain_domain_id']['default_action'] = 'default';
+  $handler->display->display_options['arguments']['domain_domain_id']['default_argument_type'] = 'current_domain';
+  $handler->display->display_options['arguments']['domain_domain_id']['summary']['format'] = 'default_summary';
+  $handler->display->display_options['arguments']['domain_domain_id']['break_phrase'] = 0;
+  $handler->display->display_options['arguments']['domain_domain_id']['not'] = 0;
   $export['resources_listing'] = $view;
 
   return $export;
