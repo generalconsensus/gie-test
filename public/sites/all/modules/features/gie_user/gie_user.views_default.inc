@@ -1241,6 +1241,16 @@ function gie_user_views_default_views() {
   $handler->display->display_options['exposed_form']['type'] = 'basic';
   $handler->display->display_options['exposed_form']['options']['expose_sort_order'] = FALSE;
   $handler->display->display_options['exposed_block'] = TRUE;
+  $handler->display->display_options['defaults']['arguments'] = FALSE;
+  /* Contextual filter: Indexed User: Domain ID */
+  $handler->display->display_options['arguments']['domain_domain_id']['id'] = 'domain_domain_id';
+  $handler->display->display_options['arguments']['domain_domain_id']['table'] = 'search_api_index_default_user_index';
+  $handler->display->display_options['arguments']['domain_domain_id']['field'] = 'domain_domain_id';
+  $handler->display->display_options['arguments']['domain_domain_id']['default_action'] = 'default';
+  $handler->display->display_options['arguments']['domain_domain_id']['default_argument_type'] = 'current_domain';
+  $handler->display->display_options['arguments']['domain_domain_id']['summary']['format'] = 'default_summary';
+  $handler->display->display_options['arguments']['domain_domain_id']['break_phrase'] = 0;
+  $handler->display->display_options['arguments']['domain_domain_id']['not'] = 0;
   $handler->display->display_options['defaults']['filter_groups'] = FALSE;
   $handler->display->display_options['defaults']['filters'] = FALSE;
   /* Filter criterion: Indexed User: Status */
