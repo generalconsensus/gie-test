@@ -17,6 +17,9 @@ function gie_microsite_ctools_plugin_api($module = NULL, $api = NULL) {
   if ($module == "field_group" && $api == "field_group") {
     return array("version" => "1");
   }
+  if ($module == "flexslider" && $api == "flexslider_default_preset") {
+    return array("version" => "1");
+  }
   if ($module == "panelizer" && $api == "panelizer") {
     return array("version" => "1");
   }
@@ -83,6 +86,11 @@ function gie_microsite_paragraphs_info() {
       'bundle' => 'microsite_callout_card',
       'locked' => '1',
     ),
+    'microsite_news_slider' => array(
+      'name' => 'Microsite News Slider',
+      'bundle' => 'microsite_news_slider',
+      'locked' => '1',
+    ),
     'microsite_section_break_image' => array(
       'name' => 'Microsite Section Break Image',
       'bundle' => 'microsite_section_break_image',
@@ -91,6 +99,11 @@ function gie_microsite_paragraphs_info() {
     'microsite_text' => array(
       'name' => 'Microsite Text',
       'bundle' => 'microsite_text',
+      'locked' => '1',
+    ),
+    'microsite_text_callout' => array(
+      'name' => 'Microsite Text Callout',
+      'bundle' => 'microsite_text_callout',
       'locked' => '1',
     ),
   );

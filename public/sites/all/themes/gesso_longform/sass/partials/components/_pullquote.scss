@@ -1,13 +1,14 @@
 //@file
 // Quotes
 
-.pullquote {
-	.pullquote__text {}
-	.pullquote__author {
-		display: block;
-		text-align: center;
-	}
+.pullquote.component {
+  margin-bottom: 2em;
+  margin-top: 2em;
+  padding: 0;
 }
-.pullquote.component{
-	// padding: 10em 0;
+
+.pullquote__author {
+  display: block;
+  text-align: center;
 }
+ 
