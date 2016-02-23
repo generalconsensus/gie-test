@@ -125,6 +125,9 @@ function gie_news_strongarm() {
       'revision' => array(
         'custom_settings' => FALSE,
       ),
+      'microsite_content_slider' => array(
+        'custom_settings' => FALSE,
+      ),
     ),
     'extra_fields' => array(
       'form' => array(
@@ -147,31 +150,31 @@ function gie_news_strongarm() {
       'display' => array(
         'domain' => array(
           'default' => array(
-            'weight' => '1',
+            'weight' => '0',
             'visible' => TRUE,
           ),
           'listing' => array(
-            'weight' => '6',
+            'weight' => '18',
             'visible' => FALSE,
           ),
           'at_a_glance' => array(
-            'weight' => '12',
+            'weight' => '15',
             'visible' => FALSE,
           ),
           'contact' => array(
-            'weight' => '9',
+            'weight' => '15',
             'visible' => FALSE,
           ),
           'details' => array(
-            'weight' => '11',
-            'visible' => TRUE,
+            'weight' => '14',
+            'visible' => FALSE,
           ),
           'search_listing' => array(
             'weight' => '1',
             'visible' => TRUE,
           ),
           'full' => array(
-            'weight' => '2',
+            'weight' => '16',
             'visible' => FALSE,
           ),
           'page_header' => array(
@@ -181,31 +184,31 @@ function gie_news_strongarm() {
         ),
         'sharethis' => array(
           'default' => array(
-            'weight' => '10',
-            'visible' => TRUE,
+            'weight' => '22',
+            'visible' => FALSE,
           ),
           'listing' => array(
-            'weight' => '12',
+            'weight' => '22',
             'visible' => FALSE,
           ),
           'at_a_glance' => array(
-            'weight' => '5',
+            'weight' => '14',
             'visible' => FALSE,
           ),
           'contact' => array(
-            'weight' => '27',
+            'weight' => '28',
             'visible' => FALSE,
           ),
           'details' => array(
-            'weight' => '17',
-            'visible' => TRUE,
+            'weight' => '16',
+            'visible' => FALSE,
           ),
           'search_listing' => array(
             'weight' => '10',
             'visible' => TRUE,
           ),
           'full' => array(
-            'weight' => '8',
+            'weight' => '21',
             'visible' => FALSE,
           ),
           'page_header' => array(
@@ -227,7 +230,7 @@ function gie_news_strongarm() {
             'visible' => TRUE,
           ),
           'default' => array(
-            'weight' => '10',
+            'weight' => '7',
             'visible' => TRUE,
           ),
           'full' => array(
@@ -253,7 +256,7 @@ function gie_news_strongarm() {
             'visible' => TRUE,
           ),
           'default' => array(
-            'weight' => '10',
+            'weight' => '6',
             'visible' => TRUE,
           ),
           'full' => array(
@@ -279,7 +282,7 @@ function gie_news_strongarm() {
             'visible' => TRUE,
           ),
           'default' => array(
-            'weight' => '10',
+            'weight' => '8',
             'visible' => TRUE,
           ),
           'full' => array(
@@ -305,7 +308,7 @@ function gie_news_strongarm() {
             'visible' => FALSE,
           ),
           'default' => array(
-            'weight' => '10',
+            'weight' => '9',
             'visible' => TRUE,
           ),
           'full' => array(
@@ -331,7 +334,7 @@ function gie_news_strongarm() {
             'visible' => FALSE,
           ),
           'default' => array(
-            'weight' => '10',
+            'weight' => '11',
             'visible' => TRUE,
           ),
           'full' => array(
@@ -345,14 +348,126 @@ function gie_news_strongarm() {
         ),
         'flag_favorite' => array(
           'details' => array(
+            'weight' => '12',
+            'visible' => FALSE,
+          ),
+          'default' => array(
+            'weight' => '23',
+            'visible' => FALSE,
+          ),
+          'full' => array(
+            'weight' => '17',
+            'visible' => FALSE,
+          ),
+          'at_a_glance' => array(
+            'weight' => '13',
+            'visible' => FALSE,
+          ),
+          'listing' => array(
+            'weight' => '11',
+            'visible' => FALSE,
+          ),
+          'contact' => array(
             'weight' => '10',
-            'visible' => TRUE,
+            'visible' => FALSE,
           ),
         ),
         'flag_abuse_node' => array(
           'details' => array(
+            'weight' => '13',
+            'visible' => FALSE,
+          ),
+          'default' => array(
+            'weight' => '20',
+            'visible' => FALSE,
+          ),
+          'full' => array(
+            'weight' => '14',
+            'visible' => FALSE,
+          ),
+          'at_a_glance' => array(
+            'weight' => '12',
+            'visible' => FALSE,
+          ),
+          'listing' => array(
+            'weight' => '10',
+            'visible' => FALSE,
+          ),
+          'contact' => array(
+            'weight' => '9',
+            'visible' => FALSE,
+          ),
+        ),
+        'news_counters_comment_count' => array(
+          'listing' => array(
             'weight' => '10',
             'visible' => TRUE,
+          ),
+          'full' => array(
+            'weight' => '12',
+            'visible' => FALSE,
+          ),
+          'contact' => array(
+            'weight' => '13',
+            'visible' => FALSE,
+          ),
+          'at_a_glance' => array(
+            'weight' => '0',
+            'visible' => TRUE,
+          ),
+        ),
+        'news_counters_favorite_count' => array(
+          'listing' => array(
+            'weight' => '11',
+            'visible' => TRUE,
+          ),
+          'full' => array(
+            'weight' => '13',
+            'visible' => FALSE,
+          ),
+          'contact' => array(
+            'weight' => '11',
+            'visible' => FALSE,
+          ),
+          'at_a_glance' => array(
+            'weight' => '1',
+            'visible' => TRUE,
+          ),
+        ),
+        'news_counters_resource_comment_detail' => array(
+          'listing' => array(
+            'weight' => '10',
+            'visible' => FALSE,
+          ),
+          'full' => array(
+            'weight' => '11',
+            'visible' => FALSE,
+          ),
+          'contact' => array(
+            'weight' => '14',
+            'visible' => FALSE,
+          ),
+          'at_a_glance' => array(
+            'weight' => '3',
+            'visible' => FALSE,
+          ),
+        ),
+        'news_counters_resource_favorite_count_detail' => array(
+          'listing' => array(
+            'weight' => '10',
+            'visible' => FALSE,
+          ),
+          'full' => array(
+            'weight' => '10',
+            'visible' => FALSE,
+          ),
+          'contact' => array(
+            'weight' => '12',
+            'visible' => FALSE,
+          ),
+          'at_a_glance' => array(
+            'weight' => '4',
+            'visible' => FALSE,
           ),
         ),
       ),
