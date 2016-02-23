@@ -9,10 +9,16 @@
 
     .nav__link {
       font-weight: normal;
-      .section--microsite & {
+      .microsite-palette1 & {
         &:hover,
         &:focus {
-          color: darken($microsite-primary,20%);
+          color: darken($microsite-palette1-primary,20%);
+        }
+      }
+      .microsite-palette2 & {
+        &:hover,
+        &:focus {
+          color: darken($microsite-palette2-primary,20%);
         }
       }
     }

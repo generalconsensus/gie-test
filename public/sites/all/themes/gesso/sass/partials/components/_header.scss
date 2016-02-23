@@ -11,11 +11,17 @@ header.header {
     display: none;
   }
 
-  .section--microsite & {
-    background: $microsite-site-header;
+  .microsite-palette1 & {
+    background: $microsite-palette1-site-header;
     border: 0;
     color: #fff;
   }
+  .microsite-palette2 & {
+    background: $microsite-palette2-site-header;
+    border: 0;
+    color: #fff;
+  }
+
 
 }
 
