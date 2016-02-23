@@ -1,0 +1,5 @@
+name = GIE Dashboard Custom Panes
+description = Custom Pane pieces
+package = GIE
+core = 7.x
+
