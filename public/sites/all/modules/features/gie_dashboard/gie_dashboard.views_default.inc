@@ -615,6 +615,128 @@ function gie_dashboard_views_default_views() {
   $handler->display->display_options['filters']['status']['value'] = 1;
   $handler->display->display_options['filters']['status']['group'] = 1;
   $handler->display->display_options['filters']['status']['expose']['operator'] = FALSE;
+
+  /* Display: Your Funding Opportunities */
+  $handler = $view->new_display('panel_pane', 'Your Funding Opportunities', 'user_funding_opportunities');
+  $handler->display->display_options['defaults']['title'] = FALSE;
+  $handler->display->display_options['title'] = 'Your Funding Opportunities';
+  $handler->display->display_options['defaults']['pager'] = FALSE;
+  $handler->display->display_options['pager']['type'] = 'some';
+  $handler->display->display_options['pager']['options']['items_per_page'] = '5';
+  $handler->display->display_options['pager']['options']['offset'] = '0';
+  $handler->display->display_options['defaults']['style_plugin'] = FALSE;
+  $handler->display->display_options['style_plugin'] = 'default';
+  $handler->display->display_options['defaults']['style_options'] = FALSE;
+  $handler->display->display_options['defaults']['row_plugin'] = FALSE;
+  $handler->display->display_options['row_plugin'] = 'fields';
+  $handler->display->display_options['defaults']['row_options'] = FALSE;
+  $handler->display->display_options['defaults']['relationships'] = FALSE;
+  $handler->display->display_options['defaults']['fields'] = FALSE;
+  /* Field: Content: Title */
+  $handler->display->display_options['fields']['title']['id'] = 'title';
+  $handler->display->display_options['fields']['title']['table'] = 'node';
+  $handler->display->display_options['fields']['title']['field'] = 'title';
+  $handler->display->display_options['fields']['title']['label'] = '';
+  $handler->display->display_options['fields']['title']['alter']['word_boundary'] = FALSE;
+  $handler->display->display_options['fields']['title']['alter']['ellipsis'] = FALSE;
+  /* Field: Content: Funding Type */
+  $handler->display->display_options['fields']['field_funding_type']['id'] = 'field_funding_type';
+  $handler->display->display_options['fields']['field_funding_type']['table'] = 'field_data_field_funding_type';
+  $handler->display->display_options['fields']['field_funding_type']['field'] = 'field_funding_type';
+  $handler->display->display_options['fields']['field_funding_type']['label'] = '';
+  $handler->display->display_options['fields']['field_funding_type']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_funding_type']['type'] = 'taxonomy_term_reference_plain';
+  $handler->display->display_options['fields']['field_funding_type']['settings'] = array(
+    'field_delimiter' => ', ',
+    'linked_field' => array(
+      'linked' => 0,
+      'destination' => '',
+      'advanced' => array(
+        'title' => '',
+        'target' => '',
+        'class' => '',
+        'rel' => '',
+        'text' => '',
+      ),
+    ),
+  );
+  $handler->display->display_options['fields']['field_funding_type']['delta_offset'] = '0';
+  /* Field: Content: Grant / Award Value */
+  $handler->display->display_options['fields']['field_funding_grant_award_value']['id'] = 'field_funding_grant_award_value';
+  $handler->display->display_options['fields']['field_funding_grant_award_value']['table'] = 'field_data_field_funding_grant_award_value';
+  $handler->display->display_options['fields']['field_funding_grant_award_value']['field'] = 'field_funding_grant_award_value';
+  $handler->display->display_options['fields']['field_funding_grant_award_value']['label'] = '';
+  $handler->display->display_options['fields']['field_funding_grant_award_value']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_funding_grant_award_value']['empty'] = '-';
+  $handler->display->display_options['fields']['field_funding_grant_award_value']['hide_alter_empty'] = FALSE;
+  $handler->display->display_options['fields']['field_funding_grant_award_value']['settings'] = array(
+    'thousand_separator' => ',',
+    'prefix_suffix' => 1,
+    'linked_field' => array(
+      'linked' => 0,
+      'destination' => '',
+      'advanced' => array(
+        'title' => '',
+        'target' => '',
+        'class' => '',
+        'rel' => '',
+        'text' => '',
+      ),
+    ),
+  );
+  /* Field: Content: Application URL */
+  $handler->display->display_options['fields']['field_funding_link']['id'] = 'field_funding_link';
+  $handler->display->display_options['fields']['field_funding_link']['table'] = 'field_data_field_funding_link';
+  $handler->display->display_options['fields']['field_funding_link']['field'] = 'field_funding_link';
+  /* Field: Content: Deadlines */
+  $handler->display->display_options['fields']['field_funding_deadline']['id'] = 'field_funding_deadline';
+  $handler->display->display_options['fields']['field_funding_deadline']['table'] = 'field_data_field_funding_deadline';
+  $handler->display->display_options['fields']['field_funding_deadline']['field'] = 'field_funding_deadline';
+  $handler->display->display_options['fields']['field_funding_deadline']['label'] = '';
+  $handler->display->display_options['fields']['field_funding_deadline']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_funding_deadline']['settings'] = array(
+    'format_type' => 'long',
+    'fromto' => 'both',
+    'multiple_number' => '',
+    'multiple_from' => '',
+    'multiple_to' => '',
+    'show_remaining_days' => 0,
+    'linked_field' => array(
+      'linked' => 0,
+      'destination' => '',
+      'advanced' => array(
+        'title' => '',
+        'target' => '',
+        'class' => '',
+        'rel' => '',
+        'text' => '',
+      ),
+    ),
+  );
+  $handler->display->display_options['defaults']['sorts'] = FALSE;
+  $handler->display->display_options['defaults']['arguments'] = FALSE;
+  /* Contextual filter: Content: Author uid */
+  $handler->display->display_options['arguments']['uid']['id'] = 'uid';
+  $handler->display->display_options['arguments']['uid']['table'] = 'node';
+  $handler->display->display_options['arguments']['uid']['field'] = 'uid';
+  $handler->display->display_options['arguments']['uid']['default_action'] = 'default';
+  $handler->display->display_options['arguments']['uid']['default_argument_type'] = 'current_user';
+  $handler->display->display_options['arguments']['uid']['summary']['number_of_records'] = '0';
+  $handler->display->display_options['arguments']['uid']['summary']['format'] = 'default_summary';
+  $handler->display->display_options['arguments']['uid']['summary_options']['items_per_page'] = '25';
+  $handler->display->display_options['defaults']['filter_groups'] = FALSE;
+  $handler->display->display_options['filter_groups']['groups'] = array(
+    1 => 'AND',
+    2 => 'OR',
+  );
+  $handler->display->display_options['defaults']['filters'] = FALSE;
+  /* Filter criterion: Content: Type */
+  $handler->display->display_options['filters']['type']['id'] = 'type';
+  $handler->display->display_options['filters']['type']['table'] = 'node';
+  $handler->display->display_options['filters']['type']['field'] = 'type';
+  $handler->display->display_options['filters']['type']['value'] = array(
+    'funding' => 'funding',
+  );
   $export['dashboard'] = $view;
 
   $view = new view();
