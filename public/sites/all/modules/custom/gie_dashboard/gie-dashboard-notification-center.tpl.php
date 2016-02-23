@@ -1,1 +1,1 @@
-<?php print render($form); ?>
+<?php //print render($form); ?>

@@ -17,6 +17,7 @@ dependencies[] = field_group
 dependencies[] = field_validation
 dependencies[] = flag
 dependencies[] = formblock
+dependencies[] = gie_dashboard
 dependencies[] = gie_funding
 dependencies[] = gie_innovation
 dependencies[] = html5_tools
