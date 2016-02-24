@@ -625,11 +625,83 @@ function gie_dashboard_views_default_views() {
   $handler->display->display_options['pager']['options']['items_per_page'] = '5';
   $handler->display->display_options['pager']['options']['offset'] = '0';
   $handler->display->display_options['defaults']['style_plugin'] = FALSE;
-  $handler->display->display_options['style_plugin'] = 'default';
+  $handler->display->display_options['style_plugin'] = 'table';
+  $handler->display->display_options['style_options']['columns'] = array(
+    'title' => 'title',
+    'field_funding_type' => 'field_funding_type',
+    'field_funding_grant_award_value' => 'field_funding_grant_award_value',
+    'field_funding_link' => 'field_funding_link',
+    'field_funding_deadline' => 'field_funding_deadline',
+  );
+  $handler->display->display_options['style_options']['default'] = '-1';
+  $handler->display->display_options['style_options']['info'] = array(
+    'title' => array(
+      'sortable' => 0,
+      'default_sort_order' => 'asc',
+      'align' => '',
+      'separator' => '',
+      'empty_column' => 0,
+    ),
+    'field_funding_type' => array(
+      'align' => '',
+      'separator' => '',
+      'empty_column' => 0,
+    ),
+    'field_funding_grant_award_value' => array(
+      'sortable' => 0,
+      'default_sort_order' => 'asc',
+      'align' => '',
+      'separator' => '',
+      'empty_column' => 0,
+    ),
+    'field_funding_link' => array(
+      'sortable' => 0,
+      'default_sort_order' => 'asc',
+      'align' => '',
+      'separator' => '',
+      'empty_column' => 0,
+    ),
+    'field_funding_deadline' => array(
+      'sortable' => 0,
+      'default_sort_order' => 'asc',
+      'align' => '',
+      'separator' => '',
+      'empty_column' => 0,
+    ),
+  );
   $handler->display->display_options['defaults']['style_options'] = FALSE;
   $handler->display->display_options['defaults']['row_plugin'] = FALSE;
-  $handler->display->display_options['row_plugin'] = 'fields';
   $handler->display->display_options['defaults']['row_options'] = FALSE;
+  $handler->display->display_options['defaults']['footer'] = FALSE;
+  /* Footer: Global: Text area */
+  $handler->display->display_options['footer']['area']['id'] = 'area';
+  $handler->display->display_options['footer']['area']['table'] = 'views';
+  $handler->display->display_options['footer']['area']['field'] = 'area';
+  $handler->display->display_options['footer']['area']['label'] = 'View Your Complete Funding History';
+  $handler->display->display_options['footer']['area']['content'] = '<a class="button button--highlight" href="/data">View Your Complete Funding History</a>';
+  $handler->display->display_options['footer']['area']['format'] = 'filtered_html';
+  /* Footer: Global: View area */
+  $handler->display->display_options['footer']['view']['id'] = 'view';
+  $handler->display->display_options['footer']['view']['table'] = 'views';
+  $handler->display->display_options['footer']['view']['field'] = 'view';
+  $handler->display->display_options['footer']['view']['label'] = 'Funding Recommended for You';
+  $handler->display->display_options['footer']['view']['view_to_insert'] = 'dashboard:dashboard_reco';
+  /* Footer: Global: Text area */
+  $handler->display->display_options['footer']['area_1']['id'] = 'area_1';
+  $handler->display->display_options['footer']['area_1']['table'] = 'views';
+  $handler->display->display_options['footer']['area_1']['field'] = 'area';
+  $handler->display->display_options['footer']['area_1']['label'] = 'View all funding opportunities';
+  $handler->display->display_options['footer']['area_1']['content'] = '<a class="button button--highlight" href="/data">View all funding opportunities</a>';
+  $handler->display->display_options['footer']['area_1']['format'] = 'filtered_html';
+  /* Footer: Global: Text area */
+  $handler->display->display_options['footer']['area_2']['id'] = 'area_2';
+  $handler->display->display_options['footer']['area_2']['table'] = 'views';
+  $handler->display->display_options['footer']['area_2']['field'] = 'area';
+  $handler->display->display_options['footer']['area_2']['label'] = 'Funding Counts Chart';
+  $handler->display->display_options['footer']['area_2']['content'] = '<div data-ng-controller="FundingCountController">
+<bar-chart></bar-chart>
+</div>';
+  $handler->display->display_options['footer']['area_2']['format'] = 'full_html';
   $handler->display->display_options['defaults']['relationships'] = FALSE;
   $handler->display->display_options['defaults']['fields'] = FALSE;
   /* Field: Content: Title */
