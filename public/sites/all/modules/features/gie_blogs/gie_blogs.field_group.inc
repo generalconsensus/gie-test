@@ -57,8 +57,9 @@ function gie_blogs_field_group_info() {
     'weight' => '0',
     'children' => array(
       0 => 'title_field',
-      1 => 'group_card_author',
-      2 => 'group_card_counts',
+      1 => 'field_blogs_sector',
+      2 => 'group_card_author',
+      3 => 'group_card_counts',
     ),
     'format_type' => 'div',
     'format_settings' => array(
@@ -88,7 +89,7 @@ function gie_blogs_field_group_info() {
   $field_group->parent_name = 'group_card_content';
   $field_group->data = array(
     'label' => 'Card Counts',
-    'weight' => '24',
+    'weight' => '25',
     'children' => array(
       0 => 'blogs_counters_comment_count',
       1 => 'blogs_counters_favorite_count',

@@ -223,7 +223,7 @@ function gie_blogs_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 15,
+        'weight' => 16,
       ),
       'page_header' => array(
         'label' => 'above',
@@ -413,7 +413,7 @@ function gie_blogs_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 13,
+        'weight' => 14,
       ),
       'page_header' => array(
         'label' => 'above',
@@ -584,7 +584,7 @@ function gie_blogs_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 17,
+        'weight' => 18,
       ),
       'page_header' => array(
         'label' => 'above',
@@ -916,7 +916,7 @@ function gie_blogs_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 18,
+        'weight' => 19,
       ),
       'page_header' => array(
         'label' => 'above',
@@ -1087,7 +1087,7 @@ function gie_blogs_field_default_field_instances() {
         'weight' => 11,
       ),
       'listing' => array(
-        'label' => 'inline',
+        'label' => 'hidden',
         'module' => 'date',
         'settings' => array(
           'field_delimiter' => '',
@@ -1417,10 +1417,24 @@ function gie_blogs_field_default_field_instances() {
         'weight' => 15,
       ),
       'listing' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 19,
+        'label' => 'inline',
+        'module' => 'taxonomy',
+        'settings' => array(
+          'field_delimiter' => ', ',
+          'linked_field' => array(
+            'advanced' => array(
+              'class' => '',
+              'rel' => '',
+              'target' => '',
+              'text' => '',
+              'title' => '',
+            ),
+            'destination' => '',
+            'linked' => 0,
+          ),
+        ),
+        'type' => 'taxonomy_term_reference_link',
+        'weight' => 24,
       ),
       'page_header' => array(
         'label' => 'above',
@@ -1572,7 +1586,7 @@ function gie_blogs_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 16,
+        'weight' => 17,
       ),
       'page_header' => array(
         'label' => 'above',
