@@ -1,0 +1,102 @@
+From 6f952563857a9306d064bed5bfa10f3ad12f113e Mon Sep 17 00:00:00 2001
+From: Daniel McDermott <dmcdermott@forumone.com>
+Date: Wed, 20 Jan 2016 14:37:49 -0800
+Subject: [PATCH] Fix to login check (patched from
+ https://github.com/jhedstrom/drupalextension/pull/237)
+
+---
+ .../DrupalExtension/Context/DrupalContext.php      | 25 +++++++++++++++++-----
+ src/Drupal/DrupalExtension/Extension.php           |  7 ++++++
+ 2 files changed, 27 insertions(+), 5 deletions(-)
+
+diff --git a/src/Drupal/DrupalExtension/Context/DrupalContext.php b/src/Drupal/DrupalExtension/Context/DrupalContext.php
+index 11eed14..5be375f 100644
+--- a/src/Drupal/DrupalExtension/Context/DrupalContext.php
++++ b/src/Drupal/DrupalExtension/Context/DrupalContext.php
+@@ -339,12 +339,27 @@ class DrupalContext extends MinkContext implements DrupalAwareInterface, Transla
+    */
+   public function loggedIn() {
+     $session = $this->getSession();
++    $page = $session->getPage();
++    // Look for a css selector to determine if a user is logged in.
++    // Default is the logged-in class on the body tag.
++    // Which should work with almost any theme.
++    try {
++      if ($page->has('css', $this->getDrupalSelector('logged_in_selector'))) {
++        return TRUE;
++      }
++    } catch (\Behat\Mink\Exception\DriverException $e) {
++      // This test may fail if the driver did not load any site yet.
++    }
++    // Some themes do not add that class to the body, so lets check if the
++    // login form is displayed on /user/login.
++    $session->visit($this->locatePath('/user/login'));
++    if (!$page->has('css', $this->getDrupalSelector('login_form_selector'))) {
++      return TRUE;
++    }
+     $session->visit($this->locatePath('/'));
+-
+-    // If a logout link is found, we are logged in. While not perfect, this is
+-    // how Drupal SimpleTests currently work as well.
+-    $element = $session->getPage();
+-    return $element->findLink($this->getDrupalText('log_out'));
++    // As a last resort, if a logout link is found, we are logged in. While not
++    // perfect, this is how Drupal SimpleTests currently work as well.
++    return $page->findLink($this->getDrupalText('log_out'));
+   }
+
+   /**
+diff --git a/src/Drupal/DrupalExtension/Extension.php b/src/Drupal/DrupalExtension/Extension.php
+index 39bdbfb..0290ea2 100644
+--- a/src/Drupal/DrupalExtension/Extension.php
++++ b/src/Drupal/DrupalExtension/Extension.php
+@@ -138,6 +138,13 @@ class Extension implements ExtensionInterface {
+             scalarNode('error_message_selector')->end()->
+             scalarNode('success_message_selector')->end()->
+             scalarNode('warning_message_selector')->end()->
++            scalarNode('login_form_selector')->end()->
++            scalarNode('logged_in_selector')->
++              defaultValue('body.logged-in')->
++            end()->
++            scalarNode('login_form_selector')->
++              defaultValue('form#user-login')->
++            end()->
+           end()->
+         end()->
+         // Drupal drivers.
+--
+2.6.2
+
+From 15c69223a3b1efd8bc369f4ee16f673d8a79e003 Mon Sep 17 00:00:00 2001
+From: Daniel McDermott <dmcdermott@forumone.com>
+Date: Tue, 26 Jan 2016 15:12:49 -0800
+Subject: [PATCH] Fix to exception handling
+
+---
+ src/Drupal/DrupalExtension/Context/DrupalContext.php | 3 ++-
+ 1 file changed, 2 insertions(+), 1 deletion(-)
+
+diff --git a/src/Drupal/DrupalExtension/Context/DrupalContext.php b/src/Drupal/DrupalExtension/Context/DrupalContext.php
+index 5be375f..f6d9dbe 100644
+--- a/src/Drupal/DrupalExtension/Context/DrupalContext.php
++++ b/src/Drupal/DrupalExtension/Context/DrupalContext.php
+@@ -12,6 +12,7 @@ use Drupal\Drupal;
+ use Drupal\DrupalExtension\Event\EntityEvent;
+ use Drupal\DrupalExtension\Context\DrupalSubContextInterface;
+ 
++use Drupal\Exception\Exception;
+ use Symfony\Component\Process\Process;
+ use Symfony\Component\EventDispatcher\EventDispatcher;
+ 
+@@ -347,7 +348,7 @@ class DrupalContext extends MinkContext implements DrupalAwareInterface, Transla
+       if ($page->has('css', $this->getDrupalSelector('logged_in_selector'))) {
+         return TRUE;
+       }
+-    } catch (\Behat\Mink\Exception\DriverException $e) {
++    } catch (Exception $e) {
+       // This test may fail if the driver did not load any site yet.
+     }
+     // Some themes do not add that class to the body, so lets check if the
+-- 
+2.6.2
+

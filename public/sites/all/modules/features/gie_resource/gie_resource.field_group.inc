@@ -353,6 +353,39 @@ function gie_resource_field_group_info() {
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
   $field_group->api_version = 1;
+  $field_group->identifier = 'group_resource_contact|node|resource|contact';
+  $field_group->group_name = 'group_resource_contact';
+  $field_group->entity_type = 'node';
+  $field_group->bundle = 'resource';
+  $field_group->mode = 'contact';
+  $field_group->parent_name = '';
+  $field_group->data = array(
+    'label' => 'Point of Contact',
+    'weight' => '0',
+    'children' => array(
+      0 => 'field_resource_author',
+      1 => 'field_resource_date',
+    ),
+    'format_type' => 'div',
+    'format_settings' => array(
+      'label' => 'Point of Contact',
+      'instance_settings' => array(
+        'id' => '',
+        'classes' => '',
+        'description' => '',
+        'show_label' => '0',
+        'label_element' => 'h2',
+        'effect' => 'none',
+        'speed' => 'none',
+      ),
+      'formatter' => 'open',
+    ),
+  );
+  $export['group_resource_contact|node|resource|contact'] = $field_group;
+
+  $field_group = new stdClass();
+  $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
+  $field_group->api_version = 1;
   $field_group->identifier = 'group_resource_details|node|resource|form';
   $field_group->group_name = 'group_resource_details';
   $field_group->entity_type = 'node';
@@ -410,12 +443,12 @@ function gie_resource_field_group_info() {
       'label' => 'At a Glance',
       'instance_settings' => array(
         'id' => '',
-        'classes' => 'stats',
+        'classes' => '',
         'description' => '',
-        'show_label' => '1',
+        'show_label' => '0',
         'label_element' => 'h2',
         'effect' => 'none',
-        'speed' => 'fast',
+        'speed' => 'none',
       ),
       'formatter' => 'open',
     ),
@@ -448,9 +481,9 @@ function gie_resource_field_group_info() {
       'label' => 'Details',
       'instance_settings' => array(
         'id' => '',
-        'classes' => 'stats',
+        'classes' => '',
         'description' => '',
-        'show_label' => '1',
+        'show_label' => '0',
         'label_element' => 'h2',
         'effect' => 'none',
         'speed' => 'none',
