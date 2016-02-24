@@ -49,7 +49,7 @@ function gie_general_flag_default_flags() {
     'title' => 'Node Abuse',
     'global' => 0,
     'types' => array(
-      0 => 'blog',
+      0 => 'blogs',
       1 => 'event',
       2 => 'funding',
       3 => 'innovation',
@@ -79,6 +79,7 @@ function gie_general_flag_default_flags() {
       'page_header' => 0,
       'teaser_date' => 0,
       'data' => 0,
+      'microsite_content_slider' => 0,
       'needs_list' => 0,
       'at_a_glance' => 0,
       'contact' => 0,
@@ -153,7 +154,7 @@ function gie_general_flag_default_flags() {
     'title' => 'Favorite',
     'global' => 0,
     'types' => array(
-      0 => 'blog',
+      0 => 'blogs',
       1 => 'event',
       2 => 'funding',
       3 => 'innovation',
@@ -186,6 +187,7 @@ function gie_general_flag_default_flags() {
       'page_header' => 0,
       'teaser_date' => 0,
       'data' => 0,
+      'microsite_content_slider' => 0,
       'needs_list' => 0,
       'at_a_glance' => 0,
       'contact' => 0,

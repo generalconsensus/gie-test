@@ -563,7 +563,7 @@ function gie_general_strongarm() {
   $strongarm->api_version = 1;
   $strongarm->name = 'sharethis_node_types';
   $strongarm->value = array(
-    'blog' => 'blog',
+    'blogs' => 'blogs',
     'event' => 'event',
     'funding' => 'funding',
     'innovation' => 'innovation',

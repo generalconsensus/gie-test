@@ -1,18 +1,24 @@
 <?php
 /**
  * @file
- * gie_blog.features.inc
+ * gie_blogs.features.inc
  */
 
 /**
  * Implements hook_ctools_plugin_api().
  */
-function gie_blog_ctools_plugin_api($module = NULL, $api = NULL) {
+function gie_blogs_ctools_plugin_api($module = NULL, $api = NULL) {
   if ($module == "ds" && $api == "ds") {
     return array("version" => "1");
   }
   if ($module == "field_group" && $api == "field_group") {
     return array("version" => "1");
+  }
+  if ($module == "page_manager" && $api == "pages_default") {
+    return array("version" => "1");
+  }
+  if ($module == "pane" && $api == "pane") {
+    return array("version" => "2");
   }
   if ($module == "panelizer" && $api == "panelizer") {
     return array("version" => "1");
@@ -25,17 +31,17 @@ function gie_blog_ctools_plugin_api($module = NULL, $api = NULL) {
 /**
  * Implements hook_views_api().
  */
-function gie_blog_views_api($module = NULL, $api = NULL) {
+function gie_blogs_views_api($module = NULL, $api = NULL) {
   return array("api" => "3.0");
 }
 
 /**
  * Implements hook_node_info().
  */
-function gie_blog_node_info() {
+function gie_blogs_node_info() {
   $items = array(
-    'blog' => array(
-      'name' => t('Blog'),
+    'blogs' => array(
+      'name' => t('Blogs'),
       'base' => 'node_content',
       'description' => '',
       'has_title' => '1',
