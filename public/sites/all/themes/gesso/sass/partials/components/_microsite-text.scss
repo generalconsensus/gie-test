@@ -1,5 +1,8 @@
 // Styles for the microsites paragraphs text block component
-.microsite-text { 
+
+$ol-bullet-size: 60px;
+
+.microsite-text {
   @extend %microsite-component;
   padding: 0 5%;
   margin-bottom: 4em;
@@ -8,13 +11,98 @@
     text-transform: uppercase;
   }
   ol {
-    @extend %fancy-list--ordered;
+    counter-reset: li-counter;
+    list-style: none;
+    margin: 0 0 1.5em 0;
+    padding: 0 0 0 $ol-bullet-size+10;
+    text-align: left;
+    > li {
+      @extend %clearfix;
+      clear: both;
+      line-height: 1.5;
+      list-style: none;
+      margin: 0 0 2em 0;
+      padding: 0;
+      li {
+        margin-bottom: 1em;
+      }
+    }
+    > li:before {
+      
+      @each $current-color in $microsite-primary-list {
+        $i: index($microsite-primary-list, $current-color);
+        .microsite-palette#{$i} & { // body class
+          background-color: $current-color;
+        }
+      }
+
+      color: #fff;
+      content: counter(li-counter);
+      counter-increment: li-counter;
+      display: block;
+      float: left;
+      font-size: 20px;
+      line-height: $ol-bullet-size;
+      margin-left: -($ol-bullet-size+10);
+      min-height: $ol-bullet-size;
+      min-width: $ol-bullet-size;
+      position: relative;
+      text-align: center;
+    }
+    ul &, ol {
+      margin: 0.5em 0;
+      padding: 0 0 0 (($ol-bullet-size/2)+10);  
+      > li:before {
+        line-height: $ol-bullet-size/2;
+        font-size: 14px;
+        margin-left: -(($ol-bullet-size/2)+10);
+        min-height: $ol-bullet-size/2;
+        min-width: $ol-bullet-size/2;
+      }
+    }
   }
 }
 
 .microsite-text.microsite-text { // specificity hack to overcome basic bullets from _html-elements.
   ul {
-    @extend %fancy-list;
+    list-style: none;
+    margin: 0 0 2em 0;
+    padding: 0 0 0 40px; // same as width of bullet offset
+    > li {
+      @extend %clearfix;
+      clear: both;
+      list-style: none;
+      margin: 0 0 1em 0;
+      padding: 0;
+    }
+    > li:before {
+
+      @each $current-color in $microsite-secondary-list {
+        $i: index($microsite-secondary-list, $current-color);
+        .microsite-palette#{$i} & { // body class
+          color: $current-color;
+        }
+      }
+      content: "►";
+      display: inline-block;
+      margin-left: -21px;
+      margin-right: 10px;
+      font-size: 30px;
+      position: relative;
+      top: 3px;
+      width: 30px;
+    }
+    ol &, ul {
+      margin: 0.5em 0;
+      padding: 0 0 0 25px; // same as width of bullet offset
+      > li:before {
+        margin-left: -25px;
+        margin-right: 10px;
+        font-size: 15px;
+        top: 0;
+        width: 15px;
+      }
+    }
   }
 }
 
