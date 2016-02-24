@@ -1,49 +1,38 @@
 %microsite-component {
   clear: both;
-  a {
-    .microsite-palette1 & {
-      color: $microsite-palette1-primary;
-      &:hover,
-      &:focus {
-        color: darken($microsite-palette1-primary,20%);
+
+  @each $current-color in $microsite-primary-list {
+    $i: index($microsite-primary-list, $current-color);
+    a {
+      .microsite-palette#{$i} & { // body class
+        color: $current-color;
+        &:hover,
+        &:focus {
+          color: darken($current-color,20%);
+        }
       }
     }
-    .microsite-palette2 & {
-      color: $microsite-palette2-primary;
-      &:hover,
-      &:focus {
-        color: darken($microsite-palette2-primary,20%);
+    h1, h2, h3, h4, h5, h6 {
+      .microsite-palette#{$i} & {
+        color: nth($microsite-header-list, $i);
       }
+    }
+    .button {
+      .microsite-palette#{$i} & {
+        background-color: nth($microsite-secondary-list, $i);
+        border-color: nth($microsite-secondary-list, $i);
+        &:hover, &:focus {
+          background-color: darken(nth($microsite-secondary-list, $i), 6.9%);
+          border-color: darken(nth($microsite-secondary-list, $i), 6.9%);
+        }
+      }
+
     }
   }
-  h1, h2, h3, h4, h5, h6 {
-    .microsite-palette1 & {
-      color: $microsite-palette1-header;
-    }
-    .microsite-palette2 & {
-      color: $microsite-palette1-header;
-    }
-  }
-  .button {
-    .microsite-palette1 & {
-      background-color: $microsite-palette1-secondary;
-      border-color: $microsite-palette1-secondary;
-      &:hover, &:focus {
-         background-color: darken($microsite-palette1-secondary, 6.9%);
-        border-color: darken($microsite-palette1-secondary, 6.9%);
-      }
-    }
-    .microsite-palette2 & {
-      background-color: $microsite-palette2-secondary;
-      border-color: $microsite-palette2-secondary;
-      &:hover, &:focus {
-         background-color: darken($microsite-palette2-secondary, 6.9%);
-        border-color: darken($microsite-palette2-secondary, 6.9%);
-      }
-    }
-  }
+
   p:last-child {
     margin-bottom: 0;
   }
+
 }
  
