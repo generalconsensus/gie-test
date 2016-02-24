@@ -232,7 +232,7 @@ function gie_search_default_page_manager_handlers() {
     $pane->locks = array();
     $pane->uuid = '0eed2689-09a0-47a2-96de-c1af105b8e73';
     $display->content['new-0eed2689-09a0-47a2-96de-c1af105b8e73'] = $pane;
-    $display->panels['sidebar'][5] = 'new-0eed2689-09a0-47a2-96de-c1af105b8e73';
+    $display->panels['sidebar'][6] = 'new-0eed2689-09a0-47a2-96de-c1af105b8e73';
     $pane = new stdClass();
     $pane->pid = 'new-6d1a33a8-d28a-47b3-b84b-29a8e26e9926';
     $pane->panel = 'title';
