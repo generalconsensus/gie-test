@@ -12,23 +12,6 @@ function gie_news_ds_field_settings_info() {
 
   $ds_fieldsetting = new stdClass();
   $ds_fieldsetting->api_version = 1;
-  $ds_fieldsetting->id = 'node|news|contact';
-  $ds_fieldsetting->entity_type = 'node';
-  $ds_fieldsetting->bundle = 'news';
-  $ds_fieldsetting->view_mode = 'contact';
-  $ds_fieldsetting->settings = array(
-    'field_news_publish_date' => array(
-      'formatter_settings' => array(
-        'ft' => array(
-          'lb' => 'News Published',
-        ),
-      ),
-    ),
-  );
-  $export['node|news|contact'] = $ds_fieldsetting;
-
-  $ds_fieldsetting = new stdClass();
-  $ds_fieldsetting->api_version = 1;
   $ds_fieldsetting->id = 'node|news|details';
   $ds_fieldsetting->entity_type = 'node';
   $ds_fieldsetting->bundle = 'news';
@@ -36,9 +19,7 @@ function gie_news_ds_field_settings_info() {
   $ds_fieldsetting->settings = array(
     'field_news_country' => array(
       'formatter_settings' => array(
-        'ft' => array(
-          'lb' => 'Country',
-        ),
+        'ft' => array(),
       ),
     ),
     'field_news_organization' => array(
@@ -57,27 +38,102 @@ function gie_news_ds_field_settings_info() {
     ),
     'field_news_region' => array(
       'formatter_settings' => array(
-        'ft' => array(
-          'lb' => 'Region',
-        ),
+        'ft' => array(),
       ),
     ),
     'field_news_sector' => array(
       'formatter_settings' => array(
         'ft' => array(
-          'lb' => 'Sector',
+          'lb' => 'Sectors',
         ),
       ),
     ),
     'field_news_topic' => array(
       'formatter_settings' => array(
         'ft' => array(
-          'lb' => 'Topic',
+          'lb' => 'Topics',
         ),
       ),
     ),
   );
   $export['node|news|details'] = $ds_fieldsetting;
+
+  $ds_fieldsetting = new stdClass();
+  $ds_fieldsetting->api_version = 1;
+  $ds_fieldsetting->id = 'node|news|full';
+  $ds_fieldsetting->entity_type = 'node';
+  $ds_fieldsetting->bundle = 'news';
+  $ds_fieldsetting->view_mode = 'full';
+  $ds_fieldsetting->settings = array(
+    'comments' => array(
+      'weight' => '2',
+      'label' => 'hidden',
+      'format' => 'default',
+    ),
+  );
+  $export['node|news|full'] = $ds_fieldsetting;
+
+  $ds_fieldsetting = new stdClass();
+  $ds_fieldsetting->api_version = 1;
+  $ds_fieldsetting->id = 'node|news|listing';
+  $ds_fieldsetting->entity_type = 'node';
+  $ds_fieldsetting->bundle = 'news';
+  $ds_fieldsetting->view_mode = 'listing';
+  $ds_fieldsetting->settings = array(
+    'title_field' => array(
+      'formatter_settings' => array(
+        'ft' => array(
+          'func' => 'theme_ds_field_expert',
+          'fi' => TRUE,
+          'fi-el' => 'h3',
+          'fi-cl' => 'card__title',
+          'fi-at' => '',
+          'fi-def-at' => FALSE,
+          'fi-odd-even' => FALSE,
+          'fi-first-last' => FALSE,
+        ),
+      ),
+    ),
+    'field_news_point_of_contact' => array(
+      'formatter_settings' => array(
+        'ft' => array(
+          'func' => 'theme_ds_field_expert',
+        ),
+      ),
+    ),
+    'field_news_publish_date' => array(
+      'formatter_settings' => array(
+        'ft' => array(
+          'func' => 'theme_ds_field_expert',
+          'fi' => TRUE,
+          'fi-el' => 'div',
+          'fi-cl' => 'card__author-date',
+          'fi-at' => '',
+          'fi-def-at' => FALSE,
+          'fi-odd-even' => FALSE,
+          'fi-first-last' => FALSE,
+        ),
+      ),
+    ),
+  );
+  $export['node|news|listing'] = $ds_fieldsetting;
+
+  $ds_fieldsetting = new stdClass();
+  $ds_fieldsetting->api_version = 1;
+  $ds_fieldsetting->id = 'node|news|search_listing';
+  $ds_fieldsetting->entity_type = 'node';
+  $ds_fieldsetting->bundle = 'news';
+  $ds_fieldsetting->view_mode = 'search_listing';
+  $ds_fieldsetting->settings = array(
+    'field_news_publish_date' => array(
+      'formatter_settings' => array(
+        'ft' => array(
+          'lb' => 'News Published',
+        ),
+      ),
+    ),
+  );
+  $export['node|news|search_listing'] = $ds_fieldsetting;
 
   return $export;
 }
@@ -87,70 +143,6 @@ function gie_news_ds_field_settings_info() {
  */
 function gie_news_ds_layout_settings_info() {
   $export = array();
-
-  $ds_layout = new stdClass();
-  $ds_layout->api_version = 1;
-  $ds_layout->id = 'node|news|at_a_glance';
-  $ds_layout->entity_type = 'node';
-  $ds_layout->bundle = 'news';
-  $ds_layout->view_mode = 'at_a_glance';
-  $ds_layout->layout = 'ds_reset';
-  $ds_layout->settings = array(
-    'regions' => array(
-      'ds_content' => array(
-        0 => 'news_counters_comment_count',
-        1 => 'news_counters_favorite_count',
-        2 => 'field_news_source',
-      ),
-    ),
-    'fields' => array(
-      'news_counters_comment_count' => 'ds_content',
-      'news_counters_favorite_count' => 'ds_content',
-      'field_news_source' => 'ds_content',
-    ),
-    'classes' => array(),
-    'wrappers' => array(
-      'ds_content' => 'div',
-    ),
-    'layout_wrapper' => 'div',
-    'layout_attributes' => '',
-    'layout_attributes_merge' => TRUE,
-    'layout_link_attribute' => FALSE,
-    'layout_link_custom' => '',
-  );
-  $export['node|news|at_a_glance'] = $ds_layout;
-
-  $ds_layout = new stdClass();
-  $ds_layout->api_version = 1;
-  $ds_layout->id = 'node|news|contact';
-  $ds_layout->entity_type = 'node';
-  $ds_layout->bundle = 'news';
-  $ds_layout->view_mode = 'contact';
-  $ds_layout->layout = 'slat';
-  $ds_layout->settings = array(
-    'regions' => array(
-      'media' => array(
-        0 => 'field_news_point_of_contact',
-        1 => 'field_news_publish_date',
-      ),
-    ),
-    'fields' => array(
-      'field_news_point_of_contact' => 'media',
-      'field_news_publish_date' => 'media',
-    ),
-    'classes' => array(),
-    'wrappers' => array(
-      'header' => 'div',
-      'media' => 'div',
-      'main_content' => 'div',
-    ),
-    'layout_wrapper' => 'div',
-    'layout_attributes' => '',
-    'layout_attributes_merge' => 1,
-    'layout_link_attribute' => '',
-    'layout_link_custom' => '',
-  );
-  $export['node|news|contact'] = $ds_layout;
 
   $ds_layout = new stdClass();
   $ds_layout->api_version = 1;
@@ -179,15 +171,124 @@ function gie_news_ds_layout_settings_info() {
       'field_news_organization' => 'ds_content',
     ),
     'classes' => array(),
-    'wrappers' => array(),
+    'wrappers' => array(
+      'ds_content' => 'div',
+    ),
     'layout_wrapper' => 'div',
     'layout_attributes' => '',
-    'layout_attributes_merge' => TRUE,
-    'layout_link_attribute' => FALSE,
+    'layout_attributes_merge' => 1,
+    'layout_link_attribute' => '',
     'layout_link_custom' => '',
-    'layout_disable_css' => FALSE,
   );
   $export['node|news|details'] = $ds_layout;
+
+  $ds_layout = new stdClass();
+  $ds_layout->api_version = 1;
+  $ds_layout->id = 'node|news|full';
+  $ds_layout->entity_type = 'node';
+  $ds_layout->bundle = 'news';
+  $ds_layout->view_mode = 'full';
+  $ds_layout->layout = 'ds_1col';
+  $ds_layout->settings = array(
+    'regions' => array(
+      'ds_content' => array(
+        0 => 'field_news_image',
+        1 => 'field_news_body',
+        2 => 'comments',
+      ),
+    ),
+    'fields' => array(
+      'field_news_image' => 'ds_content',
+      'field_news_body' => 'ds_content',
+      'comments' => 'ds_content',
+    ),
+    'classes' => array(),
+    'wrappers' => array(
+      'ds_content' => 'div',
+    ),
+    'layout_wrapper' => 'div',
+    'layout_attributes' => '',
+    'layout_attributes_merge' => 1,
+    'layout_link_attribute' => '',
+    'layout_link_custom' => '',
+  );
+  $export['node|news|full'] = $ds_layout;
+
+  $ds_layout = new stdClass();
+  $ds_layout->api_version = 1;
+  $ds_layout->id = 'node|news|listing';
+  $ds_layout->entity_type = 'node';
+  $ds_layout->bundle = 'news';
+  $ds_layout->view_mode = 'listing';
+  $ds_layout->layout = 'article';
+  $ds_layout->settings = array(
+    'regions' => array(
+      'main_content' => array(
+        0 => 'group_card_content',
+        1 => 'title_field',
+        2 => 'group_card_author',
+        3 => 'group_card_counts',
+        4 => 'field_news_point_of_contact',
+        5 => 'news_counters_comment_count',
+        6 => 'field_news_publish_date',
+        7 => 'news_counters_favorite_count',
+      ),
+    ),
+    'fields' => array(
+      'group_card_content' => 'main_content',
+      'title_field' => 'main_content',
+      'group_card_author' => 'main_content',
+      'group_card_counts' => 'main_content',
+      'field_news_point_of_contact' => 'main_content',
+      'news_counters_comment_count' => 'main_content',
+      'field_news_publish_date' => 'main_content',
+      'news_counters_favorite_count' => 'main_content',
+    ),
+    'classes' => array(),
+    'wrappers' => array(
+      'header' => 'div',
+      'main_content' => 'div',
+      'footer' => 'div',
+    ),
+    'layout_wrapper' => 'div',
+    'layout_attributes' => '',
+    'layout_attributes_merge' => 1,
+    'layout_link_attribute' => '',
+    'layout_link_custom' => '',
+  );
+  $export['node|news|listing'] = $ds_layout;
+
+  $ds_layout = new stdClass();
+  $ds_layout->api_version = 1;
+  $ds_layout->id = 'node|news|search_listing';
+  $ds_layout->entity_type = 'node';
+  $ds_layout->bundle = 'news';
+  $ds_layout->view_mode = 'search_listing';
+  $ds_layout->layout = 'ds_1col';
+  $ds_layout->settings = array(
+    'regions' => array(
+      'ds_content' => array(
+        0 => 'title_field',
+        1 => 'field_news_source',
+        2 => 'field_news_publish_date',
+      ),
+    ),
+    'fields' => array(
+      'title_field' => 'ds_content',
+      'field_news_source' => 'ds_content',
+      'field_news_publish_date' => 'ds_content',
+    ),
+    'classes' => array(),
+    'wrappers' => array(
+      'ds_content' => 'div',
+    ),
+    'layout_wrapper' => 'div',
+    'layout_attributes' => '',
+    'layout_attributes_merge' => 1,
+    'layout_link_attribute' => '',
+    'layout_link_custom' => '',
+  );
+  $export['node|news|search_listing'] = $ds_layout;
 
   return $export;
 }
