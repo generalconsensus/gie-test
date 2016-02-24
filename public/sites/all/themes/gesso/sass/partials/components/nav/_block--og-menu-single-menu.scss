@@ -15,20 +15,17 @@
       padding: 0 0 0 1em;
     }
     .nav__link {
-      .microsite-palette1 & {
-        color: $microsite-palette1-main-menu;
-        &:hover,
-        &:focus {
-          color: darken($microsite-palette1-main-menu,20%);
+      @each $current-color in $microsite-main-menu-list {
+        $i: index($microsite-main-menu-list, $current-color);
+        .microsite-palette#{$i} & { // body class
+          color: $current-color;
+          &:hover,
+          &:focus {
+            color: darken($current-color,20%);
+          }
         }
       }
-      .microsite-palette2 & {
-        color: $microsite-palette2-main-menu;
-        &:hover,
-        &:focus {
-          color: darken($microsite-palette2-main-menu,20%);
-        }
-      }
+       
       font-weight: bold;
       text-decoration: none;
       text-transform: uppercase;

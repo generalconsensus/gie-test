@@ -9,11 +9,11 @@ $header-image-height: 700px;
   @extend %microsite-component;
   background-position: 50% 50%;
   background-size: cover;
-  .microsite-palette1 & {
-    border-bottom: 6px solid $microsite-palette1-secondary;
-  }
-  .microsite-palette2 & {
-    border-bottom: 6px solid $microsite-palette2-secondary;
+  @each $current-color in $microsite-secondary-list {
+    $i: index($microsite-secondary-list, $current-color);
+    .microsite-palette#{$i} & { // body class
+      border-bottom: 6px solid $current-color;
+    }
   }
   margin: 0 auto 5em auto;
   min-height: $header-image-height * 0.5;
@@ -21,7 +21,7 @@ $header-image-height: 700px;
     min-height: $header-image-height * 0.6;
   }
   @include breakpoint($header-image-width * 0.7) {
-    min-height: $header-image-height * 0.7
+    min-height: $header-image-height * 0.7;
   }
   @include breakpoint($header-image-width * 0.8) {
     min-height: $header-image-height * 0.8;
@@ -37,17 +37,17 @@ $header-image-height: 700px;
   text-align: center;
   width: 100%;
   &:after {
+    @each $current-color in $microsite-secondary-list {
+      $i: index($microsite-secondary-list, $current-color);
+      .microsite-palette#{$i} & { // body class
+        border-color: $current-color transparent transparent;
+      }
+    }
+    border-style: solid;
+    border-width: 20px 20px 0;
     bottom: -20px;
     content: "";
     display: block;
-    border-style: solid;
-    border-width: 20px 20px 0;
-    .microsite-palette1 & {
-      border-color: $microsite-palette1-secondary transparent transparent;
-    }
-    .microsite-palette2 & {
-      border-color: $microsite-palette2-secondary transparent transparent;
-    }
     height: 0;
     left: 50%;
     margin-left: -20px;
@@ -105,12 +105,14 @@ $header-image-height: 700px;
   max-width: $max-page-width;
   padding: 5% 2% 2% 2%;
   &:after {
-    .microsite-palette1 & {
-      border-top: 4px solid $microsite-palette1-secondary;
+    
+    @each $current-color in $microsite-secondary-list {
+      $i: index($microsite-secondary-list, $current-color);
+      .microsite-palette#{$i} & { // body class
+        border-top: 4px solid $current-color;
+      }
     }
-    .microsite-palette2 & {
-      border-top: 4px solid $microsite-palette2-secondary;
-    }
+
     content: "";
     display: block;
     margin: 0.25em auto 0 auto;

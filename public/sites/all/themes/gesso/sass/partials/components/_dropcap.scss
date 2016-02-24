@@ -1,11 +1,11 @@
 .dropcap {
   &:first-letter { 
-    background-color: #cd1041;
-    .microsite-palette1 & {
-      background-color: $microsite-palette1-secondary; 
-    }
-    .microsite-palette2 & {
-      background-color: $microsite-palette2-secondary; 
+    background-color: nth($microsite-primary-list, 1); // just in case palette or color class is missing
+    @each $current-color in $microsite-secondary-list {
+      $i: index($microsite-secondary-list, $current-color);
+      .microsite-palette#{$i} & { // body class
+        background-color: $current-color;
+      }
     }
     color: #fff;
     float: left; 
