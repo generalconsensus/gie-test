@@ -154,7 +154,7 @@ function gie_news_strongarm() {
             'visible' => TRUE,
           ),
           'listing' => array(
-            'weight' => '18',
+            'weight' => '25',
             'visible' => FALSE,
           ),
           'at_a_glance' => array(
@@ -170,25 +170,25 @@ function gie_news_strongarm() {
             'visible' => FALSE,
           ),
           'search_listing' => array(
-            'weight' => '1',
-            'visible' => TRUE,
+            'weight' => '3',
+            'visible' => FALSE,
           ),
           'full' => array(
             'weight' => '16',
             'visible' => FALSE,
           ),
           'page_header' => array(
-            'weight' => '2',
+            'weight' => '8',
             'visible' => FALSE,
           ),
         ),
         'sharethis' => array(
           'default' => array(
-            'weight' => '22',
+            'weight' => '21',
             'visible' => FALSE,
           ),
           'listing' => array(
-            'weight' => '22',
+            'weight' => '26',
             'visible' => FALSE,
           ),
           'at_a_glance' => array(
@@ -205,14 +205,14 @@ function gie_news_strongarm() {
           ),
           'search_listing' => array(
             'weight' => '10',
-            'visible' => TRUE,
+            'visible' => FALSE,
           ),
           'full' => array(
             'weight' => '21',
             'visible' => FALSE,
           ),
           'page_header' => array(
-            'weight' => '9',
+            'weight' => '13',
             'visible' => FALSE,
           ),
         ),
@@ -352,7 +352,7 @@ function gie_news_strongarm() {
             'visible' => FALSE,
           ),
           'default' => array(
-            'weight' => '23',
+            'weight' => '22',
             'visible' => FALSE,
           ),
           'full' => array(
@@ -364,11 +364,19 @@ function gie_news_strongarm() {
             'visible' => FALSE,
           ),
           'listing' => array(
-            'weight' => '11',
+            'weight' => '22',
             'visible' => FALSE,
           ),
           'contact' => array(
             'weight' => '10',
+            'visible' => FALSE,
+          ),
+          'page_header' => array(
+            'weight' => '2',
+            'visible' => FALSE,
+          ),
+          'search_listing' => array(
+            'weight' => '11',
             'visible' => FALSE,
           ),
         ),
@@ -390,17 +398,25 @@ function gie_news_strongarm() {
             'visible' => FALSE,
           ),
           'listing' => array(
-            'weight' => '10',
+            'weight' => '21',
             'visible' => FALSE,
           ),
           'contact' => array(
             'weight' => '9',
             'visible' => FALSE,
           ),
+          'page_header' => array(
+            'weight' => '1',
+            'visible' => FALSE,
+          ),
+          'search_listing' => array(
+            'weight' => '17',
+            'visible' => FALSE,
+          ),
         ),
         'news_counters_comment_count' => array(
           'listing' => array(
-            'weight' => '10',
+            'weight' => '6',
             'visible' => TRUE,
           ),
           'full' => array(
@@ -415,10 +431,26 @@ function gie_news_strongarm() {
             'weight' => '0',
             'visible' => TRUE,
           ),
+          'default' => array(
+            'weight' => '18',
+            'visible' => FALSE,
+          ),
+          'page_header' => array(
+            'weight' => '6',
+            'visible' => FALSE,
+          ),
+          'details' => array(
+            'weight' => '10',
+            'visible' => FALSE,
+          ),
+          'search_listing' => array(
+            'weight' => '15',
+            'visible' => FALSE,
+          ),
         ),
         'news_counters_favorite_count' => array(
           'listing' => array(
-            'weight' => '11',
+            'weight' => '7',
             'visible' => TRUE,
           ),
           'full' => array(
@@ -433,10 +465,26 @@ function gie_news_strongarm() {
             'weight' => '1',
             'visible' => TRUE,
           ),
+          'default' => array(
+            'weight' => '17',
+            'visible' => FALSE,
+          ),
+          'page_header' => array(
+            'weight' => '5',
+            'visible' => FALSE,
+          ),
+          'details' => array(
+            'weight' => '10',
+            'visible' => FALSE,
+          ),
+          'search_listing' => array(
+            'weight' => '14',
+            'visible' => FALSE,
+          ),
         ),
         'news_counters_resource_comment_detail' => array(
           'listing' => array(
-            'weight' => '10',
+            'weight' => '20',
             'visible' => FALSE,
           ),
           'full' => array(
@@ -451,10 +499,26 @@ function gie_news_strongarm() {
             'weight' => '3',
             'visible' => FALSE,
           ),
+          'default' => array(
+            'weight' => '16',
+            'visible' => FALSE,
+          ),
+          'page_header' => array(
+            'weight' => '4',
+            'visible' => FALSE,
+          ),
+          'details' => array(
+            'weight' => '10',
+            'visible' => FALSE,
+          ),
+          'search_listing' => array(
+            'weight' => '12',
+            'visible' => FALSE,
+          ),
         ),
         'news_counters_resource_favorite_count_detail' => array(
           'listing' => array(
-            'weight' => '10',
+            'weight' => '18',
             'visible' => FALSE,
           ),
           'full' => array(
@@ -467,6 +531,22 @@ function gie_news_strongarm() {
           ),
           'at_a_glance' => array(
             'weight' => '4',
+            'visible' => FALSE,
+          ),
+          'default' => array(
+            'weight' => '15',
+            'visible' => FALSE,
+          ),
+          'page_header' => array(
+            'weight' => '3',
+            'visible' => FALSE,
+          ),
+          'details' => array(
+            'weight' => '10',
+            'visible' => FALSE,
+          ),
+          'search_listing' => array(
+            'weight' => '13',
             'visible' => FALSE,
           ),
         ),

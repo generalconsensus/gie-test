@@ -21,7 +21,7 @@ function gie_news_field_group_info() {
   $field_group->parent_name = 'group_card_content';
   $field_group->data = array(
     'label' => 'Card Author',
-    'weight' => '1',
+    'weight' => '3',
     'children' => array(
       0 => 'field_news_point_of_contact',
       1 => 'field_news_publish_date',
@@ -57,9 +57,8 @@ function gie_news_field_group_info() {
     'weight' => '0',
     'children' => array(
       0 => 'title_field',
-      1 => 'field_news_sector',
+      1 => 'group_card_counts',
       2 => 'group_card_author',
-      3 => 'group_card_counts',
     ),
     'format_type' => 'div',
     'format_settings' => array(
@@ -77,6 +76,39 @@ function gie_news_field_group_info() {
     ),
   );
   $export['group_card_content|node|news|listing'] = $field_group;
+
+  $field_group = new stdClass();
+  $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
+  $field_group->api_version = 1;
+  $field_group->identifier = 'group_card_counts|node|news|listing';
+  $field_group->group_name = 'group_card_counts';
+  $field_group->entity_type = 'node';
+  $field_group->bundle = 'news';
+  $field_group->mode = 'listing';
+  $field_group->parent_name = 'group_card_content';
+  $field_group->data = array(
+    'label' => 'Card Counts',
+    'weight' => '4',
+    'children' => array(
+      0 => 'news_counters_comment_count',
+      1 => 'news_counters_favorite_count',
+    ),
+    'format_type' => 'div',
+    'format_settings' => array(
+      'label' => 'Card Counts',
+      'instance_settings' => array(
+        'id' => '',
+        'classes' => 'card__counts',
+        'description' => '',
+        'show_label' => '0',
+        'label_element' => 'h3',
+        'effect' => 'none',
+        'speed' => 'none',
+      ),
+      'formatter' => 'open',
+    ),
+  );
+  $export['group_card_counts|node|news|listing'] = $field_group;
 
   return $export;
 }
