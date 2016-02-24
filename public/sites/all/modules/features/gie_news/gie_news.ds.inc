@@ -115,6 +115,20 @@ function gie_news_ds_field_settings_info() {
         ),
       ),
     ),
+    'field_news_sector' => array(
+      'formatter_settings' => array(
+        'ft' => array(
+          'func' => 'theme_ds_field_expert',
+          'lb' => 'Sectors',
+          'ow' => TRUE,
+          'ow-el' => 'div',
+          'ow-cl' => 'card__list',
+          'ow-def-cl' => FALSE,
+          'ow-at' => '',
+          'ow-def-at' => FALSE,
+        ),
+      ),
+    ),
   );
   $export['node|news|listing'] = $ds_fieldsetting;
 
@@ -143,69 +157,6 @@ function gie_news_ds_field_settings_info() {
  */
 function gie_news_ds_layout_settings_info() {
   $export = array();
-
-  $ds_layout = new stdClass();
-  $ds_layout->api_version = 1;
-  $ds_layout->id = 'node|news|at_a_glance';
-  $ds_layout->entity_type = 'node';
-  $ds_layout->bundle = 'news';
-  $ds_layout->view_mode = 'at_a_glance';
-  $ds_layout->layout = 'ds_reset';
-  $ds_layout->settings = array(
-    'regions' => array(
-      'ds_content' => array(
-        0 => 'news_counters_comment_count',
-        1 => 'news_counters_favorite_count',
-        2 => 'field_news_source',
-      ),
-    ),
-    'fields' => array(
-      'news_counters_comment_count' => 'ds_content',
-      'news_counters_favorite_count' => 'ds_content',
-      'field_news_source' => 'ds_content',
-    ),
-    'classes' => array(),
-    'wrappers' => array(),
-    'layout_wrapper' => 'div',
-    'layout_attributes' => '',
-    'layout_attributes_merge' => TRUE,
-    'layout_link_attribute' => FALSE,
-    'layout_link_custom' => '',
-    'layout_disable_css' => FALSE,
-  );
-  $export['node|news|at_a_glance'] = $ds_layout;
-
-  $ds_layout = new stdClass();
-  $ds_layout->api_version = 1;
-  $ds_layout->id = 'node|news|contact';
-  $ds_layout->entity_type = 'node';
-  $ds_layout->bundle = 'news';
-  $ds_layout->view_mode = 'contact';
-  $ds_layout->layout = 'slat';
-  $ds_layout->settings = array(
-    'regions' => array(
-      'media' => array(
-        0 => 'field_news_point_of_contact',
-        1 => 'field_news_publish_date',
-      ),
-    ),
-    'fields' => array(
-      'field_news_point_of_contact' => 'media',
-      'field_news_publish_date' => 'media',
-    ),
-    'classes' => array(),
-    'wrappers' => array(
-      'header' => 'div',
-      'media' => 'div',
-      'main_content' => 'div',
-    ),
-    'layout_wrapper' => 'div',
-    'layout_attributes' => '',
-    'layout_attributes_merge' => 1,
-    'layout_link_attribute' => '',
-    'layout_link_custom' => '',
-  );
-  $export['node|news|contact'] = $ds_layout;
 
   $ds_layout = new stdClass();
   $ds_layout->api_version = 1;
@@ -290,17 +241,19 @@ function gie_news_ds_layout_settings_info() {
         0 => 'group_card_content',
         1 => 'title_field',
         2 => 'group_card_author',
-        3 => 'group_card_counts',
-        4 => 'field_news_point_of_contact',
-        5 => 'news_counters_comment_count',
-        6 => 'field_news_publish_date',
-        7 => 'news_counters_favorite_count',
+        3 => 'field_news_sector',
+        4 => 'group_card_counts',
+        5 => 'field_news_point_of_contact',
+        6 => 'news_counters_comment_count',
+        7 => 'field_news_publish_date',
+        8 => 'news_counters_favorite_count',
       ),
     ),
     'fields' => array(
       'group_card_content' => 'main_content',
       'title_field' => 'main_content',
       'group_card_author' => 'main_content',
+      'field_news_sector' => 'main_content',
       'group_card_counts' => 'main_content',
       'field_news_point_of_contact' => 'main_content',
       'news_counters_comment_count' => 'main_content',

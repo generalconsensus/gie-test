@@ -57,8 +57,9 @@ function gie_news_field_group_info() {
     'weight' => '0',
     'children' => array(
       0 => 'title_field',
-      1 => 'group_card_counts',
-      2 => 'group_card_author',
+      1 => 'field_news_sector',
+      2 => 'group_card_counts',
+      3 => 'group_card_author',
     ),
     'format_type' => 'div',
     'format_settings' => array(
@@ -88,7 +89,7 @@ function gie_news_field_group_info() {
   $field_group->parent_name = 'group_card_content';
   $field_group->data = array(
     'label' => 'Card Counts',
-    'weight' => '4',
+    'weight' => '5',
     'children' => array(
       0 => 'news_counters_comment_count',
       1 => 'news_counters_favorite_count',
