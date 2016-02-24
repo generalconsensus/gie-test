@@ -20,10 +20,12 @@ function gie_user_quicktabs_default_quicktabs() {
   $quicktabs->title = 'Dashboard';
   $quicktabs->tabs = array(
     0 => array(
-      'path' => 'gie_dashboard/notification_center',
+      'nid' => '',
+      'view_mode' => 'full',
+      'hide_title' => 1,
       'title' => 'What\'s New?',
       'weight' => '-100',
-      'type' => 'callback',
+      'type' => 'node',
     ),
     1 => array(
       'vid' => 'user_innovations',
