@@ -1,10 +1,12 @@
 .microsite-link-bar {
-  .microsite-palette1 & {
-    background: $microsite-palette1-primary;
+
+  @each $current-color in $microsite-primary-list {
+    $i: index($microsite-primary-list, $current-color);
+    .microsite-palette#{$i} & { // body class
+      background: $current-color;
+    }
   }
-  .microsite-palette2 & {
-    background: $microsite-palette2-primary;
-  }
+
   text-align: center;
   a {
     color: #fff !important;
@@ -12,17 +14,16 @@
     font-weight: 300;
     padding: 0.5em 1em;
     text-decoration: none;
-    .microsite-palette1 & {
-      background: $microsite-palette1-secondary;
-      &:hover, &:focus {
-        background: darken($microsite-palette1-secondary,10%);
-      } 
-    }
-    .microsite-palette2 & {
-      background: $microsite-palette2-secondary;
-      &:hover, &:focus {
-        background: darken($microsite-palette2-secondary,10%);
+    
+    @each $current-color in $microsite-secondary-list {
+      $i: index($microsite-secondary-list, $current-color);
+      .microsite-palette#{$i} & {
+        background: $current-color;
+        &:hover, &:focus {
+          background: darken($current-color,10%);
+        } 
       }
     }
+
   }
 }

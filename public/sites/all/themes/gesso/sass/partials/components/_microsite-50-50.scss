@@ -7,12 +7,26 @@
     flex-direction: row;
     justify-content: center;
   }
-  .microsite-palette1 & {
-    background: $microsite-palette1-secondary;
+  background: nth($microsite-primary-list, 1); // just in case palette or color class is missing
+  @each $current-color in $microsite-primary-list {
+    $i: index($microsite-primary-list, $current-color);
+    .microsite-palette#{$i} & { // body class
+      background-color: $current-color;
+      &.microsite-secondary { // component class
+        background: nth($microsite-secondary-list, $i); 
+      }
+      &.microsite-tertiary {
+        background: nth($microsite-tertiary-list, $i); 
+      }
+      &.microsite-light-gray {
+        background: nth($microsite-light-gray-list, $i); 
+      }
+      &.microsite-dark-gray {
+        background: nth($microsite-dark-gray-list, $i); 
+      }
+    }
   }
-  .microsite-palette2 & {
-    background: $microsite-palette2-secondary;
-  }
+
 }
 
 .microsite-50-50__text {
@@ -23,6 +37,12 @@
   }
   a, h1, h2, h3, h4, h5, h6 {
     color: #fff !important;
+  }
+  .microsite-light-gray & {
+    color: #333;
+    a, h1, h2, h3, h4, h5, h6 {
+      color: #333 !important;
+    }
   }
 }
 

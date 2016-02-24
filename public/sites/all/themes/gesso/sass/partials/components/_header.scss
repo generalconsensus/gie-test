@@ -11,17 +11,14 @@ header.header {
     display: none;
   }
 
-  .microsite-palette1 & {
-    background: $microsite-palette1-site-header;
-    border: 0;
-    color: #fff;
+  @each $current-color in $microsite-site-header-list {
+    $i: index($microsite-site-header-list, $current-color);
+    .microsite-palette#{$i} & {
+      background: $current-color;
+      border: 0;
+      color: #fff;
+    }
   }
-  .microsite-palette2 & {
-    background: $microsite-palette2-site-header;
-    border: 0;
-    color: #fff;
-  }
-
 
 }
 
