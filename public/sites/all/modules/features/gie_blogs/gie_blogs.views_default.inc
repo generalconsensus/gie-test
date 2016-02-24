@@ -12,7 +12,7 @@ function gie_blogs_views_default_views() {
 
   $view = new view();
   $view->name = 'blogs_counters';
-  $view->description = '"At a Glance" display on Resource pages.';
+  $view->description = '"At a Glance" display on Bloge pages.';
   $view->tag = 'default';
   $view->base_table = 'node';
   $view->human_name = 'Blogs counters';
