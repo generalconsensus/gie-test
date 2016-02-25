@@ -1,0 +1,102 @@
+// @file
+// Styles for the microsites paragraphs page header component
+// background image native size: 1600x700
+
+$header-image-width: 1600px;
+$header-image-height: 700px;
+
+.microsite-highlight {
+  @extend %microsite-component;
+  background-color: nth($microsite-primary-list, 1); // just in case palette or color class is missing
+  @each $current-color in $microsite-primary-list {
+    $i: index($microsite-primary-list, $current-color);
+    .microsite-palette#{$i} & { // body class
+      background-color: $current-color;
+      &.microsite-secondary { // component class
+        background-color: nth($microsite-secondary-list, $i); 
+      }
+      &.microsite-tertiary {
+        background-color: nth($microsite-tertiary-list, $i); 
+      }
+      &.microsite-light-gray {
+        background-color: nth($microsite-light-gray-list, $i); 
+      }
+      &.microsite-dark-gray {
+        background-color: nth($microsite-dark-gray-list, $i); 
+      }
+    }
+  }
+  background-position: 50% 50%;
+  background-size: cover;
+  min-height: $header-image-height * 0.5;
+  @include breakpoint($header-image-width * 0.6) {
+    min-height: $header-image-height * 0.6;
+  }
+  @include breakpoint($header-image-width * 0.7) {
+    min-height: $header-image-height * 0.7;
+  }
+  @include breakpoint($header-image-width * 0.8) {
+    min-height: $header-image-height * 0.8;
+  }
+  @include breakpoint($header-image-width * 0.9) {
+    min-height: $header-image-height * 0.9;
+  }
+  @include breakpoint($header-image-width, $no-query: true) {
+    min-height: $header-image-height;
+  }
+  max-height: 700px;
+  position: relative;
+  text-align: center;
+  width: 100%;
+}
+
+
+.microsite-highlight__text-wrapper {
+  display: table; 
+  width: 100%;
+}
+
+.microsite-highlight__text {
+  color: #fff;
+  display: table-cell;
+  height: $header-image-height * 0.5;
+  @include breakpoint($header-image-width * 0.6) {
+    height: $header-image-height * 0.6;
+  }
+  @include breakpoint($header-image-width * 0.7) {
+    height: $header-image-height * 0.7
+  }
+  @include breakpoint($header-image-width * 0.8) {
+    height: $header-image-height * 0.8;
+  }
+  @include breakpoint($header-image-width * 0.9) {
+    height: $header-image-height * 0.9;
+  }
+  @include breakpoint($header-image-width, $no-query: true) {
+    height: $header-image-height;
+  }
+  vertical-align: middle;
+  width: 100%;
+
+  h2 {
+    @extend %h1;
+  }
+
+  a, h1, h2, h3, h4, h5, h6 {
+    color: #fff !important;
+  }
+
+  .microsite-light-gray & {
+    color: #333;
+    a, h1, h2, h3, h4, h5, h6 {
+      color: #333 !important;
+    }
+  }
+
+  img {
+    margin: 1em;
+  }
+
+}
+
+ 
