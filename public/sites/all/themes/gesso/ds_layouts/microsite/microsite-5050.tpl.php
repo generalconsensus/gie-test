@@ -14,7 +14,7 @@
   //var_dump($content['field_background'][0]['#markup']);
 
   if ($orientation == 'image-on-the-right') {
-    $classes = "microsite-50-50" . ' ' . $background . $orientation;
+    $classes = "microsite-50-50" . ' ' . $background;
   } else {
     $classes = "microsite-50-50 microsite-50-50--reversed" . ' ' . $background;
   };
