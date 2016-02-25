@@ -46,13 +46,12 @@ function dashboard_whats_new_header_image_admin_form($form, &$form_state) {
 function dashboard_whats_new_header_image_render($subtype, $conf, $panel_args, $context = NULL) {
   // Render block
   $block = new stdClass();
-//  $block->title = t('Innovation Spotlight:');
 
   global $user;
   $profile_uri = db_query('SELECT file_managed.uri FROM field_data_field_user_photo INNER JOIN file_managed ON file_managed.fid = field_data_field_user_photo.field_user_photo_fid WHERE field_data_field_user_photo.entity_id = :uid', array(':uid' => $user->uid))->fetchField();
 
   if (!empty($profile_uri)) {
-    $image = image_style_url('resource_author__58x58_', $profile_uri);
+//    $image = image_style_url('resource_author__58x58_', $profile_uri);
 
     // Default Profile Image
   }
@@ -62,7 +61,7 @@ function dashboard_whats_new_header_image_render($subtype, $conf, $panel_args, $
   }
 
   $output = '<div class="dashboard__header_image"></div>
-    <p><img alt="" src="' . $image . '"></p>
+    <p><img alt="" src="' . (!empty($image) ? $image : '') . '"></p>
     </p>
 <div class="dashboard__action_items"></div>
     <p>

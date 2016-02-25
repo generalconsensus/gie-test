@@ -386,7 +386,10 @@ function gie_dashboard_notification_center_list() {
     $results['featured_innovation'] = db_query('select node.nid from field_data_field_featured_innovation INNER JOIN node on node.nid = field_data_field_featured_innovation.entity_id WHERE field_featured_innovation_value = 1 LIMIT 1')->fetchField();
 
     if (!empty($results['featured_innovation']) && is_numeric($results['featured_innovation'])) {
-      $results['featured_innovation'] = render(entity_view('node', array(node_load($results['featured_innovation'])), 'listing'));
+      $entity = entity_view('node', array(node_load($results['featured_innovation'])), 'listing');
+      if (!empty($entity)) {
+        $results['featured_innovation'] = render($entity);
+      }
     }
 
     return $results;
@@ -521,8 +524,27 @@ function gie_dashboard_views_pre_view($view) {
   if ($view->name == 'dashboard' && $view->current_display == 'user_funding_opportunities') {
     _gie_data_viz_init();
   }
-
 }
+
+function gie_dashboard_views_pre_render(&$view) {
+  if ($view->name == 'dashboard' && $view->current_display == 'user_funding_opportunities' && !empty($view->result)) {
+    foreach ($view->result as $key => $result) {
+      if (!empty($result->field_field_funding_deadline[0]['raw']['value']) && !empty($result->field_field_funding_link[0]['raw']['value'])) {
+        $deadline = $result->field_field_funding_deadline[0]['raw']['value'];
+        $deadline = strtotime($deadline);
+        // The deadline has passed
+        if (!empty($deadline) && is_numeric($deadline) && strtotime('now') > $deadline) {
+          $result->field_field_funding_deadline[0]['rendered']['#markup'] = '<span class="gie-dashboard-funding-op-status">Closed</span>';
+          // The deadline is open
+        }
+        else {
+          $result->field_field_funding_deadline[0]['rendered']['#markup'] = '<a class="button button--highlight" href="' . $result->field_field_funding_link[0]['raw']['value'] . '">Apply</a>';
+        }
+      }
+    }
+  }
+}
+
 
 /**
  * Implements hook_menu().
