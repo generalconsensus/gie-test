@@ -14,7 +14,7 @@
   $image = file_create_url($content['field_para_highlight_image']['#items'][0]['uri']);
   //set classes, including background value
   
-  $classes = "microsite-highlight"
+  $classes = "microsite-highlight";
 
   //if image set, then set style, if not do nothing. 
   if (isset($imagefield)) {
@@ -24,6 +24,7 @@
   };
 
   hide($content['field_para_highlight_image']);
+
 ?>
 
 <div class="<?php print $classes ?>" <?php print $styles ?>>

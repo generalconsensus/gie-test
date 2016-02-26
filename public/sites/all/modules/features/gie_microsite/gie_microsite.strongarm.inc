@@ -362,6 +362,9 @@ function gie_microsite_strongarm() {
       'right_image' => array(
         'custom_settings' => FALSE,
       ),
+      'diff_standard' => array(
+        'custom_settings' => FALSE,
+      ),
     ),
     'extra_fields' => array(
       'form' => array(),
@@ -454,6 +457,9 @@ function gie_microsite_strongarm() {
         'custom_settings' => FALSE,
       ),
       'right_image' => array(
+        'custom_settings' => FALSE,
+      ),
+      'diff_standard' => array(
         'custom_settings' => FALSE,
       ),
     ),

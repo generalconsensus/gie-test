@@ -935,7 +935,7 @@ function gie_microsite_field_group_info() {
       'label' => 'Text',
       'instance_settings' => array(
         'id' => '',
-        'classes' => 'microsite-highlights__text-wrapper',
+        'classes' => 'microsite-highlight__text-wrapper',
         'description' => '',
         'show_label' => '0',
         'label_element' => 'h3',
