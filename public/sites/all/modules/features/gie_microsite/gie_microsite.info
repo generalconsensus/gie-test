@@ -28,6 +28,7 @@ features[ctools][] = views:views_default:3.0
 features[ds_field_settings][] = paragraphs_item|long_form_50_50|default
 features[ds_field_settings][] = paragraphs_item|long_form_50_50|left_image
 features[ds_field_settings][] = paragraphs_item|long_form_50_50|right_image
+features[ds_field_settings][] = paragraphs_item|long_form_header|default
 features[ds_field_settings][] = paragraphs_item|microsite_callout_card|callout_1
 features[ds_field_settings][] = paragraphs_item|microsite_callout_card|callout_2
 features[ds_field_settings][] = paragraphs_item|microsite_callout_card|callout_3
