@@ -1,5 +1,12 @@
 // Microsites
-$microsite-primary: #00498f;
-$microsite-secondary: #cd1041;
-$microsite-header: #035b94;
-$microsite-site-header: #565a5c;
+// first color is palette1, second is palette2
+
+$microsite-primary-list: #00498f #cd1041;
+$microsite-secondary-list: #cd1041 #faa74a;
+$microsite-tertiary-list: #cd1041 #0094b4;
+$microsite-light-gray-list: #dae3e7 #dae3e7;
+$microsite-dark-gray-list: #444545 #444545;
+$microsite-header-list: #035b94 #0094b4;
+$microsite-site-header-list: #565a5c #0094b4;
+$microsite-main-menu-list: #00498f #444545;
+
