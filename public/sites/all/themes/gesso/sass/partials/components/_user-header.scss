@@ -9,18 +9,18 @@
 .user-header__photo {
   padding-right: 1em;
   img {
-    @include border-radius(50%);
     border: 2px solid $border-color;
+    border-radius: 50%;
   }
 }
 
 .user-header__name {
-  @include hyphens(none);
   color: $orange;
   font-size: em($font-size-xxl);
   @include breakpoint(500px, $no-query: true) {
     font-size: em($font-size-xxxl);
   }
+  hyphens: none;
   margin: 0 0 0.5em 0;
   text-transform: uppercase;
 }

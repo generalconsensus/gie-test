@@ -31,13 +31,13 @@
     width: 100%;
   }
 }
-.share-block__icon--share {
+.share-block__icon--share { 
   span.st_sharethis_custom {
     @include svg-background(longform-share-icon-square);
     @include image-replace (40px, 40px);
     background-repeat: no-repeat;
     cursor: pointer;
-    position: relative;
+    position: relative; 
     z-index: 50;
     @include breakpoint($mobile-menu-bp, $no-query: true) {
       @include image-replace (75px, 75px);

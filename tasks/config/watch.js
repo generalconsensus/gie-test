@@ -4,12 +4,9 @@ module.exports = function(grunt) {
   
   grunt.config.merge({
     watch : {
-      compass: {
+      gesso: {
         files : [ '<%= pkg.themePath %>/sass/**/*.scss' ],
-        tasks : [ 'compass:' + environment ],
-        options : {
-          livereload : true
-        }
+        tasks : [ 'buildStyles' ],
       },
       patternlab : {
         files : [ '<%= pkg.themePath %>/patternlab/source/**/*' ],
@@ -18,27 +15,13 @@ module.exports = function(grunt) {
           livereload : true
         }
       },
-      longform_compass: {
-        files : [ 'public/sites/all/themes/gesso_longform/sass/**/*.scss' ],
-        tasks : [ 'compass:longform_' + environment ],
-        options : {
-          livereload : true
-        }
+      gesso_longform: {
+        files : [ '<%= pkg.longformThemePath %>/sass/**/*.scss' ],
+        tasks : [ 'buildStyles' ],
       },
-      longform_patternlab : {
-        files : [ 'public/sites/all/themes/gesso_longform/patternlab/source/**/*' ],
-        tasks : [ 'shell:longform_patternlab' ],
-        options : {
-          livereload : true
-        }
-      },
-      microsites_compass: {
-        files : [ 'public/sites/all/themes/gesso_microsites/sass/**/*.scss' ],
-        tasks : [ 'compass:microsites_' + environment ],
-      },
-      microsites_patternlab : {
-        files : [ 'public/sites/all/themes/gesso_microsites/patternlab/source/**/*' ],
-        tasks : [ 'shell:microsites_patternlab' ],
+      gesso_longform_patternlab : {
+        files : [ '<%= pkg.longformThemePath %>/patternlab/source/**/*' ],
+        tasks : [ 'shell:patternlab' ],
         options : {
           livereload : true
         }

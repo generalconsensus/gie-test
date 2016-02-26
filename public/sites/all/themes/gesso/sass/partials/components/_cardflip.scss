@@ -2,11 +2,11 @@ $cardheight: 180px;
 
 .cardflip {
   cursor: pointer;
-  @include perspective(800px);
   min-height: $cardheight;
   .no-transformstylepreserve3d & {
     overflow: hidden;
   }
+  perspective: 800px;
   position: relative;
   width: 100%;
   z-index: 0;
@@ -23,11 +23,11 @@ $cardheight: 180px;
   position: absolute;
   text-align: center;
   top: 0;
-  @include transition(transform 0.5s linear);
-  @include transform(translate3d(0px, 0px, 0px));
-  @include transform-style(preserve-3d);
+  transition: transform 0.5s linear;
+  transform: translate3d(0px, 0px, 0px);
+  transform-style: preserve-3d;
   .no-transformstylepreserve3d & {
-    @include transform-style(flat);
+    transform-style: flat;
   }
   width: 100%;
   z-index: 1;
@@ -35,10 +35,10 @@ $cardheight: 180px;
   .cardflip:hover &,
   .cardflip:focus &,
   .cardflip.is-flipped & {
-    @include transform(rotateY(180deg));
+    transform: rotateY(180deg);
     z-index: 2;
     .no-transformstylepreserve3d & {
-      @include transform(translate3d(0px, 0px, 0px));
+      transform: translate3d(0px, 0px, 0px);
     }
   }
   
@@ -49,13 +49,13 @@ $cardheight: 180px;
 }
 
 %cardside {
-  @include backface-visibility(hidden);
+  backface-visibility: hidden;
   min-height: $cardheight;
   left: 0;
   padding: 20px;
   position: absolute;
   top: 0;
-  @include transform(translate3d(0px, 0px, 0px));
+  transform: translate3d(0px, 0px, 0px);
   width: 100%;
 }
 
@@ -64,11 +64,11 @@ $cardheight: 180px;
 }
 
 %cardside-back {
-  @include transform(rotateY(180deg));
+  transform: rotateY(180deg);
   .no-transformstylepreserve3d & {
-    @include transform(none);
     top: 100%;
-    @include transition(top 0.5s linear);
+    transform: none;
+    transition: top 0.5s linear;
   }
   .no-transformstylepreserve3d .cardflip:hover &,
   .no-transformstylepreserve3d .cardflip:focus &,
@@ -80,7 +80,7 @@ $cardheight: 180px;
 .cardflip__a { // homepage style card, front side
   @extend %cardside;
   @extend %cardside-front;
-  @include box-shadow(0 1px 1px 0 rgba(0,0,0,0.1));
+  box-shadow: 0 1px 1px 0 rgba(0,0,0,0.1);
   background: $lightorange;
   border: 1px solid #eee;
 
@@ -89,7 +89,7 @@ $cardheight: 180px;
 .cardflip__b { // homepage style card, back side
   @extend %cardside;
   @extend %cardside-back;
-  @include box-shadow(0 1px 1px 0 rgba(0,0,0,0.1));
+  box-shadow: 0 1px 1px 0 rgba(0,0,0,0.1);
   background: $orange;
   border: 1px solid #eee;
   
@@ -111,8 +111,8 @@ $cardheight: 180px;
 }
 
 .cardflip__title {
-  @include hyphens(none);
   font-size: 21px;
+  hyphens: none;
   .cardflip__a & {
     min-height: 60px;
   }
@@ -129,7 +129,7 @@ $cardheight: 180px;
     text-transform: uppercase;
     top: 50%;
     z-index: 3;
-    @include transform(translateY(-50%)); // vertically center 
+    transform: translateY(-50%); // vertically center 
   }
   .cardflip__2 & {
     font-size: 13px;

@@ -3,7 +3,7 @@
 	background-image: url(../images/members-icon.png);
 	background-position: 100% 100%;
 	background-repeat: no-repeat;
-	@include box-shadow(0 2px 4px 0px rgba(0,0,0,0.15));
+	box-shadow: 0 2px 4px 0px rgba(0,0,0,0.15);
 	overflow: hidden;
 	padding: 20px;
 	position: relative;

@@ -1,6 +1,7 @@
 module.exports = function (grunt) {
 	grunt.registerTask('build', [
-		'buildStyles',
+		'bower',
+    'buildStyles',
 		'buildPatternlab',
 		'concat',
     'uglify'
