@@ -3577,6 +3577,7 @@ function gie_long_form_content_field_default_field_instances() {
   t('Body #3');
   t('Byline');
   t('Caption');
+  t('Caution: updating the title of this content will update the URL of the long form post. If you would like the URL to be something specific regardless of the title, set a custom path below.');
   t('Explanation');
   t('File');
   t('Header Image');
