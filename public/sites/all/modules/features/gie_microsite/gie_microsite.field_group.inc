@@ -498,6 +498,39 @@ function gie_microsite_field_group_info() {
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
   $field_group->api_version = 1;
+  $field_group->identifier = 'group_header_text|paragraphs_item|long_form_header|default';
+  $field_group->group_name = 'group_header_text';
+  $field_group->entity_type = 'paragraphs_item';
+  $field_group->bundle = 'long_form_header';
+  $field_group->mode = 'default';
+  $field_group->parent_name = 'group_text_wrapper';
+  $field_group->data = array(
+    'label' => 'Header Text',
+    'weight' => '6',
+    'children' => array(
+      0 => 'field_para_header_subtitle',
+      1 => 'field_para_header_title',
+    ),
+    'format_type' => 'div',
+    'format_settings' => array(
+      'label' => 'Header Text',
+      'instance_settings' => array(
+        'id' => '',
+        'classes' => 'microsite-header__text',
+        'description' => '',
+        'show_label' => '0',
+        'label_element' => 'h3',
+        'effect' => 'none',
+        'speed' => 'none',
+      ),
+      'formatter' => 'open',
+    ),
+  );
+  $export['group_header_text|paragraphs_item|long_form_header|default'] = $field_group;
+
+  $field_group = new stdClass();
+  $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
+  $field_group->api_version = 1;
   $field_group->identifier = 'group_header|paragraphs_item|microsite_news_slider|default';
   $field_group->group_name = 'group_header';
   $field_group->entity_type = 'paragraphs_item';
@@ -725,6 +758,70 @@ function gie_microsite_field_group_info() {
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
   $field_group->api_version = 1;
+  $field_group->identifier = 'group_text_wrapper|paragraphs_item|long_form_header|default';
+  $field_group->group_name = 'group_text_wrapper';
+  $field_group->entity_type = 'paragraphs_item';
+  $field_group->bundle = 'long_form_header';
+  $field_group->mode = 'default';
+  $field_group->parent_name = '';
+  $field_group->data = array(
+    'label' => 'Text Wrapper',
+    'weight' => '0',
+    'children' => array(
+      0 => 'group_header_text',
+    ),
+    'format_type' => 'div',
+    'format_settings' => array(
+      'label' => 'Text Wrapper',
+      'instance_settings' => array(
+        'id' => '',
+        'classes' => 'microsite-header__text-wrapper',
+        'description' => '',
+        'show_label' => '0',
+        'label_element' => 'h3',
+        'effect' => 'none',
+        'speed' => 'none',
+      ),
+      'formatter' => 'open',
+    ),
+  );
+  $export['group_text_wrapper|paragraphs_item|long_form_header|default'] = $field_group;
+
+  $field_group = new stdClass();
+  $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
+  $field_group->api_version = 1;
+  $field_group->identifier = 'group_text_wrapper|paragraphs_item|microsite_highlight|default';
+  $field_group->group_name = 'group_text_wrapper';
+  $field_group->entity_type = 'paragraphs_item';
+  $field_group->bundle = 'microsite_highlight';
+  $field_group->mode = 'default';
+  $field_group->parent_name = '';
+  $field_group->data = array(
+    'label' => 'Text Wrapper',
+    'weight' => '0',
+    'children' => array(
+      0 => 'group_text',
+    ),
+    'format_type' => 'div',
+    'format_settings' => array(
+      'label' => 'Text Wrapper',
+      'instance_settings' => array(
+        'id' => '',
+        'classes' => 'layout-constrain',
+        'description' => '',
+        'show_label' => '0',
+        'label_element' => 'h3',
+        'effect' => 'none',
+        'speed' => 'none',
+      ),
+      'formatter' => 'open',
+    ),
+  );
+  $export['group_text_wrapper|paragraphs_item|microsite_highlight|default'] = $field_group;
+
+  $field_group = new stdClass();
+  $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
+  $field_group->api_version = 1;
   $field_group->identifier = 'group_text|paragraphs_item|long_form_50_50|default';
   $field_group->group_name = 'group_text';
   $field_group->entity_type = 'paragraphs_item';
@@ -817,6 +914,38 @@ function gie_microsite_field_group_info() {
     ),
   );
   $export['group_text|paragraphs_item|long_form_50_50|right_image'] = $field_group;
+
+  $field_group = new stdClass();
+  $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
+  $field_group->api_version = 1;
+  $field_group->identifier = 'group_text|paragraphs_item|microsite_highlight|default';
+  $field_group->group_name = 'group_text';
+  $field_group->entity_type = 'paragraphs_item';
+  $field_group->bundle = 'microsite_highlight';
+  $field_group->mode = 'default';
+  $field_group->parent_name = 'group_text_wrapper';
+  $field_group->data = array(
+    'label' => 'Text',
+    'weight' => '6',
+    'children' => array(
+      0 => 'field_para_highlight_text',
+    ),
+    'format_type' => 'div',
+    'format_settings' => array(
+      'label' => 'Text',
+      'instance_settings' => array(
+        'id' => '',
+        'classes' => 'microsite-highlight__text-wrapper',
+        'description' => '',
+        'show_label' => '0',
+        'label_element' => 'h3',
+        'effect' => 'none',
+        'speed' => 'none',
+      ),
+      'formatter' => 'open',
+    ),
+  );
+  $export['group_text|paragraphs_item|microsite_highlight|default'] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */

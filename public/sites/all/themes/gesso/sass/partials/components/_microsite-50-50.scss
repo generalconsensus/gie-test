@@ -7,17 +7,42 @@
     flex-direction: row;
     justify-content: center;
   }
-  background: $microsite-secondary;
-  color: #fff;
-  a, h1, h2, h3, h4, h5, h6 {
-    color: #fff;
+  background-color: nth($microsite-primary-list, 1); // just in case palette or color class is missing
+  @each $current-color in $microsite-primary-list {
+    $i: index($microsite-primary-list, $current-color);
+    .microsite-palette#{$i} & { // body class
+      background-color: $current-color;
+      &.microsite-secondary { // component class
+        background-color: nth($microsite-secondary-list, $i); 
+      }
+      &.microsite-tertiary {
+        background-color: nth($microsite-tertiary-list, $i); 
+      }
+      &.microsite-light-gray {
+        background-color: nth($microsite-light-gray-list, $i); 
+      }
+      &.microsite-dark-gray {
+        background-color: nth($microsite-dark-gray-list, $i); 
+      }
+    }
   }
+
 }
 
 .microsite-50-50__text {
+  color: #fff;
   padding: 2% 5%;
   @include breakpoint(900px, $no-query: true) {
     width: 50%;
+  }
+  a, h1, h2, h3, h4, h5, h6 {
+    color: #fff !important;
+  }
+  .microsite-light-gray & {
+    color: #333;
+    a, h1, h2, h3, h4, h5, h6 {
+      color: #333 !important;
+    }
   }
 }
 
