@@ -487,10 +487,11 @@ function gie_microsite_field_default_field_instances() {
         'long_form_text' => -1,
         'long_form_video' => -1,
         'microsite_callout_card' => 'microsite_callout_card',
-        'microsite_news_slider' => 'microsite_news_slider',
+        'microsite_highlight' => 'microsite_highlight',
+        'microsite_news_slider' => -1,
         'microsite_section_break_image' => 'microsite_section_break_image',
         'microsite_text' => 'microsite_text',
-        'microsite_text_callout' => 'microsite_text_callout',
+        'microsite_text_callout' => -1,
       ),
       'bundle_weights' => array(
         'long_form_50_50' => 2,
@@ -506,6 +507,7 @@ function gie_microsite_field_default_field_instances() {
         'long_form_text' => 12,
         'long_form_video' => 13,
         'microsite_callout_card' => 14,
+        'microsite_highlight' => -36,
         'microsite_news_slider' => 31,
         'microsite_section_break_image' => 15,
         'microsite_text' => 16,
@@ -1118,7 +1120,7 @@ function gie_microsite_field_default_field_instances() {
     'description' => '',
     'display' => array(
       'default' => array(
-        'label' => 'above',
+        'label' => 'hidden',
         'module' => 'image',
         'settings' => array(
           'field_delimiter' => '',
@@ -1137,7 +1139,7 @@ function gie_microsite_field_default_field_instances() {
           ),
         ),
         'type' => 'image',
-        'weight' => 4,
+        'weight' => 1,
       ),
     ),
     'ds_extras_field_template' => '',
@@ -1182,6 +1184,55 @@ function gie_microsite_field_default_field_instances() {
   );
 
   // Exported field_instance:
+  // 'paragraphs_item-long_form_header-field_para_header_options'
+  $field_instances['paragraphs_item-long_form_header-field_para_header_options'] = array(
+    'bundle' => 'long_form_header',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'hidden',
+        'module' => 'taxonomy',
+        'settings' => array(
+          'field_delimiter' => '',
+          'linked_field' => array(
+            'advanced' => array(
+              'class' => '',
+              'rel' => '',
+              'target' => '',
+              'text' => '',
+              'title' => '',
+            ),
+            'destination' => '',
+            'linked' => 0,
+          ),
+        ),
+        'type' => 'taxonomy_term_reference_plain',
+        'weight' => 2,
+      ),
+    ),
+    'ds_extras_field_template' => '',
+    'entity_type' => 'paragraphs_item',
+    'field_name' => 'field_para_header_options',
+    'label' => 'Header Options',
+    'required' => 0,
+    'settings' => array(
+      'description_display' => 'after',
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'options',
+      'settings' => array(
+        'apply_chosen' => '',
+      ),
+      'type' => 'options_select',
+      'weight' => 6,
+    ),
+  );
+
+  // Exported field_instance:
   // 'paragraphs_item-long_form_header-field_para_header_subtitle'
   $field_instances['paragraphs_item-long_form_header-field_para_header_subtitle'] = array(
     'bundle' => 'long_form_header',
@@ -1190,10 +1241,24 @@ function gie_microsite_field_default_field_instances() {
     'description' => '',
     'display' => array(
       'default' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 3,
+        'label' => 'hidden',
+        'module' => 'text',
+        'settings' => array(
+          'field_delimiter' => '',
+          'linked_field' => array(
+            'advanced' => array(
+              'class' => '',
+              'rel' => '',
+              'target' => '',
+              'text' => '',
+              'title' => '',
+            ),
+            'destination' => '',
+            'linked' => 0,
+          ),
+        ),
+        'type' => 'text_default',
+        'weight' => 4,
       ),
     ),
     'ds_extras_field_template' => '',
@@ -1266,10 +1331,24 @@ function gie_microsite_field_default_field_instances() {
     'description' => '',
     'display' => array(
       'default' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 2,
+        'label' => 'hidden',
+        'module' => 'text',
+        'settings' => array(
+          'field_delimiter' => '',
+          'linked_field' => array(
+            'advanced' => array(
+              'class' => '',
+              'rel' => '',
+              'target' => '',
+              'text' => '',
+              'title' => '',
+            ),
+            'destination' => '',
+            'linked' => 0,
+          ),
+        ),
+        'type' => 'text_default',
+        'weight' => 5,
       ),
     ),
     'ds_extras_field_template' => '',
@@ -2233,6 +2312,165 @@ function gie_microsite_field_default_field_instances() {
   );
 
   // Exported field_instance:
+  // 'paragraphs_item-microsite_highlight-field_para_highlight_image'
+  $field_instances['paragraphs_item-microsite_highlight-field_para_highlight_image'] = array(
+    'bundle' => 'microsite_highlight',
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'hidden',
+        'module' => 'image',
+        'settings' => array(
+          'field_delimiter' => '',
+          'image_link' => '',
+          'image_style' => '',
+          'linked_field' => array(
+            'advanced' => array(
+              'class' => '',
+              'rel' => '',
+              'target' => '',
+              'text' => '',
+              'title' => '',
+            ),
+            'destination' => '',
+            'linked' => 0,
+          ),
+        ),
+        'type' => 'image',
+        'weight' => 1,
+      ),
+    ),
+    'ds_extras_field_template' => '',
+    'entity_type' => 'paragraphs_item',
+    'field_name' => 'field_para_highlight_image',
+    'label' => 'Image',
+    'required' => 0,
+    'settings' => array(
+      'alt_field' => 0,
+      'alt_field_default' => '',
+      'alt_field_hide' => 0,
+      'alt_field_sync_title' => 0,
+      'alt_field_update_on_edit' => 0,
+      'default_image' => 0,
+      'description_display' => 'after',
+      'file_directory' => '',
+      'file_extensions' => 'png gif jpg jpeg',
+      'focus' => 0,
+      'focus_lock_ratio' => 0,
+      'focus_min_size' => '',
+      'max_filesize' => '',
+      'max_resolution' => '',
+      'min_resolution' => '',
+      'random_default' => 0,
+      'random_default_path' => '',
+      'title_field' => 0,
+      'title_field_default' => '',
+      'title_field_hide' => 0,
+      'title_field_update_on_edit' => 0,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'image',
+      'settings' => array(
+        'preview_image_style' => 'thumbnail',
+        'progress_indicator' => 'throbber',
+      ),
+      'type' => 'image_image',
+      'weight' => 1,
+    ),
+  );
+
+  // Exported field_instance:
+  // 'paragraphs_item-microsite_highlight-field_para_highlight_text'
+  $field_instances['paragraphs_item-microsite_highlight-field_para_highlight_text'] = array(
+    'bundle' => 'microsite_highlight',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'hidden',
+        'module' => 'text',
+        'settings' => array(
+          'field_delimiter' => '',
+          'linked_field' => array(
+            'advanced' => array(
+              'class' => '',
+              'rel' => '',
+              'target' => '',
+              'text' => '',
+              'title' => '',
+            ),
+            'destination' => '',
+            'linked' => 0,
+          ),
+        ),
+        'type' => 'text_default',
+        'weight' => 2,
+      ),
+    ),
+    'ds_extras_field_template' => '',
+    'entity_type' => 'paragraphs_item',
+    'field_name' => 'field_para_highlight_text',
+    'label' => 'Text',
+    'required' => 0,
+    'settings' => array(
+      'better_formats' => array(
+        'allowed_formats' => array(
+          'comments_filtered' => 0,
+          'filtered_html' => 0,
+          'full_html' => 0,
+          'long_form_filtered' => 0,
+          'long_form_full' => 'long_form_full',
+          'plain_text' => 'plain_text',
+        ),
+        'allowed_formats_toggle' => 1,
+        'default_order_toggle' => 0,
+        'default_order_wrapper' => array(
+          'formats' => array(
+            'comments_filtered' => array(
+              'weight' => 0,
+            ),
+            'filtered_html' => array(
+              'weight' => 0,
+            ),
+            'full_html' => array(
+              'weight' => 1,
+            ),
+            'long_form_filtered' => array(
+              'weight' => 0,
+            ),
+            'long_form_full' => array(
+              'weight' => 0,
+            ),
+            'plain_text' => array(
+              'weight' => 10,
+            ),
+          ),
+        ),
+      ),
+      'description_display' => 'after',
+      'text_processing' => 1,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'text',
+      'settings' => array(
+        'maxlength_js' => '',
+        'maxlength_js_enforce' => 0,
+        'maxlength_js_label' => 'Content limited to @limit characters, remaining: <strong>@remaining</strong>',
+        'maxlength_js_truncate_html' => 0,
+        'rows' => 5,
+      ),
+      'type' => 'text_textarea',
+      'weight' => 2,
+    ),
+  );
+
+  // Exported field_instance:
   // 'paragraphs_item-microsite_news_slider-field_para_slider_content'
   $field_instances['paragraphs_item-microsite_news_slider-field_para_slider_content'] = array(
     'bundle' => 'microsite_news_slider',
@@ -2643,6 +2881,101 @@ function gie_microsite_field_default_field_instances() {
       ),
       'type' => 'options_select',
       'weight' => 1,
+    ),
+  );
+
+  // Exported field_instance:
+  // 'paragraphs_item-microsite_text-field_para_text_orientation'
+  $field_instances['paragraphs_item-microsite_text-field_para_text_orientation'] = array(
+    'bundle' => 'microsite_text',
+    'default_value' => array(
+      0 => array(
+        'value' => 'default',
+      ),
+    ),
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'center_aligned' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 2,
+      ),
+      'default' => array(
+        'label' => 'above',
+        'module' => 'view_mode_selector',
+        'settings' => array(
+          'field_delimiter' => '',
+          'linked_field' => array(
+            'advanced' => array(
+              'class' => '',
+              'rel' => '',
+              'target' => '',
+              'text' => '',
+              'title' => '',
+            ),
+            'destination' => '',
+            'linked' => 0,
+          ),
+        ),
+        'type' => 'view_mode_selector',
+        'weight' => 2,
+      ),
+      'left_aligned' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 1,
+      ),
+      'view_mode_selector' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'ds_extras_field_template' => '',
+    'entity_type' => 'paragraphs_item',
+    'field_name' => 'field_para_text_orientation',
+    'label' => 'Text Orientation',
+    'required' => 0,
+    'settings' => array(
+      'description_display' => 'after',
+      'user_register_form' => FALSE,
+      'view_modes' => array(
+        'center_aligned' => array(
+          'enable' => 1,
+        ),
+        'default' => array(
+          'enable' => 0,
+        ),
+        'full' => array(
+          'enable' => 0,
+        ),
+        'left_aligned' => array(
+          'enable' => 1,
+        ),
+        'left_image' => array(
+          'enable' => 0,
+        ),
+        'paragraphs_editor_preview' => array(
+          'enable' => 0,
+        ),
+        'right_image' => array(
+          'enable' => 0,
+        ),
+        'token' => array(
+          'enable' => 0,
+        ),
+      ),
+    ),
+    'widget' => array(
+      'active' => 0,
+      'module' => 'view_mode_selector',
+      'settings' => array(),
+      'type' => 'view_mode_selector_select',
+      'weight' => 2,
     ),
   );
 
@@ -3241,6 +3574,82 @@ function gie_microsite_field_default_field_instances() {
     ),
   );
 
+  // Exported field_instance:
+  // 'taxonomy_term-microsite_header_options-description_field'
+  $field_instances['taxonomy_term-microsite_header_options-description_field'] = array(
+    'bundle' => 'microsite_header_options',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 1,
+      ),
+    ),
+    'entity_type' => 'taxonomy_term',
+    'field_name' => 'description_field',
+    'label' => 'Description',
+    'required' => FALSE,
+    'settings' => array(
+      'display_summary' => 0,
+      'hide_label' => array(
+        'entity' => 0,
+        'page' => 0,
+      ),
+      'text_processing' => 1,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'module' => 'text',
+      'settings' => array(
+        'rows' => 20,
+        'summary_rows' => 5,
+      ),
+      'type' => 'text_textarea_with_summary',
+      'weight' => -5,
+    ),
+  );
+
+  // Exported field_instance:
+  // 'taxonomy_term-microsite_header_options-name_field'
+  $field_instances['taxonomy_term-microsite_header_options-name_field'] = array(
+    'bundle' => 'microsite_header_options',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'taxonomy_term',
+    'field_name' => 'name_field',
+    'label' => 'Name',
+    'required' => TRUE,
+    'settings' => array(
+      'hide_label' => array(
+        'entity' => 0,
+        'page' => 0,
+      ),
+      'text_processing' => 0,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'module' => 'text',
+      'settings' => array(
+        'size' => 60,
+      ),
+      'type' => 'text_textfield',
+      'weight' => -5,
+    ),
+  );
+
   // Exported field_instance: 'taxonomy_term-text_orientation-description_field'
   $field_instances['taxonomy_term-text_orientation-description_field'] = array(
     'bundle' => 'text_orientation',
@@ -3326,6 +3735,7 @@ function gie_microsite_field_default_field_instances() {
   t('Callout Text');
   t('Description');
   t('Featured Content');
+  t('Header Options');
   t('Image');
   t('Microsite Footer Desc');
   t('Microsite Footer Title');
@@ -3339,6 +3749,7 @@ function gie_microsite_field_default_field_instances() {
   t('Style');
   t('Subtitle');
   t('Text');
+  t('Text Orientation');
   t('Title');
   t('Title #1');
   t('Title #2');

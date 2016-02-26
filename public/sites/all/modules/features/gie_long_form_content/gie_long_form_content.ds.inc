@@ -427,10 +427,31 @@ function gie_long_form_content_ds_field_settings_info() {
   $ds_fieldsetting->bundle = 'long_form_header';
   $ds_fieldsetting->view_mode = 'default';
   $ds_fieldsetting->settings = array(
-    'microsite_header_image' => array(
-      'weight' => '0',
-      'label' => 'hidden',
-      'format' => 'default',
+    'field_para_header_subtitle' => array(
+      'formatter_settings' => array(
+        'ft' => array(
+          'func' => 'theme_ds_field_expert',
+          'fis' => TRUE,
+          'fis-el' => 'div',
+          'fis-cl' => '',
+          'fis-at' => 'microsite-header__subtext',
+          'fis-def-at' => FALSE,
+        ),
+      ),
+    ),
+    'field_para_header_title' => array(
+      'formatter_settings' => array(
+        'ft' => array(
+          'func' => 'theme_ds_field_expert',
+          'fi' => TRUE,
+          'fi-el' => 'div',
+          'fi-cl' => 'microsite-header__headline',
+          'fi-at' => '',
+          'fi-def-at' => FALSE,
+          'fi-odd-even' => FALSE,
+          'fi-first-last' => FALSE,
+        ),
+      ),
     ),
   );
   $export['paragraphs_item|long_form_header|default'] = $ds_fieldsetting;
