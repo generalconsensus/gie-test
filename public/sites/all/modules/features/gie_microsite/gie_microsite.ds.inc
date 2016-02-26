@@ -200,6 +200,30 @@ function gie_microsite_ds_field_settings_info() {
 
   $ds_fieldsetting = new stdClass();
   $ds_fieldsetting->api_version = 1;
+  $ds_fieldsetting->id = 'paragraphs_item|microsite_highlight|default';
+  $ds_fieldsetting->entity_type = 'paragraphs_item';
+  $ds_fieldsetting->bundle = 'microsite_highlight';
+  $ds_fieldsetting->view_mode = 'default';
+  $ds_fieldsetting->settings = array(
+    'field_para_highlight_text' => array(
+      'formatter_settings' => array(
+        'ft' => array(
+          'func' => 'theme_ds_field_expert',
+          'fi' => TRUE,
+          'fi-el' => 'div',
+          'fi-cl' => 'microsite-highlight__text',
+          'fi-at' => '',
+          'fi-def-at' => FALSE,
+          'fi-odd-even' => FALSE,
+          'fi-first-last' => FALSE,
+        ),
+      ),
+    ),
+  );
+  $export['paragraphs_item|microsite_highlight|default'] = $ds_fieldsetting;
+
+  $ds_fieldsetting = new stdClass();
+  $ds_fieldsetting->api_version = 1;
   $ds_fieldsetting->id = 'paragraphs_item|microsite_news_slider|default';
   $ds_fieldsetting->entity_type = 'paragraphs_item';
   $ds_fieldsetting->bundle = 'microsite_news_slider';
@@ -532,24 +556,34 @@ function gie_microsite_ds_layout_settings_info() {
   $ds_layout->entity_type = 'paragraphs_item';
   $ds_layout->bundle = 'long_form_header';
   $ds_layout->view_mode = 'default';
-  $ds_layout->layout = 'ds_reset';
+  $ds_layout->layout = 'microsite_header';
   $ds_layout->settings = array(
     'regions' => array(
-      'ds_content' => array(
-        0 => 'microsite_header_image',
+      'main_content' => array(
+        0 => 'group_text_wrapper',
+        1 => 'field_para_header_image',
+        2 => 'field_para_header_options',
+        3 => 'field_para_header_subtitle',
+        4 => 'field_para_header_title',
+        5 => 'group_header_text',
       ),
     ),
     'fields' => array(
-      'microsite_header_image' => 'ds_content',
+      'group_text_wrapper' => 'main_content',
+      'field_para_header_image' => 'main_content',
+      'field_para_header_options' => 'main_content',
+      'field_para_header_subtitle' => 'main_content',
+      'field_para_header_title' => 'main_content',
+      'group_header_text' => 'main_content',
     ),
     'classes' => array(),
     'wrappers' => array(
-      'ds_content' => 'div',
+      'main_content' => 'div',
     ),
     'layout_wrapper' => 'div',
     'layout_attributes' => '',
-    'layout_attributes_merge' => TRUE,
-    'layout_link_attribute' => FALSE,
+    'layout_attributes_merge' => 1,
+    'layout_link_attribute' => '',
     'layout_link_custom' => '',
   );
   $export['paragraphs_item|long_form_header|default'] = $ds_layout;
@@ -667,6 +701,40 @@ function gie_microsite_ds_layout_settings_info() {
     'layout_link_custom' => '',
   );
   $export['paragraphs_item|microsite_callout_card|callout_3'] = $ds_layout;
+
+  $ds_layout = new stdClass();
+  $ds_layout->api_version = 1;
+  $ds_layout->id = 'paragraphs_item|microsite_highlight|default';
+  $ds_layout->entity_type = 'paragraphs_item';
+  $ds_layout->bundle = 'microsite_highlight';
+  $ds_layout->view_mode = 'default';
+  $ds_layout->layout = 'microsite_highlight';
+  $ds_layout->settings = array(
+    'regions' => array(
+      'main_content' => array(
+        0 => 'group_text_wrapper',
+        1 => 'field_para_highlight_image',
+        2 => 'field_para_highlight_text',
+        3 => 'group_text',
+      ),
+    ),
+    'fields' => array(
+      'group_text_wrapper' => 'main_content',
+      'field_para_highlight_image' => 'main_content',
+      'field_para_highlight_text' => 'main_content',
+      'group_text' => 'main_content',
+    ),
+    'classes' => array(),
+    'wrappers' => array(
+      'main_content' => 'div',
+    ),
+    'layout_wrapper' => 'div',
+    'layout_attributes' => '',
+    'layout_attributes_merge' => 1,
+    'layout_link_attribute' => '',
+    'layout_link_custom' => '',
+  );
+  $export['paragraphs_item|microsite_highlight|default'] = $ds_layout;
 
   $ds_layout = new stdClass();
   $ds_layout->api_version = 1;

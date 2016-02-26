@@ -404,36 +404,6 @@ function gie_long_form_content_field_group_info() {
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
   $field_group->api_version = 1;
-  $field_group->identifier = 'group_header|paragraphs_item|long_form_header|default';
-  $field_group->group_name = 'group_header';
-  $field_group->entity_type = 'paragraphs_item';
-  $field_group->bundle = 'long_form_header';
-  $field_group->mode = 'default';
-  $field_group->parent_name = '';
-  $field_group->data = array(
-    'label' => 'Header',
-    'weight' => '1',
-    'children' => array(),
-    'format_type' => 'div',
-    'format_settings' => array(
-      'label' => 'Header',
-      'instance_settings' => array(
-        'id' => '',
-        'classes' => 'page-header component',
-        'description' => '',
-        'show_label' => '0',
-        'label_element' => 'h3',
-        'effect' => 'none',
-        'speed' => 'none',
-      ),
-      'formatter' => 'open',
-    ),
-  );
-  $export['group_header|paragraphs_item|long_form_header|default'] = $field_group;
-
-  $field_group = new stdClass();
-  $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
-  $field_group->api_version = 1;
   $field_group->identifier = 'group_image|paragraphs_item|long_form_image|default';
   $field_group->group_name = 'group_image';
   $field_group->entity_type = 'paragraphs_item';
