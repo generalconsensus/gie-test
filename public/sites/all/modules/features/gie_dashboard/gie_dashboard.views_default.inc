@@ -198,6 +198,15 @@ function gie_dashboard_views_default_views() {
   $handler->display->display_options['pager']['type'] = 'some';
   $handler->display->display_options['pager']['options']['items_per_page'] = '8';
   $handler->display->display_options['pager']['options']['offset'] = '0';
+  $handler->display->display_options['defaults']['header'] = FALSE;
+  /* Header: Global: Text area */
+  $handler->display->display_options['header']['area']['id'] = 'area';
+  $handler->display->display_options['header']['area']['table'] = 'views';
+  $handler->display->display_options['header']['area']['field'] = 'area';
+  $handler->display->display_options['header']['area']['label'] = 'Funding Recommended for You';
+  $handler->display->display_options['header']['area']['empty'] = TRUE;
+  $handler->display->display_options['header']['area']['content'] = '<div class="dashboard-revamp-title">Funding Recommended for You<hr></div>';
+  $handler->display->display_options['header']['area']['format'] = 'full_html';
   $handler->display->display_options['defaults']['empty'] = FALSE;
   /* No results behavior: Global: Text area */
   $handler->display->display_options['empty']['area']['id'] = 'area';
@@ -258,13 +267,6 @@ function gie_dashboard_views_default_views() {
     'funding' => 'funding',
   );
   $handler->display->display_options['filters']['type']['group'] = 1;
-  /* Filter criterion: Content: Deadlines (field_funding_deadline) */
-  $handler->display->display_options['filters']['field_funding_deadline_value']['id'] = 'field_funding_deadline_value';
-  $handler->display->display_options['filters']['field_funding_deadline_value']['table'] = 'field_data_field_funding_deadline';
-  $handler->display->display_options['filters']['field_funding_deadline_value']['field'] = 'field_funding_deadline_value';
-  $handler->display->display_options['filters']['field_funding_deadline_value']['operator'] = '>=';
-  $handler->display->display_options['filters']['field_funding_deadline_value']['group'] = 1;
-  $handler->display->display_options['filters']['field_funding_deadline_value']['default_date'] = 'now';
 
   /* Display: Follow Content */
   $handler = $view->new_display('panel_pane', 'Follow Content', 'panel_pane_1');
@@ -826,8 +828,8 @@ function gie_dashboard_views_default_views() {
     'title' => 'title',
     'field_funding_type' => 'field_funding_type',
     'field_funding_grant_award_value' => 'field_funding_grant_award_value',
-    'field_funding_link' => 'field_funding_link',
     'field_funding_deadline' => 'field_funding_deadline',
+    'field_funding_link' => 'field_funding_link',
   );
   $handler->display->display_options['style_options']['default'] = '-1';
   $handler->display->display_options['style_options']['info'] = array(
@@ -850,14 +852,14 @@ function gie_dashboard_views_default_views() {
       'separator' => '',
       'empty_column' => 0,
     ),
-    'field_funding_link' => array(
+    'field_funding_deadline' => array(
       'sortable' => 0,
       'default_sort_order' => 'asc',
       'align' => '',
       'separator' => '',
       'empty_column' => 0,
     ),
-    'field_funding_deadline' => array(
+    'field_funding_link' => array(
       'sortable' => 0,
       'default_sort_order' => 'asc',
       'align' => '',
@@ -868,15 +870,23 @@ function gie_dashboard_views_default_views() {
   $handler->display->display_options['defaults']['style_options'] = FALSE;
   $handler->display->display_options['defaults']['row_plugin'] = FALSE;
   $handler->display->display_options['defaults']['row_options'] = FALSE;
+  $handler->display->display_options['defaults']['header'] = FALSE;
+  /* Header: Global: Text area */
+  $handler->display->display_options['header']['area']['id'] = 'area';
+  $handler->display->display_options['header']['area']['table'] = 'views';
+  $handler->display->display_options['header']['area']['field'] = 'area';
+  $handler->display->display_options['header']['area']['label'] = 'Your Funding Opportunities';
+  $handler->display->display_options['header']['area']['empty'] = TRUE;
+  $handler->display->display_options['header']['area']['content'] = '<div class="dashboard-revamp-title">Your Funding Opportunities<hr></div>';
+  $handler->display->display_options['header']['area']['format'] = 'full_html';
   $handler->display->display_options['defaults']['footer'] = FALSE;
   /* Footer: Global: Text area */
   $handler->display->display_options['footer']['area']['id'] = 'area';
   $handler->display->display_options['footer']['area']['table'] = 'views';
   $handler->display->display_options['footer']['area']['field'] = 'area';
   $handler->display->display_options['footer']['area']['label'] = 'View Your Complete Funding History';
-  $handler->display->display_options['footer']['area']['empty'] = TRUE;
   $handler->display->display_options['footer']['area']['content'] = '<a class="button button--highlight" href="/funding">View Your Complete Funding History</a>';
-  $handler->display->display_options['footer']['area']['format'] = 'filtered_html';
+  $handler->display->display_options['footer']['area']['format'] = 'full_html';
   /* Footer: Global: View area */
   $handler->display->display_options['footer']['view']['id'] = 'view';
   $handler->display->display_options['footer']['view']['table'] = 'views';
@@ -884,6 +894,7 @@ function gie_dashboard_views_default_views() {
   $handler->display->display_options['footer']['view']['label'] = 'Funding Recommended for You';
   $handler->display->display_options['footer']['view']['empty'] = TRUE;
   $handler->display->display_options['footer']['view']['view_to_insert'] = 'dashboard:dashboard_reco';
+  $handler->display->display_options['footer']['view']['inherit_arguments'] = TRUE;
   /* Footer: Global: Text area */
   $handler->display->display_options['footer']['area_1']['id'] = 'area_1';
   $handler->display->display_options['footer']['area_1']['table'] = 'views';
@@ -891,17 +902,29 @@ function gie_dashboard_views_default_views() {
   $handler->display->display_options['footer']['area_1']['label'] = 'View all funding opportunities';
   $handler->display->display_options['footer']['area_1']['empty'] = TRUE;
   $handler->display->display_options['footer']['area_1']['content'] = '<a class="button button--highlight" href="/funding">View all funding opportunities</a>';
-  $handler->display->display_options['footer']['area_1']['format'] = 'filtered_html';
+  $handler->display->display_options['footer']['area_1']['format'] = 'full_html';
   /* Footer: Global: Text area */
   $handler->display->display_options['footer']['area_2']['id'] = 'area_2';
   $handler->display->display_options['footer']['area_2']['table'] = 'views';
   $handler->display->display_options['footer']['area_2']['field'] = 'area';
   $handler->display->display_options['footer']['area_2']['label'] = 'Funding Counts Chart';
   $handler->display->display_options['footer']['area_2']['empty'] = TRUE;
-  $handler->display->display_options['footer']['area_2']['content'] = '<div data-ng-controller="FundingCountController">
+  $handler->display->display_options['footer']['area_2']['content'] = '<div class="dashboard-revamp-title">Number of Funding Opportunities by Country<hr></div>
+<div data-ng-controller="FundingCountController">
 <bar-chart></bar-chart>
+</div>
+<div class="dashboard__funding__chart__more__link"> 
+<a class="button button--highlight" href="/data">View the GIX\'s Data</a>
 </div>';
   $handler->display->display_options['footer']['area_2']['format'] = 'full_html';
+  $handler->display->display_options['defaults']['empty'] = FALSE;
+  /* No results behavior: Global: Text area */
+  $handler->display->display_options['empty']['area']['id'] = 'area';
+  $handler->display->display_options['empty']['area']['table'] = 'views';
+  $handler->display->display_options['empty']['area']['field'] = 'area';
+  $handler->display->display_options['empty']['area']['empty'] = TRUE;
+  $handler->display->display_options['empty']['area']['content'] = 'You don\'t have any Funding Opportunities, you can create your them <a class="button button--highlight" href="/node/add/funding">here</a>';
+  $handler->display->display_options['empty']['area']['format'] = 'filtered_html';
   $handler->display->display_options['defaults']['relationships'] = FALSE;
   $handler->display->display_options['defaults']['fields'] = FALSE;
   /* Field: Content: Title */
@@ -915,7 +938,7 @@ function gie_dashboard_views_default_views() {
   $handler->display->display_options['fields']['field_funding_type']['id'] = 'field_funding_type';
   $handler->display->display_options['fields']['field_funding_type']['table'] = 'field_data_field_funding_type';
   $handler->display->display_options['fields']['field_funding_type']['field'] = 'field_funding_type';
-  $handler->display->display_options['fields']['field_funding_type']['label'] = '';
+  $handler->display->display_options['fields']['field_funding_type']['label'] = 'Type';
   $handler->display->display_options['fields']['field_funding_type']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['field_funding_type']['type'] = 'taxonomy_term_reference_plain';
   $handler->display->display_options['fields']['field_funding_type']['settings'] = array(
@@ -937,7 +960,7 @@ function gie_dashboard_views_default_views() {
   $handler->display->display_options['fields']['field_funding_grant_award_value']['id'] = 'field_funding_grant_award_value';
   $handler->display->display_options['fields']['field_funding_grant_award_value']['table'] = 'field_data_field_funding_grant_award_value';
   $handler->display->display_options['fields']['field_funding_grant_award_value']['field'] = 'field_funding_grant_award_value';
-  $handler->display->display_options['fields']['field_funding_grant_award_value']['label'] = '';
+  $handler->display->display_options['fields']['field_funding_grant_award_value']['label'] = 'Amount';
   $handler->display->display_options['fields']['field_funding_grant_award_value']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['field_funding_grant_award_value']['empty'] = '-';
   $handler->display->display_options['fields']['field_funding_grant_award_value']['hide_alter_empty'] = FALSE;
@@ -960,7 +983,7 @@ function gie_dashboard_views_default_views() {
   $handler->display->display_options['fields']['field_funding_deadline']['id'] = 'field_funding_deadline';
   $handler->display->display_options['fields']['field_funding_deadline']['table'] = 'field_data_field_funding_deadline';
   $handler->display->display_options['fields']['field_funding_deadline']['field'] = 'field_funding_deadline';
-  $handler->display->display_options['fields']['field_funding_deadline']['label'] = '';
+  $handler->display->display_options['fields']['field_funding_deadline']['label'] = 'Status';
   $handler->display->display_options['fields']['field_funding_deadline']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['field_funding_deadline']['settings'] = array(
     'format_type' => 'gie_general_slash_no_time',
@@ -1025,6 +1048,7 @@ function gie_dashboard_views_default_views() {
   $handler->display->display_options['filters']['type']['value'] = array(
     'funding' => 'funding',
   );
+  $handler->display->display_options['pane_title'] = 'Your Funding Opportunities';
   $export['dashboard'] = $view;
 
   $view = new view();

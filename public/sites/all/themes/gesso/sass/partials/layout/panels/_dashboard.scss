@@ -1,0 +1,121 @@
+// This is for use with forcing the buttons inline
+.dashboard__action_items > p > .button.button--highlight {
+  display: inherit;
+}
+// Forcing the action buttons to the right
+.dashboard__action_items > p {
+  float: right;
+}
+// Originally this looked good before I added the welcome text
+.dashboard__header_image > .profile-thumb__image--rounded > p > img {
+  float: left;
+  margin-left: 70px;
+  margin-top: 29px;
+}
+
+//
+.dashboard__action_items > p > a.button.button--highlight {
+  width: 175px;
+  margin: 23px 46px 0 0
+}
+
+// Header image made web ready
+.dashboard__header_image {
+  height: 215px;
+  background-image: url('../images/Lightbulbs-Treated.jpg');
+}
+
+// Reused styling from other part of the site
+.dashboard-revamp-title {
+  color: #565a5c;
+  font-size: 1.8em;
+  font-weight: bold;
+  -webkit-hyphens: none;
+  -moz-hyphens: none;
+  -ms-hyphens: none;
+  hyphens: none;
+  margin: 0 0 0.5em 0;
+}
+
+// Probably want to delete this since you are fond of tables
+.dashboard-revamp-title > hr {
+  margin: -2px;
+}
+
+// Could care less about color but wanted to add some 'pop' with random classes being added (See line 531 of gie_dashboard.module to see how I do it)
+.dashboard--notification__center__item__grey {
+  background-image: none;
+  background-color: rgba(105, 105, 105, 0.14902);
+  background-size: auto;
+  background-position: 50% 50%;
+  background-repeat: repeat
+}
+
+// Same as before, 'pop'
+.dashboard--notification__center__item__pink {
+
+  background-image: none;
+  background-color: rgba(214, 85, 11, 0.14902);
+  background-size: auto;
+  background-position: 50% 50%;
+  background-repeat: repeat
+}
+
+.dashboard--notification__center__item__featured {
+
+  background-image: none;
+  background-color: rgba(105, 3, 38, 0.15);
+  background-size: auto;
+  background-position: 50% 50%;
+  background-repeat: repeat
+}
+
+// This is the titling for the Exchange Form piece in the middle
+.dashboard_updates_selected {
+  display: inline;
+}
+
+// Yup, form again
+form#gie-dashboard-exchange-updates-form > .form-item-selected {
+  display: inline;
+  margin-left: 15px;
+  font-size: 1.5em;
+}
+
+// Hi, I'm the stupid list items in the notification center such as '17 people follow you'
+.dashboard-notification__center__items > ul > div > li {
+  list-style: none;
+  font-size: 1.8em;
+  padding: 5px 0 0 77px;
+  margin: 1px 1px -17px 1px;
+  white-space: normal;
+  width: 100%;
+  overflow: visible;
+  text-overflow: ellipsis;
+  height: 100%;
+}
+
+// Button at the end of the exchange form
+a.button.button--highlight.dashboard--exchange--out {
+  font-size: 1.4em;
+}
+
+// Goodnight sweet <hr> prince, Corey doesn't like you
+form#gie-dashboard-exchange-updates-form > hr {
+  margin-top: 2px;
+}
+
+// Class that affects all items
+.dashboard-notification__center__items {
+  align-items: center;
+  margin-top: 37px;
+}
+
+// Not sure what parent wrapper to use so I just added this. You can see the originally display for this set of info at localhost:8081/data
+form#gie-dashboard-exchange-updates-form > #edit-updates > .data-point {
+  display: inline-block;
+  margin: 10px 50px 25px 70px;
+  padding-bottom: 10px;
+}
+
+// Below is what took me so long in getting this to you
