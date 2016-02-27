@@ -51,14 +51,19 @@ function dashboard_whats_new_header_image_render($subtype, $conf, $panel_args, $
   $profile_uri = db_query('SELECT file_managed.uri FROM field_data_field_user_photo INNER JOIN file_managed ON file_managed.fid = field_data_field_user_photo.field_user_photo_fid WHERE field_data_field_user_photo.entity_id = :uid', array(':uid' => $user->uid))->fetchField();
 
   if (!empty($profile_uri)) {
-    $image = image_style_url('thumbnail', $profile_uri);
+    $image = image_style_url('dashboard_profile_image', $profile_uri);
   }
 
   $output = '<div class="dashboard__header_image">
     <div class="profile-thumb__image--rounded">
-        <p><img typeof="foaf:Image" width="100" height="100" alt="" src="' . (!empty($image) ? $image : '') . '"></p>
+        <p>
+           <img typeof="foaf:Image" width="150" height="150" alt="" src="' . (!empty($image) ? $image : '') . '">
+        </p>
     </div>
-<div class="dashboard__action_items"></div>
+    <div class ="dashboard__welcome_text_static">Your Exchange Dashboard</br>
+      <div class="dashboard__welcome_text_dynamic">WELCOME ' . strtoupper($user->name) . '</div>
+    </div>
+    <div class="dashboard__action_items">
     <p>
         <a class="button button--highlight" href="/user/' . $user->uid . '/edit">Update your profile</a>
         <a class="button button--highlight" href="/user">View your profile</a>

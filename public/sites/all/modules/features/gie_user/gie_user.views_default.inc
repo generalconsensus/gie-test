@@ -1177,7 +1177,7 @@ function gie_user_views_default_views() {
   /* Display: Dashboard */
   $handler = $view->new_display('panel_pane', 'Dashboard', 'panel_pane_1');
   $handler->display->display_options['defaults']['title'] = FALSE;
-  $handler->display->display_options['title'] = 'Your Innovations:';
+  $handler->display->display_options['title'] = 'Your Innovations';
   $handler->display->display_options['defaults']['pager'] = FALSE;
   $handler->display->display_options['pager']['type'] = 'some';
   $handler->display->display_options['pager']['options']['items_per_page'] = '5';
@@ -1200,35 +1200,41 @@ function gie_user_views_default_views() {
   $handler->display->display_options['defaults']['style_options'] = FALSE;
   $handler->display->display_options['defaults']['row_plugin'] = FALSE;
   $handler->display->display_options['defaults']['row_options'] = FALSE;
+  $handler->display->display_options['defaults']['header'] = FALSE;
+  /* Header: Global: Text area */
+  $handler->display->display_options['header']['area']['id'] = 'area';
+  $handler->display->display_options['header']['area']['table'] = 'views';
+  $handler->display->display_options['header']['area']['field'] = 'area';
+  $handler->display->display_options['header']['area']['label'] = 'Innovation Title and Create Innovation Button';
+  $handler->display->display_options['header']['area']['empty'] = TRUE;
+  $handler->display->display_options['header']['area']['content'] = '<div class="dashboard-revamp-title">Your Innovations</div><a class="button button--highlight" href="/node/add/innovation">Create an Innovation</a><hr>
+';
+  $handler->display->display_options['header']['area']['format'] = 'full_html';
   $handler->display->display_options['defaults']['footer'] = FALSE;
-  /* Footer: Global: Text area */
-  $handler->display->display_options['footer']['area']['id'] = 'area';
-  $handler->display->display_options['footer']['area']['table'] = 'views';
-  $handler->display->display_options['footer']['area']['field'] = 'area';
-  $handler->display->display_options['footer']['area']['label'] = 'Create an Innovation';
-  $handler->display->display_options['footer']['area']['content'] = '<a href="/node/add/innovation">Create an Innovation</a>';
-  $handler->display->display_options['footer']['area']['format'] = 'filtered_html';
   /* Footer: Global: View area */
   $handler->display->display_options['footer']['view']['id'] = 'view';
   $handler->display->display_options['footer']['view']['table'] = 'views';
   $handler->display->display_options['footer']['view']['field'] = 'view';
   $handler->display->display_options['footer']['view']['label'] = 'Innovations You Follow Embedded';
+  $handler->display->display_options['footer']['view']['empty'] = TRUE;
   $handler->display->display_options['footer']['view']['view_to_insert'] = 'user_innovations:panel_pane_2';
   $handler->display->display_options['footer']['view']['inherit_arguments'] = TRUE;
-  /* Footer: Global: Text area */
-  $handler->display->display_options['footer']['area_1']['id'] = 'area_1';
-  $handler->display->display_options['footer']['area_1']['table'] = 'views';
-  $handler->display->display_options['footer']['area_1']['field'] = 'area';
-  $handler->display->display_options['footer']['area_1']['label'] = 'See all Innovations';
-  $handler->display->display_options['footer']['area_1']['content'] = '<a class="button button--highlight" href="/innovations">See all Innovations</a>';
-  $handler->display->display_options['footer']['area_1']['format'] = 'filtered_html';
   /* Footer: Global: View area */
   $handler->display->display_options['footer']['view_1']['id'] = 'view_1';
   $handler->display->display_options['footer']['view_1']['table'] = 'views';
   $handler->display->display_options['footer']['view_1']['field'] = 'view';
   $handler->display->display_options['footer']['view_1']['label'] = 'Innovations Recommended for You:';
+  $handler->display->display_options['footer']['view_1']['empty'] = TRUE;
   $handler->display->display_options['footer']['view_1']['view_to_insert'] = 'user_innovations:panel_pane_3';
   $handler->display->display_options['footer']['view_1']['inherit_arguments'] = TRUE;
+  $handler->display->display_options['defaults']['empty'] = FALSE;
+  /* No results behavior: Global: Text area */
+  $handler->display->display_options['empty']['area']['id'] = 'area';
+  $handler->display->display_options['empty']['area']['table'] = 'views';
+  $handler->display->display_options['empty']['area']['field'] = 'area';
+  $handler->display->display_options['empty']['area']['empty'] = TRUE;
+  $handler->display->display_options['empty']['area']['content'] = 'You don\'t have any innovations, you can create your own Innovations <a class="button button--highlight" href="/node/add/innovations">here</a>';
+  $handler->display->display_options['empty']['area']['format'] = 'full_html';
   $handler->display->display_options['defaults']['relationships'] = FALSE;
   /* Relationship: Flags: favorite counter */
   $handler->display->display_options['relationships']['flag_count_rel']['id'] = 'flag_count_rel';
@@ -1271,12 +1277,30 @@ function gie_user_views_default_views() {
   $handler = $view->new_display('panel_pane', 'Innovations You Follow', 'panel_pane_2');
   $handler->display->display_options['defaults']['title'] = FALSE;
   $handler->display->display_options['title'] = 'Innovations You Follow:';
+  $handler->display->display_options['defaults']['header'] = FALSE;
+  /* Header: Global: Text area */
+  $handler->display->display_options['header']['area']['id'] = 'area';
+  $handler->display->display_options['header']['area']['table'] = 'views';
+  $handler->display->display_options['header']['area']['field'] = 'area';
+  $handler->display->display_options['header']['area']['label'] = 'Innovations You Follow';
+  $handler->display->display_options['header']['area']['empty'] = TRUE;
+  $handler->display->display_options['header']['area']['content'] = '<div class="dashboard-revamp-title">Innovations You Follow<hr></div>';
+  $handler->display->display_options['header']['area']['format'] = 'full_html';
+  $handler->display->display_options['defaults']['empty'] = FALSE;
+  /* No results behavior: Global: Text area */
+  $handler->display->display_options['empty']['area']['id'] = 'area';
+  $handler->display->display_options['empty']['area']['table'] = 'views';
+  $handler->display->display_options['empty']['area']['field'] = 'area';
+  $handler->display->display_options['empty']['area']['empty'] = TRUE;
+  $handler->display->display_options['empty']['area']['content'] = 'You aren\'t following any Innovations, you can follow them here <a class="button button--highlight" href="/innovations">here</a>';
+  $handler->display->display_options['empty']['area']['format'] = 'full_html';
   $handler->display->display_options['defaults']['relationships'] = FALSE;
   /* Relationship: Flags: favorite */
   $handler->display->display_options['relationships']['flag_content_rel']['id'] = 'flag_content_rel';
   $handler->display->display_options['relationships']['flag_content_rel']['table'] = 'node';
   $handler->display->display_options['relationships']['flag_content_rel']['field'] = 'flag_content_rel';
   $handler->display->display_options['relationships']['flag_content_rel']['flag'] = 'favorite';
+  $handler->display->display_options['relationships']['flag_content_rel']['user_scope'] = 'any';
   $handler->display->display_options['defaults']['arguments'] = FALSE;
   /* Contextual filter: Content: Author uid */
   $handler->display->display_options['arguments']['uid']['id'] = 'uid';
@@ -1302,6 +1326,23 @@ function gie_user_views_default_views() {
   $handler = $view->new_display('panel_pane', 'Innovations Recommended', 'panel_pane_3');
   $handler->display->display_options['defaults']['title'] = FALSE;
   $handler->display->display_options['title'] = 'Innovations Recommended for You:';
+  $handler->display->display_options['defaults']['header'] = FALSE;
+  /* Header: Global: Text area */
+  $handler->display->display_options['header']['area']['id'] = 'area';
+  $handler->display->display_options['header']['area']['table'] = 'views';
+  $handler->display->display_options['header']['area']['field'] = 'area';
+  $handler->display->display_options['header']['area']['label'] = 'Innovations Recommended for You';
+  $handler->display->display_options['header']['area']['empty'] = TRUE;
+  $handler->display->display_options['header']['area']['content'] = '<div class="dashboard-revamp-title">Innovations Recommended for You<hr></div>';
+  $handler->display->display_options['header']['area']['format'] = 'full_html';
+  $handler->display->display_options['defaults']['empty'] = FALSE;
+  /* No results behavior: Global: Text area */
+  $handler->display->display_options['empty']['area']['id'] = 'area';
+  $handler->display->display_options['empty']['area']['table'] = 'views';
+  $handler->display->display_options['empty']['area']['field'] = 'area';
+  $handler->display->display_options['empty']['area']['empty'] = TRUE;
+  $handler->display->display_options['empty']['area']['content'] = 'We couldn\'t find a match for you based on your skillset. Make sure you have topics of interest added to your account  <a class="button button--highlight" href="/user">here</a>';
+  $handler->display->display_options['empty']['area']['format'] = 'full_html';
   $handler->display->display_options['defaults']['relationships'] = FALSE;
   /* Relationship: Content: Topic (field_term_topic) */
   $handler->display->display_options['relationships']['field_term_topic_tid']['id'] = 'field_term_topic_tid';
