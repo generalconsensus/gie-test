@@ -412,6 +412,92 @@ function gie_innovation_field_default_field_instances() {
     ),
   );
 
+  // Exported field_instance: 'node-innovation-field_featured_innovation'
+  $field_instances['node-innovation-field_featured_innovation'] = array(
+    'bundle' => 'innovation',
+    'default_value' => array(
+      0 => array(
+        'value' => 0,
+      ),
+    ),
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'at_a_glance' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'contact' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'default' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 52,
+      ),
+      'full' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'highlights' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'listing' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'search_listing' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'teaser_date' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'ds_extras_field_template' => '',
+    'entity_type' => 'node',
+    'field_name' => 'field_featured_innovation',
+    'label' => 'Featured Innovation',
+    'required' => 0,
+    'settings' => array(
+      'description_display' => 'after',
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'options',
+      'settings' => array(
+        'display_label' => 1,
+      ),
+      'type' => 'options_onoff',
+      'weight' => 13,
+    ),
+  );
+
   // Exported field_instance: 'node-innovation-field_innovation_address'
   $field_instances['node-innovation-field_innovation_address'] = array(
     'bundle' => 'innovation',
@@ -5664,6 +5750,80 @@ Using the selector below, highlight the area of the image you would like to feat
     ),
   );
 
+  // Exported field_instance: 'taxonomy_term-comment_type-description_field'
+  $field_instances['taxonomy_term-comment_type-description_field'] = array(
+    'bundle' => 'comment_type',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 1,
+      ),
+    ),
+    'entity_type' => 'taxonomy_term',
+    'field_name' => 'description_field',
+    'label' => 'Description',
+    'required' => FALSE,
+    'settings' => array(
+      'display_summary' => 0,
+      'hide_label' => array(
+        'entity' => 0,
+        'page' => 0,
+      ),
+      'text_processing' => 1,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'module' => 'text',
+      'settings' => array(
+        'rows' => 20,
+        'summary_rows' => 5,
+      ),
+      'type' => 'text_textarea_with_summary',
+      'weight' => -5,
+    ),
+  );
+
+  // Exported field_instance: 'taxonomy_term-comment_type-name_field'
+  $field_instances['taxonomy_term-comment_type-name_field'] = array(
+    'bundle' => 'comment_type',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'taxonomy_term',
+    'field_name' => 'name_field',
+    'label' => 'Name',
+    'required' => TRUE,
+    'settings' => array(
+      'hide_label' => array(
+        'entity' => 0,
+        'page' => 0,
+      ),
+      'text_processing' => 0,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'module' => 'text',
+      'settings' => array(
+        'size' => 60,
+      ),
+      'type' => 'text_textfield',
+      'weight' => -5,
+    ),
+  );
+
   // Exported field_instance: 'taxonomy_term-innovation_stage-description_field'
   $field_instances['taxonomy_term-innovation_stage-description_field'] = array(
     'bundle' => 'innovation_stage',
@@ -5979,6 +6139,7 @@ Using the selector below, highlight the area of the image you would like to feat
   t('Evidence it Works');
   t('Exchange References');
   t('Featured Image');
+  t('Featured Innovation');
   t('First Name');
   t('From the drop down list, pick as many types as apply to your innovation.');
   t('Funded By');

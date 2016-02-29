@@ -4,6 +4,7 @@ description = API to access statistics from the <a href="https://developers.goog
 core = 7.x
 
 files[] = google_analytics_reports_api.lib.inc
+files[] = google_analytics_reports_api.admin.inc
 
 configure = admin/config/system/google-analytics-reports-api
 

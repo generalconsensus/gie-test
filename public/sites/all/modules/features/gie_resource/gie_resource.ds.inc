@@ -68,11 +68,6 @@ function gie_resource_ds_field_settings_info() {
   $ds_fieldsetting->bundle = 'resource';
   $ds_fieldsetting->view_mode = 'full';
   $ds_fieldsetting->settings = array(
-    'comments' => array(
-      'weight' => '4',
-      'label' => 'hidden',
-      'format' => 'default',
-    ),
     'field_resource_assets' => array(
       'formatter_settings' => array(
         'ft' => array(
@@ -409,19 +404,15 @@ function gie_resource_ds_layout_settings_info() {
   $ds_layout->settings = array(
     'regions' => array(
       'ds_content' => array(
-        0 => 'sharethis',
-        1 => 'field_resource_desc',
-        2 => 'field_resource_assets',
-        3 => 'field_resource_link',
-        4 => 'comments',
+        0 => 'field_resource_desc',
+        1 => 'field_resource_assets',
+        2 => 'field_resource_link',
       ),
     ),
     'fields' => array(
-      'sharethis' => 'ds_content',
       'field_resource_desc' => 'ds_content',
       'field_resource_assets' => 'ds_content',
       'field_resource_link' => 'ds_content',
-      'comments' => 'ds_content',
     ),
     'classes' => array(),
     'wrappers' => array(

@@ -391,7 +391,38 @@ function gie_user_views_default_views() {
   $handler->display->display_options['use_more_always'] = FALSE;
   $handler->display->display_options['access']['type'] = 'perm';
   $handler->display->display_options['access']['perm'] = 'access comments';
-  $handler->display->display_options['cache']['type'] = 'none';
+  $handler->display->display_options['cache']['type'] = 'views_content_cache';
+  $handler->display->display_options['cache']['results_min_lifespan'] = '300';
+  $handler->display->display_options['cache']['results_max_lifespan'] = '21600';
+  $handler->display->display_options['cache']['output_min_lifespan'] = '300';
+  $handler->display->display_options['cache']['output_max_lifespan'] = '21600';
+  $handler->display->display_options['cache']['keys'] = array(
+    'comment' => array(
+      'changed' => 'changed',
+    ),
+    'node' => array(
+      'funding' => 'funding',
+      'innovation' => 'innovation',
+      'resource' => 'resource',
+      'action_card' => 0,
+      'article' => 0,
+      'page' => 0,
+      'discussion' => 0,
+      'error_page' => 0,
+      'event' => 0,
+      'homepage' => 0,
+      'long_form_page' => 0,
+      'microsite' => 0,
+      'microsite_page' => 0,
+      'needs' => 0,
+      'organization' => 0,
+      'persona' => 0,
+      'program' => 0,
+    ),
+    'node_only' => array(
+      'node_changed' => 'node_changed',
+    ),
+  );
   $handler->display->display_options['query']['type'] = 'views_query';
   $handler->display->display_options['exposed_form']['type'] = 'basic';
   $handler->display->display_options['pager']['type'] = 'some';
@@ -539,7 +570,38 @@ function gie_user_views_default_views() {
   $handler->display->display_options['hide_admin_links'] = TRUE;
   $handler->display->display_options['use_more_always'] = FALSE;
   $handler->display->display_options['access']['type'] = 'perm';
-  $handler->display->display_options['cache']['type'] = 'none';
+  $handler->display->display_options['cache']['type'] = 'views_content_cache';
+  $handler->display->display_options['cache']['results_min_lifespan'] = '300';
+  $handler->display->display_options['cache']['results_max_lifespan'] = '21600';
+  $handler->display->display_options['cache']['output_min_lifespan'] = '300';
+  $handler->display->display_options['cache']['output_max_lifespan'] = '21600';
+  $handler->display->display_options['cache']['keys'] = array(
+    'comment' => array(
+      'changed' => 'changed',
+    ),
+    'node' => array(
+      'funding' => 'funding',
+      'innovation' => 'innovation',
+      'resource' => 'resource',
+      'action_card' => 0,
+      'article' => 0,
+      'page' => 0,
+      'discussion' => 0,
+      'error_page' => 0,
+      'event' => 0,
+      'homepage' => 0,
+      'long_form_page' => 0,
+      'microsite' => 0,
+      'microsite_page' => 0,
+      'needs' => 0,
+      'organization' => 0,
+      'persona' => 0,
+      'program' => 0,
+    ),
+    'node_only' => array(
+      'node_changed' => 'node_changed',
+    ),
+  );
   $handler->display->display_options['query']['type'] = 'views_query';
   $handler->display->display_options['exposed_form']['type'] = 'basic';
   $handler->display->display_options['pager']['type'] = 'full';
@@ -826,7 +888,38 @@ function gie_user_views_default_views() {
   $handler->display->display_options['hide_admin_links'] = TRUE;
   $handler->display->display_options['use_more_always'] = FALSE;
   $handler->display->display_options['access']['type'] = 'perm';
-  $handler->display->display_options['cache']['type'] = 'none';
+  $handler->display->display_options['cache']['type'] = 'views_content_cache';
+  $handler->display->display_options['cache']['results_min_lifespan'] = '300';
+  $handler->display->display_options['cache']['results_max_lifespan'] = '21600';
+  $handler->display->display_options['cache']['output_min_lifespan'] = '300';
+  $handler->display->display_options['cache']['output_max_lifespan'] = '21600';
+  $handler->display->display_options['cache']['keys'] = array(
+    'comment' => array(
+      'changed' => 'changed',
+    ),
+    'node' => array(
+      'organization' => 'organization',
+      'action_card' => 0,
+      'article' => 0,
+      'page' => 0,
+      'discussion' => 0,
+      'error_page' => 0,
+      'event' => 0,
+      'funding' => 0,
+      'homepage' => 0,
+      'innovation' => 0,
+      'long_form_page' => 0,
+      'microsite' => 0,
+      'microsite_page' => 0,
+      'needs' => 0,
+      'persona' => 0,
+      'program' => 0,
+      'resource' => 0,
+    ),
+    'node_only' => array(
+      'node_changed' => 'node_changed',
+    ),
+  );
   $handler->display->display_options['query']['type'] = 'views_query';
   $handler->display->display_options['query']['options']['distinct'] = TRUE;
   $handler->display->display_options['exposed_form']['type'] = 'basic';
@@ -935,7 +1028,38 @@ function gie_user_views_default_views() {
   $handler->display->display_options['hide_admin_links'] = TRUE;
   $handler->display->display_options['use_more_always'] = FALSE;
   $handler->display->display_options['access']['type'] = 'perm';
-  $handler->display->display_options['cache']['type'] = 'none';
+  $handler->display->display_options['cache']['type'] = 'views_content_cache';
+  $handler->display->display_options['cache']['results_min_lifespan'] = '300';
+  $handler->display->display_options['cache']['results_max_lifespan'] = '21600';
+  $handler->display->display_options['cache']['output_min_lifespan'] = '300';
+  $handler->display->display_options['cache']['output_max_lifespan'] = '21600';
+  $handler->display->display_options['cache']['keys'] = array(
+    'comment' => array(
+      'changed' => 'changed',
+    ),
+    'node' => array(
+      'innovation' => 'innovation',
+      'action_card' => 0,
+      'article' => 0,
+      'page' => 0,
+      'discussion' => 0,
+      'error_page' => 0,
+      'event' => 0,
+      'funding' => 0,
+      'homepage' => 0,
+      'long_form_page' => 0,
+      'microsite' => 0,
+      'microsite_page' => 0,
+      'needs' => 0,
+      'organization' => 0,
+      'persona' => 0,
+      'program' => 0,
+      'resource' => 0,
+    ),
+    'node_only' => array(
+      'node_changed' => 'node_changed',
+    ),
+  );
   $handler->display->display_options['query']['type'] = 'views_query';
   $handler->display->display_options['exposed_form']['type'] = 'basic';
   $handler->display->display_options['pager']['type'] = 'full';
@@ -976,6 +1100,16 @@ function gie_user_views_default_views() {
   $handler->display->display_options['arguments']['uid']['summary']['number_of_records'] = '0';
   $handler->display->display_options['arguments']['uid']['summary']['format'] = 'default_summary';
   $handler->display->display_options['arguments']['uid']['summary_options']['items_per_page'] = '25';
+  /* Contextual filter: Content: Innovation Team (field_innovation_team) */
+  $handler->display->display_options['arguments']['field_innovation_team_target_id']['id'] = 'field_innovation_team_target_id';
+  $handler->display->display_options['arguments']['field_innovation_team_target_id']['table'] = 'field_data_field_innovation_team';
+  $handler->display->display_options['arguments']['field_innovation_team_target_id']['field'] = 'field_innovation_team_target_id';
+  $handler->display->display_options['arguments']['field_innovation_team_target_id']['default_action'] = 'default';
+  $handler->display->display_options['arguments']['field_innovation_team_target_id']['default_argument_type'] = 'user';
+  $handler->display->display_options['arguments']['field_innovation_team_target_id']['default_argument_options']['user'] = FALSE;
+  $handler->display->display_options['arguments']['field_innovation_team_target_id']['summary']['number_of_records'] = '0';
+  $handler->display->display_options['arguments']['field_innovation_team_target_id']['summary']['format'] = 'default_summary';
+  $handler->display->display_options['arguments']['field_innovation_team_target_id']['summary_options']['items_per_page'] = '25';
   /* Filter criterion: Content: Published */
   $handler->display->display_options['filters']['status']['id'] = 'status';
   $handler->display->display_options['filters']['status']['table'] = 'node';
@@ -991,8 +1125,8 @@ function gie_user_views_default_views() {
     'innovation' => 'innovation',
   );
 
-  /* Display: Content pane */
-  $handler = $view->new_display('panel_pane', 'Content pane', 'innovations');
+  /* Display: User Profile */
+  $handler = $view->new_display('panel_pane', 'User Profile', 'innovations');
   $handler->display->display_options['defaults']['query'] = FALSE;
   $handler->display->display_options['query']['type'] = 'views_query';
   $handler->display->display_options['query']['options']['contextual_filters_or'] = TRUE;
@@ -1005,27 +1139,6 @@ function gie_user_views_default_views() {
   $handler->display->display_options['empty']['area']['content'] = 'This user has not created any innovations.';
   $handler->display->display_options['empty']['area']['format'] = 'filtered_html';
   $handler->display->display_options['defaults']['relationships'] = FALSE;
-  $handler->display->display_options['defaults']['arguments'] = FALSE;
-  /* Contextual filter: Content: Author uid */
-  $handler->display->display_options['arguments']['uid']['id'] = 'uid';
-  $handler->display->display_options['arguments']['uid']['table'] = 'node';
-  $handler->display->display_options['arguments']['uid']['field'] = 'uid';
-  $handler->display->display_options['arguments']['uid']['default_action'] = 'default';
-  $handler->display->display_options['arguments']['uid']['default_argument_type'] = 'user';
-  $handler->display->display_options['arguments']['uid']['default_argument_options']['user'] = FALSE;
-  $handler->display->display_options['arguments']['uid']['summary']['number_of_records'] = '0';
-  $handler->display->display_options['arguments']['uid']['summary']['format'] = 'default_summary';
-  $handler->display->display_options['arguments']['uid']['summary_options']['items_per_page'] = '25';
-  /* Contextual filter: Content: Innovation Team (field_innovation_team) */
-  $handler->display->display_options['arguments']['field_innovation_team_target_id']['id'] = 'field_innovation_team_target_id';
-  $handler->display->display_options['arguments']['field_innovation_team_target_id']['table'] = 'field_data_field_innovation_team';
-  $handler->display->display_options['arguments']['field_innovation_team_target_id']['field'] = 'field_innovation_team_target_id';
-  $handler->display->display_options['arguments']['field_innovation_team_target_id']['default_action'] = 'default';
-  $handler->display->display_options['arguments']['field_innovation_team_target_id']['default_argument_type'] = 'user';
-  $handler->display->display_options['arguments']['field_innovation_team_target_id']['default_argument_options']['user'] = FALSE;
-  $handler->display->display_options['arguments']['field_innovation_team_target_id']['summary']['number_of_records'] = '0';
-  $handler->display->display_options['arguments']['field_innovation_team_target_id']['summary']['format'] = 'default_summary';
-  $handler->display->display_options['arguments']['field_innovation_team_target_id']['summary_options']['items_per_page'] = '25';
   $handler->display->display_options['defaults']['filter_groups'] = FALSE;
   $handler->display->display_options['defaults']['filters'] = FALSE;
   /* Filter criterion: Content: Published */
@@ -1060,6 +1173,202 @@ function gie_user_views_default_views() {
       'label' => 'Content: Innovation Team (field_innovation_team)',
     ),
   );
+
+  /* Display: Dashboard */
+  $handler = $view->new_display('panel_pane', 'Dashboard', 'panel_pane_1');
+  $handler->display->display_options['defaults']['title'] = FALSE;
+  $handler->display->display_options['title'] = 'Your Innovations';
+  $handler->display->display_options['defaults']['pager'] = FALSE;
+  $handler->display->display_options['pager']['type'] = 'some';
+  $handler->display->display_options['pager']['options']['items_per_page'] = '5';
+  $handler->display->display_options['pager']['options']['offset'] = '0';
+  $handler->display->display_options['defaults']['style_plugin'] = FALSE;
+  $handler->display->display_options['style_plugin'] = 'table';
+  $handler->display->display_options['style_options']['columns'] = array(
+    'title' => 'title',
+  );
+  $handler->display->display_options['style_options']['default'] = '-1';
+  $handler->display->display_options['style_options']['info'] = array(
+    'title' => array(
+      'sortable' => 0,
+      'default_sort_order' => 'asc',
+      'align' => '',
+      'separator' => '',
+      'empty_column' => 0,
+    ),
+  );
+  $handler->display->display_options['defaults']['style_options'] = FALSE;
+  $handler->display->display_options['defaults']['row_plugin'] = FALSE;
+  $handler->display->display_options['defaults']['row_options'] = FALSE;
+  $handler->display->display_options['defaults']['header'] = FALSE;
+  /* Header: Global: Text area */
+  $handler->display->display_options['header']['area']['id'] = 'area';
+  $handler->display->display_options['header']['area']['table'] = 'views';
+  $handler->display->display_options['header']['area']['field'] = 'area';
+  $handler->display->display_options['header']['area']['label'] = 'Innovation Title and Create Innovation Button';
+  $handler->display->display_options['header']['area']['empty'] = TRUE;
+  $handler->display->display_options['header']['area']['content'] = '<div class="dashboard-revamp-title">Your Innovations</div><a class="button button--highlight" href="/node/add/innovation">Create an Innovation</a><hr>
+';
+  $handler->display->display_options['header']['area']['format'] = 'full_html';
+  $handler->display->display_options['defaults']['footer'] = FALSE;
+  /* Footer: Global: View area */
+  $handler->display->display_options['footer']['view']['id'] = 'view';
+  $handler->display->display_options['footer']['view']['table'] = 'views';
+  $handler->display->display_options['footer']['view']['field'] = 'view';
+  $handler->display->display_options['footer']['view']['label'] = 'Innovations You Follow Embedded';
+  $handler->display->display_options['footer']['view']['empty'] = TRUE;
+  $handler->display->display_options['footer']['view']['view_to_insert'] = 'user_innovations:panel_pane_2';
+  $handler->display->display_options['footer']['view']['inherit_arguments'] = TRUE;
+  /* Footer: Global: View area */
+  $handler->display->display_options['footer']['view_1']['id'] = 'view_1';
+  $handler->display->display_options['footer']['view_1']['table'] = 'views';
+  $handler->display->display_options['footer']['view_1']['field'] = 'view';
+  $handler->display->display_options['footer']['view_1']['label'] = 'Innovations Recommended for You:';
+  $handler->display->display_options['footer']['view_1']['empty'] = TRUE;
+  $handler->display->display_options['footer']['view_1']['view_to_insert'] = 'user_innovations:panel_pane_3';
+  $handler->display->display_options['footer']['view_1']['inherit_arguments'] = TRUE;
+  $handler->display->display_options['defaults']['empty'] = FALSE;
+  /* No results behavior: Global: Text area */
+  $handler->display->display_options['empty']['area']['id'] = 'area';
+  $handler->display->display_options['empty']['area']['table'] = 'views';
+  $handler->display->display_options['empty']['area']['field'] = 'area';
+  $handler->display->display_options['empty']['area']['empty'] = TRUE;
+  $handler->display->display_options['empty']['area']['content'] = 'You don\'t have any innovations, you can create your own Innovations <a class="button button--highlight" href="/node/add/innovations">here</a>';
+  $handler->display->display_options['empty']['area']['format'] = 'full_html';
+  $handler->display->display_options['defaults']['relationships'] = FALSE;
+  /* Relationship: Flags: favorite counter */
+  $handler->display->display_options['relationships']['flag_count_rel']['id'] = 'flag_count_rel';
+  $handler->display->display_options['relationships']['flag_count_rel']['table'] = 'node';
+  $handler->display->display_options['relationships']['flag_count_rel']['field'] = 'flag_count_rel';
+  $handler->display->display_options['relationships']['flag_count_rel']['label'] = 'counter-test-1';
+  $handler->display->display_options['relationships']['flag_count_rel']['required'] = 0;
+  $handler->display->display_options['relationships']['flag_count_rel']['flag'] = 'favorite';
+  $handler->display->display_options['defaults']['fields'] = FALSE;
+  /* Field: Content: Title */
+  $handler->display->display_options['fields']['title']['id'] = 'title';
+  $handler->display->display_options['fields']['title']['table'] = 'node';
+  $handler->display->display_options['fields']['title']['field'] = 'title';
+  $handler->display->display_options['fields']['title']['label'] = '';
+  $handler->display->display_options['fields']['title']['alter']['word_boundary'] = FALSE;
+  $handler->display->display_options['fields']['title']['alter']['ellipsis'] = FALSE;
+  /* Field: Flags: Flag counter */
+  $handler->display->display_options['fields']['count']['id'] = 'count';
+  $handler->display->display_options['fields']['count']['table'] = 'flag_counts';
+  $handler->display->display_options['fields']['count']['field'] = 'count';
+  $handler->display->display_options['fields']['count']['relationship'] = 'flag_count_rel';
+  $handler->display->display_options['fields']['count']['label'] = 'Favorites';
+  /* Field: Content: Comment count */
+  $handler->display->display_options['fields']['comment_count']['id'] = 'comment_count';
+  $handler->display->display_options['fields']['comment_count']['table'] = 'node_comment_statistics';
+  $handler->display->display_options['fields']['comment_count']['field'] = 'comment_count';
+  $handler->display->display_options['fields']['comment_count']['label'] = 'Comments';
+  $handler->display->display_options['defaults']['arguments'] = FALSE;
+  /* Contextual filter: Content: Author uid */
+  $handler->display->display_options['arguments']['uid']['id'] = 'uid';
+  $handler->display->display_options['arguments']['uid']['table'] = 'node';
+  $handler->display->display_options['arguments']['uid']['field'] = 'uid';
+  $handler->display->display_options['arguments']['uid']['default_action'] = 'default';
+  $handler->display->display_options['arguments']['uid']['default_argument_type'] = 'current_user';
+  $handler->display->display_options['arguments']['uid']['summary']['number_of_records'] = '0';
+  $handler->display->display_options['arguments']['uid']['summary']['format'] = 'default_summary';
+  $handler->display->display_options['arguments']['uid']['summary_options']['items_per_page'] = '25';
+
+  /* Display: Innovations You Follow */
+  $handler = $view->new_display('panel_pane', 'Innovations You Follow', 'panel_pane_2');
+  $handler->display->display_options['defaults']['title'] = FALSE;
+  $handler->display->display_options['title'] = 'Innovations You Follow:';
+  $handler->display->display_options['defaults']['header'] = FALSE;
+  /* Header: Global: Text area */
+  $handler->display->display_options['header']['area']['id'] = 'area';
+  $handler->display->display_options['header']['area']['table'] = 'views';
+  $handler->display->display_options['header']['area']['field'] = 'area';
+  $handler->display->display_options['header']['area']['label'] = 'Innovations You Follow';
+  $handler->display->display_options['header']['area']['empty'] = TRUE;
+  $handler->display->display_options['header']['area']['content'] = '<div class="dashboard-revamp-title">Innovations You Follow<hr></div>';
+  $handler->display->display_options['header']['area']['format'] = 'full_html';
+  $handler->display->display_options['defaults']['empty'] = FALSE;
+  /* No results behavior: Global: Text area */
+  $handler->display->display_options['empty']['area']['id'] = 'area';
+  $handler->display->display_options['empty']['area']['table'] = 'views';
+  $handler->display->display_options['empty']['area']['field'] = 'area';
+  $handler->display->display_options['empty']['area']['empty'] = TRUE;
+  $handler->display->display_options['empty']['area']['content'] = 'You aren\'t following any Innovations, you can follow them here <a class="button button--highlight" href="/innovations">here</a>';
+  $handler->display->display_options['empty']['area']['format'] = 'full_html';
+  $handler->display->display_options['defaults']['relationships'] = FALSE;
+  /* Relationship: Flags: favorite */
+  $handler->display->display_options['relationships']['flag_content_rel']['id'] = 'flag_content_rel';
+  $handler->display->display_options['relationships']['flag_content_rel']['table'] = 'node';
+  $handler->display->display_options['relationships']['flag_content_rel']['field'] = 'flag_content_rel';
+  $handler->display->display_options['relationships']['flag_content_rel']['flag'] = 'favorite';
+  $handler->display->display_options['relationships']['flag_content_rel']['user_scope'] = 'any';
+  $handler->display->display_options['defaults']['arguments'] = FALSE;
+  /* Contextual filter: Content: Author uid */
+  $handler->display->display_options['arguments']['uid']['id'] = 'uid';
+  $handler->display->display_options['arguments']['uid']['table'] = 'node';
+  $handler->display->display_options['arguments']['uid']['field'] = 'uid';
+  $handler->display->display_options['arguments']['uid']['default_action'] = 'default';
+  $handler->display->display_options['arguments']['uid']['default_argument_type'] = 'current_user';
+  $handler->display->display_options['arguments']['uid']['summary']['number_of_records'] = '0';
+  $handler->display->display_options['arguments']['uid']['summary']['format'] = 'default_summary';
+  $handler->display->display_options['arguments']['uid']['summary_options']['items_per_page'] = '25';
+  $handler->display->display_options['argument_input'] = array(
+    'uid' => array(
+      'type' => 'context',
+      'context' => 'entity:node.flag-favorite-user',
+      'context_optional' => 0,
+      'panel' => '0',
+      'fixed' => '',
+      'label' => 'Content: Author uid',
+    ),
+  );
+
+  /* Display: Innovations Recommended */
+  $handler = $view->new_display('panel_pane', 'Innovations Recommended', 'panel_pane_3');
+  $handler->display->display_options['defaults']['title'] = FALSE;
+  $handler->display->display_options['title'] = 'Innovations Recommended for You:';
+  $handler->display->display_options['defaults']['header'] = FALSE;
+  /* Header: Global: Text area */
+  $handler->display->display_options['header']['area']['id'] = 'area';
+  $handler->display->display_options['header']['area']['table'] = 'views';
+  $handler->display->display_options['header']['area']['field'] = 'area';
+  $handler->display->display_options['header']['area']['label'] = 'Innovations Recommended for You';
+  $handler->display->display_options['header']['area']['empty'] = TRUE;
+  $handler->display->display_options['header']['area']['content'] = '<div class="dashboard-revamp-title">Innovations Recommended for You<hr></div>';
+  $handler->display->display_options['header']['area']['format'] = 'full_html';
+  $handler->display->display_options['defaults']['empty'] = FALSE;
+  /* No results behavior: Global: Text area */
+  $handler->display->display_options['empty']['area']['id'] = 'area';
+  $handler->display->display_options['empty']['area']['table'] = 'views';
+  $handler->display->display_options['empty']['area']['field'] = 'area';
+  $handler->display->display_options['empty']['area']['empty'] = TRUE;
+  $handler->display->display_options['empty']['area']['content'] = 'We couldn\'t find a match for you based on your skillset. Make sure you have topics of interest added to your account  <a class="button button--highlight" href="/user">here</a>';
+  $handler->display->display_options['empty']['area']['format'] = 'full_html';
+  $handler->display->display_options['defaults']['relationships'] = FALSE;
+  /* Relationship: Content: Topic (field_term_topic) */
+  $handler->display->display_options['relationships']['field_term_topic_tid']['id'] = 'field_term_topic_tid';
+  $handler->display->display_options['relationships']['field_term_topic_tid']['table'] = 'field_data_field_term_topic';
+  $handler->display->display_options['relationships']['field_term_topic_tid']['field'] = 'field_term_topic_tid';
+  $handler->display->display_options['relationships']['field_term_topic_tid']['label'] = 'Innovations in Search of User Skills';
+  $handler->display->display_options['relationships']['field_term_topic_tid']['required'] = TRUE;
+  /* Relationship: Taxonomy term: User using Your Topics of Interest */
+  $handler->display->display_options['relationships']['reverse_field_user_interests_user']['id'] = 'reverse_field_user_interests_user';
+  $handler->display->display_options['relationships']['reverse_field_user_interests_user']['table'] = 'taxonomy_term_data';
+  $handler->display->display_options['relationships']['reverse_field_user_interests_user']['field'] = 'reverse_field_user_interests_user';
+  $handler->display->display_options['relationships']['reverse_field_user_interests_user']['relationship'] = 'field_term_topic_tid';
+  $handler->display->display_options['relationships']['reverse_field_user_interests_user']['label'] = 'Users with Matching Skills';
+  $handler->display->display_options['relationships']['reverse_field_user_interests_user']['required'] = TRUE;
+  $handler->display->display_options['defaults']['arguments'] = FALSE;
+  /* Contextual filter: User: Uid */
+  $handler->display->display_options['arguments']['uid']['id'] = 'uid';
+  $handler->display->display_options['arguments']['uid']['table'] = 'users';
+  $handler->display->display_options['arguments']['uid']['field'] = 'uid';
+  $handler->display->display_options['arguments']['uid']['relationship'] = 'reverse_field_user_interests_user';
+  $handler->display->display_options['arguments']['uid']['default_action'] = 'default';
+  $handler->display->display_options['arguments']['uid']['default_argument_type'] = 'user';
+  $handler->display->display_options['arguments']['uid']['default_argument_options']['user'] = FALSE;
+  $handler->display->display_options['arguments']['uid']['summary']['number_of_records'] = '0';
+  $handler->display->display_options['arguments']['uid']['summary']['format'] = 'default_summary';
+  $handler->display->display_options['arguments']['uid']['summary_options']['items_per_page'] = '25';
   $export['user_innovations'] = $view;
 
   $view = new view();
@@ -1747,7 +2056,38 @@ function gie_user_views_default_views() {
   $handler->display->display_options['hide_admin_links'] = TRUE;
   $handler->display->display_options['use_more_always'] = FALSE;
   $handler->display->display_options['access']['type'] = 'perm';
-  $handler->display->display_options['cache']['type'] = 'none';
+  $handler->display->display_options['cache']['type'] = 'views_content_cache';
+  $handler->display->display_options['cache']['results_min_lifespan'] = '300';
+  $handler->display->display_options['cache']['results_max_lifespan'] = '21600';
+  $handler->display->display_options['cache']['output_min_lifespan'] = '300';
+  $handler->display->display_options['cache']['output_max_lifespan'] = '21600';
+  $handler->display->display_options['cache']['keys'] = array(
+    'comment' => array(
+      'changed' => 'changed',
+    ),
+    'node' => array(
+      'resource' => 'resource',
+      'action_card' => 0,
+      'article' => 0,
+      'page' => 0,
+      'discussion' => 0,
+      'error_page' => 0,
+      'event' => 0,
+      'funding' => 0,
+      'homepage' => 0,
+      'innovation' => 0,
+      'long_form_page' => 0,
+      'microsite' => 0,
+      'microsite_page' => 0,
+      'needs' => 0,
+      'organization' => 0,
+      'persona' => 0,
+      'program' => 0,
+    ),
+    'node_only' => array(
+      'node_changed' => 'node_changed',
+    ),
+  );
   $handler->display->display_options['query']['type'] = 'views_query';
   $handler->display->display_options['exposed_form']['type'] = 'basic';
   $handler->display->display_options['pager']['type'] = 'full';
@@ -1820,7 +2160,38 @@ function gie_user_views_default_views() {
   $handler->display->display_options['use_more_always'] = FALSE;
   $handler->display->display_options['access']['type'] = 'perm';
   $handler->display->display_options['access']['perm'] = 'access user profiles';
-  $handler->display->display_options['cache']['type'] = 'none';
+  $handler->display->display_options['cache']['type'] = 'views_content_cache';
+  $handler->display->display_options['cache']['results_min_lifespan'] = '300';
+  $handler->display->display_options['cache']['results_max_lifespan'] = '21600';
+  $handler->display->display_options['cache']['output_min_lifespan'] = '300';
+  $handler->display->display_options['cache']['output_max_lifespan'] = '21600';
+  $handler->display->display_options['cache']['keys'] = array(
+    'comment' => array(
+      'changed' => 'changed',
+    ),
+    'node' => array(
+      'organization' => 'organization',
+      'action_card' => 0,
+      'article' => 0,
+      'page' => 0,
+      'discussion' => 0,
+      'error_page' => 0,
+      'event' => 0,
+      'funding' => 0,
+      'homepage' => 0,
+      'innovation' => 0,
+      'long_form_page' => 0,
+      'microsite' => 0,
+      'microsite_page' => 0,
+      'needs' => 0,
+      'persona' => 0,
+      'program' => 0,
+      'resource' => 0,
+    ),
+    'node_only' => array(
+      'node_changed' => 'node_changed',
+    ),
+  );
   $handler->display->display_options['query']['type'] = 'views_query';
   $handler->display->display_options['exposed_form']['type'] = 'basic';
   $handler->display->display_options['pager']['type'] = 'none';

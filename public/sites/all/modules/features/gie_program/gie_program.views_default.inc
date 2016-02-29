@@ -26,7 +26,38 @@ function gie_program_views_default_views() {
   $handler->display->display_options['hide_admin_links'] = TRUE;
   $handler->display->display_options['use_more_always'] = FALSE;
   $handler->display->display_options['access']['type'] = 'perm';
-  $handler->display->display_options['cache']['type'] = 'none';
+  $handler->display->display_options['cache']['type'] = 'views_content_cache';
+  $handler->display->display_options['cache']['results_min_lifespan'] = '300';
+  $handler->display->display_options['cache']['results_max_lifespan'] = '21600';
+  $handler->display->display_options['cache']['output_min_lifespan'] = '300';
+  $handler->display->display_options['cache']['output_max_lifespan'] = '21600';
+  $handler->display->display_options['cache']['keys'] = array(
+    'comment' => array(
+      'changed' => 'changed',
+    ),
+    'node' => array(
+      'program' => 'program',
+      'action_card' => 0,
+      'article' => 0,
+      'page' => 0,
+      'discussion' => 0,
+      'error_page' => 0,
+      'event' => 0,
+      'funding' => 0,
+      'homepage' => 0,
+      'innovation' => 0,
+      'long_form_page' => 0,
+      'microsite' => 0,
+      'microsite_page' => 0,
+      'needs' => 0,
+      'organization' => 0,
+      'persona' => 0,
+      'resource' => 0,
+    ),
+    'node_only' => array(
+      'node_changed' => 'node_changed',
+    ),
+  );
   $handler->display->display_options['query']['type'] = 'views_query';
   $handler->display->display_options['exposed_form']['type'] = 'basic';
   $handler->display->display_options['pager']['type'] = 'some';
@@ -125,6 +156,39 @@ function gie_program_views_default_views() {
   $handler = $view->new_display('entity_view', 'Innovation', 'innovation');
   $handler->display->display_options['defaults']['group_by'] = FALSE;
   $handler->display->display_options['group_by'] = TRUE;
+  $handler->display->display_options['defaults']['cache'] = FALSE;
+  $handler->display->display_options['cache']['type'] = 'views_content_cache';
+  $handler->display->display_options['cache']['results_min_lifespan'] = '300';
+  $handler->display->display_options['cache']['results_max_lifespan'] = '21600';
+  $handler->display->display_options['cache']['output_min_lifespan'] = '300';
+  $handler->display->display_options['cache']['output_max_lifespan'] = '21600';
+  $handler->display->display_options['cache']['keys'] = array(
+    'comment' => array(
+      'changed' => 'changed',
+    ),
+    'node' => array(
+      'innovation' => 'innovation',
+      'action_card' => 0,
+      'article' => 0,
+      'page' => 0,
+      'discussion' => 0,
+      'error_page' => 0,
+      'event' => 0,
+      'funding' => 0,
+      'homepage' => 0,
+      'long_form_page' => 0,
+      'microsite' => 0,
+      'microsite_page' => 0,
+      'needs' => 0,
+      'organization' => 0,
+      'persona' => 0,
+      'program' => 0,
+      'resource' => 0,
+    ),
+    'node_only' => array(
+      'node_changed' => 'node_changed',
+    ),
+  );
   $handler->display->display_options['defaults']['relationships'] = FALSE;
   /* Relationship: Entity Reference: Referenced Entity */
   $handler->display->display_options['relationships']['field_innovation_program_target_id']['id'] = 'field_innovation_program_target_id';
@@ -256,7 +320,38 @@ function gie_program_views_default_views() {
   $handler->display->display_options['hide_admin_links'] = TRUE;
   $handler->display->display_options['use_more_always'] = FALSE;
   $handler->display->display_options['access']['type'] = 'perm';
-  $handler->display->display_options['cache']['type'] = 'none';
+  $handler->display->display_options['cache']['type'] = 'views_content_cache';
+  $handler->display->display_options['cache']['results_min_lifespan'] = '300';
+  $handler->display->display_options['cache']['results_max_lifespan'] = '21600';
+  $handler->display->display_options['cache']['output_min_lifespan'] = '300';
+  $handler->display->display_options['cache']['output_max_lifespan'] = '21600';
+  $handler->display->display_options['cache']['keys'] = array(
+    'comment' => array(
+      'changed' => 'changed',
+    ),
+    'node' => array(
+      'program' => 'program',
+      'action_card' => 0,
+      'article' => 0,
+      'page' => 0,
+      'discussion' => 0,
+      'error_page' => 0,
+      'event' => 0,
+      'funding' => 0,
+      'homepage' => 0,
+      'innovation' => 0,
+      'long_form_page' => 0,
+      'microsite' => 0,
+      'microsite_page' => 0,
+      'needs' => 0,
+      'organization' => 0,
+      'persona' => 0,
+      'resource' => 0,
+    ),
+    'node_only' => array(
+      'node_changed' => 'node_changed',
+    ),
+  );
   $handler->display->display_options['query']['type'] = 'views_query';
   $handler->display->display_options['exposed_form']['type'] = 'basic';
   $handler->display->display_options['pager']['type'] = 'some';
@@ -352,6 +447,39 @@ function gie_program_views_default_views() {
   $handler = $view->new_display('entity_view', 'Innovation count', 'innovation_count');
   $handler->display->display_options['defaults']['group_by'] = FALSE;
   $handler->display->display_options['group_by'] = TRUE;
+  $handler->display->display_options['defaults']['cache'] = FALSE;
+  $handler->display->display_options['cache']['type'] = 'views_content_cache';
+  $handler->display->display_options['cache']['results_min_lifespan'] = '300';
+  $handler->display->display_options['cache']['results_max_lifespan'] = '21600';
+  $handler->display->display_options['cache']['output_min_lifespan'] = '300';
+  $handler->display->display_options['cache']['output_max_lifespan'] = '21600';
+  $handler->display->display_options['cache']['keys'] = array(
+    'comment' => array(
+      'changed' => 'changed',
+    ),
+    'node' => array(
+      'innovation' => 'innovation',
+      'action_card' => 0,
+      'article' => 0,
+      'page' => 0,
+      'discussion' => 0,
+      'error_page' => 0,
+      'event' => 0,
+      'funding' => 0,
+      'homepage' => 0,
+      'long_form_page' => 0,
+      'microsite' => 0,
+      'microsite_page' => 0,
+      'needs' => 0,
+      'organization' => 0,
+      'persona' => 0,
+      'program' => 0,
+      'resource' => 0,
+    ),
+    'node_only' => array(
+      'node_changed' => 'node_changed',
+    ),
+  );
   $handler->display->display_options['defaults']['relationships'] = FALSE;
   /* Relationship: Entity Reference: Referenced Entity */
   $handler->display->display_options['relationships']['field_innovation_program_target_id']['id'] = 'field_innovation_program_target_id';
@@ -418,7 +546,11 @@ function gie_program_views_default_views() {
   $handler->display->display_options['css_class'] = 'view--card-view-3col';
   $handler->display->display_options['use_more_always'] = FALSE;
   $handler->display->display_options['access']['type'] = 'none';
-  $handler->display->display_options['cache']['type'] = 'none';
+  $handler->display->display_options['cache']['type'] = 'search_api_views_cache';
+  $handler->display->display_options['cache']['results_lifespan'] = '300';
+  $handler->display->display_options['cache']['results_lifespan_custom'] = '0';
+  $handler->display->display_options['cache']['output_lifespan'] = '300';
+  $handler->display->display_options['cache']['output_lifespan_custom'] = '0';
   $handler->display->display_options['query']['type'] = 'views_query';
   $handler->display->display_options['exposed_form']['type'] = 'basic';
   $handler->display->display_options['pager']['type'] = 'full';
@@ -461,6 +593,114 @@ function gie_program_views_default_views() {
   $export['program_listing'] = $view;
 
   $view = new view();
+  $view->name = 'program_point_of_contact';
+  $view->description = '';
+  $view->tag = 'default';
+  $view->base_table = 'node';
+  $view->human_name = 'Program Contact';
+  $view->core = 7;
+  $view->api_version = '3.0';
+  $view->disabled = FALSE; /* Edit this to true to make a default view disabled initially */
+
+  /* Display: Master */
+  $handler = $view->new_display('default', 'Master', 'default');
+  $handler->display->display_options['title'] = 'Contact';
+  $handler->display->display_options['use_more_always'] = FALSE;
+  $handler->display->display_options['access']['type'] = 'perm';
+  $handler->display->display_options['cache']['type'] = 'none';
+  $handler->display->display_options['query']['type'] = 'views_query';
+  $handler->display->display_options['exposed_form']['type'] = 'basic';
+  $handler->display->display_options['pager']['type'] = 'some';
+  $handler->display->display_options['pager']['options']['items_per_page'] = '1';
+  $handler->display->display_options['pager']['options']['offset'] = '0';
+  $handler->display->display_options['style_plugin'] = 'default';
+  $handler->display->display_options['row_plugin'] = 'fields';
+  /* No results behavior: Global: Text area */
+  $handler->display->display_options['empty']['area']['id'] = 'area';
+  $handler->display->display_options['empty']['area']['table'] = 'views';
+  $handler->display->display_options['empty']['area']['field'] = 'area';
+  $handler->display->display_options['empty']['area']['empty'] = TRUE;
+  $handler->display->display_options['empty']['area']['content'] = 'No contact information has been provided.';
+  $handler->display->display_options['empty']['area']['format'] = 'filtered_html';
+  /* Field: Content: Point of Contact */
+  $handler->display->display_options['fields']['field_program_poc']['id'] = 'field_program_poc';
+  $handler->display->display_options['fields']['field_program_poc']['table'] = 'field_data_field_program_poc';
+  $handler->display->display_options['fields']['field_program_poc']['field'] = 'field_program_poc';
+  $handler->display->display_options['fields']['field_program_poc']['label'] = '';
+  $handler->display->display_options['fields']['field_program_poc']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_program_poc']['type'] = 'entityreference_entity_view';
+  $handler->display->display_options['fields']['field_program_poc']['settings'] = array(
+    'view_mode' => 'user_teaser_summary',
+    'links' => 0,
+    'linked_field' => array(
+      'linked' => 0,
+      'destination' => '',
+      'advanced' => array(
+        'title' => '',
+        'target' => '',
+        'class' => '',
+        'rel' => '',
+        'text' => '',
+      ),
+    ),
+  );
+  /* Field: Content: Address */
+  $handler->display->display_options['fields']['field_program_address']['id'] = 'field_program_address';
+  $handler->display->display_options['fields']['field_program_address']['table'] = 'field_data_field_program_address';
+  $handler->display->display_options['fields']['field_program_address']['field'] = 'field_program_address';
+  $handler->display->display_options['fields']['field_program_address']['label'] = '';
+  $handler->display->display_options['fields']['field_program_address']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_program_address']['settings'] = array(
+    'linked_field' => array(
+      'linked' => 0,
+      'destination' => '',
+      'advanced' => array(
+        'title' => '',
+        'target' => '',
+        'class' => '',
+        'rel' => '',
+        'text' => '',
+      ),
+    ),
+  );
+  /* Contextual filter: Content: Nid */
+  $handler->display->display_options['arguments']['nid']['id'] = 'nid';
+  $handler->display->display_options['arguments']['nid']['table'] = 'node';
+  $handler->display->display_options['arguments']['nid']['field'] = 'nid';
+  $handler->display->display_options['arguments']['nid']['default_action'] = 'default';
+  $handler->display->display_options['arguments']['nid']['default_argument_type'] = 'node';
+  $handler->display->display_options['arguments']['nid']['summary']['number_of_records'] = '0';
+  $handler->display->display_options['arguments']['nid']['summary']['format'] = 'default_summary';
+  $handler->display->display_options['arguments']['nid']['summary_options']['items_per_page'] = '25';
+  $handler->display->display_options['filter_groups']['groups'] = array(
+    1 => 'AND',
+    2 => 'OR',
+  );
+  /* Filter criterion: Content: Published */
+  $handler->display->display_options['filters']['status']['id'] = 'status';
+  $handler->display->display_options['filters']['status']['table'] = 'node';
+  $handler->display->display_options['filters']['status']['field'] = 'status';
+  $handler->display->display_options['filters']['status']['value'] = 1;
+  $handler->display->display_options['filters']['status']['group'] = 1;
+  $handler->display->display_options['filters']['status']['expose']['operator'] = FALSE;
+  /* Filter criterion: Content: Point of Contact (field_program_poc) */
+  $handler->display->display_options['filters']['field_program_poc_target_id']['id'] = 'field_program_poc_target_id';
+  $handler->display->display_options['filters']['field_program_poc_target_id']['table'] = 'field_data_field_program_poc';
+  $handler->display->display_options['filters']['field_program_poc_target_id']['field'] = 'field_program_poc_target_id';
+  $handler->display->display_options['filters']['field_program_poc_target_id']['operator'] = 'not empty';
+  $handler->display->display_options['filters']['field_program_poc_target_id']['group'] = 2;
+  /* Filter criterion: Content: Address (field_program_address) */
+  $handler->display->display_options['filters']['field_program_address_value']['id'] = 'field_program_address_value';
+  $handler->display->display_options['filters']['field_program_address_value']['table'] = 'field_data_field_program_address';
+  $handler->display->display_options['filters']['field_program_address_value']['field'] = 'field_program_address_value';
+  $handler->display->display_options['filters']['field_program_address_value']['operator'] = 'not empty';
+  $handler->display->display_options['filters']['field_program_address_value']['group'] = 2;
+
+  /* Display: Content pane */
+  $handler = $view->new_display('panel_pane', 'Content pane', 'program_poc_pane');
+  $export['program_point_of_contact'] = $view;
+
+  $view = new view();
   $view->name = 'program_recent_content';
   $view->description = '';
   $view->tag = 'default';
@@ -478,7 +718,38 @@ function gie_program_views_default_views() {
   $handler->display->display_options['use_more_text'] = 'Explore all innovations by this program';
   $handler->display->display_options['link_display'] = 'custom_url';
   $handler->display->display_options['access']['type'] = 'perm';
-  $handler->display->display_options['cache']['type'] = 'none';
+  $handler->display->display_options['cache']['type'] = 'views_content_cache';
+  $handler->display->display_options['cache']['results_min_lifespan'] = '300';
+  $handler->display->display_options['cache']['results_max_lifespan'] = '21600';
+  $handler->display->display_options['cache']['output_min_lifespan'] = '300';
+  $handler->display->display_options['cache']['output_max_lifespan'] = '21600';
+  $handler->display->display_options['cache']['keys'] = array(
+    'comment' => array(
+      'changed' => 'changed',
+    ),
+    'node' => array(
+      'resource' => 'resource',
+      'action_card' => 0,
+      'article' => 0,
+      'page' => 0,
+      'discussion' => 0,
+      'error_page' => 0,
+      'event' => 0,
+      'funding' => 0,
+      'homepage' => 0,
+      'innovation' => 0,
+      'long_form_page' => 0,
+      'microsite' => 0,
+      'microsite_page' => 0,
+      'needs' => 0,
+      'organization' => 0,
+      'persona' => 0,
+      'program' => 0,
+    ),
+    'node_only' => array(
+      'node_changed' => 'node_changed',
+    ),
+  );
   $handler->display->display_options['query']['type'] = 'views_query';
   $handler->display->display_options['exposed_form']['type'] = 'basic';
   $handler->display->display_options['pager']['type'] = 'some';
@@ -558,6 +829,39 @@ function gie_program_views_default_views() {
   $handler->display->display_options['defaults']['link_display'] = FALSE;
   $handler->display->display_options['link_display'] = 'custom_url';
   $handler->display->display_options['link_url'] = '/innovations/program/!1';
+  $handler->display->display_options['defaults']['cache'] = FALSE;
+  $handler->display->display_options['cache']['type'] = 'views_content_cache';
+  $handler->display->display_options['cache']['results_min_lifespan'] = '300';
+  $handler->display->display_options['cache']['results_max_lifespan'] = '21600';
+  $handler->display->display_options['cache']['output_min_lifespan'] = '300';
+  $handler->display->display_options['cache']['output_max_lifespan'] = '21600';
+  $handler->display->display_options['cache']['keys'] = array(
+    'comment' => array(
+      'changed' => 'changed',
+    ),
+    'node' => array(
+      'innovation' => 'innovation',
+      'action_card' => 0,
+      'article' => 0,
+      'page' => 0,
+      'discussion' => 0,
+      'error_page' => 0,
+      'event' => 0,
+      'funding' => 0,
+      'homepage' => 0,
+      'long_form_page' => 0,
+      'microsite' => 0,
+      'microsite_page' => 0,
+      'needs' => 0,
+      'organization' => 0,
+      'persona' => 0,
+      'program' => 0,
+      'resource' => 0,
+    ),
+    'node_only' => array(
+      'node_changed' => 'node_changed',
+    ),
+  );
   $handler->display->display_options['defaults']['style_plugin'] = FALSE;
   $handler->display->display_options['style_plugin'] = 'default';
   $handler->display->display_options['defaults']['style_options'] = FALSE;
@@ -599,6 +903,39 @@ function gie_program_views_default_views() {
   $handler->display->display_options['use_more_always'] = FALSE;
   $handler->display->display_options['defaults']['use_more_text'] = FALSE;
   $handler->display->display_options['use_more_text'] = 'Explore all innovations by this program';
+  $handler->display->display_options['defaults']['cache'] = FALSE;
+  $handler->display->display_options['cache']['type'] = 'views_content_cache';
+  $handler->display->display_options['cache']['results_min_lifespan'] = '300';
+  $handler->display->display_options['cache']['results_max_lifespan'] = '21600';
+  $handler->display->display_options['cache']['output_min_lifespan'] = '300';
+  $handler->display->display_options['cache']['output_max_lifespan'] = '21600';
+  $handler->display->display_options['cache']['keys'] = array(
+    'comment' => array(
+      'changed' => 'changed',
+    ),
+    'node' => array(
+      'organization' => 'organization',
+      'action_card' => 0,
+      'article' => 0,
+      'page' => 0,
+      'discussion' => 0,
+      'error_page' => 0,
+      'event' => 0,
+      'funding' => 0,
+      'homepage' => 0,
+      'innovation' => 0,
+      'long_form_page' => 0,
+      'microsite' => 0,
+      'microsite_page' => 0,
+      'needs' => 0,
+      'persona' => 0,
+      'program' => 0,
+      'resource' => 0,
+    ),
+    'node_only' => array(
+      'node_changed' => 'node_changed',
+    ),
+  );
   $handler->display->display_options['defaults']['pager'] = FALSE;
   $handler->display->display_options['pager']['type'] = 'none';
   $handler->display->display_options['pager']['options']['offset'] = '0';

@@ -221,9 +221,23 @@ function gie_user_views_pre_render(&$view) {
 /**
  * Implements hook_menu_alter().
  * - Remove Contact item from Tab menu.
+ * - Use custom function for user notifications menu tab access.
  */
 function gie_user_menu_alter(&$items) {
   $items['user/%user/contact']['type'] = MENU_CALLBACK;
+  $items['user/%pm_arg/notifications']['access callback'] = '_gie_user_notifications_link_access';
+}
+
+/**
+ * Custom function to check access for Notifications link
+ */
+function _gie_user_notifications_link_access() {
+  // Only display Notifications menu link on own user profile
+  if (!user_is_anonymous() && arg(0) == 'user') {
+    global $user;
+    if ($user->uid == arg(1)) return true;
+    else return false;
+  } else return false;
 }
 
 /**
@@ -232,6 +246,87 @@ function gie_user_menu_alter(&$items) {
 function gie_user_form_user_profile_form_alter(&$form, &$form_state, $form_id) {
   // Hide "Select the types of assistance..." field
   $form['field_assistance_offered']['#access'] = FALSE;
+
+  // Hide Notifications group on user edit page
+  if (preg_match('/^user\/\d*\/edit$/', current_path()) && !user_has_role(3)) {
+    field_group_hide_field_groups($form, array('group_user_notifications'));
+  }
+
+  // Alter form for User Notifications page
+  else if (preg_match('/^user\/\d*\/notifications/', current_path())) {
+
+    // Hide "Cancel Account" button
+    $form['actions']['cancel']['#access'] = FALSE;
+
+    // Hide all field groups but Notifications
+    field_group_hide_field_groups($form, array(
+        'group_about',
+        'group_account',
+        'group_connect',
+        'group_interests',
+        'group_where',
+    ));
+  }
+}
+
+/**
+ * Implements hook_block_info().
+ */
+function gie_user_block_info() {
+  $blocks = array();
+
+  $blocks['user_notifications_form'] = array(
+    'info' => t('User Notifications form')
+  );
+
+  return $blocks;
+}
+
+/**
+ * Implements hook_block_view().
+ */
+function gie_user_block_view($delta = '') {
+  $block = array();
+
+  switch($delta) {
+    case 'user_notifications_form':
+      // Check if anonymous user
+      if (user_is_anonymous()) {
+        drupal_access_denied();
+        break;
+      }
+      if (path_is_admin(current_path()) || arg(0) !== 'user') break;
+
+      // Check for current user's page (work around permission check)
+      global $user;
+      if ($user->uid !== arg(1)) {
+        drupal_access_denied();
+        break;
+      }
+
+      // Load User Edit form for current user
+      module_load_include('inc', 'user', 'user.pages');
+      $user = user_load($user->uid);
+      $form = drupal_get_form('user_profile_form', $user);
+
+      // Hide non-group fields
+      $form['timezone']['#access'] = FALSE;
+      $form['domain']['#access'] = FALSE;
+      $form['mimemail']['#access'] = FALSE;
+      $form['ckeditor']['#access'] = FALSE;
+      $form['field_newsletter_sign_up']['#access'] = FALSE;
+      $form['contact']['#access'] = FALSE;
+      $form['xmlsitemap']['#access'] = FALSE;
+      $form['metatags']['#access'] = FALSE;
+      $form['lr_social_login_linked']['#access'] = FALSE;
+
+      // Form the block
+      $block['subject'] = '';
+      $block['content'] = $form;
+      break;
+  }
+
+  return $block;
 }
 
 /**

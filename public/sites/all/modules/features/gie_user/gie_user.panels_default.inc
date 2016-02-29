@@ -13,6 +13,87 @@ function gie_user_default_panels_mini() {
   $mini = new stdClass();
   $mini->disabled = FALSE; /* Edit this to true to make a default mini disabled initially */
   $mini->api_version = 1;
+  $mini->name = 'dashboard_profile_header';
+  $mini->category = 'Dashboard';
+  $mini->admin_title = 'Dashboard Profile Header';
+  $mini->admin_description = '';
+  $mini->requiredcontexts = array();
+  $mini->contexts = array();
+  $mini->relationships = array();
+  $display = new panels_display();
+  $display->layout = 'threecol_25_50_25';
+  $display->layout_settings = array();
+  $display->panel_settings = array(
+    'style_settings' => array(
+      'default' => NULL,
+      'middle' => NULL,
+      'left' => NULL,
+      'right' => NULL,
+    ),
+  );
+  $display->cache = array();
+  $display->title = '';
+  $display->uuid = '50318d01-436b-487c-8a93-fbf6d24321f1';
+  $display->content = array();
+  $display->panels = array();
+    $pane = new stdClass();
+    $pane->pid = 'new-41e44c89-fd6b-4370-854f-abc5472d607b';
+    $pane->panel = 'left';
+    $pane->type = 'custom';
+    $pane->subtype = 'custom';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array(
+      'admin_title' => 'Dashboard Profile Picture',
+      'title' => '',
+      'body' => '<img alt="" src="https://s3.amazonaws.com/upload.uxpin/files/169187/174513/lzaltman-01-circle.png?1456169841" />',
+      'format' => 'full_html',
+      'substitute' => TRUE,
+    );
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
+    $pane->css = array();
+    $pane->extras = array();
+    $pane->position = 0;
+    $pane->locks = array();
+    $pane->uuid = '41e44c89-fd6b-4370-854f-abc5472d607b';
+    $display->content['new-41e44c89-fd6b-4370-854f-abc5472d607b'] = $pane;
+    $display->panels['left'][0] = 'new-41e44c89-fd6b-4370-854f-abc5472d607b';
+    $pane = new stdClass();
+    $pane->pid = 'new-43c9b2a5-2db3-4426-9fb5-5bbaa14d5373';
+    $pane->panel = 'right';
+    $pane->type = 'custom';
+    $pane->subtype = 'custom';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array(
+      'admin_title' => 'Dashboard Profile Action Items',
+      'title' => '',
+      'body' => '<a class="button button--highlight" href="/user/1/edit">Update your profile</a> <a class="button button--highlight" href="/user">View your profile</a> <a class="button button--highlight" href="/user/1/edit">Email Preferences</a>',
+      'format' => 'full_html',
+      'substitute' => TRUE,
+    );
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
+    $pane->css = array();
+    $pane->extras = array();
+    $pane->position = 0;
+    $pane->locks = array();
+    $pane->uuid = '43c9b2a5-2db3-4426-9fb5-5bbaa14d5373';
+    $display->content['new-43c9b2a5-2db3-4426-9fb5-5bbaa14d5373'] = $pane;
+    $display->panels['right'][0] = 'new-43c9b2a5-2db3-4426-9fb5-5bbaa14d5373';
+  $display->hide_title = PANELS_TITLE_FIXED;
+  $display->title_pane = 'new-41e44c89-fd6b-4370-854f-abc5472d607b';
+  $mini->display = $display;
+  $export['dashboard_profile_header'] = $mini;
+
+  $mini = new stdClass();
+  $mini->disabled = FALSE; /* Edit this to true to make a default mini disabled initially */
+  $mini->api_version = 1;
   $mini->name = 'user_overview';
   $mini->category = '';
   $mini->admin_title = 'User Overview';
