@@ -28,3 +28,28 @@ function gie_dashboard_ctools_plugin_api($module = NULL, $api = NULL) {
 function gie_dashboard_views_api($module = NULL, $api = NULL) {
   return array("api" => "3.0");
 }
+
+/**
+ * Implements hook_image_default_styles().
+ */
+function gie_dashboard_image_default_styles() {
+  $styles = array();
+
+  // Exported image style: dashboard_profile_image.
+  $styles['dashboard_profile_image'] = array(
+    'label' => 'dashboard_profile_image',
+    'effects' => array(
+      4 => array(
+        'name' => 'smartcrop_scale_and_crop',
+        'data' => array(
+          'width' => 150,
+          'height' => 150,
+          'upscale' => 1,
+        ),
+        'weight' => 1,
+      ),
+    ),
+  );
+
+  return $styles;
+}
