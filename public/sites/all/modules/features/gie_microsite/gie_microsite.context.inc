@@ -74,7 +74,7 @@ function gie_microsite_context_default_contexts() {
       ),
     ),
     'theme_html' => array(
-      'class' => 'section--microsite section-wanteds',
+      'class' => 'section--microsite',
     ),
   );
   $context->condition_mode = 1;
