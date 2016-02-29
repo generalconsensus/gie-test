@@ -1,0 +1,20 @@
+.dashboard-notifications {
+  list-style: none;
+  margin: 0 10% 2em 10%;
+  padding: 0;
+  .dashboard-notifications__item {
+    background: #F1DED3;
+    font-size: em($font-size-lg);
+    list-style: none;
+    margin: 0;
+    padding: 0.5em 1em;
+    &:before { // undo bullet from _html-elements
+      display: none;
+    }
+    &.is-featured {
+      background: #E1E1E1;
+    }
+  }
+}
+
+ 
