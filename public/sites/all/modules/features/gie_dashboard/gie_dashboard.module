@@ -617,7 +617,8 @@ function gie_dashboard_dummy_data($original_user_uid = NULL, $pieces = NULL) {
     'field_funding_grant_award_value' => 100000,
 //    'field_term_topic' => 545,
     'field_term_sector' => 419,
-    'field_funding_deadline' => array('value' => date('Y-m-d h:i:s', rand(strtotime('first day of last month'), strtotime('last day of last month'))))
+    'field_funding_deadline' => array('value' => date('Y-m-d h:i:s', rand(strtotime('first day of last month'), strtotime('last day of last month')))),
+    'field_funding_link' =>  'http://google.com'
   ));
   gie_dashboard_create_node('innovation', $users[$rand_user], $pieces);
 
@@ -742,6 +743,10 @@ function gie_dashboard_create_node($type, $uid, $pieces, $payload = NULL) {
 
     if (!empty($payload['field_term_sector'])) {
       $node->field_term_sector[$node->language][]['tid'] = $payload['field_term_sector'];
+    }
+
+    if (!empty($payload['field_funding_link'])) {
+      $node->field_funding_link[$node->language][]['value'] = $payload['field_funding_link'];
     }
 
     $node = node_submit($node); // Prepare node for saving
