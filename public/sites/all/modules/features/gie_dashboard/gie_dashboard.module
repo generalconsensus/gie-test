@@ -501,7 +501,7 @@ function gie_dashboard_whats_new_tab() {
 
         }
       }
-      elseif ($key == 'people_follow_you') {
+      elseif ($key == 'people_follow_you' && !empty($result)) {
         if (count($result) > 1) {
           $follow_name = array();
           $gie_dashboard_notification_center[$key] = array(
