@@ -160,6 +160,69 @@ function gie_news_ds_layout_settings_info() {
 
   $ds_layout = new stdClass();
   $ds_layout->api_version = 1;
+  $ds_layout->id = 'node|news|at_a_glance';
+  $ds_layout->entity_type = 'node';
+  $ds_layout->bundle = 'news';
+  $ds_layout->view_mode = 'at_a_glance';
+  $ds_layout->layout = 'ds_reset';
+  $ds_layout->settings = array(
+    'regions' => array(
+      'ds_content' => array(
+        0 => 'news_counters_comment_count',
+        1 => 'news_counters_favorite_count',
+        2 => 'field_news_source',
+      ),
+    ),
+    'fields' => array(
+      'news_counters_comment_count' => 'ds_content',
+      'news_counters_favorite_count' => 'ds_content',
+      'field_news_source' => 'ds_content',
+    ),
+    'classes' => array(),
+    'wrappers' => array(),
+    'layout_wrapper' => 'div',
+    'layout_attributes' => '',
+    'layout_attributes_merge' => TRUE,
+    'layout_link_attribute' => FALSE,
+    'layout_link_custom' => '',
+    'layout_disable_css' => FALSE,
+  );
+  $export['node|news|at_a_glance'] = $ds_layout;
+
+  $ds_layout = new stdClass();
+  $ds_layout->api_version = 1;
+  $ds_layout->id = 'node|news|contact';
+  $ds_layout->entity_type = 'node';
+  $ds_layout->bundle = 'news';
+  $ds_layout->view_mode = 'contact';
+  $ds_layout->layout = 'slat';
+  $ds_layout->settings = array(
+    'regions' => array(
+      'media' => array(
+        0 => 'field_news_point_of_contact',
+        1 => 'field_news_publish_date',
+      ),
+    ),
+    'fields' => array(
+      'field_news_point_of_contact' => 'media',
+      'field_news_publish_date' => 'media',
+    ),
+    'classes' => array(),
+    'wrappers' => array(
+      'header' => 'div',
+      'media' => 'div',
+      'main_content' => 'div',
+    ),
+    'layout_wrapper' => 'div',
+    'layout_attributes' => '',
+    'layout_attributes_merge' => 1,
+    'layout_link_attribute' => '',
+    'layout_link_custom' => '',
+  );
+  $export['node|news|contact'] = $ds_layout;
+
+  $ds_layout = new stdClass();
+  $ds_layout->api_version = 1;
   $ds_layout->id = 'node|news|details';
   $ds_layout->entity_type = 'node';
   $ds_layout->bundle = 'news';
