@@ -5,6 +5,11 @@
       min-width: 60%;
       max-width: 80%;
       text-align: left;
+      img {
+        display: inline-block;
+        margin-right: 10px;
+        vertical-align: top;
+      }
     }
     .views-field-count,
     .views-field-comment-count {
