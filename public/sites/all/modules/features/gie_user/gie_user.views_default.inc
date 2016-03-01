@@ -1220,14 +1220,38 @@ function gie_user_views_default_views() {
   $handler->display->display_options['footer']['view']['empty'] = TRUE;
   $handler->display->display_options['footer']['view']['view_to_insert'] = 'user_innovations:panel_pane_2';
   $handler->display->display_options['footer']['view']['inherit_arguments'] = TRUE;
+  /* Footer: Global: Text area */
+  $handler->display->display_options['footer']['area']['id'] = 'area';
+  $handler->display->display_options['footer']['area']['table'] = 'views';
+  $handler->display->display_options['footer']['area']['field'] = 'area';
+  $handler->display->display_options['footer']['area']['label'] = 'Innovations Recommended for You';
+  $handler->display->display_options['footer']['area']['empty'] = TRUE;
+  $handler->display->display_options['header']['area']['content'] = '<h2 class="dashboard__title">Innovations Recommended for You</h2>';
+  $handler->display->display_options['footer']['area']['format'] = 'full_html';
   /* Footer: Global: View area */
   $handler->display->display_options['footer']['view_1']['id'] = 'view_1';
   $handler->display->display_options['footer']['view_1']['table'] = 'views';
   $handler->display->display_options['footer']['view_1']['field'] = 'view';
-  $handler->display->display_options['footer']['view_1']['label'] = 'Innovations Recommended for You:';
+  $handler->display->display_options['footer']['view_1']['label'] = 'Innovations Recommended for You';
   $handler->display->display_options['footer']['view_1']['empty'] = TRUE;
   $handler->display->display_options['footer']['view_1']['view_to_insert'] = 'user_innovations:panel_pane_3';
   $handler->display->display_options['footer']['view_1']['inherit_arguments'] = TRUE;
+  /* Footer: Global: View area */
+  $handler->display->display_options['footer']['view_2']['id'] = 'view_2';
+  $handler->display->display_options['footer']['view_2']['table'] = 'views';
+  $handler->display->display_options['footer']['view_2']['field'] = 'view';
+  $handler->display->display_options['footer']['view_2']['label'] = 'User Recommended based on the sectors you joined';
+  $handler->display->display_options['footer']['view_2']['empty'] = TRUE;
+  $handler->display->display_options['footer']['view_2']['view_to_insert'] = 'user_innovations:panel_pane_3';
+  $handler->display->display_options['footer']['view_2']['inherit_arguments'] = TRUE;
+  /* Footer: Global: View area */
+  $handler->display->display_options['footer']['view_3']['id'] = 'view_3';
+  $handler->display->display_options['footer']['view_3']['table'] = 'views';
+  $handler->display->display_options['footer']['view_3']['field'] = 'view';
+  $handler->display->display_options['footer']['view_3']['label'] = 'Innovations Recommended Based on People You Follow';
+  $handler->display->display_options['footer']['view_3']['empty'] = TRUE;
+  $handler->display->display_options['footer']['view_3']['view_to_insert'] = 'user_innovations:panel_pane_4';
+  $handler->display->display_options['footer']['view_3']['inherit_arguments'] = TRUE;
   $handler->display->display_options['defaults']['empty'] = FALSE;
   /* No results behavior: Global: Text area */
   $handler->display->display_options['empty']['area']['id'] = 'area';
@@ -1245,13 +1269,39 @@ function gie_user_views_default_views() {
   $handler->display->display_options['relationships']['flag_count_rel']['required'] = 0;
   $handler->display->display_options['relationships']['flag_count_rel']['flag'] = 'favorite';
   $handler->display->display_options['defaults']['fields'] = FALSE;
+  /* Field: Content: Featured Image */
+  $handler->display->display_options['fields']['field_innovation_image']['id'] = 'field_innovation_image';
+  $handler->display->display_options['fields']['field_innovation_image']['table'] = 'field_data_field_innovation_image';
+  $handler->display->display_options['fields']['field_innovation_image']['field'] = 'field_innovation_image';
+  $handler->display->display_options['fields']['field_innovation_image']['label'] = '';
+  $handler->display->display_options['fields']['field_innovation_image']['exclude'] = TRUE;
+  $handler->display->display_options['fields']['field_innovation_image']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_innovation_image']['click_sort_column'] = 'fid';
+  $handler->display->display_options['fields']['field_innovation_image']['settings'] = array(
+    'image_style' => 'thumb-78x78',
+    'image_link' => '',
+    'linked_field' => array(
+      'linked' => 0,
+      'destination' => '',
+      'advanced' => array(
+        'title' => '',
+        'target' => '',
+        'class' => '',
+        'rel' => '',
+        'text' => '',
+      ),
+    ),
+  );
   /* Field: Content: Title */
   $handler->display->display_options['fields']['title']['id'] = 'title';
   $handler->display->display_options['fields']['title']['table'] = 'node';
   $handler->display->display_options['fields']['title']['field'] = 'title';
   $handler->display->display_options['fields']['title']['label'] = '';
+  $handler->display->display_options['fields']['title']['alter']['alter_text'] = TRUE;
+  $handler->display->display_options['fields']['title']['alter']['text'] = '<div>[field_innovation_image]</div><div>[title]</div>';
   $handler->display->display_options['fields']['title']['alter']['word_boundary'] = FALSE;
   $handler->display->display_options['fields']['title']['alter']['ellipsis'] = FALSE;
+  $handler->display->display_options['fields']['title']['element_label_colon'] = FALSE;
   /* Field: Flags: Flag counter */
   $handler->display->display_options['fields']['count']['id'] = 'count';
   $handler->display->display_options['fields']['count']['table'] = 'flag_counts';
@@ -1323,8 +1373,8 @@ function gie_user_views_default_views() {
     ),
   );
 
-  /* Display: Innovations Recommended */
-  $handler = $view->new_display('panel_pane', 'Innovations Recommended', 'panel_pane_3');
+  /* Display: Innovations Recommended Skills */
+  $handler = $view->new_display('panel_pane', 'Innovations Recommended Skills', 'panel_pane_3');
   $handler->display->display_options['defaults']['title'] = FALSE;
   $handler->display->display_options['title'] = 'Innovations Recommended for You:';
   $handler->display->display_options['defaults']['header'] = FALSE;
@@ -1334,7 +1384,54 @@ function gie_user_views_default_views() {
   $handler->display->display_options['header']['area']['field'] = 'area';
   $handler->display->display_options['header']['area']['label'] = 'Innovations Recommended for You';
   $handler->display->display_options['header']['area']['empty'] = TRUE;
-  $handler->display->display_options['header']['area']['content'] = '<h2 class="dashboard__title">Innovations Recommended for You</h2>';
+  $handler->display->display_options['header']['area']['content'] = '<div class="dashboard-sub-title">Based on the skills you offer</div>';
+  $handler->display->display_options['header']['area']['format'] = 'full_html';
+  $handler->display->display_options['defaults']['empty'] = FALSE;
+  /* No results behavior: Global: Text area */
+  $handler->display->display_options['empty']['area']['id'] = 'area';
+  $handler->display->display_options['empty']['area']['table'] = 'views';
+  $handler->display->display_options['empty']['area']['field'] = 'area';
+  $handler->display->display_options['empty']['area']['empty'] = TRUE;
+  $handler->display->display_options['empty']['area']['content'] = 'We couldn\'t find a match for you based on your skillset. Make sure you have topics of interest added to your account  <a class="button button--highlight" href="/user">here</a>';
+  $handler->display->display_options['empty']['area']['format'] = 'full_html';
+  $handler->display->display_options['defaults']['relationships'] = FALSE;
+  /* Relationship: Field: Assistance Type (field_innovation_assistance) */
+  $handler->display->display_options['relationships']['field_innovation_assistance_tid']['id'] = 'field_innovation_assistance_tid';
+  $handler->display->display_options['relationships']['field_innovation_assistance_tid']['table'] = 'field_data_field_innovation_assistance';
+  $handler->display->display_options['relationships']['field_innovation_assistance_tid']['field'] = 'field_innovation_assistance_tid';
+  $handler->display->display_options['relationships']['field_innovation_assistance_tid']['label'] = 'Innovation Connection using term from field_innovation_assistance';
+  $handler->display->display_options['relationships']['field_innovation_assistance_tid']['required'] = TRUE;
+  /* Relationship: Taxonomy term: User using Assistance Offered */
+  $handler->display->display_options['relationships']['reverse_field_user_assistance_user']['id'] = 'reverse_field_user_assistance_user';
+  $handler->display->display_options['relationships']['reverse_field_user_assistance_user']['table'] = 'taxonomy_term_data';
+  $handler->display->display_options['relationships']['reverse_field_user_assistance_user']['field'] = 'reverse_field_user_assistance_user';
+  $handler->display->display_options['relationships']['reverse_field_user_assistance_user']['relationship'] = 'field_innovation_assistance_tid';
+  $handler->display->display_options['relationships']['reverse_field_user_assistance_user']['label'] = 'User connected through field_user_assistance';
+  $handler->display->display_options['relationships']['reverse_field_user_assistance_user']['required'] = TRUE;
+  $handler->display->display_options['defaults']['arguments'] = FALSE;
+  /* Contextual filter: User: Uid */
+  $handler->display->display_options['arguments']['uid']['id'] = 'uid';
+  $handler->display->display_options['arguments']['uid']['table'] = 'users';
+  $handler->display->display_options['arguments']['uid']['field'] = 'uid';
+  $handler->display->display_options['arguments']['uid']['relationship'] = 'reverse_field_user_assistance_user';
+  $handler->display->display_options['arguments']['uid']['default_action'] = 'default';
+  $handler->display->display_options['arguments']['uid']['default_argument_type'] = 'user';
+  $handler->display->display_options['arguments']['uid']['default_argument_options']['user'] = FALSE;
+  $handler->display->display_options['arguments']['uid']['summary']['number_of_records'] = '0';
+  $handler->display->display_options['arguments']['uid']['summary']['format'] = 'default_summary';
+  $handler->display->display_options['arguments']['uid']['summary_options']['items_per_page'] = '25';
+
+  /* Display: Innovations Recommended Sectors */
+  $handler = $view->new_display('panel_pane', 'Innovations Recommended Sectors', 'panel_pane_4');
+  $handler->display->display_options['defaults']['title'] = FALSE;
+  $handler->display->display_options['defaults']['header'] = FALSE;
+  /* Header: Global: Text area */
+  $handler->display->display_options['header']['area']['id'] = 'area';
+  $handler->display->display_options['header']['area']['table'] = 'views';
+  $handler->display->display_options['header']['area']['field'] = 'area';
+  $handler->display->display_options['header']['area']['label'] = 'Innovations Recommended for You';
+  $handler->display->display_options['header']['area']['empty'] = TRUE;
+  $handler->display->display_options['header']['area']['content'] = '<div class="dashboard-sub-title">Based on the sectors you have joined</div>';
   $handler->display->display_options['header']['area']['format'] = 'full_html';
   $handler->display->display_options['defaults']['empty'] = FALSE;
   /* No results behavior: Global: Text area */
@@ -1349,14 +1446,14 @@ function gie_user_views_default_views() {
   $handler->display->display_options['relationships']['field_term_topic_tid']['id'] = 'field_term_topic_tid';
   $handler->display->display_options['relationships']['field_term_topic_tid']['table'] = 'field_data_field_term_topic';
   $handler->display->display_options['relationships']['field_term_topic_tid']['field'] = 'field_term_topic_tid';
-  $handler->display->display_options['relationships']['field_term_topic_tid']['label'] = 'Innovations in Search of User Skills';
+  $handler->display->display_options['relationships']['field_term_topic_tid']['label'] = 'Innovation Topic Field';
   $handler->display->display_options['relationships']['field_term_topic_tid']['required'] = TRUE;
   /* Relationship: Taxonomy term: User using Your Topics of Interest */
   $handler->display->display_options['relationships']['reverse_field_user_interests_user']['id'] = 'reverse_field_user_interests_user';
   $handler->display->display_options['relationships']['reverse_field_user_interests_user']['table'] = 'taxonomy_term_data';
   $handler->display->display_options['relationships']['reverse_field_user_interests_user']['field'] = 'reverse_field_user_interests_user';
   $handler->display->display_options['relationships']['reverse_field_user_interests_user']['relationship'] = 'field_term_topic_tid';
-  $handler->display->display_options['relationships']['reverse_field_user_interests_user']['label'] = 'Users with Matching Skills';
+  $handler->display->display_options['relationships']['reverse_field_user_interests_user']['label'] = 'User match field_user_interests';
   $handler->display->display_options['relationships']['reverse_field_user_interests_user']['required'] = TRUE;
   $handler->display->display_options['defaults']['arguments'] = FALSE;
   /* Contextual filter: User: Uid */
@@ -1370,6 +1467,40 @@ function gie_user_views_default_views() {
   $handler->display->display_options['arguments']['uid']['summary']['number_of_records'] = '0';
   $handler->display->display_options['arguments']['uid']['summary']['format'] = 'default_summary';
   $handler->display->display_options['arguments']['uid']['summary_options']['items_per_page'] = '25';
+
+  /* Display: Innovations Recommended User Follows */
+  $handler = $view->new_display('panel_pane', 'Innovations Recommended User Follows', 'panel_pane_5');
+  $handler->display->display_options['defaults']['title'] = FALSE;
+  $handler->display->display_options['defaults']['header'] = FALSE;
+  /* Header: Global: Text area */
+  $handler->display->display_options['header']['area']['id'] = 'area';
+  $handler->display->display_options['header']['area']['table'] = 'views';
+  $handler->display->display_options['header']['area']['field'] = 'area';
+  $handler->display->display_options['header']['area']['label'] = 'Innovations Recommended for You';
+  $handler->display->display_options['header']['area']['empty'] = TRUE;
+  $handler->display->display_options['header']['area']['content'] = '<div class="dashboard-sub-title">Based on the people you follow</div>';
+  $handler->display->display_options['header']['area']['format'] = 'full_html';
+  $handler->display->display_options['defaults']['empty'] = FALSE;
+  /* No results behavior: Global: Text area */
+  $handler->display->display_options['empty']['area']['id'] = 'area';
+  $handler->display->display_options['empty']['area']['table'] = 'views';
+  $handler->display->display_options['empty']['area']['field'] = 'area';
+  $handler->display->display_options['empty']['area']['empty'] = TRUE;
+  $handler->display->display_options['empty']['area']['content'] = 'We couldn\'t find a match for you based on your skillset. Make sure you have topics of interest added to your account  <a class="button button--highlight" href="/user">here</a>';
+  $handler->display->display_options['empty']['area']['format'] = 'full_html';
+  $handler->display->display_options['defaults']['relationships'] = FALSE;
+  /* Relationship: Content: Author */
+  $handler->display->display_options['relationships']['uid']['id'] = 'uid';
+  $handler->display->display_options['relationships']['uid']['table'] = 'node';
+  $handler->display->display_options['relationships']['uid']['field'] = 'uid';
+  /* Relationship: Flags: follow */
+  $handler->display->display_options['relationships']['flag_content_rel']['id'] = 'flag_content_rel';
+  $handler->display->display_options['relationships']['flag_content_rel']['table'] = 'users';
+  $handler->display->display_options['relationships']['flag_content_rel']['field'] = 'flag_content_rel';
+  $handler->display->display_options['relationships']['flag_content_rel']['relationship'] = 'uid';
+  $handler->display->display_options['relationships']['flag_content_rel']['label'] = 'current user follows author';
+  $handler->display->display_options['relationships']['flag_content_rel']['flag'] = 'follow';
+  $handler->display->display_options['defaults']['arguments'] = FALSE;
   $export['user_innovations'] = $view;
 
   $view = new view();
