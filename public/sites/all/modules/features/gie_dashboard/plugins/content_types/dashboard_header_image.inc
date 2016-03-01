@@ -54,21 +54,18 @@ function dashboard_whats_new_header_image_render($subtype, $conf, $panel_args, $
     $image = image_style_url('dashboard_profile_image', $profile_uri);
   }
 
-  $output = '<div class="dashboard__header_image">
-    <div class="profile-thumb__image--rounded">
-        <p>
-           <img typeof="foaf:Image" width="150" height="150" alt="" src="' . (!empty($image) ? $image : '') . '">
-        </p>
+  $output = '<div class="dashboard-header">
+    <div class="dashboard-header__profile-image profile-thumb__image-rounded">
+      <img typeof="foaf:Image" width="150" height="150" alt="" src="' . (!empty($image) ? $image : '') . '">     
     </div>
-    <div class ="dashboard__welcome_text_static">Your Exchange Dashboard</br>
-      <div class="dashboard__welcome_text_dynamic">WELCOME ' . strtoupper($user->name) . '</div>
+    <div class="dashboard-header__text">
+      <h2 class ="dashboard-header__title">Your Exchange Dashboard</h2>
+      <h3 class="dashboard-header__welcome">WELCOME ' . strtoupper($user->name) . '</h3>
     </div>
-    <div class="dashboard__action_items">
-    <p>
-        <a class="button button--highlight" href="/user/' . $user->uid . '/edit">Update your profile</a>
-        <a class="button button--highlight" href="/user">View your profile</a>
-        <a class="button button--highlight" href="/user/' . $user->uid . '/edit">Email Preferences</a>
-    </p>
+    <div class="dashboard-header__actions">
+      <a class="button button--highlight" href="/user/' . $user->uid . '/edit">Update your profile</a>
+      <a class="button button--highlight" href="/user">View your profile</a>
+      <a class="button button--highlight" href="/user/' . $user->uid . '/edit">Email Preferences</a>
   </div>
 </div>';
 
