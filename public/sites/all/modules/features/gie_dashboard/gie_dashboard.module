@@ -203,21 +203,49 @@ function gie_dashboard_notification_center_list() {
   if (!empty($user) && $user->uid > 0) {
     $results = array();
     $follow_user = flag_load('follow');
+    $favorite = flag_load('favorite');
 
     //  Comments left on your content
-    $results['comments_on_your_content'] = db_query('SELECT SUM(comment_count) FROM node INNER JOIN node_comment_statistics ON node_comment_statistics.nid = node.nid WHERE uid = :uid', array(':uid' => $user->uid))->fetchField();
+    $results['comments_on_your_content'] = db_query('SELECT users.name, users.uid, field_data_field_user_firstname.field_user_firstname_value, field_data_field_user_lastname.field_user_lastname_value
+	FROM node
+    INNER JOIN comment on comment.nid = node.nid
+    INNER JOIN users on comment.uid = users.uid
+    LEFT JOIN field_data_field_user_firstname on field_data_field_user_firstname.entity_id = comment.uid
+    LEFT JOIN field_data_field_user_lastname on field_data_field_user_lastname.entity_id = comment.uid
+    WHERE node.uid = :uid GROUP BY users.uid ORDER BY RAND() LIMIT 3', array(
+      ':uid' => $user->uid
+    ))->fetchAll();
+
 
     // Users following you
-    $results['people_follow_you'] = gie_dashboard_flag_get_entity_flag_counts($follow_user, 'user', array(
-      'entity_id',
-      $user->uid
-    ));
+    $results['people_follow_you'] = db_query('SELECT users.name, users.uid, field_data_field_user_firstname.field_user_firstname_value, field_data_field_user_lastname.field_user_lastname_value
+    FROM flagging
+    INNER JOIN users on flagging.uid = users.uid
+    LEFT JOIN field_data_field_user_firstname on field_data_field_user_firstname.entity_id = flagging.uid
+    LEFT JOIN field_data_field_user_lastname on field_data_field_user_lastname.entity_id = flagging.uid
+    WHERE flagging.fid = :fid AND flagging.entity_id = :uid AND flagging.uid <> :uid ORDER BY RAND() LIMIT 3', array(
+      ':fid' => $follow_user->fid,
+      ':uid' => $user->uid
+    ))->fetchAll();
 
     // Users following your content
-    $results['people_follow_your_content'] = db_query('SELECT COUNT(node.nid) FROM node INNER JOIN flagging on flagging.entity_id = node.nid WHERE node.uid = :uid AND flagging.uid <> :uid', array(':uid' => $user->uid))->fetchField();
+    $results['people_follow_your_content'] = db_query('SELECT users.name, users.uid, field_data_field_user_firstname.field_user_firstname_value, field_data_field_user_lastname.field_user_lastname_value
+    FROM node
+    INNER JOIN flagging on flagging.entity_id = node.nid
+    INNER JOIN users on flagging.uid = users.uid
+    LEFT JOIN field_data_field_user_firstname on field_data_field_user_firstname.entity_id = flagging.uid
+    LEFT JOIN field_data_field_user_lastname on field_data_field_user_lastname.entity_id = flagging.uid
+    WHERE flagging.fid = :fid AND node.uid = :uid AND flagging.uid <> :uid ORDER BY RAND() LIMIT 3', array(
+      ':fid' => $favorite->fid,
+      ':uid' => $user->uid
+    ))->fetchAll();
+
 
     // Grab random followers for use with generating a list of content
-    $followers = db_query('SELECT flagging.uid FROM flagging WHERE flagging.fid = :fid AND flagging.entity_id = :uid', array(
+    // Inner Join back on flagging to make sure that the relationship is 'two-way'
+    $followers = db_query('SELECT flagging.uid FROM flagging INNER JOIN flagging reverse_flagging on flagging.uid = reverse_flagging.entity_id
+    WHERE flagging.fid = :fid AND reverse_flagging.fid  = :fid
+    AND flagging.entity_id = :uid AND reverse_flagging.uid = :uid', array(
       ':fid' => $follow_user->fid,
       ':uid' => $user->uid
     ))->fetchCol();
@@ -241,7 +269,7 @@ function gie_dashboard_notification_center_list() {
   FROM flagging
   INNER JOIN users on users.uid = flagging.uid
   INNER JOIN node followed_content on followed_content.nid = flagging.entity_id AND flagging.timestamp between :start AND :end
-  WHERE flagging.uid IN (:uids) ORDER BY RAND() LIMIT 1', array(
+  WHERE flagging.uid IN (:uids) ORDER BY RAND() LIMIT 3', array(
         ':start' => strtotime('first day of last month'),
         ':end' => $now,
         ':uids' => $followers
@@ -253,7 +281,7 @@ function gie_dashboard_notification_center_list() {
   INNER JOIN users on users.uid = flagging.uid
   INNER JOIN flagging connected_user on connected_user.uid = flagging.entity_id AND flagging.timestamp between :start AND :end
   INNER JOIN users friend_of_friend on friend_of_friend.uid = connected_user.uid
-  WHERE flagging.uid IN (:uids) AND flagging.fid = :fid AND connected_user.entity_id <> :uid AND connected_user.fid = :fid ORDER BY RAND() LIMIT 1', array(
+  WHERE flagging.uid IN (:uids) AND flagging.fid = :fid AND connected_user.entity_id <> :uid AND connected_user.fid = :fid ORDER BY RAND() LIMIT 3', array(
         ':start' => strtotime('first day of last month'),
         ':end' => $now,
         ':uids' => $followers,
@@ -268,7 +296,7 @@ function gie_dashboard_notification_center_list() {
   INNER JOIN comment friend_comment on friend_comment.uid = users.uid AND friend_comment.changed between :start AND :end
   INNER JOIN node on node.nid = friend_comment.nid
   WHERE users.uid IN (:uids)
-  ORDER BY RAND() LIMIT 1', array(
+  ORDER BY RAND() LIMIT 3', array(
         ':uids' => $followers,
         ':start' => strtotime('first day of last month'),
         ':end' => $now
@@ -282,49 +310,6 @@ function gie_dashboard_notification_center_list() {
         'friend_comment' => 0
       ));
     }
-
-    //TODO: See if needed later on, if not remove
-    //  $favorite = flag_load('favorite');
-    //  $follow_taxonomy = flag_load('follow_taxonomy');
-//  $attending = flag_load('attending');
-//  $results['exchange_updates'] = drupal_render(drupal_get_form('gie_dashboard_exchange_updates_form'));
-
-//  // People you follow
-//  $results['people_you_follow'] = gie_dashboard_flag_get_entity_flag_counts($follow_user, 'user', array(
-//    'uid',
-//    $user->uid
-//  ));
-//
-//  //Number of events you are attending
-//  $results['attending_counts'] = gie_dashboard_flag_get_entity_flag_counts($attending, 'node', array(
-//    'uid',
-//    $user->uid
-//  ));
-//
-//  // Favorite counts for event, funding, innovation, long_form_page, needs, organization, program, resource
-//  $results['favorite_counts'] = gie_dashboard_flag_get_entity_flag_counts($favorite, 'node', array(
-//    'uid',
-//    $user->uid
-//  ));
-//
-//  // People you follow
-//  $results['people_you_follow'] = gie_dashboard_flag_get_entity_flag_counts($follow_user, 'user', array(
-//    'uid',
-//    $user->uid
-//  ));
-//
-//
-//  //Follow region, topic, sector, program_discussions
-//  $results['follow_taxonomy_counts'] = gie_dashboard_flag_get_entity_flag_counts($follow_taxonomy, 'taxonomy_term', array(
-//    'uid',
-//    $user->uid
-//  ));
-//
-//  //Number of events you are attending
-//  $results['attending_counts'] = gie_dashboard_flag_get_entity_flag_counts($attending, 'node', array(
-//    'uid',
-//    $user->uid
-//  ));
 
     $results['featured_innovation'] = db_query('select node.nid from field_data_field_featured_innovation INNER JOIN node on node.nid = field_data_field_featured_innovation.entity_id WHERE field_featured_innovation_value = 1 LIMIT 1')->fetchField();
 
@@ -415,50 +400,6 @@ function gie_dashboard_form_validate($form, &$form_state) {
   }
 }
 
-/**
- *
- * Get the count of flags for a particular entity type.
- *
- * When called during a flagging or unflagging (such as from a hook
- * implementation or from Rules), the flagging or unflagging that is in the
- * process of being performed:
- *  - will be included during a flagging operation
- *  - will STILL be included during an unflagging operation. That is, the count
- *    will not yet have been decreased.
- * This is because this queries the {flagging} table, which only has its record
- * deleted at the very end of the unflagging process.
- *
- * @param $flag
- *   The flag.
- * @param $entity_type
- *   The entity type. For example, 'node'.
- * @param $condition
- *   The condition. For example, array('uid', $user->uid).
- *
- * @return
- *   The flag count with the flag name and entity type as the array key.
- */
-function gie_dashboard_flag_get_entity_flag_counts($flag, $entity_type, $condition) {
-  $counts = &drupal_static(__FUNCTION__);
-
-  // We check to see if the flag count is already in the cache,
-  // if it's not, run the query.
-  if (!isset($counts[$flag->name][$entity_type])) {
-    $counts[$flag->name][$entity_type] = array();
-    $result = db_select('flagging', 'f')
-      ->fields('f', array('fid'))
-      ->condition('fid', $flag->fid)
-      ->condition('entity_type', $entity_type)
-      ->condition("$condition[0]", "$condition[1]")
-      ->countQuery()
-      ->execute()
-      ->fetchField();
-    $counts[$flag->name][$entity_type] = $result;
-  }
-
-  return $counts[$flag->name][$entity_type];
-}
-
 
 /**
  * Implements hook_views_pre_views_pre_view().
@@ -525,26 +466,79 @@ function gie_dashboard_whats_new_tab() {
     );
 
     foreach ($results as $key => $result) {
-      if ($key == 'comments_on_your_content') {
-        $gie_dashboard_notification_center[$key] = array(
-          '#markup' => '<li>' . format_plural($result, '1 Person has', '@count People have') . ' commented on your content</li></br>',
-          '#prefix' => '<div class="' . array_rand($notification_center_styles) . '">',
-          '#suffix' => '</div>'
-        );
+      if ($key == 'comments_on_your_content' && !empty($result)) {
+        if (count($result) > 1) {
+          $comments_name = array();
+          $gie_dashboard_notification_center[$key] = array(
+            '#markup' => '<li>',
+            '#prefix' => '<div class="' . array_rand($notification_center_styles) . '">',
+            '#suffix' => '</div>'
+          );
+          foreach ($result as $record) {
+            $comments_name[] = !empty($record->field_user_firstname_value) && !empty($record->field_user_lastname_value) ? l($record->field_user_firstname_value . ' ' . $record->field_user_lastname_value, 'user/' . $record->uid) : l($record->name, 'user/' . $record->uid);
+          }
+          $gie_dashboard_notification_center[$key]['#markup'] .= implode(', ', $comments_name) . ' commented on your content</li></br>';
+
+
+        }
+        else {
+          $name = !empty($result[0]->field_user_firstname_value) && !empty($result[0]->field_user_lastname_value) ? !$result[0]->field_user_firstname_value . ' ' . $result[0]->field_user_lastname_value : $result[0]->name;
+          $gie_dashboard_notification_center[$key] = array(
+            '#markup' => '<li>' . l($name, 'user/' . $result[0]->uid) . ' commented on your content</li></br>',
+            '#prefix' => '<div class="' . array_rand($notification_center_styles) . '">',
+            '#suffix' => '</div>'
+          );
+
+        }
       }
-      if ($key == 'people_follow_your_content') {
-        $gie_dashboard_notification_center[$key] = array(
-          '#markup' => '<li>' . format_plural($result, '1 Person follows', '@count People follow') . ' your content.</li></br>',
-          '#prefix' => '<div class="' . array_rand($notification_center_styles) . '">',
-          '#suffix' => '</div>'
-        );
+      if ($key == 'people_follow_your_content' && !empty($result)) {
+        if (count($result) > 1) {
+          $content_name = array();
+          $gie_dashboard_notification_center[$key] = array(
+            '#markup' => '<li>',
+            '#prefix' => '<div class="' . array_rand($notification_center_styles) . '">',
+            '#suffix' => '</div>'
+          );
+          foreach ($result as $record) {
+            $content_name[] = !empty($record->field_user_firstname_value) && !empty($record->field_user_lastname_value) ? l($record->field_user_firstname_value . ' ' . $record->field_user_lastname_value, 'user/' . $record->uid) : l($record->name, 'user/' . $record->uid);
+          }
+          $gie_dashboard_notification_center[$key]['#markup'] .= implode(', ', $content_name) . ' follows your content</li></br>';
+
+        }
+        else {
+          $name = !empty($result[0]->field_user_firstname_value) && !empty($result[0]->field_user_lastname_value) ? !$result[0]->field_user_firstname_value . ' ' . $result[0]->field_user_lastname_value : $result[0]->name;
+          $gie_dashboard_notification_center[$key] = array(
+            '#markup' => '<li>' . l($name, 'user/' . $result[0]->uid) . ' follows your content</li></br>',
+            '#prefix' => '<div class="' . array_rand($notification_center_styles) . '">',
+            '#suffix' => '</div>'
+          );
+
+        }
       }
       elseif ($key == 'people_follow_you') {
-        $gie_dashboard_notification_center[$key] = array(
-          '#markup' => '<li>' . format_plural($result, '1 Person follows', '@count People follow') . ' you.</li></br>',
-          '#prefix' => '<div class="' . array_rand($notification_center_styles) . '">',
-          '#suffix' => '</div>'
-        );
+        if (count($result) > 1) {
+          $follow_name = array();
+          $gie_dashboard_notification_center[$key] = array(
+            '#markup' => '<li>',
+            '#prefix' => '<div class="' . array_rand($notification_center_styles) . '">',
+            '#suffix' => '</div>'
+          );
+          foreach ($result as $record) {
+            $follow_name[] = !empty($record->field_user_firstname_value) && !empty($record->field_user_lastname_value) ? l($record->field_user_firstname_value . ' ' . $record->field_user_lastname_value, 'user/' . $record->uid) : l($record->name, 'user/' . $record->uid);
+          }
+          $gie_dashboard_notification_center[$key]['#markup'] .= implode(', ', $follow_name) . ' follow you</li></br>';
+
+
+        }
+        else {
+          $name = !empty($result[0]->field_user_firstname_value) && !empty($result[0]->field_user_lastname_value) ? !$result[0]->field_user_firstname_value . ' ' . $result[0]->field_user_lastname_value : $result[0]->name;
+          $gie_dashboard_notification_center[$key] = array(
+            '#markup' => '<li>' . l($name, 'user/' . $result[0]->uid) . ' follows you</li></br>',
+            '#prefix' => '<div class="' . array_rand($notification_center_styles) . '">',
+            '#suffix' => '</div>'
+          );
+
+        }
       }
       elseif ($key == 'friend_content' && !empty($result['name']) && !empty($result['uid']) && !empty($result['nid'])) {
         $gie_dashboard_notification_center[$key] = array(
@@ -561,6 +555,7 @@ function gie_dashboard_whats_new_tab() {
         );
       }
       elseif ($key == 'friend_followed' && !empty($result['original_friend_name']) && !empty($result['original_friend_uid']) && !empty($result['friend_of_friend_name']) && !empty($result['friend_of_friend_uid'])) {
+
         $gie_dashboard_notification_center[$key] = array(
           '#markup' => '<li>' . l($result['original_friend_name'], 'user/' . $result['original_friend_uid']) . ' followed ' . l($result['friend_of_friend_name'], 'user/' . $result['friend_of_friend_uid']) . '.</li></br>',
           '#prefix' => '<div class="' . array_rand($notification_center_styles) . '">',
@@ -568,6 +563,7 @@ function gie_dashboard_whats_new_tab() {
         );
       }
       elseif ($key == 'friend_comment' && !empty($result['name']) && !empty($result['uid']) && !empty($result['nid'])) {
+
         $gie_dashboard_notification_center[$key] = array(
           '#markup' => '<li>' . l($result['name'], 'user/' . $result['uid']) . ' commented ' . $result['subject'] . ' on ' . l($result['title'], 'node/' . $result['nid'], array('fragment' => 'comments')) . '.</li></br>',
           '#prefix' => '<div class="' . array_rand($notification_center_styles) . '">',
@@ -601,8 +597,22 @@ function gie_dashboard_dummy_data($original_user_uid = NULL, $pieces = NULL) {
   // Add the skill match
   if ($original_user_uid != 1) {
     $user = user_load($original_user_uid);
-    $user->field_user_interests = array(LANGUAGE_NONE => array(array('delta' => 0, 'tid' => '545')));
-    $user->field_term_sector = array(LANGUAGE_NONE => array(array('delta' => 0, 'tid' => '419')));
+    $user->field_user_interests = array(
+      LANGUAGE_NONE => array(
+        array(
+          'delta' => 0,
+          'tid' => '545'
+        )
+      )
+    );
+    $user->field_term_sector = array(
+      LANGUAGE_NONE => array(
+        array(
+          'delta' => 0,
+          'tid' => '419'
+        )
+      )
+    );
     user_save($user);
   }
 
@@ -618,7 +628,7 @@ function gie_dashboard_dummy_data($original_user_uid = NULL, $pieces = NULL) {
 //    'field_term_topic' => 545,
     'field_term_sector' => 419,
     'field_funding_deadline' => array('value' => date('Y-m-d h:i:s', rand(strtotime('first day of last month'), strtotime('last day of last month')))),
-    'field_funding_link' =>  'http://google.com'
+    'field_funding_link' => 'http://google.com'
   ));
   gie_dashboard_create_node('innovation', $users[$rand_user], $pieces);
 
@@ -703,7 +713,7 @@ function gie_dashboard_dummy_data($original_user_uid = NULL, $pieces = NULL) {
   // Check for a Featured Node
   // If not found, add one
   $featured_node = db_query('SELECT COUNT(entity_id) FROM field_data_field_featured_innovation WHERE field_data_field_featured_innovation.field_featured_innovation_value = 1')->fetchField();
-  if (empty($featured_node) || $featured_node < 1 ) {
+  if (empty($featured_node) || $featured_node < 1) {
     $random_innovation = db_query('SELECT nid FROM node WHERE node.type = :innovation ORDER BY RAND() LIMIT 1', array(':innovation' => 'innovation'))->fetchField();
     $node = node_load($random_innovation);
     $node->field_featured_innovation[$node->language][]['value'] = 1;
@@ -784,8 +794,22 @@ function gie_dashboard_create_user($pieces, $name = NULL, $payload = NULL) {
 
     //the first parameter is left blank so a new user is created
     $user = user_save('', $fields);
-    $user->field_user_interests = array(LANGUAGE_NONE => array(array('delta' => 0, 'tid' => '545')));
-    $user->field_term_sector = array(LANGUAGE_NONE => array(array('delta' => 0, 'tid' => '419')));
+    $user->field_user_interests = array(
+      LANGUAGE_NONE => array(
+        array(
+          'delta' => 0,
+          'tid' => '545'
+        )
+      )
+    );
+    $user->field_term_sector = array(
+      LANGUAGE_NONE => array(
+        array(
+          'delta' => 0,
+          'tid' => '419'
+        )
+      )
+    );
     user_save($user);
     // If you want to send the welcome email, use the following code
 
