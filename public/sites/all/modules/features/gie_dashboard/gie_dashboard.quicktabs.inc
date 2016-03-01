@@ -29,7 +29,7 @@ function gie_dashboard_quicktabs_default_quicktabs() {
       'vid' => 'user_innovations',
       'display' => 'panel_pane_1',
       'args' => '',
-      'title' => 'Innovations',
+      'title' => 'Innovation Impacts',
       'weight' => '-99',
       'type' => 'view',
     ),
@@ -37,14 +37,14 @@ function gie_dashboard_quicktabs_default_quicktabs() {
       'vid' => 'dashboard',
       'display' => 'user_funding_opportunities',
       'args' => '',
-      'title' => 'Funding',
+      'title' => 'Funding Status',
       'weight' => '-98',
       'type' => 'view',
     ),
     3 => array(
       'bid' => 'panels_mini_delta_dashboard_follow',
       'hide_title' => 0,
-      'title' => 'Connections',
+      'title' => 'Network',
       'weight' => '-97',
       'type' => 'block',
     ),
@@ -55,10 +55,10 @@ function gie_dashboard_quicktabs_default_quicktabs() {
 
   // Translatables
   // Included for use with string extractors like potx.
-  t('Connections');
   t('Dashboard');
-  t('Funding');
-  t('Innovations');
+  t('Funding Status');
+  t('Innovation Impacts');
+  t('Network');
   t('What\'s New?');
 
   $export['dashboard'] = $quicktabs;
