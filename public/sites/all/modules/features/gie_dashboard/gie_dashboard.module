@@ -110,27 +110,27 @@ function gie_dashboard_exchange_updates_form($form, &$form_state) {
         }
       }
     }
-    $award_available = '<div class="data-point"><a href="/funding">$' . $award_available . ' <span>Available</span></a></div>';
+    $award_available = '<div class="dashboard__data data-point"><a href="/funding">$' . $award_available . ' <span>Available</span></a></div>';
   }
   else {
-    $award_available = '<div class="data-point"><a href="/funding">N/A <span>Available</span></a></div>';
+    $award_available = '<div class="dashboard__data data-point"><a href="/funding">N/A <span>Available</span></a></div>';
   }
 
-  $organizations = !empty($organizations) ? '<div class="data-point"><a href="/organizations">' . $organizations . ' <span>Organizations</span></a></div>' : '<div class="data-point"><a href="/organizations">N/A <span>Organizations</span></a></div>';
-  $collaborators = !empty($collaborators) ? '<div class="data-point"><a href="/members">' . $collaborators . ' <span>Collaborators</span></a></div>' : '<div class="data-point"><a href="/members">N/A <span>Collaborators</span></a></div>';
-  $innovations = !empty($organizations) ? '<div class="data-point"><a href="/innovations">' . $innovations . ' <span>Innovations</span></a></div>' : '<div class="data-point"><a href="/innovations">N/A <span>Innovations</span></a></div>';
+  $organizations = !empty($organizations) ? '<div class="dashboard__data data-point"><a href="/organizations">' . $organizations . ' <span>Organizations</span></a></div>' : '<div class="data-point"><a href="/organizations">N/A <span>Organizations</span></a></div>';
+  $collaborators = !empty($collaborators) ? '<div class="dashboard__data data-point"><a href="/members">' . $collaborators . ' <span>Collaborators</span></a></div>' : '<div class="data-point"><a href="/members">N/A <span>Collaborators</span></a></div>';
+  $innovations = !empty($organizations) ? '<div class="dashboard__data data-point"><a href="/innovations">' . $innovations . ' <span>Innovations</span></a></div>' : '<div class="data-point"><a href="/innovations">N/A <span>Innovations</span></a></div>';
 
 
   $form['selected'] = array(
     '#type' => 'select',
-    '#prefix' => '<h2 class="dashboard__title dashboard_updates_selected">' . t("Exchange Updates since last") . '</h2>',
+    '#prefix' => '<h2 class="dashboard__title">' . t("Exchange Updates since") . '',
     '#options' => array(
-      0 => t('Month'),
+      0 => t('Last Month'),
       1 => t('Your Last Visit'),
     ),
     '#default_value' => !empty($_GET['updates']) && $_GET['updates'] == 'last-visit' ? 1 : 0,
     '#attributes' => array('onChange' => 'document.getElementById("gie-dashboard-exchange-updates-form").submit();'),
-    '#suffix' => '',
+    '#suffix' => '</h2>',
     '#weight' => 4,
   );
 
@@ -146,7 +146,7 @@ function gie_dashboard_exchange_updates_form($form, &$form_state) {
     '#type' => 'item',
     '#markup' => $organizations . $award_available . $collaborators . $innovations,
     '#weight' => 5,
-    '#suffix' => '<div style="text-align:center"><a class="button button--highlight dashboard--exchange--out" href="/data">See all Exchange Data</a></div>'
+    '#suffix' => '<div class="dashboard__all-data-button"><a class="button button--highlight" href="/data">See all Exchange Data</a></div>'
   );
 
 

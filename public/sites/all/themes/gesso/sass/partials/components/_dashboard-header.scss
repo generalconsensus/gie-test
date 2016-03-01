@@ -27,7 +27,7 @@
 
 .dashboard-header__text {
   float: left;
-  padding: 1em;
+  padding: 3em 1em 1em 1em;
   width: percentage(2/3);
   @include breakpoint(800px, $no-query: true) {
     @include dashboard-header__layout;
