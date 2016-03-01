@@ -35,25 +35,6 @@ function gie_dashboard_default_panels_mini() {
   $display->content = array();
   $display->panels = array();
     $pane = new stdClass();
-    $pane->pid = 'new-c875b34b-e2e7-486a-ac36-3eea00f0e85c';
-    $pane->panel = 'middle';
-    $pane->type = 'views_panes';
-    $pane->subtype = 'dashboard-panel_pane_1';
-    $pane->shown = TRUE;
-    $pane->access = array();
-    $pane->configuration = array();
-    $pane->cache = array();
-    $pane->style = array(
-      'settings' => NULL,
-    );
-    $pane->css = array();
-    $pane->extras = array();
-    $pane->position = 0;
-    $pane->locks = array();
-    $pane->uuid = 'c875b34b-e2e7-486a-ac36-3eea00f0e85c';
-    $display->content['new-c875b34b-e2e7-486a-ac36-3eea00f0e85c'] = $pane;
-    $display->panels['middle'][0] = 'new-c875b34b-e2e7-486a-ac36-3eea00f0e85c';
-    $pane = new stdClass();
     $pane->pid = 'new-065d1b82-aa4d-4690-afa0-3817acb7d334';
     $pane->panel = 'middle';
     $pane->type = 'views_panes';
@@ -67,11 +48,11 @@ function gie_dashboard_default_panels_mini() {
     );
     $pane->css = array();
     $pane->extras = array();
-    $pane->position = 1;
+    $pane->position = 0;
     $pane->locks = array();
     $pane->uuid = '065d1b82-aa4d-4690-afa0-3817acb7d334';
     $display->content['new-065d1b82-aa4d-4690-afa0-3817acb7d334'] = $pane;
-    $display->panels['middle'][1] = 'new-065d1b82-aa4d-4690-afa0-3817acb7d334';
+    $display->panels['middle'][0] = 'new-065d1b82-aa4d-4690-afa0-3817acb7d334';
     $pane = new stdClass();
     $pane->pid = 'new-29818a4a-293f-418d-a40f-f5bce0dff3fb';
     $pane->panel = 'middle';
@@ -86,13 +67,13 @@ function gie_dashboard_default_panels_mini() {
     );
     $pane->css = array();
     $pane->extras = array();
-    $pane->position = 2;
+    $pane->position = 1;
     $pane->locks = array();
     $pane->uuid = '29818a4a-293f-418d-a40f-f5bce0dff3fb';
     $display->content['new-29818a4a-293f-418d-a40f-f5bce0dff3fb'] = $pane;
-    $display->panels['middle'][2] = 'new-29818a4a-293f-418d-a40f-f5bce0dff3fb';
+    $display->panels['middle'][1] = 'new-29818a4a-293f-418d-a40f-f5bce0dff3fb';
   $display->hide_title = PANELS_TITLE_FIXED;
-  $display->title_pane = 'new-c875b34b-e2e7-486a-ac36-3eea00f0e85c';
+  $display->title_pane = '0';
   $mini->display = $display;
   $export['dashboard_follow'] = $mini;
 
