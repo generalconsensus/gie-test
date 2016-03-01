@@ -909,8 +909,7 @@ function gie_dashboard_views_default_views() {
   $handler->display->display_options['footer']['area_2']['field'] = 'area';
   $handler->display->display_options['footer']['area_2']['label'] = 'Funding Counts Chart';
   $handler->display->display_options['footer']['area_2']['empty'] = TRUE;
-  $handler->display->display_options['footer']['area_2']['content'] = '<h2 class="dashboard__title">Number of Funding Opportunities by Country</h2>
-<div data-ng-controller="FundingCountController">
+  $handler->display->display_options['footer']['area_2']['content'] = '<div data-ng-controller="FundingCountController">
 <bar-chart></bar-chart>
 </div>
 <div class="dashboard__funding__chart__more__link"> 
