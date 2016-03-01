@@ -1,0 +1,14 @@
+.view--user-innovations {
+  > .views-table {
+    @extend %table-large;
+    .views-field-title {
+      min-width: 60%;
+      max-width: 80%;
+      text-align: left;
+    }
+    .views-field-count,
+    .views-field-comment-count {
+      border-left: 1px solid #333; 
+    }
+  }
+}

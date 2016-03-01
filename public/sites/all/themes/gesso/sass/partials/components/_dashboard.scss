@@ -1,15 +1,21 @@
 .dashboard {
-  
+  color: #333;
 }
 
 .dashboard__title {
   border-bottom: 1px solid #333;
   color: #333;
+  margin-top: 1em;
+  overflow: hidden;
   padding-bottom: 0.5em;
   .form-type-select {
     display: inline-block;
     font-size: $font-size-normal;
     margin: 0 0 0 1em;
+  }
+  .button {
+    float: right;
+    margin: 0 0 -0.5em 0;
   }
 }
 
