@@ -1178,6 +1178,7 @@ function gie_user_views_default_views() {
   $handler = $view->new_display('panel_pane', 'Dashboard', 'panel_pane_1');
   $handler->display->display_options['defaults']['title'] = FALSE;
   $handler->display->display_options['title'] = 'Your Innovations';
+  $handler->display->display_options['defaults']['css_class'] = FALSE;
   $handler->display->display_options['defaults']['pager'] = FALSE;
   $handler->display->display_options['pager']['type'] = 'some';
   $handler->display->display_options['pager']['options']['items_per_page'] = '5';
@@ -1207,7 +1208,7 @@ function gie_user_views_default_views() {
   $handler->display->display_options['header']['area']['field'] = 'area';
   $handler->display->display_options['header']['area']['label'] = 'Innovation Title and Create Innovation Button';
   $handler->display->display_options['header']['area']['empty'] = TRUE;
-  $handler->display->display_options['header']['area']['content'] = '<div class="dashboard-revamp-title">Your Innovations</div><a class="button button--highlight" href="/node/add/innovation">Create an Innovation</a><hr>
+  $handler->display->display_options['header']['area']['content'] = '<h2 class="dashboard__title">Your Innovations <a class="button button--highlight" href="/node/add/innovation">Create an Innovation</a></h2>
 ';
   $handler->display->display_options['header']['area']['format'] = 'full_html';
   $handler->display->display_options['defaults']['footer'] = FALSE;
@@ -1284,7 +1285,7 @@ function gie_user_views_default_views() {
   $handler->display->display_options['header']['area']['field'] = 'area';
   $handler->display->display_options['header']['area']['label'] = 'Innovations You Follow';
   $handler->display->display_options['header']['area']['empty'] = TRUE;
-  $handler->display->display_options['header']['area']['content'] = '<div class="dashboard-revamp-title">Innovations You Follow<hr></div>';
+  $handler->display->display_options['header']['area']['content'] = '<h2 class="dashboard__title">Innovations You Follow</h2>';
   $handler->display->display_options['header']['area']['format'] = 'full_html';
   $handler->display->display_options['defaults']['empty'] = FALSE;
   /* No results behavior: Global: Text area */
@@ -1333,7 +1334,7 @@ function gie_user_views_default_views() {
   $handler->display->display_options['header']['area']['field'] = 'area';
   $handler->display->display_options['header']['area']['label'] = 'Innovations Recommended for You';
   $handler->display->display_options['header']['area']['empty'] = TRUE;
-  $handler->display->display_options['header']['area']['content'] = '<div class="dashboard-revamp-title">Innovations Recommended for You<hr></div>';
+  $handler->display->display_options['header']['area']['content'] = '<h2 class="dashboard__title">Innovations Recommended for You</h2>';
   $handler->display->display_options['header']['area']['format'] = 'full_html';
   $handler->display->display_options['defaults']['empty'] = FALSE;
   /* No results behavior: Global: Text area */
