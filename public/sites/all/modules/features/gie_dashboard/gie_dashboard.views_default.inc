@@ -205,7 +205,7 @@ function gie_dashboard_views_default_views() {
   $handler->display->display_options['header']['area']['field'] = 'area';
   $handler->display->display_options['header']['area']['label'] = 'Funding Recommended for You';
   $handler->display->display_options['header']['area']['empty'] = TRUE;
-  $handler->display->display_options['header']['area']['content'] = '<div class="dashboard-revamp-title">Funding Recommended for You<hr></div>';
+  $handler->display->display_options['header']['area']['content'] = '<h2 class="dashboard__title">Funding Recommended for You</h2>';
   $handler->display->display_options['header']['area']['format'] = 'full_html';
   $handler->display->display_options['defaults']['empty'] = FALSE;
   /* No results behavior: Global: Text area */
@@ -877,7 +877,7 @@ function gie_dashboard_views_default_views() {
   $handler->display->display_options['header']['area']['field'] = 'area';
   $handler->display->display_options['header']['area']['label'] = 'Your Funding Opportunities';
   $handler->display->display_options['header']['area']['empty'] = TRUE;
-  $handler->display->display_options['header']['area']['content'] = '<div class="dashboard-revamp-title">Your Funding Opportunities<hr></div>';
+  $handler->display->display_options['header']['area']['content'] = '<h2 class="dashboard__title">Your Funding Opportunities</h2>';
   $handler->display->display_options['header']['area']['format'] = 'full_html';
   $handler->display->display_options['defaults']['footer'] = FALSE;
   /* Footer: Global: Text area */
@@ -909,7 +909,7 @@ function gie_dashboard_views_default_views() {
   $handler->display->display_options['footer']['area_2']['field'] = 'area';
   $handler->display->display_options['footer']['area_2']['label'] = 'Funding Counts Chart';
   $handler->display->display_options['footer']['area_2']['empty'] = TRUE;
-  $handler->display->display_options['footer']['area_2']['content'] = '<div class="dashboard-revamp-title">Number of Funding Opportunities by Country<hr></div>
+  $handler->display->display_options['footer']['area_2']['content'] = '<h2 class="dashboard__title">Number of Funding Opportunities by Country</h2>
 <div data-ng-controller="FundingCountController">
 <bar-chart></bar-chart>
 </div>

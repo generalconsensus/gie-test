@@ -123,14 +123,14 @@ function gie_dashboard_exchange_updates_form($form, &$form_state) {
 
   $form['selected'] = array(
     '#type' => 'select',
-    '#prefix' => '<div class="dashboard-revamp-title dashboard_updates_selected">' . t("Exchange Updates since last") . '</div>',
+    '#prefix' => '<h2 class="dashboard__title dashboard_updates_selected">' . t("Exchange Updates since last") . '</h2>',
     '#options' => array(
       0 => t('Month'),
       1 => t('Your Last Visit'),
     ),
     '#default_value' => !empty($_GET['updates']) && $_GET['updates'] == 'last-visit' ? 1 : 0,
     '#attributes' => array('onChange' => 'document.getElementById("gie-dashboard-exchange-updates-form").submit();'),
-    '#suffix' => '<hr>',
+    '#suffix' => '',
     '#weight' => 4,
   );
 
@@ -454,15 +454,9 @@ function gie_dashboard_whats_new_tab() {
 
   if ($results) {
 
-    $notification_center_styles = array(
-      'dashboard--notification__center__item__grey' => '',
-      'dashboard--notification__center__item__featured' => '',
-      'dashboard--notification__center__item__pink' => ''
-    );
-
     $gie_dashboard_notification_center = array(
-      '#prefix' => '<div class="dashboard-revamp-title">Notification Center<hr></div><div class="dashboard-notification__center__items"><ul>',
-      '#suffix' => '</ul></div>',
+      '#prefix' => '<h2 class="dashboard__title">Notification Center</h2><ul class="dashboard-notifications">',
+      '#suffix' => '</ul>',
     );
 
     foreach ($results as $key => $result) {
@@ -470,23 +464,19 @@ function gie_dashboard_whats_new_tab() {
         if (count($result) > 1) {
           $comments_name = array();
           $gie_dashboard_notification_center[$key] = array(
-            '#markup' => '<li>',
-            '#prefix' => '<div class="' . array_rand($notification_center_styles) . '">',
-            '#suffix' => '</div>'
+            '#markup' => '<li class="dashboard-notifications__item is-featured">',
           );
           foreach ($result as $record) {
             $comments_name[] = !empty($record->field_user_firstname_value) && !empty($record->field_user_lastname_value) ? l($record->field_user_firstname_value . ' ' . $record->field_user_lastname_value, 'user/' . $record->uid) : l($record->name, 'user/' . $record->uid);
           }
-          $gie_dashboard_notification_center[$key]['#markup'] .= implode(', ', $comments_name) . ' commented on your content</li></br>';
+          $gie_dashboard_notification_center[$key]['#markup'] .= implode(', ', $comments_name) . ' commented on your content</li>';
 
 
         }
         else {
           $name = !empty($result[0]->field_user_firstname_value) && !empty($result[0]->field_user_lastname_value) ? !$result[0]->field_user_firstname_value . ' ' . $result[0]->field_user_lastname_value : $result[0]->name;
           $gie_dashboard_notification_center[$key] = array(
-            '#markup' => '<li>' . l($name, 'user/' . $result[0]->uid) . ' commented on your content</li></br>',
-            '#prefix' => '<div class="' . array_rand($notification_center_styles) . '">',
-            '#suffix' => '</div>'
+            '#markup' => '<li class="dashboard-notifications__item is-featured">' . l($name, 'user/' . $result[0]->uid) . ' commented on your content</li>',
           );
 
         }
@@ -495,22 +485,18 @@ function gie_dashboard_whats_new_tab() {
         if (count($result) > 1) {
           $content_name = array();
           $gie_dashboard_notification_center[$key] = array(
-            '#markup' => '<li>',
-            '#prefix' => '<div class="' . array_rand($notification_center_styles) . '">',
-            '#suffix' => '</div>'
+            '#markup' => '<li class="dashboard-notifications__item is-featured">',
           );
           foreach ($result as $record) {
             $content_name[] = !empty($record->field_user_firstname_value) && !empty($record->field_user_lastname_value) ? l($record->field_user_firstname_value . ' ' . $record->field_user_lastname_value, 'user/' . $record->uid) : l($record->name, 'user/' . $record->uid);
           }
-          $gie_dashboard_notification_center[$key]['#markup'] .= implode(', ', $content_name) . ' follows your content</li></br>';
+          $gie_dashboard_notification_center[$key]['#markup'] .= implode(', ', $content_name) . ' follows your content</li>';
 
         }
         else {
           $name = !empty($result[0]->field_user_firstname_value) && !empty($result[0]->field_user_lastname_value) ? !$result[0]->field_user_firstname_value . ' ' . $result[0]->field_user_lastname_value : $result[0]->name;
           $gie_dashboard_notification_center[$key] = array(
-            '#markup' => '<li>' . l($name, 'user/' . $result[0]->uid) . ' follows your content</li></br>',
-            '#prefix' => '<div class="' . array_rand($notification_center_styles) . '">',
-            '#suffix' => '</div>'
+            '#markup' => '<li class="dashboard-notifications__item is-featured">' . l($name, 'user/' . $result[0]->uid) . ' follows your content</li>',
           );
 
         }
@@ -519,60 +505,47 @@ function gie_dashboard_whats_new_tab() {
         if (count($result) > 1) {
           $follow_name = array();
           $gie_dashboard_notification_center[$key] = array(
-            '#markup' => '<li>',
-            '#prefix' => '<div class="' . array_rand($notification_center_styles) . '">',
-            '#suffix' => '</div>'
+            '#markup' => '<li class="dashboard-notifications__item is-featured">',
           );
           foreach ($result as $record) {
             $follow_name[] = !empty($record->field_user_firstname_value) && !empty($record->field_user_lastname_value) ? l($record->field_user_firstname_value . ' ' . $record->field_user_lastname_value, 'user/' . $record->uid) : l($record->name, 'user/' . $record->uid);
           }
-          $gie_dashboard_notification_center[$key]['#markup'] .= implode(', ', $follow_name) . ' follow you</li></br>';
+          $gie_dashboard_notification_center[$key]['#markup'] .= implode(', ', $follow_name) . ' follow you</li>';
 
 
         }
         else {
           $name = !empty($result[0]->field_user_firstname_value) && !empty($result[0]->field_user_lastname_value) ? !$result[0]->field_user_firstname_value . ' ' . $result[0]->field_user_lastname_value : $result[0]->name;
           $gie_dashboard_notification_center[$key] = array(
-            '#markup' => '<li>' . l($name, 'user/' . $result[0]->uid) . ' follows you</li></br>',
-            '#prefix' => '<div class="' . array_rand($notification_center_styles) . '">',
-            '#suffix' => '</div>'
+            '#markup' => '<li class="dashboard-notifications__item is-featured">' . l($name, 'user/' . $result[0]->uid) . ' follows you</li>',
           );
-
         }
       }
       elseif ($key == 'friend_content' && !empty($result['name']) && !empty($result['uid']) && !empty($result['nid'])) {
         $gie_dashboard_notification_center[$key] = array(
-          '#markup' => '<li>' . l($result['name'], 'user/' . $result['uid']) . ' created new content ' . l($result['title'], 'node/' . $result['nid']) . '.</li></br>',
-          '#prefix' => '<div class="' . array_rand($notification_center_styles) . '">',
-          '#suffix' => '</div>'
+          '#markup' => '<li class="dashboard-notifications__item">' . l($result['name'], 'user/' . $result['uid']) . ' created new content ' . l($result['title'], 'node/' . $result['nid']) . '.</li>'
         );
       }
       elseif ($key == 'friend_followed_content' && !empty($result['name']) && !empty($result['uid']) && !empty($result['nid'])) {
         $gie_dashboard_notification_center[$key] = array(
-          '#markup' => '<li>' . l($result['name'], 'user/' . $result['uid']) . ' followed content ' . l($result['title'], 'node/' . $result['nid']) . '.</li></br>',
-          '#prefix' => '<div class="' . array_rand($notification_center_styles) . '">',
-          '#suffix' => '</div>'
+          '#markup' => '<li class="dashboard-notifications__item">' . l($result['name'], 'user/' . $result['uid']) . ' followed content ' . l($result['title'], 'node/' . $result['nid']) . '.</li>'
         );
       }
       elseif ($key == 'friend_followed' && !empty($result['original_friend_name']) && !empty($result['original_friend_uid']) && !empty($result['friend_of_friend_name']) && !empty($result['friend_of_friend_uid'])) {
 
         $gie_dashboard_notification_center[$key] = array(
-          '#markup' => '<li>' . l($result['original_friend_name'], 'user/' . $result['original_friend_uid']) . ' followed ' . l($result['friend_of_friend_name'], 'user/' . $result['friend_of_friend_uid']) . '.</li></br>',
-          '#prefix' => '<div class="' . array_rand($notification_center_styles) . '">',
-          '#suffix' => '</div>'
+          '#markup' => '<li class="dashboard-notifications__item">' . l($result['original_friend_name'], 'user/' . $result['original_friend_uid']) . ' followed ' . l($result['friend_of_friend_name'], 'user/' . $result['friend_of_friend_uid']) . '.</li>'
         );
       }
       elseif ($key == 'friend_comment' && !empty($result['name']) && !empty($result['uid']) && !empty($result['nid'])) {
 
         $gie_dashboard_notification_center[$key] = array(
-          '#markup' => '<li>' . l($result['name'], 'user/' . $result['uid']) . ' commented ' . $result['subject'] . ' on ' . l($result['title'], 'node/' . $result['nid'], array('fragment' => 'comments')) . '.</li></br>',
-          '#prefix' => '<div class="' . array_rand($notification_center_styles) . '">',
-          '#suffix' => '</div>'
+          '#markup' => '<li class="dashboard-notifications__item">' . l($result['name'], 'user/' . $result['uid']) . ' commented ' . $result['subject'] . ' on ' . l($result['title'], 'node/' . $result['nid'], array('fragment' => 'comments')) . '.</li>'
         );
       }
       elseif ($key == 'featured_innovation') {
         $gie_dashboard_featured_innovation = array(
-          '#prefix' => '<div class="dashboard-revamp-title">Innovation Spotlight<hr></div><div class="dashboard-innovation__spotlights__items">',
+          '#prefix' => '<h2 class="dashboard__title">Innovation Spotlight</h2><div class="dashboard__spotlights">',
           '#suffix' => '</div>',
         );
 
