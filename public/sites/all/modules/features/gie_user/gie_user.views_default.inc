@@ -1298,7 +1298,7 @@ function gie_user_views_default_views() {
   $handler->display->display_options['fields']['title']['field'] = 'title';
   $handler->display->display_options['fields']['title']['label'] = '';
   $handler->display->display_options['fields']['title']['alter']['alter_text'] = TRUE;
-  $handler->display->display_options['fields']['title']['alter']['text'] = '<div>[field_innovation_image]</div><div>[title]</div>';
+  $handler->display->display_options['fields']['title']['alter']['text'] = '[field_innovation_image][title]';
   $handler->display->display_options['fields']['title']['alter']['word_boundary'] = FALSE;
   $handler->display->display_options['fields']['title']['alter']['ellipsis'] = FALSE;
   $handler->display->display_options['fields']['title']['element_label_colon'] = FALSE;
@@ -1384,7 +1384,7 @@ function gie_user_views_default_views() {
   $handler->display->display_options['header']['area']['field'] = 'area';
   $handler->display->display_options['header']['area']['label'] = 'Innovations Recommended for You';
   $handler->display->display_options['header']['area']['empty'] = TRUE;
-  $handler->display->display_options['header']['area']['content'] = '<div class="dashboard-sub-title">Based on the skills you offer</div>';
+  $handler->display->display_options['header']['area']['content'] = '<div class="dashboard__sub-title">Based on the skills you offer:</div>';
   $handler->display->display_options['header']['area']['format'] = 'full_html';
   $handler->display->display_options['defaults']['empty'] = FALSE;
   /* No results behavior: Global: Text area */
@@ -1431,7 +1431,7 @@ function gie_user_views_default_views() {
   $handler->display->display_options['header']['area']['field'] = 'area';
   $handler->display->display_options['header']['area']['label'] = 'Innovations Recommended for You';
   $handler->display->display_options['header']['area']['empty'] = TRUE;
-  $handler->display->display_options['header']['area']['content'] = '<div class="dashboard-sub-title">Based on the sectors you have joined</div>';
+  $handler->display->display_options['header']['area']['content'] = '<div class="dashboard__sub-title">Based on the sectors you have joined:</div>';
   $handler->display->display_options['header']['area']['format'] = 'full_html';
   $handler->display->display_options['defaults']['empty'] = FALSE;
   /* No results behavior: Global: Text area */
@@ -1478,7 +1478,7 @@ function gie_user_views_default_views() {
   $handler->display->display_options['header']['area']['field'] = 'area';
   $handler->display->display_options['header']['area']['label'] = 'Innovations Recommended for You';
   $handler->display->display_options['header']['area']['empty'] = TRUE;
-  $handler->display->display_options['header']['area']['content'] = '<div class="dashboard-sub-title">Based on the people you follow</div>';
+  $handler->display->display_options['header']['area']['content'] = '<div class="dashboard__sub-title">Based on the people you follow:</div>';
   $handler->display->display_options['header']['area']['format'] = 'full_html';
   $handler->display->display_options['defaults']['empty'] = FALSE;
   /* No results behavior: Global: Text area */
