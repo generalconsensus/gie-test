@@ -105,48 +105,6 @@ function gie_messages_default_message_type() {
     },
     "rdf_mapping" : []
   }');
-  $items['funding_recommendation'] = entity_import('message_type', '{
-    "name" : "funding_recommendation",
-    "description" : "Funding recommendation",
-    "argument_keys" : [],
-    "argument" : [],
-    "category" : "message_type",
-    "data" : {
-      "token options" : { "clear" : 0 },
-      "purge" : { "override" : 0, "enabled" : 0, "quota" : "", "days" : "" }
-    },
-    "language" : "",
-    "arguments" : null,
-    "message_text" : { "und" : [
-        {
-          "value" : "You have a new funding recommendation! Based on your preferences, we think you might be interested in \\u0022[message:field-node-ref:title-field]\\u0022. View here: [message:field-node-ref:url]",
-          "format" : "filtered_html"
-        }
-      ]
-    },
-    "rdf_mapping" : []
-  }');
-  $items['innovation_recommendation'] = entity_import('message_type', '{
-    "name" : "innovation_recommendation",
-    "description" : "Innovation recommendation",
-    "argument_keys" : [],
-    "argument" : [],
-    "category" : "message_type",
-    "data" : {
-      "token options" : { "clear" : 0 },
-      "purge" : { "override" : 0, "enabled" : 0, "quota" : "", "days" : "" }
-    },
-    "language" : "",
-    "arguments" : null,
-    "message_text" : { "und" : [
-        {
-          "value" : "You have a new innovation recommendation! Based on your preferences, we think you might be interested in \\u0022[message:field-node-ref:title-field]\\u0022. View here: [message:field-node-ref:url]",
-          "format" : "filtered_html"
-        }
-      ]
-    },
-    "rdf_mapping" : []
-  }');
   $items['node_update_notify'] = entity_import('message_type', '{
     "name" : "node_update_notify",
     "description" : "Node update notify",
