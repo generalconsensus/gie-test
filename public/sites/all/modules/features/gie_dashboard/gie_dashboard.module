@@ -281,7 +281,7 @@ function gie_dashboard_notification_center_list() {
   INNER JOIN users on users.uid = flagging.uid
   INNER JOIN flagging connected_user on connected_user.uid = flagging.entity_id AND flagging.timestamp between :start AND :end
   INNER JOIN users friend_of_friend on friend_of_friend.uid = connected_user.uid
-  WHERE flagging.uid IN (:uids) AND flagging.fid = :fid AND connected_user.entity_id <> :uid AND connected_user.fid = :fid ORDER BY RAND() LIMIT 3', array(
+  WHERE flagging.uid IN (:uids) AND flagging.fid = :fid AND connected_user.uid <> :uid AND connected_user.fid = :fid ORDER BY RAND() LIMIT 3', array(
         ':start' => strtotime('first day of last month'),
         ':end' => $now,
         ':uids' => $followers,
