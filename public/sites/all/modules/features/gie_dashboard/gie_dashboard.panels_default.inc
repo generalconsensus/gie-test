@@ -54,6 +54,31 @@ function gie_dashboard_default_panels_mini() {
     $display->content['new-065d1b82-aa4d-4690-afa0-3817acb7d334'] = $pane;
     $display->panels['middle'][0] = 'new-065d1b82-aa4d-4690-afa0-3817acb7d334';
     $pane = new stdClass();
+    $pane->pid = 'new-62f32864-81b3-412a-907a-83cc049c28a4';
+    $pane->panel = 'middle';
+    $pane->type = 'custom';
+    $pane->subtype = 'custom';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array(
+      'admin_title' => 'See All Exchange Users',
+      'title' => '',
+      'body' => '<a class="button button--highlight" href="/members">See all Exchange Users</a>',
+      'format' => 'full_html',
+      'substitute' => TRUE,
+    );
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
+    $pane->css = array();
+    $pane->extras = array();
+    $pane->position = 1;
+    $pane->locks = array();
+    $pane->uuid = '62f32864-81b3-412a-907a-83cc049c28a4';
+    $display->content['new-62f32864-81b3-412a-907a-83cc049c28a4'] = $pane;
+    $display->panels['middle'][1] = 'new-62f32864-81b3-412a-907a-83cc049c28a4';
+    $pane = new stdClass();
     $pane->pid = 'new-29818a4a-293f-418d-a40f-f5bce0dff3fb';
     $pane->panel = 'middle';
     $pane->type = 'views_panes';
@@ -67,11 +92,36 @@ function gie_dashboard_default_panels_mini() {
     );
     $pane->css = array();
     $pane->extras = array();
-    $pane->position = 1;
+    $pane->position = 2;
     $pane->locks = array();
     $pane->uuid = '29818a4a-293f-418d-a40f-f5bce0dff3fb';
     $display->content['new-29818a4a-293f-418d-a40f-f5bce0dff3fb'] = $pane;
-    $display->panels['middle'][1] = 'new-29818a4a-293f-418d-a40f-f5bce0dff3fb';
+    $display->panels['middle'][2] = 'new-29818a4a-293f-418d-a40f-f5bce0dff3fb';
+    $pane = new stdClass();
+    $pane->pid = 'new-9b15831f-4ca1-4735-87a9-b196e09024b2';
+    $pane->panel = 'middle';
+    $pane->type = 'custom';
+    $pane->subtype = 'custom';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array(
+      'admin_title' => 'See all Exchange Events',
+      'title' => '',
+      'body' => '<a class="button button--highlight" href="/events">See all Exchange Events</a>',
+      'format' => 'full_html',
+      'substitute' => TRUE,
+    );
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
+    $pane->css = array();
+    $pane->extras = array();
+    $pane->position = 3;
+    $pane->locks = array();
+    $pane->uuid = '9b15831f-4ca1-4735-87a9-b196e09024b2';
+    $display->content['new-9b15831f-4ca1-4735-87a9-b196e09024b2'] = $pane;
+    $display->panels['middle'][3] = 'new-9b15831f-4ca1-4735-87a9-b196e09024b2';
   $display->hide_title = PANELS_TITLE_FIXED;
   $display->title_pane = '0';
   $mini->display = $display;
