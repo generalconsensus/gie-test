@@ -3,35 +3,35 @@
 
 <main id="main" class="main" role="main" tabindex="-1">
   <div class="region-content">
-
-    <div class="l-panels-landing preface-empty title sidebar main">
-      <div class="l-preface layout-constrain"></div>
-      <div class="l-title region-landing-title">
-        <div class="layout-constrain">
-          {{> molecules-landing-page-intro-innovations }}
+    <div class="region__inner">
+      <div class="l-panels-landing preface-empty title sidebar main">
+        <div class="l-preface layout-constrain"></div>
+        <div class="l-title region-landing-title">
+          <div class="layout-constrain">
+            {{> molecules-landing-page-intro-innovations }}
+          </div>
         </div>
-      </div>
-      <div class="l-wrapper region-landing-content">
-        <div class="layout-constrain">
-          <aside class="l-sidebar">
-            {{> molecules-filters }}
-          </aside>
-          <div class="l-main">
-            <div class="view--card-view-3col">
-              {{# listItems.nine }}
-                <div class="views-row">
-                  {{> organisms-innovation-teaser }}
+        <div class="l-wrapper region-landing-content">
+          <div class="layout-constrain">
+            <aside class="l-sidebar">
+              {{> molecules-filters }}
+            </aside>
+            <div class="l-main">
+              <div class="view--card-view-3col">
+                {{# listItems.nine }}
+                  <div class="views-row">
+                    {{> organisms-innovation-teaser }}
+                  </div>
+                {{/ listItems.nine }}
+                <div class="view__pager">
+                  {{> molecules-pager }}
                 </div>
-              {{/ listItems.nine }}
-              <div class="view__pager">
-                {{> molecules-pager }}
               </div>
             </div>
           </div>
         </div>
       </div>
     </div>
-
   </div>
 </main>
 

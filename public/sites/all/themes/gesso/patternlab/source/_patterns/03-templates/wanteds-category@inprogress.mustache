@@ -3,51 +3,51 @@
 
 <main id="main" class="main" role="main" tabindex="-1">
   <div class="region-content">
-
-    <div class="l-panels-landing preface-empty title sidebar main">
-      <div class="l-preface layout-constrain"></div>
-      <div class="l-title region-landing-title">
-        <div class="layout-constrain">
-          {{> molecules-landing-page-intro-wanteds }}
+    <div class="region__inner">
+      <div class="l-panels-landing preface-empty title sidebar main">
+        <div class="l-preface layout-constrain"></div>
+        <div class="l-title region-landing-title">
+          <div class="layout-constrain">
+            {{> molecules-landing-page-intro-wanteds }}
+          </div>
         </div>
-      </div>
-      <div class="l-wrapper region-landing-content">
-        <div class="layout-constrain">
-           <aside class="l-sidebar">
-            {{> molecules-filters }}
-          </aside>
-          <div class="l-main">
+        <div class="l-wrapper region-landing-content">
+          <div class="layout-constrain">
+             <aside class="l-sidebar">
+              {{> molecules-filters }}
+            </aside>
+            <div class="l-main">
 
-            <div class="pane pane--wanteds-search">
-              <div class="pane__content">
-                <form action="/members" method="get" id="views-exposed-form-user-listing-listing-pane" accept-charset="UTF-8">      <div id="edit-search-api-views-fulltext" class="views-widget views-widget--filter-search_api_views_fulltext">
-                  <div class="form-item form-type-textfield form-item-search-api-views-fulltext">
-                    <input autocapitalize="off" autocorrect="off" id="edit-search-api-views-fulltext" name="search_api_views_fulltext" value="" size="30" maxlength="128" class="form-text" type="text">
+              <div class="pane pane--wanteds-search">
+                <div class="pane__content">
+                  <form action="/members" method="get" id="views-exposed-form-user-listing-listing-pane" accept-charset="UTF-8">      <div id="edit-search-api-views-fulltext" class="views-widget views-widget--filter-search_api_views_fulltext">
+                    <div class="form-item form-type-textfield form-item-search-api-views-fulltext">
+                      <input autocapitalize="off" autocorrect="off" id="edit-search-api-views-fulltext" name="search_api_views_fulltext" value="" size="30" maxlength="128" class="form-text" type="text">
+                    </div>
+                  </div>
+                  <div class="views-widget views-widget--submit">
+                    <input id="edit-submit-user-listing" name="" value="Apply" class="button button--submit" type="submit">  </div>
+                  </form>
+                </div>
+              </div>
+
+              <div class="pane">
+                <div class="pane__content">
+                  <div class="view view--needs-listing-pages">
+                     {{# listItems.nine }}
+                        <div class="views-row">
+                          {{> organisms-wanteds-teaser }}
+                        </div>
+                      {{/ listItems.nine }}
                   </div>
                 </div>
-                <div class="views-widget views-widget--submit">
-                  <input id="edit-submit-user-listing" name="" value="Apply" class="button button--submit" type="submit">  </div>
-                </form>
               </div>
             </div>
 
-            <div class="pane">
-              <div class="pane__content">
-                <div class="view view--needs-listing-pages">
-                   {{# listItems.nine }}
-                      <div class="views-row">
-                        {{> organisms-wanteds-teaser }}
-                      </div>
-                    {{/ listItems.nine }}
-                </div>
-              </div>
-            </div>
           </div>
-
         </div>
       </div>
     </div>
-
   </div>
 </main>
 
