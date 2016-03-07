@@ -434,7 +434,7 @@ function gie_program_views_default_views() {
   $handler->display->display_options['fields']['nid']['id'] = 'nid';
   $handler->display->display_options['fields']['nid']['table'] = 'search_api_index_default_node_index';
   $handler->display->display_options['fields']['nid']['field'] = 'nid';
-  /* Sort criterion: Indexed Content: Organization Title */
+  /* Sort criterion: Indexed Content: Title */
   $handler->display->display_options['sorts']['title_field']['id'] = 'title_field';
   $handler->display->display_options['sorts']['title_field']['table'] = 'search_api_index_default_node_index';
   $handler->display->display_options['sorts']['title_field']['field'] = 'title_field';
@@ -448,6 +448,16 @@ function gie_program_views_default_views() {
 
   /* Display: Programs */
   $handler = $view->new_display('panel_pane', 'Programs', 'program_listing');
+  $handler->display->display_options['defaults']['arguments'] = FALSE;
+  /* Contextual filter: Indexed Content: Domain ID */
+  $handler->display->display_options['arguments']['domain_domain_id']['id'] = 'domain_domain_id';
+  $handler->display->display_options['arguments']['domain_domain_id']['table'] = 'search_api_index_default_node_index';
+  $handler->display->display_options['arguments']['domain_domain_id']['field'] = 'domain_domain_id';
+  $handler->display->display_options['arguments']['domain_domain_id']['default_action'] = 'default';
+  $handler->display->display_options['arguments']['domain_domain_id']['default_argument_type'] = 'current_domain';
+  $handler->display->display_options['arguments']['domain_domain_id']['summary']['format'] = 'default_summary';
+  $handler->display->display_options['arguments']['domain_domain_id']['break_phrase'] = 0;
+  $handler->display->display_options['arguments']['domain_domain_id']['not'] = 0;
   $export['program_listing'] = $view;
 
   $view = new view();

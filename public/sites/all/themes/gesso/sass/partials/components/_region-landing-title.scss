@@ -31,11 +31,23 @@
     }    
   }
   .section-wanteds & {
-    background: #00729c;
+    background: $wanted-section-color;
     @include breakpoint(1500px, $no-query: true) {
       &:after {
-        border-color: #025979 transparent transparent transparent;
+        border-color: darken($wanted-section-color,7%) transparent transparent transparent;
       }
     }
   }
+  @each $current-color in $microsite-primary-list {
+    $i: index($microsite-primary-list, $current-color);
+    .microsite-palette#{$i} & { // body class
+      background: $current-color;
+      @include breakpoint(1500px, $no-query: true) {
+        &:after {
+          border-color: darken($current-color,7%) transparent transparent transparent;
+        }
+      } 
+    }
+  }
+
 }

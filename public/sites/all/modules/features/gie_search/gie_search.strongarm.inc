@@ -109,6 +109,8 @@ function gie_search_strongarm() {
       'search_api_views:events_listing:event_mega' => 'search_api_views:events_listing:event_mega',
       'SearchApiQuery' => 'SearchApiQuery',
       'search_api_views:needs_listing_pages:needs_listings' => 'search_api_views:needs_listing_pages:needs_listings',
+      'search_api_views:blogs_listing:resource_listing' => 'search_api_views:blogs_listing:resource_listing',
+      'search_api_views:news_listing:resource_listing' => 'search_api_views:news_listing:resource_listing',
     ),
     'default_user_index' => array(
       'search_api_views:user_listing:listing_pane' => 'search_api_views:user_listing:listing_pane',

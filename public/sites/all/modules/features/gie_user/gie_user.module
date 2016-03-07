@@ -233,3 +233,22 @@ function gie_user_form_user_profile_form_alter(&$form, &$form_state, $form_id) {
   // Hide "Select the types of assistance..." field
   $form['field_assistance_offered']['#access'] = FALSE;
 }
+
+/**
+ * Implements hook_mail_alter().
+ * - alter From field on User Personal Contact mail to site email.
+ */
+function gie_user_mail_alter(&$message) {
+  //Alter only the User Personal Contact messages
+  if ($message['id'] === 'contact_user_mail') {
+    //get user and site emails
+    $user_email = $message['params']['sender']->mail;
+    $site_email = variable_get('site_mail', '');
+    //add additional text to email body
+    $message['body'][] = t('This email was sent from '.$user_email.'. Please reply to this user directly.');
+    //set appropriate fields to site email
+    $message['from'] = $site_email;
+    $message['headers']['From'] = $site_email;
+    $message['params']['mail'] = $site_email;
+  }
+}

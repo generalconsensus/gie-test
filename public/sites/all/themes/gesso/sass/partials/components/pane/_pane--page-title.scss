@@ -15,7 +15,13 @@
     }
     border-color: $lightorange transparent transparent transparent;
     .section-wanteds & {
-      border-color: #00729c transparent transparent transparent;
+      border-color: $wanted-section-color transparent transparent transparent;
+    }
+    @each $current-color in $microsite-primary-list {
+      $i: index($microsite-primary-list, $current-color);
+      .microsite-palette#{$i} & { // body class
+        border-color: $current-color transparent transparent transparent;
+      }
     }
     height: 0;
     left: 0;

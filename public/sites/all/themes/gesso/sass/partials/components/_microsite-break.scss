@@ -7,7 +7,14 @@ $section-break-image-height: 500px;
 
 .microsite-break {
   @extend %microsite-component;
-  background-color: $microsite-primary;
+
+  @each $current-color in $microsite-primary-list {
+    $i: index($microsite-primary-list, $current-color);
+    .microsite-palette#{$i} & { // body class
+      background-color: $current-color;
+    }
+  }
+
   background-position: 50% 50%;
   background-size: cover;
   min-height: $section-break-image-height * 0.5;
@@ -70,7 +77,14 @@ $section-break-image-height: 500px;
   vertical-align: middle;
   width: 100%;
   &:before {
-    border-top: 4px solid $microsite-secondary;
+    
+    @each $current-color in $microsite-secondary-list {
+      $i: index($microsite-secondary-list, $current-color);
+      .microsite-palette#{$i} & { // body class
+        border-top: 4px solid $current-color;
+      }
+    }
+
     content: "";
     display: block;
     margin: 0 auto 0.5em auto;
