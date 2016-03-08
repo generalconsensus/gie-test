@@ -32,6 +32,65 @@ function gie_resource_ds_field_settings_info() {
 
   $ds_fieldsetting = new stdClass();
   $ds_fieldsetting->api_version = 1;
+  $ds_fieldsetting->id = 'node|resource|at_a_glance';
+  $ds_fieldsetting->entity_type = 'node';
+  $ds_fieldsetting->bundle = 'resource';
+  $ds_fieldsetting->view_mode = 'at_a_glance';
+  $ds_fieldsetting->settings = array(
+    'field_resource_date' => array(
+      'formatter_settings' => array(
+        'ft' => array(
+          'func' => 'theme_ds_field_expert',
+          'lb' => 'Resource Posted',
+          'lb-el' => 'div',
+          'lb-cl' => 'field-label',
+          'ow' => TRUE,
+          'ow-el' => 'div',
+          'ow-cl' => 'field--resource-posted',
+          'ow-def-cl' => FALSE,
+          'ow-at' => '',
+          'ow-def-at' => FALSE,
+          'fi' => TRUE,
+          'fi-el' => 'div',
+          'fi-cl' => 'field-item',
+          'fi-at' => '',
+          'fi-def-at' => FALSE,
+          'fi-odd-even' => FALSE,
+          'fi-first-last' => FALSE,
+        ),
+      ),
+    ),
+    'field_resource_source' => array(
+      'formatter_settings' => array(
+        'ft' => array(
+          'func' => 'theme_ds_field_expert',
+          'lb' => 'Source',
+          'lb-el' => 'div',
+          'lb-cl' => 'field-label',
+          'lb-def-at' => TRUE,
+          'lbw-el' => 'div',
+          'lbw-cl' => 'field-label',
+          'ow' => TRUE,
+          'ow-el' => 'div',
+          'ow-cl' => 'field field--resource-source',
+          'ow-def-cl' => FALSE,
+          'ow-at' => '',
+          'ow-def-at' => FALSE,
+          'fi' => TRUE,
+          'fi-el' => 'div',
+          'fi-cl' => 'field-item',
+          'fi-at' => '',
+          'fi-def-at' => FALSE,
+          'fi-odd-even' => FALSE,
+          'fi-first-last' => FALSE,
+        ),
+      ),
+    ),
+  );
+  $export['node|resource|at_a_glance'] = $ds_fieldsetting;
+
+  $ds_fieldsetting = new stdClass();
+  $ds_fieldsetting->api_version = 1;
   $ds_fieldsetting->id = 'node|resource|details';
   $ds_fieldsetting->entity_type = 'node';
   $ds_fieldsetting->bundle = 'resource';
@@ -332,6 +391,7 @@ function gie_resource_ds_layout_settings_info() {
         1 => 'resource_counters_resource_comment_detail',
         2 => 'resource_counters_resource_favorite_count_detail',
         3 => 'field_resource_source',
+        4 => 'field_resource_date',
       ),
     ),
     'fields' => array(
@@ -339,6 +399,7 @@ function gie_resource_ds_layout_settings_info() {
       'resource_counters_resource_comment_detail' => 'ds_content',
       'resource_counters_resource_favorite_count_detail' => 'ds_content',
       'field_resource_source' => 'ds_content',
+      'field_resource_date' => 'ds_content',
     ),
     'classes' => array(),
     'wrappers' => array(
