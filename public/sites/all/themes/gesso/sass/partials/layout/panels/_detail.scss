@@ -7,6 +7,11 @@
 .l-panels-detail {
   @include add-grid(12 at 700px);
   @include add-gutter(2);
+  &.main-empty.main-sidebar-empty.center-empty {
+    .l-title {
+      margin-bottom: 0;
+    }
+  }
   &.main {
     &.main-sidebar { // 1, 2 have content
       @include breakpoint(700px) {
