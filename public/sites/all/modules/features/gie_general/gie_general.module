@@ -140,7 +140,7 @@ function _gie_general_contents($block_id) {
         'become_page' => array(
           '#type' => 'link',
           '#title' => t('Become a Partner'),
-          '#href' => 'team',
+          '#href' => 'node/add/organization',
           '#attributes' => array(
             'class' => array('tb-megamenu-big-button has-icon-become'),
           ),
