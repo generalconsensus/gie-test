@@ -21,7 +21,7 @@ function gie_blogs_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 14,
+        'weight' => 25,
       ),
       'contact' => array(
         'label' => 'above',
@@ -67,7 +67,7 @@ function gie_blogs_field_default_field_instances() {
           ),
         ),
         'type' => 'gie_listing_link',
-        'weight' => 1,
+        'weight' => 2,
       ),
       'full' => array(
         'label' => 'above',
@@ -165,7 +165,7 @@ function gie_blogs_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 4,
+        'weight' => 15,
       ),
       'contact' => array(
         'label' => 'above',
@@ -197,7 +197,7 @@ function gie_blogs_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 13,
+        'weight' => 23,
       ),
       'full' => array(
         'label' => 'hidden',
@@ -351,7 +351,7 @@ function gie_blogs_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 3,
+        'weight' => 14,
       ),
       'contact' => array(
         'label' => 'above',
@@ -385,7 +385,7 @@ function gie_blogs_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 11,
+        'weight' => 21,
       ),
       'full' => array(
         'label' => 'hidden',
@@ -524,7 +524,7 @@ function gie_blogs_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 7,
+        'weight' => 17,
       ),
       'contact' => array(
         'label' => 'above',
@@ -572,7 +572,7 @@ function gie_blogs_field_default_field_instances() {
           ),
         ),
         'type' => 'entityreference_label',
-        'weight' => 4,
+        'weight' => 5,
       ),
       'full' => array(
         'label' => 'above',
@@ -681,7 +681,7 @@ function gie_blogs_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 5,
+        'weight' => 16,
       ),
       'contact' => array(
         'label' => 'hidden',
@@ -703,7 +703,7 @@ function gie_blogs_field_default_field_instances() {
           'view_mode' => 'user_teaser_summary',
         ),
         'type' => 'entityreference_entity_view',
-        'weight' => 0,
+        'weight' => 1,
       ),
       'default' => array(
         'label' => 'above',
@@ -730,7 +730,7 @@ function gie_blogs_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 7,
+        'weight' => 15,
       ),
       'full' => array(
         'label' => 'above',
@@ -856,7 +856,7 @@ function gie_blogs_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 8,
+        'weight' => 18,
       ),
       'contact' => array(
         'label' => 'above',
@@ -904,7 +904,7 @@ function gie_blogs_field_default_field_instances() {
           ),
         ),
         'type' => 'entityreference_label',
-        'weight' => 5,
+        'weight' => 6,
       ),
       'full' => array(
         'label' => 'above',
@@ -1018,16 +1018,10 @@ function gie_blogs_field_default_field_instances() {
     'display' => array(
       'at_a_glance' => array(
         'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 6,
-      ),
-      'contact' => array(
-        'label' => 'inline',
         'module' => 'date',
         'settings' => array(
           'field_delimiter' => '',
-          'format_type' => 'short',
+          'format_type' => 'long',
           'fromto' => 'both',
           'linked_field' => array(
             'advanced' => array(
@@ -1046,6 +1040,12 @@ function gie_blogs_field_default_field_instances() {
           'show_remaining_days' => 0,
         ),
         'type' => 'date_default',
+        'weight' => 3,
+      ),
+      'contact' => array(
+        'label' => 'inline',
+        'settings' => array(),
+        'type' => 'hidden',
         'weight' => 1,
       ),
       'default' => array(
@@ -1078,7 +1078,7 @@ function gie_blogs_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 6,
+        'weight' => 14,
       ),
       'full' => array(
         'label' => 'above',
@@ -1218,7 +1218,7 @@ function gie_blogs_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 11,
+        'weight' => 23,
       ),
       'contact' => array(
         'label' => 'above',
@@ -1264,7 +1264,7 @@ function gie_blogs_field_default_field_instances() {
           ),
         ),
         'type' => 'taxonomy_term_reference_link',
-        'weight' => 0,
+        'weight' => 1,
       ),
       'full' => array(
         'label' => 'above',
@@ -1362,7 +1362,7 @@ function gie_blogs_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 10,
+        'weight' => 22,
       ),
       'contact' => array(
         'label' => 'above',
@@ -1408,7 +1408,7 @@ function gie_blogs_field_default_field_instances() {
           ),
         ),
         'type' => 'taxonomy_term_reference_link',
-        'weight' => 3,
+        'weight' => 4,
       ),
       'full' => array(
         'label' => 'above',
@@ -1528,7 +1528,7 @@ function gie_blogs_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 9,
+        'weight' => 19,
       ),
       'contact' => array(
         'label' => 'above',
@@ -1574,7 +1574,7 @@ function gie_blogs_field_default_field_instances() {
           ),
         ),
         'type' => 'taxonomy_term_reference_link',
-        'weight' => 2,
+        'weight' => 3,
       ),
       'full' => array(
         'label' => 'above',
@@ -1680,7 +1680,7 @@ function gie_blogs_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 23,
+        'weight' => 26,
       ),
       'contact' => array(
         'label' => 'above',
@@ -1698,7 +1698,7 @@ function gie_blogs_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 23,
+        'weight' => 26,
       ),
       'full' => array(
         'label' => 'above',

@@ -163,7 +163,7 @@ function gie_resource_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 4,
+        'weight' => 12,
       ),
       'default' => array(
         'label' => 'above',
@@ -296,7 +296,7 @@ function gie_resource_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 22,
+        'weight' => 30,
       ),
       'default' => array(
         'label' => 'above',
@@ -428,7 +428,7 @@ function gie_resource_field_default_field_instances() {
           'view_mode' => 'user_teaser_summary',
         ),
         'type' => 'entityreference_entity_view',
-        'weight' => 2,
+        'weight' => 0,
       ),
       'default' => array(
         'label' => 'above',
@@ -612,7 +612,7 @@ function gie_resource_field_default_field_instances() {
         'label' => 'inline',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 1,
+        'weight' => 9,
       ),
       'default' => array(
         'label' => 'above',
@@ -815,7 +815,7 @@ function gie_resource_field_default_field_instances() {
         'label' => 'hidden',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 6,
+        'weight' => 14,
       ),
       'default' => array(
         'label' => 'hidden',
@@ -987,7 +987,7 @@ function gie_resource_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 7,
+        'weight' => 15,
       ),
       'default' => array(
         'label' => 'above',
@@ -1127,7 +1127,7 @@ function gie_resource_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 17,
+        'weight' => 25,
       ),
       'default' => array(
         'label' => 'above',
@@ -1259,7 +1259,7 @@ function gie_resource_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 15,
+        'weight' => 23,
       ),
       'default' => array(
         'label' => 'above',
@@ -1405,7 +1405,7 @@ function gie_resource_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 5,
+        'weight' => 13,
       ),
       'default' => array(
         'label' => 'above',
@@ -1531,7 +1531,7 @@ function gie_resource_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 8,
+        'weight' => 16,
       ),
       'default' => array(
         'label' => 'above',
@@ -1681,7 +1681,7 @@ function gie_resource_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 21,
+        'weight' => 29,
       ),
       'default' => array(
         'label' => 'above',
@@ -1803,7 +1803,7 @@ function gie_resource_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 18,
+        'weight' => 26,
       ),
       'default' => array(
         'label' => 'above',
@@ -1925,7 +1925,7 @@ function gie_resource_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 19,
+        'weight' => 27,
       ),
       'default' => array(
         'label' => 'above',
@@ -2070,7 +2070,7 @@ function gie_resource_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 20,
+        'weight' => 28,
       ),
       'default' => array(
         'label' => 'above',
@@ -2192,7 +2192,7 @@ function gie_resource_field_default_field_instances() {
         'label' => 'hidden',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 2,
+        'weight' => 10,
       ),
       'default' => array(
         'label' => 'hidden',
