@@ -40,6 +40,7 @@ features[ctools][] = pane:pane:2
 features[ctools][] = panelizer:panelizer:1
 features[ctools][] = strongarm:strongarm:1
 features[ctools][] = views:views_default:3.0
+features[ds_field_settings][] = node|news|at_a_glance
 features[ds_field_settings][] = node|news|details
 features[ds_field_settings][] = node|news|full
 features[ds_field_settings][] = node|news|listing
