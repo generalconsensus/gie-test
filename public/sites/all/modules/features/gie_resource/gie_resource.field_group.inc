@@ -361,10 +361,9 @@ function gie_resource_field_group_info() {
   $field_group->parent_name = '';
   $field_group->data = array(
     'label' => 'Point of Contact',
-    'weight' => '0',
+    'weight' => '1',
     'children' => array(
       0 => 'field_resource_author',
-      1 => 'field_resource_date',
     ),
     'format_type' => 'div',
     'format_settings' => array(
@@ -434,9 +433,10 @@ function gie_resource_field_group_info() {
     'label' => 'At a Glance',
     'weight' => '0',
     'children' => array(
-      0 => 'field_resource_source',
-      1 => 'resource_counters_resource_comment_detail',
-      2 => 'resource_counters_resource_favorite_count_detail',
+      0 => 'field_resource_date',
+      1 => 'field_resource_source',
+      2 => 'resource_counters_resource_comment_detail',
+      3 => 'resource_counters_resource_favorite_count_detail',
     ),
     'format_type' => 'div',
     'format_settings' => array(
@@ -481,7 +481,7 @@ function gie_resource_field_group_info() {
       'label' => 'Details',
       'instance_settings' => array(
         'id' => '',
-        'classes' => '',
+        'classes' => 'details',
         'description' => '',
         'show_label' => '0',
         'label_element' => 'h2',

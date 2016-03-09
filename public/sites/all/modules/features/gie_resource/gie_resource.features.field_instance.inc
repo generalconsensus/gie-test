@@ -163,7 +163,7 @@ function gie_resource_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 10,
+        'weight' => 12,
       ),
       'default' => array(
         'label' => 'above',
@@ -296,7 +296,7 @@ function gie_resource_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 28,
+        'weight' => 30,
       ),
       'default' => array(
         'label' => 'above',
@@ -428,7 +428,7 @@ function gie_resource_field_default_field_instances() {
           'view_mode' => 'user_teaser_summary',
         ),
         'type' => 'entityreference_entity_view',
-        'weight' => 2,
+        'weight' => 0,
       ),
       'default' => array(
         'label' => 'above',
@@ -583,17 +583,11 @@ function gie_resource_field_default_field_instances() {
     'description' => 'This is the date the resource was created. It will default to the date the resource was added to the Exchange if left blank.',
     'display' => array(
       'at_a_glance' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 11,
-      ),
-      'contact' => array(
         'label' => 'inline',
         'module' => 'date',
         'settings' => array(
           'field_delimiter' => '',
-          'format_type' => 'short',
+          'format_type' => 'long',
           'fromto' => 'both',
           'linked_field' => array(
             'advanced' => array(
@@ -612,7 +606,13 @@ function gie_resource_field_default_field_instances() {
           'show_remaining_days' => 0,
         ),
         'type' => 'date_default',
-        'weight' => 3,
+        'weight' => 14,
+      ),
+      'contact' => array(
+        'label' => 'inline',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 9,
       ),
       'default' => array(
         'label' => 'above',
@@ -815,7 +815,7 @@ function gie_resource_field_default_field_instances() {
         'label' => 'hidden',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 12,
+        'weight' => 14,
       ),
       'default' => array(
         'label' => 'hidden',
@@ -987,7 +987,7 @@ function gie_resource_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 13,
+        'weight' => 15,
       ),
       'default' => array(
         'label' => 'above',
@@ -1127,7 +1127,7 @@ function gie_resource_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 23,
+        'weight' => 25,
       ),
       'default' => array(
         'label' => 'above',
@@ -1259,7 +1259,7 @@ function gie_resource_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 21,
+        'weight' => 23,
       ),
       'default' => array(
         'label' => 'above',
@@ -1382,7 +1382,7 @@ function gie_resource_field_default_field_instances() {
     'description' => 'If your resource is hosted on another website, you can add that website here. Provide the full URL, for example: http://www.example.com',
     'display' => array(
       'at_a_glance' => array(
-        'label' => 'above',
+        'label' => 'inline',
         'module' => 'link',
         'settings' => array(
           'field_delimiter' => '',
@@ -1405,7 +1405,7 @@ function gie_resource_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 11,
+        'weight' => 13,
       ),
       'default' => array(
         'label' => 'above',
@@ -1531,7 +1531,7 @@ function gie_resource_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 14,
+        'weight' => 16,
       ),
       'default' => array(
         'label' => 'above',
@@ -1681,7 +1681,7 @@ function gie_resource_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 27,
+        'weight' => 29,
       ),
       'default' => array(
         'label' => 'above',
@@ -1803,7 +1803,7 @@ function gie_resource_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 24,
+        'weight' => 26,
       ),
       'default' => array(
         'label' => 'above',
@@ -1925,7 +1925,7 @@ function gie_resource_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 25,
+        'weight' => 27,
       ),
       'default' => array(
         'label' => 'above',
@@ -2070,7 +2070,7 @@ function gie_resource_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 26,
+        'weight' => 28,
       ),
       'default' => array(
         'label' => 'above',
@@ -2192,7 +2192,7 @@ function gie_resource_field_default_field_instances() {
         'label' => 'hidden',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 8,
+        'weight' => 10,
       ),
       'default' => array(
         'label' => 'hidden',

@@ -41,6 +41,7 @@ features[ctools][] = panelizer:panelizer:1
 features[ctools][] = strongarm:strongarm:1
 features[ctools][] = views:views_default:3.0
 features[ds_field_settings][] = comment|comment_node_resource|default
+features[ds_field_settings][] = node|resource|at_a_glance
 features[ds_field_settings][] = node|resource|details
 features[ds_field_settings][] = node|resource|full
 features[ds_field_settings][] = node|resource|highlights

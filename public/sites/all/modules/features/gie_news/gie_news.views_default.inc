@@ -103,6 +103,7 @@ function gie_news_views_default_views() {
   /* Display: Comment count */
   $handler = $view->new_display('entity_view', 'Comment count', 'comment_count');
   $handler->display->display_options['defaults']['css_class'] = FALSE;
+  $handler->display->display_options['css_class'] = 'view--at-a-glance';
   $handler->display->display_options['defaults']['hide_admin_links'] = FALSE;
   $handler->display->display_options['hide_admin_links'] = TRUE;
   $handler->display->display_options['defaults']['relationships'] = FALSE;
@@ -125,6 +126,7 @@ function gie_news_views_default_views() {
   /* Display: Favorite count */
   $handler = $view->new_display('entity_view', 'Favorite count', 'favorite_count');
   $handler->display->display_options['defaults']['css_class'] = FALSE;
+  $handler->display->display_options['css_class'] = 'view--at-a-glance';
   $handler->display->display_options['defaults']['hide_admin_links'] = FALSE;
   $handler->display->display_options['hide_admin_links'] = TRUE;
   $handler->display->display_options['defaults']['fields'] = FALSE;
