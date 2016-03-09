@@ -2,5 +2,6 @@
   a {
     @extend %button;
     @extend %button--flag;
+    margin-bottom: 0;
   }
 }

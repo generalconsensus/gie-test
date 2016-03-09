@@ -170,7 +170,7 @@ function gie_blogs_strongarm() {
             'visible' => FALSE,
           ),
           'at_a_glance' => array(
-            'weight' => '2',
+            'weight' => '13',
             'visible' => FALSE,
           ),
           'contact' => array(
@@ -178,7 +178,7 @@ function gie_blogs_strongarm() {
             'visible' => FALSE,
           ),
           'details' => array(
-            'weight' => '10',
+            'weight' => '19',
             'visible' => FALSE,
           ),
           'search_listing' => array(
@@ -208,7 +208,7 @@ function gie_blogs_strongarm() {
             'visible' => FALSE,
           ),
           'at_a_glance' => array(
-            'weight' => '13',
+            'weight' => '24',
             'visible' => FALSE,
           ),
           'contact' => array(
@@ -216,7 +216,7 @@ function gie_blogs_strongarm() {
             'visible' => FALSE,
           ),
           'details' => array(
-            'weight' => '17',
+            'weight' => '25',
             'visible' => FALSE,
           ),
           'search_listing' => array(
@@ -226,15 +226,15 @@ function gie_blogs_strongarm() {
         ),
         'blogs_counters_comment_count' => array(
           'at_a_glance' => array(
-            'weight' => '0',
-            'visible' => TRUE,
+            'weight' => '5',
+            'visible' => FALSE,
           ),
           'contact' => array(
             'weight' => '18',
             'visible' => FALSE,
           ),
           'details' => array(
-            'weight' => '14',
+            'weight' => '24',
             'visible' => FALSE,
           ),
           'default' => array(
@@ -256,15 +256,15 @@ function gie_blogs_strongarm() {
         ),
         'blogs_counters_favorite_count' => array(
           'at_a_glance' => array(
-            'weight' => '1',
-            'visible' => TRUE,
+            'weight' => '4',
+            'visible' => FALSE,
           ),
           'contact' => array(
             'weight' => '22',
             'visible' => FALSE,
           ),
           'details' => array(
-            'weight' => '9',
+            'weight' => '17',
             'visible' => FALSE,
           ),
           'default' => array(
@@ -286,15 +286,15 @@ function gie_blogs_strongarm() {
         ),
         'blogs_counters_resource_comment_detail' => array(
           'at_a_glance' => array(
-            'weight' => '21',
-            'visible' => FALSE,
+            'weight' => '1',
+            'visible' => TRUE,
           ),
           'contact' => array(
             'weight' => '24',
             'visible' => FALSE,
           ),
           'details' => array(
-            'weight' => '8',
+            'weight' => '16',
             'visible' => FALSE,
           ),
           'default' => array(
@@ -316,15 +316,15 @@ function gie_blogs_strongarm() {
         ),
         'blogs_counters_resource_favorite_count_detail' => array(
           'at_a_glance' => array(
-            'weight' => '22',
-            'visible' => FALSE,
+            'weight' => '2',
+            'visible' => TRUE,
           ),
           'contact' => array(
             'weight' => '19',
             'visible' => FALSE,
           ),
           'details' => array(
-            'weight' => '12',
+            'weight' => '22',
             'visible' => FALSE,
           ),
           'default' => array(
@@ -357,6 +357,14 @@ function gie_blogs_strongarm() {
             'weight' => '10',
             'visible' => FALSE,
           ),
+          'details' => array(
+            'weight' => '18',
+            'visible' => FALSE,
+          ),
+          'at_a_glance' => array(
+            'weight' => '20',
+            'visible' => FALSE,
+          ),
         ),
         'flag_abuse_node' => array(
           'contact' => array(
@@ -369,6 +377,14 @@ function gie_blogs_strongarm() {
           ),
           'listing' => array(
             'weight' => '11',
+            'visible' => FALSE,
+          ),
+          'details' => array(
+            'weight' => '20',
+            'visible' => FALSE,
+          ),
+          'at_a_glance' => array(
+            'weight' => '21',
             'visible' => FALSE,
           ),
         ),

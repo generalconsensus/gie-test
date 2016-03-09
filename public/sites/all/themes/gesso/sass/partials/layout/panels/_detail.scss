@@ -7,7 +7,7 @@
 .l-panels-detail {
   @include add-grid(12 at 700px);
   @include add-gutter(2);
-  &.main-empty.main-sidebar-empty.center-empty {
+  &.main-empty.main-sidebar-empty.center-empty.boxes { // if top areas are empty but blue bar with boxes isn't, then let title arrow hang over blue area
     .l-title {
       margin-bottom: 0;
     }
