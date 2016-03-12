@@ -223,6 +223,21 @@ function gie_microsite_field_default_field_bases() {
     'type' => 'taxonomy_term_reference',
   );
 
+  // Exported field_base: 'field_para_5050_style'
+  $field_bases['field_para_5050_style'] = array(
+    'active' => 1,
+    'cardinality' => 1,
+    'deleted' => 0,
+    'entity_types' => array(),
+    'field_name' => 'field_para_5050_style',
+    'indexes' => array(),
+    'locked' => 0,
+    'module' => 'view_mode_selector',
+    'settings' => array(),
+    'translatable' => 0,
+    'type' => 'view_mode_selector',
+  );
+
   // Exported field_base: 'field_para_5050_text'
   $field_bases['field_para_5050_text'] = array(
     'active' => 1,
