@@ -43,287 +43,81 @@ function gie_dashboard_search_api_solr_query_alter(array &$call_args, SearchApiQ
   }
 }
 
-
-//What's New?
-/**
- * @param null $since
- */
-function gie_dashboard_exchange_updates_form($form, &$form_state) {
-
-  global $user;
-  if (!empty($_GET['updates']) && $_GET['updates'] == 'last-visit' && !empty($user) && $user->uid > 0) {
-    // Customize the data for showing everything since the last login
-
-    $now = strtotime('now');
-    $last_access = db_query("select login from {users} where uid = :uid", array(':uid' => $user->uid))->fetchField();
-    $organizations = db_query("SELECT COUNT(nid) from {node} WHERE type = 'organization' AND changed between :start AND :end", array(
-      ':start' => $last_access,
-      ':end' => $now
-    ))->fetchField();
-    $award_available = db_query("SELECT sum(field_funding_grant_award_value_value) from {field_data_field_funding_grant_award_value} inner join node on node.nid = field_data_field_funding_grant_award_value.entity_id where changed between :start AND :end", array(
-      ':start' => $last_access,
-      ':end' => $now
-    ))->fetchField();
-    $collaborators = db_query("SELECT COUNT(uid) from {users} WHERE created between :start AND :end", array(
-      ':start' => $last_access,
-      ':end' => $now
-    ))->fetchField();
-    $innovations = db_query("SELECT COUNT(nid) from {node} where type = 'innovation' AND changed between :start AND :end", array(
-      ':start' => $last_access,
-      ':end' => $now
-    ))->fetchField();
-  }
-  else {
-    $first_day_last_month = strtotime('first day of last month');
-    $last_day_last_month = strtotime('last day of last month');
-    // Customize the data for showing everything since last month
-    $organizations = db_query("SELECT COUNT(nid) from {node} WHERE type = 'organization' AND changed between :start AND :end", array(
-      ':start' => $first_day_last_month,
-      ':end' => $last_day_last_month
-    ))->fetchField();
-    $award_available = db_query("SELECT sum(field_funding_grant_award_value_value) from {field_data_field_funding_grant_award_value} inner join node on node.nid = field_data_field_funding_grant_award_value.entity_id where changed between :start AND :end", array(
-      ':start' => $first_day_last_month,
-      ':end' => $last_day_last_month
-    ))->fetchField();
-    $collaborators = db_query("SELECT COUNT(uid) from {users} WHERE created between :start AND :end", array(
-      ':start' => $first_day_last_month,
-      ':end' => $last_day_last_month
-    ))->fetchField();
-    $innovations = db_query("SELECT COUNT(nid) from {node} where type = 'innovations' AND changed between :start AND :end", array(
-      ':start' => $first_day_last_month,
-      ':end' => $last_day_last_month
-    ))->fetchField();
-
-
-  }
-  if (!empty($award_available)) {
-    if ($award_available > 1000000000) {
-      $award_available = round(($award_available / 1000000000), 1) . 'B';
-    }
-    else {
-      if ($award_available > 1000000) {
-        $award_available = round(($award_available / 1000000), 1) . 'M';
-      }
-      else {
-        if ($award_available > 1000) {
-          $award_available = round(($award_available / 1000), 1) . 'T';
-        }
-      }
-    }
-    $award_available = '<div class="dashboard__data data-point"><a href="/funding">$' . $award_available . ' <span>Available</span></a></div>';
-  }
-  else {
-    $award_available = '<div class="dashboard__data data-point"><a href="/funding">N/A <span>Available</span></a></div>';
-  }
-
-  $organizations = !empty($organizations) ? '<div class="dashboard__data data-point"><a href="/organizations">' . $organizations . ' <span>Organizations</span></a></div>' : '<div class="data-point"><a href="/organizations">N/A <span>Organizations</span></a></div>';
-  $collaborators = !empty($collaborators) ? '<div class="dashboard__data data-point"><a href="/members">' . $collaborators . ' <span>Collaborators</span></a></div>' : '<div class="data-point"><a href="/members">N/A <span>Collaborators</span></a></div>';
-  $innovations = !empty($organizations) ? '<div class="dashboard__data data-point"><a href="/innovations">' . $innovations . ' <span>Innovations</span></a></div>' : '<div class="data-point"><a href="/innovations">N/A <span>Innovations</span></a></div>';
-
-
-  $form['selected'] = array(
-    '#type' => 'select',
-    '#prefix' => '<h2 class="dashboard__title">' . t("Exchange Updates since") . '',
-    '#options' => array(
-      0 => t('Last Month'),
-      1 => t('Your Last Visit'),
-    ),
-    '#default_value' => !empty($_GET['updates']) && $_GET['updates'] == 'last-visit' ? 1 : 0,
-    '#attributes' => array('onChange' => 'document.getElementById("gie-dashboard-exchange-updates-form").submit();'),
-    '#suffix' => '</h2>',
-    '#weight' => 4,
-  );
-
-  $form['submit'] = array(
-    '#type' => 'submit',
-    '#value' => '',
-    '#prefix' => '<div style="display: none;">',
-    '#suffix' => '</div>',
-    '#weight' => 0,
-  );
-
-  $form['updates'] = array(
-    '#type' => 'item',
-    '#markup' => $organizations . $award_available . $collaborators . $innovations,
-    '#weight' => 5,
-    '#suffix' => '<div class="dashboard__all-data-button"><a class="button button--highlight" href="/data">See all Exchange Data</a></div>'
-  );
-
-
-  return $form;
-}
-
-
-/**
- * @param $form
- * @param $form_state
- */
-function gie_dashboard_exchange_updates_form_validate($form, &$form_state) {
-  if (empty($form_state['values']['selected']) && !is_numeric($form_state['values']['selected'])) {
-    form_set_error('selected', 'Select a normal value');
-  }
-}
-
-/**
- * @param $form
- * @param $form_state
- */
-function gie_dashboard_exchange_updates_form_submit($form, &$form_state) {
-  if (!empty($form_state['values']['selected']) && $form_state['values']['selected'] == 1) {
-
-    $form_state['redirect'] = array(
-      'dashboard/',
-      array(
-        'query' => array(
-          'updates' => 'last-visit',
-        ),
-      ),
-    );
-    drupal_redirect_form($form_state);
-  }
-  else {
-    $form_state['redirect'] = array(
-      'dashboard/',
-      array(
-        'query' => array(
-          'updates' => 'month',
-        ),
-      ),
-    );
-    drupal_redirect_form($form_state);
-  }
-}
-
-
-/**
- * TODO: Combine Queries to reduce time for creation
- */
-function gie_dashboard_notification_center_list() {
-  global $user;
-  if (!empty($user) && $user->uid > 0) {
-    $results = array();
-    $follow_user = flag_load('follow');
-    $favorite = flag_load('favorite');
-
-    //  Comments left on your content
-    $results['comments_on_your_content'] = db_query('SELECT users.name, users.uid, field_data_field_user_firstname.field_user_firstname_value, field_data_field_user_lastname.field_user_lastname_value
-	FROM node
-    INNER JOIN comment on comment.nid = node.nid
-    INNER JOIN users on comment.uid = users.uid
-    LEFT JOIN field_data_field_user_firstname on field_data_field_user_firstname.entity_id = comment.uid
-    LEFT JOIN field_data_field_user_lastname on field_data_field_user_lastname.entity_id = comment.uid
-    WHERE node.uid = :uid GROUP BY users.uid ORDER BY RAND() LIMIT 3', array(
-      ':uid' => $user->uid
-    ))->fetchAll();
-
-
-    // Users following you
-    $results['people_follow_you'] = db_query('SELECT users.name, users.uid, field_data_field_user_firstname.field_user_firstname_value, field_data_field_user_lastname.field_user_lastname_value
-    FROM flagging
-    INNER JOIN users on flagging.uid = users.uid
-    LEFT JOIN field_data_field_user_firstname on field_data_field_user_firstname.entity_id = flagging.uid
-    LEFT JOIN field_data_field_user_lastname on field_data_field_user_lastname.entity_id = flagging.uid
-    WHERE flagging.fid = :fid AND flagging.entity_id = :uid AND flagging.uid <> :uid ORDER BY RAND() LIMIT 3', array(
-      ':fid' => $follow_user->fid,
-      ':uid' => $user->uid
-    ))->fetchAll();
-
-    // Users following your content
-    $results['people_follow_your_content'] = db_query('SELECT users.name, users.uid, field_data_field_user_firstname.field_user_firstname_value, field_data_field_user_lastname.field_user_lastname_value
-    FROM node
-    INNER JOIN flagging on flagging.entity_id = node.nid
-    INNER JOIN users on flagging.uid = users.uid
-    LEFT JOIN field_data_field_user_firstname on field_data_field_user_firstname.entity_id = flagging.uid
-    LEFT JOIN field_data_field_user_lastname on field_data_field_user_lastname.entity_id = flagging.uid
-    WHERE flagging.fid = :fid AND node.uid = :uid AND flagging.uid <> :uid ORDER BY RAND() LIMIT 3', array(
-      ':fid' => $favorite->fid,
-      ':uid' => $user->uid
-    ))->fetchAll();
-
-
-    // Grab random followers for use with generating a list of content
-    // Inner Join back on flagging to make sure that the relationship is 'two-way'
-    $followers = db_query('SELECT flagging.uid FROM flagging INNER JOIN flagging reverse_flagging on flagging.uid = reverse_flagging.entity_id
-    WHERE flagging.fid = :fid AND reverse_flagging.fid  = :fid
-    AND flagging.entity_id = :uid AND reverse_flagging.uid = :uid', array(
-      ':fid' => $follow_user->fid,
-      ':uid' => $user->uid
-    ))->fetchCol();
-
-    if (!empty($followers) && $followers > 0) {
-      $now = strtotime('now');
-
-      //  A "friend" created new content
-      $results['friend_content'] = db_query('SELECT node.title, node.nid, users.name, users.uid
-  FROM node
-  INNER JOIN users on users.uid = node.uid
-  WHERE node.uid IN (:uids) AND node.changed between :start AND :end
-  ORDER BY RAND() LIMIT 1', array(
-        ':uids' => $followers,
-        ':start' => strtotime('first day of last month'),
-        ':end' => $now
-      ))->fetchAssoc();
-
-      //  A "friend" followed a piece of content
-      $results['friend_followed_content'] = db_query('SELECT users.name, users.uid, followed_content.title, followed_content.nid
-  FROM flagging
-  INNER JOIN users on users.uid = flagging.uid
-  INNER JOIN node followed_content on followed_content.nid = flagging.entity_id AND flagging.timestamp between :start AND :end
-  WHERE flagging.uid IN (:uids) ORDER BY RAND() LIMIT 3', array(
-        ':start' => strtotime('first day of last month'),
-        ':end' => $now,
-        ':uids' => $followers
-      ))->fetchAssoc();
-
-      //  A "friend" connected with a user
-      $results['friend_followed'] = db_query('SELECT users.name as original_friend_name, users.uid as original_friend_uid, friend_of_friend.uid as friend_of_friend_uid, friend_of_friend.name as friend_of_friend_name
-  FROM flagging
-  INNER JOIN users on users.uid = flagging.uid
-  INNER JOIN flagging connected_user on connected_user.uid = flagging.entity_id AND flagging.timestamp between :start AND :end
-  INNER JOIN users friend_of_friend on friend_of_friend.uid = connected_user.uid
-  WHERE flagging.uid IN (:uids) AND flagging.fid = :fid AND connected_user.uid <> :uid AND connected_user.fid = :fid ORDER BY RAND() LIMIT 3', array(
-        ':start' => strtotime('first day of last month'),
-        ':end' => $now,
-        ':uids' => $followers,
-        ':fid' => $follow_user->fid,
-        ':uid' => $user->uid
-      ))->fetchAssoc();
-
-
-      //  A "friend" commented on content
-      $results['friend_comment'] = db_query('  SELECT users.name, users.uid, node.title, node.nid, friend_comment.subject
-  FROM users
-  INNER JOIN comment friend_comment on friend_comment.uid = users.uid AND friend_comment.changed between :start AND :end
-  INNER JOIN node on node.nid = friend_comment.nid
-  WHERE users.uid IN (:uids)
-  ORDER BY RAND() LIMIT 3', array(
-        ':uids' => $followers,
-        ':start' => strtotime('first day of last month'),
-        ':end' => $now
-      ))->fetchAssoc();
-    }
-    else {
-      $results = array_merge($results, array(
-        'friend_content' => 0,
-        'friend_followed_content' => 0,
-        'friend_followed' => 0,
-        'friend_comment' => 0
-      ));
-    }
-
-    $results['featured_innovation'] = db_query('select node.nid from field_data_field_featured_innovation INNER JOIN node on node.nid = field_data_field_featured_innovation.entity_id WHERE field_featured_innovation_value = 1 LIMIT 1')->fetchField();
-
-    if (!empty($results['featured_innovation']) && is_numeric($results['featured_innovation'])) {
-      $entity = entity_view('node', array(node_load($results['featured_innovation'])), 'listing');
-      if (!empty($entity)) {
-        $results['featured_innovation'] = render($entity);
-      }
-    }
-
-    return $results;
-  }
-
-}
+//
+//function gie_dashboard_exchange_updates_form($form, &$form_state) {
+//
+//  $test = 1;
+//  $form['selected'] = array(
+//    '#type' => 'select',
+//    '#prefix' => '<h2 class="dashboard__title">' . t("Exchange Updates since") . '',
+//    '#options' => array(
+//      0 => t('Last Month'),
+//      1 => t('Your Last Visit'),
+//    ),
+//    '#default_value' => !empty($_GET['updates']) && $_GET['updates'] == 'last-visit' ? 1 : 0,
+//    '#attributes' => array('onChange' => 'document.getElementById("gie-dashboard-exchange-updates-form").submit();'),
+//    '#suffix' => '</h2>',
+//    '#weight' => 4,
+//  );
+//
+//  $form['submit'] = array(
+//    '#type' => 'submit',
+//    '#value' => '',
+//    '#prefix' => '<div style="display: none;">',
+//    '#suffix' => '</div>',
+//    '#weight' => 0,
+//  );
+//
+//  $form['updates'] = array(
+//    '#type' => 'item',
+//    '#markup' => $form_state['organizations'] . $form_state['award_available'] . $form_state['collaborators'] . $form_state['innovations'],
+//    '#weight' => 5,
+//    '#suffix' => '<div class="dashboard__all-data-button"><a class="button button--highlight" href="/data">See all Exchange Data</a></div>'
+//  );
+//
+//  return $form;
+//}
+//
+//
+///**
+// * @param $form
+// * @param $form_state
+// */
+//function gie_dashboard_exchange_updates_form_validate($form, &$form_state) {
+//  if (empty($form_state['values']['selected']) && !is_numeric($form_state['values']['selected'])) {
+//    form_set_error('selected', 'Select a normal value');
+//  }
+//}
+//
+///**
+// * @param $form
+// * @param $form_state
+// */
+//function gie_dashboard_exchange_updates_form_submit($form, &$form_state) {
+//  if (!empty($form_state['values']['selected']) && $form_state['values']['selected'] == 1) {
+//
+//    $form_state['redirect'] = array(
+//      'dashboard/',
+//      array(
+//        'query' => array(
+//          'updates' => 'last-visit',
+//        ),
+//      ),
+//    );
+//    drupal_redirect_form($form_state);
+//  }
+//  else {
+//    $form_state['redirect'] = array(
+//      'dashboard/',
+//      array(
+//        'query' => array(
+//          'updates' => 'month',
+//        ),
+//      ),
+//    );
+//    drupal_redirect_form($form_state);
+//  }
+//}
 
 ///**
 // * @param $variables
@@ -443,124 +237,6 @@ function gie_dashboard_menu() {
     'type' => MENU_CALLBACK,
   );
   return $items;
-}
-
-
-function gie_dashboard_whats_new_tab() {
-  $results = gie_dashboard_notification_center_list();
-  $gie_dashboard_notification_center = array();
-  $gie_dashboard_featured_innovation = array();
-
-
-  if ($results) {
-
-    $gie_dashboard_notification_center = array(
-      '#prefix' => '<h2 class="dashboard__title">Notification Center</h2><ul class="dashboard-notifications">',
-      '#suffix' => '</ul>',
-    );
-
-    foreach ($results as $key => $result) {
-      if ($key == 'comments_on_your_content' && !empty($result)) {
-        if (count($result) > 1) {
-          $comments_name = array();
-          $gie_dashboard_notification_center[$key] = array(
-            '#markup' => '<li class="dashboard-notifications__item is-featured">',
-          );
-          foreach ($result as $record) {
-            $comments_name[] = !empty($record->field_user_firstname_value) && !empty($record->field_user_lastname_value) ? l($record->field_user_firstname_value . ' ' . $record->field_user_lastname_value, 'user/' . $record->uid) : l($record->name, 'user/' . $record->uid);
-          }
-          $gie_dashboard_notification_center[$key]['#markup'] .= implode(', ', $comments_name) . ' commented on your content</li>';
-
-
-        }
-        else {
-          $name = !empty($result[0]->field_user_firstname_value) && !empty($result[0]->field_user_lastname_value) ? !$result[0]->field_user_firstname_value . ' ' . $result[0]->field_user_lastname_value : $result[0]->name;
-          $gie_dashboard_notification_center[$key] = array(
-            '#markup' => '<li class="dashboard-notifications__item is-featured">' . l($name, 'user/' . $result[0]->uid) . ' commented on your content</li>',
-          );
-
-        }
-      }
-      if ($key == 'people_follow_your_content' && !empty($result)) {
-        if (count($result) > 1) {
-          $content_name = array();
-          $gie_dashboard_notification_center[$key] = array(
-            '#markup' => '<li class="dashboard-notifications__item is-featured">',
-          );
-          foreach ($result as $record) {
-            $content_name[] = !empty($record->field_user_firstname_value) && !empty($record->field_user_lastname_value) ? l($record->field_user_firstname_value . ' ' . $record->field_user_lastname_value, 'user/' . $record->uid) : l($record->name, 'user/' . $record->uid);
-          }
-          $gie_dashboard_notification_center[$key]['#markup'] .= implode(', ', $content_name) . ' follows your content</li>';
-
-        }
-        else {
-          $name = !empty($result[0]->field_user_firstname_value) && !empty($result[0]->field_user_lastname_value) ? !$result[0]->field_user_firstname_value . ' ' . $result[0]->field_user_lastname_value : $result[0]->name;
-          $gie_dashboard_notification_center[$key] = array(
-            '#markup' => '<li class="dashboard-notifications__item is-featured">' . l($name, 'user/' . $result[0]->uid) . ' follows your content</li>',
-          );
-
-        }
-      }
-      elseif ($key == 'people_follow_you' && !empty($result)) {
-        if (count($result) > 1) {
-          $follow_name = array();
-          $gie_dashboard_notification_center[$key] = array(
-            '#markup' => '<li class="dashboard-notifications__item is-featured">',
-          );
-          foreach ($result as $record) {
-            $follow_name[] = !empty($record->field_user_firstname_value) && !empty($record->field_user_lastname_value) ? l($record->field_user_firstname_value . ' ' . $record->field_user_lastname_value, 'user/' . $record->uid) : l($record->name, 'user/' . $record->uid);
-          }
-          $gie_dashboard_notification_center[$key]['#markup'] .= implode(', ', $follow_name) . ' follow you</li>';
-
-
-        }
-        else {
-          $name = !empty($result[0]->field_user_firstname_value) && !empty($result[0]->field_user_lastname_value) ? !$result[0]->field_user_firstname_value . ' ' . $result[0]->field_user_lastname_value : $result[0]->name;
-          $gie_dashboard_notification_center[$key] = array(
-            '#markup' => '<li class="dashboard-notifications__item is-featured">' . l($name, 'user/' . $result[0]->uid) . ' follows you</li>',
-          );
-        }
-      }
-      elseif ($key == 'friend_content' && !empty($result['name']) && !empty($result['uid']) && !empty($result['nid'])) {
-        $gie_dashboard_notification_center[$key] = array(
-          '#markup' => '<li class="dashboard-notifications__item">' . l($result['name'], 'user/' . $result['uid']) . ' created new content ' . l($result['title'], 'node/' . $result['nid']) . '.</li>'
-        );
-      }
-      elseif ($key == 'friend_followed_content' && !empty($result['name']) && !empty($result['uid']) && !empty($result['nid'])) {
-        $gie_dashboard_notification_center[$key] = array(
-          '#markup' => '<li class="dashboard-notifications__item">' . l($result['name'], 'user/' . $result['uid']) . ' followed content ' . l($result['title'], 'node/' . $result['nid']) . '.</li>'
-        );
-      }
-      elseif ($key == 'friend_followed' && !empty($result['original_friend_name']) && !empty($result['original_friend_uid']) && !empty($result['friend_of_friend_name']) && !empty($result['friend_of_friend_uid'])) {
-
-        $gie_dashboard_notification_center[$key] = array(
-          '#markup' => '<li class="dashboard-notifications__item">' . l($result['original_friend_name'], 'user/' . $result['original_friend_uid']) . ' followed ' . l($result['friend_of_friend_name'], 'user/' . $result['friend_of_friend_uid']) . '.</li>'
-        );
-      }
-      elseif ($key == 'friend_comment' && !empty($result['name']) && !empty($result['uid']) && !empty($result['nid'])) {
-
-        $gie_dashboard_notification_center[$key] = array(
-          '#markup' => '<li class="dashboard-notifications__item">' . l($result['name'], 'user/' . $result['uid']) . ' commented ' . $result['subject'] . ' on ' . l($result['title'], 'node/' . $result['nid'], array('fragment' => 'comments')) . '.</li>'
-        );
-      }
-      elseif ($key == 'featured_innovation') {
-        $gie_dashboard_featured_innovation = array(
-          '#prefix' => '<h2 class="dashboard__title">Innovation Spotlight</h2><div class="dashboard__spotlights">',
-          '#suffix' => '</div>',
-        );
-
-        $gie_dashboard_featured_innovation[$key] = array('#markup' => $result);
-      }
-    }
-
-  }
-  $page = array
-  (
-    $gie_dashboard_notification_center,
-    'form' => drupal_get_form('gie_dashboard_exchange_updates_form'),
-    $gie_dashboard_featured_innovation,
-  );
-  return $page;
 }
 
 function gie_dashboard_dummy_data($original_user_uid = NULL, $pieces = NULL) {
