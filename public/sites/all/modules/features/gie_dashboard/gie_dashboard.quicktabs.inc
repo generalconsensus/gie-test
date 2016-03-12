@@ -20,10 +20,11 @@ function gie_dashboard_quicktabs_default_quicktabs() {
   $quicktabs->title = 'Dashboard';
   $quicktabs->tabs = array(
     0 => array(
-      'path' => 'gie_dashboard/notification_center',
+      'bid' => 'panels_mini_delta_whats_new_tab',
+      'hide_title' => 1,
       'title' => 'What\'s New?',
       'weight' => '-100',
-      'type' => 'callback',
+      'type' => 'block',
     ),
     1 => array(
       'vid' => 'user_innovations',
