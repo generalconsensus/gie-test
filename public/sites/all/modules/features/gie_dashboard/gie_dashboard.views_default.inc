@@ -1045,19 +1045,46 @@ function gie_dashboard_views_default_views() {
   $handler->display->display_options['pager']['options']['offset'] = '0';
   $handler->display->display_options['style_plugin'] = 'default';
   $handler->display->display_options['row_plugin'] = 'fields';
-  /* Field: User: Address - First name */
-  $handler->display->display_options['fields']['field_user_address_first_name']['id'] = 'field_user_address_first_name';
-  $handler->display->display_options['fields']['field_user_address_first_name']['table'] = 'field_data_field_user_address';
-  $handler->display->display_options['fields']['field_user_address_first_name']['field'] = 'field_user_address_first_name';
-  $handler->display->display_options['fields']['field_user_address_first_name']['label'] = '';
-  $handler->display->display_options['fields']['field_user_address_first_name']['exclude'] = TRUE;
-  $handler->display->display_options['fields']['field_user_address_first_name']['element_label_colon'] = FALSE;
-  /* Field: User: Address - Last name */
-  $handler->display->display_options['fields']['field_user_address_last_name']['id'] = 'field_user_address_last_name';
-  $handler->display->display_options['fields']['field_user_address_last_name']['table'] = 'field_data_field_user_address';
-  $handler->display->display_options['fields']['field_user_address_last_name']['field'] = 'field_user_address_last_name';
-  $handler->display->display_options['fields']['field_user_address_last_name']['label'] = '';
-  $handler->display->display_options['fields']['field_user_address_last_name']['element_label_colon'] = FALSE;
+  /* Field: User: First Name */
+  $handler->display->display_options['fields']['field_user_firstname']['id'] = 'field_user_firstname';
+  $handler->display->display_options['fields']['field_user_firstname']['table'] = 'field_data_field_user_firstname';
+  $handler->display->display_options['fields']['field_user_firstname']['field'] = 'field_user_firstname';
+  $handler->display->display_options['fields']['field_user_firstname']['label'] = '';
+  $handler->display->display_options['fields']['field_user_firstname']['exclude'] = TRUE;
+  $handler->display->display_options['fields']['field_user_firstname']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_user_firstname']['settings'] = array(
+    'linked_field' => array(
+      'linked' => 0,
+      'destination' => '',
+      'advanced' => array(
+        'title' => '',
+        'target' => '',
+        'class' => '',
+        'rel' => '',
+        'text' => '',
+      ),
+    ),
+  );
+  /* Field: User: Last Name */
+  $handler->display->display_options['fields']['field_user_lastname']['id'] = 'field_user_lastname';
+  $handler->display->display_options['fields']['field_user_lastname']['table'] = 'field_data_field_user_lastname';
+  $handler->display->display_options['fields']['field_user_lastname']['field'] = 'field_user_lastname';
+  $handler->display->display_options['fields']['field_user_lastname']['label'] = '';
+  $handler->display->display_options['fields']['field_user_lastname']['exclude'] = TRUE;
+  $handler->display->display_options['fields']['field_user_lastname']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_user_lastname']['settings'] = array(
+    'linked_field' => array(
+      'linked' => 0,
+      'destination' => '',
+      'advanced' => array(
+        'title' => '',
+        'target' => '',
+        'class' => '',
+        'rel' => '',
+        'text' => '',
+      ),
+    ),
+  );
   /* Field: User: Profile Photo */
   $handler->display->display_options['fields']['field_user_photo']['id'] = 'field_user_photo';
   $handler->display->display_options['fields']['field_user_photo']['table'] = 'field_data_field_user_photo';
@@ -1095,7 +1122,7 @@ function gie_dashboard_views_default_views() {
   $handler->display->display_options['fields']['nothing']['table'] = 'views';
   $handler->display->display_options['fields']['nothing']['field'] = 'nothing';
   $handler->display->display_options['fields']['nothing']['label'] = '';
-  $handler->display->display_options['fields']['nothing']['alter']['text'] = '[field_user_photo] [field_user_address_first_name] [field_user_address_last_name] joined the Exchange [created]';
+  $handler->display->display_options['fields']['nothing']['alter']['text'] = '[field_user_photo] [field_user_firstname] [field_user_lastname]  joined the Exchange [created]';
   $handler->display->display_options['fields']['nothing']['element_label_colon'] = FALSE;
   /* Sort criterion: User: Created date */
   $handler->display->display_options['sorts']['created']['id'] = 'created';
