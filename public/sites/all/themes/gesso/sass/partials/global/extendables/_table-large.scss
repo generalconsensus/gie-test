@@ -1,0 +1,13 @@
+%table-large{
+  margin-bottom: 2em;
+  width: 100%;
+  th, td {
+    font-size: em($font-size-lg);
+    padding: 0.5em; 
+    text-align: center;
+  }
+  th {
+    font-size: em($font-size-xl);
+    font-weight: bold;
+  }
+}

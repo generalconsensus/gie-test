@@ -17,11 +17,11 @@ angular.module('gieDataViz').directive('barChart', function() {
               data = newValue.data,
               maxLength = d3.max(data, function(d) { return xInfo[d.id].length; }) + 2;
 
-          var maxWidth = 600,
-              maxHeight = 400,
-              margin = {top: 20, right: 30, bottom: maxLength * 5, left: 60},
-              width = maxWidth - margin.left - margin.right,
-              height = maxHeight - margin.top - margin.bottom;
+          var maxWidth = 600,//full svg width
+              height = 300,//bar chart height
+              margin = {top: 20, right: 30, bottom: maxLength * 5, left: 60},//margins around the chart for axis labels and padding
+              width = maxWidth - margin.left - margin.right,//bar chart width
+              maxHeight = height + margin.top + margin.bottom;//full svg height
 
           // Format numbers to 3 digits. e.g. 100, 100k, 10m, etc.
           var formatter = d3.format("s");

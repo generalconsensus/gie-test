@@ -43,6 +43,10 @@
         "src": "../../images/sherlock-178-178.jpg",
         "alt": "Card 1:1"
       },
+      "img-150-150": {
+        "src": "../../images/sherlock-150-150.jpg",
+        "alt": "Card 1:1"
+      },
       "img-78-78": {
         "src": "../../images/sherlock-78-78.jpg",
         "alt": "Card 1:1"
@@ -137,6 +141,10 @@
       },
       "img-178-178": {
         "src": "../../images/watson-178-178.jpg",
+        "alt": "Card 1:1"
+      },
+      "img-150-150": {
+        "src": "../../images/watson-150-150.jpg",
         "alt": "Card 1:1"
       },
       "img-78-78": {
@@ -235,6 +243,10 @@
         "src": "../../images/mulder-178-178.jpg",
         "alt": "Card 1:1"
       },
+      "img-150-150": {
+        "src": "../../images/mulder-150-150.jpg",
+        "alt": "Card 1:1"
+      },
       "img-78-78": {
         "src": "../../images/mulder-78-78.jpg",
         "alt": "Card 1:1"
@@ -329,6 +341,10 @@
       },
       "img-178-178": {
         "src": "../../images/scully-178-178.jpg",
+        "alt": "Card 1:1"
+      },
+      "img-150-150": {
+        "src": "../../images/scully-150-150.jpg",
         "alt": "Card 1:1"
       },
       "img-78-78": {
@@ -427,6 +443,10 @@
         "src": "../../images/daenerys-178-178.jpg",
         "alt": "Card 1:1"
       },
+      "img-150-150": {
+        "src": "../../images/daenerys-150-150.jpg",
+        "alt": "Card 1:1"
+      },
       "img-78-78": {
         "src": "../../images/daenerys-78-78.jpg",
         "alt": "Card 1:1"
@@ -521,6 +541,10 @@
       },
       "img-178-178": {
         "src": "../../images/tyrion-178-178.jpg",
+        "alt": "Card 1:1"
+      },
+      "img-150-150": {
+        "src": "../../images/tyrion-150-150.jpg",
         "alt": "Card 1:1"
       },
       "img-78-78": {
@@ -619,6 +643,10 @@
         "src": "../../images/josh-178-178.jpg",
         "alt": "Card 1:1"
       },
+      "img-150-150": {
+        "src": "../../images/josh-150-150.jpg",
+        "alt": "Card 1:1"
+      },
       "img-78-78": {
         "src": "../../images/josh-78-78.jpg",
         "alt": "Card 1:1"
@@ -713,6 +741,10 @@
       },
       "img-178-178": {
         "src": "../../images/cj-178-178.jpg",
+        "alt": "Card 1:1"
+      },
+      "img-150-150": {
+        "src": "../../images/cj-150-150.jpg",
         "alt": "Card 1:1"
       },
       "img-78-78": {
@@ -811,6 +843,10 @@
         "src": "../../images/cameron-178-178.jpg",
         "alt": "Card 1:1"
       },
+      "img-150-150": {
+        "src": "../../images/cameron-150-150.jpg",
+        "alt": "Card 1:1"
+      },
       "img-78-78": {
         "src": "../../images/cameron-78-78.jpg",
         "alt": "Card 1:1"
@@ -905,6 +941,10 @@
       },
       "img-178-178": {
         "src": "../../images/gordon-178-178.jpg",
+        "alt": "Card 1:1"
+      },
+      "img-150-150": {
+        "src": "../../images/gordon-150-150.jpg",
         "alt": "Card 1:1"
       },
       "img-78-78": {
@@ -1003,6 +1043,10 @@
         "src": "../../images/inigo-178-178.jpg",
         "alt": "Card 1:1"
       },
+      "img-150-150": {
+        "src": "../../images/inigo-150-150.jpg",
+        "alt": "Card 1:1"
+      },
       "img-78-78": {
         "src": "../../images/inigo-78-78.jpg",
         "alt": "Card 1:1"
@@ -1097,6 +1141,10 @@
       },
       "img-178-178": {
         "src": "../../images/buttercup-178-178.jpg",
+        "alt": "Card 1:1"
+      },
+      "img-150-150": {
+        "src": "../../images/buttercup-150-150.jpg",
         "alt": "Card 1:1"
       },
       "img-78-78": {

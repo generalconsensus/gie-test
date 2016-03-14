@@ -582,6 +582,182 @@ function gie_innovation_views_default_views() {
   $export['funded_by'] = $view;
 
   $view = new view();
+  $view->name = 'grants_listing_page';
+  $view->description = 'This view powers the innovations listing on the Grants iData page.';
+  $view->tag = 'default';
+  $view->base_table = 'search_api_index_default_node_index';
+  $view->human_name = 'Grants Listing Page';
+  $view->core = 7;
+  $view->api_version = '3.0';
+  $view->disabled = FALSE; /* Edit this to true to make a default view disabled initially */
+
+  /* Display: Master */
+  $handler = $view->new_display('default', 'Master', 'default');
+  $handler->display->display_options['css_class'] = 'view--card-view-4col';
+  $handler->display->display_options['use_more_always'] = FALSE;
+  $handler->display->display_options['access']['type'] = 'none';
+  $handler->display->display_options['cache']['type'] = 'none';
+  $handler->display->display_options['query']['type'] = 'views_query';
+  $handler->display->display_options['exposed_form']['type'] = 'basic';
+  $handler->display->display_options['pager']['type'] = 'full';
+  $handler->display->display_options['pager']['options']['items_per_page'] = '16';
+  $handler->display->display_options['pager']['options']['offset'] = '0';
+  $handler->display->display_options['pager']['options']['id'] = '0';
+  $handler->display->display_options['pager']['options']['quantity'] = '9';
+  $handler->display->display_options['style_plugin'] = 'default';
+  $handler->display->display_options['row_plugin'] = 'entity';
+  $handler->display->display_options['row_options']['view_mode'] = 'listing';
+  /* Field: Indexed Content: Node ID */
+  $handler->display->display_options['fields']['nid']['id'] = 'nid';
+  $handler->display->display_options['fields']['nid']['table'] = 'search_api_index_default_node_index';
+  $handler->display->display_options['fields']['nid']['field'] = 'nid';
+  /* Sort criterion: Indexed Content: Date created */
+  $handler->display->display_options['sorts']['created']['id'] = 'created';
+  $handler->display->display_options['sorts']['created']['table'] = 'search_api_index_default_node_index';
+  $handler->display->display_options['sorts']['created']['field'] = 'created';
+  $handler->display->display_options['sorts']['created']['order'] = 'DESC';
+  /* Contextual filter: Indexed Content: Funded By */
+  $handler->display->display_options['arguments']['field_innovation_funders']['id'] = 'field_innovation_funders';
+  $handler->display->display_options['arguments']['field_innovation_funders']['table'] = 'search_api_index_default_node_index';
+  $handler->display->display_options['arguments']['field_innovation_funders']['field'] = 'field_innovation_funders';
+  $handler->display->display_options['arguments']['field_innovation_funders']['default_action'] = 'not found';
+  $handler->display->display_options['arguments']['field_innovation_funders']['default_argument_type'] = 'fixed';
+  $handler->display->display_options['arguments']['field_innovation_funders']['summary']['format'] = 'default_summary';
+  $handler->display->display_options['arguments']['field_innovation_funders']['break_phrase'] = 1;
+  $handler->display->display_options['arguments']['field_innovation_funders']['not'] = 0;
+  /* Filter criterion: Indexed Content: Content type */
+  $handler->display->display_options['filters']['type']['id'] = 'type';
+  $handler->display->display_options['filters']['type']['table'] = 'search_api_index_default_node_index';
+  $handler->display->display_options['filters']['type']['field'] = 'type';
+  $handler->display->display_options['filters']['type']['value'] = array(
+    'innovation' => 'innovation',
+  );
+
+  /* Display: Content pane */
+  $handler = $view->new_display('panel_pane', 'Content pane', 'grants_list');
+  $handler->display->display_options['allow']['use_pager'] = 0;
+  $handler->display->display_options['allow']['items_per_page'] = 0;
+  $handler->display->display_options['allow']['offset'] = 0;
+  $handler->display->display_options['allow']['link_to_view'] = 0;
+  $handler->display->display_options['allow']['more_link'] = 0;
+  $handler->display->display_options['allow']['path_override'] = 0;
+  $handler->display->display_options['allow']['title_override'] = 0;
+  $handler->display->display_options['allow']['exposed_form'] = 0;
+  $handler->display->display_options['allow']['fields_override'] = 0;
+  $export['grants_listing_page'] = $view;
+
+  $view = new view();
+  $view->name = 'grants_organization_list';
+  $view->description = 'This view shows the Organizations at the top of the Grants page.';
+  $view->tag = 'default';
+  $view->base_table = 'node';
+  $view->human_name = 'Grants Organization List';
+  $view->core = 7;
+  $view->api_version = '3.0';
+  $view->disabled = FALSE; /* Edit this to true to make a default view disabled initially */
+
+  /* Display: Master */
+  $handler = $view->new_display('default', 'Master', 'default');
+  $handler->display->display_options['title'] = 'Select an Organization or Browse All Below';
+  $handler->display->display_options['css_class'] = 'view--card-view-4col';
+  $handler->display->display_options['use_more_always'] = FALSE;
+  $handler->display->display_options['access']['type'] = 'perm';
+  $handler->display->display_options['cache']['type'] = 'none';
+  $handler->display->display_options['query']['type'] = 'views_query';
+  $handler->display->display_options['exposed_form']['type'] = 'basic';
+  $handler->display->display_options['pager']['type'] = 'full';
+  $handler->display->display_options['style_plugin'] = 'default';
+  $handler->display->display_options['row_plugin'] = 'fields';
+  /* Field: Content: Nid */
+  $handler->display->display_options['fields']['nid']['id'] = 'nid';
+  $handler->display->display_options['fields']['nid']['table'] = 'node';
+  $handler->display->display_options['fields']['nid']['field'] = 'nid';
+  $handler->display->display_options['fields']['nid']['label'] = '';
+  $handler->display->display_options['fields']['nid']['exclude'] = TRUE;
+  $handler->display->display_options['fields']['nid']['element_label_colon'] = FALSE;
+  /* Field: Content: Logo */
+  $handler->display->display_options['fields']['field_program_logo']['id'] = 'field_program_logo';
+  $handler->display->display_options['fields']['field_program_logo']['table'] = 'field_data_field_program_logo';
+  $handler->display->display_options['fields']['field_program_logo']['field'] = 'field_program_logo';
+  $handler->display->display_options['fields']['field_program_logo']['label'] = '';
+  $handler->display->display_options['fields']['field_program_logo']['alter']['make_link'] = TRUE;
+  $handler->display->display_options['fields']['field_program_logo']['alter']['path'] = '/grants/funded-by/[nid]';
+  $handler->display->display_options['fields']['field_program_logo']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_program_logo']['click_sort_column'] = 'fid';
+  $handler->display->display_options['fields']['field_program_logo']['settings'] = array(
+    'image_style' => 'card__500x300_',
+    'image_link' => '',
+    'linked_field' => array(
+      'linked' => 0,
+      'destination' => '',
+      'advanced' => array(
+        'title' => '',
+        'target' => '',
+        'class' => '',
+        'rel' => '',
+        'text' => '',
+      ),
+    ),
+  );
+  /* Field: Content: Logo */
+  $handler->display->display_options['fields']['field_org_logo']['id'] = 'field_org_logo';
+  $handler->display->display_options['fields']['field_org_logo']['table'] = 'field_data_field_org_logo';
+  $handler->display->display_options['fields']['field_org_logo']['field'] = 'field_org_logo';
+  $handler->display->display_options['fields']['field_org_logo']['label'] = '';
+  $handler->display->display_options['fields']['field_org_logo']['alter']['make_link'] = TRUE;
+  $handler->display->display_options['fields']['field_org_logo']['alter']['path'] = '/grants/funded-by/[nid]';
+  $handler->display->display_options['fields']['field_org_logo']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_org_logo']['click_sort_column'] = 'fid';
+  $handler->display->display_options['fields']['field_org_logo']['settings'] = array(
+    'image_style' => 'card__500x300_',
+    'image_link' => '',
+    'linked_field' => array(
+      'linked' => 0,
+      'destination' => '/grants/funded-by/[nid]',
+      'advanced' => array(
+        'title' => '',
+        'target' => '',
+        'class' => '',
+        'rel' => '',
+        'text' => '',
+      ),
+    ),
+  );
+  /* Sort criterion: Content: Post date */
+  $handler->display->display_options['sorts']['created']['id'] = 'created';
+  $handler->display->display_options['sorts']['created']['table'] = 'node';
+  $handler->display->display_options['sorts']['created']['field'] = 'created';
+  $handler->display->display_options['sorts']['created']['order'] = 'DESC';
+  /* Contextual filter: Content: Nid */
+  $handler->display->display_options['arguments']['nid']['id'] = 'nid';
+  $handler->display->display_options['arguments']['nid']['table'] = 'node';
+  $handler->display->display_options['arguments']['nid']['field'] = 'nid';
+  $handler->display->display_options['arguments']['nid']['default_action'] = 'not found';
+  $handler->display->display_options['arguments']['nid']['default_argument_type'] = 'fixed';
+  $handler->display->display_options['arguments']['nid']['summary']['number_of_records'] = '0';
+  $handler->display->display_options['arguments']['nid']['summary']['format'] = 'default_summary';
+  $handler->display->display_options['arguments']['nid']['summary_options']['items_per_page'] = '25';
+  $handler->display->display_options['arguments']['nid']['break_phrase'] = TRUE;
+  /* Filter criterion: Content: Published */
+  $handler->display->display_options['filters']['status']['id'] = 'status';
+  $handler->display->display_options['filters']['status']['table'] = 'node';
+  $handler->display->display_options['filters']['status']['field'] = 'status';
+  $handler->display->display_options['filters']['status']['value'] = 1;
+  $handler->display->display_options['filters']['status']['group'] = 1;
+  $handler->display->display_options['filters']['status']['expose']['operator'] = FALSE;
+  /* Filter criterion: Content: Type */
+  $handler->display->display_options['filters']['type']['id'] = 'type';
+  $handler->display->display_options['filters']['type']['table'] = 'node';
+  $handler->display->display_options['filters']['type']['field'] = 'type';
+  $handler->display->display_options['filters']['type']['value'] = array(
+    'organization' => 'organization',
+  );
+
+  /* Display: Content pane */
+  $handler = $view->new_display('panel_pane', 'Content pane', 'grants_organizations');
+  $export['grants_organization_list'] = $view;
+
+  $view = new view();
   $view->name = 'innovation_assistance';
   $view->description = '';
   $view->tag = 'default';

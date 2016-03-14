@@ -237,5 +237,4 @@ features[views_view][] = communities_terms_menu
 features[views_view][] = communities_user_menu
 features_exclude[dependencies][asset] = asset
 features_exclude[dependencies][gie_organization] = gie_organization
-features_exclude[variable][pathauto_node_error_page_pattern] = pathauto_node_error_page_pattern
 project path = sites/all/modules/features

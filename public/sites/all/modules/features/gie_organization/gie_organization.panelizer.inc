@@ -288,7 +288,7 @@ function gie_organization_panelizer_defaults() {
       'view_mode' => 'contact',
       'context' => 'panelizer',
       'override_title' => 1,
-      'override_title_text' => 'Point of Contact',
+      'override_title_text' => 'Contact',
       'override_title_heading' => 'h2',
     );
     $pane->cache = array();

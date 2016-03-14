@@ -208,7 +208,7 @@ function gie_discussion_views_default_views() {
   $handler->display->display_options['fields']['field_user_photo']['field'] = 'field_user_photo';
   $handler->display->display_options['fields']['field_user_photo']['label'] = '';
   $handler->display->display_options['fields']['field_user_photo']['element_type'] = 'div';
-  $handler->display->display_options['fields']['field_user_photo']['element_class'] = 'profile-thumb__image--rounded';
+  $handler->display->display_options['fields']['field_user_photo']['element_class'] = 'profile-thumb__image-rounded';
   $handler->display->display_options['fields']['field_user_photo']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['field_user_photo']['click_sort_column'] = 'fid';
   $handler->display->display_options['fields']['field_user_photo']['settings'] = array(

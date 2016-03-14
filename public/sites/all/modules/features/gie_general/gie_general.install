@@ -383,3 +383,14 @@ function gie_general_update_7037() {
   );
   module_enable($modules, TRUE);
 }
+
+/**
+ * Enable GIE Blog and News feature.
+ */
+function gie_general_update_7038() {
+    $modules = array(
+        'gie_blog',
+        'gie_news',
+    );
+    module_enable($modules, TRUE);
+}

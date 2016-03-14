@@ -16,10 +16,7 @@ function gie_dashboard_default_page_manager_pages() {
   $page->admin_title = 'Dashboard';
   $page->admin_description = 'This is the user dashboard page.';
   $page->path = 'dashboard';
-  $page->access = array(
-    'type' => 'none',
-    'settings' => NULL,
-  );
+  $page->access = array();
   $page->menu = array();
   $page->arguments = array();
   $page->conf = array(
@@ -60,6 +57,8 @@ function gie_dashboard_default_page_manager_pages() {
       'box_third' => NULL,
       'bottom_sidebar' => NULL,
       'bottom' => NULL,
+      'preface' => NULL,
+      'sidebar' => NULL,
     ),
   );
   $display->cache = array();
@@ -68,19 +67,17 @@ function gie_dashboard_default_page_manager_pages() {
   $display->content = array();
   $display->panels = array();
     $pane = new stdClass();
-    $pane->pid = 'new-79569c40-d815-4209-995a-35fea6907415';
-    $pane->panel = 'main';
-    $pane->type = 'custom';
-    $pane->subtype = 'custom';
+    $pane->pid = 'new-b9346319-c9ec-4a3f-bd9a-ab3359d2cef5';
+    $pane->panel = 'center';
+    $pane->type = 'dashboard_header_image';
+    $pane->subtype = 'dashboard_header_image';
     $pane->shown = TRUE;
     $pane->access = array();
     $pane->configuration = array(
-      'admin_title' => 'Take Action',
-      'title' => '',
-      'body' => '<h1>Take Action on the Exchange</h1>
-',
-      'format' => 'full_html',
-      'substitute' => TRUE,
+      'type' => '',
+      'override_title' => 0,
+      'override_title_text' => '',
+      'override_title_heading' => 'h2',
     );
     $pane->cache = array();
     $pane->style = array(
@@ -90,61 +87,12 @@ function gie_dashboard_default_page_manager_pages() {
     $pane->extras = array();
     $pane->position = 0;
     $pane->locks = array();
-    $pane->uuid = '79569c40-d815-4209-995a-35fea6907415';
-    $display->content['new-79569c40-d815-4209-995a-35fea6907415'] = $pane;
-    $display->panels['main'][0] = 'new-79569c40-d815-4209-995a-35fea6907415';
-    $pane = new stdClass();
-    $pane->pid = 'new-a6b2389d-c251-45f0-aa63-3a401417d5fa';
-    $pane->panel = 'main';
-    $pane->type = 'pane';
-    $pane->subtype = 'dashboard_action_cards';
-    $pane->shown = TRUE;
-    $pane->access = array();
-    $pane->configuration = array(
-      'override_title' => 1,
-      'override_title_text' => '',
-      'override_title_heading' => 'h2',
-    );
-    $pane->cache = array();
-    $pane->style = array(
-      'settings' => NULL,
-    );
-    $pane->css = array();
-    $pane->extras = array();
-    $pane->position = 1;
-    $pane->locks = array();
-    $pane->uuid = 'a6b2389d-c251-45f0-aa63-3a401417d5fa';
-    $display->content['new-a6b2389d-c251-45f0-aa63-3a401417d5fa'] = $pane;
-    $display->panels['main'][1] = 'new-a6b2389d-c251-45f0-aa63-3a401417d5fa';
-    $pane = new stdClass();
-    $pane->pid = 'new-db50d99d-94db-4085-a8ba-8edfb7423138';
-    $pane->panel = 'main';
-    $pane->type = 'custom';
-    $pane->subtype = 'custom';
-    $pane->shown = TRUE;
-    $pane->access = array();
-    $pane->configuration = array(
-      'admin_title' => 'find content',
-      'title' => '',
-      'body' => '<h1>Find Content on the Exchange</h1>
-',
-      'format' => 'full_html',
-      'substitute' => TRUE,
-    );
-    $pane->cache = array();
-    $pane->style = array(
-      'settings' => NULL,
-    );
-    $pane->css = array();
-    $pane->extras = array();
-    $pane->position = 2;
-    $pane->locks = array();
-    $pane->uuid = 'db50d99d-94db-4085-a8ba-8edfb7423138';
-    $display->content['new-db50d99d-94db-4085-a8ba-8edfb7423138'] = $pane;
-    $display->panels['main'][2] = 'new-db50d99d-94db-4085-a8ba-8edfb7423138';
+    $pane->uuid = 'b9346319-c9ec-4a3f-bd9a-ab3359d2cef5';
+    $display->content['new-b9346319-c9ec-4a3f-bd9a-ab3359d2cef5'] = $pane;
+    $display->panels['center'][0] = 'new-b9346319-c9ec-4a3f-bd9a-ab3359d2cef5';
     $pane = new stdClass();
     $pane->pid = 'new-cc873759-f953-459a-9ba2-c94aff11b86d';
-    $pane->panel = 'main';
+    $pane->panel = 'center';
     $pane->type = 'block';
     $pane->subtype = 'quicktabs-dashboard';
     $pane->shown = TRUE;
@@ -154,23 +102,26 @@ function gie_dashboard_default_page_manager_pages() {
       'override_title_text' => '',
       'override_title_heading' => 'h2',
     );
-    $pane->cache = array();
+    $pane->cache = array(
+      'method' => '0',
+      'settings' => array(),
+    );
     $pane->style = array(
       'settings' => NULL,
     );
     $pane->css = array();
     $pane->extras = array();
-    $pane->position = 3;
+    $pane->position = 1;
     $pane->locks = array();
     $pane->uuid = 'cc873759-f953-459a-9ba2-c94aff11b86d';
     $display->content['new-cc873759-f953-459a-9ba2-c94aff11b86d'] = $pane;
-    $display->panels['main'][3] = 'new-cc873759-f953-459a-9ba2-c94aff11b86d';
+    $display->panels['center'][1] = 'new-cc873759-f953-459a-9ba2-c94aff11b86d';
     $pane = new stdClass();
     $pane->pid = 'new-580cb31e-5a70-489b-98e7-e701b204c0b4';
     $pane->panel = 'title';
     $pane->type = 'page_title';
     $pane->subtype = 'page_title';
-    $pane->shown = TRUE;
+    $pane->shown = FALSE;
     $pane->access = array();
     $pane->configuration = array(
       'markup' => 'h1',

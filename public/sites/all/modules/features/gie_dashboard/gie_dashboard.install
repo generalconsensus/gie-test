@@ -1,0 +1,11 @@
+<?php
+
+/**
+ * Create Dummy Data for Admin user for use with showing the revamped Dashboard
+ */
+function gie_dashboard_update_7001() {
+  // Create some dummy data for use with the dashboard
+  gie_dashboard_dummy_data();
+  cache_clear_all();
+
+}
