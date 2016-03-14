@@ -172,12 +172,12 @@ function dashboard_whats_new_notification_center_render($subtype, $conf, $panel_
   $block = new stdClass();
 
 
-  if ($results) {
+  $gie_dashboard_notification_center = array(
+    '#prefix' => '<h2 class="dashboard__title">' . strtoupper(t('Notifications')) . '</h2><ul class="dashboard-notifications">',
+    '#suffix' => '</ul>',
+  );
 
-    $gie_dashboard_notification_center = array(
-      '#prefix' => '<h2 class="dashboard__title">' . strtoupper(t('Notifications')) . '</h2><ul class="dashboard-notifications">',
-      '#suffix' => '</ul>',
-    );
+  if ($results) {
 
     foreach ($results as $key => $result) {
       if ($key == 'comments_on_your_content' && !empty($result)) {
@@ -221,23 +221,29 @@ function dashboard_whats_new_notification_center_render($subtype, $conf, $panel_
 
         }
       }
-      elseif ($key == 'people_follow_you' && !empty($result)) {
-        if (count($result) > 1) {
-          $follow_name = array();
-          $gie_dashboard_notification_center[$key] = array(
-            '#markup' => '<li class="dashboard-notifications__item is-featured">',
-          );
-          foreach ($result as $record) {
-            $follow_name[] = !empty($record->field_user_firstname_value) && !empty($record->field_user_lastname_value) ? l($record->field_user_firstname_value . ' ' . $record->field_user_lastname_value, 'user/' . $record->uid) : l($record->name, 'user/' . $record->uid);
+      elseif ($key == 'people_follow_you') {
+        if (!empty($result)) {
+          if (count($result) > 1) {
+            $follow_name = array();
+            $gie_dashboard_notification_center[$key] = array(
+              '#markup' => '<li class="dashboard-notifications__item is-featured">',
+            );
+            foreach ($result as $record) {
+              $follow_name[] = !empty($record->field_user_firstname_value) && !empty($record->field_user_lastname_value) ? l($record->field_user_firstname_value . ' ' . $record->field_user_lastname_value, 'user/' . $record->uid) : l($record->name, 'user/' . $record->uid);
+            }
+            $gie_dashboard_notification_center[$key]['#markup'] .= implode(', ', $follow_name) . ' follow you</li>';
+
+
           }
-          $gie_dashboard_notification_center[$key]['#markup'] .= implode(', ', $follow_name) . ' follow you</li>';
-
-
-        }
-        else {
-          $name = !empty($result[0]->field_user_firstname_value) && !empty($result[0]->field_user_lastname_value) ? !$result[0]->field_user_firstname_value . ' ' . $result[0]->field_user_lastname_value : $result[0]->name;
+          else {
+            $name = !empty($result[0]->field_user_firstname_value) && !empty($result[0]->field_user_lastname_value) ? !$result[0]->field_user_firstname_value . ' ' . $result[0]->field_user_lastname_value : $result[0]->name;
+            $gie_dashboard_notification_center[$key] = array(
+              '#markup' => '<li class="dashboard-notifications__item is-featured">' . l($name, 'user/' . $result[0]->uid) . ' follows you</li>',
+            );
+          }
+        } else {
           $gie_dashboard_notification_center[$key] = array(
-            '#markup' => '<li class="dashboard-notifications__item is-featured">' . l($name, 'user/' . $result[0]->uid) . ' follows you</li>',
+            '#markup' => '<li class="dashboard-notifications__item">Find your Friends on the ' . l(t('Exchange'), 'members') . '.</li>'
           );
         }
       }
@@ -246,10 +252,16 @@ function dashboard_whats_new_notification_center_render($subtype, $conf, $panel_
           '#markup' => '<li class="dashboard-notifications__item">' . l($result['name'], 'user/' . $result['uid']) . ' created new content ' . l($result['title'], 'node/' . $result['nid']) . '.</li>'
         );
       }
-      elseif ($key == 'friend_followed_content' && !empty($result['name']) && !empty($result['uid']) && !empty($result['nid'])) {
-        $gie_dashboard_notification_center[$key] = array(
-          '#markup' => '<li class="dashboard-notifications__item">' . l($result['name'], 'user/' . $result['uid']) . ' followed content ' . l($result['title'], 'node/' . $result['nid']) . '.</li>'
-        );
+      elseif ($key == 'friend_followed_content') {
+        if (!empty($result['name']) && !empty($result['uid']) && !empty($result['nid'])) {
+          $gie_dashboard_notification_center[$key] = array(
+            '#markup' => '<li class="dashboard-notifications__item">' . l($result['name'], 'user/' . $result['uid']) . ' followed content ' . l($result['title'], 'node/' . $result['nid']) . '.</li>'
+          );
+        } else {
+          $gie_dashboard_notification_center[$key] = array(
+            '#markup' => '<li class="dashboard-notifications__item">Find Innovations on the ' . l(t('Exchange'), 'innovations') . '.</li>'
+          );
+        }
       }
       elseif ($key == 'friend_followed' && !empty($result['original_friend_name']) && !empty($result['original_friend_uid']) && !empty($result['friend_of_friend_name']) && !empty($result['friend_of_friend_uid'])) {
 
@@ -267,12 +279,8 @@ function dashboard_whats_new_notification_center_render($subtype, $conf, $panel_
     }
 
   }
-//  $page = array
-//  (
-//    $gie_dashboard_notification_center,
-//    'form' => drupal_get_form('gie_dashboard_exchange_updates_form'),
-//    $gie_dashboard_featured_innovation,
-//  );
+
+
   $block->content = $gie_dashboard_notification_center;
 
   return $block;
