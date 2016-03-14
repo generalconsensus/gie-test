@@ -164,33 +164,15 @@ function gie_dashboard_search_api_solr_query_alter(array &$call_args, SearchApiQ
 //  }
 //}
 
-/**
- *
+/*
  * Implements hook_form_FORM_ID_alter().
  */
-function gie_dashboard_form_innovation_node_form_alter(&$form, &$form_state) {
+function gie_dashboard_form_user_profile_form_alter(&$form, &$form_state) {
   $admin_role = user_role_load_by_name('administrator');
   $community_role = user_role_load_by_name('Program Community Manager');
-  if (!(user_has_role($admin_role->rid) || user_has_role($community_role->rid))) {
-    $form['field_featured_innovation']['#type'] = 'hidden';
-  }
   // Set field visibility based on whether the user is an admin
-  $form['#validate'][] = 'gie_dashboard_form_validate';
-}
-
-
-/**va
- * @param $form
- * @param $form_state
- */
-function gie_dashboard_form_validate($form, &$form_state) {
-  if (!empty($form_state['values']['field_featured_innovation'][LANGUAGE_NONE][0]['value'])) {
-    if ($form_state['values']['field_featured_innovation']['und'][0]['value'] == 1) {
-      $existing_featured_innovation = db_query('SELECT entity_id FROM field_data_field_featured_innovation WHERE field_featured_innovation_value = 1')->fetchField();
-      if (!empty($existing_featured_innovation)) {
-        form_set_error('field_featured_innovation', 'Only one Innovation can be featured at a time. Here is the current ' . l('Featured Innovation', 'node/' . $existing_featured_innovation . '/edit'));
-      }
-    }
+  if (!(user_has_role($admin_role->rid) || user_has_role($community_role->rid))) {
+    $form['field_featured']['#type'] = 'hidden';
   }
 }
 
@@ -361,7 +343,7 @@ function gie_dashboard_dummy_data($original_user_uid = NULL, $pieces = NULL) {
   }
   // Check for a Featured Node
   // If not found, add one
-  $featured_node = db_query('SELECT COUNT(entity_id) FROM field_data_field_featured_innovation WHERE field_data_field_featured_innovation.field_featured_innovation_value = 1')->fetchField();
+  $featured_node = db_query('SELECT COUNT(entity_id) FROM field_data_field_featured WHERE field_data_field_featured.field_featured_value = 1')->fetchField();
   if (empty($featured_node) || $featured_node < 1) {
     $random_innovation = db_query('SELECT nid FROM node WHERE node.type = :innovation ORDER BY RAND() LIMIT 1', array(':innovation' => 'innovation'))->fetchField();
     $node = node_load($random_innovation);

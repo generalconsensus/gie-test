@@ -42,7 +42,7 @@ function dashboard_whats_new_featured_items_admin_form($form, &$form_state) {
 
 function dashboard_whats_new_featured_items_generate_listing() {
 
-  $featured_innovations = db_query('select node.nid from field_data_field_featured_innovation INNER JOIN node on node.nid = field_data_field_featured_innovation.entity_id WHERE field_featured_innovation_value = 1 LIMIT 1')->fetchField();
+  $featured_innovations = db_query('select node.nid from field_data_field_featured INNER JOIN node on node.nid = field_data_field_featured.entity_id WHERE field_featured_value = 1 LIMIT 1')->fetchField();
 
   if (!empty($featured_innovations) && is_numeric($featured_innovations)) {
     $entity = entity_view('node', array(node_load($featured_innovations)), 'listing');
