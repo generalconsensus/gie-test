@@ -1,10 +1,7 @@
 .stats {
-  background: $gray;
-  border: 0;
+  @extend %box;
   overflow: hidden;
   margin: 0 0 3em 0;
-  padding: 1em;
- 
   > h2 {
     font-weight: normal;
   }
@@ -38,7 +35,7 @@
       }
     }
   }
-   
+
 }
 
 .stats__first {
@@ -53,6 +50,6 @@
   @include breakpoint(900px, $no-query: true) {
     float: left;
     padding-left: 4%;
-    width: 50%;    
-  }   
+    width: 50%;
+  }
 }

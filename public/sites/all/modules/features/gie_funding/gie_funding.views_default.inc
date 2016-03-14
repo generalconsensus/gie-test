@@ -593,6 +593,12 @@ function gie_funding_views_default_views() {
   $handler->display->display_options['filters']['status']['value'] = array(
     1 => '1',
   );
+  /* Filter criterion: Indexed Content: Deadlines */
+  $handler->display->display_options['filters']['field_funding_deadline']['id'] = 'field_funding_deadline';
+  $handler->display->display_options['filters']['field_funding_deadline']['table'] = 'search_api_index_default_node_index';
+  $handler->display->display_options['filters']['field_funding_deadline']['field'] = 'field_funding_deadline';
+  $handler->display->display_options['filters']['field_funding_deadline']['operator'] = '>=';
+  $handler->display->display_options['filters']['field_funding_deadline']['value'] = 'now';
   $export['funding_opp_listing'] = $view;
 
   $view = new view();

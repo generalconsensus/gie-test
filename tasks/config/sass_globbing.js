@@ -11,6 +11,7 @@ module.exports = function(grunt) {
           '<%= pkg.themePath %>/sass/partials/sass-globbing/_layout.scss' : '<%= pkg.themePath %>/sass/partials/layout/**/*.scss',
           '<%= pkg.themePath %>/sass/partials/sass-globbing/_components.scss' : '<%= pkg.themePath %>/sass/partials/components/**/*.scss',
           '<%= pkg.themePath %>/sass/partials/sass-globbing/_block.scss' : '<%= pkg.themePath %>/sass/partials/components/block/**/*.scss',
+          '<%= pkg.themePath %>/sass/partials/sass-globbing/_field.scss' : '<%= pkg.themePath %>/sass/partials/components/field/**/*.scss',
           '<%= pkg.themePath %>/sass/partials/sass-globbing/_nav.scss' : '<%= pkg.themePath %>/sass/partials/components/nav/**/*.scss',
           '<%= pkg.themePath %>/sass/partials/sass-globbing/_pane.scss' : '<%= pkg.themePath %>/sass/partials/components/pane/**/*.scss',
           '<%= pkg.themePath %>/sass/partials/sass-globbing/_view.scss' : '<%= pkg.themePath %>/sass/partials/components/view/**/*.scss',
@@ -31,6 +32,6 @@ module.exports = function(grunt) {
       }
     }
   });
-  
+
   grunt.loadNpmTasks('grunt-sass-globbing');
 }
