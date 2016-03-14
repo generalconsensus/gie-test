@@ -52,6 +52,7 @@ features[ds_field_settings][] = node|resource|search_listing
 features[ds_layout_settings][] = comment|comment_node_resource|default
 features[ds_layout_settings][] = comment|comment_node_resource|form
 features[ds_layout_settings][] = node|resource|at_a_glance
+features[ds_layout_settings][] = node|resource|contact
 features[ds_layout_settings][] = node|resource|details
 features[ds_layout_settings][] = node|resource|full
 features[ds_layout_settings][] = node|resource|highlights
