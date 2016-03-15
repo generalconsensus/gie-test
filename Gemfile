@@ -1,5 +1,4 @@
 source 'https://rubygems.org'
-
 gem 'capistrano', '~>3.1'
 gem 'compass', '~>1.0.1'
 gem 'breakpoint', '~>2.5.0'

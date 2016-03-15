@@ -120,12 +120,5 @@ module.exports = function(grunt) {
   var taskConfigurations = loadTasks('./tasks/config'),
       registerDefinitions = loadTasks('./tasks/register');
 
-  // Ensure that a default task exists
-  if (!registerDefinitions.default) {
-    registerDefinitions.default = function (grunt) { grunt.registerTask('default', []); };
-  }
-
-  // Run task functions to configure Grunt.
-  invokeConfigFn(taskConfigurations);
-  invokeConfigFn(registerDefinitions);
+  grunt.registerTask('default', [ 'compass:' + stage ]);
 };
