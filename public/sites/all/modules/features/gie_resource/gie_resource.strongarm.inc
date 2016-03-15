@@ -208,7 +208,7 @@ function gie_resource_strongarm() {
             'visible' => FALSE,
           ),
           'contact' => array(
-            'weight' => '24',
+            'weight' => '23',
             'visible' => FALSE,
           ),
         ),
@@ -246,7 +246,7 @@ function gie_resource_strongarm() {
             'visible' => FALSE,
           ),
           'contact' => array(
-            'weight' => '18',
+            'weight' => '17',
             'visible' => FALSE,
           ),
         ),
@@ -284,7 +284,7 @@ function gie_resource_strongarm() {
             'visible' => FALSE,
           ),
           'contact' => array(
-            'weight' => '17',
+            'weight' => '16',
             'visible' => FALSE,
           ),
         ),
@@ -314,7 +314,7 @@ function gie_resource_strongarm() {
             'visible' => FALSE,
           ),
           'contact' => array(
-            'weight' => '19',
+            'weight' => '18',
             'visible' => FALSE,
           ),
         ),
@@ -344,7 +344,7 @@ function gie_resource_strongarm() {
             'visible' => FALSE,
           ),
           'contact' => array(
-            'weight' => '22',
+            'weight' => '21',
             'visible' => FALSE,
           ),
         ),
@@ -354,7 +354,7 @@ function gie_resource_strongarm() {
             'visible' => TRUE,
           ),
           'contact' => array(
-            'weight' => '11',
+            'weight' => '10',
             'visible' => FALSE,
           ),
           'at_a_glance' => array(
@@ -376,7 +376,7 @@ function gie_resource_strongarm() {
             'visible' => TRUE,
           ),
           'contact' => array(
-            'weight' => '20',
+            'weight' => '19',
             'visible' => FALSE,
           ),
           'at_a_glance' => array(
@@ -398,7 +398,7 @@ function gie_resource_strongarm() {
             'visible' => TRUE,
           ),
           'contact' => array(
-            'weight' => '21',
+            'weight' => '20',
             'visible' => FALSE,
           ),
           'at_a_glance' => array(
