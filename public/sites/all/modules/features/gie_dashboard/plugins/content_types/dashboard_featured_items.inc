@@ -41,16 +41,55 @@ function dashboard_whats_new_featured_items_admin_form($form, &$form_state) {
 }
 
 function dashboard_whats_new_featured_items_generate_listing() {
+  global $user;
+  $bundle_nodes = array('innovation', 'resource', 'funding');
+  $payload = array();
 
-  $featured_innovations = db_query('select node.nid from field_data_field_featured INNER JOIN node on node.nid = field_data_field_featured.entity_id WHERE field_featured_value = 1 LIMIT 1')->fetchField();
+  $featured_innovations = db_query('select node.nid from field_data_field_featured INNER JOIN node on node.nid = field_data_field_featured.entity_id WHERE field_data_field_featured.bundle in (:bundle) AND field_featured_value = 1 LIMIT 3', array(
+    ':bundle' => $bundle_nodes
+  ))->fetchCol();
 
-  if (!empty($featured_innovations) && is_numeric($featured_innovations)) {
-    $entity = entity_view('node', array(node_load($featured_innovations)), 'listing');
-    if (!empty($entity)) {
-      $featured_innovations = render($entity);
+  array_merge();
+  $test = 1;
+
+  $sector_matches = db_query("SELECT sub.nid FROM
+    (
+	  SELECT DISTINCT node.created AS node_created, node.changed, node.nid, node.type  FROM node
+      LEFT JOIN field_data_field_term_sector sector_1 ON node.nid = sector_1.entity_id AND (sector_1.entity_type = 'node' AND sector_1.deleted = '0')
+      INNER JOIN taxonomy_term_data  ON sector_1.field_term_sector_tid = taxonomy_term_data.tid
+      INNER JOIN field_data_field_term_sector sector_2 ON taxonomy_term_data.tid = sector_2.field_term_sector_tid AND (sector_2.entity_type = 'user' AND sector_2.deleted = '0')
+      INNER JOIN users ON sector_2.entity_id = users.uid
+      WHERE (( (users.uid = :uid ) )AND(( (node.status = '1') AND (node.type IN (:bundle)) ))) ORDER BY node.changed DESC
+    ) AS sub
+  GROUP BY sub.type DESC LIMIT 3", array(
+    ':uid' => $user->uid,
+    ':bundle' => $bundle_nodes
+  ))->fetchCol();
+
+  if (!empty($featured_innovations) && is_array($featured_innovations)) {
+    $inc = 0;
+    foreach ($featured_innovations as $key => $innovation_match) {
+      $entity = entity_view('node', array(node_load($innovation_match)), 'listing');
+      if (!empty($entity)) {
+          $payload[$key + $inc] = render($entity);
+      }
+      $inc +=1;
     }
   }
-  return $featured_innovations;
+
+  if (!empty($sector_matches) && is_array($sector_matches)) {
+    $inc = 0;
+    foreach ($sector_matches as $key => $sector_match) {
+      $inc +=1;
+      $entity = entity_view('node', array(node_load($sector_match)), 'listing');
+      if (!empty($entity)) {
+        $payload[$key + $inc] = render($entity);
+      }
+    }
+  }
+
+  ksort($payload);
+  return $payload;
 }
 
 /**
@@ -61,21 +100,22 @@ function dashboard_whats_new_featured_items_render($subtype, $conf, $panel_args,
 
   $featured_innovations = dashboard_whats_new_featured_items_generate_listing();
 
-    if (!empty($featured_innovations)) {
+  if (!empty($featured_innovations)) {
 
-      // Render block
-      $block = new stdClass();
+    // Render block
+    $block = new stdClass();
 
-      $payload = array(
-//        '#prefix' => '<h2 class="dashboard__title">Innovation Spotlight</h2><div class="dashboard__spotlights">',
-//        '#suffix' => '</div>',
-        '#markup' => $featured_innovations
-      );
+    $payload = array(
+      '#theme' => 'item_list',
+      '#items' => $featured_innovations,
+      '#type' => 'ul',
+      '#attributes' => array('class' => 'list-class'),
+    );
 
-      $block->content = $payload;
+    $block->content = $payload;
 
-      return $block;
+    return $block;
 
-    }
+  }
 
 }
