@@ -24,7 +24,7 @@
       }
       @each $item, $color in $micrositeColorMap {
         .microsite-palette#{$item} & {
-          border-color: darke(micro-site($item, 'primary'),7%) transparent transparent transparent;
+          border-color: darken(micro-site($item, 'primary'),7%) transparent transparent transparent;
         }
       }
       height: 0;
