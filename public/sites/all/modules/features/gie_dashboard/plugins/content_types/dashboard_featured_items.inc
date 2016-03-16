@@ -45,26 +45,18 @@ function dashboard_whats_new_featured_items_generate_listing() {
   $bundle_nodes = array('innovation', 'resource', 'funding', 'event');
   $payload = array();
 
-  $featured_innovations = db_query('SELECT sub.nid FROM
-  (
-    SELECT node.nid, node.type from field_data_field_featured
+  $featured_innovations = db_query('SELECT DISTINCT node.nid from field_data_field_featured
     INNER JOIN node on node.nid = field_data_field_featured.entity_id
-    WHERE field_data_field_featured.bundle in (:bundle) AND field_featured_value = 1 ORDER BY node.changed DESC
-  ) AS sub
-  GROUP BY sub.type DESC LIMIT 4', array(
+    WHERE field_data_field_featured.bundle in (:bundle) AND field_featured_value = 1 ORDER BY node.changed DESC LIMIT 3', array(
     ':bundle' => $bundle_nodes
   ))->fetchCol();
 
-  $sector_matches = db_query("SELECT sub.nid FROM
-    (
-	  SELECT DISTINCT node.created AS node_created, node.changed, node.nid, node.type  FROM node
+  $sector_matches = db_query("SELECT DISTINCT node.nid  FROM node
       LEFT JOIN field_data_field_term_sector sector_1 ON node.nid = sector_1.entity_id AND (sector_1.entity_type = 'node' AND sector_1.deleted = '0')
       INNER JOIN taxonomy_term_data  ON sector_1.field_term_sector_tid = taxonomy_term_data.tid
       INNER JOIN field_data_field_term_sector sector_2 ON taxonomy_term_data.tid = sector_2.field_term_sector_tid AND (sector_2.entity_type = 'user' AND sector_2.deleted = '0')
       INNER JOIN users ON sector_2.entity_id = users.uid
-      WHERE (( (users.uid = :uid ) )AND(( (node.status = '1') AND (node.type IN (:bundle)) ))) ORDER BY node.changed DESC
-    ) AS sub
-  GROUP BY sub.type DESC LIMIT 4", array(
+      WHERE (( (users.uid = :uid ) )AND(( (node.status = '1') AND (node.type IN (:bundle)) ))) ORDER BY node.changed DESC LIMIT 3", array(
     ':uid' => $user->uid,
     ':bundle' => $bundle_nodes
   ))->fetchCol();
