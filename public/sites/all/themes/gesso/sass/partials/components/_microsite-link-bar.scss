@@ -1,9 +1,8 @@
 .microsite-link-bar {
 
-  @each $current-color in $microsite-primary-list {
-    $i: index($microsite-primary-list, $current-color);
-    .microsite-palette#{$i} & { // body class
-      background: $current-color;
+  @each $item, $color in $micrositeColorMap {
+    .microsite-palette#{$item} & {
+      background: micro-site($item, 'primary');
     }
   }
 
@@ -14,14 +13,13 @@
     font-weight: 300;
     padding: 0.5em 1em;
     text-decoration: none;
-    
-    @each $current-color in $microsite-secondary-list {
-      $i: index($microsite-secondary-list, $current-color);
-      .microsite-palette#{$i} & {
-        background: $current-color;
+
+    @each $item, $color in $micrositeColorMap {
+      .microsite-palette#{$item} & {
+        background: micro-site($item, 'secondary');
         &:hover, &:focus {
-          background: darken($current-color,10%);
-        } 
+          background: darken(micro-site($item, 'secondary'),10%);
+        }
       }
     }
 

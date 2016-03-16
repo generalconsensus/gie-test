@@ -15,17 +15,17 @@
       padding: 0 0 0 1em;
     }
     .nav__link {
-      @each $current-color in $microsite-main-menu-list {
-        $i: index($microsite-main-menu-list, $current-color);
-        .microsite-palette#{$i} & { // body class
-          color: $current-color;
+
+      @each $item, $color in $micrositeColorMap {
+        .microsite-palette#{$item} & {
+          color: micro-site($item, 'main-menu');
           &:hover,
           &:focus {
-            color: darken($current-color,20%);
+            color: darken(micro-site($item, 'main-menu'),20%);
           }
         }
       }
-       
+
       font-weight: bold;
       text-decoration: none;
       text-transform: uppercase;
