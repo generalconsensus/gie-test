@@ -8,10 +8,9 @@ $section-break-image-height: 500px;
 .microsite-break {
   @extend %microsite-component;
 
-  @each $current-color in $microsite-primary-list {
-    $i: index($microsite-primary-list, $current-color);
-    .microsite-palette#{$i} & { // body class
-      background-color: $current-color;
+  @each $item, $color in $micrositeColorMap {
+    .microsite-palette#{$item} & {
+      background-color: micro-site($item, 'primary');
     }
   }
 
@@ -77,11 +76,10 @@ $section-break-image-height: 500px;
   vertical-align: middle;
   width: 100%;
   &:before {
-    
-    @each $current-color in $microsite-secondary-list {
-      $i: index($microsite-secondary-list, $current-color);
-      .microsite-palette#{$i} & { // body class
-        border-top: 4px solid $current-color;
+
+    @each $item, $color in $micrositeColorMap {
+      .microsite-palette#{$item} & {
+        border-top: 4px solid micro-site($item, 'secondary');
       }
     }
 
@@ -94,6 +92,3 @@ $section-break-image-height: 500px;
     }
   }
 }
-
-
- 
