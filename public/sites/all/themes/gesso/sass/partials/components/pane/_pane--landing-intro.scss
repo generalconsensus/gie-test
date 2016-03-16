@@ -10,7 +10,7 @@
   }
   position: relative;
   z-index: 2;
-  
+
   h1 {
     color: #fff;
     font-size: em(30px);
@@ -34,10 +34,9 @@
     .section-wanteds & { // blue header
       border-color: $wanted-section-color transparent transparent transparent;
     }
-    @each $current-color in $microsite-primary-list {
-      $i: index($microsite-primary-list, $current-color);
-      .microsite-palette#{$i} & { // body class
-        border-color: $current-color transparent transparent transparent;
+    @each $item, $color in $micrositeColorMap {
+      .microsite-palette#{$item} & {
+        border-color: micro-site($item, 'primary') transparent transparent transparent;
       }
     }
     height: 0;
@@ -74,7 +73,7 @@
     @include breakpoint(500px, $no-query: true) { // don't show icon until 500px
       padding-left: 49px; // icon width + 15
       margin-bottom: 25px;
-    }  
+    }
     &:before {
       @include svg-background(icon-innovations-34-46-white);
       width: 34px;
@@ -84,7 +83,7 @@
   .pane--events-introduction & {
     @include breakpoint(500px, $no-query: true) { // don't show icon until 500px
       padding-left: 60px; // icon width + 15
-    } 
+    }
     &:before {
       @include svg-background(icon-events-45-46-white);
       width: 45px;
@@ -112,7 +111,7 @@
   .pane--resources-introduction & {
     @include breakpoint(500px, $no-query: true) { // don't show icon until 500px
       padding-left: 65px; // icon width + 15
-    } 
+    }
     &:before {
       @include svg-background(icon-resources-50-46-white);
       width: 50px;
@@ -122,7 +121,7 @@
   .pane--communities-introduction & {
     @include breakpoint(500px, $no-query: true) { // don't show icon until 500px
       padding-left: 69px; // icon width + 15
-    } 
+    }
     &:before {
       @include svg-background(icon-communities-54-46-white);
       width: 54px;
@@ -141,7 +140,7 @@
   .pane--organizations-introduction & {
     @include breakpoint(500px, $no-query: true) { // don't show icon until 500px
       padding-left: 60px; // icon width + 15
-    } 
+    }
     &:before {
       @include svg-background(icon-organization-45-46-white);
       width: 45px;
@@ -151,7 +150,7 @@
   .pane--discussions-introduction & {
     @include breakpoint(500px, $no-query: true) { // don't show icon until 500px
       padding-left: 75px; // icon width + 15
-    } 
+    }
     &:before {
       @include svg-background(icon-discussions-60-46-white);
       width: 60px;
@@ -170,7 +169,7 @@
   .pane--topics-introduction & {
     @include breakpoint(500px, $no-query: true) { // don't show icon until 500px
       padding-left: 68px; // icon width + 15
-    } 
+    }
     &:before {
       @include svg-background(icon-topics-53-46-white);
       width: 53px;
@@ -180,7 +179,7 @@
   .pane--locations-introduction & {
     @include breakpoint(500px, $no-query: true) { // don't show icon until 500px
       padding-left: 50px; // icon width + 15
-    } 
+    }
     &:before {
       @include svg-background(icon-locations-35-46-white);
       width: 35px;
@@ -190,7 +189,7 @@
   .pane--programs-introduction & {
     @include breakpoint(500px, $no-query: true) { // don't show icon until 500px
       padding-left: 68px; // icon width + 15
-    } 
+    }
     &:before {
       @include svg-background(icon-programs-53-46-white);
       width: 53px;
@@ -204,7 +203,7 @@
       @include svg-background(icon-members-46-46-white);
     }
   }
-  
+
 }
 
 .pane--landing-intro__right {

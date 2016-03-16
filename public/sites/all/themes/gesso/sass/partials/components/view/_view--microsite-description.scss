@@ -11,14 +11,13 @@
   }
   .button {
    
-    @each $current-color in $microsite-secondary-list {
-      $i: index($microsite-secondary-list, $current-color);
-      .microsite-palette#{$i} & { // body class
-        background-color: $current-color;
-        border-color: $current-color;
+    @each $item, $color in $micrositeColorMap {
+      .microsite-palette#{$item} & {
+        background-color: micro-site($item, 'secondary');
+        border-color: micro-site($item, 'secondary');
         &:hover, &:focus {
-           background-color: darken($current-color, 6.9%);
-           border-color: darken($current-color, 6.9%);
+           background-color: darken(micro-site($item, 'secondary'), 6.9%);
+           border-color: darken(micro-site($item, 'secondary'), 6.9%);
         }
       }
     }

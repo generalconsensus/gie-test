@@ -3,10 +3,9 @@
   .section-wanteds & {
     background: $wanted-section-color;
   }
-  @each $current-color in $microsite-primary-list {
-    $i: index($microsite-primary-list, $current-color);
-    .microsite-palette#{$i} & { // body class
-      background: $current-color;
+  @each $item, $color in $micrositeColorMap {
+    .microsite-palette#{$item} & {
+      background: micro-site($item, 'primary');
     }
   }
   margin: 0 0 3em 0;
@@ -23,10 +22,9 @@
       .section-wanteds & {
         border-color: darken($wanted-section-color,7%) transparent transparent transparent;
       }
-      @each $current-color in $microsite-primary-list {
-        $i: index($microsite-primary-list, $current-color);
-        .microsite-palette#{$i} & { // body class
-          border-color: darken($current-color,7%) transparent transparent transparent;
+      @each $item, $color in $micrositeColorMap {
+        .microsite-palette#{$item} & {
+          border-color: darke(micro-site($item, 'primary'),7%) transparent transparent transparent;
         }
       }
       height: 0;
