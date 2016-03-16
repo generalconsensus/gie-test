@@ -42,15 +42,18 @@ function dashboard_whats_new_featured_items_admin_form($form, &$form_state) {
 
 function dashboard_whats_new_featured_items_generate_listing() {
   global $user;
-  $bundle_nodes = array('innovation', 'resource', 'funding');
+  $bundle_nodes = array('innovation', 'resource', 'funding', 'event');
   $payload = array();
 
-  $featured_innovations = db_query('select node.nid from field_data_field_featured INNER JOIN node on node.nid = field_data_field_featured.entity_id WHERE field_data_field_featured.bundle in (:bundle) AND field_featured_value = 1 LIMIT 3', array(
+  $featured_innovations = db_query('SELECT sub.nid FROM
+  (
+    SELECT node.nid, node.type from field_data_field_featured
+    INNER JOIN node on node.nid = field_data_field_featured.entity_id
+    WHERE field_data_field_featured.bundle in (:bundle) AND field_featured_value = 1 ORDER BY node.changed DESC
+  ) AS sub
+  GROUP BY sub.type DESC LIMIT 4', array(
     ':bundle' => $bundle_nodes
   ))->fetchCol();
-
-  array_merge();
-  $test = 1;
 
   $sector_matches = db_query("SELECT sub.nid FROM
     (
@@ -61,7 +64,7 @@ function dashboard_whats_new_featured_items_generate_listing() {
       INNER JOIN users ON sector_2.entity_id = users.uid
       WHERE (( (users.uid = :uid ) )AND(( (node.status = '1') AND (node.type IN (:bundle)) ))) ORDER BY node.changed DESC
     ) AS sub
-  GROUP BY sub.type DESC LIMIT 3", array(
+  GROUP BY sub.type DESC LIMIT 4", array(
     ':uid' => $user->uid,
     ':bundle' => $bundle_nodes
   ))->fetchCol();
@@ -71,16 +74,16 @@ function dashboard_whats_new_featured_items_generate_listing() {
     foreach ($featured_innovations as $key => $innovation_match) {
       $entity = entity_view('node', array(node_load($innovation_match)), 'listing');
       if (!empty($entity)) {
-          $payload[$key + $inc] = render($entity);
+        $payload[$key + $inc] = render($entity);
       }
-      $inc +=1;
+      $inc += 1;
     }
   }
 
   if (!empty($sector_matches) && is_array($sector_matches)) {
     $inc = 0;
     foreach ($sector_matches as $key => $sector_match) {
-      $inc +=1;
+      $inc += 1;
       $entity = entity_view('node', array(node_load($sector_match)), 'listing');
       if (!empty($entity)) {
         $payload[$key + $inc] = render($entity);
