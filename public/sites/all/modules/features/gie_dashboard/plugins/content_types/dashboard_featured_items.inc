@@ -45,12 +45,6 @@ function dashboard_whats_new_featured_items_generate_listing() {
   $bundle_nodes = array('innovation', 'resource', 'funding', 'event');
   $payload = array();
 
-  $featured_innovations = db_query('SELECT DISTINCT node.nid from field_data_field_featured
-    INNER JOIN node on node.nid = field_data_field_featured.entity_id
-    WHERE field_data_field_featured.bundle in (:bundle) AND field_featured_value = 1 ORDER BY node.changed DESC LIMIT 3', array(
-    ':bundle' => $bundle_nodes
-  ))->fetchCol();
-
   $sector_matches = db_query("SELECT DISTINCT node.nid  FROM node
       LEFT JOIN field_data_field_term_sector sector_1 ON node.nid = sector_1.entity_id AND (sector_1.entity_type = 'node' AND sector_1.deleted = '0')
       INNER JOIN taxonomy_term_data  ON sector_1.field_term_sector_tid = taxonomy_term_data.tid
@@ -60,6 +54,15 @@ function dashboard_whats_new_featured_items_generate_listing() {
     ':uid' => $user->uid,
     ':bundle' => $bundle_nodes
   ))->fetchCol();
+
+  $amount_to_replace = 6 - (count($sector_matches));
+
+  $featured_innovations = db_query_range('SELECT DISTINCT node.nid from field_data_field_featured
+    INNER JOIN node on node.nid = field_data_field_featured.entity_id
+    WHERE field_data_field_featured.bundle in (:bundle) AND field_featured_value = 1 ORDER BY node.changed DESC', 0, $amount_to_replace, array(
+    ':bundle' => $bundle_nodes
+  ))->fetchCol();
+
 
   if (!empty($featured_innovations) && is_array($featured_innovations)) {
     $inc = 0;
