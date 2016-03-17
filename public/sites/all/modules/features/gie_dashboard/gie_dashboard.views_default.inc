@@ -1045,6 +1045,14 @@ function gie_dashboard_views_default_views() {
   $handler->display->display_options['pager']['options']['offset'] = '0';
   $handler->display->display_options['style_plugin'] = 'default';
   $handler->display->display_options['row_plugin'] = 'fields';
+  /* Field: User: Uid */
+  $handler->display->display_options['fields']['uid']['id'] = 'uid';
+  $handler->display->display_options['fields']['uid']['table'] = 'users';
+  $handler->display->display_options['fields']['uid']['field'] = 'uid';
+  $handler->display->display_options['fields']['uid']['label'] = '';
+  $handler->display->display_options['fields']['uid']['exclude'] = TRUE;
+  $handler->display->display_options['fields']['uid']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['uid']['link_to_user'] = FALSE;
   /* Field: User: First Name */
   $handler->display->display_options['fields']['field_user_firstname']['id'] = 'field_user_firstname';
   $handler->display->display_options['fields']['field_user_firstname']['table'] = 'field_data_field_user_firstname';
@@ -1122,7 +1130,7 @@ function gie_dashboard_views_default_views() {
   $handler->display->display_options['fields']['nothing']['table'] = 'views';
   $handler->display->display_options['fields']['nothing']['field'] = 'nothing';
   $handler->display->display_options['fields']['nothing']['label'] = '';
-  $handler->display->display_options['fields']['nothing']['alter']['text'] = '[field_user_photo] [field_user_firstname] [field_user_lastname]  joined the Exchange [created]';
+  $handler->display->display_options['fields']['nothing']['alter']['text'] = '<a href="/user/[uid]">[field_user_photo]</a> [field_user_firstname] [field_user_lastname]  joined the Exchange [created]';
   $handler->display->display_options['fields']['nothing']['element_label_colon'] = FALSE;
   /* Sort criterion: User: Created date */
   $handler->display->display_options['sorts']['created']['id'] = 'created';

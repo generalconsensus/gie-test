@@ -28,25 +28,33 @@ function gie_dashboard_quicktabs_default_quicktabs() {
     ),
     1 => array(
       'vid' => 'user_innovations',
-      'display' => 'panel_pane_1',
+      'display' => 'default',
       'args' => '',
-      'title' => 'Innovation Impacts',
+      'title' => 'My Portfolio',
       'weight' => '-99',
       'type' => 'view',
     ),
     2 => array(
-      'vid' => 'dashboard',
-      'display' => 'user_funding_opportunities',
+      'vid' => 'user_innovations',
+      'display' => 'default',
       'args' => '',
-      'title' => 'Funding Status',
+      'title' => 'Innovation',
       'weight' => '-98',
       'type' => 'view',
     ),
     3 => array(
+      'vid' => 'dashboard',
+      'display' => 'default',
+      'args' => '',
+      'title' => 'Funding',
+      'weight' => '-97',
+      'type' => 'view',
+    ),
+    4 => array(
       'bid' => 'panels_mini_delta_dashboard_follow',
       'hide_title' => 0,
-      'title' => 'Network',
-      'weight' => '-97',
+      'title' => 'My Network',
+      'weight' => '-96',
       'type' => 'block',
     ),
   );
@@ -57,9 +65,10 @@ function gie_dashboard_quicktabs_default_quicktabs() {
   // Translatables
   // Included for use with string extractors like potx.
   t('Dashboard');
-  t('Funding Status');
-  t('Innovation Impacts');
-  t('Network');
+  t('Funding');
+  t('Innovation');
+  t('My Network');
+  t('My Portfolio');
   t('What\'s New?');
 
   $export['dashboard'] = $quicktabs;
