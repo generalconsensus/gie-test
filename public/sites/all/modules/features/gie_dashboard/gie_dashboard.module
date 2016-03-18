@@ -6,7 +6,6 @@
 
 include_once 'gie_dashboard.features.inc';
 
-
 /*
  * Implements hook_ctools_plugin_directory()
  */
@@ -43,94 +42,6 @@ function gie_dashboard_search_api_solr_query_alter(array &$call_args, SearchApiQ
   }
 }
 
-
-//
-//
-///**
-// * @param $form
-// * @param $form_state
-// */
-//function gie_dashboard_exchange_updates_form_validate($form, &$form_state) {
-//  if (empty($form_state['values']['selected']) && !is_numeric($form_state['values']['selected'])) {
-//    form_set_error('selected', 'Select a normal value');
-//  }
-//}
-//
-///**
-// * @param $form
-// * @param $form_state
-// */
-//function gie_dashboard_exchange_updates_form_submit($form, &$form_state) {
-//  if (!empty($form_state['values']['selected']) && $form_state['values']['selected'] == 1) {
-//
-//    $form_state['redirect'] = array(
-//      'dashboard/',
-//      array(
-//        'query' => array(
-//          'updates' => 'last-visit',
-//        ),
-//      ),
-//    );
-//    drupal_redirect_form($form_state);
-//  }
-//  else {
-//    $form_state['redirect'] = array(
-//      'dashboard/',
-//      array(
-//        'query' => array(
-//          'updates' => 'month',
-//        ),
-//      ),
-//    );
-//    drupal_redirect_form($form_state);
-//  }
-//}
-
-///**
-// * @param $variables
-// */
-//function template_preprocess_gie_dashboard_whats_new_notification_center_view(&$variables) {
-//  foreach ($variables['results'] as $key => $result) {
-//    if ($key == 'comments_on_your_content') {
-//      $variables['results'][$key] = $result . ' People have commented on your content.';
-//    }
-//    if ($key == 'people_follow_your_content') {
-//      $variables['results'][$key] = $result . ' People follow your content.';
-//    }
-//    elseif ($key == 'people_follow_you') {
-//      $variables['results'][$key] = $result . ' People follow you.';
-//    }
-//    elseif ($key == 'friend_content') {
-//      $variables['results'][$key] = $result['name'] . ' created new content ' . l($result['title'], 'node/' . $result['nid']) . '.';
-//    }
-//    elseif ($key == 'friend_followed_content') {
-//      $variables['results'][$key] = $result['name'] . ' followed content ' . l($result['title'], 'node/' . $result['nid']) . '.';
-//    }
-//    elseif ($key == 'friend_followed') {
-//      $variables['results'][$key] = $result['original_friend'] . ' followed ' . $result['friend_of_friend'] . '.';
-//    }
-//    elseif ($key == 'friend_comment') {
-//      $variables['results'][$key] = $result['name'] . ' commented ' . $result['subject'] . ' on ' . l($result['title'], 'node/' . $result['nid']) . '.';
-//    }
-//  }
-//}
-//
-//
-///**
-// * @return array|string
-// * @throws \Exception
-// */
-//function gie_dashboard_whats_new_notification_center() {
-//  $results = gie_dashboard_notification_center_list();
-//  if ($results) {
-//    $results = theme('gie_dashboard_whats_new_notification_center_view', array('results' => $results));
-//    return $results;
-//  }
-//  else {
-//    return 'empty data';
-//  }
-//}
-
 /*
  * Implements hook_form_FORM_ID_alter().
  */
@@ -142,7 +53,6 @@ function gie_dashboard_form_user_profile_form_alter(&$form, &$form_state) {
     $form['field_featured']['#type'] = 'hidden';
   }
 }
-
 
 /**
  * Implements hook_views_pre_views_pre_view().
@@ -172,7 +82,6 @@ function gie_dashboard_views_pre_render(&$view) {
   }
 }
 
-
 /**
  * Implements hook_menu().
  */
@@ -188,6 +97,13 @@ function gie_dashboard_menu() {
   $items['gie_dashboard/recommended_funding'] = array(
     'title' => 'Recommended Funding',
     'page arguments' => array('dashboard_recommended_funding_form', 2),
+    'page callback' => 'drupal_get_form',
+    'access callback' => TRUE,
+    'type' => MENU_CALLBACK,
+  );
+  $items['gie_dashboard/my_portfolio'] = array(
+    'title' => 'My Portfolio',
+    'page arguments' => array('dashboard_my_portfolio_form', 2),
     'page callback' => 'drupal_get_form',
     'access callback' => TRUE,
     'type' => MENU_CALLBACK,
@@ -372,7 +288,6 @@ function gie_dashboard_create_node($type, $uid, $pieces, $payload = NULL) {
   return $nodes;
 }
 
-
 function gie_dashboard_create_user($pieces, $name = NULL, $payload = NULL) {
   $path = drupal_get_path('module', 'devel_generate');
   require_once($path . '/devel_generate.inc');
@@ -482,7 +397,7 @@ function dashboard_recommendation_engine($bundle, $filter) {
       INNER JOIN flagging reverse_flagging on flagging.uid = reverse_flagging.entity_id
       INNER JOIN flagging favorite_node on flagging.uid = favorite_node.uid
       INNER JOIN node on node.nid = favorite_node.entity_id
-      WHERE node.type = (:bundle) AND flagging.fid = :follow_fid AND reverse_flagging.fid = :follow_fid AND flagging.entity_id = :uid
+      WHERE node.type IN (:bundle) AND flagging.fid = :follow_fid AND reverse_flagging.fid = :follow_fid AND flagging.entity_id = :uid
       AND reverse_flagging.uid = :uid AND favorite_node.fid = :favorite_fid', 0, $display_items, array(
         ':bundle' => $bundle,
         ':follow_fid' => $follow_user->fid,
@@ -496,7 +411,7 @@ function dashboard_recommendation_engine($bundle, $filter) {
       $matches = db_query_range('SELECT flagging.entity_id
         FROM flagging
         INNER JOIN node on node.nid = flagging.entity_id
-        WHERE node.type = (:bundle) AND flagging.uid = :uid AND flagging.fid = :favorite_fid', 0, $display_items, array(
+        WHERE node.type IN (:bundle) AND flagging.uid = :uid AND flagging.fid = :favorite_fid', 0, $display_items, array(
         ':bundle' => $bundle,
         ':uid' => $user->uid,
         ':favorite_fid' => $favorite->fid
@@ -522,7 +437,6 @@ function dashboard_recommendation_engine($bundle, $filter) {
   return $matches;
 }
 
-
 function dashboard_recommended_innovations_form($form, &$form_state) {
 
   $bundle = array('innovation');
@@ -533,29 +447,24 @@ function dashboard_recommended_innovations_form($form, &$form_state) {
   $user_model = FALSE;
 
   $form['sectors'] = array(
-    '#type' => 'button',
-    '#value' => t('My Sectors'),
-    '#executes_submit_callback' => TRUE
+    '#type' => 'submit',
+    '#value' => t('My Sectors')
   );
   $form['topics'] = array(
-    '#type' => 'button',
-    '#value' => t('My Topics'),
-    '#executes_submit_callback' => TRUE
+    '#type' => 'submit',
+    '#value' => t('My Topics')
   );
   $form['skills'] = array(
-    '#type' => 'button',
-    '#value' => t('My Skills'),
-    '#executes_submit_callback' => TRUE
+    '#type' => 'submit',
+    '#value' => t('My Skills')
   );
   $form['friends'] = array(
-    '#type' => 'button',
-    '#value' => t('My Friends'),
-    '#executes_submit_callback' => TRUE
+    '#type' => 'submit',
+    '#value' => t('My Friends')
   );
   $form['following'] = array(
-    '#type' => 'button',
-    '#value' => t('I\'m Following'),
-    '#executes_submit_callback' => TRUE
+    '#type' => 'submit',
+    '#value' => t('I\'m Following')
   );
 
   $form['submit'] = array(
@@ -567,13 +476,13 @@ function dashboard_recommended_innovations_form($form, &$form_state) {
   );
 
 
-    foreach ($matches as $key => $sector_match) {
-      $inc += 1;
-      $entity = entity_view('node', array(node_load($sector_match)), 'listing');
-      if (!empty($entity)) {
-        $payload[$key + $inc] = render($entity);
-      }
+  foreach ($matches as $key => $sector_match) {
+    $inc += 1;
+    $entity = entity_view('node', array(node_load($sector_match)), 'listing');
+    if (!empty($entity)) {
+      $payload[$key + $inc] = render($entity);
     }
+  }
 
   $payload = array(
     '#theme' => 'item_list',
@@ -592,16 +501,15 @@ function dashboard_recommended_innovations_form($form, &$form_state) {
   return $form;
 }
 
-
 function dashboard_recommended_innovations_form_validate($form, &$form_state) {
   $test = 1;
 }
 
 function dashboard_recommended_innovations_form_submit($form, &$form_state) {
   $filter = 'my_sectors';
-  if (!empty($form_state['values']['op'])) {
+  if (!empty($form_state['triggering_element']['#value'])) {
 
-    switch ($form_state['values']['op']) {
+    switch ($form_state['triggering_element']['#value']) {
       case 'My Sectors':
         $filter = 'my_sectors';
         break;
@@ -642,29 +550,24 @@ function dashboard_recommended_funding_form($form, &$form_state) {
   $user_model = FALSE;
 
   $form['sectors'] = array(
-    '#type' => 'button',
-    '#value' => t('My Sectors'),
-    '#executes_submit_callback' => TRUE
+    '#type' => 'submit',
+    '#value' => t('My Sectors')
   );
   $form['topics'] = array(
-    '#type' => 'button',
-    '#value' => t('My Topics'),
-    '#executes_submit_callback' => TRUE
+    '#type' => 'submit',
+    '#value' => t('My Topics')
   );
   $form['skills'] = array(
-    '#type' => 'button',
-    '#value' => t('My Skills'),
-    '#executes_submit_callback' => TRUE
+    '#type' => 'submit',
+    '#value' => t('My Skills')
   );
   $form['friends'] = array(
-    '#type' => 'button',
-    '#value' => t('My Friends'),
-    '#executes_submit_callback' => TRUE
+    '#type' => 'submit',
+    '#value' => t('My Friends')
   );
   $form['following'] = array(
-    '#type' => 'button',
-    '#value' => t('I\'m Following'),
-    '#executes_submit_callback' => TRUE
+    '#type' => 'submit',
+    '#value' => t('I\'m Following')
   );
 
   $form['submit'] = array(
@@ -701,16 +604,15 @@ function dashboard_recommended_funding_form($form, &$form_state) {
   return $form;
 }
 
-
 function dashboard_recommended_funding_form_validate($form, &$form_state) {
   $test = 1;
 }
 
 function dashboard_recommended_funding_form_submit($form, &$form_state) {
   $filter = 'my_sectors';
-  if (!empty($form_state['values']['op'])) {
+  if (!empty($form_state['triggering_element']['#value'])) {
 
-    switch ($form_state['values']['op']) {
+    switch ($form_state['triggering_element']['#value']) {
       case 'My Sectors':
         $filter = 'my_sectors';
         break;
@@ -733,6 +635,101 @@ function dashboard_recommended_funding_form_submit($form, &$form_state) {
       array(
         'query' => array(
           'qt-dashboard' => 3,
+          'filter' => $filter
+        ),
+      ),
+    );
+    drupal_redirect_form($form_state);
+  }
+}
+
+function dashboard_my_portfolio_form($form, &$form_state) {
+
+  $bundle = array('innovation', 'funding', 'resource', 'event');
+  $filter = (!empty($_GET) && !empty($_GET['filter'])) ? $_GET['filter'] : NULL;
+  $matches = dashboard_recommendation_engine($bundle, $filter);
+  $payload = array();
+  $inc = 0;
+  $user_model = FALSE;
+
+  $form['sectors'] = array(
+    '#type' => 'submit',
+    '#value' => t('My Sectors')
+  );
+  $form['topics'] = array(
+    '#type' => 'submit',
+    '#value' => t('My Topics')
+  );
+  $form['skills'] = array(
+    '#type' => 'submit',
+    '#value' => t('My Skills')
+  );
+  $form['friends'] = array(
+    '#type' => 'submit',
+    '#value' => t('My Friends')
+  );
+  $form['following'] = array(
+    '#type' => 'submit',
+    '#value' => t('I\'m Following')
+  );
+
+
+  foreach ($matches as $key => $sector_match) {
+    $inc += 1;
+    $entity = entity_view('node', array(node_load($sector_match)), 'listing');
+    if (!empty($entity)) {
+      $payload[$key + $inc] = render($entity);
+    }
+  }
+
+  $payload = array(
+    '#theme' => 'item_list',
+    '#items' => $payload,
+    '#type' => 'ul',
+    '#attributes' => array('class' => 'list-class'),
+  );
+
+  $form['updates'] = array(
+    '#type' => 'item',
+    '#markup' => drupal_render($payload),
+    '#weight' => 5,
+    '#suffix' => '<div class="dashboard__all-data-button"><a class="button button--highlight" href="/data">See all Exchange Data</a></div>'
+  );
+
+  return $form;
+}
+
+function dashboard_my_portfolio_form_validate($form, &$form_state) {
+  $test = 1;
+}
+
+function dashboard_my_portfolio_form_submit($form, &$form_state) {
+  $filter = 'my_sectors';
+  if (!empty($form_state['triggering_element']['#value'])) {
+
+    switch ($form_state['triggering_element']['#value']) {
+      case 'My Sectors':
+        $filter = 'my_sectors';
+        break;
+      case 'My Topics':
+        $filter = 'my_topics';
+        break;
+      case 'My Skills':
+        $filter = 'my_skills';
+        break;
+      case 'My Friends':
+        $filter = 'my_friends';
+        break;
+      case 'I\'m Following':
+        $filter = 'im_following';
+        break;
+    }
+
+    $form_state['redirect'] = array(
+      'dashboard',
+      array(
+        'query' => array(
+          'qt-dashboard' => 1,
           'filter' => $filter
         ),
       ),
