@@ -43,40 +43,7 @@ function gie_dashboard_search_api_solr_query_alter(array &$call_args, SearchApiQ
   }
 }
 
-//
-//function gie_dashboard_exchange_updates_form($form, &$form_state) {
-//
-//  $test = 1;
-//  $form['selected'] = array(
-//    '#type' => 'select',
-//    '#prefix' => '<h2 class="dashboard__title">' . t("Exchange Updates since") . '',
-//    '#options' => array(
-//      0 => t('Last Month'),
-//      1 => t('Your Last Visit'),
-//    ),
-//    '#default_value' => !empty($_GET['updates']) && $_GET['updates'] == 'last-visit' ? 1 : 0,
-//    '#attributes' => array('onChange' => 'document.getElementById("gie-dashboard-exchange-updates-form").submit();'),
-//    '#suffix' => '</h2>',
-//    '#weight' => 4,
-//  );
-//
-//  $form['submit'] = array(
-//    '#type' => 'submit',
-//    '#value' => '',
-//    '#prefix' => '<div style="display: none;">',
-//    '#suffix' => '</div>',
-//    '#weight' => 0,
-//  );
-//
-//  $form['updates'] = array(
-//    '#type' => 'item',
-//    '#markup' => $form_state['organizations'] . $form_state['award_available'] . $form_state['collaborators'] . $form_state['innovations'],
-//    '#weight' => 5,
-//    '#suffix' => '<div class="dashboard__all-data-button"><a class="button button--highlight" href="/data">See all Exchange Data</a></div>'
-//  );
-//
-//  return $form;
-//}
+
 //
 //
 ///**
@@ -211,10 +178,17 @@ function gie_dashboard_views_pre_render(&$view) {
  */
 function gie_dashboard_menu() {
   $items = array();
-  $items['gie_dashboard/notification_center'] = array(
-    'title' => 'Test Notification Center Callback',
-    'page arguments' => array(2),
-    'page callback' => 'gie_dashboard_whats_new_tab',
+  $items['gie_dashboard/recommended_innovations'] = array(
+    'title' => 'Recommended Innovations',
+    'page arguments' => array('dashboard_recommended_innovations_form', 2),
+    'page callback' => 'drupal_get_form',
+    'access callback' => TRUE,
+    'type' => MENU_CALLBACK,
+  );
+  $items['gie_dashboard/recommended_funding'] = array(
+    'title' => 'Recommended Funding',
+    'page arguments' => array('dashboard_recommended_funding_form', 2),
+    'page callback' => 'drupal_get_form',
     'access callback' => TRUE,
     'type' => MENU_CALLBACK,
   );
@@ -451,3 +425,288 @@ function gie_dashboard_create_user($pieces, $name = NULL, $payload = NULL) {
   }
   return $users;
 }
+
+
+function dashboard_recommended_innovations_form($form, &$form_state) {
+
+  global $user;
+  $bundle_nodes = array('innovation', 'resource', 'funding', 'event');
+  $payload = array();
+  $inc = 0;
+  $follow_user = flag_load('follow');
+  $favorite = flag_load('favorite');
+  $user_model = FALSE;
+
+  if (!empty($_GET) && !empty($_GET['filter'])) {
+    switch ($_GET['filter']) {
+      case 'my_sectors':
+
+        $matches = db_query_range("SELECT DISTINCT node.nid  FROM node
+      LEFT JOIN field_data_field_term_sector sector_1 ON node.nid = sector_1.entity_id AND (sector_1.entity_type = 'node' AND sector_1.deleted = '0')
+      INNER JOIN taxonomy_term_data  ON sector_1.field_term_sector_tid = taxonomy_term_data.tid
+      INNER JOIN field_data_field_term_sector sector_2 ON taxonomy_term_data.tid = sector_2.field_term_sector_tid AND (sector_2.entity_type = 'user' AND sector_2.deleted = '0')
+      INNER JOIN users ON sector_2.entity_id = users.uid
+      WHERE (( (users.uid = :uid ) )AND(( (node.status = '1') AND (node.type IN (:bundle)) ))) ORDER BY node.changed DESC", 0, 8, array(
+          ':uid' => $user->uid,
+          ':bundle' => $bundle_nodes
+        ))->fetchCol();
+
+        break;
+
+      case 'my_topics':
+
+        $matches = db_query_range("SELECT DISTINCT node.nid FROM node
+      LEFT JOIN field_data_field_term_topic term_1 ON node.nid = term_1.entity_id AND (term_1.entity_type = 'node' AND term_1.deleted = '0')
+      INNER JOIN taxonomy_term_data  ON term_1.field_term_topic_tid = taxonomy_term_data.tid
+      INNER JOIN field_data_field_user_interests ON taxonomy_term_data.tid = field_data_field_user_interests.field_user_interests_tid AND (field_data_field_user_interests.entity_type = 'user' AND field_data_field_user_interests.deleted = '0')
+      INNER JOIN users ON field_data_field_user_interests.entity_id = users.uid
+      WHERE (( (users.uid = :uid ) )AND(( (node.status = '1') AND (node.type IN (:bundle)) ))) ORDER BY node.changed DESC", 0, 8, array(
+          ':uid' => $user->uid,
+          ':bundle' => $bundle_nodes
+        ))->fetchCol();
+
+        break;
+
+      case 'my_skills':
+        //edit-field-user-skills-und
+        $filter = 'my_skills';
+        break;
+
+      case 'my_friends':
+        $user_model = TRUE;
+        $matches = db_query_range('SELECT flagging.uid FROM flagging INNER JOIN flagging reverse_flagging on flagging.uid = reverse_flagging.entity_id
+        WHERE flagging.fid = :fid AND reverse_flagging.fid  = :fid
+        AND flagging.entity_id = :uid AND reverse_flagging.uid = :uid', 0, 8, array(
+          ':fid' => $follow_user->fid,
+          ':uid' => $user->uid
+        ))->fetchCol();
+
+        break;
+      case 'im_following':
+
+        $filter = 'im_following';
+        break;
+
+      default:
+
+        $matches = db_query_range("SELECT DISTINCT node.nid  FROM node
+      LEFT JOIN field_data_field_term_sector sector_1 ON node.nid = sector_1.entity_id AND (sector_1.entity_type = 'node' AND sector_1.deleted = '0')
+      INNER JOIN taxonomy_term_data  ON sector_1.field_term_sector_tid = taxonomy_term_data.tid
+      INNER JOIN field_data_field_term_sector sector_2 ON taxonomy_term_data.tid = sector_2.field_term_sector_tid AND (sector_2.entity_type = 'user' AND sector_2.deleted = '0')
+      INNER JOIN users ON sector_2.entity_id = users.uid
+      WHERE (( (users.uid = :uid ) )AND(( (node.status = '1') AND (node.type IN (:bundle)) ))) ORDER BY node.changed DESC ", 0, 8, array(
+          ':uid' => $user->uid,
+          ':bundle' => $bundle_nodes
+        ))->fetchCol();
+
+        break;
+    }
+  }
+
+  $sector_matches = db_query_range("SELECT DISTINCT node.nid  FROM node
+      LEFT JOIN field_data_field_term_sector sector_1 ON node.nid = sector_1.entity_id AND (sector_1.entity_type = 'node' AND sector_1.deleted = '0')
+      INNER JOIN taxonomy_term_data  ON sector_1.field_term_sector_tid = taxonomy_term_data.tid
+      INNER JOIN field_data_field_term_sector sector_2 ON taxonomy_term_data.tid = sector_2.field_term_sector_tid AND (sector_2.entity_type = 'user' AND sector_2.deleted = '0')
+      INNER JOIN users ON sector_2.entity_id = users.uid
+      WHERE (( (users.uid = :uid ) )AND(( (node.status = '1') AND (node.type IN (:bundle)) ))) ORDER BY node.changed DESC ", 0, 8, array(
+    ':uid' => $user->uid,
+    ':bundle' => $bundle_nodes
+  ))->fetchCol();
+
+  $form['sectors'] = array(
+    '#type' => 'button',
+    '#value' => t('My Sectors'),
+    '#executes_submit_callback' => TRUE
+  );
+  $form['topics'] = array(
+    '#type' => 'button',
+    '#value' => t('My Topics'),
+    '#executes_submit_callback' => TRUE
+  );
+  $form['skills'] = array(
+    '#type' => 'button',
+    '#value' => t('My Skills'),
+    '#executes_submit_callback' => TRUE
+  );
+  $form['friends'] = array(
+    '#type' => 'button',
+    '#value' => t('My Friends'),
+    '#executes_submit_callback' => TRUE
+  );
+  $form['following'] = array(
+    '#type' => 'button',
+    '#value' => t('I\'m Following'),
+    '#executes_submit_callback' => TRUE
+  );
+
+  $form['submit'] = array(
+    '#type' => 'submit',
+    '#value' => '',
+    '#prefix' => '<div style="display: none;">',
+    '#suffix' => '</div>',
+    '#weight' => 0,
+  );
+
+
+  if (!($user_model)) {
+    foreach ($matches as $key => $sector_match) {
+      $inc += 1;
+      $entity = entity_view('node', array(node_load($sector_match)), 'listing');
+      if (!empty($entity)) {
+        $payload[$key + $inc] = render($entity);
+      }
+    }
+  }
+  else {
+    foreach ($matches as $key => $sector_match) {
+      $inc += 1;
+      $entity = entity_view('user', array(user_load($sector_match)), 'listing');
+      if (!empty($entity)) {
+        $payload[$key + $inc] = render($entity);
+      }
+    }
+  }
+
+
+  $payload = array(
+    '#theme' => 'item_list',
+    '#items' => $payload,
+    '#type' => 'ul',
+    '#attributes' => array('class' => 'list-class'),
+  );
+
+  $form['updates'] = array(
+    '#type' => 'item',
+    '#markup' => drupal_render($payload),
+    '#weight' => 5,
+    '#suffix' => '<div class="dashboard__all-data-button"><a class="button button--highlight" href="/data">See all Exchange Data</a></div>'
+  );
+
+  return $form;
+}
+
+
+function dashboard_recommended_innovations_form_validate($form, &$form_state) {
+  $test = 1;
+}
+
+function dashboard_recommended_innovations_form_submit($form, &$form_state) {
+  $filter = 'my_sectors';
+  if (!empty($form_state['values']['op'])) {
+
+    switch ($form_state['values']['op']) {
+      case 'My Sectors':
+        $filter = 'my_sectors';
+        break;
+      case 'My Topics':
+        $filter = 'my_topics';
+        break;
+      case 'My Skills':
+        $filter = 'my_skills';
+        break;
+      case 'My Friends':
+        $filter = 'my_friends';
+        break;
+      case 'I\'m Following':
+        $filter = 'im_following';
+        break;
+    }
+
+    $form_state['redirect'] = array(
+      'dashboard',
+      array(
+        'query' => array(
+          'filter' => $filter
+        ),
+      ),
+    );
+    drupal_redirect_form($form_state);
+  }
+}
+
+function dashboard_recommended_funding_form($form, &$form_state) {
+
+  global $user;
+  $bundle_nodes = array('innovation', 'resource', 'funding', 'event');
+  $payload = array();
+  $inc = 0;
+
+  $sector_matches = db_query("SELECT DISTINCT node.nid  FROM node
+      LEFT JOIN field_data_field_term_sector sector_1 ON node.nid = sector_1.entity_id AND (sector_1.entity_type = 'node' AND sector_1.deleted = '0')
+      INNER JOIN taxonomy_term_data  ON sector_1.field_term_sector_tid = taxonomy_term_data.tid
+      INNER JOIN field_data_field_term_sector sector_2 ON taxonomy_term_data.tid = sector_2.field_term_sector_tid AND (sector_2.entity_type = 'user' AND sector_2.deleted = '0')
+      INNER JOIN users ON sector_2.entity_id = users.uid
+      WHERE (( (users.uid = :uid ) )AND(( (node.status = '1') AND (node.type IN (:bundle)) ))) ORDER BY node.changed DESC LIMIT 3", array(
+    ':uid' => $user->uid,
+    ':bundle' => $bundle_nodes
+  ))->fetchCol();
+
+  $form['sectors'] = array(
+    '#type' => 'button',
+    '#value' => t('My Sectors'),
+    '#executes_submit_callback' => TRUE
+  );
+  $form['topics'] = array(
+    '#type' => 'button',
+    '#value' => t('My Topics'),
+    '#executes_submit_callback' => TRUE
+  );
+  $form['skills'] = array(
+    '#type' => 'button',
+    '#value' => t('My Skills'),
+    '#executes_submit_callback' => TRUE
+  );
+  $form['friends'] = array(
+    '#type' => 'button',
+    '#value' => t('My Friends'),
+    '#executes_submit_callback' => TRUE
+  );
+  $form['following'] = array(
+    '#type' => 'button',
+    '#value' => t('I\'m Following'),
+    '#executes_submit_callback' => TRUE
+  );
+
+  $form['submit'] = array(
+    '#type' => 'submit',
+    '#value' => '',
+    '#prefix' => '<div style="display: none;">',
+    '#suffix' => '</div>',
+    '#weight' => 0,
+  );
+
+
+  foreach ($sector_matches as $key => $sector_match) {
+    $inc += 1;
+    $entity = entity_view('node', array(node_load($sector_match)), 'listing');
+    if (!empty($entity)) {
+      $payload[$key + $inc] = render($entity);
+    }
+  }
+
+  $payload = array(
+    '#theme' => 'item_list',
+    '#items' => $payload,
+    '#type' => 'ul',
+    '#attributes' => array('class' => 'list-class'),
+  );
+
+  $form['updates'] = array(
+    '#type' => 'item',
+    '#markup' => drupal_render($payload),
+    '#weight' => 5,
+    '#suffix' => '<div class="dashboard__all-data-button"><a class="button button--highlight" href="/data">See all Exchange Data</a></div>'
+  );
+
+  return $form;
+}
+
+
+function dashboard_recommended_funding_form_validate($form, &$form_state) {
+  $test = 1;
+}
+
+function dashboard_recommended_funding_form_submit($form, &$form_state) {
+  $test = 1;
+}
+

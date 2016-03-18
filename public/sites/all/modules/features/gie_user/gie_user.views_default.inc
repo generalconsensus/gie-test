@@ -1180,46 +1180,6 @@ function gie_user_views_default_views() {
   $handler->display->display_options['header']['area']['content'] = '<h2 class="dashboard__title">Your Innovations</h2>';
   $handler->display->display_options['header']['area']['format'] = 'full_html';
   $handler->display->display_options['defaults']['footer'] = FALSE;
-  /* Footer: Global: View area */
-  $handler->display->display_options['footer']['view']['id'] = 'view';
-  $handler->display->display_options['footer']['view']['table'] = 'views';
-  $handler->display->display_options['footer']['view']['field'] = 'view';
-  $handler->display->display_options['footer']['view']['label'] = 'Innovations You Follow Embedded';
-  $handler->display->display_options['footer']['view']['empty'] = TRUE;
-  $handler->display->display_options['footer']['view']['view_to_insert'] = 'user_innovations:panel_pane_2';
-  $handler->display->display_options['footer']['view']['inherit_arguments'] = TRUE;
-  /* Footer: Global: Text area */
-  $handler->display->display_options['footer']['area']['id'] = 'area';
-  $handler->display->display_options['footer']['area']['table'] = 'views';
-  $handler->display->display_options['footer']['area']['field'] = 'area';
-  $handler->display->display_options['footer']['area']['label'] = 'Innovations Recommended for You';
-  $handler->display->display_options['footer']['area']['empty'] = TRUE;
-  $handler->display->display_options['footer']['area']['content'] = '<h2 class="dashboard__title">Innovations Recommended for You</h2>';
-  $handler->display->display_options['footer']['area']['format'] = 'full_html';
-  /* Footer: Global: View area */
-  $handler->display->display_options['footer']['view_1']['id'] = 'view_1';
-  $handler->display->display_options['footer']['view_1']['table'] = 'views';
-  $handler->display->display_options['footer']['view_1']['field'] = 'view';
-  $handler->display->display_options['footer']['view_1']['label'] = 'Skills Offered';
-  $handler->display->display_options['footer']['view_1']['empty'] = TRUE;
-  $handler->display->display_options['footer']['view_1']['view_to_insert'] = 'user_innovations:innovations_skills';
-  $handler->display->display_options['footer']['view_1']['inherit_arguments'] = TRUE;
-  /* Footer: Global: View area */
-  $handler->display->display_options['footer']['view_2']['id'] = 'view_2';
-  $handler->display->display_options['footer']['view_2']['table'] = 'views';
-  $handler->display->display_options['footer']['view_2']['field'] = 'view';
-  $handler->display->display_options['footer']['view_2']['label'] = 'Users you Follow';
-  $handler->display->display_options['footer']['view_2']['empty'] = TRUE;
-  $handler->display->display_options['footer']['view_2']['view_to_insert'] = 'user_innovations:innovations_follow';
-  $handler->display->display_options['footer']['view_2']['inherit_arguments'] = TRUE;
-  /* Footer: Global: View area */
-  $handler->display->display_options['footer']['view_3']['id'] = 'view_3';
-  $handler->display->display_options['footer']['view_3']['table'] = 'views';
-  $handler->display->display_options['footer']['view_3']['field'] = 'view';
-  $handler->display->display_options['footer']['view_3']['label'] = 'Sectors you follow';
-  $handler->display->display_options['footer']['view_3']['empty'] = TRUE;
-  $handler->display->display_options['footer']['view_3']['view_to_insert'] = 'user_innovations:innovations_sectors';
-  $handler->display->display_options['footer']['view_3']['inherit_arguments'] = TRUE;
   $handler->display->display_options['defaults']['empty'] = FALSE;
   /* No results behavior: Global: Text area */
   $handler->display->display_options['empty']['area']['id'] = 'area';
