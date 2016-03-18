@@ -7,25 +7,26 @@ $header-image-height: 700px;
 
 .microsite-highlight {
   @extend %microsite-component;
-  background-color: nth($microsite-primary-list, 1); // just in case palette or color class is missing
-  @each $current-color in $microsite-primary-list {
-    $i: index($microsite-primary-list, $current-color);
-    .microsite-palette#{$i} & { // body class
-      background-color: $current-color;
+  background-color: #00498f; // just in case palette or color class is missing
+
+  @each $item, $color in $micrositeColorMap {
+    .microsite-palette#{$item} & {
+      background-color: micro-site($item, 'primary');
       &.microsite-secondary { // component class
-        background-color: nth($microsite-secondary-list, $i); 
+        background-color: micro-site($item, 'secondary');
       }
       &.microsite-tertiary {
-        background-color: nth($microsite-tertiary-list, $i); 
+        background-color: micro-site($item, 'tertiary');
       }
       &.microsite-light-gray {
-        background-color: nth($microsite-light-gray-list, $i); 
+        background-color: micro-site($item, 'light-gray');
       }
       &.microsite-dark-gray {
-        background-color: nth($microsite-dark-gray-list, $i); 
+        background-color: micro-site($item, 'dark-gray');
       }
     }
   }
+
   background-position: 50% 50%;
   background-size: cover;
   min-height: $header-image-height * 0.5;
@@ -52,7 +53,7 @@ $header-image-height: 700px;
 
 
 .microsite-highlight__text-wrapper {
-  display: table; 
+  display: table;
   width: 100%;
 }
 
@@ -98,5 +99,3 @@ $header-image-height: 700px;
   }
 
 }
-
- 

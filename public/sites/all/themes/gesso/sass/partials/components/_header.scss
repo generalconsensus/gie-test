@@ -11,19 +11,12 @@ header.header {
     display: none;
   }
 
-  @each $current-color in $microsite-site-header-list {
-    $i: index($microsite-site-header-list, $current-color);
-    .microsite-palette#{$i} & {
-      background: $current-color;
+  @each $item, $color in $micrositeColorMap {
+    .microsite-palette#{$item} & {
+      background: micro-site($item, 'site-header');
       border: 0;
       color: #fff;
     }
   }
 
 }
-
-
-
-
-
-

@@ -159,8 +159,8 @@ function gie_blogs_field_group_info() {
     'label' => 'Card Content',
     'weight' => '0',
     'children' => array(
-      0 => 'title_field',
-      1 => 'field_blogs_sector',
+      0 => 'field_blogs_sector',
+      1 => 'title_field',
       2 => 'group_card_author',
       3 => 'group_card_counts',
     ),
