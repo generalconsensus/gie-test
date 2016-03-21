@@ -48,17 +48,27 @@ function gie_blogs_ds_field_settings_info() {
         ),
       ),
     ),
-    'field_blogs_sector' => array(
+    'field_term_sector' => array(
       'formatter_settings' => array(
         'ft' => array(
+          'func' => 'theme_ds_field_expert',
           'lb' => 'Sectors',
         ),
       ),
     ),
-    'field_blogs_topic' => array(
+    'field_term_topic' => array(
       'formatter_settings' => array(
         'ft' => array(
+          'func' => 'theme_ds_field_expert',
           'lb' => 'Topics',
+        ),
+      ),
+    ),
+    'field_term_region' => array(
+      'formatter_settings' => array(
+        'ft' => array(
+          'func' => 'theme_ds_field_expert',
+          'lb' => 'Region',
         ),
       ),
     ),
@@ -101,20 +111,6 @@ function gie_blogs_ds_field_settings_info() {
         ),
       ),
     ),
-    'field_blogs_sector' => array(
-      'formatter_settings' => array(
-        'ft' => array(
-          'func' => 'theme_ds_field_expert',
-          'lb' => 'Sectors',
-          'ow' => TRUE,
-          'ow-el' => 'div',
-          'ow-cl' => 'card__list',
-          'ow-def-cl' => FALSE,
-          'ow-at' => '',
-          'ow-def-at' => FALSE,
-        ),
-      ),
-    ),
     'title_field' => array(
       'formatter_settings' => array(
         'ft' => array(
@@ -126,6 +122,20 @@ function gie_blogs_ds_field_settings_info() {
           'fi-def-at' => FALSE,
           'fi-odd-even' => FALSE,
           'fi-first-last' => FALSE,
+        ),
+      ),
+    ),
+    'field_term_sector' => array(
+      'formatter_settings' => array(
+        'ft' => array(
+          'func' => 'theme_ds_field_expert',
+          'lb' => 'Sectors',
+          'ow' => TRUE,
+          'ow-el' => 'div',
+          'ow-cl' => 'card__list',
+          'ow-def-cl' => FALSE,
+          'ow-at' => '',
+          'ow-def-at' => FALSE,
         ),
       ),
     ),
@@ -216,20 +226,20 @@ function gie_blogs_ds_layout_settings_info() {
     'regions' => array(
       'ds_content' => array(
         0 => 'group_blog_stats',
-        1 => 'field_blogs_region',
-        2 => 'field_blogs_country',
-        3 => 'field_blogs_topic',
-        4 => 'field_blogs_sector',
+        1 => 'field_term_region',
+        2 => 'field_term_country',
+        3 => 'field_term_topic',
+        4 => 'field_term_sector',
         5 => 'field_blogs_organization',
         6 => 'field_blogs_program',
       ),
     ),
     'fields' => array(
       'group_blog_stats' => 'ds_content',
-      'field_blogs_region' => 'ds_content',
-      'field_blogs_country' => 'ds_content',
-      'field_blogs_topic' => 'ds_content',
-      'field_blogs_sector' => 'ds_content',
+      'field_term_region' => 'ds_content',
+      'field_term_country' => 'ds_content',
+      'field_term_topic' => 'ds_content',
+      'field_term_sector' => 'ds_content',
       'field_blogs_organization' => 'ds_content',
       'field_blogs_program' => 'ds_content',
     ),
@@ -294,7 +304,7 @@ function gie_blogs_ds_layout_settings_info() {
         4 => 'blogs_counters_favorite_count',
         5 => 'title_field',
         6 => 'group_card_author',
-        7 => 'field_blogs_sector',
+        7 => 'field_term_sector',
         8 => 'group_card_counts',
       ),
     ),
@@ -306,15 +316,10 @@ function gie_blogs_ds_layout_settings_info() {
       'blogs_counters_favorite_count' => 'main_content',
       'title_field' => 'main_content',
       'group_card_author' => 'main_content',
-      'field_blogs_sector' => 'main_content',
+      'field_term_sector' => 'main_content',
       'group_card_counts' => 'main_content',
     ),
-    'classes' => array(
-      'layout_class' => array(
-        'card' => 'card',
-        'card--icons' => 'card--icons',
-      ),
-    ),
+    'classes' => array(),
     'wrappers' => array(
       'header' => 'div',
       'main_content' => 'div',
