@@ -85,17 +85,27 @@ function gie_news_ds_field_settings_info() {
         ),
       ),
     ),
-    'field_news_sector' => array(
+    'field_term_sector' => array(
       'formatter_settings' => array(
         'ft' => array(
+          'func' => 'theme_ds_field_expert',
           'lb' => 'Sectors',
         ),
       ),
     ),
-    'field_news_topic' => array(
+    'field_term_topic' => array(
       'formatter_settings' => array(
         'ft' => array(
+          'func' => 'theme_ds_field_expert',
           'lb' => 'Topics',
+        ),
+      ),
+    ),
+    'field_term_region' => array(
+      'formatter_settings' => array(
+        'ft' => array(
+          'func' => 'theme_ds_field_expert',
+          'lb' => 'Region',
         ),
       ),
     ),
@@ -159,7 +169,7 @@ function gie_news_ds_field_settings_info() {
         ),
       ),
     ),
-    'field_news_sector' => array(
+    'field_term_sector' => array(
       'formatter_settings' => array(
         'ft' => array(
           'func' => 'theme_ds_field_expert',
@@ -278,21 +288,21 @@ function gie_news_ds_layout_settings_info() {
   $ds_layout->settings = array(
     'regions' => array(
       'ds_content' => array(
-        0 => 'group_news_stats',
-        1 => 'field_news_region',
-        2 => 'field_news_country',
-        3 => 'field_news_topic',
-        4 => 'field_news_sector',
+        0 => 'field_term_region',
+        1 => 'group_news_stats',
+        2 => 'field_term_country',
+        3 => 'field_term_topic',
+        4 => 'field_term_sector',
         5 => 'field_news_program',
         6 => 'field_news_organization',
       ),
     ),
     'fields' => array(
+      'field_term_region' => 'ds_content',
       'group_news_stats' => 'ds_content',
-      'field_news_region' => 'ds_content',
-      'field_news_country' => 'ds_content',
-      'field_news_topic' => 'ds_content',
-      'field_news_sector' => 'ds_content',
+      'field_term_country' => 'ds_content',
+      'field_term_topic' => 'ds_content',
+      'field_term_sector' => 'ds_content',
       'field_news_program' => 'ds_content',
       'field_news_organization' => 'ds_content',
     ),
@@ -353,9 +363,9 @@ function gie_news_ds_layout_settings_info() {
         0 => 'group_card_content',
         1 => 'title_field',
         2 => 'group_card_author',
-        3 => 'field_news_sector',
-        4 => 'group_card_counts',
-        5 => 'field_news_point_of_contact',
+        3 => 'field_term_sector',
+        4 => 'field_news_point_of_contact',
+        5 => 'group_card_counts',
         6 => 'news_counters_comment_count',
         7 => 'field_news_publish_date',
         8 => 'news_counters_favorite_count',
@@ -365,19 +375,14 @@ function gie_news_ds_layout_settings_info() {
       'group_card_content' => 'main_content',
       'title_field' => 'main_content',
       'group_card_author' => 'main_content',
-      'field_news_sector' => 'main_content',
-      'group_card_counts' => 'main_content',
+      'field_term_sector' => 'main_content',
       'field_news_point_of_contact' => 'main_content',
+      'group_card_counts' => 'main_content',
       'news_counters_comment_count' => 'main_content',
       'field_news_publish_date' => 'main_content',
       'news_counters_favorite_count' => 'main_content',
     ),
-    'classes' => array(
-      'layout_class' => array(
-        'card' => 'card',
-        'card--icons' => 'card--icons',
-      ),
-    ),
+    'classes' => array(),
     'wrappers' => array(
       'header' => 'div',
       'main_content' => 'div',
