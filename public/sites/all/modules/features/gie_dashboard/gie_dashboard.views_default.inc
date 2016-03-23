@@ -1323,7 +1323,6 @@ function gie_dashboard_views_default_views() {
   $handler->display->display_options['access']['type'] = 'role';
   $handler->display->display_options['access']['role'] = array(
     3 => '3',
-    5 => '5',
   );
   $handler->display->display_options['cache']['type'] = 'none';
   $handler->display->display_options['query']['type'] = 'views_query';
@@ -1332,17 +1331,31 @@ function gie_dashboard_views_default_views() {
   $handler->display->display_options['pager']['options']['items_per_page'] = '10';
   $handler->display->display_options['style_plugin'] = 'table';
   $handler->display->display_options['style_options']['columns'] = array(
+    'views_bulk_operations' => 'views_bulk_operations',
     'timestamp' => 'timestamp',
+    'field_featured' => 'field_featured',
     'title' => 'title',
-    'status' => 'status',
     'type' => 'type',
     'changed' => 'changed',
+    'status' => 'status',
     'edit_node' => 'edit_node',
     'delete_node' => 'delete_node',
   );
-  $handler->display->display_options['style_options']['default'] = '-1';
+  $handler->display->display_options['style_options']['default'] = 'field_featured';
   $handler->display->display_options['style_options']['info'] = array(
+    'views_bulk_operations' => array(
+      'align' => '',
+      'separator' => '',
+      'empty_column' => 0,
+    ),
     'timestamp' => array(
+      'align' => '',
+      'separator' => '',
+      'empty_column' => 0,
+    ),
+    'field_featured' => array(
+      'sortable' => 1,
+      'default_sort_order' => 'desc',
       'align' => '',
       'separator' => '',
       'empty_column' => 0,
@@ -1354,13 +1367,6 @@ function gie_dashboard_views_default_views() {
       'separator' => '&nbsp;',
       'empty_column' => 0,
     ),
-    'status' => array(
-      'sortable' => 1,
-      'default_sort_order' => 'asc',
-      'align' => '',
-      'separator' => '',
-      'empty_column' => 0,
-    ),
     'type' => array(
       'sortable' => 1,
       'default_sort_order' => 'asc',
@@ -1369,6 +1375,13 @@ function gie_dashboard_views_default_views() {
       'empty_column' => 0,
     ),
     'changed' => array(
+      'sortable' => 1,
+      'default_sort_order' => 'asc',
+      'align' => '',
+      'separator' => '',
+      'empty_column' => 0,
+    ),
+    'status' => array(
       'sortable' => 1,
       'default_sort_order' => 'asc',
       'align' => '',
@@ -1387,6 +1400,10 @@ function gie_dashboard_views_default_views() {
     ),
   );
   $handler->display->display_options['style_options']['empty_table'] = TRUE;
+  /* Relationship: Content: Featured Topics (field_homepage_topics) */
+  $handler->display->display_options['relationships']['field_homepage_topics_tid']['id'] = 'field_homepage_topics_tid';
+  $handler->display->display_options['relationships']['field_homepage_topics_tid']['table'] = 'field_data_field_homepage_topics';
+  $handler->display->display_options['relationships']['field_homepage_topics_tid']['field'] = 'field_homepage_topics_tid';
   /* Field: Bulk operations: Content */
   $handler->display->display_options['fields']['views_bulk_operations']['id'] = 'views_bulk_operations';
   $handler->display->display_options['fields']['views_bulk_operations']['table'] = 'node';
@@ -1492,41 +1509,12 @@ function gie_dashboard_views_default_views() {
   $handler->display->display_options['filters']['status']['value'] = 1;
   $handler->display->display_options['filters']['status']['group'] = 1;
   $handler->display->display_options['filters']['status']['expose']['operator'] = FALSE;
-  /* Filter criterion: Content: Type */
-  $handler->display->display_options['filters']['type']['id'] = 'type';
-  $handler->display->display_options['filters']['type']['table'] = 'node';
-  $handler->display->display_options['filters']['type']['field'] = 'type';
-  $handler->display->display_options['filters']['type']['value'] = array(
-    'blogs' => 'blogs',
-    'event' => 'event',
-    'funding' => 'funding',
-    'news' => 'news',
-    'organization' => 'organization',
-    'program' => 'program',
-    'resource' => 'resource',
-  );
-  $handler->display->display_options['filters']['type']['exposed'] = TRUE;
-  $handler->display->display_options['filters']['type']['expose']['operator_id'] = 'type_op';
-  $handler->display->display_options['filters']['type']['expose']['label'] = 'Type';
-  $handler->display->display_options['filters']['type']['expose']['operator'] = 'type_op';
-  $handler->display->display_options['filters']['type']['expose']['identifier'] = 'type';
-  $handler->display->display_options['filters']['type']['expose']['multiple'] = TRUE;
-  $handler->display->display_options['filters']['type']['expose']['remember_roles'] = array(
-    2 => '2',
-    1 => 0,
-    8 => 0,
-    6 => 0,
-    7 => 0,
-    4 => 0,
-    3 => 0,
-    5 => 0,
-    9 => 0,
-  );
   /* Filter criterion: Content: Title */
   $handler->display->display_options['filters']['title']['id'] = 'title';
   $handler->display->display_options['filters']['title']['table'] = 'node';
   $handler->display->display_options['filters']['title']['field'] = 'title';
   $handler->display->display_options['filters']['title']['operator'] = 'contains';
+  $handler->display->display_options['filters']['title']['group'] = 1;
   $handler->display->display_options['filters']['title']['exposed'] = TRUE;
   $handler->display->display_options['filters']['title']['expose']['operator_id'] = 'title_op';
   $handler->display->display_options['filters']['title']['expose']['label'] = 'Search Titles';
@@ -1549,6 +1537,7 @@ function gie_dashboard_views_default_views() {
   $handler->display->display_options['path'] = 'admin/content/featured-content-administration';
   $handler->display->display_options['menu']['type'] = 'tab';
   $handler->display->display_options['menu']['title'] = 'Featured Content';
+  $handler->display->display_options['menu']['description'] = 'Featured Dashboard Content';
   $handler->display->display_options['menu']['weight'] = '0';
   $handler->display->display_options['menu']['context'] = 0;
   $handler->display->display_options['menu']['context_only_inline'] = 0;
@@ -1571,7 +1560,6 @@ function gie_dashboard_views_default_views() {
   $handler->display->display_options['access']['type'] = 'role';
   $handler->display->display_options['access']['role'] = array(
     3 => '3',
-    5 => '5',
   );
   $handler->display->display_options['cache']['type'] = 'none';
   $handler->display->display_options['query']['type'] = 'views_query';
@@ -1580,11 +1568,19 @@ function gie_dashboard_views_default_views() {
   $handler->display->display_options['pager']['options']['items_per_page'] = '10';
   $handler->display->display_options['style_plugin'] = 'table';
   $handler->display->display_options['style_options']['columns'] = array(
-    'name' => 'name',
     'field_featured' => 'field_featured',
+    'name' => 'name',
+    'edit_node' => 'edit_node',
   );
-  $handler->display->display_options['style_options']['default'] = '-1';
+  $handler->display->display_options['style_options']['default'] = 'field_featured';
   $handler->display->display_options['style_options']['info'] = array(
+    'field_featured' => array(
+      'sortable' => 1,
+      'default_sort_order' => 'desc',
+      'align' => '',
+      'separator' => '',
+      'empty_column' => 0,
+    ),
     'name' => array(
       'sortable' => 1,
       'default_sort_order' => 'asc',
@@ -1592,21 +1588,12 @@ function gie_dashboard_views_default_views() {
       'separator' => '',
       'empty_column' => 0,
     ),
-    'field_featured' => array(
-      'sortable' => 1,
-      'default_sort_order' => 'asc',
+    'edit_node' => array(
       'align' => '',
       'separator' => '',
       'empty_column' => 0,
     ),
   );
-  /* Field: User: Name */
-  $handler->display->display_options['fields']['name']['id'] = 'name';
-  $handler->display->display_options['fields']['name']['table'] = 'users';
-  $handler->display->display_options['fields']['name']['field'] = 'name';
-  $handler->display->display_options['fields']['name']['label'] = '';
-  $handler->display->display_options['fields']['name']['alter']['word_boundary'] = FALSE;
-  $handler->display->display_options['fields']['name']['alter']['ellipsis'] = FALSE;
   /* Field: Field: Featured */
   $handler->display->display_options['fields']['field_featured']['id'] = 'field_featured';
   $handler->display->display_options['fields']['field_featured']['table'] = 'field_data_field_featured';
@@ -1626,6 +1613,13 @@ function gie_dashboard_views_default_views() {
       ),
     ),
   );
+  /* Field: User: Name */
+  $handler->display->display_options['fields']['name']['id'] = 'name';
+  $handler->display->display_options['fields']['name']['table'] = 'users';
+  $handler->display->display_options['fields']['name']['field'] = 'name';
+  $handler->display->display_options['fields']['name']['label'] = '';
+  $handler->display->display_options['fields']['name']['alter']['word_boundary'] = FALSE;
+  $handler->display->display_options['fields']['name']['alter']['ellipsis'] = FALSE;
   /* Field: User: Edit link */
   $handler->display->display_options['fields']['edit_node']['id'] = 'edit_node';
   $handler->display->display_options['fields']['edit_node']['table'] = 'users';
@@ -1729,9 +1723,6 @@ function gie_dashboard_views_default_views() {
   $handler->display->display_options['filters']['field_featured_value']['id'] = 'field_featured_value';
   $handler->display->display_options['filters']['field_featured_value']['table'] = 'field_data_field_featured';
   $handler->display->display_options['filters']['field_featured_value']['field'] = 'field_featured_value';
-  $handler->display->display_options['filters']['field_featured_value']['value'] = array(
-    1 => '1',
-  );
   $handler->display->display_options['filters']['field_featured_value']['exposed'] = TRUE;
   $handler->display->display_options['filters']['field_featured_value']['expose']['operator_id'] = 'field_featured_value_op';
   $handler->display->display_options['filters']['field_featured_value']['expose']['label'] = 'Featured User';
@@ -1754,6 +1745,7 @@ function gie_dashboard_views_default_views() {
   $handler->display->display_options['path'] = 'admin/content/featured-user-administration';
   $handler->display->display_options['menu']['type'] = 'tab';
   $handler->display->display_options['menu']['title'] = 'Featured Users';
+  $handler->display->display_options['menu']['description'] = 'Featured Dashboard Users';
   $handler->display->display_options['menu']['weight'] = '0';
   $handler->display->display_options['menu']['context'] = 0;
   $handler->display->display_options['menu']['context_only_inline'] = 0;
