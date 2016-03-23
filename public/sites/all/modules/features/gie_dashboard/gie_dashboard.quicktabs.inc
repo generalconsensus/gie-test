@@ -45,11 +45,10 @@ function gie_dashboard_quicktabs_default_quicktabs() {
       'type' => 'callback',
     ),
     4 => array(
-      'bid' => 'panels_mini_delta_dashboard_follow',
-      'hide_title' => 0,
+      'path' => 'gie_dashboard/my_network',
       'title' => 'My Network',
       'weight' => '-96',
-      'type' => 'block',
+      'type' => 'callback',
     ),
   );
   $quicktabs->renderer = 'quicktabs';
