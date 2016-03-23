@@ -47,9 +47,30 @@ function gie_dashboard_search_api_solr_query_alter(array &$call_args, SearchApiQ
  */
 function gie_dashboard_form_user_profile_form_alter(&$form, &$form_state) {
   $admin_role = user_role_load_by_name('administrator');
-  $community_role = user_role_load_by_name('Program Community Manager');
   // Set field visibility based on whether the user is an admin
-  if (!(user_has_role($admin_role->rid) || user_has_role($community_role->rid))) {
+  if (!(user_has_role($admin_role->rid))) {
+    $form['field_featured']['#type'] = 'hidden';
+  }
+}
+
+/*
+ * Implements hook_form_FORM_ID_alter().
+ */
+function gie_dashboard_form_node_form_alter(&$form, &$form_state) {
+  $types = array(
+    'innovation',
+    'funding',
+    'resource',
+    'event',
+    'organization',
+    'program',
+    'blogs',
+    'news'
+  );
+
+  $admin_role = user_role_load_by_name('administrator');
+  // Set field visibility based on whether the user is an admin
+  if (in_array($form['type']['#value'], $types) && !(user_has_role($admin_role->rid)) && !empty($form['field_featured'])) {
     $form['field_featured']['#type'] = 'hidden';
   }
 }
