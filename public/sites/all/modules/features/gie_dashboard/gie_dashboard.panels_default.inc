@@ -259,8 +259,31 @@ function gie_dashboard_default_panels_mini() {
     $display->content['new-61de17ba-4fe1-45e7-9b02-f9dd4e6144a1'] = $pane;
     $display->panels['bottom_left'][0] = 'new-61de17ba-4fe1-45e7-9b02-f9dd4e6144a1';
     $pane = new stdClass();
-    $pane->pid = 'new-1a830965-2fe2-438a-9ee1-295e2136f02b';
+    $pane->pid = 'new-10b04ffa-ead9-4a67-9dd3-13ae3df17d94';
     $pane->panel = 'bottom_right';
+    $pane->type = 'block';
+    $pane->subtype = 'gie_data_viz-gie_data_viz_fund_count_chart';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array(
+      'override_title' => 0,
+      'override_title_text' => '',
+      'override_title_heading' => 'h2',
+    );
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
+    $pane->css = array();
+    $pane->extras = array();
+    $pane->position = 0;
+    $pane->locks = array();
+    $pane->uuid = '10b04ffa-ead9-4a67-9dd3-13ae3df17d94';
+    $display->content['new-10b04ffa-ead9-4a67-9dd3-13ae3df17d94'] = $pane;
+    $display->panels['bottom_right'][0] = 'new-10b04ffa-ead9-4a67-9dd3-13ae3df17d94';
+    $pane = new stdClass();
+    $pane->pid = 'new-1a830965-2fe2-438a-9ee1-295e2136f02b';
+    $pane->panel = 'main';
     $pane->type = 'dashboard_exchange_updates';
     $pane->subtype = 'dashboard_exchange_updates';
     $pane->shown = TRUE;
@@ -281,7 +304,7 @@ function gie_dashboard_default_panels_mini() {
     $pane->locks = array();
     $pane->uuid = '1a830965-2fe2-438a-9ee1-295e2136f02b';
     $display->content['new-1a830965-2fe2-438a-9ee1-295e2136f02b'] = $pane;
-    $display->panels['bottom_right'][0] = 'new-1a830965-2fe2-438a-9ee1-295e2136f02b';
+    $display->panels['main'][0] = 'new-1a830965-2fe2-438a-9ee1-295e2136f02b';
     $pane = new stdClass();
     $pane->pid = 'new-c49b8b82-75cb-4b45-951f-80086dd1e305';
     $pane->panel = 'main';
@@ -301,11 +324,11 @@ function gie_dashboard_default_panels_mini() {
     );
     $pane->css = array();
     $pane->extras = array();
-    $pane->position = 0;
+    $pane->position = 1;
     $pane->locks = array();
     $pane->uuid = 'c49b8b82-75cb-4b45-951f-80086dd1e305';
     $display->content['new-c49b8b82-75cb-4b45-951f-80086dd1e305'] = $pane;
-    $display->panels['main'][0] = 'new-c49b8b82-75cb-4b45-951f-80086dd1e305';
+    $display->panels['main'][1] = 'new-c49b8b82-75cb-4b45-951f-80086dd1e305';
     $pane = new stdClass();
     $pane->pid = 'new-98dad3b5-e78b-472a-a9a3-da216001f186';
     $pane->panel = 'sidebar';
