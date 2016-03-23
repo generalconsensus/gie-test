@@ -489,7 +489,7 @@ function dashboard_recommendation_engine($bundle, $filter) {
 function dashboard_recommended_innovations_form($form, &$form_state) {
 
   $bundle = array('innovation');
-  $filter = (!empty($_GET) && !empty($_GET['stdfilter'])) ? $_GET['stdfilter'] : NULL;
+  $filter = (!empty($_GET) && !empty($_GET['stdfilter'])) ? $_GET['stdfilter'] : 'my_sectors';
   $matches = dashboard_recommendation_engine($bundle, $filter);
   $payload = array();
   $inc = 0;
@@ -592,7 +592,7 @@ function dashboard_recommended_innovations_form_submit($form, &$form_state) {
 function dashboard_recommended_funding_form($form, &$form_state) {
 
   $bundle = array('funding');
-  $filter = (!empty($_GET) && !empty($_GET['stdfilter'])) ? $_GET['stdfilter'] : NULL;
+  $filter = (!empty($_GET) && !empty($_GET['stdfilter'])) ? $_GET['stdfilter'] : 'sectors';
   $matches = dashboard_recommendation_engine($bundle, $filter);
   $payload = array();
   $inc = 0;
@@ -695,7 +695,7 @@ function dashboard_recommended_funding_form_submit($form, &$form_state) {
 function dashboard_my_portfolio_form($form, &$form_state) {
 
   $bundle = array('innovation', 'funding', 'resource', 'event');
-  $filter = (!empty($_GET) && !empty($_GET['pfilter'])) ? $_GET['pfilter'] : NULL;
+  $filter = (!empty($_GET) && !empty($_GET['pfilter'])) ? $_GET['pfilter'] : 'innovation';
   $matches = dashboard_recommendation_engine($bundle, $filter);
   $payload = array();
   $inc = 0;
@@ -810,7 +810,7 @@ function dashboard_my_network_form($form, &$form_state) {
     'net_organization',
     'net_program'
   );
-  $filter = (!empty($_GET) && !empty($_GET['nfilter'])) ? $_GET['nfilter'] : NULL;
+  $filter = (!empty($_GET) && !empty($_GET['nfilter'])) ? $_GET['nfilter'] : 'net_users';
   $matches = dashboard_recommendation_engine($bundle, $filter);
   $payload = array();
   $inc = 0;
