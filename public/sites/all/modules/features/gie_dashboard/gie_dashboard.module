@@ -108,6 +108,13 @@ function gie_dashboard_menu() {
     'access callback' => TRUE,
     'type' => MENU_CALLBACK,
   );
+  $items['gie_dashboard/my_network'] = array(
+    'title' => 'My Network',
+    'page arguments' => array('dashboard_my_network_form', 2),
+    'page callback' => 'drupal_get_form',
+    'access callback' => TRUE,
+    'type' => MENU_CALLBACK,
+  );
   return $items;
 }
 
@@ -419,6 +426,48 @@ function dashboard_recommendation_engine($bundle, $filter) {
 
       break;
 
+    case 'innovation':
+    case 'funding':
+    case 'resource':
+    case 'event':
+      $matches = db_query_range('SELECT node.nid FROM node
+        WHERE node.type IN (:bundle) AND node.uid = :uid ORDER BY node.changed DESC', 0, $display_items, array(
+        ':bundle' => $filter,
+        ':uid' => $user->uid
+      ))->fetchCol();
+
+      break;
+
+    case 'net_innovation':
+    case 'net_funding':
+    case 'net_resource':
+    case 'net_event':
+    case 'net_organization':
+    case 'net_program':
+
+      $matches = db_query_range('SELECT flagging.entity_id
+        FROM flagging
+        INNER JOIN node on node.nid = flagging.entity_id
+        WHERE node.type IN (:bundle) AND flagging.uid = :uid AND flagging.fid = :favorite_fid', 0, $display_items, array(
+        ':bundle' => substr($filter, 4),
+        ':uid' => $user->uid,
+        ':favorite_fid' => $favorite->fid
+      ))->fetchCol();
+
+      break;
+
+    case 'net_users':
+
+      $matches = db_query('SELECT flagging.uid FROM flagging
+    INNER JOIN flagging reverse_flagging on flagging.uid = reverse_flagging.entity_id
+    WHERE flagging.fid = :fid AND reverse_flagging.fid  = :fid
+    AND flagging.entity_id = :uid AND reverse_flagging.uid = :uid', array(
+        ':fid' => $follow_user->fid,
+        ':uid' => $user->uid
+      ))->fetchCol();
+
+      break;
+
     default:
 
       $matches = db_query_range("SELECT DISTINCT node.nid  FROM node
@@ -440,7 +489,7 @@ function dashboard_recommendation_engine($bundle, $filter) {
 function dashboard_recommended_innovations_form($form, &$form_state) {
 
   $bundle = array('innovation');
-  $filter = (!empty($_GET) && !empty($_GET['filter'])) ? $_GET['filter'] : NULL;
+  $filter = (!empty($_GET) && !empty($_GET['stdfilter'])) ? $_GET['stdfilter'] : NULL;
   $matches = dashboard_recommendation_engine($bundle, $filter);
   $payload = array();
   $inc = 0;
@@ -532,7 +581,7 @@ function dashboard_recommended_innovations_form_submit($form, &$form_state) {
       array(
         'query' => array(
           'qt-dashboard' => 2,
-          'filter' => $filter
+          'stdfilter' => $filter
         ),
       ),
     );
@@ -543,7 +592,7 @@ function dashboard_recommended_innovations_form_submit($form, &$form_state) {
 function dashboard_recommended_funding_form($form, &$form_state) {
 
   $bundle = array('funding');
-  $filter = (!empty($_GET) && !empty($_GET['filter'])) ? $_GET['filter'] : NULL;
+  $filter = (!empty($_GET) && !empty($_GET['stdfilter'])) ? $_GET['stdfilter'] : NULL;
   $matches = dashboard_recommendation_engine($bundle, $filter);
   $payload = array();
   $inc = 0;
@@ -635,7 +684,7 @@ function dashboard_recommended_funding_form_submit($form, &$form_state) {
       array(
         'query' => array(
           'qt-dashboard' => 3,
-          'filter' => $filter
+          'stdfilter' => $filter
         ),
       ),
     );
@@ -646,39 +695,53 @@ function dashboard_recommended_funding_form_submit($form, &$form_state) {
 function dashboard_my_portfolio_form($form, &$form_state) {
 
   $bundle = array('innovation', 'funding', 'resource', 'event');
-  $filter = (!empty($_GET) && !empty($_GET['filter'])) ? $_GET['filter'] : NULL;
+  $filter = (!empty($_GET) && !empty($_GET['pfilter'])) ? $_GET['pfilter'] : NULL;
   $matches = dashboard_recommendation_engine($bundle, $filter);
   $payload = array();
   $inc = 0;
-  $user_model = FALSE;
 
-  $form['sectors'] = array(
+  $form['innovation'] = array(
     '#type' => 'submit',
-    '#value' => t('My Sectors')
+    '#value' => t('My Innovations')
   );
-  $form['topics'] = array(
+  $form['funding'] = array(
     '#type' => 'submit',
-    '#value' => t('My Topics')
+    '#value' => t('My Funding Opportunities')
   );
-  $form['skills'] = array(
+  $form['resource'] = array(
     '#type' => 'submit',
-    '#value' => t('My Skills')
+    '#value' => t('My Resources')
   );
-  $form['friends'] = array(
+  $form['event'] = array(
     '#type' => 'submit',
-    '#value' => t('My Friends')
-  );
-  $form['following'] = array(
-    '#type' => 'submit',
-    '#value' => t('I\'m Following')
+    '#value' => t('My Events')
   );
 
 
-  foreach ($matches as $key => $sector_match) {
-    $inc += 1;
-    $entity = entity_view('node', array(node_load($sector_match)), 'listing');
-    if (!empty($entity)) {
-      $payload[$key + $inc] = render($entity);
+  if (!empty($matches)) {
+    foreach ($matches as $key => $sector_match) {
+      $inc += 1;
+      $favorite = flag_load('favorite');
+      $entity = entity_view('node', array(node_load($sector_match)), 'listing');
+      if (!empty($entity)) {
+        $payload[$key + $inc] = render($entity);
+      }
+    }
+  }
+  else {
+    switch ($filter) {
+      case 'innovation':
+        $payload[] = 'You haven\'t created any innovations! Click ' . l('here', 'node/add/innovation') . ' to add your innovations.';
+        break;
+      case 'funding':
+        $payload[] = 'You haven\'t created any funding opportunities! Click ' . l('here', 'node/add/funding') . ' to add your funding opportunities.';
+        break;
+      case 'resource':
+        $payload[] = 'You haven\'t created any resources! Click ' . l('here', 'node/add/resources') . ' to add your resources.';
+        break;
+      case 'event':
+        $payload[] = 'You haven\'t created any events! Click ' . l('here', 'node/add/event') . ' to add your events.';
+        break;
     }
   }
 
@@ -704,24 +767,22 @@ function dashboard_my_portfolio_form_validate($form, &$form_state) {
 }
 
 function dashboard_my_portfolio_form_submit($form, &$form_state) {
-  $filter = 'my_sectors';
+  $filter = 'innovations';
+
   if (!empty($form_state['triggering_element']['#value'])) {
 
     switch ($form_state['triggering_element']['#value']) {
-      case 'My Sectors':
-        $filter = 'my_sectors';
+      case 'My Innovations':
+        $filter = 'innovation';
         break;
-      case 'My Topics':
-        $filter = 'my_topics';
+      case 'My Funding Opportunities':
+        $filter = 'funding';
         break;
-      case 'My Skills':
-        $filter = 'my_skills';
+      case 'My Resources':
+        $filter = 'resource';
         break;
-      case 'My Friends':
-        $filter = 'my_friends';
-        break;
-      case 'I\'m Following':
-        $filter = 'im_following';
+      case 'My Events':
+        $filter = 'event';
         break;
     }
 
@@ -730,7 +791,7 @@ function dashboard_my_portfolio_form_submit($form, &$form_state) {
       array(
         'query' => array(
           'qt-dashboard' => 1,
-          'filter' => $filter
+          'pfilter' => $filter
         ),
       ),
     );
@@ -738,3 +799,157 @@ function dashboard_my_portfolio_form_submit($form, &$form_state) {
   }
 }
 
+function dashboard_my_network_form($form, &$form_state) {
+
+  $bundle = array(
+    'net_users',
+    'net_innovation',
+    'net_funding',
+    'net_resource',
+    'net_event',
+    'net_organization',
+    'net_program'
+  );
+  $filter = (!empty($_GET) && !empty($_GET['nfilter'])) ? $_GET['nfilter'] : NULL;
+  $matches = dashboard_recommendation_engine($bundle, $filter);
+  $payload = array();
+  $inc = 0;
+
+  $form['net_users'] = array(
+    '#type' => 'submit',
+    '#value' => t('Users')
+  );
+  $form['net_innovation'] = array(
+    '#type' => 'submit',
+    '#value' => t('Innovations')
+  );
+  $form['net_funding'] = array(
+    '#type' => 'submit',
+    '#value' => t('Funding Ops')
+  );
+  $form['net_resource'] = array(
+    '#type' => 'submit',
+    '#value' => t('Resources')
+  );
+  $form['net_event'] = array(
+    '#type' => 'submit',
+    '#value' => t('Events')
+  );
+  $form['net_organization'] = array(
+    '#type' => 'submit',
+    '#value' => t('Organizations')
+  );
+  $form['net_program'] = array(
+    '#type' => 'submit',
+    '#value' => t('Programs')
+  );
+
+  if (!empty($matches)) {
+    if ($filter != 'net_users') {
+      foreach ($matches as $key => $sector_match) {
+        $inc += 1;
+        $entity = entity_view('node', array(node_load($sector_match)), 'listing');
+        if (!empty($entity)) {
+          $payload[$key + $inc] = render($entity);
+        }
+      }
+    }
+    else {
+      foreach ($matches as $key => $sector_match) {
+        $inc += 1;
+        $entity = entity_view('user', array(user_load($sector_match)), 'listing');
+        if (!empty($entity)) {
+          $payload[$key + $inc] = render($entity);
+        }
+      }
+    }
+  }
+  else {
+
+    switch ($filter) {
+      case 'net_users':
+        $payload[] = 'You haven\'t created any followed any users! Click ' . l('here', 'users') . ' to follow new users';
+        break;
+      case 'net_innovation':
+        $payload[] = 'You haven\'t created any followed any innovations! Click ' . l('here', 'innovation') . ' to follow new innovations';
+        break;
+      case 'net_funding':
+        $payload[] = 'You haven\'t created any followed any fundings! Click ' . l('here', 'funding') . ' to follow new fundings';
+        break;
+      case 'net_resource':
+        $payload[] = 'You haven\'t created any followed any resources! Click ' . l('here', 'resource') . ' to follow new resources';
+        break;
+      case 'net_event':
+        $payload[] = 'You haven\'t created any followed any events! Click ' . l('here', 'event') . ' to follow new events';
+        break;
+      case 'net_organization':
+        $payload[] = 'You haven\'t created any followed any organizations! Click ' . l('here', 'organization') . ' to follow new organizations';
+        break;
+      case 'net_program':
+        $payload[] = 'You haven\'t created any followed any programs! Click ' . l('here', 'program') . ' to follow new programs';
+        break;
+    }
+  }
+
+  $payload = array(
+    '#theme' => 'item_list',
+    '#items' => $payload,
+    '#type' => 'ul',
+    '#attributes' => array('class' => 'list-class'),
+  );
+
+  $form['updates'] = array(
+    '#type' => 'item',
+    '#markup' => drupal_render($payload),
+    '#weight' => 5,
+    '#suffix' => '<div class="dashboard__all-data-button"><a class="button button--highlight" href="/data">See all Exchange Data</a></div>'
+  );
+
+  return $form;
+}
+
+function dashboard_my_network_form_validate($form, &$form_state) {
+  $test = 1;
+}
+
+function dashboard_my_network_form_submit($form, &$form_state) {
+  $filter = 'net_users';
+
+  if (!empty($form_state['triggering_element']['#value'])) {
+
+    switch ($form_state['triggering_element']['#value']) {
+      case 'Users':
+        $filter = 'net_users';
+        break;
+      case 'Innovations':
+        $filter = 'net_innovation';
+        break;
+      case 'Funding Ops':
+        $filter = 'net_funding';
+        break;
+      case 'Resources':
+        $filter = 'net_resource';
+        break;
+      case 'Events':
+        $filter = 'net_event';
+        break;
+      case 'Organizations':
+        $filter = 'net_organization';
+        break;
+      case 'Programs':
+        $filter = 'net_program';
+        break;
+    }
+
+    $form_state['redirect'] = array(
+      'dashboard',
+      array(
+        'query' => array(
+          'qt-dashboard' => 4,
+          'nfilter' => $filter
+        ),
+      ),
+    );
+    drupal_redirect_form($form_state);
+  }
+}
