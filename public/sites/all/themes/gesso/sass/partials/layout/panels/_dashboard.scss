@@ -6,7 +6,7 @@
 
 .l-panels-dashboard {
   @include add-grid(12 at 700px);
-  @include add-gutter(1);
+  @include add-gutter(0.5);
   @include breakpoint(700px, $no-query: true) {
     &.sidebar {
       .l-sidebar {

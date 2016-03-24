@@ -19,9 +19,9 @@
                   <h3 class="dashboard-header__welcome">WELCOME {{ user.name }}</h3>
                 </div>
                 <div class="dashboard-header__actions">
-                  <a href="#" class="button button--highlight">Update your profile</a>
-                  <a href="#" class="button button--highlight">View your profile</a>
-                  <a href="#" class="button button--highlight">Email Preferences</a>
+                  <a href="#" class="button button--update-profile">Update your profile</a>
+                  <a href="#" class="button button--view-profile">View your profile</a>
+                  <a href="#" class="button button--email">Email Preferences</a>
                 </div>
               </div>
             </div>
@@ -39,262 +39,123 @@
                 <div id="quicktabs-container-dashboard" class="quicktabs_main quicktabs-style-nostyle">
                   <div class="quicktabs-tabpage">
 
-                    <h2 class="dashboard__title">Notification Center</h2>
-                    <ul class="dashboard-notifications">
-                      <li class="dashboard-notifications__item is-featured"><a href="#">creuoribr</a>, <a href="#">wrugetudowr</a> commented on your content</li>
-                      <li class="dashboard-notifications__item is-featured"><a href="#">slakuhepr</a>, <a href="#">wrugetudowr</a>, <a href="#">newuclupri</a> follow you</li>
-                      <li class="dashboard-notifications__item is-featured"><a href="#">Matt Burge</a>, <a href="#">wrugetudowr</a>, <a href="#">dutojopr</a> follows your content</li>
-                    </ul>
-
-                    <form accept-charset="UTF-8">
-                      <h2 class="dashboard__title">
-                        Exchange Updates since
-                        <div class="form-item form-type-select form-item-selected">
-                          <select class="form-select">
-                            <option selected="selected" value="0">Last Month</option>
-                            <option value="1">Your Last Visit</option>
-                          </select>
-                        </div>
-                      </h2>
-                      <div class="form-item form-type-item">
-                        <div class="dashboard__data data-point"><a href="#">19 <span>Organizations</span></a></div>
-                        <div class="dashboard__data data-point"><a href="#">$1.8M <span>Available</span></a></div>
-                        <div class="dashboard__data data-point"><a href="#">20 <span>Collaborators</span></a></div>
-                        <div class="dashboard__data data-point"><a href="#">0 <span>Innovations</span></a></div>
-                      </div>
-                      <div class="dashboard__all-data-button"><a href="#" class="button button--highlight">See all Exchange Data</a></div>
-                    </form>
-
-                    <h2 class="dashboard__title">Innovation Spotlight</h2>
-                    <div class="dashboard__spotlights">
-                        {{# listItems.one }}
-                          {{> organisms-innovation-teaser }}
-                        {{/ listItems.one }}
-                    </div>
-
-
-                    <div class="view view--user-innovations view-user-innovations">
-                      <div class="view__header">
-                        <h2 class="dashboard__title">Your Innovations</h2>
-                      </div>
-                      <table class="views-table cols-3">
-                        <thead>
-                          <tr>
-                            <th scope="col" class="views-field views-field-title"> </th>
-                            <th scope="col" class="views-field views-field-count"> Favorites </th>
-                            <th scope="col" class="views-field views-field-comment-count"> Comments </th>
-                          </tr>
-                        </thead>
-                        <tbody>
-                          <tr class="odd views-row-first">
-                            <td class="views-field views-field-title">
-                              <a href="#"><img width="78" height="78" title="Default image, no image supplied by the user." alt="Default image, no image supplied by the user." src="http://giexchange-dev.s3.amazonaws.com/styles/thumb-78x78/s3/default_images/innovation-default-image.jpg?itok=wiXPtMCt" typeof="foaf:Image">Meus</a>
-                            </td>
-                            <td class="views-field views-field-count"> 0 </td>
-                            <td class="views-field views-field-comment-count"> 0 </td>
-                          </tr>
-                          <tr class="even">
-                            <td class="views-field views-field-title">
-                              <a href="/innovations/illum-0"><img width="78" height="78" title="Default image, no image supplied by the user." alt="Default image, no image supplied by the user." src="http://giexchange-dev.s3.amazonaws.com/styles/thumb-78x78/s3/default_images/innovation-default-image.jpg?itok=wiXPtMCt" typeof="foaf:Image">Illum</a>
-                            </td>
-                            <td class="views-field views-field-count"> 1 </td>
-                            <td class="views-field views-field-comment-count"> 1 </td>
-                          </tr>
-                          <tr class="odd">
-                            <td class="views-field views-field-title">
-                              <a href="/innovations/gilvus"><img width="78" height="78" title="Default image, no image supplied by the user." alt="Default image, no image supplied by the user." src="http://giexchange-dev.s3.amazonaws.com/styles/thumb-78x78/s3/default_images/innovation-default-image.jpg?itok=wiXPtMCt" typeof="foaf:Image">Gilvus</a>
-                            </td>
-                            <td class="views-field views-field-count"> 1 </td>
-                            <td class="views-field views-field-comment-count"> 0 </td>
-                          </tr>
-                          <tr class="even">
-                            <td class="views-field views-field-title">
-                              <a href="/innovations/augue"><img width="78" height="78" title="Default image, no image supplied by the user." alt="Default image, no image supplied by the user." src="http://giexchange-dev.s3.amazonaws.com/styles/thumb-78x78/s3/default_images/innovation-default-image.jpg?itok=wiXPtMCt" typeof="foaf:Image">Augue</a>
-                            </td>
-                            <td class="views-field views-field-count"> 1 </td>
-                            <td class="views-field views-field-comment-count"> 0 </td>
-                          </tr>
-                          <tr class="odd views-row-last">
-                            <td class="views-field views-field-title">
-                              <a href="/innovations/dolus"><img width="78" height="78" title="Default image, no image supplied by the user." alt="Default image, no image supplied by the user." src="http://giexchange-dev.s3.amazonaws.com/styles/thumb-78x78/s3/default_images/innovation-default-image.jpg?itok=wiXPtMCt" typeof="foaf:Image">Dolus</a>
-                            </td>
-                            <td class="views-field views-field-count"> 1 </td>
-                            <td class="views-field views-field-comment-count"> 0 </td>
-                          </tr>
-                        </tbody>
-                      </table>
-                      <div class="view__footer">
-                        <div class="view view--user-innovations view--id-user_innovations view--display-id-panel_pane_2 view--card-view-3col view--dom-id-9a922864a3fb9af2e1e1b9f3b2e8f6e9 view-user-innovations view-id-user_innovations view-display-id-panel_pane_2 view-dom-id-9a922864a3fb9af2e1e1b9f3b2e8f6e9">
-                          <div class="view__header">
-                            <h2 class="dashboard__title">Innovations You Follow</h2>
-                          </div>
-                          {{# listItems.nine }}
-                            <div class="views-row">
-                              {{> organisms-innovation-teaser }}
-                            </div>
-                          {{/ listItems.nine }}
-                          <div class="view__pager">
-                            {{> molecules-pager }}
-                          </div>
-                        </div>
-                        <h2 class="dashboard__title">Innovations Recommended for You</h2>
-                        <div class="view view--user-innovations view--id-user_innovations view--display-id-innovations_skills view--card-view-3col view--dom-id-e045a9576da01012446c2275b0920e59 view-user-innovations view-id-user_innovations view-display-id-innovations_skills view-dom-id-e045a9576da01012446c2275b0920e59">
-                          <div class="view__header">
-                            <div class="dashboard__sub-title">Based on the skills you offer</div>
-                          </div>
-                          <p>We couldn't find a match for you based on your skillset. Make sure you have topics of interest added to your account  <a href="/user" class="button button--highlight">here</a></p>
-                        </div>
-                        <div class="view view--user-innovations view--id-user_innovations view--display-id-innovations_follow view--card-view-3col view--dom-id-9f3dd7aa621e3d8d8f17a1e97427f3c0 view-user-innovations view-id-user_innovations view-display-id-innovations_follow view-dom-id-9f3dd7aa621e3d8d8f17a1e97427f3c0">
-                          <div class="view__header">
-                            <div class="dashboard__sub-title">Based on the people you follow</div>
-                          </div>
-                          <p>We couldn't find innovations created by those you follow. You can add other members who have created innovations  <a href="/members" class="button button--highlight">here</a></p>
-                        </div>
-                        <div class="view view--user-innovations view--id-user_innovations view--display-id-innovations_sectors view--card-view-3col view--dom-id-dbb68b8d1006484db8e7afe5e0d61c93 view-user-innovations view-id-user_innovations view-display-id-innovations_sectors view-dom-id-dbb68b8d1006484db8e7afe5e0d61c93">
-                          <div class="view__header">
-                            <div class="dashboard__sub-title">Based on the sectors you have joined</div>
-                          </div>
-                          {{# listItems.nine }}
-                            <div class="views-row">
-                              {{> organisms-innovation-teaser }}
-                            </div>
-                          {{/ listItems.nine }}
-                          <div class="view__pager">
-                            {{> molecules-pager }}
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-
-                    <div class="view view--dashboard view--id-dashboard view--display-id-user_funding_opportunities view--card-view-4col view--dom-id-0236c17e749a6f0de8a72a1ab9156aa9 view-dashboard view-id-dashboard view-display-id-user_funding_opportunities view-dom-id-0236c17e749a6f0de8a72a1ab9156aa9">
-                      <div class="view__header">
-                        <h2 class="dashboard__title">Your Funding Opportunities</h2>
-                      </div>
-
-                      <table class="views-table cols-4">
-                        <thead>
-                          <tr>
-                            <th scope="col" class="views-field views-field-title"> </th>
-                            <th scope="col" class="views-field views-field-field-funding-type"> Type </th>
-                            <th scope="col" class="views-field views-field-field-funding-grant-award-value"> Amount </th>
-                            <th scope="col" class="views-field views-field-field-funding-deadline"> Status </th>
-                          </tr>
-                        </thead>
-                        <tbody>
-                          <tr class="odd views-row-first">
-                            <td class="views-field views-field-title"> <a href="/funding/blandit">Blandit</a> </td>
-                            <td class="views-field views-field-field-funding-type"> </td>
-                            <td class="views-field views-field-field-funding-grant-award-value"> $100,000 </td>
-                            <td class="views-field views-field-field-funding-deadline">
-                              <span content="2016-01-24T04:41:11+00:00" datatype="xsd:dateTime" property="dc:date" class="date-display-single">1/24/2016</span>
-                            </td>
-                          </tr>
-                          <tr class="even">
-                            <td class="views-field views-field-title"> <a href="/funding/hendrerit">Hendrerit</a> </td>
-                            <td class="views-field views-field-field-funding-type"> </td>
-                            <td class="views-field views-field-field-funding-grant-award-value"> $100,000 </td>
-                            <td class="views-field views-field-field-funding-deadline">
-                              <span content="2016-01-24T04:41:11+00:00" datatype="xsd:dateTime" property="dc:date" class="date-display-single">1/24/2016</span>
-                            </td>
-                          </tr>
-                          <tr class="odd">
-                            <td class="views-field views-field-title"> <a href="/funding/vereor">Vereor</a> </td>
-                            <td class="views-field views-field-field-funding-type"> </td>
-                            <td class="views-field views-field-field-funding-grant-award-value"> $100,000 </td>
-                            <td class="views-field views-field-field-funding-deadline">
-                              <span content="2016-01-24T04:41:11+00:00" datatype="xsd:dateTime" property="dc:date" class="date-display-single">1/24/2016</span>
-                            </td>
-                          </tr>
-                          <tr class="even">
-                            <td class="views-field views-field-title"> <a href="/funding/appellatio">Appellatio</a> </td>
-                            <td class="views-field views-field-field-funding-type">  </td>
-                            <td class="views-field views-field-field-funding-grant-award-value"> $100,000 </td>
-                            <td class="views-field views-field-field-funding-deadline">
-                              <span content="2016-01-24T04:41:11+00:00" datatype="xsd:dateTime" property="dc:date" class="date-display-single">1/24/2016</span>
-                            </td>
-                          </tr>
-                          <tr class="odd views-row-last">
-                            <td class="views-field views-field-title"> <a href="/funding/jugis">Jugis</a> </td>
-                            <td class="views-field views-field-field-funding-type"> </td>
-                            <td class="views-field views-field-field-funding-grant-award-value"> $100,000 </td>
-                            <td class="views-field views-field-field-funding-deadline">
-                              <span content="2016-01-24T04:41:11+00:00" datatype="xsd:dateTime" property="dc:date" class="date-display-single">1/24/2016</span>
-                            </td>
-                          </tr>
-                        </tbody>
-                      </table>
-                      <div class="view__footer">
-                        <p><a href="/funding" class="button button--highlight">View Your Complete Funding History</a></p>
-                        <div class="view view--dashboard view--id-dashboard view--display-id-dashboard_reco view--card-view-4col view--dom-id-5d7420c1fff917c894a01b3b7d17bdf8 view-dashboard view-id-dashboard view-display-id-dashboard_reco view-dom-id-5d7420c1fff917c894a01b3b7d17bdf8">
-                          <div class="view__header">
-                            <h2 class="dashboard__title">Funding Recommended for You</h2>
-                          </div>
-                          {{# listItems.eight }}
-                            <div class="views-row">
-                              {{> organisms-funding-op-teaser }}
-                            </div>
-                          {{/ listItems.eight }}
-
-
-                        </div>
-                        <p><a href="/funding" class="button button--highlight">View all funding opportunities</a></p>
-                        <div data-ng-controller="FundingCountController" class="ng-scope">
-                          <div selection="selection" items="items" data="data" class="ng-isolate-scope">
-                            <!-- ngIf: data.chartTitle --><!-- ngIf: items -->
-                            <div>
-                              <svg id="bar_chart__003" class="chart bar-chart vertical"/>
+                    <div class="l-panels-dashboard main sidebar bottom-left bottom-right">
+                      <div class="l-wrapper">
+                        <aside class="l-sidebar">
+                          <div class="pane pane--dashboard-notification-center">
+                            <div class="pane__content">
+                              <div class="dashboard-notifications">
+                                <h2>NOTIFICATIONS</h2>
+                                <ul>
+                                  <li><a href="/users/aklatsky">Alex Klatsky</a>, <a href="/users/vitraphigelu">vitraphigelu</a>, <a href="/users/aklatsk2gmailcom">alex klatsky</a> commented on your content</li>
+                                  <li><a href="/users/vitraphigelu">vitraphigelu</a>, <a href="/users/frabusocriw">frabusocriw</a>, <a href="/users/testustosto">testustosto</a> follow you</li>
+                                  <li><a href="/users/aklatsky">Alex Klatsky</a>, <a href="/users/aklatsk2gmailcom">alex klatsky</a>, <a href="/users/dmcdermott">Daniel McDermott</a> follows your content</li>
+                                  <li>Find Innovations on the <a href="/innovations">Exchange</a>.</li>
+                                </ul>
+                              </div>
                             </div>
                           </div>
-                        </div>
-                        <div class="dashboard__funding__chart__more__link">
-                          <a href="/data" class="button button--highlight">View the GIX's Data</a>
-                        </div>
-                      </div>
-                    </div>
+                        </aside>
+                        <div class="l-main-wrapper">
+                          <div class="l-main">
 
-                    <div class="block block-panels-mini-dashboard-follow block--panels-mini block--panels-mini-dashboard-follow" id="block-panels-mini-dashboard-follow">
-                      <div id="mini-panel-dashboard_follow" class="panel-display panel-1col clearfix">
-                        <div class="panel-panel panel-col">
-                          <div>
-                            <div class="pane pane--dashboard-users-panel-pane-1">
-                              <h2 class="pane__title">People You Follow</h2>
+                            <div class="pane pane--dashboard-exchange-updates">
                               <div class="pane__content">
-                                <div class="view view--dashboard-users view--id-dashboard_users view--display-id-panel_pane_1 view--card-view-4col view--dom-id-c60c7e439f82a1ec408fa068a95a1189 view-dashboard-users view-id-dashboard_users view-display-id-panel_pane_1 view-dom-id-c60c7e439f82a1ec408fa068a95a1189">
-                                  {{# listItems.three }}
-                                    <div class="views-row">
-                                      {{> organisms-user-teaser }}
-                                    </div>
-                                  {{/ listItems.three }}
+                                <h2 class="pane__title">EXCHANGE AT A GLANCE</h2>
+                                <div class="view view--data-page-views view--data-points">
+                                  <div class="views-row">
+                                    <article class="node node--persona node--data view-mode-data">
+                                      <div class="data-point"><a href="#">334 <span>Organizations</span></a></div>
+                                    </article>
+                                  </div>
+                                  <div class="views-row">
+                                    <article class="node node--persona node--data view-mode-data ">
+                                      <div class="data-point"><a href="#">$349.4M <span>Available</span></a></div>
+                                    </article>
+                                  </div>
+                                  <div class="views-row">
+                                    <article class="node node--persona node--data view-mode-data">
+                                      <div class="data-point"><a href="#">1636 <span>Collaborators</span></a></div>
+                                    </article>
+                                  </div>
+                                  <div class="views-row">
+                                    <article class="node node--persona node--data view-mode-data">
+                                      <div class="data-point"><a href="#">3907 <span>Innovations</span></a></div>
+                                    </article>
+                                  </div>
                                 </div>
                               </div>
                             </div>
-                            <div class="pane-1 pane pane--custom">
+
+                            <div class="pane pane--dashboard-featured-items">
                               <div class="pane__content">
-                                <p><a href="#" class="button button--highlight">See all Exchange Users</a></p>
+                                <ul class="list-class">
+                                  <li>
+
+                                    <article class="card">
+                                      <h2 class="card__dashboard-type">Exchange Updates</h2>
+                                      <div class="card__image">
+                                        <a href="{{ url }}">{{> atoms-card-image }}</a>
+                                      </div>
+                                      <div class="card__content">
+                                        <div class="card__type">content type</div>
+                                        <h3 class="card__title"><a href="{{ url }}">{{ title }}</a></h3>
+                                      </div>
+                                      <a href="#" class="card__favorite"></a>
+                                    </article>
+
+                                  </li>
+                                </ul>
                               </div>
                             </div>
-                            <div class="pane pane--dashboard-panel-pane-2">
-                              <h2 class="pane__title">Events You Are or Have Attended</h2>
-                              <div class="pane__content">
-                                <div class="view view--dashboard view--id-dashboard view--display-id-panel_pane_2 view--card-view-4col view--dom-id-a558093b8b67cb286534153150680187 view-dashboard view-id-dashboard view-display-id-panel_pane_2 view-dom-id-a558093b8b67cb286534153150680187">
-                                  {{# listItems.two }}
+
+                          </div>
+                          <div class="l-wrapper">
+                            <div class="l-bottom-left">
+
+                              <div class="pane pane--dashboard-new-users">
+                                <h2 class="pane__title">NEW EXCHANGE USERS</h2>
+                                <div class="pane__content">
+                                  <div class="view view--dashboard-new-users">
                                     <div class="views-row">
-                                      {{> organisms-event-teaser }}
+                                      <div class="views-field views-field-nothing">
+                                        <span class="field-content"><a href="#"><img title="Default image, no image supplied by the user." alt="Default image, no image supplied by the user." src="http://giexchange-dev.s3.amazonaws.com/styles/dashboard_profile_image/s3/random/user/iStock_000052855756.jpg?itok=bXp7YfdZ" typeof="foaf:Image"></a> Mike Dos  joined the Exchange <em class="placeholder">2 weeks 1 day</em> ago</span>
+                                      </div>
                                     </div>
-                                  {{/ listItems.two }}
+                                    <div class="views-row">
+                                      <div class="views-field views-field-nothing">
+                                        <span class="field-content"><a href="#"><img title="Default image, no image supplied by the user." alt="Default image, no image supplied by the user." src="http://giexchange-dev.s3.amazonaws.com/styles/dashboard_profile_image/s3/random/user/iStock_000050200156.jpg?itok=8D1X3BlN" typeof="foaf:Image"></a> Dashboard Test  joined the Exchange <em class="placeholder">3 weeks 1 day</em> ago</span>
+                                      </div>
+                                    </div>
+                                    <div class="views-row">
+                                      <div class="views-field views-field-nothing">
+                                        <span class="field-content"><a href="#"></a>    joined the Exchange <em class="placeholder">3 weeks 3 days</em> ago</span>
+                                      </div>
+                                    </div>
+                                    <div class="views-row">
+                                      <div class="views-field views-field-nothing">
+                                        <span class="field-content"><a href="#"></a>    joined the Exchange <em class="placeholder">3 weeks 3 days</em> ago</span>
+                                      </div>
+                                    </div>
+                                  </div>
                                 </div>
                               </div>
+
                             </div>
-                            <div class="pane-2 pane pane--custom">
-                              <div class="pane__content">
-                                <p><a href="#" class="button button--highlight">See all Exchange Events</a></p>
+                            <div class="l-bottom-right">
+
+                              <div class="pane pane--dashboard-data-viz">
+                                <h2 class="pane__title">Funding Counts Chart</h2>
+                                <div class="pane__content">
+                                  <div data-ng-controller="FundingCountController"><bar-chart></bar-chart></div>
+                                </div>
                               </div>
+
                             </div>
                           </div>
                         </div>
                       </div>
                     </div>
-
                  </div>
                 </div>
               </div>
@@ -302,8 +163,6 @@
           </div>
         </div>
       </div>
-
-
 
     </div>
   </div>
