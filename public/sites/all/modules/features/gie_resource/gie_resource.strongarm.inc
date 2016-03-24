@@ -159,6 +159,12 @@ function gie_resource_strongarm() {
       'long_form_footer_logo' => array(
         'custom_settings' => FALSE,
       ),
+      'spotlight' => array(
+        'custom_settings' => TRUE,
+      ),
+      'microsite_content_slider' => array(
+        'custom_settings' => FALSE,
+      ),
     ),
     'extra_fields' => array(
       'form' => array(
@@ -208,7 +214,11 @@ function gie_resource_strongarm() {
             'visible' => FALSE,
           ),
           'contact' => array(
-            'weight' => '24',
+            'weight' => '23',
+            'visible' => FALSE,
+          ),
+          'spotlight' => array(
+            'weight' => '19',
             'visible' => FALSE,
           ),
         ),
@@ -246,7 +256,11 @@ function gie_resource_strongarm() {
             'visible' => FALSE,
           ),
           'contact' => array(
-            'weight' => '18',
+            'weight' => '17',
+            'visible' => FALSE,
+          ),
+          'spotlight' => array(
+            'weight' => '21',
             'visible' => FALSE,
           ),
         ),
@@ -284,7 +298,11 @@ function gie_resource_strongarm() {
             'visible' => FALSE,
           ),
           'contact' => array(
-            'weight' => '17',
+            'weight' => '16',
+            'visible' => FALSE,
+          ),
+          'spotlight' => array(
+            'weight' => '23',
             'visible' => FALSE,
           ),
         ),
@@ -314,7 +332,11 @@ function gie_resource_strongarm() {
             'visible' => FALSE,
           ),
           'contact' => array(
-            'weight' => '19',
+            'weight' => '18',
+            'visible' => FALSE,
+          ),
+          'spotlight' => array(
+            'weight' => '24',
             'visible' => FALSE,
           ),
         ),
@@ -344,6 +366,10 @@ function gie_resource_strongarm() {
             'visible' => FALSE,
           ),
           'contact' => array(
+            'weight' => '21',
+            'visible' => FALSE,
+          ),
+          'spotlight' => array(
             'weight' => '22',
             'visible' => FALSE,
           ),
@@ -354,7 +380,7 @@ function gie_resource_strongarm() {
             'visible' => TRUE,
           ),
           'contact' => array(
-            'weight' => '11',
+            'weight' => '10',
             'visible' => FALSE,
           ),
           'at_a_glance' => array(
@@ -369,6 +395,10 @@ function gie_resource_strongarm() {
             'weight' => '1',
             'visible' => FALSE,
           ),
+          'spotlight' => array(
+            'weight' => '11',
+            'visible' => FALSE,
+          ),
         ),
         'flag_favorite' => array(
           'default' => array(
@@ -376,7 +406,7 @@ function gie_resource_strongarm() {
             'visible' => TRUE,
           ),
           'contact' => array(
-            'weight' => '20',
+            'weight' => '19',
             'visible' => FALSE,
           ),
           'at_a_glance' => array(
@@ -391,6 +421,10 @@ function gie_resource_strongarm() {
             'weight' => '10',
             'visible' => FALSE,
           ),
+          'spotlight' => array(
+            'weight' => '4',
+            'visible' => TRUE,
+          ),
         ),
         'flag_abuse_node' => array(
           'default' => array(
@@ -398,7 +432,7 @@ function gie_resource_strongarm() {
             'visible' => TRUE,
           ),
           'contact' => array(
-            'weight' => '21',
+            'weight' => '20',
             'visible' => FALSE,
           ),
           'at_a_glance' => array(
@@ -411,6 +445,10 @@ function gie_resource_strongarm() {
           ),
           'details' => array(
             'weight' => '10',
+            'visible' => FALSE,
+          ),
+          'spotlight' => array(
+            'weight' => '18',
             'visible' => FALSE,
           ),
         ),

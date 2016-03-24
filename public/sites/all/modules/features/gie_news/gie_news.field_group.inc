@@ -58,8 +58,8 @@ function gie_news_field_group_info() {
     'children' => array(
       0 => 'title_field',
       1 => 'field_news_sector',
-      2 => 'group_card_counts',
-      3 => 'group_card_author',
+      2 => 'group_card_author',
+      3 => 'group_card_counts',
     ),
     'format_type' => 'div',
     'format_settings' => array(

@@ -39,7 +39,6 @@ function gie_organization_field_default_field_bases() {
     'indexes' => array(
       'format' => array(
         0 => 'format',
-
       ),
     ),
     'locked' => 0,

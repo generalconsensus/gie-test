@@ -285,6 +285,35 @@ function gie_resource_ds_field_settings_info() {
   );
   $export['node|resource|search_listing'] = $ds_fieldsetting;
 
+  $ds_fieldsetting = new stdClass();
+  $ds_fieldsetting->api_version = 1;
+  $ds_fieldsetting->id = 'node|resource|spotlight';
+  $ds_fieldsetting->entity_type = 'node';
+  $ds_fieldsetting->bundle = 'resource';
+  $ds_fieldsetting->view_mode = 'spotlight';
+  $ds_fieldsetting->settings = array(
+    'content_type' => array(
+      'weight' => '2',
+      'label' => 'hidden',
+      'format' => 'default',
+    ),
+    'title_field' => array(
+      'formatter_settings' => array(
+        'ft' => array(
+          'func' => 'theme_ds_field_expert',
+          'fi' => TRUE,
+          'fi-el' => 'h3',
+          'fi-cl' => 'card__title',
+          'fi-at' => '',
+          'fi-def-at' => FALSE,
+          'fi-odd-even' => FALSE,
+          'fi-first-last' => FALSE,
+        ),
+      ),
+    ),
+  );
+  $export['node|resource|spotlight'] = $ds_fieldsetting;
+
   return $export;
 }
 
@@ -409,6 +438,36 @@ function gie_resource_ds_layout_settings_info() {
     'layout_link_custom' => '',
   );
   $export['node|resource|at_a_glance'] = $ds_layout;
+
+  $ds_layout = new stdClass();
+  $ds_layout->api_version = 1;
+  $ds_layout->id = 'node|resource|contact';
+  $ds_layout->entity_type = 'node';
+  $ds_layout->bundle = 'resource';
+  $ds_layout->view_mode = 'contact';
+  $ds_layout->layout = 'ds_1col';
+  $ds_layout->settings = array(
+    'regions' => array(
+      'ds_content' => array(
+        0 => 'group_resource_contact',
+        1 => 'field_resource_author',
+      ),
+    ),
+    'fields' => array(
+      'group_resource_contact' => 'ds_content',
+      'field_resource_author' => 'ds_content',
+    ),
+    'classes' => array(),
+    'wrappers' => array(
+      'ds_content' => 'div',
+    ),
+    'layout_wrapper' => 'div',
+    'layout_attributes' => '',
+    'layout_attributes_merge' => 1,
+    'layout_link_attribute' => '',
+    'layout_link_custom' => '',
+  );
+  $export['node|resource|contact'] = $ds_layout;
 
   $ds_layout = new stdClass();
   $ds_layout->api_version = 1;
@@ -645,6 +704,42 @@ function gie_resource_ds_layout_settings_info() {
     'layout_link_custom' => '',
   );
   $export['node|resource|search_listing'] = $ds_layout;
+
+  $ds_layout = new stdClass();
+  $ds_layout->api_version = 1;
+  $ds_layout->id = 'node|resource|spotlight';
+  $ds_layout->entity_type = 'node';
+  $ds_layout->bundle = 'resource';
+  $ds_layout->view_mode = 'spotlight';
+  $ds_layout->layout = 'article';
+  $ds_layout->settings = array(
+    'regions' => array(
+      'main_content' => array(
+        0 => 'group_card_content',
+        1 => 'content_type',
+        2 => 'title_field',
+        3 => 'flag_favorite',
+      ),
+    ),
+    'fields' => array(
+      'group_card_content' => 'main_content',
+      'content_type' => 'main_content',
+      'title_field' => 'main_content',
+      'flag_favorite' => 'main_content',
+    ),
+    'classes' => array(),
+    'wrappers' => array(
+      'header' => 'div',
+      'main_content' => 'div',
+      'footer' => 'div',
+    ),
+    'layout_wrapper' => 'div',
+    'layout_attributes' => '',
+    'layout_attributes_merge' => 1,
+    'layout_link_attribute' => '',
+    'layout_link_custom' => '',
+  );
+  $export['node|resource|spotlight'] = $ds_layout;
 
   $ds_layout = new stdClass();
   $ds_layout->api_version = 1;

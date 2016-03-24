@@ -8,18 +8,17 @@
     .nav__item {}
 
     .nav__link {
-      
-      @each $current-color in $microsite-primary-list {
-        $i: index($microsite-primary-list, $current-color);
-        .microsite-palette#{$i} & { // body class
+
+      @each $item, $color in $micrositeColorMap {
+        .microsite-palette#{$item} & {
           &:hover,
           &:focus {
-            color: darken($current-color,20%);
+            color: darken(micro-site($item, 'primary'),20%);
           }
         }
       }
-      
-      font-weight: normal;      
+
+      font-weight: normal;
     }
 
     .footer-simple & {
