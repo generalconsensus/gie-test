@@ -412,6 +412,106 @@ function gie_innovation_field_default_field_instances() {
     ),
   );
 
+  // Exported field_instance: 'node-innovation-field_featured'
+  $field_instances['node-innovation-field_featured'] = array(
+    'bundle' => 'innovation',
+    'default_value' => array(
+      0 => array(
+        'value' => 0,
+      ),
+    ),
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'at_a_glance' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'contact' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'default' => array(
+        'label' => 'above',
+        'module' => 'list',
+        'settings' => array(
+          'field_delimiter' => '',
+          'linked_field' => array(
+            'advanced' => array(
+              'class' => '',
+              'rel' => '',
+              'target' => '',
+              'text' => '',
+              'title' => '',
+            ),
+            'destination' => '',
+            'linked' => 0,
+          ),
+        ),
+        'type' => 'list_default',
+        'weight' => 52,
+      ),
+      'full' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'highlights' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'listing' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'search_listing' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'teaser_date' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'ds_extras_field_template' => '',
+    'entity_type' => 'node',
+    'field_name' => 'field_featured',
+    'label' => 'Featured',
+    'required' => 0,
+    'settings' => array(
+      'description_display' => 'after',
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'options',
+      'settings' => array(
+        'display_label' => 1,
+      ),
+      'type' => 'options_onoff',
+      'weight' => 41,
+    ),
+  );
+
   // Exported field_instance: 'node-innovation-field_innovation_address'
   $field_instances['node-innovation-field_innovation_address'] = array(
     'bundle' => 'innovation',
@@ -498,6 +598,12 @@ function gie_innovation_field_default_field_instances() {
         'settings' => array(),
         'type' => 'hidden',
         'weight' => 0,
+      ),
+      'spotlight' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 56,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -613,6 +719,12 @@ function gie_innovation_field_default_field_instances() {
         'type' => 'hidden',
         'weight' => 9,
       ),
+      'spotlight' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 13,
+      ),
       'teaser' => array(
         'label' => 'above',
         'settings' => array(),
@@ -723,6 +835,12 @@ function gie_innovation_field_default_field_instances() {
         'type' => 'hidden',
         'weight' => 10,
       ),
+      'spotlight' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 14,
+      ),
       'teaser' => array(
         'label' => 'above',
         'settings' => array(),
@@ -828,6 +946,12 @@ function gie_innovation_field_default_field_instances() {
         'settings' => array(),
         'type' => 'hidden',
         'weight' => 35,
+      ),
+      'spotlight' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 44,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -951,6 +1075,12 @@ function gie_innovation_field_default_field_instances() {
         'type' => 'hidden',
         'weight' => 42,
       ),
+      'spotlight' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 51,
+      ),
       'teaser' => array(
         'label' => 'above',
         'settings' => array(),
@@ -1068,6 +1198,12 @@ function gie_innovation_field_default_field_instances() {
         'settings' => array(),
         'type' => 'hidden',
         'weight' => 20,
+      ),
+      'spotlight' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 29,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -1219,6 +1355,12 @@ function gie_innovation_field_default_field_instances() {
         'type' => 'smart_trim_format',
         'weight' => 1,
       ),
+      'spotlight' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 12,
+      ),
       'teaser' => array(
         'label' => 'above',
         'settings' => array(),
@@ -1366,6 +1508,12 @@ function gie_innovation_field_default_field_instances() {
         'type' => 'hidden',
         'weight' => 25,
       ),
+      'spotlight' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 34,
+      ),
       'teaser' => array(
         'label' => 'above',
         'settings' => array(),
@@ -1499,6 +1647,12 @@ function gie_innovation_field_default_field_instances() {
         'type' => 'hidden',
         'weight' => 37,
       ),
+      'spotlight' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 46,
+      ),
       'teaser' => array(
         'label' => 'above',
         'settings' => array(),
@@ -1601,6 +1755,12 @@ function gie_innovation_field_default_field_instances() {
         'settings' => array(),
         'type' => 'hidden',
         'weight' => 31,
+      ),
+      'spotlight' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 40,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -1730,6 +1890,12 @@ function gie_innovation_field_default_field_instances() {
         'type' => 'hidden',
         'weight' => 41,
       ),
+      'spotlight' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 50,
+      ),
       'teaser' => array(
         'label' => 'above',
         'settings' => array(),
@@ -1852,6 +2018,28 @@ Using the selector below, highlight the area of the image you would like to feat
         'settings' => array(),
         'type' => 'hidden',
         'weight' => 47,
+      ),
+      'spotlight' => array(
+        'label' => 'hidden',
+        'module' => 'image',
+        'settings' => array(
+          'field_delimiter' => '',
+          'image_link' => '',
+          'image_style' => 'card__500x300_',
+          'linked_field' => array(
+            'advanced' => array(
+              'class' => '',
+              'rel' => '',
+              'target' => '',
+              'text' => '',
+              'title' => '',
+            ),
+            'destination' => '',
+            'linked' => 0,
+          ),
+        ),
+        'type' => 'image',
+        'weight' => 55,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -1989,6 +2177,12 @@ Using the selector below, highlight the area of the image you would like to feat
         'settings' => array(),
         'type' => 'hidden',
         'weight' => 27,
+      ),
+      'spotlight' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 36,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -2133,6 +2327,12 @@ Using the selector below, highlight the area of the image you would like to feat
         'type' => 'hidden',
         'weight' => 21,
       ),
+      'spotlight' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 30,
+      ),
       'teaser' => array(
         'label' => 'above',
         'settings' => array(),
@@ -2252,6 +2452,12 @@ Using the selector below, highlight the area of the image you would like to feat
         'settings' => array(),
         'type' => 'hidden',
         'weight' => 0,
+      ),
+      'spotlight' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 58,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -2375,6 +2581,12 @@ Using the selector below, highlight the area of the image you would like to feat
         'type' => 'hidden',
         'weight' => 0,
       ),
+      'spotlight' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 60,
+      ),
       'teaser' => array(
         'label' => 'above',
         'settings' => array(),
@@ -2492,6 +2704,12 @@ Using the selector below, highlight the area of the image you would like to feat
         'settings' => array(),
         'type' => 'hidden',
         'weight' => 28,
+      ),
+      'spotlight' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 37,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -2617,6 +2835,12 @@ Using the selector below, highlight the area of the image you would like to feat
         'settings' => array(),
         'type' => 'hidden',
         'weight' => 36,
+      ),
+      'spotlight' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 45,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -2749,6 +2973,12 @@ Using the selector below, highlight the area of the image you would like to feat
         'type' => 'hidden',
         'weight' => 11,
       ),
+      'spotlight' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 15,
+      ),
       'teaser' => array(
         'label' => 'above',
         'settings' => array(),
@@ -2877,6 +3107,12 @@ Using the selector below, highlight the area of the image you would like to feat
         'type' => 'hidden',
         'weight' => 0,
       ),
+      'spotlight' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 57,
+      ),
       'teaser' => array(
         'label' => 'above',
         'settings' => array(),
@@ -2999,6 +3235,12 @@ Using the selector below, highlight the area of the image you would like to feat
         'type' => 'hidden',
         'weight' => 0,
       ),
+      'spotlight' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 59,
+      ),
       'teaser' => array(
         'label' => 'above',
         'settings' => array(),
@@ -3119,6 +3361,12 @@ Using the selector below, highlight the area of the image you would like to feat
         'type' => 'hidden',
         'weight' => 22,
       ),
+      'spotlight' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 31,
+      ),
       'teaser' => array(
         'label' => 'above',
         'settings' => array(),
@@ -3232,6 +3480,12 @@ Using the selector below, highlight the area of the image you would like to feat
         'settings' => array(),
         'type' => 'hidden',
         'weight' => 39,
+      ),
+      'spotlight' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 48,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -3351,6 +3605,12 @@ Using the selector below, highlight the area of the image you would like to feat
         'type' => 'hidden',
         'weight' => 38,
       ),
+      'spotlight' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 47,
+      ),
       'teaser' => array(
         'label' => 'above',
         'settings' => array(),
@@ -3464,6 +3724,12 @@ Using the selector below, highlight the area of the image you would like to feat
         'type' => 'hidden',
         'weight' => 34,
       ),
+      'spotlight' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 43,
+      ),
       'teaser' => array(
         'label' => 'above',
         'settings' => array(),
@@ -3572,6 +3838,12 @@ Using the selector below, highlight the area of the image you would like to feat
         'type' => 'hidden',
         'weight' => 40,
       ),
+      'spotlight' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 49,
+      ),
       'teaser' => array(
         'label' => 'above',
         'settings' => array(),
@@ -3672,6 +3944,12 @@ Using the selector below, highlight the area of the image you would like to feat
         'settings' => array(),
         'type' => 'hidden',
         'weight' => 32,
+      ),
+      'spotlight' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 41,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -3783,6 +4061,12 @@ Using the selector below, highlight the area of the image you would like to feat
         'settings' => array(),
         'type' => 'hidden',
         'weight' => 0,
+      ),
+      'spotlight' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 61,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -3910,6 +4194,12 @@ Using the selector below, highlight the area of the image you would like to feat
         'settings' => array(),
         'type' => 'hidden',
         'weight' => 29,
+      ),
+      'spotlight' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 38,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -4049,6 +4339,12 @@ Using the selector below, highlight the area of the image you would like to feat
         'type' => 'hidden',
         'weight' => 13,
       ),
+      'spotlight' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 17,
+      ),
       'teaser' => array(
         'label' => 'above',
         'settings' => array(),
@@ -4164,6 +4460,12 @@ Using the selector below, highlight the area of the image you would like to feat
         'settings' => array(),
         'type' => 'hidden',
         'weight' => 33,
+      ),
+      'spotlight' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 42,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -4308,6 +4610,12 @@ Using the selector below, highlight the area of the image you would like to feat
         'type' => 'hidden',
         'weight' => 23,
       ),
+      'spotlight' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 32,
+      ),
       'teaser' => array(
         'label' => 'above',
         'settings' => array(),
@@ -4438,6 +4746,12 @@ Using the selector below, highlight the area of the image you would like to feat
         'type' => 'hidden',
         'weight' => 30,
       ),
+      'spotlight' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 39,
+      ),
       'teaser' => array(
         'label' => 'above',
         'settings' => array(),
@@ -4561,6 +4875,12 @@ Using the selector below, highlight the area of the image you would like to feat
         'settings' => array(),
         'type' => 'hidden',
         'weight' => 26,
+      ),
+      'spotlight' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 35,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -4733,6 +5053,12 @@ Using the selector below, highlight the area of the image you would like to feat
         'type' => 'hidden',
         'weight' => 12,
       ),
+      'spotlight' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 16,
+      ),
       'teaser' => array(
         'label' => 'above',
         'settings' => array(),
@@ -4848,6 +5174,12 @@ Using the selector below, highlight the area of the image you would like to feat
         'settings' => array(),
         'type' => 'hidden',
         'weight' => 43,
+      ),
+      'spotlight' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 52,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -4983,6 +5315,12 @@ Using the selector below, highlight the area of the image you would like to feat
         'type' => 'hidden',
         'weight' => 24,
       ),
+      'spotlight' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 33,
+      ),
       'teaser' => array(
         'label' => 'above',
         'settings' => array(),
@@ -5112,6 +5450,12 @@ Using the selector below, highlight the area of the image you would like to feat
         'type' => 'hidden',
         'weight' => 46,
       ),
+      'spotlight' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 55,
+      ),
       'teaser' => array(
         'label' => 'above',
         'settings' => array(),
@@ -5227,6 +5571,12 @@ Using the selector below, highlight the area of the image you would like to feat
         'settings' => array(),
         'type' => 'hidden',
         'weight' => 44,
+      ),
+      'spotlight' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 53,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -5353,6 +5703,12 @@ Using the selector below, highlight the area of the image you would like to feat
         'type' => 'hidden',
         'weight' => 45,
       ),
+      'spotlight' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 54,
+      ),
       'teaser' => array(
         'label' => 'above',
         'settings' => array(),
@@ -5407,8 +5763,25 @@ Using the selector below, highlight the area of the image you would like to feat
       ),
       'default' => array(
         'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
+        'module' => 'title',
+        'settings' => array(
+          'field_delimiter' => '',
+          'linked_field' => array(
+            'advanced' => array(
+              'class' => '',
+              'rel' => '',
+              'target' => '',
+              'text' => '',
+              'title' => '',
+            ),
+            'destination' => '',
+            'linked' => 0,
+          ),
+          'title_class' => '',
+          'title_link' => '',
+          'title_style' => '',
+        ),
+        'type' => 'title_linked',
         'weight' => 0,
       ),
       'full' => array(
@@ -5508,6 +5881,29 @@ Using the selector below, highlight the area of the image you would like to feat
         ),
         'type' => 'title_linked',
         'weight' => 0,
+      ),
+      'spotlight' => array(
+        'label' => 'hidden',
+        'module' => 'title',
+        'settings' => array(
+          'field_delimiter' => '',
+          'linked_field' => array(
+            'advanced' => array(
+              'class' => '',
+              'rel' => '',
+              'target' => '',
+              'text' => '',
+              'title' => '',
+            ),
+            'destination' => '',
+            'linked' => 0,
+          ),
+          'title_class' => '',
+          'title_link' => 'content',
+          'title_style' => '_none',
+        ),
+        'type' => 'title_linked',
+        'weight' => 1,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -6052,6 +6448,7 @@ Using the selector below, highlight the area of the image you would like to feat
   t('Evidence Available?');
   t('Evidence it Works');
   t('Exchange References');
+  t('Featured');
   t('Featured Image');
   t('First Name');
   t('From the drop down list, pick as many types as apply to your innovation.');

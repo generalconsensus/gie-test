@@ -150,6 +150,21 @@ function gie_funding_strongarm() {
       'highlights' => array(
         'custom_settings' => TRUE,
       ),
+      'spotlight' => array(
+        'custom_settings' => TRUE,
+      ),
+      'data' => array(
+        'custom_settings' => FALSE,
+      ),
+      'microsite_content_slider' => array(
+        'custom_settings' => FALSE,
+      ),
+      'needs_list' => array(
+        'custom_settings' => FALSE,
+      ),
+      'long_form_footer_logo' => array(
+        'custom_settings' => FALSE,
+      ),
     ),
     'extra_fields' => array(
       'form' => array(
@@ -190,6 +205,10 @@ function gie_funding_strongarm() {
             'weight' => '17',
             'visible' => FALSE,
           ),
+          'spotlight' => array(
+            'weight' => '22',
+            'visible' => FALSE,
+          ),
         ),
         'funding_fields_link_url' => array(
           'full' => array(
@@ -214,6 +233,10 @@ function gie_funding_strongarm() {
           ),
           'highlights' => array(
             'weight' => '14',
+            'visible' => FALSE,
+          ),
+          'spotlight' => array(
+            'weight' => '24',
             'visible' => FALSE,
           ),
         ),
@@ -242,6 +265,10 @@ function gie_funding_strongarm() {
             'weight' => '13',
             'visible' => FALSE,
           ),
+          'spotlight' => array(
+            'weight' => '18',
+            'visible' => FALSE,
+          ),
         ),
         'funding_listing_counts_comments' => array(
           'listing' => array(
@@ -251,6 +278,7 @@ function gie_funding_strongarm() {
           'search_listing' => NULL,
           'at_a_glance' => NULL,
           'highlights' => NULL,
+          'spotlight' => NULL,
         ),
         'funding_listing_counts_favorites' => array(
           'listing' => array(
@@ -260,6 +288,7 @@ function gie_funding_strongarm() {
           'search_listing' => NULL,
           'at_a_glance' => NULL,
           'highlights' => NULL,
+          'spotlight' => NULL,
         ),
         'funding_counters_comment_count' => array(
           'listing' => array(
@@ -284,6 +313,10 @@ function gie_funding_strongarm() {
           ),
           'highlights' => array(
             'weight' => '21',
+            'visible' => FALSE,
+          ),
+          'spotlight' => array(
+            'weight' => '27',
             'visible' => FALSE,
           ),
         ),
@@ -312,6 +345,10 @@ function gie_funding_strongarm() {
             'weight' => '20',
             'visible' => FALSE,
           ),
+          'spotlight' => array(
+            'weight' => '28',
+            'visible' => FALSE,
+          ),
         ),
         'funding_ops_counters_comments' => array(
           'at_a_glance' => array(
@@ -332,6 +369,10 @@ function gie_funding_strongarm() {
           ),
           'highlights' => array(
             'weight' => '16',
+            'visible' => FALSE,
+          ),
+          'spotlight' => array(
+            'weight' => '26',
             'visible' => FALSE,
           ),
         ),
@@ -356,6 +397,10 @@ function gie_funding_strongarm() {
             'weight' => '19',
             'visible' => FALSE,
           ),
+          'spotlight' => array(
+            'weight' => '25',
+            'visible' => FALSE,
+          ),
         ),
         'funding_ops_counters_amount' => array(
           'at_a_glance' => array(
@@ -378,6 +423,10 @@ function gie_funding_strongarm() {
             'weight' => '18',
             'visible' => FALSE,
           ),
+          'spotlight' => array(
+            'weight' => '20',
+            'visible' => FALSE,
+          ),
         ),
         'funding_fields_deadline' => array(
           'full' => array(
@@ -396,11 +445,46 @@ function gie_funding_strongarm() {
             'weight' => '15',
             'visible' => FALSE,
           ),
+          'spotlight' => array(
+            'weight' => '19',
+            'visible' => FALSE,
+          ),
         ),
         'funding_counters_eligibility' => array(
           'listing' => array(
             'weight' => '3',
             'visible' => TRUE,
+          ),
+          'spotlight' => NULL,
+        ),
+        'domain' => array(
+          'default' => array(
+            'weight' => '1',
+            'visible' => TRUE,
+          ),
+          'spotlight' => array(
+            'weight' => '11',
+            'visible' => FALSE,
+          ),
+        ),
+        'flag_favorite' => array(
+          'default' => array(
+            'weight' => '10',
+            'visible' => TRUE,
+          ),
+          'spotlight' => array(
+            'weight' => '2',
+            'visible' => TRUE,
+          ),
+        ),
+        'flag_abuse_node' => array(
+          'default' => array(
+            'weight' => '10',
+            'visible' => TRUE,
+          ),
+          'spotlight' => array(
+            'weight' => '21',
+            'visible' => FALSE,
           ),
         ),
       ),

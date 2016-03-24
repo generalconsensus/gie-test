@@ -9,6 +9,11 @@ include_once 'gie_dashboard.features.inc';
 /*
  * Implements hook_ctools_plugin_directory()
  */
+/**
+ * @param $owner
+ * @param $plugin_type
+ * @return string
+ */
 function gie_dashboard_ctools_plugin_directory($owner, $plugin_type) {
   if ($owner == 'ctools' && $plugin_type == 'content_types') {
     return 'plugins/' . $plugin_type;
@@ -45,6 +50,10 @@ function gie_dashboard_search_api_solr_query_alter(array &$call_args, SearchApiQ
 /*
  * Implements hook_form_FORM_ID_alter().
  */
+/**
+ * @param $form
+ * @param $form_state
+ */
 function gie_dashboard_form_user_profile_form_alter(&$form, &$form_state) {
   $admin_role = user_role_load_by_name('administrator');
   // Set field visibility based on whether the user is an admin
@@ -55,6 +64,10 @@ function gie_dashboard_form_user_profile_form_alter(&$form, &$form_state) {
 
 /*
  * Implements hook_form_FORM_ID_alter().
+ */
+/**
+ * @param $form
+ * @param $form_state
  */
 function gie_dashboard_form_node_form_alter(&$form, &$form_state) {
   $types = array(
@@ -84,6 +97,9 @@ function gie_dashboard_views_pre_view($view) {
   }
 }
 
+/**
+ * @param $view
+ */
 function gie_dashboard_views_pre_render(&$view) {
   if ($view->name == 'dashboard' && $view->current_display == 'user_funding_opportunities' && !empty($view->result)) {
     foreach ($view->result as $key => $result) {
@@ -139,7 +155,12 @@ function gie_dashboard_menu() {
   return $items;
 }
 
-function gie_dashboard_dummy_data($original_user_uid = NULL, $pieces = NULL) {
+/**
+ * @param null $original_user_uid
+ * @param null $pieces
+ * @throws \Exception
+ */
+function gie_dashboard_dummy_data($tab, $original_user_uid = NULL, $pieces = NULL) {
   $original_user_uid = !empty($original_user_uid) ? $original_user_uid : 1;
   $pieces = !empty($pieces) ? $pieces : 6;
 
@@ -273,6 +294,14 @@ function gie_dashboard_dummy_data($original_user_uid = NULL, $pieces = NULL) {
 
 }
 
+/**
+ * @param $type
+ * @param $uid
+ * @param $pieces
+ * @param null $payload
+ * @return array
+ * @throws \Exception
+ */
 function gie_dashboard_create_node($type, $uid, $pieces, $payload = NULL) {
   $path = drupal_get_path('module', 'devel_generate');
   require_once($path . '/devel_generate.inc');
@@ -316,6 +345,13 @@ function gie_dashboard_create_node($type, $uid, $pieces, $payload = NULL) {
   return $nodes;
 }
 
+/**
+ * @param $pieces
+ * @param null $name
+ * @param null $payload
+ * @return array|void
+ * @throws \Exception
+ */
 function gie_dashboard_create_user($pieces, $name = NULL, $payload = NULL) {
   $path = drupal_get_path('module', 'devel_generate');
   require_once($path . '/devel_generate.inc');
@@ -369,6 +405,11 @@ function gie_dashboard_create_user($pieces, $name = NULL, $payload = NULL) {
   return $users;
 }
 
+/**
+ * @param $bundle
+ * @param $filter
+ * @return array
+ */
 function dashboard_recommendation_engine($bundle, $filter) {
   global $user;
   $matches = array();
@@ -507,6 +548,11 @@ function dashboard_recommendation_engine($bundle, $filter) {
   return $matches;
 }
 
+/**
+ * @param $form
+ * @param $form_state
+ * @return mixed
+ */
 function dashboard_recommended_innovations_form($form, &$form_state) {
 
   $bundle = array('innovation');
@@ -514,25 +560,24 @@ function dashboard_recommended_innovations_form($form, &$form_state) {
   $matches = dashboard_recommendation_engine($bundle, $filter);
   $payload = array();
   $inc = 0;
-  $user_model = FALSE;
 
-  $form['sectors'] = array(
+  $form['my_sectors'] = array(
     '#type' => 'submit',
     '#value' => t('My Sectors')
   );
-  $form['topics'] = array(
+  $form['my_topics'] = array(
     '#type' => 'submit',
     '#value' => t('My Topics')
   );
-  $form['skills'] = array(
+  $form['my_skills'] = array(
     '#type' => 'submit',
     '#value' => t('My Skills')
   );
-  $form['friends'] = array(
+  $form['my_friends'] = array(
     '#type' => 'submit',
     '#value' => t('My Friends')
   );
-  $form['following'] = array(
+  $form['im_following'] = array(
     '#type' => 'submit',
     '#value' => t('I\'m Following')
   );
@@ -546,11 +591,33 @@ function dashboard_recommended_innovations_form($form, &$form_state) {
   );
 
 
-  foreach ($matches as $key => $sector_match) {
-    $inc += 1;
-    $entity = entity_view('node', array(node_load($sector_match)), 'listing');
-    if (!empty($entity)) {
-      $payload[$key + $inc] = render($entity);
+  if (!empty($matches)) {
+    foreach ($matches as $key => $sector_match) {
+      $inc += 1;
+      $entity = entity_view('node', array(node_load($sector_match)), 'listing');
+      if (!empty($entity)) {
+        $payload[$key + $inc] = render($entity);
+      }
+    }
+  }
+  else {
+    global $user;
+    switch ($filter) {
+      case 'my_sectors':
+        $payload[] = t('There are no innovation recommendations based on your sector preferences.') . l(t('Update your preferences'), 'user/' . $user->uid . '/edit') . t(' to get better results');
+        break;
+      case 'my_topics':
+        $payload[] = t('There are no innovation recommendations based on your topic preferences.') . l(t('Update your preferences'), 'user/' . $user->uid . '/edit') . t(' to get better results');
+        break;
+      case 'my_skills':
+        $payload[] = t('There are no innovation recommendations requesting your skills.') . l(t('Update your preferences'), 'user/' . $user->uid . '/edit') . t(' to get better results');
+        break;
+      case 'my_friends':
+        $payload[] = t('There are no innovation recommendations on what your friends are following.') . l(t('Find members to follow'), 'members') . t(' to get better results');
+        break;
+      case 'im_following':
+        $payload[] = t('You are not following any innovations') . l(t('Find innovations to follow'), 'innovations');
+        break;
     }
   }
 
@@ -571,10 +638,18 @@ function dashboard_recommended_innovations_form($form, &$form_state) {
   return $form;
 }
 
+/**
+ * @param $form
+ * @param $form_state
+ */
 function dashboard_recommended_innovations_form_validate($form, &$form_state) {
   $test = 1;
 }
 
+/**
+ * @param $form
+ * @param $form_state
+ */
 function dashboard_recommended_innovations_form_submit($form, &$form_state) {
   $filter = 'my_sectors';
   if (!empty($form_state['triggering_element']['#value'])) {
@@ -610,6 +685,11 @@ function dashboard_recommended_innovations_form_submit($form, &$form_state) {
   }
 }
 
+/**
+ * @param $form
+ * @param $form_state
+ * @return mixed
+ */
 function dashboard_recommended_funding_form($form, &$form_state) {
 
   $bundle = array('funding');
@@ -617,7 +697,6 @@ function dashboard_recommended_funding_form($form, &$form_state) {
   $matches = dashboard_recommendation_engine($bundle, $filter);
   $payload = array();
   $inc = 0;
-  $user_model = FALSE;
 
   $form['sectors'] = array(
     '#type' => 'submit',
@@ -626,10 +705,6 @@ function dashboard_recommended_funding_form($form, &$form_state) {
   $form['topics'] = array(
     '#type' => 'submit',
     '#value' => t('My Topics')
-  );
-  $form['skills'] = array(
-    '#type' => 'submit',
-    '#value' => t('My Skills')
   );
   $form['friends'] = array(
     '#type' => 'submit',
@@ -649,11 +724,30 @@ function dashboard_recommended_funding_form($form, &$form_state) {
   );
 
 
-  foreach ($matches as $key => $sector_match) {
-    $inc += 1;
-    $entity = entity_view('node', array(node_load($sector_match)), 'listing');
-    if (!empty($entity)) {
-      $payload[$key + $inc] = render($entity);
+  if (!empty($matches)) {
+    foreach ($matches as $key => $sector_match) {
+      $inc += 1;
+      $entity = entity_view('node', array(node_load($sector_match)), 'listing');
+      if (!empty($entity)) {
+        $payload[$key + $inc] = render($entity);
+      }
+    }
+  }
+  else {
+    global $user;
+    switch ($filter) {
+      case 'sectors':
+        $payload[] = t('There are no funding opportunity recommendations based on your sector preferences.') . l(t('Update your preferences'), 'user/' . $user->uid . '/edit') . t(' to get better results');
+        break;
+      case 'topics':
+        $payload[] = t('There are no funding opportunity recommendations based on your topic preferences.') . l(t('Update your preferences'), 'user/' . $user->uid . '/edit') . t(' to get better results');
+        break;
+      case 'friends':
+        $payload[] = t('There are no funding opportunity recommendations based on on what your friends are following.') . l(t('Find members to follow'), 'members') . t(' to get better results');
+        break;
+      case 'following':
+        $payload[] = t('You are not following any funding opportunities') . l(t('Find funding opportunities to follow'), 'funding');
+        break;
     }
   }
 
@@ -674,10 +768,18 @@ function dashboard_recommended_funding_form($form, &$form_state) {
   return $form;
 }
 
+/**
+ * @param $form
+ * @param $form_state
+ */
 function dashboard_recommended_funding_form_validate($form, &$form_state) {
   $test = 1;
 }
 
+/**
+ * @param $form
+ * @param $form_state
+ */
 function dashboard_recommended_funding_form_submit($form, &$form_state) {
   $filter = 'my_sectors';
   if (!empty($form_state['triggering_element']['#value'])) {
@@ -688,9 +790,6 @@ function dashboard_recommended_funding_form_submit($form, &$form_state) {
         break;
       case 'My Topics':
         $filter = 'my_topics';
-        break;
-      case 'My Skills':
-        $filter = 'my_skills';
         break;
       case 'My Friends':
         $filter = 'my_friends';
@@ -713,6 +812,11 @@ function dashboard_recommended_funding_form_submit($form, &$form_state) {
   }
 }
 
+/**
+ * @param $form
+ * @param $form_state
+ * @return mixed
+ */
 function dashboard_my_portfolio_form($form, &$form_state) {
 
   $bundle = array('innovation', 'funding', 'resource', 'event');
@@ -742,37 +846,63 @@ function dashboard_my_portfolio_form($form, &$form_state) {
   if (!empty($matches)) {
     foreach ($matches as $key => $sector_match) {
       $inc += 1;
-      $favorite = flag_load('favorite');
+      $favorites = flag_get_counts('node', $sector_match);
+      $comments = db_query('SELECT count(nid) FROM comment WHERE comment.nid = :nid', array(':nid' => $sector_match))->fetchField();
       $entity = entity_view('node', array(node_load($sector_match)), 'listing');
       if (!empty($entity)) {
-        $payload[$key + $inc] = render($entity);
+        $payload[$key + $inc] = array(
+          render($entity),
+          (!empty($favorites) ? $favorites['favorite'] : 0),
+          $comments
+        );
       }
     }
   }
   else {
     switch ($filter) {
       case 'innovation':
-        $payload[] = 'You haven\'t created any innovations! Click ' . l('here', 'node/add/innovation') . ' to add your innovations.';
+        $payload[] = array(
+          t('You haven\'t created any innovations! Click ') . l(t('here'), 'node/add/innovation') . t(' to add your innovations.'),
+          NULL,
+          NULL
+        );
         break;
       case 'funding':
-        $payload[] = 'You haven\'t created any funding opportunities! Click ' . l('here', 'node/add/funding') . ' to add your funding opportunities.';
+        $payload[] = array(
+          t('You haven\'t created any funding opportunities! Click ') . l(t('here'), 'node/add/funding') . t(' to add your funding opportunities.'),
+          NULL,
+          NULL
+        );
         break;
       case 'resource':
-        $payload[] = 'You haven\'t created any resources! Click ' . l('here', 'node/add/resources') . ' to add your resources.';
+        $payload[] = array(
+          t('You haven\'t created any resources! Click ') . l(t('here'), 'node/add/resources') . t(' to add your resources.'),
+          NULL,
+          NULL
+        );
         break;
       case 'event':
-        $payload[] = 'You haven\'t created any events! Click ' . l('here', 'node/add/event') . ' to add your events.';
+        $payload[] = array(
+          t('You haven\'t created any events! Click ') . l(t('here'), 'node/add/event') . t(' to add your events.'),
+          NULL,
+          NULL
+        );
         break;
     }
   }
 
-  $payload = array(
-    '#theme' => 'item_list',
-    '#items' => $payload,
-    '#type' => 'ul',
-    '#attributes' => array('class' => 'list-class'),
+  $header = array(
+    array('data' => ''),
+    array('data' => strtoupper(t('Favorites'))),
+    array('data' => strtoupper(t('Comments'))),
   );
 
+  $payload = array(
+    '#theme' => 'table',
+    '#rows' => $payload,
+    '#header' => $header,
+  );
+  
   $form['updates'] = array(
     '#type' => 'item',
     '#markup' => drupal_render($payload),
@@ -783,10 +913,18 @@ function dashboard_my_portfolio_form($form, &$form_state) {
   return $form;
 }
 
+/**
+ * @param $form
+ * @param $form_state
+ */
 function dashboard_my_portfolio_form_validate($form, &$form_state) {
   $test = 1;
 }
 
+/**
+ * @param $form
+ * @param $form_state
+ */
 function dashboard_my_portfolio_form_submit($form, &$form_state) {
   $filter = 'innovations';
 
@@ -820,6 +958,11 @@ function dashboard_my_portfolio_form_submit($form, &$form_state) {
   }
 }
 
+/**
+ * @param $form
+ * @param $form_state
+ * @return mixed
+ */
 function dashboard_my_network_form($form, &$form_state) {
 
   $bundle = array(
@@ -838,7 +981,7 @@ function dashboard_my_network_form($form, &$form_state) {
 
   $form['net_users'] = array(
     '#type' => 'submit',
-    '#value' => t('Users')
+    '#value' => t('Members')
   );
   $form['net_innovation'] = array(
     '#type' => 'submit',
@@ -889,25 +1032,25 @@ function dashboard_my_network_form($form, &$form_state) {
 
     switch ($filter) {
       case 'net_users':
-        $payload[] = 'You haven\'t created any followed any users! Click ' . l('here', 'users') . ' to follow new users';
+        $payload[] = t('You have not followed a members! Click ') . l(t('here'), 'members') . t(' to find members');
         break;
       case 'net_innovation':
-        $payload[] = 'You haven\'t created any followed any innovations! Click ' . l('here', 'innovation') . ' to follow new innovations';
+        $payload[] = t('You have not followed an innovation! Click ') . l(t('here'), 'innovation') . t(' to find innovations');
         break;
       case 'net_funding':
-        $payload[] = 'You haven\'t created any followed any fundings! Click ' . l('here', 'funding') . ' to follow new fundings';
+        $payload[] = t('You have not followed a funding opportunity! Click ') . l(t('here'), 'funding') . t('to find funding opportunities');
         break;
       case 'net_resource':
-        $payload[] = 'You haven\'t created any followed any resources! Click ' . l('here', 'resource') . ' to follow new resources';
+        $payload[] = t('You have not followed a resource! Click ') . l(t('here'), 'resource') . t(' to find resources');
         break;
       case 'net_event':
-        $payload[] = 'You haven\'t created any followed any events! Click ' . l('here', 'event') . ' to follow new events';
+        $payload[] = t('You have not followed an event! Click ') . l(t('here'), 'event') . t(' to find events');
         break;
       case 'net_organization':
-        $payload[] = 'You haven\'t created any followed any organizations! Click ' . l('here', 'organization') . ' to follow new organizations';
+        $payload[] = t('You have not followed an organization! Click ') . l(t('here'), 'organizations') . t(' to find organizations');
         break;
       case 'net_program':
-        $payload[] = 'You haven\'t created any followed any programs! Click ' . l('here', 'program') . ' to follow new programs';
+        $payload[] = t('You have not followed a program! Click ') . l(t('here'), 'programs') . t(' to find programs');
         break;
     }
   }
@@ -929,17 +1072,25 @@ function dashboard_my_network_form($form, &$form_state) {
   return $form;
 }
 
+/**
+ * @param $form
+ * @param $form_state
+ */
 function dashboard_my_network_form_validate($form, &$form_state) {
   $test = 1;
 }
 
+/**
+ * @param $form
+ * @param $form_state
+ */
 function dashboard_my_network_form_submit($form, &$form_state) {
   $filter = 'net_users';
 
   if (!empty($form_state['triggering_element']['#value'])) {
 
     switch ($form_state['triggering_element']['#value']) {
-      case 'Users':
+      case 'Members':
         $filter = 'net_users';
         break;
       case 'Innovations':

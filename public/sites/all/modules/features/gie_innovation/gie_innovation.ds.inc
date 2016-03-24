@@ -449,6 +449,42 @@ function gie_innovation_ds_field_settings_info() {
 
   $ds_fieldsetting = new stdClass();
   $ds_fieldsetting->api_version = 1;
+  $ds_fieldsetting->id = 'node|innovation|spotlight';
+  $ds_fieldsetting->entity_type = 'node';
+  $ds_fieldsetting->bundle = 'innovation';
+  $ds_fieldsetting->view_mode = 'spotlight';
+  $ds_fieldsetting->settings = array(
+    'content_type' => array(
+      'weight' => '0',
+      'label' => 'hidden',
+      'format' => 'default',
+    ),
+    'title_field' => array(
+      'formatter_settings' => array(
+        'ft' => array(
+          'func' => 'theme_ds_field_expert',
+          'fi' => TRUE,
+          'fi-el' => 'h3',
+          'fi-cl' => 'card__primary-title',
+          'fi-at' => '',
+          'fi-def-at' => FALSE,
+          'fi-odd-even' => FALSE,
+          'fi-first-last' => FALSE,
+        ),
+      ),
+    ),
+    'field_innovation_image' => array(
+      'formatter_settings' => array(
+        'ft' => array(
+          'func' => 'theme_ds_field_expert',
+        ),
+      ),
+    ),
+  );
+  $export['node|innovation|spotlight'] = $ds_fieldsetting;
+
+  $ds_fieldsetting = new stdClass();
+  $ds_fieldsetting->api_version = 1;
   $ds_fieldsetting->id = 'node|innovation|teaser_date';
   $ds_fieldsetting->entity_type = 'node';
   $ds_fieldsetting->bundle = 'innovation';
@@ -908,6 +944,46 @@ function gie_innovation_ds_layout_settings_info() {
     'layout_link_custom' => '',
   );
   $export['node|innovation|search_listing'] = $ds_layout;
+
+  $ds_layout = new stdClass();
+  $ds_layout->api_version = 1;
+  $ds_layout->id = 'node|innovation|spotlight';
+  $ds_layout->entity_type = 'node';
+  $ds_layout->bundle = 'innovation';
+  $ds_layout->view_mode = 'spotlight';
+  $ds_layout->layout = 'article';
+  $ds_layout->settings = array(
+    'regions' => array(
+      'main_content' => array(
+        0 => 'group_card_image',
+        1 => 'content_type',
+        2 => 'group_card_content',
+        3 => 'title_field',
+        4 => 'flag_favorite',
+        5 => 'field_innovation_image',
+      ),
+    ),
+    'fields' => array(
+      'group_card_image' => 'main_content',
+      'content_type' => 'main_content',
+      'group_card_content' => 'main_content',
+      'title_field' => 'main_content',
+      'flag_favorite' => 'main_content',
+      'field_innovation_image' => 'main_content',
+    ),
+    'classes' => array(),
+    'wrappers' => array(
+      'header' => 'div',
+      'main_content' => 'div',
+      'footer' => 'div',
+    ),
+    'layout_wrapper' => 'div',
+    'layout_attributes' => '',
+    'layout_attributes_merge' => 1,
+    'layout_link_attribute' => '',
+    'layout_link_custom' => '',
+  );
+  $export['node|innovation|spotlight'] = $ds_layout;
 
   $ds_layout = new stdClass();
   $ds_layout->api_version = 1;
