@@ -13,6 +13,7 @@ dependencies[] = entityreference_view_widget
 dependencies[] = eva
 dependencies[] = features
 dependencies[] = field_group
+dependencies[] = gie_dashboard
 dependencies[] = gie_funding
 dependencies[] = gie_innovation
 dependencies[] = gie_resource
