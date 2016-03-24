@@ -167,6 +167,4 @@
 .nav--inline {
   @extend %nav--pipeline;
 }
-
-// Custom nav styles imported via sass globbing.
-@import '../sass-globbing/nav';
+ 

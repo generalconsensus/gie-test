@@ -1,15 +1,15 @@
 .dropcap {
-  &:first-letter { 
-    background-color: nth($microsite-primary-list, 1); // just in case palette or color class is missing
-    @each $current-color in $microsite-secondary-list {
-      $i: index($microsite-secondary-list, $current-color);
-      .microsite-palette#{$i} & { // body class
-        background-color: $current-color;
+  &:first-letter {
+    background-color: #00498f; // just in case palette or color class is missing
+    @each $item, $color in $micrositeColorMap {
+      .microsite-palette#{$item} & {
+        background-color: micro-site($item, 'secondary');
       }
     }
+
     color: #fff;
-    float: left; 
-    font-size: em($font-size-xxl); 
+    float: left;
+    font-size: em($font-size-xxl);
     margin-right: 5px;
     padding: .5em;
   }

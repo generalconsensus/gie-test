@@ -130,7 +130,7 @@ function gie_news_ds_field_settings_info() {
           'func' => 'theme_ds_field_expert',
           'fi' => TRUE,
           'fi-el' => 'h3',
-          'fi-cl' => 'card__title',
+          'fi-cl' => 'card__primary-title',
           'fi-at' => '',
           'fi-def-at' => FALSE,
           'fi-odd-even' => FALSE,
@@ -372,7 +372,12 @@ function gie_news_ds_layout_settings_info() {
       'field_news_publish_date' => 'main_content',
       'news_counters_favorite_count' => 'main_content',
     ),
-    'classes' => array(),
+    'classes' => array(
+      'layout_class' => array(
+        'card' => 'card',
+        'card--icons' => 'card--icons',
+      ),
+    ),
     'wrappers' => array(
       'header' => 'div',
       'main_content' => 'div',
