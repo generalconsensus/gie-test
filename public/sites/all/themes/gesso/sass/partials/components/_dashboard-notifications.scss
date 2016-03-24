@@ -1,20 +1,29 @@
 .dashboard-notifications {
-  list-style: none;
-  margin: 0 10% 4em 10%;
-  padding: 0;
-  .dashboard-notifications__item {
-    background: #F1DED3;
-    font-size: em($font-size-lg);
+  @extend %dashboard-pane;
+  h2 {
+    background: #565a5c;
+    color: #fff;
+    font-size: em(16px);
+    line-height: 1;
+    margin: 0;
+    padding: 1em;
+  }
+  ul {
     list-style: none;
     margin: 0;
-    padding: 0.5em 1em;
-    &:before { // undo bullet from _html-elements
-      display: none;
-    }
-    &.is-featured {
-      background: #E1E1E1;
+    padding: 0;
+    li {
+      border-bottom: 1px solid #eee;
+      line-height: 1.3;
+      list-style: none;
+      margin: 0;
+      padding: 1em 1em;
+      &:last-child {
+        border-bottom: 0;
+      }
+      &:before { // undo bullet from _html-elements
+        display: none;
+      }
     }
   }
 }
-
- 

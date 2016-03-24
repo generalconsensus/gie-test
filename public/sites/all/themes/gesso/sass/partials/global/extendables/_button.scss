@@ -157,7 +157,7 @@
     height: 22px;
     top: 8px;
     width: 22px;
-  } 
+  }
 }
 
 %button--flag {
@@ -173,7 +173,7 @@
     opacity: 0.65;
     top: 9px;
     width: 19px;
-  } 
+  }
   &:hover, &:focus {
     background-color: #f1f1f1;
     border-color: #000;
@@ -181,5 +181,33 @@
     &:before {
       opacity: 0.9;
     }
+  }
+}
+
+%button--gear {
+  @extend %button--icon;
+  &:before {
+    @include svg-background(icon-gear);
+    height: 16px;
+    width: 16px;
+  }
+}
+
+%button--mail {
+  @extend %button--icon;
+  &:before {
+    @include svg-background(icon-mail);
+    height: 12px;
+    width: 15px;
+  }
+}
+
+%button--eye {
+  @extend %button--icon;
+  &:before {
+    @include svg-background(icon-eye);
+    height: 18px;
+    left: 14px;
+    width: 18px;
   }
 }

@@ -51,8 +51,7 @@ function dashboard_whats_new_exchange_updates_render($subtype, $conf, $panel_arg
 
   $view = views_get_view('data_page_views');
 
-  $block->content = '<h2 class="dashboard__title">' . strtoupper(t('Exchange Data')) . '</h2>' . $view->render('data_counts');
+  $block->content = '<h2 class="pane__title">' . strtoupper(t('Exchange at a Glance')) . '</h2>' . $view->render('data_counts');
 
   return $block;
 }
-
