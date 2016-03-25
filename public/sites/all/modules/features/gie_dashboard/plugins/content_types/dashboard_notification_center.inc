@@ -88,9 +88,9 @@ function dashboard_notification_center_generate_listing() {
 
     // Grab random followers for use with generating a list of content
     // Inner Join back on flagging to make sure that the relationship is 'two-way'
-    $followers = db_query('SELECT flagging.uid FROM flagging INNER JOIN flagging reverse_flagging on flagging.uid = reverse_flagging.entity_id
-    WHERE flagging.fid = :fid AND reverse_flagging.fid  = :fid
-    AND flagging.entity_id = :uid AND reverse_flagging.uid = :uid', array(
+    $followers = db_query('SELECT flagging.uid FROM flagging
+    WHERE flagging.fid = :fid
+    AND flagging.entity_id = :uid ', array(
       ':fid' => $follow_user->fid,
       ':uid' => $user->uid
     ))->fetchCol();
@@ -241,7 +241,8 @@ function dashboard_whats_new_notification_center_render($subtype, $conf, $panel_
               '#markup' => '<li>' . l($name, 'user/' . $result[0]->uid) . ' follows you</li>',
             );
           }
-        } else {
+        }
+        else {
           $gie_dashboard_notification_center[$key] = array(
             '#markup' => '<li>Find your Friends on the ' . l(t('Exchange'), 'members') . '.</li>'
           );
@@ -257,7 +258,8 @@ function dashboard_whats_new_notification_center_render($subtype, $conf, $panel_
           $gie_dashboard_notification_center[$key] = array(
             '#markup' => '<li>' . l($result['name'], 'user/' . $result['uid']) . ' followed content ' . l($result['title'], 'node/' . $result['nid']) . '.</li>'
           );
-        } else {
+        }
+        else {
           $gie_dashboard_notification_center[$key] = array(
             '#markup' => '<li>Find Innovations on the ' . l(t('Exchange'), 'innovations') . '.</li>'
           );
