@@ -16,7 +16,10 @@ function gie_innovation_default_page_manager_pages() {
   $page->admin_title = 'grants';
   $page->admin_description = 'This is the page for innovations tied to grants and contains specific organizations. ';
   $page->path = 'grants';
-  $page->access = array();
+  $page->access = array(
+    'type' => 'none',
+    'settings' => NULL,
+  );
   $page->menu = array();
   $page->arguments = array();
   $page->conf = array(
@@ -791,7 +794,10 @@ function gie_innovation_default_page_manager_pages() {
   $page->admin_title = 'SDG Landing Page';
   $page->admin_description = '';
   $page->path = 'sdg';
-  $page->access = array();
+  $page->access = array(
+    'type' => 'none',
+    'settings' => NULL,
+  );
   $page->menu = array();
   $page->arguments = array();
   $page->conf = array(

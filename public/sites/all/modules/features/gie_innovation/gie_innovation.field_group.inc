@@ -154,11 +154,10 @@ function gie_innovation_field_group_info() {
   $field_group->parent_name = '';
   $field_group->data = array(
     'label' => 'Card Content',
-    'weight' => '1',
+    'weight' => '2',
     'children' => array(
       0 => 'title_field',
-      1 => 'flag_favorite',
-      2 => 'content_type',
+      1 => 'content_type',
     ),
     'format_type' => 'div',
     'format_settings' => array(
@@ -256,7 +255,7 @@ function gie_innovation_field_group_info() {
   $field_group->parent_name = '';
   $field_group->data = array(
     'label' => 'Card Image',
-    'weight' => '0',
+    'weight' => '1',
     'children' => array(
       0 => 'field_innovation_image',
     ),

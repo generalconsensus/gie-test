@@ -292,12 +292,31 @@ function gie_user_ds_field_settings_info() {
   $ds_fieldsetting->view_mode = 'spotlight';
   $ds_fieldsetting->settings = array(
     'member_text' => array(
-      'weight' => '0',
+      'weight' => '1',
       'label' => 'hidden',
       'format' => 'default',
+      'formatter_settings' => array(
+        'ft' => array(
+          'func' => 'theme_ds_field_expert',
+          'lb-el' => 'div',
+          'lb-cl' => 'card__type',
+        ),
+        'field_delimiter' => '',
+        'linked_field' => array(
+          'linked' => 0,
+          'destination' => '',
+          'advanced' => array(
+            'title' => '',
+            'target' => '',
+            'class' => '',
+            'rel' => '',
+            'text' => '',
+          ),
+        ),
+      ),
     ),
     'user_full_name' => array(
-      'weight' => '1',
+      'weight' => '2',
       'label' => 'hidden',
       'format' => 'linked_name',
       'formatter_settings' => array(
@@ -309,6 +328,30 @@ function gie_user_ds_field_settings_info() {
           'ow-def-cl' => FALSE,
           'ow-at' => '',
           'ow-def-at' => FALSE,
+        ),
+        'field_delimiter' => '',
+        'linked_field' => array(
+          'linked' => 0,
+          'destination' => '',
+          'advanced' => array(
+            'title' => '',
+            'target' => '',
+            'class' => '',
+            'rel' => '',
+            'text' => '',
+          ),
+        ),
+      ),
+    ),
+    'dashboard_spotlight_card_user_classification' => array(
+      'weight' => '0',
+      'label' => 'hidden',
+      'format' => 'default',
+      'formatter_settings' => array(
+        'ft' => array(
+          'func' => 'theme_ds_field_expert',
+          'lb-el' => 'h2',
+          'lb-cl' => 'card__dashboard',
         ),
         'field_delimiter' => '',
         'linked_field' => array(
@@ -687,17 +730,19 @@ function gie_user_ds_layout_settings_info() {
   $ds_layout->settings = array(
     'regions' => array(
       'main_content' => array(
-        0 => 'member_text',
+        0 => 'dashboard_spotlight_card_user_classification',
         1 => 'group_card_image',
-        2 => 'user_full_name',
-        3 => 'group_card_content',
-        4 => 'flag_follow',
-        5 => 'field_user_photo',
+        2 => 'member_text',
+        3 => 'user_full_name',
+        4 => 'group_card_content',
+        5 => 'flag_follow',
+        6 => 'field_user_photo',
       ),
     ),
     'fields' => array(
-      'member_text' => 'main_content',
+      'dashboard_spotlight_card_user_classification' => 'main_content',
       'group_card_image' => 'main_content',
+      'member_text' => 'main_content',
       'user_full_name' => 'main_content',
       'group_card_content' => 'main_content',
       'flag_follow' => 'main_content',

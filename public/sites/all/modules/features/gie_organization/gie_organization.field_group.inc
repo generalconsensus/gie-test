@@ -55,7 +55,7 @@ function gie_organization_field_group_info() {
   $field_group->parent_name = '';
   $field_group->data = array(
     'label' => 'Card Content',
-    'weight' => '1',
+    'weight' => '2',
     'children' => array(
       0 => 'title_field',
       1 => 'flag_favorite',
@@ -123,7 +123,7 @@ function gie_organization_field_group_info() {
   $field_group->parent_name = '';
   $field_group->data = array(
     'label' => 'Card Image',
-    'weight' => '0',
+    'weight' => '1',
     'children' => array(
       0 => 'field_org_logo',
     ),

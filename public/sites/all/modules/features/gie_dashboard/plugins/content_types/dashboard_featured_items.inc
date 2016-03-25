@@ -45,7 +45,7 @@ function dashboard_whats_new_featured_items_generate_listing() {
   $bundle_nodes = array('innovation', 'resource', 'funding', 'event');
   $payload = array();
 
-  $sector_matches = db_query("SELECT DISTINCT node.nid  FROM node
+  $sector_matches = db_query("SELECT DISTINCT node.nid, NULL as flagged, NULL as featured  FROM node
       LEFT JOIN field_data_field_term_sector sector_1 ON node.nid = sector_1.entity_id AND (sector_1.entity_type = 'node' AND sector_1.deleted = '0')
       INNER JOIN taxonomy_term_data  ON sector_1.field_term_sector_tid = taxonomy_term_data.tid
       INNER JOIN field_data_field_term_sector sector_2 ON taxonomy_term_data.tid = sector_2.field_term_sector_tid AND (sector_2.entity_type = 'user' AND sector_2.deleted = '0')
@@ -53,37 +53,24 @@ function dashboard_whats_new_featured_items_generate_listing() {
       WHERE (( (users.uid = :uid ) )AND(( (node.status = '1') AND (node.type IN (:bundle)) ))) ORDER BY node.changed DESC LIMIT 3", array(
     ':uid' => $user->uid,
     ':bundle' => $bundle_nodes
-  ))->fetchCol();
+  ))->fetchAll();
 
   $amount_to_replace = 6 - (count($sector_matches));
 
-  $featured_innovations = db_query_range('SELECT DISTINCT node.nid from field_data_field_featured
+  $featured_innovations = db_query_range('SELECT DISTINCT node.nid, NULL as flagged, 1 as featured
+    FROM field_data_field_featured
     INNER JOIN node on node.nid = field_data_field_featured.entity_id
     WHERE field_data_field_featured.bundle in (:bundle) AND field_featured_value = 1 ORDER BY node.changed DESC', 0, $amount_to_replace, array(
     ':bundle' => $bundle_nodes
-  ))->fetchCol();
+  ))->fetchAll();
 
 
-  if (!empty($featured_innovations) && is_array($featured_innovations)) {
-    $inc = 0;
-    foreach ($featured_innovations as $key => $innovation_match) {
-      $entity = entity_view('node', array(node_load($innovation_match)), 'listing');
-      if (!empty($entity)) {
-        $payload[$key + $inc] = render($entity);
-      }
-      $inc += 1;
-    }
+  if (!empty($featured_innovations)) {
+    $payload += gie_dashboard_card_build($featured_innovations);
   }
 
-  if (!empty($sector_matches) && is_array($sector_matches)) {
-    $inc = 0;
-    foreach ($sector_matches as $key => $sector_match) {
-      $inc += 1;
-      $entity = entity_view('node', array(node_load($sector_match)), 'listing');
-      if (!empty($entity)) {
-        $payload[$key + $inc] = render($entity);
-      }
-    }
+  if (!empty($sector_matches)) {
+    $payload += gie_dashboard_card_build($sector_matches, TRUE);
   }
 
   ksort($payload);
