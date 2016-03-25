@@ -260,7 +260,7 @@ function gie_resource_strongarm() {
             'visible' => FALSE,
           ),
           'spotlight' => array(
-            'weight' => '21',
+            'weight' => '20',
             'visible' => FALSE,
           ),
         ),
@@ -302,7 +302,7 @@ function gie_resource_strongarm() {
             'visible' => FALSE,
           ),
           'spotlight' => array(
-            'weight' => '23',
+            'weight' => '22',
             'visible' => FALSE,
           ),
         ),
@@ -336,7 +336,7 @@ function gie_resource_strongarm() {
             'visible' => FALSE,
           ),
           'spotlight' => array(
-            'weight' => '24',
+            'weight' => '23',
             'visible' => FALSE,
           ),
         ),
@@ -370,7 +370,7 @@ function gie_resource_strongarm() {
             'visible' => FALSE,
           ),
           'spotlight' => array(
-            'weight' => '22',
+            'weight' => '21',
             'visible' => FALSE,
           ),
         ),
@@ -422,7 +422,7 @@ function gie_resource_strongarm() {
             'visible' => FALSE,
           ),
           'spotlight' => array(
-            'weight' => '4',
+            'weight' => '3',
             'visible' => TRUE,
           ),
         ),

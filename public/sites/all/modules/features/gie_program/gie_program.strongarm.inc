@@ -176,7 +176,7 @@ function gie_program_strongarm() {
             'visible' => FALSE,
           ),
           'spotlight' => array(
-            'weight' => '22',
+            'weight' => '21',
             'visible' => FALSE,
           ),
         ),
@@ -263,7 +263,7 @@ function gie_program_strongarm() {
             'visible' => FALSE,
           ),
           'spotlight' => array(
-            'weight' => '23',
+            'weight' => '22',
             'visible' => FALSE,
           ),
         ),
@@ -289,7 +289,7 @@ function gie_program_strongarm() {
             'visible' => FALSE,
           ),
           'spotlight' => array(
-            'weight' => '25',
+            'weight' => '24',
             'visible' => FALSE,
           ),
         ),
@@ -315,7 +315,7 @@ function gie_program_strongarm() {
             'visible' => FALSE,
           ),
           'spotlight' => array(
-            'weight' => '26',
+            'weight' => '25',
             'visible' => FALSE,
           ),
         ),

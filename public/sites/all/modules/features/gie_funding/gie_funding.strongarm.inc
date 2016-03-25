@@ -236,7 +236,7 @@ function gie_funding_strongarm() {
             'visible' => FALSE,
           ),
           'spotlight' => array(
-            'weight' => '24',
+            'weight' => '23',
             'visible' => FALSE,
           ),
         ),
@@ -316,7 +316,7 @@ function gie_funding_strongarm() {
             'visible' => FALSE,
           ),
           'spotlight' => array(
-            'weight' => '27',
+            'weight' => '26',
             'visible' => FALSE,
           ),
         ),
@@ -346,7 +346,7 @@ function gie_funding_strongarm() {
             'visible' => FALSE,
           ),
           'spotlight' => array(
-            'weight' => '28',
+            'weight' => '27',
             'visible' => FALSE,
           ),
         ),
@@ -372,7 +372,7 @@ function gie_funding_strongarm() {
             'visible' => FALSE,
           ),
           'spotlight' => array(
-            'weight' => '26',
+            'weight' => '25',
             'visible' => FALSE,
           ),
         ),
@@ -398,7 +398,7 @@ function gie_funding_strongarm() {
             'visible' => FALSE,
           ),
           'spotlight' => array(
-            'weight' => '25',
+            'weight' => '24',
             'visible' => FALSE,
           ),
         ),

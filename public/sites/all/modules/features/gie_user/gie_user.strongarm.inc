@@ -175,7 +175,7 @@ function gie_user_strongarm() {
             'visible' => FALSE,
           ),
           'spotlight' => array(
-            'weight' => '12',
+            'weight' => '19',
             'visible' => FALSE,
           ),
         ),
@@ -213,7 +213,7 @@ function gie_user_strongarm() {
             'visible' => FALSE,
           ),
           'spotlight' => array(
-            'weight' => '2',
+            'weight' => '3',
             'visible' => TRUE,
           ),
         ),
@@ -223,7 +223,7 @@ function gie_user_strongarm() {
             'visible' => TRUE,
           ),
           'spotlight' => array(
-            'weight' => '8',
+            'weight' => '15',
             'visible' => FALSE,
           ),
         ),
@@ -233,7 +233,7 @@ function gie_user_strongarm() {
             'visible' => TRUE,
           ),
           'spotlight' => array(
-            'weight' => '7',
+            'weight' => '14',
             'visible' => FALSE,
           ),
         ),

@@ -233,7 +233,7 @@ function gie_innovation_strongarm() {
             'visible' => FALSE,
           ),
           'spotlight' => array(
-            'weight' => '21',
+            'weight' => '22',
             'visible' => FALSE,
           ),
         ),
@@ -309,7 +309,7 @@ function gie_innovation_strongarm() {
             'visible' => FALSE,
           ),
           'spotlight' => array(
-            'weight' => '18',
+            'weight' => '19',
             'visible' => FALSE,
           ),
         ),
@@ -347,7 +347,7 @@ function gie_innovation_strongarm() {
             'visible' => FALSE,
           ),
           'spotlight' => array(
-            'weight' => '19',
+            'weight' => '20',
             'visible' => FALSE,
           ),
         ),
@@ -385,7 +385,7 @@ function gie_innovation_strongarm() {
             'visible' => FALSE,
           ),
           'spotlight' => array(
-            'weight' => '20',
+            'weight' => '21',
             'visible' => FALSE,
           ),
         ),
@@ -415,7 +415,7 @@ function gie_innovation_strongarm() {
             'visible' => FALSE,
           ),
           'spotlight' => array(
-            'weight' => '25',
+            'weight' => '26',
             'visible' => FALSE,
           ),
         ),
@@ -445,7 +445,7 @@ function gie_innovation_strongarm() {
             'visible' => FALSE,
           ),
           'spotlight' => array(
-            'weight' => '22',
+            'weight' => '23',
             'visible' => FALSE,
           ),
         ),
@@ -475,7 +475,7 @@ function gie_innovation_strongarm() {
             'visible' => FALSE,
           ),
           'spotlight' => array(
-            'weight' => '24',
+            'weight' => '25',
             'visible' => FALSE,
           ),
         ),
@@ -503,7 +503,7 @@ function gie_innovation_strongarm() {
             'visible' => TRUE,
           ),
           'spotlight' => array(
-            'weight' => '11',
+            'weight' => '12',
             'visible' => FALSE,
           ),
         ),
@@ -513,7 +513,7 @@ function gie_innovation_strongarm() {
             'visible' => TRUE,
           ),
           'spotlight' => array(
-            'weight' => '2',
+            'weight' => '3',
             'visible' => TRUE,
           ),
         ),
@@ -523,7 +523,7 @@ function gie_innovation_strongarm() {
             'visible' => TRUE,
           ),
           'spotlight' => array(
-            'weight' => '23',
+            'weight' => '24',
             'visible' => FALSE,
           ),
         ),
