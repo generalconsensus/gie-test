@@ -138,139 +138,157 @@ function gie_dashboard_menu() {
  * @param null $pieces
  * @throws \Exception
  */
-function gie_dashboard_dummy_data($tab, $original_user_uid = NULL, $pieces = NULL) {
-  $original_user_uid = !empty($original_user_uid) ? $original_user_uid : 1;
-  $pieces = !empty($pieces) ? $pieces : 6;
-
-  // Add the skill match
-  if ($original_user_uid != 1) {
-    $user = user_load($original_user_uid);
-    $user->field_user_interests = array(
-      LANGUAGE_NONE => array(
-        array(
-          'delta' => 0,
-          'tid' => '545'
-        )
-      )
-    );
-    $user->field_term_sector = array(
-      LANGUAGE_NONE => array(
-        array(
-          'delta' => 0,
-          'tid' => '419'
-        )
-      )
-    );
-    user_save($user);
-  }
-
-  //Pragmatically Create Node Content For Dynamic Exchange Form
-
-  $users = gie_dashboard_create_user($pieces);
-  $rand_user = array_rand($users);
-  $random_time_last_month = rand(strtotime('first day of last month'), strtotime('last day of last month'));
-  // Last Access
-  gie_dashboard_create_node('organization', $users[$rand_user], $pieces);
-  gie_dashboard_create_node('funding', $original_user_uid, $pieces, array(
-    'field_funding_grant_award_value' => 100000,
-//    'field_term_topic' => 545,
-    'field_term_sector' => 419,
-    'field_funding_deadline' => array('value' => date('Y-m-d h:i:s', rand(strtotime('first day of last month'), strtotime('last day of last month')))),
-    'field_funding_link' => 'http://google.com'
-  ));
-  gie_dashboard_create_node('innovation', $users[$rand_user], $pieces);
-
-  $nids = array();
-  // Last Month
-  $month_users = gie_dashboard_create_user($pieces);
-  $org_nids = gie_dashboard_create_node('organization', $users[$rand_user], $pieces);
-  $funding_nids = gie_dashboard_create_node('funding', $users[$rand_user], $pieces, array('field_funding_grant_award_value' => 100000));
-  $innovation_nids = gie_dashboard_create_node('innovation', $original_user_uid, $pieces);
-
-  $nids = array_merge($org_nids, $funding_nids, $innovation_nids);
-  // Random time during last month
-
-  db_update('node')
-    ->fields(array(
-      'changed' => $random_time_last_month
-    ))
-    ->condition('nid', array($nids))
-    ->execute();
-
-  db_update('users')
-    ->fields(array(
-      'created' => $random_time_last_month
-    ))
-    ->condition('uid', array($month_users))
-    ->execute();
-
-  // People comment on admin content
-  $comment = (object) array(
-    'cid' => NULL,
-    'nid' => $innovation_nids[array_rand($innovation_nids)],
-    'node_type' => 'innovation',
-    'pid' => 0,
-    'uid' => $users[$rand_user],
-    'status' => COMMENT_PUBLISHED,
-    'subject' => devel_generate_word(mt_rand(6, 12)),
-    'hostname' => ip_address(),
-    'language' => LANGUAGE_NONE,
-    'comment_body' => array(LANGUAGE_NONE => array(devel_generate_word(mt_rand(6, 12)))),
-  );
-  comment_save($comment);
-
-
-  foreach ($users as $key => $user) {
-    $account = user_load($user);
-    $other_users = array_diff($users, array($user));
-    $rando_not_me = $other_users[array_rand($other_users)];
-
-    // People follow admin
-    flag('flag', 'follow', $original_user_uid, $account, TRUE);
-
-    // People follow your content
-    flag('flag', 'favorite', $innovation_nids[$key], $account, TRUE);
-
-    // Friend creates content
-    $generated_content = gie_dashboard_create_node('innovation', $user, 1, array('field_term_topic' => 545));
-
-    // Original User Follows Content
-    flag('flag', 'favorite', $generated_content[0], user_load($original_user_uid), TRUE);
-
-    //Friend follows content
-    flag('flag', 'favorite', $generated_content[0], user_load($rando_not_me), TRUE);
-
-    //Friend follows Friend of Friend
-    flag('flag', 'follow', $user, user_load($rando_not_me), TRUE);
-
-    //Friend comments on content
-    $comment = (object) array(
-      'cid' => NULL,
-      'nid' => $generated_content,
-      'node_type' => 'innovation',
-      'pid' => 0,
-      'uid' => $rando_not_me,
-      'status' => COMMENT_PUBLISHED,
-      'subject' => devel_generate_word(mt_rand(6, 12)),
-      'hostname' => ip_address(),
-      'language' => LANGUAGE_NONE,
-      'comment_body' => array(LANGUAGE_NONE => array(devel_generate_word(mt_rand(6, 12)))),
-    );
-    comment_save($comment);
-  }
-  // Check for a Featured Node
-  // If not found, add one
-  $featured_node = db_query('SELECT COUNT(entity_id) FROM field_data_field_featured WHERE field_data_field_featured.field_featured_value = 1')->fetchField();
-  if (empty($featured_node) || $featured_node < 1) {
-    $random_innovation = db_query('SELECT nid FROM node WHERE node.type = :innovation ORDER BY RAND() LIMIT 1', array(':innovation' => 'innovation'))->fetchField();
-    $node = node_load($random_innovation);
-    $node->field_featured_innovation[$node->language][]['value'] = 1;
-    node_save($node);
-  }
-
-  watchdog('gie_dashboard', 'Completed Dashboard Data Provision');
-
-}
+//function gie_dashboard_dummy_data($tab, $original_user_uid = NULL, $pieces = NULL) {
+//  $original_user_uid = !empty($original_user_uid) ? $original_user_uid : 1;
+//  $pieces = !empty($pieces) ? $pieces : 6;
+//
+//
+//switch ($tab) {
+//  case 1:
+//    break;
+//
+//  case 2:
+//    break;
+//
+//  case 3:
+//    break;
+//
+//  case 4:
+//    break;
+//
+//  case 5:
+//    break;
+//}
+//
+//  // Add the skill match
+//  if ($original_user_uid != 1) {
+//    $user = user_load($original_user_uid);
+//    $user->field_user_interests = array(
+//      LANGUAGE_NONE => array(
+//        array(
+//          'delta' => 0,
+//          'tid' => '545'
+//        )
+//      )
+//    );
+//    $user->field_term_sector = array(
+//      LANGUAGE_NONE => array(
+//        array(
+//          'delta' => 0,
+//          'tid' => '419'
+//        )
+//      )
+//    );
+//    user_save($user);
+//  }
+//
+//  //Pragmatically Create Node Content For Dynamic Exchange Form
+//
+//  $users = gie_dashboard_create_user($pieces);
+//  $rand_user = array_rand($users);
+//  $random_time_last_month = rand(strtotime('first day of last month'), strtotime('last day of last month'));
+//  // Last Access
+//  gie_dashboard_create_node('organization', $users[$rand_user], $pieces);
+//  gie_dashboard_create_node('funding', $original_user_uid, $pieces, array(
+//    'field_funding_grant_award_value' => 100000,
+////    'field_term_topic' => 545,
+//    'field_term_sector' => 419,
+//    'field_funding_deadline' => array('value' => date('Y-m-d h:i:s', rand(strtotime('first day of last month'), strtotime('last day of last month')))),
+//    'field_funding_link' => 'http://google.com'
+//  ));
+//  gie_dashboard_create_node('innovation', $users[$rand_user], $pieces);
+//
+//  $nids = array();
+//  // Last Month
+//  $month_users = gie_dashboard_create_user($pieces);
+//  $org_nids = gie_dashboard_create_node('organization', $users[$rand_user], $pieces);
+//  $funding_nids = gie_dashboard_create_node('funding', $users[$rand_user], $pieces, array('field_funding_grant_award_value' => 100000));
+//  $innovation_nids = gie_dashboard_create_node('innovation', $original_user_uid, $pieces);
+//
+//  $nids = array_merge($org_nids, $funding_nids, $innovation_nids);
+//  // Random time during last month
+//
+//  db_update('node')
+//    ->fields(array(
+//      'changed' => $random_time_last_month
+//    ))
+//    ->condition('nid', array($nids))
+//    ->execute();
+//
+//  db_update('users')
+//    ->fields(array(
+//      'created' => $random_time_last_month
+//    ))
+//    ->condition('uid', array($month_users))
+//    ->execute();
+//
+//  // People comment on admin content
+//  $comment = (object) array(
+//    'cid' => NULL,
+//    'nid' => $innovation_nids[array_rand($innovation_nids)],
+//    'node_type' => 'innovation',
+//    'pid' => 0,
+//    'uid' => $users[$rand_user],
+//    'status' => COMMENT_PUBLISHED,
+//    'subject' => devel_generate_word(mt_rand(6, 12)),
+//    'hostname' => ip_address(),
+//    'language' => LANGUAGE_NONE,
+//    'comment_body' => array(LANGUAGE_NONE => array(devel_generate_word(mt_rand(6, 12)))),
+//  );
+//  comment_save($comment);
+//
+//
+//  foreach ($users as $key => $user) {
+//    $account = user_load($user);
+//    $other_users = array_diff($users, array($user));
+//    $rando_not_me = $other_users[array_rand($other_users)];
+//
+//    // People follow admin
+//    flag('flag', 'follow', $original_user_uid, $account, TRUE);
+//
+//    // People follow your content
+//    flag('flag', 'favorite', $innovation_nids[$key], $account, TRUE);
+//
+//    // Friend creates content
+//    $generated_content = gie_dashboard_create_node('innovation', $user, 1, array('field_term_topic' => 545));
+//
+//    // Original User Follows Content
+//    flag('flag', 'favorite', $generated_content[0], user_load($original_user_uid), TRUE);
+//
+//    //Friend follows content
+//    flag('flag', 'favorite', $generated_content[0], user_load($rando_not_me), TRUE);
+//
+//    //Friend follows Friend of Friend
+//    flag('flag', 'follow', $user, user_load($rando_not_me), TRUE);
+//
+//    //Friend comments on content
+//    $comment = (object) array(
+//      'cid' => NULL,
+//      'nid' => $generated_content,
+//      'node_type' => 'innovation',
+//      'pid' => 0,
+//      'uid' => $rando_not_me,
+//      'status' => COMMENT_PUBLISHED,
+//      'subject' => devel_generate_word(mt_rand(6, 12)),
+//      'hostname' => ip_address(),
+//      'language' => LANGUAGE_NONE,
+//      'comment_body' => array(LANGUAGE_NONE => array(devel_generate_word(mt_rand(6, 12)))),
+//    );
+//    comment_save($comment);
+//  }
+//  // Check for a Featured Node
+//  // If not found, add one
+//  $featured_node = db_query('SELECT COUNT(entity_id) FROM field_data_field_featured WHERE field_data_field_featured.field_featured_value = 1')->fetchField();
+//  if (empty($featured_node) || $featured_node < 1) {
+//    $random_innovation = db_query('SELECT nid FROM node WHERE node.type = :innovation ORDER BY RAND() LIMIT 1', array(':innovation' => 'innovation'))->fetchField();
+//    $node = node_load($random_innovation);
+//    $node->field_featured_innovation[$node->language][]['value'] = 1;
+//    node_save($node);
+//  }
+//
+//  watchdog('gie_dashboard', 'Completed Dashboard Data Provision');
+//
+//}
 
 /**
  * @param $type
