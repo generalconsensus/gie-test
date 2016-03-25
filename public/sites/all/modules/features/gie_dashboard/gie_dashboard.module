@@ -613,19 +613,19 @@ function dashboard_recommended_innovations_form($form) {
     global $user;
     switch ($filter) {
       case 'my_sectors':
-        $payload[] = t('There are no innovation recommendations based on your sector preferences.') . l(t('Update your preferences'), 'user/' . $user->uid . '/edit') . t(' to get better results');
+        $payload[] = t('There are no innovation recommendations based on your sector preferences.') . ' ' . l(t('Update your preferences'), 'user/' . $user->uid . '/edit') . t(' to get better results');
         break;
       case 'my_topics':
-        $payload[] = t('There are no innovation recommendations based on your topic preferences.') . l(t('Update your preferences'), 'user/' . $user->uid . '/edit') . t(' to get better results');
+        $payload[] = t('There are no innovation recommendations based on your topic preferences.') . ' ' . l(t('Update your preferences'), 'user/' . $user->uid . '/edit') . t(' to get better results');
         break;
       case 'my_skills':
-        $payload[] = t('There are no innovation recommendations requesting your skills.') . l(t('Update your preferences'), 'user/' . $user->uid . '/edit') . t(' to get better results');
+        $payload[] = t('There are no innovation recommendations requesting your skills.') . ' ' . l(t('Update your preferences'), 'user/' . $user->uid . '/edit') . t(' to get better results');
         break;
       case 'my_friends':
-        $payload[] = t('There are no innovation recommendations on what your friends are following.') . l(t('Find members to follow'), 'members') . t(' to get better results');
+        $payload[] = t('There are no innovation recommendations on what your friends are following.') . ' ' . l(t('Find members to follow'), 'members') . t(' to get better results');
         break;
       case 'im_following':
-        $payload[] = t('You are not following any innovations') . l(t('Find innovations to follow'), 'innovations');
+        $payload[] = t('You are not following any innovations') . ' ' . l(t('Find innovations to follow'), 'innovations');
         break;
     }
   }
@@ -730,17 +730,17 @@ function dashboard_recommended_funding_form($form) {
   else {
     global $user;
     switch ($filter) {
-      case 'sectors':
-        $payload[] = t('There are no funding opportunity recommendations based on your sector preferences.') . l(t('Update your preferences'), 'user/' . $user->uid . '/edit') . t(' to get better results');
+      case 'my_sectors':
+        $payload[] = t('There are no funding opportunity recommendations based on your sector preferences.') . ' ' . l(t('Update your preferences'), 'user/' . $user->uid . '/edit') . t(' to get better results');
         break;
-      case 'topics':
-        $payload[] = t('There are no funding opportunity recommendations based on your topic preferences.') . l(t('Update your preferences'), 'user/' . $user->uid . '/edit') . t(' to get better results');
+      case 'my_topics':
+        $payload[] = t('There are no funding opportunity recommendations based on your topic preferences.') . ' ' . l(t('Update your preferences'), 'user/' . $user->uid . '/edit') . t(' to get better results');
         break;
-      case 'friends':
-        $payload[] = t('There are no funding opportunity recommendations based on on what your friends are following.') . l(t('Find members to follow'), 'members') . t(' to get better results');
+      case 'my_friends':
+        $payload[] = t('There are no funding opportunity recommendations based on on what your friends are following.') . ' ' . l(t('Find members to follow'), 'members') . t(' to get better results');
         break;
-      case 'following':
-        $payload[] = t('You are not following any funding opportunities') . l(t('Find funding opportunities to follow'), 'funding');
+      case 'im_following':
+        $payload[] = t('You are not following any funding opportunities') . ' ' . l(t('Find funding opportunities to follow'), 'funding');
         break;
     }
   }
