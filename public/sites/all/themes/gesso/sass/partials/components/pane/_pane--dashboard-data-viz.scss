@@ -1,3 +1,6 @@
 .pane--dashboard-data-viz {
   @extend %dashboard-pane;
+  .pane__title {
+    @extend %dashboard-header;
+  }
 }
