@@ -45,5 +45,26 @@
   text-transform: uppercase;
 }
 
+.button--update-profile {
+  @extend %button--highlight;
+  @extend %button--gear;
+  padding-left: 45px;
+  text-align: left;
+  text-transform: none;
+}
 
+.button--view-profile {
+  @extend %button--highlight;
+  @extend %button--eye;
+  padding-left: 45px;
+  text-align: left;
+  text-transform: none;
+}
 
+.button--email {
+  @extend %button--highlight;
+  @extend %button--mail;
+  padding-left: 45px;
+  text-align: left;
+  text-transform: none;
+}

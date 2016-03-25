@@ -56,16 +56,16 @@ function dashboard_whats_new_header_image_render($subtype, $conf, $panel_args, $
 
   $output = '<div class="dashboard-header">
     <div class="dashboard-header__profile-image profile-thumb__image-rounded">
-      <img typeof="foaf:Image" width="150" height="150" alt="" src="' . (!empty($image) ? $image : '') . '">     
+      <img typeof="foaf:Image" width="150" height="150" alt="" src="' . (!empty($image) ? $image : '') . '">
     </div>
     <div class="dashboard-header__text">
       <h2 class ="dashboard-header__title">Your Exchange Dashboard</h2>
       <h3 class="dashboard-header__welcome">WELCOME ' . strtoupper($user->name) . '</h3>
     </div>
     <div class="dashboard-header__actions">
-      <a class="button button--highlight" href="/user/' . $user->uid . '/edit">Update your profile</a>
-      <a class="button button--highlight" href="/user">View your profile</a>
-      <a class="button button--highlight" href="/user/' . $user->uid . '/edit">Email Preferences</a>
+      <a class="button button--update-profile" href="/user/' . $user->uid . '/edit">Update your profile</a>
+      <a class="button button--view-profile" href="/user">View your profile</a>
+      <a class="button button--email" href="/user/' . $user->uid . '/edit">Email Preferences</a>
   </div>
 </div>';
 

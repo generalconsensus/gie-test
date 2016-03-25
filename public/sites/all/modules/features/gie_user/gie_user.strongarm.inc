@@ -109,6 +109,9 @@ function gie_user_strongarm() {
       'user_teaser_with_motto' => array(
         'custom_settings' => TRUE,
       ),
+      'spotlight' => array(
+        'custom_settings' => TRUE,
+      ),
     ),
     'extra_fields' => array(
       'form' => array(
@@ -174,6 +177,10 @@ function gie_user_strongarm() {
             'weight' => '10',
             'visible' => FALSE,
           ),
+          'spotlight' => array(
+            'weight' => '12',
+            'visible' => FALSE,
+          ),
         ),
         'flag_follow' => array(
           'full' => array(
@@ -206,6 +213,30 @@ function gie_user_strongarm() {
           ),
           'user_teaser_with_motto' => array(
             'weight' => '16',
+            'visible' => FALSE,
+          ),
+          'spotlight' => array(
+            'weight' => '2',
+            'visible' => TRUE,
+          ),
+        ),
+        'domain' => array(
+          'default' => array(
+            'weight' => '1',
+            'visible' => TRUE,
+          ),
+          'spotlight' => array(
+            'weight' => '8',
+            'visible' => FALSE,
+          ),
+        ),
+        'mimemail' => array(
+          'default' => array(
+            'weight' => '0',
+            'visible' => TRUE,
+          ),
+          'spotlight' => array(
+            'weight' => '7',
             'visible' => FALSE,
           ),
         ),
