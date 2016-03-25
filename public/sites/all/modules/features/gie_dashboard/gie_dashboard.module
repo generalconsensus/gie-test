@@ -630,16 +630,10 @@ function dashboard_recommended_innovations_form($form) {
     }
   }
 
-  $payload = array(
-    '#theme' => 'item_list',
-    '#items' => $payload,
-    '#type' => 'ul',
-    '#attributes' => array('class' => 'list-class'),
-  );
 
   $form['updates'] = array(
     '#type' => 'item',
-    '#markup' => drupal_render($payload),
+    '#markup' => '<div class="view--card-view-3col">' . implode("", $payload) . '</div>',
     '#weight' => 5,
     '#suffix' => '<div class="dashboard__all-data-button"><a class="button button--highlight" href="/data">See all Exchange Data</a></div>'
   );
@@ -745,16 +739,10 @@ function dashboard_recommended_funding_form($form) {
     }
   }
 
-  $payload = array(
-    '#theme' => 'item_list',
-    '#items' => $payload,
-    '#type' => 'ul',
-    '#attributes' => array('class' => 'list-class'),
-  );
 
   $form['updates'] = array(
     '#type' => 'item',
-    '#markup' => drupal_render($payload),
+    '#markup' => '<div class="view--card-view-3col">' . implode("", $payload) . '</div>',
     '#weight' => 5,
     '#suffix' => '<div class="dashboard__all-data-button"><a class="button button--highlight" href="/data">See all Exchange Data</a></div>'
   );
@@ -1020,16 +1008,10 @@ function dashboard_my_network_form($form) {
     }
   }
 
-  $payload = array(
-    '#theme' => 'item_list',
-    '#items' => $payload,
-    '#type' => 'ul',
-    '#attributes' => array('class' => 'list-class'),
-  );
 
   $form['updates'] = array(
     '#type' => 'item',
-    '#markup' => drupal_render($payload),
+    '#markup' => '<div class="view--card-view-3col">' . implode("", $payload) . '</div>',
     '#weight' => 5,
     '#suffix' => '<div class="dashboard__all-data-button"><a class="button button--highlight" href="/data">See all Exchange Data</a></div>'
   );
@@ -1172,7 +1154,7 @@ function gie_dashboard_card_build($matches, $alternate = FALSE, $user = FALSE) {
         }
       }
       $entity = render($entity);
-      $payload[$key + $inc] = $entity;
+      $payload[$key + $inc] = '<div class="views-row">' . $entity . '</div>';
     }
   }
   else {
@@ -1191,7 +1173,7 @@ function gie_dashboard_card_build($matches, $alternate = FALSE, $user = FALSE) {
         }
       }
       $entity = render($entity);
-      $payload[$key + $inc] = $entity;
+      $payload[$key + $inc] = '<div class="views-row">' . $entity . '</div>';
     }
   }
 

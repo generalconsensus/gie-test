@@ -19,7 +19,7 @@ $plugin = array(
 /**
  * The 'admin info' callback for the content type.
  */
-function dashboard_whats_new_exchange_updates_admin_info($subtype, $conf, $contexts) {
+function dashboard_whats_new_exchange_updates_admin_info($subtype, $conf) {
   if (!empty($conf)) {
     $block = new stdClass();
     $block->title = $conf['override_title'] ? $conf['override_title_text'] : '';
@@ -31,7 +31,7 @@ function dashboard_whats_new_exchange_updates_admin_info($subtype, $conf, $conte
 /**
  * The 'Edit form' callback for the content type.
  */
-function dashboard_whats_new_exchange_updates_admin_form($form, &$form_state) {
+function dashboard_whats_new_exchange_updates_admin_form($form) {
 
   $form['type'] = array(
     '#type' => 'hidden',
@@ -44,7 +44,7 @@ function dashboard_whats_new_exchange_updates_admin_form($form, &$form_state) {
 /**
  * Run-time rendering of the body of the block (content type).
  */
-function dashboard_whats_new_exchange_updates_render($subtype, $conf, $panel_args, $context = NULL) {
+function dashboard_whats_new_exchange_updates_render() {
 
   // Render block
   $block = new stdClass();

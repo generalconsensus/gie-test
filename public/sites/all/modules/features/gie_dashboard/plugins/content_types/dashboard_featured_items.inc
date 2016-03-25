@@ -19,7 +19,7 @@ $plugin = array(
 /**
  * The 'admin info' callback for the content type.
  */
-function dashboard_whats_new_featured_items_admin_info($subtype, $conf, $contexts) {
+function dashboard_whats_new_featured_items_admin_info($subtype, $conf) {
   if (!empty($conf)) {
     $block = new stdClass();
     $block->title = $conf['override_title'] ? $conf['override_title_text'] : '';
@@ -31,7 +31,7 @@ function dashboard_whats_new_featured_items_admin_info($subtype, $conf, $context
 /**
  * The 'Edit form' callback for the content type.
  */
-function dashboard_whats_new_featured_items_admin_form($form, &$form_state) {
+function dashboard_whats_new_featured_items_admin_form($form) {
 
   $form['type'] = array(
     '#type' => 'hidden',
@@ -80,7 +80,7 @@ function dashboard_whats_new_featured_items_generate_listing() {
 /**
  * Run-time rendering of the body of the block (content type).
  */
-function dashboard_whats_new_featured_items_render($subtype, $conf, $panel_args, $context = NULL) {
+function dashboard_whats_new_featured_items_render() {
 
 
   $featured_innovations = dashboard_whats_new_featured_items_generate_listing();
@@ -90,14 +90,7 @@ function dashboard_whats_new_featured_items_render($subtype, $conf, $panel_args,
     // Render block
     $block = new stdClass();
 
-    $payload = array(
-      '#theme' => 'item_list',
-      '#items' => $featured_innovations,
-      '#type' => 'ul',
-      '#attributes' => array('class' => 'list-class'),
-    );
-
-    $block->content = $payload;
+    $block->content = '<div class="view--card-view-3col">' . implode("", $featured_innovations) . '</div>';
 
     return $block;
 
