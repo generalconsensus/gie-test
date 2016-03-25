@@ -335,7 +335,6 @@ function gie_funding_ds_field_settings_info() {
         'ft' => array(
           'func' => 'theme_ds_field_expert',
           'lb-el' => 'h2',
-          'lb-cl' => 'card__dashboard-type',
         ),
         'field_delimiter' => '',
         'linked_field' => array(
@@ -356,7 +355,7 @@ function gie_funding_ds_field_settings_info() {
         'ft' => array(
           'func' => 'theme_ds_field_expert',
           'fi' => TRUE,
-          'fi-el' => 'h3',
+          'fi-el' => 'h5',
           'fi-cl' => 'card_title',
           'fi-at' => '',
           'fi-def-at' => FALSE,
@@ -726,7 +725,12 @@ function gie_funding_ds_layout_settings_info() {
       'flag_favorite' => 'main_content',
       'field_funding_image' => 'main_content',
     ),
-    'classes' => array(),
+    'classes' => array(
+      'layout_class' => array(
+        'card' => 'card',
+        'card--spotlight' => 'card--spotlight',
+      ),
+    ),
     'wrappers' => array(
       'header' => 'div',
       'main_content' => 'div',

@@ -329,7 +329,6 @@ function gie_resource_ds_field_settings_info() {
         'ft' => array(
           'func' => 'theme_ds_field_expert',
           'lb-el' => 'h2',
-          'lb-cl' => 'card__dashboard-type',
         ),
         'field_delimiter' => '',
         'linked_field' => array(
@@ -350,7 +349,7 @@ function gie_resource_ds_field_settings_info() {
         'ft' => array(
           'func' => 'theme_ds_field_expert',
           'fi' => TRUE,
-          'fi-el' => 'h3',
+          'fi-el' => 'h5',
           'fi-cl' => 'card__title',
           'fi-at' => '',
           'fi-def-at' => FALSE,
@@ -764,20 +763,25 @@ function gie_resource_ds_layout_settings_info() {
     'regions' => array(
       'main_content' => array(
         0 => 'dashboard_spotlight_card_entity_classification',
-        1 => 'group_card_content',
-        2 => 'content_type',
-        3 => 'title_field',
-        4 => 'flag_favorite',
+        1 => 'content_type',
+        2 => 'group_card_content',
+        3 => 'flag_favorite',
+        4 => 'title_field',
       ),
     ),
     'fields' => array(
       'dashboard_spotlight_card_entity_classification' => 'main_content',
-      'group_card_content' => 'main_content',
       'content_type' => 'main_content',
-      'title_field' => 'main_content',
+      'group_card_content' => 'main_content',
       'flag_favorite' => 'main_content',
+      'title_field' => 'main_content',
     ),
-    'classes' => array(),
+    'classes' => array(
+      'layout_class' => array(
+        'card' => 'card',
+        'card--spotlight' => 'card--spotlight',
+      ),
+    ),
     'wrappers' => array(
       'header' => 'div',
       'main_content' => 'div',

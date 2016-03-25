@@ -176,7 +176,7 @@ function gie_program_strongarm() {
             'visible' => FALSE,
           ),
           'spotlight' => array(
-            'weight' => '21',
+            'weight' => '22',
             'visible' => FALSE,
           ),
         ),
@@ -225,7 +225,7 @@ function gie_program_strongarm() {
             'visible' => FALSE,
           ),
           'spotlight' => array(
-            'weight' => '20',
+            'weight' => '21',
             'visible' => FALSE,
           ),
         ),
@@ -263,7 +263,7 @@ function gie_program_strongarm() {
             'visible' => FALSE,
           ),
           'spotlight' => array(
-            'weight' => '22',
+            'weight' => '23',
             'visible' => FALSE,
           ),
         ),
@@ -289,7 +289,7 @@ function gie_program_strongarm() {
             'visible' => FALSE,
           ),
           'spotlight' => array(
-            'weight' => '24',
+            'weight' => '25',
             'visible' => FALSE,
           ),
         ),
@@ -315,7 +315,7 @@ function gie_program_strongarm() {
             'visible' => FALSE,
           ),
           'spotlight' => array(
-            'weight' => '25',
+            'weight' => '26',
             'visible' => FALSE,
           ),
         ),
@@ -325,7 +325,7 @@ function gie_program_strongarm() {
             'visible' => TRUE,
           ),
           'spotlight' => array(
-            'weight' => '11',
+            'weight' => '12',
             'visible' => FALSE,
           ),
         ),
@@ -335,7 +335,7 @@ function gie_program_strongarm() {
             'visible' => TRUE,
           ),
           'spotlight' => array(
-            'weight' => '6',
+            'weight' => '3',
             'visible' => TRUE,
           ),
         ),
@@ -474,13 +474,6 @@ function gie_program_strongarm() {
   $strongarm->name = 'panelizer_node:program:page_manager_selection';
   $strongarm->value = 'node:program:default';
   $export['panelizer_node:program:page_manager_selection'] = $strongarm;
-
-  $strongarm = new stdClass();
-  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
-  $strongarm->api_version = 1;
-  $strongarm->name = 'pathauto_node_program_pattern';
-  $strongarm->value = 'programs/[node:title]';
-  $export['pathauto_node_program_pattern'] = $strongarm;
 
   return $export;
 }

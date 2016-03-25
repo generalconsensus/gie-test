@@ -57,8 +57,7 @@ function gie_program_field_group_info() {
     'weight' => '2',
     'children' => array(
       0 => 'title_field',
-      1 => 'flag_favorite',
-      2 => 'content_type',
+      1 => 'content_type',
     ),
     'format_type' => 'div',
     'format_settings' => array(

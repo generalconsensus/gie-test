@@ -13,7 +13,42 @@
   font-size: em($font-size-sm);
   text-transform: uppercase;
 }
- 
+
+%card__spotlight-type {
+  color: #fff;
+  font-size: 16px;
+  line-height: 1;
+  margin: 0;
+  padding: 7px 16px 16px 16px;
+  text-align: center;
+  text-transform: uppercase;
+  &:before {
+    @include image-replace(25px,25px);
+    bottom: -5px;
+    content: "";
+    display: inline-block;
+    margin-right: 5px;
+    position: relative;
+  }
+}
+
+.card__spotlight-type-new {
+  @extend %card__spotlight-type;
+  background: $lightblue;
+  &:before {
+    @include svg-background(icon-star);
+    margin-right: 10px;
+  }
+}
+
+.card__spotlight-type-update {
+  @extend %card__spotlight-type;
+  background: $orange;
+  &:before {
+    @include svg-background(icon-exchange-white);
+  }
+}
+
 .card__image {
   line-height: 0;
 }
@@ -28,7 +63,7 @@
   text-align: center;
   text-transform: uppercase;
 }
- 
+
 .card__number {
   @extend %cardheader;
   &:before {
@@ -56,7 +91,10 @@
 }
 
 .card__content {
-  padding: 0.75em;  
+  padding: 0.75em;
+  .card--dashboard & {
+    padding-bottom: 36px; // extra bottom space for favorite
+  }
   .card--icons &,
   .card--background & {
     padding-bottom: 60px; // extra bottom space for icons
@@ -69,9 +107,9 @@
 .card__title {
   font-weight: normal;
   margin: 0 0 0.5em 0;
-  a { 
+  a {
     font-weight: normal;
-  } 
+  }
 }
 
 .card__primary-title {
@@ -86,7 +124,7 @@
 }
 
 .card__user-title {
-  font-style: italic; 
+  font-style: italic;
 }
 
 .card__author {
@@ -105,7 +143,7 @@
     font-weight: bold;
   }
   .card__author-date {
-     
+
   }
 }
 
@@ -167,7 +205,7 @@
   }
 }
 
-.card__location { 
+.card__location {
   font-size: em(14px);
   &:before {
     @include image-replace(12px,16px);
@@ -186,6 +224,18 @@
     &:last-child {
       margin: 0;
     }
+  }
+}
+
+.card__favorite { // faovorite icon on dashboard cards
+  @include image-replace(19px,18px)
+  @include svg-background(icon-heart-empty);
+  bottom: 10px;
+  display: block;
+  position: absolute;
+  right: 10px;
+  &.is-favorited {
+    @include svg-background(icon-heart);
   }
 }
 
@@ -240,7 +290,7 @@
       &:before {
         @extend %cardicon;
         @include image-replace(20px,20px);
-        @include svg-background(icon-comment-20-17-blue); 
+        @include svg-background(icon-comment-20-17-blue);
         background-size: 20px 17px;
         margin-left: -10px; // half of width
       }
@@ -290,13 +340,13 @@
         margin-left: -8px; // half of width
       }
     }
-    .has-icon--organization { 
+    .has-icon--organization {
       &:before {
         @extend %cardicon;
         @include image-replace(17px,20px);
         @include svg-background(icon-organization-17-17-blue);
         background-size: 17px 17px;
-        margin-left: -8px; // half of width 
+        margin-left: -8px; // half of width
       }
     }
     .has-icon--evidence {
@@ -324,6 +374,10 @@
       }
     }
   }
+}
+
+.card--spotlight {
+  @extend %dashboard-pane; // slightly different shadow if inside dashboard
 }
 
 .card--button {

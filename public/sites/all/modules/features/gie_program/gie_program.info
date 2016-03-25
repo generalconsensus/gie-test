@@ -106,7 +106,6 @@ features[variable][] = node_submitted_program
 features[variable][] = panelizer_defaults_node_program
 features[variable][] = panelizer_node:program:default_selection
 features[variable][] = panelizer_node:program:page_manager_selection
-features[variable][] = pathauto_node_program_pattern
 features[views_view][] = program_at_a_glance
 features[views_view][] = program_community
 features[views_view][] = program_counters
