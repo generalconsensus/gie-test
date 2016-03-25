@@ -800,14 +800,54 @@ function dashboard_my_portfolio_form($form) {
       $inc += 1;
       $favorites = flag_get_counts('node', $sector_match);
       $comments = db_query('SELECT count(nid) FROM comment WHERE comment.nid = :nid', array(':nid' => $sector_match))->fetchField();
-      $entity = entity_view('node', array(node_load($sector_match)), 'spotlight');
-      if (!empty($entity)) {
-        $payload[$key + $inc] = array(
-          render($entity),
-          (!empty($favorites) ? $favorites['favorite'] : 0),
-          $comments
-        );
+      $node = node_load($sector_match);
+
+      // Grab image
+      $img_path = '';
+      $img = '';
+      switch ($node->type) {
+        case 'innovation':
+          $img_path = (!empty($node->field_innovation_image)) && !empty($node->field_innovation_image['und'][0]) && !empty($node->field_innovation_image['und'][0]['uri']) ? image_style_url('card__500x300_', $node->field_innovation_image['und'][0]['uri']) : image_style_url('card__500x300_', 's3://default_images/innovation-default-image.jpg');
+          break;
+        case 'funding':
+          $img_path = (!empty($node->field_funding_image)) && !empty($node->field_funding_image['und'][0]) && !empty($node->field_funding_image['und'][0]['uri']) ? image_style_url('card__500x300_', $node->field_funding_image['und'][0]['uri']) : image_style_url('card__500x300_', 's3://default_images/innovation-default-image.jpg');
+          break;
+        case 'event':
+          $img_path = (!empty($node->field_event_image)) && !empty($node->field_event_image['und'][0]) && !empty($node->field_event_image['und'][0]['uri']) ? image_style_url('card__500x300_', $node->field_event_image['und'][0]['uri']) : image_style_url('card__500x300_', 's3://default_images/innovation-default-image.jpg');
+          break;
+
       }
+
+      if (!empty($img_path)) {
+        $variables = array(
+          'path' => $img_path,
+          'alt' => $node->title
+        );
+
+        $img = theme('image', $variables);
+        $img = '<a href="node/' . $node->nid . '">' . $img . '</a>';
+      }
+
+      $column_payload = '
+       <td>
+        <div class="layout-slat">
+            <div class="layout-slat__media">
+            ' . $img . '
+            </div>
+             <div class="layout-slat__content">
+                    <div class="dashboard-table__date">' . date('F jS, Y', $node->changed) . '
+                    </div>
+                    <h4 class="dashboard-table__title">' . l($node->title, "node/" . $node->nid) . '</h4>
+                </div>
+            </div>
+      </td>';
+
+      $payload[$key + $inc] = array(
+        $column_payload,
+        (!empty($favorites) ? $favorites['favorite'] : 0),
+        $comments
+      );
+
     }
   }
   else {
@@ -848,6 +888,7 @@ function dashboard_my_portfolio_form($form) {
     array('data' => strtoupper(t('Favorites'))),
     array('data' => strtoupper(t('Comments'))),
   );
+
 
   $payload = array(
     '#theme' => 'table',
@@ -985,7 +1026,7 @@ function dashboard_my_network_form($form) {
         break;
     }
   }
-  
+
   $form['updates'] = array(
     '#type' => 'item',
     '#markup' => '<div class="view--card-view-3col">' . implode("", $payload) . '</div>',

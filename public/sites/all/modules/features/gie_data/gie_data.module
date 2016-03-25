@@ -36,22 +36,22 @@ function _gie_data_data_count($field) {
         switch ($persona_type[0]['value']) {
             case "innovation":
                 $count = db_query('SELECT COUNT(nid) FROM {node} WHERE type = :type AND status = :status', array(':type' => 'innovation', ':status' => 1))->fetchField();
-                return '<div class="data-point"><a href="/innovations">' . $count . ' <span>Innovations</span></a></div>';
+                return '<div class="data-point data-point--innovation"><a href="/innovations">' . $count . ' <span>Innovations</span></a></div>';
                 break;
             case "funding":
                 $count = db_query('SELECT SUM(field_funding_grant_award_value_value) FROM {field_data_field_funding_grant_award_value} WHERE deleted = :deleted', array(':deleted' => 0))->fetchField();
                 if($count>1000000000) $count = round(($count/1000000000),1).'B';
                 else if($count>1000000) $count = round(($count/1000000),1).'M';
                 else if($count>1000) $count = round(($count/1000),1).'T';
-                return '<div class="data-point"><a href="/funding">$' . $count . ' <span>Available</span></a></div>';
+                return '<div class="data-point data-point--funding"><a href="/funding">$' . $count . ' <span>Available</span></a></div>';
                 break;
             case "user":
                 $count = db_query('SELECT COUNT(uid) FROM {users} WHERE status > :status', array(':status' => 0))->fetchField();
-                return '<div class="data-point"><a href="/members">' . $count . ' <span>Collaborators</span></a></div>';
+                return '<div class="data-point data-point--user"><a href="/members">' . $count . ' <span>Collaborators</span></a></div>';
                 break;
             case "org":
                 $count = db_query('SELECT COUNT(nid) FROM {node} WHERE type = :type AND status = :status', array(':type' => 'organization', ':status' => 1))->fetchField();
-                return '<div class="data-point"><a href="/organizations">' . $count . ' <span>Organizations</span></a></div>';
+                return '<div class="data-point data-point--org"><a href="/organizations">' . $count . ' <span>Organizations</span></a></div>';
                 break;
         }
 

@@ -97,7 +97,9 @@
     "assistance": "4",
     "innovations": "2",
     "resources": "32",
-    "members": "10"
+    "members": "10",
+    "dashboardtype": "Exchange Updates",
+    "dashboardtypeclass": "-update"
   },
   "2": {
     "url": "http://veggieipsum.com",
@@ -197,7 +199,9 @@
     "assistance": "45",
     "innovations": "6",
     "resources": "5",
-    "members": "105"
+    "members": "105",
+    "dashboardtype": "New For You",
+    "dashboardtypeclass": "-new"
   },
   "3": {
     "url": "http://baconipsum.com/",
@@ -297,7 +301,9 @@
     "assistance": "1",
     "innovations": "7",
     "resources": "22",
-    "members": "1"
+    "members": "1",
+    "dashboardtype": "Exchange Updates",
+    "dashboardtypeclass": "-update"
   },
   "4": {
     "url": "http://hipsteripsum.me/",
@@ -397,7 +403,9 @@
     "assistance": "305",
     "innovations": "67",
     "resources": "32",
-    "members": "55"
+    "members": "55",
+    "dashboardtype": "New For You",
+    "dashboardtypeclass": "-new"
   },
   "5": {
     "url": "http://www.niemanlab.org/journo-ipsum/",
@@ -497,7 +505,9 @@
     "assistance": "65",
     "innovations": "1",
     "resources": "2",
-    "members": "10"
+    "members": "10",
+    "dashboardtype": "Exchange Updates",
+    "dashboardtypeclass": "-update"
   },
   "6": {
     "url": "http://www.malevole.com/mv/misc/text/",
@@ -597,7 +607,9 @@
     "assistance": "899",
     "innovations": "8",
     "resources": "4",
-    "members": "35"
+    "members": "35",
+    "dashboardtype": "New For You",
+    "dashboardtypeclass": "-new"
   },
   "7": {
     "url": "http://slipsum.com/lite/",
@@ -697,7 +709,9 @@
     "assistance": "4",
     "innovations": "12",
     "resources": "2",
-    "members": "167"
+    "members": "167",
+    "dashboardtype": "Exchange Updates",
+    "dashboardtypeclass": "-update"
   },
   "8": {
     "url": "http://web20ipsum.com",
@@ -797,7 +811,9 @@
     "assistance": "4",
     "innovations": "4",
     "resources": "66",
-    "members": "3"
+    "members": "3",
+    "dashboardtype": "New For You",
+    "dashboardtypeclass": "-new"
   },
   "9": {
     "url": "http://chrisvalleskey.com/fillerama/",
@@ -897,7 +913,9 @@
     "assistance": "678",
     "innovations": "2",
     "resources": "55",
-    "members": "145"
+    "members": "145",
+    "dashboardtype": "Exchange Updates",
+    "dashboardtypeclass": "-update"
   },
   "10": {
     "url": "http://chrisvalleskey.com/fillerama/",
@@ -997,7 +1015,9 @@
     "assistance": "487",
     "innovations": "4",
     "resources": "12",
-    "members": "4578"
+    "members": "4578",
+    "dashboardtype": "New For You",
+    "dashboardtypeclass": "-new"
   },
   "11": {
     "url": "http://cupcakeipsum.com/",
@@ -1097,7 +1117,9 @@
     "assistance": "9",
     "innovations": "3",
     "resources": "13",
-    "members": "6"
+    "members": "6",
+    "dashboardtype": "Exchange Updates",
+    "dashboardtypeclass": "-update"
   },
   "12": {
     "url": "http://www.cheeseipsum.co.uk/",
@@ -1197,6 +1219,8 @@
     "assistance": "300",
     "innovations": "6",
     "resources": "1",
-    "members": "899"
+    "members": "899",
+    "dashboardtype": "New For You",
+    "dashboardtypeclass": "-new"
   }
 }
