@@ -1,3 +1,6 @@
 .pane--dashboard-new-users {
   @extend %dashboard-pane;
+  .pane__title {
+    @extend %dashboard-header;
+  }
 }
