@@ -797,7 +797,6 @@ function dashboard_my_portfolio_form($form) {
 
   if (!empty($matches)) {
     foreach ($matches as $key => $sector_match) {
-      $inc += 1;
       $favorites = flag_get_counts('node', $sector_match);
       $comments = db_query('SELECT count(nid) FROM comment WHERE comment.nid = :nid', array(':nid' => $sector_match))->fetchField();
       $node = node_load($sector_match);
@@ -829,7 +828,6 @@ function dashboard_my_portfolio_form($form) {
       }
 
       $column_payload = '
-       <td>
         <div class="layout-slat">
             <div class="layout-slat__media">
             ' . $img . '
@@ -839,14 +837,20 @@ function dashboard_my_portfolio_form($form) {
                     </div>
                     <h4 class="dashboard-table__title">' . l($node->title, "node/" . $node->nid) . '</h4>
                 </div>
-            </div>
-      </td>';
+            </div>';
 
-      $payload[$key + $inc] = array(
+      $payload[$key] = array(
         $column_payload,
-        (!empty($favorites) ? $favorites['favorite'] : 0),
-        $comments
+        (array(
+          'data' => (!empty($favorites) ? $favorites['favorite'] : 0),
+          'class' => 'dashboard-table__data'
+        )),
+        (array(
+          'data' => (!empty($comments) ? $comments : 0),
+          'class' => 'dashboard-table__data'
+        )),
       );
+      $inc += 1;
 
     }
   }
@@ -884,9 +888,15 @@ function dashboard_my_portfolio_form($form) {
   }
 
   $header = array(
-    array('data' => ''),
-    array('data' => strtoupper(t('Favorites'))),
-    array('data' => strtoupper(t('Comments'))),
+    array(),
+    array(
+      'data' => strtoupper(t('Favorites')),
+      'class' => 'dashboard-table__fav-header'
+    ),
+    array(
+      'data' => strtoupper(t('Comments')),
+      'class' => 'dashboard-table__comment-header'
+    ),
   );
 
 
@@ -894,7 +904,9 @@ function dashboard_my_portfolio_form($form) {
     '#theme' => 'table',
     '#rows' => $payload,
     '#header' => $header,
+    '#attributes' => array('class' => array('dashboard-table'))
   );
+
 
   $form['updates'] = array(
     '#type' => 'item',
