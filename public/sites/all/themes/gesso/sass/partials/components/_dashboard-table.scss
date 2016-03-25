@@ -1,0 +1,27 @@
+.dashboard-table {
+  margin: 0 0 2em 0;
+  tr {}
+  th {
+    padding: 25px;
+  }
+  td {
+    border-bottom: 1px solid #464646;
+    border-right: 1px solid #464646;
+    padding: 25px;
+  }
+}
+
+.dashboard-table__data {
+  color: $orange;
+  font-size: em(35px);
+  text-align: center;
+  vertical-align: middle;
+}
+
+.dashboard-table__date {
+
+}
+
+.dashboard-table__title {
+
+}

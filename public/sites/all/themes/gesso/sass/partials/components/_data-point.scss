@@ -1,4 +1,4 @@
-// large data output at top of /data
+// large data output at top of /data.  also used on dashboard 'what's new' tab.
 
 .data-point {
   font-size: em(50px);
@@ -18,6 +18,47 @@
       color: darken(#464646,10%);
       span {
         color: $link-hover-color;
+      }
+    }
+  }
+  .pane--dashboard-exchange-updates & {
+    font-size: em(25px);
+    a {
+      @include breakpoint(600px, $no-query: true) {
+        border-right: 1px solid #eee;
+      }
+      span {
+        font-size: em($font-size-normal,25px);
+        padding-top: 0.5em;
+      }
+      &:before {
+        @include image-replace(65px,65px);
+        content: "";
+        display: block;
+        margin: 0 auto 0.5em auto;
+      }
+    }
+    &.data-point--user a {
+      &:before {
+        @include svg-background(icon-2peeps);
+      }
+    }
+    &.data-point--innovation a {
+      border: 0;
+      &:before {
+        @include svg-background(icon-bulb);
+        width: 46px;
+      }
+    }
+    &.data-point--org a {
+      &:before {
+        @include svg-background(icon-3peeps);
+        width: 95px;
+      }
+    }
+    &.data-point--funding a {
+      &:before {
+        @include svg-background(icon-funding);
       }
     }
   }

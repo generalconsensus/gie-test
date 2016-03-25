@@ -3,10 +3,33 @@
   h2 {
     background: #565a5c;
     color: #fff;
-    font-size: em(16px);
-    line-height: 1;
+    font-size: 16px;
+    font-weight: bold;
+    line-height: 24px;
     margin: 0;
-    padding: 1em;
+    padding: 16px 16px 16px 66px;
+    position: relative;
+    &:before {
+      background: $orange;
+      border: 2px solid #fff;
+      border-radius: 50%;
+      content: "";
+      display: block;
+      height: 40px;
+      left: 14px;
+      position: absolute;
+      top: 8px;
+      width: 40px;
+    }
+    &:after {
+      @include image-replace(22px,22px);
+      @include svg-background(icon-bell);
+      content: "";
+      display: block;
+      left: 24px;
+      position: absolute;
+      top: 18px;
+    }
   }
   ul {
     list-style: none;

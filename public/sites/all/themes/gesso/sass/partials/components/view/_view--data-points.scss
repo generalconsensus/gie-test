@@ -1,4 +1,4 @@
-// custom class added to view with 4 large data counts on /data
+// custom class added to view with 4 large data counts on /data. also used on dashboard 'what's new' tab.
 
 .view--data-points {
   @extend %clearfix;
@@ -12,6 +12,16 @@
     @include breakpoint(700px, $no-query: true) {
       padding: 0;
       width: percentage(1/4);
+    }
+    .pane--dashboard-exchange-updates & {
+      padding: 0 0 1em 0;
+      width: 100%;
+      @include breakpoint(600px) {
+        width: percentage(1/2);
+      }
+      @include breakpoint(900px, $no-query: true) {
+        width: percentage(1/4);
+      }
     }
   }
 }
