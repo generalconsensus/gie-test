@@ -304,6 +304,52 @@ function gie_funding_ds_field_settings_info() {
       'weight' => '0',
       'label' => 'hidden',
       'format' => 'default',
+      'formatter_settings' => array(
+        'ft' => array(
+          'func' => 'theme_ds_field_expert',
+          'fis' => TRUE,
+          'fis-el' => 'div',
+          'fis-cl' => 'card__type',
+          'fis-at' => '',
+          'fis-def-at' => FALSE,
+        ),
+        'field_delimiter' => '',
+        'linked_field' => array(
+          'linked' => 0,
+          'destination' => '',
+          'advanced' => array(
+            'title' => '',
+            'target' => '',
+            'class' => '',
+            'rel' => '',
+            'text' => '',
+          ),
+        ),
+      ),
+    ),
+    'dashboard_spotlight_card_entity_classification' => array(
+      'weight' => '0',
+      'label' => 'hidden',
+      'format' => 'default',
+      'formatter_settings' => array(
+        'ft' => array(
+          'func' => 'theme_ds_field_expert',
+          'lb-el' => 'h2',
+          'lb-cl' => 'card__dashboard-type',
+        ),
+        'field_delimiter' => '',
+        'linked_field' => array(
+          'linked' => 0,
+          'destination' => '',
+          'advanced' => array(
+            'title' => '',
+            'target' => '',
+            'class' => '',
+            'rel' => '',
+            'text' => '',
+          ),
+        ),
+      ),
     ),
     'title_field' => array(
       'formatter_settings' => array(
@@ -311,7 +357,7 @@ function gie_funding_ds_field_settings_info() {
           'func' => 'theme_ds_field_expert',
           'fi' => TRUE,
           'fi-el' => 'h3',
-          'fi-cl' => 'card__primary-title',
+          'fi-cl' => 'card_title',
           'fi-at' => '',
           'fi-def-at' => FALSE,
           'fi-odd-even' => FALSE,
@@ -663,17 +709,19 @@ function gie_funding_ds_layout_settings_info() {
     'regions' => array(
       'main_content' => array(
         0 => 'content_type',
-        1 => 'group_card_image',
+        1 => 'dashboard_spotlight_card_entity_classification',
         2 => 'title_field',
-        3 => 'group_card_content',
-        4 => 'flag_favorite',
-        5 => 'field_funding_image',
+        3 => 'group_card_image',
+        4 => 'group_card_content',
+        5 => 'flag_favorite',
+        6 => 'field_funding_image',
       ),
     ),
     'fields' => array(
       'content_type' => 'main_content',
-      'group_card_image' => 'main_content',
+      'dashboard_spotlight_card_entity_classification' => 'main_content',
       'title_field' => 'main_content',
+      'group_card_image' => 'main_content',
       'group_card_content' => 'main_content',
       'flag_favorite' => 'main_content',
       'field_funding_image' => 'main_content',

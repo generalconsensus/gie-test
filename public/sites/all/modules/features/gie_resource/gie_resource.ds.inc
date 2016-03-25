@@ -293,9 +293,57 @@ function gie_resource_ds_field_settings_info() {
   $ds_fieldsetting->view_mode = 'spotlight';
   $ds_fieldsetting->settings = array(
     'content_type' => array(
-      'weight' => '2',
+      'weight' => '1',
       'label' => 'hidden',
       'format' => 'default',
+      'formatter_settings' => array(
+        'ft' => array(
+          'func' => 'theme_ds_field_expert',
+          'fi' => TRUE,
+          'fi-el' => 'div',
+          'fi-cl' => 'card__type',
+          'fi-at' => '',
+          'fi-def-at' => FALSE,
+          'fi-odd-even' => FALSE,
+          'fi-first-last' => FALSE,
+        ),
+        'field_delimiter' => '',
+        'linked_field' => array(
+          'linked' => 0,
+          'destination' => '',
+          'advanced' => array(
+            'title' => '',
+            'target' => '',
+            'class' => '',
+            'rel' => '',
+            'text' => '',
+          ),
+        ),
+      ),
+    ),
+    'dashboard_spotlight_card_entity_classification' => array(
+      'weight' => '0',
+      'label' => 'hidden',
+      'format' => 'default',
+      'formatter_settings' => array(
+        'ft' => array(
+          'func' => 'theme_ds_field_expert',
+          'lb-el' => 'h2',
+          'lb-cl' => 'card__dashboard-type',
+        ),
+        'field_delimiter' => '',
+        'linked_field' => array(
+          'linked' => 0,
+          'destination' => '',
+          'advanced' => array(
+            'title' => '',
+            'target' => '',
+            'class' => '',
+            'rel' => '',
+            'text' => '',
+          ),
+        ),
+      ),
     ),
     'title_field' => array(
       'formatter_settings' => array(
@@ -715,13 +763,15 @@ function gie_resource_ds_layout_settings_info() {
   $ds_layout->settings = array(
     'regions' => array(
       'main_content' => array(
-        0 => 'group_card_content',
-        1 => 'content_type',
-        2 => 'title_field',
-        3 => 'flag_favorite',
+        0 => 'dashboard_spotlight_card_entity_classification',
+        1 => 'group_card_content',
+        2 => 'content_type',
+        3 => 'title_field',
+        4 => 'flag_favorite',
       ),
     ),
     'fields' => array(
+      'dashboard_spotlight_card_entity_classification' => 'main_content',
       'group_card_content' => 'main_content',
       'content_type' => 'main_content',
       'title_field' => 'main_content',

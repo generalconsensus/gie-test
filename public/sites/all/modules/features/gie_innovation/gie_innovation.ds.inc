@@ -455,9 +455,57 @@ function gie_innovation_ds_field_settings_info() {
   $ds_fieldsetting->view_mode = 'spotlight';
   $ds_fieldsetting->settings = array(
     'content_type' => array(
+      'weight' => '1',
+      'label' => 'hidden',
+      'format' => 'default',
+      'formatter_settings' => array(
+        'ft' => array(
+          'func' => 'theme_ds_field_expert',
+          'fi' => TRUE,
+          'fi-el' => 'div',
+          'fi-cl' => 'card__type',
+          'fi-at' => '',
+          'fi-def-at' => FALSE,
+          'fi-odd-even' => FALSE,
+          'fi-first-last' => FALSE,
+        ),
+        'field_delimiter' => '',
+        'linked_field' => array(
+          'linked' => 0,
+          'destination' => '',
+          'advanced' => array(
+            'title' => '',
+            'target' => '',
+            'class' => '',
+            'rel' => '',
+            'text' => '',
+          ),
+        ),
+      ),
+    ),
+    'dashboard_spotlight_card_entity_classification' => array(
       'weight' => '0',
       'label' => 'hidden',
       'format' => 'default',
+      'formatter_settings' => array(
+        'ft' => array(
+          'func' => 'theme_ds_field_expert',
+          'lb-el' => 'h2',
+          'lb-cl' => 'card__dashboard-type',
+        ),
+        'field_delimiter' => '',
+        'linked_field' => array(
+          'linked' => 0,
+          'destination' => '',
+          'advanced' => array(
+            'title' => '',
+            'target' => '',
+            'class' => '',
+            'rel' => '',
+            'text' => '',
+          ),
+        ),
+      ),
     ),
     'title_field' => array(
       'formatter_settings' => array(
@@ -465,7 +513,7 @@ function gie_innovation_ds_field_settings_info() {
           'func' => 'theme_ds_field_expert',
           'fi' => TRUE,
           'fi-el' => 'h3',
-          'fi-cl' => 'card__primary-title',
+          'fi-cl' => 'card_title',
           'fi-at' => '',
           'fi-def-at' => FALSE,
           'fi-odd-even' => FALSE,
@@ -955,17 +1003,19 @@ function gie_innovation_ds_layout_settings_info() {
   $ds_layout->settings = array(
     'regions' => array(
       'main_content' => array(
-        0 => 'group_card_image',
+        0 => 'dashboard_spotlight_card_entity_classification',
         1 => 'content_type',
-        2 => 'group_card_content',
-        3 => 'title_field',
-        4 => 'flag_favorite',
-        5 => 'field_innovation_image',
+        2 => 'group_card_image',
+        3 => 'group_card_content',
+        4 => 'title_field',
+        5 => 'flag_favorite',
+        6 => 'field_innovation_image',
       ),
     ),
     'fields' => array(
-      'group_card_image' => 'main_content',
+      'dashboard_spotlight_card_entity_classification' => 'main_content',
       'content_type' => 'main_content',
+      'group_card_image' => 'main_content',
       'group_card_content' => 'main_content',
       'title_field' => 'main_content',
       'flag_favorite' => 'main_content',

@@ -202,6 +202,49 @@ function gie_program_ds_field_settings_info() {
       'weight' => '4',
       'label' => 'hidden',
       'format' => 'default',
+      'formatter_settings' => array(
+        'ft' => array(
+          'func' => 'theme_ds_field_expert',
+          'lb-el' => 'div',
+          'lb-cl' => 'card__type',
+        ),
+        'field_delimiter' => '',
+        'linked_field' => array(
+          'linked' => 0,
+          'destination' => '',
+          'advanced' => array(
+            'title' => '',
+            'target' => '',
+            'class' => '',
+            'rel' => '',
+            'text' => '',
+          ),
+        ),
+      ),
+    ),
+    'dashboard_spotlight_card_entity_classification' => array(
+      'weight' => '0',
+      'label' => 'hidden',
+      'format' => 'default',
+      'formatter_settings' => array(
+        'ft' => array(
+          'func' => 'theme_ds_field_expert',
+          'lb-el' => 'h2',
+          'lb-cl' => 'card__dashboard-type',
+        ),
+        'field_delimiter' => '',
+        'linked_field' => array(
+          'linked' => 0,
+          'destination' => '',
+          'advanced' => array(
+            'title' => '',
+            'target' => '',
+            'class' => '',
+            'rel' => '',
+            'text' => '',
+          ),
+        ),
+      ),
     ),
     'title_field' => array(
       'formatter_settings' => array(
@@ -209,7 +252,7 @@ function gie_program_ds_field_settings_info() {
           'func' => 'theme_ds_field_expert',
           'fi' => TRUE,
           'fi-el' => 'h3',
-          'fi-cl' => 'card__primary-title',
+          'fi-cl' => 'card__title',
           'fi-at' => '',
           'fi-def-at' => FALSE,
           'fi-odd-even' => FALSE,
@@ -459,15 +502,17 @@ function gie_program_ds_layout_settings_info() {
   $ds_layout->settings = array(
     'regions' => array(
       'main_content' => array(
-        0 => 'group_card_image',
-        1 => 'group_card_content',
-        2 => 'content_type',
-        3 => 'title_field',
-        4 => 'flag_favorite',
-        5 => 'field_program_logo',
+        0 => 'dashboard_spotlight_card_entity_classification',
+        1 => 'group_card_image',
+        2 => 'group_card_content',
+        3 => 'content_type',
+        4 => 'title_field',
+        5 => 'flag_favorite',
+        6 => 'field_program_logo',
       ),
     ),
     'fields' => array(
+      'dashboard_spotlight_card_entity_classification' => 'main_content',
       'group_card_image' => 'main_content',
       'group_card_content' => 'main_content',
       'content_type' => 'main_content',
