@@ -591,19 +591,19 @@ function dashboard_recommended_innovations_form($form) {
     global $user;
     switch ($filter) {
       case 'my_sectors':
-        $payload[] = t('There are no innovation recommendations based on your sector preferences.') . ' ' . l(t('Update your preferences'), 'user/' . $user->uid . '/edit') . t(' to get better results');
+        $payload[] = '<div class="views-row">' . t('There are no innovation recommendations based on your sector preferences.') . ' ' . l(t('Update your preferences'), 'user/' . $user->uid . '/edit') . t(' to get better results') . '</div>';
         break;
       case 'my_topics':
-        $payload[] = t('There are no innovation recommendations based on your topic preferences.') . ' ' . l(t('Update your preferences'), 'user/' . $user->uid . '/edit') . t(' to get better results');
+        $payload[] = '<div class="views-row">' . t('There are no innovation recommendations based on your topic preferences.') . ' ' . l(t('Update your preferences'), 'user/' . $user->uid . '/edit') . t(' to get better results') . '</div>';
         break;
       case 'my_skills':
-        $payload[] = t('There are no innovation recommendations requesting your skills.') . ' ' . l(t('Update your preferences'), 'user/' . $user->uid . '/edit') . t(' to get better results');
+        $payload[] = '<div class="views-row">' . t('There are no innovation recommendations requesting your skills.') . ' ' . l(t('Update your preferences'), 'user/' . $user->uid . '/edit') . t(' to get better results') . '</div>';
         break;
       case 'my_friends':
-        $payload[] = t('There are no innovation recommendations on what your friends are following.') . ' ' . l(t('Find members to follow'), 'members') . t(' to get better results');
+        $payload[] = '<div class="views-row">' . t('There are no innovation recommendations on what your friends are following.') . ' ' . l(t('Find members to follow'), 'members') . t(' to get better results') . '</div>';
         break;
       case 'im_following':
-        $payload[] = t('You are not following any innovations') . ' ' . l(t('Find innovations to follow'), 'innovations');
+        $payload[] = '<div class="views-row">' . t('You are not following any innovations') . ' ' . l(t('Find innovations to follow'), 'innovations') . '</div>';
         break;
     }
   }
@@ -703,16 +703,16 @@ function dashboard_recommended_funding_form($form) {
     global $user;
     switch ($filter) {
       case 'my_sectors':
-        $payload[] = t('There are no funding opportunity recommendations based on your sector preferences.') . ' ' . l(t('Update your preferences'), 'user/' . $user->uid . '/edit') . t(' to get better results');
+        $payload[] = '<div class="views-row">' . t('There are no funding opportunity recommendations based on your sector preferences.') . ' ' . l(t('Update your preferences'), 'user/' . $user->uid . '/edit') . t(' to get better results') . '</div>';
         break;
       case 'my_topics':
-        $payload[] = t('There are no funding opportunity recommendations based on your topic preferences.') . ' ' . l(t('Update your preferences'), 'user/' . $user->uid . '/edit') . t(' to get better results');
+        $payload[] = '<div class="views-row">' . t('There are no funding opportunity recommendations based on your topic preferences.') . ' ' . l(t('Update your preferences'), 'user/' . $user->uid . '/edit') . t(' to get better results') . '</div>';
         break;
       case 'my_friends':
-        $payload[] = t('There are no funding opportunity recommendations based on on what your friends are following.') . ' ' . l(t('Find members to follow'), 'members') . t(' to get better results');
+        $payload[] = '<div class="views-row">' . t('There are no funding opportunity recommendations based on on what your friends are following.') . ' ' . l(t('Find members to follow'), 'members') . t(' to get better results') . '</div>';
         break;
       case 'im_following':
-        $payload[] = t('You are not following any funding opportunities') . ' ' . l(t('Find funding opportunities to follow'), 'funding');
+        $payload[] = '<div class="views-row">' . t('You are not following any funding opportunities') . ' ' . l(t('Find funding opportunities to follow'), 'funding') . '</div>';
         break;
     }
   }
@@ -1004,25 +1004,25 @@ function dashboard_my_network_form($form) {
 
     switch ($filter) {
       case 'net_users':
-        $payload[] = t('You have not followed a members! Click ') . l(t('here'), 'members') . t(' to find members');
+        $payload[] = '<div class="views-row">' . t('You have not followed a members! Click ') . l(t('here'), 'members') . t(' to find members') . '</div>';
         break;
       case 'net_innovation':
-        $payload[] = t('You have not followed an innovation! Click ') . l(t('here'), 'innovations') . t(' to find innovations');
+        $payload[] = '<div class="views-row">' . t('You have not followed an innovation! Click ') . l(t('here'), 'innovations') . t(' to find innovations') . '</div>';
         break;
       case 'net_funding':
-        $payload[] = t('You have not followed a funding opportunity! Click ') . l(t('here'), 'funding') . t('to find funding opportunities');
+        $payload[] = '<div class="views-row">' . t('You have not followed a funding opportunity! Click ') . l(t('here'), 'funding') . t('to find funding opportunities') . '</div>';
         break;
       case 'net_resource':
-        $payload[] = t('You have not followed a resource! Click ') . l(t('here'), 'resources') . t(' to find resources');
+        $payload[] = '<div class="views-row">' . t('You have not followed a resource! Click ') . l(t('here'), 'resources') . t(' to find resources') . '</div>';
         break;
       case 'net_event':
-        $payload[] = t('You have not followed an event! Click ') . l(t('here'), 'events') . t(' to find events');
+        $payload[] = '<div class="views-row">' . t('You have not followed an event! Click ') . l(t('here'), 'events') . t(' to find events') . '</div>';
         break;
       case 'net_organization':
-        $payload[] = t('You have not followed an organization! Click ') . l(t('here'), 'organizations') . t(' to find organizations');
+        $payload[] = '<div class="views-row">' . t('You have not followed an organization! Click ') . l(t('here'), 'organizations') . t(' to find organizations') . '</div>';
         break;
       case 'net_program':
-        $payload[] = t('You have not followed a program! Click ') . l(t('here'), 'programs') . t(' to find programs');
+        $payload[] = '<div class="views-row">' . t('You have not followed a program! Click ') . l(t('here'), 'programs') . t(' to find programs') . '</div>';
         break;
     }
   }
