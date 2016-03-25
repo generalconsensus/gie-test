@@ -1472,7 +1472,7 @@ function gie_innovation_views_default_views() {
   $handler->display->display_options['row_options']['default_field_elements'] = FALSE;
   $handler->display->display_options['defaults']['row_options'] = FALSE;
   $handler->display->display_options['defaults']['fields'] = FALSE;
-  /* Field: COUNT(Field: Assistance Type) */
+  /* Field: COUNT(Content: Assistance Type) */
   $handler->display->display_options['fields']['field_innovation_assistance']['id'] = 'field_innovation_assistance';
   $handler->display->display_options['fields']['field_innovation_assistance']['table'] = 'field_data_field_innovation_assistance';
   $handler->display->display_options['fields']['field_innovation_assistance']['field'] = 'field_innovation_assistance';

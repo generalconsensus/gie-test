@@ -14,7 +14,7 @@
   text-transform: uppercase;
 }
 
-%card__dashboard-type {
+%card__spotlight-type {
   color: #fff;
   font-size: 16px;
   line-height: 1;
@@ -32,8 +32,8 @@
   }
 }
 
-.card__dashboard-type-new {
-  @extend %card__dashboard-type;
+.card__spotlight-type-new {
+  @extend %card__spotlight-type;
   background: $lightblue;
   &:before {
     @include svg-background(icon-star);
@@ -41,8 +41,8 @@
   }
 }
 
-.card__dashboard-type-update {
-  @extend %card__dashboard-type;
+.card__spotlight-type-update {
+  @extend %card__spotlight-type;
   background: $orange;
   &:before {
     @include svg-background(icon-exchange-white);
@@ -376,7 +376,7 @@
   }
 }
 
-.card--dashboard {
+.card--spotlight {
   @extend %dashboard-pane; // slightly different shadow if inside dashboard
 }
 

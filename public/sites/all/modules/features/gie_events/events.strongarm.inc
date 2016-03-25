@@ -189,7 +189,7 @@ function events_strongarm() {
             'visible' => FALSE,
           ),
           'spotlight' => array(
-            'weight' => '16',
+            'weight' => '19',
             'visible' => FALSE,
           ),
         ),
@@ -215,7 +215,7 @@ function events_strongarm() {
             'visible' => FALSE,
           ),
           'spotlight' => array(
-            'weight' => '26',
+            'weight' => '28',
             'visible' => FALSE,
           ),
         ),
@@ -241,7 +241,7 @@ function events_strongarm() {
             'visible' => FALSE,
           ),
           'spotlight' => array(
-            'weight' => '20',
+            'weight' => '23',
             'visible' => FALSE,
           ),
         ),
@@ -267,7 +267,7 @@ function events_strongarm() {
             'visible' => FALSE,
           ),
           'spotlight' => array(
-            'weight' => '22',
+            'weight' => '25',
             'visible' => FALSE,
           ),
         ),
@@ -289,7 +289,7 @@ function events_strongarm() {
             'visible' => FALSE,
           ),
           'spotlight' => array(
-            'weight' => '19',
+            'weight' => '22',
             'visible' => FALSE,
           ),
         ),
@@ -319,7 +319,7 @@ function events_strongarm() {
             'visible' => FALSE,
           ),
           'spotlight' => array(
-            'weight' => '21',
+            'weight' => '24',
             'visible' => FALSE,
           ),
         ),
@@ -337,7 +337,7 @@ function events_strongarm() {
             'visible' => FALSE,
           ),
           'spotlight' => array(
-            'weight' => '23',
+            'weight' => '26',
             'visible' => FALSE,
           ),
         ),
@@ -347,7 +347,7 @@ function events_strongarm() {
             'visible' => TRUE,
           ),
           'spotlight' => array(
-            'weight' => '10',
+            'weight' => '13',
             'visible' => FALSE,
           ),
         ),
@@ -357,7 +357,7 @@ function events_strongarm() {
             'visible' => TRUE,
           ),
           'spotlight' => array(
-            'weight' => '6',
+            'weight' => '3',
             'visible' => TRUE,
           ),
         ),

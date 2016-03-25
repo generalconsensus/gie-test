@@ -1162,13 +1162,13 @@ function gie_dashboard_card_build($matches, $alternate = FALSE, $user = FALSE) {
       $entity = entity_view('node', array(node_load($sector_match->nid)), 'spotlight');
       if (!empty($entity)) {
         if (!empty($sector_match->featured)) {
-          $entity['node'][key($entity['node'])]['dashboard_spotlight_card_entity_classification'][0]['#markup'] = '<h2 class="card__dashboard-type dashboard_exchange_featured">' . strtoupper(t('Exchange Updates')) . '</h2>';
+          $entity['node'][key($entity['node'])]['dashboard_spotlight_card_entity_classification'][0]['#markup'] = '<h2 class="card__spotlight-type-update">' . strtoupper(t('Exchange Updates')) . '</h2>';
         }
         elseif (!empty($sector_match->flagged)) {
-          $entity['node'][key($entity['node'])]['dashboard_spotlight_card_entity_classification'][0]['#markup'] = '<h2 class="card__dashboard-type dashboard_exchange_flagged">' . strtoupper(t('Followed By You')) . '</h2>';
+          $entity['node'][key($entity['node'])]['dashboard_spotlight_card_entity_classification'][0]['#markup'] = '<h2 class="card__spotlight-type-followed">' . strtoupper(t('Followed By You')) . '</h2>';
         }
         else {
-          $entity['node'][key($entity['node'])]['dashboard_spotlight_card_entity_classification'][0]['#markup'] = '<h2 class="card__dashboard-type dashboard_exchange_match">' . strtoupper(t('New for You')) . '</h2>';
+          $entity['node'][key($entity['node'])]['dashboard_spotlight_card_entity_classification'][0]['#markup'] = '<h2 class="card__spotlight-type-new">' . strtoupper(t('New for You')) . '</h2>';
         }
       }
       $entity = render($entity);
@@ -1181,13 +1181,13 @@ function gie_dashboard_card_build($matches, $alternate = FALSE, $user = FALSE) {
       $entity = entity_view('user', array(user_load($sector_match->uid)), 'spotlight');
       if (!empty($entity)) {
         if (!empty($sector_match->featured)) {
-          $entity['user'][key($entity['user'])]['dashboard_spotlight_card_user_classification'][0]['#markup'] = '<h2 class="card__dashboard-type dashboard_exchange_featured">' . strtoupper(t('Exchange Updates')) . '</h2>';
+          $entity['user'][key($entity['user'])]['dashboard_spotlight_card_user_classification'][0]['#markup'] = '<h2 class="card__spotlight-type-update">' . strtoupper(t('Exchange Updates')) . '</h2>';
         }
         elseif (!empty($sector_match->flagged)) {
-          $entity['user'][key($entity['user'])]['dashboard_spotlight_card_user_classification'][0]['#markup'] = '<h2 class="card__dashboard-type dashboard_exchange_flagged">' . strtoupper(t('Followed By You')) . '</h2>';
+          $entity['user'][key($entity['user'])]['dashboard_spotlight_card_user_classification'][0]['#markup'] = '<h2 class="card__spotlight-type-followed">' . strtoupper(t('Followed By You')) . '</h2>';
         }
         else {
-          $entity['user'][key($entity['user'])]['dashboard_spotlight_card_user_classification'][0]['#markup'] = '<h2 class="card__dashboard-type dashboard_exchange_match">' . strtoupper(t('New for You')) . '</h2>';
+          $entity['user'][key($entity['user'])]['dashboard_spotlight_card_user_classification'][0]['#markup'] = '<h2 class="card__spotlight-type-new">' . strtoupper(t('New for You')) . '</h2>';
         }
       }
       $entity = render($entity);
