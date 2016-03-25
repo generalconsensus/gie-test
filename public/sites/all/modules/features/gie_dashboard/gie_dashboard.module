@@ -89,33 +89,11 @@ function gie_dashboard_form_node_form_alter(&$form) {
 }
 
 /**
- * Implements hook_views_pre_views_pre_view().
+ * Implements hook_panels_pre_render().
  */
-function gie_dashboard_views_pre_view($view) {
-  if ($view->name == 'dashboard' && $view->current_display == 'user_funding_opportunities') {
+function gie_dashboard_panels_pre_render($panels_display, $renderer) {
+  if ($panels_display->title == 'Your Exchange Dashboard') {
     _gie_data_viz_init();
-  }
-}
-
-/**
- * @param $view
- */
-function gie_dashboard_views_pre_render(&$view) {
-  if ($view->name == 'dashboard' && $view->current_display == 'user_funding_opportunities' && !empty($view->result)) {
-    foreach ($view->result as $key => $result) {
-      if (!empty($result->field_field_funding_deadline[0]['raw']['value']) && !empty($result->field_field_funding_link[0]['raw']['value'])) {
-        $deadline = $result->field_field_funding_deadline[0]['raw']['value'];
-        $deadline = strtotime($deadline);
-        // The deadline has passed
-        if (!empty($deadline) && is_numeric($deadline) && strtotime('now') > $deadline) {
-          $result->field_field_funding_deadline[0]['rendered']['#markup'] = '<span class="gie-dashboard-funding-op-status">Closed</span>';
-          // The deadline is open
-        }
-        else {
-          $result->field_field_funding_deadline[0]['rendered']['#markup'] = '<a class="button button--highlight" href="' . $result->field_field_funding_link[0]['raw']['value'] . '">Apply</a>';
-        }
-      }
-    }
   }
 }
 
