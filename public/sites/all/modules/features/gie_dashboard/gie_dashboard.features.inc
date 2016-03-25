@@ -25,7 +25,7 @@ function gie_dashboard_ctools_plugin_api($module = NULL, $api = NULL) {
 /**
  * Implements hook_views_api().
  */
-function gie_dashboard_views_api($module = NULL, $api = NULL) {
+function gie_dashboard_views_api() {
   return array("api" => "3.0");
 }
 

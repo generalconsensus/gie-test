@@ -19,7 +19,7 @@ $plugin = array(
 /**
  * The 'admin info' callback for the content type.
  */
-function dashboard_whats_new_notification_center_admin_info($subtype, $conf, $contexts) {
+function dashboard_whats_new_notification_center_admin_info($subtype, $conf) {
   if (!empty($conf)) {
     $block = new stdClass();
     $block->title = $conf['override_title'] ? $conf['override_title_text'] : '';
@@ -31,7 +31,7 @@ function dashboard_whats_new_notification_center_admin_info($subtype, $conf, $co
 /**
  * The 'Edit form' callback for the content type.
  */
-function dashboard_whats_new_notification_center_admin_form($form, &$form_state) {
+function dashboard_whats_new_notification_center_admin_form($form) {
 
   $form['type'] = array(
     '#type' => 'hidden',
@@ -88,9 +88,9 @@ function dashboard_notification_center_generate_listing() {
 
     // Grab random followers for use with generating a list of content
     // Inner Join back on flagging to make sure that the relationship is 'two-way'
-    $followers = db_query('SELECT flagging.uid FROM flagging INNER JOIN flagging reverse_flagging on flagging.uid = reverse_flagging.entity_id
-    WHERE flagging.fid = :fid AND reverse_flagging.fid  = :fid
-    AND flagging.entity_id = :uid AND reverse_flagging.uid = :uid', array(
+    $followers = db_query('SELECT flagging.uid FROM flagging
+    WHERE flagging.fid = :fid
+    AND flagging.entity_id = :uid ', array(
       ':fid' => $follow_user->fid,
       ':uid' => $user->uid
     ))->fetchCol();
@@ -164,13 +164,11 @@ function dashboard_notification_center_generate_listing() {
 /**
  * Run-time rendering of the body of the block (content type).
  */
-function dashboard_whats_new_notification_center_render($subtype, $conf, $panel_args, $context = NULL) {
+function dashboard_whats_new_notification_center_render() {
   $results = dashboard_notification_center_generate_listing();
-  $gie_dashboard_notification_center = array();
 
   // Render block
   $block = new stdClass();
-
 
   $gie_dashboard_notification_center = array(
     '#prefix' => '<div class="dashboard-notifications"><h2>' . strtoupper(t('Notifications')) . '</h2><ul>',
@@ -241,7 +239,8 @@ function dashboard_whats_new_notification_center_render($subtype, $conf, $panel_
               '#markup' => '<li>' . l($name, 'user/' . $result[0]->uid) . ' follows you</li>',
             );
           }
-        } else {
+        }
+        else {
           $gie_dashboard_notification_center[$key] = array(
             '#markup' => '<li>Find your Friends on the ' . l(t('Exchange'), 'members') . '.</li>'
           );
@@ -257,7 +256,8 @@ function dashboard_whats_new_notification_center_render($subtype, $conf, $panel_
           $gie_dashboard_notification_center[$key] = array(
             '#markup' => '<li>' . l($result['name'], 'user/' . $result['uid']) . ' followed content ' . l($result['title'], 'node/' . $result['nid']) . '.</li>'
           );
-        } else {
+        }
+        else {
           $gie_dashboard_notification_center[$key] = array(
             '#markup' => '<li>Find Innovations on the ' . l(t('Exchange'), 'innovations') . '.</li>'
           );
@@ -279,7 +279,6 @@ function dashboard_whats_new_notification_center_render($subtype, $conf, $panel_
     }
 
   }
-
 
   $block->content = $gie_dashboard_notification_center;
 
