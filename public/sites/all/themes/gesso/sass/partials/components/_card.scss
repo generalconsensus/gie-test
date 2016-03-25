@@ -5,9 +5,6 @@
   margin: 0 auto;
   max-width: 500px;
   position: relative;
-  .dashboard & { // slightly different shadow if inside dashboard
-    @extend %dashboard-pane;
-  }
 }
 
 .card__meta {}
@@ -39,7 +36,7 @@
   @extend %card__dashboard-type;
   background: $lightblue;
   &:before {
-    @include svg-background(icon-heart);
+    @include svg-background(icon-star);
     margin-right: 10px;
   }
 }
@@ -95,6 +92,9 @@
 
 .card__content {
   padding: 0.75em;
+  .card--dashboard & {
+    padding-bottom: 36px; // extra bottom space for favorite
+  }
   .card--icons &,
   .card--background & {
     padding-bottom: 60px; // extra bottom space for icons
@@ -224,6 +224,18 @@
     &:last-child {
       margin: 0;
     }
+  }
+}
+
+.card__favorite { // faovorite icon on dashboard cards
+  @include image-replace(19px,18px)
+  @include svg-background(icon-heart-empty);
+  bottom: 10px;
+  display: block;
+  position: absolute;
+  right: 10px;
+  &.is-favorited {
+    @include svg-background(icon-heart);
   }
 }
 
@@ -362,6 +374,10 @@
       }
     }
   }
+}
+
+.card--dashboard {
+  @extend %dashboard-pane; // slightly different shadow if inside dashboard
 }
 
 .card--button {
