@@ -65,22 +65,22 @@
                                 <div class="view view--data-page-views view--data-points">
                                   <div class="views-row">
                                     <article class="node node--persona node--data view-mode-data">
-                                      <div class="data-point"><a href="#">334 <span>Organizations</span></a></div>
+                                      <div class="data-point data-point--org"><a href="#">334 <span>Organizations</span></a></div>
                                     </article>
                                   </div>
                                   <div class="views-row">
                                     <article class="node node--persona node--data view-mode-data ">
-                                      <div class="data-point"><a href="#">$349.4M <span>Available</span></a></div>
+                                      <div class="data-point data-point--funding"><a href="#">$349.4M <span>Available</span></a></div>
                                     </article>
                                   </div>
                                   <div class="views-row">
                                     <article class="node node--persona node--data view-mode-data">
-                                      <div class="data-point"><a href="#">1636 <span>Collaborators</span></a></div>
+                                      <div class="data-point data-point--user"><a href="#">1636 <span>Collaborators</span></a></div>
                                     </article>
                                   </div>
                                   <div class="views-row">
                                     <article class="node node--persona node--data view-mode-data">
-                                      <div class="data-point"><a href="#">3907 <span>Innovations</span></a></div>
+                                      <div class="data-point data-point--innovation"><a href="#">3907 <span>Innovations</span></a></div>
                                     </article>
                                   </div>
                                 </div>
@@ -98,6 +98,31 @@
                                   </div>
                               </div>
                             </div>
+
+                            <table class="dashboard-table">
+                              <tr>
+                                <th></th>
+                                <th class="dashboard-table__fav-header">Favorites</th>
+                                <th class="dashboard-table__comment-header">Comments</th>
+                              </tr>
+                              {{# listItems.six }}
+                              <tr>
+                                <td>
+                                  <div class="layout-slat">
+                                    <div class="layout-slat__media">
+                                      <a href="{{ url }}">{{> atoms-thumbnail-image }}</a>
+                                    </div>
+                                    <div class="layout-slat__content">
+                                      <div class="dashboard-table__date">{{> atoms-medium-date }}</div>
+                                      <h4 class="dashboard-table__title"><a href="{{ url }}">{{ title }}</a></h4>
+                                    </div>
+                                  </div>
+                                </td>
+                                <td class="dashboard-table__data">20</td>
+                                <td class="dashboard-table__data">20</td>
+                              </tr>
+                              {{/ listItems.six }}
+                            </table>
 
                           </div>
                           <div class="l-wrapper">
