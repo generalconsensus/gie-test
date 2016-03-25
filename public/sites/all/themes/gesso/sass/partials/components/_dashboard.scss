@@ -2,37 +2,37 @@
   color: #333;
 }
 
-.dashboard__title {
-  border-bottom: 1px solid #333;
-  color: #333;
-  margin-top: 1em;
-  overflow: hidden;
-  padding-bottom: 0.5em;
-  .form-type-select {
-    display: inline-block;
-    font-size: $font-size-normal;
-    margin: 0 0 0 1em;
-  }
-  .button {
-    float: right;
-    margin: 0 0 -0.5em 0;
-  }
-}
+// .dashboard__title {
+//   border-bottom: 1px solid #333;
+//   color: #333;
+//   margin-top: 1em;
+//   overflow: hidden;
+//   padding-bottom: 0.5em;
+//   .form-type-select {
+//     display: inline-block;
+//     font-size: $font-size-normal;
+//     margin: 0 0 0 1em;
+//   }
+//   .button {
+//     float: right;
+//     margin: 0 0 -0.5em 0;
+//   }
+// }
+//
+// .dashboard__sub-title {
+//   font-weight: bold;
+// }
 
-.dashboard__sub-title {
-  font-weight: bold;
-}
+// .dashboard__data {
+//   float: left;
+//   padding: 0 10px 1em 10px;
+//   width: percentage(1/2);
+//   @include breakpoint(700px, $no-query: true) {
+//     width: percentage(1/4);
+//   }
+// }
 
-.dashboard__data {
-  float: left;
-  padding: 0 10px 1em 10px;
-  width: percentage(1/2);
-  @include breakpoint(700px, $no-query: true) {    
-    width: percentage(1/4);
-  }
-}
-
-.dashboard__all-data-button {
-  clear: both;
-  text-align: center;
-}
+// .dashboard__all-data-button {
+//   clear: both;
+//   text-align: center;
+// }
