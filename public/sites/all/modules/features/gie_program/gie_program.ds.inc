@@ -205,7 +205,7 @@ function gie_program_ds_field_settings_info() {
       'formatter_settings' => array(
         'ft' => array(
           'func' => 'theme_ds_field_expert',
-          'lb-el' => 'div',
+          'lb-el' => 'h2',
           'lb-cl' => 'card__type',
         ),
         'field_delimiter' => '',

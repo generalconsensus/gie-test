@@ -462,7 +462,7 @@ function gie_innovation_ds_field_settings_info() {
         'ft' => array(
           'func' => 'theme_ds_field_expert',
           'fi' => TRUE,
-          'fi-el' => 'div',
+          'fi-el' => 'h2',
           'fi-cl' => 'card__type',
           'fi-at' => '',
           'fi-def-at' => FALSE,

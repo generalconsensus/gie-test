@@ -135,7 +135,7 @@ function events_ds_field_settings_info() {
         'ft' => array(
           'func' => 'theme_ds_field_expert',
           'fis' => TRUE,
-          'fis-el' => 'div',
+          'fis-el' => 'h2',
           'fis-cl' => 'card__type',
           'fis-at' => '',
           'fis-def-at' => FALSE,
