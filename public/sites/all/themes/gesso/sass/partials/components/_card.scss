@@ -12,6 +12,9 @@
 .card__type {
   font-size: em($font-size-sm);
   text-transform: uppercase;
+  p { // spotlight cards get a p tag inside them for some reason.
+    margin: 0;
+  }
 }
 
 %card__spotlight-type {
@@ -46,6 +49,17 @@
   background: $orange;
   &:before {
     @include svg-background(icon-exchange-white);
+  }
+}
+
+.card__spotlight-type-followed {
+  @extend %card__spotlight-type;
+  background: $red;
+  &:before {
+    @include svg-background(icon-heart-21-20-white);
+    height: 20px;
+    margin-right: 10px;
+    width: 21px;
   }
 }
 
@@ -381,7 +395,7 @@
       padding: 0;
       position: absolute;
       right: 10px;
-      &.flagged {
+      &.flagged, &.unflag-action {
         @include svg-background(icon-heart);
       }
     }
