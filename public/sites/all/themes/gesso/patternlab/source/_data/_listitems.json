@@ -98,8 +98,8 @@
     "innovations": "2",
     "resources": "32",
     "members": "10",
-    "dashboardtype": "Exchange Updates",
-    "dashboardtypeclass": "-update"
+    "dashboardtype": "Followed By You",
+    "dashboardtypeclass": "-followed"
   },
   "2": {
     "url": "http://veggieipsum.com",

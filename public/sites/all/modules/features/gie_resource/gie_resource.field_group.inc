@@ -225,8 +225,7 @@ function gie_resource_field_group_info() {
     'weight' => '1',
     'children' => array(
       0 => 'title_field',
-      1 => 'flag_favorite',
-      2 => 'content_type',
+      1 => 'content_type',
     ),
     'format_type' => 'div',
     'format_settings' => array(

@@ -1328,7 +1328,7 @@ function gie_user_views_default_views() {
   $handler->display->display_options['empty']['area']['content'] = 'We couldn\'t find a match for you based on your skillset. Make sure you have topics of interest added to your account  <a class="button button--highlight" href="/user">here</a>';
   $handler->display->display_options['empty']['area']['format'] = 'full_html';
   $handler->display->display_options['defaults']['relationships'] = FALSE;
-  /* Relationship: Field: Assistance Type (field_innovation_assistance) */
+  /* Relationship: Content: Assistance Type (field_innovation_assistance) */
   $handler->display->display_options['relationships']['field_innovation_assistance_tid']['id'] = 'field_innovation_assistance_tid';
   $handler->display->display_options['relationships']['field_innovation_assistance_tid']['table'] = 'field_data_field_innovation_assistance';
   $handler->display->display_options['relationships']['field_innovation_assistance_tid']['field'] = 'field_innovation_assistance_tid';

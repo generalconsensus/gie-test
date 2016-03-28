@@ -175,7 +175,7 @@ function gie_dashboard_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 0,
+        'weight' => 4,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -269,7 +269,7 @@ function gie_dashboard_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 10,
+        'weight' => 11,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -493,7 +493,7 @@ function gie_dashboard_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 8,
+        'weight' => 11,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -595,7 +595,7 @@ function gie_dashboard_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 4,
+        'weight' => 11,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -704,7 +704,7 @@ function gie_dashboard_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 9,
+        'weight' => 10,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -792,7 +792,7 @@ function gie_dashboard_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 7,
+        'weight' => 9,
       ),
       'title' => array(
         'label' => 'above',

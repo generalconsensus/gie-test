@@ -3,4 +3,7 @@
   .pane__title {
     @extend %dashboard-header;
   }
+  .pane__content {
+    padding: 1em;
+  }
 }

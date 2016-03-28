@@ -91,7 +91,7 @@ function gie_dashboard_form_node_form_alter(&$form) {
 /**
  * Implements hook_panels_pre_render().
  */
-function gie_dashboard_panels_pre_render($panels_display, $renderer) {
+function gie_dashboard_panels_pre_render($panels_display) {
   if ($panels_display->title == 'Your Exchange Dashboard') {
     _gie_data_viz_init();
   }
@@ -138,139 +138,157 @@ function gie_dashboard_menu() {
  * @param null $pieces
  * @throws \Exception
  */
-function gie_dashboard_dummy_data($tab, $original_user_uid = NULL, $pieces = NULL) {
-  $original_user_uid = !empty($original_user_uid) ? $original_user_uid : 1;
-  $pieces = !empty($pieces) ? $pieces : 6;
-
-  // Add the skill match
-  if ($original_user_uid != 1) {
-    $user = user_load($original_user_uid);
-    $user->field_user_interests = array(
-      LANGUAGE_NONE => array(
-        array(
-          'delta' => 0,
-          'tid' => '545'
-        )
-      )
-    );
-    $user->field_term_sector = array(
-      LANGUAGE_NONE => array(
-        array(
-          'delta' => 0,
-          'tid' => '419'
-        )
-      )
-    );
-    user_save($user);
-  }
-
-  //Pragmatically Create Node Content For Dynamic Exchange Form
-
-  $users = gie_dashboard_create_user($pieces);
-  $rand_user = array_rand($users);
-  $random_time_last_month = rand(strtotime('first day of last month'), strtotime('last day of last month'));
-  // Last Access
-  gie_dashboard_create_node('organization', $users[$rand_user], $pieces);
-  gie_dashboard_create_node('funding', $original_user_uid, $pieces, array(
-    'field_funding_grant_award_value' => 100000,
-//    'field_term_topic' => 545,
-    'field_term_sector' => 419,
-    'field_funding_deadline' => array('value' => date('Y-m-d h:i:s', rand(strtotime('first day of last month'), strtotime('last day of last month')))),
-    'field_funding_link' => 'http://google.com'
-  ));
-  gie_dashboard_create_node('innovation', $users[$rand_user], $pieces);
-
-  $nids = array();
-  // Last Month
-  $month_users = gie_dashboard_create_user($pieces);
-  $org_nids = gie_dashboard_create_node('organization', $users[$rand_user], $pieces);
-  $funding_nids = gie_dashboard_create_node('funding', $users[$rand_user], $pieces, array('field_funding_grant_award_value' => 100000));
-  $innovation_nids = gie_dashboard_create_node('innovation', $original_user_uid, $pieces);
-
-  $nids = array_merge($org_nids, $funding_nids, $innovation_nids);
-  // Random time during last month
-
-  db_update('node')
-    ->fields(array(
-      'changed' => $random_time_last_month
-    ))
-    ->condition('nid', array($nids))
-    ->execute();
-
-  db_update('users')
-    ->fields(array(
-      'created' => $random_time_last_month
-    ))
-    ->condition('uid', array($month_users))
-    ->execute();
-
-  // People comment on admin content
-  $comment = (object) array(
-    'cid' => NULL,
-    'nid' => $innovation_nids[array_rand($innovation_nids)],
-    'node_type' => 'innovation',
-    'pid' => 0,
-    'uid' => $users[$rand_user],
-    'status' => COMMENT_PUBLISHED,
-    'subject' => devel_generate_word(mt_rand(6, 12)),
-    'hostname' => ip_address(),
-    'language' => LANGUAGE_NONE,
-    'comment_body' => array(LANGUAGE_NONE => array(devel_generate_word(mt_rand(6, 12)))),
-  );
-  comment_save($comment);
-
-
-  foreach ($users as $key => $user) {
-    $account = user_load($user);
-    $other_users = array_diff($users, array($user));
-    $rando_not_me = $other_users[array_rand($other_users)];
-
-    // People follow admin
-    flag('flag', 'follow', $original_user_uid, $account, TRUE);
-
-    // People follow your content
-    flag('flag', 'favorite', $innovation_nids[$key], $account, TRUE);
-
-    // Friend creates content
-    $generated_content = gie_dashboard_create_node('innovation', $user, 1, array('field_term_topic' => 545));
-
-    // Original User Follows Content
-    flag('flag', 'favorite', $generated_content[0], user_load($original_user_uid), TRUE);
-
-    //Friend follows content
-    flag('flag', 'favorite', $generated_content[0], user_load($rando_not_me), TRUE);
-
-    //Friend follows Friend of Friend
-    flag('flag', 'follow', $user, user_load($rando_not_me), TRUE);
-
-    //Friend comments on content
-    $comment = (object) array(
-      'cid' => NULL,
-      'nid' => $generated_content,
-      'node_type' => 'innovation',
-      'pid' => 0,
-      'uid' => $rando_not_me,
-      'status' => COMMENT_PUBLISHED,
-      'subject' => devel_generate_word(mt_rand(6, 12)),
-      'hostname' => ip_address(),
-      'language' => LANGUAGE_NONE,
-      'comment_body' => array(LANGUAGE_NONE => array(devel_generate_word(mt_rand(6, 12)))),
-    );
-    comment_save($comment);
-  }
-  // Check for a Featured Node
-  // If not found, add one
-  $featured_node = db_query('SELECT COUNT(entity_id) FROM field_data_field_featured WHERE field_data_field_featured.field_featured_value = 1')->fetchField();
-  if (empty($featured_node) || $featured_node < 1) {
-    $random_innovation = db_query('SELECT nid FROM node WHERE node.type = :innovation ORDER BY RAND() LIMIT 1', array(':innovation' => 'innovation'))->fetchField();
-    $node = node_load($random_innovation);
-    $node->field_featured_innovation[$node->language][]['value'] = 1;
-    node_save($node);
-  }
-
-  watchdog('gie_dashboard', 'Completed Dashboard Data Provision');
-
-}
+//function gie_dashboard_dummy_data($tab, $original_user_uid = NULL, $pieces = NULL) {
+//  $original_user_uid = !empty($original_user_uid) ? $original_user_uid : 1;
+//  $pieces = !empty($pieces) ? $pieces : 6;
+//
+//
+//switch ($tab) {
+//  case 1:
+//    break;
+//
+//  case 2:
+//    break;
+//
+//  case 3:
+//    break;
+//
+//  case 4:
+//    break;
+//
+//  case 5:
+//    break;
+//}
+//
+//  // Add the skill match
+//  if ($original_user_uid != 1) {
+//    $user = user_load($original_user_uid);
+//    $user->field_user_interests = array(
+//      LANGUAGE_NONE => array(
+//        array(
+//          'delta' => 0,
+//          'tid' => '545'
+//        )
+//      )
+//    );
+//    $user->field_term_sector = array(
+//      LANGUAGE_NONE => array(
+//        array(
+//          'delta' => 0,
+//          'tid' => '419'
+//        )
+//      )
+//    );
+//    user_save($user);
+//  }
+//
+//  //Pragmatically Create Node Content For Dynamic Exchange Form
+//
+//  $users = gie_dashboard_create_user($pieces);
+//  $rand_user = array_rand($users);
+//  $random_time_last_month = rand(strtotime('first day of last month'), strtotime('last day of last month'));
+//  // Last Access
+//  gie_dashboard_create_node('organization', $users[$rand_user], $pieces);
+//  gie_dashboard_create_node('funding', $original_user_uid, $pieces, array(
+//    'field_funding_grant_award_value' => 100000,
+////    'field_term_topic' => 545,
+//    'field_term_sector' => 419,
+//    'field_funding_deadline' => array('value' => date('Y-m-d h:i:s', rand(strtotime('first day of last month'), strtotime('last day of last month')))),
+//    'field_funding_link' => 'http://google.com'
+//  ));
+//  gie_dashboard_create_node('innovation', $users[$rand_user], $pieces);
+//
+//  $nids = array();
+//  // Last Month
+//  $month_users = gie_dashboard_create_user($pieces);
+//  $org_nids = gie_dashboard_create_node('organization', $users[$rand_user], $pieces);
+//  $funding_nids = gie_dashboard_create_node('funding', $users[$rand_user], $pieces, array('field_funding_grant_award_value' => 100000));
+//  $innovation_nids = gie_dashboard_create_node('innovation', $original_user_uid, $pieces);
+//
+//  $nids = array_merge($org_nids, $funding_nids, $innovation_nids);
+//  // Random time during last month
+//
+//  db_update('node')
+//    ->fields(array(
+//      'changed' => $random_time_last_month
+//    ))
+//    ->condition('nid', array($nids))
+//    ->execute();
+//
+//  db_update('users')
+//    ->fields(array(
+//      'created' => $random_time_last_month
+//    ))
+//    ->condition('uid', array($month_users))
+//    ->execute();
+//
+//  // People comment on admin content
+//  $comment = (object) array(
+//    'cid' => NULL,
+//    'nid' => $innovation_nids[array_rand($innovation_nids)],
+//    'node_type' => 'innovation',
+//    'pid' => 0,
+//    'uid' => $users[$rand_user],
+//    'status' => COMMENT_PUBLISHED,
+//    'subject' => devel_generate_word(mt_rand(6, 12)),
+//    'hostname' => ip_address(),
+//    'language' => LANGUAGE_NONE,
+//    'comment_body' => array(LANGUAGE_NONE => array(devel_generate_word(mt_rand(6, 12)))),
+//  );
+//  comment_save($comment);
+//
+//
+//  foreach ($users as $key => $user) {
+//    $account = user_load($user);
+//    $other_users = array_diff($users, array($user));
+//    $rando_not_me = $other_users[array_rand($other_users)];
+//
+//    // People follow admin
+//    flag('flag', 'follow', $original_user_uid, $account, TRUE);
+//
+//    // People follow your content
+//    flag('flag', 'favorite', $innovation_nids[$key], $account, TRUE);
+//
+//    // Friend creates content
+//    $generated_content = gie_dashboard_create_node('innovation', $user, 1, array('field_term_topic' => 545));
+//
+//    // Original User Follows Content
+//    flag('flag', 'favorite', $generated_content[0], user_load($original_user_uid), TRUE);
+//
+//    //Friend follows content
+//    flag('flag', 'favorite', $generated_content[0], user_load($rando_not_me), TRUE);
+//
+//    //Friend follows Friend of Friend
+//    flag('flag', 'follow', $user, user_load($rando_not_me), TRUE);
+//
+//    //Friend comments on content
+//    $comment = (object) array(
+//      'cid' => NULL,
+//      'nid' => $generated_content,
+//      'node_type' => 'innovation',
+//      'pid' => 0,
+//      'uid' => $rando_not_me,
+//      'status' => COMMENT_PUBLISHED,
+//      'subject' => devel_generate_word(mt_rand(6, 12)),
+//      'hostname' => ip_address(),
+//      'language' => LANGUAGE_NONE,
+//      'comment_body' => array(LANGUAGE_NONE => array(devel_generate_word(mt_rand(6, 12)))),
+//    );
+//    comment_save($comment);
+//  }
+//  // Check for a Featured Node
+//  // If not found, add one
+//  $featured_node = db_query('SELECT COUNT(entity_id) FROM field_data_field_featured WHERE field_data_field_featured.field_featured_value = 1')->fetchField();
+//  if (empty($featured_node) || $featured_node < 1) {
+//    $random_innovation = db_query('SELECT nid FROM node WHERE node.type = :innovation ORDER BY RAND() LIMIT 1', array(':innovation' => 'innovation'))->fetchField();
+//    $node = node_load($random_innovation);
+//    $node->field_featured_innovation[$node->language][]['value'] = 1;
+//    node_save($node);
+//  }
+//
+//  watchdog('gie_dashboard', 'Completed Dashboard Data Provision');
+//
+//}
 
 /**
  * @param $type
@@ -551,35 +569,47 @@ function dashboard_recommended_innovations_form($form) {
   $matches = dashboard_recommendation_engine($bundle, $filter);
   $payload = array();
 
-  $form['my_sectors'] = array(
-    '#type' => 'submit',
-    '#value' => t('My Sectors')
+  $form['recommended_innovations'] = array(
+    '#type' => 'container',
+    '#attributes' => array(
+      'id' => array(
+        'dashboard-filters'
+      ),
+    )
   );
-  $form['my_topics'] = array(
+  $form['recommended_innovations']['my_sectors'] = array(
     '#type' => 'submit',
-    '#value' => t('My Topics')
+    '#value' => t('My Sectors'),
+    '#prefix' => '<span class="dashboard-filters__item has-icon-sectors">',
+    '#suffix' => '</span>'
   );
-  $form['my_skills'] = array(
+  $form['recommended_innovations']['my_topics'] = array(
     '#type' => 'submit',
-    '#value' => t('My Skills')
+    '#value' => t('My Topics'),
+    '#prefix' => '<span class="dashboard-filters__item has-icon-topics">',
+    '#suffix' => '</span>'
   );
-  $form['my_friends'] = array(
+  $form['recommended_innovations']['my_skills'] = array(
     '#type' => 'submit',
-    '#value' => t('My Friends')
+    '#value' => t('My Skills'),
+    '#prefix' => '<span class="dashboard-filters__item has-icon-my-skills">',
+    '#suffix' => '</span>'
   );
-  $form['im_following'] = array(
+  $form['recommended_innovations']['my_friends'] = array(
     '#type' => 'submit',
-    '#value' => t('I\'m Following')
+    '#value' => t('My Friends'),
+    '#prefix' => '<span class="dashboard-filters__item has-icon-my-friends">',
+    '#suffix' => '</span>'
+  );
+  $form['recommended_innovations']['im_following'] = array(
+    '#type' => 'submit',
+    '#value' => t('I\'m Following'),
+    '#prefix' => '<span class="dashboard-filters__item has-icon-following">',
+    '#suffix' => '</span>'
   );
 
-  $form['submit'] = array(
-    '#type' => 'submit',
-    '#value' => '',
-    '#prefix' => '<div style="display: none;">',
-    '#suffix' => '</div>',
-    '#weight' => 0,
-  );
-
+  // Add dynamic is-active class to form element
+  $form['recommended_innovations'][$filter]['#prefix'] = str_replace('">', ' is-active">', $form['recommended_innovations'][$filter]['#prefix']);
 
   if (!empty($matches)) {
     $payload = gie_dashboard_card_build($matches);
@@ -588,19 +618,19 @@ function dashboard_recommended_innovations_form($form) {
     global $user;
     switch ($filter) {
       case 'my_sectors':
-        $payload[] = '<div class="views-row">' . t('There are no innovation recommendations based on your sector preferences.') . ' ' . l(t('Update your preferences'), 'user/' . $user->uid . '/edit') . t(' to get better results') . '</div>';
+        $payload[] = t('There are no innovation recommendations based on your sector preferences.') . ' ' . l(t('Update your preferences'), 'user/' . $user->uid . '/edit') . t(' to get better results');
         break;
       case 'my_topics':
-        $payload[] = '<div class="views-row">' . t('There are no innovation recommendations based on your topic preferences.') . ' ' . l(t('Update your preferences'), 'user/' . $user->uid . '/edit') . t(' to get better results') . '</div>';
+        $payload[] = t('There are no innovation recommendations based on your topic preferences.') . ' ' . l(t('Update your preferences'), 'user/' . $user->uid . '/edit') . t(' to get better results');
         break;
       case 'my_skills':
-        $payload[] = '<div class="views-row">' . t('There are no innovation recommendations requesting your skills.') . ' ' . l(t('Update your preferences'), 'user/' . $user->uid . '/edit') . t(' to get better results') . '</div>';
+        $payload[] = t('There are no innovation recommendations requesting your skills.') . ' ' . l(t('Update your preferences'), 'user/' . $user->uid . '/edit') . t(' to get better results');
         break;
       case 'my_friends':
-        $payload[] = '<div class="views-row">' . t('There are no innovation recommendations on what your friends are following.') . ' ' . l(t('Find members to follow'), 'members') . t(' to get better results') . '</div>';
+        $payload[] = t('There are no innovation recommendations on what your friends are following.') . ' ' . l(t('Find members to follow'), 'members') . t(' to get better results');
         break;
       case 'im_following':
-        $payload[] = '<div class="views-row">' . t('You are not following any innovations') . ' ' . l(t('Find innovations to follow'), 'innovations') . '</div>';
+        $payload[] = t('You are not following any innovations') . ' ' . l(t('Find innovations to follow'), 'innovations');
         break;
     }
   }
@@ -667,30 +697,50 @@ function dashboard_recommended_funding_form($form) {
   $matches = dashboard_recommendation_engine($bundle, $filter);
   $payload = array();
 
-  $form['my_sectors'] = array(
-    '#type' => 'submit',
-    '#value' => t('My Sectors')
-  );
-  $form['my_topics'] = array(
-    '#type' => 'submit',
-    '#value' => t('My Topics')
-  );
-  $form['my_friends'] = array(
-    '#type' => 'submit',
-    '#value' => t('My Friends')
-  );
-  $form['im_following'] = array(
-    '#type' => 'submit',
-    '#value' => t('I\'m Following')
+  $form['recommended_funding'] = array(
+    '#type' => 'container',
+    '#attributes' => array(
+      'id' => array(
+        'dashboard-filters'
+      ),
+    )
   );
 
-  $form['submit'] = array(
+  $form['recommended_funding']['my_sectors'] = array(
     '#type' => 'submit',
-    '#value' => '',
-    '#prefix' => '<div style="display: none;">',
-    '#suffix' => '</div>',
-    '#weight' => 0,
+    '#value' => t('My Sectors'),
+    '#prefix' => '<span class="dashboard-filters__item has-icon-sectors">',
+    '#suffix' => '</span>'
   );
+  $form['recommended_funding']['my_topics'] = array(
+    '#type' => 'submit',
+    '#value' => t('My Topics'),
+    '#prefix' => '<span class="dashboard-filters__item has-icon-topics">',
+    '#suffix' => '</span>'
+  );
+  $form['recommended_funding']['my_friends'] = array(
+    '#type' => 'submit',
+    '#value' => t('My Friends'),
+    '#prefix' => '<span class="dashboard-filters__item has-icon-my-friends">',
+    '#suffix' => '</span>'
+  );
+  $form['recommended_funding']['im_following'] = array(
+    '#type' => 'submit',
+    '#value' => t('I\'m Following'),
+    '#prefix' => '<span class="dashboard-filters__item has-icon-following">',
+    '#suffix' => '</span>'
+  );
+
+  // Add dynamic is-active class to form element
+  $form['recommended_funding'][$filter]['#prefix'] = str_replace('">', ' is-active">', $form['recommended_funding'][$filter]['#prefix']);
+
+//  $form['submit'] = array(
+//    '#type' => 'submit',
+//    '#value' => '',
+//    '#prefix' => '<div style="display: none;">',
+//    '#suffix' => '</div>',
+//    '#weight' => 0,
+//  );
 
 
   if (!empty($matches)) {
@@ -700,16 +750,16 @@ function dashboard_recommended_funding_form($form) {
     global $user;
     switch ($filter) {
       case 'my_sectors':
-        $payload[] = '<div class="views-row">' . t('There are no funding opportunity recommendations based on your sector preferences.') . ' ' . l(t('Update your preferences'), 'user/' . $user->uid . '/edit') . t(' to get better results') . '</div>';
+        $payload[] = t('There are no funding opportunity recommendations based on your sector preferences.') . ' ' . l(t('Update your preferences'), 'user/' . $user->uid . '/edit') . t(' to get better results');
         break;
       case 'my_topics':
-        $payload[] = '<div class="views-row">' . t('There are no funding opportunity recommendations based on your topic preferences.') . ' ' . l(t('Update your preferences'), 'user/' . $user->uid . '/edit') . t(' to get better results') . '</div>';
+        $payload[] = t('There are no funding opportunity recommendations based on your topic preferences.') . ' ' . l(t('Update your preferences'), 'user/' . $user->uid . '/edit') . t(' to get better results');
         break;
       case 'my_friends':
-        $payload[] = '<div class="views-row">' . t('There are no funding opportunity recommendations based on on what your friends are following.') . ' ' . l(t('Find members to follow'), 'members') . t(' to get better results') . '</div>';
+        $payload[] = t('There are no funding opportunity recommendations based on on what your friends are following.') . ' ' . l(t('Find members to follow'), 'members') . t(' to get better results');
         break;
       case 'im_following':
-        $payload[] = '<div class="views-row">' . t('You are not following any funding opportunities') . ' ' . l(t('Find funding opportunities to follow'), 'funding') . '</div>';
+        $payload[] = t('You are not following any funding opportunities') . ' ' . l(t('Find funding opportunities to follow'), 'funding');
         break;
     }
   }
@@ -774,22 +824,42 @@ function dashboard_my_portfolio_form($form) {
   $payload = array();
   $inc = 0;
 
-  $form['innovation'] = array(
-    '#type' => 'submit',
-    '#value' => t('My Innovations')
+  $form['my_portfolio'] = array(
+    '#type' => 'container',
+    '#attributes' => array(
+      'id' => array(
+        'dashboard-filters'
+      ),
+    )
   );
-  $form['funding'] = array(
+
+  $form['my_portfolio']['innovation'] = array(
     '#type' => 'submit',
-    '#value' => t('My Funding Opportunities')
+    '#value' => t('My Innovations'),
+    '#prefix' => '<span class="dashboard-filters__item has-icon-innovation">',
+    '#suffix' => '</span>'
   );
-  $form['resource'] = array(
+  $form['my_portfolio']['funding'] = array(
     '#type' => 'submit',
-    '#value' => t('My Resources')
+    '#value' => t('My Funding Opportunities'),
+    '#prefix' => '<span class="dashboard-filters__item has-icon-funding">',
+    '#suffix' => '</span>'
   );
-  $form['event'] = array(
+  $form['my_portfolio']['resource'] = array(
     '#type' => 'submit',
-    '#value' => t('My Events')
+    '#value' => t('My Resources'),
+    '#prefix' => '<span class="dashboard-filters__item has-icon-resource">',
+    '#suffix' => '</span>'
   );
+  $form['my_portfolio']['event'] = array(
+    '#type' => 'submit',
+    '#value' => t('My Events'),
+    '#prefix' => '<span class="dashboard-filters__item has-icon-event">',
+    '#suffix' => '</span>'
+  );
+
+  // Add dynamic is-active class to form element
+  $form['my_portfolio'][$filter]['#prefix'] = str_replace('">', ' is-active">', $form['my_portfolio'][$filter]['#prefix']);
 
 
   if (!empty($matches)) {
@@ -972,34 +1042,61 @@ function dashboard_my_network_form($form) {
   $matches = dashboard_recommendation_engine($bundle, $filter);
   $payload = array();
 
-  $form['net_users'] = array(
-    '#type' => 'submit',
-    '#value' => t('Members')
+  $form['my_network'] = array(
+    '#type' => 'container',
+    '#attributes' => array(
+      'id' => array(
+        'dashboard-filters'
+      ),
+    )
   );
-  $form['net_innovation'] = array(
+
+  $form['my_network']['net_users'] = array(
     '#type' => 'submit',
-    '#value' => t('Innovations')
+    '#value' => t('Members'),
+    '#prefix' => '<span class="dashboard-filters__item has-icon-members">',
+    '#suffix' => '</span>'
   );
-  $form['net_funding'] = array(
+  $form['my_network']['net_innovation'] = array(
     '#type' => 'submit',
-    '#value' => t('Funding Ops')
+    '#value' => t('Innovations'),
+    '#prefix' => '<span class="dashboard-filters__item has-icon-innovation">',
+    '#suffix' => '</span>'
   );
-  $form['net_resource'] = array(
+  $form['my_network']['net_funding'] = array(
     '#type' => 'submit',
-    '#value' => t('Resources')
+    '#value' => t('Funding Ops'),
+    '#prefix' => '<span class="dashboard-filters__item has-icon-funding">',
+    '#suffix' => '</span>'
   );
-  $form['net_event'] = array(
+  $form['my_network']['net_resource'] = array(
     '#type' => 'submit',
-    '#value' => t('Events')
+    '#value' => t('Resources'),
+    '#prefix' => '<span class="dashboard-filters__item has-icon-resources">',
+    '#suffix' => '</span>'
   );
-  $form['net_organization'] = array(
+  $form['my_network']['net_event'] = array(
     '#type' => 'submit',
-    '#value' => t('Organizations')
+    '#value' => t('Events'),
+    '#prefix' => '<span class="dashboard-filters__item has-icon-events">',
+    '#suffix' => '</span>'
   );
-  $form['net_program'] = array(
+  $form['my_network']['net_organization'] = array(
     '#type' => 'submit',
-    '#value' => t('Programs')
+    '#value' => t('Organizations'),
+    '#prefix' => '<span class="dashboard-filters__item has-icon-organizations">',
+    '#suffix' => '</span>'
   );
+  $form['my_network']['net_program'] = array(
+    '#type' => 'submit',
+    '#value' => t('Programs'),
+    '#prefix' => '<span class="dashboard-filters__item has-icon-programs">',
+    '#suffix' => '</span>'
+  );
+
+  // Add dynamic is-active class to form element
+  $form['my_network'][$filter]['#prefix'] = str_replace('">', ' is-active">', $form['my_network'][$filter]['#prefix']);
+
 
   if (!empty($matches)) {
     if ($filter != 'net_users') {
@@ -1013,25 +1110,25 @@ function dashboard_my_network_form($form) {
 
     switch ($filter) {
       case 'net_users':
-        $payload[] = '<div class="views-row">' . t('You have not followed a members! Click ') . l(t('here'), 'members') . t(' to find members') . '</div>';
+        $payload[] = t('You have not followed a members! Click ') . l(t('here'), 'members') . t(' to find members');
         break;
       case 'net_innovation':
-        $payload[] = '<div class="views-row">' . t('You have not followed an innovation! Click ') . l(t('here'), 'innovations') . t(' to find innovations') . '</div>';
+        $payload[] = t('You have not followed an innovation! Click ') . l(t('here'), 'innovations') . t(' to find innovations');
         break;
       case 'net_funding':
-        $payload[] = '<div class="views-row">' . t('You have not followed a funding opportunity! Click ') . l(t('here'), 'funding') . t('to find funding opportunities') . '</div>';
+        $payload[] = t('You have not followed a funding opportunity! Click ') . l(t('here'), 'funding') . t('to find funding opportunities');
         break;
       case 'net_resource':
-        $payload[] = '<div class="views-row">' . t('You have not followed a resource! Click ') . l(t('here'), 'resources') . t(' to find resources') . '</div>';
+        $payload[] = t('You have not followed a resource! Click ') . l(t('here'), 'resources') . t(' to find resources');
         break;
       case 'net_event':
-        $payload[] = '<div class="views-row">' . t('You have not followed an event! Click ') . l(t('here'), 'events') . t(' to find events') . '</div>';
+        $payload[] = t('You have not followed an event! Click ') . l(t('here'), 'events') . t(' to find events');
         break;
       case 'net_organization':
-        $payload[] = '<div class="views-row">' . t('You have not followed an organization! Click ') . l(t('here'), 'organizations') . t(' to find organizations') . '</div>';
+        $payload[] = t('You have not followed an organization! Click ') . l(t('here'), 'organizations') . t(' to find organizations');
         break;
       case 'net_program':
-        $payload[] = '<div class="views-row">' . t('You have not followed a program! Click ') . l(t('here'), 'programs') . t(' to find programs') . '</div>';
+        $payload[] = t('You have not followed a program! Click ') . l(t('here'), 'programs') . t(' to find programs');
         break;
     }
   }
@@ -1171,13 +1268,13 @@ function gie_dashboard_card_build($matches, $alternate = FALSE, $user = FALSE) {
       $entity = entity_view('node', array(node_load($sector_match->nid)), 'spotlight');
       if (!empty($entity)) {
         if (!empty($sector_match->featured)) {
-          $entity['node'][key($entity['node'])]['dashboard_spotlight_card_entity_classification'][0]['#markup'] = '<h2 class="card__dashboard-type dashboard_exchange_featured">' . strtoupper(t('Exchange Updates')) . '</h2>';
+          $entity['node'][key($entity['node'])]['dashboard_spotlight_card_entity_classification'][0]['#markup'] = '<h2 class="card__spotlight-type-update">' . strtoupper(t('Exchange Updates')) . '</h2>';
         }
         elseif (!empty($sector_match->flagged)) {
-          $entity['node'][key($entity['node'])]['dashboard_spotlight_card_entity_classification'][0]['#markup'] = '<h2 class="card__dashboard-type dashboard_exchange_flagged">' . strtoupper(t('Followed By You')) . '</h2>';
+          $entity['node'][key($entity['node'])]['dashboard_spotlight_card_entity_classification'][0]['#markup'] = '<h2 class="card__spotlight-type-followed">' . strtoupper(t('Followed By You')) . '</h2>';
         }
         else {
-          $entity['node'][key($entity['node'])]['dashboard_spotlight_card_entity_classification'][0]['#markup'] = '<h2 class="card__dashboard-type dashboard_exchange_match">' . strtoupper(t('New for You')) . '</h2>';
+          $entity['node'][key($entity['node'])]['dashboard_spotlight_card_entity_classification'][0]['#markup'] = '<h2 class="card__spotlight-type-new">' . strtoupper(t('New for You')) . '</h2>';
         }
       }
       $entity = render($entity);
@@ -1190,13 +1287,13 @@ function gie_dashboard_card_build($matches, $alternate = FALSE, $user = FALSE) {
       $entity = entity_view('user', array(user_load($sector_match->uid)), 'spotlight');
       if (!empty($entity)) {
         if (!empty($sector_match->featured)) {
-          $entity['user'][key($entity['user'])]['dashboard_spotlight_card_user_classification'][0]['#markup'] = '<h2 class="card__dashboard-type dashboard_exchange_featured">' . strtoupper(t('Exchange Updates')) . '</h2>';
+          $entity['user'][key($entity['user'])]['dashboard_spotlight_card_user_classification'][0]['#markup'] = '<h2 class="card__spotlight-type-update">' . strtoupper(t('Exchange Updates')) . '</h2>';
         }
         elseif (!empty($sector_match->flagged)) {
-          $entity['user'][key($entity['user'])]['dashboard_spotlight_card_user_classification'][0]['#markup'] = '<h2 class="card__dashboard-type dashboard_exchange_flagged">' . strtoupper(t('Followed By You')) . '</h2>';
+          $entity['user'][key($entity['user'])]['dashboard_spotlight_card_user_classification'][0]['#markup'] = '<h2 class="card__spotlight-type-followed">' . strtoupper(t('Followed By You')) . '</h2>';
         }
         else {
-          $entity['user'][key($entity['user'])]['dashboard_spotlight_card_user_classification'][0]['#markup'] = '<h2 class="card__dashboard-type dashboard_exchange_match">' . strtoupper(t('New for You')) . '</h2>';
+          $entity['user'][key($entity['user'])]['dashboard_spotlight_card_user_classification'][0]['#markup'] = '<h2 class="card__spotlight-type-new">' . strtoupper(t('New for You')) . '</h2>';
         }
       }
       $entity = render($entity);

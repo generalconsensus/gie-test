@@ -19,7 +19,7 @@ $plugin = array(
 /**
  * The 'admin info' callback for the content type.
  */
-function dashboard_whats_new_notification_center_admin_info($subtype, $conf, $contexts) {
+function dashboard_whats_new_notification_center_admin_info($subtype, $conf) {
   if (!empty($conf)) {
     $block = new stdClass();
     $block->title = $conf['override_title'] ? $conf['override_title_text'] : '';
@@ -31,7 +31,7 @@ function dashboard_whats_new_notification_center_admin_info($subtype, $conf, $co
 /**
  * The 'Edit form' callback for the content type.
  */
-function dashboard_whats_new_notification_center_admin_form($form, &$form_state) {
+function dashboard_whats_new_notification_center_admin_form($form) {
 
   $form['type'] = array(
     '#type' => 'hidden',
@@ -164,13 +164,11 @@ function dashboard_notification_center_generate_listing() {
 /**
  * Run-time rendering of the body of the block (content type).
  */
-function dashboard_whats_new_notification_center_render($subtype, $conf, $panel_args, $context = NULL) {
+function dashboard_whats_new_notification_center_render() {
   $results = dashboard_notification_center_generate_listing();
-  $gie_dashboard_notification_center = array();
 
   // Render block
   $block = new stdClass();
-
 
   $gie_dashboard_notification_center = array(
     '#prefix' => '<div class="dashboard-notifications"><h2>' . strtoupper(t('Notifications')) . '</h2><ul>',
@@ -281,7 +279,6 @@ function dashboard_whats_new_notification_center_render($subtype, $conf, $panel_
     }
 
   }
-
 
   $block->content = $gie_dashboard_notification_center;
 

@@ -134,9 +134,8 @@ function gie_user_field_group_info() {
     'label' => 'Card Content',
     'weight' => '2',
     'children' => array(
-      0 => 'flag_follow',
-      1 => 'member_text',
-      2 => 'user_full_name',
+      0 => 'member_text',
+      1 => 'user_full_name',
     ),
     'format_type' => 'div',
     'format_settings' => array(

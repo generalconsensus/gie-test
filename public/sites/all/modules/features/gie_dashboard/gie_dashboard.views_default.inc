@@ -636,7 +636,7 @@ function gie_dashboard_views_default_views() {
   $handler->display->display_options['empty']['area']['format'] = 'filtered_html';
   $handler->display->display_options['empty']['area']['tokenize'] = TRUE;
   $handler->display->display_options['defaults']['relationships'] = FALSE;
-  /* Relationship: Field: Assistance Type (field_innovation_assistance) */
+  /* Relationship: Content: Assistance Type (field_innovation_assistance) */
   $handler->display->display_options['relationships']['field_innovation_assistance_tid']['id'] = 'field_innovation_assistance_tid';
   $handler->display->display_options['relationships']['field_innovation_assistance_tid']['table'] = 'field_data_field_innovation_assistance';
   $handler->display->display_options['relationships']['field_innovation_assistance_tid']['field'] = 'field_innovation_assistance_tid';
@@ -1102,7 +1102,7 @@ function gie_dashboard_views_default_views() {
   $handler->display->display_options['fields']['field_user_photo']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['field_user_photo']['click_sort_column'] = 'fid';
   $handler->display->display_options['fields']['field_user_photo']['settings'] = array(
-    'image_style' => 'dashboard_profile_image',
+    'image_style' => 'resource_author__58x58_',
     'image_link' => '',
     'linked_field' => array(
       'linked' => 0,
@@ -1130,7 +1130,14 @@ function gie_dashboard_views_default_views() {
   $handler->display->display_options['fields']['nothing']['table'] = 'views';
   $handler->display->display_options['fields']['nothing']['field'] = 'nothing';
   $handler->display->display_options['fields']['nothing']['label'] = '';
-  $handler->display->display_options['fields']['nothing']['alter']['text'] = '<a href="/user/[uid]">[field_user_photo]</a> [field_user_firstname] [field_user_lastname]  joined the Exchange [created]';
+  $handler->display->display_options['fields']['nothing']['alter']['text'] = '<div class="layout-slat layout-slat--small">
+  <div class="layout-slat__media">
+    <div class="view__author-image"><a href="/user/[uid]">[field_user_photo]</a></div>
+  </div>
+  <div class="layout-slat__content">
+    <div class="view__description">[field_user_firstname] [field_user_lastname] joined the Exchange [created]</div>
+  </div>
+</div>';
   $handler->display->display_options['fields']['nothing']['element_label_colon'] = FALSE;
   /* Sort criterion: User: Created date */
   $handler->display->display_options['sorts']['created']['id'] = 'created';

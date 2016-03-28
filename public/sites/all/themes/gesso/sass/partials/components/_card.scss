@@ -12,9 +12,12 @@
 .card__type {
   font-size: em($font-size-sm);
   text-transform: uppercase;
+  p { // spotlight cards get a p tag inside them for some reason.
+    margin: 0;
+  }
 }
 
-%card__dashboard-type {
+%card__spotlight-type {
   color: #fff;
   font-size: 16px;
   line-height: 1;
@@ -32,8 +35,8 @@
   }
 }
 
-.card__dashboard-type-new {
-  @extend %card__dashboard-type;
+.card__spotlight-type-new {
+  @extend %card__spotlight-type;
   background: $lightblue;
   &:before {
     @include svg-background(icon-star);
@@ -41,11 +44,22 @@
   }
 }
 
-.card__dashboard-type-update {
-  @extend %card__dashboard-type;
+.card__spotlight-type-update {
+  @extend %card__spotlight-type;
   background: $orange;
   &:before {
     @include svg-background(icon-exchange-white);
+  }
+}
+
+.card__spotlight-type-followed {
+  @extend %card__spotlight-type;
+  background: $red;
+  &:before {
+    @include svg-background(icon-heart-21-20-white);
+    height: 20px;
+    margin-right: 10px;
+    width: 21px;
   }
 }
 
@@ -227,18 +241,6 @@
   }
 }
 
-.card__favorite { // faovorite icon on dashboard cards
-  @include image-replace(19px,18px)
-  @include svg-background(icon-heart-empty);
-  bottom: 10px;
-  display: block;
-  position: absolute;
-  right: 10px;
-  &.is-favorited {
-    @include svg-background(icon-heart);
-  }
-}
-
 %cardicon {
   content: "";
   background-position: 50% 100%;
@@ -376,8 +378,28 @@
   }
 }
 
-.card--dashboard {
+.card--spotlight {
   @extend %dashboard-pane; // slightly different shadow if inside dashboard
+  .flag-wrapper {
+    position: static;
+    a {
+      background: none;
+      @include image-replace(19px,18px)
+      @include svg-background(icon-heart-empty);
+      border: 0;
+      bottom: 10px;
+      display: block;
+      font-size: 0%;
+      line-height: 0;
+      margin: 0;
+      padding: 0;
+      position: absolute;
+      right: 10px;
+      &.flagged, &.unflag-action {
+        @include svg-background(icon-heart);
+      }
+    }
+  }
 }
 
 .card--button {
