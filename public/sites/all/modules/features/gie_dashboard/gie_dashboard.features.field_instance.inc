@@ -792,7 +792,7 @@ function gie_dashboard_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 7,
+        'weight' => 9,
       ),
       'title' => array(
         'label' => 'above',

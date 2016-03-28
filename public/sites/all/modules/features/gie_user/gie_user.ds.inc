@@ -298,8 +298,13 @@ function gie_user_ds_field_settings_info() {
       'formatter_settings' => array(
         'ft' => array(
           'func' => 'theme_ds_field_expert',
-          'lb-el' => 'div',
-          'lb-cl' => 'card__type',
+          'fi' => TRUE,
+          'fi-el' => 'h2',
+          'fi-cl' => 'card__type',
+          'fi-at' => '',
+          'fi-def-at' => FALSE,
+          'fi-odd-even' => FALSE,
+          'fi-first-last' => FALSE,
         ),
         'field_delimiter' => '',
         'linked_field' => array(
@@ -351,7 +356,6 @@ function gie_user_ds_field_settings_info() {
         'ft' => array(
           'func' => 'theme_ds_field_expert',
           'lb-el' => 'h2',
-          'lb-cl' => 'card__dashboard',
         ),
         'field_delimiter' => '',
         'linked_field' => array(
@@ -731,8 +735,8 @@ function gie_user_ds_layout_settings_info() {
     'regions' => array(
       'main_content' => array(
         0 => 'dashboard_spotlight_card_user_classification',
-        1 => 'group_card_image',
-        2 => 'member_text',
+        1 => 'member_text',
+        2 => 'group_card_image',
         3 => 'user_full_name',
         4 => 'group_card_content',
         5 => 'flag_follow',
@@ -741,14 +745,20 @@ function gie_user_ds_layout_settings_info() {
     ),
     'fields' => array(
       'dashboard_spotlight_card_user_classification' => 'main_content',
-      'group_card_image' => 'main_content',
       'member_text' => 'main_content',
+      'group_card_image' => 'main_content',
       'user_full_name' => 'main_content',
       'group_card_content' => 'main_content',
       'flag_follow' => 'main_content',
       'field_user_photo' => 'main_content',
     ),
-    'classes' => array(),
+    'classes' => array(
+      'layout_class' => array(
+        'card' => 'card',
+        'card--center' => 'card--center',
+        'card--spotlight' => 'card--spotlight',
+      ),
+    ),
     'wrappers' => array(
       'header' => 'div',
       'main_content' => 'div',

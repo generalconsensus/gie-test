@@ -2366,7 +2366,7 @@ function gie_user_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 6,
+        'weight' => 8,
       ),
       'title' => array(
         'label' => 'above',
