@@ -259,31 +259,24 @@ function gie_dashboard_default_panels_mini() {
     $display->content['new-61de17ba-4fe1-45e7-9b02-f9dd4e6144a1'] = $pane;
     $display->panels['bottom_left'][0] = 'new-61de17ba-4fe1-45e7-9b02-f9dd4e6144a1';
     $pane = new stdClass();
-    $pane->pid = 'new-10b04ffa-ead9-4a67-9dd3-13ae3df17d94';
+    $pane->pid = 'new-47ded4f1-13e0-4bda-bc26-1d6a05e44307';
     $pane->panel = 'bottom_right';
-    $pane->type = 'block';
-    $pane->subtype = 'gie_data_viz-gie_data_viz_fund_count_chart';
+    $pane->type = 'views_panes';
+    $pane->subtype = 'data_page_taxonomy_views-data_sector_funding';
     $pane->shown = TRUE;
     $pane->access = array();
-    $pane->configuration = array(
-      'override_title' => 0,
-      'override_title_text' => '',
-      'override_title_heading' => 'h2',
-    );
+    $pane->configuration = array();
     $pane->cache = array();
     $pane->style = array(
       'settings' => NULL,
     );
-    $pane->css = array(
-      'css_id' => '',
-      'css_class' => 'pane--dashboard-data-viz',
-    );
+    $pane->css = array();
     $pane->extras = array();
     $pane->position = 0;
     $pane->locks = array();
-    $pane->uuid = '10b04ffa-ead9-4a67-9dd3-13ae3df17d94';
-    $display->content['new-10b04ffa-ead9-4a67-9dd3-13ae3df17d94'] = $pane;
-    $display->panels['bottom_right'][0] = 'new-10b04ffa-ead9-4a67-9dd3-13ae3df17d94';
+    $pane->uuid = '47ded4f1-13e0-4bda-bc26-1d6a05e44307';
+    $display->content['new-47ded4f1-13e0-4bda-bc26-1d6a05e44307'] = $pane;
+    $display->panels['bottom_right'][0] = 'new-47ded4f1-13e0-4bda-bc26-1d6a05e44307';
     $pane = new stdClass();
     $pane->pid = 'new-1a830965-2fe2-438a-9ee1-295e2136f02b';
     $pane->panel = 'main';
