@@ -536,11 +536,11 @@ function dashboard_recommendation_engine($bundle, $filter) {
 
     case 'net_event':
 
-      $matches = db_query_range('SELECT DISTINCT flagging.entity_id as nid, 1 as flagged, field_data_field_featured.field_featured_value as featured
+      $matches = db_query_range("SELECT DISTINCT 'event', flagging.entity_id as nid, 1 as flagged, field_data_field_featured.field_featured_value as featured
         FROM flagging
         INNER JOIN node on node.nid = flagging.entity_id
         LEFT JOIN field_data_field_featured ON field_data_field_featured.entity_id = node.nid
-        WHERE node.type IN (:bundle) AND flagging.uid = :uid AND flagging.fid = :attending_fid', 0, $display_items, array(
+        WHERE node.type IN (:bundle) AND flagging.uid = :uid AND flagging.fid = :attending_fid", 0, $display_items, array(
         ':bundle' => substr($filter, 4),
         ':uid' => $user->uid,
         ':attending_fid' => $attending->fid
@@ -1274,8 +1274,11 @@ function gie_dashboard_card_build($matches, $alternate = FALSE, $user = FALSE) {
       $inc += 1;
       $entity = entity_view('node', array(node_load($sector_match->nid)), 'spotlight');
       if (!empty($entity)) {
-        if (!empty($sector_match->featured)) {
-          $entity['node'][key($entity['node'])]['dashboard_spotlight_card_entity_classification'][0]['#markup'] = '<h2 class="card__spotlight-type-update">' . strtoupper(t('Exchange Updates')) . '</h2>';
+        if (!empty($sector_match->event)) {
+          $entity['node'][key($entity['node'])]['dashboard_spotlight_card_entity_classification'][0]['#markup'] = '<h2 class="card__spotlight-type-event">' . strtoupper(t('Attending')) . '</h2>';
+        }
+        elseif (!empty($sector_match->featured)) {
+          $entity['node'][key($entity['node'])]['dashboard_spotlight_card_entity_classification'][0]['#markup'] = '<h2 class="card__spotlight-type-update">' . strtoupper(t('Event')) . '</h2>';
         }
         elseif (!empty($sector_match->flagged)) {
           $entity['node'][key($entity['node'])]['dashboard_spotlight_card_entity_classification'][0]['#markup'] = '<h2 class="card__spotlight-type-followed">' . strtoupper(t('Followed By You')) . '</h2>';

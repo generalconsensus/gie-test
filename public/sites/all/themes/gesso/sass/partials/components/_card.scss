@@ -52,6 +52,14 @@
   }
 }
 
+.card__spotlight-type-event {
+  @extend %card__spotlight-type;
+  background: $blue;
+  &:before {
+    @include svg-background(icon-exchange-white);
+  }
+}
+
 .card__spotlight-type-followed {
   @extend %card__spotlight-type;
   background: $red;
