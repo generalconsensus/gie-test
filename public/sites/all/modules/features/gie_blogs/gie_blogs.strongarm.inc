@@ -220,7 +220,7 @@ function gie_blogs_strongarm() {
             'visible' => FALSE,
           ),
           'search_listing' => array(
-            'weight' => '10',
+            'weight' => '11',
             'visible' => TRUE,
           ),
         ),
@@ -242,7 +242,7 @@ function gie_blogs_strongarm() {
             'visible' => TRUE,
           ),
           'search_listing' => array(
-            'weight' => '10',
+            'weight' => '13',
             'visible' => TRUE,
           ),
           'full' => array(
@@ -272,7 +272,7 @@ function gie_blogs_strongarm() {
             'visible' => TRUE,
           ),
           'search_listing' => array(
-            'weight' => '10',
+            'weight' => '12',
             'visible' => TRUE,
           ),
           'full' => array(
@@ -302,7 +302,7 @@ function gie_blogs_strongarm() {
             'visible' => TRUE,
           ),
           'search_listing' => array(
-            'weight' => '10',
+            'weight' => '14',
             'visible' => TRUE,
           ),
           'full' => array(
@@ -365,6 +365,10 @@ function gie_blogs_strongarm() {
             'weight' => '20',
             'visible' => FALSE,
           ),
+          'search_listing' => array(
+            'weight' => '23',
+            'visible' => FALSE,
+          ),
         ),
         'flag_abuse_node' => array(
           'contact' => array(
@@ -385,6 +389,10 @@ function gie_blogs_strongarm() {
           ),
           'at_a_glance' => array(
             'weight' => '21',
+            'visible' => FALSE,
+          ),
+          'search_listing' => array(
+            'weight' => '24',
             'visible' => FALSE,
           ),
         ),

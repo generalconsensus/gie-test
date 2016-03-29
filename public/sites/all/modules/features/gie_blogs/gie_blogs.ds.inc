@@ -48,10 +48,23 @@ function gie_blogs_ds_field_settings_info() {
         ),
       ),
     ),
+    'field_term_country' => array(
+      'formatter_settings' => array(
+        'ft' => array(
+          'lb' => 'Country',
+        ),
+      ),
+    ),
+    'field_term_region' => array(
+      'formatter_settings' => array(
+        'ft' => array(
+          'lb' => 'Region',
+        ),
+      ),
+    ),
     'field_term_sector' => array(
       'formatter_settings' => array(
         'ft' => array(
-          'func' => 'theme_ds_field_expert',
           'lb' => 'Sectors',
         ),
       ),
@@ -59,16 +72,7 @@ function gie_blogs_ds_field_settings_info() {
     'field_term_topic' => array(
       'formatter_settings' => array(
         'ft' => array(
-          'func' => 'theme_ds_field_expert',
           'lb' => 'Topics',
-        ),
-      ),
-    ),
-    'field_term_region' => array(
-      'formatter_settings' => array(
-        'ft' => array(
-          'func' => 'theme_ds_field_expert',
-          'lb' => 'Region',
         ),
       ),
     ),
@@ -225,8 +229,8 @@ function gie_blogs_ds_layout_settings_info() {
   $ds_layout->settings = array(
     'regions' => array(
       'ds_content' => array(
-        0 => 'group_blog_stats',
-        1 => 'field_term_region',
+        0 => 'field_term_region',
+        1 => 'group_blog_stats',
         2 => 'field_term_country',
         3 => 'field_term_topic',
         4 => 'field_term_sector',
@@ -235,8 +239,8 @@ function gie_blogs_ds_layout_settings_info() {
       ),
     ),
     'fields' => array(
-      'group_blog_stats' => 'ds_content',
       'field_term_region' => 'ds_content',
+      'group_blog_stats' => 'ds_content',
       'field_term_country' => 'ds_content',
       'field_term_topic' => 'ds_content',
       'field_term_sector' => 'ds_content',
@@ -319,7 +323,12 @@ function gie_blogs_ds_layout_settings_info() {
       'field_term_sector' => 'main_content',
       'group_card_counts' => 'main_content',
     ),
-    'classes' => array(),
+    'classes' => array(
+      'layout_class' => array(
+        'card' => 'card',
+        'card--icons' => 'card--icons',
+      ),
+    ),
     'wrappers' => array(
       'header' => 'div',
       'main_content' => 'div',
@@ -353,11 +362,11 @@ function gie_blogs_ds_layout_settings_info() {
         7 => 'field_term_topic',
         8 => 'field_term_sector',
         9 => 'field_term_region',
-        10 => 'blogs_counters_resource_comment_detail',
+        10 => 'blogs_counters_resource_favorite_count_detail',
         11 => 'sharethis',
-        12 => 'blogs_counters_resource_favorite_count_detail',
-        13 => 'blogs_counters_favorite_count',
-        14 => 'blogs_counters_comment_count',
+        12 => 'blogs_counters_favorite_count',
+        13 => 'blogs_counters_comment_count',
+        14 => 'blogs_counters_resource_comment_detail',
         15 => 'field_term_country',
       ),
     ),
@@ -372,21 +381,22 @@ function gie_blogs_ds_layout_settings_info() {
       'field_term_topic' => 'ds_content',
       'field_term_sector' => 'ds_content',
       'field_term_region' => 'ds_content',
-      'blogs_counters_resource_comment_detail' => 'ds_content',
-      'sharethis' => 'ds_content',
       'blogs_counters_resource_favorite_count_detail' => 'ds_content',
+      'sharethis' => 'ds_content',
       'blogs_counters_favorite_count' => 'ds_content',
       'blogs_counters_comment_count' => 'ds_content',
+      'blogs_counters_resource_comment_detail' => 'ds_content',
       'field_term_country' => 'ds_content',
     ),
     'classes' => array(),
-    'wrappers' => array(),
+    'wrappers' => array(
+      'ds_content' => 'div',
+    ),
     'layout_wrapper' => 'div',
     'layout_attributes' => '',
-    'layout_attributes_merge' => TRUE,
-    'layout_link_attribute' => FALSE,
+    'layout_attributes_merge' => 1,
+    'layout_link_attribute' => '',
     'layout_link_custom' => '',
-    'layout_disable_css' => FALSE,
   );
   $export['node|blogs|search_listing'] = $ds_layout;
 
