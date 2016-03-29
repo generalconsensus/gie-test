@@ -571,7 +571,7 @@ function dashboard_recommended_innovations_form($form) {
   $form['recommended_innovations'] = array(
     '#type' => 'container',
     '#attributes' => array(
-      'id' => array(
+      'class' => array(
         'dashboard-filters'
       ),
     )
@@ -699,7 +699,7 @@ function dashboard_recommended_funding_form($form) {
   $form['recommended_funding'] = array(
     '#type' => 'container',
     '#attributes' => array(
-      'id' => array(
+      'class' => array(
         'dashboard-filters'
       ),
     )
@@ -826,7 +826,7 @@ function dashboard_my_portfolio_form($form) {
   $form['my_portfolio'] = array(
     '#type' => 'container',
     '#attributes' => array(
-      'id' => array(
+      'class' => array(
         'dashboard-filters'
       ),
     )
@@ -1044,7 +1044,7 @@ function dashboard_my_network_form($form) {
   $form['my_network'] = array(
     '#type' => 'container',
     '#attributes' => array(
-      'id' => array(
+      'class' => array(
         'dashboard-filters'
       ),
     )
@@ -1071,25 +1071,25 @@ function dashboard_my_network_form($form) {
   $form['my_network']['net_resource'] = array(
     '#type' => 'submit',
     '#value' => t('Resources'),
-    '#prefix' => '<span class="dashboard-filters__item has-icon-resources">',
+    '#prefix' => '<span class="dashboard-filters__item has-icon-resource">',
     '#suffix' => '</span>'
   );
   $form['my_network']['net_event'] = array(
     '#type' => 'submit',
     '#value' => t('Events'),
-    '#prefix' => '<span class="dashboard-filters__item has-icon-events">',
+    '#prefix' => '<span class="dashboard-filters__item has-icon-event">',
     '#suffix' => '</span>'
   );
   $form['my_network']['net_organization'] = array(
     '#type' => 'submit',
     '#value' => t('Organizations'),
-    '#prefix' => '<span class="dashboard-filters__item has-icon-organizations">',
+    '#prefix' => '<span class="dashboard-filters__item has-icon-organization">',
     '#suffix' => '</span>'
   );
   $form['my_network']['net_program'] = array(
     '#type' => 'submit',
     '#value' => t('Programs'),
-    '#prefix' => '<span class="dashboard-filters__item has-icon-programs">',
+    '#prefix' => '<span class="dashboard-filters__item has-icon-program">',
     '#suffix' => '</span>'
   );
 
