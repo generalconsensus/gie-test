@@ -649,7 +649,7 @@ function dashboard_recommended_innovations_form($form) {
 
   $form['updates'] = array(
     '#type' => 'item',
-    '#markup' => '<div class="view--card-view-3col">' . implode("", $payload) . '</div>',
+    '#markup' => '<div class="view--card-view-4col">' . implode("", $payload) . '</div>',
     '#weight' => 5
   );
 
@@ -777,7 +777,7 @@ function dashboard_recommended_funding_form($form) {
 
   $form['updates'] = array(
     '#type' => 'item',
-    '#markup' => '<div class="view--card-view-3col">' . implode("", $payload) . '</div>',
+    '#markup' => '<div class="view--card-view-4col">' . implode("", $payload) . '</div>',
     '#weight' => 5,
   );
 
@@ -1143,7 +1143,7 @@ function dashboard_my_network_form($form) {
 
   $form['updates'] = array(
     '#type' => 'item',
-    '#markup' => '<div class="view--card-view-3col">' . implode("", $payload) . '</div>',
+    '#markup' => '<div class="view--card-view-4col">' . implode("", $payload) . '</div>',
     '#weight' => 5,
   );
 
