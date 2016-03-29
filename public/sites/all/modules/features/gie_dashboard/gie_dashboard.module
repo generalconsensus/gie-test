@@ -550,7 +550,7 @@ function dashboard_recommendation_engine($bundle, $filter) {
 
     case 'net_users':
 
-      $matches = db_query('SELECT flagging.uid, 1 as flagged, field_data_field_featured.field_featured_value as featured
+      $matches = db_query('SELECT DISTINCT flagging.entity_id, 1 as flagged, field_data_field_featured.field_featured_value as featured
     FROM flagging
     LEFT JOIN field_data_field_featured ON field_data_field_featured.entity_id = flagging.uid
     WHERE flagging.fid = :fid AND flagging.uid = :uid', array(
@@ -650,8 +650,7 @@ function dashboard_recommended_innovations_form($form) {
   $form['updates'] = array(
     '#type' => 'item',
     '#markup' => '<div class="view--card-view-3col">' . implode("", $payload) . '</div>',
-    '#weight' => 5,
-    '#suffix' => '<div class="dashboard__all-data-button"><a class="button button--highlight" href="/data">See all Exchange Data</a></div>'
+    '#weight' => 5
   );
 
   return $form;
@@ -780,7 +779,6 @@ function dashboard_recommended_funding_form($form) {
     '#type' => 'item',
     '#markup' => '<div class="view--card-view-3col">' . implode("", $payload) . '</div>',
     '#weight' => 5,
-    '#suffix' => '<div class="dashboard__all-data-button"><a class="button button--highlight" href="/data">See all Exchange Data</a></div>'
   );
 
   return $form;
@@ -990,7 +988,6 @@ function dashboard_my_portfolio_form($form) {
     '#type' => 'item',
     '#markup' => drupal_render($payload),
     '#weight' => 5,
-    '#suffix' => '<div class="dashboard__all-data-button"><a class="button button--highlight" href="/data">See all Exchange Data</a></div>'
   );
 
   return $form;
@@ -1148,7 +1145,6 @@ function dashboard_my_network_form($form) {
     '#type' => 'item',
     '#markup' => '<div class="view--card-view-3col">' . implode("", $payload) . '</div>',
     '#weight' => 5,
-    '#suffix' => '<div class="dashboard__all-data-button"><a class="button button--highlight" href="/data">See all Exchange Data</a></div>'
   );
 
   return $form;
