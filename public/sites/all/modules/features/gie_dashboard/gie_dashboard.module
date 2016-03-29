@@ -465,16 +465,17 @@ function dashboard_recommendation_engine($bundle, $filter) {
 
     case 'my_friends':
 
-      $matches = db_query_range('SELECT DISTINCT flagging.entity_id as nid, am_i_favoriting_content.fid as flagged, field_data_field_featured.field_featured_value as featured
-      FROM flagging
-      INNER JOIN node friends_content on friends_content.uid = flagging.entity_id
-      LEFT OUTER JOIN flagging am_i_favoriting_content ON am_i_favoriting_content.uid = :uid AND am_i_favoriting_content.entity_id = friends_content.nid AND am_i_favoriting_content.fid = :favorite_fid
-      LEFT JOIN field_data_field_featured ON field_data_field_featured.entity_id = friends_content.nid
-      WHERE am_i_favoriting_content.fid IS NULL AND friends_content.uid <> :uid AND flagging.uid = :uid AND flagging.fid = :follow_fid AND friends_content.type IN (:bundle)', 0, $display_items, array(
-        ':favorite_fid' => $favorite->fid,
-        ':uid' => $user->uid,
+      $matches = db_query_range('SELECT DISTINCT favorite_node.entity_id as nid, my_favorite.fid as flagged, field_data_field_featured.field_featured_value as featured FROM flagging
+      INNER JOIN flagging favorite_node on flagging.uid = favorite_node.uid
+      INNER JOIN node on node.nid = favorite_node.entity_id
+      LEFT JOIN flagging my_favorite ON my_favorite.uid = :uid AND my_favorite.entity_id = node.nid
+      LEFT JOIN field_data_field_featured ON field_data_field_featured.entity_id = node.nid
+      WHERE node.type IN (:bundle) AND flagging.fid = :follow_fid AND flagging.entity_id = :uid
+      AND favorite_node.fid = :favorite_fid', 0, $display_items, array(
+        ':bundle' => $bundle,
         ':follow_fid' => $follow_user->fid,
-        ':bundle' => $bundle
+        ':uid' => $user->uid,
+        ':favorite_fid' => $favorite->fid
       ))->fetchAll();
 
       break;
