@@ -422,9 +422,9 @@ function dashboard_recommendation_engine($bundle, $filter) {
       INNER JOIN taxonomy_term_data  ON sector_1.field_term_sector_tid = taxonomy_term_data.tid
       INNER JOIN field_data_field_term_sector sector_2 ON taxonomy_term_data.tid = sector_2.field_term_sector_tid AND (sector_2.entity_type = 'user' AND sector_2.deleted = '0')
       INNER JOIN users ON sector_2.entity_id = users.uid
-      LEFT JOIN flagging ON flagging.uid = :uid AND flagging.entity_id = node.nid
+      LEFT OUTER JOIN flagging ON flagging.uid = :uid AND flagging.entity_id = node.nid
       LEFT JOIN field_data_field_featured ON field_data_field_featured.entity_id = node.nid
-      WHERE (( (users.uid = :uid ) )AND(( (node.status = '1') AND (node.type IN (:bundle)) ))) ORDER BY node.changed DESC", 0, $display_items, array(
+      WHERE flagging.fid IS NULL AND node.uid <> :uid AND users.uid = :uid AND node.status = '1' AND node.type IN (:bundle) ORDER BY node.changed DESC", 0, $display_items, array(
         ':uid' => $user->uid,
         ':bundle' => $bundle
       ))->fetchAll();
@@ -438,9 +438,9 @@ function dashboard_recommendation_engine($bundle, $filter) {
       INNER JOIN taxonomy_term_data  ON term_1.field_term_topic_tid = taxonomy_term_data.tid
       INNER JOIN field_data_field_user_interests ON taxonomy_term_data.tid = field_data_field_user_interests.field_user_interests_tid AND (field_data_field_user_interests.entity_type = 'user' AND field_data_field_user_interests.deleted = '0')
       INNER JOIN users ON field_data_field_user_interests.entity_id = users.uid
-      LEFT JOIN flagging ON flagging.uid = :uid AND flagging.entity_id = node.nid
+      LEFT OUTER JOIN flagging ON flagging.uid = :uid AND flagging.entity_id = node.nid
       LEFT JOIN field_data_field_featured ON field_data_field_featured.entity_id = node.nid
-      WHERE (( (users.uid = :uid ) )AND(( (node.status = '1') AND (node.type IN (:bundle)) ))) ORDER BY node.changed DESC", 0, $display_items, array(
+      WHERE flagging.fid IS NULL AND node.uid <> :uid AND users.uid = :uid  AND node.status = '1' AND node.type IN (:bundle) ORDER BY node.changed DESC", 0, $display_items, array(
         ':uid' => $user->uid,
         ':bundle' => $bundle
       ))->fetchAll();
@@ -454,9 +454,9 @@ function dashboard_recommendation_engine($bundle, $filter) {
       INNER JOIN taxonomy_term_data  ON field_data_field_innovation_assistance.field_innovation_assistance_tid = taxonomy_term_data.tid
       INNER JOIN field_data_field_user_assistance ON taxonomy_term_data.tid = field_data_field_user_assistance.field_user_assistance_tid AND (field_data_field_user_assistance.entity_type = 'user' AND field_data_field_user_assistance.deleted = '0')
       INNER JOIN users ON field_data_field_user_assistance.entity_id = users.uid
-      LEFT JOIN flagging ON flagging.uid = :uid AND flagging.entity_id = node.nid
+      LEFT OUTER JOIN flagging ON flagging.uid = :uid AND flagging.entity_id = node.nid
       LEFT JOIN field_data_field_featured ON field_data_field_featured.entity_id = node.nid
-      WHERE (( (users.uid = :uid ) )AND(( (node.status = '1') AND (node.type IN (:bundle)) ))) ORDER BY node.changed DESC", 0, $display_items, array(
+      WHERE flagging.fid IS NULL AND node.uid <> :uid AND users.uid = :uid  AND node.status = '1' AND node.type IN (:bundle) ORDER BY node.changed DESC", 0, $display_items, array(
         ':uid' => $user->uid,
         ':bundle' => $bundle
       ))->fetchAll();
@@ -572,7 +572,7 @@ function dashboard_recommended_innovations_form($form) {
   $form['recommended_innovations'] = array(
     '#type' => 'container',
     '#attributes' => array(
-      'id' => array(
+      'class' => array(
         'dashboard-filters'
       ),
     )
@@ -700,7 +700,7 @@ function dashboard_recommended_funding_form($form) {
   $form['recommended_funding'] = array(
     '#type' => 'container',
     '#attributes' => array(
-      'id' => array(
+      'class' => array(
         'dashboard-filters'
       ),
     )
@@ -827,7 +827,7 @@ function dashboard_my_portfolio_form($form) {
   $form['my_portfolio'] = array(
     '#type' => 'container',
     '#attributes' => array(
-      'id' => array(
+      'class' => array(
         'dashboard-filters'
       ),
     )
@@ -1045,7 +1045,7 @@ function dashboard_my_network_form($form) {
   $form['my_network'] = array(
     '#type' => 'container',
     '#attributes' => array(
-      'id' => array(
+      'class' => array(
         'dashboard-filters'
       ),
     )
@@ -1072,25 +1072,25 @@ function dashboard_my_network_form($form) {
   $form['my_network']['net_resource'] = array(
     '#type' => 'submit',
     '#value' => t('Resources'),
-    '#prefix' => '<span class="dashboard-filters__item has-icon-resources">',
+    '#prefix' => '<span class="dashboard-filters__item has-icon-resource">',
     '#suffix' => '</span>'
   );
   $form['my_network']['net_event'] = array(
     '#type' => 'submit',
     '#value' => t('Events'),
-    '#prefix' => '<span class="dashboard-filters__item has-icon-events">',
+    '#prefix' => '<span class="dashboard-filters__item has-icon-event">',
     '#suffix' => '</span>'
   );
   $form['my_network']['net_organization'] = array(
     '#type' => 'submit',
     '#value' => t('Organizations'),
-    '#prefix' => '<span class="dashboard-filters__item has-icon-organizations">',
+    '#prefix' => '<span class="dashboard-filters__item has-icon-organization">',
     '#suffix' => '</span>'
   );
   $form['my_network']['net_program'] = array(
     '#type' => 'submit',
     '#value' => t('Programs'),
-    '#prefix' => '<span class="dashboard-filters__item has-icon-programs">',
+    '#prefix' => '<span class="dashboard-filters__item has-icon-program">',
     '#suffix' => '</span>'
   );
 

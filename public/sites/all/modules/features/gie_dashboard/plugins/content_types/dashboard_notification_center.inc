@@ -88,9 +88,9 @@ function dashboard_notification_center_generate_listing() {
 
     // Grab random followers for use with generating a list of content
     // Inner Join back on flagging to make sure that the relationship is 'two-way'
-    $followers = db_query('SELECT flagging.uid FROM flagging
+    $followers = db_query('SELECT flagging.entity_id FROM flagging
     WHERE flagging.fid = :fid
-    AND flagging.entity_id = :uid ', array(
+    AND flagging.uid = :uid ', array(
       ':fid' => $follow_user->fid,
       ':uid' => $user->uid
     ))->fetchCol();
@@ -121,17 +121,22 @@ function dashboard_notification_center_generate_listing() {
       ))->fetchAssoc();
 
       //  A "friend" connected with a user
-      $results['friend_followed'] = db_query('SELECT users.name as original_friend_name, users.uid as original_friend_uid, friend_of_friend.uid as friend_of_friend_uid, friend_of_friend.name as friend_of_friend_name
+      $results['friend_followed'] = db_query('SELECT DISTINCT friend.name as original_friend_name, friend.uid as original_friend_uid,
+  friend_of_friend.uid as friend_of_friend_uid, friend_of_friend.name as friend_of_friend_name
   FROM flagging
-  INNER JOIN users on users.uid = flagging.uid
-  INNER JOIN flagging connected_user on connected_user.uid = flagging.entity_id AND flagging.timestamp between :start AND :end
-  INNER JOIN users friend_of_friend on friend_of_friend.uid = connected_user.uid
-  WHERE flagging.uid IN (:uids) AND flagging.fid = :fid AND connected_user.uid <> :uid AND connected_user.fid = :fid ORDER BY RAND() LIMIT 3', array(
+  INNER JOIN users friend on friend.uid = flagging.uid
+  INNER JOIN users friend_of_friend on friend_of_friend.uid = flagging.entity_id
+  INNER JOIN flagging connected_user on connected_user.entity_id = friend_of_friend.uid
+  WHERE flagging.uid in (:followers) AND flagging.entity_type = :user AND flagging.fid = :fid
+  AND friend_of_friend.uid <> :uid AND connected_user.entity_type = :user AND connected_user.fid = :fid
+  AND connected_user.timestamp between :start AND :end
+  ORDER BY RAND() LIMIT 3', array(
+        ':followers' => $followers,
+        ':user' => 'user',
+        ':fid' => $follow_user->fid,
+        ':uid' => $user->uid,
         ':start' => strtotime('first day of last month'),
         ':end' => $now,
-        ':uids' => $followers,
-        ':fid' => $follow_user->fid,
-        ':uid' => $user->uid
       ))->fetchAssoc();
 
 
@@ -146,6 +151,7 @@ function dashboard_notification_center_generate_listing() {
         ':start' => strtotime('first day of last month'),
         ':end' => $now
       ))->fetchAssoc();
+
     }
     else {
       $results = array_merge($results, array(
