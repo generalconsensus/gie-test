@@ -91,11 +91,11 @@ function gie_dashboard_form_node_form_alter(&$form) {
 /**
  * Implements hook_panels_pre_render().
  */
-function gie_dashboard_panels_pre_render($panels_display) {
-  if ($panels_display->title == 'Your Exchange Dashboard') {
-    _gie_data_viz_init();
-  }
-}
+//function gie_dashboard_panels_pre_render($panels_display) {
+//  if ($panels_display->title == 'Your Exchange Dashboard') {
+//    _gie_data_viz_init();
+//  }
+//}
 
 /**
  * Implements hook_menu().
