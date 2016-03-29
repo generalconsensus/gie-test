@@ -91,10 +91,10 @@ function gie_blogs_field_group_info() {
     'children' => array(
       0 => 'field_blogs_organization',
       1 => 'field_blogs_program',
-      2 => 'field_term_sector',
-      3 => 'field_term_topic',
-      4 => 'field_term_country',
-      5 => 'field_term_region',
+      2 => 'field_term_country',
+      3 => 'field_term_region',
+      4 => 'field_term_sector',
+      5 => 'field_term_topic',
     ),
     'format_type' => 'div',
     'format_settings' => array(
