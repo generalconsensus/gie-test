@@ -1452,7 +1452,9 @@ function gie_dashboard_views_default_views() {
   $handler->display->display_options['fields']['field_featured']['table'] = 'field_data_field_featured';
   $handler->display->display_options['fields']['field_featured']['field'] = 'field_featured';
   $handler->display->display_options['fields']['field_featured']['alter']['alter_text'] = TRUE;
-  $handler->display->display_options['fields']['field_featured']['alter']['text'] = 'Yes';
+  $handler->display->display_options['fields']['field_featured']['alter']['text'] = 'Featured';
+  $handler->display->display_options['fields']['field_featured']['empty'] = 'Not Featured';
+  $handler->display->display_options['fields']['field_featured']['empty_zero'] = TRUE;
   $handler->display->display_options['fields']['field_featured']['type'] = 'list_key';
   $handler->display->display_options['fields']['field_featured']['settings'] = array(
     'linked_field' => array(
@@ -1605,7 +1607,10 @@ function gie_dashboard_views_default_views() {
   $handler->display->display_options['fields']['field_featured']['id'] = 'field_featured';
   $handler->display->display_options['fields']['field_featured']['table'] = 'field_data_field_featured';
   $handler->display->display_options['fields']['field_featured']['field'] = 'field_featured';
-  $handler->display->display_options['fields']['field_featured']['alter']['text'] = '[field_featured] ';
+  $handler->display->display_options['fields']['field_featured']['alter']['alter_text'] = TRUE;
+  $handler->display->display_options['fields']['field_featured']['alter']['text'] = 'Featured';
+  $handler->display->display_options['fields']['field_featured']['empty'] = 'Not Featured';
+  $handler->display->display_options['fields']['field_featured']['empty_zero'] = TRUE;
   $handler->display->display_options['fields']['field_featured']['type'] = 'list_key';
   $handler->display->display_options['fields']['field_featured']['settings'] = array(
     'linked_field' => array(
