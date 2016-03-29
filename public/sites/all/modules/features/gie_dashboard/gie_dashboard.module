@@ -422,9 +422,9 @@ function dashboard_recommendation_engine($bundle, $filter) {
       INNER JOIN taxonomy_term_data  ON sector_1.field_term_sector_tid = taxonomy_term_data.tid
       INNER JOIN field_data_field_term_sector sector_2 ON taxonomy_term_data.tid = sector_2.field_term_sector_tid AND (sector_2.entity_type = 'user' AND sector_2.deleted = '0')
       INNER JOIN users ON sector_2.entity_id = users.uid
-      LEFT JOIN flagging ON flagging.uid = :uid AND flagging.entity_id = node.nid
+      LEFT OUTER JOIN flagging ON flagging.uid = :uid AND flagging.entity_id = node.nid
       LEFT JOIN field_data_field_featured ON field_data_field_featured.entity_id = node.nid
-      WHERE (( (users.uid = :uid ) )AND(( (node.status = '1') AND (node.type IN (:bundle)) ))) ORDER BY node.changed DESC", 0, $display_items, array(
+      WHERE flagging.fid IS NULL AND node.uid <> :uid AND users.uid = :uid AND node.status = '1' AND node.type IN (:bundle) ORDER BY node.changed DESC", 0, $display_items, array(
         ':uid' => $user->uid,
         ':bundle' => $bundle
       ))->fetchAll();
@@ -438,9 +438,9 @@ function dashboard_recommendation_engine($bundle, $filter) {
       INNER JOIN taxonomy_term_data  ON term_1.field_term_topic_tid = taxonomy_term_data.tid
       INNER JOIN field_data_field_user_interests ON taxonomy_term_data.tid = field_data_field_user_interests.field_user_interests_tid AND (field_data_field_user_interests.entity_type = 'user' AND field_data_field_user_interests.deleted = '0')
       INNER JOIN users ON field_data_field_user_interests.entity_id = users.uid
-      LEFT JOIN flagging ON flagging.uid = :uid AND flagging.entity_id = node.nid
+      LEFT OUTER JOIN flagging ON flagging.uid = :uid AND flagging.entity_id = node.nid
       LEFT JOIN field_data_field_featured ON field_data_field_featured.entity_id = node.nid
-      WHERE (( (users.uid = :uid ) )AND(( (node.status = '1') AND (node.type IN (:bundle)) ))) ORDER BY node.changed DESC", 0, $display_items, array(
+      WHERE flagging.fid IS NULL AND node.uid <> :uid AND users.uid = :uid  AND node.status = '1' AND node.type IN (:bundle) ORDER BY node.changed DESC", 0, $display_items, array(
         ':uid' => $user->uid,
         ':bundle' => $bundle
       ))->fetchAll();
@@ -454,9 +454,9 @@ function dashboard_recommendation_engine($bundle, $filter) {
       INNER JOIN taxonomy_term_data  ON field_data_field_innovation_assistance.field_innovation_assistance_tid = taxonomy_term_data.tid
       INNER JOIN field_data_field_user_assistance ON taxonomy_term_data.tid = field_data_field_user_assistance.field_user_assistance_tid AND (field_data_field_user_assistance.entity_type = 'user' AND field_data_field_user_assistance.deleted = '0')
       INNER JOIN users ON field_data_field_user_assistance.entity_id = users.uid
-      LEFT JOIN flagging ON flagging.uid = :uid AND flagging.entity_id = node.nid
+      LEFT OUTER JOIN flagging ON flagging.uid = :uid AND flagging.entity_id = node.nid
       LEFT JOIN field_data_field_featured ON field_data_field_featured.entity_id = node.nid
-      WHERE (( (users.uid = :uid ) )AND(( (node.status = '1') AND (node.type IN (:bundle)) ))) ORDER BY node.changed DESC", 0, $display_items, array(
+      WHERE flagging.fid IS NULL AND node.uid <> :uid AND users.uid = :uid  AND node.status = '1' AND node.type IN (:bundle) ORDER BY node.changed DESC", 0, $display_items, array(
         ':uid' => $user->uid,
         ':bundle' => $bundle
       ))->fetchAll();
@@ -465,17 +465,16 @@ function dashboard_recommendation_engine($bundle, $filter) {
 
     case 'my_friends':
 
-      $matches = db_query_range('SELECT DISTINCT favorite_node.entity_id as nid, my_favorite.fid as flagged, field_data_field_featured.field_featured_value as featured FROM flagging
-      INNER JOIN flagging favorite_node on flagging.uid = favorite_node.uid
-      INNER JOIN node on node.nid = favorite_node.entity_id
-      LEFT JOIN flagging my_favorite ON my_favorite.uid = :uid AND my_favorite.entity_id = node.nid
-      LEFT JOIN field_data_field_featured ON field_data_field_featured.entity_id = node.nid
-      WHERE node.type IN (:bundle) AND flagging.fid = :follow_fid AND flagging.entity_id = :uid
-      AND favorite_node.fid = :favorite_fid', 0, $display_items, array(
-        ':bundle' => $bundle,
-        ':follow_fid' => $follow_user->fid,
+      $matches = db_query_range('SELECT DISTINCT flagging.entity_id as nid, am_i_favoriting_content.fid as flagged, field_data_field_featured.field_featured_value as featured
+      FROM flagging
+      INNER JOIN node friends_content on friends_content.uid = flagging.entity_id
+      LEFT OUTER JOIN flagging am_i_favoriting_content ON am_i_favoriting_content.uid = :uid AND am_i_favoriting_content.entity_id = friends_content.nid AND am_i_favoriting_content.fid = :favorite_fid
+      LEFT JOIN field_data_field_featured ON field_data_field_featured.entity_id = friends_content.nid
+      WHERE am_i_favoriting_content.fid IS NULL AND friends_content.uid <> :uid AND flagging.uid = :uid AND flagging.fid = :follow_fid AND friends_content.type IN (:bundle)', 0, $display_items, array(
+        ':favorite_fid' => $favorite->fid,
         ':uid' => $user->uid,
-        ':favorite_fid' => $favorite->fid
+        ':follow_fid' => $follow_user->fid,
+        ':bundle' => $bundle
       ))->fetchAll();
 
       break;
