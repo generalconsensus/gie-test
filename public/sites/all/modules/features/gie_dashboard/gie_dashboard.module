@@ -629,16 +629,16 @@ function dashboard_recommended_innovations_form($form) {
     global $user;
     switch ($filter) {
       case 'my_sectors':
-        $payload[] = t('There are no innovation recommendations based on your sector preferences.') . ' ' . l(t('Update your preferences'), 'user/' . $user->uid . '/edit') . t(' to get better results');
+        $payload[] = t('There are no innovation recommendations based on your sector preferences.') . ' ' . l(t('Update your preferences'), 'user/' . $user->uid . '/edit') . ' ' . t('to get better results');
         break;
       case 'my_topics':
-        $payload[] = t('There are no innovation recommendations based on your topic preferences.') . ' ' . l(t('Update your preferences'), 'user/' . $user->uid . '/edit') . t(' to get better results');
+        $payload[] = t('There are no innovation recommendations based on your topic preferences.') . ' ' . l(t('Update your preferences'), 'user/' . $user->uid . '/edit') . ' ' . t('to get better results');
         break;
       case 'my_skills':
-        $payload[] = t('There are no innovation recommendations requesting your skills.') . ' ' . l(t('Update your preferences'), 'user/' . $user->uid . '/edit') . t(' to get better results');
+        $payload[] = t('There are no innovation recommendations requesting your skills.') . ' ' . l(t('Update your preferences'), 'user/' . $user->uid . '/edit') . ' ' . t('to get better results');
         break;
       case 'my_friends':
-        $payload[] = t('There are no innovation recommendations on what your friends are following.') . ' ' . l(t('Find members to follow'), 'members') . t(' to get better results');
+        $payload[] = t('There are no innovation recommendations on what your friends are following.') . ' ' . l(t('Find members to follow'), 'members') . ' ' . t('to get better results');
         break;
       case 'im_following':
         $payload[] = t('You are not following any innovations') . ' ' . l(t('Find innovations to follow'), 'innovations');
@@ -760,13 +760,13 @@ function dashboard_recommended_funding_form($form) {
     global $user;
     switch ($filter) {
       case 'my_sectors':
-        $payload[] = t('There are no funding opportunity recommendations based on your sector preferences.') . ' ' . l(t('Update your preferences'), 'user/' . $user->uid . '/edit') . t(' to get better results');
+        $payload[] = t('There are no funding opportunity recommendations based on your sector preferences.') . ' ' . l(t('Update your preferences'), 'user/' . $user->uid . '/edit') . ' ' . t('to get better results');
         break;
       case 'my_topics':
-        $payload[] = t('There are no funding opportunity recommendations based on your topic preferences.') . ' ' . l(t('Update your preferences'), 'user/' . $user->uid . '/edit') . t(' to get better results');
+        $payload[] = t('There are no funding opportunity recommendations based on your topic preferences.') . ' ' . l(t('Update your preferences'), 'user/' . $user->uid . '/edit') . ' ' . t('to get better results');
         break;
       case 'my_friends':
-        $payload[] = t('There are no funding opportunity recommendations based on on what your friends are following.') . ' ' . l(t('Find members to follow'), 'members') . t(' to get better results');
+        $payload[] = t('There are no funding opportunity recommendations based on on what your friends are following.') . ' ' . l(t('Find members to follow'), 'members') . ' ' . t('to get better results');
         break;
       case 'im_following':
         $payload[] = t('You are not following any funding opportunities') . ' ' . l(t('Find funding opportunities to follow'), 'funding');
@@ -934,28 +934,28 @@ function dashboard_my_portfolio_form($form) {
     switch ($filter) {
       case 'innovation':
         $payload[] = array(
-          t('You haven\'t created any innovations! Click ') . l(t('here'), 'node/add/innovation') . t(' to add your innovations.'),
+          t('You haven\'t created any innovations! Click ') . l(t('here'), 'node/add/innovation') . ' ' . t('to add your innovations.'),
           NULL,
           NULL
         );
         break;
       case 'funding':
         $payload[] = array(
-          t('You haven\'t created any funding opportunities! Click ') . l(t('here'), 'node/add/funding') . t(' to add your funding opportunities.'),
+          t('You haven\'t created any funding opportunities! Click ') . l(t('here'), 'node/add/funding') . ' ' . t('to add your funding opportunities.'),
           NULL,
           NULL
         );
         break;
       case 'resource':
         $payload[] = array(
-          t('You haven\'t created any resources! Click ') . l(t('here'), 'node/add/resources') . t(' to add your resources.'),
+          t('You haven\'t created any resources! Click ') . l(t('here'), 'node/add/resources') . ' ' . t('to add your resources.'),
           NULL,
           NULL
         );
         break;
       case 'event':
         $payload[] = array(
-          t('You haven\'t created any events! Click ') . l(t('here'), 'node/add/event') . t(' to add your events.'),
+          t('You haven\'t created any events! Click ') . l(t('here'), 'node/add/event') . ' ' . t('to add your events.'),
           NULL,
           NULL
         );
@@ -1118,25 +1118,25 @@ function dashboard_my_network_form($form) {
 
     switch ($filter) {
       case 'net_users':
-        $payload[] = t('You have not followed a members! Click ') . l(t('here'), 'members') . t(' to find members');
+        $payload[] = t('You have not followed a members! Click ') . l(t('here'), 'members') . ' ' . t('to find members');
         break;
       case 'net_innovation':
-        $payload[] = t('You have not followed an innovation! Click ') . l(t('here'), 'innovations') . t(' to find innovations');
+        $payload[] = t('You have not followed an innovation! Click ') . l(t('here'), 'innovations') . ' ' . t('to find innovations');
         break;
       case 'net_funding':
-        $payload[] = t('You have not followed a funding opportunity! Click ') . l(t('here'), 'funding') . t('to find funding opportunities');
+        $payload[] = t('You have not followed a funding opportunity! Click ') . l(t('here'), 'funding') . ' ' . t('to find funding opportunities');
         break;
       case 'net_resource':
-        $payload[] = t('You have not followed a resource! Click ') . l(t('here'), 'resources') . t(' to find resources');
+        $payload[] = t('You have not followed a resource! Click ') . l(t('here'), 'resources') . ' ' . t('to find resources');
         break;
       case 'net_event':
-        $payload[] = t('You have not followed an event! Click ') . l(t('here'), 'events') . t(' to find events');
+        $payload[] = t('You have not followed an event! Click ') . l(t('here'), 'events') . ' ' . t('to find events');
         break;
       case 'net_organization':
-        $payload[] = t('You have not followed an organization! Click ') . l(t('here'), 'organizations') . t(' to find organizations');
+        $payload[] = t('You have not followed an organization! Click ') . l(t('here'), 'organizations') . ' ' . t('to find organizations');
         break;
       case 'net_program':
-        $payload[] = t('You have not followed a program! Click ') . l(t('here'), 'programs') . t(' to find programs');
+        $payload[] = t('You have not followed a program! Click ') . l(t('here'), 'programs') . ' ' . t('to find programs');
         break;
     }
   }
@@ -1278,7 +1278,7 @@ function gie_dashboard_card_build($matches, $alternate = FALSE, $user = FALSE) {
           $entity['node'][key($entity['node'])]['dashboard_spotlight_card_entity_classification'][0]['#markup'] = '<h2 class="card__spotlight-type-event">' . strtoupper(t('Attending')) . '</h2>';
         }
         elseif (!empty($sector_match->featured)) {
-          $entity['node'][key($entity['node'])]['dashboard_spotlight_card_entity_classification'][0]['#markup'] = '<h2 class="card__spotlight-type-update">' . strtoupper(t('Event')) . '</h2>';
+          $entity['node'][key($entity['node'])]['dashboard_spotlight_card_entity_classification'][0]['#markup'] = '<h2 class="card__spotlight-type-update">' . strtoupper(t('Exchange Updates')) . '</h2>';
         }
         elseif (!empty($sector_match->flagged)) {
           $entity['node'][key($entity['node'])]['dashboard_spotlight_card_entity_classification'][0]['#markup'] = '<h2 class="card__spotlight-type-followed">' . strtoupper(t('Followed By You')) . '</h2>';
