@@ -46,6 +46,40 @@ function gie_program_field_group_info() {
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
   $field_group->api_version = 1;
+  $field_group->identifier = 'group_card_content|node|program|spotlight';
+  $field_group->group_name = 'group_card_content';
+  $field_group->entity_type = 'node';
+  $field_group->bundle = 'program';
+  $field_group->mode = 'spotlight';
+  $field_group->parent_name = '';
+  $field_group->data = array(
+    'label' => 'Card Content',
+    'weight' => '1',
+    'children' => array(
+      0 => 'title_field',
+      1 => 'flag_favorite',
+      2 => 'content_type',
+    ),
+    'format_type' => 'div',
+    'format_settings' => array(
+      'label' => 'Card Content',
+      'instance_settings' => array(
+        'id' => '',
+        'classes' => 'card__content',
+        'description' => '',
+        'show_label' => '0',
+        'label_element' => 'h3',
+        'effect' => 'none',
+        'speed' => 'none',
+      ),
+      'formatter' => 'open',
+    ),
+  );
+  $export['group_card_content|node|program|spotlight'] = $field_group;
+
+  $field_group = new stdClass();
+  $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
+  $field_group->api_version = 1;
   $field_group->identifier = 'group_card_counts|node|program|listing';
   $field_group->group_name = 'group_card_counts';
   $field_group->entity_type = 'node';
@@ -75,6 +109,38 @@ function gie_program_field_group_info() {
     ),
   );
   $export['group_card_counts|node|program|listing'] = $field_group;
+
+  $field_group = new stdClass();
+  $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
+  $field_group->api_version = 1;
+  $field_group->identifier = 'group_card_image|node|program|spotlight';
+  $field_group->group_name = 'group_card_image';
+  $field_group->entity_type = 'node';
+  $field_group->bundle = 'program';
+  $field_group->mode = 'spotlight';
+  $field_group->parent_name = '';
+  $field_group->data = array(
+    'label' => 'Card Image',
+    'weight' => '0',
+    'children' => array(
+      0 => 'field_program_logo',
+    ),
+    'format_type' => 'div',
+    'format_settings' => array(
+      'label' => 'Card Image',
+      'instance_settings' => array(
+        'id' => '',
+        'classes' => 'card__image',
+        'description' => '',
+        'show_label' => '0',
+        'label_element' => 'h3',
+        'effect' => 'none',
+        'speed' => 'none',
+      ),
+      'formatter' => 'open',
+    ),
+  );
+  $export['group_card_image|node|program|spotlight'] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */

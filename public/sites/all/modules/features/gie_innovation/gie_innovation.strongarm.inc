@@ -173,6 +173,21 @@ function gie_innovation_strongarm() {
       'details' => array(
         'custom_settings' => FALSE,
       ),
+      'spotlight' => array(
+        'custom_settings' => TRUE,
+      ),
+      'data' => array(
+        'custom_settings' => FALSE,
+      ),
+      'microsite_content_slider' => array(
+        'custom_settings' => FALSE,
+      ),
+      'needs_list' => array(
+        'custom_settings' => FALSE,
+      ),
+      'long_form_footer_logo' => array(
+        'custom_settings' => FALSE,
+      ),
     ),
     'extra_fields' => array(
       'form' => array(
@@ -217,6 +232,10 @@ function gie_innovation_strongarm() {
             'weight' => '10',
             'visible' => FALSE,
           ),
+          'spotlight' => array(
+            'weight' => '21',
+            'visible' => FALSE,
+          ),
         ),
         'innovation_listing_counts_evidence' => array(
           'listing' => array(
@@ -249,6 +268,10 @@ function gie_innovation_strongarm() {
           ),
           'highlights' => array(
             'weight' => '10',
+            'visible' => FALSE,
+          ),
+          'spotlight' => array(
+            'weight' => '27',
             'visible' => FALSE,
           ),
         ),
@@ -285,6 +308,10 @@ function gie_innovation_strongarm() {
             'weight' => '10',
             'visible' => FALSE,
           ),
+          'spotlight' => array(
+            'weight' => '18',
+            'visible' => FALSE,
+          ),
         ),
         'innovation_listing_counts_orgs' => array(
           'listing' => array(
@@ -317,6 +344,10 @@ function gie_innovation_strongarm() {
           ),
           'highlights' => array(
             'weight' => '10',
+            'visible' => FALSE,
+          ),
+          'spotlight' => array(
+            'weight' => '19',
             'visible' => FALSE,
           ),
         ),
@@ -353,6 +384,10 @@ function gie_innovation_strongarm() {
             'weight' => '10',
             'visible' => FALSE,
           ),
+          'spotlight' => array(
+            'weight' => '20',
+            'visible' => FALSE,
+          ),
         ),
         'innovation_at_a_glance_comments' => array(
           'at_a_glance' => array(
@@ -377,6 +412,10 @@ function gie_innovation_strongarm() {
           ),
           'highlights' => array(
             'weight' => '10',
+            'visible' => FALSE,
+          ),
+          'spotlight' => array(
+            'weight' => '25',
             'visible' => FALSE,
           ),
         ),
@@ -405,6 +444,10 @@ function gie_innovation_strongarm() {
             'weight' => '10',
             'visible' => FALSE,
           ),
+          'spotlight' => array(
+            'weight' => '22',
+            'visible' => FALSE,
+          ),
         ),
         'innovation_at_a_glance_evidence' => array(
           'at_a_glance' => array(
@@ -431,6 +474,10 @@ function gie_innovation_strongarm() {
             'weight' => '10',
             'visible' => FALSE,
           ),
+          'spotlight' => array(
+            'weight' => '24',
+            'visible' => FALSE,
+          ),
         ),
         'innovation_listing_counts_assistance' => array(
           'listing' => array(
@@ -443,6 +490,40 @@ function gie_innovation_strongarm() {
           ),
           'highlights' => array(
             'weight' => '10',
+            'visible' => FALSE,
+          ),
+          'spotlight' => array(
+            'weight' => '28',
+            'visible' => FALSE,
+          ),
+        ),
+        'domain' => array(
+          'default' => array(
+            'weight' => '1',
+            'visible' => TRUE,
+          ),
+          'spotlight' => array(
+            'weight' => '11',
+            'visible' => FALSE,
+          ),
+        ),
+        'flag_favorite' => array(
+          'default' => array(
+            'weight' => '10',
+            'visible' => TRUE,
+          ),
+          'spotlight' => array(
+            'weight' => '2',
+            'visible' => TRUE,
+          ),
+        ),
+        'flag_abuse_node' => array(
+          'default' => array(
+            'weight' => '10',
+            'visible' => TRUE,
+          ),
+          'spotlight' => array(
+            'weight' => '23',
             'visible' => FALSE,
           ),
         ),
@@ -607,6 +688,13 @@ function gie_innovation_strongarm() {
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
+  $strongarm->name = 'pathauto_taxonomy_term_comment_type_pattern';
+  $strongarm->value = '';
+  $export['pathauto_taxonomy_term_comment_type_pattern'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
   $strongarm->name = 'pathauto_taxonomy_term_country_pattern';
   $strongarm->value = '';
   $export['pathauto_taxonomy_term_country_pattern'] = $strongarm;
@@ -624,6 +712,13 @@ function gie_innovation_strongarm() {
   $strongarm->name = 'pathauto_taxonomy_term_solution_type_pattern';
   $strongarm->value = '';
   $export['pathauto_taxonomy_term_solution_type_pattern'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'pathauto_taxonomy_term_sustainable_development_goals_pattern';
+  $strongarm->value = '';
+  $export['pathauto_taxonomy_term_sustainable_development_goals_pattern'] = $strongarm;
 
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
