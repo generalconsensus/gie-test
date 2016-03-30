@@ -31,31 +31,6 @@ function gie_innovation_field_default_field_bases() {
     'type' => 'text_long',
   );
 
-  // Exported field_base: 'field_featured_innovation'
-  $field_bases['field_featured_innovation'] = array(
-    'active' => 1,
-    'cardinality' => 1,
-    'deleted' => 0,
-    'entity_types' => array(),
-    'field_name' => 'field_featured_innovation',
-    'indexes' => array(
-      'value' => array(
-        0 => 'value',
-      ),
-    ),
-    'locked' => 0,
-    'module' => 'list',
-    'settings' => array(
-      'allowed_values' => array(
-        0 => 'Not Featured Innovation',
-        1 => 'Featured Innovation',
-      ),
-      'allowed_values_function' => '',
-    ),
-    'translatable' => 0,
-    'type' => 'list_boolean',
-  );
-
   // Exported field_base: 'field_innovation_address'
   $field_bases['field_innovation_address'] = array(
     'active' => 1,
