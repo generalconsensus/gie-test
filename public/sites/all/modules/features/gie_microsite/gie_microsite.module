@@ -5,3 +5,33 @@
  */
 
 include_once 'gie_microsite.features.inc';
+
+/**
+ * Implements hook_page_alter().
+ */
+function gie_microsite_page_alter(&$page)
+{
+  $term = menu_get_object('taxonomy_term',2);
+  if ($term) {
+    $vocab = $term->vocabulary_machine_name;
+
+    if ($vocab === 'youthpower_issues') {
+      $domain = $GLOBALS['_domain']['machine_name'];
+
+      // list of known Youth Power domain machine names
+      $yp_domain_list = [
+        'youthpower_globalinnovationexchange_org',
+        'youthpower_stage_gie_byf1_io',
+        'dev_test2_gie_byf1_io',
+      ];
+
+      // get path arguments
+      $path_args = explode('/', current_path());
+
+      // if current domain is not Youth Power (and not edit page), return 404
+      if ( $path_args[3] !== 'edit' && !in_array($domain, $yp_domain_list) ) {
+        drupal_not_found();
+      }
+    }
+  }
+}
