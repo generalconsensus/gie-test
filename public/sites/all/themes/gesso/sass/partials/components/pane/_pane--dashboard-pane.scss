@@ -1,0 +1,10 @@
+// class to add to generic dashboard panes, like the data table
+.pane--dashboard-pane {
+  @extend %dashboard-pane;
+  .pane__title {
+    @extend %dashboard-header;
+  }
+  .pane__content {
+    padding: 1em;
+  }
+}
