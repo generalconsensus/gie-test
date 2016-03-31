@@ -16,7 +16,7 @@
   }
 }
 
-.profile-thumb__image--rounded {
+.profile-thumb__image-rounded {
   @extend .profile-thumb__image;
   img {
     border: 2px solid $border-color;

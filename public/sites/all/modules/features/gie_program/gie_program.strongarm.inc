@@ -113,6 +113,24 @@ function gie_program_strongarm() {
       'details' => array(
         'custom_settings' => FALSE,
       ),
+      'spotlight' => array(
+        'custom_settings' => TRUE,
+      ),
+      'highlights' => array(
+        'custom_settings' => FALSE,
+      ),
+      'data' => array(
+        'custom_settings' => FALSE,
+      ),
+      'microsite_content_slider' => array(
+        'custom_settings' => FALSE,
+      ),
+      'needs_list' => array(
+        'custom_settings' => FALSE,
+      ),
+      'long_form_footer_logo' => array(
+        'custom_settings' => FALSE,
+      ),
     ),
     'extra_fields' => array(
       'form' => array(
@@ -157,6 +175,10 @@ function gie_program_strongarm() {
             'weight' => '10',
             'visible' => FALSE,
           ),
+          'spotlight' => array(
+            'weight' => '22',
+            'visible' => FALSE,
+          ),
         ),
         'program_counters_favorite_count' => array(
           'full' => array(
@@ -167,6 +189,7 @@ function gie_program_strongarm() {
           'search_listing' => NULL,
           'page_header' => NULL,
           'logo' => NULL,
+          'spotlight' => NULL,
         ),
         'program_counters_innovation_count' => array(
           'full' => array(
@@ -199,6 +222,10 @@ function gie_program_strongarm() {
           ),
           'logo' => array(
             'weight' => '10',
+            'visible' => FALSE,
+          ),
+          'spotlight' => array(
+            'weight' => '21',
             'visible' => FALSE,
           ),
         ),
@@ -235,6 +262,10 @@ function gie_program_strongarm() {
             'weight' => '10',
             'visible' => FALSE,
           ),
+          'spotlight' => array(
+            'weight' => '23',
+            'visible' => FALSE,
+          ),
         ),
         'program_at_a_glance_favorites' => array(
           'at_a_glance' => array(
@@ -255,6 +286,10 @@ function gie_program_strongarm() {
           ),
           'page_header' => array(
             'weight' => '10',
+            'visible' => FALSE,
+          ),
+          'spotlight' => array(
+            'weight' => '25',
             'visible' => FALSE,
           ),
         ),
@@ -278,6 +313,30 @@ function gie_program_strongarm() {
           'page_header' => array(
             'weight' => '10',
             'visible' => FALSE,
+          ),
+          'spotlight' => array(
+            'weight' => '26',
+            'visible' => FALSE,
+          ),
+        ),
+        'domain' => array(
+          'default' => array(
+            'weight' => '1',
+            'visible' => TRUE,
+          ),
+          'spotlight' => array(
+            'weight' => '12',
+            'visible' => FALSE,
+          ),
+        ),
+        'flag_favorite' => array(
+          'default' => array(
+            'weight' => '10',
+            'visible' => TRUE,
+          ),
+          'spotlight' => array(
+            'weight' => '3',
+            'visible' => TRUE,
           ),
         ),
       ),
@@ -415,13 +474,6 @@ function gie_program_strongarm() {
   $strongarm->name = 'panelizer_node:program:page_manager_selection';
   $strongarm->value = 'node:program:default';
   $export['panelizer_node:program:page_manager_selection'] = $strongarm;
-
-  $strongarm = new stdClass();
-  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
-  $strongarm->api_version = 1;
-  $strongarm->name = 'pathauto_node_program_pattern';
-  $strongarm->value = 'programs/[node:title]';
-  $export['pathauto_node_program_pattern'] = $strongarm;
 
   return $export;
 }

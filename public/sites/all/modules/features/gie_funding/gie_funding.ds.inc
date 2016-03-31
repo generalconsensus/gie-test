@@ -295,6 +295,87 @@ function gie_funding_ds_field_settings_info() {
 
   $ds_fieldsetting = new stdClass();
   $ds_fieldsetting->api_version = 1;
+  $ds_fieldsetting->id = 'node|funding|spotlight';
+  $ds_fieldsetting->entity_type = 'node';
+  $ds_fieldsetting->bundle = 'funding';
+  $ds_fieldsetting->view_mode = 'spotlight';
+  $ds_fieldsetting->settings = array(
+    'content_type' => array(
+      'weight' => '0',
+      'label' => 'hidden',
+      'format' => 'default',
+      'formatter_settings' => array(
+        'ft' => array(
+          'func' => 'theme_ds_field_expert',
+          'fis' => TRUE,
+          'fis-el' => 'h2',
+          'fis-cl' => 'card__type',
+          'fis-at' => '',
+          'fis-def-at' => FALSE,
+        ),
+        'field_delimiter' => '',
+        'linked_field' => array(
+          'linked' => 0,
+          'destination' => '',
+          'advanced' => array(
+            'title' => '',
+            'target' => '',
+            'class' => '',
+            'rel' => '',
+            'text' => '',
+          ),
+        ),
+      ),
+    ),
+    'dashboard_spotlight_card_entity_classification' => array(
+      'weight' => '0',
+      'label' => 'hidden',
+      'format' => 'default',
+      'formatter_settings' => array(
+        'ft' => array(
+          'func' => 'theme_ds_field_expert',
+          'lb-el' => 'h2',
+        ),
+        'field_delimiter' => '',
+        'linked_field' => array(
+          'linked' => 0,
+          'destination' => '',
+          'advanced' => array(
+            'title' => '',
+            'target' => '',
+            'class' => '',
+            'rel' => '',
+            'text' => '',
+          ),
+        ),
+      ),
+    ),
+    'title_field' => array(
+      'formatter_settings' => array(
+        'ft' => array(
+          'func' => 'theme_ds_field_expert',
+          'fi' => TRUE,
+          'fi-el' => 'h5',
+          'fi-cl' => 'card_title',
+          'fi-at' => '',
+          'fi-def-at' => FALSE,
+          'fi-odd-even' => FALSE,
+          'fi-first-last' => FALSE,
+        ),
+      ),
+    ),
+    'field_funding_image' => array(
+      'formatter_settings' => array(
+        'ft' => array(
+          'func' => 'theme_ds_field_expert',
+        ),
+      ),
+    ),
+  );
+  $export['node|funding|spotlight'] = $ds_fieldsetting;
+
+  $ds_fieldsetting = new stdClass();
+  $ds_fieldsetting->api_version = 1;
   $ds_fieldsetting->id = 'node|funding|teaser_date';
   $ds_fieldsetting->entity_type = 'node';
   $ds_fieldsetting->bundle = 'funding';
@@ -615,6 +696,53 @@ function gie_funding_ds_layout_settings_info() {
     'layout_link_custom' => '',
   );
   $export['node|funding|search_listing'] = $ds_layout;
+
+  $ds_layout = new stdClass();
+  $ds_layout->api_version = 1;
+  $ds_layout->id = 'node|funding|spotlight';
+  $ds_layout->entity_type = 'node';
+  $ds_layout->bundle = 'funding';
+  $ds_layout->view_mode = 'spotlight';
+  $ds_layout->layout = 'article';
+  $ds_layout->settings = array(
+    'regions' => array(
+      'main_content' => array(
+        0 => 'content_type',
+        1 => 'dashboard_spotlight_card_entity_classification',
+        2 => 'title_field',
+        3 => 'group_card_image',
+        4 => 'group_card_content',
+        5 => 'flag_favorite',
+        6 => 'field_funding_image',
+      ),
+    ),
+    'fields' => array(
+      'content_type' => 'main_content',
+      'dashboard_spotlight_card_entity_classification' => 'main_content',
+      'title_field' => 'main_content',
+      'group_card_image' => 'main_content',
+      'group_card_content' => 'main_content',
+      'flag_favorite' => 'main_content',
+      'field_funding_image' => 'main_content',
+    ),
+    'classes' => array(
+      'layout_class' => array(
+        'card' => 'card',
+        'card--spotlight' => 'card--spotlight',
+      ),
+    ),
+    'wrappers' => array(
+      'header' => 'div',
+      'main_content' => 'div',
+      'footer' => 'div',
+    ),
+    'layout_wrapper' => 'div',
+    'layout_attributes' => '',
+    'layout_attributes_merge' => 1,
+    'layout_link_attribute' => '',
+    'layout_link_custom' => '',
+  );
+  $export['node|funding|spotlight'] = $ds_layout;
 
   $ds_layout = new stdClass();
   $ds_layout->api_version = 1;

@@ -1,0 +1,248 @@
+{{> organisms-header }}
+{{> organisms-navigation }}
+
+<main id="main" class="main" role="main" tabindex="-1"
+  <div class="region-content">
+    <div class="region__inner">
+
+      <div class="l-panels-detail">
+        <div class="l-center layout-constrain">
+
+          <div class="pane pane--dashboard-header-image">
+            <div class="pane__content">
+              <div class="dashboard-header">
+                <div class="dashboard-header__profile-image profile-thumb__image-rounded">
+                  <img src="{{ user.img-150-150.src }}">
+                </div>
+                <div class="dashboard-header__text">
+                  <h2 class="dashboard-header__title">Your Exchange Dashboard</h2>
+                  <h3 class="dashboard-header__welcome">WELCOME {{ user.name }}</h3>
+                </div>
+                <div class="dashboard-header__actions">
+                  <a href="#" class="button button--update-profile">Update your profile</a>
+                  <a href="#" class="button button--view-profile">View your profile</a>
+                  <a href="#" class="button button--email">Email Preferences</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="pane pane--quicktabs-dashboard dashboard">
+            <div class="pane__content">
+              <div class="quicktabs-wrapper quicktabs-style-nostyle jquery-once-1-processed" id="quicktabs-dashboard">
+                <ul class="quicktabs-tabs quicktabs-style-nostyle">
+                  <li class="active"><a class="is-active quicktabs-loaded jquery-once-2-processed" href="#">What's New?</a></li>
+                  <li><a class="is-active" href="#">Innovation Impacts</a></li>
+                  <li><a class="is-active" href="#">Funding Status</a></li>
+                  <li><a class="is-active" href="#">Network</a></li>
+                </ul>
+                <div id="quicktabs-container-dashboard" class="quicktabs_main quicktabs-style-nostyle">
+                  <div class="quicktabs-tabpage">
+
+                    <div class="l-panels-dashboard main sidebar bottom-left bottom-right">
+                      <div class="l-wrapper">
+                        <aside class="l-sidebar">
+                          <div class="pane pane--dashboard-notification-center">
+                            <div class="pane__content">
+                              <div class="dashboard-notifications">
+                                <h2>NOTIFICATIONS</h2>
+                                <ul>
+                                  <li><a href="/users/aklatsky">Alex Klatsky</a>, <a href="/users/vitraphigelu">vitraphigelu</a>, <a href="/users/aklatsk2gmailcom">alex klatsky</a> commented on your content</li>
+                                  <li><a href="/users/vitraphigelu">vitraphigelu</a>, <a href="/users/frabusocriw">frabusocriw</a>, <a href="/users/testustosto">testustosto</a> follow you</li>
+                                  <li><a href="/users/aklatsky">Alex Klatsky</a>, <a href="/users/aklatsk2gmailcom">alex klatsky</a>, <a href="/users/dmcdermott">Daniel McDermott</a> follows your content</li>
+                                  <li>Find Innovations on the <a href="/innovations">Exchange</a>.</li>
+                                </ul>
+                              </div>
+                            </div>
+                          </div>
+                        </aside>
+                        <div class="l-main-wrapper">
+                          <div class="l-main">
+
+                            <div class="pane pane--dashboard-exchange-updates">
+                              <div class="pane__content">
+                                <h2 class="pane__title">EXCHANGE AT A GLANCE</h2>
+                                <div class="view view--data-page-views view--data-points">
+                                  <div class="views-row">
+                                    <article class="node node--persona node--data view-mode-data">
+                                      <div class="data-point data-point--org"><a href="#">334 <span>Organizations</span></a></div>
+                                    </article>
+                                  </div>
+                                  <div class="views-row">
+                                    <article class="node node--persona node--data view-mode-data ">
+                                      <div class="data-point data-point--funding"><a href="#">$349.4M <span>Available</span></a></div>
+                                    </article>
+                                  </div>
+                                  <div class="views-row">
+                                    <article class="node node--persona node--data view-mode-data">
+                                      <div class="data-point data-point--user"><a href="#">1636 <span>Collaborators</span></a></div>
+                                    </article>
+                                  </div>
+                                  <div class="views-row">
+                                    <article class="node node--persona node--data view-mode-data">
+                                      <div class="data-point data-point--innovation"><a href="#">3907 <span>Innovations</span></a></div>
+                                    </article>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+
+                            <div class="pane pane--dashboard-featured-items">
+                              <div class="pane__content">
+                                <div class="view--card-view-3col">
+                                    {{# listItems.six }}
+                                      <div class="views-row">
+                                        {{> organisms-spotlight-teaser }}
+                                      </div>
+                                    {{/ listItems.six }}
+                                  </div>
+                              </div>
+                            </div>
+
+                            <div class="pane">
+                              <div class="pane__content">
+                                <div class="dashboard-filters">
+                                  <span class="dashboard-filters__item has-icon-sectors is-active"><input type="submit" class="button button--submit" value="My Sectors" name="op" id="edit-my-sectors--2"></span>
+                                  <span class="dashboard-filters__item has-icon-topics"><input type="submit" class="button button--submit" value="My Topics" name="op" id="edit-my-topics--2"></span>
+                                  <span class="dashboard-filters__item has-icon-my-friends"><input type="submit" class="button button--submit" value="My Friends" name="op" id="edit-my-friends--2"></span>
+                                  <span class="dashboard-filters__item has-icon-following"><input type="submit" class="button button--submit" value="I'm Following" name="op" id="edit-im-following--2"></span>
+                                </div>
+                                <div class="dashboard-filters">
+                                  <span class="dashboard-filters__item has-icon-innovation is-active"><input type="submit" class="button button--submit" value="My Innovations" name="op" id="edit-innovation"></span>
+                                  <span class="dashboard-filters__item has-icon-funding"><input type="submit" class="button button--submit" value="My Funding Opportunities" name="op" id="edit-funding"></span>
+                                  <span class="dashboard-filters__item has-icon-resource"><input type="submit" class="button button--submit" value="My Resources" name="op" id="edit-resource"></span>
+                                  <span class="dashboard-filters__item has-icon-event"><input type="submit" class="button button--submit" value="My Events" name="op" id="edit-event"></span>
+                                </div>
+                                <div class="dashboard-filters">
+                                  <span class="dashboard-filters__item has-icon-sectors is-active"><input type="submit" class="button button--submit" value="My Sectors" name="op" id="edit-my-sectors"></span>
+                                  <span class="dashboard-filters__item has-icon-topics"><input type="submit" class="button button--submit" value="My Topics" name="op" id="edit-my-topics"></span>
+                                  <span class="dashboard-filters__item has-icon-my-skills"><input type="submit" class="button button--submit" value="My Skills" name="op" id="edit-my-skills"></span>
+                                  <span class="dashboard-filters__item has-icon-my-friends"><input type="submit" class="button button--submit" value="My Friends" name="op" id="edit-my-friends"></span>
+                                  <span class="dashboard-filters__item has-icon-following"><input type="submit" class="button button--submit" value="I'm Following" name="op" id="edit-im-following"></span>
+                                </div>
+                                <div class="dashboard-filters">
+                                  <span class="dashboard-filters__item has-icon-members is-active"><input type="submit" class="button button--submit" value="Members" name="op" id="edit-net-users"></span>
+                                  <span class="dashboard-filters__item has-icon-innovation"><input type="submit" class="button button--submit" value="Innovations" name="op" id="edit-net-innovation"></span>
+                                  <span class="dashboard-filters__item has-icon-funding"><input type="submit" class="button button--submit" value="Funding Ops" name="op" id="edit-net-funding"></span>
+                                  <span class="dashboard-filters__item has-icon-resource"><input type="submit" class="button button--submit" value="Resources" name="op" id="edit-net-resource"></span>
+                                  <span class="dashboard-filters__item has-icon-event"><input type="submit" class="button button--submit" value="Events" name="op" id="edit-net-event"></span>
+                                  <span class="dashboard-filters__item has-icon-organization"><input type="submit" class="button button--submit" value="Organizations" name="op" id="edit-net-organization"></span>
+                                  <span class="dashboard-filters__item has-icon-program"><input type="submit" class="button button--submit" value="Programs" name="op" id="edit-net-program"></span>
+                                </div>
+                              </div>
+                            </div>
+
+                            <table class="dashboard-table">
+                              <tr>
+                                <th></th>
+                                <th class="dashboard-table__fav-header">Favorites</th>
+                                <th class="dashboard-table__comment-header">Comments</th>
+                              </tr>
+                              {{# listItems.six }}
+                              <tr>
+                                <td>
+                                  <div class="layout-slat">
+                                    <div class="layout-slat__media">
+                                      <a href="{{ url }}">{{> atoms-card-image }}</a>
+                                    </div>
+                                    <div class="layout-slat__content">
+                                      <div class="dashboard-table__date">{{> atoms-medium-date }}</div>
+                                      <h4 class="dashboard-table__title"><a href="{{ url }}">{{ title }}</a></h4>
+                                    </div>
+                                  </div>
+                                </td>
+                                <td class="dashboard-table__data">20</td>
+                                <td class="dashboard-table__data">20</td>
+                              </tr>
+                              {{/ listItems.six }}
+                            </table>
+
+                          </div>
+                          <div class="l-wrapper">
+                            <div class="l-bottom-left">
+
+                              <div class="pane pane--dashboard-new-users">
+                                <h2 class="pane__title">NEW EXCHANGE USERS</h2>
+                                <div class="pane__content">
+                                  <div class="view view--dashboard-new-users">
+                                    <div class="views-row">
+                                      <div class="layout-slat layout-slat--small">
+                                        <div class="layout-slat__media">
+                                          <div class="view__author-image">
+                                            <img src="../../images/hannibal-58-58.jpg">
+                                          </div>
+                                        </div>
+                                        <div class="layout-slat__content">
+                                          <div class="view__description">Hannibal Lector joined the Exchange <em class="view__date">6 weeks 1 day</em> ago</div>
+                                        </div>
+                                      </div>
+                                    </div>
+                                    <div class="views-row">
+                                      <div class="layout-slat layout-slat--small">
+                                        <div class="layout-slat__media">
+                                          <div class="view__author-image">
+                                            <img src="../../images/josh-58-58.jpg">
+                                          </div>
+                                        </div>
+                                        <div class="layout-slat__content">
+                                          <div class="view__description">Josh Lyman joined the Exchange <em class="view__date">2 weeks 1 day</em> ago</div>
+                                        </div>
+                                      </div>
+                                    </div>
+                                    <div class="views-row">
+                                      <div class="layout-slat layout-slat--small">
+                                        <div class="layout-slat__media">
+                                          <div class="view__author-image">
+                                            <img src="../../images/buffy-58-58.jpg">
+                                          </div>
+                                        </div>
+                                        <div class="layout-slat__content">
+                                          <div class="view__description">Bufy Summers joined the Exchange <em class="view__date">3 weeks 2 day</em> ago</div>
+                                        </div>
+                                      </div>
+                                    </div>
+                                    <div class="views-row">
+                                      <div class="layout-slat layout-slat--small">
+                                        <div class="layout-slat__media">
+                                          <div class="view__author-image">
+                                            <img src="../../images/scully-58-58.jpg">
+                                          </div>
+                                        </div>
+                                        <div class="layout-slat__content">
+                                          <div class="view__description">Dana Scully joined the Exchange <em class="view__date">1 day</em> ago</div>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+
+                            </div>
+                            <div class="l-bottom-right">
+
+                              <div class="pane pane--dashboard-pane">
+                                <h2 class="pane__title">Funding Counts Chart</h2>
+                                <div class="pane__content">
+                                  <div data-ng-controller="FundingCountController"><bar-chart></bar-chart></div>
+                                </div>
+                              </div>
+
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                 </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</main>
+
+{{> organisms-postscript }}
+{{> organisms-footer }}

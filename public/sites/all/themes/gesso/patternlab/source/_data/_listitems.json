@@ -43,6 +43,10 @@
         "src": "../../images/sherlock-178-178.jpg",
         "alt": "Card 1:1"
       },
+      "img-150-150": {
+        "src": "../../images/sherlock-150-150.jpg",
+        "alt": "Card 1:1"
+      },
       "img-78-78": {
         "src": "../../images/sherlock-78-78.jpg",
         "alt": "Card 1:1"
@@ -93,7 +97,9 @@
     "assistance": "4",
     "innovations": "2",
     "resources": "32",
-    "members": "10"
+    "members": "10",
+    "dashboardtype": "Followed By You",
+    "dashboardtypeclass": "-followed"
   },
   "2": {
     "url": "http://veggieipsum.com",
@@ -137,6 +143,10 @@
       },
       "img-178-178": {
         "src": "../../images/watson-178-178.jpg",
+        "alt": "Card 1:1"
+      },
+      "img-150-150": {
+        "src": "../../images/watson-150-150.jpg",
         "alt": "Card 1:1"
       },
       "img-78-78": {
@@ -189,7 +199,9 @@
     "assistance": "45",
     "innovations": "6",
     "resources": "5",
-    "members": "105"
+    "members": "105",
+    "dashboardtype": "New For You",
+    "dashboardtypeclass": "-new"
   },
   "3": {
     "url": "http://baconipsum.com/",
@@ -233,6 +245,10 @@
       },
       "img-178-178": {
         "src": "../../images/mulder-178-178.jpg",
+        "alt": "Card 1:1"
+      },
+      "img-150-150": {
+        "src": "../../images/mulder-150-150.jpg",
         "alt": "Card 1:1"
       },
       "img-78-78": {
@@ -285,7 +301,9 @@
     "assistance": "1",
     "innovations": "7",
     "resources": "22",
-    "members": "1"
+    "members": "1",
+    "dashboardtype": "Exchange Updates",
+    "dashboardtypeclass": "-update"
   },
   "4": {
     "url": "http://hipsteripsum.me/",
@@ -329,6 +347,10 @@
       },
       "img-178-178": {
         "src": "../../images/scully-178-178.jpg",
+        "alt": "Card 1:1"
+      },
+      "img-150-150": {
+        "src": "../../images/scully-150-150.jpg",
         "alt": "Card 1:1"
       },
       "img-78-78": {
@@ -381,7 +403,9 @@
     "assistance": "305",
     "innovations": "67",
     "resources": "32",
-    "members": "55"
+    "members": "55",
+    "dashboardtype": "New For You",
+    "dashboardtypeclass": "-new"
   },
   "5": {
     "url": "http://www.niemanlab.org/journo-ipsum/",
@@ -425,6 +449,10 @@
       },
       "img-178-178": {
         "src": "../../images/daenerys-178-178.jpg",
+        "alt": "Card 1:1"
+      },
+      "img-150-150": {
+        "src": "../../images/daenerys-150-150.jpg",
         "alt": "Card 1:1"
       },
       "img-78-78": {
@@ -477,7 +505,9 @@
     "assistance": "65",
     "innovations": "1",
     "resources": "2",
-    "members": "10"
+    "members": "10",
+    "dashboardtype": "Exchange Updates",
+    "dashboardtypeclass": "-update"
   },
   "6": {
     "url": "http://www.malevole.com/mv/misc/text/",
@@ -521,6 +551,10 @@
       },
       "img-178-178": {
         "src": "../../images/tyrion-178-178.jpg",
+        "alt": "Card 1:1"
+      },
+      "img-150-150": {
+        "src": "../../images/tyrion-150-150.jpg",
         "alt": "Card 1:1"
       },
       "img-78-78": {
@@ -573,7 +607,9 @@
     "assistance": "899",
     "innovations": "8",
     "resources": "4",
-    "members": "35"
+    "members": "35",
+    "dashboardtype": "New For You",
+    "dashboardtypeclass": "-new"
   },
   "7": {
     "url": "http://slipsum.com/lite/",
@@ -617,6 +653,10 @@
       },
       "img-178-178": {
         "src": "../../images/josh-178-178.jpg",
+        "alt": "Card 1:1"
+      },
+      "img-150-150": {
+        "src": "../../images/josh-150-150.jpg",
         "alt": "Card 1:1"
       },
       "img-78-78": {
@@ -669,7 +709,9 @@
     "assistance": "4",
     "innovations": "12",
     "resources": "2",
-    "members": "167"
+    "members": "167",
+    "dashboardtype": "Exchange Updates",
+    "dashboardtypeclass": "-update"
   },
   "8": {
     "url": "http://web20ipsum.com",
@@ -713,6 +755,10 @@
       },
       "img-178-178": {
         "src": "../../images/cj-178-178.jpg",
+        "alt": "Card 1:1"
+      },
+      "img-150-150": {
+        "src": "../../images/cj-150-150.jpg",
         "alt": "Card 1:1"
       },
       "img-78-78": {
@@ -765,7 +811,9 @@
     "assistance": "4",
     "innovations": "4",
     "resources": "66",
-    "members": "3"
+    "members": "3",
+    "dashboardtype": "New For You",
+    "dashboardtypeclass": "-new"
   },
   "9": {
     "url": "http://chrisvalleskey.com/fillerama/",
@@ -809,6 +857,10 @@
       },
       "img-178-178": {
         "src": "../../images/cameron-178-178.jpg",
+        "alt": "Card 1:1"
+      },
+      "img-150-150": {
+        "src": "../../images/cameron-150-150.jpg",
         "alt": "Card 1:1"
       },
       "img-78-78": {
@@ -861,7 +913,9 @@
     "assistance": "678",
     "innovations": "2",
     "resources": "55",
-    "members": "145"
+    "members": "145",
+    "dashboardtype": "Exchange Updates",
+    "dashboardtypeclass": "-update"
   },
   "10": {
     "url": "http://chrisvalleskey.com/fillerama/",
@@ -905,6 +959,10 @@
       },
       "img-178-178": {
         "src": "../../images/gordon-178-178.jpg",
+        "alt": "Card 1:1"
+      },
+      "img-150-150": {
+        "src": "../../images/gordon-150-150.jpg",
         "alt": "Card 1:1"
       },
       "img-78-78": {
@@ -957,7 +1015,9 @@
     "assistance": "487",
     "innovations": "4",
     "resources": "12",
-    "members": "4578"
+    "members": "4578",
+    "dashboardtype": "New For You",
+    "dashboardtypeclass": "-new"
   },
   "11": {
     "url": "http://cupcakeipsum.com/",
@@ -1001,6 +1061,10 @@
       },
       "img-178-178": {
         "src": "../../images/inigo-178-178.jpg",
+        "alt": "Card 1:1"
+      },
+      "img-150-150": {
+        "src": "../../images/inigo-150-150.jpg",
         "alt": "Card 1:1"
       },
       "img-78-78": {
@@ -1053,7 +1117,9 @@
     "assistance": "9",
     "innovations": "3",
     "resources": "13",
-    "members": "6"
+    "members": "6",
+    "dashboardtype": "Exchange Updates",
+    "dashboardtypeclass": "-update"
   },
   "12": {
     "url": "http://www.cheeseipsum.co.uk/",
@@ -1097,6 +1163,10 @@
       },
       "img-178-178": {
         "src": "../../images/buttercup-178-178.jpg",
+        "alt": "Card 1:1"
+      },
+      "img-150-150": {
+        "src": "../../images/buttercup-150-150.jpg",
         "alt": "Card 1:1"
       },
       "img-78-78": {
@@ -1149,6 +1219,8 @@
     "assistance": "300",
     "innovations": "6",
     "resources": "1",
-    "members": "899"
+    "members": "899",
+    "dashboardtype": "New For You",
+    "dashboardtypeclass": "-new"
   }
 }

@@ -20,32 +20,35 @@ function gie_dashboard_quicktabs_default_quicktabs() {
   $quicktabs->title = 'Dashboard';
   $quicktabs->tabs = array(
     0 => array(
-      'bid' => 'panels_mini_delta_dashboard_recommendations',
-      'hide_title' => 0,
-      'title' => 'Recommended',
+      'bid' => 'panels_mini_delta_whats_new_tab',
+      'hide_title' => 1,
+      'title' => 'What\'s New?',
       'weight' => '-100',
       'type' => 'block',
     ),
     1 => array(
-      'bid' => 'panels_mini_delta_dashboard_help',
-      'hide_title' => 1,
-      'title' => 'Use Your Skills',
+      'path' => 'gie_dashboard/my_portfolio',
+      'title' => 'My Portfolio',
       'weight' => '-99',
-      'type' => 'block',
+      'type' => 'callback',
     ),
     2 => array(
-      'bid' => 'panels_mini_delta_dashboard_similar',
-      'hide_title' => 0,
-      'title' => 'Similar Content',
+      'path' => 'gie_dashboard/recommended_innovations',
+      'title' => 'Innovation',
       'weight' => '-98',
-      'type' => 'block',
+      'type' => 'callback',
     ),
     3 => array(
-      'bid' => 'panels_mini_delta_dashboard_follow',
-      'hide_title' => 0,
-      'title' => 'Content You Follow',
+      'path' => 'gie_dashboard/recommended_funding',
+      'title' => 'Funding',
       'weight' => '-97',
-      'type' => 'block',
+      'type' => 'callback',
+    ),
+    4 => array(
+      'path' => 'gie_dashboard/my_network',
+      'title' => 'My Network',
+      'weight' => '-96',
+      'type' => 'callback',
     ),
   );
   $quicktabs->renderer = 'quicktabs';
@@ -54,11 +57,12 @@ function gie_dashboard_quicktabs_default_quicktabs() {
 
   // Translatables
   // Included for use with string extractors like potx.
-  t('Content You Follow');
   t('Dashboard');
-  t('Recommended');
-  t('Similar Content');
-  t('Use Your Skills');
+  t('Funding');
+  t('Innovation');
+  t('My Network');
+  t('My Portfolio');
+  t('What\'s New?');
 
   $export['dashboard'] = $quicktabs;
 

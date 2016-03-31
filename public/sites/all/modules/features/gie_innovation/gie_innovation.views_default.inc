@@ -1905,7 +1905,7 @@ function gie_innovation_views_default_views() {
   $handler->display->display_options['filters']['type']['value'] = array(
     'innovation' => 'innovation',
   );
-  /* Filter criterion: Indexed Content: Related Sectors */
+  /* Filter criterion: Indexed Content: Sector */
   $handler->display->display_options['filters']['field_term_sector']['id'] = 'field_term_sector';
   $handler->display->display_options['filters']['field_term_sector']['table'] = 'search_api_index_default_node_index';
   $handler->display->display_options['filters']['field_term_sector']['field'] = 'field_term_sector';
