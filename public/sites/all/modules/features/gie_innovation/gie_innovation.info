@@ -146,7 +146,6 @@ features[field_instance][] = field_collection_item-field_innovation_non_referenc
 features[field_instance][] = field_collection_item-field_innovation_non_references-field_non_ref_first_name
 features[field_instance][] = field_collection_item-field_innovation_non_references-field_non_ref_last_name
 features[field_instance][] = field_collection_item-field_innovation_non_references-field_non_ref_photo
-features[field_instance][] = node-innovation-field_featured
 features[field_instance][] = node-innovation-field_innovation_address
 features[field_instance][] = node-innovation-field_innovation_assets
 features[field_instance][] = node-innovation-field_innovation_assistance
