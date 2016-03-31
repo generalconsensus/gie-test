@@ -4,6 +4,7 @@
   background-size: cover;
   @include breakpoint(800px, $no-query: true) {
     display: table;
+    width: 100%;
   }
 }
 
@@ -27,7 +28,7 @@
 
 .dashboard-header__text {
   float: left;
-  padding: 1em;
+  padding: 3em 1em 1em 1em;
   width: percentage(2/3);
   @include breakpoint(800px, $no-query: true) {
     @include dashboard-header__layout;
@@ -50,9 +51,9 @@
     @include breakpoint(800px, $no-query: true) {
       display: block;
       margin: 0 0 0.5em 0;
-    }  
+    }
     max-width: 200px;
-    min-width: 130px; 
+    min-width: 130px;
   }
 }
 
@@ -66,7 +67,8 @@
   color: #fff;
   font-size: em(28px);
   @include breakpoint(800px, $no-query: true) {
-    font-size: em(40px);    
+    font-size: em(40px);
   }
   margin: 0;
+  text-transform: uppercase;
 }
