@@ -26,6 +26,7 @@ features[field_base][] = field_featured
 features[field_instance][] = node-blogs-field_featured
 features[field_instance][] = node-event-field_featured
 features[field_instance][] = node-funding-field_featured
+features[field_instance][] = node-innovation-field_featured
 features[field_instance][] = node-news-field_featured
 features[field_instance][] = node-organization-field_featured
 features[field_instance][] = node-program-field_featured
