@@ -566,7 +566,7 @@ function gie_program_views_default_views() {
   $handler->display->display_options['fields']['nid']['id'] = 'nid';
   $handler->display->display_options['fields']['nid']['table'] = 'search_api_index_default_node_index';
   $handler->display->display_options['fields']['nid']['field'] = 'nid';
-  /* Sort criterion: Indexed Content: Title */
+  /* Sort criterion: Indexed Content: Funding Opportunity Title */
   $handler->display->display_options['sorts']['title_field']['id'] = 'title_field';
   $handler->display->display_options['sorts']['title_field']['table'] = 'search_api_index_default_node_index';
   $handler->display->display_options['sorts']['title_field']['field'] = 'title_field';

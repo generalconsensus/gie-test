@@ -5,6 +5,33 @@
  */
 
 /**
+ * Implements hook_ds_custom_fields_info().
+ */
+function gie_general_ds_custom_fields_info() {
+  $export = array();
+
+  $ds_field = new stdClass();
+  $ds_field->api_version = 1;
+  $ds_field->field = 'content_type';
+  $ds_field->label = 'Content type';
+  $ds_field->field_type = 5;
+  $ds_field->entities = array(
+    'node' => 'node',
+  );
+  $ds_field->ui_limit = '*|*';
+  $ds_field->properties = array(
+    'code' => array(
+      'value' => '[node:content-type:name]',
+      'format' => 'plain_text',
+    ),
+    'use_token' => 1,
+  );
+  $export['content_type'] = $ds_field;
+
+  return $export;
+}
+
+/**
  * Implements hook_ds_layout_settings_info().
  */
 function gie_general_ds_layout_settings_info() {
@@ -89,6 +116,16 @@ function gie_general_ds_view_modes_info() {
     'node' => 'node',
   );
   $export['page_header'] = $ds_view_mode;
+
+  $ds_view_mode = new stdClass();
+  $ds_view_mode->api_version = 1;
+  $ds_view_mode->view_mode = 'spotlight';
+  $ds_view_mode->label = 'Spotlight';
+  $ds_view_mode->entities = array(
+    'node' => 'node',
+    'user' => 'user',
+  );
+  $export['spotlight'] = $ds_view_mode;
 
   $ds_view_mode = new stdClass();
   $ds_view_mode->api_version = 1;
