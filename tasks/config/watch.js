@@ -1,12 +1,12 @@
 module.exports = function(grunt) {
   // Test the build mode to use by checking the --environment CLI flag
   var environment = (grunt.option('prod') || grunt.option('production')) ? 'stage' : 'dev';
-  
+
   grunt.config.merge({
     watch : {
       gesso: {
         files : [ '<%= pkg.themePath %>/sass/**/*.scss' ],
-        tasks : [ 'buildStyles' ],
+        tasks : [ 'sass_globbing:gesso', 'sass:gesso', 'postcss:gesso' ],
       },
       patternlab : {
         files : [ '<%= pkg.themePath %>/patternlab/source/**/*' ],
@@ -17,11 +17,11 @@ module.exports = function(grunt) {
       },
       gesso_longform: {
         files : [ '<%= pkg.longformThemePath %>/sass/**/*.scss' ],
-        tasks : [ 'buildStyles' ],
+        tasks : [ 'sass_globbing:gesso_longform', 'sass:gesso_longform', 'postcss:gesso_longform' ],
       },
       gesso_longform_patternlab : {
         files : [ '<%= pkg.longformThemePath %>/patternlab/source/**/*' ],
-        tasks : [ 'shell:patternlab' ],
+        tasks : [ 'shell:longform_patternlab' ],
         options : {
           livereload : true
         }
