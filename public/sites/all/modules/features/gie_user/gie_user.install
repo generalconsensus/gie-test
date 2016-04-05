@@ -58,7 +58,7 @@ function gie_user_update_7005() {
 /**
  * [#48575] Set all Notification fields to true
  */
-function gie_user_update_7006() {
+function gie_user_update_7006(&$sandbox) {
 
   // If this is the first pass through this update function then set some variables.
   if (!isset($sandbox['total'])) {
