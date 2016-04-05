@@ -58,7 +58,15 @@ function gie_user_update_7005() {
 /**
  * [#48575] Set all Notification fields to true
  */
-function gie_user_update_7006() {
+function gie_user_update_7006(&$sandbox) {
+
+  // If this is the first pass through this update function then set some variables.
+  if (!isset($sandbox['total'])) {
+    $result = db_query('SELECT uid FROM {users} WHERE uid <> 1 AND uid <> 0');
+    $sandbox['total'] = $result->rowCount();
+    $sandbox['current'] = 0;
+  }
+  
   // load all users
   $users = entity_load('user');
   foreach($users as $user) {
@@ -73,5 +81,19 @@ function gie_user_update_7006() {
     $wrapper->field_user_mail_comment->set(1);
 
     $wrapper->save();
+
+    // Lets tell the site admin what we are doing. You could write to a log here, or a watchdog message or whatever...
+    drupal_set_message(t('We processed user @uid', array('@uid' => $user->uid)));
+
+    // Increment "current" by 1.
+    $sandbox['current']++;
+  }
+
+
+  // Set the value for finished. If current == total then finished will be 1, signifying we are done.
+  $sandbox['#finished'] = ($sandbox['current'] / $sandbox['total']);
+
+  if ($sandbox['#finished'] === 1) {
+    drupal_set_message(t('We processed @users users. DONE!!!', array('@users' => $sandbox['total'])));
   }
 }
