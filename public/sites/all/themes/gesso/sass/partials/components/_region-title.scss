@@ -1,7 +1,12 @@
 .region-title {
   background: $lightorange;
   .section-wanteds & {
-    background: #00729c;
+    background: $wanted-section-color;
+  }
+  @each $item, $color in $micrositeColorMap {
+    .microsite-palette#{$item} & {
+      background: micro-site($item, 'primary');
+    }
   }
   margin: 0 0 3em 0;
   @include breakpoint(1200px, $no-query: true) {
@@ -15,7 +20,12 @@
       border-width: 105px 70px 0 0;
       border-color: $orange transparent transparent transparent;
       .section-wanteds & {
-        border-color: #025979 transparent transparent transparent;
+        border-color: darken($wanted-section-color,7%) transparent transparent transparent;
+      }
+      @each $item, $color in $micrositeColorMap {
+        .microsite-palette#{$item} & {
+          border-color: darken(micro-site($item, 'primary'),7%) transparent transparent transparent;
+        }
       }
       height: 0;
       left: 0;

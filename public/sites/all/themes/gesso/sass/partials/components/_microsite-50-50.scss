@@ -2,22 +2,50 @@
   @extend %microsite-component;
   @extend %clearfix;
   @include breakpoint(900px, $no-query: true) {
-    @include align-items(center);
-    @include display-flex(flex);
-    @include flex-direction(row);
-    @include justify-content(center);
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
   }
-  background: $microsite-secondary;
-  color: #fff;
-  a, h1, h2, h3, h4, h5, h6 {
-    color: #fff;
+  background-color: #00498f; // just in case palette or color class is missing
+  @each $item, $color in $micrositeColorMap {
+    .microsite-palette#{$item} & {
+      background-color: micro-site($item, 'primary');
+      &.microsite-secondary { // component class
+        background-color: micro-site($item, 'secondary');
+      }
+      &.microsite-tertiary {
+        background-color: micro-site($item, 'tertiary');
+      }
+      &.microsite-light-gray {
+        background-color: micro-site($item, 'light-gray');
+      }
+      &.microsite-dark-gray {
+        background-color: micro-site($item, 'dark-gray');
+      }
+    }
   }
 }
 
 .microsite-50-50__text {
+  color: #fff;
   padding: 2% 5%;
   @include breakpoint(900px, $no-query: true) {
     width: 50%;
+  }
+  a, h1, h2, h3, h4, h5, h6 {
+    color: #fff !important;
+  }
+  .microsite-light-gray & {
+    color: #333;
+    a, h1, h2, h3, h4, h5, h6 {
+      color: #333 !important;
+    }
+  }
+  .no-flexbox & {
+    @include breakpoint(900px, $no-query: true) {
+      float: right;
+    }
   }
 }
 
@@ -29,10 +57,25 @@
   img {
     width: 100%;
   }
+  .no-flexbox & {
+    @include breakpoint(900px, $no-query: true) {
+      float: left;
+    }
+  }
 }
 
 .microsite-50-50--reversed {
   @include breakpoint(900px, $no-query: true) {
-    @include flex-direction(row-reverse);
+    flex-direction: row-reverse;
+  }
+  .no-flexbox & {
+    @include breakpoint(900px, $no-query: true) {
+      .microsite-50-50__image {
+        float: right;
+      }
+      .microsite-50-50__text {
+        float: left;
+      }
+    }
   }
 }

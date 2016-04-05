@@ -10,7 +10,7 @@ $gutter: 1.5em;
 
 .layout-slat__media {
   margin: 0;
-  padding: 0 0 rhythm(1/2);
+  padding: 0 0 0.75em;
 
   @include breakpoint($bp-first) {
     float: left;

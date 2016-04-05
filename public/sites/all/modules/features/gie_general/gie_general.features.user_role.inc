@@ -16,5 +16,11 @@ function gie_general_user_default_roles() {
     'weight' => 2,
   );
 
+  // Exported role: Microsite Administrator.
+  $roles['Microsite Administrator'] = array(
+    'name' => 'Microsite Administrator',
+    'weight' => 7,
+  );
+
   return $roles;
 }

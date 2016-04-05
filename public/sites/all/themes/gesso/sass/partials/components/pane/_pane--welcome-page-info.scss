@@ -16,19 +16,19 @@
     color: #fff;
     font-weight: 400;
     font-size: em(40px, 16px);
-    margin-bottom: rhythm(.75);
+    margin-bottom: 1em;
     text-transform: uppercase;
   }
   h2 {
     color: $lightorange;
     font-size: em(30px, 16px);
-    margin-bottom: rhythm(.75);
+    margin-bottom: 1em;
     text-transform: uppercase;
   }
 
   p {
     font-size: em(18px, 16px);
-    margin-bottom: rhythm(1);
+    margin-bottom: 1.5em;
 
   }
 }

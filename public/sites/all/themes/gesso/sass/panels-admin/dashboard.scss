@@ -1,0 +1,7 @@
+// @file
+// Admin syles for Panels layout: dashboard
+
+$panels-admin: true;
+
+@import '../partials/global';
+@import '../partials/layout/panels/dashboard';

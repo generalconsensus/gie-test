@@ -28,14 +28,25 @@
       position: absolute;
       width: 60px;
       z-index: 3;
-    }    
+    }
   }
   .section-wanteds & {
-    background: #00729c;
+    background: $wanted-section-color;
     @include breakpoint(1500px, $no-query: true) {
       &:after {
-        border-color: #025979 transparent transparent transparent;
+        border-color: darken($wanted-section-color,7%) transparent transparent transparent;
       }
     }
   }
+  @each $item, $color in $micrositeColorMap {
+    .microsite-palette#{$item} & {
+      background:  micro-site($item, 'primary');
+      @include breakpoint(1500px, $no-query: true) {
+        &:after {
+          border-color: darken( micro-site($item, 'primary'),7%) transparent transparent transparent;
+        }
+      }
+    }
+  }
+
 }

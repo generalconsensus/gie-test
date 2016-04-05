@@ -1,0 +1,46 @@
+// @file
+// Panels layout: landing
+// Media queries use: http://breakpoint-sass.com
+// Media queries use: github.com/Team-Sass/breakpoint/wiki/No-Query-Fallbacks
+// Grid via: singularity.gs
+
+.l-panels-dashboard {
+  @include add-grid(12 at 700px);
+  @include add-gutter(0.5);
+  @include breakpoint(700px, $no-query: true) {
+    &.sidebar {
+      .l-sidebar {
+        @include grid-span(3,1);
+      }
+      .l-main-wrapper {
+        @include grid-span(9,4);
+      }
+    }
+    &.bottom-left.bottom-right {
+      .l-bottom-left {
+        @include grid-span(6,1);
+      }
+      .l-bottom-right {
+        @include grid-span(6,7);
+      }
+    }
+
+  }
+}
+
+.l-panels-dashboard {
+  @include clearfix;
+  .l-preface,
+  .l-main,
+  .l-sidebar,
+  .l-bottom-left,
+  .l-bottom-right,
+  .l-wrapper,
+  .l-main-wrapper {
+    @include clearfix;
+
+    @if $panels-admin {
+      @include border-box;
+    }
+  }
+}

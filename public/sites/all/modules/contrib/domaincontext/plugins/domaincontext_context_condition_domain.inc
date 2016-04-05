@@ -23,6 +23,22 @@ class domaincontext_context_condition_domain extends context_condition {
     return $values;
   }
 
+  function options_form($context) {
+    $defaults = $this->fetch_from_context($context, 'options');
+    return array(
+      'include_exclude' => array(
+        '#title' => t('Include/Exclude'),
+        '#type' => 'select',
+        '#options' => array(
+          0 => t('Include'),
+          1 => t('Exclude'),
+        ),
+        '#description' => t('Treat as inclusive(white list) or exclusive(black list).'),
+        '#default_value' => isset($defaults['include_exclude']) ? $defaults['include_exclude'] : FALSE,
+      ),
+    );
+  }
+
   /**
    * Executes condition callback.
    */
@@ -33,10 +49,14 @@ class domaincontext_context_condition_domain extends context_condition {
       $domain_id = -1;
     }
     $this->values[$domain_id] = array();
-    $contexts = $this->get_contexts($domain_id);
+    $contexts = $this->get_contexts();
     foreach ($contexts as $context) {
-      $this->values[$domain_id][] = $context->name;
-      $this->condition_met($context, $domain_id);
+      $domains = $this->fetch_from_context($context, 'values');
+      $options = $this->fetch_from_context($context, 'options');
+      if (isset($domains[$domain_id]) xor (isset($options['include_exclude']) && (bool)$options['include_exclude'])) {
+        $this->values[$domain_id][] = $context->name;
+        $this->condition_met($context, $domain_id);
+      }
     }
   }
 }

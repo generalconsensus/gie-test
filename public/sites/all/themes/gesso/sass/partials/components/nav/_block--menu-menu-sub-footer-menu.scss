@@ -8,13 +8,17 @@
     .nav__item {}
 
     .nav__link {
-      font-weight: normal;
-      .section--microsite & {
-        &:hover,
-        &:focus {
-          color: darken($microsite-primary,20%);
+
+      @each $item, $color in $micrositeColorMap {
+        .microsite-palette#{$item} & {
+          &:hover,
+          &:focus {
+            color: darken(micro-site($item, 'primary'),20%);
+          }
         }
       }
+
+      font-weight: normal;
     }
 
     .footer-simple & {

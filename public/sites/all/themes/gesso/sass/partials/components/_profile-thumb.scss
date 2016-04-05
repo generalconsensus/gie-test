@@ -16,17 +16,17 @@
   }
 }
 
-.profile-thumb__image--rounded {
+.profile-thumb__image-rounded {
   @extend .profile-thumb__image;
   img {
-    @include border-radius(50%);
     border: 2px solid $border-color;
+    border-radius: 50%;
   }
 }
 
 .profile-thumb__name {
-  @include hyphens(none);
   font-size: em(13px);
+  hyphens: none;
   line-height: 1.3;
   padding-top: 0.2em;
   text-align: center;
@@ -36,7 +36,7 @@
 }
 
 .profile-thumb__summary {
-  @include hyphens(none);
   font-size: em(14px);
+  hyphens: none;
   line-height: 1.5;
 }
