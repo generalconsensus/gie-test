@@ -232,3 +232,4 @@ features_exclude[dependencies][gie_user] = gie_user
 features_exclude[dependencies][list] = list
 features_exclude[dependencies][panels_mini] = panels_mini
 features_exclude[dependencies][quicktabs] = quicktabs
+features_exclude[dependencies][gie_funding] = gie_funding
