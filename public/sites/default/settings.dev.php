@@ -655,3 +655,17 @@ $conf['awssdk2_secret_key'] = 'PTCZuvHXjdzpVScJboIIWbPhEPTQWQD3M7pEJuay';
  * Add the domain module setup routine.
  */
 include DRUPAL_ROOT . '/sites/all/modules/contrib/domain/settings.inc';
+
+/**
+ * Correct S3FS settings on local
+ */
+$conf['s3fs_bucket'] = 'giexchange-dev';
+$conf['s3fs_use_s3_for_private'] = 1;
+$conf['s3fs_use_s3_for_public'] = 1;
+
+/**
+ * Set Re-route email to enable to catch all local emails
+ */
+$conf['reroute_email_enable'] = 1;
+$conf['reroute_email_address'] = 'mburge@forumone.com, mdrayer@forumone.com, cchumley@forumone.com, mdrayer+test@forumone.com, dmcdermott@forumone.com';
+$conf['reroute_email_enable_message'] = 1;
