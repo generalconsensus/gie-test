@@ -383,3 +383,20 @@ function gie_general_update_7037() {
   );
   module_enable($modules, TRUE);
 }
+
+/**
+ * Generate new Taxonomy Term paths.
+ */
+function gie_general_update_7038() {
+  module_load_include('inc', 'pathauto');
+  module_load_include('inc', 'pathauto.pathauto');
+
+  // Delete existing term aliases
+  db_delete('url_alias')
+    ->condition('source', 'taxonomy/term/%','LIKE')
+    ->execute();
+
+  // Regenerate term aliases
+  $tids = db_query('SELECT tid FROM {taxonomy_term_data}')->fetchCol();
+  pathauto_taxonomy_term_update_alias_multiple($tids, 'bulkupdate');
+}
