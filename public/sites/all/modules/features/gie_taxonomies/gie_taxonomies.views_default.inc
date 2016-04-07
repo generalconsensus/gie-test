@@ -1957,6 +1957,11 @@ function gie_taxonomies_views_default_views() {
   $handler = $view->new_display('panel_pane', 'Regions', 'regions_pane');
   $handler->display->display_options['defaults']['title'] = FALSE;
   $handler->display->display_options['title'] = 'Related Subregions';
+
+  /* Display: YouthPower Issues */
+  $handler = $view->new_display('panel_pane', 'YouthPower Issues', 'yp_issues_pane');
+  $handler->display->display_options['defaults']['title'] = FALSE;
+  $handler->display->display_options['title'] = 'Related YouthPower Issues';
   $export['subterms'] = $view;
 
   $view = new view();
