@@ -331,7 +331,7 @@ function gie_search_default_search_api_index() {
         "field_assistance_offered" : { "type" : "list\\u003Cinteger\\u003E", "entity_type" : "taxonomy_term" },
         "field_term_region" : { "type" : "list\\u003Cinteger\\u003E", "entity_type" : "taxonomy_term" },
         "field_term_sector" : { "type" : "list\\u003Cinteger\\u003E", "entity_type" : "taxonomy_term" },
-        "field_user_address:country" : { "type" : "text" },
+        "field_user_address:country" : { "type" : "string" },
         "field_user_company" : { "type" : "integer", "entity_type" : "taxonomy_term" },
         "field_user_firstname" : { "type" : "string" },
         "field_user_interests" : { "type" : "list\\u003Cinteger\\u003E", "entity_type" : "taxonomy_term" },
