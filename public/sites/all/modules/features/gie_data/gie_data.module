@@ -41,10 +41,10 @@ function _gie_data_data_count($field) {
             case "funding":
                 // get sum of funding grant award
                 $query = db_select('field_data_field_funding_grant_award_value', 'g');
-                $query->join('field_data_field_funding_deadline', 'd', 'g.entity_id = d.entity_id'); // join deadline field table
+                $query->leftJoin('field_data_field_funding_deadline', 'd', 'g.entity_id = d.entity_id'); // join deadline field table
                 $query
                     ->condition('g.deleted', 0)
-                    ->where('d.field_funding_deadline_value > CURDATE()'); // deadline has not passed yet
+                    ->where('d.field_funding_deadline_value > CURDATE() OR d.field_funding_deadline_value IS NULL'); // deadline has not passed yet or doesn't exist
                 $query->addExpression('SUM(field_funding_grant_award_value_value)', 'sum'); // sum of grant award values
                 $count = $query->execute()->fetchField();
 
