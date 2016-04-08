@@ -982,6 +982,8 @@ function gie_microsite_views_default_views() {
 
   /* Display: Block */
   $handler = $view->new_display('block', 'Block', 'microsite_description');
+  $handler->display->display_options['defaults']['cache'] = FALSE;
+  $handler->display->display_options['cache']['type'] = 'none';
   $export['microsite_description'] = $view;
 
   $view = new view();
@@ -1226,6 +1228,8 @@ function gie_microsite_views_default_views() {
 
   /* Display: Block */
   $handler = $view->new_display('block', 'Block', 'microsite_logo');
+  $handler->display->display_options['defaults']['cache'] = FALSE;
+  $handler->display->display_options['cache']['type'] = 'none';
   $export['microsite_logo'] = $view;
 
   $view = new view();
@@ -1364,6 +1368,8 @@ function gie_microsite_views_default_views() {
 
   /* Display: Block */
   $handler = $view->new_display('block', 'Block', 'microsite_partners');
+  $handler->display->display_options['defaults']['cache'] = FALSE;
+  $handler->display->display_options['cache']['type'] = 'none';
   $export['microsite_partners'] = $view;
 
   return $export;
