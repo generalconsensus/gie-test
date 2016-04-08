@@ -1962,6 +1962,25 @@ function gie_taxonomies_views_default_views() {
   $handler = $view->new_display('panel_pane', 'YouthPower Issues', 'yp_issues_pane');
   $handler->display->display_options['defaults']['title'] = FALSE;
   $handler->display->display_options['title'] = 'Related YouthPower Issues';
+  $handler->display->display_options['defaults']['arguments'] = FALSE;
+  /* Contextual filter: Taxonomy term: Parent term */
+  $handler->display->display_options['arguments']['parent']['id'] = 'parent';
+  $handler->display->display_options['arguments']['parent']['table'] = 'taxonomy_term_hierarchy';
+  $handler->display->display_options['arguments']['parent']['field'] = 'parent';
+  $handler->display->display_options['arguments']['parent']['default_action'] = 'default';
+  $handler->display->display_options['arguments']['parent']['default_argument_type'] = 'raw';
+  $handler->display->display_options['arguments']['parent']['default_argument_options']['index'] = '1';
+  $handler->display->display_options['arguments']['parent']['default_argument_options']['use_alias'] = TRUE;
+  $handler->display->display_options['arguments']['parent']['summary']['number_of_records'] = '0';
+  $handler->display->display_options['arguments']['parent']['summary']['format'] = 'default_summary';
+  $handler->display->display_options['arguments']['parent']['summary_options']['items_per_page'] = '25';
+  $handler->display->display_options['arguments']['parent']['specify_validation'] = TRUE;
+  $handler->display->display_options['arguments']['parent']['validate']['type'] = 'taxonomy_term';
+  $handler->display->display_options['arguments']['parent']['validate_options']['vocabularies'] = array(
+    'youthpower_issues' => 'youthpower_issues',
+  );
+  $handler->display->display_options['arguments']['parent']['validate_options']['type'] = 'convert';
+  $handler->display->display_options['arguments']['parent']['validate_options']['transform'] = TRUE;
   $export['subterms'] = $view;
 
   $view = new view();
