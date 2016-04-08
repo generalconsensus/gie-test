@@ -434,6 +434,7 @@ function gie_resource_field_group_info() {
       3 => 'field_term_topic',
       4 => 'field_term_region',
       5 => 'field_term_country',
+      6 => 'field_resource_attribution',
     ),
     'format_type' => 'div',
     'format_settings' => array(
@@ -468,8 +469,9 @@ function gie_resource_field_group_info() {
     'children' => array(
       0 => 'field_resource_date',
       1 => 'field_resource_source',
-      2 => 'resource_counters_resource_comment_detail',
-      3 => 'resource_counters_resource_favorite_count_detail',
+      2 => 'field_resource_attribution',
+      3 => 'resource_counters_resource_comment_detail',
+      4 => 'resource_counters_resource_favorite_count_detail',
     ),
     'format_type' => 'div',
     'format_settings' => array(
