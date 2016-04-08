@@ -15,7 +15,8 @@ function gie_domain_strongarm() {
   $strongarm->api_version = 1;
   $strongarm->name = 'domain_bootstrap_modules';
   $strongarm->value = array(
-    0 => 'domain_conf',
+    0 => 'domain_alias',
+    1 => 'domain_conf',
   );
   $export['domain_bootstrap_modules'] = $strongarm;
 
