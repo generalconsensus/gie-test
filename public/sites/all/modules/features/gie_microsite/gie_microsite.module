@@ -35,8 +35,8 @@ function gie_microsite_access_callback($term, $string, $account = NULL, $reset =
   if (!empty($term) && $term->vocabulary_machine_name == 'youthpower_issues') {
     if (!empty($domain) && $domain['domain_id'] == 7) {
       return TRUE;
-    } 
-      return FALSE;
+    }
+    return FALSE;
   }
   return TRUE;
 
