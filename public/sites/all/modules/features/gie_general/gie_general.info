@@ -8,7 +8,6 @@ dependencies[] = admin_menu
 dependencies[] = admin_menu_toolbar
 dependencies[] = admin_views
 dependencies[] = angularjs
-dependencies[] = batch_add_terms
 dependencies[] = better_formats
 dependencies[] = block
 dependencies[] = blockify
