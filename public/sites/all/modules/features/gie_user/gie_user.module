@@ -229,9 +229,26 @@ function gie_user_menu_alter(&$items) {
 /**
  * Implements hook_form_FORM_ID_alter().
  */
-function gie_user_form_user_profile_form_alter(&$form, &$form_state, $form_id) {
+function gie_user_form_user_profile_form_alter(&$form) {
   // Hide "Select the types of assistance..." field
   $form['field_assistance_offered']['#access'] = FALSE;
+
+  // Add custom submit to redirect user to profile
+  $form['actions']['submit']['#submit'][] = 'gie_user_profile_redirect';
+}
+
+/**
+ * Custom Submission for sending the user back to their profile page after user edit
+ */
+function gie_user_profile_redirect($form, &$form_state) {
+  global $user;
+  $alias = drupal_get_path_alias('user/' . $user->uid);
+  if (!empty($alias)) {
+    $form_state['redirect'] = $alias;
+  } else {
+    $form_state['redirect'] = 'user/' . $user->uid;
+  }
+
 }
 
 /**
