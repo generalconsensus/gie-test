@@ -56,3 +56,15 @@ function gie_user_update_7005() {
 }
 
 
+/**
+ * [#48575] Delete all previous half-baked field data
+ */
+function gie_user_update_7006() {
+  field_delete_field('field_user_mail_comment');
+  field_delete_field('field_user_mail_content_follow');
+  field_delete_field('field_user_mail_follow_comment');
+  field_delete_field('field_user_mail_follow_edit');
+  field_delete_field('field_user_mail_user_follow');
+}
+
+
