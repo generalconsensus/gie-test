@@ -194,6 +194,18 @@ function gie_microsite_strongarm() {
       'revision' => array(
         'custom_settings' => FALSE,
       ),
+      'spotlight' => array(
+        'custom_settings' => FALSE,
+      ),
+      'data' => array(
+        'custom_settings' => FALSE,
+      ),
+      'microsite_content_slider' => array(
+        'custom_settings' => FALSE,
+      ),
+      'long_form_footer_logo' => array(
+        'custom_settings' => FALSE,
+      ),
     ),
     'extra_fields' => array(
       'form' => array(
@@ -215,6 +227,12 @@ function gie_microsite_strongarm() {
           'default' => array(
             'weight' => '1',
             'visible' => FALSE,
+          ),
+        ),
+        'domain' => array(
+          'default' => array(
+            'weight' => '1',
+            'visible' => TRUE,
           ),
         ),
       ),
@@ -383,7 +401,7 @@ function gie_microsite_strongarm() {
         'custom_settings' => FALSE,
       ),
       'view_mode_selector' => array(
-        'custom_settings' => TRUE,
+        'custom_settings' => FALSE,
       ),
       'full' => array(
         'custom_settings' => FALSE,
@@ -392,13 +410,13 @@ function gie_microsite_strongarm() {
         'custom_settings' => FALSE,
       ),
       'callout_1' => array(
-        'custom_settings' => TRUE,
+        'custom_settings' => FALSE,
       ),
       'callout_2' => array(
-        'custom_settings' => TRUE,
+        'custom_settings' => FALSE,
       ),
       'callout_3' => array(
-        'custom_settings' => TRUE,
+        'custom_settings' => FALSE,
       ),
       'center_aligned' => array(
         'custom_settings' => FALSE,
@@ -819,6 +837,20 @@ function gie_microsite_strongarm() {
   $strongarm->name = 'panelizer_node:microsite_page:page_manager_selection';
   $strongarm->value = 'node:microsite_page:default';
   $export['panelizer_node:microsite_page:page_manager_selection'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'pathauto_node_microsite_page_pattern';
+  $strongarm->value = '[node:title]';
+  $export['pathauto_node_microsite_page_pattern'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'pathauto_node_microsite_pattern';
+  $strongarm->value = '';
+  $export['pathauto_node_microsite_pattern'] = $strongarm;
 
   return $export;
 }
