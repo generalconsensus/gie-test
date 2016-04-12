@@ -19,8 +19,6 @@
     "grunt-postcss": "~0.7.1",
     "postcss-assets": "~4.0.1",
     "autoprefixer": "~6.3.1", 
-    "grunt-bower-task": "~0.4.0",
-    "grunt-parallel-behat": "linusnorton/grunt-parallel-behat"
-
+    "grunt-bower-task": "~0.4.0"
   }
 }
