@@ -7,11 +7,8 @@
 
 <?php
 
-  //$field_para_5050_orientation = field_get_items('paragraphs_item', $variables['paragraphs_item'], 'field_para_text_orientation');
   $background = $content['field_background'][0]['#markup'];
   $orientation = $content['field_para_5050_orientation'][0]['#markup'];
-
-  //var_dump($content['field_background'][0]['#markup']);
 
   if ($orientation == 'image-on-the-right') {
     $classes = "microsite-50-50" . ' ' . $background;
