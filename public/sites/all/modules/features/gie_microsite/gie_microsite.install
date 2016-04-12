@@ -58,7 +58,7 @@ function gie_microsite_update_7002() {
 /**
  * #50232: Delete Microsite Callout Card Style Field
  */
-function gie_microsite_update_7007() {
+function gie_microsite_update_7003() {
     field_delete_field("field_para_callout_style");
     field_delete_field("field_para_5050_style");
     field_delete_field("field_para_text_orientation");
