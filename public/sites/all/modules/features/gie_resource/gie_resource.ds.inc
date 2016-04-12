@@ -83,6 +83,28 @@ function gie_resource_ds_field_settings_info() {
         ),
       ),
     ),
+    'field_resource_attribution' => array(
+      'formatter_settings' => array(
+        'ft' => array(
+          'func' => 'theme_ds_field_expert',
+          'lb' => 'Attribution',
+          'lb-cl' => 'div',
+          'ow' => TRUE,
+          'ow-el' => 'div',
+          'ow-cl' => 'field--at-a-glance',
+          'ow-def-cl' => FALSE,
+          'ow-at' => '',
+          'ow-def-at' => FALSE,
+          'fi' => TRUE,
+          'fi-el' => 'div',
+          'fi-cl' => 'field__item',
+          'fi-at' => '',
+          'fi-def-at' => FALSE,
+          'fi-odd-even' => FALSE,
+          'fi-first-last' => FALSE,
+        ),
+      ),
+    ),
   );
   $export['node|resource|at_a_glance'] = $ds_fieldsetting;
 
@@ -464,7 +486,8 @@ function gie_resource_ds_layout_settings_info() {
         1 => 'resource_counters_resource_comment_detail',
         2 => 'resource_counters_resource_favorite_count_detail',
         3 => 'field_resource_source',
-        4 => 'field_resource_date',
+        4 => 'field_resource_attribution',
+        5 => 'field_resource_date',
       ),
     ),
     'fields' => array(
@@ -472,6 +495,7 @@ function gie_resource_ds_layout_settings_info() {
       'resource_counters_resource_comment_detail' => 'ds_content',
       'resource_counters_resource_favorite_count_detail' => 'ds_content',
       'field_resource_source' => 'ds_content',
+      'field_resource_attribution' => 'ds_content',
       'field_resource_date' => 'ds_content',
     ),
     'classes' => array(),

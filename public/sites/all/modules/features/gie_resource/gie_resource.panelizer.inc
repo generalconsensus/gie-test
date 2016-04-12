@@ -239,19 +239,13 @@ function gie_resource_panelizer_defaults() {
     $display->content['new-75e583b9-94c1-41f0-ad16-da91fcfa40ba'] = $pane;
     $display->panels['box_second'][0] = 'new-75e583b9-94c1-41f0-ad16-da91fcfa40ba';
     $pane = new stdClass();
-    $pane->pid = 'new-99000840-c920-4f61-b4e8-6f44bc686409';
+    $pane->pid = 'new-f8e1f1ec-f3d1-4fb5-a30e-f94c5ee48598';
     $pane->panel = 'box_third';
-    $pane->type = 'entity_view';
-    $pane->subtype = 'node';
+    $pane->type = 'views_panes';
+    $pane->subtype = 'resource_poc-poc_pane';
     $pane->shown = TRUE;
     $pane->access = array();
-    $pane->configuration = array(
-      'view_mode' => 'contact',
-      'context' => 'panelizer',
-      'override_title' => 1,
-      'override_title_text' => 'Point of Contact',
-      'override_title_heading' => 'h2',
-    );
+    $pane->configuration = array();
     $pane->cache = array();
     $pane->style = array(
       'settings' => NULL,
@@ -260,9 +254,9 @@ function gie_resource_panelizer_defaults() {
     $pane->extras = array();
     $pane->position = 0;
     $pane->locks = array();
-    $pane->uuid = '99000840-c920-4f61-b4e8-6f44bc686409';
-    $display->content['new-99000840-c920-4f61-b4e8-6f44bc686409'] = $pane;
-    $display->panels['box_third'][0] = 'new-99000840-c920-4f61-b4e8-6f44bc686409';
+    $pane->uuid = 'f8e1f1ec-f3d1-4fb5-a30e-f94c5ee48598';
+    $display->content['new-f8e1f1ec-f3d1-4fb5-a30e-f94c5ee48598'] = $pane;
+    $display->panels['box_third'][0] = 'new-f8e1f1ec-f3d1-4fb5-a30e-f94c5ee48598';
     $pane = new stdClass();
     $pane->pid = 'new-378a7862-9433-4d94-959b-7516be01fdb8';
     $pane->panel = 'main';

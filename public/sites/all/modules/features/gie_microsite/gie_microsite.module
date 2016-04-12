@@ -5,3 +5,51 @@
  */
 
 include_once 'gie_microsite.features.inc';
+
+//
+///**
+// * Implements hook_menu_alter().
+// */
+//function gie_microsite_menu_alter(&$items) {
+//  $items['taxonomy/term/%taxonomy_term']['access callback'] = 'gie_microsite_access_callback';
+//  $items['taxonomy/term/%taxonomy_term']['access arguments'] = array('access content', 2);
+//  $items['admin/structure/taxonomy/%taxonomy_vocabulary_machine_name/add']['access callback'] = 'gie_microsite_admin_access_callback';
+//  $items['admin/structure/taxonomy/%taxonomy_vocabulary_machine_name/add']['access arguments'] = array('administer taxonomy');
+//  $items['taxonomy/term/%taxonomy_term/edit']['access callback'] = 'gie_microsite_admin_access_callback';
+//  $items['taxonomy/term/%taxonomy_term/edit']['access arguments'] = array('administer taxonomy');
+//
+//}
+//
+//function gie_microsite_access_callback($term, $string, $account = NULL, $reset = FALSE) {
+//  $domain = $GLOBALS['_domain'];
+//
+//  if (!empty($term) && $term->vocabulary_machine_name == 'youthpower_issues') {
+//    if (!empty($domain) && $domain['domain_id'] == 7) {
+//      return TRUE;
+//    }
+//    return FALSE;
+//  }
+//  return TRUE;
+//
+//}
+//
+//function gie_microsite_admin_access_callback($term, $string, $account = NULL, $reset = FALSE) {
+//  $domain = $GLOBALS['_domain'];
+//
+//  if (user_is_anonymous()) {
+//    return FALSE;
+//  }
+//
+//  if (!empty($term) && $term->vocabulary_machine_name == 'youthpower_issues') {
+//    if (!empty($domain) && $domain['domain_id'] == 7) {
+//      return TRUE;
+//    }
+//    return FALSE;
+//  }
+//  return TRUE;
+//
+//}
+
+
+
+
