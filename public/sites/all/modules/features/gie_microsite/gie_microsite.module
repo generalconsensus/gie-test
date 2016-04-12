@@ -19,12 +19,12 @@ function gie_microsite_menu_alter(&$items) {
   $items['admin/structure/taxonomy/%taxonomy_vocabulary_machine_name/add']['access callback'] = 'gie_microsite_access_callback';
   $items['admin/structure/taxonomy/%taxonomy_vocabulary_machine_name/add']['access arguments'] = array(
     2,
-    'access content'
+    'administer taxonomy'
   );
   $items['taxonomy/term/%taxonomy_term/edit']['access callback'] = 'gie_microsite_access_callback';
   $items['taxonomy/term/%taxonomy_term/edit']['access arguments'] = array(
     2,
-    'access content'
+    'administer taxonomy'
   );
 
 }
