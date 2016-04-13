@@ -283,3 +283,77 @@ function gie_user_ctools_plugin_directory($owner, $plugin_type) {
     return 'plugins/' . $plugin_type;
   }
 }
+
+/**
+ * Implements hook_field_attach_validate().
+ */
+function gie_user_field_attach_validate($entity_type, $entity, &$errors) {
+  $valid_types = array('user', 'organization');
+
+  if (in_array($entity_type, $valid_types)) {
+
+    $wrapper = entity_metadata_wrapper($entity_type, $entity);
+    if (!empty($wrapper->field_user_twitter->value())) {
+      if (!gie_user_social_field_validate('field_user_twitter', $wrapper->field_user_twitter->value())) {
+        $lang = field_language($entity_type, $entity, 'field_user_twitter', NULL);
+        $errors['field_user_twitter'][$lang][0][] = array(
+          'error' => 'field_user_twitter_invalid',
+          'message' => t('Twitter url must be set correctly. Example: https://twitter.com/RobertDowneyJr'),
+        );
+      }
+    }
+    if (!empty($wrapper->field_user_linkedin->value())) {
+      if (!gie_user_social_field_validate('field_user_linkedin', $wrapper->field_user_linkedin->value())) {
+        $lang = field_language($entity_type, $entity, 'field_user_linkedin', NULL);
+        $errors['field_user_linkedin'][$lang][0][] = array(
+          'error' => 'field_user_linkedin_invalid',
+          'message' => t('Linkedin url must be set correctly. Example: https://www.linkedin.com/in/robertdowneyjunior'),
+        );
+      }
+    }
+    if (!empty($wrapper->field_user_facebook->value())) {
+      if (!gie_user_social_field_validate('field_user_facebook', $wrapper->field_user_facebook->value())) {
+        $lang = field_language($entity_type, $entity, 'field_user_facebook', NULL);
+        $errors['field_user_facebook'][$lang][0][] = array(
+          'error' => 'field_user_facebook_invalid',
+          'message' => t('Facebook url must be set correctly. Example: https://www.facebook.com/robertdowneyjr'),
+        );
+      }
+    }
+  }
+}
+
+
+/**
+ *
+ * Regex Validation for Social Media Fields
+ */
+function gie_user_social_field_validate($field_name, $field_value) {
+  if (!empty($field_name) && !empty($field_value)) {
+    mb_regex_encoding('UTF-8');
+
+    switch ($field_name) {
+      case 'field_user_twitter':
+        $regex = '^.*twitter\\.com.*';
+        break;
+      case 'field_user_linkedin':
+        $regex = '^.*linkedin\\.com.*';
+        break;
+      case 'field_user_facebook':
+        $regex = '^.*facebook\\.com.*';
+        break;
+      default:
+        $regex = '';
+        break;
+    }
+
+    if (!empty($regex)) {
+      if ($field_value != '' && (!mb_ereg("$regex", $field_value))) {
+        return FALSE;
+      }
+      else {
+        return TRUE;
+      }
+    }
+  }
+}
