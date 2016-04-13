@@ -391,3 +391,11 @@ function gie_general_update_7038() {
   // removing taxonomy term path update. was taking too long to go through and was not actually working
   // update the paths manually via /admin/config/search/path
 }
+
+
+/**
+ * [#44576] Update all user Contact fields.
+ */
+function gie_user_update_7039() {
+  module_disable(array('batch_add_terms'), TRUE);
+}
