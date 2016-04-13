@@ -116,7 +116,7 @@ function gie_user_strongarm() {
     'extra_fields' => array(
       'form' => array(
         'ckeditor' => array(
-          'weight' => '7',
+          'weight' => '9',
         ),
         'account' => array(
           'weight' => '3',
@@ -125,19 +125,22 @@ function gie_user_strongarm() {
           'weight' => '18',
         ),
         'googleanalytics' => array(
-          'weight' => '4',
+          'weight' => '5',
         ),
         'mimemail' => array(
-          'weight' => '3',
+          'weight' => '4',
         ),
         'contact' => array(
-          'weight' => '10',
+          'weight' => '11',
         ),
         'metatags' => array(
-          'weight' => '40',
+          'weight' => '13',
         ),
         'xmlsitemap' => array(
-          'weight' => '30',
+          'weight' => '12',
+        ),
+        'domain' => array(
+          'weight' => '1',
         ),
       ),
       'display' => array(
