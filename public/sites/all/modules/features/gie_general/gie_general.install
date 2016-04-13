@@ -383,3 +383,11 @@ function gie_general_update_7037() {
   );
   module_enable($modules, TRUE);
 }
+
+/**
+ * Generate new Taxonomy Term paths.
+ */
+function gie_general_update_7038() {
+  // removing taxonomy term path update. was taking too long to go through and was not actually working
+  // update the paths manually via /admin/config/search/path
+}

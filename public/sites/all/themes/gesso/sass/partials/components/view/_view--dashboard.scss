@@ -1,0 +1,15 @@
+.view--dashboard {
+  > .views-table {
+    @extend %table-large;
+    .views-field-title {
+      min-width: 60%;
+      max-width: 80%;
+      text-align: left;
+    }
+    .views-field-field-funding-type,
+    .views-field-field-funding-grant-award-value,
+    .views-field-field-funding-deadline {
+      border-left: 1px solid #333;
+    }
+  }
+}

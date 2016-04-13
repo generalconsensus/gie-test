@@ -2,7 +2,7 @@
   clear: both;
 
   @each $item, $color in $micrositeColorMap {
-  
+
     a {
       .microsite-palette#{$item} & { // body class
         color:  micro-site($item, 'primary');
@@ -26,7 +26,26 @@
           border-color: darken(micro-site($item, 'secondary'), 6.9%);
         }
       }
-
+    }
+    &.microsite-secondary .button { // change bg color if against same
+      .microsite-palette#{$item} & {
+        background-color: micro-site($item, 'primary');
+        border-color: micro-site($item, 'primary');
+        &:hover, &:focus {
+          background-color: darken(micro-site($item, 'primary'), 6.9%);
+          border-color: darken(micro-site($item, 'primary'), 6.9%);
+        }
+      }
+    }
+    &.microsite-tertiary .button { // change bg color if against same
+      .microsite-palette#{$item} & {
+        background-color: micro-site($item, 'primary');
+        border-color: micro-site($item, 'primary');
+        &:hover, &:focus {
+          background-color: darken(micro-site($item, 'primary'), 6.9%);
+          border-color: darken(micro-site($item, 'primary'), 6.9%);
+        }
+      }
     }
   }
 

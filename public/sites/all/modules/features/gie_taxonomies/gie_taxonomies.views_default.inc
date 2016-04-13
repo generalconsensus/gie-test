@@ -359,7 +359,7 @@ function gie_taxonomies_views_default_views() {
   $handler->display->display_options['fields']['field_user_photo']['field'] = 'field_user_photo';
   $handler->display->display_options['fields']['field_user_photo']['label'] = '';
   $handler->display->display_options['fields']['field_user_photo']['element_type'] = 'div';
-  $handler->display->display_options['fields']['field_user_photo']['element_class'] = 'profile-thumb__image--rounded';
+  $handler->display->display_options['fields']['field_user_photo']['element_class'] = 'profile-thumb__image-rounded';
   $handler->display->display_options['fields']['field_user_photo']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['field_user_photo']['click_sort_column'] = 'fid';
   $handler->display->display_options['fields']['field_user_photo']['settings'] = array(
@@ -1922,15 +1922,28 @@ function gie_taxonomies_views_default_views() {
   $handler->display->display_options['fields']['name']['alter']['word_boundary'] = FALSE;
   $handler->display->display_options['fields']['name']['alter']['ellipsis'] = FALSE;
   $handler->display->display_options['fields']['name']['link_to_taxonomy'] = TRUE;
+  /* Sort criterion: Taxonomy term: Name */
+  $handler->display->display_options['sorts']['name']['id'] = 'name';
+  $handler->display->display_options['sorts']['name']['table'] = 'taxonomy_term_data';
+  $handler->display->display_options['sorts']['name']['field'] = 'name';
   /* Contextual filter: Taxonomy term: Parent term */
   $handler->display->display_options['arguments']['parent']['id'] = 'parent';
   $handler->display->display_options['arguments']['parent']['table'] = 'taxonomy_term_hierarchy';
   $handler->display->display_options['arguments']['parent']['field'] = 'parent';
   $handler->display->display_options['arguments']['parent']['default_action'] = 'default';
-  $handler->display->display_options['arguments']['parent']['default_argument_type'] = 'taxonomy_tid';
+  $handler->display->display_options['arguments']['parent']['default_argument_type'] = 'raw';
+  $handler->display->display_options['arguments']['parent']['default_argument_options']['index'] = '1';
+  $handler->display->display_options['arguments']['parent']['default_argument_options']['use_alias'] = TRUE;
   $handler->display->display_options['arguments']['parent']['summary']['number_of_records'] = '0';
   $handler->display->display_options['arguments']['parent']['summary']['format'] = 'default_summary';
   $handler->display->display_options['arguments']['parent']['summary_options']['items_per_page'] = '25';
+  $handler->display->display_options['arguments']['parent']['specify_validation'] = TRUE;
+  $handler->display->display_options['arguments']['parent']['validate']['type'] = 'taxonomy_term';
+  $handler->display->display_options['arguments']['parent']['validate_options']['vocabularies'] = array(
+    'sector' => 'sector',
+  );
+  $handler->display->display_options['arguments']['parent']['validate_options']['type'] = 'convert';
+  $handler->display->display_options['arguments']['parent']['validate_options']['transform'] = TRUE;
 
   /* Display: Topics */
   $handler = $view->new_display('panel_pane', 'Topics', 'topics_pane');
@@ -1944,6 +1957,30 @@ function gie_taxonomies_views_default_views() {
   $handler = $view->new_display('panel_pane', 'Regions', 'regions_pane');
   $handler->display->display_options['defaults']['title'] = FALSE;
   $handler->display->display_options['title'] = 'Related Subregions';
+
+  /* Display: YouthPower Issues */
+  $handler = $view->new_display('panel_pane', 'YouthPower Issues', 'yp_issues_pane');
+  $handler->display->display_options['defaults']['title'] = FALSE;
+  $handler->display->display_options['title'] = 'Related YouthPower Issues';
+  $handler->display->display_options['defaults']['arguments'] = FALSE;
+  /* Contextual filter: Taxonomy term: Parent term */
+  $handler->display->display_options['arguments']['parent']['id'] = 'parent';
+  $handler->display->display_options['arguments']['parent']['table'] = 'taxonomy_term_hierarchy';
+  $handler->display->display_options['arguments']['parent']['field'] = 'parent';
+  $handler->display->display_options['arguments']['parent']['default_action'] = 'default';
+  $handler->display->display_options['arguments']['parent']['default_argument_type'] = 'raw';
+  $handler->display->display_options['arguments']['parent']['default_argument_options']['index'] = '1';
+  $handler->display->display_options['arguments']['parent']['default_argument_options']['use_alias'] = TRUE;
+  $handler->display->display_options['arguments']['parent']['summary']['number_of_records'] = '0';
+  $handler->display->display_options['arguments']['parent']['summary']['format'] = 'default_summary';
+  $handler->display->display_options['arguments']['parent']['summary_options']['items_per_page'] = '25';
+  $handler->display->display_options['arguments']['parent']['specify_validation'] = TRUE;
+  $handler->display->display_options['arguments']['parent']['validate']['type'] = 'taxonomy_term';
+  $handler->display->display_options['arguments']['parent']['validate_options']['vocabularies'] = array(
+    'youthpower_issues' => 'youthpower_issues',
+  );
+  $handler->display->display_options['arguments']['parent']['validate_options']['type'] = 'convert';
+  $handler->display->display_options['arguments']['parent']['validate_options']['transform'] = TRUE;
   $export['subterms'] = $view;
 
   $view = new view();

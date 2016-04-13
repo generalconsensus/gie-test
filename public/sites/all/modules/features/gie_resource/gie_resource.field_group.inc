@@ -214,6 +214,39 @@ function gie_resource_field_group_info() {
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
   $field_group->api_version = 1;
+  $field_group->identifier = 'group_card_content|node|resource|spotlight';
+  $field_group->group_name = 'group_card_content';
+  $field_group->entity_type = 'node';
+  $field_group->bundle = 'resource';
+  $field_group->mode = 'spotlight';
+  $field_group->parent_name = '';
+  $field_group->data = array(
+    'label' => 'Card Content',
+    'weight' => '1',
+    'children' => array(
+      0 => 'title_field',
+      1 => 'content_type',
+    ),
+    'format_type' => 'div',
+    'format_settings' => array(
+      'label' => 'Card Content',
+      'instance_settings' => array(
+        'id' => '',
+        'classes' => 'card__content',
+        'description' => '',
+        'show_label' => '0',
+        'label_element' => 'h3',
+        'effect' => 'none',
+        'speed' => 'none',
+      ),
+      'formatter' => 'open',
+    ),
+  );
+  $export['group_card_content|node|resource|spotlight'] = $field_group;
+
+  $field_group = new stdClass();
+  $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
+  $field_group->api_version = 1;
   $field_group->identifier = 'group_card_counts|node|resource|listing';
   $field_group->group_name = 'group_card_counts';
   $field_group->entity_type = 'node';
@@ -401,6 +434,7 @@ function gie_resource_field_group_info() {
       3 => 'field_term_topic',
       4 => 'field_term_region',
       5 => 'field_term_country',
+      6 => 'field_resource_attribution',
     ),
     'format_type' => 'div',
     'format_settings' => array(
@@ -435,8 +469,9 @@ function gie_resource_field_group_info() {
     'children' => array(
       0 => 'field_resource_date',
       1 => 'field_resource_source',
-      2 => 'resource_counters_resource_comment_detail',
-      3 => 'resource_counters_resource_favorite_count_detail',
+      2 => 'field_resource_attribution',
+      3 => 'resource_counters_resource_comment_detail',
+      4 => 'resource_counters_resource_favorite_count_detail',
     ),
     'format_type' => 'div',
     'format_settings' => array(
