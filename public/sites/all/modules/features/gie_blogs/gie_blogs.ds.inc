@@ -48,17 +48,17 @@ function gie_blogs_ds_field_settings_info() {
         ),
       ),
     ),
-    'field_blogs_topic' => array(
-      'formatter_settings' => array(
-        'ft' => array(
-          'lb' => 'Topics',
-        ),
-      ),
-    ),
     'field_blogs_sector' => array(
       'formatter_settings' => array(
         'ft' => array(
           'lb' => 'Sectors',
+        ),
+      ),
+    ),
+    'field_blogs_topic' => array(
+      'formatter_settings' => array(
+        'ft' => array(
+          'lb' => 'Topics',
         ),
       ),
     ),
@@ -87,20 +87,6 @@ function gie_blogs_ds_field_settings_info() {
   $ds_fieldsetting->bundle = 'blogs';
   $ds_fieldsetting->view_mode = 'listing';
   $ds_fieldsetting->settings = array(
-    'title_field' => array(
-      'formatter_settings' => array(
-        'ft' => array(
-          'func' => 'theme_ds_field_expert',
-          'fi' => TRUE,
-          'fi-el' => 'h3',
-          'fi-cl' => 'card__primary-title',
-          'fi-at' => '',
-          'fi-def-at' => FALSE,
-          'fi-odd-even' => FALSE,
-          'fi-first-last' => FALSE,
-        ),
-      ),
-    ),
     'field_blogs_publish_date' => array(
       'formatter_settings' => array(
         'ft' => array(
@@ -129,6 +115,20 @@ function gie_blogs_ds_field_settings_info() {
         ),
       ),
     ),
+    'title_field' => array(
+      'formatter_settings' => array(
+        'ft' => array(
+          'func' => 'theme_ds_field_expert',
+          'fi' => TRUE,
+          'fi-el' => 'h3',
+          'fi-cl' => 'card__primary-title',
+          'fi-at' => '',
+          'fi-def-at' => FALSE,
+          'fi-odd-even' => FALSE,
+          'fi-first-last' => FALSE,
+        ),
+      ),
+    ),
   );
   $export['node|blogs|listing'] = $ds_fieldsetting;
 
@@ -147,17 +147,21 @@ function gie_blogs_ds_layout_settings_info() {
   $ds_layout->entity_type = 'node';
   $ds_layout->bundle = 'blogs';
   $ds_layout->view_mode = 'at_a_glance';
-  $ds_layout->layout = 'ds_reset';
+  $ds_layout->layout = 'ds_1col';
   $ds_layout->settings = array(
     'regions' => array(
       'ds_content' => array(
-        0 => 'blogs_counters_comment_count',
-        1 => 'blogs_counters_favorite_count',
+        0 => 'group_blog_glance',
+        1 => 'blogs_counters_resource_comment_detail',
+        2 => 'blogs_counters_resource_favorite_count_detail',
+        3 => 'field_blogs_publish_date',
       ),
     ),
     'fields' => array(
-      'blogs_counters_comment_count' => 'ds_content',
-      'blogs_counters_favorite_count' => 'ds_content',
+      'group_blog_glance' => 'ds_content',
+      'blogs_counters_resource_comment_detail' => 'ds_content',
+      'blogs_counters_resource_favorite_count_detail' => 'ds_content',
+      'field_blogs_publish_date' => 'ds_content',
     ),
     'classes' => array(),
     'wrappers' => array(
@@ -165,8 +169,8 @@ function gie_blogs_ds_layout_settings_info() {
     ),
     'layout_wrapper' => 'div',
     'layout_attributes' => '',
-    'layout_attributes_merge' => TRUE,
-    'layout_link_attribute' => FALSE,
+    'layout_attributes_merge' => 1,
+    'layout_link_attribute' => '',
     'layout_link_custom' => '',
   );
   $export['node|blogs|at_a_glance'] = $ds_layout;
@@ -177,23 +181,21 @@ function gie_blogs_ds_layout_settings_info() {
   $ds_layout->entity_type = 'node';
   $ds_layout->bundle = 'blogs';
   $ds_layout->view_mode = 'contact';
-  $ds_layout->layout = 'slat';
+  $ds_layout->layout = 'ds_1col';
   $ds_layout->settings = array(
     'regions' => array(
-      'media' => array(
-        0 => 'field_blogs_point_contact',
-        1 => 'field_blogs_publish_date',
+      'ds_content' => array(
+        0 => 'group_blog_contact',
+        1 => 'field_blogs_point_contact',
       ),
     ),
     'fields' => array(
-      'field_blogs_point_contact' => 'media',
-      'field_blogs_publish_date' => 'media',
+      'group_blog_contact' => 'ds_content',
+      'field_blogs_point_contact' => 'ds_content',
     ),
     'classes' => array(),
     'wrappers' => array(
-      'header' => 'div',
-      'media' => 'div',
-      'main_content' => 'div',
+      'ds_content' => 'div',
     ),
     'layout_wrapper' => 'div',
     'layout_attributes' => '',
@@ -213,15 +215,17 @@ function gie_blogs_ds_layout_settings_info() {
   $ds_layout->settings = array(
     'regions' => array(
       'ds_content' => array(
-        0 => 'field_blogs_region',
-        1 => 'field_blogs_country',
-        2 => 'field_blogs_topic',
-        3 => 'field_blogs_sector',
-        4 => 'field_blogs_organization',
-        5 => 'field_blogs_program',
+        0 => 'group_blog_stats',
+        1 => 'field_blogs_region',
+        2 => 'field_blogs_country',
+        3 => 'field_blogs_topic',
+        4 => 'field_blogs_sector',
+        5 => 'field_blogs_organization',
+        6 => 'field_blogs_program',
       ),
     ),
     'fields' => array(
+      'group_blog_stats' => 'ds_content',
       'field_blogs_region' => 'ds_content',
       'field_blogs_country' => 'ds_content',
       'field_blogs_topic' => 'ds_content',
@@ -305,7 +309,12 @@ function gie_blogs_ds_layout_settings_info() {
       'field_blogs_sector' => 'main_content',
       'group_card_counts' => 'main_content',
     ),
-    'classes' => array(),
+    'classes' => array(
+      'layout_class' => array(
+        'card' => 'card',
+        'card--icons' => 'card--icons',
+      ),
+    ),
     'wrappers' => array(
       'header' => 'div',
       'main_content' => 'div',

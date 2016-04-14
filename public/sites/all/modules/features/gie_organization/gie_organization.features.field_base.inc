@@ -39,7 +39,6 @@ function gie_organization_field_default_field_bases() {
     'indexes' => array(
       'format' => array(
         0 => 'format',
-
       ),
     ),
     'locked' => 0,
@@ -163,6 +162,7 @@ function gie_organization_field_default_field_bases() {
     'locked' => 0,
     'module' => 'image',
     'settings' => array(
+      'default_image' => 43,
       'uri_scheme' => 's3',
     ),
     'translatable' => 0,

@@ -158,15 +158,15 @@ function gie_news_strongarm() {
             'visible' => FALSE,
           ),
           'at_a_glance' => array(
-            'weight' => '15',
+            'weight' => '13',
             'visible' => FALSE,
           ),
           'contact' => array(
-            'weight' => '15',
+            'weight' => '16',
             'visible' => FALSE,
           ),
           'details' => array(
-            'weight' => '14',
+            'weight' => '27',
             'visible' => FALSE,
           ),
           'search_listing' => array(
@@ -192,15 +192,15 @@ function gie_news_strongarm() {
             'visible' => FALSE,
           ),
           'at_a_glance' => array(
-            'weight' => '14',
+            'weight' => '12',
             'visible' => FALSE,
           ),
           'contact' => array(
-            'weight' => '28',
+            'weight' => '29',
             'visible' => FALSE,
           ),
           'details' => array(
-            'weight' => '16',
+            'weight' => '28',
             'visible' => FALSE,
           ),
           'search_listing' => array(
@@ -348,7 +348,7 @@ function gie_news_strongarm() {
         ),
         'flag_favorite' => array(
           'details' => array(
-            'weight' => '12',
+            'weight' => '25',
             'visible' => FALSE,
           ),
           'default' => array(
@@ -360,7 +360,7 @@ function gie_news_strongarm() {
             'visible' => FALSE,
           ),
           'at_a_glance' => array(
-            'weight' => '13',
+            'weight' => '11',
             'visible' => FALSE,
           ),
           'listing' => array(
@@ -368,7 +368,7 @@ function gie_news_strongarm() {
             'visible' => FALSE,
           ),
           'contact' => array(
-            'weight' => '10',
+            'weight' => '11',
             'visible' => FALSE,
           ),
           'page_header' => array(
@@ -382,7 +382,7 @@ function gie_news_strongarm() {
         ),
         'flag_abuse_node' => array(
           'details' => array(
-            'weight' => '13',
+            'weight' => '26',
             'visible' => FALSE,
           ),
           'default' => array(
@@ -394,7 +394,7 @@ function gie_news_strongarm() {
             'visible' => FALSE,
           ),
           'at_a_glance' => array(
-            'weight' => '12',
+            'weight' => '10',
             'visible' => FALSE,
           ),
           'listing' => array(
@@ -402,7 +402,7 @@ function gie_news_strongarm() {
             'visible' => FALSE,
           ),
           'contact' => array(
-            'weight' => '9',
+            'weight' => '10',
             'visible' => FALSE,
           ),
           'page_header' => array(
@@ -424,12 +424,12 @@ function gie_news_strongarm() {
             'visible' => FALSE,
           ),
           'contact' => array(
-            'weight' => '13',
+            'weight' => '14',
             'visible' => FALSE,
           ),
           'at_a_glance' => array(
-            'weight' => '0',
-            'visible' => TRUE,
+            'weight' => '1',
+            'visible' => FALSE,
           ),
           'default' => array(
             'weight' => '18',
@@ -440,7 +440,7 @@ function gie_news_strongarm() {
             'visible' => FALSE,
           ),
           'details' => array(
-            'weight' => '10',
+            'weight' => '22',
             'visible' => FALSE,
           ),
           'search_listing' => array(
@@ -458,12 +458,12 @@ function gie_news_strongarm() {
             'visible' => FALSE,
           ),
           'contact' => array(
-            'weight' => '11',
+            'weight' => '12',
             'visible' => FALSE,
           ),
           'at_a_glance' => array(
-            'weight' => '1',
-            'visible' => TRUE,
+            'weight' => '2',
+            'visible' => FALSE,
           ),
           'default' => array(
             'weight' => '17',
@@ -474,7 +474,7 @@ function gie_news_strongarm() {
             'visible' => FALSE,
           ),
           'details' => array(
-            'weight' => '10',
+            'weight' => '24',
             'visible' => FALSE,
           ),
           'search_listing' => array(
@@ -492,12 +492,12 @@ function gie_news_strongarm() {
             'visible' => FALSE,
           ),
           'contact' => array(
-            'weight' => '14',
+            'weight' => '15',
             'visible' => FALSE,
           ),
           'at_a_glance' => array(
-            'weight' => '3',
-            'visible' => FALSE,
+            'weight' => '2',
+            'visible' => TRUE,
           ),
           'default' => array(
             'weight' => '16',
@@ -508,7 +508,7 @@ function gie_news_strongarm() {
             'visible' => FALSE,
           ),
           'details' => array(
-            'weight' => '10',
+            'weight' => '21',
             'visible' => FALSE,
           ),
           'search_listing' => array(
@@ -526,12 +526,12 @@ function gie_news_strongarm() {
             'visible' => FALSE,
           ),
           'contact' => array(
-            'weight' => '12',
+            'weight' => '13',
             'visible' => FALSE,
           ),
           'at_a_glance' => array(
             'weight' => '4',
-            'visible' => FALSE,
+            'visible' => TRUE,
           ),
           'default' => array(
             'weight' => '15',
@@ -542,7 +542,7 @@ function gie_news_strongarm() {
             'visible' => FALSE,
           ),
           'details' => array(
-            'weight' => '10',
+            'weight' => '23',
             'visible' => FALSE,
           ),
           'search_listing' => array(

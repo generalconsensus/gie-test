@@ -140,6 +140,18 @@ function events_strongarm() {
       'needs_list' => array(
         'custom_settings' => FALSE,
       ),
+      'spotlight' => array(
+        'custom_settings' => TRUE,
+      ),
+      'data' => array(
+        'custom_settings' => FALSE,
+      ),
+      'microsite_content_slider' => array(
+        'custom_settings' => FALSE,
+      ),
+      'long_form_footer_logo' => array(
+        'custom_settings' => FALSE,
+      ),
     ),
     'extra_fields' => array(
       'form' => array(
@@ -176,6 +188,10 @@ function events_strongarm() {
             'weight' => '15',
             'visible' => FALSE,
           ),
+          'spotlight' => array(
+            'weight' => '19',
+            'visible' => FALSE,
+          ),
         ),
         'events_at_a_glance_comments' => array(
           'at_a_glance' => array(
@@ -196,6 +212,10 @@ function events_strongarm() {
           ),
           'search_listing' => array(
             'weight' => '24',
+            'visible' => FALSE,
+          ),
+          'spotlight' => array(
+            'weight' => '28',
             'visible' => FALSE,
           ),
         ),
@@ -220,6 +240,10 @@ function events_strongarm() {
             'weight' => '21',
             'visible' => FALSE,
           ),
+          'spotlight' => array(
+            'weight' => '23',
+            'visible' => FALSE,
+          ),
         ),
         'events_at_a_glance_amount' => array(
           'at_a_glance' => array(
@@ -242,6 +266,10 @@ function events_strongarm() {
             'weight' => '18',
             'visible' => FALSE,
           ),
+          'spotlight' => array(
+            'weight' => '25',
+            'visible' => FALSE,
+          ),
         ),
         'events_at_a_glance_entity_view_1' => array(
           'listing' => array(
@@ -260,6 +288,10 @@ function events_strongarm() {
             'weight' => '22',
             'visible' => FALSE,
           ),
+          'spotlight' => array(
+            'weight' => '22',
+            'visible' => FALSE,
+          ),
         ),
         'events_at_a_glance_event_attending_flag' => array(
           'full' => array(
@@ -267,6 +299,7 @@ function events_strongarm() {
             'visible' => FALSE,
           ),
           'search_listing' => NULL,
+          'spotlight' => NULL,
         ),
         'events_at_a_glance_related_org_card_event' => array(
           'listing' => array(
@@ -285,6 +318,10 @@ function events_strongarm() {
             'weight' => '19',
             'visible' => FALSE,
           ),
+          'spotlight' => array(
+            'weight' => '24',
+            'visible' => FALSE,
+          ),
         ),
         'flag_abuse_node' => array(
           'listing' => array(
@@ -298,6 +335,30 @@ function events_strongarm() {
           'search_listing' => array(
             'weight' => '20',
             'visible' => FALSE,
+          ),
+          'spotlight' => array(
+            'weight' => '26',
+            'visible' => FALSE,
+          ),
+        ),
+        'domain' => array(
+          'default' => array(
+            'weight' => '1',
+            'visible' => TRUE,
+          ),
+          'spotlight' => array(
+            'weight' => '13',
+            'visible' => FALSE,
+          ),
+        ),
+        'flag_favorite' => array(
+          'default' => array(
+            'weight' => '10',
+            'visible' => TRUE,
+          ),
+          'spotlight' => array(
+            'weight' => '3',
+            'visible' => TRUE,
           ),
         ),
       ),
@@ -409,6 +470,34 @@ function events_strongarm() {
   $strongarm->name = 'panelizer_node:event:page_manager_selection';
   $strongarm->value = 'node:event:default';
   $export['panelizer_node:event:page_manager_selection'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'pathauto_node_event_pattern';
+  $strongarm->value = 'events/[node:title]';
+  $export['pathauto_node_event_pattern'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'pathauto_taxonomy_term_event_needs_pattern';
+  $strongarm->value = '';
+  $export['pathauto_taxonomy_term_event_needs_pattern'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'pathauto_taxonomy_term_event_size_pattern';
+  $strongarm->value = '';
+  $export['pathauto_taxonomy_term_event_size_pattern'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'pathauto_taxonomy_term_event_type_pattern';
+  $strongarm->value = '';
+  $export['pathauto_taxonomy_term_event_type_pattern'] = $strongarm;
 
   return $export;
 }

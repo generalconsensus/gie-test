@@ -109,11 +109,14 @@ function gie_user_strongarm() {
       'user_teaser_with_motto' => array(
         'custom_settings' => TRUE,
       ),
+      'spotlight' => array(
+        'custom_settings' => TRUE,
+      ),
     ),
     'extra_fields' => array(
       'form' => array(
         'ckeditor' => array(
-          'weight' => '7',
+          'weight' => '9',
         ),
         'account' => array(
           'weight' => '3',
@@ -122,19 +125,22 @@ function gie_user_strongarm() {
           'weight' => '18',
         ),
         'googleanalytics' => array(
-          'weight' => '4',
+          'weight' => '5',
         ),
         'mimemail' => array(
-          'weight' => '3',
+          'weight' => '4',
         ),
         'contact' => array(
-          'weight' => '10',
+          'weight' => '11',
         ),
         'metatags' => array(
-          'weight' => '40',
+          'weight' => '13',
         ),
         'xmlsitemap' => array(
-          'weight' => '30',
+          'weight' => '12',
+        ),
+        'domain' => array(
+          'weight' => '1',
         ),
       ),
       'display' => array(
@@ -171,6 +177,10 @@ function gie_user_strongarm() {
             'weight' => '10',
             'visible' => FALSE,
           ),
+          'spotlight' => array(
+            'weight' => '19',
+            'visible' => FALSE,
+          ),
         ),
         'flag_follow' => array(
           'full' => array(
@@ -203,6 +213,30 @@ function gie_user_strongarm() {
           ),
           'user_teaser_with_motto' => array(
             'weight' => '16',
+            'visible' => FALSE,
+          ),
+          'spotlight' => array(
+            'weight' => '3',
+            'visible' => TRUE,
+          ),
+        ),
+        'domain' => array(
+          'default' => array(
+            'weight' => '1',
+            'visible' => TRUE,
+          ),
+          'spotlight' => array(
+            'weight' => '15',
+            'visible' => FALSE,
+          ),
+        ),
+        'mimemail' => array(
+          'default' => array(
+            'weight' => '0',
+            'visible' => TRUE,
+          ),
+          'spotlight' => array(
+            'weight' => '14',
             'visible' => FALSE,
           ),
         ),
@@ -317,6 +351,48 @@ function gie_user_strongarm() {
   $strongarm->name = 'panelizer_user:user:page_manager_selection';
   $strongarm->value = 'user:user:default';
   $export['panelizer_user:user:page_manager_selection'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'pathauto_taxonomy_term_company_pattern';
+  $strongarm->value = '';
+  $export['pathauto_taxonomy_term_company_pattern'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'pathauto_taxonomy_term_member_help_pattern';
+  $strongarm->value = '';
+  $export['pathauto_taxonomy_term_member_help_pattern'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'pathauto_taxonomy_term_other_interest_pattern';
+  $strongarm->value = '';
+  $export['pathauto_taxonomy_term_other_interest_pattern'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'pathauto_taxonomy_term_topic_pattern';
+  $strongarm->value = '';
+  $export['pathauto_taxonomy_term_topic_pattern'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'pathauto_taxonomy_term_user_skills_pattern';
+  $strongarm->value = '';
+  $export['pathauto_taxonomy_term_user_skills_pattern'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'pathauto_taxonomy_term_user_type_pattern';
+  $strongarm->value = '';
+  $export['pathauto_taxonomy_term_user_type_pattern'] = $strongarm;
 
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */

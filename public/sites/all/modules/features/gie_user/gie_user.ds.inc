@@ -286,6 +286,96 @@ function gie_user_ds_field_settings_info() {
 
   $ds_fieldsetting = new stdClass();
   $ds_fieldsetting->api_version = 1;
+  $ds_fieldsetting->id = 'user|user|spotlight';
+  $ds_fieldsetting->entity_type = 'user';
+  $ds_fieldsetting->bundle = 'user';
+  $ds_fieldsetting->view_mode = 'spotlight';
+  $ds_fieldsetting->settings = array(
+    'member_text' => array(
+      'weight' => '1',
+      'label' => 'hidden',
+      'format' => 'default',
+      'formatter_settings' => array(
+        'ft' => array(
+          'func' => 'theme_ds_field_expert',
+          'fi' => TRUE,
+          'fi-el' => 'h2',
+          'fi-cl' => 'card__type',
+          'fi-at' => '',
+          'fi-def-at' => FALSE,
+          'fi-odd-even' => FALSE,
+          'fi-first-last' => FALSE,
+        ),
+        'field_delimiter' => '',
+        'linked_field' => array(
+          'linked' => 0,
+          'destination' => '',
+          'advanced' => array(
+            'title' => '',
+            'target' => '',
+            'class' => '',
+            'rel' => '',
+            'text' => '',
+          ),
+        ),
+      ),
+    ),
+    'user_full_name' => array(
+      'weight' => '2',
+      'label' => 'hidden',
+      'format' => 'linked_name',
+      'formatter_settings' => array(
+        'ft' => array(
+          'func' => 'theme_ds_field_expert',
+          'ow' => TRUE,
+          'ow-el' => 'h3',
+          'ow-cl' => 'card__title',
+          'ow-def-cl' => FALSE,
+          'ow-at' => '',
+          'ow-def-at' => FALSE,
+        ),
+        'field_delimiter' => '',
+        'linked_field' => array(
+          'linked' => 0,
+          'destination' => '',
+          'advanced' => array(
+            'title' => '',
+            'target' => '',
+            'class' => '',
+            'rel' => '',
+            'text' => '',
+          ),
+        ),
+      ),
+    ),
+    'dashboard_spotlight_card_user_classification' => array(
+      'weight' => '0',
+      'label' => 'hidden',
+      'format' => 'default',
+      'formatter_settings' => array(
+        'ft' => array(
+          'func' => 'theme_ds_field_expert',
+          'lb-el' => 'h2',
+        ),
+        'field_delimiter' => '',
+        'linked_field' => array(
+          'linked' => 0,
+          'destination' => '',
+          'advanced' => array(
+            'title' => '',
+            'target' => '',
+            'class' => '',
+            'rel' => '',
+            'text' => '',
+          ),
+        ),
+      ),
+    ),
+  );
+  $export['user|user|spotlight'] = $ds_fieldsetting;
+
+  $ds_fieldsetting = new stdClass();
+  $ds_fieldsetting->api_version = 1;
   $ds_fieldsetting->id = 'user|user|title';
   $ds_fieldsetting->entity_type = 'user';
   $ds_fieldsetting->bundle = 'user';
@@ -340,7 +430,7 @@ function gie_user_ds_field_settings_info() {
           'func' => 'theme_ds_field_expert',
           'ow' => TRUE,
           'ow-el' => 'div',
-          'ow-cl' => 'profile-thumb__image--rounded',
+          'ow-cl' => 'profile-thumb__image-rounded',
           'ow-def-cl' => FALSE,
           'ow-at' => '',
           'ow-def-at' => FALSE,
@@ -404,7 +494,7 @@ function gie_user_ds_field_settings_info() {
           'func' => 'theme_ds_field_expert',
           'ow' => TRUE,
           'ow-el' => 'div',
-          'ow-cl' => 'profile-thumb__image--rounded',
+          'ow-cl' => 'profile-thumb__image-rounded',
           'ow-def-cl' => FALSE,
           'ow-at' => '',
           'ow-def-at' => FALSE,
@@ -455,7 +545,7 @@ function gie_user_ds_field_settings_info() {
           'func' => 'theme_ds_field_expert',
           'ow' => TRUE,
           'ow-el' => 'div',
-          'ow-cl' => 'profile-thumb__image--rounded',
+          'ow-cl' => 'profile-thumb__image-rounded',
           'ow-def-cl' => FALSE,
           'ow-at' => '',
           'ow-def-at' => FALSE,
@@ -464,6 +554,33 @@ function gie_user_ds_field_settings_info() {
     ),
   );
   $export['user|user|user_teaser_with_motto'] = $ds_fieldsetting;
+
+  return $export;
+}
+
+/**
+ * Implements hook_ds_custom_fields_info().
+ */
+function gie_user_ds_custom_fields_info() {
+  $export = array();
+
+  $ds_field = new stdClass();
+  $ds_field->api_version = 1;
+  $ds_field->field = 'member_text';
+  $ds_field->label = 'Member text';
+  $ds_field->field_type = 5;
+  $ds_field->entities = array(
+    'user' => 'user',
+  );
+  $ds_field->ui_limit = '*|*';
+  $ds_field->properties = array(
+    'code' => array(
+      'value' => 'Member',
+      'format' => 'plain_text',
+    ),
+    'use_token' => 0,
+  );
+  $export['member_text'] = $ds_field;
 
   return $export;
 }
@@ -606,6 +723,54 @@ function gie_user_ds_layout_settings_info() {
     'layout_link_custom' => '',
   );
   $export['user|user|resource_user'] = $ds_layout;
+
+  $ds_layout = new stdClass();
+  $ds_layout->api_version = 1;
+  $ds_layout->id = 'user|user|spotlight';
+  $ds_layout->entity_type = 'user';
+  $ds_layout->bundle = 'user';
+  $ds_layout->view_mode = 'spotlight';
+  $ds_layout->layout = 'article';
+  $ds_layout->settings = array(
+    'regions' => array(
+      'main_content' => array(
+        0 => 'dashboard_spotlight_card_user_classification',
+        1 => 'member_text',
+        2 => 'group_card_image',
+        3 => 'user_full_name',
+        4 => 'group_card_content',
+        5 => 'flag_follow',
+        6 => 'field_user_photo',
+      ),
+    ),
+    'fields' => array(
+      'dashboard_spotlight_card_user_classification' => 'main_content',
+      'member_text' => 'main_content',
+      'group_card_image' => 'main_content',
+      'user_full_name' => 'main_content',
+      'group_card_content' => 'main_content',
+      'flag_follow' => 'main_content',
+      'field_user_photo' => 'main_content',
+    ),
+    'classes' => array(
+      'layout_class' => array(
+        'card' => 'card',
+        'card--center' => 'card--center',
+        'card--spotlight' => 'card--spotlight',
+      ),
+    ),
+    'wrappers' => array(
+      'header' => 'div',
+      'main_content' => 'div',
+      'footer' => 'div',
+    ),
+    'layout_wrapper' => 'div',
+    'layout_attributes' => '',
+    'layout_attributes_merge' => 1,
+    'layout_link_attribute' => '',
+    'layout_link_custom' => '',
+  );
+  $export['user|user|spotlight'] = $ds_layout;
 
   $ds_layout = new stdClass();
   $ds_layout->api_version = 1;

@@ -556,6 +556,12 @@ function gie_user_field_default_field_instances() {
         'type' => 'hidden',
         'weight' => 0,
       ),
+      'spotlight' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 31,
+      ),
       'title' => array(
         'label' => 'above',
         'settings' => array(),
@@ -661,6 +667,12 @@ function gie_user_field_default_field_instances() {
         'type' => 'hidden',
         'weight' => 0,
       ),
+      'spotlight' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 29,
+      ),
       'title' => array(
         'label' => 'above',
         'settings' => array(),
@@ -713,7 +725,7 @@ function gie_user_field_default_field_instances() {
       'module' => 'mailchimp_lists',
       'settings' => array(),
       'type' => 'mailchimp_lists_select',
-      'weight' => 8,
+      'weight' => 10,
     ),
   );
 
@@ -761,6 +773,12 @@ function gie_user_field_default_field_instances() {
         'settings' => array(),
         'type' => 'hidden',
         'weight' => 26,
+      ),
+      'spotlight' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 28,
       ),
       'title' => array(
         'label' => 'above',
@@ -860,6 +878,12 @@ function gie_user_field_default_field_instances() {
         'settings' => array(),
         'type' => 'hidden',
         'weight' => 25,
+      ),
+      'spotlight' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 27,
       ),
       'title' => array(
         'label' => 'above',
@@ -978,6 +1002,12 @@ function gie_user_field_default_field_instances() {
         'type' => 'hidden',
         'weight' => 21,
       ),
+      'spotlight' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 23,
+      ),
       'title' => array(
         'label' => 'above',
         'settings' => array(),
@@ -1078,6 +1108,12 @@ function gie_user_field_default_field_instances() {
         'settings' => array(),
         'type' => 'hidden',
         'weight' => 0,
+      ),
+      'spotlight' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 32,
       ),
       'title' => array(
         'label' => 'above',
@@ -1207,6 +1243,12 @@ function gie_user_field_default_field_instances() {
         'type' => 'hidden',
         'weight' => 8,
       ),
+      'spotlight' => array(
+        'label' => 'hidden',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 11,
+      ),
       'title' => array(
         'label' => 'hidden',
         'settings' => array(),
@@ -1297,6 +1339,12 @@ function gie_user_field_default_field_instances() {
         'settings' => array(),
         'type' => 'hidden',
         'weight' => 15,
+      ),
+      'spotlight' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 19,
       ),
       'title' => array(
         'label' => 'above',
@@ -1415,6 +1463,12 @@ function gie_user_field_default_field_instances() {
         'type' => 'hidden',
         'weight' => 12,
       ),
+      'spotlight' => array(
+        'label' => 'hidden',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 15,
+      ),
       'title' => array(
         'label' => 'hidden',
         'settings' => array(),
@@ -1529,6 +1583,12 @@ function gie_user_field_default_field_instances() {
         'settings' => array(),
         'type' => 'hidden',
         'weight' => 3,
+      ),
+      'spotlight' => array(
+        'label' => 'hidden',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 6,
       ),
       'title' => array(
         'label' => 'hidden',
@@ -1649,6 +1709,12 @@ function gie_user_field_default_field_instances() {
         'type' => 'hidden',
         'weight' => 17,
       ),
+      'spotlight' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 20,
+      ),
       'title' => array(
         'label' => 'above',
         'settings' => array(),
@@ -1747,6 +1813,12 @@ function gie_user_field_default_field_instances() {
         'settings' => array(),
         'type' => 'hidden',
         'weight' => 6,
+      ),
+      'spotlight' => array(
+        'label' => 'hidden',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 9,
       ),
       'title' => array(
         'label' => 'hidden',
@@ -1865,6 +1937,12 @@ function gie_user_field_default_field_instances() {
         'type' => 'hidden',
         'weight' => 11,
       ),
+      'spotlight' => array(
+        'label' => 'hidden',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 14,
+      ),
       'title' => array(
         'label' => 'hidden',
         'settings' => array(),
@@ -1935,6 +2013,382 @@ function gie_user_field_default_field_instances() {
     ),
   );
 
+  // Exported field_instance: 'user-user-field_user_mail_comment'
+  $field_instances['user-user-field_user_mail_comment'] = array(
+    'bundle' => 'user',
+    'default_value' => array(
+      0 => array(
+        'value' => 1,
+      ),
+    ),
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'list',
+        'settings' => array(
+          'field_delimiter' => '',
+          'linked_field' => array(
+            'advanced' => array(
+              'class' => '',
+              'rel' => '',
+              'target' => '',
+              'text' => '',
+              'title' => '',
+            ),
+            'destination' => '',
+            'linked' => 0,
+          ),
+        ),
+        'type' => 'list_default',
+        'weight' => 32,
+      ),
+      'full' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'listing' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'resource_user' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'title' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'user_teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'user_teaser_summary' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'user_teaser_with_motto' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'ds_extras_field_template' => '',
+    'entity_type' => 'user',
+    'field_name' => 'field_user_mail_comment',
+    'label' => 'Receive emails when someone comments on my content',
+    'required' => 0,
+    'settings' => array(
+      'description_display' => 'after',
+      'user_register_form' => 0,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'options',
+      'settings' => array(
+        'display_label' => 1,
+      ),
+      'type' => 'options_onoff',
+      'weight' => 19,
+    ),
+  );
+
+  // Exported field_instance: 'user-user-field_user_mail_content_follow'
+  $field_instances['user-user-field_user_mail_content_follow'] = array(
+    'bundle' => 'user',
+    'default_value' => array(
+      0 => array(
+        'value' => 1,
+      ),
+    ),
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'list',
+        'settings' => array(
+          'field_delimiter' => '',
+          'linked_field' => array(
+            'advanced' => array(
+              'class' => '',
+              'rel' => '',
+              'target' => '',
+              'text' => '',
+              'title' => '',
+            ),
+            'destination' => '',
+            'linked' => 0,
+          ),
+        ),
+        'type' => 'list_default',
+        'weight' => 31,
+      ),
+      'full' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'listing' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'resource_user' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'title' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'user_teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'user_teaser_summary' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'user_teaser_with_motto' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'ds_extras_field_template' => '',
+    'entity_type' => 'user',
+    'field_name' => 'field_user_mail_content_follow',
+    'label' => 'Receive emails when someone follows my content',
+    'required' => 0,
+    'settings' => array(
+      'description_display' => 'after',
+      'user_register_form' => 0,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'options',
+      'settings' => array(
+        'display_label' => 1,
+      ),
+      'type' => 'options_onoff',
+      'weight' => 18,
+    ),
+  );
+
+  // Exported field_instance: 'user-user-field_user_mail_follow_edit'
+  $field_instances['user-user-field_user_mail_follow_edit'] = array(
+    'bundle' => 'user',
+    'default_value' => array(
+      0 => array(
+        'value' => 1,
+      ),
+    ),
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'list',
+        'settings' => array(
+          'field_delimiter' => '',
+          'linked_field' => array(
+            'advanced' => array(
+              'class' => '',
+              'rel' => '',
+              'target' => '',
+              'text' => '',
+              'title' => '',
+            ),
+            'destination' => '',
+            'linked' => 0,
+          ),
+        ),
+        'type' => 'list_default',
+        'weight' => 29,
+      ),
+      'full' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'listing' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'resource_user' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'title' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'user_teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'user_teaser_summary' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'user_teaser_with_motto' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'ds_extras_field_template' => '',
+    'entity_type' => 'user',
+    'field_name' => 'field_user_mail_follow_edit',
+    'label' => 'Receive emails when content I follow is edited',
+    'required' => 0,
+    'settings' => array(
+      'description_display' => 'after',
+      'user_register_form' => 0,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'options',
+      'settings' => array(
+        'display_label' => 1,
+      ),
+      'type' => 'options_onoff',
+      'weight' => 16,
+    ),
+  );
+
+  // Exported field_instance: 'user-user-field_user_mail_user_follow'
+  $field_instances['user-user-field_user_mail_user_follow'] = array(
+    'bundle' => 'user',
+    'default_value' => array(
+      0 => array(
+        'value' => 1,
+      ),
+    ),
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'list',
+        'settings' => array(
+          'field_delimiter' => '',
+          'linked_field' => array(
+            'advanced' => array(
+              'class' => '',
+              'rel' => '',
+              'target' => '',
+              'text' => '',
+              'title' => '',
+            ),
+            'destination' => '',
+            'linked' => 0,
+          ),
+        ),
+        'type' => 'list_default',
+        'weight' => 28,
+      ),
+      'full' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'listing' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'resource_user' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'title' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'user_teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'user_teaser_summary' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'user_teaser_with_motto' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'ds_extras_field_template' => '',
+    'entity_type' => 'user',
+    'field_name' => 'field_user_mail_user_follow',
+    'label' => 'Receive emails when I am followed',
+    'required' => 0,
+    'settings' => array(
+      'description_display' => 'after',
+      'user_register_form' => 0,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'options',
+      'settings' => array(
+        'display_label' => 1,
+      ),
+      'type' => 'options_onoff',
+      'weight' => 15,
+    ),
+  );
+
   // Exported field_instance: 'user-user-field_user_motto'
   $field_instances['user-user-field_user_motto'] = array(
     'bundle' => 'user',
@@ -1979,6 +2433,12 @@ function gie_user_field_default_field_instances() {
         'settings' => array(),
         'type' => 'hidden',
         'weight' => 22,
+      ),
+      'spotlight' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 24,
       ),
       'title' => array(
         'label' => 'above',
@@ -2115,6 +2575,12 @@ function gie_user_field_default_field_instances() {
         'type' => 'hidden',
         'weight' => 18,
       ),
+      'spotlight' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 21,
+      ),
       'title' => array(
         'label' => 'above',
         'settings' => array(),
@@ -2213,6 +2679,12 @@ function gie_user_field_default_field_instances() {
         'type' => 'hidden',
         'weight' => 24,
       ),
+      'spotlight' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 26,
+      ),
       'title' => array(
         'label' => 'above',
         'settings' => array(),
@@ -2304,6 +2776,12 @@ function gie_user_field_default_field_instances() {
         'settings' => array(),
         'type' => 'hidden',
         'weight' => 0,
+      ),
+      'spotlight' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 30,
       ),
       'title' => array(
         'label' => 'above',
@@ -2452,6 +2930,28 @@ function gie_user_field_default_field_instances() {
         ),
         'type' => 'image',
         'weight' => 0,
+      ),
+      'spotlight' => array(
+        'label' => 'hidden',
+        'module' => 'image',
+        'settings' => array(
+          'field_delimiter' => '',
+          'image_link' => '',
+          'image_style' => 'card__500x300_',
+          'linked_field' => array(
+            'advanced' => array(
+              'class' => '',
+              'rel' => '',
+              'target' => '',
+              'text' => '',
+              'title' => '',
+            ),
+            'destination' => '',
+            'linked' => 0,
+          ),
+        ),
+        'type' => 'image',
+        'weight' => 23,
       ),
       'title' => array(
         'label' => 'above',
@@ -2613,6 +3113,12 @@ function gie_user_field_default_field_instances() {
         'type' => 'hidden',
         'weight' => 23,
       ),
+      'spotlight' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 25,
+      ),
       'title' => array(
         'label' => 'above',
         'settings' => array(),
@@ -2713,6 +3219,12 @@ function gie_user_field_default_field_instances() {
         'type' => 'hidden',
         'weight' => 19,
       ),
+      'spotlight' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 22,
+      ),
       'title' => array(
         'label' => 'above',
         'settings' => array(),
@@ -2804,6 +3316,12 @@ function gie_user_field_default_field_instances() {
         'settings' => array(),
         'type' => 'hidden',
         'weight' => 14,
+      ),
+      'spotlight' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 17,
       ),
       'title' => array(
         'label' => 'above',
@@ -2975,6 +3493,12 @@ function gie_user_field_default_field_instances() {
         'type' => 'hidden',
         'weight' => 7,
       ),
+      'spotlight' => array(
+        'label' => 'hidden',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 10,
+      ),
       'title' => array(
         'label' => 'hidden',
         'settings' => array(),
@@ -3091,6 +3615,12 @@ function gie_user_field_default_field_instances() {
         'settings' => array(),
         'type' => 'hidden',
         'weight' => 13,
+      ),
+      'spotlight' => array(
+        'label' => 'hidden',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 16,
       ),
       'title' => array(
         'label' => 'hidden',
@@ -3225,6 +3755,12 @@ function gie_user_field_default_field_instances() {
         'type' => 'hidden',
         'weight' => 10,
       ),
+      'spotlight' => array(
+        'label' => 'hidden',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 13,
+      ),
       'title' => array(
         'label' => 'hidden',
         'settings' => array(),
@@ -3306,6 +3842,10 @@ function gie_user_field_default_field_instances() {
   t('Provide the LinkedIn URL for your profile. For example: https://www.linkedin.com/in/example');
   t('Provide the Twitter URL for your profile. For example: https://twitter.com/globalinnovationexchange');
   t('Receive email alerts about new funding opportunities, innovations, people, events, and other content coming into the Exchange that is relevant to you based on your profile. We will also send you occasional updates on new features and opportunities in the Exchange. ');
+  t('Receive emails when I am followed');
+  t('Receive emails when content I follow is edited');
+  t('Receive emails when someone comments on my content');
+  t('Receive emails when someone follows my content');
   t('Select as many types that apply to your current role and expertise.');
   t('Select the region where you are based. ');
   t('Select the types of assistance you can offer members and organizations of the Exchange');

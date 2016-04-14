@@ -173,7 +173,7 @@ function gie_organization_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 16,
+        'weight' => 0,
       ),
       'page_header' => array(
         'label' => 'above',
@@ -186,6 +186,12 @@ function gie_organization_field_default_field_instances() {
         'settings' => array(),
         'type' => 'hidden',
         'weight' => 13,
+      ),
+      'spotlight' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 18,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -330,35 +336,10 @@ function gie_organization_field_default_field_instances() {
         'weight' => 3,
       ),
       'microsite_content_slider' => array(
-        'label' => 'hidden',
-        'module' => 'smart_trim',
-        'settings' => array(
-          'field_delimiter' => '',
-          'linked_field' => array(
-            'advanced' => array(
-              'class' => '',
-              'rel' => '',
-              'target' => '',
-              'text' => '',
-              'title' => '',
-            ),
-            'destination' => '',
-            'linked' => 0,
-          ),
-          'more_link' => 0,
-          'more_text' => '',
-          'summary_handler' => 'full',
-          'trim_length' => 300,
-          'trim_link' => 0,
-          'trim_options' => array(
-            'text' => 0,
-          ),
-          'trim_preserve_tags' => '',
-          'trim_suffix' => '...',
-          'trim_type' => 'chars',
-        ),
-        'type' => 'smart_trim_format',
-        'weight' => 3,
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
       ),
       'page_header' => array(
         'label' => 'hidden',
@@ -408,6 +389,12 @@ function gie_organization_field_default_field_instances() {
         ),
         'type' => 'smart_trim_format',
         'weight' => 1,
+      ),
+      'spotlight' => array(
+        'label' => 'hidden',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 13,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -544,7 +531,7 @@ function gie_organization_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 15,
+        'weight' => 0,
       ),
       'page_header' => array(
         'label' => 'above',
@@ -557,6 +544,12 @@ function gie_organization_field_default_field_instances() {
         'settings' => array(),
         'type' => 'hidden',
         'weight' => 12,
+      ),
+      'spotlight' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 17,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -656,7 +649,7 @@ function gie_organization_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 26,
+        'weight' => 0,
       ),
       'page_header' => array(
         'label' => 'above',
@@ -669,6 +662,12 @@ function gie_organization_field_default_field_instances() {
         'settings' => array(),
         'type' => 'hidden',
         'weight' => 24,
+      ),
+      'spotlight' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 27,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -776,7 +775,7 @@ function gie_organization_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 14,
+        'weight' => 0,
       ),
       'page_header' => array(
         'label' => 'above',
@@ -789,6 +788,12 @@ function gie_organization_field_default_field_instances() {
         'settings' => array(),
         'type' => 'hidden',
         'weight' => 11,
+      ),
+      'spotlight' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 16,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -922,10 +927,10 @@ function gie_organization_field_default_field_instances() {
         'weight' => 4,
       ),
       'microsite_content_slider' => array(
-        'label' => 'hidden',
+        'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 12,
+        'weight' => 0,
       ),
       'page_header' => array(
         'label' => 'hidden',
@@ -938,6 +943,12 @@ function gie_organization_field_default_field_instances() {
         'settings' => array(),
         'type' => 'hidden',
         'weight' => 9,
+      ),
+      'spotlight' => array(
+        'label' => 'hidden',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 14,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -1097,26 +1108,10 @@ function gie_organization_field_default_field_instances() {
         'weight' => 0,
       ),
       'microsite_content_slider' => array(
-        'label' => 'hidden',
-        'module' => 'image',
-        'settings' => array(
-          'field_delimiter' => '',
-          'image_link' => 'content',
-          'image_style' => 'org_and_program_detail',
-          'linked_field' => array(
-            'advanced' => array(
-              'class' => '',
-              'rel' => '',
-              'target' => '',
-              'text' => '',
-              'title' => '',
-            ),
-            'destination' => '',
-            'linked' => 0,
-          ),
-        ),
-        'type' => 'image',
-        'weight' => 1,
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
       ),
       'page_header' => array(
         'label' => 'hidden',
@@ -1145,6 +1140,28 @@ function gie_organization_field_default_field_instances() {
         'settings' => array(),
         'type' => 'hidden',
         'weight' => 34,
+      ),
+      'spotlight' => array(
+        'label' => 'hidden',
+        'module' => 'image',
+        'settings' => array(
+          'field_delimiter' => '',
+          'image_link' => '',
+          'image_style' => 'card__500x300_',
+          'linked_field' => array(
+            'advanced' => array(
+              'class' => '',
+              'rel' => '',
+              'target' => '',
+              'text' => '',
+              'title' => '',
+            ),
+            'destination' => '',
+            'linked' => 0,
+          ),
+        ),
+        'type' => 'image',
+        'weight' => 37,
       ),
       'teaser' => array(
         'label' => 'hidden',
@@ -1291,7 +1308,7 @@ function gie_organization_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 13,
+        'weight' => 0,
       ),
       'page_header' => array(
         'label' => 'above',
@@ -1304,6 +1321,12 @@ function gie_organization_field_default_field_instances() {
         'settings' => array(),
         'type' => 'hidden',
         'weight' => 10,
+      ),
+      'spotlight' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 15,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -1427,7 +1450,7 @@ function gie_organization_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 37,
+        'weight' => 0,
       ),
       'page_header' => array(
         'label' => 'above',
@@ -1440,6 +1463,12 @@ function gie_organization_field_default_field_instances() {
         'settings' => array(),
         'type' => 'hidden',
         'weight' => 0,
+      ),
+      'spotlight' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 38,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -1537,7 +1566,7 @@ function gie_organization_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 25,
+        'weight' => 0,
       ),
       'page_header' => array(
         'label' => 'above',
@@ -1550,6 +1579,12 @@ function gie_organization_field_default_field_instances() {
         'settings' => array(),
         'type' => 'hidden',
         'weight' => 23,
+      ),
+      'spotlight' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 26,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -1670,7 +1705,7 @@ function gie_organization_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 17,
+        'weight' => 0,
       ),
       'page_header' => array(
         'label' => 'above',
@@ -1683,6 +1718,12 @@ function gie_organization_field_default_field_instances() {
         'settings' => array(),
         'type' => 'hidden',
         'weight' => 14,
+      ),
+      'spotlight' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 19,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -1800,7 +1841,7 @@ function gie_organization_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 30,
+        'weight' => 0,
       ),
       'page_header' => array(
         'label' => 'above',
@@ -1813,6 +1854,12 @@ function gie_organization_field_default_field_instances() {
         'settings' => array(),
         'type' => 'hidden',
         'weight' => 27,
+      ),
+      'spotlight' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 31,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -1947,7 +1994,7 @@ function gie_organization_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 31,
+        'weight' => 0,
       ),
       'page_header' => array(
         'label' => 'above',
@@ -1960,6 +2007,12 @@ function gie_organization_field_default_field_instances() {
         'settings' => array(),
         'type' => 'hidden',
         'weight' => 28,
+      ),
+      'spotlight' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 32,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -2080,7 +2133,7 @@ function gie_organization_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 34,
+        'weight' => 0,
       ),
       'page_header' => array(
         'label' => 'above',
@@ -2093,6 +2146,12 @@ function gie_organization_field_default_field_instances() {
         'settings' => array(),
         'type' => 'hidden',
         'weight' => 31,
+      ),
+      'spotlight' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 35,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -2213,7 +2272,7 @@ function gie_organization_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 35,
+        'weight' => 0,
       ),
       'page_header' => array(
         'label' => 'above',
@@ -2226,6 +2285,12 @@ function gie_organization_field_default_field_instances() {
         'settings' => array(),
         'type' => 'hidden',
         'weight' => 32,
+      ),
+      'spotlight' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 36,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -2346,7 +2411,7 @@ function gie_organization_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 36,
+        'weight' => 0,
       ),
       'page_header' => array(
         'label' => 'above',
@@ -2359,6 +2424,12 @@ function gie_organization_field_default_field_instances() {
         'settings' => array(),
         'type' => 'hidden',
         'weight' => 33,
+      ),
+      'spotlight' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 37,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -2479,7 +2550,7 @@ function gie_organization_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 32,
+        'weight' => 0,
       ),
       'page_header' => array(
         'label' => 'above',
@@ -2492,6 +2563,12 @@ function gie_organization_field_default_field_instances() {
         'settings' => array(),
         'type' => 'hidden',
         'weight' => 29,
+      ),
+      'spotlight' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 33,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -2591,7 +2668,7 @@ function gie_organization_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 38,
+        'weight' => 0,
       ),
       'page_header' => array(
         'label' => 'above',
@@ -2604,6 +2681,12 @@ function gie_organization_field_default_field_instances() {
         'settings' => array(),
         'type' => 'hidden',
         'weight' => 0,
+      ),
+      'spotlight' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 39,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -2699,7 +2782,7 @@ function gie_organization_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 33,
+        'weight' => 0,
       ),
       'page_header' => array(
         'label' => 'above',
@@ -2712,6 +2795,12 @@ function gie_organization_field_default_field_instances() {
         'settings' => array(),
         'type' => 'hidden',
         'weight' => 30,
+      ),
+      'spotlight' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 34,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -2807,7 +2896,7 @@ function gie_organization_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 29,
+        'weight' => 0,
       ),
       'page_header' => array(
         'label' => 'above',
@@ -2820,6 +2909,12 @@ function gie_organization_field_default_field_instances() {
         'settings' => array(),
         'type' => 'hidden',
         'weight' => 0,
+      ),
+      'spotlight' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 30,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -2915,7 +3010,7 @@ function gie_organization_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 28,
+        'weight' => 0,
       ),
       'page_header' => array(
         'label' => 'above',
@@ -2928,6 +3023,12 @@ function gie_organization_field_default_field_instances() {
         'settings' => array(),
         'type' => 'hidden',
         'weight' => 26,
+      ),
+      'spotlight' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 29,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -3023,7 +3124,7 @@ function gie_organization_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 27,
+        'weight' => 0,
       ),
       'page_header' => array(
         'label' => 'above',
@@ -3036,6 +3137,12 @@ function gie_organization_field_default_field_instances() {
         'settings' => array(),
         'type' => 'hidden',
         'weight' => 25,
+      ),
+      'spotlight' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 28,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -3140,7 +3247,7 @@ function gie_organization_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 39,
+        'weight' => 0,
       ),
       'page_header' => array(
         'label' => 'above',
@@ -3153,6 +3260,12 @@ function gie_organization_field_default_field_instances() {
         'settings' => array(),
         'type' => 'hidden',
         'weight' => 0,
+      ),
+      'spotlight' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 40,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -3273,10 +3386,10 @@ function gie_organization_field_default_field_instances() {
         'weight' => 1,
       ),
       'microsite_content_slider' => array(
-        'label' => 'hidden',
+        'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 10,
+        'weight' => 0,
       ),
       'page_header' => array(
         'label' => 'hidden',
@@ -3306,6 +3419,29 @@ function gie_organization_field_default_field_instances() {
         ),
         'type' => 'title_linked',
         'weight' => 0,
+      ),
+      'spotlight' => array(
+        'label' => 'hidden',
+        'module' => 'title',
+        'settings' => array(
+          'field_delimiter' => '',
+          'linked_field' => array(
+            'advanced' => array(
+              'class' => '',
+              'rel' => '',
+              'target' => '',
+              'text' => '',
+              'title' => '',
+            ),
+            'destination' => '',
+            'linked' => 0,
+          ),
+          'title_class' => '',
+          'title_link' => 'content',
+          'title_style' => '_none',
+        ),
+        'type' => 'title_linked',
+        'weight' => 7,
       ),
       'teaser' => array(
         'label' => 'above',

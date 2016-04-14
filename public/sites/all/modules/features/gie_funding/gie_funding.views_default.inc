@@ -24,7 +24,38 @@ function gie_funding_views_default_views() {
   $handler = $view->new_display('default', 'Master', 'default');
   $handler->display->display_options['use_more_always'] = FALSE;
   $handler->display->display_options['access']['type'] = 'perm';
-  $handler->display->display_options['cache']['type'] = 'none';
+  $handler->display->display_options['cache']['type'] = 'views_content_cache';
+  $handler->display->display_options['cache']['results_min_lifespan'] = '300';
+  $handler->display->display_options['cache']['results_max_lifespan'] = '21600';
+  $handler->display->display_options['cache']['output_min_lifespan'] = '300';
+  $handler->display->display_options['cache']['output_max_lifespan'] = '21600';
+  $handler->display->display_options['cache']['keys'] = array(
+    'comment' => array(
+      'changed' => 'changed',
+    ),
+    'node' => array(
+      'funding' => 'funding',
+      'action_card' => 0,
+      'article' => 0,
+      'page' => 0,
+      'discussion' => 0,
+      'error_page' => 0,
+      'event' => 0,
+      'homepage' => 0,
+      'innovation' => 0,
+      'long_form_page' => 0,
+      'microsite' => 0,
+      'microsite_page' => 0,
+      'needs' => 0,
+      'organization' => 0,
+      'persona' => 0,
+      'program' => 0,
+      'resource' => 0,
+    ),
+    'node_only' => array(
+      'node_changed' => 'node_changed',
+    ),
+  );
   $handler->display->display_options['query']['type'] = 'views_query';
   $handler->display->display_options['exposed_form']['type'] = 'basic';
   $handler->display->display_options['pager']['type'] = 'some';
@@ -157,7 +188,38 @@ function gie_funding_views_default_views() {
   $handler = $view->new_display('default', 'Master', 'default');
   $handler->display->display_options['use_more_always'] = FALSE;
   $handler->display->display_options['access']['type'] = 'perm';
-  $handler->display->display_options['cache']['type'] = 'none';
+  $handler->display->display_options['cache']['type'] = 'views_content_cache';
+  $handler->display->display_options['cache']['results_min_lifespan'] = '300';
+  $handler->display->display_options['cache']['results_max_lifespan'] = '21600';
+  $handler->display->display_options['cache']['output_min_lifespan'] = '300';
+  $handler->display->display_options['cache']['output_max_lifespan'] = '21600';
+  $handler->display->display_options['cache']['keys'] = array(
+    'comment' => array(
+      'changed' => 'changed',
+    ),
+    'node' => array(
+      'funding' => 'funding',
+      'action_card' => 0,
+      'article' => 0,
+      'page' => 0,
+      'discussion' => 0,
+      'error_page' => 0,
+      'event' => 0,
+      'homepage' => 0,
+      'innovation' => 0,
+      'long_form_page' => 0,
+      'microsite' => 0,
+      'microsite_page' => 0,
+      'needs' => 0,
+      'organization' => 0,
+      'persona' => 0,
+      'program' => 0,
+      'resource' => 0,
+    ),
+    'node_only' => array(
+      'node_changed' => 'node_changed',
+    ),
+  );
   $handler->display->display_options['query']['type'] = 'views_query';
   $handler->display->display_options['exposed_form']['type'] = 'basic';
   $handler->display->display_options['pager']['type'] = 'none';
@@ -459,7 +521,11 @@ function gie_funding_views_default_views() {
   $handler = $view->new_display('default', 'Master', 'default');
   $handler->display->display_options['use_more_always'] = FALSE;
   $handler->display->display_options['access']['type'] = 'none';
-  $handler->display->display_options['cache']['type'] = 'none';
+  $handler->display->display_options['cache']['type'] = 'search_api_views_cache';
+  $handler->display->display_options['cache']['results_lifespan'] = '300';
+  $handler->display->display_options['cache']['results_lifespan_custom'] = '0';
+  $handler->display->display_options['cache']['output_lifespan'] = '300';
+  $handler->display->display_options['cache']['output_lifespan_custom'] = '0';
   $handler->display->display_options['query']['type'] = 'views_query';
   $handler->display->display_options['exposed_form']['type'] = 'basic';
   $handler->display->display_options['pager']['type'] = 'full';
@@ -527,6 +593,12 @@ function gie_funding_views_default_views() {
   $handler->display->display_options['filters']['status']['value'] = array(
     1 => '1',
   );
+  /* Filter criterion: Indexed Content: Deadlines */
+  $handler->display->display_options['filters']['field_funding_deadline']['id'] = 'field_funding_deadline';
+  $handler->display->display_options['filters']['field_funding_deadline']['table'] = 'search_api_index_default_node_index';
+  $handler->display->display_options['filters']['field_funding_deadline']['field'] = 'field_funding_deadline';
+  $handler->display->display_options['filters']['field_funding_deadline']['operator'] = '>=';
+  $handler->display->display_options['filters']['field_funding_deadline']['value'] = 'now';
   $export['funding_opp_listing'] = $view;
 
   $view = new view();
@@ -545,7 +617,38 @@ function gie_funding_views_default_views() {
   $handler->display->display_options['hide_admin_links'] = TRUE;
   $handler->display->display_options['use_more_always'] = FALSE;
   $handler->display->display_options['access']['type'] = 'perm';
-  $handler->display->display_options['cache']['type'] = 'none';
+  $handler->display->display_options['cache']['type'] = 'views_content_cache';
+  $handler->display->display_options['cache']['results_min_lifespan'] = '300';
+  $handler->display->display_options['cache']['results_max_lifespan'] = '21600';
+  $handler->display->display_options['cache']['output_min_lifespan'] = '300';
+  $handler->display->display_options['cache']['output_max_lifespan'] = '21600';
+  $handler->display->display_options['cache']['keys'] = array(
+    'comment' => array(
+      'changed' => 'changed',
+    ),
+    'node' => array(
+      'funding' => 'funding',
+      'action_card' => 0,
+      'article' => 0,
+      'page' => 0,
+      'discussion' => 0,
+      'error_page' => 0,
+      'event' => 0,
+      'homepage' => 0,
+      'innovation' => 0,
+      'long_form_page' => 0,
+      'microsite' => 0,
+      'microsite_page' => 0,
+      'needs' => 0,
+      'organization' => 0,
+      'persona' => 0,
+      'program' => 0,
+      'resource' => 0,
+    ),
+    'node_only' => array(
+      'node_changed' => 'node_changed',
+    ),
+  );
   $handler->display->display_options['query']['type'] = 'views_query';
   $handler->display->display_options['exposed_form']['type'] = 'basic';
   $handler->display->display_options['pager']['type'] = 'some';

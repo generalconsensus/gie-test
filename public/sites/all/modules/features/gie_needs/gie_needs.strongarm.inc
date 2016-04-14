@@ -507,5 +507,33 @@ function gie_needs_strongarm() {
   );
   $export['panelizer_taxonomy_term:needs_type_default'] = $strongarm;
 
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'pathauto_node_needs_pattern';
+  $strongarm->value = 'wanteds/[node:title]';
+  $export['pathauto_node_needs_pattern'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'pathauto_taxonomy_term_needs_duration_pattern';
+  $strongarm->value = '';
+  $export['pathauto_taxonomy_term_needs_duration_pattern'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'pathauto_taxonomy_term_needs_status_pattern';
+  $strongarm->value = '';
+  $export['pathauto_taxonomy_term_needs_status_pattern'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'pathauto_taxonomy_term_needs_type_pattern';
+  $strongarm->value = 'wanteds/[term:name]';
+  $export['pathauto_taxonomy_term_needs_type_pattern'] = $strongarm;
+
   return $export;
 }

@@ -494,6 +494,13 @@ function gie_general_strongarm() {
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
+  $strongarm->name = 'pathauto_node_error_page_pattern';
+  $strongarm->value = 'errors/[node:title]';
+  $export['pathauto_node_error_page_pattern'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
   $strongarm->name = 'pathauto_node_pattern';
   $strongarm->value = '[node:menu-link:parent:title]/[node:menu-link:title]';
   $export['pathauto_node_pattern'] = $strongarm;
@@ -509,7 +516,7 @@ function gie_general_strongarm() {
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'pathauto_taxonomy_term_pattern';
-  $strongarm->value = '[term:vocabulary]/[term:name]';
+  $strongarm->value = '[term:vocabulary]/[term:parent]/[term:name]';
   $export['pathauto_taxonomy_term_pattern'] = $strongarm;
 
   $strongarm = new stdClass();

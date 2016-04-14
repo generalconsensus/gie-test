@@ -28,7 +28,7 @@
       position: absolute;
       width: 60px;
       z-index: 3;
-    }    
+    }
   }
   .section-wanteds & {
     background: $wanted-section-color;
@@ -38,15 +38,14 @@
       }
     }
   }
-  @each $current-color in $microsite-primary-list {
-    $i: index($microsite-primary-list, $current-color);
-    .microsite-palette#{$i} & { // body class
-      background: $current-color;
+  @each $item, $color in $micrositeColorMap {
+    .microsite-palette#{$item} & {
+      background:  micro-site($item, 'primary');
       @include breakpoint(1500px, $no-query: true) {
         &:after {
-          border-color: darken($current-color,7%) transparent transparent transparent;
+          border-color: darken( micro-site($item, 'primary'),7%) transparent transparent transparent;
         }
-      } 
+      }
     }
   }
 

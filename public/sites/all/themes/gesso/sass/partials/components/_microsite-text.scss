@@ -4,9 +4,42 @@ $ol-bullet-size: 60px;
 
 .microsite-text {
   @extend %microsite-component;
-  padding: 0 5%;
-  margin-bottom: 4em;
-  margin-top: 4em;
+  @each $item, $color in $micrositeColorMap {
+    .microsite-palette#{$item} & {
+      &.microsite-primary { // component class
+        background-color: micro-site($item, 'primary');
+        color: #fff;
+        a, h1, h2, h3, h4, h5, h6 {
+          color: #fff !important;
+        }
+      }
+      &.microsite-secondary {
+        background-color: micro-site($item, 'secondary');
+        color: #fff;
+        a, h1, h2, h3, h4, h5, h6 {
+          color: #fff !important;
+        }
+      }
+      &.microsite-tertiary {
+        background-color: micro-site($item, 'tertiary');
+        color: #fff;
+        a, h1, h2, h3, h4, h5, h6 {
+          color: #fff !important;
+        }
+      }
+      &.microsite-light-gray {
+        background-color: micro-site($item, 'light-gray');
+      }
+      &.microsite-dark-gray {
+        background-color: micro-site($item, 'dark-gray');
+        color: #fff;
+        a, h1, h2, h3, h4, h5, h6 {
+          color: #fff !important;
+        }
+      }
+    }
+  }
+  padding: 4em 5%;
   h2 {
     text-transform: uppercase;
   }
@@ -28,14 +61,11 @@ $ol-bullet-size: 60px;
       }
     }
     > li:before {
-      
-      @each $current-color in $microsite-primary-list {
-        $i: index($microsite-primary-list, $current-color);
-        .microsite-palette#{$i} & { // body class
-          background-color: $current-color;
+      @each $item, $color in $micrositeColorMap {
+        .microsite-palette#{$item} & {
+          background-color: micro-site($item, 'primary');
         }
       }
-
       color: #fff;
       content: counter(li-counter);
       counter-increment: li-counter;
@@ -51,7 +81,7 @@ $ol-bullet-size: 60px;
     }
     ul &, ol {
       margin: 0.5em 0;
-      padding: 0 0 0 (($ol-bullet-size/2)+10);  
+      padding: 0 0 0 (($ol-bullet-size/2)+10);
       > li:before {
         line-height: $ol-bullet-size/2;
         font-size: 14px;
@@ -61,13 +91,27 @@ $ol-bullet-size: 60px;
       }
     }
   }
+  @each $item, $color in $micrositeColorMap {
+    .microsite-palette#{$item} & {
+      &.microsite-primary ol > li:before { // override ol colors if against background
+        background-color: #333;
+      }
+      &.microsite-secondary ol > li:before { // override ol colors if against background
+        background-color: #333;
+      }
+      &.microsite-tertiary ol > li:before { // override ol colors if against background
+        background-color: #333;
+      }
+    }
+  }
 }
 
-.microsite-text.microsite-text { // specificity hack to overcome basic bullets from _html-elements.
+// ul styling inside microsite-text
+.microsite-text.microsite-text { // specificity hack to overwrite basic ul bullets from _html-elements.
   ul {
     list-style: none;
     margin: 0 0 2em 0;
-    padding: 0 0 0 40px; // same as width of bullet offset
+    padding: 0 0 0 40px;
     > li {
       @extend %clearfix;
       clear: both;
@@ -77,10 +121,9 @@ $ol-bullet-size: 60px;
     }
     > li:before {
 
-      @each $current-color in $microsite-secondary-list {
-        $i: index($microsite-secondary-list, $current-color);
-        .microsite-palette#{$i} & { // body class
-          color: $current-color;
+      @each $item, $color in $micrositeColorMap {
+        .microsite-palette#{$item} & {
+          color: micro-site($item, 'secondary');
         }
       }
       content: "►";
@@ -101,6 +144,19 @@ $ol-bullet-size: 60px;
         font-size: 15px;
         top: 0;
         width: 15px;
+      }
+    }
+  }
+  @each $item, $color in $micrositeColorMap {
+    .microsite-palette#{$item} & {
+      &.microsite-primary ul > li:before { // override ul colors if against background
+        color: #333;
+      }
+      &.microsite-secondary ul > li:before { // override ul colors if against background
+        color: #333;
+      }
+      &.microsite-tertiary ul > li:before { // override ul colors if against background
+        color: #333;
       }
     }
   }

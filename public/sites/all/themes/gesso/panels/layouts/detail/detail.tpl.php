@@ -6,10 +6,11 @@
   $box_first = (empty($content['box_first']) ? 'box-first-empty' : 'box-first');
   $box_second = (empty($content['box_second']) ? 'box-second-empty' : 'box-second');
   $box_third = (empty($content['box_third']) ? 'box-third-empty' : 'box-third');
+  $boxes = (empty($content['box_first']) || empty($content['box_second']) || empty($content['box_third']) ? 'boxes-empty' : 'boxes');
   $bottom_sidebar = (empty($content['bottom_sidebar']) ? 'bottom-sidebar-empty' : 'bottom-sidebar');
   $bottom = (empty($content['bottom']) ? 'bottom-empty' : 'bottom');
 
-  $classes = "$title $main $main_sidebar $center $box_first $box_second $box_third $bottom_sidebar $bottom";
+  $classes = "$title $main $main_sidebar $center $box_first $box_second $box_third $boxes $bottom_sidebar $bottom";
 ?>
 
 <div<?php if (!empty($css_id)): ?> id="<?php print $css_id; ?>"<?php endif; ?> class="l-panels-detail <?php print $classes; ?>">
@@ -75,12 +76,3 @@
     </div>
   <?php endif; ?>
 </div>
-
-
-
-
-
-
-
-
- 

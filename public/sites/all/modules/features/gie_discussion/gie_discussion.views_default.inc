@@ -25,7 +25,38 @@ function gie_discussion_views_default_views() {
   $handler->display->display_options['title'] = 'Active Discussions';
   $handler->display->display_options['use_more_always'] = FALSE;
   $handler->display->display_options['access']['type'] = 'perm';
-  $handler->display->display_options['cache']['type'] = 'none';
+  $handler->display->display_options['cache']['type'] = 'views_content_cache';
+  $handler->display->display_options['cache']['results_min_lifespan'] = '300';
+  $handler->display->display_options['cache']['results_max_lifespan'] = '21600';
+  $handler->display->display_options['cache']['output_min_lifespan'] = '300';
+  $handler->display->display_options['cache']['output_max_lifespan'] = '21600';
+  $handler->display->display_options['cache']['keys'] = array(
+    'comment' => array(
+      'changed' => 'changed',
+    ),
+    'node' => array(
+      'discussion' => 'discussion',
+      'action_card' => 0,
+      'article' => 0,
+      'page' => 0,
+      'error_page' => 0,
+      'event' => 0,
+      'funding' => 0,
+      'homepage' => 0,
+      'innovation' => 0,
+      'long_form_page' => 0,
+      'microsite' => 0,
+      'microsite_page' => 0,
+      'needs' => 0,
+      'organization' => 0,
+      'persona' => 0,
+      'program' => 0,
+      'resource' => 0,
+    ),
+    'node_only' => array(
+      'node_changed' => 'node_changed',
+    ),
+  );
   $handler->display->display_options['query']['type'] = 'views_query';
   $handler->display->display_options['exposed_form']['type'] = 'basic';
   $handler->display->display_options['pager']['type'] = 'some';
@@ -177,7 +208,7 @@ function gie_discussion_views_default_views() {
   $handler->display->display_options['fields']['field_user_photo']['field'] = 'field_user_photo';
   $handler->display->display_options['fields']['field_user_photo']['label'] = '';
   $handler->display->display_options['fields']['field_user_photo']['element_type'] = 'div';
-  $handler->display->display_options['fields']['field_user_photo']['element_class'] = 'profile-thumb__image--rounded';
+  $handler->display->display_options['fields']['field_user_photo']['element_class'] = 'profile-thumb__image-rounded';
   $handler->display->display_options['fields']['field_user_photo']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['field_user_photo']['click_sort_column'] = 'fid';
   $handler->display->display_options['fields']['field_user_photo']['settings'] = array(
@@ -216,7 +247,11 @@ function gie_discussion_views_default_views() {
   $handler->display->display_options['hide_admin_links'] = TRUE;
   $handler->display->display_options['use_more_always'] = FALSE;
   $handler->display->display_options['access']['type'] = 'none';
-  $handler->display->display_options['cache']['type'] = 'none';
+  $handler->display->display_options['cache']['type'] = 'search_api_views_cache';
+  $handler->display->display_options['cache']['results_lifespan'] = '300';
+  $handler->display->display_options['cache']['results_lifespan_custom'] = '0';
+  $handler->display->display_options['cache']['output_lifespan'] = '300';
+  $handler->display->display_options['cache']['output_lifespan_custom'] = '0';
   $handler->display->display_options['query']['type'] = 'views_query';
   $handler->display->display_options['exposed_form']['type'] = 'basic';
   $handler->display->display_options['pager']['type'] = 'full';
@@ -224,16 +259,16 @@ function gie_discussion_views_default_views() {
   $handler->display->display_options['style_options']['row_class_special'] = FALSE;
   $handler->display->display_options['row_plugin'] = 'entity';
   $handler->display->display_options['row_options']['view_mode'] = 'listing';
-  /* Field: Indexed Node: Node ID */
+  /* Field: Indexed Content: Node ID */
   $handler->display->display_options['fields']['nid']['id'] = 'nid';
   $handler->display->display_options['fields']['nid']['table'] = 'search_api_index_default_node_index';
   $handler->display->display_options['fields']['nid']['field'] = 'nid';
-  /* Sort criterion: Indexed Node: Date created */
+  /* Sort criterion: Indexed Content: Date created */
   $handler->display->display_options['sorts']['created']['id'] = 'created';
   $handler->display->display_options['sorts']['created']['table'] = 'search_api_index_default_node_index';
   $handler->display->display_options['sorts']['created']['field'] = 'created';
   $handler->display->display_options['sorts']['created']['order'] = 'DESC';
-  /* Filter criterion: Indexed Node: Content type */
+  /* Filter criterion: Indexed Content: Content type */
   $handler->display->display_options['filters']['type']['id'] = 'type';
   $handler->display->display_options['filters']['type']['table'] = 'search_api_index_default_node_index';
   $handler->display->display_options['filters']['type']['field'] = 'type';
