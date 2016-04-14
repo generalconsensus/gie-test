@@ -91,6 +91,7 @@ features[flag][] = attending
 features[node][] = event
 features[page_manager_pages][] = events
 features[pane_container][] = events_introduction
+features[pane_container][] = past_events_introduction
 features[panelizer_defaults][] = node:event:default
 features[taxonomy][] = event_needs
 features[taxonomy][] = event_size
