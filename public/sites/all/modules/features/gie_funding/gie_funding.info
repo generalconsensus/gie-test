@@ -126,6 +126,7 @@ features[field_instance][] = taxonomy_term-funding_type-description_field
 features[field_instance][] = taxonomy_term-funding_type-name_field
 features[node][] = funding
 features[page_manager_pages][] = funding
+features[pane_container][] = expired_funding_introduction
 features[pane_container][] = funding_introduction
 features[panelizer_defaults][] = node:funding:default
 features[taxonomy][] = effort_level
