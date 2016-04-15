@@ -54,3 +54,12 @@ function gie_microsite_update_7002() {
     field_delete_field('field_paragraph_display_type');     
     field_purge_batch(1);
 }
+
+/**
+ * Disable domain_integration_rules, domain_integration_vbo and rules
+ */
+function gie_microsite_update_7003() {
+    module_disable(array('domain_integration_vbo'), TRUE);
+    module_disable(array('domain_integration_rules'), TRUE);
+    module_disable(array('rules'), TRUE);
+}
