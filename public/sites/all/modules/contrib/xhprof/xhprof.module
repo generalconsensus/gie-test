@@ -39,6 +39,12 @@ function xhprof_menu() {
     'file' => 'xhprof.admin.inc',
     'access arguments' => array('administer site configuration'),
   );
+  $items[XHPROF_PATH . '/callgraph/%'] = array(
+    'title' => 'XHProf callgraph',
+    'page callback' => 'xhprof_display_callgraph',
+    'page arguments' => array(4),
+    'access arguments' => array('access xhprof data'),
+  );
 
   return $items;
 }
@@ -485,7 +491,7 @@ function theme_xhprof_run_table($variables) {
         xhprof_print_pct_cell($data['mu'], $totals['mu'], TRUE),
         xhprof_print_num_cell($data['excl_mu'], NULL, TRUE),
         xhprof_print_pct_cell($data['excl_mu'], $totals['mu'], TRUE),
-        xhprof_print_num_cell($data['pmu'], NULL, TRUE), 
+        xhprof_print_num_cell($data['pmu'], NULL, TRUE),
         xhprof_print_pct_cell($data['pmu'], $totals['pmu'], TRUE),
         xhprof_print_num_cell($data['excl_pmu'], NULL, TRUE),
         xhprof_print_pct_cell($data['excl_pmu'], $totals['pmu'], TRUE),
@@ -545,4 +551,29 @@ function xhprof_path_for_run($run1, $run2 = NULL) {
 function xhprof_path_for_symbol($symbol, $run1, $run2 = NULL) {
   $run_path = xhprof_path_for_run($run1, $run2);
   return $run_path . '/symbol/' . urlencode($symbol);
+}
+
+
+/**
+ * Display a call graph for the specified run
+ * @param type $id
+ * @param type $source
+ */
+function xhprof_display_callgraph($id, $depth = 0.1, $function = '') {
+  // The source is always the sitename
+  $source = variable_get('site_name', '');
+
+  // by default assume that xhprof_html & xhprof_lib directories
+  // are at the same level.
+  $GLOBALS['XHPROF_LIB_ROOT'] = dirname(__FILE__) . '/XHProfLib';
+
+  include_once $GLOBALS['XHPROF_LIB_ROOT'] . '/callgraph/utils/callgraph_utils.php';
+  include_once $GLOBALS['XHPROF_LIB_ROOT'] . '/callgraph/utils/xhprof_runs.php';
+
+  ini_set('max_execution_time', 100);
+
+  $xhprof_runs_impl = new XHProfRuns_Default();
+
+  xhprof_render_image($xhprof_runs_impl, $id, 'jpg', $depth, $function, $source, FALSE);
+
 }
