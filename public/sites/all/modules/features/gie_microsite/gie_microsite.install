@@ -68,3 +68,12 @@ function gie_microsite_update_7003() {
     db_query('DELETE FROM field_config WHERE field_config.deleted = 1')->execute();
     module_disable(array('view_mode_selector'), TRUE);
 }
+
+/**
+ * Disable domain_integration_rules, domain_integration_vbo and rules
+ */
+function gie_microsite_update_7004() {
+    module_disable(array('domain_integration_vbo'), TRUE);
+    module_disable(array('domain_integration_rules'), TRUE);
+    module_disable(array('rules'), TRUE);
+}
