@@ -670,6 +670,3 @@ $conf['reroute_email_enable'] = 1;
 $conf['reroute_email_address'] = 'mburge@forumone.com, mdrayer@forumone.com, cchumley@forumone.com, mdrayer+test@forumone.com, dmcdermott@forumone.com, aklatsky@forumone.com';
 $conf['reroute_email_enable_message'] = 1;
 
-$conf['environment_modules'] = array(
-  'gie_development' => 'sites/all/modules/features/gie_development/gie_development.module',
-);
