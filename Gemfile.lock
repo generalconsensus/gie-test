@@ -62,9 +62,10 @@ DEPENDENCIES
   breakpoint (~> 2.5.0)
   capistrano (~> 3.1)
   compass (~> 1.0.1)
+  net-ssh (~> 2.9.2)
   rake (~> 10.3)
   sass-globbing (= 1.1.0)
   singularitygs (~> 1.6.2)
 
 BUNDLED WITH
-   1.10.6
+   1.11.2
