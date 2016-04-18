@@ -5,7 +5,16 @@
  */
 
 include_once 'gie_innovation.features.inc';
+include_once 'gie_innovation.inc';
 
+/**
+ * Implements hook_ctools_plugin_directory().
+ */
+function gie_innovation_ctools_plugin_directory($module, $plugin) {
+  if ($module == 'gie_innovation') {
+    return 'plugins/' . $plugin;
+  }
+}
 
 
 /**
@@ -443,7 +452,7 @@ function gie_innovation_autocomplete_callback_get_matches($type, $field, $instan
     }
   }
 
-  $handler = entityreference_get_selection_handler($field, $instance, $entity_type, $entity);
+  $handler = gie_innovation_get_selection_handler($field, $instance, $entity_type, $entity);
 
   if ($type == 'tags') {
     // The user enters a comma-separated list of tags. We only autocomplete the last tag.
@@ -479,4 +488,20 @@ function gie_innovation_autocomplete_callback_get_matches($type, $field, $instan
   }
 
   drupal_json_output($matches);
+}
+
+/**
+ * Get the selection handler for a given entityreference field.
+ */
+function gie_innovation_get_selection_handler($field, $instance = NULL, $entity_type = NULL, $entity = NULL) {
+  ctools_include('plugins');
+  $handler = $field['settings']['handler'];
+  $class = ctools_plugin_load_class('gie_innovation', 'selection', $handler, 'class');
+
+  if (class_exists($class)) {
+    return call_user_func(array($class, 'getInstance'), $field, $instance, $entity_type, $entity);
+  }
+  else {
+    return Blah_Blah::getInstance($field, $instance, $entity_type, $entity);
+  }
 }
