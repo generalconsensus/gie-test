@@ -19,7 +19,10 @@ function gie_microsite_context_default_contexts() {
   $context->conditions = array(
     'domain' => array(
       'values' => array(
-        2 => 2,
+        1 => 1,
+      ),
+      'options' => array(
+        'include_exclude' => '1',
       ),
     ),
     'path' => array(
@@ -71,7 +74,7 @@ function gie_microsite_context_default_contexts() {
       ),
     ),
     'theme_html' => array(
-      'class' => 'section--microsite section-wanteds',
+      'class' => 'section--microsite',
     ),
   );
   $context->condition_mode = 1;

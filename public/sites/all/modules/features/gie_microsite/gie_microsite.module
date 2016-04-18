@@ -5,3 +5,77 @@
  */
 
 include_once 'gie_microsite.features.inc';
+
+
+/**
+ * Implements hook_menu_alter().
+ */
+function gie_microsite_menu_alter(&$items) {
+  $items['taxonomy/term/%taxonomy_term']['access callback'] = 'gie_microsite_access_callback';
+  $items['taxonomy/term/%taxonomy_term']['access arguments'] = array(2, 'access content');
+  $items['taxonomy/term/%taxonomy_term']['page arguments'] = array(2);
+
+  $items['admin/structure/taxonomy/%taxonomy_vocabulary_machine_name/add']['access callback'] = 'gie_microsite_admin_add_access_callback';
+  $items['admin/structure/taxonomy/%taxonomy_vocabulary_machine_name/add']['access arguments'] = array(3, 'administer taxonomy');
+  $items['admin/structure/taxonomy/%taxonomy_vocabulary_machine_name/add']['page arguments'] = array('taxonomy_form_term', array(), 3);
+
+  $items['taxonomy/term/%taxonomy_term/edit']['access callback'] = 'gie_microsite_admin_edit_access_callback';
+  $items['taxonomy/term/%taxonomy_term/edit']['access arguments'] = array(2, 'administer taxonomy');
+  $items['taxonomy/term/%taxonomy_term/edit']['page arguments'] = array('taxonomy_form_term', 2, NULL);
+
+}
+
+function gie_microsite_access_callback($term, $permission) {
+  if (!user_access($permission)) {
+    return FALSE;
+  }
+
+  $domain = $GLOBALS['_domain'];
+
+  if (!empty($term) && $term->vocabulary_machine_name == 'youthpower_issues') {
+    if (!empty($domain) && $domain['domain_id'] == 7) {
+      return TRUE;
+    }
+    return FALSE;
+  }
+  return TRUE;
+
+}
+
+function gie_microsite_admin_add_access_callback($vocabulary, $permission) {
+  if (!user_access($permission)) {
+    return FALSE;
+  }
+
+  $domain = $GLOBALS['_domain'];
+
+  if (!empty($vocabulary) && $vocabulary->machine_name == 'youthpower_issues') {
+    if (!empty($domain) && $domain['domain_id'] == 7) {
+      return TRUE;
+    }
+    return FALSE;
+  }
+  return TRUE;
+
+}
+
+function gie_microsite_admin_edit_access_callback($term, $permission) {
+  if (!user_access($permission)) {
+    return FALSE;
+  }
+
+  $domain = $GLOBALS['_domain'];
+
+  if (!empty($term) && $term->vocabulary_machine_name == 'youthpower_issues') {
+    if (!empty($domain) && $domain['domain_id'] == 7) {
+      return TRUE;
+    }
+    return FALSE;
+  }
+  return TRUE;
+
+}
+
+
+
+

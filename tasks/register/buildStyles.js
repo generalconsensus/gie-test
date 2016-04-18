@@ -3,6 +3,11 @@ module.exports = function (grunt) {
   var environment = (grunt.option('prod') || grunt.option('production')) ? 'stage' : 'dev';
 
   grunt.registerTask('buildStyles', [
-    'compass:' + environment
+    'sass_globbing:gesso',
+    'sass:gesso',
+    'postcss:gesso',
+    'sass_globbing:gesso_longform',
+    'sass:gesso_longform',
+    'postcss:gesso_longform'
   ]);
 };

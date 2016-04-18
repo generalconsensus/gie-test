@@ -11,8 +11,8 @@
     max-width: 275px;
     padding: 0;
     width: 100%;
-    @include perspective(800px);
-    @include transform(translate3d(0px, 0px, 0px));
+    perspective: 800px;
+    transform: translate3d(0px, 0px, 0px);
     @include breakpoint(580px, $no-query: true) {
       //float: left;
       width: percentage(1/2);

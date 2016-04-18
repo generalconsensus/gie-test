@@ -16,7 +16,7 @@
 }
 
 .pre-footer__download-link {  
-	background-color: $lightred;
+	background-color: $red;
 	height: 60px;
 	margin-bottom: 2em;
 	position: relative;
@@ -47,7 +47,7 @@
     z-index: 0;
   }
   img {
-    border: 3px $lightred solid;
+    border: 3px $red solid;
     border-bottom: none;
     display: block;
     height: 100%;
@@ -78,7 +78,7 @@
   }
   .button {
     margin-top: 10px;
-    background-color: $lightred;
-    border-color: $lightred;
+    background-color: $red;
+    border-color: $red;
   }
 }

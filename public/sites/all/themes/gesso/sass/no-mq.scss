@@ -7,10 +7,11 @@ $browser-minimum-versions: (
   'ie': '8'
 );
 
+@import 'breakpoint-sass/stylesheets/breakpoint'; // github.com/Team-Sass/breakpoint
 // Don't print media queries & print no query fallbacks.
 // github.com/Team-Sass/breakpoint/wiki/No-Query-Fallbacks
-$breakpoint-no-queries: true;
-$breakpoint-no-query-fallbacks: true;
+@include breakpoint-set('no queries', true);
+@include breakpoint-set('no query fallbacks', true);
 
 @import 'partials/global';
 @import 'partials/base';

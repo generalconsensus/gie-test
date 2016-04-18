@@ -15,7 +15,12 @@
     }
     border-color: $lightorange transparent transparent transparent;
     .section-wanteds & {
-      border-color: #00729c transparent transparent transparent;
+      border-color: $wanted-section-color transparent transparent transparent;
+    }
+    @each $item, $color in $micrositeColorMap {
+      .microsite-palette#{$item} & {
+        border-color: micro-site($item, 'primary') transparent transparent transparent;
+      }
     }
     height: 0;
     left: 0;
@@ -31,6 +36,6 @@
     font-weight: 300;
     line-height: 1.3;
     margin: 0;
-    padding: 0.6em 0 0.75em 0; 
+    padding: 0.6em 0 0.75em 0;
   }
 }

@@ -1,0 +1,52 @@
+.dashboard-notifications {
+  @extend %dashboard-pane;
+  h2 {
+    background: #565a5c;
+    color: #fff;
+    font-size: 16px;
+    font-weight: bold;
+    line-height: 24px;
+    margin: 0;
+    padding: 16px 16px 16px 66px;
+    position: relative;
+    &:before {
+      background: $orange;
+      border: 2px solid #fff;
+      border-radius: 50%;
+      content: "";
+      display: block;
+      height: 40px;
+      left: 14px;
+      position: absolute;
+      top: 8px;
+      width: 40px;
+    }
+    &:after {
+      @include image-replace(22px,22px);
+      @include svg-background(icon-bell);
+      content: "";
+      display: block;
+      left: 24px;
+      position: absolute;
+      top: 18px;
+    }
+  }
+  ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    li {
+      border-bottom: 1px solid #eee;
+      line-height: 1.3;
+      list-style: none;
+      margin: 0;
+      padding: 1em 1em;
+      &:last-child {
+        border-bottom: 0;
+      }
+      &:before { // undo bullet from _html-elements
+        display: none;
+      }
+    }
+  }
+}

@@ -1,5 +1,30 @@
-// Microsites
-$microsite-primary: #00498f;
-$microsite-secondary: #cd1041;
-$microsite-header: #035b94;
-$microsite-site-header: #565a5c;
+// Micro Site Map
+$micrositeColorMap: (
+ 1: (
+   primary: #00498f,
+   secondary: #cd1041,
+   tertiary: #cd1041,
+   light-gray: #dae3e7,
+   dark-gray: #444545,
+   header: #035b94,
+   site-header: #565a5c,
+   main-menu: #00498f,
+ ),
+ 2: (
+   primary: #cd1041,
+   secondary: #faa74a,
+   tertiary: #0094b4,
+   light-gray: #dae3e7,
+   dark-gray: #444545,
+   header: #0094b4,
+   site-header: #0094b4,
+   main-menu: #444545,
+ )
+);
+
+//Micro Site Function
+@function micro-site($palette, $color: "primary") {
+  @if map-has-key($micrositeColorMap, $palette) {
+    @return map-get(map-get($micrositeColorMap, $palette), $color);
+  }
+}

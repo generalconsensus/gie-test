@@ -229,13 +229,13 @@ function gie_microsite_strongarm() {
   $strongarm->value = array(
     'view_modes' => array(
       'view_mode_selector' => array(
-        'custom_settings' => TRUE,
+        'custom_settings' => FALSE,
       ),
       'left_image' => array(
-        'custom_settings' => TRUE,
+        'custom_settings' => FALSE,
       ),
       'right_image' => array(
-        'custom_settings' => TRUE,
+        'custom_settings' => FALSE,
       ),
       'full' => array(
         'custom_settings' => FALSE,
@@ -250,6 +250,15 @@ function gie_microsite_strongarm() {
         'custom_settings' => FALSE,
       ),
       'left_aligned' => array(
+        'custom_settings' => FALSE,
+      ),
+      'callout_1' => array(
+        'custom_settings' => FALSE,
+      ),
+      'callout_2' => array(
+        'custom_settings' => FALSE,
+      ),
+      'callout_3' => array(
         'custom_settings' => FALSE,
       ),
     ),
@@ -353,6 +362,9 @@ function gie_microsite_strongarm() {
       'right_image' => array(
         'custom_settings' => FALSE,
       ),
+      'diff_standard' => array(
+        'custom_settings' => FALSE,
+      ),
     ),
     'extra_fields' => array(
       'form' => array(),
@@ -411,6 +423,110 @@ function gie_microsite_strongarm() {
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
+  $strongarm->name = 'field_bundle_settings_paragraphs_item__microsite_highlight';
+  $strongarm->value = array(
+    'view_modes' => array(
+      'paragraphs_editor_preview' => array(
+        'custom_settings' => FALSE,
+      ),
+      'view_mode_selector' => array(
+        'custom_settings' => FALSE,
+      ),
+      'full' => array(
+        'custom_settings' => FALSE,
+      ),
+      'token' => array(
+        'custom_settings' => FALSE,
+      ),
+      'callout_1' => array(
+        'custom_settings' => FALSE,
+      ),
+      'callout_2' => array(
+        'custom_settings' => FALSE,
+      ),
+      'callout_3' => array(
+        'custom_settings' => FALSE,
+      ),
+      'center_aligned' => array(
+        'custom_settings' => FALSE,
+      ),
+      'left_aligned' => array(
+        'custom_settings' => FALSE,
+      ),
+      'left_image' => array(
+        'custom_settings' => FALSE,
+      ),
+      'right_image' => array(
+        'custom_settings' => FALSE,
+      ),
+      'diff_standard' => array(
+        'custom_settings' => FALSE,
+      ),
+    ),
+    'extra_fields' => array(
+      'form' => array(),
+      'display' => array(),
+    ),
+  );
+  $export['field_bundle_settings_paragraphs_item__microsite_highlight'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'field_bundle_settings_paragraphs_item__microsite_news_slider';
+  $strongarm->value = array(
+    'view_modes' => array(
+      'full' => array(
+        'custom_settings' => FALSE,
+      ),
+      'paragraphs_editor_preview' => array(
+        'custom_settings' => FALSE,
+      ),
+      'token' => array(
+        'custom_settings' => FALSE,
+      ),
+      'view_mode_selector' => array(
+        'custom_settings' => FALSE,
+      ),
+      'callout_1' => array(
+        'custom_settings' => FALSE,
+      ),
+      'callout_2' => array(
+        'custom_settings' => FALSE,
+      ),
+      'callout_3' => array(
+        'custom_settings' => FALSE,
+      ),
+      'center_aligned' => array(
+        'custom_settings' => FALSE,
+      ),
+      'left_aligned' => array(
+        'custom_settings' => FALSE,
+      ),
+      'left_image' => array(
+        'custom_settings' => FALSE,
+      ),
+      'right_image' => array(
+        'custom_settings' => FALSE,
+      ),
+    ),
+    'extra_fields' => array(
+      'form' => array(),
+      'display' => array(
+        'microsite_content_slider_microsite_content_slider' => array(
+          'default' => array(
+            'weight' => '2',
+            'visible' => TRUE,
+          ),
+        ),
+      ),
+    ),
+  );
+  $export['field_bundle_settings_paragraphs_item__microsite_news_slider'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
   $strongarm->name = 'field_bundle_settings_paragraphs_item__microsite_section_break_image';
   $strongarm->value = array(
     'view_modes' => array(
@@ -462,13 +578,13 @@ function gie_microsite_strongarm() {
   $strongarm->value = array(
     'view_modes' => array(
       'view_mode_selector' => array(
-        'custom_settings' => TRUE,
+        'custom_settings' => FALSE,
       ),
       'center_aligned' => array(
-        'custom_settings' => TRUE,
+        'custom_settings' => FALSE,
       ),
       'left_aligned' => array(
-        'custom_settings' => TRUE,
+        'custom_settings' => FALSE,
       ),
       'full' => array(
         'custom_settings' => FALSE,
@@ -485,6 +601,15 @@ function gie_microsite_strongarm() {
       'right_image' => array(
         'custom_settings' => FALSE,
       ),
+      'callout_1' => array(
+        'custom_settings' => FALSE,
+      ),
+      'callout_2' => array(
+        'custom_settings' => FALSE,
+      ),
+      'callout_3' => array(
+        'custom_settings' => FALSE,
+      ),
     ),
     'extra_fields' => array(
       'form' => array(),
@@ -492,6 +617,93 @@ function gie_microsite_strongarm() {
     ),
   );
   $export['field_bundle_settings_paragraphs_item__microsite_text'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'field_bundle_settings_paragraphs_item__microsite_text_callout';
+  $strongarm->value = array(
+    'view_modes' => array(
+      'full' => array(
+        'custom_settings' => FALSE,
+      ),
+      'paragraphs_editor_preview' => array(
+        'custom_settings' => FALSE,
+      ),
+      'token' => array(
+        'custom_settings' => FALSE,
+      ),
+      'view_mode_selector' => array(
+        'custom_settings' => FALSE,
+      ),
+      'callout_1' => array(
+        'custom_settings' => FALSE,
+      ),
+      'callout_2' => array(
+        'custom_settings' => FALSE,
+      ),
+      'callout_3' => array(
+        'custom_settings' => FALSE,
+      ),
+      'center_aligned' => array(
+        'custom_settings' => FALSE,
+      ),
+      'left_aligned' => array(
+        'custom_settings' => FALSE,
+      ),
+      'left_image' => array(
+        'custom_settings' => FALSE,
+      ),
+      'right_image' => array(
+        'custom_settings' => FALSE,
+      ),
+    ),
+    'extra_fields' => array(
+      'form' => array(),
+      'display' => array(),
+    ),
+  );
+  $export['field_bundle_settings_paragraphs_item__microsite_text_callout'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'field_bundle_settings_taxonomy_term__organization_type';
+  $strongarm->value = array(
+    'view_modes' => array(),
+    'extra_fields' => array(
+      'form' => array(
+        'path' => array(
+          'weight' => '30',
+        ),
+      ),
+      'display' => array(),
+    ),
+  );
+  $export['field_bundle_settings_taxonomy_term__organization_type'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'field_bundle_settings_taxonomy_term__text_orientation';
+  $strongarm->value = array(
+    'view_modes' => array(),
+    'extra_fields' => array(
+      'form' => array(
+        'metatags' => array(
+          'weight' => '40',
+        ),
+        'path' => array(
+          'weight' => '30',
+        ),
+        'xmlsitemap' => array(
+          'weight' => '30',
+        ),
+      ),
+      'display' => array(),
+    ),
+  );
+  $export['field_bundle_settings_taxonomy_term__text_orientation'] = $strongarm;
 
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */

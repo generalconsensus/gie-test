@@ -28,7 +28,7 @@ $featured-image-height: 300px;
   position: absolute;
   text-align: center;                
   top: 50%;                         
-  @include transform(translate(0, -50%));
+  transform: translate(0, -50%);
   width: 100%;
   .microsite-featured:hover & {
     opacity: 1;

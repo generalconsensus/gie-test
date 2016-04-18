@@ -12,17 +12,17 @@
 .mobile-menu__bar {
   background-color: $mobile-menu-bg-color;
   border-bottom: 1px solid $mobile-menu-border-color;
-  @include box-shadow(0 0px 2px 1px rgba(0,0,0,0.4));
+  box-shadow: 0 0px 2px 1px rgba(0,0,0,0.4);
   color: $mobile-menu-text-color;
   height: em(55px);
   text-align: center;
 }
 
 .mobile-menu__button {
-  @include border-radius(0);
-  @include box-shadow(none);
   background-color: transparent;
   border: 0;
+  border-radius: 0;
+  box-shadow: none;
   color: $mobile-menu-text-color;
   display: inline-block;
   font-family: $mobile-menu-font-family;

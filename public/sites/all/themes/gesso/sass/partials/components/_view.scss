@@ -4,7 +4,7 @@
 .view {}
 
 .view__filters {
-  margin-bottom: rhythm(1);
+  margin-bottom: 1.5em;
 }
 
 .view__all {
@@ -58,13 +58,13 @@
 
 .view__author-image {
   img {
-    @include border-radius(50%);
     border: 1px solid $border-color;
+    border-radius: 50%;
   }
 }
 
 .view__pager {
-  clear: both;  
+  clear: both;
 }
 
 
@@ -75,7 +75,4 @@
   }
 }
 
-
-
-// Custom view styles imported via sass globbing.
-@import 'view/*.*';
+ 

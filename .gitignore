@@ -10,6 +10,9 @@
 # NPM
 node_modules
 
+# Bower
+bower_components
+
 # OSX file
 .DS_Store
 
@@ -21,6 +24,9 @@ settings.local.php
 
 # SASS cache
 .sass-cache
-.DS_Store
+/_site
 /tmp
 .idea/
+
+/private
+/secret.json

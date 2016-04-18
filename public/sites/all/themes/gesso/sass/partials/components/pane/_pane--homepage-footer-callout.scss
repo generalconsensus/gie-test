@@ -37,11 +37,11 @@
       }
     }
     .pane__text {
-      @include hyphens(none);
       background: rgb(220,86,6);
       background: rgba(220,86,6,0.8);
       bottom: 10%;
       color: #fff;
+      hyphens: none;
       left: 4%;      
       padding: 2%;
       position: absolute;

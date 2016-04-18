@@ -1,15 +1,12 @@
 module.exports = function(grunt) {
   // Test the build mode to use by checking the --environment CLI flag
   var environment = (grunt.option('prod') || grunt.option('production')) ? 'stage' : 'dev';
-  
+
   grunt.config.merge({
     watch : {
-      compass: {
+      gesso: {
         files : [ '<%= pkg.themePath %>/sass/**/*.scss' ],
-        tasks : [ 'compass:' + environment ],
-        options : {
-          livereload : true
-        }
+        tasks : [ 'sass_globbing:gesso', 'sass:gesso', 'postcss:gesso' ],
       },
       patternlab : {
         files : [ '<%= pkg.themePath %>/patternlab/source/**/*' ],
@@ -18,27 +15,13 @@ module.exports = function(grunt) {
           livereload : true
         }
       },
-      longform_compass: {
-        files : [ 'public/sites/all/themes/gesso_longform/sass/**/*.scss' ],
-        tasks : [ 'compass:longform_' + environment ],
-        options : {
-          livereload : true
-        }
+      gesso_longform: {
+        files : [ '<%= pkg.longformThemePath %>/sass/**/*.scss' ],
+        tasks : [ 'sass_globbing:gesso_longform', 'sass:gesso_longform', 'postcss:gesso_longform' ],
       },
-      longform_patternlab : {
-        files : [ 'public/sites/all/themes/gesso_longform/patternlab/source/**/*' ],
+      gesso_longform_patternlab : {
+        files : [ '<%= pkg.longformThemePath %>/patternlab/source/**/*' ],
         tasks : [ 'shell:longform_patternlab' ],
-        options : {
-          livereload : true
-        }
-      },
-      microsites_compass: {
-        files : [ 'public/sites/all/themes/gesso_microsites/sass/**/*.scss' ],
-        tasks : [ 'compass:microsites_' + environment ],
-      },
-      microsites_patternlab : {
-        files : [ 'public/sites/all/themes/gesso_microsites/patternlab/source/**/*' ],
-        tasks : [ 'shell:microsites_patternlab' ],
         options : {
           livereload : true
         }

@@ -11,16 +11,12 @@ header.header {
     display: none;
   }
 
-  .section--microsite & {
-    background: $microsite-site-header;
-    border: 0;
-    color: #fff;
+  @each $item, $color in $micrositeColorMap {
+    .microsite-palette#{$item} & {
+      background: micro-site($item, 'site-header');
+      border: 0;
+      color: #fff;
+    }
   }
 
 }
-
-
-
-
-
-

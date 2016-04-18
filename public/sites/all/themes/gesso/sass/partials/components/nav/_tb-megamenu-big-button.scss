@@ -25,6 +25,7 @@ $iconList : (
   background: $lightblue;
   border: 0;
   font-size: em(15px);
+  margin-bottom: 1em;
   margin-left: $tb-icon-padding;
   min-width: 280px;
   max-width: $tb-max-width;
@@ -75,7 +76,7 @@ $iconList : (
 //Add additional class names and icons to $iconList variable
 @each $iconList, $iconName in $iconList {
   .tb-megamenu-big-button.#{$iconList}:before {
-    @include transition(opacity 0.2s linear);
+    transition: opacity 0.2s linear;
     @include svg-background($iconName);
     opacity: 0.6;
   }

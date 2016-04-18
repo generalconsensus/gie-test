@@ -1,0 +1,184 @@
+.dashboard-filters {
+  @extend %clearfix;
+  margin: 2em 0;
+}
+
+.dashboard-filters__item {
+  border-right: 1px solid #a1a1a1;
+  display: block;
+  float: left;
+  line-height: 1;
+  margin: 0 16px 0 0;
+  padding: 8px 16px 8px 0;
+  position: relative;
+  transition: none;
+  &:last-child {
+    border: 0;
+    margin-right: 0;
+    padding-right: 0;
+  }
+  &:before {
+    @include image-replace(20px,20px);
+    content: "";
+    display: inline-block;
+    left: 0;
+    position: absolute;
+    top: 9px;
+    z-index: -1; // so input sits on top of icon, making it clickable
+  }
+  input {
+    background: none !important;
+    border: 0 !important;
+    color: #565a5c !important;
+    font-weight: bold;
+    margin: 0;
+    padding: 0 0 0 30px;
+    text-transform: uppercase;
+    transition: none;
+    &:hover, &:focus {
+      color: #565a5c !important;
+    }
+  }
+
+  &:hover, &:focus, &.is-active {
+    input {
+      color: $orange !important;
+    }
+  }
+
+  &.has-icon-sectors:before { // icomoon setting 22px
+    @include svg-background(filter-icon-sectors);
+    height: 22px;
+    width: 22px;
+  }
+  &:hover, &:focus, &.is-active {
+    &.has-icon-sectors:before {
+      @include svg-background(filter-icon-sectors-active);
+    }
+  }
+
+  &.has-icon-topics:before { // icomoon setting 18px
+    @include svg-background(filter-icon-topics);
+    height: 18px;
+    width: 21px;
+  }
+  &:hover, &:focus, &.is-active {
+    &.has-icon-topics:before {
+      @include svg-background(filter-icon-topics-active);
+    }
+  }
+
+  &.has-icon-my-friends:before { // icomoon setting 20px
+    @include svg-background(filter-icon-my-friends);
+  }
+  &:hover, &:focus, &.is-active {
+    &.has-icon-my-friends:before {
+      @include svg-background(filter-icon-my-friends-active);
+    }
+  }
+
+
+  &.has-icon-following:before { // icomoon setting 18px
+    @include svg-background(filter-icon-following);
+    height: 18px;
+    top: 11px;
+    width: 19px;
+  }
+  &:hover, &:focus, &.is-active {
+    &.has-icon-following:before {
+      @include svg-background(filter-icon-following-active);
+    }
+  }
+
+
+  &.has-icon-my-skills:before { // icomoon setting 20px
+    @include svg-background(filter-icon-my-skills);
+    width: 22px;
+  }
+  &:hover, &:focus, &.is-active {
+    &.has-icon-my-skills:before {
+      @include svg-background(filter-icon-my-skills-active);
+    }
+  }
+
+  &.has-icon-innovation {
+    input {
+      padding-left: 25px;
+    }
+    &:before { // icomoon setting 20px
+      @include svg-background(filter-icon-innovation);
+      width: 14px;
+    }
+  }
+  &:hover, &:focus, &.is-active {
+    &.has-icon-innovation:before {
+      @include svg-background(filter-icon-innovation-active);
+    }
+  }
+
+  &.has-icon-funding:before { // icomoon setting 20px
+    @include svg-background(filter-icon-funding);
+  }
+  &:hover, &:focus, &.is-active {
+    &.has-icon-funding:before {
+      @include svg-background(filter-icon-funding-active);
+    }
+  }
+
+  &.has-icon-resource:before { // icomoon setting 20px
+    @include svg-background(filter-icon-resource);
+    width: 22px;
+  }
+  &:hover, &:focus, &.is-active {
+    &.has-icon-resource:before {
+      @include svg-background(filter-icon-resource-active);
+    }
+  }
+
+  &.has-icon-event:before { // icomoon setting 20px
+    @include svg-background(filter-icon-event);
+    width: 19px;
+  }
+  &:hover, &:focus, &.is-active {
+    &.has-icon-event:before {
+      @include svg-background(filter-icon-event-active);
+    }
+  }
+
+  &.has-icon-members {
+    input {
+      padding-left: 39px;
+    }
+    &:before { // icomoon setting 20px
+      @include svg-background(filter-icon-members);
+      width: 29px;
+    }
+  }
+  &:hover, &:focus, &.is-active {
+    &.has-icon-members:before {
+      @include svg-background(filter-icon-members-active);
+    }
+  }
+
+  &.has-icon-organization:before { // icomoon setting 20px
+    @include svg-background(filter-icon-organization);
+    width: 19px;
+  }
+  &:hover, &:focus, &.is-active {
+    &.has-icon-organization:before {
+      @include svg-background(filter-icon-organization-active);
+    }
+  }
+
+  &.has-icon-program:before { // icomoon setting 20px
+    @include svg-background(filter-icon-program);
+    width: 23px;
+  }
+  &:hover, &:focus, &.is-active {
+    &.has-icon-program:before {
+      @include svg-background(filter-icon-program-active);
+    }
+  }
+
+
+}

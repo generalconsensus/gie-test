@@ -192,6 +192,35 @@ function gie_taxonomies_strongarm() {
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
+  $strongarm->name = 'field_bundle_settings_taxonomy_term__youthpower_issues';
+  $strongarm->value = array(
+    'view_modes' => array(
+      'full' => array(
+        'custom_settings' => TRUE,
+      ),
+      'diff_standard' => array(
+        'custom_settings' => FALSE,
+      ),
+      'token' => array(
+        'custom_settings' => FALSE,
+      ),
+      'listing' => array(
+        'custom_settings' => FALSE,
+      ),
+      'title' => array(
+        'custom_settings' => FALSE,
+      ),
+    ),
+    'extra_fields' => array(
+      'form' => array(),
+      'display' => array(),
+    ),
+  );
+  $export['field_bundle_settings_taxonomy_term__youthpower_issues'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
   $strongarm->name = 'page_manager_term_view_disabled';
   $strongarm->value = FALSE;
   $export['page_manager_term_view_disabled'] = $strongarm;
@@ -327,6 +356,29 @@ function gie_taxonomies_strongarm() {
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
+  $strongarm->name = 'panelizer_defaults_taxonomy_term_youthpower_issues';
+  $strongarm->value = array(
+    'status' => 1,
+    'view modes' => array(
+      'page_manager' => array(
+        'status' => 1,
+        'substitute' => '',
+        'default' => 1,
+        'choice' => 0,
+      ),
+      'default' => array(
+        'status' => 0,
+        'substitute' => 0,
+        'default' => 0,
+        'choice' => 0,
+      ),
+    ),
+  );
+  $export['panelizer_defaults_taxonomy_term_youthpower_issues'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
   $strongarm->name = 'panelizer_taxonomy_term:program_discussions:default_selection';
   $strongarm->value = 0;
   $export['panelizer_taxonomy_term:program_discussions:default_selection'] = $strongarm;
@@ -421,6 +473,27 @@ function gie_taxonomies_strongarm() {
   $strongarm->name = 'panelizer_taxonomy_term:topic:page_manager_selection';
   $strongarm->value = 'taxonomy_term:topic:default';
   $export['panelizer_taxonomy_term:topic:page_manager_selection'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'pathauto_taxonomy_term_program_discussions_pattern';
+  $strongarm->value = '';
+  $export['pathauto_taxonomy_term_program_discussions_pattern'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'pathauto_taxonomy_term_region_pattern';
+  $strongarm->value = '';
+  $export['pathauto_taxonomy_term_region_pattern'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'pathauto_taxonomy_term_sector_pattern';
+  $strongarm->value = '';
+  $export['pathauto_taxonomy_term_sector_pattern'] = $strongarm;
 
   return $export;
 }

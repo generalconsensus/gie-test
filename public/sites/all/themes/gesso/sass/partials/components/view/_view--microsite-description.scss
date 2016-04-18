@@ -10,11 +10,17 @@
     text-transform: uppercase;
   }
   .button {
-    background-color: $microsite-secondary;
-    border-color: $microsite-secondary;
-    &:hover, &:focus {
-       background-color: darken($microsite-secondary, 6.9%);
-       border-color: darken($microsite-secondary, 6.9%);
+   
+    @each $item, $color in $micrositeColorMap {
+      .microsite-palette#{$item} & {
+        background-color: micro-site($item, 'secondary');
+        border-color: micro-site($item, 'secondary');
+        &:hover, &:focus {
+           background-color: darken(micro-site($item, 'secondary'), 6.9%);
+           border-color: darken(micro-site($item, 'secondary'), 6.9%);
+        }
+      }
     }
+
   }
 }

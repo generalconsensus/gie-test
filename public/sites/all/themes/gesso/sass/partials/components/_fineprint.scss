@@ -1,6 +1,6 @@
 .fineprint {
-  @include hyphens(none);
   color: #888;
   font-size: em($font-size-sm);
+  hyphens: none;
   line-height: 1.3;
 }

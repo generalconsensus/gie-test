@@ -1,9 +1,15 @@
 .dropcap {
-  &:first-letter { 
-    background-color: $microsite-secondary; 
+  &:first-letter {
+    background-color: #00498f; // just in case palette or color class is missing
+    @each $item, $color in $micrositeColorMap {
+      .microsite-palette#{$item} & {
+        background-color: micro-site($item, 'secondary');
+      }
+    }
+
     color: #fff;
-    float: left; 
-    font-size: em($font-size-xxl); 
+    float: left;
+    font-size: em($font-size-xxl);
     margin-right: 5px;
     padding: .5em;
   }

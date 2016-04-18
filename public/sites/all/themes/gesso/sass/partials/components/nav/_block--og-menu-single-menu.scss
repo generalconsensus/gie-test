@@ -1,4 +1,5 @@
 // microsites main menu
+
 .block--og-menu-single-menu {
   float: right;
   margin-top: 1em;
@@ -14,14 +15,20 @@
       padding: 0 0 0 1em;
     }
     .nav__link {
-      color: $microsite-primary;
+
+      @each $item, $color in $micrositeColorMap {
+        .microsite-palette#{$item} & {
+          color: micro-site($item, 'main-menu');
+          &:hover,
+          &:focus {
+            color: darken(micro-site($item, 'main-menu'),20%);
+          }
+        }
+      }
+
       font-weight: bold;
       text-decoration: none;
       text-transform: uppercase;
-      &:hover,
-      &:focus {
-        color: darken($microsite-primary,20%);
-      }
     }
   }
 }
