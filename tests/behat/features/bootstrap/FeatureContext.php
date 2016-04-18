@@ -12,14 +12,8 @@ use Behat\Behat\Context\Step\Then;
 use Behat\Behat\Context\BehatContext;
 use Sanpi\Behatch\Context\BehatchContext;
 use Behat\Mink\Exception\ElementNotFoundException,
-    Behat\Behat\Event\StepEvent;
+  Behat\Behat\Event\StepEvent;
 
-//
-// Require 3rd-party libraries here:
-//
-// require_once 'PHPUnit/Autoload.php';
-// require_once 'PHPUnit/Framework/Assert/Functions.php';
-//
 
 
 /**
