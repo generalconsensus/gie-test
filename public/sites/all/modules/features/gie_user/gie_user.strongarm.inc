@@ -116,7 +116,7 @@ function gie_user_strongarm() {
     'extra_fields' => array(
       'form' => array(
         'ckeditor' => array(
-          'weight' => '7',
+          'weight' => '9',
         ),
         'account' => array(
           'weight' => '3',
@@ -125,19 +125,22 @@ function gie_user_strongarm() {
           'weight' => '18',
         ),
         'googleanalytics' => array(
-          'weight' => '4',
+          'weight' => '5',
         ),
         'mimemail' => array(
-          'weight' => '3',
+          'weight' => '4',
         ),
         'contact' => array(
-          'weight' => '10',
+          'weight' => '11',
         ),
         'metatags' => array(
-          'weight' => '40',
+          'weight' => '13',
         ),
         'xmlsitemap' => array(
-          'weight' => '30',
+          'weight' => '12',
+        ),
+        'domain' => array(
+          'weight' => '1',
         ),
       ),
       'display' => array(
@@ -369,6 +372,13 @@ function gie_user_strongarm() {
   $strongarm->name = 'pathauto_taxonomy_term_other_interest_pattern';
   $strongarm->value = '';
   $export['pathauto_taxonomy_term_other_interest_pattern'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'pathauto_taxonomy_term_team_pattern';
+  $strongarm->value = '';
+  $export['pathauto_taxonomy_term_team_pattern'] = $strongarm;
 
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */

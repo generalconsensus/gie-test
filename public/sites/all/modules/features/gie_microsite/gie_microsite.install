@@ -54,3 +54,26 @@ function gie_microsite_update_7002() {
     field_delete_field('field_paragraph_display_type');     
     field_purge_batch(1);
 }
+
+/**
+ * #50232: Delete Microsite Callout Card Style Field
+ */
+function gie_microsite_update_7003() {
+    field_delete_field("field_para_callout_style");
+    field_delete_field("field_para_5050_style");
+    field_delete_field("field_para_text_orientation");
+    field_purge_batch(3);
+    drupal_cron_run();
+    // Temporary Fix due to cron not completing correctly
+    db_query('DELETE FROM field_config WHERE field_config.deleted = 1')->execute();
+    module_disable(array('view_mode_selector'), TRUE);
+}
+
+/**
+ * Disable domain_integration_rules, domain_integration_vbo and rules
+ */
+function gie_microsite_update_7004() {
+    module_disable(array('domain_integration_vbo'), TRUE);
+    module_disable(array('domain_integration_rules'), TRUE);
+    module_disable(array('rules'), TRUE);
+}

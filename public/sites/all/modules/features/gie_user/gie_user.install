@@ -54,3 +54,17 @@ function gie_user_update_7005() {
     user_save($user);
   }
 }
+
+/**
+ * [#44576] Update all user Contact fields.
+ */
+function gie_user_update_7006() {
+  module_disable(array('formblock'), TRUE);
+}
+
+/**
+ * [#50439] Remove field_validation
+ */
+function gie_user_update_7007() {
+  module_disable(array('field_validation'), TRUE);
+}

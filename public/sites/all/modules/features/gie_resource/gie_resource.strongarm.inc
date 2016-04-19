@@ -174,6 +174,15 @@ function gie_resource_strongarm() {
         'rabbit_hole' => array(
           'weight' => '0',
         ),
+        'domain' => array(
+          'weight' => '1',
+        ),
+        'metatags' => array(
+          'weight' => '40',
+        ),
+        'xmlsitemap' => array(
+          'weight' => '30',
+        ),
       ),
       'display' => array(
         'sharethis' => array(

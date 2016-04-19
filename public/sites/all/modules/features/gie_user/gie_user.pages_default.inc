@@ -303,14 +303,15 @@ function gie_user_default_page_manager_handlers() {
     $display->content['new-e3adee68-53d5-4e46-b23e-d5c4bf0cfa1a'] = $pane;
     $display->panels['first'][1] = 'new-e3adee68-53d5-4e46-b23e-d5c4bf0cfa1a';
     $pane = new stdClass();
-    $pane->pid = 'new-ee6d06f2-0db1-4f93-848f-ac56edec09ca';
+    $pane->pid = 'new-f0769848-244b-468c-ba0c-55bf54b0bec8';
     $pane->panel = 'second';
-    $pane->type = 'block';
-    $pane->subtype = 'formblock-user_register';
+    $pane->type = 'user_registration_form';
+    $pane->subtype = 'user_registration_form';
     $pane->shown = TRUE;
     $pane->access = array();
     $pane->configuration = array(
-      'override_title' => 1,
+      'type' => '',
+      'override_title' => 0,
       'override_title_text' => '',
       'override_title_heading' => 'h2',
     );
@@ -318,16 +319,13 @@ function gie_user_default_page_manager_handlers() {
     $pane->style = array(
       'settings' => NULL,
     );
-    $pane->css = array(
-      'css_id' => '',
-      'css_class' => 'pane--welcome-page-user-register',
-    );
+    $pane->css = array();
     $pane->extras = array();
     $pane->position = 0;
     $pane->locks = array();
-    $pane->uuid = 'ee6d06f2-0db1-4f93-848f-ac56edec09ca';
-    $display->content['new-ee6d06f2-0db1-4f93-848f-ac56edec09ca'] = $pane;
-    $display->panels['second'][0] = 'new-ee6d06f2-0db1-4f93-848f-ac56edec09ca';
+    $pane->uuid = 'f0769848-244b-468c-ba0c-55bf54b0bec8';
+    $display->content['new-f0769848-244b-468c-ba0c-55bf54b0bec8'] = $pane;
+    $display->panels['second'][0] = 'new-f0769848-244b-468c-ba0c-55bf54b0bec8';
     $pane = new stdClass();
     $pane->pid = 'new-c055813e-a03d-4040-bc23-f64b50002271';
     $pane->panel = 'second';
@@ -809,6 +807,163 @@ function gie_user_default_page_manager_pages() {
   $handler->conf['display'] = $display;
   $page->default_handlers[$handler->name] = $handler;
   $pages['member_directory'] = $page;
+
+  $page = new stdClass();
+  $page->disabled = FALSE; /* Edit this to true to make a default page disabled initially */
+  $page->api_version = 1;
+  $page->name = 'user_notifications';
+  $page->task = 'page';
+  $page->admin_title = 'User Notifications';
+  $page->admin_description = 'Email notifications edit page';
+  $page->path = 'user/%user/notifications';
+  $page->access = array();
+  $page->menu = array(
+    'type' => 'tab',
+    'title' => 'Notifications',
+    'name' => 'navigation',
+    'weight' => '2',
+    'parent' => array(
+      'type' => 'none',
+      'title' => '',
+      'name' => 'navigation',
+      'weight' => '0',
+    ),
+  );
+  $page->arguments = array(
+    'user' => array(
+      'id' => 1,
+      'identifier' => 'User: ID',
+      'name' => 'entity_id:user',
+      'settings' => array(),
+    ),
+  );
+  $page->conf = array(
+    'admin_paths' => FALSE,
+  );
+  $page->default_handlers = array();
+  $handler = new stdClass();
+  $handler->disabled = FALSE; /* Edit this to true to make a default handler disabled initially */
+  $handler->api_version = 1;
+  $handler->name = 'page_user_notifications__panel';
+  $handler->task = 'page';
+  $handler->subtask = 'user_notifications';
+  $handler->handler = 'panel_context';
+  $handler->weight = 0;
+  $handler->conf = array(
+    'title' => 'Panel',
+    'no_blocks' => 0,
+    'pipeline' => 'standard',
+    'body_classes_to_remove' => '',
+    'body_classes_to_add' => '',
+    'css_id' => '',
+    'css' => '',
+    'contexts' => array(),
+    'relationships' => array(),
+    'name' => 'panel',
+  );
+  $display = new panels_display();
+  $display->layout = 'sidebar_right';
+  $display->layout_settings = array();
+  $display->panel_settings = array(
+    'style_settings' => array(
+      'default' => NULL,
+      'title' => NULL,
+      'main' => NULL,
+      'main_sidebar' => NULL,
+      'center' => NULL,
+      'box_first' => NULL,
+      'box_second' => NULL,
+      'box_third' => NULL,
+      'bottom_sidebar' => NULL,
+      'bottom' => NULL,
+      'preface' => NULL,
+      'sidebar' => NULL,
+    ),
+  );
+  $display->cache = array();
+  $display->title = '%user:field_user_firstname %user:field_user_lastname User Notifications';
+  $display->uuid = '50666f4f-a31a-40e4-b8e0-dc7ccebc6ccb';
+  $display->content = array();
+  $display->panels = array();
+    $pane = new stdClass();
+    $pane->pid = 'new-b2954fd7-2dc8-4f0b-8c5f-41f0689aa707';
+    $pane->panel = 'main';
+    $pane->type = 'page_tabs';
+    $pane->subtype = 'page_tabs';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array(
+      'type' => 'both',
+      'id' => 'tabs',
+      'override_title' => 1,
+      'override_title_text' => '',
+      'override_title_heading' => 'h2',
+    );
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
+    $pane->css = array();
+    $pane->extras = array();
+    $pane->position = 0;
+    $pane->locks = array();
+    $pane->uuid = 'b2954fd7-2dc8-4f0b-8c5f-41f0689aa707';
+    $display->content['new-b2954fd7-2dc8-4f0b-8c5f-41f0689aa707'] = $pane;
+    $display->panels['main'][0] = 'new-b2954fd7-2dc8-4f0b-8c5f-41f0689aa707';
+    $pane = new stdClass();
+    $pane->pid = 'new-9b082cda-ac32-4daa-80ab-4f5a53af0ed3';
+    $pane->panel = 'main';
+    $pane->type = 'block';
+    $pane->subtype = 'gie_user-user_notifications_form';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array(
+      'override_title' => 0,
+      'override_title_text' => '',
+      'override_title_heading' => 'h2',
+    );
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
+    $pane->css = array();
+    $pane->extras = array();
+    $pane->position = 1;
+    $pane->locks = array();
+    $pane->uuid = '9b082cda-ac32-4daa-80ab-4f5a53af0ed3';
+    $display->content['new-9b082cda-ac32-4daa-80ab-4f5a53af0ed3'] = $pane;
+    $display->panels['main'][1] = 'new-9b082cda-ac32-4daa-80ab-4f5a53af0ed3';
+    $pane = new stdClass();
+    $pane->pid = 'new-32a4272e-0320-43d8-9b5c-31492f8738bd';
+    $pane->panel = 'title';
+    $pane->type = 'page_title';
+    $pane->subtype = 'page_title';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array(
+      'markup' => 'h1',
+      'class' => '',
+      'id' => '',
+      'override_title' => 0,
+      'override_title_text' => '',
+      'override_title_heading' => 'h2',
+    );
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
+    $pane->css = array();
+    $pane->extras = array();
+    $pane->position = 0;
+    $pane->locks = array();
+    $pane->uuid = '32a4272e-0320-43d8-9b5c-31492f8738bd';
+    $display->content['new-32a4272e-0320-43d8-9b5c-31492f8738bd'] = $pane;
+    $display->panels['title'][0] = 'new-32a4272e-0320-43d8-9b5c-31492f8738bd';
+  $display->hide_title = PANELS_TITLE_FIXED;
+  $display->title_pane = '0';
+  $handler->conf['display'] = $display;
+  $page->default_handlers[$handler->name] = $handler;
+  $pages['user_notifications'] = $page;
 
   return $pages;
 

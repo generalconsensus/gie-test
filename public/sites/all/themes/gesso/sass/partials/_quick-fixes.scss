@@ -4,5 +4,14 @@
 // Deadlines happen, so put your quick fixes here. Hopefully there will be time
 // later to move/re-factor these styles into their proper place.
 
- 
+.page-user-register #user-register-form .password-strength {
+  display: none;
+}
 
+.page-user-register #user-register-form input.password-confirm, input.password-field {
+  width: 100%;
+}
+
+.page-user-register #user-register-form .confirm-parent, .password-parent {
+  width: auto;
+}
