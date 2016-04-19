@@ -454,3 +454,13 @@ function gie_user_social_field_validate($field_name, $field_value) {
     }
   }
 }
+
+/**
+ * Implements hook_user_presave().
+ */
+function gie_user_user_presave(&$edit, $account, $category) {
+  global $databases;
+  if (!empty($databases) && !empty($databases['default']['default']['database']) && $databases['default']['default']['database'] != 'giexchange_www') {
+    $edit['field_newsletter_sign_up']['und'][0]['subscribe'] = false;
+  }
+}
