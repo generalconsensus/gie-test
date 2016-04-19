@@ -2,6 +2,9 @@
 classes:
   - elasticsearch
 
+forumone::yum_extra::modules:
+  - graphviz
+
 forumone::databases: 
   web: 
     username: web
