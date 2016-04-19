@@ -270,7 +270,7 @@ function gie_user_form_user_profile_form_alter(&$form, &$form_state, $form_id) {
   }
 
   // Add custom submit to redirect user to profile
-  $form['actions']['submit']['#submit'][] = 'gie_user_profile_redirect';
+  $form['#submit'][] = 'gie_user_profile_redirect';
 }
 
 
@@ -348,6 +348,7 @@ function gie_user_block_view($delta = '') {
   return $block;
 }
 
+
 /**
  * Implements hook_mail_alter().
  * - alter From field on User Personal Contact mail to site email.
@@ -369,11 +370,6 @@ function gie_user_mail_alter(&$message) {
 
 /*
  * Implements hook_ctools_plugin_directory()
- */
-/**
- * @param $owner
- * @param $plugin_type
- * @return string
  */
 function gie_user_ctools_plugin_directory($owner, $plugin_type) {
   if ($owner == 'ctools' && $plugin_type == 'content_types') {
