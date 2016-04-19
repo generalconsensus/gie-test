@@ -434,6 +434,9 @@ function gie_search_default_search_api_index() {
               "action_card" : "action_card",
               "error_page" : "error_page",
               "homepage" : "homepage",
+              "long_form_page" : "long_form_page",
+              "microsite" : "microsite",
+              "microsite_page" : "microsite_page",
               "persona" : "persona"
             }
           }
