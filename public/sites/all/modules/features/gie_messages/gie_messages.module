@@ -225,6 +225,10 @@ function gie_messages_node_insert($node) {
       // End if flag not found
       if (!$flag) break;
 
+      // initiate send and do not send lists
+      $do_not_send_list = [];
+      $send_list = [];
+
       // Get all users currently following node author
       $query = db_select('flagging', 'f');
       $query->fields('f');
@@ -244,9 +248,14 @@ function gie_messages_node_insert($node) {
         $user = entity_metadata_wrapper('user', $uid);
         $notifier_name = _gie_messages_get_notifier_name($user);
         if ($notifier_name == 'do_not_send') {
+          // add user to "do not send" list
+          $do_not_send_list[] = $uid;
           // user set to not receive emails, skip to next user
           continue;
         }
+
+        // Add user to send list
+        $send_list[] = $uid;
 
         // Set message entity
         $message = message_create('user_follow_create', array('uid' => $uid));
