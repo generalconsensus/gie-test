@@ -397,10 +397,11 @@ class FeatureContext extends Drupal\DrupalExtension\Context\DrupalContext {
     $option = $this->fixStepArgument($option);
 
     $page = $this->getSession()->getPage();
-    $field = $page->findField($select, true);
+    $field = $page->findField($select, TRUE);
 
-    if (null === $field) {
-      throw new ElementNotFoundException($this->getSession()->getDriver(), 'form field', 'id|name|label|value', $select);
+    if (NULL === $field) {
+      throw new ElementNotFoundException($this->getSession()
+        ->getDriver(), 'form field', 'id|name|label|value', $select);
     }
 
     $id = $field->getAttribute('id');
@@ -421,9 +422,10 @@ class FeatureContext extends Drupal\DrupalExtension\Context\DrupalContext {
     $select = $this->fixStepArgument($select);
     $option = $this->fixStepArgument($option);
     $page = $this->getSession()->getPage();
-    $field = $page->findField($select, true);
-    if (null === $field) {
-      throw new ElementNotFoundException($this->getSession()->getDriver(), 'form field', 'id|name|label|value', $select);
+    $field = $page->findField($select, TRUE);
+    if (NULL === $field) {
+      throw new ElementNotFoundException($this->getSession()
+        ->getDriver(), 'form field', 'id|name|label|value', $select);
     }
     $id = $field->getAttribute('id');
     $javascript = "var select = jQuery('#$id > option:contains(\'$option\')').val();
@@ -459,5 +461,63 @@ class FeatureContext extends Drupal\DrupalExtension\Context\DrupalContext {
     }
   }
 
+  /**
+   * @Given /^I retrieve "([^"]*)" content to search on the site$/
+   */
+  public function iRetrieveContentToSearchOnTheSite($type) {
+    $command = 'f1-search';
+    $output = $this->getDriver('Drush')
+      ->$command($type);
+
+    //Get only the JSON Output
+    if (!empty($output)) {
+      $output = json_decode($output);
+      if (empty($output)) {
+        throw new \Exception(sprintf("Unable to retrieve search information via drush"));
+      }
+      else {
+        $this->search = $output;
+      }
+    }
+  }
+
+  /**
+   * @Then /^I check that the content is "([^"]*)" on the search page$/
+   */
+  public function iCheckThatTheContentIsOnTheSearchPage($available) {
+
+    if ($available == 'available') {
+      if (empty($this->search)) {
+        throw new \Exception(sprintf("Unable to retrieve search information via drush"));
+      }
+      foreach ($this->search as $item) {
+        $this->visit('search/' . $item);
+        $this->assertPageNotContainsText('Your search yielded no results.');
+        $this->assertPageNotContainsText('Check if your spelling is correct.');
+        $this->assertPageNotContainsText('Remove quotes around phrases to search for each word individually.');
+        $this->assertPageNotContainsText('Use fewer keywords to increase the number of results.');
+      }
+    } else {
+      if (empty($this->search)) {
+        throw new \Exception(sprintf("Unable to retrieve search information via drush"));
+      }
+      foreach ($this->search as $item) {
+        $this->visit('search/' . $item);
+        $this->assertPageContainsText('Your search yielded no results.');
+        $this->assertPageContainsText('Check if your spelling is correct.');
+        $this->assertPageContainsText('Remove quotes around phrases to search for each word individually.');
+        $this->assertPageContainsText('Use fewer keywords to increase the number of results.');
+      }
+    }
+  }
+
+  /**
+   * @Given /^I create "([^"]*)" content to search on the site$/
+   */
+  public function iCreateContentToSearchOnTheSite($arg1) {
+    throw new PendingException();
+  }
 
 }
+
+
