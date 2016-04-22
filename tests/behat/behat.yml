@@ -1,11 +1,11 @@
 default:
     extensions:
         Behat\MinkExtension\Extension:
-            base_url: http://localhost/
+            base_url: http://localhost:8081/
             goutte: ~
             selenium2:
               browser:              'chrome'
-              capabilities:         { "browserName": "chrome", "browser": "chrome"}
+              capabilities:         { "browserName": "firefox", "deviceType": "desktop"}
               wd_host:              'http://127.0.0.1:8643/wd/hub'
             browser_name: 'chrome'
             files_path: 'tests/behat/files/'
@@ -30,8 +30,8 @@ local-selenium:
             base_url: http://localhost:8081/
             goutte: ~
             selenium2:
-              browser:              'firefox'
-              capabilities:         { "browserName": "firefox", "browser": "firefox"}
+              browser:              'chrome'
+              capabilities:         { "browserName": "chrome", "browser": "chrome"}
               # The url for accessing the guest vm selenium process from the guest VM
               wd_host:              'http://10.11.12.1:5555/wd/hub'
             browser_name: 'chrome'
