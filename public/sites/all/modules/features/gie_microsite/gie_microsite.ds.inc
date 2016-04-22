@@ -284,13 +284,6 @@ function gie_microsite_ds_field_settings_info() {
   $ds_fieldsetting->bundle = 'microsite_text';
   $ds_fieldsetting->view_mode = 'center_aligned';
   $ds_fieldsetting->settings = array(
-    'field_para_text_orientation' => array(
-      'formatter_settings' => array(
-        'ft' => array(
-          'func' => 'theme_ds_field_reset',
-        ),
-      ),
-    ),
     'field_paragraph_text' => array(
       'formatter_settings' => array(
         'ft' => array(
@@ -769,14 +762,12 @@ function gie_microsite_ds_layout_settings_info() {
     'regions' => array(
       'main_content' => array(
         0 => 'field_paragraph_text',
-        1 => 'field_background',
-        2 => 'field_para_text_orientation',
+        1 => 'field_background'
       ),
     ),
     'fields' => array(
       'field_paragraph_text' => 'main_content',
       'field_background' => 'main_content',
-      'field_para_text_orientation' => 'main_content',
     ),
     'classes' => array(),
     'wrappers' => array(
