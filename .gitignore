@@ -30,3 +30,5 @@ settings.local.php
 
 /private
 /secret.json
+
+tests/*/vendor
