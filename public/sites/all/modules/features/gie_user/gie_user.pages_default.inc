@@ -255,14 +255,15 @@ function gie_user_default_page_manager_handlers() {
   $display->content = array();
   $display->panels = array();
     $pane = new stdClass();
-    $pane->pid = 'new-fa2f59f8-2a7e-47e1-aa5e-eca8ffa214c9';
+    $pane->pid = 'new-261c8382-d6ff-44d3-b37a-6446095bbe03';
     $pane->panel = 'first';
-    $pane->type = 'pane';
-    $pane->subtype = 'welcome_page_';
+    $pane->type = 'welcome_pane';
+    $pane->subtype = 'welcome_pane';
     $pane->shown = TRUE;
     $pane->access = array();
     $pane->configuration = array(
-      'override_title' => 1,
+      'type' => '',
+      'override_title' => 0,
       'override_title_text' => '',
       'override_title_heading' => 'h2',
     );
@@ -277,9 +278,9 @@ function gie_user_default_page_manager_handlers() {
     $pane->extras = array();
     $pane->position = 0;
     $pane->locks = array();
-    $pane->uuid = 'fa2f59f8-2a7e-47e1-aa5e-eca8ffa214c9';
-    $display->content['new-fa2f59f8-2a7e-47e1-aa5e-eca8ffa214c9'] = $pane;
-    $display->panels['first'][0] = 'new-fa2f59f8-2a7e-47e1-aa5e-eca8ffa214c9';
+    $pane->uuid = '261c8382-d6ff-44d3-b37a-6446095bbe03';
+    $display->content['new-261c8382-d6ff-44d3-b37a-6446095bbe03'] = $pane;
+    $display->panels['first'][0] = 'new-261c8382-d6ff-44d3-b37a-6446095bbe03';
     $pane = new stdClass();
     $pane->pid = 'new-e3adee68-53d5-4e46-b23e-d5c4bf0cfa1a';
     $pane->panel = 'first';

@@ -1,0 +1,7 @@
+name = GIE Testing
+description = Functions for use with Behat testing
+core = 7.x
+package = GIE
+version = 7.x-1.0
+project = gie_testing
+

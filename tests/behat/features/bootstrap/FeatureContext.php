@@ -12,14 +12,8 @@ use Behat\Behat\Context\Step\Then;
 use Behat\Behat\Context\BehatContext;
 use Sanpi\Behatch\Context\BehatchContext;
 use Behat\Mink\Exception\ElementNotFoundException,
-    Behat\Behat\Event\StepEvent;
+  Behat\Behat\Event\StepEvent;
 
-//
-// Require 3rd-party libraries here:
-//
-// require_once 'PHPUnit/Autoload.php';
-// require_once 'PHPUnit/Framework/Assert/Functions.php';
-//
 
 
 /**
@@ -56,9 +50,9 @@ class FeatureContext extends Drupal\DrupalExtension\Context\DrupalContext {
   }
 
 //  TODO: Figure a smarter place for this @@@@!!!!! For use with local setups only !!!!!@@@@
-//  /**
-//   * @AfterStep
-//   */
+  /**
+   * @AfterStep
+   */
 //  public function dumpInfoAfterFailedStep(StepEvent $event) {
 //
 //    if ($event->getResult() === StepEvent::FAILED)
@@ -74,13 +68,16 @@ class FeatureContext extends Drupal\DrupalExtension\Context\DrupalContext {
 //    }
 //  }
 
-//  /*
-//   * @BeforeSuite
-//   */
-//  public function xdebug_start() {
-//    $this->getSession()
-//      ->executeScript('javascript:(/**%20%40version%200.5.2%20*/function()%20%7Bdocument.cookie%3D%27XDEBUG_SESSION%3D%27%2B%27PHPSTORM%27%2B%27%3Bpath%3D/%3B%27%3B%7D)()');
-//  }
+  /**
+   * Fix the screen resolution so that all browser drivers get a correct 'Desktop' view
+   * @TODO Allow a custom profile window size
+   *
+   *
+   * @BeforeScenario
+   */
+  public function beforeScenario($event) {
+    $this->getSession()->getDriver()->resizeWindow(1440, 900);
+  }
 //
 //  /*
 //   * @AfterSuite
@@ -400,10 +397,11 @@ class FeatureContext extends Drupal\DrupalExtension\Context\DrupalContext {
     $option = $this->fixStepArgument($option);
 
     $page = $this->getSession()->getPage();
-    $field = $page->findField($select, true);
+    $field = $page->findField($select, TRUE);
 
-    if (null === $field) {
-      throw new ElementNotFoundException($this->getSession()->getDriver(), 'form field', 'id|name|label|value', $select);
+    if (NULL === $field) {
+      throw new ElementNotFoundException($this->getSession()
+        ->getDriver(), 'form field', 'id|name|label|value', $select);
     }
 
     $id = $field->getAttribute('id');
@@ -424,9 +422,10 @@ class FeatureContext extends Drupal\DrupalExtension\Context\DrupalContext {
     $select = $this->fixStepArgument($select);
     $option = $this->fixStepArgument($option);
     $page = $this->getSession()->getPage();
-    $field = $page->findField($select, true);
-    if (null === $field) {
-      throw new ElementNotFoundException($this->getSession()->getDriver(), 'form field', 'id|name|label|value', $select);
+    $field = $page->findField($select, TRUE);
+    if (NULL === $field) {
+      throw new ElementNotFoundException($this->getSession()
+        ->getDriver(), 'form field', 'id|name|label|value', $select);
     }
     $id = $field->getAttribute('id');
     $javascript = "var select = jQuery('#$id > option:contains(\'$option\')').val();
@@ -434,6 +433,91 @@ class FeatureContext extends Drupal\DrupalExtension\Context\DrupalContext {
     $this->getSession()->executeScript($javascript);
   }
 
+  /**
+   * @Then /^I will visit the user edit screen and apply a new role to each user$/
+   */
+  public function iWillVisitTheUserEditScreenAndApplyANewRoleToEachUser() {
+    $test = 1;
+    foreach ($this->users as $user) {
+      $command = 'user-information';
+      $output = $this->getDriver('Drush')
+        ->$command($user->mail, '--format=json');
+      //Get only the JSON Output
+      preg_match('~\{(?:[^{}]|(?R))*\}~', $output, $json_output, PREG_OFFSET_CAPTURE, 3);
+      if (!empty($json_output)) {
+        $json = json_decode($json_output[0][0]);
+        if (empty($json) || empty($json->uid)) {
+          throw new \Exception(sprintf("Unable to retrieve information on user via drush"));
+        }
+      }
+      $this->visit('user/' . $json->uid . '/edit');
+      $this->fillField('First Name', 'Test First');
+      $this->fillField('Last Name', 'Test Last');
+      $this->checkOption('Intern');
+      $this->pressButton('Save');
+      $this->assertTextVisible('The changes have been saved.');
+      $this->visit('user/' . $json->uid . '/edit');
+      $this->assertCheckboxChecked('Intern');
+    }
+  }
 
+  /**
+   * @Given /^I retrieve "([^"]*)" content to search on the site$/
+   */
+  public function iRetrieveContentToSearchOnTheSite($type) {
+    $command = 'f1-search';
+    $output = $this->getDriver('Drush')
+      ->$command($type);
+
+    //Get only the JSON Output
+    if (!empty($output)) {
+      $output = json_decode($output);
+      if (empty($output)) {
+        throw new \Exception(sprintf("Unable to retrieve search information via drush"));
+      }
+      else {
+        $this->search = $output;
+      }
+    }
+  }
+
+  /**
+   * @Then /^I check that the content is "([^"]*)" on the search page$/
+   */
+  public function iCheckThatTheContentIsOnTheSearchPage($available) {
+
+    if ($available == 'available') {
+      if (empty($this->search)) {
+        throw new \Exception(sprintf("Unable to retrieve search information via drush"));
+      }
+      foreach ($this->search as $item) {
+        $this->visit('search/' . $item);
+        $this->assertPageNotContainsText('Your search yielded no results.');
+        $this->assertPageNotContainsText('Check if your spelling is correct.');
+        $this->assertPageNotContainsText('Remove quotes around phrases to search for each word individually.');
+        $this->assertPageNotContainsText('Use fewer keywords to increase the number of results.');
+      }
+    } else {
+      if (empty($this->search)) {
+        throw new \Exception(sprintf("Unable to retrieve search information via drush"));
+      }
+      foreach ($this->search as $item) {
+        $this->visit('search/' . $item);
+        $this->assertPageContainsText('Your search yielded no results.');
+        $this->assertPageContainsText('Check if your spelling is correct.');
+        $this->assertPageContainsText('Remove quotes around phrases to search for each word individually.');
+        $this->assertPageContainsText('Use fewer keywords to increase the number of results.');
+      }
+    }
+  }
+
+  /**
+   * @Given /^I create "([^"]*)" content to search on the site$/
+   */
+  public function iCreateContentToSearchOnTheSite($arg1) {
+    throw new PendingException();
+  }
 
 }
+
+
