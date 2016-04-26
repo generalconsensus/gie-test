@@ -38,11 +38,11 @@ function events_default_page_manager_pages() {
   $handler = new stdClass();
   $handler->disabled = FALSE; /* Edit this to true to make a default handler disabled initially */
   $handler->api_version = 1;
-  $handler->name = 'page_events__past-events';
+  $handler->name = 'page_events__panel_context_ba4f793a-3b23-443f-8fdc-be6041b5111c';
   $handler->task = 'page';
   $handler->subtask = 'events';
   $handler->handler = 'panel_context';
-  $handler->weight = -30;
+  $handler->weight = -27;
   $handler->conf = array(
     'title' => 'Past Events',
     'no_blocks' => 0,
@@ -68,7 +68,7 @@ function events_default_page_manager_pages() {
       ),
       'logic' => 'and',
     ),
-    'name' => 'past-events',
+    'name' => '',
   );
   $display = new panels_display();
   $display->layout = 'landing';
@@ -327,11 +327,11 @@ function events_default_page_manager_pages() {
   $handler = new stdClass();
   $handler->disabled = FALSE; /* Edit this to true to make a default handler disabled initially */
   $handler->api_version = 1;
-  $handler->name = 'page_events__panel_context_4e49f5e3-4b49-44b8-b927-e48f77b9c66d';
+  $handler->name = 'page_events__panel_context_d8d734ae-c8a8-49ab-a54c-7bd914483787';
   $handler->task = 'page';
   $handler->subtask = 'events';
   $handler->handler = 'panel_context';
-  $handler->weight = -29;
+  $handler->weight = -26;
   $handler->conf = array(
     'title' => 'Events',
     'no_blocks' => 0,
@@ -346,6 +346,7 @@ function events_default_page_manager_pages() {
       'plugins' => array(),
       'logic' => 'and',
     ),
+    'name' => '',
   );
   $display = new panels_display();
   $display->layout = 'landing';
