@@ -11,7 +11,6 @@ dependencies[] = diff
 dependencies[] = features
 dependencies[] = forminspect
 dependencies[] = maillog
-dependencies[] = stage_file_proxy
 dependencies[] = strongarm
 dependencies[] = xhprof
 features[ctools][] = strongarm:strongarm:1
