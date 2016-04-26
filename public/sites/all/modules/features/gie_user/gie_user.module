@@ -378,6 +378,16 @@ function gie_user_ctools_plugin_directory($owner, $plugin_type) {
 }
 
 /**
+ * Implements hook_user_presave().
+ */
+function gie_user_user_presave(&$edit, $account, $category) {
+  global $databases;
+  if (!empty($databases) && !empty($databases['default']['default']['database']) && $databases['default']['default']['database'] != 'giexchange_www') {
+    $edit['field_newsletter_sign_up']['und'][0]['subscribe'] = false;
+  }
+}
+
+/**
  * Implements hook_field_attach_validate().
  */
 function gie_user_field_attach_validate($entity_type, $entity, &$errors) {
