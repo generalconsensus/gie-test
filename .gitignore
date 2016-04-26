@@ -24,6 +24,11 @@ settings.local.php
 
 # SASS cache
 .sass-cache
+/_site
+/tmp
+.idea/
 
 /private
 /secret.json
+
+tests/*/vendor
