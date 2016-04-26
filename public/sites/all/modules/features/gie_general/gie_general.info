@@ -35,6 +35,7 @@ dependencies[] = entitycache
 dependencies[] = entityconnect
 dependencies[] = entityreference
 dependencies[] = eva
+dependencies[] = fastly
 dependencies[] = features
 dependencies[] = fel
 dependencies[] = fel_fields
