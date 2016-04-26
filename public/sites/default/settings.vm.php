@@ -668,5 +668,6 @@ $conf['reroute_email_address'] = '';
 $conf['reroute_email_enable_message'] = 1;
 
 $conf['environment_modules'] = array(
-  'gie_dev' => 'sites/all/modules/features/gie_dev/gie_dev.module',
+  'gie_ui' => 'sites/all/modules/features/gie_ui/gie_ui.module',
+  'gie_dev' => 'sites/all/modules/features/gie_dev/gie_dev.module'
 );
