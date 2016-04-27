@@ -246,6 +246,7 @@ function _gie_user_notifications_link_access() {
 function gie_user_form_user_register_form_alter(&$form) {
   $form['account']['pass']['#type'] = 'password';
   $form['account']['pass']['#title'] = 'Password';
+  $form['account']['pass']['#attributes']['placeholder'] = t('Password');
 }
 
 
