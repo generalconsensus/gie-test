@@ -797,7 +797,7 @@ function admin_menu_flush_caches($uid = NULL) {
   drupal_static_reset('admin_menu_cache_get');
   // db_table_exists() required for SimpleTest.
   if (db_table_exists('cache_admin_menu')) {
-    cache_clear_all(isset($uid) ? $cid : '*', 'cache_admin_menu', TRUE);
+//    cache_clear_all(isset($uid) ? $cid : '*', 'cache_admin_menu', TRUE);
   }
 }
 

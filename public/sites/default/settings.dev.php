@@ -669,3 +669,8 @@ $conf['s3fs_use_s3_for_public'] = 1;
 $conf['reroute_email_enable'] = 1;
 $conf['reroute_email_address'] = 'mburge@forumone.com, mdrayer@forumone.com, cchumley@forumone.com, mdrayer+test@forumone.com, dmcdermott@forumone.com, aklatsky@forumone.com';
 $conf['reroute_email_enable_message'] = 1;
+
+$conf['environment_modules'] = array(
+  'gie_ui' => 'sites/all/modules/features/gie_ui/gie_ui.module',
+  'gie_dev' => 'sites/all/modules/features/gie_dev/gie_dev.module'
+);

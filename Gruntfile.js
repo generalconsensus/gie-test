@@ -18,7 +18,61 @@ module.exports = function(grunt) {
 
   // Initialize configuration with package.json data
   grunt.initConfig({
-    'pkg': grunt.file.readJSON('package.json')
+    'pkg': grunt.file.readJSON('package.json'),
+    behat: {
+      src: 'tests/behat/features/***/**/*',
+      options: {
+        maxProcesses: 5,
+        bin: './tests/behat/bin/behat',
+        junit: {
+          output_folder: 'tests/test_results/'
+        }
+      }
+    }
+  });
+
+  var stage = grunt.option('stage') || 'dev';
+
+  grunt.registerTask('behatJenkinsTest', 'Execute Behat for BDD testing', function () {
+    //TODO: Temporary solution -- create standardized markers
+    var target = grunt.option('buildDisplay');
+    if (target) {
+      if (target.indexOf('dev') > -1){
+        grunt.config.merge({
+          behat: {
+            options: {
+              config: './tests/behat/behat.jenkins.yml',
+              flags: '-p dev'
+            }
+          }
+        });
+      } else if(target.indexOf('stage') > -1) {
+        grunt.config.merge({
+          behat: {
+            options: {
+              config: './tests/behat/behat.jenkins.yml',
+              flags: '-p stage'
+            }
+          }
+        });
+      } else {
+        grunt.fatal('Select either Dev or Stage Behat Profiles');
+      }
+      // Don't allow test to continue if it doesn't match either Behat Profiles
+    } else {
+      grunt.fatal('Select either Dev or Stage Behat Profiles');
+    }
+    grunt.task.run('behat')
+  });
+  grunt.registerTask('behatTest', 'Execute Behat for BDD testing', function () {
+    grunt.config.merge({
+      behat: {
+        options: {
+          config: './tests/behat/behat.yml'
+        }
+      }
+    });
+    grunt.task.run('behat')
   });
 
   // Load the include-all library in order to require all of our grunt

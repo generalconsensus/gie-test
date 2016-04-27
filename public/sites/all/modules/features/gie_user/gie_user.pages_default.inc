@@ -255,14 +255,15 @@ function gie_user_default_page_manager_handlers() {
   $display->content = array();
   $display->panels = array();
     $pane = new stdClass();
-    $pane->pid = 'new-fa2f59f8-2a7e-47e1-aa5e-eca8ffa214c9';
+    $pane->pid = 'new-261c8382-d6ff-44d3-b37a-6446095bbe03';
     $pane->panel = 'first';
-    $pane->type = 'pane';
-    $pane->subtype = 'welcome_page_';
+    $pane->type = 'welcome_pane';
+    $pane->subtype = 'welcome_pane';
     $pane->shown = TRUE;
     $pane->access = array();
     $pane->configuration = array(
-      'override_title' => 1,
+      'type' => '',
+      'override_title' => 0,
       'override_title_text' => '',
       'override_title_heading' => 'h2',
     );
@@ -277,9 +278,9 @@ function gie_user_default_page_manager_handlers() {
     $pane->extras = array();
     $pane->position = 0;
     $pane->locks = array();
-    $pane->uuid = 'fa2f59f8-2a7e-47e1-aa5e-eca8ffa214c9';
-    $display->content['new-fa2f59f8-2a7e-47e1-aa5e-eca8ffa214c9'] = $pane;
-    $display->panels['first'][0] = 'new-fa2f59f8-2a7e-47e1-aa5e-eca8ffa214c9';
+    $pane->uuid = '261c8382-d6ff-44d3-b37a-6446095bbe03';
+    $display->content['new-261c8382-d6ff-44d3-b37a-6446095bbe03'] = $pane;
+    $display->panels['first'][0] = 'new-261c8382-d6ff-44d3-b37a-6446095bbe03';
     $pane = new stdClass();
     $pane->pid = 'new-e3adee68-53d5-4e46-b23e-d5c4bf0cfa1a';
     $pane->panel = 'first';
@@ -303,14 +304,15 @@ function gie_user_default_page_manager_handlers() {
     $display->content['new-e3adee68-53d5-4e46-b23e-d5c4bf0cfa1a'] = $pane;
     $display->panels['first'][1] = 'new-e3adee68-53d5-4e46-b23e-d5c4bf0cfa1a';
     $pane = new stdClass();
-    $pane->pid = 'new-ee6d06f2-0db1-4f93-848f-ac56edec09ca';
+    $pane->pid = 'new-f0769848-244b-468c-ba0c-55bf54b0bec8';
     $pane->panel = 'second';
-    $pane->type = 'block';
-    $pane->subtype = 'formblock-user_register';
+    $pane->type = 'user_registration_form';
+    $pane->subtype = 'user_registration_form';
     $pane->shown = TRUE;
     $pane->access = array();
     $pane->configuration = array(
-      'override_title' => 1,
+      'type' => '',
+      'override_title' => 0,
       'override_title_text' => '',
       'override_title_heading' => 'h2',
     );
@@ -318,16 +320,13 @@ function gie_user_default_page_manager_handlers() {
     $pane->style = array(
       'settings' => NULL,
     );
-    $pane->css = array(
-      'css_id' => '',
-      'css_class' => 'pane--welcome-page-user-register',
-    );
+    $pane->css = array();
     $pane->extras = array();
     $pane->position = 0;
     $pane->locks = array();
-    $pane->uuid = 'ee6d06f2-0db1-4f93-848f-ac56edec09ca';
-    $display->content['new-ee6d06f2-0db1-4f93-848f-ac56edec09ca'] = $pane;
-    $display->panels['second'][0] = 'new-ee6d06f2-0db1-4f93-848f-ac56edec09ca';
+    $pane->uuid = 'f0769848-244b-468c-ba0c-55bf54b0bec8';
+    $display->content['new-f0769848-244b-468c-ba0c-55bf54b0bec8'] = $pane;
+    $display->panels['second'][0] = 'new-f0769848-244b-468c-ba0c-55bf54b0bec8';
     $pane = new stdClass();
     $pane->pid = 'new-c055813e-a03d-4040-bc23-f64b50002271';
     $pane->panel = 'second';

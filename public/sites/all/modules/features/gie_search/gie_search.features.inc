@@ -240,10 +240,10 @@ function gie_search_default_search_api_index() {
         "field_blogs_region" : { "type" : "list\\u003Cinteger\\u003E", "entity_type" : "taxonomy_term" },
         "field_blogs_sector" : { "type" : "list\\u003Cinteger\\u003E", "entity_type" : "taxonomy_term" },
         "field_blogs_topic" : { "type" : "list\\u003Cinteger\\u003E", "entity_type" : "taxonomy_term" },
-        "field_blogs_topic" : { "type" : "list\\u003Cinteger\\u003E", "entity_type" : "taxonomy_term" },
         "field_discussion_program_disc" : { "type" : "list\\u003Cinteger\\u003E", "entity_type" : "taxonomy_term" },
         "field_event_cost" : { "type" : "integer" },
         "field_event_date:value" : { "type" : "date" },
+        "field_event_date:value2" : { "type" : "date" },
         "field_event_type" : { "type" : "integer", "entity_type" : "taxonomy_term" },
         "field_funding_author" : { "type" : "list\\u003Cinteger\\u003E", "entity_type" : "user" },
         "field_funding_deadline" : { "type" : "date" },
@@ -434,6 +434,9 @@ function gie_search_default_search_api_index() {
               "action_card" : "action_card",
               "error_page" : "error_page",
               "homepage" : "homepage",
+              "long_form_page" : "long_form_page",
+              "microsite" : "microsite",
+              "microsite_page" : "microsite_page",
               "persona" : "persona"
             }
           }
