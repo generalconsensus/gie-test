@@ -38,11 +38,11 @@ function gie_funding_default_page_manager_pages() {
   $handler = new stdClass();
   $handler->disabled = FALSE; /* Edit this to true to make a default handler disabled initially */
   $handler->api_version = 1;
-  $handler->name = 'page_funding__expired-funding';
+  $handler->name = 'page_funding__panel_context_8a08c5d9-5482-4a21-a90a-f8d8b788ae32';
   $handler->task = 'page';
   $handler->subtask = 'funding';
   $handler->handler = 'panel_context';
-  $handler->weight = -30;
+  $handler->weight = -28;
   $handler->conf = array(
     'title' => 'Expired Funding',
     'no_blocks' => 0,
@@ -53,7 +53,7 @@ function gie_funding_default_page_manager_pages() {
     'css' => '',
     'contexts' => array(),
     'relationships' => array(),
-    'name' => 'expired-funding',
+    'name' => '',
     'access' => array(
       'plugins' => array(
         0 => array(
@@ -369,11 +369,11 @@ function gie_funding_default_page_manager_pages() {
   $handler = new stdClass();
   $handler->disabled = FALSE; /* Edit this to true to make a default handler disabled initially */
   $handler->api_version = 1;
-  $handler->name = 'page_funding__panel_context_9d0ed62e-0d22-4cf9-b9a1-5b2084b8c5cf';
+  $handler->name = 'page_funding__panel_context_6bf8cd10-043a-402c-a0c0-e5f8c8975cb6';
   $handler->task = 'page';
   $handler->subtask = 'funding';
   $handler->handler = 'panel_context';
-  $handler->weight = -29;
+  $handler->weight = -27;
   $handler->conf = array(
     'title' => 'Funding',
     'no_blocks' => 0,
@@ -384,6 +384,7 @@ function gie_funding_default_page_manager_pages() {
     'css' => '',
     'contexts' => array(),
     'relationships' => array(),
+    'name' => '',
   );
   $display = new panels_display();
   $display->layout = 'landing';
