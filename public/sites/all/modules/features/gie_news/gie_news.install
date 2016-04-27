@@ -1,0 +1,12 @@
+<?php
+
+/**
+ * Delete exclusive news taxonomy fields
+ */
+function gie_news_update_7000() {
+  field_delete_field('field_news_sector');
+  field_delete_field('field_news_topic');
+  field_delete_field('field_news_country');
+  field_delete_field('field_news_region');
+  field_purge_batch(1);
+}
