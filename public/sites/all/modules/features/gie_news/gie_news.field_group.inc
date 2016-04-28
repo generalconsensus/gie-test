@@ -57,7 +57,7 @@ function gie_news_field_group_info() {
     'weight' => '0',
     'children' => array(
       0 => 'title_field',
-      1 => 'field_news_sector',
+      1 => 'field_term_sector',
       2 => 'group_card_author',
       3 => 'group_card_counts',
     ),
@@ -191,12 +191,12 @@ function gie_news_field_group_info() {
     'label' => 'Details',
     'weight' => '0',
     'children' => array(
-      0 => 'field_news_country',
-      1 => 'field_news_organization',
-      2 => 'field_news_program',
-      3 => 'field_news_region',
-      4 => 'field_news_sector',
-      5 => 'field_news_topic',
+      0 => 'field_news_organization',
+      1 => 'field_news_program',
+      2 => 'field_term_country',
+      3 => 'field_term_region',
+      4 => 'field_term_sector',
+      5 => 'field_term_topic',
     ),
     'format_type' => 'div',
     'format_settings' => array(

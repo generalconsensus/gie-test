@@ -1,0 +1,12 @@
+<?php
+
+/**
+ * Delete exclusive blog taxonomy fields
+ */
+function gie_blogs_update_7000() {
+  field_delete_field('field_blogs_sector');
+  field_delete_field('field_blogs_topic');
+  field_delete_field('field_blogs_country');
+  field_delete_field('field_blogs_region');
+  field_purge_batch(1);
+}
