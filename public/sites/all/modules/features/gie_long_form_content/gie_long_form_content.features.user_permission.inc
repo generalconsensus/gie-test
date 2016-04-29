@@ -14,6 +14,7 @@ function gie_long_form_content_user_default_permissions() {
   $permissions['use text format long_form_filtered'] = array(
     'name' => 'use text format long_form_filtered',
     'roles' => array(
+      'Microsite Administrator' => 'Microsite Administrator',
       'administrator' => 'administrator',
     ),
     'module' => 'filter',
@@ -23,6 +24,7 @@ function gie_long_form_content_user_default_permissions() {
   $permissions['use text format long_form_full'] = array(
     'name' => 'use text format long_form_full',
     'roles' => array(
+      'Microsite Administrator' => 'Microsite Administrator',
       'administrator' => 'administrator',
     ),
     'module' => 'filter',
