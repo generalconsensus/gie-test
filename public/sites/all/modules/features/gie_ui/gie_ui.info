@@ -1,0 +1,8 @@
+name = Gie UI Modules
+core = 7.x
+package = GIE
+dependencies[] = context_ui
+dependencies[] = ds_ui
+dependencies[] = panels_ipe
+dependencies[] = views_ui
+features[features_api][] = api:2

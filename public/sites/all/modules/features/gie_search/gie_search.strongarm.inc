@@ -111,6 +111,11 @@ function gie_search_strongarm() {
       'search_api_views:needs_listing_pages:needs_listings' => 'search_api_views:needs_listing_pages:needs_listings',
       'search_api_views:blogs_listing:resource_listing' => 'search_api_views:blogs_listing:resource_listing',
       'search_api_views:news_listing:resource_listing' => 'search_api_views:news_listing:resource_listing',
+      'search_api_views:events_listing:events_dropdown' => 'search_api_views:events_listing:events_dropdown',
+      'search_api_views:events_listing:panel_pane_1' => 'search_api_views:events_listing:panel_pane_1',
+      'search_api_views:events_listing:past_events_listing' => 'search_api_views:events_listing:past_events_listing',
+      'search_api_views:funding_opp_listing:panel_pane_1' => 'search_api_views:funding_opp_listing:panel_pane_1',
+      'search_api_views:funding_opp_listing:expired_funding_listing' => 'search_api_views:funding_opp_listing:expired_funding_listing',
     ),
     'default_user_index' => array(
       'search_api_views:user_listing:listing_pane' => 'search_api_views:user_listing:listing_pane',

@@ -243,9 +243,20 @@ function _gie_user_notifications_link_access() {
 /**
  * Implements hook_form_FORM_ID_alter().
  */
+function gie_user_form_user_register_form_alter(&$form) {
+  $form['account']['pass']['#type'] = 'password';
+  $form['account']['pass']['#title'] = 'Password';
+  $form['account']['pass']['#attributes']['placeholder'] = t('Password');
+}
+
+
+/**
+ * Implements hook_form_FORM_ID_alter().
+ */
 function gie_user_form_user_profile_form_alter(&$form, &$form_state, $form_id) {
   // Hide "Select the types of assistance..." field
   $form['field_assistance_offered']['#access'] = FALSE;
+
 
   // Hide Notifications group on user edit page
   if (preg_match('/^user\/\d*\/edit$/', current_path()) && !user_has_role(3)) {
@@ -266,6 +277,24 @@ function gie_user_form_user_profile_form_alter(&$form, &$form_state, $form_id) {
         'group_interests',
         'group_where',
     ));
+  }
+
+  // Add custom submit to redirect user to profile
+  $form['#submit'][] = 'gie_user_profile_redirect';
+}
+
+
+/**
+ * Custom Submission for sending the user back to their profile page after user edit
+ */
+function gie_user_profile_redirect($form, &$form_state) {
+  global $user;
+  $alias = drupal_get_path_alias('user/' . $user->uid);
+  if (!empty($alias)) {
+    $form_state['redirect'] = $alias;
+  }
+  else {
+    $form_state['redirect'] = 'user/' . $user->uid;
   }
 }
 
@@ -329,6 +358,7 @@ function gie_user_block_view($delta = '') {
   return $block;
 }
 
+
 /**
  * Implements hook_mail_alter().
  * - alter From field on User Personal Contact mail to site email.
@@ -345,5 +375,98 @@ function gie_user_mail_alter(&$message) {
     $message['from'] = $site_email;
     $message['headers']['From'] = $site_email;
     $message['params']['mail'] = $site_email;
+  }
+}
+
+/*
+ * Implements hook_ctools_plugin_directory()
+ */
+function gie_user_ctools_plugin_directory($owner, $plugin_type) {
+  if ($owner == 'ctools' && $plugin_type == 'content_types') {
+    return 'plugins/' . $plugin_type;
+  }
+}
+
+/**
+ * Implements hook_user_presave().
+ */
+function gie_user_user_presave(&$edit, $account, $category) {
+  global $databases;
+  if (!empty($databases) && !empty($databases['default']['default']['database']) && $databases['default']['default']['database'] != 'giexchange_www') {
+    $edit['field_newsletter_sign_up']['und'][0]['subscribe'] = false;
+  }
+}
+
+/**
+ * Implements hook_field_attach_validate().
+ */
+function gie_user_field_attach_validate($entity_type, $entity, &$errors) {
+  $valid_types = array('user', 'organization');
+
+  if (in_array($entity_type, $valid_types)) {
+
+    $wrapper = entity_metadata_wrapper($entity_type, $entity);
+    if (!empty($wrapper->field_user_twitter->value())) {
+      if (!gie_user_social_field_validate('field_user_twitter', $wrapper->field_user_twitter->value())) {
+        $lang = field_language($entity_type, $entity, 'field_user_twitter', NULL);
+        $errors['field_user_twitter'][$lang][0][] = array(
+          'error' => 'field_user_twitter_invalid',
+          'message' => t('Twitter url must be set correctly. Example: https://twitter.com/RobertDowneyJr'),
+        );
+      }
+    }
+    if (!empty($wrapper->field_user_linkedin->value())) {
+      if (!gie_user_social_field_validate('field_user_linkedin', $wrapper->field_user_linkedin->value())) {
+        $lang = field_language($entity_type, $entity, 'field_user_linkedin', NULL);
+        $errors['field_user_linkedin'][$lang][0][] = array(
+          'error' => 'field_user_linkedin_invalid',
+          'message' => t('Linkedin url must be set correctly. Example: https://www.linkedin.com/in/robertdowneyjunior'),
+        );
+      }
+    }
+    if (!empty($wrapper->field_user_facebook->value())) {
+      if (!gie_user_social_field_validate('field_user_facebook', $wrapper->field_user_facebook->value())) {
+        $lang = field_language($entity_type, $entity, 'field_user_facebook', NULL);
+        $errors['field_user_facebook'][$lang][0][] = array(
+          'error' => 'field_user_facebook_invalid',
+          'message' => t('Facebook url must be set correctly. Example: https://www.facebook.com/robertdowneyjr'),
+        );
+      }
+    }
+  }
+}
+
+
+/**
+ *
+ * Regex Validation for Social Media Fields
+ */
+function gie_user_social_field_validate($field_name, $field_value) {
+  if (!empty($field_name) && !empty($field_value)) {
+    mb_regex_encoding('UTF-8');
+
+    switch ($field_name) {
+      case 'field_user_twitter':
+        $regex = '^.*twitter\\.com.*';
+        break;
+      case 'field_user_linkedin':
+        $regex = '^.*linkedin\\.com.*';
+        break;
+      case 'field_user_facebook':
+        $regex = '^.*facebook\\.com.*';
+        break;
+      default:
+        $regex = '';
+        break;
+    }
+
+    if (!empty($regex)) {
+      if ($field_value != '' && (!mb_ereg("$regex", $field_value))) {
+        return FALSE;
+      }
+      else {
+        return TRUE;
+      }
+    }
   }
 }

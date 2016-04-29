@@ -241,3 +241,21 @@ function _gie_general_node_theme($node){
       return $theme;
   }
 }
+/*
+ * Implements hook_cron fixing slow cache clears
+ */
+function gie_general_cron() {
+  global $user;
+  global $base_url;
+
+  $cid = 'admin_menu:';
+  if (isset($user->uid)) {
+    $cid .= $user->uid;
+  }
+
+  // Clear the cache for the admin menu.
+  cache_clear_all(isset($user->uid) ? $cid : '*', 'cache_admin_menu', TRUE);
+
+  // A HTTP request will rebuild the menu.
+  drupal_http_request($base_url);
+}
