@@ -4,6 +4,7 @@ core = 7.x
 package = GIE
 version = 7.x-1.0
 project = gie_microsite
+dependencies[] = blockify
 dependencies[] = context
 dependencies[] = domain_integration_search_api
 dependencies[] = field_group
