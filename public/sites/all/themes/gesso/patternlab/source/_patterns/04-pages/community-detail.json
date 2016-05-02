@@ -1,7 +1,6 @@
 {
   "bodyClass": "not-front node-type-community",
   "pageTitle" : "Evalutation & Impact of Development Innovation",
-  "body": "<div class='pane--nodefield-funding-desc pane'><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam at porttitor sem. Aliquam erat volutpat. Donec placerat nisl magna, et faucibus arcu condimentum sed. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p></div><div class='pane'><div class='sharethis-buttons'><a href='#' class='st_sharethis_custom'>Share</a></div></div>",
+  "body": "<div class='pane--nodefield-funding-desc pane'><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam at porttitor sem. Aliquam erat volutpat. Donec placerat nisl magna, et faucibus arcu condimentum sed. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p></div><div class='pane pane--nodesharethis'><div class='sharethis-buttons'><a href='#' class='st_sharethis_custom'>Share</a></div></div>",
   "contentType": "Community Detail"
 }
- 
