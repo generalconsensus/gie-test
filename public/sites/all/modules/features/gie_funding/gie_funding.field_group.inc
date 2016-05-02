@@ -8,7 +8,7 @@
  * Implements hook_field_group_info().
  */
 function gie_funding_field_group_info() {
-  $export = array();
+  $field_groups = array();
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -41,7 +41,7 @@ function gie_funding_field_group_info() {
       'formatter' => 'open',
     ),
   );
-  $export['group_card_author_inner|node|funding|highlights'] = $field_group;
+  $field_groups['group_card_author_inner|node|funding|highlights'] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -73,7 +73,7 @@ function gie_funding_field_group_info() {
       'formatter' => 'open',
     ),
   );
-  $export['group_card_author|node|funding|highlights'] = $field_group;
+  $field_groups['group_card_author|node|funding|highlights'] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -107,7 +107,7 @@ function gie_funding_field_group_info() {
       'formatter' => 'open',
     ),
   );
-  $export['group_card_content|node|funding|highlights'] = $field_group;
+  $field_groups['group_card_content|node|funding|highlights'] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -143,7 +143,7 @@ function gie_funding_field_group_info() {
       'formatter' => 'open',
     ),
   );
-  $export['group_card_content|node|funding|listing'] = $field_group;
+  $field_groups['group_card_content|node|funding|listing'] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -176,7 +176,7 @@ function gie_funding_field_group_info() {
       'formatter' => 'open',
     ),
   );
-  $export['group_card_content|node|funding|spotlight'] = $field_group;
+  $field_groups['group_card_content|node|funding|spotlight'] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -209,7 +209,7 @@ function gie_funding_field_group_info() {
       'formatter' => 'open',
     ),
   );
-  $export['group_card_counts|node|funding|listing'] = $field_group;
+  $field_groups['group_card_counts|node|funding|listing'] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -241,7 +241,7 @@ function gie_funding_field_group_info() {
       'formatter' => 'open',
     ),
   );
-  $export['group_card_image|node|funding|spotlight'] = $field_group;
+  $field_groups['group_card_image|node|funding|spotlight'] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -274,7 +274,7 @@ function gie_funding_field_group_info() {
       'formatter' => 'open',
     ),
   );
-  $export['group_comment_content|comment|comment_node_funding|default'] = $field_group;
+  $field_groups['group_comment_content|comment|comment_node_funding|default'] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -308,7 +308,7 @@ function gie_funding_field_group_info() {
       ),
     ),
   );
-  $export['group_funding_about|node|funding|form'] = $field_group;
+  $field_groups['group_funding_about|node|funding|form'] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -344,7 +344,7 @@ function gie_funding_field_group_info() {
       ),
     ),
   );
-  $export['group_funding_details|node|funding|form'] = $field_group;
+  $field_groups['group_funding_details|node|funding|form'] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -379,7 +379,7 @@ function gie_funding_field_group_info() {
       ),
     ),
   );
-  $export['group_funding_info|node|funding|form'] = $field_group;
+  $field_groups['group_funding_info|node|funding|form'] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -413,7 +413,7 @@ function gie_funding_field_group_info() {
       'formatter' => 'open',
     ),
   );
-  $export['group_funding_stats_first|node|funding|full'] = $field_group;
+  $field_groups['group_funding_stats_first|node|funding|full'] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -448,7 +448,7 @@ function gie_funding_field_group_info() {
       'formatter' => 'open',
     ),
   );
-  $export['group_funding_stats_second|node|funding|full'] = $field_group;
+  $field_groups['group_funding_stats_second|node|funding|full'] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -489,7 +489,7 @@ function gie_funding_field_group_info() {
       ),
     ),
   );
-  $export['group_funding_stats|node|funding|form'] = $field_group;
+  $field_groups['group_funding_stats|node|funding|form'] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -522,7 +522,23 @@ function gie_funding_field_group_info() {
       'formatter' => 'open',
     ),
   );
-  $export['group_funding_stats|node|funding|full'] = $field_group;
+  $field_groups['group_funding_stats|node|funding|full'] = $field_group;
 
-  return $export;
+  // Translatables
+  // Included for use with string extractors like potx.
+  t('About your Funding Opportunity');
+  t('Additional funding opportunity information');
+  t('Card Author');
+  t('Card Author Inner');
+  t('Card Content');
+  t('Card Counts');
+  t('Card Image');
+  t('Comment Content');
+  t('Funding Stats');
+  t('Funding Stats First');
+  t('Funding Stats Second');
+  t('Key funding opportunity details');
+  t('Provide some stats about your funding opportunity');
+
+  return $field_groups;
 }

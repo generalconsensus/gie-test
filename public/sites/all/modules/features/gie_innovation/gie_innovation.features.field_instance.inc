@@ -411,7 +411,7 @@ function gie_innovation_field_default_field_instances() {
       'weight' => 4,
     ),
   );
-  
+
   // Exported field_instance: 'node-innovation-field_innovation_address'
   $field_instances['node-innovation-field_innovation_address'] = array(
     'bundle' => 'innovation',
@@ -6274,7 +6274,6 @@ Using the selector below, highlight the area of the image you would like to feat
   t('Evidence Available?');
   t('Evidence it Works');
   t('Exchange References');
-  t('Featured');
   t('Featured Image');
   t('First Name');
   t('From the drop down list, pick as many types as apply to your innovation.');
