@@ -8,7 +8,7 @@
  * Implements hook_field_group_info().
  */
 function gie_innovation_field_group_info() {
-  $export = array();
+  $field_groups = array();
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -41,7 +41,7 @@ function gie_innovation_field_group_info() {
       'formatter' => 'open',
     ),
   );
-  $export['group_card_author_inner|node|innovation|highlights'] = $field_group;
+  $field_groups['group_card_author_inner|node|innovation|highlights'] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -73,7 +73,7 @@ function gie_innovation_field_group_info() {
       'formatter' => 'open',
     ),
   );
-  $export['group_card_author|node|innovation|highlights'] = $field_group;
+  $field_groups['group_card_author|node|innovation|highlights'] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -107,7 +107,7 @@ function gie_innovation_field_group_info() {
       'formatter' => 'open',
     ),
   );
-  $export['group_card_content|node|innovation|highlights'] = $field_group;
+  $field_groups['group_card_content|node|innovation|highlights'] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -141,7 +141,7 @@ function gie_innovation_field_group_info() {
       'formatter' => 'open',
     ),
   );
-  $export['group_card_content|node|innovation|listing'] = $field_group;
+  $field_groups['group_card_content|node|innovation|listing'] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -174,7 +174,7 @@ function gie_innovation_field_group_info() {
       'formatter' => 'open',
     ),
   );
-  $export['group_card_content|node|innovation|spotlight'] = $field_group;
+  $field_groups['group_card_content|node|innovation|spotlight'] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -210,7 +210,7 @@ function gie_innovation_field_group_info() {
       'formatter' => 'open',
     ),
   );
-  $export['group_card_counts|node|innovation|listing'] = $field_group;
+  $field_groups['group_card_counts|node|innovation|listing'] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -242,7 +242,7 @@ function gie_innovation_field_group_info() {
       'formatter' => 'open',
     ),
   );
-  $export['group_card_image|node|innovation|listing'] = $field_group;
+  $field_groups['group_card_image|node|innovation|listing'] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -274,7 +274,7 @@ function gie_innovation_field_group_info() {
       'formatter' => 'open',
     ),
   );
-  $export['group_card_image|node|innovation|spotlight'] = $field_group;
+  $field_groups['group_card_image|node|innovation|spotlight'] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -308,7 +308,7 @@ function gie_innovation_field_group_info() {
       'formatter' => 'open',
     ),
   );
-  $export['group_comment_content|comment|comment_node_innovation|default'] = $field_group;
+  $field_groups['group_comment_content|comment|comment_node_innovation|default'] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -343,7 +343,7 @@ function gie_innovation_field_group_info() {
       'formatter' => 'open',
     ),
   );
-  $export['group_innovation_about|node|innovation|form'] = $field_group;
+  $field_groups['group_innovation_about|node|innovation|form'] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -384,7 +384,7 @@ function gie_innovation_field_group_info() {
       'formatter' => 'open',
     ),
   );
-  $export['group_innovation_details|node|innovation|form'] = $field_group;
+  $field_groups['group_innovation_details|node|innovation|form'] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -418,7 +418,7 @@ function gie_innovation_field_group_info() {
       'formatter' => 'open',
     ),
   );
-  $export['group_innovation_evidence|node|innovation|form'] = $field_group;
+  $field_groups['group_innovation_evidence|node|innovation|form'] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -452,7 +452,7 @@ function gie_innovation_field_group_info() {
       'formatter' => 'open',
     ),
   );
-  $export['group_innovation_help|node|innovation|form'] = $field_group;
+  $field_groups['group_innovation_help|node|innovation|form'] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -486,7 +486,7 @@ function gie_innovation_field_group_info() {
       'formatter' => 'open',
     ),
   );
-  $export['group_innovation_media|node|innovation|form'] = $field_group;
+  $field_groups['group_innovation_media|node|innovation|form'] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -521,7 +521,7 @@ function gie_innovation_field_group_info() {
       'formatter' => 'open',
     ),
   );
-  $export['group_innovation_references|node|innovation|form'] = $field_group;
+  $field_groups['group_innovation_references|node|innovation|form'] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -560,7 +560,7 @@ function gie_innovation_field_group_info() {
       'formatter' => 'open',
     ),
   );
-  $export['group_innovation_stats_first|node|innovation|full'] = $field_group;
+  $field_groups['group_innovation_stats_first|node|innovation|full'] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -596,7 +596,7 @@ function gie_innovation_field_group_info() {
       'formatter' => 'open',
     ),
   );
-  $export['group_innovation_stats_second|node|innovation|full'] = $field_group;
+  $field_groups['group_innovation_stats_second|node|innovation|full'] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -644,7 +644,7 @@ function gie_innovation_field_group_info() {
       'formatter' => 'open',
     ),
   );
-  $export['group_innovation_stats|node|innovation|form'] = $field_group;
+  $field_groups['group_innovation_stats|node|innovation|form'] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -677,7 +677,7 @@ function gie_innovation_field_group_info() {
       'formatter' => 'open',
     ),
   );
-  $export['group_innovation_stats|node|innovation|full'] = $field_group;
+  $field_groups['group_innovation_stats|node|innovation|full'] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -713,7 +713,27 @@ function gie_innovation_field_group_info() {
       'formatter' => 'open',
     ),
   );
-  $export['group_innovation_team|node|innovation|form'] = $field_group;
+  $field_groups['group_innovation_team|node|innovation|form'] = $field_group;
 
-  return $export;
+  // Translatables
+  // Included for use with string extractors like potx.
+  t('Add photos and videos about your innovation');
+  t('Card Author');
+  t('Card Author Inner');
+  t('Card Content');
+  t('Card Counts');
+  t('Card Image');
+  t('Comment Content');
+  t('Do you have evidence or supporting documents for your innovation?');
+  t('Do you have references for your innovation available?');
+  t('How can the exchange help you with your innovation?');
+  t('Innovation Stats');
+  t('Innovation Stats First');
+  t('Innovation Stats Second');
+  t('Provide some key stats about your innovation');
+  t('Tell us about your innovation');
+  t('Tell us about your innovation team and affiliated organizations');
+  t('Tell us more about your innovation');
+
+  return $field_groups;
 }
