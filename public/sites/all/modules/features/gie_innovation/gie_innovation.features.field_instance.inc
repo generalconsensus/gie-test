@@ -662,7 +662,7 @@ function gie_innovation_field_default_field_instances() {
         'size' => 60,
       ),
       'type' => 'entityreference_autocomplete',
-      'weight' => 10,
+      'weight' => 6,
     ),
   );
 
@@ -1991,7 +1991,7 @@ Using the selector below, highlight the area of the image you would like to feat
         'progress_indicator' => 'throbber',
       ),
       'type' => 'image_image',
-      'weight' => 9,
+      'weight' => 5,
     ),
   );
 
@@ -2916,7 +2916,7 @@ Using the selector below, highlight the area of the image you would like to feat
         'view_mode' => 'full',
       ),
       'type' => 'entityreference_view_widget',
-      'weight' => 12,
+      'weight' => 13,
     ),
   );
 

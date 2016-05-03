@@ -8,7 +8,7 @@
  * Implements hook_field_group_info().
  */
 function gie_innovation_field_group_info() {
-  $field_groups = array();
+  $export = array();
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -41,7 +41,7 @@ function gie_innovation_field_group_info() {
       'formatter' => 'open',
     ),
   );
-  $field_groups['group_card_author_inner|node|innovation|highlights'] = $field_group;
+  $export['group_card_author_inner|node|innovation|highlights'] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -73,7 +73,7 @@ function gie_innovation_field_group_info() {
       'formatter' => 'open',
     ),
   );
-  $field_groups['group_card_author|node|innovation|highlights'] = $field_group;
+  $export['group_card_author|node|innovation|highlights'] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -107,7 +107,7 @@ function gie_innovation_field_group_info() {
       'formatter' => 'open',
     ),
   );
-  $field_groups['group_card_content|node|innovation|highlights'] = $field_group;
+  $export['group_card_content|node|innovation|highlights'] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -141,7 +141,7 @@ function gie_innovation_field_group_info() {
       'formatter' => 'open',
     ),
   );
-  $field_groups['group_card_content|node|innovation|listing'] = $field_group;
+  $export['group_card_content|node|innovation|listing'] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -174,7 +174,7 @@ function gie_innovation_field_group_info() {
       'formatter' => 'open',
     ),
   );
-  $field_groups['group_card_content|node|innovation|spotlight'] = $field_group;
+  $export['group_card_content|node|innovation|spotlight'] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -210,7 +210,7 @@ function gie_innovation_field_group_info() {
       'formatter' => 'open',
     ),
   );
-  $field_groups['group_card_counts|node|innovation|listing'] = $field_group;
+  $export['group_card_counts|node|innovation|listing'] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -242,7 +242,7 @@ function gie_innovation_field_group_info() {
       'formatter' => 'open',
     ),
   );
-  $field_groups['group_card_image|node|innovation|listing'] = $field_group;
+  $export['group_card_image|node|innovation|listing'] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -274,7 +274,7 @@ function gie_innovation_field_group_info() {
       'formatter' => 'open',
     ),
   );
-  $field_groups['group_card_image|node|innovation|spotlight'] = $field_group;
+  $export['group_card_image|node|innovation|spotlight'] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -308,7 +308,7 @@ function gie_innovation_field_group_info() {
       'formatter' => 'open',
     ),
   );
-  $field_groups['group_comment_content|comment|comment_node_innovation|default'] = $field_group;
+  $export['group_comment_content|comment|comment_node_innovation|default'] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -318,10 +318,10 @@ function gie_innovation_field_group_info() {
   $field_group->entity_type = 'node';
   $field_group->bundle = 'innovation';
   $field_group->mode = 'form';
-  $field_group->parent_name = '';
+  $field_group->parent_name = 'group_one';
   $field_group->data = array(
     'label' => 'Tell us about your innovation',
-    'weight' => '0',
+    'weight' => '1',
     'children' => array(
       0 => 'title_field',
       1 => 'field_innovation_desc',
@@ -343,7 +343,7 @@ function gie_innovation_field_group_info() {
       'formatter' => 'open',
     ),
   );
-  $field_groups['group_innovation_about|node|innovation|form'] = $field_group;
+  $export['group_innovation_about|node|innovation|form'] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -353,10 +353,10 @@ function gie_innovation_field_group_info() {
   $field_group->entity_type = 'node';
   $field_group->bundle = 'innovation';
   $field_group->mode = 'form';
-  $field_group->parent_name = '';
+  $field_group->parent_name = 'group_two';
   $field_group->data = array(
     'label' => 'Tell us more about your innovation',
-    'weight' => '4',
+    'weight' => '5',
     'children' => array(
       0 => 'field_innovation_evidence',
       1 => 'field_innovation_impact',
@@ -384,7 +384,7 @@ function gie_innovation_field_group_info() {
       'formatter' => 'open',
     ),
   );
-  $field_groups['group_innovation_details|node|innovation|form'] = $field_group;
+  $export['group_innovation_details|node|innovation|form'] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -394,10 +394,10 @@ function gie_innovation_field_group_info() {
   $field_group->entity_type = 'node';
   $field_group->bundle = 'innovation';
   $field_group->mode = 'form';
-  $field_group->parent_name = '';
+  $field_group->parent_name = 'group_three';
   $field_group->data = array(
     'label' => 'Do you have evidence or supporting documents for your innovation?',
-    'weight' => '9',
+    'weight' => '8',
     'children' => array(
       0 => 'field_innovation_proof_avail',
       1 => 'field_innovation_proof_evidence',
@@ -418,7 +418,7 @@ function gie_innovation_field_group_info() {
       'formatter' => 'open',
     ),
   );
-  $field_groups['group_innovation_evidence|node|innovation|form'] = $field_group;
+  $export['group_innovation_evidence|node|innovation|form'] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -428,10 +428,10 @@ function gie_innovation_field_group_info() {
   $field_group->entity_type = 'node';
   $field_group->bundle = 'innovation';
   $field_group->mode = 'form';
-  $field_group->parent_name = '';
+  $field_group->parent_name = 'group_one';
   $field_group->data = array(
     'label' => 'How can the exchange help you with your innovation?',
-    'weight' => '2',
+    'weight' => '3',
     'children' => array(
       0 => 'field_innovation_poc',
       1 => 'field_innovation_assistance',
@@ -452,7 +452,7 @@ function gie_innovation_field_group_info() {
       'formatter' => 'open',
     ),
   );
-  $field_groups['group_innovation_help|node|innovation|form'] = $field_group;
+  $export['group_innovation_help|node|innovation|form'] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -462,10 +462,10 @@ function gie_innovation_field_group_info() {
   $field_group->entity_type = 'node';
   $field_group->bundle = 'innovation';
   $field_group->mode = 'form';
-  $field_group->parent_name = '';
+  $field_group->parent_name = 'group_one';
   $field_group->data = array(
     'label' => 'Add photos and videos about your innovation',
-    'weight' => '1',
+    'weight' => '2',
     'children' => array(
       0 => 'field_innovation_assets',
       1 => 'field_innovation_image',
@@ -486,7 +486,7 @@ function gie_innovation_field_group_info() {
       'formatter' => 'open',
     ),
   );
-  $field_groups['group_innovation_media|node|innovation|form'] = $field_group;
+  $export['group_innovation_media|node|innovation|form'] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -496,10 +496,10 @@ function gie_innovation_field_group_info() {
   $field_group->entity_type = 'node';
   $field_group->bundle = 'innovation';
   $field_group->mode = 'form';
-  $field_group->parent_name = '';
+  $field_group->parent_name = 'group_three';
   $field_group->data = array(
     'label' => 'Do you have references for your innovation available?',
-    'weight' => '6',
+    'weight' => '7',
     'children' => array(
       0 => 'field_innovation_references',
       1 => 'field_innovation_non_references',
@@ -521,7 +521,7 @@ function gie_innovation_field_group_info() {
       'formatter' => 'open',
     ),
   );
-  $field_groups['group_innovation_references|node|innovation|form'] = $field_group;
+  $export['group_innovation_references|node|innovation|form'] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -560,7 +560,7 @@ function gie_innovation_field_group_info() {
       'formatter' => 'open',
     ),
   );
-  $field_groups['group_innovation_stats_first|node|innovation|full'] = $field_group;
+  $export['group_innovation_stats_first|node|innovation|full'] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -596,7 +596,7 @@ function gie_innovation_field_group_info() {
       'formatter' => 'open',
     ),
   );
-  $field_groups['group_innovation_stats_second|node|innovation|full'] = $field_group;
+  $export['group_innovation_stats_second|node|innovation|full'] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -606,10 +606,10 @@ function gie_innovation_field_group_info() {
   $field_group->entity_type = 'node';
   $field_group->bundle = 'innovation';
   $field_group->mode = 'form';
-  $field_group->parent_name = '';
+  $field_group->parent_name = 'group_two';
   $field_group->data = array(
     'label' => 'Provide some key stats about your innovation',
-    'weight' => '3',
+    'weight' => '4',
     'children' => array(
       0 => 'field_innovation_created',
       1 => 'field_innovation_implemented',
@@ -644,7 +644,7 @@ function gie_innovation_field_group_info() {
       'formatter' => 'open',
     ),
   );
-  $field_groups['group_innovation_stats|node|innovation|form'] = $field_group;
+  $export['group_innovation_stats|node|innovation|form'] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -677,7 +677,7 @@ function gie_innovation_field_group_info() {
       'formatter' => 'open',
     ),
   );
-  $field_groups['group_innovation_stats|node|innovation|full'] = $field_group;
+  $export['group_innovation_stats|node|innovation|full'] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -687,10 +687,10 @@ function gie_innovation_field_group_info() {
   $field_group->entity_type = 'node';
   $field_group->bundle = 'innovation';
   $field_group->mode = 'form';
-  $field_group->parent_name = '';
+  $field_group->parent_name = 'group_two';
   $field_group->data = array(
     'label' => 'Tell us about your innovation team and affiliated organizations',
-    'weight' => '5',
+    'weight' => '6',
     'children' => array(
       0 => 'field_innovation_funders',
       1 => 'field_innovation_program',
@@ -713,27 +713,92 @@ function gie_innovation_field_group_info() {
       'formatter' => 'open',
     ),
   );
-  $field_groups['group_innovation_team|node|innovation|form'] = $field_group;
+  $export['group_innovation_team|node|innovation|form'] = $field_group;
 
-  // Translatables
-  // Included for use with string extractors like potx.
-  t('Add photos and videos about your innovation');
-  t('Card Author');
-  t('Card Author Inner');
-  t('Card Content');
-  t('Card Counts');
-  t('Card Image');
-  t('Comment Content');
-  t('Do you have evidence or supporting documents for your innovation?');
-  t('Do you have references for your innovation available?');
-  t('How can the exchange help you with your innovation?');
-  t('Innovation Stats');
-  t('Innovation Stats First');
-  t('Innovation Stats Second');
-  t('Provide some key stats about your innovation');
-  t('Tell us about your innovation');
-  t('Tell us about your innovation team and affiliated organizations');
-  t('Tell us more about your innovation');
+  $field_group = new stdClass();
+  $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
+  $field_group->api_version = 1;
+  $field_group->identifier = 'group_one|node|innovation|form';
+  $field_group->group_name = 'group_one';
+  $field_group->entity_type = 'node';
+  $field_group->bundle = 'innovation';
+  $field_group->mode = 'form';
+  $field_group->parent_name = '';
+  $field_group->data = array(
+    'label' => 'Step One',
+    'weight' => '0',
+    'children' => array(
+      0 => 'group_innovation_about',
+      1 => 'group_innovation_help',
+      2 => 'group_innovation_media',
+    ),
+    'format_type' => 'multistep',
+    'format_settings' => array(
+      'formatter' => '',
+      'instance_settings' => array(
+        'classes' => 'group-one field-group-multistep',
+      ),
+    ),
+  );
+  $export['group_one|node|innovation|form'] = $field_group;
 
-  return $field_groups;
+  $field_group = new stdClass();
+  $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
+  $field_group->api_version = 1;
+  $field_group->identifier = 'group_three|node|innovation|form';
+  $field_group->group_name = 'group_three';
+  $field_group->entity_type = 'node';
+  $field_group->bundle = 'innovation';
+  $field_group->mode = 'form';
+  $field_group->parent_name = '';
+  $field_group->data = array(
+    'label' => 'Step Three',
+    'weight' => '2',
+    'children' => array(
+      0 => 'field_featured',
+      1 => 'metatags',
+      2 => 'path',
+      3 => 'rabbit_hole',
+      4 => 'xmlsitemap',
+      5 => 'group_innovation_evidence',
+      6 => 'group_innovation_references',
+    ),
+    'format_type' => 'multistep',
+    'format_settings' => array(
+      'formatter' => '',
+      'instance_settings' => array(
+        'classes' => 'group-three field-group-multistep',
+      ),
+    ),
+  );
+  $export['group_three|node|innovation|form'] = $field_group;
+
+  $field_group = new stdClass();
+  $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
+  $field_group->api_version = 1;
+  $field_group->identifier = 'group_two|node|innovation|form';
+  $field_group->group_name = 'group_two';
+  $field_group->entity_type = 'node';
+  $field_group->bundle = 'innovation';
+  $field_group->mode = 'form';
+  $field_group->parent_name = '';
+  $field_group->data = array(
+    'label' => 'Step Two',
+    'weight' => '1',
+    'children' => array(
+      0 => 'group_innovation_details',
+      1 => 'group_innovation_stats',
+      2 => 'group_innovation_team',
+    ),
+    'format_type' => 'multistep',
+    'format_settings' => array(
+      'formatter' => '',
+      'instance_settings' => array(
+        'classes' => 'group-two field-group-multistep',
+      ),
+    ),
+  );
+  $export['group_two|node|innovation|form'] = $field_group;
+
+  return $export;
 }
