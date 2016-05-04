@@ -8,7 +8,7 @@
  * Implements hook_field_group_info().
  */
 function gie_resource_field_group_info() {
-  $export = array();
+  $field_groups = array();
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -41,7 +41,7 @@ function gie_resource_field_group_info() {
       'formatter' => 'open',
     ),
   );
-  $export['group_card_author_inner|node|resource|highlights'] = $field_group;
+  $field_groups['group_card_author_inner|node|resource|highlights'] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -73,7 +73,7 @@ function gie_resource_field_group_info() {
       'formatter' => 'open',
     ),
   );
-  $export['group_card_author|node|resource|highlights'] = $field_group;
+  $field_groups['group_card_author|node|resource|highlights'] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -106,7 +106,7 @@ function gie_resource_field_group_info() {
       'formatter' => 'open',
     ),
   );
-  $export['group_card_author|node|resource|listing'] = $field_group;
+  $field_groups['group_card_author|node|resource|listing'] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -139,7 +139,7 @@ function gie_resource_field_group_info() {
       'formatter' => 'open',
     ),
   );
-  $export['group_card_author|node|resource|page_header'] = $field_group;
+  $field_groups['group_card_author|node|resource|page_header'] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -173,7 +173,7 @@ function gie_resource_field_group_info() {
       'formatter' => 'open',
     ),
   );
-  $export['group_card_content|node|resource|highlights'] = $field_group;
+  $field_groups['group_card_content|node|resource|highlights'] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -209,7 +209,7 @@ function gie_resource_field_group_info() {
       'formatter' => 'open',
     ),
   );
-  $export['group_card_content|node|resource|listing'] = $field_group;
+  $field_groups['group_card_content|node|resource|listing'] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -242,7 +242,7 @@ function gie_resource_field_group_info() {
       'formatter' => 'open',
     ),
   );
-  $export['group_card_content|node|resource|spotlight'] = $field_group;
+  $field_groups['group_card_content|node|resource|spotlight'] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -275,7 +275,7 @@ function gie_resource_field_group_info() {
       'formatter' => 'open',
     ),
   );
-  $export['group_card_counts|node|resource|listing'] = $field_group;
+  $field_groups['group_card_counts|node|resource|listing'] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -308,7 +308,7 @@ function gie_resource_field_group_info() {
       'formatter' => 'open',
     ),
   );
-  $export['group_comment_content|comment|comment_node_resource|default'] = $field_group;
+  $field_groups['group_comment_content|comment|comment_node_resource|default'] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -346,7 +346,7 @@ function gie_resource_field_group_info() {
       'formatter' => 'open',
     ),
   );
-  $export['group_resource_about|node|resource|form'] = $field_group;
+  $field_groups['group_resource_about|node|resource|form'] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -381,7 +381,7 @@ function gie_resource_field_group_info() {
       'formatter' => 'open',
     ),
   );
-  $export['group_resource_addtl|node|resource|form'] = $field_group;
+  $field_groups['group_resource_addtl|node|resource|form'] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -413,7 +413,7 @@ function gie_resource_field_group_info() {
       'formatter' => 'open',
     ),
   );
-  $export['group_resource_contact|node|resource|contact'] = $field_group;
+  $field_groups['group_resource_contact|node|resource|contact'] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -452,7 +452,7 @@ function gie_resource_field_group_info() {
       'formatter' => 'open',
     ),
   );
-  $export['group_resource_details|node|resource|form'] = $field_group;
+  $field_groups['group_resource_details|node|resource|form'] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -488,7 +488,7 @@ function gie_resource_field_group_info() {
       'formatter' => 'open',
     ),
   );
-  $export['group_resource_glance|node|resource|at_a_glance'] = $field_group;
+  $field_groups['group_resource_glance|node|resource|at_a_glance'] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -526,7 +526,21 @@ function gie_resource_field_group_info() {
       'formatter' => 'open',
     ),
   );
-  $export['group_resource_stats|node|resource|details'] = $field_group;
+  $field_groups['group_resource_stats|node|resource|details'] = $field_group;
 
-  return $export;
+  // Translatables
+  // Included for use with string extractors like potx.
+  t('About your Resource');
+  t('Additional resource information');
+  t('At a Glance');
+  t('Card Author');
+  t('Card Author Inner');
+  t('Card Content');
+  t('Card Counts');
+  t('Comment Content');
+  t('Details');
+  t('Key resource details');
+  t('Point of Contact');
+
+  return $field_groups;
 }

@@ -231,10 +231,7 @@ function gie_blogs_panelizer_defaults() {
     $pane->style = array(
       'settings' => NULL,
     );
-    $pane->css = array(
-      'css_id' => '',
-      'css_class' => 'pane--button',
-    );
+    $pane->css = '';
     $pane->extras = array();
     $pane->position = 4;
     $pane->locks = array();
@@ -259,10 +256,7 @@ function gie_blogs_panelizer_defaults() {
     $pane->style = array(
       'settings' => NULL,
     );
-    $pane->css = array(
-      'css_id' => '',
-      'css_class' => 'pane--button',
-    );
+    $pane->css = '';
     $pane->extras = array();
     $pane->position = 5;
     $pane->locks = array();
