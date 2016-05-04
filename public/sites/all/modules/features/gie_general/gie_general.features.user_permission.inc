@@ -115,6 +115,43 @@ function gie_general_user_default_permissions() {
     'module' => 'flag',
   );
 
+  // Exported permission: 'show format selection for message'.
+  $permissions['show format selection for message'] = array(
+    'name' => 'show format selection for message',
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
+    'module' => 'better_formats',
+  );
+
+  // Exported permission: 'show format selection for message_type'.
+  $permissions['show format selection for message_type'] = array(
+    'name' => 'show format selection for message_type',
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
+    'module' => 'better_formats',
+  );
+
+  // Exported permission: 'show format selection for message_type_category'.
+  $permissions['show format selection for message_type_category'] = array(
+    'name' => 'show format selection for message_type_category',
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
+    'module' => 'better_formats',
+  );
+
+  // Exported permission: 'show format selection for paragraphs_item'.
+  $permissions['show format selection for paragraphs_item'] = array(
+    'name' => 'show format selection for paragraphs_item',
+    'roles' => array(
+      'Microsite Administrator' => 'Microsite Administrator',
+      'administrator' => 'administrator',
+    ),
+    'module' => 'better_formats',
+  );
+
   // Exported permission: 'unflag favorite'.
   $permissions['unflag favorite'] = array(
     'name' => 'unflag favorite',
