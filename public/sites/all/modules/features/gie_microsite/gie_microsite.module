@@ -76,6 +76,26 @@ function gie_microsite_admin_edit_access_callback($term, $permission) {
 
 }
 
+/**
+ * Implements hook_form_alter().
+ * - Change the contact form category to appropriate domain
+ */
+function gie_microsite_form_alter(&$form, &$form_state, $form_id) {
+  if ($form_id == 'contact_site_form') {
+    // get current domain
+    $domain = $GLOBALS['_domain'];
 
+    // get the category ID corresponding to the current domain
+    $cid = array_search($domain['sitename'],$form['cid']['#options']);
+
+    // change the default category to the found category id
+    if ($cid) {
+      $form['cid']['#default_value'] = $cid;
+    }
+
+    // hide the Category drop-down field
+    $form['cid']['#access'] = FALSE;
+  }
+}
 
 
