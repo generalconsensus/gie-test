@@ -2,6 +2,6 @@
 
 $plugin = array(
   'title' => t('Simple GIE Innovation (with optional filter by bundle)'),
-  'class' => 'GieInnovationEntityReference_SelectionHandler',
+  'class' => 'GieEntityReference_SelectionHandler_Generic',
   'weight' => -100,
 );

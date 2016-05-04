@@ -4,6 +4,7 @@ core = 7.x
 package = GIE
 version = 7.x-1.0
 project = gie_innovation
+files[] = plugins/selection/abstract.inc
 dependencies[] = addressfield
 dependencies[] = conditional_fields
 dependencies[] = ctools

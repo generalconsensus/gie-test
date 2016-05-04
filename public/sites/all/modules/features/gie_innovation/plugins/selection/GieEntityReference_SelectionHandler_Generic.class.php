@@ -6,7 +6,7 @@
  * The generic base implementation has a variety of overrides to workaround
  * core's largely deficient entity handling.
  */
-class GieInnovationEntityReference_SelectionHandler implements EntityReference_SelectionHandler {
+class GieEntityReference_SelectionHandler_Generic implements EntityReference_SelectionHandler {
 
   /**
    * Implements EntityReferenceHandler::getInstance().
@@ -17,14 +17,14 @@ class GieInnovationEntityReference_SelectionHandler implements EntityReference_S
     // Check if the entity type does exist and has a base table.
     $entity_info = entity_get_info($target_entity_type);
     if (empty($entity_info['base table'])) {
-      return EntityReference_SelectionHandler_Broken::getInstance($field, $instance);
+      return GieEntityReference_SelectionHandler_Broken::getInstance($field, $instance);
     }
 
-    if (class_exists($class_name = 'EntityReference_SelectionHandler_Generic_' . $target_entity_type)) {
+    if (class_exists($class_name = 'GieEntityReference_SelectionHandler_Generic_' . $target_entity_type)) {
       return new $class_name($field, $instance, $entity_type, $entity);
     }
     else {
-      return new GieInnovationEntityReference_SelectionHandler($field, $instance, $entity_type, $entity);
+      return new GieEntityReference_SelectionHandler_Generic($field, $instance, $entity_type, $entity);
     }
   }
 
@@ -253,7 +253,7 @@ class GieInnovationEntityReference_SelectionHandler implements EntityReference_S
 
     // Add a generic entity access tag to the query.
     $query->addTag($this->field['settings']['target_type'] . '_access');
-    $query->addTag('entityreference');
+    $query->addTag('gie_innovation');
     $query->addMetaData('field', $this->field);
     $query->addMetaData('entityreference_selection_handler', $this);
 
@@ -350,7 +350,7 @@ class GieInnovationEntityReference_SelectionHandler implements EntityReference_S
  *
  * This only exists to workaround core bugs.
  */
-  class GieInnovationEntityReference_SelectionHandler_Generic_node extends EntityReference_SelectionHandler_Generic {
+  class GieEntityReference_SelectionHandler_Generic_node extends GieEntityReference_SelectionHandler_Generic {
   public function entityFieldQueryAlter(SelectQueryInterface $query) {
     // Adding the 'node_access' tag is sadly insufficient for nodes: core
     // requires us to also know about the concept of 'published' and
@@ -369,7 +369,7 @@ class GieInnovationEntityReference_SelectionHandler implements EntityReference_S
  *
  * This only exists to workaround core bugs.
  */
-class GieInnovationEntityReference_SelectionHandler_Generic_user extends EntityReference_SelectionHandler_Generic {
+class GieEntityReference_SelectionHandler_Generic_user extends GieEntityReference_SelectionHandler_Generic {
   public function buildEntityFieldQuery($match = NULL, $match_operator = 'CONTAINS') {
     $query = parent::buildEntityFieldQuery($match, $match_operator);
 
@@ -427,7 +427,7 @@ class GieInnovationEntityReference_SelectionHandler_Generic_user extends EntityR
  *
  * This only exists to workaround core bugs.
  */
-class GieInnovationEntityReference_SelectionHandler_Generic_comment extends EntityReference_SelectionHandler_Generic {
+class GieEntityReference_SelectionHandler_Generic_comment extends GieEntityReference_SelectionHandler_Generic {
   public function entityFieldQueryAlter(SelectQueryInterface $query) {
     // Adding the 'comment_access' tag is sadly insufficient for comments: core
     // requires us to also know about the concept of 'published' and
@@ -476,7 +476,7 @@ class GieInnovationEntityReference_SelectionHandler_Generic_comment extends Enti
  *
  * This only exists to workaround core bugs.
  */
-class GieInnovationEntityReference_SelectionHandler_Generic_file extends EntityReference_SelectionHandler_Generic {
+class GieEntityReference_SelectionHandler_Generic_file extends GieEntityReference_SelectionHandler_Generic {
   public function entityFieldQueryAlter(SelectQueryInterface $query) {
     // Core forces us to know about 'permanent' vs. 'temporary' files.
     $tables = $query->getTables();
@@ -501,7 +501,7 @@ class GieInnovationEntityReference_SelectionHandler_Generic_file extends EntityR
  *
  * This only exists to workaround core bugs.
  */
-class GieInnovationEntityReference_SelectionHandler_Generic_taxonomy_term extends EntityReference_SelectionHandler_Generic {
+class GieEntityReference_SelectionHandler_Generic_taxonomy_term extends GieEntityReference_SelectionHandler_Generic {
   public function entityFieldQueryAlter(SelectQueryInterface $query) {
     // The Taxonomy module doesn't implement any proper taxonomy term access,
     // and as a consequence doesn't make sure that taxonomy terms cannot be viewed
