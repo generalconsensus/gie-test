@@ -8,7 +8,7 @@
  * Implements hook_field_group_info().
  */
 function gie_news_field_group_info() {
-  $export = array();
+  $field_groups = array();
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -41,7 +41,7 @@ function gie_news_field_group_info() {
       'formatter' => 'open',
     ),
   );
-  $export['group_card_author|node|news|listing'] = $field_group;
+  $field_groups['group_card_author|node|news|listing'] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -57,7 +57,7 @@ function gie_news_field_group_info() {
     'weight' => '0',
     'children' => array(
       0 => 'title_field',
-      1 => 'field_news_sector',
+      1 => 'field_term_sector',
       2 => 'group_card_author',
       3 => 'group_card_counts',
     ),
@@ -76,7 +76,7 @@ function gie_news_field_group_info() {
       'formatter' => 'open',
     ),
   );
-  $export['group_card_content|node|news|listing'] = $field_group;
+  $field_groups['group_card_content|node|news|listing'] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -109,7 +109,7 @@ function gie_news_field_group_info() {
       'formatter' => 'open',
     ),
   );
-  $export['group_card_counts|node|news|listing'] = $field_group;
+  $field_groups['group_card_counts|node|news|listing'] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -141,7 +141,7 @@ function gie_news_field_group_info() {
       'formatter' => 'open',
     ),
   );
-  $export['group_news_contact|node|news|contact'] = $field_group;
+  $field_groups['group_news_contact|node|news|contact'] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -176,7 +176,7 @@ function gie_news_field_group_info() {
       'formatter' => 'open',
     ),
   );
-  $export['group_news_glance|node|news|at_a_glance'] = $field_group;
+  $field_groups['group_news_glance|node|news|at_a_glance'] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -191,12 +191,12 @@ function gie_news_field_group_info() {
     'label' => 'Details',
     'weight' => '0',
     'children' => array(
-      0 => 'field_news_country',
-      1 => 'field_news_organization',
-      2 => 'field_news_program',
-      3 => 'field_news_region',
-      4 => 'field_news_sector',
-      5 => 'field_news_topic',
+      0 => 'field_news_organization',
+      1 => 'field_news_program',
+      2 => 'field_term_country',
+      3 => 'field_term_region',
+      4 => 'field_term_sector',
+      5 => 'field_term_topic',
     ),
     'format_type' => 'div',
     'format_settings' => array(
@@ -213,7 +213,16 @@ function gie_news_field_group_info() {
       'formatter' => 'open',
     ),
   );
-  $export['group_news_stats|node|news|details'] = $field_group;
+  $field_groups['group_news_stats|node|news|details'] = $field_group;
 
-  return $export;
+  // Translatables
+  // Included for use with string extractors like potx.
+  t('At a Glance');
+  t('Card Author');
+  t('Card Content');
+  t('Card Counts');
+  t('Details');
+  t('Point of Contact');
+
+  return $field_groups;
 }

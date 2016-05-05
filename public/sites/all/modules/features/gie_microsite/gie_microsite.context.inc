@@ -53,6 +53,12 @@ function gie_microsite_context_default_contexts() {
           'region' => 'navigation',
           'weight' => '-9',
         ),
+        'blockify-blockify-messages' => array(
+          'module' => 'blockify',
+          'delta' => 'blockify-messages',
+          'region' => 'preface',
+          'weight' => '-10',
+        ),
         'views-023d63e471c859444525b3bb3e763d26' => array(
           'module' => 'views',
           'delta' => '023d63e471c859444525b3bb3e763d26',

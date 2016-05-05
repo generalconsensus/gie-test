@@ -8,7 +8,7 @@
  * Implements hook_field_group_info().
  */
 function gie_blogs_field_group_info() {
-  $export = array();
+  $field_groups = array();
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -40,7 +40,7 @@ function gie_blogs_field_group_info() {
       'formatter' => 'open',
     ),
   );
-  $export['group_blog_contact|node|blogs|contact'] = $field_group;
+  $field_groups['group_blog_contact|node|blogs|contact'] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -74,7 +74,7 @@ function gie_blogs_field_group_info() {
       'formatter' => 'open',
     ),
   );
-  $export['group_blog_glance|node|blogs|at_a_glance'] = $field_group;
+  $field_groups['group_blog_glance|node|blogs|at_a_glance'] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -89,12 +89,12 @@ function gie_blogs_field_group_info() {
     'label' => 'Details',
     'weight' => '0',
     'children' => array(
-      0 => 'field_blogs_country',
-      1 => 'field_blogs_organization',
-      2 => 'field_blogs_program',
-      3 => 'field_blogs_region',
-      4 => 'field_blogs_sector',
-      5 => 'field_blogs_topic',
+      0 => 'field_blogs_organization',
+      1 => 'field_blogs_program',
+      2 => 'field_term_country',
+      3 => 'field_term_region',
+      4 => 'field_term_sector',
+      5 => 'field_term_topic',
     ),
     'format_type' => 'div',
     'format_settings' => array(
@@ -111,7 +111,7 @@ function gie_blogs_field_group_info() {
       'formatter' => 'open',
     ),
   );
-  $export['group_blog_stats|node|blogs|details'] = $field_group;
+  $field_groups['group_blog_stats|node|blogs|details'] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -144,7 +144,7 @@ function gie_blogs_field_group_info() {
       'formatter' => 'open',
     ),
   );
-  $export['group_card_author|node|blogs|listing'] = $field_group;
+  $field_groups['group_card_author|node|blogs|listing'] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -159,8 +159,8 @@ function gie_blogs_field_group_info() {
     'label' => 'Card Content',
     'weight' => '0',
     'children' => array(
-      0 => 'field_blogs_sector',
-      1 => 'title_field',
+      0 => 'title_field',
+      1 => 'field_term_sector',
       2 => 'group_card_author',
       3 => 'group_card_counts',
     ),
@@ -179,7 +179,7 @@ function gie_blogs_field_group_info() {
       'formatter' => 'open',
     ),
   );
-  $export['group_card_content|node|blogs|listing'] = $field_group;
+  $field_groups['group_card_content|node|blogs|listing'] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -212,7 +212,16 @@ function gie_blogs_field_group_info() {
       'formatter' => 'open',
     ),
   );
-  $export['group_card_counts|node|blogs|listing'] = $field_group;
+  $field_groups['group_card_counts|node|blogs|listing'] = $field_group;
 
-  return $export;
+  // Translatables
+  // Included for use with string extractors like potx.
+  t('At a Glance');
+  t('Card Author');
+  t('Card Content');
+  t('Card Counts');
+  t('Details');
+  t('Point of Contact');
+
+  return $field_groups;
 }

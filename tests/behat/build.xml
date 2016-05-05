@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<project name="Behat Test" default="runner" basedir=".">
+
+    <!-- Run the individual steps required -->
+    <target name="runner" description="Overall step executor" depends="prepare, test">
+        <echo msg="Running ..." />
+    </target>
+
+    <!-- Prepare the environment with composer -->
+    <target name="prepare" description="Use composer to install dependancies">
+        <echo msg="update composer" />
+        <exec command="composer self-update" passthru="true" />
+        <echo msg="install dependancies" />
+        <exec command="composer install" passthru="true" />
+    </target>
+
+    <!-- Run the test suite -->
+    <target name="test" description="Execute the behat tests">
+        <echo msg="Run behat tests" />
+        <exec command="vendor/behat/bin/behat -c vendor/behat/behat.yml features/OLD/test/test.feature" passthru="true" />
+    </target>
+
+</project>

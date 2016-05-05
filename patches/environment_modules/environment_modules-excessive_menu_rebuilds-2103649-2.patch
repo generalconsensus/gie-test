@@ -1,0 +1,48 @@
+diff --git a/environment_modules.module b/environment_modules.module
+index d38f90e..cdba6d5 100755
+--- a/environment_modules.module
++++ b/environment_modules.module
+@@ -47,6 +47,7 @@ if (!empty($GLOBALS['conf']['environment_modules'])) {
+  * Implements hook_init().
+  */
+ function environment_modules_init() {
++  $rebuild_menu = FALSE;
+ 
+   // Check that we have environment modules to enable.
+   if ($envmodules = variable_get('environment_modules')) {
+@@ -57,18 +58,31 @@ function environment_modules_init() {
+       unset($envmodules[$id]);
+     }
+ 
++    // Remove modules not on the filesystem
++    if(!empty($envmodules)) {
++      foreach ($envmodules as $id => $module) {
++        if(!file_exists(DRUPAL_ROOT . DIRECTORY_SEPARATOR . $module)) {
++          unset($envmodules[$id]);
++        }
++      }
++    }
++
+     // If the module is not installed/enabled yet enable it.
+     if (!empty($envmodules)) {
+       module_enable(array_keys($envmodules));
+-      menu_rebuild();
++      $rebuild_menu = TRUE;
+     }
+   }
+ 
+   // Check that we have environment modules to disable.
+   if ($envmodules_disable = variable_get('environment_modules_disable')) {
+-    if (!empty($envmodules_disable)) {
+-      module_disable(array_keys($envmodules_disable));
+-      menu_rebuild();
++    if(empty($modules)) $modules = module_list();
++    $envmodules_disable = array_intersect(array_keys($envmodules_disable), $modules);
++    if(!empty($envmodules_disable)) {
++      module_disable($envmodules_disable);
++      $rebuild_menu = TRUE;
+     }
+   }
++
++  if($rebuild_menu) menu_rebuild();
+ }
