@@ -253,7 +253,6 @@ class GieEntityReference_SelectionHandler_Generic implements EntityReference_Sel
 
     // Add a generic entity access tag to the query.
     $query->addTag($this->field['settings']['target_type'] . '_access');
-    $query->addTag('gie_innovation');
     $query->addMetaData('field', $this->field);
     $query->addMetaData('entityreference_selection_handler', $this);
 
