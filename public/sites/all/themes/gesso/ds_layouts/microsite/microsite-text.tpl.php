@@ -14,9 +14,9 @@
   //var_dump($content['field_background'][0]['#markup']);
 
   if ($orientation == 'microsite-text--centered') {
-    $classes = "microsite-text layout-constrain " . $orientation . ' ' . $background;
+    $classes = "microsite-text " . $orientation . ' ' . $background;
   } else {
-    $classes = "microsite-text layout-constrain " . $orientation . ' ' . $background;
+    $classes = "microsite-text " . $orientation . ' ' . $background;
   };
 
   hide($content['field_orientation']);
@@ -24,5 +24,7 @@
 ?>
 
 <div class="<?php print $classes ?>">
-  <?php print render($content); ?>
+  <div class="layout-constrain">
+    <?php print render($content); ?>
+  </div>
 </div>
