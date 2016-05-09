@@ -1,7 +1,7 @@
 default:
     extensions:
         Behat\MinkExtension\Extension:
-            base_url: http://localhost:8081/
+            base_url: http://localhost/
             goutte: ~
             selenium2:
               browser:              'chrome'
@@ -21,7 +21,7 @@ default:
                 login_form_selector: "form#user-login"
             api_driver: 'drush'
             drush:
-              alias: 'dai-usaid.local'
+#              alias: 'dai-usaid.local'
               root: '/vagrant/public'
 local-selenium:
     extensions:
