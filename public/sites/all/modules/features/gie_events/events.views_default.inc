@@ -182,38 +182,7 @@ function events_views_default_views() {
   $handler->display->display_options['hide_admin_links'] = TRUE;
   $handler->display->display_options['use_more_always'] = FALSE;
   $handler->display->display_options['access']['type'] = 'perm';
-  $handler->display->display_options['cache']['type'] = 'views_content_cache';
-  $handler->display->display_options['cache']['results_min_lifespan'] = '300';
-  $handler->display->display_options['cache']['results_max_lifespan'] = '21600';
-  $handler->display->display_options['cache']['output_min_lifespan'] = '300';
-  $handler->display->display_options['cache']['output_max_lifespan'] = '21600';
-  $handler->display->display_options['cache']['keys'] = array(
-    'comment' => array(
-      'changed' => 'changed',
-    ),
-    'node' => array(
-      'event' => 'event',
-      'action_card' => 0,
-      'article' => 0,
-      'page' => 0,
-      'discussion' => 0,
-      'error_page' => 0,
-      'funding' => 0,
-      'homepage' => 0,
-      'innovation' => 0,
-      'long_form_page' => 0,
-      'microsite' => 0,
-      'microsite_page' => 0,
-      'needs' => 0,
-      'organization' => 0,
-      'persona' => 0,
-      'program' => 0,
-      'resource' => 0,
-    ),
-    'node_only' => array(
-      'node_changed' => 'node_changed',
-    ),
-  );
+  $handler->display->display_options['cache']['type'] = 'none';
   $handler->display->display_options['query']['type'] = 'views_query';
   $handler->display->display_options['exposed_form']['type'] = 'basic';
   $handler->display->display_options['pager']['type'] = 'some';
@@ -592,39 +561,6 @@ function events_views_default_views() {
   $handler->display->display_options['defaults']['title'] = FALSE;
   $handler->display->display_options['title'] = 'Event Organizations';
   $handler->display->display_options['defaults']['css_class'] = FALSE;
-  $handler->display->display_options['defaults']['cache'] = FALSE;
-  $handler->display->display_options['cache']['type'] = 'views_content_cache';
-  $handler->display->display_options['cache']['results_min_lifespan'] = '300';
-  $handler->display->display_options['cache']['results_max_lifespan'] = '21600';
-  $handler->display->display_options['cache']['output_min_lifespan'] = '300';
-  $handler->display->display_options['cache']['output_max_lifespan'] = '21600';
-  $handler->display->display_options['cache']['keys'] = array(
-    'comment' => array(
-      'changed' => 'changed',
-    ),
-    'node' => array(
-      'organization' => 'organization',
-      'action_card' => 0,
-      'article' => 0,
-      'page' => 0,
-      'discussion' => 0,
-      'error_page' => 0,
-      'event' => 0,
-      'funding' => 0,
-      'homepage' => 0,
-      'innovation' => 0,
-      'long_form_page' => 0,
-      'microsite' => 0,
-      'microsite_page' => 0,
-      'needs' => 0,
-      'persona' => 0,
-      'program' => 0,
-      'resource' => 0,
-    ),
-    'node_only' => array(
-      'node_changed' => 'node_changed',
-    ),
-  );
   $handler->display->display_options['defaults']['pager'] = FALSE;
   $handler->display->display_options['pager']['type'] = 'none';
   $handler->display->display_options['pager']['options']['offset'] = '0';
