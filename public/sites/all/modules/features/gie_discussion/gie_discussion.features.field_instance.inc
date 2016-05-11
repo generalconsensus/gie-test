@@ -496,8 +496,9 @@ function gie_discussion_field_default_field_instances() {
     'entity_type' => 'node',
     'field_name' => 'field_term_region',
     'label' => 'Region',
-    'required' => 0,
+    'required' => 1,
     'settings' => array(
+      'description_display' => 'after',
       'user_register_form' => FALSE,
     ),
     'widget' => array(
@@ -579,7 +580,7 @@ function gie_discussion_field_default_field_instances() {
     'entity_type' => 'node',
     'field_name' => 'field_term_sector',
     'label' => 'Sector',
-    'required' => 0,
+    'required' => 1,
     'settings' => array(
       'description_display' => 'before',
       'user_register_form' => FALSE,
