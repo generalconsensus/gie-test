@@ -39,7 +39,7 @@
     <?php if ($recipient): ?>
       <p>Update your message settings by editing your profile on the Exchange <a href="<?php
         $uid = $recipient->uid;
-        print $GLOBALS['base_url'] . '/user/' . $uid . '/edit';
+        print $GLOBALS['base_url'] . '/user/' . $uid . '/notifications';
       ?>">here</a>.</p>
     <?php endif; ?>
   </div>
