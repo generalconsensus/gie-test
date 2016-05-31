@@ -664,7 +664,7 @@ $conf['s3fs_use_s3_for_public'] = 0;
  * Set Re-route email to enable to catch all local emails
  */
 $conf['reroute_email_enable'] = 1;
-$conf['reroute_email_address'] = '';
+#$conf['reroute_email_address'] = '';
 $conf['reroute_email_enable_message'] = 1;
 
 $conf['environment_modules'] = array(
