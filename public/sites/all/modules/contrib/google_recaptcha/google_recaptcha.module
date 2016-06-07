@@ -75,20 +75,8 @@ function google_recaptcha_form_alter(&$form, &$form_state, $form_id) {
 
   $tune = variable_get('google_recaptcha');
 
-  // For security usability reasons - forms for
-  // user registration, recovery pass and login always protected
-  $always_protected = array(
-    'user_login',
-    'user_register_form',
-    'user_pass',
-    'user_login_block'
-  );
 
-  drupal_alter('google_recaptcha_always_protect', $always_protected);
-
-  if (in_array($form_id, $always_protected)) {
-    g_add_captcha($form, $form_id);
-  }
+  drupal_alter('google_recaptcha_always_protect', $tune['protected_forms']);
 
   foreach ($tune['protected_forms'] as $protected_form_name) {
     if (strstr($form_id, $protected_form_name)) {

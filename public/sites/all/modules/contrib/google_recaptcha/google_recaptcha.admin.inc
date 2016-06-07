@@ -176,11 +176,11 @@ function g_forms($form, &$form_state) {
     }
   }
 
+
   drupal_alter('google_recaptcha_available_forms', $available_forms);
 
   // create form
   $form['#prefix'] = '<p>' . t('Check forms which You want to protect with Google reCAPTCHA') . '</p>';
-  $form['#prefix'] .= '<div class="description">' . t('For security usability reasons - forms for <b>user registration</b>, <b>recovery pass</b> and <b>login</b> always protected!') . '</div>';
 
   foreach ($available_forms as $available_form_name => $available_form_title) {
     $form['available_forms'][$available_form_name] = array(
@@ -189,6 +189,32 @@ function g_forms($form, &$form_state) {
       '#default_value' => in_array($available_form_name, $tune['protected_forms']) ? 1 : 0,
     );
   }
+
+  // Default Protected Forms
+  $protected_forms = array(
+      'user_login' => array(
+        '#title' => t('User Login') . ' <b>(' . t('Recommended for Security') . ')</b>',
+        '#type' => 'checkbox',
+        '#default_value' => in_array('user_login', $tune['protected_forms']) ? 1 : 0
+      ),
+      'user_register_form' => array(
+        '#title' => t('User Register') . ' <b>(' . t('Recommended for Security') . ')</b>',
+        '#type' => 'checkbox',
+        '#default_value' => in_array('user_register_form', $tune['protected_forms']) ? 1 : 0
+      ),
+      'user_pass' => array(
+        '#title' => t('User Password Reset') . ' <b>(' . t('Recommended for Security') . ')</b>',
+        '#type' => 'checkbox',
+        '#default_value' => in_array('user_pass', $tune['protected_forms']) ? 1 : 0
+      ),
+      'user_login_block' => array(
+        '#title' => t('User Login Block') . ' <b>(' . t('Recommended for Security') . ')</b>',
+        '#type' => 'checkbox',
+        '#default_value' => in_array('user_login_block', $tune['protected_forms']) ? 1 : 0
+      )
+  );
+
+  $form['available_forms'] += $protected_forms;
 
   $form['submit'] = array(
     '#type' => 'submit',

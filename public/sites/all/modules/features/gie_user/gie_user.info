@@ -186,6 +186,7 @@ features[variable][] = contact_plus_user_text
 features[variable][] = contact_plus_user_title
 features[variable][] = contact_plus_user_to
 features[variable][] = field_bundle_settings_user__user
+features[variable][] = google_recaptcha
 features[variable][] = mailchimp_api_key
 features[variable][] = page_manager_contact_user_disabled
 features[variable][] = page_manager_user_view_disabled
