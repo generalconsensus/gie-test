@@ -90,7 +90,7 @@ function user_registration_render() {
 //  unset($form['account']['pass']['#size']);
 
   // Set terms and conditions text before submit button
-  $form['actions']['submit']['#prefix'] = '<p>By creating an account, you agree to our <a href="/terms-use">terms and conditions</a>.</p>';
+  $form['actions']['submit']['#suffix'] = '<p>By creating an account, you agree to our <a href="/terms-use">terms and conditions</a>.</p>';
 
   $block->content = drupal_render($form);
 
