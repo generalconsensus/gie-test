@@ -17,6 +17,7 @@ dependencies[] = field_group
 dependencies[] = flag
 dependencies[] = gie_funding
 dependencies[] = gie_innovation
+dependencies[] = google_recaptcha
 dependencies[] = html5_tools
 dependencies[] = image
 dependencies[] = image_field_random
