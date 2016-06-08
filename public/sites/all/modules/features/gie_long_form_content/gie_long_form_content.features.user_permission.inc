@@ -14,6 +14,7 @@ function gie_long_form_content_user_default_permissions() {
   $permissions['use text format long_form_filtered'] = array(
     'name' => 'use text format long_form_filtered',
     'roles' => array(
+      'Intern' => 'Intern',
       'Microsite Administrator' => 'Microsite Administrator',
       'administrator' => 'administrator',
     ),
@@ -24,6 +25,7 @@ function gie_long_form_content_user_default_permissions() {
   $permissions['use text format long_form_full'] = array(
     'name' => 'use text format long_form_full',
     'roles' => array(
+      'Intern' => 'Intern',
       'Microsite Administrator' => 'Microsite Administrator',
       'administrator' => 'administrator',
     ),
