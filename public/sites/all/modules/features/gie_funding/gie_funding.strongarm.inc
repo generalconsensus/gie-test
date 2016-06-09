@@ -466,6 +466,10 @@ function gie_funding_strongarm() {
             'weight' => '12',
             'visible' => FALSE,
           ),
+          'listing' => array(
+            'weight' => '1',
+            'visible' => FALSE,
+          ),
         ),
         'flag_favorite' => array(
           'default' => array(
@@ -476,6 +480,10 @@ function gie_funding_strongarm() {
             'weight' => '3',
             'visible' => TRUE,
           ),
+          'listing' => array(
+            'weight' => '10',
+            'visible' => FALSE,
+          ),
         ),
         'flag_abuse_node' => array(
           'default' => array(
@@ -484,6 +492,10 @@ function gie_funding_strongarm() {
           ),
           'spotlight' => array(
             'weight' => '22',
+            'visible' => FALSE,
+          ),
+          'listing' => array(
+            'weight' => '10',
             'visible' => FALSE,
           ),
         ),
