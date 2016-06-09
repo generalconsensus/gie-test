@@ -35,6 +35,10 @@
     margin: 1.5em 0 0.75em 0;
   }
 
+  #google_recaptcha_user_register_form {
+    margin-bottom: 1.5em;
+  }
+
   .button--submit {
     margin: 0.5em 0;
   }
@@ -93,7 +97,7 @@
     margin-bottom: 0;
   }
 
-  #edit-actions {
+  #edit-actions { 
     text-align: center;
     margin-top: em(33px, 16px);;
     > p {
