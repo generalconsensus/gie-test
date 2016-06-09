@@ -1,0 +1,94 @@
+diff --git a/google_recaptcha/google_recaptcha.admin.inc b/google_recaptcha/google_recaptcha.admin.inc
+index 23433c3..8a4e997 100644
+--- a/google_recaptcha/google_recaptcha.admin.inc
++++ b/google_recaptcha/google_recaptcha.admin.inc
+@@ -176,11 +176,11 @@ function g_forms($form, &$form_state) {
+     }
+   }
+ 
++
+   drupal_alter('google_recaptcha_available_forms', $available_forms);
+ 
+   // create form
+   $form['#prefix'] = '<p>' . t('Check forms which You want to protect with Google reCAPTCHA') . '</p>';
+-  $form['#prefix'] .= '<div class="description">' . t('For security usability reasons - forms for <b>user registration</b>, <b>recovery pass</b> and <b>login</b> always protected!') . '</div>';
+ 
+   foreach ($available_forms as $available_form_name => $available_form_title) {
+     $form['available_forms'][$available_form_name] = array(
+@@ -190,6 +190,32 @@ function g_forms($form, &$form_state) {
+     );
+   }
+ 
++  // Default Protected Forms
++  $protected_forms = array(
++      'user_login' => array(
++        '#title' => t('User Login') . ' <b>(' . t('Recommended for Security') . ')</b>',
++        '#type' => 'checkbox',
++        '#default_value' => in_array('user_login', $tune['protected_forms']) ? 1 : 0
++      ),
++      'user_register_form' => array(
++        '#title' => t('User Register') . ' <b>(' . t('Recommended for Security') . ')</b>',
++        '#type' => 'checkbox',
++        '#default_value' => in_array('user_register_form', $tune['protected_forms']) ? 1 : 0
++      ),
++      'user_pass' => array(
++        '#title' => t('User Password Reset') . ' <b>(' . t('Recommended for Security') . ')</b>',
++        '#type' => 'checkbox',
++        '#default_value' => in_array('user_pass', $tune['protected_forms']) ? 1 : 0
++      ),
++      'user_login_block' => array(
++        '#title' => t('User Login Block') . ' <b>(' . t('Recommended for Security') . ')</b>',
++        '#type' => 'checkbox',
++        '#default_value' => in_array('user_login_block', $tune['protected_forms']) ? 1 : 0
++      )
++  );
++
++  $form['available_forms'] += $protected_forms;
++
+   $form['submit'] = array(
+     '#type' => 'submit',
+     '#value' => t('Save')
+diff --git a/google_recaptcha/google_recaptcha.install b/google_recaptcha/google_recaptcha.install
+index afc0502..66372d5 100644
+--- a/google_recaptcha/google_recaptcha.install
++++ b/google_recaptcha/google_recaptcha.install
+@@ -13,7 +13,12 @@ function google_recaptcha_install() {
+   $tune = array(
+     'public_key' => '',
+     'secret_key' => '',
+-    'protected_forms' => array(),
++    'protected_forms' => array(
++      'user_login',
++      'user_register_form',
++      'user_pass',
++      'user_login_block'
++    ),
+     'statistics' => array(
+       'status' => 1,
+       'requests' => 0,
+diff --git a/google_recaptcha/google_recaptcha.module b/google_recaptcha/google_recaptcha.module
+index b8e024a..4601f46 100644
+--- a/google_recaptcha/google_recaptcha.module
++++ b/google_recaptcha/google_recaptcha.module
+@@ -75,20 +75,8 @@ function google_recaptcha_form_alter(&$form, &$form_state, $form_id) {
+ 
+   $tune = variable_get('google_recaptcha');
+ 
+-  // For security usability reasons - forms for
+-  // user registration, recovery pass and login always protected
+-  $always_protected = array(
+-    'user_login',
+-    'user_register_form',
+-    'user_pass',
+-    'user_login_block'
+-  );
+-
+-  drupal_alter('google_recaptcha_always_protect', $always_protected);
+ 
+-  if (in_array($form_id, $always_protected)) {
+-    g_add_captcha($form, $form_id);
+-  }
++  drupal_alter('google_recaptcha_always_protect', $tune['protected_forms']);
+ 
+   foreach ($tune['protected_forms'] as $protected_form_name) {
+     if (strstr($form_id, $protected_form_name)) {

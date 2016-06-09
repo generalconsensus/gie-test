@@ -38,7 +38,7 @@ $header-image-height: 700px;
     }
   }
 
-  margin: 0 auto 5em auto;
+  margin: 0 auto 3em auto;
   &:after {
     @each $item, $color in $micrositeColorMap {
       .microsite-palette#{$item} & {
