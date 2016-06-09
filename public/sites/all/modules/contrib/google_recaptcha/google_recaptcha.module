@@ -84,14 +84,3 @@ function google_recaptcha_form_alter(&$form, &$form_state, $form_id) {
     }
   }
 }
-
-/**
- * Implements hook_html_head_alter().
- */
-function google_recaptcha_html_head_alter(&$head_elements) {
-  $tune_js = &drupal_static('google_recaptcha_js');
-  $js = 'var google_recaptcha_onload = function() {' . $tune_js . '};';
-  drupal_add_js($js, 'inline');
-}
-
-
