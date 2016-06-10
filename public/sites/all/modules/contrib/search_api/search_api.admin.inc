@@ -1332,8 +1332,10 @@ function search_api_admin_index_edit(array $form, array &$form_state, SearchApiI
     $form['server']['#options'][$server->machine_name] = $server->name;
   }
 
-  $datasource_form = !empty($form['options']['datasource']) ? $form['options']['datasource'] : array();
-  $datasource_form = $index->datasource()->configurationForm($datasource_form, $form_state);
+  $datasource_form = (!empty($form['options']) && !empty($form['options']['datasource'])) ? $form['options']['datasource'] : array();
+  if ($index->datasource()) {
+    $datasource_form = $index->datasource()->configurationForm($datasource_form, $form_state);
+  }
   if ($datasource_form) {
     $form['options']['datasource'] = $datasource_form;
     $form['options']['datasource']['#type'] = 'fieldset';
