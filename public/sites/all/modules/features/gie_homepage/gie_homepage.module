@@ -36,7 +36,7 @@ function gie_homepage_ds_fields_info($entity_type) {
 function _gie_homepage_title_count($field) {
     $persona_type = field_get_items('node', $field['entity'], 'field_persona_type');
 
-    if (isset($persona_type)) {
+    if (!empty($persona_type)) {
 
         switch ($persona_type[0]['value']) {
             case "innovation":
@@ -72,6 +72,16 @@ function _gie_homepage_title_count($field) {
 
         return $result;
 
+    } else {
+      // get node title and link field
+      $wrapper = entity_metadata_wrapper('node',$field['entity']);
+      $node_title = $wrapper->label();
+      $link_field = $wrapper->field_persona_link->value();
+
+      // if node does not contain link, default to node title for content
+      $content = (empty($link_field)) ? $node_title : l($link_field['title'],$link_field['url']);
+
+      return '<h1 class="card__title">'.$content.'</h1>';
     }
 }
 
