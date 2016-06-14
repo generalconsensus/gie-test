@@ -8,7 +8,7 @@
  * Implements hook_field_group_info().
  */
 function gie_microsite_field_group_info() {
-  $export = array();
+  $field_groups = array();
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -40,7 +40,7 @@ function gie_microsite_field_group_info() {
       'formatter' => 'open',
     ),
   );
-  $export['group_callout_text|paragraphs_item|microsite_text_callout|default'] = $field_group;
+  $field_groups['group_callout_text|paragraphs_item|microsite_text_callout|default'] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -73,7 +73,7 @@ function gie_microsite_field_group_info() {
       'formatter' => 'open',
     ),
   );
-  $export['group_container|paragraphs_item|long_form_50_50|left_image'] = $field_group;
+  $field_groups['group_container|paragraphs_item|long_form_50_50|left_image'] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -106,7 +106,7 @@ function gie_microsite_field_group_info() {
       'formatter' => 'open',
     ),
   );
-  $export['group_container|paragraphs_item|long_form_50_50|right_image'] = $field_group;
+  $field_groups['group_container|paragraphs_item|long_form_50_50|right_image'] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -139,7 +139,7 @@ function gie_microsite_field_group_info() {
       'formatter' => 'open',
     ),
   );
-  $export['group_header_text|paragraphs_item|long_form_header|default'] = $field_group;
+  $field_groups['group_header_text|paragraphs_item|long_form_header|default'] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -172,7 +172,7 @@ function gie_microsite_field_group_info() {
       'formatter' => 'open',
     ),
   );
-  $export['group_header|paragraphs_item|microsite_news_slider|default'] = $field_group;
+  $field_groups['group_header|paragraphs_item|microsite_news_slider|default'] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -204,7 +204,7 @@ function gie_microsite_field_group_info() {
       'formatter' => 'open',
     ),
   );
-  $export['group_image|node|organization|microsite_content_slider'] = $field_group;
+  $field_groups['group_image|node|organization|microsite_content_slider'] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -236,7 +236,7 @@ function gie_microsite_field_group_info() {
       'formatter' => 'open',
     ),
   );
-  $export['group_image|paragraphs_item|long_form_50_50|default'] = $field_group;
+  $field_groups['group_image|paragraphs_item|long_form_50_50|default'] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -268,7 +268,7 @@ function gie_microsite_field_group_info() {
       'formatter' => 'open',
     ),
   );
-  $export['group_image|paragraphs_item|long_form_50_50|left_image'] = $field_group;
+  $field_groups['group_image|paragraphs_item|long_form_50_50|left_image'] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -300,7 +300,7 @@ function gie_microsite_field_group_info() {
       'formatter' => 'open',
     ),
   );
-  $export['group_image|paragraphs_item|long_form_50_50|right_image'] = $field_group;
+  $field_groups['group_image|paragraphs_item|long_form_50_50|right_image'] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -334,7 +334,7 @@ function gie_microsite_field_group_info() {
       'formatter' => 'open',
     ),
   );
-  $export['group_right_content|node|organization|microsite_content_slider'] = $field_group;
+  $field_groups['group_right_content|node|organization|microsite_content_slider'] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -366,7 +366,7 @@ function gie_microsite_field_group_info() {
       'formatter' => 'open',
     ),
   );
-  $export['group_slider|paragraphs_item|microsite_news_slider|default'] = $field_group;
+  $field_groups['group_slider|paragraphs_item|microsite_news_slider|default'] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -398,7 +398,7 @@ function gie_microsite_field_group_info() {
       'formatter' => 'open',
     ),
   );
-  $export['group_text_wrapper|paragraphs_item|long_form_header|default'] = $field_group;
+  $field_groups['group_text_wrapper|paragraphs_item|long_form_header|default'] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -430,7 +430,7 @@ function gie_microsite_field_group_info() {
       'formatter' => 'open',
     ),
   );
-  $export['group_text_wrapper|paragraphs_item|microsite_highlight|default'] = $field_group;
+  $field_groups['group_text_wrapper|paragraphs_item|microsite_highlight|default'] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -462,7 +462,7 @@ function gie_microsite_field_group_info() {
       'formatter' => 'open',
     ),
   );
-  $export['group_text|paragraphs_item|long_form_50_50|default'] = $field_group;
+  $field_groups['group_text|paragraphs_item|long_form_50_50|default'] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -494,7 +494,7 @@ function gie_microsite_field_group_info() {
       'formatter' => 'open',
     ),
   );
-  $export['group_text|paragraphs_item|long_form_50_50|left_image'] = $field_group;
+  $field_groups['group_text|paragraphs_item|long_form_50_50|left_image'] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -526,7 +526,7 @@ function gie_microsite_field_group_info() {
       'formatter' => 'open',
     ),
   );
-  $export['group_text|paragraphs_item|long_form_50_50|right_image'] = $field_group;
+  $field_groups['group_text|paragraphs_item|long_form_50_50|right_image'] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -558,7 +558,7 @@ function gie_microsite_field_group_info() {
       'formatter' => 'open',
     ),
   );
-  $export['group_text|paragraphs_item|microsite_highlight|default'] = $field_group;
+  $field_groups['group_text|paragraphs_item|microsite_highlight|default'] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -590,7 +590,7 @@ function gie_microsite_field_group_info() {
       'formatter' => 'open',
     ),
   );
-  $export['group_text|paragraphs_item|microsite_text_callout|default'] = $field_group;
+  $field_groups['group_text|paragraphs_item|microsite_text_callout|default'] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -622,7 +622,7 @@ function gie_microsite_field_group_info() {
       'formatter' => 'open',
     ),
   );
-  $export['group_text|paragraphs_item|microsite_text|center_aligned'] = $field_group;
+  $field_groups['group_text|paragraphs_item|microsite_text|center_aligned'] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -654,7 +654,19 @@ function gie_microsite_field_group_info() {
       'formatter' => 'open',
     ),
   );
-  $export['group_text|paragraphs_item|microsite_text|left_aligned'] = $field_group;
+  $field_groups['group_text|paragraphs_item|microsite_text|left_aligned'] = $field_group;
 
-  return $export;
+  // Translatables
+  // Included for use with string extractors like potx.
+  t('Callout Text');
+  t('Container');
+  t('Header');
+  t('Header Text');
+  t('Image');
+  t('Right Content');
+  t('Slider');
+  t('Text');
+  t('Text Wrapper');
+
+  return $field_groups;
 }
