@@ -237,7 +237,12 @@ function gie_homepage_ds_layout_settings_info() {
       'title_count' => 'main_content',
       'field_persona_description' => 'main_content',
     ),
-    'classes' => array(),
+    'classes' => array(
+      'layout_class' => array(
+        'card' => 'card',
+        'card--button' => 'card--button',
+      ),
+    ),
     'wrappers' => array(
       'header' => 'div',
       'main_content' => 'div',
