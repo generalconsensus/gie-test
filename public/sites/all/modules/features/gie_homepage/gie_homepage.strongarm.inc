@@ -242,16 +242,22 @@ function gie_homepage_strongarm() {
     'extra_fields' => array(
       'form' => array(
         'path' => array(
-          'weight' => '2',
+          'weight' => '3',
         ),
         'rabbit_hole' => array(
-          'weight' => '1',
+          'weight' => '2',
         ),
         'metatags' => array(
-          'weight' => '20',
+          'weight' => '21',
         ),
         'xmlsitemap' => array(
-          'weight' => '19',
+          'weight' => '20',
+        ),
+        'domain' => array(
+          'weight' => '1',
+        ),
+        'redirect' => array(
+          'weight' => '23',
         ),
       ),
       'display' => array(),
@@ -323,6 +329,12 @@ function gie_homepage_strongarm() {
           ),
           'teaser' => array(
             'weight' => '8',
+            'visible' => FALSE,
+          ),
+        ),
+        'domain' => array(
+          'listing' => array(
+            'weight' => '1',
             'visible' => FALSE,
           ),
         ),
