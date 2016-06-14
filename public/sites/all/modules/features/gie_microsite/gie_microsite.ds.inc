@@ -390,7 +390,7 @@ function gie_microsite_ds_custom_fields_info() {
   $ds_field->ui_limit = '';
   $ds_field->properties = array(
     'code' => array(
-      'value' => ' <div class="microsite-break" style="background-image: url([paragraphs_item:field_para_section_break_image]);">
+      'value' => ' <div class="microsite-break" style="background-image: url([paragraphs_item:field_para_section_break_image]);" title="[paragraphs_item:field-para-section-break-image:title]">
       <div class="microsite-break__text-wrapper">
         <div class="microsite-break__text">
 [paragraphs_item:field_para_section_break_title]        </div>
@@ -762,7 +762,7 @@ function gie_microsite_ds_layout_settings_info() {
     'regions' => array(
       'main_content' => array(
         0 => 'field_paragraph_text',
-        1 => 'field_background'
+        1 => 'field_background',
       ),
     ),
     'fields' => array(
