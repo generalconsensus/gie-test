@@ -37,6 +37,7 @@ function gie_search_default_search_api_index() {
     "server" : "elasticsearch",
     "item_type" : "node",
     "options" : {
+      "datasource" : { "bundles" : [] },
       "index_directly" : 0,
       "cron_limit" : "50",
       "number_of_shards" : "1",
@@ -137,6 +138,7 @@ function gie_search_default_search_api_index() {
     "server" : "solr",
     "item_type" : "node",
     "options" : {
+      "datasource" : { "bundles" : [] },
       "index_directly" : 1,
       "cron_limit" : "50",
       "data_alter_callbacks" : {
@@ -413,6 +415,7 @@ function gie_search_default_search_api_index() {
     "server" : "solr",
     "item_type" : "node",
     "options" : {
+      "datasource" : { "bundles" : [] },
       "index_directly" : 1,
       "cron_limit" : "50",
       "data_alter_callbacks" : {
@@ -517,6 +520,7 @@ function gie_search_default_search_api_index() {
     "server" : "elasticsearch",
     "item_type" : "taxonomy_term",
     "options" : {
+      "datasource" : { "bundles" : [] },
       "index_directly" : 0,
       "cron_limit" : "50",
       "number_of_shards" : "1",
