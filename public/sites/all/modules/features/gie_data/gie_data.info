@@ -9,6 +9,7 @@ dependencies[] = panels_mini
 dependencies[] = short_scale_formatter
 dependencies[] = views
 dependencies[] = views_content
+dependencies[] = views_content_cache
 features[ctools][] = page_manager:pages_default:1
 features[ctools][] = pane:pane:2
 features[ctools][] = panels_mini:panels_default:1
