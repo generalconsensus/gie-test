@@ -18,6 +18,7 @@ class FeatureContext extends RawDrupalContext implements SnippetAcceptingContext
    * Initializes context.
    */
   public function __construct() {
+    $test = 1;
   }
 
   /**
@@ -254,9 +255,9 @@ class FeatureContext extends RawDrupalContext implements SnippetAcceptingContext
   }
 
   /**
-   * @Then I visit the user edit screen and apply a social media url to each user
+   * @Then I visit the previously created users profile page
    */
-  public function iVisitTheUserEditScreenAndApplyASocialMediaUrlToEachUser() {
+  public function iVisitThePreviouslyCreatedUsersProfilePage() {
     $test = 1;
   }
 

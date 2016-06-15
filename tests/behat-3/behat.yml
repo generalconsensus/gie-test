@@ -30,7 +30,7 @@ default:
             selectors:
                 logged_in_selector: "body.logged-in"
                 login_form_selector: "form#user-login"
-            api_driver: 'drush'
+            api_driver: 'drupal'
             drush:
 #              alias: 'dai-usaid.local'
               root: '/vagrant/public'
@@ -106,5 +106,4 @@ local-selenium:
                 login_form_selector: "form#user-login"
             api_driver: 'drush'
             drush:
-              alias: 'dai-usaid.local'
               root: '/vagrant/public'
