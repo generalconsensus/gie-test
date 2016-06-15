@@ -1,0 +1,15 @@
+diff --git a/modules/search_api_elasticsearch/includes/SearchApiElasticsearchElastica.inc b/html/sites/all/modules/contrib/search_api_elasticsearch/modules/search_api_elasticsearch/includes/SearchApiElasticsearchElastica.inc
+index 19a1b6f..ee78889 100644
+--- a/modules/search_api_elasticsearch/includes/SearchApiElasticsearchElastica.inc
++++ b/modules/search_api_elasticsearch/includes/SearchApiElasticsearchElastica.inc
+@@ -799,7 +799,9 @@ class SearchApiElasticsearchElastica extends SearchApiElasticsearchAbstractServi
+     try {
+       $elastica_index = $this->getElasticaIndex($index);
+       $elastica_index->close();
+-      $elastica_index->setSettings($data);
++      if ($data) {
++        $elastica_index->setSettings($data);
++      }
+       $elastica_index->open();
+     }
+     catch (Exception $e) {

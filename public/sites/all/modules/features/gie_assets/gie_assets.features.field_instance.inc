@@ -383,7 +383,7 @@ function gie_assets_field_default_field_instances() {
     'label' => 'Image',
     'required' => 1,
     'settings' => array(
-      'alt_field' => 0,
+      'alt_field' => 1,
       'alt_field_default' => '',
       'alt_field_hide' => 0,
       'alt_field_sync_title' => 0,
@@ -400,7 +400,7 @@ function gie_assets_field_default_field_instances() {
       'min_resolution' => '',
       'random_default' => 0,
       'random_default_path' => '',
-      'title_field' => 0,
+      'title_field' => 1,
       'title_field_default' => '',
       'title_field_hide' => 0,
       'title_field_update_on_edit' => 0,
