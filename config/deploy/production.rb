@@ -60,4 +60,4 @@ role :db,  %w[gie@utility.gie.byf1.io]
 
 # fetch(:default_env).merge!(:rails_env, :dev)
 
-Rake::Task["deploy:published"].enhance ["deploy:autoscale"]
+# Rake::Task["deploy:published"].enhance ["deploy:autoscale"]
