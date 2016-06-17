@@ -10,7 +10,7 @@
 function gie_organization_field_default_field_instances() {
   $field_instances = array();
 
-  // Exported field_instance: 'comment-comment_node_organization-comment_body'
+  // Exported field_instance: 'comment-comment_node_organization-comment_body'.
   $field_instances['comment-comment_node_organization-comment_body'] = array(
     'bundle' => 'comment_node_organization',
     'default_value' => NULL,
@@ -56,7 +56,7 @@ function gie_organization_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'comment-comment_node_organization-subject_field'
+  // Exported field_instance: 'comment-comment_node_organization-subject_field'.
   $field_instances['comment-comment_node_organization-subject_field'] = array(
     'bundle' => 'comment_node_organization',
     'default_value' => NULL,
@@ -92,7 +92,7 @@ function gie_organization_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-organization-field_org_address'
+  // Exported field_instance: 'node-organization-field_org_address'.
   $field_instances['node-organization-field_org_address'] = array(
     'bundle' => 'organization',
     'default_value' => NULL,
@@ -247,7 +247,7 @@ function gie_organization_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-organization-field_org_desc'
+  // Exported field_instance: 'node-organization-field_org_desc'.
   $field_instances['node-organization-field_org_desc'] = array(
     'bundle' => 'organization',
     'default_value' => NULL,
@@ -450,7 +450,7 @@ function gie_organization_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-organization-field_org_expertise'
+  // Exported field_instance: 'node-organization-field_org_expertise'.
   $field_instances['node-organization-field_org_expertise'] = array(
     'bundle' => 'organization',
     'default_value' => NULL,
@@ -578,7 +578,7 @@ function gie_organization_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-organization-field_org_featured'
+  // Exported field_instance: 'node-organization-field_org_featured'.
   $field_instances['node-organization-field_org_featured'] = array(
     'bundle' => 'organization',
     'default_value' => array(
@@ -694,7 +694,7 @@ function gie_organization_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-organization-field_org_focus'
+  // Exported field_instance: 'node-organization-field_org_focus'.
   $field_instances['node-organization-field_org_focus'] = array(
     'bundle' => 'organization',
     'default_value' => NULL,
@@ -849,7 +849,7 @@ function gie_organization_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-organization-field_org_link'
+  // Exported field_instance: 'node-organization-field_org_link'.
   $field_instances['node-organization-field_org_link'] = array(
     'bundle' => 'organization',
     'default_value' => NULL,
@@ -995,7 +995,7 @@ function gie_organization_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-organization-field_org_logo'
+  // Exported field_instance: 'node-organization-field_org_logo'.
   $field_instances['node-organization-field_org_logo'] = array(
     'bundle' => 'organization',
     'deleted' => 0,
@@ -1227,7 +1227,7 @@ function gie_organization_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-organization-field_org_mission'
+  // Exported field_instance: 'node-organization-field_org_mission'.
   $field_instances['node-organization-field_org_mission'] = array(
     'bundle' => 'organization',
     'default_value' => NULL,
@@ -1382,7 +1382,7 @@ function gie_organization_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-organization-field_org_parent_organization'
+  // Exported field_instance: 'node-organization-field_org_parent_organization'.
   $field_instances['node-organization-field_org_parent_organization'] = array(
     'bundle' => 'organization',
     'default_value' => NULL,
@@ -1497,7 +1497,7 @@ function gie_organization_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-organization-field_org_partners'
+  // Exported field_instance: 'node-organization-field_org_partners'.
   $field_instances['node-organization-field_org_partners'] = array(
     'bundle' => 'organization',
     'default_value' => NULL,
@@ -1621,7 +1621,7 @@ function gie_organization_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-organization-field_org_poc'
+  // Exported field_instance: 'node-organization-field_org_poc'.
   $field_instances['node-organization-field_org_poc'] = array(
     'bundle' => 'organization',
     'default_value' => NULL,
@@ -1760,7 +1760,7 @@ function gie_organization_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-organization-field_org_telephone'
+  // Exported field_instance: 'node-organization-field_org_telephone'.
   $field_instances['node-organization-field_org_telephone'] = array(
     'bundle' => 'organization',
     'default_value' => NULL,
@@ -1913,7 +1913,7 @@ function gie_organization_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-organization-field_org_text_email'
+  // Exported field_instance: 'node-organization-field_org_text_email'.
   $field_instances['node-organization-field_org_text_email'] = array(
     'bundle' => 'organization',
     'default_value' => NULL,
@@ -2066,7 +2066,7 @@ function gie_organization_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-organization-field_organization_facebook'
+  // Exported field_instance: 'node-organization-field_organization_facebook'.
   $field_instances['node-organization-field_organization_facebook'] = array(
     'bundle' => 'organization',
     'default_value' => NULL,
@@ -2205,7 +2205,7 @@ function gie_organization_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-organization-field_organization_linkedin'
+  // Exported field_instance: 'node-organization-field_organization_linkedin'.
   $field_instances['node-organization-field_organization_linkedin'] = array(
     'bundle' => 'organization',
     'default_value' => NULL,
@@ -2344,7 +2344,7 @@ function gie_organization_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-organization-field_organization_twitter'
+  // Exported field_instance: 'node-organization-field_organization_twitter'.
   $field_instances['node-organization-field_organization_twitter'] = array(
     'bundle' => 'organization',
     'default_value' => NULL,
@@ -2483,7 +2483,7 @@ function gie_organization_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-organization-field_organization_type'
+  // Exported field_instance: 'node-organization-field_organization_type'.
   $field_instances['node-organization-field_organization_type'] = array(
     'bundle' => 'organization',
     'default_value' => NULL,
@@ -2597,7 +2597,7 @@ function gie_organization_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-organization-field_partner'
+  // Exported field_instance: 'node-organization-field_partner'.
   $field_instances['node-organization-field_partner'] = array(
     'bundle' => 'organization',
     'default_value' => array(
@@ -2715,7 +2715,7 @@ function gie_organization_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-organization-field_role_on_the_exchange'
+  // Exported field_instance: 'node-organization-field_role_on_the_exchange'.
   $field_instances['node-organization-field_role_on_the_exchange'] = array(
     'bundle' => 'organization',
     'default_value' => NULL,
@@ -2829,7 +2829,7 @@ function gie_organization_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-organization-field_term_country'
+  // Exported field_instance: 'node-organization-field_term_country'.
   $field_instances['node-organization-field_term_country'] = array(
     'bundle' => 'organization',
     'default_value' => NULL,
@@ -2943,7 +2943,7 @@ function gie_organization_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-organization-field_term_region'
+  // Exported field_instance: 'node-organization-field_term_region'.
   $field_instances['node-organization-field_term_region'] = array(
     'bundle' => 'organization',
     'default_value' => NULL,
@@ -3057,7 +3057,7 @@ function gie_organization_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-organization-field_term_sector'
+  // Exported field_instance: 'node-organization-field_term_sector'.
   $field_instances['node-organization-field_term_sector'] = array(
     'bundle' => 'organization',
     'default_value' => NULL,
@@ -3180,7 +3180,7 @@ function gie_organization_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-organization-field_term_topic'
+  // Exported field_instance: 'node-organization-field_term_topic'.
   $field_instances['node-organization-field_term_topic'] = array(
     'bundle' => 'organization',
     'default_value' => NULL,
@@ -3302,7 +3302,7 @@ function gie_organization_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-organization-title_field'
+  // Exported field_instance: 'node-organization-title_field'.
   $field_instances['node-organization-title_field'] = array(
     'bundle' => 'organization',
     'default_value' => NULL,
@@ -3501,7 +3501,7 @@ function gie_organization_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'taxonomy_term-expertise_type-description_field'
+  // Exported field_instance: 'taxonomy_term-expertise_type-description_field'.
   $field_instances['taxonomy_term-expertise_type-description_field'] = array(
     'bundle' => 'expertise_type',
     'default_value' => NULL,
@@ -3539,7 +3539,7 @@ function gie_organization_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'taxonomy_term-expertise_type-name_field'
+  // Exported field_instance: 'taxonomy_term-expertise_type-name_field'.
   $field_instances['taxonomy_term-expertise_type-name_field'] = array(
     'bundle' => 'expertise_type',
     'default_value' => NULL,
@@ -3576,7 +3576,7 @@ function gie_organization_field_default_field_instances() {
   );
 
   // Exported field_instance:
-  // 'taxonomy_term-organization_role-description_field'
+  // 'taxonomy_term-organization_role-description_field'.
   $field_instances['taxonomy_term-organization_role-description_field'] = array(
     'bundle' => 'organization_role',
     'default_value' => NULL,
@@ -3614,7 +3614,7 @@ function gie_organization_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'taxonomy_term-organization_role-name_field'
+  // Exported field_instance: 'taxonomy_term-organization_role-name_field'.
   $field_instances['taxonomy_term-organization_role-name_field'] = array(
     'bundle' => 'organization_role',
     'default_value' => NULL,
@@ -3651,7 +3651,7 @@ function gie_organization_field_default_field_instances() {
   );
 
   // Exported field_instance:
-  // 'taxonomy_term-organization_type-description_field'
+  // 'taxonomy_term-organization_type-description_field'.
   $field_instances['taxonomy_term-organization_type-description_field'] = array(
     'bundle' => 'organization_type',
     'default_value' => NULL,
@@ -3689,7 +3689,7 @@ function gie_organization_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'taxonomy_term-organization_type-name_field'
+  // Exported field_instance: 'taxonomy_term-organization_type-name_field'.
   $field_instances['taxonomy_term-organization_type-name_field'] = array(
     'bundle' => 'organization_type',
     'default_value' => NULL,
