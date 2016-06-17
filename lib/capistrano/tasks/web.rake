@@ -17,6 +17,7 @@ Rake::Task["deploy:starting"].enhance ["web:load_platform"]
 namespace :load do
   task :defaults do
     set :platform, "drupal"
+    set :run_updates, true
   end
 end
 
