@@ -11,7 +11,7 @@ Rake::Task["deploy:symlink:release"].enhance ["drush:initialize"]
 
 # After publication run updates
 Rake::Task["deploy:published"].enhance do 
-  # Rake::Task["drush:update"].invoke
+  Rake::Task["drush:update"].invoke
 end
 
 namespace :drupal do
