@@ -17,7 +17,7 @@ set :deploy_to, '/var/www/vhosts/gie.www'
 set :tmp_dir, fetch(:deploy_to)
 
 # Which branch to deploy
-set :branch, 'live'
+set :branch, 'GIE-810'
 
 # Simple Role Syntax
 # ==================
