@@ -4,6 +4,7 @@ angular.module('gieDataViz').directive('barChart', function() {
     restrict: 'E',
     template: '<div data="data" items="items" selection="selection">' +
       '<h2 data-ng-if="data.chartTitle"> {{ data.chartTitle }} </h2>' +
+      '<label>Select a Grouping: </label>' +
       '<select data-ng-if="items" ng-options="item as item.label for item in items track by item.id" data-ng-model="$parent.selection"></select>' +
       '<div><svg class="chart bar-chart vertical" id="bar_chart__{{$id}}"></svg></div>' +
       '</div>',
