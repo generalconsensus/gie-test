@@ -10,7 +10,7 @@
 function gie_innovation_field_default_field_bases() {
   $field_bases = array();
 
-  // Exported field_base: 'comment_body'
+  // Exported field_base: 'comment_body'.
   $field_bases['comment_body'] = array(
     'active' => 1,
     'cardinality' => 1,
@@ -31,7 +31,7 @@ function gie_innovation_field_default_field_bases() {
     'type' => 'text_long',
   );
 
-  // Exported field_base: 'field_innovation_address'
+  // Exported field_base: 'field_innovation_address'.
   $field_bases['field_innovation_address'] = array(
     'active' => 1,
     'cardinality' => 1,
@@ -46,7 +46,7 @@ function gie_innovation_field_default_field_bases() {
     'type' => 'addressfield',
   );
 
-  // Exported field_base: 'field_innovation_assets'
+  // Exported field_base: 'field_innovation_assets'.
   $field_bases['field_innovation_assets'] = array(
     'active' => 1,
     'cardinality' => -1,
@@ -82,7 +82,7 @@ function gie_innovation_field_default_field_bases() {
     'type' => 'entityreference',
   );
 
-  // Exported field_base: 'field_innovation_assistance'
+  // Exported field_base: 'field_innovation_assistance'.
   $field_bases['field_innovation_assistance'] = array(
     'active' => 1,
     'cardinality' => 5,
@@ -108,7 +108,7 @@ function gie_innovation_field_default_field_bases() {
     'type' => 'taxonomy_term_reference',
   );
 
-  // Exported field_base: 'field_innovation_comment_type'
+  // Exported field_base: 'field_innovation_comment_type'.
   $field_bases['field_innovation_comment_type'] = array(
     'active' => 1,
     'cardinality' => 1,
@@ -146,7 +146,7 @@ function gie_innovation_field_default_field_bases() {
     'type' => 'entityreference',
   );
 
-  // Exported field_base: 'field_innovation_cost_bene'
+  // Exported field_base: 'field_innovation_cost_bene'.
   $field_bases['field_innovation_cost_bene'] = array(
     'active' => 1,
     'cardinality' => 1,
@@ -161,7 +161,7 @@ function gie_innovation_field_default_field_bases() {
     'type' => 'number_integer',
   );
 
-  // Exported field_base: 'field_innovation_cost_per_unit'
+  // Exported field_base: 'field_innovation_cost_per_unit'.
   $field_bases['field_innovation_cost_per_unit'] = array(
     'active' => 1,
     'cardinality' => 1,
@@ -176,7 +176,7 @@ function gie_innovation_field_default_field_bases() {
     'type' => 'number_integer',
   );
 
-  // Exported field_base: 'field_innovation_created'
+  // Exported field_base: 'field_innovation_created'.
   $field_bases['field_innovation_created'] = array(
     'active' => 1,
     'cardinality' => -1,
@@ -202,7 +202,7 @@ function gie_innovation_field_default_field_bases() {
     'type' => 'taxonomy_term_reference',
   );
 
-  // Exported field_base: 'field_innovation_desc'
+  // Exported field_base: 'field_innovation_desc'.
   $field_bases['field_innovation_desc'] = array(
     'active' => 1,
     'cardinality' => 1,
@@ -221,7 +221,7 @@ function gie_innovation_field_default_field_bases() {
     'type' => 'text_long',
   );
 
-  // Exported field_base: 'field_innovation_evidence'
+  // Exported field_base: 'field_innovation_evidence'.
   $field_bases['field_innovation_evidence'] = array(
     'active' => 1,
     'cardinality' => 1,
@@ -240,7 +240,7 @@ function gie_innovation_field_default_field_bases() {
     'type' => 'text_long',
   );
 
-  // Exported field_base: 'field_innovation_evidence_avail'
+  // Exported field_base: 'field_innovation_evidence_avail'.
   $field_bases['field_innovation_evidence_avail'] = array(
     'active' => 1,
     'cardinality' => 1,
@@ -265,7 +265,7 @@ function gie_innovation_field_default_field_bases() {
     'type' => 'list_boolean',
   );
 
-  // Exported field_base: 'field_innovation_funders'
+  // Exported field_base: 'field_innovation_funders'.
   $field_bases['field_innovation_funders'] = array(
     'active' => 1,
     'cardinality' => -1,
@@ -300,7 +300,7 @@ function gie_innovation_field_default_field_bases() {
     'type' => 'entityreference',
   );
 
-  // Exported field_base: 'field_innovation_funding_goal'
+  // Exported field_base: 'field_innovation_funding_goal'.
   $field_bases['field_innovation_funding_goal'] = array(
     'active' => 1,
     'cardinality' => 1,
@@ -315,7 +315,7 @@ function gie_innovation_field_default_field_bases() {
     'type' => 'number_integer',
   );
 
-  // Exported field_base: 'field_innovation_image'
+  // Exported field_base: 'field_innovation_image'.
   $field_bases['field_innovation_image'] = array(
     'active' => 1,
     'cardinality' => 1,
@@ -337,7 +337,7 @@ function gie_innovation_field_default_field_bases() {
     'type' => 'image',
   );
 
-  // Exported field_base: 'field_innovation_impact'
+  // Exported field_base: 'field_innovation_impact'.
   $field_bases['field_innovation_impact'] = array(
     'active' => 1,
     'cardinality' => 1,
@@ -356,7 +356,7 @@ function gie_innovation_field_default_field_bases() {
     'type' => 'text_long',
   );
 
-  // Exported field_base: 'field_innovation_implemented'
+  // Exported field_base: 'field_innovation_implemented'.
   $field_bases['field_innovation_implemented'] = array(
     'active' => 1,
     'cardinality' => -1,
@@ -382,7 +382,7 @@ function gie_innovation_field_default_field_bases() {
     'type' => 'taxonomy_term_reference',
   );
 
-  // Exported field_base: 'field_innovation_lives_impacted'
+  // Exported field_base: 'field_innovation_lives_impacted'.
   $field_bases['field_innovation_lives_impacted'] = array(
     'active' => 1,
     'cardinality' => 1,
@@ -397,7 +397,7 @@ function gie_innovation_field_default_field_bases() {
     'type' => 'number_integer',
   );
 
-  // Exported field_base: 'field_innovation_lives_saved'
+  // Exported field_base: 'field_innovation_lives_saved'.
   $field_bases['field_innovation_lives_saved'] = array(
     'active' => 1,
     'cardinality' => 1,
@@ -412,7 +412,7 @@ function gie_innovation_field_default_field_bases() {
     'type' => 'number_integer',
   );
 
-  // Exported field_base: 'field_innovation_news'
+  // Exported field_base: 'field_innovation_news'.
   $field_bases['field_innovation_news'] = array(
     'active' => 1,
     'cardinality' => -1,
@@ -441,7 +441,7 @@ function gie_innovation_field_default_field_bases() {
     'type' => 'link_field',
   );
 
-  // Exported field_base: 'field_innovation_non_references'
+  // Exported field_base: 'field_innovation_non_references'.
   $field_bases['field_innovation_non_references'] = array(
     'active' => 1,
     'cardinality' => -1,
@@ -463,7 +463,7 @@ function gie_innovation_field_default_field_bases() {
     'type' => 'field_collection',
   );
 
-  // Exported field_base: 'field_innovation_poc'
+  // Exported field_base: 'field_innovation_poc'.
   $field_bases['field_innovation_poc'] = array(
     'active' => 1,
     'cardinality' => 1,
@@ -496,7 +496,7 @@ function gie_innovation_field_default_field_bases() {
     'type' => 'entityreference',
   );
 
-  // Exported field_base: 'field_innovation_potent_lives_im'
+  // Exported field_base: 'field_innovation_potent_lives_im'.
   $field_bases['field_innovation_potent_lives_im'] = array(
     'active' => 1,
     'cardinality' => 1,
@@ -511,7 +511,7 @@ function gie_innovation_field_default_field_bases() {
     'type' => 'number_integer',
   );
 
-  // Exported field_base: 'field_innovation_potent_lives_sa'
+  // Exported field_base: 'field_innovation_potent_lives_sa'.
   $field_bases['field_innovation_potent_lives_sa'] = array(
     'active' => 1,
     'cardinality' => 1,
@@ -526,7 +526,7 @@ function gie_innovation_field_default_field_bases() {
     'type' => 'number_integer',
   );
 
-  // Exported field_base: 'field_innovation_program'
+  // Exported field_base: 'field_innovation_program'.
   $field_bases['field_innovation_program'] = array(
     'active' => 1,
     'cardinality' => -1,
@@ -561,7 +561,7 @@ function gie_innovation_field_default_field_bases() {
     'type' => 'entityreference',
   );
 
-  // Exported field_base: 'field_innovation_proof_avail'
+  // Exported field_base: 'field_innovation_proof_avail'.
   $field_bases['field_innovation_proof_avail'] = array(
     'active' => 1,
     'cardinality' => 1,
@@ -586,7 +586,7 @@ function gie_innovation_field_default_field_bases() {
     'type' => 'list_boolean',
   );
 
-  // Exported field_base: 'field_innovation_proof_evidence'
+  // Exported field_base: 'field_innovation_proof_evidence'.
   $field_bases['field_innovation_proof_evidence'] = array(
     'active' => 1,
     'cardinality' => -1,
@@ -619,7 +619,7 @@ function gie_innovation_field_default_field_bases() {
     'type' => 'entityreference',
   );
 
-  // Exported field_base: 'field_innovation_raised'
+  // Exported field_base: 'field_innovation_raised'.
   $field_bases['field_innovation_raised'] = array(
     'active' => 1,
     'cardinality' => 1,
@@ -634,7 +634,7 @@ function gie_innovation_field_default_field_bases() {
     'type' => 'number_integer',
   );
 
-  // Exported field_base: 'field_innovation_ref_avail'
+  // Exported field_base: 'field_innovation_ref_avail'.
   $field_bases['field_innovation_ref_avail'] = array(
     'active' => 1,
     'cardinality' => 1,
@@ -659,7 +659,7 @@ function gie_innovation_field_default_field_bases() {
     'type' => 'list_boolean',
   );
 
-  // Exported field_base: 'field_innovation_references'
+  // Exported field_base: 'field_innovation_references'.
   $field_bases['field_innovation_references'] = array(
     'active' => 1,
     'cardinality' => -1,
@@ -692,7 +692,7 @@ function gie_innovation_field_default_field_bases() {
     'type' => 'entityreference',
   );
 
-  // Exported field_base: 'field_innovation_related_org'
+  // Exported field_base: 'field_innovation_related_org'.
   $field_bases['field_innovation_related_org'] = array(
     'active' => 1,
     'cardinality' => -1,
@@ -727,7 +727,7 @@ function gie_innovation_field_default_field_bases() {
     'type' => 'entityreference',
   );
 
-  // Exported field_base: 'field_innovation_resources'
+  // Exported field_base: 'field_innovation_resources'.
   $field_bases['field_innovation_resources'] = array(
     'active' => 1,
     'cardinality' => -1,
@@ -762,7 +762,7 @@ function gie_innovation_field_default_field_bases() {
     'type' => 'entityreference',
   );
 
-  // Exported field_base: 'field_innovation_stage'
+  // Exported field_base: 'field_innovation_stage'.
   $field_bases['field_innovation_stage'] = array(
     'active' => 1,
     'cardinality' => 1,
@@ -788,7 +788,7 @@ function gie_innovation_field_default_field_bases() {
     'type' => 'taxonomy_term_reference',
   );
 
-  // Exported field_base: 'field_innovation_status_update'
+  // Exported field_base: 'field_innovation_status_update'.
   $field_bases['field_innovation_status_update'] = array(
     'active' => 1,
     'cardinality' => 1,
@@ -807,7 +807,7 @@ function gie_innovation_field_default_field_bases() {
     'type' => 'text_long',
   );
 
-  // Exported field_base: 'field_innovation_steps'
+  // Exported field_base: 'field_innovation_steps'.
   $field_bases['field_innovation_steps'] = array(
     'active' => 1,
     'cardinality' => 1,
@@ -826,7 +826,7 @@ function gie_innovation_field_default_field_bases() {
     'type' => 'text_long',
   );
 
-  // Exported field_base: 'field_innovation_team'
+  // Exported field_base: 'field_innovation_team'.
   $field_bases['field_innovation_team'] = array(
     'active' => 1,
     'cardinality' => -1,
@@ -859,7 +859,7 @@ function gie_innovation_field_default_field_bases() {
     'type' => 'entityreference',
   );
 
-  // Exported field_base: 'field_innovation_testers'
+  // Exported field_base: 'field_innovation_testers'.
   $field_bases['field_innovation_testers'] = array(
     'active' => 1,
     'cardinality' => 1,
@@ -878,7 +878,7 @@ function gie_innovation_field_default_field_bases() {
     'type' => 'text_long',
   );
 
-  // Exported field_base: 'field_innovation_type'
+  // Exported field_base: 'field_innovation_type'.
   $field_bases['field_innovation_type'] = array(
     'active' => 1,
     'cardinality' => 1,
@@ -904,7 +904,7 @@ function gie_innovation_field_default_field_bases() {
     'type' => 'taxonomy_term_reference',
   );
 
-  // Exported field_base: 'field_innovation_website'
+  // Exported field_base: 'field_innovation_website'.
   $field_bases['field_innovation_website'] = array(
     'active' => 1,
     'cardinality' => 1,
@@ -933,7 +933,7 @@ function gie_innovation_field_default_field_bases() {
     'type' => 'link_field',
   );
 
-  // Exported field_base: 'field_innovation_works'
+  // Exported field_base: 'field_innovation_works'.
   $field_bases['field_innovation_works'] = array(
     'active' => 1,
     'cardinality' => 1,
@@ -952,7 +952,7 @@ function gie_innovation_field_default_field_bases() {
     'type' => 'text_long',
   );
 
-  // Exported field_base: 'field_non_ref_email'
+  // Exported field_base: 'field_non_ref_email'.
   $field_bases['field_non_ref_email'] = array(
     'active' => 1,
     'cardinality' => 1,
@@ -967,7 +967,7 @@ function gie_innovation_field_default_field_bases() {
     'type' => 'email',
   );
 
-  // Exported field_base: 'field_non_ref_first_name'
+  // Exported field_base: 'field_non_ref_first_name'.
   $field_bases['field_non_ref_first_name'] = array(
     'active' => 1,
     'cardinality' => 1,
@@ -988,7 +988,7 @@ function gie_innovation_field_default_field_bases() {
     'type' => 'text',
   );
 
-  // Exported field_base: 'field_non_ref_last_name'
+  // Exported field_base: 'field_non_ref_last_name'.
   $field_bases['field_non_ref_last_name'] = array(
     'active' => 1,
     'cardinality' => 1,
@@ -1009,7 +1009,7 @@ function gie_innovation_field_default_field_bases() {
     'type' => 'text',
   );
 
-  // Exported field_base: 'field_non_ref_photo'
+  // Exported field_base: 'field_non_ref_photo'.
   $field_bases['field_non_ref_photo'] = array(
     'active' => 1,
     'cardinality' => 1,
@@ -1031,7 +1031,7 @@ function gie_innovation_field_default_field_bases() {
     'type' => 'image',
   );
 
-  // Exported field_base: 'subject_field'
+  // Exported field_base: 'subject_field'.
   $field_bases['subject_field'] = array(
     'active' => 1,
     'cardinality' => 1,

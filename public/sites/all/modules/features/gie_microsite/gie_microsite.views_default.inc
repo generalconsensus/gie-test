@@ -872,7 +872,7 @@ function gie_microsite_views_default_views() {
   $handler->display->display_options['cache']['output_max_lifespan'] = '21600';
   $handler->display->display_options['cache']['keys'] = array(
     'comment' => array(
-      'changed' => 'changed',
+      'changed' => 0,
     ),
     'node' => array(
       'microsite' => 'microsite',
@@ -1140,7 +1140,7 @@ function gie_microsite_views_default_views() {
   $handler->display->display_options['cache']['output_max_lifespan'] = '21600';
   $handler->display->display_options['cache']['keys'] = array(
     'comment' => array(
-      'changed' => 'changed',
+      'changed' => 0,
     ),
     'node' => array(
       'microsite' => 'microsite',
@@ -1254,7 +1254,7 @@ function gie_microsite_views_default_views() {
   $handler->display->display_options['cache']['output_max_lifespan'] = '21600';
   $handler->display->display_options['cache']['keys'] = array(
     'comment' => array(
-      'changed' => 'changed',
+      'changed' => 0,
     ),
     'node' => array(
       'microsite' => 'microsite',

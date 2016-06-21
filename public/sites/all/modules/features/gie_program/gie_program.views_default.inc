@@ -33,7 +33,7 @@ function gie_program_views_default_views() {
   $handler->display->display_options['cache']['output_max_lifespan'] = '21600';
   $handler->display->display_options['cache']['keys'] = array(
     'comment' => array(
-      'changed' => 'changed',
+      'changed' => 0,
     ),
     'node' => array(
       'program' => 'program',
@@ -164,7 +164,7 @@ function gie_program_views_default_views() {
   $handler->display->display_options['cache']['output_max_lifespan'] = '21600';
   $handler->display->display_options['cache']['keys'] = array(
     'comment' => array(
-      'changed' => 'changed',
+      'changed' => 0,
     ),
     'node' => array(
       'innovation' => 'innovation',
@@ -327,7 +327,7 @@ function gie_program_views_default_views() {
   $handler->display->display_options['cache']['output_max_lifespan'] = '21600';
   $handler->display->display_options['cache']['keys'] = array(
     'comment' => array(
-      'changed' => 'changed',
+      'changed' => 0,
     ),
     'node' => array(
       'program' => 'program',
@@ -455,7 +455,7 @@ function gie_program_views_default_views() {
   $handler->display->display_options['cache']['output_max_lifespan'] = '21600';
   $handler->display->display_options['cache']['keys'] = array(
     'comment' => array(
-      'changed' => 'changed',
+      'changed' => 0,
     ),
     'node' => array(
       'innovation' => 'innovation',
@@ -617,7 +617,7 @@ function gie_program_views_default_views() {
   $handler->display->display_options['cache']['output_max_lifespan'] = '21600';
   $handler->display->display_options['cache']['keys'] = array(
     'comment' => array(
-      'changed' => 'changed',
+      'changed' => 0,
     ),
     'node' => array(
       'resource' => 'resource',
@@ -729,7 +729,7 @@ function gie_program_views_default_views() {
   $handler->display->display_options['cache']['output_max_lifespan'] = '21600';
   $handler->display->display_options['cache']['keys'] = array(
     'comment' => array(
-      'changed' => 'changed',
+      'changed' => 0,
     ),
     'node' => array(
       'innovation' => 'innovation',
@@ -803,7 +803,7 @@ function gie_program_views_default_views() {
   $handler->display->display_options['cache']['output_max_lifespan'] = '21600';
   $handler->display->display_options['cache']['keys'] = array(
     'comment' => array(
-      'changed' => 'changed',
+      'changed' => 0,
     ),
     'node' => array(
       'organization' => 'organization',
