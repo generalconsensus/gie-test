@@ -316,6 +316,27 @@ function gie_homepage_views_default_views() {
   $handler->display->display_options['row_plugin'] = 'entity';
   $handler->display->display_options['row_options']['view_mode'] = 'teaser';
   $handler->display->display_options['defaults']['row_options'] = FALSE;
+
+  /* Display: GES Personas */
+  $handler = $view->new_display('panel_pane', 'GES Personas', 'ges_personas_pane');
+  $handler->display->display_options['defaults']['title'] = FALSE;
+  $handler->display->display_options['title'] = 'The Exchange Welcomes the Global Entrepreneurship Summit';
+  $handler->display->display_options['defaults']['hide_admin_links'] = FALSE;
+  $handler->display->display_options['hide_admin_links'] = TRUE;
+  $handler->display->display_options['defaults']['style_plugin'] = FALSE;
+  $handler->display->display_options['style_plugin'] = 'default';
+  $handler->display->display_options['style_options']['row_class_special'] = FALSE;
+  $handler->display->display_options['defaults']['style_options'] = FALSE;
+  $handler->display->display_options['defaults']['row_plugin'] = FALSE;
+  $handler->display->display_options['row_plugin'] = 'entity';
+  $handler->display->display_options['row_options']['view_mode'] = 'listing';
+  $handler->display->display_options['defaults']['row_options'] = FALSE;
+  $handler->display->display_options['defaults']['relationships'] = FALSE;
+  /* Relationship: Entity Reference: Referencing entity */
+  $handler->display->display_options['relationships']['reverse_field_homepage_ges_personas_node']['id'] = 'reverse_field_homepage_ges_personas_node';
+  $handler->display->display_options['relationships']['reverse_field_homepage_ges_personas_node']['table'] = 'node';
+  $handler->display->display_options['relationships']['reverse_field_homepage_ges_personas_node']['field'] = 'reverse_field_homepage_ges_personas_node';
+  $handler->display->display_options['relationships']['reverse_field_homepage_ges_personas_node']['required'] = TRUE;
   $export['homepage_views'] = $view;
 
   return $export;
