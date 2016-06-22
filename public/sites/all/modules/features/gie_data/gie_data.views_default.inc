@@ -1993,7 +1993,7 @@ function gie_data_views_default_views() {
   $handler->display->display_options['footer']['area']['id'] = 'area';
   $handler->display->display_options['footer']['area']['table'] = 'views';
   $handler->display->display_options['footer']['area']['field'] = 'area';
-  $handler->display->display_options['footer']['area']['content'] = '<h3>Total Beta Visitors</h3>';
+  $handler->display->display_options['footer']['area']['content'] = '<h3>Total Visitors</h3>';
   $handler->display->display_options['footer']['area']['format'] = 'full_html';
   $handler->display->display_options['defaults']['fields'] = FALSE;
   /* Field: Broken/missing handler */
