@@ -95,20 +95,6 @@ function gie_homepage_ds_field_settings_info() {
         ),
       ),
     ),
-    'field_persona_link' => array(
-      'formatter_settings' => array(
-        'ft' => array(
-          'func' => 'theme_ds_field_expert',
-          'fi' => TRUE,
-          'fi-el' => 'div',
-          'fi-cl' => 'card__button',
-          'fi-at' => '',
-          'fi-def-at' => FALSE,
-          'fi-odd-even' => FALSE,
-          'fi-first-last' => FALSE,
-        ),
-      ),
-    ),
   );
   $export['node|persona|listing'] = $ds_fieldsetting;
 
@@ -238,20 +224,18 @@ function gie_homepage_ds_layout_settings_info() {
     'regions' => array(
       'main_content' => array(
         0 => 'group_card_image',
-        1 => 'field_persona_image',
-        2 => 'group_card_content',
+        1 => 'group_card_content',
+        2 => 'field_persona_image',
         3 => 'title_count',
         4 => 'field_persona_description',
-        5 => 'field_persona_link',
       ),
     ),
     'fields' => array(
       'group_card_image' => 'main_content',
-      'field_persona_image' => 'main_content',
       'group_card_content' => 'main_content',
+      'field_persona_image' => 'main_content',
       'title_count' => 'main_content',
       'field_persona_description' => 'main_content',
-      'field_persona_link' => 'main_content',
     ),
     'classes' => array(
       'layout_class' => array(

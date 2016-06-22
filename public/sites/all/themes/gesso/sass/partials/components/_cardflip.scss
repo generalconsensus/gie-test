@@ -41,7 +41,7 @@ $cardheight: 180px;
       transform: translate3d(0px, 0px, 0px);
     }
   }
-  
+
   a {
     color: #fff;
   }
@@ -81,10 +81,9 @@ $cardheight: 180px;
   @extend %cardside;
   @extend %cardside-front;
   box-shadow: 0 1px 1px 0 rgba(0,0,0,0.1);
-  background: $lightorange;
+  background: $midorange;
   border: 1px solid #eee;
-
-}
+} 
 
 .cardflip__b { // homepage style card, back side
   @extend %cardside;
@@ -92,7 +91,7 @@ $cardheight: 180px;
   box-shadow: 0 1px 1px 0 rgba(0,0,0,0.1);
   background: $orange;
   border: 1px solid #eee;
-  
+
 }
 
 .cardflip__1 { // wanteds landing page style card, front side
@@ -129,7 +128,7 @@ $cardheight: 180px;
     text-transform: uppercase;
     top: 50%;
     z-index: 3;
-    transform: translateY(-50%); // vertically center 
+    transform: translateY(-50%); // vertically center
   }
   .cardflip__2 & {
     font-size: 13px;
