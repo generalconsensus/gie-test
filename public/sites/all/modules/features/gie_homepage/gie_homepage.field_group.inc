@@ -24,8 +24,7 @@ function gie_homepage_field_group_info() {
     'weight' => '1',
     'children' => array(
       0 => 'field_persona_description',
-      1 => 'field_persona_link',
-      2 => 'title_count',
+      1 => 'title_count',
     ),
     'format_type' => 'div',
     'format_settings' => array(
