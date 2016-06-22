@@ -62,8 +62,8 @@
   // IE 11 (e.g., v11.0.8) on Win10 passes preserve-3d test for some reason.
   // adding this hack to target IE11.  May need to revisit this if IE11 adds
   // true preserve-3d support or if useragent changes.
-  if(navigator.userAgent.match(/Trident.*rv:11\./)) { 
-    $('html').addClass('no-transformstylepreserve3d').removeClass('transformstylepreserve3d'); 
+  if(navigator.userAgent.match(/Trident.*rv:11\./)) {
+    $('html').addClass('no-transformstylepreserve3d').removeClass('transformstylepreserve3d');
   }
 
 
@@ -99,7 +99,7 @@
       $('.toggle-button').click(function(){
         $('.toggle-text').slideToggle();
       });
-    
+
     }
   }
 
@@ -122,17 +122,17 @@
     }
   }
 
-  Drupal.behaviors.betaVersion = {
-    attach: function (context) {
-      function betaVersion(element) {
-        if ($(element).find('.beta-version').length < 1) {
-          $(element).prepend('<div class="beta-version"><h2>BETA VERSION</h2></div>');
-        }
-      }
-      betaVersion('.header .region-header');
-      betaVersion('.l-panels-home .pane--homepage-header');
-    }
-  }
+  // Drupal.behaviors.betaVersion = {
+  //   attach: function (context) {
+  //     function betaVersion(element) {
+  //       if ($(element).find('.beta-version').length < 1) {
+  //         $(element).prepend('<div class="beta-version"><h2>BETA VERSION</h2></div>');
+  //       }
+  //     }
+  //     betaVersion('.header .region-header');
+  //     betaVersion('.l-panels-home .pane--homepage-header');
+  //   }
+  // }
 
   Drupal.behaviors.cardflipClick = {
     attach: function (context) {
@@ -149,13 +149,13 @@
       var tallest = 0;
       items.each(function(){
         var height = $(this).height();
-        if (height >= tallest) { 
+        if (height >= tallest) {
           tallest = height;
         }
         return tallest;
       });
       if (tallest > 0) {
-        items.css("height",tallest+40+"px"); // add 40 for the 20px padding  
+        items.css("height",tallest+40+"px"); // add 40 for the 20px padding
       }
     });
     $('.view--wanteds-cardflip').each(function(){
@@ -164,69 +164,69 @@
       var tallest = 0;
       items.each(function(){
         var height = $(this).height();
-        if (height >= tallest) { 
+        if (height >= tallest) {
           tallest = height;
         }
         return tallest;
       });
       if (tallest > 0) {
-        items.css("height",tallest+"px");  
+        items.css("height",tallest+"px");
       }
     });
   }
 
 
   function cardView() {
-    
+
     $('.view--card-view-2col,.view--card-view-3col,.view--card-view-4col').each(function(){
       var tab = $(this).parents('.quicktabs-hide');
-      if (tab.length > 0) { 
+      if (tab.length > 0) {
         tab.show(); // if in hidden tab, temporarily show it so height can be measured
       }
       if ($(this).is('.view--card-view-4col')) {
         var columns = 4;
-      } 
+      }
       if ($(this).is('.view--card-view-3col')) {
         var columns = 3;
-      } 
+      }
       if ($(this).is('.view--card-view-2col')) {
         var columns = 2;
-      } 
+      }
 
       var items = $(this).find('.views-row');
       items.removeClass('first second third fourth even odd');
       items.find('.card').css("height","auto");
 
-      if (Modernizr.mq('(min-width: 500px) and (max-width: 799px)')) { 
+      if (Modernizr.mq('(min-width: 500px) and (max-width: 799px)')) {
         var classes = ['odd', 'even'];
         items.addClass(function(i, c) {
           return classes[i % classes.length];
         });
       }
-      if (Modernizr.mq('(min-width: 800px)') || Modernizr.mq() == false) { 
+      if (Modernizr.mq('(min-width: 800px)') || Modernizr.mq() == false) {
         if (columns == 2) {
           var classes = ['odd', 'even'];
         }
         if (columns == 3) {
           var classes = ['first', 'second', 'third'];
-        } 
+        }
         if (columns == 4) {
           var classes = ['first', 'second', 'third', 'fourth'];
         }
         items.addClass(function(i, c) {
           return classes[i % classes.length];
         });
-      } 
+      }
 
       items.each(function(){
         var myheight = $(this).find('.card').height();
         if ($(this).is('.odd')) {
           var tallest;
           var evenheight = $(this).next('.even').find('.card').height();
-          if (myheight >= evenheight) { 
+          if (myheight >= evenheight) {
             tallest = myheight;
           }
-          if (myheight <= evenheight) { 
+          if (myheight <= evenheight) {
             tallest = evenheight;
           }
           $(this).find('.card').css("height",tallest+"px");
@@ -261,10 +261,10 @@
           }
         }
       });
-      if (tab.length > 0) { 
+      if (tab.length > 0) {
         tab.removeAttr("style");  // reset hidden tab back to hidden
       }
-           
+
     });
   }
 
@@ -291,11 +291,11 @@
       var tallest = 0;
       items.each(function(){
         var height = $(this).height();
-        if (height >= tallest) { 
+        if (height >= tallest) {
           tallest = height;
         }
       });
-      if (Modernizr.mq('(min-width: 800px)') || Modernizr.mq() == false) { 
+      if (Modernizr.mq('(min-width: 800px)') || Modernizr.mq() == false) {
         if (tallest > 0) {
           items.css("height",tallest+"px");
         }
@@ -314,9 +314,9 @@
         moi.toggleClass('is-open').toggleClass('is-closed');
         content.slideToggle();
       });
-    }).each(function() { 
+    }).each(function() {
       var moi = $(this);
-      var content = moi.find('.pane__content').eq(0); 
+      var content = moi.find('.pane__content').eq(0);
       if (content.find('input:checked').length > 0) {
         moi.addClass('is-open').removeClass('is-closed');
         content.show();
@@ -337,7 +337,7 @@
   //     $(this).css("width",site);
   //   });
   // }
-  
+
 
   // Generic function that runs on window resize.
   function resizeStuff() {
