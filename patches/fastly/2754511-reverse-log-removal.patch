@@ -1,0 +1,41 @@
+diff --git a/fastly.admin.inc b/fastly.admin.inc
+index caa847c..6daa9a2 100644
+--- a/fastly.admin.inc
++++ b/fastly.admin.inc
+@@ -69,13 +69,6 @@ function fastly_setup_form($form_state) {
+     '#description' => $description,
+   );
+
++  $form['fastly_log_enabled'] = array(
++    '#type' => 'checkbox',
++    '#title' => t('Log API requests'),
++    '#default_value' => variable_get('fastly_log_enabled', 0),
++    '#description' => t('Go to <em>Site settings > Advanced settings > Site reports > Recent log messages</em> to view the log.'),
++  );
++
+   $form['#submit'][] = 'fastly_setup_form_submit';
+
+   return system_settings_form($form);
+diff --git a/fastly.api.inc b/fastly.api.inc
+index b720a57..27247d4 100644
+--- a/fastly.api.inc
++++ b/fastly.api.inc
+@@ -17,7 +17,6 @@ class Fastly {
+     $this->service_id = $service_id;
+     $this->host = 'https://api.fastly.com/';
+     // $this->host = 'http://stg.fastly.com/';
++    $this->log_enabled = variable_get('fastly_log_enabled', 0);
+   }
+
+   /**
+@@ -205,10 +204,6 @@ class Fastly {
+
+     $result = drupal_http_request($url, $options);
+
++    if ($this->log_enabled && isset($result->request)) {
++      watchdog('fastly', $result->request, array(), WATCHDOG_INFO);
++    }
++
+     return $result;
+   }
+ }
