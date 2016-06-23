@@ -57,39 +57,31 @@ function dashboard_whats_new_exchange_updates_render() {
 //where type = :funding and field_data_field_funding_grant_award_value.field_funding_grant_award_value_value > 0 and node.status = :status', array(':funding' => 'funding', ':status' => 1))->fetchCol();
 
 
-
-  $test = 1;
   $block->content = '<h2 class="pane__title">' . strtoupper(t('Exchange at a Glance')) . '</h2>
-   <div class="view view--data-page-views view--id-data_page_views view--display-id-data_counts view--data-points view--dom-id- view-data-page-views view-id-data_page_views view-display-id-data_counts view-dom-id-">
+  <div class="view view--data-points">
+<div class=" views-row">
+<article about="/node/4040">
+    <div class="data-point data-point--org"><a href="/organizations">' .$orgs . '<span>Organizations</span></a></div>
+</article>
+</div>
 
-  <div class="views-row views-row-1 views-row-even">
-<article class="node contextual-links-region node--persona node--data view-mode-data " about="/node/4040" typeof="sioc:Item foaf:Document" role="article">
+<div class=" views-row">
+<article about="/node/30">
+    <div class="data-point data-point--funding"><a href="/funding">$178.9M <span>Available</span></a></div>
+</article>
+</div>
 
-  <div class="data-point data-point--org"><a href="/organizations">' .$orgs  . '<span>Organizations</span></a></div>
-  </article>
-  </div>
+<div class=" views-row">
+<article about="/node/29">
+    <div class="data-point data-point--user"><a href="/members">8554 <span>Collaborators</span></a></div>
+</article>
+</div>
 
-  <div class="views-row views-row-2 views-row-odd">
-<article class="node contextual-links-region node--persona node--data view-mode-data " about="/node/30" typeof="sioc:Item foaf:Document" role="article">
-
-  <div class="data-point data-point--funding"><a href="/funding">$178.9M <span>Available</span></a></div>
-  </article>
-  </div>
-
-  <div class="views-row views-row-3 views-row-even">
-<article class="node contextual-links-region node--persona node--data view-mode-data " about="/node/29" typeof="sioc:Item foaf:Document" role="article">
-
-  <div class="data-point data-point--user"><a href="/members">8554 <span>Collaborators</span></a></div>
-  </article>
-  </div>
-
-  <div class="views-row views-row-4 views-row-odd views-row-last">
-<article class="node contextual-links-region node--persona node--data view-mode-data " about="/node/28" typeof="sioc:Item foaf:Document" role="article">
-
-  <div class="data-point data-point--innovation"><a href="/innovations">' . $innovations . '<span>Innovations</span></a></div>
-  </article>
-  </div>
-
+<div class=" views-row">
+<article about="/node/28">
+    <div class="data-point data-point--innovation"><a href="/innovations">' . $innovations . '<span>Innovations</span></a></div>
+</article>
+</div>
 </div>';
 
 
