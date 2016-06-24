@@ -95,23 +95,19 @@ function _gie_homepage_welcome_count($field) {
 
         switch ($persona_type[0]['value']) {
             case "innovation":
-                $count = db_query('SELECT COUNT(nid) FROM {node} WHERE type = :type AND status = :status', array(':type' => 'innovation', ':status' => 1))->fetchField();
+                $count = gie_homepage_sitewide_summary_generator('innovations');
                 return '<div class="welcome-stats"><h2 class="welcome-stats__number">' . $count . '</h2><h3 class="welcome-stats__label">Innovations</h3></div>';
                 break;
             case "funding":
-                $count = db_query('SELECT SUM(field_funding_grant_award_value_value) FROM {field_data_field_funding_grant_award_value} WHERE deleted = :deleted', array(':deleted' => 0))->fetchField();
-                if($count>1000000000) $count = round(($count/1000000000),1).' B';
-                else if($count>1000000) $count = round(($count/1000000),1).' M';
-                else if($count>1000) $count = round(($count/1000),1).' T';
+                $count = gie_homepage_sitewide_summary_generator('funding');
                 return '<div class="welcome-stats"><h2 class="welcome-stats__number">$' . $count . '</h2><h3 class="welcome-stats__label">Available</h3></div>';
                 break;
             case "user":
-                $count = db_query('SELECT COUNT(uid) FROM {users} WHERE status > :status', array(':status' => 0))->fetchField();
+                $count = gie_homepage_sitewide_summary_generator('users');
                 return '<div class="welcome-stats"><h2 class="welcome-stats__number">' . $count . '</h2><h3 class="welcome-stats__label">Collaborators</h3></div>';
                 break;
-
             case "org":
-                $count = db_query('SELECT COUNT(nid) FROM {node} WHERE type = :type AND status = :status', array(':type' => 'organization', ':status' => 1))->fetchField();
+                $count = gie_homepage_sitewide_summary_generator('orgs');
                 return '<div class="welcome-stats"><h2 class="welcome-stats__number">' . $count . '</h2><h3 class="welcome-stats__label">Organizations</h3></div>';
                 break;
         }
@@ -204,3 +200,46 @@ function _gie_homepage_login_redirect($form, &$form_state) {
     drupal_goto('user/login');
   }
 }
+
+
+/**
+ * Custom form validation to redirect to login page if there were errors
+ */
+function gie_homepage_sitewide_summary_generator($type) {
+
+  switch ($type) {
+    case 'innovations':
+      $count = db_query('SELECT COUNT(nid) FROM {node} WHERE type = :type AND status = :status', array(':type' => 'innovation', ':status' => 1))->fetchField();
+      return $count;
+      break;
+    case "funding":
+      // get sum of funding grant award
+      $query = db_select('field_data_field_funding_grant_award_value', 'g');
+      $query->leftJoin('field_data_field_funding_deadline', 'd', 'g.entity_id = d.entity_id'); // join deadline field table
+      $query
+        ->condition('g.deleted', 0)
+        ->where('d.field_funding_deadline_value > CURDATE() OR d.field_funding_deadline_value IS NULL'); // deadline has not passed yet or doesn't exist
+      $query->addExpression('SUM(field_funding_grant_award_value_value)', 'sum'); // sum of grant award values
+      $count = $query->execute()->fetchField();
+
+      // set correct number abbreviation + suffix
+      if($count>1000000000) $count = round(($count/1000000000),1).'B';
+      else if($count>1000000) $count = round(($count/1000000),1).'M';
+      else if($count>1000) $count = round(($count/1000),1).'K';
+
+      return $count;
+      break;
+    case "users":
+      $count = db_query('SELECT COUNT(uid) FROM {users} WHERE status > :status', array(':status' => 0))->fetchField();
+      return $count;
+      break;
+    case "orgs":
+      $count = db_query('SELECT COUNT(nid) FROM {node} WHERE type = :type AND status = :status', array(':type' => 'organization', ':status' => 1))->fetchField();
+      return $count;
+      break;
+    default:
+      return NULL;
+  }
+
+}
+
