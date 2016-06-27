@@ -48,7 +48,7 @@ function gie_general_default_page_manager_handlers() {
     ),
   );
   $display->cache = array();
-  $display->title = 'Contact Global Innovation Exchange';
+  $display->title = 'Contact';
   $display->uuid = 'b74bb388-bfac-4a0f-8378-4760e2bb3836';
   $display->content = array();
   $display->panels = array();

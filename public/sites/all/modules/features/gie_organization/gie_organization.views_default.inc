@@ -32,7 +32,7 @@ function gie_organization_views_default_views() {
   $handler->display->display_options['cache']['output_max_lifespan'] = '21600';
   $handler->display->display_options['cache']['keys'] = array(
     'comment' => array(
-      'changed' => 'changed',
+      'changed' => 0,
     ),
     'node' => array(
       'organization' => 'organization',
@@ -232,7 +232,7 @@ function gie_organization_views_default_views() {
   $handler->display->display_options['cache']['output_max_lifespan'] = '21600';
   $handler->display->display_options['cache']['keys'] = array(
     'comment' => array(
-      'changed' => 'changed',
+      'changed' => 0,
     ),
     'node' => array(
       'organization' => 'organization',
@@ -498,7 +498,7 @@ function gie_organization_views_default_views() {
   $handler->display->display_options['cache']['output_max_lifespan'] = '21600';
   $handler->display->display_options['cache']['keys'] = array(
     'comment' => array(
-      'changed' => 'changed',
+      'changed' => 0,
     ),
     'node' => array(
       'organization' => 'organization',
@@ -617,7 +617,7 @@ function gie_organization_views_default_views() {
   $handler->display->display_options['cache']['output_max_lifespan'] = '21600';
   $handler->display->display_options['cache']['keys'] = array(
     'comment' => array(
-      'changed' => 'changed',
+      'changed' => 0,
     ),
     'node' => array(
       'program' => 'program',
@@ -720,7 +720,7 @@ function gie_organization_views_default_views() {
   $handler->display->display_options['cache']['output_max_lifespan'] = '21600';
   $handler->display->display_options['cache']['keys'] = array(
     'comment' => array(
-      'changed' => 'changed',
+      'changed' => 0,
     ),
     'node' => array(
       'resource' => 'resource',
@@ -826,7 +826,7 @@ function gie_organization_views_default_views() {
   $handler->display->display_options['cache']['output_max_lifespan'] = '21600';
   $handler->display->display_options['cache']['keys'] = array(
     'comment' => array(
-      'changed' => 'changed',
+      'changed' => 0,
     ),
     'node' => array(
       'innovation' => 'innovation',
@@ -932,7 +932,7 @@ function gie_organization_views_default_views() {
   $handler->display->display_options['cache']['output_max_lifespan'] = '21600';
   $handler->display->display_options['cache']['keys'] = array(
     'comment' => array(
-      'changed' => 'changed',
+      'changed' => 0,
     ),
     'node' => array(
       'funding' => 'funding',
@@ -1003,7 +1003,7 @@ function gie_organization_views_default_views() {
   $handler->display->display_options['cache']['output_max_lifespan'] = '21600';
   $handler->display->display_options['cache']['keys'] = array(
     'comment' => array(
-      'changed' => 'changed',
+      'changed' => 0,
     ),
     'node' => array(
       'organization' => 'organization',
@@ -1265,6 +1265,37 @@ function gie_organization_views_default_views() {
   $handler->display->display_options['arguments']['nid']['summary']['number_of_records'] = '0';
   $handler->display->display_options['arguments']['nid']['summary']['format'] = 'default_summary';
   $handler->display->display_options['arguments']['nid']['summary_options']['items_per_page'] = '25';
+
+  /* Display: Countries */
+  $handler = $view->new_display('panel_pane', 'Countries', 'panel_pane_1');
+  $handler->display->display_options['defaults']['title'] = FALSE;
+  $handler->display->display_options['title'] = 'Countries Where We Work';
+  $handler->display->display_options['defaults']['css_class'] = FALSE;
+  $handler->display->display_options['css_class'] = 'view--simple-list';
+  $handler->display->display_options['defaults']['style_plugin'] = FALSE;
+  $handler->display->display_options['style_plugin'] = 'default';
+  $handler->display->display_options['style_options']['row_class_special'] = FALSE;
+  $handler->display->display_options['defaults']['style_options'] = FALSE;
+  $handler->display->display_options['defaults']['row_plugin'] = FALSE;
+  $handler->display->display_options['row_plugin'] = 'fields';
+  $handler->display->display_options['row_options']['default_field_elements'] = FALSE;
+  $handler->display->display_options['defaults']['row_options'] = FALSE;
+  $handler->display->display_options['defaults']['relationships'] = FALSE;
+  /* Relationship: Taxonomy term: Content using Country */
+  $handler->display->display_options['relationships']['reverse_field_term_country_node']['id'] = 'reverse_field_term_country_node';
+  $handler->display->display_options['relationships']['reverse_field_term_country_node']['table'] = 'taxonomy_term_data';
+  $handler->display->display_options['relationships']['reverse_field_term_country_node']['field'] = 'reverse_field_term_country_node';
+  $handler->display->display_options['defaults']['arguments'] = FALSE;
+  /* Contextual filter: Content: Nid */
+  $handler->display->display_options['arguments']['nid']['id'] = 'nid';
+  $handler->display->display_options['arguments']['nid']['table'] = 'node';
+  $handler->display->display_options['arguments']['nid']['field'] = 'nid';
+  $handler->display->display_options['arguments']['nid']['relationship'] = 'reverse_field_term_country_node';
+  $handler->display->display_options['arguments']['nid']['default_action'] = 'default';
+  $handler->display->display_options['arguments']['nid']['default_argument_type'] = 'node';
+  $handler->display->display_options['arguments']['nid']['summary']['number_of_records'] = '0';
+  $handler->display->display_options['arguments']['nid']['summary']['format'] = 'default_summary';
+  $handler->display->display_options['arguments']['nid']['summary_options']['items_per_page'] = '25';
   $export['organization_taxonomies'] = $view;
 
   $view = new view();
@@ -1289,7 +1320,7 @@ function gie_organization_views_default_views() {
   $handler->display->display_options['cache']['output_max_lifespan'] = '21600';
   $handler->display->display_options['cache']['keys'] = array(
     'comment' => array(
-      'changed' => 'changed',
+      'changed' => 0,
     ),
     'node' => array(
       'organization' => 'organization',
@@ -1385,7 +1416,7 @@ function gie_organization_views_default_views() {
   $handler->display->display_options['cache']['output_max_lifespan'] = '21600';
   $handler->display->display_options['cache']['keys'] = array(
     'comment' => array(
-      'changed' => 'changed',
+      'changed' => 0,
     ),
     'node' => array(
       'organization' => 'organization',

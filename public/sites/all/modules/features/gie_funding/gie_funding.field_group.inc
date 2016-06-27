@@ -126,7 +126,6 @@ function gie_funding_field_group_info() {
       1 => 'field_funding_deadline',
       2 => 'field_funding_effort',
       3 => 'field_funding_eligibility_type',
-      4 => 'field_term_topic',
     ),
     'format_type' => 'div',
     'format_settings' => array(

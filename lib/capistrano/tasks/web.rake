@@ -17,7 +17,6 @@ Rake::Task["deploy:starting"].enhance ["web:load_platform"]
 namespace :load do
   task :defaults do
     set :platform, "drupal"
-    set :run_updates, true
   end
 end
 
@@ -43,7 +42,7 @@ namespace :web do
   desc "Run application build scripts"
   task :build do
   end
-  
+
   namespace :varnish do
     desc "Ban all URLs for a site"
     task :ban do
@@ -73,19 +72,11 @@ namespace :deploy do
     invoke "deploy:finished"
   end
   
-  desc "Deploys files to remote host"
-  task :deploy_files => [:check, :starting, :started, :updating, :updated, :publishing, :published, :finishing, :finished] do
-  	
-  end
-  
   namespace :symlink do
     desc "Set application webroot"
     task :web do
       on roles(:app) do
-        if test " [ -d #{deploy_to}/#{fetch(:webroot)} ]"
-          execute :chmod, '-R', 'u+rw', deploy_to + "/#{fetch(:webroot)}"
-          execute :rm, '-rf', deploy_to + "/#{fetch(:webroot)}"
-        end
+        execute :rm, '-rf', deploy_to + "/#{fetch(:webroot)}"
         execute :ln, '-s', "#{current_path}/#{fetch(:app_webroot, 'public')}", deploy_to + "/#{fetch(:webroot)}"
       end
     end
@@ -129,6 +120,13 @@ namespace :deploy do
       else
         debug 'Last release is the current release, skip cleanup_rollback.'
       end
+    end
+  end
+
+  desc "Ping autoscale"
+  task :autoscale do
+    on roles(:web) do
+      execute :salt, '-G', 'roles:webhead', 'state.sls', 'webhead.deploy', '--state-output=changes'
     end
   end
 end
