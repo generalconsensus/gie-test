@@ -451,7 +451,7 @@ function gie_organization_views_default_views() {
   $handler->display->display_options['fields']['nid']['id'] = 'nid';
   $handler->display->display_options['fields']['nid']['table'] = 'search_api_index_default_node_index';
   $handler->display->display_options['fields']['nid']['field'] = 'nid';
-  /* Sort criterion: Indexed Content: Funding Opportunity Title */
+  /* Sort criterion: Indexed Content: Title */
   $handler->display->display_options['sorts']['title_field']['id'] = 'title_field';
   $handler->display->display_options['sorts']['title_field']['table'] = 'search_api_index_default_node_index';
   $handler->display->display_options['sorts']['title_field']['field'] = 'title_field';
@@ -1285,6 +1285,25 @@ function gie_organization_views_default_views() {
   $handler->display->display_options['relationships']['reverse_field_term_country_node']['id'] = 'reverse_field_term_country_node';
   $handler->display->display_options['relationships']['reverse_field_term_country_node']['table'] = 'taxonomy_term_data';
   $handler->display->display_options['relationships']['reverse_field_term_country_node']['field'] = 'reverse_field_term_country_node';
+  $handler->display->display_options['defaults']['fields'] = FALSE;
+  /* Field: Taxonomy term: Term ID */
+  $handler->display->display_options['fields']['tid']['id'] = 'tid';
+  $handler->display->display_options['fields']['tid']['table'] = 'taxonomy_term_data';
+  $handler->display->display_options['fields']['tid']['field'] = 'tid';
+  $handler->display->display_options['fields']['tid']['label'] = '';
+  $handler->display->display_options['fields']['tid']['exclude'] = TRUE;
+  $handler->display->display_options['fields']['tid']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['tid']['separator'] = '';
+  /* Field: Taxonomy term: Name */
+  $handler->display->display_options['fields']['name']['id'] = 'name';
+  $handler->display->display_options['fields']['name']['table'] = 'taxonomy_term_data';
+  $handler->display->display_options['fields']['name']['field'] = 'name';
+  $handler->display->display_options['fields']['name']['label'] = '';
+  $handler->display->display_options['fields']['name']['alter']['make_link'] = TRUE;
+  $handler->display->display_options['fields']['name']['alter']['path'] = 'organizations/country/[tid]';
+  $handler->display->display_options['fields']['name']['alter']['word_boundary'] = FALSE;
+  $handler->display->display_options['fields']['name']['alter']['ellipsis'] = FALSE;
+  $handler->display->display_options['fields']['name']['element_label_colon'] = FALSE;
   $handler->display->display_options['defaults']['arguments'] = FALSE;
   /* Contextual filter: Content: Nid */
   $handler->display->display_options['arguments']['nid']['id'] = 'nid';

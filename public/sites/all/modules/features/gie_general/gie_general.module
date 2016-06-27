@@ -117,16 +117,6 @@ function _gie_general_contents($block_id) {
         ),
       );
       $block += array(
-        'team_page' => array(
-          '#type' => 'link',
-          '#title' => t('Exchange Team'),
-          '#href' => 'team',
-          '#attributes' => array(
-            'class' => array('tb-megamenu-big-button has-icon-team'),
-          ),
-        ),
-      );
-      $block += array(
         'partners_page' => array(
           '#type' => 'link',
           '#title' => t('Exchange Partners'),
@@ -140,7 +130,7 @@ function _gie_general_contents($block_id) {
         'become_page' => array(
           '#type' => 'link',
           '#title' => t('Become a Partner'),
-          '#href' => 'node/add/organization',
+          '#href' => 'node/174',
           '#attributes' => array(
             'class' => array('tb-megamenu-big-button has-icon-become'),
           ),
