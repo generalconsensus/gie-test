@@ -105,14 +105,12 @@ function gie_microsite_form_alter(&$form, &$form_state, $form_id) {
  * Change from field to sitewide contact to site email. Add user info to body
  */
 function _gie_microsite_contact_submit_alter($form, &$form_state) {
-  // add the user name and info to the message body
-  $user_name = $form_state['values']['name'];
+  // add the user mail to the message body
   $user_mail = $form_state['values']['mail'];
-  $user_info_text = "$user_name ($user_mail) sent the following from the contact form:";
-  $form_state['values']['message'] = $user_info_text . PHP_EOL . $form_state['values']['message'];
+  $user_info_text = t('Reply to @user_mail.', array('@user_mail' => $user_mail));
+  $form_state['values']['message'] .= PHP_EOL.PHP_EOL . $user_info_text;
 
-  // change name and from (mail) field to sitewide variables
-  $form_state['values']['name'] = variable_get('site_name', 'Global Innovation Exchange');
+  // change from (mail) field to sitewide variables
   $form_state['values']['mail'] = variable_get('site_mail', 'info@globalinnovationexchange.org');
 }
 
