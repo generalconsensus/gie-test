@@ -1972,8 +1972,8 @@ Using the selector below, highlight the area of the image you would like to feat
       'focus' => 1,
       'focus_lock_ratio' => 1,
       'focus_min_size' => '500x300',
-      'max_filesize' => '',
-      'max_resolution' => '',
+      'max_filesize' => '2 MB',
+      'max_resolution' => '1000x800',
       'min_resolution' => '500x300',
       'random_default' => 0,
       'random_default_path' => '',
@@ -6036,7 +6036,8 @@ Using the selector below, highlight the area of the image you would like to feat
     ),
   );
 
-  // Exported field_instance: 'taxonomy_term-innovation_stage-description_field'
+  // Exported field_instance:
+  // 'taxonomy_term-innovation_stage-description_field'.
   $field_instances['taxonomy_term-innovation_stage-description_field'] = array(
     'bundle' => 'innovation_stage',
     'default_value' => NULL,
