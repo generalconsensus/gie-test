@@ -10,7 +10,7 @@
 function gie_innovation_field_default_field_instances() {
   $field_instances = array();
 
-  // Exported field_instance: 'comment-comment_node_innovation-comment_body'
+  // Exported field_instance: 'comment-comment_node_innovation-comment_body'.
   $field_instances['comment-comment_node_innovation-comment_body'] = array(
     'bundle' => 'comment_node_innovation',
     'default_value' => NULL,
@@ -84,7 +84,7 @@ function gie_innovation_field_default_field_instances() {
   );
 
   // Exported field_instance:
-  // 'comment-comment_node_innovation-field_innovation_comment_type'
+  // 'comment-comment_node_innovation-field_innovation_comment_type'.
   $field_instances['comment-comment_node_innovation-field_innovation_comment_type'] = array(
     'bundle' => 'comment_node_innovation',
     'default_value' => NULL,
@@ -135,7 +135,7 @@ function gie_innovation_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'comment-comment_node_innovation-subject_field'
+  // Exported field_instance: 'comment-comment_node_innovation-subject_field'.
   $field_instances['comment-comment_node_innovation-subject_field'] = array(
     'bundle' => 'comment_node_innovation',
     'default_value' => NULL,
@@ -199,7 +199,7 @@ function gie_innovation_field_default_field_instances() {
   );
 
   // Exported field_instance:
-  // 'field_collection_item-field_innovation_non_references-field_non_ref_email'
+  // 'field_collection_item-field_innovation_non_references-field_non_ref_email'.
   $field_instances['field_collection_item-field_innovation_non_references-field_non_ref_email'] = array(
     'bundle' => 'field_innovation_non_references',
     'default_value' => NULL,
@@ -230,7 +230,7 @@ function gie_innovation_field_default_field_instances() {
   );
 
   // Exported field_instance:
-  // 'field_collection_item-field_innovation_non_references-field_non_ref_first_name'
+  // 'field_collection_item-field_innovation_non_references-field_non_ref_first_name'.
   $field_instances['field_collection_item-field_innovation_non_references-field_non_ref_first_name'] = array(
     'bundle' => 'field_innovation_non_references',
     'default_value' => NULL,
@@ -286,7 +286,7 @@ function gie_innovation_field_default_field_instances() {
   );
 
   // Exported field_instance:
-  // 'field_collection_item-field_innovation_non_references-field_non_ref_last_name'
+  // 'field_collection_item-field_innovation_non_references-field_non_ref_last_name'.
   $field_instances['field_collection_item-field_innovation_non_references-field_non_ref_last_name'] = array(
     'bundle' => 'field_innovation_non_references',
     'default_value' => NULL,
@@ -342,7 +342,7 @@ function gie_innovation_field_default_field_instances() {
   );
 
   // Exported field_instance:
-  // 'field_collection_item-field_innovation_non_references-field_non_ref_photo'
+  // 'field_collection_item-field_innovation_non_references-field_non_ref_photo'.
   $field_instances['field_collection_item-field_innovation_non_references-field_non_ref_photo'] = array(
     'bundle' => 'field_innovation_non_references',
     'deleted' => 0,
@@ -412,7 +412,7 @@ function gie_innovation_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-innovation-field_innovation_address'
+  // Exported field_instance: 'node-innovation-field_innovation_address'.
   $field_instances['node-innovation-field_innovation_address'] = array(
     'bundle' => 'innovation',
     'default_value' => NULL,
@@ -549,7 +549,7 @@ function gie_innovation_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-innovation-field_innovation_assets'
+  // Exported field_instance: 'node-innovation-field_innovation_assets'.
   $field_instances['node-innovation-field_innovation_assets'] = array(
     'bundle' => 'innovation',
     'default_value' => NULL,
@@ -666,7 +666,7 @@ function gie_innovation_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-innovation-field_innovation_assistance'
+  // Exported field_instance: 'node-innovation-field_innovation_assistance'.
   $field_instances['node-innovation-field_innovation_assistance'] = array(
     'bundle' => 'innovation',
     'default_value' => NULL,
@@ -774,7 +774,7 @@ function gie_innovation_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-innovation-field_innovation_cost_bene'
+  // Exported field_instance: 'node-innovation-field_innovation_cost_bene'.
   $field_instances['node-innovation-field_innovation_cost_bene'] = array(
     'bundle' => 'innovation',
     'default_value' => NULL,
@@ -888,7 +888,7 @@ function gie_innovation_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-innovation-field_innovation_cost_per_unit'
+  // Exported field_instance: 'node-innovation-field_innovation_cost_per_unit'.
   $field_instances['node-innovation-field_innovation_cost_per_unit'] = array(
     'bundle' => 'innovation',
     'default_value' => NULL,
@@ -1016,7 +1016,7 @@ function gie_innovation_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-innovation-field_innovation_created'
+  // Exported field_instance: 'node-innovation-field_innovation_created'.
   $field_instances['node-innovation-field_innovation_created'] = array(
     'bundle' => 'innovation',
     'default_value' => NULL,
@@ -1138,7 +1138,7 @@ function gie_innovation_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-innovation-field_innovation_desc'
+  // Exported field_instance: 'node-innovation-field_innovation_desc'.
   $field_instances['node-innovation-field_innovation_desc'] = array(
     'bundle' => 'innovation',
     'default_value' => NULL,
@@ -1325,7 +1325,7 @@ function gie_innovation_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-innovation-field_innovation_evidence'
+  // Exported field_instance: 'node-innovation-field_innovation_evidence'.
   $field_instances['node-innovation-field_innovation_evidence'] = array(
     'bundle' => 'innovation',
     'default_value' => NULL,
@@ -1474,7 +1474,7 @@ function gie_innovation_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-innovation-field_innovation_evidence_avail'
+  // Exported field_instance: 'node-innovation-field_innovation_evidence_avail'.
   $field_instances['node-innovation-field_innovation_evidence_avail'] = array(
     'bundle' => 'innovation',
     'default_value' => array(
@@ -1586,7 +1586,7 @@ function gie_innovation_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-innovation-field_innovation_funders'
+  // Exported field_instance: 'node-innovation-field_innovation_funders'.
   $field_instances['node-innovation-field_innovation_funders'] = array(
     'bundle' => 'innovation',
     'default_value' => NULL,
@@ -1703,7 +1703,7 @@ function gie_innovation_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-innovation-field_innovation_funding_goal'
+  // Exported field_instance: 'node-innovation-field_innovation_funding_goal'.
   $field_instances['node-innovation-field_innovation_funding_goal'] = array(
     'bundle' => 'innovation',
     'default_value' => NULL,
@@ -1831,7 +1831,7 @@ function gie_innovation_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-innovation-field_innovation_image'
+  // Exported field_instance: 'node-innovation-field_innovation_image'.
   $field_instances['node-innovation-field_innovation_image'] = array(
     'bundle' => 'innovation',
     'deleted' => 0,
@@ -1972,8 +1972,8 @@ Using the selector below, highlight the area of the image you would like to feat
       'focus' => 1,
       'focus_lock_ratio' => 1,
       'focus_min_size' => '500x300',
-      'max_filesize' => '',
-      'max_resolution' => '',
+      'max_filesize' => '2 MB',
+      'max_resolution' => '1000x800',
       'min_resolution' => '500x300',
       'random_default' => 0,
       'random_default_path' => '',
@@ -1995,7 +1995,7 @@ Using the selector below, highlight the area of the image you would like to feat
     ),
   );
 
-  // Exported field_instance: 'node-innovation-field_innovation_impact'
+  // Exported field_instance: 'node-innovation-field_innovation_impact'.
   $field_instances['node-innovation-field_innovation_impact'] = array(
     'bundle' => 'innovation',
     'default_value' => NULL,
@@ -2144,7 +2144,7 @@ Using the selector below, highlight the area of the image you would like to feat
     ),
   );
 
-  // Exported field_instance: 'node-innovation-field_innovation_implemented'
+  // Exported field_instance: 'node-innovation-field_innovation_implemented'.
   $field_instances['node-innovation-field_innovation_implemented'] = array(
     'bundle' => 'innovation',
     'default_value' => NULL,
@@ -2266,7 +2266,7 @@ Using the selector below, highlight the area of the image you would like to feat
     ),
   );
 
-  // Exported field_instance: 'node-innovation-field_innovation_lives_impacted'
+  // Exported field_instance: 'node-innovation-field_innovation_lives_impacted'.
   $field_instances['node-innovation-field_innovation_lives_impacted'] = array(
     'bundle' => 'innovation',
     'default_value' => NULL,
@@ -2394,7 +2394,7 @@ Using the selector below, highlight the area of the image you would like to feat
     ),
   );
 
-  // Exported field_instance: 'node-innovation-field_innovation_lives_saved'
+  // Exported field_instance: 'node-innovation-field_innovation_lives_saved'.
   $field_instances['node-innovation-field_innovation_lives_saved'] = array(
     'bundle' => 'innovation',
     'default_value' => NULL,
@@ -2522,7 +2522,7 @@ Using the selector below, highlight the area of the image you would like to feat
     ),
   );
 
-  // Exported field_instance: 'node-innovation-field_innovation_news'
+  // Exported field_instance: 'node-innovation-field_innovation_news'.
   $field_instances['node-innovation-field_innovation_news'] = array(
     'bundle' => 'innovation',
     'default_value' => NULL,
@@ -2662,7 +2662,7 @@ Using the selector below, highlight the area of the image you would like to feat
     ),
   );
 
-  // Exported field_instance: 'node-innovation-field_innovation_non_references'
+  // Exported field_instance: 'node-innovation-field_innovation_non_references'.
   $field_instances['node-innovation-field_innovation_non_references'] = array(
     'bundle' => 'innovation',
     'default_value' => NULL,
@@ -2771,7 +2771,7 @@ Using the selector below, highlight the area of the image you would like to feat
     ),
   );
 
-  // Exported field_instance: 'node-innovation-field_innovation_poc'
+  // Exported field_instance: 'node-innovation-field_innovation_poc'.
   $field_instances['node-innovation-field_innovation_poc'] = array(
     'bundle' => 'innovation',
     'default_value' => NULL,
@@ -2920,7 +2920,8 @@ Using the selector below, highlight the area of the image you would like to feat
     ),
   );
 
-  // Exported field_instance: 'node-innovation-field_innovation_potent_lives_im'
+  // Exported field_instance:
+  // 'node-innovation-field_innovation_potent_lives_im'.
   $field_instances['node-innovation-field_innovation_potent_lives_im'] = array(
     'bundle' => 'innovation',
     'default_value' => NULL,
@@ -3048,7 +3049,8 @@ Using the selector below, highlight the area of the image you would like to feat
     ),
   );
 
-  // Exported field_instance: 'node-innovation-field_innovation_potent_lives_sa'
+  // Exported field_instance:
+  // 'node-innovation-field_innovation_potent_lives_sa'.
   $field_instances['node-innovation-field_innovation_potent_lives_sa'] = array(
     'bundle' => 'innovation',
     'default_value' => NULL,
@@ -3176,7 +3178,7 @@ Using the selector below, highlight the area of the image you would like to feat
     ),
   );
 
-  // Exported field_instance: 'node-innovation-field_innovation_program'
+  // Exported field_instance: 'node-innovation-field_innovation_program'.
   $field_instances['node-innovation-field_innovation_program'] = array(
     'bundle' => 'innovation',
     'default_value' => NULL,
@@ -3308,7 +3310,7 @@ Using the selector below, highlight the area of the image you would like to feat
     ),
   );
 
-  // Exported field_instance: 'node-innovation-field_innovation_proof_avail'
+  // Exported field_instance: 'node-innovation-field_innovation_proof_avail'.
   $field_instances['node-innovation-field_innovation_proof_avail'] = array(
     'bundle' => 'innovation',
     'default_value' => array(
@@ -3420,7 +3422,7 @@ Using the selector below, highlight the area of the image you would like to feat
     ),
   );
 
-  // Exported field_instance: 'node-innovation-field_innovation_proof_evidence'
+  // Exported field_instance: 'node-innovation-field_innovation_proof_evidence'.
   $field_instances['node-innovation-field_innovation_proof_evidence'] = array(
     'bundle' => 'innovation',
     'default_value' => NULL,
@@ -3551,7 +3553,7 @@ Using the selector below, highlight the area of the image you would like to feat
     ),
   );
 
-  // Exported field_instance: 'node-innovation-field_innovation_raised'
+  // Exported field_instance: 'node-innovation-field_innovation_raised'.
   $field_instances['node-innovation-field_innovation_raised'] = array(
     'bundle' => 'innovation',
     'default_value' => NULL,
@@ -3665,7 +3667,7 @@ Using the selector below, highlight the area of the image you would like to feat
     ),
   );
 
-  // Exported field_instance: 'node-innovation-field_innovation_ref_avail'
+  // Exported field_instance: 'node-innovation-field_innovation_ref_avail'.
   $field_instances['node-innovation-field_innovation_ref_avail'] = array(
     'bundle' => 'innovation',
     'default_value' => array(
@@ -3775,7 +3777,7 @@ Using the selector below, highlight the area of the image you would like to feat
     ),
   );
 
-  // Exported field_instance: 'node-innovation-field_innovation_references'
+  // Exported field_instance: 'node-innovation-field_innovation_references'.
   $field_instances['node-innovation-field_innovation_references'] = array(
     'bundle' => 'innovation',
     'default_value' => NULL,
@@ -3892,7 +3894,7 @@ Using the selector below, highlight the area of the image you would like to feat
     ),
   );
 
-  // Exported field_instance: 'node-innovation-field_innovation_related_org'
+  // Exported field_instance: 'node-innovation-field_innovation_related_org'.
   $field_instances['node-innovation-field_innovation_related_org'] = array(
     'bundle' => 'innovation',
     'default_value' => NULL,
@@ -4009,7 +4011,7 @@ Using the selector below, highlight the area of the image you would like to feat
     ),
   );
 
-  // Exported field_instance: 'node-innovation-field_innovation_resources'
+  // Exported field_instance: 'node-innovation-field_innovation_resources'.
   $field_instances['node-innovation-field_innovation_resources'] = array(
     'bundle' => 'innovation',
     'default_value' => NULL,
@@ -4142,7 +4144,7 @@ Using the selector below, highlight the area of the image you would like to feat
     ),
   );
 
-  // Exported field_instance: 'node-innovation-field_innovation_stage'
+  // Exported field_instance: 'node-innovation-field_innovation_stage'.
   $field_instances['node-innovation-field_innovation_stage'] = array(
     'bundle' => 'innovation',
     'default_value' => NULL,
@@ -4278,7 +4280,7 @@ Using the selector below, highlight the area of the image you would like to feat
     ),
   );
 
-  // Exported field_instance: 'node-innovation-field_innovation_status_update'
+  // Exported field_instance: 'node-innovation-field_innovation_status_update'.
   $field_instances['node-innovation-field_innovation_status_update'] = array(
     'bundle' => 'innovation',
     'default_value' => NULL,
@@ -4427,7 +4429,7 @@ Using the selector below, highlight the area of the image you would like to feat
     ),
   );
 
-  // Exported field_instance: 'node-innovation-field_innovation_steps'
+  // Exported field_instance: 'node-innovation-field_innovation_steps'.
   $field_instances['node-innovation-field_innovation_steps'] = array(
     'bundle' => 'innovation',
     'default_value' => NULL,
@@ -4576,7 +4578,7 @@ Using the selector below, highlight the area of the image you would like to feat
     ),
   );
 
-  // Exported field_instance: 'node-innovation-field_innovation_team'
+  // Exported field_instance: 'node-innovation-field_innovation_team'.
   $field_instances['node-innovation-field_innovation_team'] = array(
     'bundle' => 'innovation',
     'default_value' => NULL,
@@ -4693,7 +4695,7 @@ Using the selector below, highlight the area of the image you would like to feat
     ),
   );
 
-  // Exported field_instance: 'node-innovation-field_innovation_testers'
+  // Exported field_instance: 'node-innovation-field_innovation_testers'.
   $field_instances['node-innovation-field_innovation_testers'] = array(
     'bundle' => 'innovation',
     'default_value' => NULL,
@@ -4842,7 +4844,7 @@ Using the selector below, highlight the area of the image you would like to feat
     ),
   );
 
-  // Exported field_instance: 'node-innovation-field_innovation_type'
+  // Exported field_instance: 'node-innovation-field_innovation_type'.
   $field_instances['node-innovation-field_innovation_type'] = array(
     'bundle' => 'innovation',
     'default_value' => NULL,
@@ -4992,7 +4994,7 @@ Using the selector below, highlight the area of the image you would like to feat
     ),
   );
 
-  // Exported field_instance: 'node-innovation-field_innovation_website'
+  // Exported field_instance: 'node-innovation-field_innovation_website'.
   $field_instances['node-innovation-field_innovation_website'] = array(
     'bundle' => 'innovation',
     'default_value' => NULL,
@@ -5132,7 +5134,7 @@ Using the selector below, highlight the area of the image you would like to feat
     ),
   );
 
-  // Exported field_instance: 'node-innovation-field_innovation_works'
+  // Exported field_instance: 'node-innovation-field_innovation_works'.
   $field_instances['node-innovation-field_innovation_works'] = array(
     'bundle' => 'innovation',
     'default_value' => NULL,
@@ -5281,7 +5283,7 @@ Using the selector below, highlight the area of the image you would like to feat
     ),
   );
 
-  // Exported field_instance: 'node-innovation-field_term_region'
+  // Exported field_instance: 'node-innovation-field_term_region'.
   $field_instances['node-innovation-field_term_region'] = array(
     'bundle' => 'innovation',
     'default_value' => NULL,
@@ -5389,7 +5391,7 @@ Using the selector below, highlight the area of the image you would like to feat
     ),
   );
 
-  // Exported field_instance: 'node-innovation-field_term_sector'
+  // Exported field_instance: 'node-innovation-field_term_sector'.
   $field_instances['node-innovation-field_term_sector'] = array(
     'bundle' => 'innovation',
     'default_value' => NULL,
@@ -5520,7 +5522,7 @@ Using the selector below, highlight the area of the image you would like to feat
     ),
   );
 
-  // Exported field_instance: 'node-innovation-field_term_topic'
+  // Exported field_instance: 'node-innovation-field_term_topic'.
   $field_instances['node-innovation-field_term_topic'] = array(
     'bundle' => 'innovation',
     'default_value' => NULL,
@@ -5642,7 +5644,7 @@ Using the selector below, highlight the area of the image you would like to feat
     ),
   );
 
-  // Exported field_instance: 'node-innovation-title_field'
+  // Exported field_instance: 'node-innovation-title_field'.
   $field_instances['node-innovation-title_field'] = array(
     'bundle' => 'innovation',
     'default_value' => NULL,
@@ -5886,7 +5888,7 @@ Using the selector below, highlight the area of the image you would like to feat
     ),
   );
 
-  // Exported field_instance: 'taxonomy_term-assistance_type-description_field'
+  // Exported field_instance: 'taxonomy_term-assistance_type-description_field'.
   $field_instances['taxonomy_term-assistance_type-description_field'] = array(
     'bundle' => 'assistance_type',
     'default_value' => NULL,
@@ -5924,7 +5926,7 @@ Using the selector below, highlight the area of the image you would like to feat
     ),
   );
 
-  // Exported field_instance: 'taxonomy_term-assistance_type-name_field'
+  // Exported field_instance: 'taxonomy_term-assistance_type-name_field'.
   $field_instances['taxonomy_term-assistance_type-name_field'] = array(
     'bundle' => 'assistance_type',
     'default_value' => NULL,
@@ -5960,7 +5962,8 @@ Using the selector below, highlight the area of the image you would like to feat
     ),
   );
 
-  // Exported field_instance: 'taxonomy_term-innovation_stage-description_field'
+  // Exported field_instance:
+  // 'taxonomy_term-innovation_stage-description_field'.
   $field_instances['taxonomy_term-innovation_stage-description_field'] = array(
     'bundle' => 'innovation_stage',
     'default_value' => NULL,
@@ -5998,7 +6001,7 @@ Using the selector below, highlight the area of the image you would like to feat
     ),
   );
 
-  // Exported field_instance: 'taxonomy_term-innovation_stage-name_field'
+  // Exported field_instance: 'taxonomy_term-innovation_stage-name_field'.
   $field_instances['taxonomy_term-innovation_stage-name_field'] = array(
     'bundle' => 'innovation_stage',
     'default_value' => NULL,
@@ -6034,7 +6037,7 @@ Using the selector below, highlight the area of the image you would like to feat
     ),
   );
 
-  // Exported field_instance: 'taxonomy_term-solution_type-description_field'
+  // Exported field_instance: 'taxonomy_term-solution_type-description_field'.
   $field_instances['taxonomy_term-solution_type-description_field'] = array(
     'bundle' => 'solution_type',
     'default_value' => NULL,
@@ -6072,7 +6075,7 @@ Using the selector below, highlight the area of the image you would like to feat
     ),
   );
 
-  // Exported field_instance: 'taxonomy_term-solution_type-name_field'
+  // Exported field_instance: 'taxonomy_term-solution_type-name_field'.
   $field_instances['taxonomy_term-solution_type-name_field'] = array(
     'bundle' => 'solution_type',
     'default_value' => NULL,
@@ -6109,7 +6112,7 @@ Using the selector below, highlight the area of the image you would like to feat
   );
 
   // Exported field_instance:
-  // 'taxonomy_term-sustainable_development_goals-description_field'
+  // 'taxonomy_term-sustainable_development_goals-description_field'.
   $field_instances['taxonomy_term-sustainable_development_goals-description_field'] = array(
     'bundle' => 'sustainable_development_goals',
     'default_value' => NULL,
@@ -6148,7 +6151,7 @@ Using the selector below, highlight the area of the image you would like to feat
   );
 
   // Exported field_instance:
-  // 'taxonomy_term-sustainable_development_goals-name_field'
+  // 'taxonomy_term-sustainable_development_goals-name_field'.
   $field_instances['taxonomy_term-sustainable_development_goals-name_field'] = array(
     'bundle' => 'sustainable_development_goals',
     'default_value' => NULL,
@@ -6184,7 +6187,7 @@ Using the selector below, highlight the area of the image you would like to feat
     ),
   );
 
-  // Exported field_instance: 'taxonomy_term-testing_phase-description_field'
+  // Exported field_instance: 'taxonomy_term-testing_phase-description_field'.
   $field_instances['taxonomy_term-testing_phase-description_field'] = array(
     'bundle' => 'testing_phase',
     'default_value' => NULL,
@@ -6222,7 +6225,7 @@ Using the selector below, highlight the area of the image you would like to feat
     ),
   );
 
-  // Exported field_instance: 'taxonomy_term-testing_phase-name_field'
+  // Exported field_instance: 'taxonomy_term-testing_phase-name_field'.
   $field_instances['taxonomy_term-testing_phase-name_field'] = array(
     'bundle' => 'testing_phase',
     'default_value' => NULL,

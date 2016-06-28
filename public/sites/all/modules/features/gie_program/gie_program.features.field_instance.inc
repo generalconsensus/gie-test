@@ -10,7 +10,7 @@
 function gie_program_field_default_field_instances() {
   $field_instances = array();
 
-  // Exported field_instance: 'node-program-field_funding_type'
+  // Exported field_instance: 'node-program-field_funding_type'.
   $field_instances['node-program-field_funding_type'] = array(
     'bundle' => 'program',
     'default_value' => NULL,
@@ -111,7 +111,7 @@ function gie_program_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-program-field_program_address'
+  // Exported field_instance: 'node-program-field_program_address'.
   $field_instances['node-program-field_program_address'] = array(
     'bundle' => 'program',
     'default_value' => NULL,
@@ -254,7 +254,7 @@ function gie_program_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-program-field_program_budget'
+  // Exported field_instance: 'node-program-field_program_budget'.
   $field_instances['node-program-field_program_budget'] = array(
     'bundle' => 'program',
     'default_value' => NULL,
@@ -380,7 +380,7 @@ function gie_program_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-program-field_program_desc'
+  // Exported field_instance: 'node-program-field_program_desc'.
   $field_instances['node-program-field_program_desc'] = array(
     'bundle' => 'program',
     'default_value' => NULL,
@@ -575,7 +575,7 @@ function gie_program_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-program-field_program_end'
+  // Exported field_instance: 'node-program-field_program_end'.
   $field_instances['node-program-field_program_end'] = array(
     'bundle' => 'program',
     'deleted' => 0,
@@ -691,7 +691,7 @@ function gie_program_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-program-field_program_link'
+  // Exported field_instance: 'node-program-field_program_link'.
   $field_instances['node-program-field_program_link'] = array(
     'bundle' => 'program',
     'default_value' => NULL,
@@ -811,7 +811,7 @@ function gie_program_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-program-field_program_logo'
+  // Exported field_instance: 'node-program-field_program_logo'.
   $field_instances['node-program-field_program_logo'] = array(
     'bundle' => 'program',
     'deleted' => 0,
@@ -976,8 +976,8 @@ function gie_program_field_default_field_instances() {
       'focus' => 1,
       'focus_lock_ratio' => 0,
       'focus_min_size' => '500x300',
-      'max_filesize' => '',
-      'max_resolution' => '',
+      'max_filesize' => '2 MB',
+      'max_resolution' => '1000x800',
       'min_resolution' => '500x300',
       'random_default' => 0,
       'random_default_path' => '',
@@ -999,7 +999,7 @@ function gie_program_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-program-field_program_objectives'
+  // Exported field_instance: 'node-program-field_program_objectives'.
   $field_instances['node-program-field_program_objectives'] = array(
     'bundle' => 'program',
     'default_value' => NULL,
@@ -1142,7 +1142,7 @@ function gie_program_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-program-field_program_parent_org'
+  // Exported field_instance: 'node-program-field_program_parent_org'.
   $field_instances['node-program-field_program_parent_org'] = array(
     'bundle' => 'program',
     'default_value' => NULL,
@@ -1245,7 +1245,7 @@ function gie_program_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-program-field_program_partners'
+  // Exported field_instance: 'node-program-field_program_partners'.
   $field_instances['node-program-field_program_partners'] = array(
     'bundle' => 'program',
     'default_value' => NULL,
@@ -1356,7 +1356,7 @@ function gie_program_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-program-field_program_poc'
+  // Exported field_instance: 'node-program-field_program_poc'.
   $field_instances['node-program-field_program_poc'] = array(
     'bundle' => 'program',
     'default_value' => NULL,
@@ -1483,7 +1483,7 @@ function gie_program_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-program-field_program_problem'
+  // Exported field_instance: 'node-program-field_program_problem'.
   $field_instances['node-program-field_program_problem'] = array(
     'bundle' => 'program',
     'default_value' => NULL,
@@ -1626,7 +1626,7 @@ function gie_program_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-program-field_program_start'
+  // Exported field_instance: 'node-program-field_program_start'.
   $field_instances['node-program-field_program_start'] = array(
     'bundle' => 'program',
     'deleted' => 0,
@@ -1742,7 +1742,7 @@ function gie_program_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-program-field_program_status'
+  // Exported field_instance: 'node-program-field_program_status'.
   $field_instances['node-program-field_program_status'] = array(
     'bundle' => 'program',
     'default_value' => NULL,
@@ -1885,7 +1885,7 @@ function gie_program_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-program-field_term_country'
+  // Exported field_instance: 'node-program-field_term_country'.
   $field_instances['node-program-field_term_country'] = array(
     'bundle' => 'program',
     'default_value' => NULL,
@@ -1987,7 +1987,7 @@ function gie_program_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-program-field_term_region'
+  // Exported field_instance: 'node-program-field_term_region'.
   $field_instances['node-program-field_term_region'] = array(
     'bundle' => 'program',
     'default_value' => NULL,
@@ -2089,7 +2089,7 @@ function gie_program_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-program-field_term_sector'
+  // Exported field_instance: 'node-program-field_term_sector'.
   $field_instances['node-program-field_term_sector'] = array(
     'bundle' => 'program',
     'default_value' => NULL,
@@ -2200,7 +2200,7 @@ function gie_program_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-program-field_term_topic'
+  // Exported field_instance: 'node-program-field_term_topic'.
   $field_instances['node-program-field_term_topic'] = array(
     'bundle' => 'program',
     'default_value' => NULL,
@@ -2302,7 +2302,7 @@ function gie_program_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-program-title_field'
+  // Exported field_instance: 'node-program-title_field'.
   $field_instances['node-program-title_field'] = array(
     'bundle' => 'program',
     'default_value' => NULL,
