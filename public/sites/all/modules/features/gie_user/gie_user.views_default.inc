@@ -398,7 +398,7 @@ function gie_user_views_default_views() {
   $handler->display->display_options['cache']['output_max_lifespan'] = '21600';
   $handler->display->display_options['cache']['keys'] = array(
     'comment' => array(
-      'changed' => 0,
+      'changed' => 'changed',
     ),
     'node' => array(
       'action_card' => 0,
@@ -422,7 +422,7 @@ function gie_user_views_default_views() {
       'resource' => 0,
     ),
     'node_only' => array(
-      'node_changed' => 'node_changed',
+      'node_changed' => 0,
     ),
   );
   $handler->display->display_options['query']['type'] = 'views_query';
@@ -588,6 +588,7 @@ function gie_user_views_default_views() {
       'action_card' => 0,
       'article' => 0,
       'page' => 0,
+      'blogs' => 0,
       'discussion' => 0,
       'error_page' => 0,
       'event' => 0,
@@ -596,6 +597,7 @@ function gie_user_views_default_views() {
       'microsite' => 0,
       'microsite_page' => 0,
       'needs' => 0,
+      'news' => 0,
       'organization' => 0,
       'persona' => 0,
       'program' => 0,
