@@ -1,30 +1,28 @@
 <?php
-
 namespace Elastica\Facet;
 
-use Elastica\Param;
-use Elastica\Filter\AbstractFilter;
 use Elastica\Exception\InvalidException;
+use Elastica\Filter\AbstractFilter;
+use Elastica\NameableInterface;
+use Elastica\Param;
 
 /**
- * Abstract facet object. Should be extended by all facet types
+ * Abstract facet object. Should be extended by all facet types.
  *
- * @category Xodoa
- * @package Elastica
  * @author Nicolas Ruflin <spam@ruflin.com>
  * @author Jasper van Wanrooy <jasper@vanwanrooy.net>
+ *
+ * @deprecated Facets are deprecated and will be removed in a future release. You are encouraged to migrate to aggregations instead.
  */
-abstract class AbstractFacet extends Param
+abstract class AbstractFacet extends Param implements NameableInterface
 {
     /**
-     * Holds the name of the facet.
-     * @var string
+     * @var string Holds the name of the facet.
      */
     protected $_name = '';
 
     /**
-     * Holds all facet parameters.
-     * @var array
+     * @var array Holds all facet parameters.
      */
     protected $_facet = array();
 
@@ -42,9 +40,11 @@ abstract class AbstractFacet extends Param
      * Sets the name of the facet. It is automatically set by
      * the constructor.
      *
-     * @param  string                              $name The name of the facet.
-     * @throws \Elastica\Exception\InvalidException
-     * @return \Elastica\Facet\AbstractFacet
+     * @param string $name The name of the facet.
+     *
+     * @throws \Elastica\Exception\InvalidException If name is empty
+     *
+     * @return $this
      */
     public function setName($name)
     {
@@ -69,12 +69,13 @@ abstract class AbstractFacet extends Param
     /**
      * Sets a filter for this facet.
      *
-     * @param  \Elastica\Filter\AbstractFilter $filter A filter to apply on the facet.
-     * @return \Elastica\Facet\AbstractFacet
+     * @param \Elastica\Filter\AbstractFilter $filter A filter to apply on the facet.
+     *
+     * @return $this
      */
     public function setFilter(AbstractFilter $filter)
     {
-        return $this->_setFacetParam('facet_filter', $filter->toArray());
+        return $this->_setFacetParam('facet_filter', $filter);
     }
 
     /**
@@ -82,8 +83,9 @@ abstract class AbstractFacet extends Param
      * current search query. When not set, it defaults to the
      * Elasticsearch default value.
      *
-     * @param  bool                         $global Flag to either run the facet globally.
-     * @return \Elastica\Facet\AbstractFacet
+     * @param bool $global Flag to either run the facet globally.
+     *
+     * @return $this
      */
     public function setGlobal($global = true)
     {
@@ -91,10 +93,11 @@ abstract class AbstractFacet extends Param
     }
 
     /**
-     * Sets the path to the nested document
+     * Sets the path to the nested document.
      *
-     * @param  string                       $nestedPath Nested path
-     * @return \Elastica\Facet\AbstractFacet
+     * @param string $nestedPath Nested path
+     *
+     * @return $this
      */
     public function setNested($nestedPath)
     {
@@ -102,10 +105,11 @@ abstract class AbstractFacet extends Param
     }
 
     /**
-     * Sets the scope
+     * Sets the scope.
      *
-     * @param  string                       $scope Scope
-     * @return \Elastica\Facet\AbstractFacet
+     * @param string $scope Scope
+     *
+     * @return $this
      */
     public function setScope($scope)
     {
@@ -121,16 +125,17 @@ abstract class AbstractFacet extends Param
      */
     public function toArray()
     {
-        return $this->_facet;
+        return $this->_convertArrayable($this->_facet);
     }
 
     /**
      * Sets a param for the facet. Each facet implementation needs to take
      * care of handling their own params.
      *
-     * @param  string                       $key   The key of the param to set.
-     * @param  mixed                        $value The value of the param.
-     * @return \Elastica\Facet\AbstractFacet
+     * @param string $key   The key of the param to set.
+     * @param mixed  $value The value of the param.
+     *
+     * @return $this
      */
     protected function _setFacetParam($key, $value)
     {
