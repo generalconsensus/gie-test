@@ -10,7 +10,7 @@
 function gie_assets_field_default_field_instances() {
   $field_instances = array();
 
-  // Exported field_instance: 'asset-document-field_asset_document_desc'
+  // Exported field_instance: 'asset-document-field_asset_document_desc'.
   $field_instances['asset-document-field_asset_document_desc'] = array(
     'bundle' => 'document',
     'default_value' => NULL,
@@ -105,7 +105,7 @@ function gie_assets_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'asset-document-field_asset_document_file'
+  // Exported field_instance: 'asset-document-field_asset_document_file'.
   $field_instances['asset-document-field_asset_document_file'] = array(
     'bundle' => 'document',
     'deleted' => 0,
@@ -194,7 +194,7 @@ function gie_assets_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'asset-image-field_asset_image'
+  // Exported field_instance: 'asset-image-field_asset_image'.
   $field_instances['asset-image-field_asset_image'] = array(
     'bundle' => 'image',
     'deleted' => 0,
@@ -418,7 +418,7 @@ function gie_assets_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'asset-image-field_asset_image_description'
+  // Exported field_instance: 'asset-image-field_asset_image_description'.
   $field_instances['asset-image-field_asset_image_description'] = array(
     'bundle' => 'image',
     'default_value' => NULL,
@@ -543,7 +543,7 @@ function gie_assets_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'asset-image-field_asset_image_link'
+  // Exported field_instance: 'asset-image-field_asset_image_link'.
   $field_instances['asset-image-field_asset_image_link'] = array(
     'bundle' => 'image',
     'default_value' => NULL,
@@ -635,7 +635,7 @@ function gie_assets_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'asset-video-field_asset_video_desc'
+  // Exported field_instance: 'asset-video-field_asset_video_desc'.
   $field_instances['asset-video-field_asset_video_desc'] = array(
     'bundle' => 'video',
     'default_value' => NULL,
@@ -776,7 +776,7 @@ function gie_assets_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'asset-video-field_asset_video_file'
+  // Exported field_instance: 'asset-video-field_asset_video_file'.
   $field_instances['asset-video-field_asset_video_file'] = array(
     'bundle' => 'video',
     'default_value' => NULL,

@@ -220,7 +220,7 @@ function gie_homepage_field_default_field_bases() {
     'type' => 'entityreference',
   );
 
-  // Exported field_base: 'field_homepage_ges_personas'
+  // Exported field_base: 'field_homepage_ges_personas'.
   $field_bases['field_homepage_ges_personas'] = array(
     'active' => 1,
     'cardinality' => 3,

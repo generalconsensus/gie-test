@@ -8,7 +8,7 @@
  * Implements hook_field_group_info().
  */
 function gie_needs_field_group_info() {
-  $export = array();
+  $field_groups = array();
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -41,7 +41,7 @@ function gie_needs_field_group_info() {
       'formatter' => 'open',
     ),
   );
-  $export['group_card_meta|node|needs|listing'] = $field_group;
+  $field_groups['group_card_meta|node|needs|listing'] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -76,7 +76,7 @@ function gie_needs_field_group_info() {
       'formatter' => 'open',
     ),
   );
-  $export['group_counts|node|needs|listing'] = $field_group;
+  $field_groups['group_counts|node|needs|listing'] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -121,7 +121,13 @@ function gie_needs_field_group_info() {
       'formatter' => 'open',
     ),
   );
-  $export['group_details|node|needs|details'] = $field_group;
+  $field_groups['group_details|node|needs|details'] = $field_group;
 
-  return $export;
+  // Translatables
+  // Included for use with string extractors like potx.
+  t('Card Meta');
+  t('Counts');
+  t('Details');
+
+  return $field_groups;
 }

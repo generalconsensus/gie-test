@@ -10,7 +10,7 @@
 function gie_messages_field_default_field_instances() {
   $field_instances = array();
 
-  // Exported field_instance: 'message-comment_notify-field_comment_ref'
+  // Exported field_instance: 'message-comment_notify-field_comment_ref'.
   $field_instances['message-comment_notify-field_comment_ref'] = array(
     'bundle' => 'comment_notify',
     'default_value' => NULL,
@@ -76,7 +76,7 @@ function gie_messages_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'message-comment_notify-field_node_ref'
+  // Exported field_instance: 'message-comment_notify-field_node_ref'.
   $field_instances['message-comment_notify-field_node_ref'] = array(
     'bundle' => 'comment_notify',
     'default_value' => NULL,
@@ -142,7 +142,7 @@ function gie_messages_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'message-favorite_notify-field_flag_ref'
+  // Exported field_instance: 'message-favorite_notify-field_flag_ref'.
   $field_instances['message-favorite_notify-field_flag_ref'] = array(
     'bundle' => 'favorite_notify',
     'default_value' => NULL,
@@ -223,7 +223,7 @@ function gie_messages_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'message-favorite_notify-field_node_ref'
+  // Exported field_instance: 'message-favorite_notify-field_node_ref'.
   $field_instances['message-favorite_notify-field_node_ref'] = array(
     'bundle' => 'favorite_notify',
     'default_value' => NULL,
@@ -304,7 +304,7 @@ function gie_messages_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'message-favorite_notify-field_user_ref'
+  // Exported field_instance: 'message-favorite_notify-field_user_ref'.
   $field_instances['message-favorite_notify-field_user_ref'] = array(
     'bundle' => 'favorite_notify',
     'default_value' => NULL,
@@ -385,7 +385,7 @@ function gie_messages_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'message-follow_user_notify-field_flag_ref'
+  // Exported field_instance: 'message-follow_user_notify-field_flag_ref'.
   $field_instances['message-follow_user_notify-field_flag_ref'] = array(
     'bundle' => 'follow_user_notify',
     'default_value' => NULL,
@@ -466,7 +466,7 @@ function gie_messages_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'message-follow_user_notify-field_user_ref'
+  // Exported field_instance: 'message-follow_user_notify-field_user_ref'.
   $field_instances['message-follow_user_notify-field_user_ref'] = array(
     'bundle' => 'follow_user_notify',
     'default_value' => NULL,
@@ -547,7 +547,7 @@ function gie_messages_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'message-node_update_notify-field_node_ref'
+  // Exported field_instance: 'message-node_update_notify-field_node_ref'.
   $field_instances['message-node_update_notify-field_node_ref'] = array(
     'bundle' => 'node_update_notify',
     'default_value' => NULL,
@@ -628,7 +628,7 @@ function gie_messages_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'message-user_follow_create-field_node_ref'
+  // Exported field_instance: 'message-user_follow_create-field_node_ref'.
   $field_instances['message-user_follow_create-field_node_ref'] = array(
     'bundle' => 'user_follow_create',
     'default_value' => NULL,
@@ -709,7 +709,7 @@ function gie_messages_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'message_type-message_type-message_text'
+  // Exported field_instance: 'message_type-message_type-message_text'.
   $field_instances['message_type-message_type-message_text'] = array(
     'bundle' => 'message_type',
     'default_value' => NULL,
@@ -755,7 +755,7 @@ function gie_messages_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'user-user-field_user_notifications'
+  // Exported field_instance: 'user-user-field_user_notifications'.
   $field_instances['user-user-field_user_notifications'] = array(
     'bundle' => 'user',
     'default_value' => array(
@@ -799,6 +799,12 @@ function gie_messages_field_default_field_instances() {
         'weight' => 0,
       ),
       'resource_user' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'spotlight' => array(
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',

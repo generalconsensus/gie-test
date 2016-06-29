@@ -10,7 +10,7 @@
 function gie_user_field_default_field_bases() {
   $field_bases = array();
 
-  // Exported field_base: 'field_assistance_offered'
+  // Exported field_base: 'field_assistance_offered'.
   $field_bases['field_assistance_offered'] = array(
     'active' => 1,
     'cardinality' => -1,
@@ -36,7 +36,7 @@ function gie_user_field_default_field_bases() {
     'type' => 'taxonomy_term_reference',
   );
 
-  // Exported field_base: 'field_newsletter_sign_up'
+  // Exported field_base: 'field_newsletter_sign_up'.
   $field_bases['field_newsletter_sign_up'] = array(
     'active' => 1,
     'cardinality' => 1,
@@ -55,7 +55,7 @@ function gie_user_field_default_field_bases() {
     'type' => 'mailchimp_lists_subscription',
   );
 
-  // Exported field_base: 'field_team_members'
+  // Exported field_base: 'field_team_members'.
   $field_bases['field_team_members'] = array(
     'active' => 1,
     'cardinality' => -1,
@@ -88,7 +88,7 @@ function gie_user_field_default_field_bases() {
     'type' => 'entityreference',
   );
 
-  // Exported field_base: 'field_user_address'
+  // Exported field_base: 'field_user_address'.
   $field_bases['field_user_address'] = array(
     'active' => 1,
     'cardinality' => 1,
@@ -103,7 +103,7 @@ function gie_user_field_default_field_bases() {
     'type' => 'addressfield',
   );
 
-  // Exported field_base: 'field_user_assistance'
+  // Exported field_base: 'field_user_assistance'.
   $field_bases['field_user_assistance'] = array(
     'active' => 1,
     'cardinality' => -1,
@@ -129,7 +129,7 @@ function gie_user_field_default_field_bases() {
     'type' => 'taxonomy_term_reference',
   );
 
-  // Exported field_base: 'field_user_company'
+  // Exported field_base: 'field_user_company'.
   $field_bases['field_user_company'] = array(
     'active' => 1,
     'cardinality' => 1,
@@ -155,7 +155,7 @@ function gie_user_field_default_field_bases() {
     'type' => 'taxonomy_term_reference',
   );
 
-  // Exported field_base: 'field_user_education'
+  // Exported field_base: 'field_user_education'.
   $field_bases['field_user_education'] = array(
     'active' => 1,
     'cardinality' => 1,
@@ -174,7 +174,7 @@ function gie_user_field_default_field_bases() {
     'type' => 'text_long',
   );
 
-  // Exported field_base: 'field_user_facebook'
+  // Exported field_base: 'field_user_facebook'.
   $field_bases['field_user_facebook'] = array(
     'active' => 1,
     'cardinality' => 1,
@@ -195,7 +195,7 @@ function gie_user_field_default_field_bases() {
     'type' => 'text',
   );
 
-  // Exported field_base: 'field_user_firstname'
+  // Exported field_base: 'field_user_firstname'.
   $field_bases['field_user_firstname'] = array(
     'active' => 1,
     'cardinality' => 1,
@@ -216,7 +216,7 @@ function gie_user_field_default_field_bases() {
     'type' => 'text',
   );
 
-  // Exported field_base: 'field_user_interests'
+  // Exported field_base: 'field_user_interests'.
   $field_bases['field_user_interests'] = array(
     'active' => 1,
     'cardinality' => -1,
@@ -242,7 +242,7 @@ function gie_user_field_default_field_bases() {
     'type' => 'taxonomy_term_reference',
   );
 
-  // Exported field_base: 'field_user_lastname'
+  // Exported field_base: 'field_user_lastname'.
   $field_bases['field_user_lastname'] = array(
     'active' => 1,
     'cardinality' => 1,
@@ -263,7 +263,7 @@ function gie_user_field_default_field_bases() {
     'type' => 'text',
   );
 
-  // Exported field_base: 'field_user_linkedin'
+  // Exported field_base: 'field_user_linkedin'.
   $field_bases['field_user_linkedin'] = array(
     'active' => 1,
     'cardinality' => 1,
@@ -284,7 +284,7 @@ function gie_user_field_default_field_bases() {
     'type' => 'text',
   );
 
-  // Exported field_base: 'field_user_mail_comment'
+  // Exported field_base: 'field_user_mail_comment'.
   $field_bases['field_user_mail_comment'] = array(
     'active' => 1,
     'cardinality' => 1,
@@ -309,7 +309,7 @@ function gie_user_field_default_field_bases() {
     'type' => 'list_boolean',
   );
 
-  // Exported field_base: 'field_user_mail_content_follow'
+  // Exported field_base: 'field_user_mail_content_follow'.
   $field_bases['field_user_mail_content_follow'] = array(
     'active' => 1,
     'cardinality' => 1,
@@ -334,7 +334,7 @@ function gie_user_field_default_field_bases() {
     'type' => 'list_boolean',
   );
 
-  // Exported field_base: 'field_user_mail_follow_edit'
+  // Exported field_base: 'field_user_mail_follow_edit'.
   $field_bases['field_user_mail_follow_edit'] = array(
     'active' => 1,
     'cardinality' => 1,
@@ -359,7 +359,7 @@ function gie_user_field_default_field_bases() {
     'type' => 'list_boolean',
   );
 
-  // Exported field_base: 'field_user_mail_user_follow'
+  // Exported field_base: 'field_user_mail_user_follow'.
   $field_bases['field_user_mail_user_follow'] = array(
     'active' => 1,
     'cardinality' => 1,
@@ -384,7 +384,7 @@ function gie_user_field_default_field_bases() {
     'type' => 'list_boolean',
   );
 
-  // Exported field_base: 'field_user_motto'
+  // Exported field_base: 'field_user_motto'.
   $field_bases['field_user_motto'] = array(
     'active' => 1,
     'cardinality' => 1,
@@ -405,7 +405,7 @@ function gie_user_field_default_field_bases() {
     'type' => 'text',
   );
 
-  // Exported field_base: 'field_user_org'
+  // Exported field_base: 'field_user_org'.
   $field_bases['field_user_org'] = array(
     'active' => 1,
     'cardinality' => -1,
@@ -440,7 +440,7 @@ function gie_user_field_default_field_bases() {
     'type' => 'entityreference',
   );
 
-  // Exported field_base: 'field_user_other_interests'
+  // Exported field_base: 'field_user_other_interests'.
   $field_bases['field_user_other_interests'] = array(
     'active' => 1,
     'cardinality' => -1,
@@ -466,7 +466,7 @@ function gie_user_field_default_field_bases() {
     'type' => 'taxonomy_term_reference',
   );
 
-  // Exported field_base: 'field_user_parent'
+  // Exported field_base: 'field_user_parent'.
   $field_bases['field_user_parent'] = array(
     'active' => 1,
     'cardinality' => 1,
@@ -501,7 +501,7 @@ function gie_user_field_default_field_bases() {
     'type' => 'entityreference',
   );
 
-  // Exported field_base: 'field_user_photo'
+  // Exported field_base: 'field_user_photo'.
   $field_bases['field_user_photo'] = array(
     'active' => 1,
     'cardinality' => 1,
@@ -523,7 +523,7 @@ function gie_user_field_default_field_bases() {
     'type' => 'image',
   );
 
-  // Exported field_base: 'field_user_programs'
+  // Exported field_base: 'field_user_programs'.
   $field_bases['field_user_programs'] = array(
     'active' => 1,
     'cardinality' => -1,
@@ -558,7 +558,7 @@ function gie_user_field_default_field_bases() {
     'type' => 'entityreference',
   );
 
-  // Exported field_base: 'field_user_skills'
+  // Exported field_base: 'field_user_skills'.
   $field_bases['field_user_skills'] = array(
     'active' => 1,
     'cardinality' => -1,
@@ -584,7 +584,7 @@ function gie_user_field_default_field_bases() {
     'type' => 'taxonomy_term_reference',
   );
 
-  // Exported field_base: 'field_user_summary'
+  // Exported field_base: 'field_user_summary'.
   $field_bases['field_user_summary'] = array(
     'active' => 1,
     'cardinality' => 1,
@@ -603,7 +603,7 @@ function gie_user_field_default_field_bases() {
     'type' => 'text_long',
   );
 
-  // Exported field_base: 'field_user_title'
+  // Exported field_base: 'field_user_title'.
   $field_bases['field_user_title'] = array(
     'active' => 1,
     'cardinality' => 1,
@@ -624,7 +624,7 @@ function gie_user_field_default_field_bases() {
     'type' => 'text',
   );
 
-  // Exported field_base: 'field_user_twitter'
+  // Exported field_base: 'field_user_twitter'.
   $field_bases['field_user_twitter'] = array(
     'active' => 1,
     'cardinality' => 1,
@@ -645,7 +645,7 @@ function gie_user_field_default_field_bases() {
     'type' => 'text',
   );
 
-  // Exported field_base: 'field_user_type'
+  // Exported field_base: 'field_user_type'.
   $field_bases['field_user_type'] = array(
     'active' => 1,
     'cardinality' => -1,

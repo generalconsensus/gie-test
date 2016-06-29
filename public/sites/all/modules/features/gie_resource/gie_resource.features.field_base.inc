@@ -10,7 +10,7 @@
 function gie_resource_field_default_field_bases() {
   $field_bases = array();
 
-  // Exported field_base: 'field_resource_assets'
+  // Exported field_base: 'field_resource_assets'.
   $field_bases['field_resource_assets'] = array(
     'active' => 1,
     'cardinality' => -1,
@@ -45,7 +45,7 @@ function gie_resource_field_default_field_bases() {
     'type' => 'entityreference',
   );
 
-  // Exported field_base: 'field_resource_assistance'
+  // Exported field_base: 'field_resource_assistance'.
   $field_bases['field_resource_assistance'] = array(
     'active' => 1,
     'cardinality' => -1,
@@ -71,7 +71,7 @@ function gie_resource_field_default_field_bases() {
     'type' => 'taxonomy_term_reference',
   );
 
-  // Exported field_base: 'field_resource_attribution'
+  // Exported field_base: 'field_resource_attribution'.
   $field_bases['field_resource_attribution'] = array(
     'active' => 1,
     'cardinality' => 1,
@@ -90,7 +90,7 @@ function gie_resource_field_default_field_bases() {
     'type' => 'text_long',
   );
 
-  // Exported field_base: 'field_resource_author'
+  // Exported field_base: 'field_resource_author'.
   $field_bases['field_resource_author'] = array(
     'active' => 1,
     'cardinality' => 1,
@@ -123,7 +123,7 @@ function gie_resource_field_default_field_bases() {
     'type' => 'entityreference',
   );
 
-  // Exported field_base: 'field_resource_date'
+  // Exported field_base: 'field_resource_date'.
   $field_bases['field_resource_date'] = array(
     'active' => 1,
     'cardinality' => 1,
@@ -152,7 +152,7 @@ function gie_resource_field_default_field_bases() {
     'type' => 'date',
   );
 
-  // Exported field_base: 'field_resource_desc'
+  // Exported field_base: 'field_resource_desc'.
   $field_bases['field_resource_desc'] = array(
     'active' => 1,
     'cardinality' => 1,
@@ -171,7 +171,7 @@ function gie_resource_field_default_field_bases() {
     'type' => 'text_long',
   );
 
-  // Exported field_base: 'field_resource_link'
+  // Exported field_base: 'field_resource_link'.
   $field_bases['field_resource_link'] = array(
     'active' => 1,
     'cardinality' => 1,
@@ -200,7 +200,7 @@ function gie_resource_field_default_field_bases() {
     'type' => 'link_field',
   );
 
-  // Exported field_base: 'field_resource_org'
+  // Exported field_base: 'field_resource_org'.
   $field_bases['field_resource_org'] = array(
     'active' => 1,
     'cardinality' => -1,
@@ -235,7 +235,7 @@ function gie_resource_field_default_field_bases() {
     'type' => 'entityreference',
   );
 
-  // Exported field_base: 'field_resource_program'
+  // Exported field_base: 'field_resource_program'.
   $field_bases['field_resource_program'] = array(
     'active' => 1,
     'cardinality' => -1,
@@ -270,7 +270,7 @@ function gie_resource_field_default_field_bases() {
     'type' => 'entityreference',
   );
 
-  // Exported field_base: 'field_resource_source'
+  // Exported field_base: 'field_resource_source'.
   $field_bases['field_resource_source'] = array(
     'active' => 1,
     'cardinality' => 1,
@@ -299,7 +299,7 @@ function gie_resource_field_default_field_bases() {
     'type' => 'link_field',
   );
 
-  // Exported field_base: 'field_resource_type'
+  // Exported field_base: 'field_resource_type'.
   $field_bases['field_resource_type'] = array(
     'active' => 1,
     'cardinality' => 1,

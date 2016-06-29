@@ -10,7 +10,7 @@
 function gie_general_field_default_field_instances() {
   $field_instances = array();
 
-  // Exported field_instance: 'flagging-abuse_node-field_abuse_description'
+  // Exported field_instance: 'flagging-abuse_node-field_abuse_description'.
   $field_instances['flagging-abuse_node-field_abuse_description'] = array(
     'bundle' => 'abuse_node',
     'default_value' => NULL,
@@ -90,7 +90,7 @@ function gie_general_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'flagging-abuse_node-field_abuse_type'
+  // Exported field_instance: 'flagging-abuse_node-field_abuse_type'.
   $field_instances['flagging-abuse_node-field_abuse_type'] = array(
     'bundle' => 'abuse_node',
     'default_value' => NULL,
@@ -138,7 +138,7 @@ function gie_general_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-error_page-field_error_description'
+  // Exported field_instance: 'node-error_page-field_error_description'.
   $field_instances['node-error_page-field_error_description'] = array(
     'bundle' => 'error_page',
     'default_value' => NULL,
@@ -218,7 +218,7 @@ function gie_general_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-error_page-title_field'
+  // Exported field_instance: 'node-error_page-title_field'.
   $field_instances['node-error_page-title_field'] = array(
     'bundle' => 'error_page',
     'default_value' => NULL,

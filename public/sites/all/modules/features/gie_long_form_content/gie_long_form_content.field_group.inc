@@ -8,7 +8,7 @@
  * Implements hook_field_group_info().
  */
 function gie_long_form_content_field_group_info() {
-  $export = array();
+  $field_groups = array();
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -41,7 +41,7 @@ function gie_long_form_content_field_group_info() {
       'formatter' => 'open',
     ),
   );
-  $export['group_aside|paragraphs_item|long_form_aside|default'] = $field_group;
+  $field_groups['group_aside|paragraphs_item|long_form_aside|default'] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -74,7 +74,7 @@ function gie_long_form_content_field_group_info() {
       'formatter' => 'open',
     ),
   );
-  $export['group_card_item_2|paragraphs_item|long_form_callout_card|default'] = $field_group;
+  $field_groups['group_card_item_2|paragraphs_item|long_form_callout_card|default'] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -107,7 +107,7 @@ function gie_long_form_content_field_group_info() {
       'formatter' => 'open',
     ),
   );
-  $export['group_card_item_3|paragraphs_item|long_form_callout_card|default'] = $field_group;
+  $field_groups['group_card_item_3|paragraphs_item|long_form_callout_card|default'] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -140,7 +140,7 @@ function gie_long_form_content_field_group_info() {
       'formatter' => 'open',
     ),
   );
-  $export['group_card_item|paragraphs_item|long_form_callout_card|default'] = $field_group;
+  $field_groups['group_card_item|paragraphs_item|long_form_callout_card|default'] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -174,7 +174,7 @@ function gie_long_form_content_field_group_info() {
       'formatter' => 'open',
     ),
   );
-  $export['group_card|paragraphs_item|long_form_callout_card|default'] = $field_group;
+  $field_groups['group_card|paragraphs_item|long_form_callout_card|default'] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -207,7 +207,7 @@ function gie_long_form_content_field_group_info() {
       'formatter' => 'open',
     ),
   );
-  $export['group_content|paragraphs_item|long_form_featured_content|default'] = $field_group;
+  $field_groups['group_content|paragraphs_item|long_form_featured_content|default'] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -239,7 +239,7 @@ function gie_long_form_content_field_group_info() {
       'formatter' => 'open',
     ),
   );
-  $export['group_favorite|node|long_form_page|full'] = $field_group;
+  $field_groups['group_favorite|node|long_form_page|full'] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -272,7 +272,7 @@ function gie_long_form_content_field_group_info() {
       'formatter' => 'open',
     ),
   );
-  $export['group_footer_group|node|long_form_page|full'] = $field_group;
+  $field_groups['group_footer_group|node|long_form_page|full'] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -305,7 +305,7 @@ function gie_long_form_content_field_group_info() {
       'formatter' => 'open',
     ),
   );
-  $export['group_footer_partners|node|long_form_page|full'] = $field_group;
+  $field_groups['group_footer_partners|node|long_form_page|full'] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -339,7 +339,7 @@ function gie_long_form_content_field_group_info() {
       'formatter' => 'open',
     ),
   );
-  $export['group_footer|node|long_form_page|full'] = $field_group;
+  $field_groups['group_footer|node|long_form_page|full'] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -369,7 +369,7 @@ function gie_long_form_content_field_group_info() {
       'formatter' => 'open',
     ),
   );
-  $export['group_footer|paragraphs_item|long_form_featured_content|default'] = $field_group;
+  $field_groups['group_footer|paragraphs_item|long_form_featured_content|default'] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -399,7 +399,7 @@ function gie_long_form_content_field_group_info() {
       'formatter' => 'open',
     ),
   );
-  $export['group_fullwidth_header|paragraphs_item|long_form_section_break_image|default'] = $field_group;
+  $field_groups['group_fullwidth_header|paragraphs_item|long_form_section_break_image|default'] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -432,7 +432,7 @@ function gie_long_form_content_field_group_info() {
       'formatter' => 'open',
     ),
   );
-  $export['group_image|paragraphs_item|long_form_image|default'] = $field_group;
+  $field_groups['group_image|paragraphs_item|long_form_image|default'] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -465,7 +465,7 @@ function gie_long_form_content_field_group_info() {
       'formatter' => 'open',
     ),
   );
-  $export['group_key_figure|paragraphs_item|long_form_key_figure|default'] = $field_group;
+  $field_groups['group_key_figure|paragraphs_item|long_form_key_figure|default'] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -495,7 +495,7 @@ function gie_long_form_content_field_group_info() {
       'formatter' => 'open',
     ),
   );
-  $export['group_longform_report_desc|node|long_form_page|form'] = $field_group;
+  $field_groups['group_longform_report_desc|node|long_form_page|form'] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -528,7 +528,7 @@ function gie_long_form_content_field_group_info() {
       'formatter' => 'open',
     ),
   );
-  $export['group_longform_report_desc|node|long_form_page|full'] = $field_group;
+  $field_groups['group_longform_report_desc|node|long_form_page|full'] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -563,7 +563,7 @@ function gie_long_form_content_field_group_info() {
       'formatter' => 'open',
     ),
   );
-  $export['group_page_header|node|long_form_page|full'] = $field_group;
+  $field_groups['group_page_header|node|long_form_page|full'] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -592,7 +592,7 @@ function gie_long_form_content_field_group_info() {
       'formatter' => 'open',
     ),
   );
-  $export['group_para_callout_1|paragraphs_item|long_form_callout_card|form'] = $field_group;
+  $field_groups['group_para_callout_1|paragraphs_item|long_form_callout_card|form'] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -620,7 +620,7 @@ function gie_long_form_content_field_group_info() {
       ),
     ),
   );
-  $export['group_para_callout_2|paragraphs_item|long_form_callout_card|form'] = $field_group;
+  $field_groups['group_para_callout_2|paragraphs_item|long_form_callout_card|form'] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -648,7 +648,7 @@ function gie_long_form_content_field_group_info() {
       ),
     ),
   );
-  $export['group_para_callout_3|paragraphs_item|long_form_callout_card|form'] = $field_group;
+  $field_groups['group_para_callout_3|paragraphs_item|long_form_callout_card|form'] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -677,7 +677,7 @@ function gie_long_form_content_field_group_info() {
       'formatter' => 'open',
     ),
   );
-  $export['group_pdf|node|long_form_page|form'] = $field_group;
+  $field_groups['group_pdf|node|long_form_page|form'] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -710,7 +710,7 @@ function gie_long_form_content_field_group_info() {
       'formatter' => 'open',
     ),
   );
-  $export['group_pullquote|paragraphs_item|long_form_pullquote|default'] = $field_group;
+  $field_groups['group_pullquote|paragraphs_item|long_form_pullquote|default'] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -743,7 +743,7 @@ function gie_long_form_content_field_group_info() {
       'formatter' => 'open',
     ),
   );
-  $export['group_section_break|paragraphs_item|long_form_section_break_image|default'] = $field_group;
+  $field_groups['group_section_break|paragraphs_item|long_form_section_break_image|default'] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -777,7 +777,7 @@ function gie_long_form_content_field_group_info() {
       'formatter' => 'open',
     ),
   );
-  $export['group_section_header|paragraphs_item|long_form_section_header_image|default'] = $field_group;
+  $field_groups['group_section_header|paragraphs_item|long_form_section_header_image|default'] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -809,7 +809,7 @@ function gie_long_form_content_field_group_info() {
       'formatter' => 'open',
     ),
   );
-  $export['group_share_btn|node|long_form_page|full'] = $field_group;
+  $field_groups['group_share_btn|node|long_form_page|full'] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -843,7 +843,7 @@ function gie_long_form_content_field_group_info() {
       'formatter' => 'open',
     ),
   );
-  $export['group_share|node|long_form_page|full'] = $field_group;
+  $field_groups['group_share|node|long_form_page|full'] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -875,7 +875,7 @@ function gie_long_form_content_field_group_info() {
       'formatter' => 'open',
     ),
   );
-  $export['group_text|paragraphs_item|long_form_text|center_aligned'] = $field_group;
+  $field_groups['group_text|paragraphs_item|long_form_text|center_aligned'] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -907,7 +907,7 @@ function gie_long_form_content_field_group_info() {
       'formatter' => 'open',
     ),
   );
-  $export['group_text|paragraphs_item|long_form_text|default'] = $field_group;
+  $field_groups['group_text|paragraphs_item|long_form_text|default'] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -939,7 +939,7 @@ function gie_long_form_content_field_group_info() {
       'formatter' => 'open',
     ),
   );
-  $export['group_text|paragraphs_item|long_form_text|left_aligned'] = $field_group;
+  $field_groups['group_text|paragraphs_item|long_form_text|left_aligned'] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -969,7 +969,7 @@ function gie_long_form_content_field_group_info() {
       'formatter' => 'open',
     ),
   );
-  $export['group_title|paragraphs_item|long_form_featured_content|default'] = $field_group;
+  $field_groups['group_title|paragraphs_item|long_form_featured_content|default'] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -1002,7 +1002,38 @@ function gie_long_form_content_field_group_info() {
       'formatter' => 'open',
     ),
   );
-  $export['group_video|paragraphs_item|long_form_video|default'] = $field_group;
+  $field_groups['group_video|paragraphs_item|long_form_video|default'] = $field_group;
 
-  return $export;
+  // Translatables
+  // Included for use with string extractors like potx.
+  t('Aside');
+  t('Callout #1');
+  t('Callout #2');
+  t('Callout #3');
+  t('Card');
+  t('Card item');
+  t('Card item 2');
+  t('Card item 3');
+  t('Content');
+  t('Favorite');
+  t('Footer');
+  t('Footer Partners');
+  t('Fullwidth Header');
+  t('Image');
+  t('Key Figure');
+  t('PDF');
+  t('Page Header');
+  t('Pre-Footer');
+  t('Pre-Footer Group');
+  t('Pullquote');
+  t('Report Description');
+  t('Section Break');
+  t('Section header');
+  t('ShareThis Button');
+  t('Text');
+  t('Title');
+  t('Video');
+  t('share');
+
+  return $field_groups;
 }
