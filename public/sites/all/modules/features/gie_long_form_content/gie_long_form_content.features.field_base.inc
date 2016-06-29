@@ -10,7 +10,7 @@
 function gie_long_form_content_field_default_field_bases() {
   $field_bases = array();
 
-  // Exported field_base: 'body'
+  // Exported field_base: 'body'.
   $field_bases['body'] = array(
     'active' => 1,
     'cardinality' => 1,
@@ -31,7 +31,7 @@ function gie_long_form_content_field_default_field_bases() {
     'type' => 'text_with_summary',
   );
 
-  // Exported field_base: 'field_header_image'
+  // Exported field_base: 'field_header_image'.
   $field_bases['field_header_image'] = array(
     'active' => 1,
     'cardinality' => 1,
@@ -53,7 +53,7 @@ function gie_long_form_content_field_default_field_bases() {
     'type' => 'image',
   );
 
-  // Exported field_base: 'field_learn_more_link'
+  // Exported field_base: 'field_learn_more_link'.
   $field_bases['field_learn_more_link'] = array(
     'active' => 1,
     'cardinality' => 1,
@@ -82,7 +82,7 @@ function gie_long_form_content_field_default_field_bases() {
     'type' => 'link_field',
   );
 
-  // Exported field_base: 'field_long_form_block'
+  // Exported field_base: 'field_long_form_block'.
   $field_bases['field_long_form_block'] = array(
     'active' => 1,
     'cardinality' => -1,
@@ -97,7 +97,7 @@ function gie_long_form_content_field_default_field_bases() {
     'type' => 'paragraphs',
   );
 
-  // Exported field_base: 'field_long_form_subtitle'
+  // Exported field_base: 'field_long_form_subtitle'.
   $field_bases['field_long_form_subtitle'] = array(
     'active' => 1,
     'cardinality' => 1,
@@ -116,7 +116,7 @@ function gie_long_form_content_field_default_field_bases() {
     'type' => 'text_long',
   );
 
-  // Exported field_base: 'field_longform_byline'
+  // Exported field_base: 'field_longform_byline'.
   $field_bases['field_longform_byline'] = array(
     'active' => 1,
     'cardinality' => 1,
@@ -137,7 +137,7 @@ function gie_long_form_content_field_default_field_bases() {
     'type' => 'text',
   );
 
-  // Exported field_base: 'field_longform_description'
+  // Exported field_base: 'field_longform_description'.
   $field_bases['field_longform_description'] = array(
     'active' => 1,
     'cardinality' => 1,
@@ -156,7 +156,7 @@ function gie_long_form_content_field_default_field_bases() {
     'type' => 'text_long',
   );
 
-  // Exported field_base: 'field_longform_description_title'
+  // Exported field_base: 'field_longform_description_title'.
   $field_bases['field_longform_description_title'] = array(
     'active' => 1,
     'cardinality' => 1,
@@ -177,7 +177,7 @@ function gie_long_form_content_field_default_field_bases() {
     'type' => 'text',
   );
 
-  // Exported field_base: 'field_longform_partners'
+  // Exported field_base: 'field_longform_partners'.
   $field_bases['field_longform_partners'] = array(
     'active' => 1,
     'cardinality' => -1,
@@ -212,7 +212,7 @@ function gie_long_form_content_field_default_field_bases() {
     'type' => 'entityreference',
   );
 
-  // Exported field_base: 'field_para_callout_body_1'
+  // Exported field_base: 'field_para_callout_body_1'.
   $field_bases['field_para_callout_body_1'] = array(
     'active' => 1,
     'cardinality' => 1,
@@ -231,7 +231,7 @@ function gie_long_form_content_field_default_field_bases() {
     'type' => 'text_long',
   );
 
-  // Exported field_base: 'field_para_callout_body_2'
+  // Exported field_base: 'field_para_callout_body_2'.
   $field_bases['field_para_callout_body_2'] = array(
     'active' => 1,
     'cardinality' => 1,
@@ -250,7 +250,7 @@ function gie_long_form_content_field_default_field_bases() {
     'type' => 'text_long',
   );
 
-  // Exported field_base: 'field_para_callout_body_3'
+  // Exported field_base: 'field_para_callout_body_3'.
   $field_bases['field_para_callout_body_3'] = array(
     'active' => 1,
     'cardinality' => 1,
@@ -269,7 +269,7 @@ function gie_long_form_content_field_default_field_bases() {
     'type' => 'text_long',
   );
 
-  // Exported field_base: 'field_para_callout_title_1'
+  // Exported field_base: 'field_para_callout_title_1'.
   $field_bases['field_para_callout_title_1'] = array(
     'active' => 1,
     'cardinality' => 1,
@@ -290,7 +290,7 @@ function gie_long_form_content_field_default_field_bases() {
     'type' => 'text',
   );
 
-  // Exported field_base: 'field_para_callout_title_2'
+  // Exported field_base: 'field_para_callout_title_2'.
   $field_bases['field_para_callout_title_2'] = array(
     'active' => 1,
     'cardinality' => 1,
@@ -311,7 +311,7 @@ function gie_long_form_content_field_default_field_bases() {
     'type' => 'text',
   );
 
-  // Exported field_base: 'field_para_callout_title_3'
+  // Exported field_base: 'field_para_callout_title_3'.
   $field_bases['field_para_callout_title_3'] = array(
     'active' => 1,
     'cardinality' => 1,
@@ -332,7 +332,7 @@ function gie_long_form_content_field_default_field_bases() {
     'type' => 'text',
   );
 
-  // Exported field_base: 'field_para_key_fig_explanation'
+  // Exported field_base: 'field_para_key_fig_explanation'.
   $field_bases['field_para_key_fig_explanation'] = array(
     'active' => 1,
     'cardinality' => 1,
@@ -351,7 +351,7 @@ function gie_long_form_content_field_default_field_bases() {
     'type' => 'text_long',
   );
 
-  // Exported field_base: 'field_para_pullquote_author'
+  // Exported field_base: 'field_para_pullquote_author'.
   $field_bases['field_para_pullquote_author'] = array(
     'active' => 1,
     'cardinality' => 1,
@@ -372,7 +372,7 @@ function gie_long_form_content_field_default_field_bases() {
     'type' => 'text',
   );
 
-  // Exported field_base: 'field_para_sctn_head_image'
+  // Exported field_base: 'field_para_sctn_head_image'.
   $field_bases['field_para_sctn_head_image'] = array(
     'active' => 1,
     'cardinality' => 1,
@@ -407,7 +407,7 @@ function gie_long_form_content_field_default_field_bases() {
     'type' => 'entityreference',
   );
 
-  // Exported field_base: 'field_para_sctn_head_sctn_title'
+  // Exported field_base: 'field_para_sctn_head_sctn_title'.
   $field_bases['field_para_sctn_head_sctn_title'] = array(
     'active' => 1,
     'cardinality' => 1,
@@ -428,7 +428,7 @@ function gie_long_form_content_field_default_field_bases() {
     'type' => 'text',
   );
 
-  // Exported field_base: 'field_para_sctn_head_title'
+  // Exported field_base: 'field_para_sctn_head_title'.
   $field_bases['field_para_sctn_head_title'] = array(
     'active' => 1,
     'cardinality' => 1,
@@ -449,7 +449,7 @@ function gie_long_form_content_field_default_field_bases() {
     'type' => 'text',
   );
 
-  // Exported field_base: 'field_para_section_break_title'
+  // Exported field_base: 'field_para_section_break_title'.
   $field_bases['field_para_section_break_title'] = array(
     'active' => 1,
     'cardinality' => 1,
@@ -470,7 +470,7 @@ function gie_long_form_content_field_default_field_bases() {
     'type' => 'text',
   );
 
-  // Exported field_base: 'field_para_section_brk_image'
+  // Exported field_base: 'field_para_section_brk_image'.
   $field_bases['field_para_section_brk_image'] = array(
     'active' => 1,
     'cardinality' => 1,
@@ -505,7 +505,7 @@ function gie_long_form_content_field_default_field_bases() {
     'type' => 'entityreference',
   );
 
-  // Exported field_base: 'field_paragraph_aside_text'
+  // Exported field_base: 'field_paragraph_aside_text'.
   $field_bases['field_paragraph_aside_text'] = array(
     'active' => 1,
     'cardinality' => 1,
@@ -524,7 +524,7 @@ function gie_long_form_content_field_default_field_bases() {
     'type' => 'text_long',
   );
 
-  // Exported field_base: 'field_paragraph_key_figure'
+  // Exported field_base: 'field_paragraph_key_figure'.
   $field_bases['field_paragraph_key_figure'] = array(
     'active' => 1,
     'cardinality' => 1,
@@ -545,7 +545,7 @@ function gie_long_form_content_field_default_field_bases() {
     'type' => 'text',
   );
 
-  // Exported field_base: 'field_paragraph_pullquote'
+  // Exported field_base: 'field_paragraph_pullquote'.
   $field_bases['field_paragraph_pullquote'] = array(
     'active' => 1,
     'cardinality' => 1,
@@ -564,7 +564,7 @@ function gie_long_form_content_field_default_field_bases() {
     'type' => 'text_long',
   );
 
-  // Exported field_base: 'field_paragraph_text'
+  // Exported field_base: 'field_paragraph_text'.
   $field_bases['field_paragraph_text'] = array(
     'active' => 1,
     'cardinality' => 1,
@@ -583,7 +583,7 @@ function gie_long_form_content_field_default_field_bases() {
     'type' => 'text_long',
   );
 
-  // Exported field_base: 'field_paragraphs_aside_title'
+  // Exported field_base: 'field_paragraphs_aside_title'.
   $field_bases['field_paragraphs_aside_title'] = array(
     'active' => 1,
     'cardinality' => 1,
@@ -604,7 +604,7 @@ function gie_long_form_content_field_default_field_bases() {
     'type' => 'text',
   );
 
-  // Exported field_base: 'field_paragraphs_caption'
+  // Exported field_base: 'field_paragraphs_caption'.
   $field_bases['field_paragraphs_caption'] = array(
     'active' => 1,
     'cardinality' => 1,
@@ -623,7 +623,7 @@ function gie_long_form_content_field_default_field_bases() {
     'type' => 'text_long',
   );
 
-  // Exported field_base: 'field_paragraphs_image'
+  // Exported field_base: 'field_paragraphs_image'.
   $field_bases['field_paragraphs_image'] = array(
     'active' => 1,
     'cardinality' => 1,
@@ -658,7 +658,7 @@ function gie_long_form_content_field_default_field_bases() {
     'type' => 'entityreference',
   );
 
-  // Exported field_base: 'field_paragraphs_video'
+  // Exported field_base: 'field_paragraphs_video'.
   $field_bases['field_paragraphs_video'] = array(
     'active' => 1,
     'cardinality' => 1,
@@ -693,7 +693,7 @@ function gie_long_form_content_field_default_field_bases() {
     'type' => 'entityreference',
   );
 
-  // Exported field_base: 'field_pdf_file'
+  // Exported field_base: 'field_pdf_file'.
   $field_bases['field_pdf_file'] = array(
     'active' => 1,
     'cardinality' => 1,
@@ -716,7 +716,7 @@ function gie_long_form_content_field_default_field_bases() {
     'type' => 'file',
   );
 
-  // Exported field_base: 'field_pdf_screenshot'
+  // Exported field_base: 'field_pdf_screenshot'.
   $field_bases['field_pdf_screenshot'] = array(
     'active' => 1,
     'cardinality' => 1,

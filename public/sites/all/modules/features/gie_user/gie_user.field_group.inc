@@ -8,7 +8,7 @@
  * Implements hook_field_group_info().
  */
 function gie_user_field_group_info() {
-  $export = array();
+  $field_groups = array();
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -50,7 +50,7 @@ function gie_user_field_group_info() {
       'formatter' => 'open',
     ),
   );
-  $export['group_about|user|user|form'] = $field_group;
+  $field_groups['group_about|user|user|form'] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -85,7 +85,7 @@ function gie_user_field_group_info() {
       'formatter' => 'open',
     ),
   );
-  $export['group_account|user|user|form'] = $field_group;
+  $field_groups['group_account|user|user|form'] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -119,7 +119,7 @@ function gie_user_field_group_info() {
       'formatter' => 'open',
     ),
   );
-  $export['group_card_content|user|user|listing'] = $field_group;
+  $field_groups['group_card_content|user|user|listing'] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -152,7 +152,7 @@ function gie_user_field_group_info() {
       'formatter' => 'open',
     ),
   );
-  $export['group_card_content|user|user|spotlight'] = $field_group;
+  $field_groups['group_card_content|user|user|spotlight'] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -184,7 +184,7 @@ function gie_user_field_group_info() {
       'formatter' => 'open',
     ),
   );
-  $export['group_card_image|user|user|listing'] = $field_group;
+  $field_groups['group_card_image|user|user|listing'] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -216,7 +216,7 @@ function gie_user_field_group_info() {
       'formatter' => 'open',
     ),
   );
-  $export['group_card_image|user|user|spotlight'] = $field_group;
+  $field_groups['group_card_image|user|user|spotlight'] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -251,7 +251,7 @@ function gie_user_field_group_info() {
       'formatter' => 'open',
     ),
   );
-  $export['group_connect|user|user|form'] = $field_group;
+  $field_groups['group_connect|user|user|form'] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -290,7 +290,7 @@ function gie_user_field_group_info() {
       'formatter' => 'open',
     ),
   );
-  $export['group_interests|user|user|form'] = $field_group;
+  $field_groups['group_interests|user|user|form'] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -324,7 +324,7 @@ function gie_user_field_group_info() {
       'formatter' => 'open',
     ),
   );
-  $export['group_user_meta|user|user|full'] = $field_group;
+  $field_groups['group_user_meta|user|user|full'] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -363,7 +363,7 @@ function gie_user_field_group_info() {
       'formatter' => 'open',
     ),
   );
-  $export['group_user_notifications|user|user|form'] = $field_group;
+  $field_groups['group_user_notifications|user|user|form'] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -397,7 +397,19 @@ function gie_user_field_group_info() {
       'formatter' => 'open',
     ),
   );
-  $export['group_where|user|user|form'] = $field_group;
+  $field_groups['group_where|user|user|form'] = $field_group;
 
-  return $export;
+  // Translatables
+  // Included for use with string extractors like potx.
+  t('Card Content');
+  t('Card Image');
+  t('Choose Your Account Details');
+  t('Notifications');
+  t('Tell Us About You');
+  t('User Meta');
+  t('What interests you about the Exchange?');
+  t('Where are you from?');
+  t('Where else can we connect with you?');
+
+  return $field_groups;
 }

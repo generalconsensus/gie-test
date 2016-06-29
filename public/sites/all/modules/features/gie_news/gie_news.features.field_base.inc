@@ -10,7 +10,7 @@
 function gie_news_field_default_field_bases() {
   $field_bases = array();
 
-  // Exported field_base: 'field_news_body'
+  // Exported field_base: 'field_news_body'.
   $field_bases['field_news_body'] = array(
     'active' => 1,
     'cardinality' => 1,
@@ -29,7 +29,7 @@ function gie_news_field_default_field_bases() {
     'type' => 'text_with_summary',
   );
 
-  // Exported field_base: 'field_news_byline'
+  // Exported field_base: 'field_news_byline'.
   $field_bases['field_news_byline'] = array(
     'active' => 1,
     'cardinality' => 1,
@@ -50,7 +50,7 @@ function gie_news_field_default_field_bases() {
     'type' => 'text',
   );
 
-  // Exported field_base: 'field_news_funding_op'
+  // Exported field_base: 'field_news_funding_op'.
   $field_bases['field_news_funding_op'] = array(
     'active' => 1,
     'cardinality' => -1,
@@ -85,7 +85,7 @@ function gie_news_field_default_field_bases() {
     'type' => 'entityreference',
   );
 
-  // Exported field_base: 'field_news_image'
+  // Exported field_base: 'field_news_image'.
   $field_bases['field_news_image'] = array(
     'active' => 1,
     'cardinality' => 1,
@@ -107,7 +107,7 @@ function gie_news_field_default_field_bases() {
     'type' => 'image',
   );
 
-  // Exported field_base: 'field_news_innovation'
+  // Exported field_base: 'field_news_innovation'.
   $field_bases['field_news_innovation'] = array(
     'active' => 1,
     'cardinality' => -1,
@@ -142,7 +142,7 @@ function gie_news_field_default_field_bases() {
     'type' => 'entityreference',
   );
 
-  // Exported field_base: 'field_news_organization'
+  // Exported field_base: 'field_news_organization'.
   $field_bases['field_news_organization'] = array(
     'active' => 1,
     'cardinality' => -1,
@@ -177,7 +177,7 @@ function gie_news_field_default_field_bases() {
     'type' => 'entityreference',
   );
 
-  // Exported field_base: 'field_news_point_of_contact'
+  // Exported field_base: 'field_news_point_of_contact'.
   $field_bases['field_news_point_of_contact'] = array(
     'active' => 1,
     'cardinality' => 1,
@@ -210,7 +210,7 @@ function gie_news_field_default_field_bases() {
     'type' => 'entityreference',
   );
 
-  // Exported field_base: 'field_news_program'
+  // Exported field_base: 'field_news_program'.
   $field_bases['field_news_program'] = array(
     'active' => 1,
     'cardinality' => -1,
@@ -245,7 +245,7 @@ function gie_news_field_default_field_bases() {
     'type' => 'entityreference',
   );
 
-  // Exported field_base: 'field_news_publish_date'
+  // Exported field_base: 'field_news_publish_date'.
   $field_bases['field_news_publish_date'] = array(
     'active' => 1,
     'cardinality' => 1,
@@ -274,7 +274,7 @@ function gie_news_field_default_field_bases() {
     'type' => 'date',
   );
 
-  // Exported field_base: 'field_news_source'
+  // Exported field_base: 'field_news_source'.
   $field_bases['field_news_source'] = array(
     'active' => 1,
     'cardinality' => 1,

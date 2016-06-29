@@ -1,0 +1,67 @@
+{
+  "mappings" : {
+    "api" : {
+      "_all" : {
+        "enabled" : false
+      },
+      "properties" : {
+        "field_funding_grant_award_value" : {
+          "type" : "integer"
+        },
+        "field_funding_organization" : {
+          "type" : "integer"
+        },
+        "field_innovation_created" : {
+          "type" : "integer"
+        },
+        "field_innovation_funders" : {
+          "type" : "integer"
+        },
+        "field_innovation_implemented" : {
+          "type" : "integer"
+        },
+        "field_innovation_stage" : {
+          "type" : "integer"
+        },
+        "field_innovation_type" : {
+          "type" : "integer"
+        },
+        "field_term_country" : {
+          "type" : "integer"
+        },
+        "field_term_region" : {
+          "type" : "integer"
+        },
+        "field_term_sector" : {
+          "type" : "integer"
+        },
+        "field_term_topic" : {
+          "type" : "integer"
+        },
+        "id" : {
+          "type" : "integer",
+          "include_in_all" : false
+        },
+        "nid" : {
+          "type" : "integer"
+        },
+        "search_api_language" : {
+          "type" : "string",
+          "index" : "not_analyzed"
+        },
+        "title" : {
+          "type" : "string",
+          "index" : "not_analyzed"
+        },
+        "type" : {
+          "type" : "string",
+          "index" : "not_analyzed"
+        },
+        "url" : {
+          "type" : "string",
+          "index" : "not_analyzed"
+        }
+      }
+    }
+  }
+}

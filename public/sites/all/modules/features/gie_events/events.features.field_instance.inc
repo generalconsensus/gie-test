@@ -10,7 +10,7 @@
 function events_field_default_field_instances() {
   $field_instances = array();
 
-  // Exported field_instance: 'node-event-field_event_cost'
+  // Exported field_instance: 'node-event-field_event_cost'.
   $field_instances['node-event-field_event_cost'] = array(
     'bundle' => 'event',
     'default_value' => NULL,
@@ -88,7 +88,7 @@ function events_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-event-field_event_date'
+  // Exported field_instance: 'node-event-field_event_date'.
   $field_instances['node-event-field_event_date'] = array(
     'bundle' => 'event',
     'deleted' => 0,
@@ -192,7 +192,7 @@ function events_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-event-field_event_description'
+  // Exported field_instance: 'node-event-field_event_description'.
   $field_instances['node-event-field_event_description'] = array(
     'bundle' => 'event',
     'default_value' => NULL,
@@ -342,7 +342,7 @@ function events_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-event-field_event_full_description'
+  // Exported field_instance: 'node-event-field_event_full_description'.
   $field_instances['node-event-field_event_full_description'] = array(
     'bundle' => 'event',
     'default_value' => NULL,
@@ -473,7 +473,7 @@ function events_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-event-field_event_image'
+  // Exported field_instance: 'node-event-field_event_image'.
   $field_instances['node-event-field_event_image'] = array(
     'bundle' => 'event',
     'deleted' => 0,
@@ -601,7 +601,7 @@ function events_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-event-field_event_location'
+  // Exported field_instance: 'node-event-field_event_location'.
   $field_instances['node-event-field_event_location'] = array(
     'bundle' => 'event',
     'default_value' => NULL,
@@ -702,7 +702,7 @@ function events_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-event-field_event_needs'
+  // Exported field_instance: 'node-event-field_event_needs'.
   $field_instances['node-event-field_event_needs'] = array(
     'bundle' => 'event',
     'default_value' => NULL,
@@ -804,7 +804,7 @@ function events_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-event-field_event_organizers'
+  // Exported field_instance: 'node-event-field_event_organizers'.
   $field_instances['node-event-field_event_organizers'] = array(
     'bundle' => 'event',
     'default_value' => NULL,
@@ -888,7 +888,7 @@ function events_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-event-field_event_point_of_contact'
+  // Exported field_instance: 'node-event-field_event_point_of_contact'.
   $field_instances['node-event-field_event_point_of_contact'] = array(
     'bundle' => 'event',
     'default_value' => NULL,
@@ -972,7 +972,7 @@ function events_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-event-field_event_program'
+  // Exported field_instance: 'node-event-field_event_program'.
   $field_instances['node-event-field_event_program'] = array(
     'bundle' => 'event',
     'default_value' => NULL,
@@ -1072,7 +1072,7 @@ function events_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-event-field_event_related_organization'
+  // Exported field_instance: 'node-event-field_event_related_organization'.
   $field_instances['node-event-field_event_related_organization'] = array(
     'bundle' => 'event',
     'default_value' => NULL,
@@ -1157,7 +1157,7 @@ function events_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-event-field_event_rsvp_url'
+  // Exported field_instance: 'node-event-field_event_rsvp_url'.
   $field_instances['node-event-field_event_rsvp_url'] = array(
     'bundle' => 'event',
     'default_value' => NULL,
@@ -1265,7 +1265,7 @@ function events_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-event-field_event_size'
+  // Exported field_instance: 'node-event-field_event_size'.
   $field_instances['node-event-field_event_size'] = array(
     'bundle' => 'event',
     'default_value' => NULL,
@@ -1367,7 +1367,7 @@ function events_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-event-field_event_type'
+  // Exported field_instance: 'node-event-field_event_type'.
   $field_instances['node-event-field_event_type'] = array(
     'bundle' => 'event',
     'default_value' => NULL,
@@ -1457,7 +1457,7 @@ function events_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-event-field_event_website_url'
+  // Exported field_instance: 'node-event-field_event_website_url'.
   $field_instances['node-event-field_event_website_url'] = array(
     'bundle' => 'event',
     'default_value' => NULL,
@@ -1565,7 +1565,7 @@ function events_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-event-field_event_who_should_attend'
+  // Exported field_instance: 'node-event-field_event_who_should_attend'.
   $field_instances['node-event-field_event_who_should_attend'] = array(
     'bundle' => 'event',
     'default_value' => NULL,
@@ -1696,7 +1696,7 @@ function events_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-event-field_term_country'
+  // Exported field_instance: 'node-event-field_term_country'.
   $field_instances['node-event-field_term_country'] = array(
     'bundle' => 'event',
     'default_value' => NULL,
@@ -1800,7 +1800,7 @@ function events_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-event-field_term_region'
+  // Exported field_instance: 'node-event-field_term_region'.
   $field_instances['node-event-field_term_region'] = array(
     'bundle' => 'event',
     'default_value' => NULL,
@@ -1912,7 +1912,7 @@ function events_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-event-field_term_sector'
+  // Exported field_instance: 'node-event-field_term_sector'.
   $field_instances['node-event-field_term_sector'] = array(
     'bundle' => 'event',
     'default_value' => NULL,
@@ -2024,7 +2024,7 @@ function events_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-event-field_term_topic'
+  // Exported field_instance: 'node-event-field_term_topic'.
   $field_instances['node-event-field_term_topic'] = array(
     'bundle' => 'event',
     'default_value' => NULL,
@@ -2137,7 +2137,7 @@ function events_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-event-title_field'
+  // Exported field_instance: 'node-event-title_field'.
   $field_instances['node-event-title_field'] = array(
     'bundle' => 'event',
     'default_value' => NULL,
@@ -2266,7 +2266,7 @@ function events_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'taxonomy_term-event_needs-description_field'
+  // Exported field_instance: 'taxonomy_term-event_needs-description_field'.
   $field_instances['taxonomy_term-event_needs-description_field'] = array(
     'bundle' => 'event_needs',
     'default_value' => NULL,
@@ -2304,7 +2304,7 @@ function events_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'taxonomy_term-event_needs-name_field'
+  // Exported field_instance: 'taxonomy_term-event_needs-name_field'.
   $field_instances['taxonomy_term-event_needs-name_field'] = array(
     'bundle' => 'event_needs',
     'default_value' => NULL,
@@ -2340,7 +2340,7 @@ function events_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'taxonomy_term-event_size-description_field'
+  // Exported field_instance: 'taxonomy_term-event_size-description_field'.
   $field_instances['taxonomy_term-event_size-description_field'] = array(
     'bundle' => 'event_size',
     'default_value' => NULL,
@@ -2378,7 +2378,7 @@ function events_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'taxonomy_term-event_size-name_field'
+  // Exported field_instance: 'taxonomy_term-event_size-name_field'.
   $field_instances['taxonomy_term-event_size-name_field'] = array(
     'bundle' => 'event_size',
     'default_value' => NULL,
@@ -2414,7 +2414,7 @@ function events_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'taxonomy_term-event_type-description_field'
+  // Exported field_instance: 'taxonomy_term-event_type-description_field'.
   $field_instances['taxonomy_term-event_type-description_field'] = array(
     'bundle' => 'event_type',
     'default_value' => NULL,
@@ -2452,7 +2452,7 @@ function events_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'taxonomy_term-event_type-name_field'
+  // Exported field_instance: 'taxonomy_term-event_type-name_field'.
   $field_instances['taxonomy_term-event_type-name_field'] = array(
     'bundle' => 'event_type',
     'default_value' => NULL,

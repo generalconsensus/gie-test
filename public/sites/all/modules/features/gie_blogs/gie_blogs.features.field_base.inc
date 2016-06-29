@@ -10,7 +10,7 @@
 function gie_blogs_field_default_field_bases() {
   $field_bases = array();
 
-  // Exported field_base: 'field_blogs_description'
+  // Exported field_base: 'field_blogs_description'.
   $field_bases['field_blogs_description'] = array(
     'active' => 1,
     'cardinality' => 1,
@@ -29,7 +29,7 @@ function gie_blogs_field_default_field_bases() {
     'type' => 'text_with_summary',
   );
 
-  // Exported field_base: 'field_blogs_image'
+  // Exported field_base: 'field_blogs_image'.
   $field_bases['field_blogs_image'] = array(
     'active' => 1,
     'cardinality' => 1,
@@ -51,7 +51,7 @@ function gie_blogs_field_default_field_bases() {
     'type' => 'image',
   );
 
-  // Exported field_base: 'field_blogs_organization'
+  // Exported field_base: 'field_blogs_organization'.
   $field_bases['field_blogs_organization'] = array(
     'active' => 1,
     'cardinality' => -1,
@@ -86,7 +86,7 @@ function gie_blogs_field_default_field_bases() {
     'type' => 'entityreference',
   );
 
-  // Exported field_base: 'field_blogs_point_contact'
+  // Exported field_base: 'field_blogs_point_contact'.
   $field_bases['field_blogs_point_contact'] = array(
     'active' => 1,
     'cardinality' => 1,
@@ -119,7 +119,7 @@ function gie_blogs_field_default_field_bases() {
     'type' => 'entityreference',
   );
 
-  // Exported field_base: 'field_blogs_program'
+  // Exported field_base: 'field_blogs_program'.
   $field_bases['field_blogs_program'] = array(
     'active' => 1,
     'cardinality' => -1,
@@ -154,7 +154,7 @@ function gie_blogs_field_default_field_bases() {
     'type' => 'entityreference',
   );
 
-  // Exported field_base: 'field_blogs_publish_date'
+  // Exported field_base: 'field_blogs_publish_date'.
   $field_bases['field_blogs_publish_date'] = array(
     'active' => 1,
     'cardinality' => 1,
