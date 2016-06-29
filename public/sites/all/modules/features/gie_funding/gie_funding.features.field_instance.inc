@@ -10,7 +10,7 @@
 function gie_funding_field_default_field_instances() {
   $field_instances = array();
 
-  // Exported field_instance: 'comment-comment_node_funding-comment_body'
+  // Exported field_instance: 'comment-comment_node_funding-comment_body'.
   $field_instances['comment-comment_node_funding-comment_body'] = array(
     'bundle' => 'comment_node_funding',
     'default_value' => NULL,
@@ -83,7 +83,7 @@ function gie_funding_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'comment-comment_node_funding-subject_field'
+  // Exported field_instance: 'comment-comment_node_funding-subject_field'.
   $field_instances['comment-comment_node_funding-subject_field'] = array(
     'bundle' => 'comment_node_funding',
     'default_value' => NULL,
@@ -146,7 +146,7 @@ function gie_funding_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-funding-field_funding_author'
+  // Exported field_instance: 'node-funding-field_funding_author'.
   $field_instances['node-funding-field_funding_author'] = array(
     'bundle' => 'funding',
     'default_value' => NULL,
@@ -268,7 +268,7 @@ function gie_funding_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-funding-field_funding_deadline'
+  // Exported field_instance: 'node-funding-field_funding_deadline'.
   $field_instances['node-funding-field_funding_deadline'] = array(
     'bundle' => 'funding',
     'deleted' => 0,
@@ -398,7 +398,7 @@ function gie_funding_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-funding-field_funding_desc'
+  // Exported field_instance: 'node-funding-field_funding_desc'.
   $field_instances['node-funding-field_funding_desc'] = array(
     'bundle' => 'funding',
     'default_value' => NULL,
@@ -544,7 +544,7 @@ function gie_funding_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-funding-field_funding_duration'
+  // Exported field_instance: 'node-funding-field_funding_duration'.
   $field_instances['node-funding-field_funding_duration'] = array(
     'bundle' => 'funding',
     'default_value' => NULL,
@@ -681,7 +681,7 @@ function gie_funding_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-funding-field_funding_effort'
+  // Exported field_instance: 'node-funding-field_funding_effort'.
   $field_instances['node-funding-field_funding_effort'] = array(
     'bundle' => 'funding',
     'default_value' => NULL,
@@ -807,7 +807,7 @@ function gie_funding_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-funding-field_funding_eligibility'
+  // Exported field_instance: 'node-funding-field_funding_eligibility'.
   $field_instances['node-funding-field_funding_eligibility'] = array(
     'bundle' => 'funding',
     'default_value' => NULL,
@@ -944,7 +944,7 @@ function gie_funding_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-funding-field_funding_eligibility_type'
+  // Exported field_instance: 'node-funding-field_funding_eligibility_type'.
   $field_instances['node-funding-field_funding_eligibility_type'] = array(
     'bundle' => 'funding',
     'default_value' => NULL,
@@ -1068,7 +1068,7 @@ function gie_funding_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-funding-field_funding_grant_award_value'
+  // Exported field_instance: 'node-funding-field_funding_grant_award_value'.
   $field_instances['node-funding-field_funding_grant_award_value'] = array(
     'bundle' => 'funding',
     'default_value' => NULL,
@@ -1202,7 +1202,7 @@ function gie_funding_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-funding-field_funding_guidance'
+  // Exported field_instance: 'node-funding-field_funding_guidance'.
   $field_instances['node-funding-field_funding_guidance'] = array(
     'bundle' => 'funding',
     'default_value' => NULL,
@@ -1339,7 +1339,7 @@ function gie_funding_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-funding-field_funding_image'
+  // Exported field_instance: 'node-funding-field_funding_image'.
   $field_instances['node-funding-field_funding_image'] = array(
     'bundle' => 'funding',
     'deleted' => 0,
@@ -1489,7 +1489,7 @@ function gie_funding_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-funding-field_funding_innovation_stage'
+  // Exported field_instance: 'node-funding-field_funding_innovation_stage'.
   $field_instances['node-funding-field_funding_innovation_stage'] = array(
     'bundle' => 'funding',
     'default_value' => NULL,
@@ -1585,7 +1585,7 @@ function gie_funding_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-funding-field_funding_innovation_type'
+  // Exported field_instance: 'node-funding-field_funding_innovation_type'.
   $field_instances['node-funding-field_funding_innovation_type'] = array(
     'bundle' => 'funding',
     'default_value' => NULL,
@@ -1681,7 +1681,7 @@ function gie_funding_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-funding-field_funding_link'
+  // Exported field_instance: 'node-funding-field_funding_link'.
   $field_instances['node-funding-field_funding_link'] = array(
     'bundle' => 'funding',
     'default_value' => NULL,
@@ -1802,7 +1802,7 @@ function gie_funding_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-funding-field_funding_organization'
+  // Exported field_instance: 'node-funding-field_funding_organization'.
   $field_instances['node-funding-field_funding_organization'] = array(
     'bundle' => 'funding',
     'default_value' => NULL,
@@ -1908,7 +1908,7 @@ function gie_funding_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-funding-field_funding_poc'
+  // Exported field_instance: 'node-funding-field_funding_poc'.
   $field_instances['node-funding-field_funding_poc'] = array(
     'bundle' => 'funding',
     'default_value' => NULL,
@@ -2046,7 +2046,7 @@ function gie_funding_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-funding-field_funding_type'
+  // Exported field_instance: 'node-funding-field_funding_type'.
   $field_instances['node-funding-field_funding_type'] = array(
     'bundle' => 'funding',
     'default_value' => NULL,
@@ -2156,7 +2156,7 @@ function gie_funding_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-funding-field_related_programs'
+  // Exported field_instance: 'node-funding-field_related_programs'.
   $field_instances['node-funding-field_related_programs'] = array(
     'bundle' => 'funding',
     'default_value' => NULL,
@@ -2252,7 +2252,7 @@ function gie_funding_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-funding-field_term_country'
+  // Exported field_instance: 'node-funding-field_term_country'.
   $field_instances['node-funding-field_term_country'] = array(
     'bundle' => 'funding',
     'default_value' => NULL,
@@ -2348,7 +2348,7 @@ function gie_funding_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-funding-field_term_region'
+  // Exported field_instance: 'node-funding-field_term_region'.
   $field_instances['node-funding-field_term_region'] = array(
     'bundle' => 'funding',
     'default_value' => NULL,
@@ -2458,7 +2458,7 @@ function gie_funding_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-funding-field_term_sector'
+  // Exported field_instance: 'node-funding-field_term_sector'.
   $field_instances['node-funding-field_term_sector'] = array(
     'bundle' => 'funding',
     'default_value' => NULL,
@@ -2577,7 +2577,7 @@ function gie_funding_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-funding-field_term_topic'
+  // Exported field_instance: 'node-funding-field_term_topic'.
   $field_instances['node-funding-field_term_topic'] = array(
     'bundle' => 'funding',
     'default_value' => NULL,
@@ -2624,22 +2624,8 @@ function gie_funding_field_default_field_instances() {
       ),
       'listing' => array(
         'label' => 'inline',
-        'module' => 'taxonomy',
-        'settings' => array(
-          'field_delimiter' => ', ',
-          'linked_field' => array(
-            'advanced' => array(
-              'class' => '',
-              'rel' => '',
-              'target' => '',
-              'text' => '',
-              'title' => '',
-            ),
-            'destination' => '',
-            'linked' => 0,
-          ),
-        ),
-        'type' => 'taxonomy_term_reference_link',
+        'settings' => array(),
+        'type' => 'hidden',
         'weight' => 5,
       ),
       'search_listing' => array(
@@ -2687,7 +2673,7 @@ function gie_funding_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-funding-title_field'
+  // Exported field_instance: 'node-funding-title_field'.
   $field_instances['node-funding-title_field'] = array(
     'bundle' => 'funding',
     'default_value' => NULL,
@@ -2902,7 +2888,7 @@ function gie_funding_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'taxonomy_term-effort_level-description_field'
+  // Exported field_instance: 'taxonomy_term-effort_level-description_field'.
   $field_instances['taxonomy_term-effort_level-description_field'] = array(
     'bundle' => 'effort_level',
     'default_value' => NULL,
@@ -2940,7 +2926,7 @@ function gie_funding_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'taxonomy_term-effort_level-name_field'
+  // Exported field_instance: 'taxonomy_term-effort_level-name_field'.
   $field_instances['taxonomy_term-effort_level-name_field'] = array(
     'bundle' => 'effort_level',
     'default_value' => NULL,
@@ -2976,7 +2962,8 @@ function gie_funding_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'taxonomy_term-eligibility_type-description_field'
+  // Exported field_instance:
+  // 'taxonomy_term-eligibility_type-description_field'.
   $field_instances['taxonomy_term-eligibility_type-description_field'] = array(
     'bundle' => 'eligibility_type',
     'default_value' => NULL,
@@ -3014,7 +3001,7 @@ function gie_funding_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'taxonomy_term-eligibility_type-name_field'
+  // Exported field_instance: 'taxonomy_term-eligibility_type-name_field'.
   $field_instances['taxonomy_term-eligibility_type-name_field'] = array(
     'bundle' => 'eligibility_type',
     'default_value' => NULL,
@@ -3050,7 +3037,7 @@ function gie_funding_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'taxonomy_term-funding_type-description_field'
+  // Exported field_instance: 'taxonomy_term-funding_type-description_field'.
   $field_instances['taxonomy_term-funding_type-description_field'] = array(
     'bundle' => 'funding_type',
     'default_value' => NULL,
@@ -3088,7 +3075,7 @@ function gie_funding_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'taxonomy_term-funding_type-name_field'
+  // Exported field_instance: 'taxonomy_term-funding_type-name_field'.
   $field_instances['taxonomy_term-funding_type-name_field'] = array(
     'bundle' => 'funding_type',
     'default_value' => NULL,

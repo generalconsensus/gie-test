@@ -140,23 +140,21 @@ namespace :drush do
 
   desc "Runs pending updates"
   task :update do
-  	if fetch(:run_updates)
-      # Run all pending database updates
-      if fetch(:drupal_db_updates)
-        invoke 'drush:updatedb'
-      end
-    
-      invoke 'drush:cc'
-	
+    # Run all pending database updates
+    if fetch(:drupal_db_updates)
+      invoke 'drush:updatedb'
+    end
+
+    invoke 'drush:cc'
+
     # If we're using Features revert Features
     if fetch(:drupal_features)
       invoke 'drush:features:revert'
     end
-    
-      # If we're using Drupal Configuration Management module synchronize the Configuration
-      if fetch(:drupal_cmi)
-        invoke 'drush:configuration:sync'
-      end
+
+    # If we're using Drupal Configuration Management module synchronize the Configuration
+    if fetch(:drupal_cmi)
+      invoke 'drush:configuration:sync'
     end
   end
   

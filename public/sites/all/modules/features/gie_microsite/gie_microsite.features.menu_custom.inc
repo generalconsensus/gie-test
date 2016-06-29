@@ -21,6 +21,5 @@ function gie_microsite_menu_default_menu_custom() {
   t('Microsite Menu');
   t('This is the menu for microsites. Set menu items to display per domain. ');
 
-
   return $menus;
 }

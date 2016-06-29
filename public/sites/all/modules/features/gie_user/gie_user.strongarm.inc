@@ -248,6 +248,31 @@ function gie_user_strongarm() {
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
+  $strongarm->name = 'google_recaptcha';
+  $strongarm->value = array(
+    'public_key' => '6Lc6BCITAAAAABtadXyI2rMvreHxP9Lyt9_HHjdq',
+    'secret_key' => '6Lc6BCITAAAAAOg8fQ1tLWCQk3tROpYgpNYsxck8',
+    'protected_forms' => array(
+      0 => 'user_register_form',
+      1 => 'user_pass',
+    ),
+    'statistics' => array(
+      'status' => 1,
+      'requests' => 0,
+      'success' => 0,
+      'fails' => 0,
+    ),
+    'settings' => array(
+      'write_log' => 0,
+      'widget_size' => 'normal',
+      'widget_theme' => 'light',
+    ),
+  );
+  $export['google_recaptcha'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
   $strongarm->name = 'mailchimp_api_key';
   $strongarm->value = 'b6c2f74e5dae88e87e00d95bea1669c6-us10';
   $export['mailchimp_api_key'] = $strongarm;

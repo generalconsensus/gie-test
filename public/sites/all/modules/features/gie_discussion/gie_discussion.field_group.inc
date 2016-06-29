@@ -8,7 +8,7 @@
  * Implements hook_field_group_info().
  */
 function gie_discussion_field_group_info() {
-  $export = array();
+  $field_groups = array();
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -41,7 +41,11 @@ function gie_discussion_field_group_info() {
       'formatter' => 'open',
     ),
   );
-  $export['group_comment_content|comment|comment_node_discussion|default'] = $field_group;
+  $field_groups['group_comment_content|comment|comment_node_discussion|default'] = $field_group;
 
-  return $export;
+  // Translatables
+  // Included for use with string extractors like potx.
+  t('Comment Content');
+
+  return $field_groups;
 }

@@ -10,7 +10,7 @@
 function gie_needs_field_default_field_instances() {
   $field_instances = array();
 
-  // Exported field_instance: 'node-needs-body'
+  // Exported field_instance: 'node-needs-body'.
   $field_instances['node-needs-body'] = array(
     'bundle' => 'needs',
     'default_value' => NULL,
@@ -201,7 +201,7 @@ function gie_needs_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-needs-field_needs_additional_info'
+  // Exported field_instance: 'node-needs-field_needs_additional_info'.
   $field_instances['node-needs-field_needs_additional_info'] = array(
     'bundle' => 'needs',
     'default_value' => NULL,
@@ -318,7 +318,7 @@ function gie_needs_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-needs-field_needs_amount_items'
+  // Exported field_instance: 'node-needs-field_needs_amount_items'.
   $field_instances['node-needs-field_needs_amount_items'] = array(
     'bundle' => 'needs',
     'default_value' => NULL,
@@ -414,7 +414,7 @@ function gie_needs_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-needs-field_needs_amount_money'
+  // Exported field_instance: 'node-needs-field_needs_amount_money'.
   $field_instances['node-needs-field_needs_amount_money'] = array(
     'bundle' => 'needs',
     'default_value' => NULL,
@@ -510,7 +510,7 @@ function gie_needs_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-needs-field_needs_amount_people'
+  // Exported field_instance: 'node-needs-field_needs_amount_people'.
   $field_instances['node-needs-field_needs_amount_people'] = array(
     'bundle' => 'needs',
     'default_value' => NULL,
@@ -606,7 +606,7 @@ function gie_needs_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-needs-field_needs_certifications'
+  // Exported field_instance: 'node-needs-field_needs_certifications'.
   $field_instances['node-needs-field_needs_certifications'] = array(
     'bundle' => 'needs',
     'default_value' => NULL,
@@ -723,7 +723,7 @@ function gie_needs_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-needs-field_needs_date_needed'
+  // Exported field_instance: 'node-needs-field_needs_date_needed'.
   $field_instances['node-needs-field_needs_date_needed'] = array(
     'bundle' => 'needs',
     'deleted' => 0,
@@ -867,7 +867,7 @@ function gie_needs_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-needs-field_needs_image'
+  // Exported field_instance: 'node-needs-field_needs_image'.
   $field_instances['node-needs-field_needs_image'] = array(
     'bundle' => 'needs',
     'deleted' => 0,
@@ -979,7 +979,7 @@ function gie_needs_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-needs-field_needs_instructions'
+  // Exported field_instance: 'node-needs-field_needs_instructions'.
   $field_instances['node-needs-field_needs_instructions'] = array(
     'bundle' => 'needs',
     'default_value' => NULL,
@@ -1096,7 +1096,7 @@ function gie_needs_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-needs-field_needs_location'
+  // Exported field_instance: 'node-needs-field_needs_location'.
   $field_instances['node-needs-field_needs_location'] = array(
     'bundle' => 'needs',
     'default_value' => NULL,
@@ -1229,7 +1229,7 @@ function gie_needs_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-needs-field_needs_paid'
+  // Exported field_instance: 'node-needs-field_needs_paid'.
   $field_instances['node-needs-field_needs_paid'] = array(
     'bundle' => 'needs',
     'default_value' => array(
@@ -1337,7 +1337,7 @@ function gie_needs_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-needs-field_needs_point_of_contact'
+  // Exported field_instance: 'node-needs-field_needs_point_of_contact'.
   $field_instances['node-needs-field_needs_point_of_contact'] = array(
     'bundle' => 'needs',
     'default_value' => NULL,
@@ -1437,7 +1437,7 @@ function gie_needs_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-needs-field_needs_qualifications'
+  // Exported field_instance: 'node-needs-field_needs_qualifications'.
   $field_instances['node-needs-field_needs_qualifications'] = array(
     'bundle' => 'needs',
     'default_value' => NULL,
@@ -1554,7 +1554,7 @@ function gie_needs_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-needs-field_needs_related_organization'
+  // Exported field_instance: 'node-needs-field_needs_related_organization'.
   $field_instances['node-needs-field_needs_related_organization'] = array(
     'bundle' => 'needs',
     'default_value' => NULL,
@@ -1653,7 +1653,7 @@ function gie_needs_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-needs-field_needs_related_program'
+  // Exported field_instance: 'node-needs-field_needs_related_program'.
   $field_instances['node-needs-field_needs_related_program'] = array(
     'bundle' => 'needs',
     'default_value' => NULL,
@@ -1752,7 +1752,7 @@ function gie_needs_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-needs-field_needs_status'
+  // Exported field_instance: 'node-needs-field_needs_status'.
   $field_instances['node-needs-field_needs_status'] = array(
     'bundle' => 'needs',
     'default_value' => NULL,
@@ -1856,7 +1856,7 @@ function gie_needs_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-needs-field_needs_type'
+  // Exported field_instance: 'node-needs-field_needs_type'.
   $field_instances['node-needs-field_needs_type'] = array(
     'bundle' => 'needs',
     'default_value' => array(
@@ -1987,7 +1987,7 @@ function gie_needs_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-needs-field_term_region'
+  // Exported field_instance: 'node-needs-field_term_region'.
   $field_instances['node-needs-field_term_region'] = array(
     'bundle' => 'needs',
     'default_value' => NULL,
@@ -2085,7 +2085,7 @@ function gie_needs_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-needs-field_term_sector'
+  // Exported field_instance: 'node-needs-field_term_sector'.
   $field_instances['node-needs-field_term_sector'] = array(
     'bundle' => 'needs',
     'default_value' => NULL,
@@ -2183,7 +2183,7 @@ function gie_needs_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-needs-field_term_topic'
+  // Exported field_instance: 'node-needs-field_term_topic'.
   $field_instances['node-needs-field_term_topic'] = array(
     'bundle' => 'needs',
     'default_value' => NULL,
@@ -2281,7 +2281,7 @@ function gie_needs_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-needs-title_field'
+  // Exported field_instance: 'node-needs-title_field'.
   $field_instances['node-needs-title_field'] = array(
     'bundle' => 'needs',
     'default_value' => NULL,
@@ -2410,7 +2410,7 @@ function gie_needs_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'taxonomy_term-needs_duration-description_field'
+  // Exported field_instance: 'taxonomy_term-needs_duration-description_field'.
   $field_instances['taxonomy_term-needs_duration-description_field'] = array(
     'bundle' => 'needs_duration',
     'default_value' => NULL,
@@ -2448,7 +2448,7 @@ function gie_needs_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'taxonomy_term-needs_duration-name_field'
+  // Exported field_instance: 'taxonomy_term-needs_duration-name_field'.
   $field_instances['taxonomy_term-needs_duration-name_field'] = array(
     'bundle' => 'needs_duration',
     'default_value' => NULL,
@@ -2484,7 +2484,7 @@ function gie_needs_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'taxonomy_term-needs_status-description_field'
+  // Exported field_instance: 'taxonomy_term-needs_status-description_field'.
   $field_instances['taxonomy_term-needs_status-description_field'] = array(
     'bundle' => 'needs_status',
     'default_value' => NULL,
@@ -2522,7 +2522,7 @@ function gie_needs_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'taxonomy_term-needs_status-name_field'
+  // Exported field_instance: 'taxonomy_term-needs_status-name_field'.
   $field_instances['taxonomy_term-needs_status-name_field'] = array(
     'bundle' => 'needs_status',
     'default_value' => NULL,
@@ -2558,7 +2558,7 @@ function gie_needs_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'taxonomy_term-needs_type-description_field'
+  // Exported field_instance: 'taxonomy_term-needs_type-description_field'.
   $field_instances['taxonomy_term-needs_type-description_field'] = array(
     'bundle' => 'needs_type',
     'default_value' => NULL,
@@ -2596,7 +2596,7 @@ function gie_needs_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'taxonomy_term-needs_type-name_field'
+  // Exported field_instance: 'taxonomy_term-needs_type-name_field'.
   $field_instances['taxonomy_term-needs_type-name_field'] = array(
     'bundle' => 'needs_type',
     'default_value' => NULL,
