@@ -1,72 +1,84 @@
 <?php
-
 namespace Elastica\Test\Connection\Strategy;
 
-use Elastica\Connection\Strategy\CallbackStrategy;
-use Elastica\Connection\Strategy\Simple;
 use Elastica\Connection\Strategy\StrategyFactory;
 use Elastica\Test\Base;
 
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
-
 /**
- * Description of StrategyFactoryTest
+ * Description of StrategyFactoryTest.
  *
  * @author chabior
  */
 class StrategyFactoryTest extends Base
 {
-   public function testCreateCallbackStrategy()
-   {
-       $callback = function ($connections)
-       {
-           
-       };
-       
-       $strategy = StrategyFactory::create($callback);
-       
-       $condition = $strategy instanceof CallbackStrategy;
-       
-       $this->assertTrue($condition);
-   }
-   
-   public function testCreateByName()
-   {
-       $strategyName = 'Simple';
-       
-       $strategy = StrategyFactory::create($strategyName);
-       
-       $this->assertTrue($strategy instanceof Simple);
-   }
-   
-   public function testCreateByClass()
-   {
-       $strategy = new EmptyStrategy();
-       
-       $this->assertEquals($strategy, StrategyFactory::create($strategy));
-   }
-   
-   public function testCreateByClassName()
-   {
-       $strategyName = '\\Elastica\Test\Connection\Strategy\\EmptyStrategy';
-       
-       $strategy = StrategyFactory::create($strategyName);
-       
-       $condition = $strategy instanceof $strategyName;
-       
-       $this->assertTrue($condition);
-   }
-   /**
-    * @expectedException \InvalidArgumentException
-    */
-   public function testFailCreate()
-   {
-       $strategy = new \stdClass();
-       
-       StrategyFactory::create($strategy);
-   }
+    /**
+     * @group unit
+     */
+    public function testCreateCallbackStrategy()
+    {
+        $callback = function ($connections) {
+        };
+
+        $strategy = StrategyFactory::create($callback);
+
+        $this->assertInstanceOf('Elastica\Connection\Strategy\CallbackStrategy', $strategy);
+    }
+
+    /**
+     * @group unit
+     */
+    public function testCreateByName()
+    {
+        $strategyName = 'Simple';
+
+        $strategy = StrategyFactory::create($strategyName);
+
+        $this->assertInstanceOf('Elastica\Connection\Strategy\Simple', $strategy);
+    }
+
+    /**
+     * @group unit
+     */
+    public function testCreateByClass()
+    {
+        $strategy = new EmptyStrategy();
+
+        $this->assertEquals($strategy, StrategyFactory::create($strategy));
+    }
+
+    /**
+     * @group unit
+     */
+    public function testCreateByClassName()
+    {
+        $strategyName = '\\Elastica\Test\Connection\Strategy\\EmptyStrategy';
+
+        $strategy = StrategyFactory::create($strategyName);
+
+        $this->assertInstanceOf($strategyName, $strategy);
+    }
+
+    /**
+     * @group unit
+     * @expectedException \InvalidArgumentException
+     */
+    public function testFailCreate()
+    {
+        $strategy = new \stdClass();
+
+        StrategyFactory::create($strategy);
+    }
+
+    /**
+     * @group unit
+     */
+    public function testNoCollisionWithGlobalNamespace()
+    {
+        // create collision
+        if (!class_exists('Simple')) {
+            class_alias('Elastica\Util', 'Simple');
+        }
+        $strategy = StrategyFactory::create('Simple');
+        $this->assertInstanceOf('Elastica\Connection\Strategy\Simple', $strategy);
+    }
 }
