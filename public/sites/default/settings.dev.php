@@ -580,6 +580,9 @@ $conf['404_fast_html'] = '<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML+RDFa 1.0//EN"
  */
 # $conf['allow_authorize_operations'] = FALSE;
 
+# Set Cron to run only through Server
+$conf['cron_safe_threshold'] = 0;
+
 /**
  * Solr Search API overrides
  *
