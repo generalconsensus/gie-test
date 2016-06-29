@@ -167,19 +167,21 @@ function gie_program_views_default_views() {
       'changed' => 0,
     ),
     'node' => array(
-      'innovation' => 'innovation',
       'action_card' => 0,
       'article' => 0,
       'page' => 0,
+      'blogs' => 0,
       'discussion' => 0,
       'error_page' => 0,
       'event' => 0,
       'funding' => 0,
       'homepage' => 0,
+      'innovation' => 0,
       'long_form_page' => 0,
       'microsite' => 0,
       'microsite_page' => 0,
       'needs' => 0,
+      'news' => 0,
       'organization' => 0,
       'persona' => 0,
       'program' => 0,
@@ -566,7 +568,7 @@ function gie_program_views_default_views() {
   $handler->display->display_options['fields']['nid']['id'] = 'nid';
   $handler->display->display_options['fields']['nid']['table'] = 'search_api_index_default_node_index';
   $handler->display->display_options['fields']['nid']['field'] = 'nid';
-  /* Sort criterion: Indexed Content: Funding Opportunity Title */
+  /* Sort criterion: Indexed Content: Title */
   $handler->display->display_options['sorts']['title_field']['id'] = 'title_field';
   $handler->display->display_options['sorts']['title_field']['table'] = 'search_api_index_default_node_index';
   $handler->display->display_options['sorts']['title_field']['field'] = 'title_field';
@@ -810,6 +812,7 @@ function gie_program_views_default_views() {
       'action_card' => 0,
       'article' => 0,
       'page' => 0,
+      'blogs' => 0,
       'discussion' => 0,
       'error_page' => 0,
       'event' => 0,
@@ -820,6 +823,7 @@ function gie_program_views_default_views() {
       'microsite' => 0,
       'microsite_page' => 0,
       'needs' => 0,
+      'news' => 0,
       'persona' => 0,
       'program' => 0,
       'resource' => 0,

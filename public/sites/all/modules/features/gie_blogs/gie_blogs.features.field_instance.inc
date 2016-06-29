@@ -10,7 +10,7 @@
 function gie_blogs_field_default_field_instances() {
   $field_instances = array();
 
-  // Exported field_instance: 'node-blogs-field_blogs_description'
+  // Exported field_instance: 'node-blogs-field_blogs_description'.
   $field_instances['node-blogs-field_blogs_description'] = array(
     'bundle' => 'blogs',
     'default_value' => NULL,
@@ -197,7 +197,7 @@ function gie_blogs_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-blogs-field_blogs_image'
+  // Exported field_instance: 'node-blogs-field_blogs_image'.
   $field_instances['node-blogs-field_blogs_image'] = array(
     'bundle' => 'blogs',
     'deleted' => 0,
@@ -369,7 +369,7 @@ function gie_blogs_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-blogs-field_blogs_organization'
+  // Exported field_instance: 'node-blogs-field_blogs_organization'.
   $field_instances['node-blogs-field_blogs_organization'] = array(
     'bundle' => 'blogs',
     'default_value' => NULL,
@@ -527,7 +527,7 @@ function gie_blogs_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-blogs-field_blogs_point_contact'
+  // Exported field_instance: 'node-blogs-field_blogs_point_contact'.
   $field_instances['node-blogs-field_blogs_point_contact'] = array(
     'bundle' => 'blogs',
     'deleted' => 0,
@@ -701,7 +701,7 @@ function gie_blogs_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-blogs-field_blogs_program'
+  // Exported field_instance: 'node-blogs-field_blogs_program'.
   $field_instances['node-blogs-field_blogs_program'] = array(
     'bundle' => 'blogs',
     'default_value' => NULL,
@@ -866,7 +866,7 @@ function gie_blogs_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-blogs-field_blogs_publish_date'
+  // Exported field_instance: 'node-blogs-field_blogs_publish_date'.
   $field_instances['node-blogs-field_blogs_publish_date'] = array(
     'bundle' => 'blogs',
     'deleted' => 0,
@@ -1063,7 +1063,7 @@ function gie_blogs_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-blogs-field_term_country'
+  // Exported field_instance: 'node-blogs-field_term_country'.
   $field_instances['node-blogs-field_term_country'] = array(
     'bundle' => 'blogs',
     'default_value' => NULL,
@@ -1187,7 +1187,7 @@ function gie_blogs_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-blogs-field_term_region'
+  // Exported field_instance: 'node-blogs-field_term_region'.
   $field_instances['node-blogs-field_term_region'] = array(
     'bundle' => 'blogs',
     'default_value' => NULL,
@@ -1320,7 +1320,7 @@ function gie_blogs_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-blogs-field_term_sector'
+  // Exported field_instance: 'node-blogs-field_term_sector'.
   $field_instances['node-blogs-field_term_sector'] = array(
     'bundle' => 'blogs',
     'default_value' => NULL,
@@ -1466,7 +1466,7 @@ function gie_blogs_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-blogs-field_term_topic'
+  // Exported field_instance: 'node-blogs-field_term_topic'.
   $field_instances['node-blogs-field_term_topic'] = array(
     'bundle' => 'blogs',
     'default_value' => NULL,
@@ -1598,7 +1598,7 @@ function gie_blogs_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-blogs-title_field'
+  // Exported field_instance: 'node-blogs-title_field'.
   $field_instances['node-blogs-title_field'] = array(
     'bundle' => 'blogs',
     'default_value' => NULL,

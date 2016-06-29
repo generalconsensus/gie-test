@@ -8,7 +8,7 @@
  * Implements hook_field_group_info().
  */
 function events_field_group_info() {
-  $export = array();
+  $field_groups = array();
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -41,7 +41,7 @@ function events_field_group_info() {
       'formatter' => 'open',
     ),
   );
-  $export['group_card_content|node|event|listing'] = $field_group;
+  $field_groups['group_card_content|node|event|listing'] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -74,7 +74,7 @@ function events_field_group_info() {
       'formatter' => 'open',
     ),
   );
-  $export['group_card_content|node|event|spotlight'] = $field_group;
+  $field_groups['group_card_content|node|event|spotlight'] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -106,7 +106,7 @@ function events_field_group_info() {
       'formatter' => 'open',
     ),
   );
-  $export['group_card_image|node|event|listing'] = $field_group;
+  $field_groups['group_card_image|node|event|listing'] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -138,7 +138,7 @@ function events_field_group_info() {
       'formatter' => 'open',
     ),
   );
-  $export['group_card_image|node|event|spotlight'] = $field_group;
+  $field_groups['group_card_image|node|event|spotlight'] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -170,7 +170,7 @@ function events_field_group_info() {
       'formatter' => 'open',
     ),
   );
-  $export['group_card_meta|node|event|listing'] = $field_group;
+  $field_groups['group_card_meta|node|event|listing'] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -207,7 +207,7 @@ function events_field_group_info() {
       'formatter' => 'open',
     ),
   );
-  $export['group_event_details_first|node|event|full'] = $field_group;
+  $field_groups['group_event_details_first|node|event|full'] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -243,7 +243,7 @@ function events_field_group_info() {
       'formatter' => 'open',
     ),
   );
-  $export['group_event_details_second|node|event|full'] = $field_group;
+  $field_groups['group_event_details_second|node|event|full'] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -276,7 +276,16 @@ function events_field_group_info() {
       'formatter' => 'open',
     ),
   );
-  $export['group_event_details|node|event|full'] = $field_group;
+  $field_groups['group_event_details|node|event|full'] = $field_group;
 
-  return $export;
+  // Translatables
+  // Included for use with string extractors like potx.
+  t('Card Content');
+  t('Card Image');
+  t('Card Meta');
+  t('Event Details');
+  t('Event Details First');
+  t('Event Details Second');
+
+  return $field_groups;
 }

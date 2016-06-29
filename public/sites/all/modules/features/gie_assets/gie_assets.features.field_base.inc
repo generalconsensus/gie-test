@@ -10,7 +10,7 @@
 function gie_assets_field_default_field_bases() {
   $field_bases = array();
 
-  // Exported field_base: 'field_asset_document_desc'
+  // Exported field_base: 'field_asset_document_desc'.
   $field_bases['field_asset_document_desc'] = array(
     'active' => 1,
     'cardinality' => 1,
@@ -29,7 +29,7 @@ function gie_assets_field_default_field_bases() {
     'type' => 'text_long',
   );
 
-  // Exported field_base: 'field_asset_document_file'
+  // Exported field_base: 'field_asset_document_file'.
   $field_bases['field_asset_document_file'] = array(
     'active' => 1,
     'cardinality' => 1,
@@ -52,7 +52,7 @@ function gie_assets_field_default_field_bases() {
     'type' => 'file',
   );
 
-  // Exported field_base: 'field_asset_image'
+  // Exported field_base: 'field_asset_image'.
   $field_bases['field_asset_image'] = array(
     'active' => 1,
     'cardinality' => 1,
@@ -74,7 +74,7 @@ function gie_assets_field_default_field_bases() {
     'type' => 'image',
   );
 
-  // Exported field_base: 'field_asset_image_description'
+  // Exported field_base: 'field_asset_image_description'.
   $field_bases['field_asset_image_description'] = array(
     'active' => 1,
     'cardinality' => 1,
@@ -93,7 +93,7 @@ function gie_assets_field_default_field_bases() {
     'type' => 'text_long',
   );
 
-  // Exported field_base: 'field_asset_image_link'
+  // Exported field_base: 'field_asset_image_link'.
   $field_bases['field_asset_image_link'] = array(
     'active' => 1,
     'cardinality' => 1,
@@ -122,7 +122,7 @@ function gie_assets_field_default_field_bases() {
     'type' => 'link_field',
   );
 
-  // Exported field_base: 'field_asset_video_desc'
+  // Exported field_base: 'field_asset_video_desc'.
   $field_bases['field_asset_video_desc'] = array(
     'active' => 1,
     'cardinality' => 1,
@@ -141,7 +141,7 @@ function gie_assets_field_default_field_bases() {
     'type' => 'text_long',
   );
 
-  // Exported field_base: 'field_asset_video_file'
+  // Exported field_base: 'field_asset_video_file'.
   $field_bases['field_asset_video_file'] = array(
     'active' => 1,
     'cardinality' => 1,

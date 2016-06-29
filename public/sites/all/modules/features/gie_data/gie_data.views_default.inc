@@ -1214,10 +1214,10 @@ function gie_data_views_default_views() {
       'changed' => 0,
     ),
     'node' => array(
-      'persona' => 'persona',
       'action_card' => 0,
       'article' => 0,
       'page' => 0,
+      'blogs' => 0,
       'discussion' => 0,
       'error_page' => 0,
       'event' => 0,
@@ -1228,7 +1228,9 @@ function gie_data_views_default_views() {
       'microsite' => 0,
       'microsite_page' => 0,
       'needs' => 0,
+      'news' => 0,
       'organization' => 0,
+      'persona' => 0,
       'program' => 0,
       'resource' => 0,
     ),
@@ -1289,45 +1291,37 @@ function gie_data_views_default_views() {
   $handler->display->display_options['filters']['type']['value'] = array(
     'persona' => 'persona',
   );
+  /* Filter criterion: Content: Persona Type (field_persona_type) */
+  $handler->display->display_options['filters']['field_persona_type_value']['id'] = 'field_persona_type_value';
+  $handler->display->display_options['filters']['field_persona_type_value']['table'] = 'field_data_field_persona_type';
+  $handler->display->display_options['filters']['field_persona_type_value']['field'] = 'field_persona_type_value';
+  $handler->display->display_options['filters']['field_persona_type_value']['value'] = array(
+    'innovation' => 'innovation',
+    'funding' => 'funding',
+    'user' => 'user',
+    'org' => 'org',
+  );
+  $handler->display->display_options['filters']['field_persona_type_value']['expose']['operator_id'] = 'field_persona_type_value_op';
+  $handler->display->display_options['filters']['field_persona_type_value']['expose']['label'] = 'Persona Type (field_persona_type)';
+  $handler->display->display_options['filters']['field_persona_type_value']['expose']['operator'] = 'field_persona_type_value_op';
+  $handler->display->display_options['filters']['field_persona_type_value']['expose']['identifier'] = 'field_persona_type_value';
+  $handler->display->display_options['filters']['field_persona_type_value']['expose']['remember_roles'] = array(
+    2 => '2',
+    1 => 0,
+    8 => 0,
+    6 => 0,
+    7 => 0,
+    4 => 0,
+    3 => 0,
+    5 => 0,
+    9 => 0,
+  );
 
   /* Display: Data Tagline */
   $handler = $view->new_display('panel_pane', 'Data Tagline', 'data_tagline');
   $handler->display->display_options['defaults']['css_class'] = FALSE;
   $handler->display->display_options['defaults']['group_by'] = FALSE;
   $handler->display->display_options['group_by'] = TRUE;
-  $handler->display->display_options['defaults']['cache'] = FALSE;
-  $handler->display->display_options['cache']['type'] = 'views_content_cache';
-  $handler->display->display_options['cache']['results_min_lifespan'] = '300';
-  $handler->display->display_options['cache']['results_max_lifespan'] = '21600';
-  $handler->display->display_options['cache']['output_min_lifespan'] = '300';
-  $handler->display->display_options['cache']['output_max_lifespan'] = '21600';
-  $handler->display->display_options['cache']['keys'] = array(
-    'comment' => array(
-      'changed' => 0,
-    ),
-    'node' => array(
-      'innovation' => 'innovation',
-      'action_card' => 0,
-      'article' => 0,
-      'page' => 0,
-      'discussion' => 0,
-      'error_page' => 0,
-      'event' => 0,
-      'funding' => 0,
-      'homepage' => 0,
-      'long_form_page' => 0,
-      'microsite' => 0,
-      'microsite_page' => 0,
-      'needs' => 0,
-      'organization' => 0,
-      'persona' => 0,
-      'program' => 0,
-      'resource' => 0,
-    ),
-    'node_only' => array(
-      'node_changed' => 'node_changed',
-    ),
-  );
   $handler->display->display_options['defaults']['pager'] = FALSE;
   $handler->display->display_options['pager']['type'] = 'some';
   $handler->display->display_options['pager']['options']['items_per_page'] = '1';
@@ -1446,39 +1440,6 @@ function gie_data_views_default_views() {
   $handler->display->display_options['css_class'] = 'view--simple-data-table';
   $handler->display->display_options['defaults']['group_by'] = FALSE;
   $handler->display->display_options['group_by'] = TRUE;
-  $handler->display->display_options['defaults']['cache'] = FALSE;
-  $handler->display->display_options['cache']['type'] = 'views_content_cache';
-  $handler->display->display_options['cache']['results_min_lifespan'] = '300';
-  $handler->display->display_options['cache']['results_max_lifespan'] = '21600';
-  $handler->display->display_options['cache']['output_min_lifespan'] = '300';
-  $handler->display->display_options['cache']['output_max_lifespan'] = '21600';
-  $handler->display->display_options['cache']['keys'] = array(
-    'comment' => array(
-      'changed' => 0,
-    ),
-    'node' => array(
-      'innovation' => 'innovation',
-      'action_card' => 0,
-      'article' => 0,
-      'page' => 0,
-      'discussion' => 0,
-      'error_page' => 0,
-      'event' => 0,
-      'funding' => 0,
-      'homepage' => 0,
-      'long_form_page' => 0,
-      'microsite' => 0,
-      'microsite_page' => 0,
-      'needs' => 0,
-      'organization' => 0,
-      'persona' => 0,
-      'program' => 0,
-      'resource' => 0,
-    ),
-    'node_only' => array(
-      'node_changed' => 'node_changed',
-    ),
-  );
   $handler->display->display_options['defaults']['pager'] = FALSE;
   $handler->display->display_options['pager']['type'] = 'some';
   $handler->display->display_options['pager']['options']['items_per_page'] = '10';
@@ -1578,39 +1539,6 @@ function gie_data_views_default_views() {
   $handler->display->display_options['css_class'] = 'view--simple-data-table';
   $handler->display->display_options['defaults']['group_by'] = FALSE;
   $handler->display->display_options['group_by'] = TRUE;
-  $handler->display->display_options['defaults']['cache'] = FALSE;
-  $handler->display->display_options['cache']['type'] = 'views_content_cache';
-  $handler->display->display_options['cache']['results_min_lifespan'] = '300';
-  $handler->display->display_options['cache']['results_max_lifespan'] = '21600';
-  $handler->display->display_options['cache']['output_min_lifespan'] = '300';
-  $handler->display->display_options['cache']['output_max_lifespan'] = '21600';
-  $handler->display->display_options['cache']['keys'] = array(
-    'comment' => array(
-      'changed' => 0,
-    ),
-    'node' => array(
-      'innovation' => 'innovation',
-      'action_card' => 0,
-      'article' => 0,
-      'page' => 0,
-      'discussion' => 0,
-      'error_page' => 0,
-      'event' => 0,
-      'funding' => 0,
-      'homepage' => 0,
-      'long_form_page' => 0,
-      'microsite' => 0,
-      'microsite_page' => 0,
-      'needs' => 0,
-      'organization' => 0,
-      'persona' => 0,
-      'program' => 0,
-      'resource' => 0,
-    ),
-    'node_only' => array(
-      'node_changed' => 'node_changed',
-    ),
-  );
   $handler->display->display_options['defaults']['pager'] = FALSE;
   $handler->display->display_options['pager']['type'] = 'some';
   $handler->display->display_options['pager']['options']['items_per_page'] = '10';
@@ -1719,39 +1647,6 @@ function gie_data_views_default_views() {
   $handler->display->display_options['css_class'] = 'view--simple-data-table';
   $handler->display->display_options['defaults']['group_by'] = FALSE;
   $handler->display->display_options['group_by'] = TRUE;
-  $handler->display->display_options['defaults']['cache'] = FALSE;
-  $handler->display->display_options['cache']['type'] = 'views_content_cache';
-  $handler->display->display_options['cache']['results_min_lifespan'] = '300';
-  $handler->display->display_options['cache']['results_max_lifespan'] = '21600';
-  $handler->display->display_options['cache']['output_min_lifespan'] = '300';
-  $handler->display->display_options['cache']['output_max_lifespan'] = '21600';
-  $handler->display->display_options['cache']['keys'] = array(
-    'comment' => array(
-      'changed' => 0,
-    ),
-    'node' => array(
-      'funding' => 'funding',
-      'action_card' => 0,
-      'article' => 0,
-      'page' => 0,
-      'discussion' => 0,
-      'error_page' => 0,
-      'event' => 0,
-      'homepage' => 0,
-      'innovation' => 0,
-      'long_form_page' => 0,
-      'microsite' => 0,
-      'microsite_page' => 0,
-      'needs' => 0,
-      'organization' => 0,
-      'persona' => 0,
-      'program' => 0,
-      'resource' => 0,
-    ),
-    'node_only' => array(
-      'node_changed' => 'node_changed',
-    ),
-  );
   $handler->display->display_options['defaults']['pager'] = FALSE;
   $handler->display->display_options['pager']['type'] = 'some';
   $handler->display->display_options['pager']['options']['items_per_page'] = '10';
@@ -1850,39 +1745,6 @@ function gie_data_views_default_views() {
   $handler->display->display_options['defaults']['css_class'] = FALSE;
   $handler->display->display_options['defaults']['group_by'] = FALSE;
   $handler->display->display_options['group_by'] = TRUE;
-  $handler->display->display_options['defaults']['cache'] = FALSE;
-  $handler->display->display_options['cache']['type'] = 'views_content_cache';
-  $handler->display->display_options['cache']['results_min_lifespan'] = '300';
-  $handler->display->display_options['cache']['results_max_lifespan'] = '21600';
-  $handler->display->display_options['cache']['output_min_lifespan'] = '300';
-  $handler->display->display_options['cache']['output_max_lifespan'] = '21600';
-  $handler->display->display_options['cache']['keys'] = array(
-    'comment' => array(
-      'changed' => 0,
-    ),
-    'node' => array(
-      'funding' => 'funding',
-      'action_card' => 0,
-      'article' => 0,
-      'page' => 0,
-      'discussion' => 0,
-      'error_page' => 0,
-      'event' => 0,
-      'homepage' => 0,
-      'innovation' => 0,
-      'long_form_page' => 0,
-      'microsite' => 0,
-      'microsite_page' => 0,
-      'needs' => 0,
-      'organization' => 0,
-      'persona' => 0,
-      'program' => 0,
-      'resource' => 0,
-    ),
-    'node_only' => array(
-      'node_changed' => 'node_changed',
-    ),
-  );
   $handler->display->display_options['defaults']['pager'] = FALSE;
   $handler->display->display_options['pager']['type'] = 'some';
   $handler->display->display_options['pager']['options']['items_per_page'] = '1';

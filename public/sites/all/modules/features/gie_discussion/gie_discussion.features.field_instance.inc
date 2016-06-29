@@ -10,7 +10,7 @@
 function gie_discussion_field_default_field_instances() {
   $field_instances = array();
 
-  // Exported field_instance: 'comment-comment_node_discussion-comment_body'
+  // Exported field_instance: 'comment-comment_node_discussion-comment_body'.
   $field_instances['comment-comment_node_discussion-comment_body'] = array(
     'bundle' => 'comment_node_discussion',
     'default_value' => NULL,
@@ -84,7 +84,7 @@ function gie_discussion_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'comment-comment_node_discussion-subject_field'
+  // Exported field_instance: 'comment-comment_node_discussion-subject_field'.
   $field_instances['comment-comment_node_discussion-subject_field'] = array(
     'bundle' => 'comment_node_discussion',
     'default_value' => NULL,
@@ -148,7 +148,7 @@ function gie_discussion_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-discussion-field_discussion_desc'
+  // Exported field_instance: 'node-discussion-field_discussion_desc'.
   $field_instances['node-discussion-field_discussion_desc'] = array(
     'bundle' => 'discussion',
     'default_value' => NULL,
@@ -345,7 +345,7 @@ function gie_discussion_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-discussion-field_discussion_program_disc'
+  // Exported field_instance: 'node-discussion-field_discussion_program_disc'.
   $field_instances['node-discussion-field_discussion_program_disc'] = array(
     'bundle' => 'discussion',
     'default_value' => NULL,
@@ -428,7 +428,7 @@ function gie_discussion_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-discussion-field_term_region'
+  // Exported field_instance: 'node-discussion-field_term_region'.
   $field_instances['node-discussion-field_term_region'] = array(
     'bundle' => 'discussion',
     'default_value' => NULL,
@@ -512,7 +512,7 @@ function gie_discussion_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-discussion-field_term_sector'
+  // Exported field_instance: 'node-discussion-field_term_sector'.
   $field_instances['node-discussion-field_term_sector'] = array(
     'bundle' => 'discussion',
     'default_value' => NULL,
@@ -596,7 +596,7 @@ function gie_discussion_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-discussion-field_term_topic'
+  // Exported field_instance: 'node-discussion-field_term_topic'.
   $field_instances['node-discussion-field_term_topic'] = array(
     'bundle' => 'discussion',
     'default_value' => NULL,
@@ -707,7 +707,7 @@ function gie_discussion_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-discussion-title_field'
+  // Exported field_instance: 'node-discussion-title_field'.
   $field_instances['node-discussion-title_field'] = array(
     'bundle' => 'discussion',
     'default_value' => NULL,

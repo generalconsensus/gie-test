@@ -10,7 +10,7 @@
 function gie_resource_field_default_field_instances() {
   $field_instances = array();
 
-  // Exported field_instance: 'comment-comment_node_resource-comment_body'
+  // Exported field_instance: 'comment-comment_node_resource-comment_body'.
   $field_instances['comment-comment_node_resource-comment_body'] = array(
     'bundle' => 'comment_node_resource',
     'default_value' => NULL,
@@ -83,7 +83,7 @@ function gie_resource_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'comment-comment_node_resource-subject_field'
+  // Exported field_instance: 'comment-comment_node_resource-subject_field'.
   $field_instances['comment-comment_node_resource-subject_field'] = array(
     'bundle' => 'comment_node_resource',
     'default_value' => NULL,
@@ -146,7 +146,7 @@ function gie_resource_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-resource-field_resource_assets'
+  // Exported field_instance: 'node-resource-field_resource_assets'.
   $field_instances['node-resource-field_resource_assets'] = array(
     'bundle' => 'resource',
     'default_value' => NULL,
@@ -285,7 +285,7 @@ function gie_resource_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-resource-field_resource_assistance'
+  // Exported field_instance: 'node-resource-field_resource_assistance'.
   $field_instances['node-resource-field_resource_assistance'] = array(
     'bundle' => 'resource',
     'default_value' => NULL,
@@ -407,7 +407,7 @@ function gie_resource_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-resource-field_resource_attribution'
+  // Exported field_instance: 'node-resource-field_resource_attribution'.
   $field_instances['node-resource-field_resource_attribution'] = array(
     'bundle' => 'resource',
     'default_value' => NULL,
@@ -574,7 +574,7 @@ function gie_resource_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-resource-field_resource_author'
+  // Exported field_instance: 'node-resource-field_resource_author'.
   $field_instances['node-resource-field_resource_author'] = array(
     'bundle' => 'resource',
     'default_value' => NULL,
@@ -763,7 +763,7 @@ function gie_resource_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-resource-field_resource_date'
+  // Exported field_instance: 'node-resource-field_resource_date'.
   $field_instances['node-resource-field_resource_date'] = array(
     'bundle' => 'resource',
     'deleted' => 0,
@@ -991,7 +991,7 @@ function gie_resource_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-resource-field_resource_desc'
+  // Exported field_instance: 'node-resource-field_resource_desc'.
   $field_instances['node-resource-field_resource_desc'] = array(
     'bundle' => 'resource',
     'default_value' => NULL,
@@ -1169,7 +1169,7 @@ function gie_resource_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-resource-field_resource_link'
+  // Exported field_instance: 'node-resource-field_resource_link'.
   $field_instances['node-resource-field_resource_link'] = array(
     'bundle' => 'resource',
     'default_value' => NULL,
@@ -1315,7 +1315,7 @@ function gie_resource_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-resource-field_resource_org'
+  // Exported field_instance: 'node-resource-field_resource_org'.
   $field_instances['node-resource-field_resource_org'] = array(
     'bundle' => 'resource',
     'default_value' => NULL,
@@ -1453,7 +1453,7 @@ function gie_resource_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-resource-field_resource_program'
+  // Exported field_instance: 'node-resource-field_resource_program'.
   $field_instances['node-resource-field_resource_program'] = array(
     'bundle' => 'resource',
     'default_value' => NULL,
@@ -1591,7 +1591,7 @@ function gie_resource_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-resource-field_resource_source'
+  // Exported field_instance: 'node-resource-field_resource_source'.
   $field_instances['node-resource-field_resource_source'] = array(
     'bundle' => 'resource',
     'default_value' => NULL,
@@ -1737,7 +1737,7 @@ function gie_resource_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-resource-field_resource_type'
+  // Exported field_instance: 'node-resource-field_resource_type'.
   $field_instances['node-resource-field_resource_type'] = array(
     'bundle' => 'resource',
     'default_value' => NULL,
@@ -1893,7 +1893,7 @@ function gie_resource_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-resource-field_term_country'
+  // Exported field_instance: 'node-resource-field_term_country'.
   $field_instances['node-resource-field_term_country'] = array(
     'bundle' => 'resource',
     'default_value' => NULL,
@@ -2021,7 +2021,7 @@ function gie_resource_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-resource-field_term_region'
+  // Exported field_instance: 'node-resource-field_term_region'.
   $field_instances['node-resource-field_term_region'] = array(
     'bundle' => 'resource',
     'default_value' => NULL,
@@ -2149,7 +2149,7 @@ function gie_resource_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-resource-field_term_sector'
+  // Exported field_instance: 'node-resource-field_term_sector'.
   $field_instances['node-resource-field_term_sector'] = array(
     'bundle' => 'resource',
     'default_value' => NULL,
@@ -2300,7 +2300,7 @@ function gie_resource_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-resource-field_term_topic'
+  // Exported field_instance: 'node-resource-field_term_topic'.
   $field_instances['node-resource-field_term_topic'] = array(
     'bundle' => 'resource',
     'default_value' => NULL,
@@ -2428,7 +2428,7 @@ function gie_resource_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-resource-title_field'
+  // Exported field_instance: 'node-resource-title_field'.
   $field_instances['node-resource-title_field'] = array(
     'bundle' => 'resource',
     'default_value' => NULL,
@@ -2661,7 +2661,7 @@ function gie_resource_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'taxonomy_term-resource_type-description_field'
+  // Exported field_instance: 'taxonomy_term-resource_type-description_field'.
   $field_instances['taxonomy_term-resource_type-description_field'] = array(
     'bundle' => 'resource_type',
     'default_value' => NULL,
@@ -2699,7 +2699,7 @@ function gie_resource_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'taxonomy_term-resource_type-name_field'
+  // Exported field_instance: 'taxonomy_term-resource_type-name_field'.
   $field_instances['taxonomy_term-resource_type-name_field'] = array(
     'bundle' => 'resource_type',
     'default_value' => NULL,

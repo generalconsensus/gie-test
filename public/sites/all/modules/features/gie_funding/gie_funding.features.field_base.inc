@@ -10,7 +10,7 @@
 function gie_funding_field_default_field_bases() {
   $field_bases = array();
 
-  // Exported field_base: 'field_funding_author'
+  // Exported field_base: 'field_funding_author'.
   $field_bases['field_funding_author'] = array(
     'active' => 1,
     'cardinality' => -1,
@@ -43,7 +43,7 @@ function gie_funding_field_default_field_bases() {
     'type' => 'entityreference',
   );
 
-  // Exported field_base: 'field_funding_deadline'
+  // Exported field_base: 'field_funding_deadline'.
   $field_bases['field_funding_deadline'] = array(
     'active' => 1,
     'cardinality' => 1,
@@ -72,7 +72,7 @@ function gie_funding_field_default_field_bases() {
     'type' => 'datetime',
   );
 
-  // Exported field_base: 'field_funding_desc'
+  // Exported field_base: 'field_funding_desc'.
   $field_bases['field_funding_desc'] = array(
     'active' => 1,
     'cardinality' => 1,
@@ -91,7 +91,7 @@ function gie_funding_field_default_field_bases() {
     'type' => 'text_long',
   );
 
-  // Exported field_base: 'field_funding_duration'
+  // Exported field_base: 'field_funding_duration'.
   $field_bases['field_funding_duration'] = array(
     'active' => 1,
     'cardinality' => 1,
@@ -112,7 +112,7 @@ function gie_funding_field_default_field_bases() {
     'type' => 'text',
   );
 
-  // Exported field_base: 'field_funding_effort'
+  // Exported field_base: 'field_funding_effort'.
   $field_bases['field_funding_effort'] = array(
     'active' => 1,
     'cardinality' => 1,
@@ -138,7 +138,7 @@ function gie_funding_field_default_field_bases() {
     'type' => 'taxonomy_term_reference',
   );
 
-  // Exported field_base: 'field_funding_eligibility'
+  // Exported field_base: 'field_funding_eligibility'.
   $field_bases['field_funding_eligibility'] = array(
     'active' => 1,
     'cardinality' => 1,
@@ -157,7 +157,7 @@ function gie_funding_field_default_field_bases() {
     'type' => 'text_long',
   );
 
-  // Exported field_base: 'field_funding_eligibility_type'
+  // Exported field_base: 'field_funding_eligibility_type'.
   $field_bases['field_funding_eligibility_type'] = array(
     'active' => 1,
     'cardinality' => -1,
@@ -183,7 +183,7 @@ function gie_funding_field_default_field_bases() {
     'type' => 'taxonomy_term_reference',
   );
 
-  // Exported field_base: 'field_funding_grant_award_value'
+  // Exported field_base: 'field_funding_grant_award_value'.
   $field_bases['field_funding_grant_award_value'] = array(
     'active' => 1,
     'cardinality' => 1,
@@ -198,7 +198,7 @@ function gie_funding_field_default_field_bases() {
     'type' => 'number_integer',
   );
 
-  // Exported field_base: 'field_funding_guidance'
+  // Exported field_base: 'field_funding_guidance'.
   $field_bases['field_funding_guidance'] = array(
     'active' => 1,
     'cardinality' => 1,
@@ -217,7 +217,7 @@ function gie_funding_field_default_field_bases() {
     'type' => 'text_long',
   );
 
-  // Exported field_base: 'field_funding_image'
+  // Exported field_base: 'field_funding_image'.
   $field_bases['field_funding_image'] = array(
     'active' => 1,
     'cardinality' => 1,
@@ -239,7 +239,7 @@ function gie_funding_field_default_field_bases() {
     'type' => 'image',
   );
 
-  // Exported field_base: 'field_funding_innovation_stage'
+  // Exported field_base: 'field_funding_innovation_stage'.
   $field_bases['field_funding_innovation_stage'] = array(
     'active' => 1,
     'cardinality' => -1,
@@ -265,7 +265,7 @@ function gie_funding_field_default_field_bases() {
     'type' => 'taxonomy_term_reference',
   );
 
-  // Exported field_base: 'field_funding_innovation_type'
+  // Exported field_base: 'field_funding_innovation_type'.
   $field_bases['field_funding_innovation_type'] = array(
     'active' => 1,
     'cardinality' => -1,
@@ -291,7 +291,7 @@ function gie_funding_field_default_field_bases() {
     'type' => 'taxonomy_term_reference',
   );
 
-  // Exported field_base: 'field_funding_link'
+  // Exported field_base: 'field_funding_link'.
   $field_bases['field_funding_link'] = array(
     'active' => 1,
     'cardinality' => 1,
@@ -312,7 +312,7 @@ function gie_funding_field_default_field_bases() {
     'type' => 'text',
   );
 
-  // Exported field_base: 'field_funding_organization'
+  // Exported field_base: 'field_funding_organization'.
   $field_bases['field_funding_organization'] = array(
     'active' => 1,
     'cardinality' => -1,
@@ -347,7 +347,7 @@ function gie_funding_field_default_field_bases() {
     'type' => 'entityreference',
   );
 
-  // Exported field_base: 'field_funding_poc'
+  // Exported field_base: 'field_funding_poc'.
   $field_bases['field_funding_poc'] = array(
     'active' => 1,
     'cardinality' => 1,
@@ -368,7 +368,7 @@ function gie_funding_field_default_field_bases() {
     'type' => 'text',
   );
 
-  // Exported field_base: 'field_funding_type'
+  // Exported field_base: 'field_funding_type'.
   $field_bases['field_funding_type'] = array(
     'active' => 1,
     'cardinality' => -1,
@@ -394,7 +394,7 @@ function gie_funding_field_default_field_bases() {
     'type' => 'taxonomy_term_reference',
   );
 
-  // Exported field_base: 'field_related_programs'
+  // Exported field_base: 'field_related_programs'.
   $field_bases['field_related_programs'] = array(
     'active' => 1,
     'cardinality' => 1,
@@ -429,7 +429,7 @@ function gie_funding_field_default_field_bases() {
     'type' => 'entityreference',
   );
 
-  // Exported field_base: 'field_term_country'
+  // Exported field_base: 'field_term_country'.
   $field_bases['field_term_country'] = array(
     'active' => 1,
     'cardinality' => -1,
@@ -455,7 +455,7 @@ function gie_funding_field_default_field_bases() {
     'type' => 'taxonomy_term_reference',
   );
 
-  // Exported field_base: 'field_term_region'
+  // Exported field_base: 'field_term_region'.
   $field_bases['field_term_region'] = array(
     'active' => 1,
     'cardinality' => -1,
@@ -481,7 +481,7 @@ function gie_funding_field_default_field_bases() {
     'type' => 'taxonomy_term_reference',
   );
 
-  // Exported field_base: 'field_term_sector'
+  // Exported field_base: 'field_term_sector'.
   $field_bases['field_term_sector'] = array(
     'active' => 1,
     'cardinality' => -1,
@@ -507,7 +507,7 @@ function gie_funding_field_default_field_bases() {
     'type' => 'taxonomy_term_reference',
   );
 
-  // Exported field_base: 'field_term_topic'
+  // Exported field_base: 'field_term_topic'.
   $field_bases['field_term_topic'] = array(
     'active' => 1,
     'cardinality' => -1,

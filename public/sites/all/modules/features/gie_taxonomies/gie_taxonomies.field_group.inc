@@ -8,7 +8,7 @@
  * Implements hook_field_group_info().
  */
 function gie_taxonomies_field_group_info() {
-  $export = array();
+  $field_groups = array();
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -40,7 +40,7 @@ function gie_taxonomies_field_group_info() {
       'formatter' => 'open',
     ),
   );
-  $export['group_card_content|taxonomy_term|region|listing'] = $field_group;
+  $field_groups['group_card_content|taxonomy_term|region|listing'] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -73,7 +73,7 @@ function gie_taxonomies_field_group_info() {
       'formatter' => 'open',
     ),
   );
-  $export['group_card_content|taxonomy_term|sector|listing'] = $field_group;
+  $field_groups['group_card_content|taxonomy_term|sector|listing'] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -106,7 +106,7 @@ function gie_taxonomies_field_group_info() {
       'formatter' => 'open',
     ),
   );
-  $export['group_card_content|taxonomy_term|topic|listing'] = $field_group;
+  $field_groups['group_card_content|taxonomy_term|topic|listing'] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -140,7 +140,7 @@ function gie_taxonomies_field_group_info() {
       'formatter' => 'open',
     ),
   );
-  $export['group_card_counts|taxonomy_term|region|listing'] = $field_group;
+  $field_groups['group_card_counts|taxonomy_term|region|listing'] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -174,7 +174,7 @@ function gie_taxonomies_field_group_info() {
       'formatter' => 'open',
     ),
   );
-  $export['group_card_counts|taxonomy_term|sector|listing'] = $field_group;
+  $field_groups['group_card_counts|taxonomy_term|sector|listing'] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -208,7 +208,12 @@ function gie_taxonomies_field_group_info() {
       'formatter' => 'open',
     ),
   );
-  $export['group_card_counts|taxonomy_term|topic|listing'] = $field_group;
+  $field_groups['group_card_counts|taxonomy_term|topic|listing'] = $field_group;
 
-  return $export;
+  // Translatables
+  // Included for use with string extractors like potx.
+  t('Card Content');
+  t('Card Counts');
+
+  return $field_groups;
 }

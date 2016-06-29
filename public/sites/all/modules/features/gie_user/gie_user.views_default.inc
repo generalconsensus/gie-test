@@ -401,23 +401,25 @@ function gie_user_views_default_views() {
       'changed' => 0,
     ),
     'node' => array(
-      'funding' => 'funding',
-      'innovation' => 'innovation',
-      'resource' => 'resource',
       'action_card' => 0,
       'article' => 0,
       'page' => 0,
+      'blogs' => 0,
       'discussion' => 0,
       'error_page' => 0,
       'event' => 0,
+      'funding' => 0,
       'homepage' => 0,
+      'innovation' => 0,
       'long_form_page' => 0,
       'microsite' => 0,
       'microsite_page' => 0,
       'needs' => 0,
+      'news' => 0,
       'organization' => 0,
       'persona' => 0,
       'program' => 0,
+      'resource' => 0,
     ),
     'node_only' => array(
       'node_changed' => 'node_changed',
@@ -436,7 +438,7 @@ function gie_user_views_default_views() {
   $handler->display->display_options['footer']['area']['id'] = 'area';
   $handler->display->display_options['footer']['area']['table'] = 'views';
   $handler->display->display_options['footer']['area']['field'] = 'area';
-  $handler->display->display_options['footer']['area']['content'] = '<a href="discussions" class="view__all">View All Discussions</a>';
+  $handler->display->display_options['footer']['area']['content'] = '<a href="/discussions" class="view__all">View All Discussions</a>';
   $handler->display->display_options['footer']['area']['format'] = 'full_html';
   /* Relationship: Comment: Content */
   $handler->display->display_options['relationships']['nid']['id'] = 'nid';

@@ -10,7 +10,7 @@
 function gie_dashboard_field_default_field_instances() {
   $field_instances = array();
 
-  // Exported field_instance: 'node-blogs-field_featured'
+  // Exported field_instance: 'node-blogs-field_featured'.
   $field_instances['node-blogs-field_featured'] = array(
     'bundle' => 'blogs',
     'default_value' => array(
@@ -110,7 +110,7 @@ function gie_dashboard_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-event-field_featured'
+  // Exported field_instance: 'node-event-field_featured'.
   $field_instances['node-event-field_featured'] = array(
     'bundle' => 'event',
     'default_value' => array(
@@ -204,7 +204,7 @@ function gie_dashboard_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-funding-field_featured'
+  // Exported field_instance: 'node-funding-field_featured'.
   $field_instances['node-funding-field_featured'] = array(
     'bundle' => 'funding',
     'default_value' => array(
@@ -304,7 +304,7 @@ function gie_dashboard_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-innovation-field_featured'
+  // Exported field_instance: 'node-innovation-field_featured'.
   $field_instances['node-innovation-field_featured'] = array(
     'bundle' => 'innovation',
     'default_value' => array(
@@ -410,7 +410,7 @@ function gie_dashboard_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-news-field_featured'
+  // Exported field_instance: 'node-news-field_featured'.
   $field_instances['node-news-field_featured'] = array(
     'bundle' => 'news',
     'default_value' => array(
@@ -510,7 +510,7 @@ function gie_dashboard_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-organization-field_featured'
+  // Exported field_instance: 'node-organization-field_featured'.
   $field_instances['node-organization-field_featured'] = array(
     'bundle' => 'organization',
     'default_value' => array(
@@ -628,7 +628,7 @@ function gie_dashboard_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-program-field_featured'
+  // Exported field_instance: 'node-program-field_featured'.
   $field_instances['node-program-field_featured'] = array(
     'bundle' => 'program',
     'default_value' => NULL,
@@ -727,7 +727,7 @@ function gie_dashboard_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-resource-field_featured'
+  // Exported field_instance: 'node-resource-field_featured'.
   $field_instances['node-resource-field_featured'] = array(
     'bundle' => 'resource',
     'default_value' => array(
@@ -845,7 +845,7 @@ function gie_dashboard_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'user-user-field_featured'
+  // Exported field_instance: 'user-user-field_featured'.
   $field_instances['user-user-field_featured'] = array(
     'bundle' => 'user',
     'default_value' => array(

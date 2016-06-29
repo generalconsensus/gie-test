@@ -10,7 +10,7 @@
 function gie_basic_page_field_default_field_instances() {
   $field_instances = array();
 
-  // Exported field_instance: 'node-page-body'
+  // Exported field_instance: 'node-page-body'.
   $field_instances['node-page-body'] = array(
     'bundle' => 'page',
     'default_value' => NULL,
@@ -108,7 +108,7 @@ function gie_basic_page_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-page-field_long_form_block'
+  // Exported field_instance: 'node-page-field_long_form_block'.
   $field_instances['node-page-field_long_form_block'] = array(
     'bundle' => 'page',
     'default_value' => NULL,
