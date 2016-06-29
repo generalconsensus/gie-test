@@ -1,5 +1,4 @@
 <?php
-
 namespace Elastica\Test\Filter;
 
 use Elastica\Document;
@@ -10,11 +9,12 @@ use Elastica\Test\Base as BaseTest;
 
 class GeoPolygonTest extends BaseTest
 {
+    /**
+     * @group functional
+     */
     public function testGeoPoint()
     {
-        $client = $this->_getClient();
-        $index = $client->getIndex('test');
-        $index->create(array(), true);
+        $index = $this->_createIndex();
 
         $type = $index->getType('test');
 

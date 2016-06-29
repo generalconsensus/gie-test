@@ -1,25 +1,26 @@
 <?php
-
 namespace Elastica\Test\Exception;
 
 use Elastica\Document;
 use Elastica\Exception\PartialShardFailureException;
 use Elastica\Query;
 use Elastica\ResultSet;
-use Elastica\Test\Base as BaseTest;
 
-class PartialShardFailureExceptionTest extends BaseTest
+class PartialShardFailureExceptionTest extends AbstractExceptionTest
 {
-
+    /**
+     * @group functional
+     */
     public function testPartialFailure()
     {
+        $this->_checkScriptInlineSetting();
         $client = $this->_getClient();
         $index = $client->getIndex('elastica_partial_failure');
         $index->create(array(
             'index' => array(
-                'number_of_shards'   => 5,
-                'number_of_replicas' => 0
-            )
+                'number_of_shards' => 5,
+                'number_of_replicas' => 0,
+            ),
         ), true);
 
         $type = $index->getType('folks');
@@ -51,5 +52,4 @@ class PartialShardFailureExceptionTest extends BaseTest
             $this->assertEquals(0, count($resultSet->getResults()));
         }
     }
-
 }
