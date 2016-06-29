@@ -10,7 +10,7 @@
 function gie_news_field_default_field_instances() {
   $field_instances = array();
 
-  // Exported field_instance: 'node-news-field_news_body'
+  // Exported field_instance: 'node-news-field_news_body'.
   $field_instances['node-news-field_news_body'] = array(
     'bundle' => 'news',
     'default_value' => NULL,
@@ -120,7 +120,7 @@ function gie_news_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-news-field_news_byline'
+  // Exported field_instance: 'node-news-field_news_byline'.
   $field_instances['node-news-field_news_byline'] = array(
     'bundle' => 'news',
     'default_value' => NULL,
@@ -267,7 +267,7 @@ function gie_news_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-news-field_news_funding_op'
+  // Exported field_instance: 'node-news-field_news_funding_op'.
   $field_instances['node-news-field_news_funding_op'] = array(
     'bundle' => 'news',
     'default_value' => NULL,
@@ -374,7 +374,7 @@ function gie_news_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-news-field_news_image'
+  // Exported field_instance: 'node-news-field_news_image'.
   $field_instances['node-news-field_news_image'] = array(
     'bundle' => 'news',
     'deleted' => 0,
@@ -508,7 +508,7 @@ function gie_news_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-news-field_news_innovation'
+  // Exported field_instance: 'node-news-field_news_innovation'.
   $field_instances['node-news-field_news_innovation'] = array(
     'bundle' => 'news',
     'default_value' => NULL,
@@ -615,7 +615,7 @@ function gie_news_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-news-field_news_organization'
+  // Exported field_instance: 'node-news-field_news_organization'.
   $field_instances['node-news-field_news_organization'] = array(
     'bundle' => 'news',
     'default_value' => NULL,
@@ -737,7 +737,7 @@ function gie_news_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-news-field_news_point_of_contact'
+  // Exported field_instance: 'node-news-field_news_point_of_contact'.
   $field_instances['node-news-field_news_point_of_contact'] = array(
     'bundle' => 'news',
     'deleted' => 0,
@@ -875,7 +875,7 @@ function gie_news_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-news-field_news_program'
+  // Exported field_instance: 'node-news-field_news_program'.
   $field_instances['node-news-field_news_program'] = array(
     'bundle' => 'news',
     'default_value' => NULL,
@@ -997,7 +997,7 @@ function gie_news_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-news-field_news_publish_date'
+  // Exported field_instance: 'node-news-field_news_publish_date'.
   $field_instances['node-news-field_news_publish_date'] = array(
     'bundle' => 'news',
     'deleted' => 0,
@@ -1168,7 +1168,7 @@ function gie_news_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-news-field_news_source'
+  // Exported field_instance: 'node-news-field_news_source'.
   $field_instances['node-news-field_news_source'] = array(
     'bundle' => 'news',
     'default_value' => NULL,
@@ -1310,7 +1310,7 @@ function gie_news_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-news-field_term_country'
+  // Exported field_instance: 'node-news-field_term_country'.
   $field_instances['node-news-field_term_country'] = array(
     'bundle' => 'news',
     'default_value' => NULL,
@@ -1420,7 +1420,7 @@ function gie_news_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-news-field_term_region'
+  // Exported field_instance: 'node-news-field_term_region'.
   $field_instances['node-news-field_term_region'] = array(
     'bundle' => 'news',
     'default_value' => NULL,
@@ -1539,7 +1539,7 @@ function gie_news_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-news-field_term_sector'
+  // Exported field_instance: 'node-news-field_term_sector'.
   $field_instances['node-news-field_term_sector'] = array(
     'bundle' => 'news',
     'default_value' => NULL,
@@ -1671,7 +1671,7 @@ function gie_news_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-news-field_term_topic'
+  // Exported field_instance: 'node-news-field_term_topic'.
   $field_instances['node-news-field_term_topic'] = array(
     'bundle' => 'news',
     'default_value' => NULL,
@@ -1789,7 +1789,7 @@ function gie_news_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-news-title_field'
+  // Exported field_instance: 'node-news-title_field'.
   $field_instances['node-news-title_field'] = array(
     'bundle' => 'news',
     'default_value' => NULL,

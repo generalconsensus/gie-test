@@ -10,7 +10,7 @@
 function gie_discussion_field_default_field_bases() {
   $field_bases = array();
 
-  // Exported field_base: 'field_discussion_desc'
+  // Exported field_base: 'field_discussion_desc'.
   $field_bases['field_discussion_desc'] = array(
     'active' => 1,
     'cardinality' => 1,
@@ -29,7 +29,7 @@ function gie_discussion_field_default_field_bases() {
     'type' => 'text_long',
   );
 
-  // Exported field_base: 'field_discussion_program_disc'
+  // Exported field_base: 'field_discussion_program_disc'.
   $field_bases['field_discussion_program_disc'] = array(
     'active' => 1,
     'cardinality' => -1,

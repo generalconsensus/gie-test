@@ -10,7 +10,7 @@
 function gie_program_field_default_field_bases() {
   $field_bases = array();
 
-  // Exported field_base: 'field_program_address'
+  // Exported field_base: 'field_program_address'.
   $field_bases['field_program_address'] = array(
     'active' => 1,
     'cardinality' => 1,
@@ -29,7 +29,7 @@ function gie_program_field_default_field_bases() {
     'type' => 'text_long',
   );
 
-  // Exported field_base: 'field_program_budget'
+  // Exported field_base: 'field_program_budget'.
   $field_bases['field_program_budget'] = array(
     'active' => 1,
     'cardinality' => 1,
@@ -44,7 +44,7 @@ function gie_program_field_default_field_bases() {
     'type' => 'number_integer',
   );
 
-  // Exported field_base: 'field_program_desc'
+  // Exported field_base: 'field_program_desc'.
   $field_bases['field_program_desc'] = array(
     'active' => 1,
     'cardinality' => 1,
@@ -63,7 +63,7 @@ function gie_program_field_default_field_bases() {
     'type' => 'text_long',
   );
 
-  // Exported field_base: 'field_program_end'
+  // Exported field_base: 'field_program_end'.
   $field_bases['field_program_end'] = array(
     'active' => 1,
     'cardinality' => 1,
@@ -92,7 +92,7 @@ function gie_program_field_default_field_bases() {
     'type' => 'datetime',
   );
 
-  // Exported field_base: 'field_program_link'
+  // Exported field_base: 'field_program_link'.
   $field_bases['field_program_link'] = array(
     'active' => 1,
     'cardinality' => 1,
@@ -121,7 +121,7 @@ function gie_program_field_default_field_bases() {
     'type' => 'link_field',
   );
 
-  // Exported field_base: 'field_program_logo'
+  // Exported field_base: 'field_program_logo'.
   $field_bases['field_program_logo'] = array(
     'active' => 1,
     'cardinality' => 1,
@@ -143,7 +143,7 @@ function gie_program_field_default_field_bases() {
     'type' => 'image',
   );
 
-  // Exported field_base: 'field_program_objectives'
+  // Exported field_base: 'field_program_objectives'.
   $field_bases['field_program_objectives'] = array(
     'active' => 1,
     'cardinality' => 1,
@@ -162,7 +162,7 @@ function gie_program_field_default_field_bases() {
     'type' => 'text_long',
   );
 
-  // Exported field_base: 'field_program_parent_org'
+  // Exported field_base: 'field_program_parent_org'.
   $field_bases['field_program_parent_org'] = array(
     'active' => 1,
     'cardinality' => 1,
@@ -197,7 +197,7 @@ function gie_program_field_default_field_bases() {
     'type' => 'entityreference',
   );
 
-  // Exported field_base: 'field_program_partners'
+  // Exported field_base: 'field_program_partners'.
   $field_bases['field_program_partners'] = array(
     'active' => 1,
     'cardinality' => -1,
@@ -233,7 +233,7 @@ function gie_program_field_default_field_bases() {
     'type' => 'entityreference',
   );
 
-  // Exported field_base: 'field_program_poc'
+  // Exported field_base: 'field_program_poc'.
   $field_bases['field_program_poc'] = array(
     'active' => 1,
     'cardinality' => 1,
@@ -266,7 +266,7 @@ function gie_program_field_default_field_bases() {
     'type' => 'entityreference',
   );
 
-  // Exported field_base: 'field_program_problem'
+  // Exported field_base: 'field_program_problem'.
   $field_bases['field_program_problem'] = array(
     'active' => 1,
     'cardinality' => 1,
@@ -285,7 +285,7 @@ function gie_program_field_default_field_bases() {
     'type' => 'text_long',
   );
 
-  // Exported field_base: 'field_program_start'
+  // Exported field_base: 'field_program_start'.
   $field_bases['field_program_start'] = array(
     'active' => 1,
     'cardinality' => 1,
@@ -314,7 +314,7 @@ function gie_program_field_default_field_bases() {
     'type' => 'datetime',
   );
 
-  // Exported field_base: 'field_program_status'
+  // Exported field_base: 'field_program_status'.
   $field_bases['field_program_status'] = array(
     'active' => 1,
     'cardinality' => 1,

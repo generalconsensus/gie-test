@@ -10,7 +10,7 @@
 function gie_taxonomies_field_default_field_bases() {
   $field_bases = array();
 
-  // Exported field_base: 'description_field'
+  // Exported field_base: 'description_field'.
   $field_bases['description_field'] = array(
     'active' => 1,
     'cardinality' => 1,
@@ -29,7 +29,7 @@ function gie_taxonomies_field_default_field_bases() {
     'type' => 'text_with_summary',
   );
 
-  // Exported field_base: 'field_assistance_members'
+  // Exported field_base: 'field_assistance_members'.
   $field_bases['field_assistance_members'] = array(
     'active' => 1,
     'cardinality' => 1,
@@ -50,7 +50,7 @@ function gie_taxonomies_field_default_field_bases() {
     'type' => 'text',
   );
 
-  // Exported field_base: 'field_assistance_related'
+  // Exported field_base: 'field_assistance_related'.
   $field_bases['field_assistance_related'] = array(
     'active' => 1,
     'cardinality' => 1,
@@ -71,7 +71,7 @@ function gie_taxonomies_field_default_field_bases() {
     'type' => 'text',
   );
 
-  // Exported field_base: 'field_program_contact'
+  // Exported field_base: 'field_program_contact'.
   $field_bases['field_program_contact'] = array(
     'active' => 1,
     'cardinality' => 1,
@@ -105,7 +105,7 @@ function gie_taxonomies_field_default_field_bases() {
     'type' => 'entityreference',
   );
 
-  // Exported field_base: 'field_program_highlights'
+  // Exported field_base: 'field_program_highlights'.
   $field_bases['field_program_highlights'] = array(
     'active' => 1,
     'cardinality' => 6,
@@ -142,7 +142,7 @@ function gie_taxonomies_field_default_field_bases() {
     'type' => 'entityreference',
   );
 
-  // Exported field_base: 'field_program_name'
+  // Exported field_base: 'field_program_name'.
   $field_bases['field_program_name'] = array(
     'active' => 1,
     'cardinality' => 1,
@@ -163,7 +163,7 @@ function gie_taxonomies_field_default_field_bases() {
     'type' => 'text',
   );
 
-  // Exported field_base: 'field_program_related_program'
+  // Exported field_base: 'field_program_related_program'.
   $field_bases['field_program_related_program'] = array(
     'active' => 1,
     'cardinality' => 1,
@@ -198,7 +198,7 @@ function gie_taxonomies_field_default_field_bases() {
     'type' => 'entityreference',
   );
 
-  // Exported field_base: 'field_region_contact'
+  // Exported field_base: 'field_region_contact'.
   $field_bases['field_region_contact'] = array(
     'active' => 1,
     'cardinality' => 1,
@@ -232,7 +232,7 @@ function gie_taxonomies_field_default_field_bases() {
     'type' => 'entityreference',
   );
 
-  // Exported field_base: 'field_region_highlights'
+  // Exported field_base: 'field_region_highlights'.
   $field_bases['field_region_highlights'] = array(
     'active' => 1,
     'cardinality' => 4,
@@ -266,7 +266,7 @@ function gie_taxonomies_field_default_field_bases() {
     'type' => 'entityreference',
   );
 
-  // Exported field_base: 'field_region_image'
+  // Exported field_base: 'field_region_image'.
   $field_bases['field_region_image'] = array(
     'active' => 1,
     'cardinality' => 1,
@@ -288,7 +288,7 @@ function gie_taxonomies_field_default_field_bases() {
     'type' => 'image',
   );
 
-  // Exported field_base: 'field_sector_contact'
+  // Exported field_base: 'field_sector_contact'.
   $field_bases['field_sector_contact'] = array(
     'active' => 1,
     'cardinality' => 1,
@@ -322,7 +322,7 @@ function gie_taxonomies_field_default_field_bases() {
     'type' => 'entityreference',
   );
 
-  // Exported field_base: 'field_sector_highlights'
+  // Exported field_base: 'field_sector_highlights'.
   $field_bases['field_sector_highlights'] = array(
     'active' => 1,
     'cardinality' => 4,
@@ -356,7 +356,7 @@ function gie_taxonomies_field_default_field_bases() {
     'type' => 'entityreference',
   );
 
-  // Exported field_base: 'field_sector_image'
+  // Exported field_base: 'field_sector_image'.
   $field_bases['field_sector_image'] = array(
     'active' => 1,
     'cardinality' => 1,
@@ -378,7 +378,7 @@ function gie_taxonomies_field_default_field_bases() {
     'type' => 'image',
   );
 
-  // Exported field_base: 'field_topic_contact'
+  // Exported field_base: 'field_topic_contact'.
   $field_bases['field_topic_contact'] = array(
     'active' => 1,
     'cardinality' => 1,
@@ -412,7 +412,7 @@ function gie_taxonomies_field_default_field_bases() {
     'type' => 'entityreference',
   );
 
-  // Exported field_base: 'field_topic_highlights'
+  // Exported field_base: 'field_topic_highlights'.
   $field_bases['field_topic_highlights'] = array(
     'active' => 1,
     'cardinality' => 4,
@@ -446,7 +446,7 @@ function gie_taxonomies_field_default_field_bases() {
     'type' => 'entityreference',
   );
 
-  // Exported field_base: 'field_topic_image'
+  // Exported field_base: 'field_topic_image'.
   $field_bases['field_topic_image'] = array(
     'active' => 1,
     'cardinality' => 1,
@@ -468,7 +468,7 @@ function gie_taxonomies_field_default_field_bases() {
     'type' => 'image',
   );
 
-  // Exported field_base: 'name_field'
+  // Exported field_base: 'name_field'.
   $field_bases['name_field'] = array(
     'active' => 1,
     'cardinality' => 1,

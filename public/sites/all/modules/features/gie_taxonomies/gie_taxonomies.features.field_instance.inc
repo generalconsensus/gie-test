@@ -11,7 +11,7 @@ function gie_taxonomies_field_default_field_instances() {
   $field_instances = array();
 
   // Exported field_instance:
-  // 'taxonomy_term-assistance_type-field_assistance_members'
+  // 'taxonomy_term-assistance_type-field_assistance_members'.
   $field_instances['taxonomy_term-assistance_type-field_assistance_members'] = array(
     'bundle' => 'assistance_type',
     'default_value' => NULL,
@@ -87,7 +87,7 @@ function gie_taxonomies_field_default_field_instances() {
   );
 
   // Exported field_instance:
-  // 'taxonomy_term-assistance_type-field_assistance_related'
+  // 'taxonomy_term-assistance_type-field_assistance_related'.
   $field_instances['taxonomy_term-assistance_type-field_assistance_related'] = array(
     'bundle' => 'assistance_type',
     'default_value' => NULL,
@@ -162,7 +162,7 @@ function gie_taxonomies_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'taxonomy_term-country-description_field'
+  // Exported field_instance: 'taxonomy_term-country-description_field'.
   $field_instances['taxonomy_term-country-description_field'] = array(
     'bundle' => 'country',
     'default_value' => NULL,
@@ -206,7 +206,7 @@ function gie_taxonomies_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'taxonomy_term-country-name_field'
+  // Exported field_instance: 'taxonomy_term-country-name_field'.
   $field_instances['taxonomy_term-country-name_field'] = array(
     'bundle' => 'country',
     'default_value' => NULL,
@@ -266,7 +266,7 @@ function gie_taxonomies_field_default_field_instances() {
   );
 
   // Exported field_instance:
-  // 'taxonomy_term-program_discussions-description_field'
+  // 'taxonomy_term-program_discussions-description_field'.
   $field_instances['taxonomy_term-program_discussions-description_field'] = array(
     'bundle' => 'program_discussions',
     'default_value' => NULL,
@@ -305,7 +305,7 @@ function gie_taxonomies_field_default_field_instances() {
   );
 
   // Exported field_instance:
-  // 'taxonomy_term-program_discussions-field_program_contact'
+  // 'taxonomy_term-program_discussions-field_program_contact'.
   $field_instances['taxonomy_term-program_discussions-field_program_contact'] = array(
     'bundle' => 'program_discussions',
     'default_value' => NULL,
@@ -362,7 +362,7 @@ function gie_taxonomies_field_default_field_instances() {
   );
 
   // Exported field_instance:
-  // 'taxonomy_term-program_discussions-field_program_highlights'
+  // 'taxonomy_term-program_discussions-field_program_highlights'.
   $field_instances['taxonomy_term-program_discussions-field_program_highlights'] = array(
     'bundle' => 'program_discussions',
     'default_value' => NULL,
@@ -411,7 +411,7 @@ function gie_taxonomies_field_default_field_instances() {
   );
 
   // Exported field_instance:
-  // 'taxonomy_term-program_discussions-field_program_name'
+  // 'taxonomy_term-program_discussions-field_program_name'.
   $field_instances['taxonomy_term-program_discussions-field_program_name'] = array(
     'bundle' => 'program_discussions',
     'default_value' => NULL,
@@ -486,7 +486,7 @@ function gie_taxonomies_field_default_field_instances() {
   );
 
   // Exported field_instance:
-  // 'taxonomy_term-program_discussions-field_program_related_program'
+  // 'taxonomy_term-program_discussions-field_program_related_program'.
   $field_instances['taxonomy_term-program_discussions-field_program_related_program'] = array(
     'bundle' => 'program_discussions',
     'default_value' => NULL,
@@ -542,7 +542,7 @@ function gie_taxonomies_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'taxonomy_term-program_discussions-name_field'
+  // Exported field_instance: 'taxonomy_term-program_discussions-name_field'.
   $field_instances['taxonomy_term-program_discussions-name_field'] = array(
     'bundle' => 'program_discussions',
     'default_value' => NULL,
@@ -578,7 +578,7 @@ function gie_taxonomies_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'taxonomy_term-region-description_field'
+  // Exported field_instance: 'taxonomy_term-region-description_field'.
   $field_instances['taxonomy_term-region-description_field'] = array(
     'bundle' => 'region',
     'default_value' => NULL,
@@ -671,7 +671,7 @@ function gie_taxonomies_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'taxonomy_term-region-field_region_contact'
+  // Exported field_instance: 'taxonomy_term-region-field_region_contact'.
   $field_instances['taxonomy_term-region-field_region_contact'] = array(
     'bundle' => 'region',
     'default_value' => NULL,
@@ -745,7 +745,7 @@ function gie_taxonomies_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'taxonomy_term-region-field_region_highlights'
+  // Exported field_instance: 'taxonomy_term-region-field_region_highlights'.
   $field_instances['taxonomy_term-region-field_region_highlights'] = array(
     'bundle' => 'region',
     'default_value' => NULL,
@@ -812,7 +812,7 @@ function gie_taxonomies_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'taxonomy_term-region-field_region_image'
+  // Exported field_instance: 'taxonomy_term-region-field_region_image'.
   $field_instances['taxonomy_term-region-field_region_image'] = array(
     'bundle' => 'region',
     'deleted' => 0,
@@ -915,7 +915,7 @@ function gie_taxonomies_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'taxonomy_term-region-name_field'
+  // Exported field_instance: 'taxonomy_term-region-name_field'.
   $field_instances['taxonomy_term-region-name_field'] = array(
     'bundle' => 'region',
     'default_value' => NULL,
@@ -1003,7 +1003,7 @@ function gie_taxonomies_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'taxonomy_term-sector-description_field'
+  // Exported field_instance: 'taxonomy_term-sector-description_field'.
   $field_instances['taxonomy_term-sector-description_field'] = array(
     'bundle' => 'sector',
     'default_value' => NULL,
@@ -1067,7 +1067,7 @@ function gie_taxonomies_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'taxonomy_term-sector-field_sector_contact'
+  // Exported field_instance: 'taxonomy_term-sector-field_sector_contact'.
   $field_instances['taxonomy_term-sector-field_sector_contact'] = array(
     'bundle' => 'sector',
     'default_value' => NULL,
@@ -1135,7 +1135,7 @@ function gie_taxonomies_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'taxonomy_term-sector-field_sector_highlights'
+  // Exported field_instance: 'taxonomy_term-sector-field_sector_highlights'.
   $field_instances['taxonomy_term-sector-field_sector_highlights'] = array(
     'bundle' => 'sector',
     'default_value' => NULL,
@@ -1198,7 +1198,7 @@ function gie_taxonomies_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'taxonomy_term-sector-field_sector_image'
+  // Exported field_instance: 'taxonomy_term-sector-field_sector_image'.
   $field_instances['taxonomy_term-sector-field_sector_image'] = array(
     'bundle' => 'sector',
     'deleted' => 0,
@@ -1295,7 +1295,7 @@ function gie_taxonomies_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'taxonomy_term-sector-name_field'
+  // Exported field_instance: 'taxonomy_term-sector-name_field'.
   $field_instances['taxonomy_term-sector-name_field'] = array(
     'bundle' => 'sector',
     'default_value' => NULL,
@@ -1343,7 +1343,7 @@ function gie_taxonomies_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'taxonomy_term-topic-description_field'
+  // Exported field_instance: 'taxonomy_term-topic-description_field'.
   $field_instances['taxonomy_term-topic-description_field'] = array(
     'bundle' => 'topic',
     'default_value' => NULL,
@@ -1407,7 +1407,7 @@ function gie_taxonomies_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'taxonomy_term-topic-field_topic_contact'
+  // Exported field_instance: 'taxonomy_term-topic-field_topic_contact'.
   $field_instances['taxonomy_term-topic-field_topic_contact'] = array(
     'bundle' => 'topic',
     'default_value' => NULL,
@@ -1475,7 +1475,7 @@ function gie_taxonomies_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'taxonomy_term-topic-field_topic_highlights'
+  // Exported field_instance: 'taxonomy_term-topic-field_topic_highlights'.
   $field_instances['taxonomy_term-topic-field_topic_highlights'] = array(
     'bundle' => 'topic',
     'default_value' => NULL,
@@ -1538,7 +1538,7 @@ function gie_taxonomies_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'taxonomy_term-topic-field_topic_image'
+  // Exported field_instance: 'taxonomy_term-topic-field_topic_image'.
   $field_instances['taxonomy_term-topic-field_topic_image'] = array(
     'bundle' => 'topic',
     'deleted' => 0,
@@ -1635,7 +1635,7 @@ function gie_taxonomies_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'taxonomy_term-topic-name_field'
+  // Exported field_instance: 'taxonomy_term-topic-name_field'.
   $field_instances['taxonomy_term-topic-name_field'] = array(
     'bundle' => 'topic',
     'default_value' => NULL,
@@ -1684,7 +1684,7 @@ function gie_taxonomies_field_default_field_instances() {
   );
 
   // Exported field_instance:
-  // 'taxonomy_term-youthpower_issues-description_field'
+  // 'taxonomy_term-youthpower_issues-description_field'.
   $field_instances['taxonomy_term-youthpower_issues-description_field'] = array(
     'bundle' => 'youthpower_issues',
     'default_value' => NULL,
@@ -1742,7 +1742,7 @@ function gie_taxonomies_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'taxonomy_term-youthpower_issues-name_field'
+  // Exported field_instance: 'taxonomy_term-youthpower_issues-name_field'.
   $field_instances['taxonomy_term-youthpower_issues-name_field'] = array(
     'bundle' => 'youthpower_issues',
     'default_value' => NULL,

@@ -10,7 +10,7 @@
 function gie_long_form_content_field_default_field_instances() {
   $field_instances = array();
 
-  // Exported field_instance: 'node-long_form_page-body'
+  // Exported field_instance: 'node-long_form_page-body'.
   $field_instances['node-long_form_page-body'] = array(
     'bundle' => 'long_form_page',
     'default_value' => NULL,
@@ -128,7 +128,7 @@ function gie_long_form_content_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-long_form_page-field_header_image'
+  // Exported field_instance: 'node-long_form_page-field_header_image'.
   $field_instances['node-long_form_page-field_header_image'] = array(
     'bundle' => 'long_form_page',
     'deleted' => 0,
@@ -204,7 +204,7 @@ function gie_long_form_content_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-long_form_page-field_learn_more_link'
+  // Exported field_instance: 'node-long_form_page-field_learn_more_link'.
   $field_instances['node-long_form_page-field_learn_more_link'] = array(
     'bundle' => 'long_form_page',
     'default_value' => NULL,
@@ -276,7 +276,7 @@ function gie_long_form_content_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-long_form_page-field_long_form_block'
+  // Exported field_instance: 'node-long_form_page-field_long_form_block'.
   $field_instances['node-long_form_page-field_long_form_block'] = array(
     'bundle' => 'long_form_page',
     'default_value' => NULL,
@@ -382,7 +382,7 @@ function gie_long_form_content_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-long_form_page-field_long_form_subtitle'
+  // Exported field_instance: 'node-long_form_page-field_long_form_subtitle'.
   $field_instances['node-long_form_page-field_long_form_subtitle'] = array(
     'bundle' => 'long_form_page',
     'default_value' => NULL,
@@ -475,7 +475,7 @@ function gie_long_form_content_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-long_form_page-field_longform_byline'
+  // Exported field_instance: 'node-long_form_page-field_longform_byline'.
   $field_instances['node-long_form_page-field_longform_byline'] = array(
     'bundle' => 'long_form_page',
     'default_value' => NULL,
@@ -566,7 +566,7 @@ function gie_long_form_content_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-long_form_page-field_longform_description'
+  // Exported field_instance: 'node-long_form_page-field_longform_description'.
   $field_instances['node-long_form_page-field_longform_description'] = array(
     'bundle' => 'long_form_page',
     'default_value' => NULL,
@@ -662,7 +662,7 @@ function gie_long_form_content_field_default_field_instances() {
   );
 
   // Exported field_instance:
-  // 'node-long_form_page-field_longform_description_title'
+  // 'node-long_form_page-field_longform_description_title'.
   $field_instances['node-long_form_page-field_longform_description_title'] = array(
     'bundle' => 'long_form_page',
     'default_value' => NULL,
@@ -753,7 +753,7 @@ function gie_long_form_content_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-long_form_page-field_longform_partners'
+  // Exported field_instance: 'node-long_form_page-field_longform_partners'.
   $field_instances['node-long_form_page-field_longform_partners'] = array(
     'bundle' => 'long_form_page',
     'default_value' => NULL,
@@ -817,7 +817,7 @@ function gie_long_form_content_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-long_form_page-field_pdf_file'
+  // Exported field_instance: 'node-long_form_page-field_pdf_file'.
   $field_instances['node-long_form_page-field_pdf_file'] = array(
     'bundle' => 'long_form_page',
     'deleted' => 0,
@@ -860,7 +860,7 @@ function gie_long_form_content_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-long_form_page-field_pdf_screenshot'
+  // Exported field_instance: 'node-long_form_page-field_pdf_screenshot'.
   $field_instances['node-long_form_page-field_pdf_screenshot'] = array(
     'bundle' => 'long_form_page',
     'deleted' => 0,
@@ -936,7 +936,7 @@ function gie_long_form_content_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-long_form_page-title_field'
+  // Exported field_instance: 'node-long_form_page-title_field'.
   $field_instances['node-long_form_page-title_field'] = array(
     'bundle' => 'long_form_page',
     'default_value' => NULL,
@@ -979,7 +979,7 @@ function gie_long_form_content_field_default_field_instances() {
   );
 
   // Exported field_instance:
-  // 'paragraphs_item-long_form_aside-field_paragraph_aside_text'
+  // 'paragraphs_item-long_form_aside-field_paragraph_aside_text'.
   $field_instances['paragraphs_item-long_form_aside-field_paragraph_aside_text'] = array(
     'bundle' => 'long_form_aside',
     'default_value' => NULL,
@@ -1139,7 +1139,7 @@ function gie_long_form_content_field_default_field_instances() {
   );
 
   // Exported field_instance:
-  // 'paragraphs_item-long_form_aside-field_paragraphs_aside_title'
+  // 'paragraphs_item-long_form_aside-field_paragraphs_aside_title'.
   $field_instances['paragraphs_item-long_form_aside-field_paragraphs_aside_title'] = array(
     'bundle' => 'long_form_aside',
     'default_value' => NULL,
@@ -1290,7 +1290,7 @@ function gie_long_form_content_field_default_field_instances() {
   );
 
   // Exported field_instance:
-  // 'paragraphs_item-long_form_callout_card-field_para_callout_body_1'
+  // 'paragraphs_item-long_form_callout_card-field_para_callout_body_1'.
   $field_instances['paragraphs_item-long_form_callout_card-field_para_callout_body_1'] = array(
     'bundle' => 'long_form_callout_card',
     'default_value' => NULL,
@@ -1410,7 +1410,7 @@ function gie_long_form_content_field_default_field_instances() {
   );
 
   // Exported field_instance:
-  // 'paragraphs_item-long_form_callout_card-field_para_callout_body_2'
+  // 'paragraphs_item-long_form_callout_card-field_para_callout_body_2'.
   $field_instances['paragraphs_item-long_form_callout_card-field_para_callout_body_2'] = array(
     'bundle' => 'long_form_callout_card',
     'default_value' => NULL,
@@ -1530,7 +1530,7 @@ function gie_long_form_content_field_default_field_instances() {
   );
 
   // Exported field_instance:
-  // 'paragraphs_item-long_form_callout_card-field_para_callout_body_3'
+  // 'paragraphs_item-long_form_callout_card-field_para_callout_body_3'.
   $field_instances['paragraphs_item-long_form_callout_card-field_para_callout_body_3'] = array(
     'bundle' => 'long_form_callout_card',
     'default_value' => NULL,
@@ -1650,7 +1650,7 @@ function gie_long_form_content_field_default_field_instances() {
   );
 
   // Exported field_instance:
-  // 'paragraphs_item-long_form_callout_card-field_para_callout_title_1'
+  // 'paragraphs_item-long_form_callout_card-field_para_callout_title_1'.
   $field_instances['paragraphs_item-long_form_callout_card-field_para_callout_title_1'] = array(
     'bundle' => 'long_form_callout_card',
     'default_value' => NULL,
@@ -1729,7 +1729,7 @@ function gie_long_form_content_field_default_field_instances() {
   );
 
   // Exported field_instance:
-  // 'paragraphs_item-long_form_callout_card-field_para_callout_title_2'
+  // 'paragraphs_item-long_form_callout_card-field_para_callout_title_2'.
   $field_instances['paragraphs_item-long_form_callout_card-field_para_callout_title_2'] = array(
     'bundle' => 'long_form_callout_card',
     'default_value' => NULL,
@@ -1808,7 +1808,7 @@ function gie_long_form_content_field_default_field_instances() {
   );
 
   // Exported field_instance:
-  // 'paragraphs_item-long_form_callout_card-field_para_callout_title_3'
+  // 'paragraphs_item-long_form_callout_card-field_para_callout_title_3'.
   $field_instances['paragraphs_item-long_form_callout_card-field_para_callout_title_3'] = array(
     'bundle' => 'long_form_callout_card',
     'default_value' => NULL,
@@ -1887,7 +1887,7 @@ function gie_long_form_content_field_default_field_instances() {
   );
 
   // Exported field_instance:
-  // 'paragraphs_item-long_form_image-field_paragraphs_caption'
+  // 'paragraphs_item-long_form_image-field_paragraphs_caption'.
   $field_instances['paragraphs_item-long_form_image-field_paragraphs_caption'] = array(
     'bundle' => 'long_form_image',
     'default_value' => NULL,
@@ -2023,7 +2023,7 @@ function gie_long_form_content_field_default_field_instances() {
   );
 
   // Exported field_instance:
-  // 'paragraphs_item-long_form_image-field_paragraphs_image'
+  // 'paragraphs_item-long_form_image-field_paragraphs_image'.
   $field_instances['paragraphs_item-long_form_image-field_paragraphs_image'] = array(
     'bundle' => 'long_form_image',
     'default_value' => NULL,
@@ -2148,7 +2148,7 @@ function gie_long_form_content_field_default_field_instances() {
   );
 
   // Exported field_instance:
-  // 'paragraphs_item-long_form_key_figure-field_para_key_fig_explanation'
+  // 'paragraphs_item-long_form_key_figure-field_para_key_fig_explanation'.
   $field_instances['paragraphs_item-long_form_key_figure-field_para_key_fig_explanation'] = array(
     'bundle' => 'long_form_key_figure',
     'default_value' => NULL,
@@ -2267,7 +2267,7 @@ function gie_long_form_content_field_default_field_instances() {
   );
 
   // Exported field_instance:
-  // 'paragraphs_item-long_form_key_figure-field_paragraph_key_figure'
+  // 'paragraphs_item-long_form_key_figure-field_paragraph_key_figure'.
   $field_instances['paragraphs_item-long_form_key_figure-field_paragraph_key_figure'] = array(
     'bundle' => 'long_form_key_figure',
     'default_value' => NULL,
@@ -2386,7 +2386,7 @@ function gie_long_form_content_field_default_field_instances() {
   );
 
   // Exported field_instance:
-  // 'paragraphs_item-long_form_pullquote-field_para_pullquote_author'
+  // 'paragraphs_item-long_form_pullquote-field_para_pullquote_author'.
   $field_instances['paragraphs_item-long_form_pullquote-field_para_pullquote_author'] = array(
     'bundle' => 'long_form_pullquote',
     'default_value' => NULL,
@@ -2465,7 +2465,7 @@ function gie_long_form_content_field_default_field_instances() {
   );
 
   // Exported field_instance:
-  // 'paragraphs_item-long_form_pullquote-field_paragraph_pullquote'
+  // 'paragraphs_item-long_form_pullquote-field_paragraph_pullquote'.
   $field_instances['paragraphs_item-long_form_pullquote-field_paragraph_pullquote'] = array(
     'bundle' => 'long_form_pullquote',
     'default_value' => NULL,
@@ -2544,7 +2544,7 @@ function gie_long_form_content_field_default_field_instances() {
   );
 
   // Exported field_instance:
-  // 'paragraphs_item-long_form_section_break_image-field_para_section_break_title'
+  // 'paragraphs_item-long_form_section_break_image-field_para_section_break_title'.
   $field_instances['paragraphs_item-long_form_section_break_image-field_para_section_break_title'] = array(
     'bundle' => 'long_form_section_break_image',
     'default_value' => NULL,
@@ -2623,7 +2623,7 @@ function gie_long_form_content_field_default_field_instances() {
   );
 
   // Exported field_instance:
-  // 'paragraphs_item-long_form_section_break_image-field_para_section_brk_image'
+  // 'paragraphs_item-long_form_section_break_image-field_para_section_brk_image'.
   $field_instances['paragraphs_item-long_form_section_break_image-field_para_section_brk_image'] = array(
     'bundle' => 'long_form_section_break_image',
     'default_value' => NULL,
@@ -2700,7 +2700,7 @@ function gie_long_form_content_field_default_field_instances() {
   );
 
   // Exported field_instance:
-  // 'paragraphs_item-long_form_section_header_image-field_para_sctn_head_image'
+  // 'paragraphs_item-long_form_section_header_image-field_para_sctn_head_image'.
   $field_instances['paragraphs_item-long_form_section_header_image-field_para_sctn_head_image'] = array(
     'bundle' => 'long_form_section_header_image',
     'default_value' => NULL,
@@ -2793,7 +2793,7 @@ function gie_long_form_content_field_default_field_instances() {
   );
 
   // Exported field_instance:
-  // 'paragraphs_item-long_form_section_header_image-field_para_sctn_head_sctn_title'
+  // 'paragraphs_item-long_form_section_header_image-field_para_sctn_head_sctn_title'.
   $field_instances['paragraphs_item-long_form_section_header_image-field_para_sctn_head_sctn_title'] = array(
     'bundle' => 'long_form_section_header_image',
     'default_value' => NULL,
@@ -2907,7 +2907,7 @@ function gie_long_form_content_field_default_field_instances() {
   );
 
   // Exported field_instance:
-  // 'paragraphs_item-long_form_section_header_image-field_para_sctn_head_title'
+  // 'paragraphs_item-long_form_section_header_image-field_para_sctn_head_title'.
   $field_instances['paragraphs_item-long_form_section_header_image-field_para_sctn_head_title'] = array(
     'bundle' => 'long_form_section_header_image',
     'default_value' => NULL,
@@ -2986,7 +2986,7 @@ function gie_long_form_content_field_default_field_instances() {
   );
 
   // Exported field_instance:
-  // 'paragraphs_item-long_form_text-field_paragraph_text'
+  // 'paragraphs_item-long_form_text-field_paragraph_text'.
   $field_instances['paragraphs_item-long_form_text-field_paragraph_text'] = array(
     'bundle' => 'long_form_text',
     'default_value' => NULL,
@@ -3212,7 +3212,7 @@ function gie_long_form_content_field_default_field_instances() {
   );
 
   // Exported field_instance:
-  // 'paragraphs_item-long_form_video-field_paragraphs_caption'
+  // 'paragraphs_item-long_form_video-field_paragraphs_caption'.
   $field_instances['paragraphs_item-long_form_video-field_paragraphs_caption'] = array(
     'bundle' => 'long_form_video',
     'default_value' => NULL,
@@ -3394,7 +3394,7 @@ function gie_long_form_content_field_default_field_instances() {
   );
 
   // Exported field_instance:
-  // 'paragraphs_item-long_form_video-field_paragraphs_video'
+  // 'paragraphs_item-long_form_video-field_paragraphs_video'.
   $field_instances['paragraphs_item-long_form_video-field_paragraphs_video'] = array(
     'bundle' => 'long_form_video',
     'default_value' => NULL,

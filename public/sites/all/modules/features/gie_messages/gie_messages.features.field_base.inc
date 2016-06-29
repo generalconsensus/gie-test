@@ -10,7 +10,7 @@
 function gie_messages_field_default_field_bases() {
   $field_bases = array();
 
-  // Exported field_base: 'field_comment_ref'
+  // Exported field_base: 'field_comment_ref'.
   $field_bases['field_comment_ref'] = array(
     'active' => 1,
     'cardinality' => 1,
@@ -47,7 +47,7 @@ function gie_messages_field_default_field_bases() {
     'type' => 'entityreference',
   );
 
-  // Exported field_base: 'field_flag_ref'
+  // Exported field_base: 'field_flag_ref'.
   $field_bases['field_flag_ref'] = array(
     'active' => 1,
     'cardinality' => 1,
@@ -82,7 +82,7 @@ function gie_messages_field_default_field_bases() {
     'type' => 'entityreference',
   );
 
-  // Exported field_base: 'field_node_ref'
+  // Exported field_base: 'field_node_ref'.
   $field_bases['field_node_ref'] = array(
     'active' => 1,
     'cardinality' => 1,
@@ -115,7 +115,7 @@ function gie_messages_field_default_field_bases() {
     'type' => 'entityreference',
   );
 
-  // Exported field_base: 'field_user_notifications'
+  // Exported field_base: 'field_user_notifications'.
   $field_bases['field_user_notifications'] = array(
     'active' => 1,
     'cardinality' => 1,
@@ -142,7 +142,7 @@ function gie_messages_field_default_field_bases() {
     'type' => 'list_text',
   );
 
-  // Exported field_base: 'field_user_ref'
+  // Exported field_base: 'field_user_ref'.
   $field_bases['field_user_ref'] = array(
     'active' => 1,
     'cardinality' => 1,
@@ -175,7 +175,7 @@ function gie_messages_field_default_field_bases() {
     'type' => 'entityreference',
   );
 
-  // Exported field_base: 'message_text'
+  // Exported field_base: 'message_text'.
   $field_bases['message_text'] = array(
     'active' => 1,
     'cardinality' => -1,

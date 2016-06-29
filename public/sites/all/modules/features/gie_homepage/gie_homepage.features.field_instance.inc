@@ -680,7 +680,7 @@ function gie_homepage_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-homepage-field_homepage_ges_personas'
+  // Exported field_instance: 'node-homepage-field_homepage_ges_personas'.
   $field_instances['node-homepage-field_homepage_ges_personas'] = array(
     'bundle' => 'homepage',
     'default_value' => NULL,
