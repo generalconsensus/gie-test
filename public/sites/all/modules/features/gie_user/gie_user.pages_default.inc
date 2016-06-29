@@ -817,7 +817,10 @@ function gie_user_default_page_manager_pages() {
   $page->admin_title = 'User Notifications';
   $page->admin_description = 'Email notifications edit page';
   $page->path = 'user/%user/notifications';
-  $page->access = array();
+  $page->access = array(
+    'type' => 'none',
+    'settings' => NULL,
+  );
   $page->menu = array(
     'type' => 'tab',
     'title' => 'Notifications',

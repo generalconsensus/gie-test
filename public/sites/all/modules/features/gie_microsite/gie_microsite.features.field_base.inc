@@ -10,7 +10,7 @@
 function gie_microsite_field_default_field_bases() {
   $field_bases = array();
 
-  // Exported field_base: 'field_background'
+  // Exported field_base: 'field_background'.
   $field_bases['field_background'] = array(
     'active' => 1,
     'cardinality' => 1,
@@ -36,7 +36,7 @@ function gie_microsite_field_default_field_bases() {
     'type' => 'taxonomy_term_reference',
   );
 
-  // Exported field_base: 'field_microsite_footer_desc'
+  // Exported field_base: 'field_microsite_footer_desc'.
   $field_bases['field_microsite_footer_desc'] = array(
     'active' => 1,
     'cardinality' => 1,
@@ -55,7 +55,7 @@ function gie_microsite_field_default_field_bases() {
     'type' => 'text_long',
   );
 
-  // Exported field_base: 'field_microsite_footer_title'
+  // Exported field_base: 'field_microsite_footer_title'.
   $field_bases['field_microsite_footer_title'] = array(
     'active' => 1,
     'cardinality' => 1,
@@ -76,7 +76,7 @@ function gie_microsite_field_default_field_bases() {
     'type' => 'text',
   );
 
-  // Exported field_base: 'field_microsite_logo'
+  // Exported field_base: 'field_microsite_logo'.
   $field_bases['field_microsite_logo'] = array(
     'active' => 1,
     'cardinality' => 1,
@@ -98,7 +98,7 @@ function gie_microsite_field_default_field_bases() {
     'type' => 'image',
   );
 
-  // Exported field_base: 'field_microsite_page_sections'
+  // Exported field_base: 'field_microsite_page_sections'.
   $field_bases['field_microsite_page_sections'] = array(
     'active' => 1,
     'cardinality' => -1,
@@ -113,7 +113,7 @@ function gie_microsite_field_default_field_bases() {
     'type' => 'paragraphs',
   );
 
-  // Exported field_base: 'field_microsite_partners'
+  // Exported field_base: 'field_microsite_partners'.
   $field_bases['field_microsite_partners'] = array(
     'active' => 1,
     'cardinality' => 4,
@@ -149,7 +149,7 @@ function gie_microsite_field_default_field_bases() {
     'type' => 'entityreference',
   );
 
-  // Exported field_base: 'field_orientation'
+  // Exported field_base: 'field_orientation'.
   $field_bases['field_orientation'] = array(
     'active' => 1,
     'cardinality' => 1,
@@ -175,7 +175,7 @@ function gie_microsite_field_default_field_bases() {
     'type' => 'taxonomy_term_reference',
   );
 
-  // Exported field_base: 'field_para_5050_image'
+  // Exported field_base: 'field_para_5050_image'.
   $field_bases['field_para_5050_image'] = array(
     'active' => 1,
     'cardinality' => 1,
@@ -197,7 +197,7 @@ function gie_microsite_field_default_field_bases() {
     'type' => 'image',
   );
 
-  // Exported field_base: 'field_para_5050_orientation'
+  // Exported field_base: 'field_para_5050_orientation'.
   $field_bases['field_para_5050_orientation'] = array(
     'active' => 1,
     'cardinality' => 1,
@@ -223,7 +223,7 @@ function gie_microsite_field_default_field_bases() {
     'type' => 'taxonomy_term_reference',
   );
 
-  // Exported field_base: 'field_para_5050_text'
+  // Exported field_base: 'field_para_5050_text'.
   $field_bases['field_para_5050_text'] = array(
     'active' => 1,
     'cardinality' => 1,
@@ -242,7 +242,7 @@ function gie_microsite_field_default_field_bases() {
     'type' => 'text_long',
   );
 
-  // Exported field_base: 'field_para_5050_title'
+  // Exported field_base: 'field_para_5050_title'.
   $field_bases['field_para_5050_title'] = array(
     'active' => 1,
     'cardinality' => 1,
@@ -263,7 +263,7 @@ function gie_microsite_field_default_field_bases() {
     'type' => 'text',
   );
 
-  // Exported field_base: 'field_para_callout_image'
+  // Exported field_base: 'field_para_callout_image'.
   $field_bases['field_para_callout_image'] = array(
     'active' => 1,
     'cardinality' => 1,
@@ -285,7 +285,7 @@ function gie_microsite_field_default_field_bases() {
     'type' => 'image',
   );
 
-  // Exported field_base: 'field_para_callout_text'
+  // Exported field_base: 'field_para_callout_text'.
   $field_bases['field_para_callout_text'] = array(
     'active' => 1,
     'cardinality' => 1,
@@ -304,7 +304,7 @@ function gie_microsite_field_default_field_bases() {
     'type' => 'text_long',
   );
 
-  // Exported field_base: 'field_para_featured_content'
+  // Exported field_base: 'field_para_featured_content'.
   $field_bases['field_para_featured_content'] = array(
     'active' => 1,
     'cardinality' => 4,
@@ -339,7 +339,7 @@ function gie_microsite_field_default_field_bases() {
     'type' => 'entityreference',
   );
 
-  // Exported field_base: 'field_para_featured_more_link'
+  // Exported field_base: 'field_para_featured_more_link'.
   $field_bases['field_para_featured_more_link'] = array(
     'active' => 1,
     'cardinality' => 1,
@@ -368,7 +368,7 @@ function gie_microsite_field_default_field_bases() {
     'type' => 'link_field',
   );
 
-  // Exported field_base: 'field_para_header_image'
+  // Exported field_base: 'field_para_header_image'.
   $field_bases['field_para_header_image'] = array(
     'active' => 1,
     'cardinality' => 1,
@@ -390,7 +390,7 @@ function gie_microsite_field_default_field_bases() {
     'type' => 'image',
   );
 
-  // Exported field_base: 'field_para_header_options'
+  // Exported field_base: 'field_para_header_options'.
   $field_bases['field_para_header_options'] = array(
     'active' => 1,
     'cardinality' => 1,
@@ -416,7 +416,7 @@ function gie_microsite_field_default_field_bases() {
     'type' => 'taxonomy_term_reference',
   );
 
-  // Exported field_base: 'field_para_header_subtitle'
+  // Exported field_base: 'field_para_header_subtitle'.
   $field_bases['field_para_header_subtitle'] = array(
     'active' => 1,
     'cardinality' => 1,
@@ -437,7 +437,7 @@ function gie_microsite_field_default_field_bases() {
     'type' => 'text',
   );
 
-  // Exported field_base: 'field_para_header_title'
+  // Exported field_base: 'field_para_header_title'.
   $field_bases['field_para_header_title'] = array(
     'active' => 1,
     'cardinality' => 1,
@@ -458,7 +458,7 @@ function gie_microsite_field_default_field_bases() {
     'type' => 'text',
   );
 
-  // Exported field_base: 'field_para_highlight_image'
+  // Exported field_base: 'field_para_highlight_image'.
   $field_bases['field_para_highlight_image'] = array(
     'active' => 1,
     'cardinality' => 1,
@@ -480,7 +480,7 @@ function gie_microsite_field_default_field_bases() {
     'type' => 'image',
   );
 
-  // Exported field_base: 'field_para_highlight_text'
+  // Exported field_base: 'field_para_highlight_text'.
   $field_bases['field_para_highlight_text'] = array(
     'active' => 1,
     'cardinality' => 1,
@@ -499,7 +499,7 @@ function gie_microsite_field_default_field_bases() {
     'type' => 'text_long',
   );
 
-  // Exported field_base: 'field_para_section_break_image'
+  // Exported field_base: 'field_para_section_break_image'.
   $field_bases['field_para_section_break_image'] = array(
     'active' => 1,
     'cardinality' => 1,
@@ -521,7 +521,7 @@ function gie_microsite_field_default_field_bases() {
     'type' => 'image',
   );
 
-  // Exported field_base: 'field_para_slider_content'
+  // Exported field_base: 'field_para_slider_content'.
   $field_bases['field_para_slider_content'] = array(
     'active' => 1,
     'cardinality' => 5,
@@ -556,7 +556,7 @@ function gie_microsite_field_default_field_bases() {
     'type' => 'entityreference',
   );
 
-  // Exported field_base: 'field_para_slider_title'
+  // Exported field_base: 'field_para_slider_title'.
   $field_bases['field_para_slider_title'] = array(
     'active' => 1,
     'cardinality' => 1,

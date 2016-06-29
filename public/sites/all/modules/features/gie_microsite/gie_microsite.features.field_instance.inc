@@ -10,7 +10,7 @@
 function gie_microsite_field_default_field_instances() {
   $field_instances = array();
 
-  // Exported field_instance: 'node-microsite-field_microsite_footer_desc'
+  // Exported field_instance: 'node-microsite-field_microsite_footer_desc'.
   $field_instances['node-microsite-field_microsite_footer_desc'] = array(
     'bundle' => 'microsite',
     'default_value' => NULL,
@@ -103,7 +103,7 @@ function gie_microsite_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-microsite-field_microsite_footer_title'
+  // Exported field_instance: 'node-microsite-field_microsite_footer_title'.
   $field_instances['node-microsite-field_microsite_footer_title'] = array(
     'bundle' => 'microsite',
     'default_value' => NULL,
@@ -194,7 +194,7 @@ function gie_microsite_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-microsite-field_microsite_logo'
+  // Exported field_instance: 'node-microsite-field_microsite_logo'.
   $field_instances['node-microsite-field_microsite_logo'] = array(
     'bundle' => 'microsite',
     'deleted' => 0,
@@ -270,7 +270,7 @@ function gie_microsite_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-microsite-field_microsite_partners'
+  // Exported field_instance: 'node-microsite-field_microsite_partners'.
   $field_instances['node-microsite-field_microsite_partners'] = array(
     'bundle' => 'microsite',
     'default_value' => NULL,
@@ -333,7 +333,7 @@ function gie_microsite_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-microsite-title_field'
+  // Exported field_instance: 'node-microsite-title_field'.
   $field_instances['node-microsite-title_field'] = array(
     'bundle' => 'microsite',
     'default_value' => NULL,
@@ -375,7 +375,7 @@ function gie_microsite_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-microsite_page-body'
+  // Exported field_instance: 'node-microsite_page-body'.
   $field_instances['node-microsite_page-body'] = array(
     'bundle' => 'microsite_page',
     'default_value' => NULL,
@@ -431,7 +431,7 @@ function gie_microsite_field_default_field_instances() {
   );
 
   // Exported field_instance:
-  // 'node-microsite_page-field_microsite_page_sections'
+  // 'node-microsite_page-field_microsite_page_sections'.
   $field_instances['node-microsite_page-field_microsite_page_sections'] = array(
     'bundle' => 'microsite_page',
     'default_value' => NULL,
@@ -528,7 +528,7 @@ function gie_microsite_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-microsite_page-title_field'
+  // Exported field_instance: 'node-microsite_page-title_field'.
   $field_instances['node-microsite_page-title_field'] = array(
     'bundle' => 'microsite_page',
     'default_value' => NULL,
@@ -570,7 +570,8 @@ function gie_microsite_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'paragraphs_item-long_form_50_50-field_background'
+  // Exported field_instance:
+  // 'paragraphs_item-long_form_50_50-field_background'.
   $field_instances['paragraphs_item-long_form_50_50-field_background'] = array(
     'bundle' => 'long_form_50_50',
     'default_value' => NULL,
@@ -619,7 +620,7 @@ function gie_microsite_field_default_field_instances() {
   );
 
   // Exported field_instance:
-  // 'paragraphs_item-long_form_50_50-field_para_5050_image'
+  // 'paragraphs_item-long_form_50_50-field_para_5050_image'.
   $field_instances['paragraphs_item-long_form_50_50-field_para_5050_image'] = array(
     'bundle' => 'long_form_50_50',
     'deleted' => 0,
@@ -740,7 +741,7 @@ function gie_microsite_field_default_field_instances() {
   );
 
   // Exported field_instance:
-  // 'paragraphs_item-long_form_50_50-field_para_5050_orientation'
+  // 'paragraphs_item-long_form_50_50-field_para_5050_orientation'.
   $field_instances['paragraphs_item-long_form_50_50-field_para_5050_orientation'] = array(
     'bundle' => 'long_form_50_50',
     'default_value' => array(
@@ -793,7 +794,7 @@ function gie_microsite_field_default_field_instances() {
   );
 
   // Exported field_instance:
-  // 'paragraphs_item-long_form_50_50-field_para_5050_text'
+  // 'paragraphs_item-long_form_50_50-field_para_5050_text'.
   $field_instances['paragraphs_item-long_form_50_50-field_para_5050_text'] = array(
     'bundle' => 'long_form_50_50',
     'default_value' => NULL,
@@ -927,7 +928,7 @@ function gie_microsite_field_default_field_instances() {
   );
 
   // Exported field_instance:
-  // 'paragraphs_item-long_form_50_50-field_para_5050_title'
+  // 'paragraphs_item-long_form_50_50-field_para_5050_title'.
   $field_instances['paragraphs_item-long_form_50_50-field_para_5050_title'] = array(
     'bundle' => 'long_form_50_50',
     'default_value' => NULL,
@@ -1017,7 +1018,7 @@ function gie_microsite_field_default_field_instances() {
   );
 
   // Exported field_instance:
-  // 'paragraphs_item-long_form_featured_content-field_para_featured_content'
+  // 'paragraphs_item-long_form_featured_content-field_para_featured_content'.
   $field_instances['paragraphs_item-long_form_featured_content-field_para_featured_content'] = array(
     'bundle' => 'long_form_featured_content',
     'default_value' => NULL,
@@ -1060,7 +1061,7 @@ function gie_microsite_field_default_field_instances() {
   );
 
   // Exported field_instance:
-  // 'paragraphs_item-long_form_featured_content-field_para_featured_more_link'
+  // 'paragraphs_item-long_form_featured_content-field_para_featured_more_link'.
   $field_instances['paragraphs_item-long_form_featured_content-field_para_featured_more_link'] = array(
     'bundle' => 'long_form_featured_content',
     'default_value' => NULL,
@@ -1113,7 +1114,7 @@ function gie_microsite_field_default_field_instances() {
   );
 
   // Exported field_instance:
-  // 'paragraphs_item-long_form_header-field_para_header_image'
+  // 'paragraphs_item-long_form_header-field_para_header_image'.
   $field_instances['paragraphs_item-long_form_header-field_para_header_image'] = array(
     'bundle' => 'long_form_header',
     'deleted' => 0,
@@ -1184,7 +1185,7 @@ function gie_microsite_field_default_field_instances() {
   );
 
   // Exported field_instance:
-  // 'paragraphs_item-long_form_header-field_para_header_options'
+  // 'paragraphs_item-long_form_header-field_para_header_options'.
   $field_instances['paragraphs_item-long_form_header-field_para_header_options'] = array(
     'bundle' => 'long_form_header',
     'default_value' => NULL,
@@ -1233,7 +1234,7 @@ function gie_microsite_field_default_field_instances() {
   );
 
   // Exported field_instance:
-  // 'paragraphs_item-long_form_header-field_para_header_subtitle'
+  // 'paragraphs_item-long_form_header-field_para_header_subtitle'.
   $field_instances['paragraphs_item-long_form_header-field_para_header_subtitle'] = array(
     'bundle' => 'long_form_header',
     'default_value' => NULL,
@@ -1323,7 +1324,7 @@ function gie_microsite_field_default_field_instances() {
   );
 
   // Exported field_instance:
-  // 'paragraphs_item-long_form_header-field_para_header_title'
+  // 'paragraphs_item-long_form_header-field_para_header_title'.
   $field_instances['paragraphs_item-long_form_header-field_para_header_title'] = array(
     'bundle' => 'long_form_header',
     'default_value' => NULL,
@@ -1413,7 +1414,7 @@ function gie_microsite_field_default_field_instances() {
   );
 
   // Exported field_instance:
-  // 'paragraphs_item-microsite_callout_card-field_para_callout_body_1'
+  // 'paragraphs_item-microsite_callout_card-field_para_callout_body_1'.
   $field_instances['paragraphs_item-microsite_callout_card-field_para_callout_body_1'] = array(
     'bundle' => 'microsite_callout_card',
     'default_value' => NULL,
@@ -1593,7 +1594,7 @@ function gie_microsite_field_default_field_instances() {
   );
 
   // Exported field_instance:
-  // 'paragraphs_item-microsite_callout_card-field_para_callout_body_2'
+  // 'paragraphs_item-microsite_callout_card-field_para_callout_body_2'.
   $field_instances['paragraphs_item-microsite_callout_card-field_para_callout_body_2'] = array(
     'bundle' => 'microsite_callout_card',
     'default_value' => NULL,
@@ -1759,7 +1760,7 @@ function gie_microsite_field_default_field_instances() {
   );
 
   // Exported field_instance:
-  // 'paragraphs_item-microsite_callout_card-field_para_callout_body_3'
+  // 'paragraphs_item-microsite_callout_card-field_para_callout_body_3'.
   $field_instances['paragraphs_item-microsite_callout_card-field_para_callout_body_3'] = array(
     'bundle' => 'microsite_callout_card',
     'default_value' => NULL,
@@ -1911,7 +1912,7 @@ function gie_microsite_field_default_field_instances() {
   );
 
   // Exported field_instance:
-  // 'paragraphs_item-microsite_callout_card-field_para_callout_title_1'
+  // 'paragraphs_item-microsite_callout_card-field_para_callout_title_1'.
   $field_instances['paragraphs_item-microsite_callout_card-field_para_callout_title_1'] = array(
     'bundle' => 'microsite_callout_card',
     'default_value' => NULL,
@@ -1994,7 +1995,7 @@ function gie_microsite_field_default_field_instances() {
   );
 
   // Exported field_instance:
-  // 'paragraphs_item-microsite_callout_card-field_para_callout_title_2'
+  // 'paragraphs_item-microsite_callout_card-field_para_callout_title_2'.
   $field_instances['paragraphs_item-microsite_callout_card-field_para_callout_title_2'] = array(
     'bundle' => 'microsite_callout_card',
     'default_value' => NULL,
@@ -2077,7 +2078,7 @@ function gie_microsite_field_default_field_instances() {
   );
 
   // Exported field_instance:
-  // 'paragraphs_item-microsite_callout_card-field_para_callout_title_3'
+  // 'paragraphs_item-microsite_callout_card-field_para_callout_title_3'.
   $field_instances['paragraphs_item-microsite_callout_card-field_para_callout_title_3'] = array(
     'bundle' => 'microsite_callout_card',
     'default_value' => NULL,
@@ -2160,7 +2161,7 @@ function gie_microsite_field_default_field_instances() {
   );
 
   // Exported field_instance:
-  // 'paragraphs_item-microsite_highlight-field_para_highlight_image'
+  // 'paragraphs_item-microsite_highlight-field_para_highlight_image'.
   $field_instances['paragraphs_item-microsite_highlight-field_para_highlight_image'] = array(
     'bundle' => 'microsite_highlight',
     'deleted' => 0,
@@ -2231,7 +2232,7 @@ function gie_microsite_field_default_field_instances() {
   );
 
   // Exported field_instance:
-  // 'paragraphs_item-microsite_highlight-field_para_highlight_text'
+  // 'paragraphs_item-microsite_highlight-field_para_highlight_text'.
   $field_instances['paragraphs_item-microsite_highlight-field_para_highlight_text'] = array(
     'bundle' => 'microsite_highlight',
     'default_value' => NULL,
@@ -2319,7 +2320,7 @@ function gie_microsite_field_default_field_instances() {
   );
 
   // Exported field_instance:
-  // 'paragraphs_item-microsite_news_slider-field_para_slider_content'
+  // 'paragraphs_item-microsite_news_slider-field_para_slider_content'.
   $field_instances['paragraphs_item-microsite_news_slider-field_para_slider_content'] = array(
     'bundle' => 'microsite_news_slider',
     'default_value' => NULL,
@@ -2364,7 +2365,7 @@ function gie_microsite_field_default_field_instances() {
   );
 
   // Exported field_instance:
-  // 'paragraphs_item-microsite_news_slider-field_para_slider_title'
+  // 'paragraphs_item-microsite_news_slider-field_para_slider_title'.
   $field_instances['paragraphs_item-microsite_news_slider-field_para_slider_title'] = array(
     'bundle' => 'microsite_news_slider',
     'default_value' => NULL,
@@ -2450,7 +2451,7 @@ function gie_microsite_field_default_field_instances() {
   );
 
   // Exported field_instance:
-  // 'paragraphs_item-microsite_section_break_image-field_para_section_break_image'
+  // 'paragraphs_item-microsite_section_break_image-field_para_section_break_image'.
   $field_instances['paragraphs_item-microsite_section_break_image-field_para_section_break_image'] = array(
     'bundle' => 'microsite_section_break_image',
     'deleted' => 0,
@@ -2521,7 +2522,7 @@ function gie_microsite_field_default_field_instances() {
   );
 
   // Exported field_instance:
-  // 'paragraphs_item-microsite_section_break_image-field_para_section_break_title'
+  // 'paragraphs_item-microsite_section_break_image-field_para_section_break_title'.
   $field_instances['paragraphs_item-microsite_section_break_image-field_para_section_break_title'] = array(
     'bundle' => 'microsite_section_break_image',
     'default_value' => NULL,
@@ -2602,7 +2603,7 @@ function gie_microsite_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'paragraphs_item-microsite_text-field_background'
+  // Exported field_instance: 'paragraphs_item-microsite_text-field_background'.
   $field_instances['paragraphs_item-microsite_text-field_background'] = array(
     'bundle' => 'microsite_text',
     'default_value' => array(
@@ -2680,7 +2681,8 @@ function gie_microsite_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'paragraphs_item-microsite_text-field_orientation'
+  // Exported field_instance:
+  // 'paragraphs_item-microsite_text-field_orientation'.
   $field_instances['paragraphs_item-microsite_text-field_orientation'] = array(
     'bundle' => 'microsite_text',
     'default_value' => array(
@@ -2733,7 +2735,7 @@ function gie_microsite_field_default_field_instances() {
   );
 
   // Exported field_instance:
-  // 'paragraphs_item-microsite_text-field_paragraph_text'
+  // 'paragraphs_item-microsite_text-field_paragraph_text'.
   $field_instances['paragraphs_item-microsite_text-field_paragraph_text'] = array(
     'bundle' => 'microsite_text',
     'default_value' => NULL,
@@ -2967,7 +2969,7 @@ function gie_microsite_field_default_field_instances() {
   );
 
   // Exported field_instance:
-  // 'paragraphs_item-microsite_text_callout-field_background'
+  // 'paragraphs_item-microsite_text_callout-field_background'.
   $field_instances['paragraphs_item-microsite_text_callout-field_background'] = array(
     'bundle' => 'microsite_text_callout',
     'default_value' => array(
@@ -3020,7 +3022,7 @@ function gie_microsite_field_default_field_instances() {
   );
 
   // Exported field_instance:
-  // 'paragraphs_item-microsite_text_callout-field_para_callout_image'
+  // 'paragraphs_item-microsite_text_callout-field_para_callout_image'.
   $field_instances['paragraphs_item-microsite_text_callout-field_para_callout_image'] = array(
     'bundle' => 'microsite_text_callout',
     'deleted' => 0,
@@ -3091,7 +3093,7 @@ function gie_microsite_field_default_field_instances() {
   );
 
   // Exported field_instance:
-  // 'paragraphs_item-microsite_text_callout-field_para_callout_text'
+  // 'paragraphs_item-microsite_text_callout-field_para_callout_text'.
   $field_instances['paragraphs_item-microsite_text_callout-field_para_callout_text'] = array(
     'bundle' => 'microsite_text_callout',
     'default_value' => NULL,
@@ -3178,7 +3180,7 @@ function gie_microsite_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'taxonomy_term-background-description_field'
+  // Exported field_instance: 'taxonomy_term-background-description_field'.
   $field_instances['taxonomy_term-background-description_field'] = array(
     'bundle' => 'background',
     'default_value' => NULL,
@@ -3216,7 +3218,7 @@ function gie_microsite_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'taxonomy_term-background-name_field'
+  // Exported field_instance: 'taxonomy_term-background-name_field'.
   $field_instances['taxonomy_term-background-name_field'] = array(
     'bundle' => 'background',
     'default_value' => NULL,
@@ -3253,7 +3255,7 @@ function gie_microsite_field_default_field_instances() {
   );
 
   // Exported field_instance:
-  // 'taxonomy_term-block_orientation-description_field'
+  // 'taxonomy_term-block_orientation-description_field'.
   $field_instances['taxonomy_term-block_orientation-description_field'] = array(
     'bundle' => 'block_orientation',
     'default_value' => NULL,
@@ -3291,7 +3293,7 @@ function gie_microsite_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'taxonomy_term-block_orientation-name_field'
+  // Exported field_instance: 'taxonomy_term-block_orientation-name_field'.
   $field_instances['taxonomy_term-block_orientation-name_field'] = array(
     'bundle' => 'block_orientation',
     'default_value' => NULL,
@@ -3328,7 +3330,7 @@ function gie_microsite_field_default_field_instances() {
   );
 
   // Exported field_instance:
-  // 'taxonomy_term-microsite_header_options-description_field'
+  // 'taxonomy_term-microsite_header_options-description_field'.
   $field_instances['taxonomy_term-microsite_header_options-description_field'] = array(
     'bundle' => 'microsite_header_options',
     'default_value' => NULL,
@@ -3367,7 +3369,7 @@ function gie_microsite_field_default_field_instances() {
   );
 
   // Exported field_instance:
-  // 'taxonomy_term-microsite_header_options-name_field'
+  // 'taxonomy_term-microsite_header_options-name_field'.
   $field_instances['taxonomy_term-microsite_header_options-name_field'] = array(
     'bundle' => 'microsite_header_options',
     'default_value' => NULL,
@@ -3403,7 +3405,8 @@ function gie_microsite_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'taxonomy_term-text_orientation-description_field'
+  // Exported field_instance:
+  // 'taxonomy_term-text_orientation-description_field'.
   $field_instances['taxonomy_term-text_orientation-description_field'] = array(
     'bundle' => 'text_orientation',
     'default_value' => NULL,
@@ -3441,7 +3444,7 @@ function gie_microsite_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'taxonomy_term-text_orientation-name_field'
+  // Exported field_instance: 'taxonomy_term-text_orientation-name_field'.
   $field_instances['taxonomy_term-text_orientation-name_field'] = array(
     'bundle' => 'text_orientation',
     'default_value' => NULL,
