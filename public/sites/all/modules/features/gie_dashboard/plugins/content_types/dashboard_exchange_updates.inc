@@ -49,34 +49,31 @@ function dashboard_whats_new_exchange_updates_render() {
   // Render block
   $block = new stdClass();
 
-  $innovations = gie_homepage_sitewide_summary_generator('innovations');
-  $funding = gie_homepage_sitewide_summary_generator('funding');
-  $users = gie_homepage_sitewide_summary_generator('users');
-  $orgs =gie_homepage_sitewide_summary_generator('orgs');
+  $results = gie_homepage_sitewide_summary_generator(array('innovations' => array(), 'funding' => array(), 'users' => array(), 'orgs' => array()));
 
   $block->content = '<h2 class="pane__title">' . strtoupper(t('Exchange at a Glance')) . '</h2>
   <div class="view view--data-points">
 <div class=" views-row">
 <article about="/node/4040">
-    <div class="data-point data-point--org"><a href="/organizations">' .$orgs . '<span>Organizations</span></a></div>
+    <div class="data-point data-point--org"><a href="/organizations">' . $results['orgs'] . '<span>Organizations</span></a></div>
 </article>
 </div>
 
 <div class=" views-row">
 <article about="/node/30">
-    <div class="data-point data-point--funding"><a href="/funding">' . $funding . '<span>Available</span></a></div>
+    <div class="data-point data-point--funding"><a href="/funding">' . $results['funding'] . '<span>Available</span></a></div>
 </article>
 </div>
 
 <div class=" views-row">
 <article about="/node/29">
-    <div class="data-point data-point--user"><a href="/members">' . $users . '<span>Collaborators</span></a></div>
+    <div class="data-point data-point--user"><a href="/members">' . $results['users'] . '<span>Collaborators</span></a></div>
 </article>
 </div>
 
 <div class=" views-row">
 <article about="/node/28">
-    <div class="data-point data-point--innovation"><a href="/innovations">' . $innovations . '<span>Innovations</span></a></div>
+    <div class="data-point data-point--innovation"><a href="/innovations">' . $results['innovations'] . '<span>Innovations</span></a></div>
 </article>
 </div>
 </div>';
