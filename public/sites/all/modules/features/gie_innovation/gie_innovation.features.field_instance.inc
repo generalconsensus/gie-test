@@ -545,7 +545,7 @@ function gie_innovation_field_default_field_instances() {
         ),
       ),
       'type' => 'addressfield_standard',
-      'weight' => 9,
+      'weight' => 11,
     ),
   );
 
@@ -770,7 +770,7 @@ function gie_innovation_field_default_field_instances() {
         'apply_chosen' => 1,
       ),
       'type' => 'options_select',
-      'weight' => 11,
+      'weight' => 9,
     ),
   );
 
@@ -884,7 +884,7 @@ function gie_innovation_field_default_field_instances() {
       'module' => 'html5_tools',
       'settings' => array(),
       'type' => 'numberfield',
-      'weight' => 35,
+      'weight' => 13,
     ),
   );
 
@@ -1012,7 +1012,7 @@ function gie_innovation_field_default_field_instances() {
       'module' => 'html5_tools',
       'settings' => array(),
       'type' => 'numberfield',
-      'weight' => 36,
+      'weight' => 14,
     ),
   );
 
@@ -1134,7 +1134,7 @@ function gie_innovation_field_default_field_instances() {
         'apply_chosen' => 1,
       ),
       'type' => 'options_select',
-      'weight' => 37,
+      'weight' => 5,
     ),
   );
 
@@ -1321,7 +1321,7 @@ function gie_innovation_field_default_field_instances() {
         'rows' => 3,
       ),
       'type' => 'text_textarea',
-      'weight' => 8,
+      'weight' => 3,
     ),
   );
 
@@ -1470,7 +1470,7 @@ function gie_innovation_field_default_field_instances() {
         'rows' => 5,
       ),
       'type' => 'text_textarea',
-      'weight' => 29,
+      'weight' => 5,
     ),
   );
 
@@ -1827,7 +1827,7 @@ function gie_innovation_field_default_field_instances() {
       'module' => 'html5_tools',
       'settings' => array(),
       'type' => 'numberfield',
-      'weight' => 33,
+      'weight' => 12,
     ),
   );
 
@@ -1991,7 +1991,7 @@ Using the selector below, highlight the area of the image you would like to feat
         'progress_indicator' => 'throbber',
       ),
       'type' => 'image_image',
-      'weight' => 5,
+      'weight' => 2,
     ),
   );
 
@@ -2140,7 +2140,7 @@ Using the selector below, highlight the area of the image you would like to feat
         'rows' => 5,
       ),
       'type' => 'text_textarea',
-      'weight' => 31,
+      'weight' => 10,
     ),
   );
 
@@ -2262,7 +2262,7 @@ Using the selector below, highlight the area of the image you would like to feat
         'apply_chosen' => 1,
       ),
       'type' => 'options_select',
-      'weight' => 38,
+      'weight' => 6,
     ),
   );
 
@@ -2390,7 +2390,7 @@ Using the selector below, highlight the area of the image you would like to feat
       'module' => 'html5_tools',
       'settings' => array(),
       'type' => 'numberfield',
-      'weight' => 30,
+      'weight' => 33,
     ),
   );
 
@@ -2518,7 +2518,7 @@ Using the selector below, highlight the area of the image you would like to feat
       'module' => 'html5_tools',
       'settings' => array(),
       'type' => 'numberfield',
-      'weight' => 32,
+      'weight' => 30,
     ),
   );
 
@@ -2658,7 +2658,7 @@ Using the selector below, highlight the area of the image you would like to feat
       'module' => 'link',
       'settings' => array(),
       'type' => 'link_field',
-      'weight' => 33,
+      'weight' => 6,
     ),
   );
 
@@ -2767,7 +2767,7 @@ Using the selector below, highlight the area of the image you would like to feat
       'module' => 'field_collection',
       'settings' => array(),
       'type' => 'field_collection_embed',
-      'weight' => 12,
+      'weight' => 37,
     ),
   );
 
@@ -3048,7 +3048,7 @@ Using the selector below, highlight the area of the image you would like to feat
       'module' => 'html5_tools',
       'settings' => array(),
       'type' => 'numberfield',
-      'weight' => 29,
+      'weight' => 32,
     ),
   );
 
@@ -3309,7 +3309,7 @@ Using the selector below, highlight the area of the image you would like to feat
         'size' => 60,
       ),
       'type' => 'entityreference_autocomplete',
-      'weight' => 11,
+      'weight' => 13,
     ),
   );
 
@@ -3421,7 +3421,7 @@ Using the selector below, highlight the area of the image you would like to feat
         'display_label' => 1,
       ),
       'type' => 'options_onoff',
-      'weight' => 11,
+      'weight' => 12,
     ),
   );
 
@@ -3552,7 +3552,7 @@ Using the selector below, highlight the area of the image you would like to feat
         'size' => 60,
       ),
       'type' => 'entityreference_autocomplete',
-      'weight' => 12,
+      'weight' => 35,
     ),
   );
 
@@ -3666,7 +3666,7 @@ Using the selector below, highlight the area of the image you would like to feat
       'module' => 'html5_tools',
       'settings' => array(),
       'type' => 'numberfield',
-      'weight' => 34,
+      'weight' => 11,
     ),
   );
 
@@ -3896,7 +3896,7 @@ Using the selector below, highlight the area of the image you would like to feat
         'view_mode' => 'full',
       ),
       'type' => 'exchange_autocomplete',
-      'weight' => 11,
+      'weight' => 36,
     ),
   );
 
@@ -4282,7 +4282,7 @@ Using the selector below, highlight the area of the image you would like to feat
         'apply_chosen' => 1,
       ),
       'type' => 'options_select',
-      'weight' => 28,
+      'weight' => 8,
     ),
   );
 
@@ -4431,7 +4431,7 @@ Using the selector below, highlight the area of the image you would like to feat
         'rows' => 5,
       ),
       'type' => 'text_textarea',
-      'weight' => 26,
+      'weight' => 8,
     ),
   );
 
@@ -4580,7 +4580,7 @@ Using the selector below, highlight the area of the image you would like to feat
         'rows' => 5,
       ),
       'type' => 'text_textarea',
-      'weight' => 32,
+      'weight' => 7,
     ),
   );
 
@@ -4700,7 +4700,7 @@ Using the selector below, highlight the area of the image you would like to feat
         'view_mode' => 'full',
       ),
       'type' => 'exchange_autocomplete',
-      'weight' => 9,
+      'weight' => 14,
     ),
   );
 
@@ -4849,7 +4849,7 @@ Using the selector below, highlight the area of the image you would like to feat
         'rows' => 5,
       ),
       'type' => 'text_textarea',
-      'weight' => 30,
+      'weight' => 29,
     ),
   );
 
@@ -4999,7 +4999,7 @@ Using the selector below, highlight the area of the image you would like to feat
         'apply_chosen' => 1,
       ),
       'type' => 'options_select',
-      'weight' => 27,
+      'weight' => 8,
     ),
   );
 
@@ -5139,7 +5139,7 @@ Using the selector below, highlight the area of the image you would like to feat
       'module' => 'html5_tools',
       'settings' => array(),
       'type' => 'urlwidget',
-      'weight' => 39,
+      'weight' => 15,
     ),
   );
 
@@ -5288,7 +5288,7 @@ Using the selector below, highlight the area of the image you would like to feat
         'rows' => 5,
       ),
       'type' => 'text_textarea',
-      'weight' => 27,
+      'weight' => 9,
     ),
   );
 
@@ -5396,7 +5396,7 @@ Using the selector below, highlight the area of the image you would like to feat
         'apply_chosen' => 1,
       ),
       'type' => 'options_select',
-      'weight' => 26,
+      'weight' => 4,
     ),
   );
 
@@ -5527,7 +5527,7 @@ Using the selector below, highlight the area of the image you would like to feat
         'track_list' => 0,
       ),
       'type' => 'term_reference_tree',
-      'weight' => 24,
+      'weight' => 7,
     ),
   );
 
@@ -5649,7 +5649,7 @@ Using the selector below, highlight the area of the image you would like to feat
         'apply_chosen' => 1,
       ),
       'type' => 'options_select',
-      'weight' => 25,
+      'weight' => 9,
     ),
   );
 
@@ -5893,7 +5893,7 @@ Using the selector below, highlight the area of the image you would like to feat
         'size' => 60,
       ),
       'type' => 'text_textfield',
-      'weight' => 7,
+      'weight' => 1,
     ),
   );
 

@@ -192,19 +192,22 @@ function gie_innovation_strongarm() {
     'extra_fields' => array(
       'form' => array(
         'path' => array(
-          'weight' => '10',
+          'weight' => '17',
         ),
         'rabbit_hole' => array(
-          'weight' => '9',
+          'weight' => '18',
         ),
         'domain' => array(
-          'weight' => '8',
+          'weight' => '19',
         ),
         'metatags' => array(
-          'weight' => '12',
+          'weight' => '15',
+        ),
+        'redirect' => array(
+          'weight' => '20',
         ),
         'xmlsitemap' => array(
-          'weight' => '11',
+          'weight' => '16',
         ),
       ),
       'display' => array(
