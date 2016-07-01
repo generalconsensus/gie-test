@@ -98,7 +98,7 @@ function gie_data_viz_block_view($delta = '') {
  */
 function _gie_data_viz_get_elastic_url() {
   $servers = variable_get('search_api_override_servers');
-  $url = ($servers['elasticsearch']['options']['0']['host'] === 'localhost') ? 'http://localhost:9200' : 'http://search.gie.byf1.io';
+  $url = ($servers['elasticsearch']['options']['0']['host'] === 'localhost') ? 'http://localhost:9200' : 'https://' . $servers['elasticsearch']['options']['0']['host'];
   return $url;
 }
 
