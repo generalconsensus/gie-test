@@ -19,7 +19,6 @@ dependencies[] = options
 dependencies[] = pane
 dependencies[] = rabbit_hole
 dependencies[] = rh_node
-dependencies[] = splashify
 dependencies[] = strongarm
 dependencies[] = taxonomy
 dependencies[] = text

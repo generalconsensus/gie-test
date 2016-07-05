@@ -399,3 +399,11 @@ function gie_general_update_7038() {
 function gie_user_update_7039() {
   module_disable(array('batch_add_terms'), TRUE);
 }
+
+/**
+ * [#850] Disable splashify
+ */
+function gie_user_update_7040() {
+  module_disable(array('splashify'), TRUE);
+}
+
