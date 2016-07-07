@@ -313,6 +313,77 @@ function gie_innovation_field_group_info() {
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
   $field_group->api_version = 1;
+  $field_group->identifier = 'group_five|node|innovation|form';
+  $field_group->group_name = 'group_five';
+  $field_group->entity_type = 'node';
+  $field_group->bundle = 'innovation';
+  $field_group->mode = 'form';
+  $field_group->parent_name = '';
+  $field_group->data = array(
+    'label' => 'Step Five',
+    'weight' => '4',
+    'children' => array(
+      0 => 'field_innovation_references',
+      1 => 'field_innovation_resources',
+      2 => 'field_innovation_testers',
+      3 => 'field_innovation_evidence_avail',
+      4 => 'field_innovation_non_references',
+      5 => 'field_innovation_proof_evidence',
+      6 => 'field_innovation_lives_impacted',
+      7 => 'field_innovation_lives_saved',
+      8 => 'field_innovation_potent_lives_im',
+      9 => 'field_innovation_potent_lives_sa',
+    ),
+    'format_type' => 'multipage',
+    'format_settings' => array(
+      'formatter' => 'no-start',
+      'instance_settings' => array(
+        'description' => '',
+        'classes' => 'group-five',
+        'required_fields' => 1,
+      ),
+    ),
+  );
+  $field_groups['group_five|node|innovation|form'] = $field_group;
+
+  $field_group = new stdClass();
+  $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
+  $field_group->api_version = 1;
+  $field_group->identifier = 'group_four|node|innovation|form';
+  $field_group->group_name = 'group_four';
+  $field_group->entity_type = 'node';
+  $field_group->bundle = 'innovation';
+  $field_group->mode = 'form';
+  $field_group->parent_name = '';
+  $field_group->data = array(
+    'label' => 'Step Four',
+    'weight' => '3',
+    'children' => array(
+      0 => 'field_innovation_funders',
+      1 => 'field_innovation_cost_bene',
+      2 => 'field_innovation_funding_goal',
+      3 => 'field_innovation_raised',
+      4 => 'field_innovation_cost_per_unit',
+    ),
+    'format_type' => 'html-element',
+    'format_settings' => array(
+      'formatter' => '',
+      'instance_settings' => array(
+        'classes' => 'group-four field-group-multistep',
+        'element' => 'div',
+        'show_label' => 0,
+        'label_element' => 'div',
+        'attributes' => '',
+        'required_fields' => 1,
+        'id' => '',
+      ),
+    ),
+  );
+  $field_groups['group_four|node|innovation|form'] = $field_group;
+
+  $field_group = new stdClass();
+  $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
+  $field_group->api_version = 1;
   $field_group->identifier = 'group_innovation_about|node|innovation|form';
   $field_group->group_name = 'group_innovation_about';
   $field_group->entity_type = 'node';
@@ -321,12 +392,8 @@ function gie_innovation_field_group_info() {
   $field_group->parent_name = '';
   $field_group->data = array(
     'label' => 'Tell us about your innovation',
-    'weight' => '0',
-    'children' => array(
-      0 => 'title_field',
-      1 => 'field_innovation_desc',
-      2 => 'field_innovation_address',
-    ),
+    'weight' => '28',
+    'children' => array(),
     'format_type' => 'div',
     'format_settings' => array(
       'label' => 'Tell us about your innovation',
@@ -356,18 +423,8 @@ function gie_innovation_field_group_info() {
   $field_group->parent_name = '';
   $field_group->data = array(
     'label' => 'Tell us more about your innovation',
-    'weight' => '4',
-    'children' => array(
-      0 => 'field_innovation_evidence',
-      1 => 'field_innovation_impact',
-      2 => 'field_innovation_news',
-      3 => 'field_innovation_resources',
-      4 => 'field_innovation_steps',
-      5 => 'field_innovation_testers',
-      6 => 'field_innovation_works',
-      7 => 'field_innovation_evidence_avail',
-      8 => 'field_innovation_status_update',
-    ),
+    'weight' => '21',
+    'children' => array(),
     'format_type' => 'div',
     'format_settings' => array(
       'label' => 'Tell us more about your innovation',
@@ -397,11 +454,8 @@ function gie_innovation_field_group_info() {
   $field_group->parent_name = '';
   $field_group->data = array(
     'label' => 'Do you have evidence or supporting documents for your innovation?',
-    'weight' => '9',
-    'children' => array(
-      0 => 'field_innovation_proof_avail',
-      1 => 'field_innovation_proof_evidence',
-    ),
+    'weight' => '25',
+    'children' => array(),
     'format_type' => 'div',
     'format_settings' => array(
       'label' => 'Do you have evidence or supporting documents for your innovation?',
@@ -431,11 +485,8 @@ function gie_innovation_field_group_info() {
   $field_group->parent_name = '';
   $field_group->data = array(
     'label' => 'How can the exchange help you with your innovation?',
-    'weight' => '2',
-    'children' => array(
-      0 => 'field_innovation_poc',
-      1 => 'field_innovation_assistance',
-    ),
+    'weight' => '27',
+    'children' => array(),
     'format_type' => 'div',
     'format_settings' => array(
       'label' => 'How can the exchange help you with your innovation?',
@@ -465,11 +516,8 @@ function gie_innovation_field_group_info() {
   $field_group->parent_name = '';
   $field_group->data = array(
     'label' => 'Add photos and videos about your innovation',
-    'weight' => '1',
-    'children' => array(
-      0 => 'field_innovation_assets',
-      1 => 'field_innovation_image',
-    ),
+    'weight' => '26',
+    'children' => array(),
     'format_type' => 'div',
     'format_settings' => array(
       'label' => 'Add photos and videos about your innovation',
@@ -499,12 +547,8 @@ function gie_innovation_field_group_info() {
   $field_group->parent_name = '';
   $field_group->data = array(
     'label' => 'Do you have references for your innovation available?',
-    'weight' => '6',
-    'children' => array(
-      0 => 'field_innovation_references',
-      1 => 'field_innovation_non_references',
-      2 => 'field_innovation_ref_avail',
-    ),
+    'weight' => '24',
+    'children' => array(),
     'format_type' => 'div',
     'format_settings' => array(
       'label' => 'Do you have references for your innovation available?',
@@ -609,25 +653,8 @@ function gie_innovation_field_group_info() {
   $field_group->parent_name = '';
   $field_group->data = array(
     'label' => 'Provide some key stats about your innovation',
-    'weight' => '3',
-    'children' => array(
-      0 => 'field_innovation_created',
-      1 => 'field_innovation_implemented',
-      2 => 'field_innovation_stage',
-      3 => 'field_innovation_type',
-      4 => 'field_innovation_cost_bene',
-      5 => 'field_innovation_funding_goal',
-      6 => 'field_innovation_raised',
-      7 => 'field_innovation_cost_per_unit',
-      8 => 'field_innovation_website',
-      9 => 'field_term_sector',
-      10 => 'field_term_topic',
-      11 => 'field_term_region',
-      12 => 'field_innovation_lives_impacted',
-      13 => 'field_innovation_lives_saved',
-      14 => 'field_innovation_potent_lives_im',
-      15 => 'field_innovation_potent_lives_sa',
-    ),
+    'weight' => '23',
+    'children' => array(),
     'format_type' => 'div',
     'format_settings' => array(
       'label' => 'Provide some key stats about your innovation',
@@ -690,13 +717,8 @@ function gie_innovation_field_group_info() {
   $field_group->parent_name = '';
   $field_group->data = array(
     'label' => 'Tell us about your innovation team and affiliated organizations',
-    'weight' => '5',
-    'children' => array(
-      0 => 'field_innovation_funders',
-      1 => 'field_innovation_program',
-      2 => 'field_innovation_team',
-      3 => 'field_innovation_related_org',
-    ),
+    'weight' => '22',
+    'children' => array(),
     'format_type' => 'div',
     'format_settings' => array(
       'label' => 'Tell us about your innovation team and affiliated organizations',
@@ -715,6 +737,113 @@ function gie_innovation_field_group_info() {
   );
   $field_groups['group_innovation_team|node|innovation|form'] = $field_group;
 
+  $field_group = new stdClass();
+  $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
+  $field_group->api_version = 1;
+  $field_group->identifier = 'group_one|node|innovation|form';
+  $field_group->group_name = 'group_one';
+  $field_group->entity_type = 'node';
+  $field_group->bundle = 'innovation';
+  $field_group->mode = 'form';
+  $field_group->parent_name = '';
+  $field_group->data = array(
+    'label' => 'Step One',
+    'weight' => '0',
+    'children' => array(
+      0 => 'title_field',
+      1 => 'field_innovation_created',
+      2 => 'field_innovation_desc',
+      3 => 'field_innovation_implemented',
+      4 => 'field_innovation_stage',
+      5 => 'field_innovation_assistance',
+      6 => 'field_term_sector',
+      7 => 'field_term_region',
+      8 => 'field_innovation_image',
+    ),
+    'format_type' => 'html-element',
+    'format_settings' => array(
+      'formatter' => '',
+      'instance_settings' => array(
+        'classes' => 'group-one field-group-multistep',
+        'element' => 'div',
+        'show_label' => 0,
+        'label_element' => 'div',
+        'attributes' => '',
+        'required_fields' => 1,
+        'id' => '',
+      ),
+    ),
+  );
+  $field_groups['group_one|node|innovation|form'] = $field_group;
+
+  $field_group = new stdClass();
+  $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
+  $field_group->api_version = 1;
+  $field_group->identifier = 'group_three|node|innovation|form';
+  $field_group->group_name = 'group_three';
+  $field_group->entity_type = 'node';
+  $field_group->bundle = 'innovation';
+  $field_group->mode = 'form';
+  $field_group->parent_name = '';
+  $field_group->data = array(
+    'label' => 'Step Three',
+    'weight' => '2',
+    'children' => array(
+      0 => 'field_innovation_program',
+      1 => 'field_innovation_team',
+      2 => 'field_innovation_website',
+      3 => 'field_innovation_related_org',
+    ),
+    'format_type' => 'html-element',
+    'format_settings' => array(
+      'formatter' => '',
+      'instance_settings' => array(
+        'classes' => 'group-three field-group-multistep',
+        'element' => 'div',
+        'show_label' => 0,
+        'label_element' => 'div',
+        'attributes' => '',
+        'required_fields' => 1,
+        'id' => '',
+      ),
+    ),
+  );
+  $field_groups['group_three|node|innovation|form'] = $field_group;
+
+  $field_group = new stdClass();
+  $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
+  $field_group->api_version = 1;
+  $field_group->identifier = 'group_two|node|innovation|form';
+  $field_group->group_name = 'group_two';
+  $field_group->entity_type = 'node';
+  $field_group->bundle = 'innovation';
+  $field_group->mode = 'form';
+  $field_group->parent_name = '';
+  $field_group->data = array(
+    'label' => 'Step Two',
+    'weight' => '1',
+    'children' => array(
+      0 => 'field_innovation_assets',
+      1 => 'field_innovation_impact',
+      2 => 'field_innovation_works',
+      3 => 'field_innovation_status_update',
+    ),
+    'format_type' => 'html-element',
+    'format_settings' => array(
+      'formatter' => '',
+      'instance_settings' => array(
+        'classes' => 'group-two field-group-multistep',
+        'element' => 'div',
+        'show_label' => 0,
+        'label_element' => 'div',
+        'attributes' => '',
+        'required_fields' => 1,
+        'id' => '',
+      ),
+    ),
+  );
+  $field_groups['group_two|node|innovation|form'] = $field_group;
+
   // Translatables
   // Included for use with string extractors like potx.
   t('Add photos and videos about your innovation');
@@ -731,6 +860,11 @@ function gie_innovation_field_group_info() {
   t('Innovation Stats First');
   t('Innovation Stats Second');
   t('Provide some key stats about your innovation');
+  t('Step Five');
+  t('Step Four');
+  t('Step One');
+  t('Step Three');
+  t('Step Two');
   t('Tell us about your innovation');
   t('Tell us about your innovation team and affiliated organizations');
   t('Tell us more about your innovation');
