@@ -1961,7 +1961,7 @@ function gie_taxonomies_views_default_views() {
   /* Display: YouthPower Issues */
   $handler = $view->new_display('panel_pane', 'YouthPower Issues', 'yp_issues_pane');
   $handler->display->display_options['defaults']['title'] = FALSE;
-  $handler->display->display_options['title'] = 'Related YouthPower Issues';
+  $handler->display->display_options['title'] = 'Related Topics';
   $handler->display->display_options['defaults']['arguments'] = FALSE;
   /* Contextual filter: Taxonomy term: Parent term */
   $handler->display->display_options['arguments']['parent']['id'] = 'parent';
