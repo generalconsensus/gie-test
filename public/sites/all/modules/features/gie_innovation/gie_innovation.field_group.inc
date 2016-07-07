@@ -334,14 +334,10 @@ function gie_innovation_field_group_info() {
       8 => 'field_innovation_potent_lives_im',
       9 => 'field_innovation_potent_lives_sa',
     ),
-    'format_type' => 'multipage',
+    'format_type' => 'multistep',
     'format_settings' => array(
-      'formatter' => 'no-start',
-      'instance_settings' => array(
-        'description' => '',
-        'classes' => 'group-five',
-        'required_fields' => 1,
-      ),
+      'formatter' => '',
+      'instance_settings' => 0,
     ),
   );
   $field_groups['group_five|node|innovation|form'] = $field_group;
@@ -365,18 +361,10 @@ function gie_innovation_field_group_info() {
       3 => 'field_innovation_raised',
       4 => 'field_innovation_cost_per_unit',
     ),
-    'format_type' => 'html-element',
+    'format_type' => 'multistep',
     'format_settings' => array(
       'formatter' => '',
-      'instance_settings' => array(
-        'classes' => 'group-four field-group-multistep',
-        'element' => 'div',
-        'show_label' => 0,
-        'label_element' => 'div',
-        'attributes' => '',
-        'required_fields' => 1,
-        'id' => '',
-      ),
+      'instance_settings' => 0,
     ),
   );
   $field_groups['group_four|node|innovation|form'] = $field_group;
@@ -760,18 +748,10 @@ function gie_innovation_field_group_info() {
       7 => 'field_term_region',
       8 => 'field_innovation_image',
     ),
-    'format_type' => 'html-element',
+    'format_type' => 'multistep',
     'format_settings' => array(
       'formatter' => '',
-      'instance_settings' => array(
-        'classes' => 'group-one field-group-multistep',
-        'element' => 'div',
-        'show_label' => 0,
-        'label_element' => 'div',
-        'attributes' => '',
-        'required_fields' => 1,
-        'id' => '',
-      ),
+      'instance_settings' => 0,
     ),
   );
   $field_groups['group_one|node|innovation|form'] = $field_group;
@@ -794,18 +774,10 @@ function gie_innovation_field_group_info() {
       2 => 'field_innovation_website',
       3 => 'field_innovation_related_org',
     ),
-    'format_type' => 'html-element',
+    'format_type' => 'multistep',
     'format_settings' => array(
       'formatter' => '',
-      'instance_settings' => array(
-        'classes' => 'group-three field-group-multistep',
-        'element' => 'div',
-        'show_label' => 0,
-        'label_element' => 'div',
-        'attributes' => '',
-        'required_fields' => 1,
-        'id' => '',
-      ),
+      'instance_settings' => 0,
     ),
   );
   $field_groups['group_three|node|innovation|form'] = $field_group;
@@ -828,18 +800,10 @@ function gie_innovation_field_group_info() {
       2 => 'field_innovation_works',
       3 => 'field_innovation_status_update',
     ),
-    'format_type' => 'html-element',
+    'format_type' => 'multistep',
     'format_settings' => array(
       'formatter' => '',
-      'instance_settings' => array(
-        'classes' => 'group-two field-group-multistep',
-        'element' => 'div',
-        'show_label' => 0,
-        'label_element' => 'div',
-        'attributes' => '',
-        'required_fields' => 1,
-        'id' => '',
-      ),
+      'instance_settings' => 0,
     ),
   );
   $field_groups['group_two|node|innovation|form'] = $field_group;
