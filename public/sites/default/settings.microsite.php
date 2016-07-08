@@ -589,8 +589,9 @@ $conf['search_api_override_servers'] = array(
   'elasticsearch' => array(
     'options' => array(
       '0' => array(
-        'host' => 'search-giexchange-kfthj2b3nazu44oiywqn5emn5i.us-east-1.es.amazonaws.com',
-        'port' => '80',
+        'host' => 'search.globalinnovationexchange.org',
+        'port' => '443',
+        'transport' => 'Https'
       ),
     ),
   ),

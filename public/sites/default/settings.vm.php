@@ -589,7 +589,9 @@ $conf['search_api_override_servers'] = array(
   'elasticsearch' => array(
     'options' => array(
       '0' => array(
-        'host' => 'localhost',
+        'host' => 'search.globalinnovationexchange.org',
+        'port' => '443',
+        'transport' => 'Https'
       ),
     ),
   ),
