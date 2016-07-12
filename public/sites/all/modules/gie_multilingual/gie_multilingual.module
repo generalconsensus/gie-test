@@ -1,7 +1,0 @@
-<?php
-/**
- * @file
- * Code for the Gie Multilingual feature.
- */
-
-include_once 'gie_multilingual.features.inc';
