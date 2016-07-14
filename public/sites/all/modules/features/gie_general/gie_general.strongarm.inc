@@ -503,9 +503,9 @@ function gie_general_strongarm() {
   $strongarm->api_version = 1;
   $strongarm->name = 'expire_menu_link_actions';
   $strongarm->value = array(
-    1 => 0,
-    2 => 0,
-    3 => 0,
+    1 => '1',
+    2 => '2',
+    3 => '3',
   );
   $export['expire_menu_link_actions'] = $strongarm;
 
