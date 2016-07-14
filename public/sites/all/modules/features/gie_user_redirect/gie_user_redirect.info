@@ -1,4 +1,0 @@
-name = GIE User Redirect
-core = 7.x
-package = GIE
-features[features_api][] = api:2
