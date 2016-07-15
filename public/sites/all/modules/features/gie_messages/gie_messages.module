@@ -298,9 +298,11 @@ function gie_messages_node_insert($node) {
           $user = entity_metadata_wrapper('user', $uid);
           // Get User Notifications frequency field
           $notifier_name = _gie_messages_get_notifier_name($user);
+          $user_fields = $user->value();
+          $innovation_rec =  !empty($user_fields->field_user_mail_innovation_rec) ? $user->field_user_mail_innovation_rec->value() : 0;
+          $funding_rec =  !empty($user_fields->field_user_mail_funding_rec) ? $user->field_user_mail_funding_rec->value() : 0;
           // Get Recommendation Notify field appropriate for the node content type
-          $notify_recommendation = ($node->type == 'innovation') ? $user->field_user_mail_innovation_rec->value()
-              : $user->field_user_mail_funding_rec->value();
+          $notify_recommendation = ($node->type == 'innovation') ? $innovation_rec : $funding_rec;
           if ($notifier_name == 'do_not_send' || !$notify_recommendation) {
             // add user to "do not send" list
             $do_not_send_list[] = $uid;
