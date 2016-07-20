@@ -1,0 +1,42 @@
+{
+  "generator-web-starter": {
+    "name": "DAI-USAID",
+    "repository": "git@github.com:forumone/DAI-USAID.git",
+    "plugins": [
+      "web-starter-drupal:web-starter",
+      "web-starter-gesso:web-starter",
+      "web-starter-capistrano:web-starter",
+      "web-starter-grunt:web-starter",
+      "web-starter-puppet:web-starter"
+    ],
+    "refspec": "1.1.x"
+  },
+  "generator-web-starter-gesso": {
+    "gessoDl": "https://ftp.drupal.org/files/projects/gesso-7.x-2.0.tar.gz",
+    "install_gesso": false,
+    "install_sass": true,
+    "sass": "Libsass",
+    "install_pattern_lab": true,
+    "install_pattern_lab_confirm": false
+  },
+  "generator-web-starter-drupal": {
+    "drupal_version": "7.50",
+    "features": true,
+    "cmi": false,
+    "drupal_theme": "",
+    "install_drupal": false
+  },
+  "generator-web-starter-capistrano": {
+    "deploy_via": "rsync",
+    "keep_releases": 3
+  },
+  "generator-web-starter-puppet": {
+    "host": "f1dev",
+    "vhost": "/vagrant/public",
+    "database": true,
+    "db_name": "web",
+    "db_user": "web",
+    "php_version": "php56u",
+    "solr": true
+  }
+}
