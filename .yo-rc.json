@@ -23,7 +23,7 @@
     "drupal_version": "7.50",
     "features": true,
     "cmi": false,
-    "drupal_theme": "",
+    "drupal_theme": "Gesso",
     "install_drupal": false
   },
   "generator-web-starter-capistrano": {
