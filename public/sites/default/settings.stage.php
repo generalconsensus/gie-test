@@ -671,7 +671,7 @@ $conf['s3fs_use_s3_for_public'] = 1;
  * Set Re-route email to enable to catch all local emails
  */
 $conf['reroute_email_enable'] = 1;
-#$conf['reroute_email_address'] = 'mburge@forumone.com, mdrayer@forumone.com, cchumley@forumone.com, mdrayer+test@forumone.com, dmcdermott@forumone.com, aklatsky@forumone.com';
+$conf['reroute_email_address'] = '';
 $conf['reroute_email_enable_message'] = 1;
 
 /**
@@ -686,9 +686,3 @@ $conf['environment_modules'] = array(
  * Set correct systlog identity
  */
 $conf['syslog_identity'] = 'gie_stage';
-
-/**
- * Set correct systlog identity
- */
-$conf['fastly_api_key'] = '';
-$conf['fastly_log_enabled'] = 0;

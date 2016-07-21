@@ -44,6 +44,7 @@ Vagrant.configure("2") do |config|
       nfs_exports += ["noac", "actimeo=0", "intr", "noacl", "lookupcache=none"]
       synched_opts[:bsd__nfs_options] = nfs_exports
     elsif (RUBY_PLATFORM =~ /linux/)
+      nfs_exports += ["all_squash"]
       synched_opts[:linux__nfs_options] = nfs_exports
     end
   	
@@ -90,6 +91,10 @@ Vagrant.configure("2") do |config|
   end
 
   config.ssh.forward_agent = true
+
+  # CentOS machines with Software Collections scripts (scl enable foo) have a misbehaving sudo that doesn't recognize flags.
+  # Override them to prevent cryptic errors about "line 8: -E: command not found"
+  config.ssh.sudo_command = "sudo %c"
 
   # Run any custom scripts before provisioning
   config.vm.provision :shell, :path => "puppet/shell/pre-provision.sh"
