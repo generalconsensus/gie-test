@@ -8,8 +8,7 @@ class GesUserMigration extends Migration {
     parent::__construct($arguments);
 
     // Create a MigrateSource object, which manages retrieving the input data.
-    // TODO: place csv elsewhere (maybe?). also rename CSV to actual filename.
-    $csv_path = DRUPAL_ROOT . '/' . drupal_get_path('module', 'gie_user_migrate') . '/assets/ges_user_sample.csv';
+    $csv_path = DRUPAL_ROOT . '/../tests/behat/files/ges_users_final.csv';
     $csv_options = array(
       'header_rows' => 1, // columns are denoted on top line of csv
       'embedded_newlines' => TRUE,
