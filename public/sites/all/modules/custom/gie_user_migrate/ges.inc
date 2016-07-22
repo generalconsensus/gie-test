@@ -43,6 +43,22 @@ class GesUserMigration extends Migration {
     $this->addFieldMapping('field_user_firstname','field_ges_firstname');
     $this->addFieldMapping('field_user_lastname','field_ges_lastname');
     $this->addFieldMapping('pass', 'password');
+    // text and URL fields
+    $this->addFieldMapping('field_user_twitter', 'field_ges_twitter');
+    $this->addFieldMapping('field_user_linkedin', 'field_ges_linkedin');
+    $this->addFieldMapping('field_user_facebook', 'field_ges_facebook');
+    $this->addFieldMapping('field_user_summary', 'field_ges_bio');
+    // address field
+    $this->addFieldMapping('field_user_address', 'field_ges_residence');
+    $this->addFieldMapping('field_user_address:locality', 'field_ges_city');
+    $this->addFieldMapping('field_user_address:administrative_area', 'field_ges_state');
+    // term fields
+    $this->addFieldMapping('field_user_company', 'field_ges_businessname');
+    $this->addFieldMapping('field_user_company:source_type')
+         ->defaultValue('tid');
+    $this->addFieldMapping('field_term_sector', 'field_ges_socialchallenge');
+    $this->addFieldMapping('field_term_sector:source_type')
+         ->defaultValue('tid');
 
     // set some default values
     $this->addFieldMapping('roles')
@@ -72,6 +88,30 @@ class GesUserMigration extends Migration {
     $password = user_password(12);
     $row->password = $password;
 
+    // set country code based on country name (field_ges_residence)
+    $country_code = _gie_user_migrate_convert_country_name_to_country_code($row->field_ges_residence);
+    $row->field_ges_residence = $country_code;
+
+    // set company term ID
+    $terms = taxonomy_get_term_by_name($row->field_ges_businessname, 'company');
+    $row->field_ges_businessname = key($terms);
+
+    // set sector term ID
+    $sector_terms = taxonomy_get_term_by_name($row->field_ges_socialchallenge, 'sector');
+    $row->field_ges_socialchallenge = key($sector_terms);
+
     return TRUE;
   }
+}
+
+/**
+ * Convert country name to ISO country code
+ *
+ * @param $country - country name. Can be of any case
+ */
+function _gie_user_migrate_convert_country_name_to_country_code($country) {
+  // Necessary for country_get_list().
+  require_once DRUPAL_ROOT . '/includes/locale.inc';
+  $countries = country_get_list();
+  return array_search(strtolower($country), array_map('strtolower', $countries));
 }
