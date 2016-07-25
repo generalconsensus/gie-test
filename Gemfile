@@ -2,12 +2,11 @@ source 'https://rubygems.org'
 gem 'capistrano', '3.4'
 gem 'net-ssh', '~>2.9.2'
 gem 'aws-sdk', '~> 2'
-gem 'rake'
+gem 'rake', '~>10.3'
 gem 'i18n', '0.6'
 gem 'mime-types', '1.25.1'
 gem 'tilt', '1.4'
 gem 'eventmachine', '0.12.10'
-gem 'json'
 
 
 # Load gem dependencies from the theme
