@@ -118,11 +118,11 @@ function _gie_microsite_contact_submit_alter($form, &$form_state) {
  * Implements hook_form_FORM_ID_alter().
  */
 function gie_microsite_form_menu_edit_menu_alter(&$form, &$form_state) {
-  $menus = variable_get('gie_microsite_domain_menu_filter', array('menu-microsite-menu' => ''));
+  $menus = variable_get('gie_microsite_domain_menu_filter', array('menu-microsite-menu'));
   $form['gie_microsite_domain_menu_filter'] = array(
     '#type' => 'checkbox',
     '#title' => t('Should the menu only show links for the specific domain you are on at the moment?'),
-    '#default_value' => isset($menus[$form['old_name']['#value']]),
+    '#default_value' => in_array($form['old_name']['#value'], $menus),
   );
 }
 
@@ -204,12 +204,13 @@ function gie_microsite_form_menu_overview_form_alter(&$form, &$form_state, $form
             if (!empty($domain_menu_access) && !in_array('d' . $_domain['domain_id'], $domain_menu_access)) {
               unset($form[$key]);
             }
-          } else {
+          }
+          else {
             unset($form[$key]);
           }
         }
       }
     }
-
+    $form['#empty_text'] = array();
   }
 }
