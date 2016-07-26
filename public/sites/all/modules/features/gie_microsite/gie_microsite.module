@@ -114,4 +114,103 @@ function _gie_microsite_contact_submit_alter($form, &$form_state) {
   $form_state['values']['mail'] = variable_get('site_mail', 'info@globalinnovationexchange.org');
 }
 
+/**
+ * Implements hook_form_FORM_ID_alter().
+ */
+function gie_microsite_form_menu_edit_menu_alter(&$form, &$form_state) {
+  $menus = variable_get('gie_microsite_domain_menu_filter', array('menu-microsite-menu'));
+  $form['gie_microsite_domain_menu_filter'] = array(
+    '#type' => 'checkbox',
+    '#title' => t('Should the menu only show links for the specific domain you are on at the moment?'),
+    '#default_value' => in_array($form['old_name']['#value'], $menus),
+  );
+}
 
+/**
+ * Add or remove a menu from the menu_block_menu_order variable.
+ *
+ * @param string $menu_name
+ *   A menu machine name.
+ * @param mixed $status
+ *   If $status evaluates to TRUE, the menu will be added. If $status evaluates
+ *   to FALSE, the menu will be removed.
+ */
+function gie_microsite_domain_menu_filter_set_menu($menu_name, $status) {
+  $menus = variable_get('gie_microsite_domain_menu_filter', array('menu-microsite-menu'));
+  if ($status && !isset($menus[$menu_name])) {
+    array_push($menus, $menu_name);
+    variable_set('gie_microsite_domain_menu_filter', $menus);
+  }
+  elseif (!$status && isset($menus[$menu_name])) {
+    unset($menus[$menu_name]);
+    variable_set('gie_microsite_domain_menu_filter', $menus);
+  }
+}
+
+/**
+ * Implements hook_menu_insert().
+ */
+function gie_microsite_menu_insert($menu) {
+  if (!empty($menu['gie_microsite_domain_menu_filter'])) {
+    gie_microsite_domain_menu_filter_set_menu($menu['menu_name'], TRUE);
+  }
+}
+
+/**
+ * Implements hook_menu_update().
+ */
+function gie_microsite_menu_update($menu) {
+  if (isset($menu['gie_microsite_domain_menu_filter'])) {
+    gie_microsite_domain_menu_filter_set_menu($menu['menu_name'], $menu['gie_microsite_domain_menu_filter']);
+  }
+}
+
+/**
+ * Implements hook_menu_delete().
+ */
+function gie_microsite_menu_delete($menu) {
+  // Delete menu block variables.
+  foreach (variable_get('menu_block_ids', array()) as $delta) {
+    $config = menu_block_get_config($delta);
+    if ($config['menu_name'] === $menu['menu_name']) {
+      menu_block_delete($delta);
+    }
+  }
+
+  gie_microsite_domain_menu_filter_set_menu($menu['menu_name'], FALSE);
+}
+
+/**
+ * Implements hook_form_BASE_FORM_ID_alter().
+ */
+function gie_microsite_form_menu_overview_form_alter(&$form, &$form_state, $form_id) {
+  // Get the current domain
+  global $_domain;
+
+  // If we can't determine the domain we are on, don't hide anything
+  if (empty($_domain)) {
+    return;
+  }
+
+  // Grab menus that will be domain filtered on
+  $menus = variable_get('gie_microsite_domain_menu_filter');
+
+  if (in_array($form['#menu']['menu_name'], $menus)) {
+    foreach ($form as $key => $menu_item) {
+      if (strpos($key, 'mlid') > -1) {
+        if (!empty($menu_item['#item'])) {
+          if (!empty($menu_item['#item']['options']) && !empty($menu_item['#item']['options']['domain_menu_access']) && !empty($menu_item['#item']['options']['domain_menu_access']['show'])) {
+            $domain_menu_access = $menu_item['#item']['options']['domain_menu_access']['show'];
+            if (!empty($domain_menu_access) && !in_array('d' . $_domain['domain_id'], $domain_menu_access)) {
+              unset($form[$key]);
+            }
+          }
+          else {
+            unset($form[$key]);
+          }
+        }
+      }
+    }
+    $form['#empty_text'] = array();
+  }
+}
