@@ -198,8 +198,8 @@ function gie_microsite_form_menu_overview_form_alter(&$form, &$form_state, $form
   if (in_array($form['#menu']['menu_name'], $menus)) {
     foreach ($form as $key => $menu_item) {
       if (strpos($key, 'mlid') > -1) {
-        if (!empty($menu_item['#item']) && !empty($menu_item['#item']['options'])) {
-          if (!empty($menu_item['#item']['options']['domain_menu_access']) && !empty($menu_item['#item']['options']['domain_menu_access']['show'])) {
+        if (!empty($menu_item['#item'])) {
+          if (!empty($menu_item['#item']['options']) && !empty($menu_item['#item']['options']['domain_menu_access']) && !empty($menu_item['#item']['options']['domain_menu_access']['show'])) {
             $domain_menu_access = $menu_item['#item']['options']['domain_menu_access']['show'];
             if (!empty($domain_menu_access) && !in_array('d' . $_domain['domain_id'], $domain_menu_access)) {
               unset($form[$key]);
