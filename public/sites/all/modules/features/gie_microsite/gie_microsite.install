@@ -77,3 +77,10 @@ function gie_microsite_update_7004() {
     module_disable(array('domain_integration_rules'), TRUE);
     module_disable(array('rules'), TRUE);
 }
+
+/**
+ * Enable domain menu filter
+ */
+function gie_microsite_update_7005() {
+    variable_get('gie_microsite_domain_menu_filter', array('menu-microsite-menu'));
+}
