@@ -82,5 +82,6 @@ function gie_microsite_update_7004() {
  * Enable domain menu filter
  */
 function gie_microsite_update_7005() {
+    cache_clear_all();
     variable_get('gie_microsite_domain_menu_filter', array('menu-microsite-menu'));
 }
