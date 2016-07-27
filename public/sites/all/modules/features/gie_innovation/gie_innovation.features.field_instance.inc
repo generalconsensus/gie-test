@@ -1438,6 +1438,8 @@ function gie_innovation_field_default_field_instances() {
           'comments_filtered' => 0,
           'filtered_html' => 'filtered_html',
           'full_html' => 0,
+          'long_form_filtered' => 0,
+          'long_form_full' => 0,
           'plain_text' => 0,
         ),
         'allowed_formats_toggle' => 1,
@@ -1453,6 +1455,12 @@ function gie_innovation_field_default_field_instances() {
             'full_html' => array(
               'weight' => 1,
             ),
+            'long_form_filtered' => array(
+              'weight' => 0,
+            ),
+            'long_form_full' => array(
+              'weight' => 0,
+            ),
             'plain_text' => array(
               'weight' => 10,
             ),
@@ -1467,6 +1475,10 @@ function gie_innovation_field_default_field_instances() {
       'active' => 1,
       'module' => 'text',
       'settings' => array(
+        'maxlength_js' => '',
+        'maxlength_js_enforce' => 0,
+        'maxlength_js_label' => 'Content limited to @limit characters, remaining: <strong>@remaining</strong>',
+        'maxlength_js_truncate_html' => 0,
         'rows' => 5,
       ),
       'type' => 'text_textarea',
@@ -4554,14 +4566,14 @@ Using the selector below, highlight the area of the image you would like to feat
     'settings' => array(
       'better_formats' => array(
         'allowed_formats' => array(
-          'comments_filtered' => 'comments_filtered',
+          'comments_filtered' => 0,
           'filtered_html' => 'filtered_html',
-          'full_html' => 'full_html',
-          'long_form_filtered' => 'long_form_filtered',
-          'long_form_full' => 'long_form_full',
-          'plain_text' => 'plain_text',
+          'full_html' => 0,
+          'long_form_filtered' => 0,
+          'long_form_full' => 0,
+          'plain_text' => 0,
         ),
-        'allowed_formats_toggle' => 0,
+        'allowed_formats_toggle' => 1,
         'default_order_toggle' => 0,
         'default_order_wrapper' => array(
           'formats' => array(
@@ -4587,7 +4599,7 @@ Using the selector below, highlight the area of the image you would like to feat
         ),
       ),
       'description_display' => 'after',
-      'text_processing' => 0,
+      'text_processing' => 1,
       'user_register_form' => FALSE,
     ),
     'widget' => array(
@@ -5114,14 +5126,14 @@ Using the selector below, highlight the area of the image you would like to feat
     'settings' => array(
       'better_formats' => array(
         'allowed_formats' => array(
-          'comments_filtered' => 'comments_filtered',
+          'comments_filtered' => 0,
           'filtered_html' => 'filtered_html',
-          'full_html' => 'full_html',
-          'long_form_filtered' => 'long_form_filtered',
-          'long_form_full' => 'long_form_full',
-          'plain_text' => 'plain_text',
+          'full_html' => 0,
+          'long_form_filtered' => 0,
+          'long_form_full' => 0,
+          'plain_text' => 0,
         ),
-        'allowed_formats_toggle' => 0,
+        'allowed_formats_toggle' => 1,
         'default_order_toggle' => 0,
         'default_order_wrapper' => array(
           'formats' => array(
@@ -5147,7 +5159,7 @@ Using the selector below, highlight the area of the image you would like to feat
         ),
       ),
       'description_display' => 'after',
-      'text_processing' => 0,
+      'text_processing' => 1,
       'user_register_form' => FALSE,
     ),
     'widget' => array(
