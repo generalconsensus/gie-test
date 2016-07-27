@@ -31,25 +31,6 @@ function gie_innovation_field_default_field_bases() {
     'type' => 'text_long',
   );
 
-  // Exported field_base: 'field_grant_activities'.
-  $field_bases['field_grant_activities'] = array(
-    'active' => 1,
-    'cardinality' => 1,
-    'deleted' => 0,
-    'entity_types' => array(),
-    'field_name' => 'field_grant_activities',
-    'indexes' => array(
-      'format' => array(
-        0 => 'format',
-      ),
-    ),
-    'locked' => 0,
-    'module' => 'text',
-    'settings' => array(),
-    'translatable' => 0,
-    'type' => 'text_long',
-  );
-
   // Exported field_base: 'field_innovation_acquisition'.
   $field_bases['field_innovation_acquisition'] = array(
     'active' => 1,
@@ -285,31 +266,6 @@ function gie_innovation_field_default_field_bases() {
     'deleted' => 0,
     'entity_types' => array(),
     'field_name' => 'field_innovation_evidence_avail',
-    'indexes' => array(
-      'value' => array(
-        0 => 'value',
-      ),
-    ),
-    'locked' => 0,
-    'module' => 'list',
-    'settings' => array(
-      'allowed_values' => array(
-        0 => 'No',
-        1 => 'Yes',
-      ),
-      'allowed_values_function' => '',
-    ),
-    'translatable' => 0,
-    'type' => 'list_boolean',
-  );
-
-  // Exported field_base: 'field_innovation_for_sale'.
-  $field_bases['field_innovation_for_sale'] = array(
-    'active' => 1,
-    'cardinality' => 1,
-    'deleted' => 0,
-    'entity_types' => array(),
-    'field_name' => 'field_innovation_for_sale',
     'indexes' => array(
       'value' => array(
         0 => 'value',
@@ -648,31 +604,6 @@ function gie_innovation_field_default_field_bases() {
     'type' => 'entityreference',
   );
 
-  // Exported field_base: 'field_innovation_proof_avail'.
-  $field_bases['field_innovation_proof_avail'] = array(
-    'active' => 1,
-    'cardinality' => 1,
-    'deleted' => 0,
-    'entity_types' => array(),
-    'field_name' => 'field_innovation_proof_avail',
-    'indexes' => array(
-      'value' => array(
-        0 => 'value',
-      ),
-    ),
-    'locked' => 0,
-    'module' => 'list',
-    'settings' => array(
-      'allowed_values' => array(
-        0 => '',
-        1 => '',
-      ),
-      'allowed_values_function' => '',
-    ),
-    'translatable' => 0,
-    'type' => 'list_boolean',
-  );
-
   // Exported field_base: 'field_innovation_proof_evidence'.
   $field_bases['field_innovation_proof_evidence'] = array(
     'active' => 1,
@@ -719,31 +650,6 @@ function gie_innovation_field_default_field_bases() {
     'settings' => array(),
     'translatable' => 0,
     'type' => 'number_integer',
-  );
-
-  // Exported field_base: 'field_innovation_ref_avail'.
-  $field_bases['field_innovation_ref_avail'] = array(
-    'active' => 1,
-    'cardinality' => 1,
-    'deleted' => 0,
-    'entity_types' => array(),
-    'field_name' => 'field_innovation_ref_avail',
-    'indexes' => array(
-      'value' => array(
-        0 => 'value',
-      ),
-    ),
-    'locked' => 0,
-    'module' => 'list',
-    'settings' => array(
-      'allowed_values' => array(
-        0 => 'No',
-        1 => 'Yes',
-      ),
-      'allowed_values_function' => '',
-    ),
-    'translatable' => 0,
-    'type' => 'list_boolean',
   );
 
   // Exported field_base: 'field_innovation_references'.

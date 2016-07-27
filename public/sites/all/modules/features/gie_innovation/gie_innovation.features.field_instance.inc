@@ -412,288 +412,6 @@ function gie_innovation_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-innovation-field_grant_activities'.
-  $field_instances['node-innovation-field_grant_activities'] = array(
-    'bundle' => 'innovation',
-    'default_value' => NULL,
-    'deleted' => 0,
-    'description' => '',
-    'display' => array(
-      'at_a_glance' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 0,
-      ),
-      'contact' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 0,
-      ),
-      'default' => array(
-        'label' => 'above',
-        'module' => 'text',
-        'settings' => array(
-          'field_delimiter' => '',
-          'linked_field' => array(
-            'advanced' => array(
-              'class' => '',
-              'rel' => '',
-              'target' => '',
-              'text' => '',
-              'title' => '',
-            ),
-            'destination' => '',
-            'linked' => 0,
-          ),
-        ),
-        'type' => 'text_default',
-        'weight' => 55,
-      ),
-      'full' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 0,
-      ),
-      'highlights' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 0,
-      ),
-      'listing' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 0,
-      ),
-      'search_listing' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 0,
-      ),
-      'spotlight' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 0,
-      ),
-      'teaser' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 0,
-      ),
-      'teaser_date' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 0,
-      ),
-    ),
-    'ds_extras_field_template' => '',
-    'entity_type' => 'node',
-    'field_name' => 'field_grant_activities',
-    'label' => 'Grant activities',
-    'required' => 0,
-    'settings' => array(
-      'better_formats' => array(
-        'allowed_formats' => array(
-          'comments_filtered' => 'comments_filtered',
-          'filtered_html' => 'filtered_html',
-          'full_html' => 'full_html',
-          'long_form_filtered' => 'long_form_filtered',
-          'long_form_full' => 'long_form_full',
-          'plain_text' => 'plain_text',
-        ),
-        'allowed_formats_toggle' => 0,
-        'default_order_toggle' => 0,
-        'default_order_wrapper' => array(
-          'formats' => array(
-            'comments_filtered' => array(
-              'weight' => 0,
-            ),
-            'filtered_html' => array(
-              'weight' => 0,
-            ),
-            'full_html' => array(
-              'weight' => 1,
-            ),
-            'long_form_filtered' => array(
-              'weight' => 0,
-            ),
-            'long_form_full' => array(
-              'weight' => 0,
-            ),
-            'plain_text' => array(
-              'weight' => 10,
-            ),
-          ),
-        ),
-      ),
-      'description_display' => 'after',
-      'text_processing' => 0,
-      'user_register_form' => FALSE,
-    ),
-    'widget' => array(
-      'active' => 1,
-      'module' => 'text',
-      'settings' => array(
-        'maxlength_js' => '',
-        'maxlength_js_enforce' => 0,
-        'maxlength_js_label' => 'Content limited to @limit characters, remaining: <strong>@remaining</strong>',
-        'maxlength_js_truncate_html' => 0,
-        'rows' => 5,
-      ),
-      'type' => 'text_textarea',
-      'weight' => 12,
-    ),
-  );
-
-  // Exported field_instance: 'node-innovation-field_innovation_acquisition'.
-  $field_instances['node-innovation-field_innovation_acquisition'] = array(
-    'bundle' => 'innovation',
-    'default_value' => NULL,
-    'deleted' => 0,
-    'description' => '',
-    'display' => array(
-      'at_a_glance' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 0,
-      ),
-      'contact' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 0,
-      ),
-      'default' => array(
-        'label' => 'above',
-        'module' => 'text',
-        'settings' => array(
-          'field_delimiter' => '',
-          'linked_field' => array(
-            'advanced' => array(
-              'class' => '',
-              'rel' => '',
-              'target' => '',
-              'text' => '',
-              'title' => '',
-            ),
-            'destination' => '',
-            'linked' => 0,
-          ),
-        ),
-        'type' => 'text_default',
-        'weight' => 57,
-      ),
-      'full' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 0,
-      ),
-      'highlights' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 0,
-      ),
-      'listing' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 0,
-      ),
-      'search_listing' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 0,
-      ),
-      'spotlight' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 0,
-      ),
-      'teaser' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 0,
-      ),
-      'teaser_date' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 0,
-      ),
-    ),
-    'ds_extras_field_template' => '',
-    'entity_type' => 'node',
-    'field_name' => 'field_innovation_acquisition',
-    'label' => 'If so, how or where can it be acquired?',
-    'required' => 0,
-    'settings' => array(
-      'better_formats' => array(
-        'allowed_formats' => array(
-          'comments_filtered' => 'comments_filtered',
-          'filtered_html' => 'filtered_html',
-          'full_html' => 'full_html',
-          'long_form_filtered' => 'long_form_filtered',
-          'long_form_full' => 'long_form_full',
-          'plain_text' => 'plain_text',
-        ),
-        'allowed_formats_toggle' => 0,
-        'default_order_toggle' => 0,
-        'default_order_wrapper' => array(
-          'formats' => array(
-            'comments_filtered' => array(
-              'weight' => 0,
-            ),
-            'filtered_html' => array(
-              'weight' => 0,
-            ),
-            'full_html' => array(
-              'weight' => 1,
-            ),
-            'long_form_filtered' => array(
-              'weight' => 0,
-            ),
-            'long_form_full' => array(
-              'weight' => 0,
-            ),
-            'plain_text' => array(
-              'weight' => 10,
-            ),
-          ),
-        ),
-      ),
-      'description_display' => 'after',
-      'text_processing' => 0,
-      'user_register_form' => FALSE,
-    ),
-    'widget' => array(
-      'active' => 1,
-      'module' => 'text',
-      'settings' => array(
-        'maxlength_js' => '',
-        'maxlength_js_enforce' => 0,
-        'maxlength_js_label' => 'Content limited to @limit characters, remaining: <strong>@remaining</strong>',
-        'maxlength_js_truncate_html' => 0,
-        'rows' => 5,
-      ),
-      'type' => 'text_textarea',
-      'weight' => 16,
-    ),
-  );
-
   // Exported field_instance: 'node-innovation-field_innovation_address'.
   $field_instances['node-innovation-field_innovation_address'] = array(
     'bundle' => 'innovation',
@@ -1720,6 +1438,8 @@ function gie_innovation_field_default_field_instances() {
           'comments_filtered' => 0,
           'filtered_html' => 'filtered_html',
           'full_html' => 0,
+          'long_form_filtered' => 0,
+          'long_form_full' => 0,
           'plain_text' => 0,
         ),
         'allowed_formats_toggle' => 1,
@@ -1735,6 +1455,12 @@ function gie_innovation_field_default_field_instances() {
             'full_html' => array(
               'weight' => 1,
             ),
+            'long_form_filtered' => array(
+              'weight' => 0,
+            ),
+            'long_form_full' => array(
+              'weight' => 0,
+            ),
             'plain_text' => array(
               'weight' => 10,
             ),
@@ -1749,6 +1475,10 @@ function gie_innovation_field_default_field_instances() {
       'active' => 1,
       'module' => 'text',
       'settings' => array(
+        'maxlength_js' => '',
+        'maxlength_js_enforce' => 0,
+        'maxlength_js_label' => 'Content limited to @limit characters, remaining: <strong>@remaining</strong>',
+        'maxlength_js_truncate_html' => 0,
         'rows' => 5,
       ),
       'type' => 'text_textarea',
@@ -1865,112 +1595,6 @@ function gie_innovation_field_default_field_instances() {
       ),
       'type' => 'options_onoff',
       'weight' => 28,
-    ),
-  );
-
-  // Exported field_instance: 'node-innovation-field_innovation_for_sale'.
-  $field_instances['node-innovation-field_innovation_for_sale'] = array(
-    'bundle' => 'innovation',
-    'default_value' => array(
-      0 => array(
-        'value' => 0,
-      ),
-    ),
-    'deleted' => 0,
-    'description' => '',
-    'display' => array(
-      'at_a_glance' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 0,
-      ),
-      'contact' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 0,
-      ),
-      'default' => array(
-        'label' => 'above',
-        'module' => 'list',
-        'settings' => array(
-          'field_delimiter' => '',
-          'linked_field' => array(
-            'advanced' => array(
-              'class' => '',
-              'rel' => '',
-              'target' => '',
-              'text' => '',
-              'title' => '',
-            ),
-            'destination' => '',
-            'linked' => 0,
-          ),
-        ),
-        'type' => 'list_default',
-        'weight' => 56,
-      ),
-      'full' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 0,
-      ),
-      'highlights' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 0,
-      ),
-      'listing' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 0,
-      ),
-      'search_listing' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 0,
-      ),
-      'spotlight' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 0,
-      ),
-      'teaser' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 0,
-      ),
-      'teaser_date' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 0,
-      ),
-    ),
-    'ds_extras_field_template' => '',
-    'entity_type' => 'node',
-    'field_name' => 'field_innovation_for_sale',
-    'label' => 'Is your Innovation For Sale?',
-    'required' => 0,
-    'settings' => array(
-      'description_display' => 'after',
-      'user_register_form' => FALSE,
-    ),
-    'widget' => array(
-      'active' => 1,
-      'module' => 'options',
-      'settings' => array(
-        'display_label' => 1,
-      ),
-      'type' => 'options_onoff',
-      'weight' => 15,
     ),
   );
 
@@ -3803,118 +3427,6 @@ Using the selector below, highlight the area of the image you would like to feat
     ),
   );
 
-  // Exported field_instance: 'node-innovation-field_innovation_proof_avail'.
-  $field_instances['node-innovation-field_innovation_proof_avail'] = array(
-    'bundle' => 'innovation',
-    'default_value' => array(
-      0 => array(
-        'value' => 0,
-      ),
-    ),
-    'deleted' => 0,
-    'description' => 'Upload an evaluation, test results, or other documents, photos, or videos that prove your innovation works.',
-    'display' => array(
-      'at_a_glance' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 43,
-      ),
-      'contact' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 42,
-      ),
-      'default' => array(
-        'label' => 'above',
-        'module' => 'list',
-        'settings' => array(
-          'field_delimiter' => '',
-          'linked_field' => array(
-            'advanced' => array(
-              'class' => '',
-              'rel' => '',
-              'target' => '',
-              'text' => '',
-              'title' => '',
-            ),
-            'destination' => '',
-            'linked' => 0,
-          ),
-        ),
-        'type' => 'list_default',
-        'weight' => 31,
-      ),
-      'full' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 32,
-      ),
-      'highlights' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 31,
-      ),
-      'listing' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 39,
-      ),
-      'needs_list' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 36,
-      ),
-      'search_listing' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 39,
-      ),
-      'spotlight' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 48,
-      ),
-      'teaser' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 0,
-      ),
-      'teaser_date' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 43,
-      ),
-    ),
-    'ds_extras_field_template' => '',
-    'entity_type' => 'node',
-    'field_name' => 'field_innovation_proof_avail',
-    'label' => 'Proof Available?',
-    'required' => 0,
-    'settings' => array(
-      'description_display' => 'before',
-      'user_register_form' => FALSE,
-    ),
-    'widget' => array(
-      'active' => 1,
-      'module' => 'options',
-      'settings' => array(
-        'display_label' => 1,
-      ),
-      'type' => 'options_onoff',
-      'weight' => 12,
-    ),
-  );
-
   // Exported field_instance: 'node-innovation-field_innovation_proof_evidence'.
   $field_instances['node-innovation-field_innovation_proof_evidence'] = array(
     'bundle' => 'innovation',
@@ -4157,116 +3669,6 @@ Using the selector below, highlight the area of the image you would like to feat
       'settings' => array(),
       'type' => 'numberfield',
       'weight' => 11,
-    ),
-  );
-
-  // Exported field_instance: 'node-innovation-field_innovation_ref_avail'.
-  $field_instances['node-innovation-field_innovation_ref_avail'] = array(
-    'bundle' => 'innovation',
-    'default_value' => array(
-      0 => array(
-        'value' => 0,
-      ),
-    ),
-    'deleted' => 0,
-    'description' => '',
-    'display' => array(
-      'at_a_glance' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 44,
-      ),
-      'contact' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 43,
-      ),
-      'default' => array(
-        'label' => 'above',
-        'module' => 'list',
-        'settings' => array(
-          'field_delimiter' => '',
-          'linked_field' => array(
-            'advanced' => array(
-              'class' => '',
-              'rel' => '',
-              'target' => '',
-              'text' => '',
-              'title' => '',
-            ),
-            'destination' => '',
-            'linked' => 0,
-          ),
-        ),
-        'type' => 'list_default',
-        'weight' => 32,
-      ),
-      'full' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 33,
-      ),
-      'highlights' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 32,
-      ),
-      'listing' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 40,
-      ),
-      'needs_list' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 37,
-      ),
-      'search_listing' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 40,
-      ),
-      'spotlight' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 49,
-      ),
-      'teaser' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 0,
-      ),
-      'teaser_date' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 44,
-      ),
-    ),
-    'entity_type' => 'node',
-    'field_name' => 'field_innovation_ref_avail',
-    'label' => 'References Available?',
-    'required' => 0,
-    'settings' => array(
-      'user_register_form' => FALSE,
-    ),
-    'widget' => array(
-      'active' => 1,
-      'module' => 'options',
-      'settings' => array(
-        'display_label' => 1,
-      ),
-      'type' => 'options_onoff',
-      'weight' => 10,
     ),
   );
 
@@ -5164,14 +4566,14 @@ Using the selector below, highlight the area of the image you would like to feat
     'settings' => array(
       'better_formats' => array(
         'allowed_formats' => array(
-          'comments_filtered' => 'comments_filtered',
+          'comments_filtered' => 0,
           'filtered_html' => 'filtered_html',
-          'full_html' => 'full_html',
-          'long_form_filtered' => 'long_form_filtered',
-          'long_form_full' => 'long_form_full',
-          'plain_text' => 'plain_text',
+          'full_html' => 0,
+          'long_form_filtered' => 0,
+          'long_form_full' => 0,
+          'plain_text' => 0,
         ),
-        'allowed_formats_toggle' => 0,
+        'allowed_formats_toggle' => 1,
         'default_order_toggle' => 0,
         'default_order_wrapper' => array(
           'formats' => array(
@@ -5197,7 +4599,7 @@ Using the selector below, highlight the area of the image you would like to feat
         ),
       ),
       'description_display' => 'after',
-      'text_processing' => 0,
+      'text_processing' => 1,
       'user_register_form' => FALSE,
     ),
     'widget' => array(
@@ -5724,14 +5126,14 @@ Using the selector below, highlight the area of the image you would like to feat
     'settings' => array(
       'better_formats' => array(
         'allowed_formats' => array(
-          'comments_filtered' => 'comments_filtered',
+          'comments_filtered' => 0,
           'filtered_html' => 'filtered_html',
-          'full_html' => 'full_html',
-          'long_form_filtered' => 'long_form_filtered',
-          'long_form_full' => 'long_form_full',
-          'plain_text' => 'plain_text',
+          'full_html' => 0,
+          'long_form_filtered' => 0,
+          'long_form_full' => 0,
+          'plain_text' => 0,
         ),
-        'allowed_formats_toggle' => 0,
+        'allowed_formats_toggle' => 1,
         'default_order_toggle' => 0,
         'default_order_wrapper' => array(
           'formats' => array(
@@ -5757,7 +5159,7 @@ Using the selector below, highlight the area of the image you would like to feat
         ),
       ),
       'description_display' => 'after',
-      'text_processing' => 0,
+      'text_processing' => 1,
       'user_register_form' => FALSE,
     ),
     'widget' => array(
@@ -6743,7 +6145,7 @@ Using the selector below, highlight the area of the image you would like to feat
     ),
   );
 
-  // Exported field_instance: 'taxonomy_term-comment_type-description_field'
+  // Exported field_instance: 'taxonomy_term-comment_type-description_field'.
   $field_instances['taxonomy_term-comment_type-description_field'] = array(
     'bundle' => 'comment_type',
     'default_value' => NULL,
@@ -6781,7 +6183,7 @@ Using the selector below, highlight the area of the image you would like to feat
     ),
   );
 
-  // Exported field_instance: 'taxonomy_term-comment_type-name_field'
+  // Exported field_instance: 'taxonomy_term-comment_type-name_field'.
   $field_instances['taxonomy_term-comment_type-name_field'] = array(
     'bundle' => 'comment_type',
     'default_value' => NULL,
@@ -7138,11 +6540,9 @@ Using the selector below, highlight the area of the image you would like to feat
   t('Funded By');
   t('Funding Goal');
   t('Funding Raised');
-  t('Grant activities');
   t('Have you already raised funding (in US Dollars) for your innovation? Share your successes here! In whole numbes like 10000 (for $10,000) no commas, periods, or symbols please.');
   t('Have you calculated how much your innovation costs per person (in US Dollars) that it benefits? This is a great way to show the value of your innovation.  Please enter a whole number, like 15 (for $15.00). No symbols, commas, or periods/decimals allowed');
   t('How it Works');
-  t('If so, how or where can it be acquired?');
   t('If you have a cost per unit for your innovation, share it here!');
   t('If you have a handbook, marketing materials, toolkit or other files that you would like to share on the Exchange, upload them here!');
   t('In the News');
@@ -7152,7 +6552,6 @@ Using the selector below, highlight the area of the image you would like to feat
   t('Innovation Type');
   t('Is there evidence that your innovation works or has the desired impact?');
   t('Is there evidence that your innovation works/has had the desired impact?');
-  t('Is your Innovation For Sale?');
   t('Last Name');
   t('Lives Impacted');
   t('Lives Saved');
@@ -7166,9 +6565,7 @@ Using the selector below, highlight the area of the image you would like to feat
   t('Point of Contact');
   t('Potential Lives Impacted');
   t('Potential Lives Saved');
-  t('Proof Available?');
   t('Proof of Evidence');
-  t('References Available?');
   t('Region');
   t('Related Organizations');
   t('Related Programs');
@@ -7196,7 +6593,6 @@ Using the selector below, highlight the area of the image you would like to feat
   t('Topics are issues that may be of interest to Exchange users. Select any (or none) topics that you think apply to your innovation (i.e. social impact investing)');
   t('Type in team members\' names (first name initial last name e.g. kshipley) to connect those who are developing the innovation to your innovation profile. Only team members who have user profiles on the Exchange will appear. If they have not created profiles yet, please encourage them to do so. ');
   t('Type the organizations or programs that you are funded by. They must have an organization or program profile to appear on your page. Please encourage your funders to create organization/program profiles and user profiles on the Exchange if they don\'t appear.');
-  t('Upload an evaluation, test results, or other documents, photos, or videos that prove your innovation works.');
   t('Upload an image that will represent your innovation in other areas of the Exchange.
 
 Using the selector below, highlight the area of the image you would like to feature. ');
