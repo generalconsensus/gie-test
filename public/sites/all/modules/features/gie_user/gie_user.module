@@ -401,6 +401,7 @@ function gie_user_user_presave(&$edit, $account, $category) {
   }
   global $_domain;
   if (!empty($_domain['domain_id'])) {
+    $edit['domain_user']['1'] = '1';
     $edit['domain_user'][$_domain['domain_id']] = $_domain['domain_id'];
   }
 }
