@@ -1,10 +1,8 @@
 {
-  "name": "dai-usaid",
+  "name": "dai_usaid",
   "description": "",
   "main": "",
-  "license": "MIT",
-  "moduleType": [],
-  "homepage": "",
+  "homepage": "git@github.com:forumone/DAI-USAID.git",
   "private": true,
   "ignore": [
     "**/.*",
@@ -13,7 +11,8 @@
     "test",
     "tests"
   ],
-  "dependencies": {
-    "singularity": "~1.6.2"
+  "dependencies": {},
+  "devDependencies": {
+    "singularity": "^1.7.0"
   }
 }

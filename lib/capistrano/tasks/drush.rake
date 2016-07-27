@@ -144,14 +144,14 @@ namespace :drush do
     if fetch(:drupal_db_updates)
       invoke 'drush:updatedb'
     end
-
+    
     invoke 'drush:cc'
-
+	
     # If we're using Features revert Features
     if fetch(:drupal_features)
       invoke 'drush:features:revert'
     end
-
+    
     # If we're using Drupal Configuration Management module synchronize the Configuration
     if fetch(:drupal_cmi)
       invoke 'drush:configuration:sync'
