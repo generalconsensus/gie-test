@@ -85,3 +85,15 @@ function gie_innovation_update_7005() {
     field_delete_field('field_testing_phase');
     field_purge_batch(1);
 }
+
+/**
+ * Delete innovation fields
+ */
+function gie_innovation_update_7006() {
+    field_delete_field('field_innovation_ref_avail');
+    field_delete_field('field_grant_activities');
+    field_delete_field('field_innovation_proof_avail');
+    field_delete_field('field_innovation_for_sale');
+    field_delete_field('field_innovation_acquisition');
+    field_purge_batch(1);
+}
