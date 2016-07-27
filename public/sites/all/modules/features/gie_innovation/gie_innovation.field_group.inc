@@ -375,6 +375,362 @@ function gie_innovation_field_group_info() {
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
   $field_group->api_version = 1;
+  $field_group->identifier = 'group_innovation_about|node|innovation|form';
+  $field_group->group_name = 'group_innovation_about';
+  $field_group->entity_type = 'node';
+  $field_group->bundle = 'innovation';
+  $field_group->mode = 'form';
+  $field_group->parent_name = '';
+  $field_group->data = array(
+    'label' => 'Tell us about your innovation',
+    'weight' => '28',
+    'children' => array(),
+    'format_type' => 'div',
+    'format_settings' => array(
+      'label' => 'Tell us about your innovation',
+      'instance_settings' => array(
+        'required_fields' => 1,
+        'id' => '',
+        'classes' => '',
+        'description' => '',
+        'show_label' => '1',
+        'label_element' => 'h2',
+        'effect' => 'none',
+        'speed' => 'none',
+      ),
+      'formatter' => 'open',
+    ),
+  );
+  $field_groups['group_innovation_about|node|innovation|form'] = $field_group;
+
+  $field_group = new stdClass();
+  $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
+  $field_group->api_version = 1;
+  $field_group->identifier = 'group_innovation_details|node|innovation|form';
+  $field_group->group_name = 'group_innovation_details';
+  $field_group->entity_type = 'node';
+  $field_group->bundle = 'innovation';
+  $field_group->mode = 'form';
+  $field_group->parent_name = '';
+  $field_group->data = array(
+    'label' => 'Tell us more about your innovation',
+    'weight' => '21',
+    'children' => array(),
+    'format_type' => 'div',
+    'format_settings' => array(
+      'label' => 'Tell us more about your innovation',
+      'instance_settings' => array(
+        'required_fields' => 1,
+        'id' => '',
+        'classes' => '',
+        'description' => '',
+        'show_label' => '1',
+        'label_element' => 'h2',
+        'effect' => 'none',
+        'speed' => 'none',
+      ),
+      'formatter' => 'open',
+    ),
+  );
+  $field_groups['group_innovation_details|node|innovation|form'] = $field_group;
+
+  $field_group = new stdClass();
+  $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
+  $field_group->api_version = 1;
+  $field_group->identifier = 'group_innovation_evidence|node|innovation|form';
+  $field_group->group_name = 'group_innovation_evidence';
+  $field_group->entity_type = 'node';
+  $field_group->bundle = 'innovation';
+  $field_group->mode = 'form';
+  $field_group->parent_name = '';
+  $field_group->data = array(
+    'label' => 'Do you have evidence or supporting documents for your innovation?',
+    'weight' => '25',
+    'children' => array(),
+    'format_type' => 'div',
+    'format_settings' => array(
+      'label' => 'Do you have evidence or supporting documents for your innovation?',
+      'instance_settings' => array(
+        'required_fields' => 1,
+        'id' => '',
+        'classes' => 'group-innovation-evidence field-group-div',
+        'description' => '',
+        'show_label' => '1',
+        'label_element' => 'h2',
+        'effect' => 'none',
+        'speed' => 'none',
+      ),
+      'formatter' => 'open',
+    ),
+  );
+  $field_groups['group_innovation_evidence|node|innovation|form'] = $field_group;
+
+  $field_group = new stdClass();
+  $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
+  $field_group->api_version = 1;
+  $field_group->identifier = 'group_innovation_help|node|innovation|form';
+  $field_group->group_name = 'group_innovation_help';
+  $field_group->entity_type = 'node';
+  $field_group->bundle = 'innovation';
+  $field_group->mode = 'form';
+  $field_group->parent_name = '';
+  $field_group->data = array(
+    'label' => 'How can the exchange help you with your innovation?',
+    'weight' => '27',
+    'children' => array(),
+    'format_type' => 'div',
+    'format_settings' => array(
+      'label' => 'How can the exchange help you with your innovation?',
+      'instance_settings' => array(
+        'required_fields' => 1,
+        'id' => '',
+        'classes' => '',
+        'description' => '',
+        'show_label' => '1',
+        'label_element' => 'h2',
+        'effect' => 'none',
+        'speed' => 'none',
+      ),
+      'formatter' => 'open',
+    ),
+  );
+  $field_groups['group_innovation_help|node|innovation|form'] = $field_group;
+
+  $field_group = new stdClass();
+  $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
+  $field_group->api_version = 1;
+  $field_group->identifier = 'group_innovation_media|node|innovation|form';
+  $field_group->group_name = 'group_innovation_media';
+  $field_group->entity_type = 'node';
+  $field_group->bundle = 'innovation';
+  $field_group->mode = 'form';
+  $field_group->parent_name = '';
+  $field_group->data = array(
+    'label' => 'Add photos and videos about your innovation',
+    'weight' => '26',
+    'children' => array(),
+    'format_type' => 'div',
+    'format_settings' => array(
+      'label' => 'Add photos and videos about your innovation',
+      'instance_settings' => array(
+        'required_fields' => 1,
+        'id' => '',
+        'classes' => '',
+        'description' => '',
+        'show_label' => '1',
+        'label_element' => 'h2',
+        'effect' => 'none',
+        'speed' => 'none',
+      ),
+      'formatter' => 'open',
+    ),
+  );
+  $field_groups['group_innovation_media|node|innovation|form'] = $field_group;
+
+  $field_group = new stdClass();
+  $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
+  $field_group->api_version = 1;
+  $field_group->identifier = 'group_innovation_references|node|innovation|form';
+  $field_group->group_name = 'group_innovation_references';
+  $field_group->entity_type = 'node';
+  $field_group->bundle = 'innovation';
+  $field_group->mode = 'form';
+  $field_group->parent_name = '';
+  $field_group->data = array(
+    'label' => 'Do you have references for your innovation available?',
+    'weight' => '24',
+    'children' => array(),
+    'format_type' => 'div',
+    'format_settings' => array(
+      'label' => 'Do you have references for your innovation available?',
+      'instance_settings' => array(
+        'required_fields' => 1,
+        'id' => '',
+        'classes' => 'group-innovation-references field-group-div',
+        'description' => '',
+        'show_label' => '1',
+        'label_element' => 'h2',
+        'effect' => 'none',
+        'speed' => 'none',
+      ),
+      'formatter' => 'open',
+    ),
+  );
+  $field_groups['group_innovation_references|node|innovation|form'] = $field_group;
+
+  $field_group = new stdClass();
+  $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
+  $field_group->api_version = 1;
+  $field_group->identifier = 'group_innovation_stats_first|node|innovation|full';
+  $field_group->group_name = 'group_innovation_stats_first';
+  $field_group->entity_type = 'node';
+  $field_group->bundle = 'innovation';
+  $field_group->mode = 'full';
+  $field_group->parent_name = 'group_innovation_stats';
+  $field_group->data = array(
+    'label' => 'Innovation Stats First',
+    'weight' => '45',
+    'children' => array(
+      0 => 'field_innovation_stage',
+      1 => 'field_innovation_type',
+      2 => 'field_innovation_funding_goal',
+      3 => 'field_innovation_cost_per_unit',
+      4 => 'field_innovation_lives_impacted',
+      5 => 'field_innovation_lives_saved',
+      6 => 'field_innovation_potent_lives_im',
+      7 => 'field_innovation_potent_lives_sa',
+    ),
+    'format_type' => 'div',
+    'format_settings' => array(
+      'label' => 'Innovation Stats First',
+      'instance_settings' => array(
+        'id' => '',
+        'classes' => 'stats__first',
+        'description' => '',
+        'show_label' => '0',
+        'label_element' => 'h3',
+        'effect' => 'none',
+        'speed' => 'none',
+      ),
+      'formatter' => 'open',
+    ),
+  );
+  $field_groups['group_innovation_stats_first|node|innovation|full'] = $field_group;
+
+  $field_group = new stdClass();
+  $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
+  $field_group->api_version = 1;
+  $field_group->identifier = 'group_innovation_stats_second|node|innovation|full';
+  $field_group->group_name = 'group_innovation_stats_second';
+  $field_group->entity_type = 'node';
+  $field_group->bundle = 'innovation';
+  $field_group->mode = 'full';
+  $field_group->parent_name = 'group_innovation_stats';
+  $field_group->data = array(
+    'label' => 'Innovation Stats Second',
+    'weight' => '46',
+    'children' => array(
+      0 => 'field_innovation_created',
+      1 => 'field_innovation_implemented',
+      2 => 'field_innovation_program',
+      3 => 'field_term_sector',
+      4 => 'field_term_topic',
+    ),
+    'format_type' => 'div',
+    'format_settings' => array(
+      'label' => 'Innovation Stats Second',
+      'instance_settings' => array(
+        'id' => '',
+        'classes' => 'stats__second',
+        'description' => '',
+        'show_label' => '0',
+        'label_element' => 'h3',
+        'effect' => 'none',
+        'speed' => 'none',
+      ),
+      'formatter' => 'open',
+    ),
+  );
+  $field_groups['group_innovation_stats_second|node|innovation|full'] = $field_group;
+
+  $field_group = new stdClass();
+  $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
+  $field_group->api_version = 1;
+  $field_group->identifier = 'group_innovation_stats|node|innovation|form';
+  $field_group->group_name = 'group_innovation_stats';
+  $field_group->entity_type = 'node';
+  $field_group->bundle = 'innovation';
+  $field_group->mode = 'form';
+  $field_group->parent_name = '';
+  $field_group->data = array(
+    'label' => 'Provide some key stats about your innovation',
+    'weight' => '23',
+    'children' => array(),
+    'format_type' => 'div',
+    'format_settings' => array(
+      'label' => 'Provide some key stats about your innovation',
+      'instance_settings' => array(
+        'required_fields' => 1,
+        'id' => '',
+        'classes' => '',
+        'description' => '',
+        'show_label' => '1',
+        'label_element' => 'h2',
+        'effect' => 'none',
+        'speed' => 'none',
+      ),
+      'formatter' => 'open',
+    ),
+  );
+  $field_groups['group_innovation_stats|node|innovation|form'] = $field_group;
+
+  $field_group = new stdClass();
+  $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
+  $field_group->api_version = 1;
+  $field_group->identifier = 'group_innovation_stats|node|innovation|full';
+  $field_group->group_name = 'group_innovation_stats';
+  $field_group->entity_type = 'node';
+  $field_group->bundle = 'innovation';
+  $field_group->mode = 'full';
+  $field_group->parent_name = '';
+  $field_group->data = array(
+    'label' => 'Innovation Stats',
+    'weight' => '0',
+    'children' => array(
+      0 => 'group_innovation_stats_first',
+      1 => 'group_innovation_stats_second',
+    ),
+    'format_type' => 'div',
+    'format_settings' => array(
+      'label' => 'Innovation Stats',
+      'instance_settings' => array(
+        'id' => '',
+        'classes' => 'stats',
+        'description' => '',
+        'show_label' => '1',
+        'label_element' => 'h2',
+        'effect' => 'none',
+        'speed' => 'none',
+      ),
+      'formatter' => 'open',
+    ),
+  );
+  $field_groups['group_innovation_stats|node|innovation|full'] = $field_group;
+
+  $field_group = new stdClass();
+  $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
+  $field_group->api_version = 1;
+  $field_group->identifier = 'group_innovation_team|node|innovation|form';
+  $field_group->group_name = 'group_innovation_team';
+  $field_group->entity_type = 'node';
+  $field_group->bundle = 'innovation';
+  $field_group->mode = 'form';
+  $field_group->parent_name = '';
+  $field_group->data = array(
+    'label' => 'Tell us about your innovation team and affiliated organizations',
+    'weight' => '22',
+    'children' => array(),
+    'format_type' => 'div',
+    'format_settings' => array(
+      'label' => 'Tell us about your innovation team and affiliated organizations',
+      'instance_settings' => array(
+        'required_fields' => 1,
+        'id' => '',
+        'classes' => '',
+        'description' => '',
+        'show_label' => '1',
+        'label_element' => 'h2',
+        'effect' => 'none',
+        'speed' => 'none',
+      ),
+      'formatter' => 'open',
+    ),
+  );
+  $field_groups['group_innovation_team|node|innovation|form'] = $field_group;
+
+  $field_group = new stdClass();
+  $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
+  $field_group->api_version = 1;
   $field_group->identifier = 'group_one|node|innovation|form';
   $field_group->group_name = 'group_one';
   $field_group->entity_type = 'node';
@@ -471,17 +827,28 @@ function gie_innovation_field_group_info() {
 
   // Translatables
   // Included for use with string extractors like potx.
+  t('Add photos and videos about your innovation');
   t('Card Author');
   t('Card Author Inner');
   t('Card Content');
   t('Card Counts');
   t('Card Image');
   t('Comment Content');
+  t('Do you have evidence or supporting documents for your innovation?');
+  t('Do you have references for your innovation available?');
+  t('How can the exchange help you with your innovation?');
+  t('Innovation Stats');
+  t('Innovation Stats First');
+  t('Innovation Stats Second');
+  t('Provide some key stats about your innovation');
   t('Step Five');
   t('Step Four');
   t('Step One');
   t('Step Three');
   t('Step Two');
+  t('Tell us about your innovation');
+  t('Tell us about your innovation team and affiliated organizations');
+  t('Tell us more about your innovation');
 
   return $field_groups;
 }
