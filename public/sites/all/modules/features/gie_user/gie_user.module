@@ -399,6 +399,11 @@ function gie_user_user_presave(&$edit, $account, $category) {
   if (!empty($databases) && !empty($databases['default']['default']['database']) && $databases['default']['default']['database'] != 'giexchange_www') {
     $edit['field_newsletter_sign_up']['und'][0]['subscribe'] = false;
   }
+  global $_domain;
+  if (!empty($_domain['domain_id'])) {
+    $edit['domain_user']['1'] = '1';
+    $edit['domain_user'][$_domain['domain_id']] = $_domain['domain_id'];
+  }
 }
 
 /**
