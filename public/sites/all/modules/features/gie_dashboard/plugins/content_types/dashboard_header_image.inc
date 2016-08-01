@@ -65,7 +65,7 @@ function dashboard_whats_new_header_image_render() {
     <div class="dashboard-header__actions">
       <a class="button button--update-profile" href="/user/' . $user->uid . '/edit">Update your profile</a>
       <a class="button button--view-profile" href="/user">View your profile</a>
-      <a class="button button--email" href="/user/' . $user->uid . '/edit">Email Preferences</a>
+      <a class="button button--email" href="/user/' . $user->uid . '/notifications">Email Preferences</a>
   </div>
 </div>';
 
