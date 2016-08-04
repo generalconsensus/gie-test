@@ -245,15 +245,15 @@ function gie_funding_default_page_manager_pages() {
     $display->content['new-8d4f5661-385a-4c0b-9896-77e343f8a9f9'] = $pane;
     $display->panels['sidebar'][5] = 'new-8d4f5661-385a-4c0b-9896-77e343f8a9f9';
     $pane = new stdClass();
-    $pane->pid = 'new-0f18bc4b-e989-4c94-9a4b-20d9c1e6d9ee';
+    $pane->pid = 'new-cb8da626-bc58-498c-aa1c-55f36d8fdf1a';
     $pane->panel = 'sidebar';
     $pane->type = 'block';
-    $pane->subtype = 'facetapi-OW2xuL11GfSOR8Lt2V2k1VJlbtJrQZWK';
+    $pane->subtype = 'facetapi-Q0pX3lRzkCTBo7R4Zv3urQrzx1hn1XJy';
     $pane->shown = TRUE;
     $pane->access = array();
     $pane->configuration = array(
       'override_title' => 1,
-      'override_title_text' => 'Program',
+      'override_title_text' => 'Related Program',
       'override_title_heading' => 'h2',
     );
     $pane->cache = array();
@@ -264,9 +264,9 @@ function gie_funding_default_page_manager_pages() {
     $pane->extras = array();
     $pane->position = 6;
     $pane->locks = array();
-    $pane->uuid = '0f18bc4b-e989-4c94-9a4b-20d9c1e6d9ee';
-    $display->content['new-0f18bc4b-e989-4c94-9a4b-20d9c1e6d9ee'] = $pane;
-    $display->panels['sidebar'][6] = 'new-0f18bc4b-e989-4c94-9a4b-20d9c1e6d9ee';
+    $pane->uuid = 'cb8da626-bc58-498c-aa1c-55f36d8fdf1a';
+    $display->content['new-cb8da626-bc58-498c-aa1c-55f36d8fdf1a'] = $pane;
+    $display->panels['sidebar'][6] = 'new-cb8da626-bc58-498c-aa1c-55f36d8fdf1a';
     $pane = new stdClass();
     $pane->pid = 'new-b555644f-5df1-4a71-b4e3-95ecbb737915';
     $pane->panel = 'sidebar';
