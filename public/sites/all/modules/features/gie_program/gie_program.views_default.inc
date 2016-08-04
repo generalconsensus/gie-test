@@ -924,6 +924,10 @@ function gie_program_views_default_views() {
   $handler->display->display_options['arguments']['nid']['summary']['format'] = 'default_summary';
   $handler->display->display_options['arguments']['nid']['summary_options']['items_per_page'] = '25';
   $handler->display->display_options['defaults']['filter_groups'] = FALSE;
+  $handler->display->display_options['filter_groups']['groups'] = array(
+    1 => 'AND',
+    2 => 'OR',
+  );
   $handler->display->display_options['defaults']['filters'] = FALSE;
   /* Filter criterion: Content: Published */
   $handler->display->display_options['filters']['status']['id'] = 'status';
@@ -939,6 +943,20 @@ function gie_program_views_default_views() {
   $handler->display->display_options['filters']['type']['value'] = array(
     'funding' => 'funding',
   );
+  $handler->display->display_options['filters']['type']['group'] = 1;
+  /* Filter criterion: Content: Deadlines (field_funding_deadline) */
+  $handler->display->display_options['filters']['field_funding_deadline_value']['id'] = 'field_funding_deadline_value';
+  $handler->display->display_options['filters']['field_funding_deadline_value']['table'] = 'field_data_field_funding_deadline';
+  $handler->display->display_options['filters']['field_funding_deadline_value']['field'] = 'field_funding_deadline_value';
+  $handler->display->display_options['filters']['field_funding_deadline_value']['operator'] = '>=';
+  $handler->display->display_options['filters']['field_funding_deadline_value']['group'] = 2;
+  $handler->display->display_options['filters']['field_funding_deadline_value']['default_date'] = 'now';
+  /* Filter criterion: Content: Deadlines (field_funding_deadline) */
+  $handler->display->display_options['filters']['field_funding_deadline_value_1']['id'] = 'field_funding_deadline_value_1';
+  $handler->display->display_options['filters']['field_funding_deadline_value_1']['table'] = 'field_data_field_funding_deadline';
+  $handler->display->display_options['filters']['field_funding_deadline_value_1']['field'] = 'field_funding_deadline_value';
+  $handler->display->display_options['filters']['field_funding_deadline_value_1']['operator'] = 'empty';
+  $handler->display->display_options['filters']['field_funding_deadline_value_1']['group'] = 2;
   $export['program_recent_content'] = $view;
 
   $view = new view();
