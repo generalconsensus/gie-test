@@ -7,14 +7,9 @@
 
 <?php
 
-  $background = $content['field_background'][0]['#markup'];
-  $orientation = $content['field_para_5050_orientation'][0]['#markup'];
-
-  if ($orientation == 'image-on-the-right') {
-    $classes = "microsite-50-50" . ' ' . $background;
-  } else {
-    $classes = "microsite-50-50 microsite-50-50--reversed" . ' ' . $background;
-  };
+  $background = ($content['field_background']) ? $content['field_background'][0]['#markup'] : '';
+  $orientation = ($content['field_para_5050_orientation'] && $content['field_para_5050_orientation'][0]['#markup'] == 'image-on-the-right') ? '' : 'microsite-50-50--reversed';
+  $classes = implode(' ', array_filter(['microsite-50-50', $orientation, $background]));
 
   hide($content['field_para_5050_orientation']);
   hide($content['field_background']);
