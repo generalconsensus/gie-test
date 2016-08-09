@@ -107,15 +107,30 @@ function lr_social_login_admin_settings($form, &$form_state) {
       2 => t('Email Address [Ex: johndoe@abc.com ]'),
     )
   );
+
+  $login_redirect_options = array(
+    0 => t('Redirect to same page of site'),
+    1 => t('Redirect to profile page of site'),
+    2 => t('Redirect to custom page of site (If you want user to be redirected to specific URL after login)')
+  );
+
+  $login_register_redirect_options =  array(
+    0 => t('Redirect to same page of site'),
+    1 => t('Redirect to profile page of site'),
+    2 => t('Redirect to custom page of site (If you want user to be redirected to specific URL after registration)'),
+  );
+
+  // Check if r4032login module is enabled
+  if (module_exists('login_destination')) {
+    $login_redirect_options[] = t('Enable integration with r4032login module redirect');
+    $login_register_redirect_options[] = t('Enable integration with r4032login module redirect');
+  }
+
   $form[$basic_group]['lr_social_login_userlogin_redirect'] = array(
     '#type' => 'radios',
     '#title' => t('Redirection settings after login'),
     '#default_value' => variable_get('lr_social_login_userlogin_redirect', 0),
-    '#options' => array(
-      0 => t('Redirect to same page of site'),
-      1 => t('Redirect to profile page of site'),
-      2 => t('Redirect to custom page of site (If you want user to be redirected to specific URL after login)'),
-    ),
+    '#options' => $login_redirect_options
   );
   $form[$basic_group]['lr_social_login_userlogin_redirect']['lr_social_login_custom_redirection'] = array(
     '#type' => 'textfield',
@@ -126,11 +141,7 @@ function lr_social_login_admin_settings($form, &$form_state) {
     '#type' => 'radios',
     '#title' => t('Redirection settings after registration'),
     '#default_value' => variable_get('lr_social_login_userregister_redirect', 0),
-    '#options' => array(
-      0 => t('Redirect to same page of site'),
-      1 => t('Redirect to profile page of site'),
-      2 => t('Redirect to custom page of site (If you want user to be redirected to specific URL after registration)'),
-    ),
+    '#options' => $login_register_redirect_options
   );
   $form[$basic_group]['lr_social_login_userregister_redirect']['lr_social_login_custom_register_redirection'] = array(
     '#type' => 'textfield',
