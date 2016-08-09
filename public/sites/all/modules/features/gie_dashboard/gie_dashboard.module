@@ -585,7 +585,9 @@ function dashboard_recommended_funding_form($form) {
   );
 
   // Add dynamic is-active class to form element
-  if ($form['recommended_funding'][$filter]) $form['recommended_funding'][$filter]['#prefix'] = str_replace('">', ' is-active">', $form['recommended_funding'][$filter]['#prefix']);
+  if (!empty($form['recommended_funding'][$filter]) && !empty($form['recommended_funding'][$filter]['#prefix'])) {
+    $form['recommended_funding'][$filter]['#prefix'] = str_replace('">', ' is-active">', $form['recommended_funding'][$filter]['#prefix']);
+  }
 
 //  $form['submit'] = array(
 //    '#type' => 'submit',
