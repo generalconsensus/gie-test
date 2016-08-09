@@ -687,3 +687,14 @@ $conf['environment_modules'] = array(
  * Set correct systlog identity
  */
 $conf['syslog_identity'] = 'gie_stage';
+
+/**
+ * Set correct systlog identity
+ */
+$conf['fastly_api_key'] = '';
+$conf['fastly_log_enabled'] = 0;
+
+/**
+ * Don't allow fastly on local, dev, stage
+ */
+$conf['expire_status'] = 0;
