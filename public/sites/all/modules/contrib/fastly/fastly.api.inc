@@ -17,6 +17,7 @@ class Fastly {
     $this->service_id = $service_id;
     $this->host = 'https://api.fastly.com/';
     // $this->host = 'http://stg.fastly.com/';
+    $this->log_enabled = variable_get('fastly_log_enabled', 0);
   }
 
   /**
@@ -146,6 +147,9 @@ class Fastly {
   public function purgeQuery($original_url) {
     $url = url($original_url, array('absolute' => TRUE, 'alias' => TRUE));
     $options = array('method' => 'PURGE');
+    if ($this->log_enabled) {
+      watchdog('fastly', 'Purged URL: ' . $original_url, array(), WATCHDOG_INFO);
+    }
     if (module_exists('httprl')) {
       // We just want to execute the queue but not wait.
       $options['blocking'] = FALSE;
@@ -235,6 +239,10 @@ class Fastly {
 
     $result = drupal_http_request($url, $options);
 
+    if ($this->log_enabled && isset($result->request)) {
+      watchdog('fastly', $result->request, array(), WATCHDOG_INFO);
+    }
+
     return $result;
   }
 
@@ -253,6 +261,10 @@ class Fastly {
   protected function queryMultiple(array $uris, $data = array(), $method = 'GET', $headers = array()) {
     foreach ($uris as $uri) {
       $urls[] = $this->host . $uri;
+    }
+
+    if ($this->log_enabled) {
+      watchdog('fastly', '<pre>Purged URLS: ' . print_r($uris, true) . '</pre>', WATCHDOG_INFO);
     }
 
     $options['headers'] = $headers;

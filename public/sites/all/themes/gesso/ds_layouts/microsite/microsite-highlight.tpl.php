@@ -27,6 +27,6 @@
 
 ?>
 
-<div class="<?php print $classes ?>" <?php print $styles ?>>
+<div class="<?php print $classes ?>" <?php print $styles ?> <?php if (!(empty($content['field_para_highlight_image']['#items'][0]['title']))) { print ('title="' . $content['field_para_highlight_image']['#items'][0]['title'] . '"'); } ?>>
   <?php print render($content); ?>
 </div>

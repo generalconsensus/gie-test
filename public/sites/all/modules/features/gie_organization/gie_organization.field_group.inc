@@ -8,7 +8,7 @@
  * Implements hook_field_group_info().
  */
 function gie_organization_field_group_info() {
-  $export = array();
+  $field_groups = array();
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -42,7 +42,7 @@ function gie_organization_field_group_info() {
       'formatter' => 'open',
     ),
   );
-  $export['group_card_content|node|organization|listing'] = $field_group;
+  $field_groups['group_card_content|node|organization|listing'] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -75,7 +75,7 @@ function gie_organization_field_group_info() {
       'formatter' => 'open',
     ),
   );
-  $export['group_card_content|node|organization|spotlight'] = $field_group;
+  $field_groups['group_card_content|node|organization|spotlight'] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -109,7 +109,7 @@ function gie_organization_field_group_info() {
       'formatter' => 'open',
     ),
   );
-  $export['group_card_counts|node|organization|listing'] = $field_group;
+  $field_groups['group_card_counts|node|organization|listing'] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -141,7 +141,7 @@ function gie_organization_field_group_info() {
       'formatter' => 'open',
     ),
   );
-  $export['group_card_image|node|organization|spotlight'] = $field_group;
+  $field_groups['group_card_image|node|organization|spotlight'] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -179,7 +179,7 @@ function gie_organization_field_group_info() {
       'formatter' => 'open',
     ),
   );
-  $export['group_org_addtl|node|organization|form'] = $field_group;
+  $field_groups['group_org_addtl|node|organization|form'] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -218,7 +218,7 @@ function gie_organization_field_group_info() {
       'formatter' => 'open',
     ),
   );
-  $export['group_org_affiliations|node|organization|form'] = $field_group;
+  $field_groups['group_org_affiliations|node|organization|form'] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -255,7 +255,7 @@ function gie_organization_field_group_info() {
       'formatter' => 'open',
     ),
   );
-  $export['group_org_general|node|organization|form'] = $field_group;
+  $field_groups['group_org_general|node|organization|form'] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -291,7 +291,17 @@ function gie_organization_field_group_info() {
       'formatter' => 'open',
     ),
   );
-  $export['group_org_glance|node|organization|form'] = $field_group;
+  $field_groups['group_org_glance|node|organization|form'] = $field_group;
 
-  return $export;
+  // Translatables
+  // Included for use with string extractors like potx.
+  t('Additional Information');
+  t('At a Glance');
+  t('Card Content');
+  t('Card Counts');
+  t('Card Image');
+  t('Focus and Affiliations');
+  t('General Information');
+
+  return $field_groups;
 }

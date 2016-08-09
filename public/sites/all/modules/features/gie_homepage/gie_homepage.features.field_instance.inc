@@ -10,7 +10,7 @@
 function gie_homepage_field_default_field_instances() {
   $field_instances = array();
 
-  // Exported field_instance: 'comment-comment_node_persona-comment_body'
+  // Exported field_instance: 'comment-comment_node_persona-comment_body'.
   $field_instances['comment-comment_node_persona-comment_body'] = array(
     'bundle' => 'comment_node_persona',
     'default_value' => NULL,
@@ -56,7 +56,7 @@ function gie_homepage_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'comment-comment_node_persona-subject_field'
+  // Exported field_instance: 'comment-comment_node_persona-subject_field'.
   $field_instances['comment-comment_node_persona-subject_field'] = array(
     'bundle' => 'comment_node_persona',
     'default_value' => NULL,
@@ -92,7 +92,7 @@ function gie_homepage_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-action_card-field_action_description'
+  // Exported field_instance: 'node-action_card-field_action_description'.
   $field_instances['node-action_card-field_action_description'] = array(
     'bundle' => 'action_card',
     'default_value' => NULL,
@@ -192,7 +192,7 @@ function gie_homepage_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-action_card-field_action_image'
+  // Exported field_instance: 'node-action_card-field_action_image'.
   $field_instances['node-action_card-field_action_image'] = array(
     'bundle' => 'action_card',
     'deleted' => 0,
@@ -255,12 +255,13 @@ function gie_homepage_field_default_field_instances() {
     'label' => 'Image',
     'required' => 0,
     'settings' => array(
-      'alt_field' => 0,
+      'alt_field' => 1,
       'alt_field_default' => '',
       'alt_field_hide' => 0,
       'alt_field_sync_title' => 0,
       'alt_field_update_on_edit' => 0,
       'default_image' => 0,
+      'description_display' => 'after',
       'file_directory' => 'pictures',
       'file_extensions' => 'png gif jpg jpeg',
       'focus' => 0,
@@ -271,7 +272,7 @@ function gie_homepage_field_default_field_instances() {
       'min_resolution' => '',
       'random_default' => 0,
       'random_default_path' => '',
-      'title_field' => 0,
+      'title_field' => 1,
       'title_field_default' => '',
       'title_field_hide' => 0,
       'title_field_update_on_edit' => 0,
@@ -289,7 +290,7 @@ function gie_homepage_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-action_card-field_action_link'
+  // Exported field_instance: 'node-action_card-field_action_link'.
   $field_instances['node-action_card-field_action_link'] = array(
     'bundle' => 'action_card',
     'default_value' => NULL,
@@ -380,7 +381,7 @@ function gie_homepage_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-action_card-title_field'
+  // Exported field_instance: 'node-action_card-title_field'.
   $field_instances['node-action_card-title_field'] = array(
     'bundle' => 'action_card',
     'default_value' => NULL,
@@ -428,7 +429,7 @@ function gie_homepage_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-homepage-field_homepage_action_cards'
+  // Exported field_instance: 'node-homepage-field_homepage_action_cards'.
   $field_instances['node-homepage-field_homepage_action_cards'] = array(
     'bundle' => 'homepage',
     'default_value' => NULL,
@@ -486,11 +487,11 @@ function gie_homepage_field_default_field_instances() {
         'size' => 60,
       ),
       'type' => 'entityreference_autocomplete',
-      'weight' => 4,
+      'weight' => 6,
     ),
   );
 
-  // Exported field_instance: 'node-homepage-field_homepage_discussions'
+  // Exported field_instance: 'node-homepage-field_homepage_discussions'.
   $field_instances['node-homepage-field_homepage_discussions'] = array(
     'bundle' => 'homepage',
     'default_value' => NULL,
@@ -549,11 +550,11 @@ function gie_homepage_field_default_field_instances() {
         'size' => 60,
       ),
       'type' => 'entityreference_autocomplete',
-      'weight' => 15,
+      'weight' => 17,
     ),
   );
 
-  // Exported field_instance: 'node-homepage-field_homepage_events'
+  // Exported field_instance: 'node-homepage-field_homepage_events'.
   $field_instances['node-homepage-field_homepage_events'] = array(
     'bundle' => 'homepage',
     'default_value' => NULL,
@@ -612,11 +613,11 @@ function gie_homepage_field_default_field_instances() {
         'size' => 60,
       ),
       'type' => 'entityreference_autocomplete',
-      'weight' => 9,
+      'weight' => 11,
     ),
   );
 
-  // Exported field_instance: 'node-homepage-field_homepage_featured_partners'
+  // Exported field_instance: 'node-homepage-field_homepage_featured_partners'.
   $field_instances['node-homepage-field_homepage_featured_partners'] = array(
     'bundle' => 'homepage',
     'default_value' => NULL,
@@ -675,11 +676,76 @@ function gie_homepage_field_default_field_instances() {
         'size' => 60,
       ),
       'type' => 'entityreference_autocomplete',
-      'weight' => 7,
+      'weight' => 9,
     ),
   );
 
-  // Exported field_instance: 'node-homepage-field_homepage_members'
+  // Exported field_instance: 'node-homepage-field_homepage_ges_personas'.
+  $field_instances['node-homepage-field_homepage_ges_personas'] = array(
+    'bundle' => 'homepage',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'entityreference',
+        'settings' => array(
+          'field_delimiter' => '',
+          'link' => FALSE,
+          'linked_field' => array(
+            'advanced' => array(
+              'class' => '',
+              'rel' => '',
+              'target' => '',
+              'text' => '',
+              'title' => '',
+            ),
+            'destination' => '',
+            'linked' => 0,
+          ),
+        ),
+        'type' => 'entityreference_label',
+        'weight' => 19,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'ds_extras_field_template' => '',
+    'entity_type' => 'node',
+    'entityconnect_show_add_icon' => 0,
+    'entityconnect_show_edit_icon' => 0,
+    'entityconnect_unload_add' => 1,
+    'entityconnect_unload_edit' => 1,
+    'field_name' => 'field_homepage_ges_personas',
+    'label' => 'GES personas',
+    'required' => 0,
+    'settings' => array(
+      'description_display' => 'after',
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'entityreference',
+      'settings' => array(
+        'match_operator' => 'CONTAINS',
+        'path' => '',
+        'references_dialog_add' => 0,
+        'references_dialog_edit' => 0,
+        'references_dialog_search' => 0,
+        'references_dialog_search_view' => '',
+        'size' => 60,
+      ),
+      'type' => 'entityreference_autocomplete',
+      'weight' => 5,
+    ),
+  );
+
+  // Exported field_instance: 'node-homepage-field_homepage_members'.
   $field_instances['node-homepage-field_homepage_members'] = array(
     'bundle' => 'homepage',
     'default_value' => NULL,
@@ -738,11 +804,11 @@ function gie_homepage_field_default_field_instances() {
         'size' => 60,
       ),
       'type' => 'entityreference_autocomplete',
-      'weight' => 11,
+      'weight' => 13,
     ),
   );
 
-  // Exported field_instance: 'node-homepage-field_homepage_organizations'
+  // Exported field_instance: 'node-homepage-field_homepage_organizations'.
   $field_instances['node-homepage-field_homepage_organizations'] = array(
     'bundle' => 'homepage',
     'default_value' => NULL,
@@ -801,11 +867,11 @@ function gie_homepage_field_default_field_instances() {
         'size' => 60,
       ),
       'type' => 'entityreference_autocomplete',
-      'weight' => 8,
+      'weight' => 10,
     ),
   );
 
-  // Exported field_instance: 'node-homepage-field_homepage_partners'
+  // Exported field_instance: 'node-homepage-field_homepage_partners'.
   $field_instances['node-homepage-field_homepage_partners'] = array(
     'bundle' => 'homepage',
     'default_value' => NULL,
@@ -864,11 +930,11 @@ function gie_homepage_field_default_field_instances() {
         'size' => 60,
       ),
       'type' => 'entityreference_autocomplete',
-      'weight' => 6,
+      'weight' => 8,
     ),
   );
 
-  // Exported field_instance: 'node-homepage-field_homepage_personas'
+  // Exported field_instance: 'node-homepage-field_homepage_personas'.
   $field_instances['node-homepage-field_homepage_personas'] = array(
     'bundle' => 'homepage',
     'default_value' => NULL,
@@ -926,11 +992,11 @@ function gie_homepage_field_default_field_instances() {
         'size' => 60,
       ),
       'type' => 'entityreference_autocomplete',
-      'weight' => 3,
+      'weight' => 4,
     ),
   );
 
-  // Exported field_instance: 'node-homepage-field_homepage_programs'
+  // Exported field_instance: 'node-homepage-field_homepage_programs'.
   $field_instances['node-homepage-field_homepage_programs'] = array(
     'bundle' => 'homepage',
     'default_value' => NULL,
@@ -989,11 +1055,11 @@ function gie_homepage_field_default_field_instances() {
         'size' => 60,
       ),
       'type' => 'entityreference_autocomplete',
-      'weight' => 10,
+      'weight' => 12,
     ),
   );
 
-  // Exported field_instance: 'node-homepage-field_homepage_regions'
+  // Exported field_instance: 'node-homepage-field_homepage_regions'.
   $field_instances['node-homepage-field_homepage_regions'] = array(
     'bundle' => 'homepage',
     'default_value' => NULL,
@@ -1041,11 +1107,11 @@ function gie_homepage_field_default_field_instances() {
       'module' => 'multiple_selects',
       'settings' => array(),
       'type' => 'multiple_selects',
-      'weight' => 14,
+      'weight' => 16,
     ),
   );
 
-  // Exported field_instance: 'node-homepage-field_homepage_resources'
+  // Exported field_instance: 'node-homepage-field_homepage_resources'.
   $field_instances['node-homepage-field_homepage_resources'] = array(
     'bundle' => 'homepage',
     'default_value' => NULL,
@@ -1104,11 +1170,11 @@ function gie_homepage_field_default_field_instances() {
         'size' => 60,
       ),
       'type' => 'entityreference_autocomplete',
-      'weight' => 18,
+      'weight' => 19,
     ),
   );
 
-  // Exported field_instance: 'node-homepage-field_homepage_sdg'
+  // Exported field_instance: 'node-homepage-field_homepage_sdg'.
   $field_instances['node-homepage-field_homepage_sdg'] = array(
     'bundle' => 'homepage',
     'default_value' => NULL,
@@ -1156,11 +1222,11 @@ function gie_homepage_field_default_field_instances() {
       'module' => 'multiple_selects',
       'settings' => array(),
       'type' => 'multiple_selects',
-      'weight' => 21,
+      'weight' => 22,
     ),
   );
 
-  // Exported field_instance: 'node-homepage-field_homepage_sectors'
+  // Exported field_instance: 'node-homepage-field_homepage_sectors'.
   $field_instances['node-homepage-field_homepage_sectors'] = array(
     'bundle' => 'homepage',
     'default_value' => NULL,
@@ -1208,11 +1274,11 @@ function gie_homepage_field_default_field_instances() {
       'module' => 'multiple_selects',
       'settings' => array(),
       'type' => 'multiple_selects',
-      'weight' => 12,
+      'weight' => 14,
     ),
   );
 
-  // Exported field_instance: 'node-homepage-field_homepage_staff_picks'
+  // Exported field_instance: 'node-homepage-field_homepage_staff_picks'.
   $field_instances['node-homepage-field_homepage_staff_picks'] = array(
     'bundle' => 'homepage',
     'default_value' => NULL,
@@ -1270,11 +1336,11 @@ function gie_homepage_field_default_field_instances() {
         'size' => 60,
       ),
       'type' => 'entityreference_autocomplete',
-      'weight' => 5,
+      'weight' => 7,
     ),
   );
 
-  // Exported field_instance: 'node-homepage-field_homepage_topics'
+  // Exported field_instance: 'node-homepage-field_homepage_topics'.
   $field_instances['node-homepage-field_homepage_topics'] = array(
     'bundle' => 'homepage',
     'default_value' => NULL,
@@ -1322,11 +1388,11 @@ function gie_homepage_field_default_field_instances() {
       'module' => 'multiple_selects',
       'settings' => array(),
       'type' => 'multiple_selects',
-      'weight' => 13,
+      'weight' => 15,
     ),
   );
 
-  // Exported field_instance: 'node-homepage-field_homepage_wanteds'
+  // Exported field_instance: 'node-homepage-field_homepage_wanteds'.
   $field_instances['node-homepage-field_homepage_wanteds'] = array(
     'bundle' => 'homepage',
     'default_value' => NULL,
@@ -1385,11 +1451,11 @@ function gie_homepage_field_default_field_instances() {
         'size' => 60,
       ),
       'type' => 'entityreference_autocomplete',
-      'weight' => 17,
+      'weight' => 18,
     ),
   );
 
-  // Exported field_instance: 'node-homepage-title_field'
+  // Exported field_instance: 'node-homepage-title_field'.
   $field_instances['node-homepage-title_field'] = array(
     'bundle' => 'homepage',
     'default_value' => NULL,
@@ -1431,13 +1497,19 @@ function gie_homepage_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-persona-field_persona_description'
+  // Exported field_instance: 'node-persona-field_persona_description'.
   $field_instances['node-persona-field_persona_description'] = array(
     'bundle' => 'persona',
     'default_value' => NULL,
     'deleted' => 0,
     'description' => '',
     'display' => array(
+      'data' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
       'default' => array(
         'label' => 'above',
         'module' => 'text',
@@ -1531,12 +1603,18 @@ function gie_homepage_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-persona-field_persona_image'
+  // Exported field_instance: 'node-persona-field_persona_image'.
   $field_instances['node-persona-field_persona_image'] = array(
     'bundle' => 'persona',
     'deleted' => 0,
     'description' => '',
     'display' => array(
+      'data' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
       'default' => array(
         'label' => 'above',
         'module' => 'image',
@@ -1600,6 +1678,7 @@ function gie_homepage_field_default_field_instances() {
       'alt_field_sync_title' => 0,
       'alt_field_update_on_edit' => 0,
       'default_image' => 0,
+      'description_display' => 'after',
       'file_directory' => 'pictures',
       'file_extensions' => 'png gif jpg jpeg',
       'focus' => 0,
@@ -1610,7 +1689,7 @@ function gie_homepage_field_default_field_instances() {
       'min_resolution' => '',
       'random_default' => 0,
       'random_default_path' => '',
-      'title_field' => 0,
+      'title_field' => 1,
       'title_field_default' => '',
       'title_field_hide' => 0,
       'title_field_update_on_edit' => 0,
@@ -1628,13 +1707,19 @@ function gie_homepage_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-persona-field_persona_link'
+  // Exported field_instance: 'node-persona-field_persona_link'.
   $field_instances['node-persona-field_persona_link'] = array(
     'bundle' => 'persona',
     'default_value' => NULL,
     'deleted' => 0,
     'description' => '',
     'display' => array(
+      'data' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
       'default' => array(
         'label' => 'above',
         'module' => 'link',
@@ -1657,22 +1742,8 @@ function gie_homepage_field_default_field_instances() {
       ),
       'listing' => array(
         'label' => 'hidden',
-        'module' => 'link',
-        'settings' => array(
-          'field_delimiter' => '',
-          'linked_field' => array(
-            'advanced' => array(
-              'class' => '',
-              'rel' => '',
-              'target' => '',
-              'text' => '',
-              'title' => '',
-            ),
-            'destination' => '',
-            'linked' => 0,
-          ),
-        ),
-        'type' => 'link_default',
+        'settings' => array(),
+        'type' => 'hidden',
         'weight' => 6,
       ),
       'teaser' => array(
@@ -1719,13 +1790,19 @@ function gie_homepage_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-persona-field_persona_type'
+  // Exported field_instance: 'node-persona-field_persona_type'.
   $field_instances['node-persona-field_persona_type'] = array(
     'bundle' => 'persona',
     'default_value' => NULL,
     'deleted' => 0,
     'description' => '',
     'display' => array(
+      'data' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
       'default' => array(
         'label' => 'above',
         'module' => 'list',
@@ -1779,13 +1856,19 @@ function gie_homepage_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-persona-title_field'
+  // Exported field_instance: 'node-persona-title_field'.
   $field_instances['node-persona-title_field'] = array(
     'bundle' => 'persona',
     'default_value' => NULL,
     'deleted' => 0,
     'description' => '',
     'display' => array(
+      'data' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
       'default' => array(
         'label' => 'above',
         'settings' => array(),
@@ -1845,6 +1928,7 @@ function gie_homepage_field_default_field_instances() {
   t('Featured Sectors');
   t('Featured Topics');
   t('Featured Wanteds');
+  t('GES personas');
   t('Image');
   t('Link');
   t('Persona Type');

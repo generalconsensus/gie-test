@@ -589,7 +589,9 @@ $conf['search_api_override_servers'] = array(
   'elasticsearch' => array(
     'options' => array(
       '0' => array(
-        'host' => 'localhost',
+        'host' => 'search.globalinnovationexchange.org',
+        'port' => '443',
+        'transport' => 'Https'
       ),
     ),
   ),
@@ -611,7 +613,7 @@ $conf['search_api_override_mode'] = 'default';
 $conf['cache_backends'][] = 'sites/all/modules/contrib/memcache/memcache.inc';
 $conf['cache_default_class'] = 'MemCacheDrupal';
 $conf['cache_class_cache_form'] = 'DrupalDatabaseCache';
-
+$conf['lock_inc'] = './sites/all/modules/contrib/memcache/memcache-lock.inc';
 /**
  * Secure pages
  */
@@ -667,7 +669,21 @@ $conf['reroute_email_enable'] = 1;
 $conf['reroute_email_address'] = '';
 $conf['reroute_email_enable_message'] = 1;
 
+/**
+ * Set Environment modules to make sure that the dev environments have their own set of modules installed by default.
+ */
 $conf['environment_modules'] = array(
   'gie_ui' => 'sites/all/modules/features/gie_ui/gie_ui.module',
   'gie_dev' => 'sites/all/modules/features/gie_dev/gie_dev.module'
 );
+
+/**
+ * Set correct systlog identity
+ */
+$conf['syslog_identity'] = 'gie_vm';
+
+/**
+ * Set correct systlog identity
+ */
+$conf['fastly_api_key'] = '';
+$conf['fastly_log_enabled'] = 0;

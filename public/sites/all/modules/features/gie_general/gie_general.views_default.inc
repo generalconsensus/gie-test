@@ -100,13 +100,13 @@ function gie_general_views_default_views() {
   $handler->display->display_options['cache']['output_max_lifespan'] = '21600';
   $handler->display->display_options['cache']['keys'] = array(
     'comment' => array(
-      'changed' => 'changed',
+      'changed' => 0,
     ),
     'node' => array(
-      'needs' => 'needs',
       'action_card' => 0,
       'article' => 0,
       'page' => 0,
+      'blogs' => 0,
       'discussion' => 0,
       'error_page' => 0,
       'event' => 0,
@@ -116,6 +116,8 @@ function gie_general_views_default_views() {
       'long_form_page' => 0,
       'microsite' => 0,
       'microsite_page' => 0,
+      'needs' => 0,
+      'news' => 0,
       'organization' => 0,
       'persona' => 0,
       'program' => 0,
@@ -191,7 +193,7 @@ function gie_general_views_default_views() {
   $handler->display->display_options['cache']['output_max_lifespan'] = '21600';
   $handler->display->display_options['cache']['keys'] = array(
     'comment' => array(
-      'changed' => 'changed',
+      'changed' => 0,
     ),
     'node' => array(
       'program' => 'program',

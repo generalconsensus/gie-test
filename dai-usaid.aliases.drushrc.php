@@ -48,3 +48,10 @@ $aliases['stage'] = array(
   'remote-host' => 'stage.gie.byf1.io',
   'remote-user' => 'gie'
 );
+
+$aliases['live'] = array(
+  'uri' => 'globalinnovationexchange.com',
+  'root' => '/var/www/vhosts/gie.www/public/',
+  'remote-host' => 'utility.gie.byf1.io',
+  'remote-user' => 'gie'
+);

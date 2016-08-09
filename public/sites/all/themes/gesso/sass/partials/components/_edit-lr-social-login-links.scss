@@ -7,6 +7,7 @@
   margin-bottom: 0 !important;
   padding-left: 1em;
   width: auto;
+  z-index: 2;
   &:before {
     @include image-replace(18px,18px);
     content: "";

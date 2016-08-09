@@ -10,7 +10,7 @@
 function gie_homepage_field_default_field_bases() {
   $field_bases = array();
 
-  // Exported field_base: 'field_action_description'
+  // Exported field_base: 'field_action_description'.
   $field_bases['field_action_description'] = array(
     'active' => 1,
     'cardinality' => 1,
@@ -31,7 +31,7 @@ function gie_homepage_field_default_field_bases() {
     'type' => 'text',
   );
 
-  // Exported field_base: 'field_action_image'
+  // Exported field_base: 'field_action_image'.
   $field_bases['field_action_image'] = array(
     'active' => 1,
     'cardinality' => 1,
@@ -53,7 +53,7 @@ function gie_homepage_field_default_field_bases() {
     'type' => 'image',
   );
 
-  // Exported field_base: 'field_action_link'
+  // Exported field_base: 'field_action_link'.
   $field_bases['field_action_link'] = array(
     'active' => 1,
     'cardinality' => 1,
@@ -82,7 +82,7 @@ function gie_homepage_field_default_field_bases() {
     'type' => 'link_field',
   );
 
-  // Exported field_base: 'field_homepage_action_cards'
+  // Exported field_base: 'field_homepage_action_cards'.
   $field_bases['field_homepage_action_cards'] = array(
     'active' => 1,
     'cardinality' => 8,
@@ -117,7 +117,7 @@ function gie_homepage_field_default_field_bases() {
     'type' => 'entityreference',
   );
 
-  // Exported field_base: 'field_homepage_discussions'
+  // Exported field_base: 'field_homepage_discussions'.
   $field_bases['field_homepage_discussions'] = array(
     'active' => 1,
     'cardinality' => 8,
@@ -152,7 +152,7 @@ function gie_homepage_field_default_field_bases() {
     'type' => 'entityreference',
   );
 
-  // Exported field_base: 'field_homepage_events'
+  // Exported field_base: 'field_homepage_events'.
   $field_bases['field_homepage_events'] = array(
     'active' => 1,
     'cardinality' => 4,
@@ -187,7 +187,7 @@ function gie_homepage_field_default_field_bases() {
     'type' => 'entityreference',
   );
 
-  // Exported field_base: 'field_homepage_featured_partners'
+  // Exported field_base: 'field_homepage_featured_partners'.
   $field_bases['field_homepage_featured_partners'] = array(
     'active' => 1,
     'cardinality' => -1,
@@ -220,7 +220,42 @@ function gie_homepage_field_default_field_bases() {
     'type' => 'entityreference',
   );
 
-  // Exported field_base: 'field_homepage_members'
+  // Exported field_base: 'field_homepage_ges_personas'.
+  $field_bases['field_homepage_ges_personas'] = array(
+    'active' => 1,
+    'cardinality' => 3,
+    'deleted' => 0,
+    'entity_types' => array(),
+    'field_name' => 'field_homepage_ges_personas',
+    'indexes' => array(
+      'target_id' => array(
+        0 => 'target_id',
+      ),
+    ),
+    'locked' => 0,
+    'module' => 'entityreference',
+    'settings' => array(
+      'handler' => 'base',
+      'handler_settings' => array(
+        'behaviors' => array(
+          'views-select-list' => array(
+            'status' => 0,
+          ),
+        ),
+        'sort' => array(
+          'type' => 'none',
+        ),
+        'target_bundles' => array(
+          'persona' => 'persona',
+        ),
+      ),
+      'target_type' => 'node',
+    ),
+    'translatable' => 0,
+    'type' => 'entityreference',
+  );
+
+  // Exported field_base: 'field_homepage_members'.
   $field_bases['field_homepage_members'] = array(
     'active' => 1,
     'cardinality' => 4,
@@ -253,7 +288,7 @@ function gie_homepage_field_default_field_bases() {
     'type' => 'entityreference',
   );
 
-  // Exported field_base: 'field_homepage_organizations'
+  // Exported field_base: 'field_homepage_organizations'.
   $field_bases['field_homepage_organizations'] = array(
     'active' => 1,
     'cardinality' => 4,
@@ -288,7 +323,7 @@ function gie_homepage_field_default_field_bases() {
     'type' => 'entityreference',
   );
 
-  // Exported field_base: 'field_homepage_partners'
+  // Exported field_base: 'field_homepage_partners'.
   $field_bases['field_homepage_partners'] = array(
     'active' => 1,
     'cardinality' => -1,
@@ -324,7 +359,7 @@ function gie_homepage_field_default_field_bases() {
     'type' => 'entityreference',
   );
 
-  // Exported field_base: 'field_homepage_personas'
+  // Exported field_base: 'field_homepage_personas'.
   $field_bases['field_homepage_personas'] = array(
     'active' => 1,
     'cardinality' => 3,
@@ -359,7 +394,7 @@ function gie_homepage_field_default_field_bases() {
     'type' => 'entityreference',
   );
 
-  // Exported field_base: 'field_homepage_programs'
+  // Exported field_base: 'field_homepage_programs'.
   $field_bases['field_homepage_programs'] = array(
     'active' => 1,
     'cardinality' => 4,
@@ -394,7 +429,7 @@ function gie_homepage_field_default_field_bases() {
     'type' => 'entityreference',
   );
 
-  // Exported field_base: 'field_homepage_regions'
+  // Exported field_base: 'field_homepage_regions'.
   $field_bases['field_homepage_regions'] = array(
     'active' => 1,
     'cardinality' => 4,
@@ -420,7 +455,7 @@ function gie_homepage_field_default_field_bases() {
     'type' => 'taxonomy_term_reference',
   );
 
-  // Exported field_base: 'field_homepage_resources'
+  // Exported field_base: 'field_homepage_resources'.
   $field_bases['field_homepage_resources'] = array(
     'active' => 1,
     'cardinality' => 4,
@@ -455,7 +490,7 @@ function gie_homepage_field_default_field_bases() {
     'type' => 'entityreference',
   );
 
-  // Exported field_base: 'field_homepage_sdg'
+  // Exported field_base: 'field_homepage_sdg'.
   $field_bases['field_homepage_sdg'] = array(
     'active' => 1,
     'cardinality' => 4,
@@ -481,7 +516,7 @@ function gie_homepage_field_default_field_bases() {
     'type' => 'taxonomy_term_reference',
   );
 
-  // Exported field_base: 'field_homepage_sectors'
+  // Exported field_base: 'field_homepage_sectors'.
   $field_bases['field_homepage_sectors'] = array(
     'active' => 1,
     'cardinality' => 4,
@@ -507,7 +542,7 @@ function gie_homepage_field_default_field_bases() {
     'type' => 'taxonomy_term_reference',
   );
 
-  // Exported field_base: 'field_homepage_staff_picks'
+  // Exported field_base: 'field_homepage_staff_picks'.
   $field_bases['field_homepage_staff_picks'] = array(
     'active' => 1,
     'cardinality' => 4,
@@ -542,7 +577,7 @@ function gie_homepage_field_default_field_bases() {
     'type' => 'entityreference',
   );
 
-  // Exported field_base: 'field_homepage_topics'
+  // Exported field_base: 'field_homepage_topics'.
   $field_bases['field_homepage_topics'] = array(
     'active' => 1,
     'cardinality' => 4,
@@ -568,7 +603,7 @@ function gie_homepage_field_default_field_bases() {
     'type' => 'taxonomy_term_reference',
   );
 
-  // Exported field_base: 'field_homepage_wanteds'
+  // Exported field_base: 'field_homepage_wanteds'.
   $field_bases['field_homepage_wanteds'] = array(
     'active' => 1,
     'cardinality' => 4,
@@ -603,7 +638,7 @@ function gie_homepage_field_default_field_bases() {
     'type' => 'entityreference',
   );
 
-  // Exported field_base: 'field_persona_description'
+  // Exported field_base: 'field_persona_description'.
   $field_bases['field_persona_description'] = array(
     'active' => 1,
     'cardinality' => 1,
@@ -624,7 +659,7 @@ function gie_homepage_field_default_field_bases() {
     'type' => 'text',
   );
 
-  // Exported field_base: 'field_persona_image'
+  // Exported field_base: 'field_persona_image'.
   $field_bases['field_persona_image'] = array(
     'active' => 1,
     'cardinality' => 1,
@@ -646,7 +681,7 @@ function gie_homepage_field_default_field_bases() {
     'type' => 'image',
   );
 
-  // Exported field_base: 'field_persona_link'
+  // Exported field_base: 'field_persona_link'.
   $field_bases['field_persona_link'] = array(
     'active' => 1,
     'cardinality' => 1,
@@ -675,7 +710,7 @@ function gie_homepage_field_default_field_bases() {
     'type' => 'link_field',
   );
 
-  // Exported field_base: 'field_persona_type'
+  // Exported field_base: 'field_persona_type'.
   $field_bases['field_persona_type'] = array(
     'active' => 1,
     'cardinality' => 1,

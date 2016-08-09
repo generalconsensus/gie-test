@@ -580,6 +580,9 @@ $conf['404_fast_html'] = '<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML+RDFa 1.0//EN"
  */
 # $conf['allow_authorize_operations'] = FALSE;
 
+# Set Cron to run only through Server
+$conf['cron_safe_threshold'] = 0;
+
 /**
  * Solr Search API overrides
  *
@@ -589,8 +592,9 @@ $conf['search_api_override_servers'] = array(
   'elasticsearch' => array(
     'options' => array(
       '0' => array(
-        'host' => 'search-giexchange-kfthj2b3nazu44oiywqn5emn5i.us-east-1.es.amazonaws.com',
-        'port' => '80',
+        'host' => 'search.globalinnovationexchange.org',
+        'port' => '443',
+        'transport' => 'Https'
       ),
     ),
   ),
@@ -614,6 +618,7 @@ $conf['cache_default_class'] = 'MemCacheDrupal';
 $conf['cache_class_cache_form'] = 'DrupalDatabaseCache';
 $conf['memcache_key_prefix'] = 'gie_stage';
 $conf['memcache_servers'] = array('10.0.2.76:11211' => 'default');
+$conf['lock_inc'] = './sites/all/modules/contrib/memcache/memcache-lock.inc';
 
 /**
  * Secure pages
@@ -667,10 +672,24 @@ $conf['s3fs_use_s3_for_public'] = 1;
  * Set Re-route email to enable to catch all local emails
  */
 $conf['reroute_email_enable'] = 1;
-$conf['reroute_email_address'] = 'mburge@forumone.com, mdrayer@forumone.com, cchumley@forumone.com, mdrayer+test@forumone.com, dmcdermott@forumone.com, aklatsky@forumone.com';
+$conf['reroute_email_address'] = '';
 $conf['reroute_email_enable_message'] = 1;
 
+/**
+ * Set Environment modules to make sure that the dev environments have their own set of modules installed by default.
+ */
 $conf['environment_modules'] = array(
   'gie_ui' => 'sites/all/modules/features/gie_ui/gie_ui.module',
   'gie_dev' => 'sites/all/modules/features/gie_dev/gie_dev.module'
 );
+
+/**
+ * Set correct systlog identity
+ */
+$conf['syslog_identity'] = 'gie_stage';
+
+/**
+ * Set correct systlog identity
+ */
+$conf['fastly_api_key'] = '';
+$conf['fastly_log_enabled'] = 0;
