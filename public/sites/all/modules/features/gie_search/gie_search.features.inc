@@ -288,6 +288,7 @@ function gie_search_default_search_api_index() {
         "field_org_telephone" : { "type" : "text" },
         "field_org_text_email" : { "type" : "text" },
         "field_organization_type" : { "type" : "list\\u003Cinteger\\u003E", "entity_type" : "taxonomy_term" },
+        "field_related_programs" : { "type" : "integer", "entity_type" : "node" },
         "field_resource_assets" : { "type" : "list\\u003Cinteger\\u003E", "entity_type" : "asset" },
         "field_resource_author" : { "type" : "integer", "entity_type" : "user" },
         "field_resource_date" : { "type" : "date" },

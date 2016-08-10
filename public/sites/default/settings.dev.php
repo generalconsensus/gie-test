@@ -618,6 +618,7 @@ $conf['cache_default_class'] = 'MemCacheDrupal';
 $conf['cache_class_cache_form'] = 'DrupalDatabaseCache';
 $conf['memcache_key_prefix'] = 'gie_dev';
 $conf['memcache_servers'] = array('10.0.2.76:11211' => 'default');
+$conf['lock_inc'] = './sites/all/modules/contrib/memcache/memcache-lock.inc';
 
 /**
  * Secure pages
@@ -671,7 +672,7 @@ $conf['s3fs_use_s3_for_public'] = 1;
  * Set Re-route email to enable to catch all local emails
  */
 $conf['reroute_email_enable'] = 1;
-$conf['reroute_email_address'] = 'mburge@forumone.com, mdrayer@forumone.com, cchumley@forumone.com, mdrayer+test@forumone.com, dmcdermott@forumone.com, aklatsky@forumone.com';
+#$conf['reroute_email_address'] = 'mburge@forumone.com, mdrayer@forumone.com, cchumley@forumone.com, mdrayer+test@forumone.com, dmcdermott@forumone.com, aklatsky@forumone.com';
 $conf['reroute_email_enable_message'] = 1;
 
 /**
