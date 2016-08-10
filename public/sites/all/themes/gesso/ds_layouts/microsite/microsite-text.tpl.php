@@ -8,16 +8,9 @@
 <?php
 
   //$field_orientation = field_get_items('paragraphs_item', $variables['paragraphs_item'], 'field_para_text_orientation');
-  $orientation = $content['field_orientation'][0]['#markup'];
-  $background = $content['field_background'][0]['#markup'];
-
-  //var_dump($content['field_background'][0]['#markup']);
-
-  if ($orientation == 'microsite-text--centered') {
-    $classes = "microsite-text " . $orientation . ' ' . $background;
-  } else {
-    $classes = "microsite-text " . $orientation . ' ' . $background;
-  };
+  $orientation = (!empty($content['field_orientation'])) ? $content['field_orientation'][0]['#markup'] : '';
+  $background = (!empty($content['field_background'])) ? $content['field_background'][0]['#markup'] : '';
+  $classes = implode(' ', array_filter(['microsite-text', $orientation, $background]));
 
   hide($content['field_orientation']);
   hide($content['field_background']);
