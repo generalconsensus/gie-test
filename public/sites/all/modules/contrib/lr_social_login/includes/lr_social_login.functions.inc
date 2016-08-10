@@ -503,16 +503,6 @@ function lr_social_login_user_redirect($form, $account, $userprofile, $variable_
       else {
         drupal_redirect_form($form, $redirect = NULL);
       }
-    } elseif (variable_get($variable_path) == 3) {
-      // Redirect to original destination
-      $destination = drupal_get_destination();
-
-      if (!empty($destination['destination'])) {
-        drupal_goto($destination['destination']);
-      }
-      else {
-        drupal_redirect_form($form, $redirect = NULL);
-      }
     }
    else {
           // Redirect to same page.
