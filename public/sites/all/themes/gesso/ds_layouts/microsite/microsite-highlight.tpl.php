@@ -9,7 +9,7 @@
 
   //$field_para_5050_orientation = field_get_items('paragraphs_item', $variables['paragraphs_item'], 'field_para_text_orientation');
   //check to see if there is an image value set
-  $imagefield = ($content['field_para_highlight_image']) ? $content['field_para_highlight_image']['#items'][0]['uri'] : null;
+  $imagefield = (!empty($content['field_para_highlight_image'])) ? $content['field_para_highlight_image']['#items'][0]['uri'] : null;
   //get image url 
   $image = ($imagefield) ? file_create_url($content['field_para_highlight_image']['#items'][0]['uri']) : null;
   //set classes, including background value
