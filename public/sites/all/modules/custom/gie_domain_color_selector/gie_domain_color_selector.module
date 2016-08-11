@@ -81,7 +81,17 @@ function gie_domain_color_selector_form_submit($form, &$form_state, $domain = ar
  * Implements template_preprocess_html().
  */
 function gie_domain_color_selector_preprocess_html(&$variables) {
-  $settings = variable_get('domain_' . $GLOBALS['_domain']['machine_name'] . '_gie_domain_color_selector_body_class', 'microsite-palette1');
+  global $_domain;
+
+  // If we can't determine the domain we are on, don't hide anything
+  if (empty($_domain)) {
+    return;
+  // If we are the main domain we aren't going to set a microsite-palette
+  } elseif ($_domain['domain_id'] == 1) {
+    return;
+  }
+
+  $settings = variable_get('domain_' . $_domain['machine_name'] . '_gie_domain_color_selector_body_class', 'microsite-palette1');
   if ($settings && $settings != 'none') {
     $variables['classes_array'][] = $settings;
   }
