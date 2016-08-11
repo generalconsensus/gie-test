@@ -26,7 +26,7 @@ function gie_domain_color_selector_menu() {
  * @return mixed
  */
 function gie_domain_color_selector_form($form, &$form_state, $domain = array()) {
-  $body_class = variable_get('domain_' . $domain['machine_name'] . '_gie_domain_color_selector_body_class', NULL);
+  $body_class = variable_get('domain_' . $domain['machine_name'] . '_gie_domain_color_selector_body_class', 'microsite-palette1');
   $color_option = array('none', 'microsite-palette1', 'microsite-palette2');
 
   if ($body_class) {
@@ -81,7 +81,7 @@ function gie_domain_color_selector_form_submit($form, &$form_state, $domain = ar
  * Implements template_preprocess_html().
  */
 function gie_domain_color_selector_preprocess_html(&$variables) {
-  $settings = variable_get('domain_' . $GLOBALS['_domain']['machine_name'] . '_gie_domain_color_selector_body_class', NULL);
+  $settings = variable_get('domain_' . $GLOBALS['_domain']['machine_name'] . '_gie_domain_color_selector_body_class', 'microsite-palette1');
   if ($settings && $settings != 'none') {
     $variables['classes_array'][] = $settings;
   }

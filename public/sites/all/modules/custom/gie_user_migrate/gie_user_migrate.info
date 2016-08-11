@@ -1,0 +1,8 @@
+name = "GIE User Migrate"
+description = "Module to migrate users to the GIE site"
+package = GIE
+core = 7.x
+
+dependencies[] = migrate
+
+files[] = ges.inc
