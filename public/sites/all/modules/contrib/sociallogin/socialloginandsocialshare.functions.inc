@@ -181,8 +181,18 @@ function socialloginandsocialshare_get_callback_url() {
       $callback = 'user';
     }
   }
+  // Allow for the login_destination module to insert it's 'current' url query
+  if (module_exists('login_destination')) {
+    $destination_parse = drupal_parse_url($destination['destination']);
 
-  $query[] = array('destination' => $callback);
+    if ($destination_parse['path'] == 'user/login' && !empty($destination_parse['query']) && !empty($destination_parse['query']['current'])) {
+      $query[] = array('destination' => $destination_parse['query']['current']);
+
+    }
+  } else {
+    $query[] = array('destination' => $callback);
+  }
+
   $url = url('socialloginandsocialshare/token_handler', array(
     'query' => $query,
     'absolute' => TRUE
