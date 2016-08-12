@@ -589,6 +589,12 @@ function gie_dashboard_field_default_field_instances() {
         'type' => 'hidden',
         'weight' => 0,
       ),
+      'rss' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 31,
+      ),
       'search_listing' => array(
         'label' => 'above',
         'settings' => array(),
