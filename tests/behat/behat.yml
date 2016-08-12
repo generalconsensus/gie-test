@@ -56,8 +56,8 @@ local-selenium:
             base_url: http://localhost:8081/
             goutte: ~
             selenium2:
-              browser:              'chrome'
-              capabilities:         { "browserName": "chrome", "browser": "chrome"}
+              browser:              'firefox'
+              capabilities:         { "browserName": "firefox", "browser": "firefox"}
               # The url for accessing the guest vm selenium process from the guest VM
               wd_host:              'http://10.11.12.1:5555/wd/hub'
             browser_name: 'chrome'
