@@ -68,3 +68,19 @@ function gie_user_update_7006() {
 function gie_user_update_7007() {
   module_disable(array('field_validation'), TRUE);
 }
+
+/**
+ * [GIE-851] Create the login destination rule
+ */
+function gie_user_update_7008() {
+  $payload = array(
+      'destination_type' => "0",
+      'destination' => "<current>",
+      'triggers' => "a:0:{}",
+      'pages_type' => "0",
+      'pages' => "",
+      'roles' => "a:0:{}",
+      'id' => "1"
+  );
+  drupal_write_record('login_destination', $payload);
+}

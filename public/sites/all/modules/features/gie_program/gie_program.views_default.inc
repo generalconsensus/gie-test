@@ -877,6 +877,86 @@ function gie_program_views_default_views() {
   $handler->display->display_options['filters']['type']['value'] = array(
     'organization' => 'organization',
   );
+
+  /* Display: Funding */
+  $handler = $view->new_display('panel_pane', 'Funding', 'funding_pane');
+  $handler->display->display_options['defaults']['title'] = FALSE;
+  $handler->display->display_options['title'] = 'Funding Opportunities';
+  $handler->display->display_options['defaults']['css_class'] = FALSE;
+  $handler->display->display_options['css_class'] = 'view--card-view-3col';
+  $handler->display->display_options['defaults']['use_more'] = FALSE;
+  $handler->display->display_options['use_more'] = TRUE;
+  $handler->display->display_options['defaults']['use_more_always'] = FALSE;
+  $handler->display->display_options['defaults']['use_more_always'] = FALSE;
+  $handler->display->display_options['use_more_always'] = FALSE;
+  $handler->display->display_options['defaults']['use_more_text'] = FALSE;
+  $handler->display->display_options['use_more_text'] = 'Explore all funding opportunities by this program';
+  $handler->display->display_options['defaults']['link_display'] = FALSE;
+  $handler->display->display_options['link_display'] = 'custom_url';
+  $handler->display->display_options['link_url'] = '/funding/related-program/!1';
+  $handler->display->display_options['defaults']['style_plugin'] = FALSE;
+  $handler->display->display_options['style_plugin'] = 'default';
+  $handler->display->display_options['defaults']['style_options'] = FALSE;
+  $handler->display->display_options['defaults']['row_plugin'] = FALSE;
+  $handler->display->display_options['row_plugin'] = 'entity';
+  $handler->display->display_options['row_options']['view_mode'] = 'listing';
+  $handler->display->display_options['defaults']['row_options'] = FALSE;
+  $handler->display->display_options['defaults']['relationships'] = FALSE;
+  /* Relationship: Entity Reference: Referenced Entity */
+  $handler->display->display_options['relationships']['field_related_programs_target_id']['id'] = 'field_related_programs_target_id';
+  $handler->display->display_options['relationships']['field_related_programs_target_id']['table'] = 'field_data_field_related_programs';
+  $handler->display->display_options['relationships']['field_related_programs_target_id']['field'] = 'field_related_programs_target_id';
+  $handler->display->display_options['defaults']['sorts'] = FALSE;
+  /* Sort criterion: Content: Date Added (field_resource_date) */
+  $handler->display->display_options['sorts']['field_resource_date_value']['id'] = 'field_resource_date_value';
+  $handler->display->display_options['sorts']['field_resource_date_value']['table'] = 'field_data_field_resource_date';
+  $handler->display->display_options['sorts']['field_resource_date_value']['field'] = 'field_resource_date_value';
+  $handler->display->display_options['sorts']['field_resource_date_value']['order'] = 'DESC';
+  $handler->display->display_options['defaults']['arguments'] = FALSE;
+  /* Contextual filter: Content: Nid */
+  $handler->display->display_options['arguments']['nid']['id'] = 'nid';
+  $handler->display->display_options['arguments']['nid']['table'] = 'node';
+  $handler->display->display_options['arguments']['nid']['field'] = 'nid';
+  $handler->display->display_options['arguments']['nid']['relationship'] = 'field_related_programs_target_id';
+  $handler->display->display_options['arguments']['nid']['default_action'] = 'default';
+  $handler->display->display_options['arguments']['nid']['default_argument_type'] = 'node';
+  $handler->display->display_options['arguments']['nid']['summary']['number_of_records'] = '0';
+  $handler->display->display_options['arguments']['nid']['summary']['format'] = 'default_summary';
+  $handler->display->display_options['arguments']['nid']['summary_options']['items_per_page'] = '25';
+  $handler->display->display_options['defaults']['filter_groups'] = FALSE;
+  $handler->display->display_options['filter_groups']['groups'] = array(
+    1 => 'AND',
+    2 => 'OR',
+  );
+  $handler->display->display_options['defaults']['filters'] = FALSE;
+  /* Filter criterion: Content: Published */
+  $handler->display->display_options['filters']['status']['id'] = 'status';
+  $handler->display->display_options['filters']['status']['table'] = 'node';
+  $handler->display->display_options['filters']['status']['field'] = 'status';
+  $handler->display->display_options['filters']['status']['value'] = 1;
+  $handler->display->display_options['filters']['status']['group'] = 1;
+  $handler->display->display_options['filters']['status']['expose']['operator'] = FALSE;
+  /* Filter criterion: Content: Type */
+  $handler->display->display_options['filters']['type']['id'] = 'type';
+  $handler->display->display_options['filters']['type']['table'] = 'node';
+  $handler->display->display_options['filters']['type']['field'] = 'type';
+  $handler->display->display_options['filters']['type']['value'] = array(
+    'funding' => 'funding',
+  );
+  $handler->display->display_options['filters']['type']['group'] = 1;
+  /* Filter criterion: Content: Deadlines (field_funding_deadline) */
+  $handler->display->display_options['filters']['field_funding_deadline_value']['id'] = 'field_funding_deadline_value';
+  $handler->display->display_options['filters']['field_funding_deadline_value']['table'] = 'field_data_field_funding_deadline';
+  $handler->display->display_options['filters']['field_funding_deadline_value']['field'] = 'field_funding_deadline_value';
+  $handler->display->display_options['filters']['field_funding_deadline_value']['operator'] = '>=';
+  $handler->display->display_options['filters']['field_funding_deadline_value']['group'] = 2;
+  $handler->display->display_options['filters']['field_funding_deadline_value']['default_date'] = 'now';
+  /* Filter criterion: Content: Deadlines (field_funding_deadline) */
+  $handler->display->display_options['filters']['field_funding_deadline_value_1']['id'] = 'field_funding_deadline_value_1';
+  $handler->display->display_options['filters']['field_funding_deadline_value_1']['table'] = 'field_data_field_funding_deadline';
+  $handler->display->display_options['filters']['field_funding_deadline_value_1']['field'] = 'field_funding_deadline_value';
+  $handler->display->display_options['filters']['field_funding_deadline_value_1']['operator'] = 'empty';
+  $handler->display->display_options['filters']['field_funding_deadline_value_1']['group'] = 2;
   $export['program_recent_content'] = $view;
 
   $view = new view();

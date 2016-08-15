@@ -2,6 +2,9 @@
   background: #fff;
   box-shadow: 0 8px 8px -6px rgba(0,0,0,0.15);
   display: none;
+  .no-js & {
+    display: block;
+  }
   @include breakpoint($mobile-menu-bp, $no-query: true) {
     display: block;
   }
@@ -13,7 +16,7 @@
   }
   position: relative;
   z-index: 3;
-  
+
   > .region__inner {
     @extend .layout-constrain;
     position: relative;
@@ -25,7 +28,7 @@
     height: auto;
     padding: 1em 0;
   }
-  
+
 }
 
 

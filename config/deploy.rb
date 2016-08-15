@@ -51,7 +51,17 @@ end
 # install NPM modules and run grunt when building for deployment
 Rake::Task["web:build"].enhance do
   Dir.chdir fetch(:rsync_stage) do
-    system "npm", "install", "--loglevel silent"
+    system "npm", "install", "--loglevel silent", "--no-bin-links"
     system "grunt build"
   end
 end
+
+
+set :drupal_features, true
+
+set :drupal_cmi, false
+
+set :drupal_db_updates, true
+
+set :linked_dirs, %w[public/sites/default/files]
+

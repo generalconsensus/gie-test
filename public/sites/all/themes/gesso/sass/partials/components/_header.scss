@@ -2,6 +2,9 @@ header.header {
   background: #f8f8f8;
   border-bottom: 1px solid #f4f4f4;
   display: none;
+  .no-js & {
+    display: block;
+  }
   @include breakpoint($mobile-menu-bp, $no-query: true) {
     display: block;
   }

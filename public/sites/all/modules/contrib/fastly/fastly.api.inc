@@ -147,6 +147,9 @@ class Fastly {
   public function purgeQuery($original_url) {
     $url = url($original_url, array('absolute' => TRUE, 'alias' => TRUE));
     $options = array('method' => 'PURGE');
+    if ($this->log_enabled) {
+      watchdog('fastly', 'Purged URL: ' . $original_url, array(), WATCHDOG_INFO);
+    }
     if (module_exists('httprl')) {
       // We just want to execute the queue but not wait.
       $options['blocking'] = FALSE;
@@ -258,6 +261,10 @@ class Fastly {
   protected function queryMultiple(array $uris, $data = array(), $method = 'GET', $headers = array()) {
     foreach ($uris as $uri) {
       $urls[] = $this->host . $uri;
+    }
+
+    if ($this->log_enabled) {
+      watchdog('fastly', '<pre>Purged URLS: ' . print_r($uris, true) . '</pre>', WATCHDOG_INFO);
     }
 
     $options['headers'] = $headers;

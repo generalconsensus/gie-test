@@ -589,8 +589,9 @@ $conf['search_api_override_servers'] = array(
   'elasticsearch' => array(
     'options' => array(
       '0' => array(
-        'host' => 'search-giexchange-kfthj2b3nazu44oiywqn5emn5i.us-east-1.es.amazonaws.com',
-        'port' => '80',
+        'host' => 'search.globalinnovationexchange.org',
+        'port' => '443',
+        'transport' => 'Https'
       ),
     ),
   ),
@@ -613,6 +614,7 @@ $conf['cache_backends'][] = 'sites/all/modules/contrib/memcache/memcache.inc';
 $conf['cache_default_class'] = 'MemCacheDrupal';
 $conf['cache_class_cache_form'] = 'DrupalDatabaseCache';
 $conf['memcache_key_prefix'] = 'gie_feat';
+$conf['lock_inc'] = './sites/all/modules/contrib/memcache/memcache-lock.inc';
 
 /**
  * Secure pages
