@@ -678,7 +678,7 @@ function events_views_default_views() {
 
   $view = new view();
   $view->name = 'events_listing';
-  $view->description = 'Funding Listing Solr View';
+  $view->description = 'Events Listing Solr View';
   $view->tag = 'default';
   $view->base_table = 'search_api_index_default_node_index';
   $view->human_name = 'Events Listing';
@@ -738,7 +738,7 @@ function events_views_default_views() {
   $handler->display->display_options['empty']['area']['table'] = 'views';
   $handler->display->display_options['empty']['area']['field'] = 'area';
   $handler->display->display_options['empty']['area']['empty'] = TRUE;
-  $handler->display->display_options['empty']['area']['content'] = 'No results found.';
+  $handler->display->display_options['empty']['area']['content'] = 'There are no events that match your search.';
   $handler->display->display_options['empty']['area']['format'] = 'filtered_html';
   $handler->display->display_options['defaults']['arguments'] = FALSE;
   /* Contextual filter: Indexed Content: Domain ID */
@@ -987,7 +987,7 @@ function events_views_default_views() {
   $handler->display->display_options['empty']['area']['table'] = 'views';
   $handler->display->display_options['empty']['area']['field'] = 'area';
   $handler->display->display_options['empty']['area']['empty'] = TRUE;
-  $handler->display->display_options['empty']['area']['content'] = 'No results found.';
+  $handler->display->display_options['empty']['area']['content'] = 'There are no events that match your search.';
   $handler->display->display_options['empty']['area']['format'] = 'filtered_html';
   $handler->display->display_options['defaults']['sorts'] = FALSE;
   /* Sort criterion: Event Date: Start date (indexed) */

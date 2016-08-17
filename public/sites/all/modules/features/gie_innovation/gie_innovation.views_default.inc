@@ -1662,6 +1662,14 @@ function gie_innovation_views_default_views() {
   $handler->display->display_options['row_plugin'] = 'entity';
   $handler->display->display_options['row_options']['view_mode'] = 'listing';
   $handler->display->display_options['defaults']['row_options'] = FALSE;
+  $handler->display->display_options['defaults']['empty'] = FALSE;
+  /* No results behavior: Global: Text area */
+  $handler->display->display_options['empty']['area']['id'] = 'area';
+  $handler->display->display_options['empty']['area']['table'] = 'views';
+  $handler->display->display_options['empty']['area']['field'] = 'area';
+  $handler->display->display_options['empty']['area']['empty'] = TRUE;
+  $handler->display->display_options['empty']['area']['content'] = 'There are no innovations that match your search.';
+  $handler->display->display_options['empty']['area']['format'] = 'filtered_html';
   $export['innovations_listing'] = $view;
 
   $view = new view();
