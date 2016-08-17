@@ -100,24 +100,47 @@ function gesso_form_element($vars) {
     $suffix = isset($element['#field_suffix']) ? ' <span class="form-item__suffix field-suffix">' . $element['#field_suffix'] . '</span>' : '';
   }
 
-  switch ($element['#title_display']) {
-    case 'before':
-    case 'invisible':
-      $output .= ' ' . theme('form_element_label', $vars);
-      $output .= ' ' . $prefix . $element['#children'] . $suffix . "\n";
-      break;
+  if (module_exists('multistep') && is_multistep($vars['element']['#entity'])) {
+    switch ($element['#title_display']) {
+      case 'before':
+      case 'invisible':
+        $output .= ' ' . theme('form_element_label', $vars);
+        $output .= ' ' . $prefix . $element['#children'] . $suffix . "\n";
+        break;
 
-    case 'after':
-      $output .= ' ' . $prefix . $element['#children'] . $suffix;
-      $output .= ' ' . theme('form_element_label', $vars) . "\n";
-      break;
+      case 'after':
+        $output .= ' ' . $prefix . $element['#children'] . $suffix;
+        $output .= ' ' . theme('form_element_label', $vars) . "\n";
+        break;
 
-    case 'none':
-    case 'attribute':
-      // Output no label and no required marker, only the children.
-      $output .= ' ' . $prefix . $element['#children'] . $suffix . "\n";
-      break;
+      case 'none':
+      case 'attribute':
+        // Output no label and no required marker, only the children.
+        $output .= ' ' . $prefix . $element['#children'] . $suffix . "\n";
+        break;
+    }
+  } else {
+    switch ($element['#title_display']) {
+      case 'before':
+      case 'invisible':
+        $output .= ' ' . theme('form_element_label', $vars);
+        $output .= ' ' . $prefix . $element['#children'] . $suffix . "\n";
+        break;
+
+      case 'after':
+        $output .= ' ' . $prefix . $element['#children'] . $suffix;
+        $output .= ' ' . theme('form_element_label', $vars) . "\n";
+        break;
+
+      case 'none':
+      case 'attribute':
+        // Output no label and no required marker, only the children.
+        $output .= ' ' . $prefix . $element['#children'] . $suffix . "\n";
+        break;
+    }
   }
+
+
 
   if (!empty($element['#description'])) {
     if ($only_use_smacss) {

@@ -45,6 +45,9 @@ function gesso_preprocess_page(&$vars, $hook) {
     $vars['page']['content']['system_main']['#theme_wrappers'] = array_diff($vars['page']['content']['system_main']['#theme_wrappers'], array('block'));
   }
 
+  // Add node edit template suggestion
+  $vars['theme_hook_suggestions'][] = 'page__node__edit';
+
   // Uncomment the following if you want to change page.tpl.php variables based
   // on node type.
   //if (isset($vars['node'])) {
