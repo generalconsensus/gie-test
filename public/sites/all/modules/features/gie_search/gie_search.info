@@ -111,7 +111,6 @@ features[facetapi][] = search_api@default_node_index:block:field_news_organizati
 features[facetapi][] = search_api@default_node_index:block:field_news_program
 features[facetapi][] = search_api@default_node_index:block:field_news_publish_date
 features[facetapi][] = search_api@default_node_index:block:field_org_expertise
-features[facetapi][] = search_api@default_node_index:block:field_org_featured
 features[facetapi][] = search_api@default_node_index:block:field_org_logo
 features[facetapi][] = search_api@default_node_index:block:field_org_partners
 features[facetapi][] = search_api@default_node_index:block:field_org_poc
