@@ -60,3 +60,11 @@ function gie_organization_update_7001() {
 function gie_organization_update_7002() {
     gie_organization_add_default_image();
 }
+
+/**
+ * Delete Organization Featured field.
+ */
+function gie_organization_update_7003() {
+  field_delete_field('field_org_featured');
+  field_purge_batch(1);
+}
