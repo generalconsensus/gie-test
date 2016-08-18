@@ -5,19 +5,6 @@
  * Implement lr_social_login support for Drupal
  */
 module_load_include('inc', 'lr_social_login', 'includes/lr_social_login.functions');
-module_load_include('php', 'lr_social_login', 'LoginRadiusSDK/LoginRadius');
-module_load_include('php', 'lr_social_login', 'LoginRadiusSDK/SocialLogin/SocialLoginAPI');
-module_load_include('php', 'lr_social_login', 'LoginRadiusSDK/LoginRadiusException');
-module_load_include('php', 'lr_social_login', 'LoginRadiusSDK/Clients/IHttpClient');
-module_load_include('php', 'lr_social_login', 'LoginRadiusSDK/Clients/DefaultHttpClient');
-
-use \LoginRadiusSDK\LoginRadius;
-use \LoginRadiusSDK\LoginRadiusException;
-use \LoginRadiusSDK\SocialLogin\SocialLoginAPI;
-
-module_load_include('php', 'lr_social_login', 'customhttpclient');
-global $apiClient_class;
-$apiClient_class = 'CustomHttpClient';
 
 /**
  * Implements hook_menu().
@@ -63,103 +50,15 @@ function lr_social_login_menu() {
     'weight' => 1,
     'file' => 'includes/lr_social_login.admin.inc',
   );
-    $items['lr_social_login/token_handler'] = array(
+  $items['lr_social_login/token_handler'] = array(
     'page callback' => 'drupal_get_form',
     'page arguments' => array('lr_social_login_user_register_validate'),
     'access arguments' => array('access content'),
     'type' => MENU_CALLBACK,
   );
-  $items['admin/config/people/userregistration/logs'] = array(
-    'title' => 'Debug logs',
-    'page callback' => 'lr_social_login_log_management',
-    'access arguments' => array('administer userregistration'),
-    'type' => MENU_LOCAL_TASK,
-    'weight' => 1,
-  ); 
-  $items['admin/config/people/userregistration/clear-log'] = array(
-    'page callback' => 'lr_social_login_clear_log',
-    'page arguments' => array(1, 3),
-    'access callback' => TRUE,
-    'type' => MENU_CALLBACK,
-  );
   return $items;
 }
 
-/**
- * Manage ERROR Logs().
- **
- */
-function lr_social_login_log_management() {  
-  
-    $lrLog = db_query("SELECT * FROM {loginradius_log} ORDER BY log_id DESC LIMIT 20");
-    $lrLog = $lrLog->fetchAll();    
-   
-  if(isset($lrLog) && !empty($lrLog)){  
-    $style = '';    
-    $output = '<table id="sociallogin_userprofile_table"  cellspacing="0" style="word-break: break-all;">';
-      $output .= '<thead>';
-        $style = 'style="background-color:#fcfcfc"'; 
-             $output .= '<tr ' . $style . '>'; 
-              $output .= '<td colspan="7" scope="col" class="manage-colum" style="font-weight: bold;"><a href="clear-log">Clear Log</a></td>'; 
-             $output .= '</tr>'; 
-        $output .= '<tr ' . $style . '>';      
-        foreach ($lrLog[0] as $key => $val) {  
-          $output .= '<th scope="col" class="manage-colum" style="font-weight: bold;">'. str_replace('_', ' ', ucfirst($key)) . '</th>';  
-        }
-      
-        $output .= '</tr>';               
-        $output .= '</thead>';
-        $output .= '<tfoot>';
-        $style = 'style="background-color:#fcfcfc"';
-        $output .= '<tr ' . $style . '>';   
-        $count = 0;
-          
-        foreach ($lrLog as $value) {         
-          foreach($value as $key=>$val){ 
-            if($key == 'timestamp'){
-              $output .= '<th scope="col" class="manage-colum">' . date('d/m/Y H:i:s', $val) . '</th>';
-            }else if($key == 'response') {
-              $output .= '<th scope="col" class="manage-colum comment more">' .  json_decode($val). '</th>';       
-            } else{
-              $output .= '<th scope="col" class="manage-colum">' .  $val . '</th>';   
-            } 
-          } 
-          $output .= '</tr>';                
-        }   
-      $output .= '</tfoot>';
-      } else {
-          $style = '';  
-      $output = '<table id="sociallogin_userprofile_table"  cellspacing="0" style="word-break: break-all;">'; 
-      $output .= '<thead>';
-        $style = 'style="background-color:#fcfcfc"';
-          $output .= '<tr ' . $style . '>';  
-          $output .= '<th scope="col" class="manage-colum" style="font-weight: bold;">Log id</th>'; 
-          $output .= '<th scope="col" class="manage-colum" style="font-weight: bold;">Api url</th>'; 
-          $output .= '<th scope="col" class="manage-colum" style="font-weight: bold;">Request type</th>'; 
-          $output .= '<th scope="col" class="manage-colum" style="font-weight: bold;">Data</th>'; 
-          $output .= '<th scope="col" class="manage-colum" style="font-weight: bold;">Response</th>'; 
-          $output .= '<th scope="col" class="manage-colum" style="font-weight: bold;">Response type</th>';    
-          $output .= '<th scope="col" class="manage-colum" style="font-weight: bold;">Timestamp</th>';           
-          $output .= '</tr>';
-          $output .= '</thead>';
-          $output .= '<tfoot>';
-        $style = 'style="background-color:#fcfcfc"';
-        $output .= '<tr ' . $style . '>';                
-        $output .= '<td colspan="7" scope="col" class="manage-colum">No log messages available</td>';         
-        $output .= '</tr>';    
-        $output .= '</tfoot>'; 
-        $output .= '</table>'; 
-      }
-  return $output;        
-}
-
-
-function lr_social_login_clear_log(){  
-     db_delete('loginradius_log')      
-        ->execute();      
-     drupal_goto('admin/config/people/userregistration/logs');    
-     
-}
 /**
  * @return null|string
  *
@@ -167,7 +66,7 @@ function lr_social_login_clear_log(){
  */
 function lr_social_login_email_content_text() {
   $output = variable_get('lr_social_login_email_content', FALSE);
- 
+
   if (!$output && $output !== '') {
     $output = '';
     $output .= '[user:name],
@@ -385,12 +284,11 @@ function lr_social_login_help($path) {
  * @param array $form_state A keyed array containing the current
  * state of the form
  */
-function lr_social_login_form_user_login_block_alter(&$form, &$form_state) {  
+function lr_social_login_form_user_login_block_alter(&$form, &$form_state) {
   if (variable_get('lr_social_login_attach_login_form') == 1) {
     lr_social_login_user_login_form_alter($form, $form_state);
   }
 }
-
 
 /**
  * Implements hook_form_FORM_ID_alter() for
@@ -492,6 +390,7 @@ function lr_social_login_block_info() {
     'info' => t('LoginRadius Social login'),
     'cache' => DRUPAL_CACHE_PER_PAGE | DRUPAL_CACHE_PER_ROLE,
   );
+
   return $blocks;
 }
 
@@ -505,9 +404,8 @@ function lr_social_login_block_info() {
  */
 function lr_social_login_block_view($delta) {
   $block = array();
-
   if ($delta == 'login') {
-    if (user_is_logged_in()) {   
+    if (user_is_logged_in()) {
       $block['content'] = '';
     }
     else {
@@ -562,11 +460,7 @@ function lr_social_login_mail($key, &$message, $params) {
  * @return array A renderable html form
  */
 function lr_social_login_form_user_profile_form_alter(&$form, &$form_state, $form_id) {
-    if (!module_exists('lr_raas')) {
-       $form['account']['mail']['#disabled'] = TRUE;  
-      }
   if (!user_access('administer site configuration') && variable_get('lr_social_login_account_linking') == 1) {
-   
     $identity_title = variable_get('lr_social_login_identity_label_string');
     $value = theme('lr_social_login_linked');
     // Advanced module LR Code Hook Start.
@@ -578,10 +472,8 @@ function lr_social_login_form_user_profile_form_alter(&$form, &$form_state, $for
         $value = $linked;
       }
     }
-
     // Advanced module LR Code Hook End.
-    $my_settings = lr_social_login_interface_settings();  
-    $form['account']['mail']['#disabled'] = TRUE;  
+    $my_settings = lr_social_login_interface_settings();
     $form['lr_social_login_linked'] = array(
       '#type' => 'item',
       '#title' => '',
@@ -598,8 +490,9 @@ function lr_social_login_form_user_profile_form_alter(&$form, &$form_state, $for
                 )
             )
         ),
-    );   
-  } 
+    );
+  }
+
   return $form;
 }
 
@@ -632,20 +525,15 @@ function lr_social_login_preprocess_lr_social_login_linked(&$vars) {
  * @param $hook hook name
  */
 function lr_social_login_preprocess_page(&$vars, $hook) {
-//drupal_set_message("hook_$hook");
-  if (!module_exists('lr_raas')) { 
+  if (!module_exists('lr_raas')) {
     drupal_add_js(drupal_get_path('module', 'lr_social_login') . '/js/LoginRadiusSDK.js', array(
       'type' => 'file',
       'scope' => 'header',
 	  'weight' => -12,
-    ));    
-    drupal_add_js(drupal_get_path('module', 'lr_social_login') . '/js/LoginRadiusLog.js', array(
-      'type' => 'file',
-      'scope' => 'header',
-	  'weight' => -12,
-    ));    
+    ));
   }
 }
+
 /**
  * Function that process login/registration/popup functionality.
  *
@@ -656,19 +544,8 @@ function lr_social_login_preprocess_page(&$vars, $hook) {
  * @return array A renderable html form
  */
 function lr_social_login_user_register_validate($form, &$form_state) {
-    
   global $user;
-  $post_value = $_REQUEST;
-   
-  if(isset($post_value['action_completed']) && $post_value['action_completed'] == 'register'){
-    variable_set('showmsg','Email for verification has been sent to your provided email id, check email for further instructions'); 
-    drupal_goto();       
-  }
-  if(isset($post_value['action_completed']) && $post_value['action_completed'] == 'forgotpassword'){
-    variable_set('showmsg','Password reset information sent to your provided email id, check email for further instructions');
-    drupal_goto(); 
-  }
-  
+  $post_value = $_POST;
   $request_token = isset($post_value['token']) ? trim($post_value['token']) : '';
   // Advanced module LR Code Hook Start.
   // Make sure at least one module implements our hook.
@@ -680,6 +557,10 @@ function lr_social_login_user_register_validate($form, &$form_state) {
       return $value;
     }
   }
+  // Advanced module LR Code Hook End.
+  // Get lr_social_login variable.
+  module_load_include('inc', 'lr_social_login', 'includes/lr_social_login.loginradius');
+  $obj = new LoginRadius();
 
   // Handle email popup.
   if (isset($post_value['lr_social_login_emailclick'])) {
@@ -691,6 +572,7 @@ function lr_social_login_user_register_validate($form, &$form_state) {
     drupal_goto();
   }
 
+  $secret = trim(variable_get('lr_social_login_apisecret'));
     // Advanced module LR Code Hook Start.
     // Make sure at least one module implements our hook.
     if (count(module_implements('check_lrtoken_valid')) > 0) {
@@ -700,63 +582,45 @@ function lr_social_login_user_register_validate($form, &$form_state) {
         if($value){
             $token = $value;
         }
-    } 
+    }
 	// Advanced module LR Code Hook End.
-    
-  $apiKey = trim(variable_get('lr_social_login_apikey'));
-  $secret = trim(variable_get('lr_social_login_apisecret'));
-  $socialLoginObject = new SocialLoginAPI($apiKey, $secret, array('output_format' => TRUE,'authentication' => FALSE));
-        
-  if(!isset($token)){    
-      try {          
-        $token = $socialLoginObject->exchangeAccessToken($request_token);        
-      }
-      catch (LoginRadiusException $e) {  
-          drupal_set_message(t($e->getMessage()), 'error'); 
-          drupal_goto();
-      }
-  }
+    if(!isset($token)){
+  $token = $obj->loginradiusFetchAccessToken($secret, $request_token);
+    }
   // Check loginradius token is posted on this page.
   if (empty($token)) {
     return;
-  }  
-    try {    
-        $userprofile = $socialLoginObject->getUserProfiledata($token->access_token);  
-        $userprofile->widget_token = $token->access_token;
-      }
-      catch (LoginRadiusException $e) {
-            $msg = isset($e->getErrorResponse()->description) ? $e->getErrorResponse()->description : 'We are unable to link this account';
-            drupal_set_message(t($msg), 'error');  
-      }
-      
+  }
+
+  $userprofile = $obj->loginradiusGetUserProfiledata($token);
   // Advanced module LR Code Hook Start.
   // Make sure at least one module implements our hook.
   if (count(module_implements('add_loginradius_userdata')) > 0) {
     // Call all modules that implement the hook, and let them.
     // Make changes to $variables.
-    $result = module_invoke_all('add_loginradius_userdata', $userprofile, $userprofile->widget_token);
+    $result = module_invoke_all('add_loginradius_userdata', $userprofile, $token);
     $value = end($result);
     if (!empty($value)) {
       $userprofile = $value;
     }
   }
   // Advanced module LR Code Hook End.
+
   // Handle login/registration functionality when user os not logged in.
-  if (!user_is_logged_in()) {       
-
+  if (!user_is_logged_in()) {
     if (isset($userprofile->ID) && $userprofile->ID != '') {
-      $userprofile = lr_social_login_getuser_data($userprofile);     
-    //  $userprofile->widget_token = trim($token);
-      variable_set('user_verify', 0);   
-      $condition = variable_get('lr_social_login_email_required', 1) && empty($userprofile->Email_value);
+      $userprofile = lr_social_login_getuser_data($userprofile);
+      $userprofile->widget_token = trim($token);
+      variable_set('user_verify', 0);
 
-      if ($condition) {  
+      if (variable_get('lr_social_login_email_required', 1) && empty($userprofile->Email_value)) {
         $account = user_external_load($userprofile->ID);
-        if (isset($account->uid) && $account->uid != 0) {         
+
+        if (isset($account->uid) && $account->uid != 0) {
           return $form = lr_social_login_provide_login_to_unblock_user($account,
             $userprofile, $form, $form_state);
         }
-        else {             
+        else {
           lr_social_login_enable_force_registration($userprofile);
           $_SESSION['lrdata'] = $userprofile;
           $textemailpoup = variable_get('lr_social_login_emailrequired_popup_text');
@@ -766,26 +630,25 @@ function lr_social_login_user_register_validate($form, &$form_state) {
             'provider' => $userprofile->Provider,
             'msgtype' => 'status',
           );
-          $theme = theme('lr_social_login_popup', array('popup_params' => $popup_params));         
+          $theme = theme('lr_social_login_popup', array('popup_params' => $popup_params));
           $form['lr_social_login_popup'] = lr_social_login_get_popup_form_element_array($theme);
           return $form;
         }
       }
+
       return $form = lr_social_login_check_existing_user($form, $form_state, $userprofile);
     }
     elseif (!user_is_logged_in()) {
       lr_social_login_show_error_message($userprofile);
     }
   }
-  elseif (!empty($token)) { 
-
+  elseif (!empty($token)) {
     if ((!isset($post_value['lr_source'])) || (isset($post_value['lr_source']) && !in_array($post_value['lr_source'], array(
           'wall_post',
           'friend_invite',
         )))
     ) {
-      lr_social_login_user_identities_submit($form, $user, $token->access_token);
+      lr_social_login_user_identities_submit($form, $user, $token);
     }
   }
 }
-

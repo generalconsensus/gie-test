@@ -1,19 +1,5 @@
 <?php
 
-module_load_include('php', 'lr_social_login', 'LoginRadiusSDK/SocialLogin/SocialLoginAPI');
-module_load_include('php', 'lr_social_login', 'LoginRadiusSDK/LoginRadius');
-module_load_include('php', 'lr_social_login', 'LoginRadiusSDK/LoginRadiusException');
-module_load_include('php', 'lr_social_login', 'LoginRadiusSDK/Clients/IHttpClient');
-module_load_include('php', 'lr_social_login', 'LoginRadiusSDK/Clients/DefaultHttpClient');
-
-use \LoginRadiusSDK\LoginRadius;
-use \LoginRadiusSDK\LoginRadiusException;
-use \LoginRadiusSDK\SocialLogin\SocialLoginAPI;
-
-module_load_include('php', 'lr_social_login', 'customhttpclient');
-global $apiClient_class;
-$apiClient_class = 'CustomHttpClient';
-
 /**
  * @file
  * Implement lr_social_profile_data support for Drupal
@@ -82,7 +68,7 @@ function lr_social_profile_data_menu() {
     'weight' => 4,
     'file path' => $file_path,
     'file' => 'includes/lr_social_profile_data.admin.inc',
-  ); 
+  );
   $items['lr_social_profile_data/ajax/userprofile/%'] = array(
     'title' => '',
     'page callback' => 'lr_social_profile_data_ajax_user_profile',
@@ -92,7 +78,6 @@ function lr_social_profile_data_menu() {
   );
   return $items;
 }
-
 
 /**
  * Delete loginradius database tables.
@@ -182,8 +167,7 @@ function lr_social_profile_data_get_extended_profile($user_id, $userprofile) {
     'website' => ((isset($userprofile->Website) && lr_social_profile_data_check_array_and_object($userprofile->Website)) ? $userprofile->Website : ''),
     'favicon' => ((isset($userprofile->Favicon) && lr_social_profile_data_check_array_and_object($userprofile->Favicon)) ? $userprofile->Favicon : ''),
     'industry' => ((isset($userprofile->Industry) && lr_social_profile_data_check_array_and_object($userprofile->Industry)) ? $userprofile->Industry : ''),
-    'no_of_logins' => ((isset($userprofile->NoOfLogins) && lr_social_profile_data_check_array_and_object($userprofile->NoOfLogins)) ? $userprofile->NoOfLogins : ''),
-    'about' => ((isset($userprofile->About) && lr_social_profile_data_check_array_and_object($userprofile->About)) ? $userprofile->About : ''),   
+    'about' => ((isset($userprofile->About) && lr_social_profile_data_check_array_and_object($userprofile->About)) ? $userprofile->About : ''),
     'timezone' => ((isset($userprofile->TimeZone) && lr_social_profile_data_check_array_and_object($userprofile->TimeZone)) ? $userprofile->TimeZone : ''),
     'verified' => ((isset($userprofile->Verified) && lr_social_profile_data_check_array_and_object($userprofile->Verified)) ? $userprofile->Verified : ''),
     'last_profile_update' => ((isset($userprofile->UpdatedTime) && lr_social_profile_data_check_array_and_object($userprofile->UpdatedTime)) ? $userprofile->UpdatedTime : ''),
@@ -310,11 +294,11 @@ function lr_social_profile_data_get_education($user_id, $education) {
   return array(
     'user_id' => $user_id,
     'school' => (isset($education->School) ? $education->School : ''),
-    'year' => (isset($education->year) ? $education->year : ''),
-    'type' => (isset($education->type) ? $education->type : ''),
-    'notes' => (isset($education->notes) ? $education->notes : ''),
-    'activities' => (isset($education->activities) ? $education->activities : ''),
-    'degree' => (isset($education->degree) ? $education->degree : ''),
+    'year' => (isset($education->Year) ? $education->Year : ''),
+    'type' => (isset($education->Type) ? $education->Type : ''),
+    'notes' => (isset($education->Notes) ? $education->Notes : ''),
+    'activities' => (isset($education->Activities) ? $education->Activities : ''),
+    'degree' => (isset($education->Degree) ? $education->Degree : ''),
     'field_of_study' => (isset($education->fieldofstudy) ? $education->fieldofstudy : ''),
     'start_date' => (isset($education->StartDate) ? $education->StartDate : ''),
     'end_date' => (isset($education->EndDate) ? $education->EndDate : ''),
@@ -650,25 +634,6 @@ function lr_social_profile_data_get_contact($user_id, $contact) {
  * @param object $event Facebook event
  * @return array Contain data values of facebook event
  */
-function lr_social_profile_data_get_facebook_like($user_id, $like) {  
-   return array(
-    'user_id' => $user_id,
-    'like_id' => (isset($like->ID) ? $like->ID : ''),
-    'name' => (isset($like->Name) ? $like->Name : ''),
-    'category' => (isset($like->Category) ? $like->Category : ''),
-    'created_date' => (isset($like->CreatedDate) ? $like->CreatedDate : ''),
-    'website' => (isset($like->Website) ? $like->Website : ''),
-    'description' => (isset($like->Description) ? $like->Description : ''),
-  );
-}
-
-/**
- * Get facebook event data from user profile
- *
- * @param int $user_id User ID
- * @param object $event Facebook event
- * @return array Contain data values of facebook event
- */
 function lr_social_profile_data_get_facebook_event($user_id, $event) {
   return array(
     'user_id' => $user_id,
@@ -852,55 +817,45 @@ function lr_social_profile_data_save_premium_data($key, $user_id, $data) {
 function lr_social_profile_data_save_premium_data_by_provider($obj, $lr_token, $user_id, $key, $provider) {
   $result = array(
     'facebook_posts' => array(
-      "getPosts",
+      "loginradiusGetPosts",
       "lr_social_profile_data_get_facebook_post",
       "loginradius_facebook_posts",
     ),
     'lr_contacts' => array(
-      "getContacts",
+      "loginradiusGetContacts",
       "lr_social_profile_data_get_contact",
       "loginradius_contacts",
     ),
     'followed_companies_on' => array(
-      "getFollowedCompanies",
+      "loginradiusGetFollowedCompanies",
       "lr_social_profile_data_get_linkedin_company",
       "loginradius_linkedin_companies",
     ),
     'status_message' => array(
-      "getStatus",
+      "loginradiusGetStatus",
       "lr_social_profile_data_get_status",
       "loginradius_status",
     ),
     'twitter_mentions' => array(
-      "getMentions",
+      "loginradiusGetMentions",
       "lr_social_profile_data_get_twitter_mentions",
       "loginradius_twitter_mentions",
     ),
     'lr_groups' => array(
-      "getGroups",
+      "loginradiusGetGroups",
       "lr_social_profile_data_get_group",
       "loginradius_groups",
     ),
-    'facebook_profile_likes' => array(
-      "getLikes",
-      "lr_social_profile_data_get_facebook_like",
-      "loginradius_facebook_likes",
-    ),
     'facebook_profile_events' => array(
-      "getEvents",
+      "loginradiusGetEvents",
       "lr_social_profile_data_get_facebook_event",
       "loginradius_facebook_events",
     ),
 
   );
-  if (isset($result[$key]) && db_table_exists($result[$key][2])) {   
-    try{
-     $posts = $obj->$result[$key][0]($lr_token);
-    }catch (LoginRadiusException $e) {  
-      $message = explode('"description": "', $e->getMessage());
-      return (isset($message[1]) ? (($msg = explode('"errorCode', $message[1])) ? str_replace('",', '.', $msg[0]) : $e->getMessage() ): $e->getMessage());
-    }
-    if ($result[$key][0] == 'getContacts') {
+  if (isset($result[$key]) && db_table_exists($result[$key][2])) {
+    $posts = $obj->$result[$key][0]($lr_token);
+    if ($result[$key][0] == 'loginradiusGetContacts') {
       $posts = isset($posts->Data) ? $posts->Data : '';
     }
     if (is_array($posts) && count($posts) > 0) {
@@ -936,7 +891,7 @@ function lr_social_profile_data_show($array, $sub_table = FALSE) {
           continue;
         }
         else {
-          $output .= '<th scope="col" class="manage-colum">' . ucfirst(str_replace("_"," ",$key)) . '</th>';
+          $output .= '<th scope="col" class="manage-colum">' . ucfirst($key) . '</th>';
 
           if ($key == 'picture' && !empty($val)) {
             $output .= '<th scope="col" class="manage-colum"><img height="60" width="60" src= "' . (isset($val) ? $val : '') . '" /></th>';
@@ -948,7 +903,7 @@ function lr_social_profile_data_show($array, $sub_table = FALSE) {
 
         $output .= '</tr>';
       }
-      
+
       $count++;
     }
   }
@@ -988,7 +943,7 @@ function lr_social_profile_data_show($array, $sub_table = FALSE) {
           // Companies.
           $companies_result = db_query("SELECT * FROM {loginradius_companies} WHERE id = :uid", array(':uid' => $val));
           $companies = $companies_result->fetchAll();
-                 
+
           if (count($companies) > 0) {
             $output .= '<th scope="col" class="manage-colum">' . lr_social_profile_data_show($companies) . '</th>';
             continue;
@@ -998,6 +953,7 @@ function lr_social_profile_data_show($array, $sub_table = FALSE) {
           if (!empty($val) && ($key == 'image_url' || $key == 'picture')) {
             $val = '<img height="50" width="50" src= "' . (isset($val) ? $val : '') . '" />';
           }
+
           $output .= '<th scope="col" class="manage-colum">' . ucfirst($val) . '</th>';
         }
       }
@@ -1026,14 +982,14 @@ function lr_social_profile_data_check_data_in_table($table_name, $user_id, $tab_
     2 => 'Extended Location Data',
     3 => 'Extended Profile Data',
     4 => 'Followed Companies',
-    5 => 'Facebook Profile Likes',
-    6 => 'Facebook Profile Events',
-    7 => 'Status Messages',
-    8 => 'Facebook Posts',
-    9 => 'Twitter Mentions',
-    10 => 'Groups',
-    11 => 'Contacts/Friends Data',
-    12 => 'Videos',
+    5 => 'Facebook Profile Events',
+    6 => 'Status Messages',
+    7 => 'Facebook Posts',
+    8 => 'Twitter Mentions',
+    9 => 'Groups',
+    10 => 'Contacts/Friends Data',
+    11 => 'Videos',
+    12 => 'Facebook Likes',
     13 => 'Photos',
     14 => 'Albums',
   );
@@ -1126,7 +1082,6 @@ function lr_social_profile_data_ajax_user_profile($js = NULL, $user_id = NULL) {
     'loginradius_extended_location_data',
     'loginradius_extended_profile_data',
     'loginradius_linkedin_companies',
-    'loginradius_facebook_likes',
     'loginradius_facebook_events',
     'loginradius_status',
     'loginradius_facebook_posts',
@@ -1208,14 +1163,7 @@ function lr_social_profile_data_ajax_user_profile($js = NULL, $user_id = NULL) {
  * @param object $userprofile User Profile information
  */
 function lr_social_profile_data_save($user_id, $userprofile) {
-  
-  $apiKey = trim(variable_get('lr_social_login_apikey'));
-  $secret = trim(variable_get('lr_social_login_apisecret'));    
-  $obj = new SocialLoginAPI($apiKey, $secret, array(
-          'output_format' => TRUE,
-          'authentication' => FALSE
-  ));
-    
+  $obj = new LoginRadius();
   $lr_social_profile_data_profile_selection = array();
   $data_array = variable_get('lr_social_profile_data_profile_selection');
 
@@ -1268,28 +1216,25 @@ function lr_social_profile_data_save($user_id, $userprofile) {
     $extended_profile_data_values = lr_social_profile_data_get_extended_profile($user_id, $userprofile);
 
     if (!db_query('SELECT user_id FROM {loginradius_extended_profile_data} WHERE user_id = :id', array('id' => $user_id))->fetchField()) {
-           
       lr_social_profile_data_insert('loginradius_extended_profile_data', $extended_profile_data_values);
     }
     else {
-  
       lr_social_profile_data_update('loginradius_extended_profile_data', $user_id, $extended_profile_data_values);
     }
 
-    // Positions.  
-   
-    if (!db_query('SELECT user_id FROM {loginradius_positions} WHERE user_id = :id', array('id' => $user_id))->fetchField()) {
-        if (!empty($userprofile->Positions) && count($userprofile->Positions) > 0) {
-          foreach ($userprofile->Positions as $lr_position) {    
+    // Positions.
+    if (!empty($userprofile->Positions) && count($userprofile->Positions) > 0) {
+      foreach ($userprofile->Positions as $lr_position) {
+
         // Companies.
         if (isset($lr_position->Company) && db_table_exists('loginradius_companies')) {
           $company_data_value = lr_social_profile_data_get_company($lr_position);
           $temp_id = lr_social_profile_data_insert('loginradius_companies', $company_data_value);
         }
+
         // Positions.
         $positions_data_value = lr_social_profile_data_get_position($user_id, $lr_position, $temp_id);
         lr_social_profile_data_insert('loginradius_positions', $positions_data_value);
-        } 
       }
     }
     $userprofile_extended_keys = array(
@@ -1335,7 +1280,6 @@ function lr_social_profile_data_save($user_id, $userprofile) {
       'yahoo',
       'live',
     ),
-    'facebook_profile_likes' => array('facebook'),
     'facebook_profile_events' => array('facebook'),
     'facebook_posts' => array('facebook'),
     'followed_companies_on' => array('facebook', 'linkedin'),
@@ -1417,7 +1361,7 @@ function lr_social_profile_data_check_array_and_object($value) {
  * @param $account
  */
 function lr_social_profile_data_add_existing_user_save($userprofile, $account) {
-  if (variable_get('lr_social_login_update_profile') == 1) {    
+  if (variable_get('lr_social_login_update_profile') == 1) {
     lr_social_profile_data_save($account->uid, $userprofile);
   }
 }

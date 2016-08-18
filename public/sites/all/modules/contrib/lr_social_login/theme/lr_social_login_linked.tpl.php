@@ -9,7 +9,6 @@ print theme('lr_social_login_links');
 if (isset($providers)) :
   foreach ($providers as $key => $provider) :
     if (!empty($provider)):
-    if ($provider != 'RAAS'):
       ?>
       <div style="margin-bottom: 3px;">
         <?php
@@ -23,19 +22,12 @@ if (isset($providers)) :
           <img style="margin-right: 5%;vertical-align: middle;"
                src="<?php print $GLOBALS['base_url'] ?>/<?php print drupal_get_path('module', 'lr_social_login') ?>/images/<?php print $provider ?>.png">
         </div>
-         <?php  
-         if (isset($_SESSION['current_social_provider']) && (check_plain($key) != $_SESSION['current_social_provider'])) :?>
         <div>
-          <?php           
-          echo l(t('Delete'), 'user/' . $user->uid . '/lr_social_login/delete/' . $key . '/' . $provider, array('attributes' => array('style' => 'vertical-align: top;')));
+          <?php echo l(t('Delete'), 'user/' . $user->uid . '/lr_social_login/delete/' . $key . '/' . $provider, array('attributes' => array('style' => 'vertical-align: top;')));
           ?>
         </div>
-        <?php else : ?>
-          <div> &nbsp; &nbsp; </div>
-          <?php endif; ?>
       </div>
     <?php
-    endif;
     endif;
   endforeach;
 endif;

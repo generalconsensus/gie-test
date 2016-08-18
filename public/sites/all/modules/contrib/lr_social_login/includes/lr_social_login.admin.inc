@@ -4,14 +4,6 @@
  * @file
  * Admin page callback file for the lr_social_login module.
  */
-module_load_include('php', 'lr_social_login', 'LoginRadiusSDK/LoginRadius');
-module_load_include('php', 'lr_social_login', 'LoginRadiusSDK/LoginRadiusException');
-module_load_include('php', 'lr_social_login', 'LoginRadiusSDK/Clients/IHttpClient');
-module_load_include('php', 'lr_social_login', 'LoginRadiusSDK/Clients/DefaultHttpClient');
-
-use \LoginRadiusSDK\LoginRadius;
-use \LoginRadiusSDK\LoginRadiusException;
-
 
 /**
  * Function that build an abstract representation of a HTML form for Social Login settings.
@@ -20,12 +12,9 @@ use \LoginRadiusSDK\LoginRadiusException;
  * @param array $form_state A keyed array containing the current state of the form.
  * @return array A renderable form array for the respective request.
  */
-function lr_social_login_admin_settings($form, &$form_state) { 
+function lr_social_login_admin_settings($form, &$form_state) {
   if (!variable_get('lr_social_login_apikey', FALSE) || !variable_get('lr_social_login_apisecret', FALSE)) {
-  $podata = isset($_POST['op']) ? $_POST['op'] : ''; 
-  if(isset($podata) && $podata != 'Save configuration'){
-    drupal_set_message(t('To activate the social login, insert LoginRadius Site Name, API Key and Secret in the social login section below.'), 'warning');
-    }
+    drupal_set_message(t('To activate the social login, insert LoginRadius API Key and Secret in the social login section below.'), 'warning');
   }
 
   drupal_add_css(drupal_get_path('module', 'lr_social_login') . '/css/lr_social_login.admin.css');
@@ -39,27 +28,31 @@ function lr_social_login_admin_settings($form, &$form_state) {
   }
 
   $thanks_text = t('To activate the module, you will need to first configure it (manage your desired social networks, etc.) from your LoginRadius account. If you do not have an account, click <a href="@loginradius" target="_blank">here</a>.<br/>We also offer Social Plugins for
-  <a href="@wordpress" target="_blank">Wordpress</a>,
-  <a href="@drupal" target="_blank">Drupal</a>,
   <a href="@joomla" target="_blank">Joomla</a>,
-  <a href="@magento" target="_blank">Magento</a>,
-  <a href="@prestashop" target="_blank">Prestashop</a>,
+  <a href="@wordpress" target="_blank">Wordpress</a>,
   <a href="@vbulletin" target="_blank">vBulletin</a>,
-  <a href="@vanillaforum" target="_blank">VanillaForum</a>,  
+  <a href="@vanillaforum" target="_blank">VanillaForum</a>,
+  <a href="@magento" target="_blank">Magento</a>,
+  <a href="@oscommerce" target="_blank">OSCommerce</a>,
+  <a href="@prestashop" target="_blank">Prestashop</a>,
+  <a href="@xcart" target="_blank">X-Cart</a>,
+  <a href="@zencart" target="_blank">Zen-Cart</a>,
   <a href="@phpbb" target="_blank">phpBB</a>,
   <a href="@smf" target="_blank">SMF</a> and
   <a href="@dotnetnuke" target="_blank">DotNetNuke</a>  <br/><a href="@loginradius" target="_blank"><br/><input class="form-submit" type="button" value="Set up my account!"></a> (<a href="@get_sociallogin" target="_blank">How to set up an account?</a>)', array(
     '@loginradius' => 'http://ish.re/4',
-    '@wordpress' => 'http://ish.re/10E78',
-    '@drupal' => 'http://ish.re/TRXK',
-    '@joomla' => 'http://ish.re/12B23',
-    '@magento' => 'http://ish.re/UF5L',
-    '@prestashop' => 'http://ish.re/TRXU',
-    '@vbulletin' => 'http://ish.re/TRXM',
-    '@vanillaforum' => 'http://ish.re/TRXR',   
-    '@dotnetnuke' => 'http://ish.re/TRY1',
-    '@phpbb' => 'http://ish.re/TRY3',
-    '@smf' => 'http://ish.re/TRY2',
+    '@joomla' => 'http://ish.re/8PE6',
+    '@wordpress' => 'http://ish.re/96IF',
+    '@vbulletin' => 'http://ish.re/8PED',
+    '@vanillaforum' => 'http://ish.re/8PEE',
+    '@magento' => 'http://ish.re/8PEC',
+    '@oscommerce' => 'http://ish.re/8PEG',
+    '@prestashop' => 'http://ish.re/8PEH',
+    '@xcart' => 'http://ish.re/8PFQ',
+    '@zencart' => 'http://ish.re/96IC',
+    '@dotnetnuke' => 'http://ish.re/96IA',
+    '@phpbb' => 'http://ish.re/96I8',
+    '@smf' => 'http://ish.re/96I9',
     '@get_sociallogin' => 'http://ish.re/INI1',
   ));
   $form['thanks_block'] = array(
@@ -76,29 +69,18 @@ function lr_social_login_admin_settings($form, &$form_state) {
     '#description' => $get_lr_social_login,
   );
 
-  $form[$setup_group]['lr_sso_site_name'] = array(
-    '#type' => 'textfield',
-    '#title' => t('LoginRadius Site Name'),
-    '#required' => TRUE,
-    '#default_value' => variable_get('lr_sso_site_name'),
-    '#description' => t('You can find the Site Name into your LoginRadius user account'),
-  );
-
   $form[$setup_group]['lr_social_login_apikey'] = array(
     '#type' => 'textfield',
     '#title' => t('API Key'),
-    '#required' => TRUE,
     '#default_value' => variable_get('lr_social_login_apikey', ''),
     '#description' => t('To activate the module, insert LoginRadius API Key ( <a href="@get_lr_social_login" target="_blank">How to get it?</a> )', array('@get_lr_social_login' => 'http://ish.re/INI1')),
   );
   $form[$setup_group]['lr_social_login_apisecret'] = array(
     '#type' => 'textfield',
     '#title' => t('API Secret'),
-    '#required' => TRUE,
     '#default_value' => variable_get('lr_social_login_apisecret', ''),
     '#description' => t('To activate the module, insert LoginRadius API Secret ( <a href="@get_lr_social_login" target="_blank">How to get it?</a> )', array('@get_lr_social_login' => 'http://ish.re/INI1')),
   );
-  
   $basic_group = 'basic';
   $form[$basic_group] = array(
     '#type' => 'fieldset',
@@ -210,7 +192,7 @@ function lr_social_login_lr_advance_settings($form, &$form_state) {
   $form[$interface_group]['interface']['lr_social_login_label_string'] = array(
     '#type' => 'textfield',
     '#title' => t('What text do you want to display above the Social Login interface?'),
-    '#default_value' => variable_get('lr_social_login_label_string'),
+    '#default_value' => variable_get('lr_social_login_label_string', 'Login with Social ID'),
     '#description' => t('Leave empty for no text'),
   );
   $form[$interface_group]['lr_social_login_interface_size'] = array(
@@ -496,23 +478,46 @@ function lr_social_login_lr_advance_settings($form, &$form_state) {
   );
   $form[$debug_group]['lr_social_login_debug_mode'] = array(
     '#type' => 'radios',
-    '#title' => t('Do you want to enable Debugging mode<a title="Choosing yes will add debug log in database"  style="text-decoration:none"> (<span style="color:#3CF;">?</span>)</a>'),
+    '#title' => t('Do you want to enable Debugging mode?'),
     '#default_value' => variable_get('lr_social_login_debug_mode', 0),
     '#options' => array(
       1 => t('Yes'),
       0 => t('No'),
     )
   );
-  $form['#submit'][] = 'lr_social_login_admin_settings_submit';
-  $form['actions'] = array('#type' => 'actions');
-  $form['actions']['submit'] = array(
-    '#type' => 'submit',
-    '#value' => t('Save configuration'),
-  );
-
-  return $form;
     
-//  return system_settings_form($form);
+  return system_settings_form($form);
+}
+
+/**
+ * Save settings to database.
+ *
+ * @param array $form_state A keyed array containing the current state of the form
+ */
+function lr_social_login_save_settings(&$form_state) {
+  //Validate APIs.
+  $api_key = isset($form_state['values']['lr_social_login_apikey']) ? trim($form_state['values']['lr_social_login_apikey']) : trim(variable_get('lr_social_login_apikey', ''));
+  $api_secret = isset($form_state['values']['lr_social_login_apisecret']) ? trim($form_state['values']['lr_social_login_apisecret']) : trim(variable_get('lr_social_login_apisecret', ''));
+  $data = lr_social_login_get_authentication($api_key, $api_secret);
+  
+  if (isset($data['status']) && $data['status'] != 'status') {
+    drupal_set_message($data['message'], $data['status']);
+    return FALSE;
+  }
+  form_state_values_clean($form_state);
+
+  foreach ($form_state['values'] as $key => $value) {
+    if (is_array($value) && isset($form_state['values']['array_filter'])) {
+      $value = array_keys(array_filter($value));
+    }
+    variable_set($key, $value);
+  }
+
+  drupal_set_message(t('The configuration options have been saved.'));
+  // Clear the cached pages and blocks.
+  cache_clear_all();
+  menu_rebuild();
+  return TRUE;
 }
 
 /**
@@ -526,7 +531,7 @@ function lr_social_login_admin_settings_submit($form, &$form_state) {
     return FALSE;
   }
   $settings = array(
-   // 'lr_social_login_label_string' => 'Login with Social ID',
+    'lr_social_login_label_string' => 'Login with Social ID',
     'lr_social_login_interface_size' => '0',
     'lr_social_login_attach_login_form' => '1',
     'lr_social_login_loginpage_position' => '1',
@@ -550,40 +555,6 @@ function lr_social_login_admin_settings_submit($form, &$form_state) {
 }
 
 /**
- * Save settings to database.
- *
- * @param array $form_state A keyed array containing the current state of the form
- */
-function lr_social_login_save_settings(&$form_state) {  //Validate APIs.
-
-  $api_key = isset($form_state['values']['lr_social_login_apikey']) ? trim($form_state['values']['lr_social_login_apikey']) : trim(variable_get('lr_social_login_apikey', ''));
-  $api_secret = isset($form_state['values']['lr_social_login_apisecret']) ? trim($form_state['values']['lr_social_login_apisecret']) : trim(variable_get('lr_social_login_apisecret', ''));
-  $data = lr_social_login_get_authentication($api_key, $api_secret);
-
-  if (isset($data['status']) && $data['status'] != 'status') {
-    drupal_set_message($data['message'], $data['status']);
-    return FALSE; 
-  }
-  form_state_values_clean($form_state);
-
-  foreach ($form_state['values'] as $key => $value) {
-    if (is_array($value) && isset($form_state['values']['array_filter'])) {
-      $value = array_keys(array_filter($value));
-    }
-    variable_set($key, $value);
-  }
-
-  drupal_set_message(t('The configuration options have been saved.'));
-  // Clear the cached pages and blocks.
-  cache_clear_all();
-  menu_rebuild();
-  return TRUE;
-}
-
-
-
-
-/**
  * Function validates against GUID format of keys
  *
  * @param string $key LoginRadius API key/secret
@@ -603,17 +574,19 @@ function lr_social_login_isvalid_key($key) {
  * @return array Contain message and status of data
  */
 function lr_social_login_get_authentication($apikey, $apisecret) {  
-  if (isset($apikey)) {  
+  if (isset($apikey)) {
     $data = array();
-     try {   
-      $validate_url = 'https://api.loginradius.com/api/v2/app/validate?apikey=' . rawurlencode(trim($apikey)) . '&apisecret=' . rawurlencode(trim($apisecret));
-      $result = LoginRadius::apiClient($validate_url, FALSE, array('output_format'=>'json'));
-      
+    $obj_auth = new LoginRadius();
+
+    try {
+      $validate_url = 'https://' . LR_DOMAIN . '/api/v2/app/validate?apikey=' . rawurlencode(trim($apikey)) . '&apisecret=' . rawurlencode(trim($apisecret));
+      $result = json_decode($obj_auth->loginradiusGetApiResponse($validate_url, FALSE));
+
       if (empty($result)) {
-        $data['message'] = check_plain('please check your php.ini settings to enable CURL or FSOCKOPEN');        
+        $data['message'] = check_plain('please check your php.ini settings to enable CURL or FSOCKOPEN');
         $data['status'] = 'error';
       }
-      elseif (isset($result->Status) && !$result->Status) {          
+      elseif (isset($result->Status) && !$result->Status) {
         $error = array(
           "API_KEY_NOT_VALID" => "LoginRadius API key is invalid. Get your LoginRadius API key from <a href='http://www.loginradius.com' target='_blank'>LoginRadius</a>",
           "API_SECRET_NOT_VALID" => "LoginRadius API Secret is invalid. Get your LoginRadius API Secret from <a href='http://www.loginradius.com' target='_blank'>LoginRadius</a>",
@@ -624,10 +597,9 @@ function lr_social_login_get_authentication($apikey, $apisecret) {
         foreach ($result->Messages as $value) {
           $data['message'] = $error["$value"];
           $data['status'] = 'error';
-          break;
         }
       }
-            
+
       return $data;
     } catch (Exception $e) {
       watchdog_exception('type', $e);
