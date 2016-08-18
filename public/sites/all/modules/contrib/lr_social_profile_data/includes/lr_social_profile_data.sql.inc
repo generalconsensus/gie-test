@@ -271,12 +271,6 @@ function lr_social_profile_data_loginradius_extended_profile_data() {
         'not null' => FALSE,
         'description' => 'Industry of user',
       ),
-      'no_of_logins' => array(
-        'type' => 'varchar',
-        'length' => 200,
-        'not null' => FALSE,
-        'description' => 'no of logins',
-      ),
       'about' => array(
         'type' => 'text',
         'not null' => FALSE,
@@ -1345,61 +1339,6 @@ function lr_social_profile_data_loginradius_linkedin_companies() {
   );
 }
 
-
-/**
- * facebook likes table schema
- *
- * @return array Schema of facebook likes table
- */
-function lr_social_profile_data_loginradius_facebook_likes() {
-  return array(
-    'description' => 'Stores facebook likes information of user',
-    'fields' => array(
-      'user_id' => array(
-        'type' => 'int',
-        'unsigned' => TRUE,
-        'not null' => TRUE,
-        'description' => 'User ID of the user table.',
-      ),
-      'like_id' => array(
-        'type' => 'varchar',
-        'length' => 30,
-        'not null' => FALSE,
-        'description' => 'likes ID of the user table.',
-      ),      
-      'name' => array(
-        'type' => 'varchar',
-        'length' => 100,
-        'not null' => FALSE,
-        'description' => 'name of like',
-      ),
-      'category' => array(
-        'type' => 'varchar',
-        'length' => 500,
-        'not null' => FALSE,
-        'description' => 'category',
-      ),     
-      'created_date' => array(
-        'type' => 'varchar',
-        'length' => 30,
-        'not null' => FALSE,
-        'description' => 'careted_date of user',
-      ),
-      'website' => array(
-        'type' => 'varchar',
-        'length' => 500,
-        'not null' => FALSE,
-        'description' => 'website',
-      ),   
-      'description' => array(
-        'type' => 'text',
-        'not null' => FALSE,
-        'description' => 'description of like',
-      ),     
-    ),
-  );
-}
-
 /**
  * facebook events table schema
  *
@@ -1464,18 +1403,19 @@ function lr_social_profile_data_loginradius_facebook_events() {
       ),
       'privacy' => array(
         'type' => 'varchar',
-        'length' => 255,
+        'length' => 30,
         'not null' => FALSE,
         'description' => 'privacy',
       ),
       'rsvp_status' => array(
         'type' => 'varchar',
-        'length' => 255,
+        'length' => 50,
         'not null' => FALSE,
         'description' => 'rsvp_status of user',
       ),
       'location' => array(
-        'type' => 'text',
+        'type' => 'varchar',
+        'length' => 50,
         'not null' => FALSE,
         'description' => 'location of user',
       ),

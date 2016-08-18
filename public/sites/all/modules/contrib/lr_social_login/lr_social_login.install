@@ -11,7 +11,6 @@
 function lr_social_login_uninstall() {
   $deleted_keys = array(
     'lr_social_login',
-    'lr_sso_site_name',
     'lr_social_login_apikey',
     'lr_social_login_apisecret',
     'lr_social_login_api_handler',
@@ -53,6 +52,7 @@ function lr_social_login_uninstall() {
     'lr_raas_prompt_password_on_social_login',
     'lr_raas_enable_user_name',
     'lr_raas_ask_email_always_for_unverified'
+
   );
   foreach($deleted_keys as $key){
     variable_del($key);
@@ -89,55 +89,5 @@ function lr_social_login_schema() {
     'primary key' => array('aid'),
   );
   return $schema;
-  }   
-  
-  if(!db_table_exists('loginradius_log')){
-  $schema['loginradius_log'] = array(
-    'description' => 'Stores API Error/Success data information.',
-    'fields' => array(
-      'log_id' => array(
-        'type' => 'serial',      
-        'unsigned' => TRUE,
-        'not null' => TRUE,
-        'description' => 'Log id of log table.',
-      ),
-      'api_url' => array(
-        'type' => 'varchar',
-        'length' => 255,
-        'not null' => TRUE,
-        'description' => 'The API Url.',
-      ),
-      'request_type' => array(
-        'type' => 'varchar',
-        'length' => 255,
-        'not null' => TRUE,
-        'description' => 'The API Request.',
-      ),
-      'data' => array(
-        'type' => 'text',       
-        'not null' => TRUE,
-        'description' => 'The API Data.',
-      ),
-      'response' => array(
-        'type' => 'text',      
-        'not null' => TRUE,
-        'description' => 'The API Response.',
-      ),
-      'response_type' => array(
-        'type' => 'varchar',
-        'length' => 255,
-        'not null' => TRUE,
-        'description' => 'The API Response type',
-      ),     
-      'timestamp' => array(
-        'type' => 'int',
-        'length' => 12,
-        'not null' => TRUE,
-        'description' => 'The created date time.',
-      ),
-    ),
-    'primary key' => array('log_id'),
-  );
-  return $schema;
-  } 
+  }
 }

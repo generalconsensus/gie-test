@@ -266,7 +266,7 @@ function lr_field_mapping_user_properties() {
       'field_types' => array('text'),
     ),
     'Website' => array(
-      'label' => t('Website Url'),
+      'label' => t('Profile url'),
       'field_types' => array('text'),
     ),
     'NickName' => array(
