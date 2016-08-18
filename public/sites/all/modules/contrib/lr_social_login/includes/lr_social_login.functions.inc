@@ -216,6 +216,19 @@ function lr_social_login_get_callback_url() {
     }
   }
 
+  // Allow for the login_destination module to insert it's 'current' url query
+  if (module_exists('login_destination')) {
+    $destination_parse = drupal_parse_url($destination['destination']);
+
+    if ($destination_parse['path'] == 'user/login' && !empty($destination_parse['query']) && !empty($destination_parse['query']['current'])) {
+      $query[] = array('destination' => $destination_parse['query']['current']);
+
+    }
+  }
+  else {
+    $query[] = array('destination' => $callback);
+  }
+
   $query[] = array('destination' => $callback);
   $url = url('lr_social_login/token_handler', array(
     'query' => $query,
