@@ -1,0 +1,12 @@
+diff --git a/public/sites/all/modules/contrib/new_relic_rpm/new_relic_rpm.info b/public/sites/all/modules/contrib/new_relic_rpm/new_relic_rpm.info
+index 0d4dda6..93ea207 100644
+--- a/public/sites/all/modules/contrib/new_relic_rpm/new_relic_rpm.info
++++ b/public/sites/all/modules/contrib/new_relic_rpm/new_relic_rpm.info
+@@ -1,6 +1,7 @@
+ name = New Relic RPM
+ description = Integration with the New Relic RPM reporting and optimization system.
+ core = 7.x
++configure = admin/config/development/new-relic-rpm
+ 
+ ; Information added by Drupal.org packaging script on 2015-11-20
+ version = "7.x-1.0-alpha3"
