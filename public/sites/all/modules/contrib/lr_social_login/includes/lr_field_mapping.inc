@@ -53,7 +53,11 @@ function lr_field_mapping_create_profile_user($account, $userprofile, $form, $fo
  * @param array $form_state A keyed array containing the current state of the form.
  * @param object $userprofile User profile data that you got from social network
  */
-function lr_field_mapping_create_user(&$form_state, $userprofile) {
+function lr_field_mapping_create_user(&$form_state, $userprofile, $account = '') {
+  if (isset($account->mail)) {
+    $userprofile->Email_value = $account->mail;
+  }
+
   $field_map = variable_get('lr_social_login_user_fields', array());
   $field_convert_info = lr_field_mapping_field_convert_info();
   $instances = field_info_instances('user', 'user');
@@ -131,6 +135,11 @@ if(!empty($lr_field_mapping_property_name)){
       if (isset($object->name)) {
         $value = $object->name;
       }
+    }
+    elseif(is_array($userprofile->likes)){
+         $array = json_decode(json_encode($userprofile->likes), true);
+         $result = array_map(function ($ar) {return $ar['Name'];}, $array);
+         $value  =  implode(",", $result);
     }
   }
 
@@ -257,7 +266,7 @@ function lr_field_mapping_user_properties() {
       'field_types' => array('text'),
     ),
     'Website' => array(
-      'label' => t('Profile url'),
+      'label' => t('Website Url'),
       'field_types' => array('text'),
     ),
     'NickName' => array(

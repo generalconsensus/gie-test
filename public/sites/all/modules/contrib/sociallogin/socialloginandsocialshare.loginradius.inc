@@ -2,7 +2,7 @@
 
 /**
  * @file
- * Sdk page callback file for the lr_social_login module.
+ * Sdk page callback file for the socialloginandsocialshare module.
  * This class should be used only for Drupal site.
  */
 // Define LoginRadius domain

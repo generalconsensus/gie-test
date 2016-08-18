@@ -5,12 +5,30 @@
  * Contain functions for help to login/registration process.
  */
 module_load_include('inc', 'lr_social_login', 'includes/lr_field_mapping');
+module_load_include('php', 'lr_social_login', 'LoginRadiusSDK/SocialLogin/SocialLoginAPI');
+module_load_include('php', 'lr_social_login', 'LoginRadiusSDK/CustomerRegistration/AccountAPI');
+module_load_include('php', 'lr_social_login', 'LoginRadiusSDK/LoginRadius');
+module_load_include('php', 'lr_social_login', 'LoginRadiusSDK/LoginRadiusException');
+module_load_include('php', 'lr_social_login', 'LoginRadiusSDK/Clients/IHttpClient');
+module_load_include('php', 'lr_social_login', 'LoginRadiusSDK/Clients/DefaultHttpClient');
+
+use \LoginRadiusSDK\LoginRadius;
+use \LoginRadiusSDK\LoginRadiusException;
+use \LoginRadiusSDK\CustomerRegistration\AccountAPI;
+use \LoginRadiusSDK\SocialLogin\SocialLoginAPI;
 /**
  * Show error message when user profile is not retrieved or error message is showing.
  *
  * @param object $data contain error that got after validate userprofile api
  */
+
 function lr_social_login_show_error_message($data) {
+  
+  if(isset($_SESSION['show_message'])){   
+    drupal_set_message($_SESSION['show_message']);
+    unset($_SESSION['show_message']);
+  }  
+  
   if (variable_get('lr_social_login_debug_mode') == 1) {
     if (isset($data->description) && !empty($data->description)) {
       drupal_set_message(t($data->description), 'error');
@@ -34,7 +52,7 @@ function lr_social_login_show_error_message($data) {
 function lr_social_login_access_token() {
   $obj = new LoginRadius();
   $secret = trim(variable_get('lr_social_login_apisecret'));
-  return $obj->loginradius_fetch_access_token($secret);
+  return $obj->loginradiusFetchAccessToken($secret);
 }
 
 /**
@@ -44,7 +62,32 @@ function lr_social_login_access_token() {
  * @return string Filter string from unescaped characters
  */
 function lr_social_login_remove_unescaped_char($str) {
-  $in_str = str_replace(array('<','>','&', '{','}','*','/', '(','[',']','!', ')','&','*','#','$','%','^','|','?','+','=','"',','), array(''), $str);
+  $in_str = str_replace(array(
+    '<',
+    '>',
+    '&',
+    '{',
+    '}',
+    '*',
+    '/',
+    '(',
+    '[',
+    ']',
+    '!',
+    ')',
+    '&',
+    '*',
+    '#',
+    '$',
+    '%',
+    '^',
+    '|',
+    '?',
+    '+',
+    '=',
+    '"',
+    ',',
+  ), array(''), $str);
   $cur_encoding = mb_detect_encoding($in_str);
 
   if ($cur_encoding == "UTF-8" && mb_check_encoding($in_str, "UTF-8")) {
@@ -72,8 +115,14 @@ function lr_social_login_mail_text($key, $language = NULL, $variables = array())
     case 'newuser_subject':
       $text = t('Thank you for registering at [site:name]', array(), array('langcode' => $langcode));
       break;
-    case 'newuser_body':
-      $text = t("[user:name]
+    case 'newuser_body':      
+        $email_content = variable_get('lr_social_login_email_content');
+        if(isset($email_content) && $email_content != '') {
+      $text = t(str_replace('@password', $variables['pass'], $email_content). "
+
+    ", array(), array('langcode' => $langcode));
+        } else {
+             $text = t("[user:name]
 
 Thank you for registering at [site:name].
 
@@ -83,6 +132,7 @@ Username : [user:name]
 Password : " . $variables['pass'] . "
 
 --  [site:name] team", array(), array('langcode' => $langcode));
+        }
       break;
   }
 
@@ -100,12 +150,14 @@ Password : " . $variables['pass'] . "
  * @param object $account User account information
  */
 function lr_social_login_insert_picture($image_url, $account) {
+ 
   if ($account->uid) {
+
     $uri = (!empty($account->picture->uri) ? $account->picture->uri : '');
     $fid = (!empty($account->picture->fid) ? $account->picture->fid : '');
-
+  
     if (empty($uri)) {
-      $fid = (!empty($account->picture) ? $account->picture : '');
+      $fid = (!empty($account->picture) ? $account->picture : 0);
       $picture = file_load($fid);
       $uri = (!empty($picture->uri) ? $picture->uri : '');
     }
@@ -114,17 +166,24 @@ function lr_social_login_insert_picture($image_url, $account) {
       $picture = $account->picture;
       file_delete(file_load($fid), TRUE);
     }
+ 
     $image_directory = file_default_scheme() . '://' . variable_get('user_picture_path', 'pictures');
 
+
     if (file_prepare_directory($image_directory, FILE_CREATE_DIRECTORY)) {
-      $image_result = @drupal_http_request($image_url);
+  
+      $image_result = @drupal_http_request($image_url); 
+    
       $picture_path = file_stream_wrapper_uri_normalize($image_directory . '/picture-' . $account->uid . '-' . REQUEST_TIME . '.jpg');
+
       if (isset($image_result->data) && !empty($image_result->data)) {
+    
         $picture_file_data = file_save_data($image_result->data, $picture_path, FILE_EXISTS_REPLACE);
         $max_dimensions = variable_get('user_picture_dimensions', '85x85');
         file_validate_image_resolution($picture_file_data, $max_dimensions);
         $picture_file_data->uid = $account->uid;
         $picture_file = file_save($picture_file_data);
+       
         file_usage_add($picture_file, 'user', 'user', $account->uid);
         db_update('users')
           ->fields(array(
@@ -157,10 +216,23 @@ function lr_social_login_get_callback_url() {
     }
   }
 
+  // Allow for the login_destination module to insert it's 'current' url query
+  if (module_exists('login_destination')) {
+    $destination_parse = drupal_parse_url($destination['destination']);
+
+    if ($destination_parse['path'] == 'user/login' && !empty($destination_parse['query']) && !empty($destination_parse['query']['current'])) {
+      $query[] = array('destination' => $destination_parse['query']['current']);
+
+    }
+  }
+  else {
+    $query[] = array('destination' => $callback);
+  }
+
   $query[] = array('destination' => $callback);
   $url = url('lr_social_login/token_handler', array(
     'query' => $query,
-    'absolute' => TRUE
+    'absolute' => TRUE,
   ));
 
   if (module_exists('ajax_register') || module_exists('modal_forms')) {
@@ -178,11 +250,12 @@ function lr_social_login_get_callback_url() {
  * @return string Generated email address on basis of provider and provider id.
  */
 function lr_social_login_get_email_by_provider_id($provider, $id) {
-  $email_name = drupal_substr(str_replace(array("-","/","."),"_",$id), -10);
-  $email = $email_name.'@'.$provider.'.com';
+  $email_name = drupal_substr(str_replace(array("-", "/", "."), "_", $id), -10);
+  $email = $email_name . '@' . $provider . '.com';
   $account = user_load_by_mail($email);
-  if($account){
-    $id = $email_name.rand();
+
+  if ($account && variable_get('lr_social_login_force_registration') != 0) {
+    $id = $email_name . rand();
     $email = lr_social_login_get_email_by_provider_id($id, $provider);
   }
   return $email;
@@ -245,16 +318,15 @@ function lr_social_login_insert_into_mapping_table($id, $provider, $account_id) 
         ->execute();
     }
 
-
-    if(db_field_exists('loginradius_mapusers','user_id')) {
-    db_insert('loginradius_mapusers')
-      ->fields(array(
-        'aid' => $aid,
-        'user_id' => $account_id,
-        'provider' => $provider,
-        'provider_id' => $id
-      ))
-      ->execute();
+    if (db_field_exists('loginradius_mapusers', 'user_id')) {
+      db_insert('loginradius_mapusers')
+        ->fields(array(
+          'aid' => $aid,
+          'user_id' => $account_id,
+          'provider' => $provider,
+          'provider_id' => $id,
+        ))
+        ->execute();
     }
     else {
       db_insert('loginradius_mapusers')
@@ -279,10 +351,10 @@ function lr_social_login_insert_into_mapping_table($id, $provider, $account_id) 
  */
 
 function lr_social_login_getuser_data($userprofile) {
-  $userprofile->Email_value = (sizeof($userprofile->Email) > 0 ? $userprofile->Email[0]->Value : '');
+  $userprofile->Email_value = (count($userprofile->Email) > 0 ? $userprofile->Email[0]->Value : '');
   $userprofile->Company_name = (isset($userprofile->Company->Name) ? $userprofile->Company->Name : '');
-  $userprofile->Country_name = (isset($userprofile->Country->Name)  ? $userprofile->Country->Name : '');
-  $userprofile->PhoneNumber = (isset($userprofile->PhoneNumbers) && sizeof($userprofile->PhoneNumbers) > 0 ? $userprofile->PhoneNumbers[0]->PhoneNumber : '');
+  $userprofile->Country_name = (isset($userprofile->Country->Name) ? $userprofile->Country->Name : '');
+  $userprofile->PhoneNumber = (isset($userprofile->PhoneNumbers) && count($userprofile->PhoneNumbers) > 0 ? $userprofile->PhoneNumbers[0]->PhoneNumber : '');
   return $userprofile;
 }
 
@@ -292,28 +364,41 @@ function lr_social_login_getuser_data($userprofile) {
  * @param array $form Nested array of form elements that comprise the form.
  * @param object $account User account information
  * @param string $token LoginRadius access Token
+ * @function
  */
 function lr_social_login_user_identities_submit(&$form, $account, $token) {
   $user_title = format_username($account);
   drupal_set_title(check_plain($user_title));
 
   if (user_is_logged_in() && $token != '') {
-    $obj = new LoginRadius();
-    $userprofile = $obj->loginradius_get_user_profiledata($token);
+    $apiKey= trim(variable_get('lr_social_login_apikey'));
+    $secret = trim(variable_get('lr_social_login_apisecret'));
+    $socialLoginObject = new SocialLoginAPI($apiKey, $secret, array(
+          'output_format' => TRUE,
+          'authentication' => FALSE
+        ));
+    
+    try {    
+        $userprofile = $socialLoginObject->getUserProfiledata($token);          
+      }
+      catch (LoginRadiusException $e) {
+          watchdog_exception('type', $e);
+      }
 
     if (isset($userprofile->ID) && $userprofile->ID != '' && user_is_logged_in()) {
-        if (sizeof(module_implements('add_user_identities_submit')) > 0) {
-            // Call all modules that implement the hook, and let them make changes to $variables.
-
-             module_invoke_all('add_user_identities_submit', $userprofile, $account);
-        }
+      //Advanced module LR Code Hook Start
+      if (count(module_implements('add_user_identities_submit')) > 0) {
+        // Call all modules that implement the hook, and let them make changes to $variables.
+        module_invoke_all('add_user_identities_submit', $userprofile, $account);
+      }
+      //Advanced module LR Code Hook End
       $authname_exist = db_select('authmap', 'authname')
         ->fields('authname')
         ->condition('authname', $userprofile->ID)
         ->execute()
         ->fetchAssoc();
       $result = db_query("SELECT provider FROM {authmap} am INNER JOIN {loginradius_mapusers} sm ON am.aid = sm.aid WHERE uid = :uid", array(
-        ':uid' => $account->uid
+        ':uid' => $account->uid,
       ));
       $mapped = '';
 
@@ -327,6 +412,7 @@ function lr_social_login_user_identities_submit(&$form, $account, $token) {
         if ($mapped != 'yes') {
           if (variable_get('lr_social_login_update_profile') == 1) {
             if (variable_get('user_pictures') == 1 && !empty($userprofile->ImageUrl)) {
+           
               lr_social_login_insert_picture($userprofile->ImageUrl, $account);
             }
           }
@@ -337,9 +423,6 @@ function lr_social_login_user_identities_submit(&$form, $account, $token) {
         else {
           drupal_set_message(t("This social ID is already linked with an account. Kindly unmap the current ID before linking new Social ID."), 'warning');
         }
-      }
-      else {
-        drupal_set_message(t("This account is already linked with an account. try to choose another account."), 'warning');
       }
     }
     drupal_redirect_form($form, $redirect = NULL);
@@ -355,17 +438,17 @@ function lr_social_login_user_identities_submit(&$form, $account, $token) {
  * @param int $aid Authmap ID
  * @return array Renderable html confirm form
  */
-function lr_social_login_user_delete_form($form, $form_state, $account, $lrid = 0, $provider ='') {
-  if(empty($provider)){
-  $provider = db_query("SELECT provider FROM {authmap} am INNER JOIN {loginradius_mapusers} sm ON am.aid = sm.aid WHERE uid = :uid AND am.authname = :authname", array(
-    ':uid' => $account->uid,
-    ':authname' => $lrid,
-  ))
-    ->fetchField();
+function lr_social_login_user_delete_form($form, $form_state, $account, $lrid = 0, $provider = '') {
+  if (empty($provider)) {
+    $provider = db_query("SELECT provider FROM {authmap} am INNER JOIN {loginradius_mapusers} sm ON am.aid = sm.aid WHERE uid = :uid AND am.authname = :authname", array(
+      ':uid' => $account->uid,
+      ':authname' => $lrid,
+    ))
+      ->fetchField();
   }
   return confirm_form(array(), t('Are you sure you want to delete the Social Login %provider for %user?', array(
       '%provider' => $provider,
-      '%user' => $account->name
+      '%user' => $account->name,
     )), 'user/' . $account->uid . '/lr_social_login');
 }
 
@@ -376,17 +459,18 @@ function lr_social_login_user_delete_form($form, $form_state, $account, $lrid = 
  * @param array $form_state A keyed array containing the current state of the form
  */
 function lr_social_login_user_delete_form_submit($form, &$form_state) {
-  if(isset($form_state['build_info']['args'][2])){
+  if (isset($form_state['build_info']['args'][2])) {
     $provider = $form_state['build_info']['args'][2];
   }
   else {
-   $provider = db_query('SELECT provider FROM {loginradius_mapusers} WHERE provider_id = :id', array('id' =>  $form_state['build_info']['args'][1]))->fetchField();
+    $provider = db_query('SELECT provider FROM {loginradius_mapusers} WHERE provider_id = :id', array('id' => $form_state['build_info']['args'][1]))->fetchField();
   }
-    if (sizeof(module_implements('add_user_delete_form_submit')) > 0) {
-        // Call all modules that implement the hook, and let them make changes to $variables.
-
-        module_invoke_all('add_user_delete_form_submit', $form_state, $provider);
-    }
+  //Advanced module LR Code Hook Start
+  if (count(module_implements('add_user_delete_form_submit')) > 0) {
+    // Call all modules that implement the hook, and let them make changes to $variables.
+    module_invoke_all('add_user_delete_form_submit', $form_state, $provider);
+  }
+  //Advanced module LR Code Hook End
   $query = db_delete('authmap')
     ->condition('uid', $form_state['build_info']['args'][0]->uid)
     ->condition('authname', $form_state['build_info']['args'][1])
@@ -415,45 +499,59 @@ function lr_social_login_user_login_form_alter(&$form, &$form_state) {
   $api_key = trim(variable_get('lr_social_login_apikey'));
   $secret = trim(variable_get('lr_social_login_apisecret'));
   $iconpos = (variable_get('lr_social_login_showicon_location', 2) ? 102 : -102);
-    if (!empty($api_key) && !empty($secret) && (!preg_match('/^\{?[A-Z0-9]{8}-[A-Z0-9]{4}-[A-Z0-9]{4}-[A-Z0-9]{4}-[A-Z0-9]{12}\}?$/i', $api_key) || !preg_match('/^\{?[A-Z0-9]{8}-[A-Z0-9]{4}-[A-Z0-9]{4}-[A-Z0-9]{4}-[A-Z0-9]{12}\}?$/i', $secret))) {
-      $value = t('<div class="interface_error">Your LoginRadius API key or secret is not valid, please correct it or contact LoginRadius support at <a href="@this" target="_blank">www.LoginRadius.com</a></div>', array('@this' => 'http://www.Loginradius.com/'));
+  if (!empty($api_key) && !empty($secret) && (!preg_match('/^\{?[A-Z0-9]{8}-[A-Z0-9]{4}-[A-Z0-9]{4}-[A-Z0-9]{4}-[A-Z0-9]{12}\}?$/i', $api_key) || !preg_match('/^\{?[A-Z0-9]{8}-[A-Z0-9]{4}-[A-Z0-9]{4}-[A-Z0-9]{4}-[A-Z0-9]{12}\}?$/i', $secret))) {
+    $value = t('<div class="interface_error">Your LoginRadius API key or secret is not valid, please correct it or contact LoginRadius support at <a href="@this" target="_blank">www.LoginRadius.com</a></div>', array('@this' => 'http://www.Loginradius.com/'));
+  }
+  elseif (!empty($api_key) && !empty($secret)) {
+    $value = theme('lr_social_login_links');
+  }
+  //Advanced module LR Code Hook Start
+  if (count(module_implements('add_social_login_interface_widget')) > 0) {
+    // Call all modules that implement the hook, and let them make changes to $variables.
+    $result = module_invoke_all('add_social_login_interface_widget');
+    $widget = end($result);
+    if (!empty($widget)) {
+      $value = $widget;
     }
-    elseif (!empty($api_key) && !empty($secret)) {
-      $value = theme('lr_social_login_links', array('params' => array('lr_location' => lr_social_login_get_callback_url())));
-    }
-    if (sizeof(module_implements('add_social_login_interface_widget')) > 0) {
-        // Call all modules that implement the hook, and let them make changes to $variables.
-
-        $result =  module_invoke_all('add_social_login_interface_widget');
-        $widget = end( $result );
-      if(!empty($widget)){
-        $value = $widget;
-      }
-    }
-    if(!empty($value)){
+  }
+  //Advanced module LR Code Hook End
+  if (!empty($value)) {
+    $my_settings = lr_social_login_interface_settings();
     $form['lr_social_login_links'] = array(
       '#type' => 'item',
-      '#title' => variable_get('lr_social_login_label_string', 'Login with Social ID'),
+      '#title' => variable_get('lr_social_login_label_string'),
       '#markup' => $value,
       '#attributes' => array('class' => array('lr_social_login-links')),
       '#weight' => $iconpos,
+      '#attached' => array(
+        'js' => array(
+          array(
+            'data' => array('lrsociallogin' => $my_settings),
+            'type' => 'setting'
+          )
+        )
+      ),
     );
-    }
+  }
 }
+
 /**
- * @param $vars
- *
- * Set all variables that required to show social login/linking interface.
+ * @return array
  */
-function lr_social_login_options(&$vars) {
-    $vars['api_key'] = trim(variable_get('lr_social_login_apikey'));
-    $vars['loc'] = lr_social_login_get_callback_url();
-    $vars['interfaceiconsize'] = variable_get('lr_social_login_interface_size') == 0 ? "small" : "";
-    $interfacebackgroundcolor = variable_get('lr_social_login_interface_bgcolor');
-    $vars['interfacebackgroundcolor'] = !empty($interfacebackgroundcolor) ? trim($interfacebackgroundcolor) : "";
-    $interfacerow = (int)variable_get('lr_social_login_interface_columns');
-    $vars['interfacerow'] = !empty($interfacerow) && is_numeric($interfacerow) ? trim($interfacerow) : 0;
+function lr_social_login_interface_settings() {
+  $interfacerow = variable_get('lr_social_login_interface_columns');
+  $interfacerow = !empty($interfacerow) && is_numeric($interfacerow) ? trim($interfacerow) : 0;
+  $my_settings = array(
+    'interfacesize' => variable_get('lr_social_login_interface_size') == 0 ? "small" : "",
+    'lrinterfacebackground' => variable_get('lr_social_login_interface_bgcolor'),
+    'noofcolumns' => (int) $interfacerow,
+    'apikey' => trim(variable_get('lr_social_login_apikey')),
+    'location' => urldecode(lr_social_login_get_callback_url()),
+    'callback' => url('', array('absolute' => TRUE)),
+  );
+  return $my_settings;
 }
+
 /**
  * Function that redirects user after login.
  *
@@ -464,18 +562,18 @@ function lr_social_login_options(&$vars) {
  * @return array A renderable html form
  */
 function lr_social_login_user_redirect($form, $account, $userprofile, $variable_path = '') {
-  $obj = new LoginRadius();
-  $flag ='';
-    // Make sure at least one module implements our hook.
-    if (sizeof(module_implements('before_user_redirect')) > 0) {
-        // Call all modules that implement the hook, and let them make changes to $variables.
-        $use_data = array('userprofile' => $userprofile, 'form' => $form, 'account' => $account);
+  //Advanced module LR Code Hook Start
+  // Make sure at least one module implements our hook.
+  if (count(module_implements('before_user_redirect')) > 0) {
+    // Call all modules that implement the hook, and let them make changes to $variables.
+    $use_data = array('userprofile' => $userprofile, 'form' => $form, 'account' => $account);
 
-       $data =  module_invoke_all('before_user_redirect', $use_data);
-        if (!empty($data) && $data != 'true') {
-          return $data;
-        }
+    $data = module_invoke_all('before_user_redirect', $use_data);
+    if (!empty($data) && $data != 'true') {
+      return $data;
     }
+  }
+  //Advanced module LR Code Hook End
 
   $variable_path = (!empty($variable_path) ? $variable_path : 'lr_social_login_userlogin_redirect');
   $variable_custom_path = (($variable_path == 'lr_social_login_userlogin_redirect') ? 'lr_social_login_custom_redirection' : 'lr_social_login_custom_register_redirection');
@@ -486,8 +584,20 @@ function lr_social_login_user_redirect($form, $account, $userprofile, $variable_
     lr_social_login_user_redirect($form, $account, $userprofile, $variable_path);
   }
   else {
-
-    if (variable_get($variable_path) == 1) {
+     
+    if(variable_get($variable_path) == 0){   
+      // Redirect to home page.
+      $url_parsed = parse_url($_GET['destination']);
+      if (isset($url_parsed['query'])) {
+      parse_str($url_parsed['query'], $url_parts);   
+      if(isset($url_parts['vtype']) && $url_parts['vtype'] == 'emailverification'){  
+         unset($_GET['destination']);
+         drupal_goto();
+      }      
+      }else{     
+        drupal_redirect_form($form, $redirect = NULL);
+      }   
+    } else if (variable_get($variable_path) == 1) {
       // Redirect to profile.
       unset($_GET['destination']);
       drupal_goto('user/' . $account->uid . '/edit');
@@ -495,7 +605,6 @@ function lr_social_login_user_redirect($form, $account, $userprofile, $variable_
     elseif (variable_get($variable_path) == 2) {
       // Redirect to custom page.
       $custom_url = variable_get($variable_custom_path);
-
       if (!empty($custom_url)) {
         unset($_GET['destination']);
         drupal_goto($custom_url);
@@ -504,10 +613,10 @@ function lr_social_login_user_redirect($form, $account, $userprofile, $variable_
         drupal_redirect_form($form, $redirect = NULL);
       }
     }
-   else {
-          // Redirect to same page.
-          drupal_redirect_form($form, $redirect = NULL);
-      }
+    else {
+      // Redirect to same page.
+      drupal_redirect_form($form, $redirect = NULL);
+    }
   }
 }
 
@@ -580,7 +689,32 @@ function lr_social_login_check_exist_username($userprofile) {
  * @return string Username of user
  */
 function lr_social_login_username_option($userprofile) {
-  if (!empty($userprofile->FirstName) && !empty($userprofile->LastName) && variable_get('lr_social_login_display_username') != 2) {
+    $enableUname = variable_get('lr_raas_enable_user_name');
+    $emailVerifyOption = variable_get('lr_raas_email_verification_condition');
+    if(isset($emailVerifyOption) && $emailVerifyOption == '1') {
+        $enableUname = 'false';
+    }
+    if(isset($enableUname) && $enableUname == 'true'){
+        try {
+            
+        $apiKey=  trim(variable_get('lr_social_login_apikey'));   
+        $apiSecret = trim(variable_get('lr_social_login_apisecret')); 
+        
+        $accountObj = new AccountAPI($apiKey, $apiSecret, array('output_format' => 'json'));           
+        
+                $returndata = $accountObj->getAccounts($userprofile->Uid);          
+                $username = '';
+                foreach($returndata as $key=>$value){
+                if($value->Provider == 'RAAS' && $value->UserName != ''){
+                   $username = $value->UserName;
+                  }                
+                } 
+                
+                } catch (LoginRadiusException $e) {              
+                    $msg = isset($e->getErrorResponse()->description) ? $e->getErrorResponse()->description : 'Password is not set';
+                    drupal_set_message(t($msg), 'error');
+                 }
+    } else if (!empty($userprofile->FirstName) && !empty($userprofile->LastName) && variable_get('lr_social_login_display_username') != 2) {
     if (variable_get('lr_social_login_display_username') == 1) {
       $username = $userprofile->FirstName . '-' . $userprofile->LastName;
     }
@@ -611,24 +745,43 @@ function lr_social_login_existing_user_save($account, $userprofile, $form, $form
     module_load_include('inc', 'lr_social_login', 'includes/lr_social_login.field');
     $data = array();
 
-      lr_field_mapping_create_user($data, $userprofile);
-      if (module_exists('profile2')) {
-        lr_field_mapping_create_profile_user($account, $userprofile, $form, $form_state);
-      }
-
-
+    lr_field_mapping_create_user($data, $userprofile, $account);
+    if (module_exists('profile2')) {
+      lr_field_mapping_create_profile_user($account, $userprofile, $form, $form_state);
+    }
 
     $account = user_save($account, $data);
 
     if (variable_get('user_pictures') == 1 && !empty($userprofile->ImageUrl)) {
+                  
       lr_social_login_insert_picture($userprofile->ImageUrl, $account);
+      
     }
-
   }
-    if (sizeof(module_implements('add_existing_user_save')) > 0) {
-        // Call all modules that implement the hook, and let them make changes to $variables.
-        module_invoke_all('add_existing_user_save', $userprofile, $account);
+  
+  if (module_exists('lr_raas')) {
+    $user_name = lr_social_login_username_option($userprofile);
+    $uname = db_select('users', 'name')
+          ->fields('name')
+          ->condition('lr_raas_uid', $userprofile->Uid)
+          ->execute()
+          ->fetchAssoc();
+
+  if(isset($user_name) && $user_name != '' && $uname['name'] != $user_name) {     
+    db_update('users')
+          ->fields(array(
+            'name' => $user_name,
+          ))
+          ->condition('lr_raas_uid', $userprofile->Uid)
+          ->execute();
     }
+  }
+  //Advanced module LR Code Hook Start
+  if (count(module_implements('add_existing_user_save')) > 0) {
+    // Call all modules that implement the hook, and let them make changes to $variables.
+    module_invoke_all('add_existing_user_save', $userprofile, $account);
+  }
+  //Advanced module LR Code Hook End
 
   $form_state['uid'] = $account->uid;
   user_login_submit(array(), $form_state);
@@ -642,9 +795,17 @@ function lr_social_login_existing_user_save($account, $userprofile, $form, $form
  * @param array $form_state A keyed array containing the current state of the form
  * @return array A renderable html form
  */
-function lr_social_login_adduser($userprofile, &$form, &$form_state) {
+function lr_social_login_adduser($userprofile, &$form, &$form_state) {     
   if (isset($userprofile->ID) && !empty($userprofile->ID)) {
     $account = user_external_load($userprofile->ID);
+    //Advanced module LR Code Hook Start
+    // Make sure at least one module implements our hook.
+    if (count(module_implements('check_raas_uid')) > 0) {
+      // Call all modules that implement the hook, and let them make changes to $variables.
+      $result = module_invoke_all('check_raas_uid', $userprofile);
+      $account = end($result);
+    }
+    //Advanced module LR Code Hook End
 
     if (!$account) {
       $account = user_load_by_mail($userprofile->Email_value);
@@ -659,6 +820,7 @@ function lr_social_login_adduser($userprofile, &$form, &$form_state) {
         if (empty($authname_exist) && !$authname_exist) {
           if (variable_get('lr_social_login_update_profile') == 1) {
             if (variable_get('user_pictures') == 1 && !empty($userprofile->ImageUrl)) {
+                   
               lr_social_login_insert_picture($userprofile->ImageUrl, $account);
             }
           }
@@ -669,10 +831,34 @@ function lr_social_login_adduser($userprofile, &$form, &$form_state) {
     }
 
     if (isset($account->uid) && $account->uid != 0) {
+      $apiKey = trim(variable_get('lr_social_login_apikey'));
+      $secret = trim(variable_get('lr_social_login_apisecret'));
+      $accountObj = new AccountAPI($apiKey, $secret, array('output_format' => 'json'));
+      try{
+          $result = $accountObj->getAccounts($userprofile->Uid);
+        }
+        catch (LoginRadiusException $e){
+        watchdog_exception('type', $e);
+        }
+   
+        if(isset($result) && !empty($result)){ 
+          foreach($result as $value){
+           if(is_array($value) || is_object($value)){   
+              $check_aid = db_query("SELECT aid FROM {loginradius_mapusers} WHERE user_id = :uid AND provider_id = :providerid", array(
+      ':uid' => $account->uid,
+      ':providerid' => $value->ID,
+    ))
+      ->fetchField();      
+             if(isset($check_aid) && !$check_aid){            
+             lr_social_login_insert_into_mapping_table($value->ID, $value->Provider, $account->uid);  
+             }
+           }
+          }
+        }
       return lr_social_login_provide_login_to_unblock_user($account, $userprofile, $form, $form_state);
     }
-    else {
-     return lr_social_login_save_new_user($userprofile, $form, $form_state);
+    else {        
+      return lr_social_login_save_new_user($userprofile, $form, $form_state);
     }
   }
 }
@@ -694,7 +880,7 @@ function lr_social_login_email_popup_submit(&$form, &$form_state, $post_value) {
       $popup_params = array(
         'msg' => t('This email is invalid. Please choose another one.'),
         'provider' => $userprofile->Provider,
-        'msgtype' => 'warning'
+        'msgtype' => 'warning',
       );
       $theme = theme('lr_social_login_popup', array('popup_params' => $popup_params));
       $form['lr_social_login_popup'] = lr_social_login_get_popup_form_element_array($theme);
@@ -707,7 +893,7 @@ function lr_social_login_email_popup_submit(&$form, &$form_state, $post_value) {
         $popup_params = array(
           'msg' => t($email_wrong),
           'provider' => $userprofile->Provider,
-          'msgtype' => 'warning'
+          'msgtype' => 'warning',
         );
         $theme = theme('lr_social_login_popup', array('popup_params' => $popup_params));
         $form['lr_social_login_popup'] = lr_social_login_get_popup_form_element_array($theme);
@@ -734,15 +920,14 @@ function lr_social_login_email_popup_submit(&$form, &$form_state, $post_value) {
 function lr_social_login_check_existing_user(&$form, &$form_state, $userprofile) {
   if ((empty($userprofile->Email_value) && variable_get('lr_social_login_email_required') == 0) || !empty($userprofile->Email_value)) {
     if (empty($userprofile->Email_value) && variable_get('lr_social_login_email_required') == 0) {
-      $userprofile->Email_value = lr_social_login_get_email_by_provider_id($userprofile->Provider, $userprofile->ID);
+        $userprofile->Email_value = lr_social_login_get_email_by_provider_id($userprofile->Provider, $userprofile->ID);
     }
 
     $account = user_external_load($userprofile->ID);
-
-    if (!$account) {
+    if (!$account) {   
       $account = user_load_by_mail($userprofile->Email_value);
 
-      if (!$account) {
+      if (!$account) {          
         lr_social_login_enable_force_registration($userprofile);
       }
     }
@@ -761,9 +946,9 @@ function lr_social_login_check_existing_user(&$form, &$form_state, $userprofile)
  * @return array A renderable html form
  */
 function lr_social_login_provide_login_to_unblock_user($account, $userprofile, &$form, &$form_state) {
- // $verified = db_query('SELECT verified FROM {loginradius_mapusers} WHERE provider_id = :id', array('id' => $userprofile->ID))->fetchField();
- // if ($verified == 1) {
-      if ($account->login) {
+  // $verified = db_query('SELECT verified FROM {loginradius_mapusers} WHERE provider_id = :id', array('id' => $userprofile->ID))->fetchField();
+  // if ($verified == 1) { 
+  if ($account->login) {
     // Check if user is blocked.
     $form_state['values']['name'] = $account->name;
     user_login_name_validate(array(), $form_state);
@@ -790,7 +975,7 @@ function lr_social_login_provide_login_to_unblock_user($account, $userprofile, &
  * @param array $form_state A keyed array containing the current state of the form
  * @return array A renderable html form
  */
-function lr_social_login_save_new_user($userprofile, &$form, &$form_state) {
+function lr_social_login_save_new_user($userprofile, &$form, &$form_state) {      
   $data = lr_social_login_check_exist_username($userprofile);
   $form_state['redirect'] = NULL;
   $form_state['values']['name'] = $data['username'];
@@ -808,28 +993,30 @@ function lr_social_login_save_new_user($userprofile, &$form, &$form_state) {
   if (variable_get('user_register', 1) || variable_get('user_register', 2) || variable_get('lr_social_login_enable_user_registration') == 1) {
     // Field module support.
 
-      lr_field_mapping_create_user($form_state['values'], $userprofile);
+    lr_field_mapping_create_user($form_state['values'], $userprofile);
     $account = user_save(NULL, $form_state['values']);
-	if ($account->status  && !variable_get('user_email_verification', TRUE) && !variable_get('user_verify', 1)) {
-db_update('users')
-          ->fields(array(
-            'login' => REQUEST_TIME,
-          ))
-          ->condition('uid', $account->uid)
-          ->execute();
-}
+    if ($account->status && !variable_get('user_email_verification', TRUE) && !variable_get('user_verify', 1)) {
+      db_update('users')
+        ->fields(array(
+          'login' => REQUEST_TIME,
+        ))
+        ->condition('uid', $account->uid)
+        ->execute();
+    }
     if (module_exists('profile2')) {
       lr_field_mapping_create_profile_user($account, $userprofile, $form, $form_state);
     }
 
     if (variable_get('user_pictures') == 1 && !empty($userprofile->ImageUrl)) {
+       
       lr_social_login_insert_picture($userprofile->ImageUrl, $account);
     }
-      if (sizeof(module_implements('add_user_data_after_save')) > 0) {
-          // Call all modules that implement the hook, and let them make changes to $variables.
-
-          module_invoke_all('add_user_data_after_save', $account, $userprofile);
-      }
+    //Advanced module LR Code Hook Start
+    if (count(module_implements('add_user_data_after_save')) > 0) {
+      // Call all modules that implement the hook, and let them make changes to $variables.
+      module_invoke_all('add_user_data_after_save', $account, $userprofile);
+    }
+    //Advanced module LR Code Hook End
     lr_social_login_insert_into_mapping_table($userprofile->ID, $userprofile->Provider, $account->uid);
 
     if (!$account) {
@@ -840,25 +1027,27 @@ db_update('users')
 
     $form_state['user'] = $account;
     $form_state['values']['uid'] = $account->uid;
-      $status = FALSE;
-      if (!variable_get('user_email_verification', TRUE)) {
-          $status = TRUE;
+    $status = FALSE;
+    if (!variable_get('user_email_verification', TRUE)) {
+      $status = TRUE;
+    }
+    //Advanced module LR Code Hook Start
+    // Make sure at least one module implements our hook.
+    if (count(module_implements('check_send_verification_email')) > 0) {
+      // Call all modules that implement the hook, and let them make changes to $variables.
+      $userprofile->Password = $form_state['values']['pass'];
+      $result = module_invoke_all('check_send_verification_email', $account, $userprofile);
+      if (isset($result['lr_social_invite_message_popup'])) {
+        return array('lr_social_invite_message_popup' => $result['lr_social_invite_message_popup']);
       }
-
-      // Make sure at least one module implements our hook.
-      if (sizeof(module_implements('check_send_verification_email')) > 0) {
-          // Call all modules that implement the hook, and let them make changes to $variables.
-          $userprofile->Password = $form_state['values']['pass'];
-          $result = module_invoke_all('check_send_verification_email', $account, $userprofile);
-            if( isset($result['lr_social_invite_message_popup'])){
-             return array('lr_social_invite_message_popup' =>$result['lr_social_invite_message_popup']); 
-            }
-        $status = end( $result );
-      }
-    if ($account->status  && $status && !variable_get('user_verify', 1)) {
+      $status = end($result);
+    }
+    //Advanced module LR Code Hook End
+   
+    if ($account->status && $status && !variable_get('user_verify',1)) {    
       watchdog('lr_social_login', 'New user: %name (%email).', array(
         '%name' => $data['username'],
-        '%email' => $userprofile->Email_value
+        '%email' => $userprofile->Email_value,
       ), WATCHDOG_NOTICE, l(t('edit'), 'user/' . $account->uid . '/edit'));
 
       if (variable_get('lr_social_login_send_user_credentials') == 1) {
@@ -870,20 +1059,19 @@ db_update('users')
       }
 
       $form_state['uid'] = $account->uid;
-      //watchdog('lr_social_login', 'user login @module', array('@module' => 'lr_social_login'), WATCHDOG_ERROR);
       user_login_submit(array(), $form_state);
       unset($_SESSION['lrdata']);
       $_SESSION['current_social_provider'] = $userprofile->ID;
       return lr_social_login_user_redirect($form, $account, $userprofile, 'lr_social_login_userregister_redirect');
     }
     elseif (variable_get('user_register') != 2 && ($account->status || (variable_get('user_verify', 1) && $status))) {
-      // Require email confirmation
+      // Require email confirmation.   
       _user_mail_notify('status_activated', $account);
       variable_set('user_verify', 0);
       drupal_set_message(t('Once you have verified your e-mail address, you may log in via Social Login.'));
       drupal_goto();
     }
-    else {
+    else {       
       _user_mail_notify('register_pending_approval', $account);
       drupal_set_message(t('Thank you for applying for an account. Your account is currently pending approval by the site administrator.<br />In the meantime, a welcome message with further instructions has been sent to your e-mail address.'));
       drupal_goto();
