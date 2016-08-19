@@ -1,0 +1,14 @@
+diff --git a/public/sites/all/modules/contrib/panels/panels_mini/panels_mini.module b/public/sites/all/modules/contrib/panels/panels_mini/panels_mini.module
+index e55c673..78a487a 100644
+--- a/public/sites/all/modules/contrib/panels/panels_mini/panels_mini.module
++++ b/public/sites/all/modules/contrib/panels/panels_mini/panels_mini.module
+@@ -313,9 +313,6 @@ function panels_mini_load_all($reset = FALSE) {
+       foreach ($panel_names as $name) {
+         $cids[] = 'panels_mini_load:' . $name->name;
+       }
+-      if (empty($cids)) {
+-        return array_filter($cache);
+-      }
+       $output = cache_get_multiple($cids, 'cache_panels');
+       foreach ($output as $mini) {
+         if (!empty($mini->data)) {
