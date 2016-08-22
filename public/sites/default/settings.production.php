@@ -666,6 +666,15 @@ $conf['awssdk2_access_key'] = 'AKIAIPEI5YZN2LIY3Z5Q';
 $conf['awssdk2_secret_key'] = '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';
 
 /**
+ * Correct S3FS settings on prod
+ */
+$conf['s3fs_bucket'] = 'giexchange-www';
+$conf['s3fs_use_s3_for_private'] = 1;
+$conf['s3fs_use_s3_for_public'] = 1;
+$conf['s3fs_use_cname'] = 1;
+$conf['s3fs_domain'] = 'static.globalinnovationexchange.org';
+
+/**
  * Add the domain module setup routine.
  */
 include DRUPAL_ROOT . '/sites/all/modules/contrib/domain/settings.inc';
