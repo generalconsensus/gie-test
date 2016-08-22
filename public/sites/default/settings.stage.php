@@ -667,8 +667,8 @@ include DRUPAL_ROOT . '/sites/all/modules/contrib/domain/settings.inc';
 $conf['s3fs_bucket'] = 'giexchange-stage';
 $conf['s3fs_use_s3_for_private'] = 1;
 $conf['s3fs_use_s3_for_public'] = 1;
-$conf['s3fs_use_cname'] = 1;
-$conf['s3fs_domain'] = 'static.globalinnovationexchange.org';
+//$conf['s3fs_use_cname'] = 1;
+//$conf['s3fs_domain'] = 'static.globalinnovationexchange.org';
 
 /**
  * Set Re-route email to enable to catch all local emails
