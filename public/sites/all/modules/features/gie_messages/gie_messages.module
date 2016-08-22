@@ -7,6 +7,17 @@
 include_once 'gie_messages.features.inc';
 
 /**
+ * Implements hook_mail_alter().
+ * - TEMPORARY: send digest emails to f1 via bcc
+ */
+function gie_messages_mail_alter(&$message)
+{
+  if ($message['key'] == 'digest') {
+    $message['headers']['bcc'] = 'mdrayer@forumone.com, dmcdermott@forumone.com, mburge@forumone.com';
+  }
+}
+
+/**
  * Implements hook_comment_insert().
  * - Trigger Comment Notify message
  */
