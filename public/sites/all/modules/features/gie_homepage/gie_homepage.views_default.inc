@@ -320,7 +320,7 @@ function gie_homepage_views_default_views() {
   /* Display: GES Personas */
   $handler = $view->new_display('panel_pane', 'GES Personas', 'ges_personas_pane');
   $handler->display->display_options['defaults']['title'] = FALSE;
-  $handler->display->display_options['title'] = 'The Exchange Welcomes the Global Entrepreneurship Summit';
+  $handler->display->display_options['title'] = 'The Exchange Supports the Global Entrepreneurship Summit';
   $handler->display->display_options['defaults']['hide_admin_links'] = FALSE;
   $handler->display->display_options['hide_admin_links'] = TRUE;
   $handler->display->display_options['defaults']['style_plugin'] = FALSE;
