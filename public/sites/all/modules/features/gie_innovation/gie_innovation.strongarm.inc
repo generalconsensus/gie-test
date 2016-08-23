@@ -730,6 +730,34 @@ function gie_innovation_strongarm() {
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
+  $strongarm->name = 'rh_taxonomy_term_action_assistance_type';
+  $strongarm->value = '2';
+  $export['rh_taxonomy_term_action_assistance_type'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'rh_taxonomy_term_action_comment_type';
+  $strongarm->value = '2';
+  $export['rh_taxonomy_term_action_comment_type'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'rh_taxonomy_term_action_innovation_stage';
+  $strongarm->value = '2';
+  $export['rh_taxonomy_term_action_innovation_stage'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'rh_taxonomy_term_action_solution_type';
+  $strongarm->value = '2';
+  $export['rh_taxonomy_term_action_solution_type'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
   $strongarm->name = 'sharethis_innovation_options';
   $strongarm->value = array(
     'full' => 0,

@@ -852,5 +852,47 @@ function gie_microsite_strongarm() {
   $strongarm->value = '';
   $export['pathauto_node_microsite_pattern'] = $strongarm;
 
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'rh_node_action_microsite';
+  $strongarm->value = '2';
+  $export['rh_node_action_microsite'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'rh_node_redirect_microsite';
+  $strongarm->value = '';
+  $export['rh_node_redirect_microsite'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'rh_taxonomy_term_action_background';
+  $strongarm->value = '2';
+  $export['rh_taxonomy_term_action_background'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'rh_taxonomy_term_action_block_orientation';
+  $strongarm->value = '2';
+  $export['rh_taxonomy_term_action_block_orientation'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'rh_taxonomy_term_action_microsite_header_options';
+  $strongarm->value = '2';
+  $export['rh_taxonomy_term_action_microsite_header_options'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'rh_taxonomy_term_action_text_orientation';
+  $strongarm->value = '2';
+  $export['rh_taxonomy_term_action_text_orientation'] = $strongarm;
+
   return $export;
 }
