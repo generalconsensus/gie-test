@@ -101,24 +101,40 @@ function gesso_form_element($vars) {
   }
 
   if (module_exists('multistep') && is_multistep($vars['element']['#entity'])) {
-    switch ($element['#title_display']) {
-      case 'before':
-      case 'invisible':
-        $output .= ' ' . theme('form_element_label', $vars);
-        $output .= ' ' . $prefix . $element['#children'] . $suffix . "\n";
-        break;
+      // reset the output to match the required setup
+      $output = '<div'.drupal_attributes($attributes).'>'."\n";
 
-      case 'after':
-        $output .= ' ' . $prefix . $element['#children'] . $suffix;
-        $output .= ' ' . theme('form_element_label', $vars) . "\n";
-        break;
+      switch ($element['#title_display']) {
+          case 'before':
+          case 'invisible':
+              $output .=  ' '  . theme('form_element_label', $vars);
+              $output .= ' <div class="multistep-container">' . $prefix . $element['#children'] . $suffix . "\n";
+              break;
 
-      case 'none':
-      case 'attribute':
-        // Output no label and no required marker, only the children.
-        $output .= ' ' . $prefix . $element['#children'] . $suffix . "\n";
-        break;
-    }
+          case 'after':
+              $output .= ' <div class="multistep-container">' . $prefix . $element['#children'] . $suffix . '<div>'."\n";
+              $output .= ' <div class="multistep-container">' . $prefix . $element['#children'] . $suffix . "\n";
+              break;
+
+          case 'none':
+          case 'attribute':
+              // Output no label and no required marker, only the children.
+          $output .= ' <div class="multistep-container">' . $prefix . $element['#children'] . $suffix . "\n";
+              break;
+      }
+
+      if (!empty($element['#description'])) {
+          if ($only_use_smacss) {
+              $output .= '<div class="form-item__description">'.$element['#description']."</div>\n";
+          } else {
+              $output .= '<div class="form-item__description description">'.$element['#description']."</div>\n";
+          }
+      }
+
+    $output .= '</div></div>';
+    return $output;
+
+
   } else {
     switch ($element['#title_display']) {
       case 'before':
@@ -142,6 +158,7 @@ function gesso_form_element($vars) {
 
 
 
+
   if (!empty($element['#description'])) {
     if ($only_use_smacss) {
       $output .= '<div class="form-item__description">' . $element['#description'] . "</div>\n";
@@ -154,6 +171,154 @@ function gesso_form_element($vars) {
   $output .= "</div>\n";
 
   return $output;
+}
+
+
+function gesso_fel_form_element($vars){
+    $element = &$vars['element'];
+    $element_type = !empty($element['#type']) ? $element['#type'] : '';
+    $element_type_class = drupal_html_class($element_type);
+    $element_name = !empty($element['#name']) ? $element['#name'] : '';
+    $element_name_class = drupal_html_class($element_name);
+    $only_use_smacss = theme_get_setting('only_use_smacss');
+
+    // This function is invoked as theme wrapper, but the rendered form element
+    // may not necessarily have been processed by form_builder().
+    $element += array(
+      '#title_display' => 'before',
+    );
+
+    // Add element #id for #type 'item'.
+    if (isset($element['#markup']) && !empty($element['#id'])) {
+        $attributes['id'] = $element['#id'];
+    }
+    // Add element's #type and #name as class to aid with JS/CSS selectors.
+    $attributes['class'] = array('form-item');
+    if (!empty($element['#type'])) {
+        $attributes['class'][] = 'form-item--' . $element_type_class;
+
+        // Add default core class if wanted.
+        if (!$only_use_smacss) {
+            $attributes['class'][] = 'form-type-' . $element_type_class;
+        }
+    }
+    if (!empty($element['#name']) && $element_type_class !== $element_name_class) {
+        $attributes['class'][] = 'form-item--' . $element_name_class;
+
+        // Add default core class if wanted.
+        if (!$only_use_smacss) {
+            $attributes['class'][] = 'form-item-' . $element_name_class;
+        }
+    }
+
+    // Add date-related classes.
+    if (isset($element['#theme']) && $element['#theme'] == 'date_select_element') {
+        $attributes['class'][] = 'form-item--date-select';
+    }
+
+    // Add a class for disabled elements to facilitate cross-browser styling.
+    if (!empty($element['#attributes']['disabled'])) {
+        $attributes['class'][] = 'is-disabled';
+
+        // Add default core class if wanted.
+        if (!$only_use_smacss) {
+            $attributes['class'][] = 'form-disabled';
+        }
+    }
+
+    // Add class for required form items.
+    if (isset($element['#required']) && $element['#required']) {
+        $attributes['class'][] = 'is-required';
+    }
+
+    $output = '<div' . drupal_attributes($attributes) . '>' . "\n";
+
+    // If #title is not set, we don't display any label or required marker.
+    if (!isset($element['#title'])) {
+        $element['#title_display'] = 'none';
+    }
+
+    // Add prefix and suffix.
+    if ($only_use_smacss) {
+        $prefix = isset($element['#field_prefix']) ? '<span class="form-item__prefix">' . $element['#field_prefix'] . '</span> ' : '';
+        $suffix = isset($element['#field_suffix']) ? ' <span class="form-item__suffix">' . $element['#field_suffix'] . '</span>' : '';
+    }
+    else {
+        $prefix = isset($element['#field_prefix']) ? '<span class="form-item__prefix field-prefix">' . $element['#field_prefix'] . '</span> ' : '';
+        $suffix = isset($element['#field_suffix']) ? ' <span class="form-item__suffix field-suffix">' . $element['#field_suffix'] . '</span>' : '';
+    }
+
+    if (module_exists('multistep') && !empty($vars['element']) && !empty($vars['element']['#entity']) && is_multistep($vars['element']['#entity'])) {
+        // reset the output to match the required setup
+        $output = '<div'.drupal_attributes($attributes).'>'."\n";
+        $vars['element']['multistep'] = TRUE;
+        switch ($element['#title_display']) {
+            case 'before':
+            case 'invisible':
+                $output .=  ' '  . theme('form_element_label', $vars);
+                $output .= ' <div class="multistep-container">' . $prefix . $element['#children'] . $suffix . "\n";
+                break;
+
+            case 'after':
+                $output .= ' <div class="multistep-container">' . $prefix . $element['#children'] . $suffix . '<div>'."\n";
+                $output .= ' <div class="multistep-container">' . $prefix . $element['#children'] . $suffix . "\n";
+                break;
+
+            case 'none':
+            case 'attribute':
+                // Output no label and no required marker, only the children.
+                $output .= ' <div class="multistep-container">' . $prefix . $element['#children'] . $suffix . "\n";
+                break;
+        }
+
+        if (!empty($element['#description'])) {
+            if ($only_use_smacss) {
+                $output .= '<div class="form-item__description">'.$element['#description']."</div>\n";
+            } else {
+                $output .= '<div class="form-item__description description">'.$element['#description']."</div>\n";
+            }
+        }
+
+        $output .= '</div></div>';
+        return $output;
+
+
+    } else {
+        switch ($element['#title_display']) {
+            case 'before':
+            case 'invisible':
+                $output .= ' ' . theme('form_element_label', $vars);
+                $output .= ' ' . $prefix . $element['#children'] . $suffix . "\n";
+                break;
+
+            case 'after':
+                $output .= ' ' . $prefix . $element['#children'] . $suffix;
+                $output .= ' ' . theme('form_element_label', $vars) . "\n";
+                break;
+
+            case 'none':
+            case 'attribute':
+                // Output no label and no required marker, only the children.
+                $output .= ' ' . $prefix . $element['#children'] . $suffix . "\n";
+                break;
+        }
+    }
+
+
+
+
+    if (!empty($element['#description'])) {
+        if ($only_use_smacss) {
+            $output .= '<div class="form-item__description">' . $element['#description'] . "</div>\n";
+        }
+        else {
+            $output .= '<div class="form-item__description description">' . $element['#description'] . "</div>\n";
+        }
+    }
+
+    $output .= "</div>\n";
+
+    return $output;
 }
 
 /**
@@ -200,9 +365,59 @@ function gesso_form_element_label($vars) {
   }
 
   // The leading whitespace helps visually separate fields from inline labels.
-  return ' <label' . drupal_attributes($attributes) . '>' . $t('!title !required', array('!title' => $title, '!required' => $required)) . "</label>\n";
+//    $output .= ' <div class="multistep-label">' . theme('form_element_label', $vars) . '</div>';
+    $output = ' <label' . drupal_attributes($attributes) . '>' . $t('!title !required', array('!title' => $title, '!required' => $required)) . "</label>\n";
+    if ($vars['element']['multistep']) {
+        $output = '<div class="multistep-label">' . $output;
+        $output .= '</div>';
+    }
+    return $output;
 }
 
+
+function gesso_fel_form_element_label($vars) {
+    $element = $vars['element'];
+
+    // This is also used in the installer, pre-database setup.
+    $t = get_t();
+
+    // If title and required marker are both empty, output no label.
+    if ((!isset($element['#title']) || $element['#title'] === '') && empty($element['#required'])) {
+        return '';
+    }
+
+    // Don't output the label for certain types..
+    if ($element['#type'] == 'radios' || $element['#type'] == 'checkboxes' || $element['#type'] == 'date') {
+        return '';
+    }
+
+    // If the element is required, a required marker is appended to the label.
+    $required = !empty($element['#required']) ? theme('form_required_marker', array('element' => $element)) : '';
+
+    $title = filter_xss_admin($element['#title']);
+
+    $attributes = array();
+
+    // Add default label class.
+    $attributes['class'][] = 'form-item__label';
+
+    // Style the label as class option to display inline with the element.
+    if (!theme_get_setting('only_use_smacss') && $element['#title_display'] == 'after') {
+        $attributes['class'] = 'option';
+    }
+
+    // Show label only to screen readers to avoid disruption in visual flows.
+    if ($element['#title_display'] == 'invisible') {
+        $attributes['class'][] = 'element-invisible';
+    }
+
+    if (!empty($element['#id'])) {
+        $attributes['for'] = $element['#id'];
+    }
+
+    // The leading whitespace helps visually separate fields from inline labels.
+    return ' <label' . drupal_attributes($attributes) . '>' . $t('!title !required', array('!title' => $title, '!required' => $required)) . "</label>\n";
+}
 /**
  * Returns HTML for a marker for required form elements.
  */
@@ -693,3 +908,4 @@ function _gesso_form_set_class(&$element, $class = array()) {
     }
   }
 }
+
