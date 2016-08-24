@@ -282,7 +282,6 @@ function gie_search_default_search_api_index() {
         "field_news_program" : { "type" : "list\\u003Cinteger\\u003E", "entity_type" : "node" },
         "field_news_publish_date" : { "type" : "date" },
         "field_org_expertise" : { "type" : "list\\u003Cinteger\\u003E", "entity_type" : "taxonomy_term" },
-        "field_org_featured" : { "type" : "boolean" },
         "field_org_partners" : { "type" : "list\\u003Cinteger\\u003E", "entity_type" : "node" },
         "field_org_poc" : { "type" : "integer", "entity_type" : "user" },
         "field_org_telephone" : { "type" : "text" },

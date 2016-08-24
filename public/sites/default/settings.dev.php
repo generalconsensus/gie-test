@@ -662,11 +662,13 @@ $conf['awssdk2_secret_key'] = 'PTCZuvHXjdzpVScJboIIWbPhEPTQWQD3M7pEJuay';
 include DRUPAL_ROOT . '/sites/all/modules/contrib/domain/settings.inc';
 
 /**
- * Correct S3FS settings on local
+ * Correct S3FS settings on dev
  */
 $conf['s3fs_bucket'] = 'giexchange-dev';
 $conf['s3fs_use_s3_for_private'] = 1;
 $conf['s3fs_use_s3_for_public'] = 1;
+//$conf['s3fs_use_cname'] = 1;
+//$conf['s3fs_domain'] = 'static.globalinnovationexchange.org';
 
 /**
  * Set Re-route email to enable to catch all local emails
