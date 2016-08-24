@@ -305,6 +305,11 @@ function gie_messages_node_insert($node) {
           $uid = $record['entity_id'];
           // skip users found via 'user_follow_create' process
           if (in_array($uid, $send_list) || in_array($uid, $do_not_send_list)) continue;
+          // skip node author
+          if ($uid == $node->uid) {
+            // If user is node author, skip to next user
+            continue;
+          }
           // Get notifier name based on user
           $user = entity_metadata_wrapper('user', $uid);
           // Get User Notifications frequency field
