@@ -13,7 +13,7 @@ include_once 'gie_messages.features.inc';
 function gie_messages_mail_alter(&$message)
 {
   if ($message['key'] == 'digest') {
-    $message['headers']['bcc'] = 'mdrayer@forumone.com, dmcdermott@forumone.com, mburge@forumone.com';
+    $message['headers']['bcc'] = 'aklatsky@forumone.com, mdrayer@forumone.com, dmcdermott@forumone.com, mburge@forumone.com';
   }
 }
 
