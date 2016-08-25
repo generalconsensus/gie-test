@@ -103,7 +103,7 @@ function gesso_form_element($vars) {
   if (module_exists('multistep') && !empty($vars['element']) && !empty($vars['element']['#entity']) && is_multistep($vars['element']['#entity'])) {
       // reset the output to match the required setup
       $output = '<div'.drupal_attributes($attributes).'>'."\n";
-
+      $vars['element']['multistep'] = TRUE;
       switch ($element['#title_display']) {
           case 'before':
           case 'invisible':
@@ -112,14 +112,15 @@ function gesso_form_element($vars) {
               break;
 
           case 'after':
-              $output .= ' <div class="multistep-container">' . $prefix . $element['#children'] . $suffix . '<div>'."\n";
-              $output .= ' <div class="multistep-container">' . $prefix . $element['#children'] . $suffix . "\n";
+              //Force to the left in order meet requirements
+              $output .=  ' '  . theme('form_element_label', $vars)  . "\n";
+              $output .= ' <div class="multistep-container">' . $prefix . $element['#children'] . $suffix . '<div>';
               break;
 
           case 'none':
           case 'attribute':
               // Output no label and no required marker, only the children.
-          $output .= ' <div class="multistep-container">' . $prefix . $element['#children'] . $suffix . "\n";
+              $output .= ' <div class="multistep-container">' . $prefix . $element['#children'] . $suffix . "\n";
               break;
       }
 
@@ -422,6 +423,8 @@ function gesso_fieldset($vars) {
 
   $output = '<fieldset' . drupal_attributes($element['#attributes']) . '>';
   if (!empty($element['#title'])) {
+
+//    $output = (module_exists('multistep') && !empty($vars['element']) && !empty($vars['element']['#entity']) && is_multistep($vars['element']['#entity'])) ? '<div class="multistep-label">' . $output : '';
     // Always wrap fieldset legends in a SPAN for CSS positioning.
     if ($only_use_smacss) {
       $output .= '<legend class="fieldset__legend"><span class="fieldset__legend-text">' . $element['#title'] . '</span></legend>';
@@ -429,7 +432,11 @@ function gesso_fieldset($vars) {
     else {
       $output .= '<legend class="fieldset__legend"><span class="fieldset__legend-text fieldset-legend">' . $element['#title'] . '</span></legend>';
     }
+//    $output .= (module_exists('multistep') && !empty($vars['element']) && !empty($vars['element']['#entity']) && is_multistep($vars['element']['#entity'])) ? '</div>'  : '';
+
   }
+
+//    $output .= (module_exists('multistep') && !empty($vars['element']) && !empty($vars['element']['#entity']) && is_multistep($vars['element']['#entity'])) ? '<div class="multistep-container">' : '';
 
   if ($only_use_smacss) {
     $output .= '<div class="fieldset__content">';
@@ -454,6 +461,7 @@ function gesso_fieldset($vars) {
   }
 
   $output .= '</div>';
+//  $output .= (module_exists('multistep') && !empty($vars['element']) && !empty($vars['element']['#entity']) && is_multistep($vars['element']['#entity'])) ? '</div>'  : '';
   $output .= "</fieldset>\n";
 
   return $output;

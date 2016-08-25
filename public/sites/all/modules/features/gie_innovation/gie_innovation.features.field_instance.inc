@@ -1143,12 +1143,7 @@ function gie_innovation_field_default_field_instances() {
   // Exported field_instance: 'node-innovation-field_innovation_desc'.
   $field_instances['node-innovation-field_innovation_desc'] = array(
     'bundle' => 'innovation',
-    'default_value' => array(
-      0 => array(
-        'value' => 'e.g. Basically a jar that you can put glow bugs in. If you have enough of them, they will provide you with light at night.',
-        'format' => 'filtered_html',
-      ),
-    ),
+    'default_value' => NULL,
     'deleted' => 0,
     'description' => 'If you had to describe your innovation on a napkin or over chat, how would you do it? This description should be short, clear, and concise and should focus on getting the reader to continue on.',
     'display' => array(
@@ -1321,7 +1316,6 @@ function gie_innovation_field_default_field_instances() {
           ),
         ),
       ),
-      'description_display' => 'after',
       'text_processing' => 1,
       'user_register_form' => FALSE,
     ),
@@ -1329,6 +1323,7 @@ function gie_innovation_field_default_field_instances() {
       'active' => 1,
       'module' => 'text',
       'settings' => array(
+        'label_help_description' => '',
         'maxlength_js' => 500,
         'maxlength_js_enforce' => 0,
         'maxlength_js_label' => 'Content limited to @limit characters, remaining: <strong>@remaining</strong>',
@@ -1343,12 +1338,7 @@ function gie_innovation_field_default_field_instances() {
   // Exported field_instance: 'node-innovation-field_innovation_evidence'.
   $field_instances['node-innovation-field_innovation_evidence'] = array(
     'bundle' => 'innovation',
-    'default_value' => array(
-      0 => array(
-        'value' => 'e.g. I have research reports that indicate the use of my innovation has been effective.&nbsp;',
-        'format' => 'filtered_html',
-      ),
-    ),
+    'default_value' => NULL,
     'deleted' => 0,
     'description' => 'What evidence have you been able to gather that your Innovation can be or has been successful?',
     'display' => array(
@@ -1487,7 +1477,6 @@ function gie_innovation_field_default_field_instances() {
           ),
         ),
       ),
-      'description_display' => 'after',
       'text_processing' => 1,
       'user_register_form' => FALSE,
     ),
@@ -1495,6 +1484,7 @@ function gie_innovation_field_default_field_instances() {
       'active' => 1,
       'module' => 'text',
       'settings' => array(
+        'label_help_description' => '',
         'maxlength_js' => '',
         'maxlength_js_enforce' => 0,
         'maxlength_js_label' => 'Content limited to @limit characters, remaining: <strong>@remaining</strong>',
@@ -1503,118 +1493,6 @@ function gie_innovation_field_default_field_instances() {
       ),
       'type' => 'text_textarea',
       'weight' => 5,
-    ),
-  );
-
-  // Exported field_instance: 'node-innovation-field_innovation_evidence_avail'.
-  $field_instances['node-innovation-field_innovation_evidence_avail'] = array(
-    'bundle' => 'innovation',
-    'default_value' => array(
-      0 => array(
-        'value' => 0,
-      ),
-    ),
-    'deleted' => 0,
-    'description' => 'Is there evidence that your innovation works or has the desired impact?',
-    'display' => array(
-      'at_a_glance' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 41,
-      ),
-      'contact' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 40,
-      ),
-      'default' => array(
-        'label' => 'above',
-        'module' => 'list',
-        'settings' => array(
-          'field_delimiter' => '',
-          'linked_field' => array(
-            'advanced' => array(
-              'class' => '',
-              'rel' => '',
-              'target' => '',
-              'text' => '',
-              'title' => '',
-            ),
-            'destination' => '',
-            'linked' => 0,
-          ),
-        ),
-        'type' => 'list_default',
-        'weight' => 29,
-      ),
-      'full' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 31,
-      ),
-      'highlights' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 29,
-      ),
-      'listing' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 37,
-      ),
-      'needs_list' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 34,
-      ),
-      'search_listing' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 37,
-      ),
-      'spotlight' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 46,
-      ),
-      'teaser' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 0,
-      ),
-      'teaser_date' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 41,
-      ),
-    ),
-    'ds_extras_field_template' => '',
-    'entity_type' => 'node',
-    'field_name' => 'field_innovation_evidence_avail',
-    'label' => 'Evidence Available?',
-    'required' => 0,
-    'settings' => array(
-      'description_display' => 'before',
-      'user_register_form' => FALSE,
-    ),
-    'widget' => array(
-      'active' => 1,
-      'module' => 'options',
-      'settings' => array(
-        'display_label' => 1,
-      ),
-      'type' => 'options_onoff',
-      'weight' => 28,
     ),
   );
 
@@ -2132,12 +2010,7 @@ function gie_innovation_field_default_field_instances() {
   // Exported field_instance: 'node-innovation-field_innovation_impact'.
   $field_instances['node-innovation-field_innovation_impact'] = array(
     'bundle' => 'innovation',
-    'default_value' => array(
-      0 => array(
-        'value' => 'e.g. I intend to find a production partner to help me streamline the manufacturing of my solar lantern. This will lower costs and allow me to market the lantern more widely.&nbsp;',
-        'format' => 'filtered_html',
-      ),
-    ),
+    'default_value' => NULL,
     'deleted' => 0,
     'description' => 'How do you intend to expand use of the innovation? In what areas are you targeting and what are your goals for the short and long term.
 ',
@@ -2277,7 +2150,6 @@ function gie_innovation_field_default_field_instances() {
           ),
         ),
       ),
-      'description_display' => 'after',
       'text_processing' => 1,
       'user_register_form' => FALSE,
     ),
@@ -2285,6 +2157,7 @@ function gie_innovation_field_default_field_instances() {
       'active' => 1,
       'module' => 'text',
       'settings' => array(
+        'label_help_description' => '',
         'maxlength_js' => '',
         'maxlength_js_enforce' => 0,
         'maxlength_js_label' => 'Content limited to @limit characters, remaining: <strong>@remaining</strong>',
@@ -3717,116 +3590,6 @@ function gie_innovation_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-innovation-field_innovation_ref_avail'.
-  $field_instances['node-innovation-field_innovation_ref_avail'] = array(
-    'bundle' => 'innovation',
-    'default_value' => array(
-      0 => array(
-        'value' => 0,
-      ),
-    ),
-    'deleted' => 0,
-    'description' => '',
-    'display' => array(
-      'at_a_glance' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 44,
-      ),
-      'contact' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 43,
-      ),
-      'default' => array(
-        'label' => 'above',
-        'module' => 'list',
-        'settings' => array(
-          'field_delimiter' => '',
-          'linked_field' => array(
-            'advanced' => array(
-              'class' => '',
-              'rel' => '',
-              'target' => '',
-              'text' => '',
-              'title' => '',
-            ),
-            'destination' => '',
-            'linked' => 0,
-          ),
-        ),
-        'type' => 'list_default',
-        'weight' => 32,
-      ),
-      'full' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 49,
-      ),
-      'highlights' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 32,
-      ),
-      'listing' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 40,
-      ),
-      'needs_list' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 37,
-      ),
-      'search_listing' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 40,
-      ),
-      'spotlight' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 49,
-      ),
-      'teaser' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 0,
-      ),
-      'teaser_date' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 44,
-      ),
-    ),
-    'entity_type' => 'node',
-    'field_name' => 'field_innovation_ref_avail',
-    'label' => 'References Available?',
-    'required' => 0,
-    'settings' => array(
-      'user_register_form' => FALSE,
-    ),
-    'widget' => array(
-      'active' => 1,
-      'module' => 'options',
-      'settings' => array(
-        'display_label' => 1,
-      ),
-      'type' => 'options_onoff',
-      'weight' => 27,
-    ),
-  );
-
   // Exported field_instance: 'node-innovation-field_innovation_references'.
   $field_instances['node-innovation-field_innovation_references'] = array(
     'bundle' => 'innovation',
@@ -4335,12 +4098,7 @@ function gie_innovation_field_default_field_instances() {
   // Exported field_instance: 'node-innovation-field_innovation_status_update'.
   $field_instances['node-innovation-field_innovation_status_update'] = array(
     'bundle' => 'innovation',
-    'default_value' => array(
-      0 => array(
-        'value' => 'e.g. I will be testing my solar lantern with a focus group next month to understand how effective it might be in the field.',
-        'format' => 'filtered_html',
-      ),
-    ),
+    'default_value' => NULL,
     'deleted' => 0,
     'description' => 'Provide your latest update for your innovation. This should be updated on a regular basis, providing Exchange members with the most recent information.',
     'display' => array(
@@ -4479,7 +4237,6 @@ function gie_innovation_field_default_field_instances() {
           ),
         ),
       ),
-      'description_display' => 'after',
       'text_processing' => 1,
       'user_register_form' => FALSE,
     ),
@@ -4487,6 +4244,7 @@ function gie_innovation_field_default_field_instances() {
       'active' => 1,
       'module' => 'text',
       'settings' => array(
+        'label_help_description' => '',
         'maxlength_js' => '',
         'maxlength_js_enforce' => 0,
         'maxlength_js_label' => 'Content limited to @limit characters, remaining: <strong>@remaining</strong>',
@@ -4662,12 +4420,7 @@ function gie_innovation_field_default_field_instances() {
   // Exported field_instance: 'node-innovation-field_innovation_target_results'.
   $field_instances['node-innovation-field_innovation_target_results'] = array(
     'bundle' => 'innovation',
-    'default_value' => array(
-      0 => array(
-        'value' => 'e.g. I expect my solar lantern to decrease the cost of lighting across the board by 50%.&nbsp;',
-        'format' => 'filtered_html',
-      ),
-    ),
+    'default_value' => NULL,
     'deleted' => 0,
     'description' => 'What are your expected impacts for the innovation. What specific results are projecting to achieve. ',
     'display' => array(
@@ -4786,7 +4539,6 @@ function gie_innovation_field_default_field_instances() {
           ),
         ),
       ),
-      'description_display' => 'after',
       'text_processing' => 1,
       'user_register_form' => FALSE,
     ),
@@ -4794,6 +4546,7 @@ function gie_innovation_field_default_field_instances() {
       'active' => 1,
       'module' => 'text',
       'settings' => array(
+        'label_help_description' => '',
         'maxlength_js' => '',
         'maxlength_js_enforce' => 0,
         'maxlength_js_label' => 'Content limited to @limit characters, remaining: <strong>@remaining</strong>',
@@ -4923,12 +4676,7 @@ function gie_innovation_field_default_field_instances() {
   // Exported field_instance: 'node-innovation-field_innovation_testers'.
   $field_instances['node-innovation-field_innovation_testers'] = array(
     'bundle' => 'innovation',
-    'default_value' => array(
-      0 => array(
-        'value' => 'e.g. I have conducted product testing with farmers in Ghana. &nbsp;',
-        'format' => 'filtered_html',
-      ),
-    ),
+    'default_value' => NULL,
     'deleted' => 0,
     'description' => 'Have you tested your innovation or are there any current users of the innovation?',
     'display' => array(
@@ -5067,7 +4815,6 @@ function gie_innovation_field_default_field_instances() {
           ),
         ),
       ),
-      'description_display' => 'after',
       'text_processing' => 1,
       'user_register_form' => FALSE,
     ),
@@ -5075,6 +4822,7 @@ function gie_innovation_field_default_field_instances() {
       'active' => 1,
       'module' => 'text',
       'settings' => array(
+        'label_help_description' => '',
         'maxlength_js' => '',
         'maxlength_js_enforce' => 0,
         'maxlength_js_label' => 'Content limited to @limit characters, remaining: <strong>@remaining</strong>',
@@ -5239,12 +4987,7 @@ function gie_innovation_field_default_field_instances() {
   // Exported field_instance: 'node-innovation-field_innovation_value_prop'.
   $field_instances['node-innovation-field_innovation_value_prop'] = array(
     'bundle' => 'innovation',
-    'default_value' => array(
-      0 => array(
-        'value' => 'e.g. My solar lantern has a battery life that lasts at least 50% longer than other models.',
-        'format' => 'filtered_html',
-      ),
-    ),
+    'default_value' => NULL,
     'deleted' => 0,
     'description' => 'How is your Innovation different from other, similar innovations? What about your innovation will change the world?',
     'display' => array(
@@ -5363,7 +5106,6 @@ function gie_innovation_field_default_field_instances() {
           ),
         ),
       ),
-      'description_display' => 'after',
       'text_processing' => 1,
       'user_register_form' => FALSE,
     ),
@@ -5371,6 +5113,7 @@ function gie_innovation_field_default_field_instances() {
       'active' => 1,
       'module' => 'text',
       'settings' => array(
+        'label_help_description' => '',
         'maxlength_js' => '',
         'maxlength_js_enforce' => 0,
         'maxlength_js_label' => 'Content limited to @limit characters, remaining: <strong>@remaining</strong>',
@@ -5525,12 +5268,7 @@ function gie_innovation_field_default_field_instances() {
   // Exported field_instance: 'node-innovation-field_innovation_works'.
   $field_instances['node-innovation-field_innovation_works'] = array(
     'bundle' => 'innovation',
-    'default_value' => array(
-      0 => array(
-        'value' => 'e.g. My solar lantern works by absorbing sunlight and other natural light sources, and storing the energy in a battery.&nbsp;',
-        'format' => 'filtered_html',
-      ),
-    ),
+    'default_value' => NULL,
     'deleted' => 0,
     'description' => 'What are the technical details behind how your innovation works? Or describe how your process makes things more effective. 
 ',
@@ -5670,7 +5408,6 @@ function gie_innovation_field_default_field_instances() {
           ),
         ),
       ),
-      'description_display' => 'after',
       'text_processing' => 1,
       'user_register_form' => FALSE,
     ),
@@ -5678,6 +5415,7 @@ function gie_innovation_field_default_field_instances() {
       'active' => 1,
       'module' => 'text',
       'settings' => array(
+        'label_help_description' => '',
         'maxlength_js' => '',
         'maxlength_js_enforce' => 0,
         'maxlength_js_label' => 'Content limited to @limit characters, remaining: <strong>@remaining</strong>',
@@ -6054,11 +5792,7 @@ function gie_innovation_field_default_field_instances() {
   // Exported field_instance: 'node-innovation-title_field'.
   $field_instances['node-innovation-title_field'] = array(
     'bundle' => 'innovation',
-    'default_value' => array(
-      0 => array(
-        'value' => 'e.g. Glow Bug Jar Bio Lantern ',
-      ),
-    ),
+    'default_value' => NULL,
     'deleted' => 0,
     'description' => 'Your project title should be simple, to the point and memorable. What would you click on when browsing innovations on the exchange?',
     'display' => array(
@@ -6288,7 +6022,6 @@ function gie_innovation_field_default_field_instances() {
           ),
         ),
       ),
-      'description_display' => 'after',
       'hide_label' => array(
         'entity' => 0,
         'page' => 0,
@@ -6300,6 +6033,7 @@ function gie_innovation_field_default_field_instances() {
       'active' => 1,
       'module' => 'text',
       'settings' => array(
+        'label_help_description' => '',
         'maxlength_js' => 0,
         'maxlength_js_label' => 'Content limited to @limit characters, remaining: <strong>@remaining</strong>',
         'size' => 60,
@@ -6762,7 +6496,6 @@ function gie_innovation_field_default_field_instances() {
   t('Actual Lives Saved');
   t('Add more photos and videos.');
   t('Additional Evidence Documentation');
-  t('Address Geocoded');
   t('Are there any related Organizations?');
   t('Are there any related Programs?');
   t('Choose an image for your Innovation.');
@@ -6812,7 +6545,6 @@ function gie_innovation_field_default_field_instances() {
   t('Potential Lives Saved');
   t('Provide a status update for your Innovation.');
   t('Provide your latest update for your innovation. This should be updated on a regular basis, providing Exchange members with the most recent information.');
-  t('References Available?');
   t('References on the Exchange');
   t('Related Resources');
   t('Select a comment type:');

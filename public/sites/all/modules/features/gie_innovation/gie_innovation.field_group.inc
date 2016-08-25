@@ -320,7 +320,7 @@ function gie_innovation_field_group_info() {
   $field_group->mode = 'form';
   $field_group->parent_name = '';
   $field_group->data = array(
-    'label' => 'Step Five',
+    'label' => 'Tell us about your Evidence & Validation.',
     'weight' => '4',
     'children' => array(
       0 => 'field_innovation_evidence',
@@ -338,8 +338,10 @@ function gie_innovation_field_group_info() {
     ),
     'format_type' => 'multistep',
     'format_settings' => array(
-      'formatter' => '',
-      'instance_settings' => 0,
+      'label' => 'Tell us about your Evidence & Validation.',
+      'instance_settings' => array(
+        'description' => 'The Global Innovation Exchange hopes to connect funders and collaborators with innovators who have the best ideas. Innovation can require financial resources. Tell us about existing funding you have and what your funding goals are.',
+      ),
     ),
   );
   $field_groups['group_five|node|innovation|form'] = $field_group;
@@ -354,7 +356,7 @@ function gie_innovation_field_group_info() {
   $field_group->mode = 'form';
   $field_group->parent_name = '';
   $field_group->data = array(
-    'label' => 'Step Four',
+    'label' => 'Tell us about your Innovation Finances.',
     'weight' => '3',
     'children' => array(
       0 => 'field_innovation_funders',
@@ -366,8 +368,10 @@ function gie_innovation_field_group_info() {
     ),
     'format_type' => 'multistep',
     'format_settings' => array(
-      'formatter' => '',
-      'instance_settings' => 0,
+      'label' => 'Tell us about your Innovation Finances.',
+      'instance_settings' => array(
+        'description' => 'The Global Innovation Exchange hopes to connect funders and collaborators with innovators who have the best ideas. Innovation can require financial resources. Tell us about existing funding you have and what your funding goals are.',
+      ),
     ),
   );
   $field_groups['group_four|node|innovation|form'] = $field_group;
@@ -738,7 +742,7 @@ function gie_innovation_field_group_info() {
   $field_group->mode = 'form';
   $field_group->parent_name = '';
   $field_group->data = array(
-    'label' => 'Step One',
+    'label' => 'Tell us the basics',
     'weight' => '0',
     'children' => array(
       0 => 'title_field',
@@ -764,8 +768,12 @@ function gie_innovation_field_group_info() {
     ),
     'format_type' => 'multistep',
     'format_settings' => array(
-      'formatter' => '',
-      'instance_settings' => 0,
+      'label' => 'Tell us the basics',
+      'instance_settings' => array(
+        'description' => 'Here is some basic information we need from you in order to add your innovation to the Global Innovation Exchange. Don\'t worry, we want MUCH more than this, but this is critical - how will people find your work if it doesn\'t have a description?
+ 
+Want to see a great example? Check out Alex\'s Greatest Innovation or Carl\'s Interesting Approach. ',
+      ),
     ),
   );
   $field_groups['group_one|node|innovation|form'] = $field_group;
@@ -780,7 +788,7 @@ function gie_innovation_field_group_info() {
   $field_group->mode = 'form';
   $field_group->parent_name = '';
   $field_group->data = array(
-    'label' => 'Step Three',
+    'label' => 'Tell us about your Innovation Team. ',
     'weight' => '2',
     'children' => array(
       0 => 'field_innovation_program',
@@ -790,8 +798,10 @@ function gie_innovation_field_group_info() {
     ),
     'format_type' => 'multistep',
     'format_settings' => array(
-      'formatter' => '',
-      'instance_settings' => 0,
+      'label' => 'Tell us about your Innovation Team. ',
+      'instance_settings' => array(
+        'description' => 'Tell us more about the team that has contributed to the Innovation you are adding to the Exchange. Are there any organizations or programs affiliated with the Innovation? Are there other members of the Exchange whom have contributed to the Innovation? Who should members contact about your Innovation?',
+      ),
     ),
   );
   $field_groups['group_three|node|innovation|form'] = $field_group;
@@ -806,7 +816,7 @@ function gie_innovation_field_group_info() {
   $field_group->mode = 'form';
   $field_group->parent_name = '';
   $field_group->data = array(
-    'label' => 'Step Two',
+    'label' => 'Tell us about your Vision.',
     'weight' => '1',
     'children' => array(
       0 => 'field_innovation_assets',
@@ -819,8 +829,10 @@ function gie_innovation_field_group_info() {
     ),
     'format_type' => 'multistep',
     'format_settings' => array(
-      'formatter' => '',
-      'instance_settings' => 0,
+      'label' => 'Tell us about your Vision.',
+      'instance_settings' => array(
+        'description' => 'The Global Innovation Exchange hopes to connect funders and collaborators with innovators who have the best ideas. Innovation can require financial resources. Tell us about existing funding you have and what your funding goals are. ',
+      ),
     ),
   );
   $field_groups['group_two|node|innovation|form'] = $field_group;
@@ -841,14 +853,14 @@ function gie_innovation_field_group_info() {
   t('Innovation Stats First');
   t('Innovation Stats Second');
   t('Provide some key stats about your innovation');
-  t('Step Five');
-  t('Step Four');
-  t('Step One');
-  t('Step Three');
-  t('Step Two');
+  t('Tell us about your Evidence & Validation.');
+  t('Tell us about your Innovation Finances.');
+  t('Tell us about your Innovation Team. ');
+  t('Tell us about your Vision.');
   t('Tell us about your innovation');
   t('Tell us about your innovation team and affiliated organizations');
   t('Tell us more about your innovation');
+  t('Tell us the basics');
 
   return $field_groups;
 }
