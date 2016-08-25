@@ -20,7 +20,7 @@
 
   //if image set, then set style, if not do nothing.
   if (isset($imagefield)) {
-    $styles = "style='background-image: url(" . urlencode($image) . ");'";
+    $styles = "style=\"background-image: url('" . $image . "');\"";
   } else {
     $styles = $imagefield;
   };
