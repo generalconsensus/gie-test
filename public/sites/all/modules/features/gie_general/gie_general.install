@@ -407,3 +407,10 @@ function gie_general_update_7041() {
   module_disable(array('splashify'), TRUE);
 }
 
+/**
+ * [#850] Disable honeypot
+ */
+function gie_general_update_7042() {
+  module_disable(array('honeypot'), TRUE);
+}
+
