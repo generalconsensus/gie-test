@@ -658,6 +658,13 @@ dashboard
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
+  $strongarm->name = 'feed_item_length';
+  $strongarm->value = 'title';
+  $export['feed_item_length'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
   $strongarm->name = 'expire_user_user_page';
   $strongarm->value = 1;
   $export['expire_user_user_page'] = $strongarm;

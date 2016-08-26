@@ -662,11 +662,13 @@ $conf['awssdk2_secret_key'] = 'jr7I5mYf66KfOezP2W15Qldakh5giReVEfc4pXAd';
 include DRUPAL_ROOT . '/sites/all/modules/contrib/domain/settings.inc';
 
 /**
- * Correct S3FS settings on local
+ * Correct S3FS settings on stage
  */
 $conf['s3fs_bucket'] = 'giexchange-stage';
 $conf['s3fs_use_s3_for_private'] = 1;
 $conf['s3fs_use_s3_for_public'] = 1;
+//$conf['s3fs_use_cname'] = 1;
+//$conf['s3fs_domain'] = 'static.globalinnovationexchange.org';
 
 /**
  * Set Re-route email to enable to catch all local emails
@@ -693,3 +695,8 @@ $conf['syslog_identity'] = 'gie_stage';
  */
 $conf['fastly_api_key'] = '';
 $conf['fastly_log_enabled'] = 0;
+
+/**
+ * Don't allow fastly on local, dev, stage
+ */
+$conf['expire_status'] = 0;

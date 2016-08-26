@@ -408,11 +408,17 @@ function gie_general_update_7041() {
 }
 
 /**
- * [#850] Disable fel module
+ * [#850] Disable honeypot
  */
 function gie_general_update_7042() {
+  module_disable(array('honeypot'), TRUE);
+}
+
+/**
+ * [#850] Disable fel module
+ */
+function gie_general_update_7043() {
     module_disable(array('fel', 'fel_fields'), TRUE);
     module_enable(array('label_help'), TRUE);
     variable_get('node_admin_theme', '1');
 }
-

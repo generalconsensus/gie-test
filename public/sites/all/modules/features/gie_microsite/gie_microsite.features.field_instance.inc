@@ -2606,11 +2606,7 @@ function gie_microsite_field_default_field_instances() {
   // Exported field_instance: 'paragraphs_item-microsite_text-field_background'.
   $field_instances['paragraphs_item-microsite_text-field_background'] = array(
     'bundle' => 'microsite_text',
-    'default_value' => array(
-      0 => array(
-        'tid' => 1897,
-      ),
-    ),
+    'default_value' => NULL,
     'deleted' => 0,
     'description' => '',
     'display' => array(
@@ -2685,11 +2681,7 @@ function gie_microsite_field_default_field_instances() {
   // 'paragraphs_item-microsite_text-field_orientation'.
   $field_instances['paragraphs_item-microsite_text-field_orientation'] = array(
     'bundle' => 'microsite_text',
-    'default_value' => array(
-      0 => array(
-        'tid' => 1903,
-      ),
-    ),
+    'default_value' => NULL,
     'deleted' => 0,
     'description' => '',
     'display' => array(

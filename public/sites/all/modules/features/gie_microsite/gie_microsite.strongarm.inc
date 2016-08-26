@@ -852,5 +852,33 @@ function gie_microsite_strongarm() {
   $strongarm->value = '';
   $export['pathauto_node_microsite_pattern'] = $strongarm;
 
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'pathauto_taxonomy_term_background_pattern';
+  $strongarm->value = '';
+  $export['pathauto_taxonomy_term_background_pattern'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'pathauto_taxonomy_term_block_orientation_pattern';
+  $strongarm->value = '';
+  $export['pathauto_taxonomy_term_block_orientation_pattern'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'pathauto_taxonomy_term_microsite_header_options_pattern';
+  $strongarm->value = '';
+  $export['pathauto_taxonomy_term_microsite_header_options_pattern'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'pathauto_taxonomy_term_text_orientation_pattern';
+  $strongarm->value = '';
+  $export['pathauto_taxonomy_term_text_orientation_pattern'] = $strongarm;
+
   return $export;
 }

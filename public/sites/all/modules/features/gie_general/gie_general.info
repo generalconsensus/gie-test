@@ -253,6 +253,7 @@ features[variable][] = expire_user_reference_field_collection_pages
 features[variable][] = expire_user_reference_pages
 features[variable][] = expire_user_term_pages
 features[variable][] = expire_user_user_page
+features[variable][] = feed_item_length
 features[variable][] = field_bundle_settings_node__error_page
 features[variable][] = jquery_update_jquery_admin_version
 features[variable][] = jquery_update_jquery_version
