@@ -134,6 +134,12 @@ function gie_long_form_content_strongarm() {
         'xmlsitemap' => array(
           'weight' => '12',
         ),
+        'domain' => array(
+          'weight' => '1',
+        ),
+        'redirect' => array(
+          'weight' => '30',
+        ),
       ),
       'display' => array(
         'sharethis' => array(

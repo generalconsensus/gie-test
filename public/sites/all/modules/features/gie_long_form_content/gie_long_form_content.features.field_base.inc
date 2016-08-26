@@ -177,6 +177,31 @@ function gie_long_form_content_field_default_field_bases() {
     'type' => 'text',
   );
 
+  // Exported field_base: 'field_longform_font_family'.
+  $field_bases['field_longform_font_family'] = array(
+    'active' => 1,
+    'cardinality' => 1,
+    'deleted' => 0,
+    'entity_types' => array(),
+    'field_name' => 'field_longform_font_family',
+    'indexes' => array(
+      'value' => array(
+        0 => 'value',
+      ),
+    ),
+    'locked' => 0,
+    'module' => 'list',
+    'settings' => array(
+      'allowed_values' => array(
+        'default' => 'Default',
+        'font-family-1' => 'Option 1',
+      ),
+      'allowed_values_function' => '',
+    ),
+    'translatable' => 0,
+    'type' => 'list_text',
+  );
+
   // Exported field_base: 'field_longform_partners'.
   $field_bases['field_longform_partners'] = array(
     'active' => 1,

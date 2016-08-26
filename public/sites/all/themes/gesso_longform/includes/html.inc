@@ -148,6 +148,18 @@ function gesso_longform_preprocess_html(&$vars, $hook) {
       }
     }
   }
+
+  // Add font-family class based on font-family field
+  $node = menu_get_object();
+
+  if (!empty($node) && $node->type == 'long_form_page' && !empty($node->field_longform_font_family)) {
+    $lang = $node->language;
+    $font_class = $node->field_longform_font_family[$lang][0]['value'];
+    // do not do for default selection in field
+    if ($font_class != 'default') {
+      $vars['classes_array'][] = drupal_clean_css_identifier($font_class);
+    }
+  }
 }
 
 /**
