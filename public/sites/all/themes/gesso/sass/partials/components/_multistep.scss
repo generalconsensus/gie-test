@@ -1,0 +1,19 @@
+.multistep {
+  h1 {
+    @extend %h2;
+  }
+  .form-item {
+    margin: 0 0 2em 0;
+  }
+}
+
+.multistep-description {
+  margin: 0 0 4em;
+  &:before {
+    @include image-replace(20px,20px);
+    @include svg-background(icon-help);
+    background-size: 20px 20px;
+    display: block;
+    content: "";
+  }
+}

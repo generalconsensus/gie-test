@@ -2,8 +2,9 @@
 // Styles for form items.
 
 .form-item {
+  @extend %clearfix;
   margin: 1em 0;
-  
+
   label {
     display: block;
     font-weight: bold;
@@ -83,5 +84,31 @@
   &:focus {
     border-color: darken($form-border-color, 50%);
     outline: 0;
+  }
+}
+
+// multi-step layout for form elements
+.form-item__label-container {
+  @include breakpoint(800px, $no-query: true) {
+    float: left;
+    padding-right: 2em;
+    width: 30%;
+  }
+  @include breakpoint(1000px, $no-query: true) {
+    width: 20%;
+  }
+}
+
+// multi-step layout for form elements
+.form-item__content-container {
+  @include breakpoint(700px, $no-query: true) {
+    float: left;
+    width: 70%;
+  }
+  @include breakpoint(1000px, $no-query: true) {
+    width: 80%;
+  }
+  .form-item__description {
+
   }
 }
