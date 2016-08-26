@@ -108,19 +108,19 @@ function gesso_form_element($vars) {
           case 'before':
           case 'invisible':
               $output .=  ' '  . theme('form_element_label', $vars);
-              $output .= ' <div class="multistep-container">' . $prefix . $element['#children'] . $suffix . "\n";
+              $output .= ' <div class="form-item__content-container">' . $prefix . $element['#children'] . $suffix . "\n";
               break;
 
           case 'after':
               //Force to the left in order meet requirements
               $output .=  ' '  . theme('form_element_label', $vars)  . "\n";
-              $output .= ' <div class="multistep-container">' . $prefix . $element['#children'] . $suffix . '<div>';
+              $output .= ' <div class="form-item__content-container">' . $prefix . $element['#children'] . $suffix . '<div>';
               break;
 
           case 'none':
           case 'attribute':
               // Output no label and no required marker, only the children.
-              $output .= ' <div class="multistep-container">' . $prefix . $element['#children'] . $suffix . "\n";
+              $output .= ' <div class="form-item__content-container">' . $prefix . $element['#children'] . $suffix . "\n";
               break;
       }
 
@@ -219,10 +219,10 @@ function gesso_form_element_label($vars) {
   }
 
   // The leading whitespace helps visually separate fields from inline labels.
-//    $output .= ' <div class="multistep-label">' . theme('form_element_label', $vars) . '</div>';
+//    $output .= ' <div class="form-item__label-container">' . theme('form_element_label', $vars) . '</div>';
     $output = ' <label' . drupal_attributes($attributes) . '>' . $t('!title !required', array('!title' => $title, '!required' => $required)) . "</label>\n";
     if (!empty($vars['element']['multistep']) && $vars['element']['multistep']) {
-        $output = '<div class="multistep-label">' . $output;
+        $output = '<div class="form-item__label-container">' . $output;
         $output .= '</div>';
     }
     return $output;
@@ -424,7 +424,7 @@ function gesso_fieldset($vars) {
   $output = '<fieldset' . drupal_attributes($element['#attributes']) . '>';
   if (!empty($element['#title'])) {
 
-//    $output = (module_exists('multistep') && !empty($vars['element']) && !empty($vars['element']['#entity']) && is_multistep($vars['element']['#entity'])) ? '<div class="multistep-label">' . $output : '';
+//    $output = (module_exists('multistep') && !empty($vars['element']) && !empty($vars['element']['#entity']) && is_multistep($vars['element']['#entity'])) ? '<div class="form-item__label-container">' . $output : '';
     // Always wrap fieldset legends in a SPAN for CSS positioning.
     if ($only_use_smacss) {
       $output .= '<legend class="fieldset__legend"><span class="fieldset__legend-text">' . $element['#title'] . '</span></legend>';
@@ -436,7 +436,7 @@ function gesso_fieldset($vars) {
 
   }
 
-//    $output .= (module_exists('multistep') && !empty($vars['element']) && !empty($vars['element']['#entity']) && is_multistep($vars['element']['#entity'])) ? '<div class="multistep-container">' : '';
+//    $output .= (module_exists('multistep') && !empty($vars['element']) && !empty($vars['element']['#entity']) && is_multistep($vars['element']['#entity'])) ? '<div class="form-item__content-container">' : '';
 
   if ($only_use_smacss) {
     $output .= '<div class="fieldset__content">';
