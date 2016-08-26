@@ -81,6 +81,11 @@
   font-size: em($form-text-size);
   padding: em(8px, $form-text-size) em(12px, $form-text-size);
 
+  &.chosen-container { // remove for chosen elements
+    border: 0;
+    padding: 0;
+  }
+
   &:focus {
     border-color: darken($form-border-color, 50%);
     outline: 0;
@@ -89,9 +94,12 @@
 
 // multi-step layout for form elements
 .form-item__label-container {
+  line-height: 1.2;
+  padding-bottom: 0.5em;
   @include breakpoint(800px, $no-query: true) {
     float: left;
     padding-right: 2em;
+    text-align: right;
     width: 30%;
   }
   @include breakpoint(1000px, $no-query: true) {
@@ -109,6 +117,18 @@
     width: 80%;
   }
   .form-item__description {
-
+    padding-left: 25px;
+    padding-top: 8px;
+    position: relative;
+    &:before {
+      @include image-replace(18px, 18px);
+      @include svg-background(icon-help);
+      background-size: 18px 18px;
+      display: block;
+      content: "";
+      left: 0;
+      position: absolute;
+      top: 8px;
+    }
   }
 }
