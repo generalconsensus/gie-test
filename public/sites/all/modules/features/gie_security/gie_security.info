@@ -1,0 +1,10 @@
+name = GIE Security
+core = 7.x
+description = Security for Exchange
+package = GIE
+dependencies[] = clients
+dependencies[] = new_relic_insights
+dependencies[] = remote_entity
+dependencies[] = botcha
+features[features_api][] = api:2
+project path = sites/all/modules/features/
