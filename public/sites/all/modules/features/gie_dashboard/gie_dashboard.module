@@ -64,8 +64,7 @@ function gie_dashboard_form_user_profile_form_alter(&$form) {
 
 /*
  * Implements hook_form_FORM_ID_alter().
- */
-/**
+ *
  * @param $form
  * @param $form_state
  */
@@ -87,15 +86,6 @@ function gie_dashboard_form_node_form_alter(&$form) {
     $form['field_featured']['#type'] = 'hidden';
   }
 }
-
-/**
- * Implements hook_panels_pre_render().
- */
-//function gie_dashboard_panels_pre_render($panels_display) {
-//  if ($panels_display->title == 'Your Exchange Dashboard') {
-//    _gie_data_viz_init();
-//  }
-//}
 
 /**
  * Implements hook_menu().
