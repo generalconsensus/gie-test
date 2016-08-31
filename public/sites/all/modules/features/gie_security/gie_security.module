@@ -1,9 +1,10 @@
 <?php
 /**
  * @file
- * Drupal needs this blank file.
+ * Code for the GIE Security feature.
  */
 
+include_once 'gie_security.features.inc';
 
 /**
  * @param $form
