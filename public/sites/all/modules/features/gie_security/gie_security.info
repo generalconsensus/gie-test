@@ -1,9 +1,14 @@
 name = GIE Security
-core = 7.x
 description = Security for Exchange
+core = 7.x
 package = GIE
 dependencies[] = clients
+dependencies[] = ctools
 dependencies[] = new_relic_insights
 dependencies[] = remote_entity
+dependencies[] = strongarm
+features[ctools][] = strongarm:strongarm:1
 features[features_api][] = api:2
+features[variable][] = user_email_verification
+features[variable][] = user_mail_register_no_approval_required_body
 project path = sites/all/modules/features/
