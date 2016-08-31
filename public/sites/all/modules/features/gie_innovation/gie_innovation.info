@@ -22,7 +22,6 @@ dependencies[] = flexslider_views
 dependencies[] = gie_general
 dependencies[] = gie_needs
 dependencies[] = gie_organization
-dependencies[] = gie_security
 dependencies[] = gie_taxonomies
 dependencies[] = gie_user
 dependencies[] = html5_tools

@@ -202,9 +202,7 @@ function gie_innovation_form_innovation_node_form_alter(&$form, &$form_state) {
   if (!isset($node->nid) || isset($node->is_new)) {
     $form['actions']['submit']['#prefix'] = '<p>Please only click \'Save\' once.</p>';
   }
-  $form['#submit'][] = 'gie_innovation_new_relic_insights';
 }
-
 
 function gie_innovation_new_relic_insights($form, $form_state) {
   if (module_exists('new_relic_insights') && function_exists('new_relic_insights_post_event') && !empty($form_state['values']['title_field']['und'][0]['value'])) {
