@@ -494,17 +494,12 @@ function antispam_menu() {
     'title' => t('AntiSpam moderation queue'),
     'description' => t('Manage the AntiSpam spam queue, appropving or deleting content in need of moderation.'),
     'page callback' => 'antispam_callback_queue',
+    'page arguments' => array('nodes'),
     'access callback' => '_antispam_is_moderator',
     'access arguments' => array($moderator_types),
     'file' => 'antispam.admin.inc',
     'type' => MENU_LOCAL_TASK,
     'weight' => 10,
-  );
-  $items['admin/content/antispam/overview'] = array(
-    'title' => t('Overview'),
-    'type' => MENU_DEFAULT_LOCAL_TASK,
-    'weight' => 0,
-    'file' => 'antispam.admin.inc',
   );
   $items['admin/content/antispam/nodes'] = array(
     'title' => t('Nodes'),
@@ -512,7 +507,7 @@ function antispam_menu() {
     'page arguments' => array('nodes'),
     'access callback' => '_antispam_is_node_moderator',
     'access arguments' => array($moderator_types),
-    'type' => MENU_LOCAL_TASK,
+    'type' => MENU_DEFAULT_LOCAL_TASK,
     'weight' => 1,
     'file' => 'antispam.admin.inc',
   );
