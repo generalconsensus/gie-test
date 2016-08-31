@@ -187,7 +187,14 @@ function gie_microsite_form_menu_overview_form_alter(&$form, &$form_state, $form
   // Get the current domain
   global $_domain;
 
-  // If we can't determine the domain we are on, don't hide anything
+  // Get the user
+  global $user;
+
+  // If it's the admin we will show everything
+  if (is_array($user->roles) && in_array('administrator', $user->roles)) {
+    return;
+  }
+    // If we can't determine the domain we are on, don't hide anything
   if (empty($_domain)) {
     return;
   }
