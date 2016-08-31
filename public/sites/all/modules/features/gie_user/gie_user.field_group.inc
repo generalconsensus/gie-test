@@ -21,7 +21,7 @@ function gie_user_field_group_info() {
   $field_group->parent_name = '';
   $field_group->data = array(
     'label' => 'Tell Us About You',
-    'weight' => '0',
+    'weight' => '1',
     'children' => array(
       0 => 'field_user_company',
       1 => 'field_user_firstname',
@@ -63,7 +63,7 @@ function gie_user_field_group_info() {
   $field_group->parent_name = '';
   $field_group->data = array(
     'label' => 'Choose Your Account Details',
-    'weight' => '3',
+    'weight' => '0',
     'children' => array(
       0 => 'field_user_type',
       1 => 'field_user_photo',
@@ -340,12 +340,10 @@ function gie_user_field_group_info() {
     'weight' => '8',
     'children' => array(
       0 => 'field_user_notifications',
-      1 => 'field_user_mail_user_follow',
-      2 => 'field_user_mail_follow_edit',
-      3 => 'field_user_mail_follow_comment',
-      4 => 'field_user_mail_content_follow',
-      5 => 'field_user_mail_comment',
-      6 => 'field_user_notify_test',
+      1 => 'field_user_mail_comment',
+      2 => 'field_user_mail_content_follow',
+      3 => 'field_user_mail_follow_edit',
+      4 => 'field_user_mail_user_follow',
     ),
     'format_type' => 'div',
     'format_settings' => array(
@@ -376,7 +374,7 @@ function gie_user_field_group_info() {
   $field_group->parent_name = '';
   $field_group->data = array(
     'label' => 'Where are you from?',
-    'weight' => '2',
+    'weight' => '3',
     'children' => array(
       0 => 'field_user_address',
       1 => 'timezone',
