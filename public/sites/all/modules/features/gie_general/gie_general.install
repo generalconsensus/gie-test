@@ -425,3 +425,12 @@ function gie_general_update_7042() {
   module_disable(array('honeypot'), TRUE);
 }
 
+/**
+ * Enable GIE Security feature.
+ */
+function gie_general_update_7043() {
+  $modules = array(
+    'gie_security'
+  );
+  module_enable($modules, TRUE);
+}
