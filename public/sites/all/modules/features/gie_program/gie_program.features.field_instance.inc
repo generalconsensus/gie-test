@@ -366,7 +366,7 @@ function gie_program_field_default_field_instances() {
     'settings' => array(
       'description_display' => 'before',
       'max' => '',
-      'min' => '',
+      'min' => 0,
       'prefix' => '$',
       'suffix' => '',
       'user_register_form' => FALSE,
