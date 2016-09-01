@@ -495,5 +495,12 @@ function gie_taxonomies_strongarm() {
   $strongarm->value = '';
   $export['pathauto_taxonomy_term_sector_pattern'] = $strongarm;
 
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'rh_taxonomy_term_action_country';
+  $strongarm->value = '2';
+  $export['rh_taxonomy_term_action_country'] = $strongarm;
+
   return $export;
 }

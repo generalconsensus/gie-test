@@ -1,27 +1,22 @@
 <?php
+
 /**
+ * @file
  * Theme social links.
  **/
-$api_key = trim(variable_get('lr_social_login_apikey'));
-if (!empty($api_key)) {
-  ?>
-  <script type="text/javascript" src="//hub.loginradius.com/include/js/LoginRadius.js"></script>
-  <?php
-  $my_settings = array(
-    'interfacesize' => $interfaceiconsize,
-    'lrinterfacebackground' => $interfacebackgroundcolor,
-    'noofcolumns' => (int)$interfacerow,
-    'apikey' => $api_key,
-    'location' => urldecode($loc),
-    'callback' => url('', array('absolute' => TRUE)),
-  );
-  drupal_add_js(array('lrsociallogin' => $my_settings), 'setting');
-  ?>
 
-  <script type="text/javascript"
-          src="<?php print $GLOBALS['base_url'] ?>/<?php echo drupal_get_path('module', 'lr_social_login') ?>/js/sociallogin_interface.js">
-  </script>
-<?php
-}
+$api_key = trim(variable_get('lr_social_login_apikey'));
+if (!empty($api_key)) :
+  drupal_add_js('//hub.loginradius.com/include/js/LoginRadius.js', array(
+    'type' => 'external',
+    'scope' => 'header',
+    'weight' => -10,
+  ));
+  drupal_add_js(drupal_get_path('module', 'lr_social_login') . '/js/sociallogin_interface.js', array(
+    'type' => 'file',
+      'scope' => 'header',
+      'weight' => -10,
+  ));
+endif;
 ?>
 <div class="interfacecontainerdiv"></div>

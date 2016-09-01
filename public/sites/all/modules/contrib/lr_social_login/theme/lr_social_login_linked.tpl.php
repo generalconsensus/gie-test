@@ -1,9 +1,11 @@
 <?php
 /**
+ * @file
+ *
  * Social Account Linking Interface theme.
  * */
 
-print theme('lr_social_login_links', array('params' => array('lr_location' => $params['lr_location'])));
+print theme('lr_social_login_links');
 if (isset($providers)) :
   foreach ($providers as $key => $provider) :
     if (!empty($provider)):

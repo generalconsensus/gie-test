@@ -12,12 +12,13 @@ function lr_social_profile_data_uninstall() {
   $deleted_keys = array(
     'social_profile_data_selection',
     'lr_social_profile_data_profile_selection',
-    'lr_social_profile_data_show_profile'
+    'lr_social_profile_data_show_profile',
   );
-  foreach($deleted_keys as $key){
+  foreach ($deleted_keys as $key) {
     variable_del($key);
   }
 }
+
 /**
  * Implements hook_schema().
  */
