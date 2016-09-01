@@ -6,10 +6,66 @@
 
 include_once 'gie_security.features.inc';
 
+
+
+/**
+ * Implements hook_menu().
+ */
+function gie_security_menu() {
+
+  $items['admin/config/spam_protection/gie_security'] = array(
+    'title' => 'GIE Security Banned Words',
+    'description' => 'Ban words from being used in description fields',
+    'page callback' => 'drupal_get_form',
+    'page arguments' => array('gie_security_settings_form'),
+    'access arguments' => array('access administration pages'),
+  );
+
+  return $items;
+
+}
+
+
+
+function gie_security_settings_form($form) {
+
+  $form['service']['banned_words'] = array(
+    '#type' => 'textarea',
+    '#title' => t('Banned Words'),
+    '#default_value' => drupal_implode_tags(variable_get('gie_security_bad_words')),
+    '#description' => t('Enter the terms you want to ban'),
+  );
+  $form['options']['submit'] = array('#type' => 'submit', '#value' => t('Submit'));
+
+  return $form;
+}
+
+
+function gie_security_settings_form_submit($form, &$form_state) {
+  if (!empty($form_state['values']) && !empty($form_state['values']['banned_words'])) {
+    variable_set('gie_security_bad_words', explode(',', $form_state['values']['banned_words']));
+  }
+}
+
+/**
+ * Implements hook_node_insert().
+ */
+function gie_security_node_insert($node) {
+  _gie_security_node_save($node);
+}
+
+/**
+ * Implements hook_node_update().
+ */
+function gie_security_node_update($node) {
+  _gie_security_node_save($node);
+}
+
+
 /**
  * Implements hook_node_validate().
  */
-function gie_security_node_validate($node, $form, &$form_state) {
+function _gie_security_node_save($node) {
   global $user;
   $content = array();
 
@@ -24,10 +80,11 @@ function gie_security_node_validate($node, $form, &$form_state) {
       $content[] = $node->field_event_description['und'][0]['value'];
       break;
   }
+  $content_flag = _gie_security_parse_content($content);
+  $user_flag = _gie_security_previous_offender($user);
 
-
-  if (_gie_security_parse_content($content) && _gie_security_previous_offender($user)) {
-    gie_security_content_publish_operation('node', $node, 'unpublish', TRUE);
+  if ($content_flag || $user_flag) {
+    gie_security_content_publish_operation('node', $node, 'unpublish', TRUE, $content_flag, $user_flag);
   }
   else {
     return TRUE;
@@ -57,21 +114,8 @@ function _gie_security_previous_offender($user) {
 }
 
 function _gie_security_parse_content($content) {
-  $bad_words = array(
-    'http',
-    'http',
-    'www',
-    'episode',
-    'Episode',
-    'Streaming',
-    'streaming',
-    'Film',
-    'film',
-    'movie',
-    'Movie',
-    'Watch Online',
-    'watch online',
-  );
+
+  $bad_words = variable_get('gie_security_bad_words');
 
   foreach ($content as $piece) {
     if (_gie_security_strposa($piece, $bad_words)) {
@@ -87,7 +131,9 @@ function gie_security_content_publish_operation(
   $content_type,
   $content,
   $op,
-  $log_action = TRUE
+  $log_action = TRUE,
+  $content_flag,
+  $user_flag
 ) {
   // This code snippet is based on node.module::node_admin_nodes_submit().
   // Only the node record is updated, no other hooks are invoked.
@@ -120,8 +166,19 @@ function gie_security_content_publish_operation(
     $action = ($op == 'publish' ? t('Content published') : t(
       'Content unpublished'
     ));
+
+    if ($content_flag && $user_flag) {
+      $flag = 'gie_security_FC_FU';
+    } elseif ($content_flag) {
+      $flag = 'gie_security_FC';
+    } elseif ($user_flag) {
+      $flag = 'gie_security_FU';
+    } else {
+      $flag = 'no_flag';
+    }
+
     watchdog(
-      'gie_security',
+      $flag,
       '@action: @title',
       array('@action' => $action, '@title' => $content->title),
       WATCHDOG_NOTICE,
