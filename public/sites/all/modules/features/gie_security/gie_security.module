@@ -6,31 +6,199 @@
 
 include_once 'gie_security.features.inc';
 
+
+
 /**
- * @param $form
- * @param $form_state
+ * Implements hook_menu().
  */
-function gie_security_form_node_form_alter(&$form) {
-  $types = array(
-    'innovation',
-    'funding',
-    'resource',
-    'event',
-    'organization',
-    'program',
-    'blogs',
-    'news'
+function gie_security_menu() {
+
+  $items['admin/config/spam_protection/gie_security'] = array(
+    'title' => 'GIE Security Banned Words',
+    'description' => 'Ban words from being used in description fields',
+    'page callback' => 'drupal_get_form',
+    'page arguments' => array('gie_security_settings_form'),
+    'access arguments' => array('access administration pages'),
   );
 
-  $admin_role = user_role_load_by_name('administrator');
-  // Set field visibility based on whether the user is an admin
-  if (in_array($form['type']['#value'], $types) && !(user_has_role($admin_role->rid))) {
-    $form['#submit'][] = 'gie_security_new_relic_insights';
+  return $items;
+
+}
+
+
+
+function gie_security_settings_form($form) {
+
+  $form['service']['banned_words'] = array(
+    '#type' => 'textarea',
+    '#title' => t('Banned Words'),
+    '#default_value' => drupal_implode_tags(variable_get('gie_security_bad_words')),
+    '#description' => t('Enter the terms you want to ban'),
+  );
+  $form['options']['submit'] = array('#type' => 'submit', '#value' => t('Submit'));
+
+  return $form;
+}
+
+
+function gie_security_settings_form_submit($form, &$form_state) {
+  if (!empty($form_state['values']) && !empty($form_state['values']['banned_words'])) {
+    variable_set('gie_security_bad_words', explode(',', $form_state['values']['banned_words']));
   }
 }
 
-function gie_security_new_relic_insights($form, $form_state) {
-  if (module_exists('new_relic_insights') && function_exists('new_relic_insights_post_event') && !empty($form_state['values']['title_field']['und'][0]['value'])) {
-    new_relic_insights_post_event($form_state['values']['title_field']['und'][0]['value']);
+/**
+ * Implements hook_node_insert().
+ */
+function gie_security_node_insert($node) {
+  _gie_security_node_save($node);
+}
+
+/**
+ * Implements hook_node_update().
+ */
+function gie_security_node_update($node) {
+  _gie_security_node_save($node);
+}
+
+
+/**
+ * Implements hook_node_validate().
+ */
+function _gie_security_node_save($node) {
+  global $user;
+  $content = array();
+
+  switch ($node->type) {
+    case 'discussion':
+      $content[] = $node->field_discussion_desc['und'][0]['value'];
+      break;
+    case 'organization':
+      $content[] = $node->field_org_desc['und'][0]['value'];
+      break;
+    case 'event':
+      $content[] = $node->field_event_description['und'][0]['value'];
+      break;
   }
+  $content_flag = _gie_security_parse_content($content);
+  $user_flag = _gie_security_previous_offender($user);
+
+  if ($content_flag || $user_flag) {
+    gie_security_content_publish_operation('node', $node, 'unpublish', TRUE, $content_flag, $user_flag);
+  }
+  else {
+    return TRUE;
+  }
+
+}
+
+function _gie_security_previous_offender($user) {
+  if (empty($user->uid)) {
+    return FALSE;
+  }
+
+  // Ignore Administrators or Microsite Administrators
+  if (user_has_role(3) || user_has_role(9)) {
+    return FALSE;
+  }
+
+  $previous_content = db_query('select nid from node 
+  left join users_roles on users_roles.uid = node.uid 
+  where node.uid = :uid AND node.status = :status order by changed desc',
+    array(':uid' => $user->uid, ':status' => 0)
+  )->rowCount();
+
+  if ($previous_content >= 3) {
+    return TRUE;
+  }
+}
+
+function _gie_security_parse_content($content) {
+
+  $bad_words = variable_get('gie_security_bad_words');
+
+  foreach ($content as $piece) {
+    if (_gie_security_strposa($piece, $bad_words)) {
+      return TRUE;
+    }
+  }
+}
+
+/*
+ * CREDIT to Antispam Module
+ */
+function gie_security_content_publish_operation(
+  $content_type,
+  $content,
+  $op,
+  $log_action = TRUE,
+  $content_flag,
+  $user_flag
+) {
+  // This code snippet is based on node.module::node_admin_nodes_submit().
+  // Only the node record is updated, no other hooks are invoked.
+
+  // Perform the update action.
+  db_update('node')
+    ->fields(
+      array(
+        'status' => ($op == 'publish' ? 1 : 0),
+      )
+    )
+    ->condition('nid', $content->nid)
+    ->execute();
+
+  // Perform the update action of the revision.
+  db_update('node_revision')
+    ->fields(
+      array(
+        'status' => ($op == 'publish' ? 1 : 0),
+      )
+    )
+    ->condition('nid', $content->nid)
+    ->condition('vid', $content->vid)
+    ->execute();
+
+  // Reset the cache for the updated node in order to update the dmin views.
+  entity_get_controller('node')->resetCache(array($content->nid));
+
+  if ($log_action) {
+    $action = ($op == 'publish' ? t('Content published') : t(
+      'Content unpublished'
+    ));
+
+    if ($content_flag && $user_flag) {
+      $flag = 'gie_security_FC_FU';
+    } elseif ($content_flag) {
+      $flag = 'gie_security_FC';
+    } elseif ($user_flag) {
+      $flag = 'gie_security_FU';
+    } else {
+      $flag = 'no_flag';
+    }
+
+    watchdog(
+      $flag,
+      '@action: @title',
+      array('@action' => $action, '@title' => $content->title),
+      WATCHDOG_NOTICE,
+      l(t('view'), 'node/' . $content->nid)
+    );
+  }
+
+}
+
+/*
+ *  CREDIT: http://stackoverflow.com/questions/6284553/using-an-array-as-needles-in-strpos
+ */
+function _gie_security_strposa($haystack, $needle, $offset = 0) {
+  if (!is_array($needle)) {
+    $needle = array($needle);
+  }
+  foreach ($needle as $query) {
+    if (strpos($haystack, $query, $offset) !== FALSE) {
+      return TRUE;
+    } // stop on first true result
+  }
+  return FALSE;
 }
