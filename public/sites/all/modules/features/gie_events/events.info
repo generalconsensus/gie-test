@@ -123,6 +123,7 @@ features[variable][] = pathauto_taxonomy_term_event_needs_pattern
 features[variable][] = pathauto_taxonomy_term_event_size_pattern
 features[variable][] = pathauto_taxonomy_term_event_type_pattern
 features[views_view][] = event_organizers
+features[views_view][] = events
 features[views_view][] = events_at_a_glance
 features[views_view][] = events_listing
 features_exclude[dependencies][addressfield] = addressfield
