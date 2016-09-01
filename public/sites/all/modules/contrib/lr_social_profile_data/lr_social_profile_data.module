@@ -16,7 +16,7 @@ function lr_social_profile_data_init() {
         'defaults' => 'width:960;height:auto;position:[center,60]',
         'selector' => 'content',
         'title' => '',
-      )
+      ),
     ), 'setting');
   }
 }
@@ -58,7 +58,7 @@ function lr_social_profile_data_permission() {
  */
 function lr_social_profile_data_menu() {
   $file_path = drupal_get_path('module', 'lr_social_profile_data');
-  $items['admin/config/people/loginradius/socialprofiledata'] = array(
+  $items['admin/config/people/userregistration/socialprofiledata'] = array(
     'title' => 'Social Profile Data',
     'description' => 'advance_social_sharing Share settings.',
     'page callback' => 'drupal_get_form',
@@ -90,7 +90,8 @@ function lr_social_profile_data_delete($table_name, $user_id) {
     db_delete($table_name)
       ->condition('user_id', $user_id)
       ->execute();
-  } catch (Exception $e) {
+  }
+  catch (Exception $e) {
     watchdog_exception('type', $e);
   }
 }
@@ -108,7 +109,8 @@ function lr_social_profile_data_insert($table_name, $data_values) {
         ->fields(array_keys($data_values))
         ->values($data_values)
         ->execute();
-    } catch (Exception $e) {
+    }
+    catch (Exception $e) {
       watchdog_exception('type', $e);
     }
   }
@@ -124,7 +126,6 @@ function lr_social_profile_data_insert_array_values($table_name, $user_id, $meth
   if (!empty($data_values) && is_array($data_values)) {
     $insert = db_insert($table_name);
     foreach ($data_values as $data_value) {
-      //$post_data_value = $result[$key][1]($user_id, $post);
       $data_value->provider = $provider;
       $post_data_value = $method_name($user_id, $data_value);
       $insert->fields(array_keys($post_data_value));
@@ -147,7 +148,8 @@ function lr_social_profile_data_update($table_name, $user_id, $data_values) {
       ->fields($data_values)
       ->condition('user_id', $user_id)
       ->execute();
-  } catch (Exception $e) {
+  }
+  catch (Exception $e) {
     watchdog_exception('type', $e);
   }
 }
@@ -782,7 +784,7 @@ function lr_social_profile_data_get_properties_callabck($key) {
     'loginradius_games' => 'lr_social_profile_data_get_games',
     'loginradius_television_show' => 'lr_social_profile_data_get_television_show',
     'loginradius_books' => 'lr_social_profile_data_get_book',
-    'loginradius_movies' => 'lr_social_profile_data_get_movies'
+    'loginradius_movies' => 'lr_social_profile_data_get_movies',
   );
   return $result[$key];
 }
@@ -815,45 +817,45 @@ function lr_social_profile_data_save_premium_data($key, $user_id, $data) {
 function lr_social_profile_data_save_premium_data_by_provider($obj, $lr_token, $user_id, $key, $provider) {
   $result = array(
     'facebook_posts' => array(
-      "loginradius_get_posts",
+      "loginradiusGetPosts",
       "lr_social_profile_data_get_facebook_post",
-      "loginradius_facebook_posts"
+      "loginradius_facebook_posts",
     ),
     'lr_contacts' => array(
-      "loginradius_get_contacts",
+      "loginradiusGetContacts",
       "lr_social_profile_data_get_contact",
-      "loginradius_contacts"
+      "loginradius_contacts",
     ),
     'followed_companies_on' => array(
-      "loginradius_get_followed_companies",
+      "loginradiusGetFollowedCompanies",
       "lr_social_profile_data_get_linkedin_company",
-      "loginradius_linkedin_companies"
+      "loginradius_linkedin_companies",
     ),
     'status_message' => array(
-      "loginradius_get_status",
+      "loginradiusGetStatus",
       "lr_social_profile_data_get_status",
-      "loginradius_status"
+      "loginradius_status",
     ),
     'twitter_mentions' => array(
-      "loginradius_get_mentions",
+      "loginradiusGetMentions",
       "lr_social_profile_data_get_twitter_mentions",
-      "loginradius_twitter_mentions"
+      "loginradius_twitter_mentions",
     ),
     'lr_groups' => array(
-      "loginradius_get_groups",
+      "loginradiusGetGroups",
       "lr_social_profile_data_get_group",
-      "loginradius_groups"
+      "loginradius_groups",
     ),
     'facebook_profile_events' => array(
-      "loginradius_get_events",
+      "loginradiusGetEvents",
       "lr_social_profile_data_get_facebook_event",
-      "loginradius_facebook_events"
+      "loginradius_facebook_events",
     ),
 
   );
   if (isset($result[$key]) && db_table_exists($result[$key][2])) {
     $posts = $obj->$result[$key][0]($lr_token);
-    if ($result[$key][0] == 'loginradius_get_contacts') {
+    if ($result[$key][0] == 'loginradiusGetContacts') {
       $posts = isset($posts->Data) ? $posts->Data : '';
     }
     if (is_array($posts) && count($posts) > 0) {
@@ -938,7 +940,7 @@ function lr_social_profile_data_show($array, $sub_table = FALSE) {
           $val = unserialize($val);
         }
         elseif ($key == 'company' && $val != NULL && $val != '') {
-          // companies
+          // Companies.
           $companies_result = db_query("SELECT * FROM {loginradius_companies} WHERE id = :uid", array(':uid' => $val));
           $companies = $companies_result->fetchAll();
 
@@ -989,7 +991,7 @@ function lr_social_profile_data_check_data_in_table($table_name, $user_id, $tab_
     11 => 'Videos',
     12 => 'Facebook Likes',
     13 => 'Photos',
-    14 => 'Albums'
+    14 => 'Albums',
   );
 
   if (db_table_exists($table_name)) {
@@ -1002,8 +1004,6 @@ function lr_social_profile_data_check_data_in_table($table_name, $user_id, $tab_
       return $data;
     }
   }
-
-  return;
 }
 
 /**
@@ -1091,7 +1091,7 @@ function lr_social_profile_data_ajax_user_profile($js = NULL, $user_id = NULL) {
     'loginradius_videos',
     'loginradius_likes',
     'loginradius_photos',
-    'loginradius_albums'
+    'loginradius_albums',
   );
 
   foreach ($tables as $key => $value) {
@@ -1112,7 +1112,7 @@ function lr_social_profile_data_ajax_user_profile($js = NULL, $user_id = NULL) {
     $output .= '<div id="tabs-1">';
     $data = array(
       'General' => 'loginradius_basic_profile_data',
-      'Email' => 'loginradius_emails'
+      'Email' => 'loginradius_emails',
     );
     $output .= lr_social_profile_data_show_data_in_same_tabs($data, $user_id, $user_profile['loginradius_basic_profile_data'], TRUE);
     $output .= '</div>';
@@ -1141,14 +1141,15 @@ function lr_social_profile_data_ajax_user_profile($js = NULL, $user_id = NULL) {
       'Books' => 'loginradius_books',
       'Games' => 'loginradius_games',
       'Television Shows' => 'loginradius_television_show',
-      'Movies' => 'loginradius_movies'
+      'Movies' => 'loginradius_movies',
     );
     $output .= lr_social_profile_data_show_data_in_same_tabs($data, $user_id, $user_profile['loginradius_extended_profile_data'], FALSE);
     $output .= '</div>';
   }
-
-  foreach ($tables as $tab_number => $table_name) {
-    $output .= lr_social_profile_data_get_extended_data_to_show(($tab_number + 1), $table_name, $user_profile);
+  if (isset($user_profile)) {
+    foreach ($tables as $tab_number => $table_name) {
+      $output .= lr_social_profile_data_get_extended_data_to_show(($tab_number + 1), $table_name, $user_profile);
+    }
   }
 
   $output .= '</div>';
@@ -1175,15 +1176,15 @@ function lr_social_profile_data_save($user_id, $userprofile) {
     if (!db_query('SELECT user_id FROM {loginradius_basic_profile_data} WHERE user_id = :id', array('id' => $user_id))->fetchField()) {
       lr_social_profile_data_insert('loginradius_basic_profile_data', $basic_profile_data_values);
 
-      // emails
+      // Emails.
       if (db_table_exists('loginradius_emails') && count($userprofile->Email) > 0) {
         try {
           $insert = db_insert('loginradius_emails');
-          foreach ($userprofile->Email as $lrEmail) {
+          foreach ($userprofile->Email as $lr_email) {
             $email_data_values = array(
               'user_id' => $user_id,
-              'email_type' => (isset($lrEmail->Type) ? $lrEmail->Type : ''),
-              'email' => (isset($lrEmail->Value) ? $lrEmail->Value : ''),
+              'email_type' => (isset($lr_email->Type) ? $lr_email->Type : ''),
+              'email' => (isset($lr_email->Value) ? $lr_email->Value : ''),
             );
             $insert->fields(array_keys($email_data_values));
             $insert->values($email_data_values);
@@ -1210,7 +1211,7 @@ function lr_social_profile_data_save($user_id, $userprofile) {
     }
   }
 
-  // insert extended profile data if option is selected
+  // Insert extended profile data if option is selected.
   if (in_array('extended_profile_data', $lr_social_profile_data_profile_selection) && db_table_exists('loginradius_extended_profile_data')) {
     $extended_profile_data_values = lr_social_profile_data_get_extended_profile($user_id, $userprofile);
 
@@ -1221,18 +1222,18 @@ function lr_social_profile_data_save($user_id, $userprofile) {
       lr_social_profile_data_update('loginradius_extended_profile_data', $user_id, $extended_profile_data_values);
     }
 
-    // positions
+    // Positions.
     if (!empty($userprofile->Positions) && count($userprofile->Positions) > 0) {
-      foreach ($userprofile->Positions as $lrPosition) {
+      foreach ($userprofile->Positions as $lr_position) {
 
-        // companies
-        if (isset($lrPosition->Company) && db_table_exists('loginradius_companies')) {
-          $company_data_value = lr_social_profile_data_get_company($lrPosition);
-          $tempId = lr_social_profile_data_insert('loginradius_companies', $company_data_value);
+        // Companies.
+        if (isset($lr_position->Company) && db_table_exists('loginradius_companies')) {
+          $company_data_value = lr_social_profile_data_get_company($lr_position);
+          $temp_id = lr_social_profile_data_insert('loginradius_companies', $company_data_value);
         }
 
-        // positions
-        $positions_data_value = lr_social_profile_data_get_position($user_id, $lrPosition, $tempId);
+        // Positions.
+        $positions_data_value = lr_social_profile_data_get_position($user_id, $lr_position, $temp_id);
         lr_social_profile_data_insert('loginradius_positions', $positions_data_value);
       }
     }
@@ -1255,7 +1256,7 @@ function lr_social_profile_data_save($user_id, $userprofile) {
       'Games' => 'loginradius_games',
       'TeleVisionShow' => 'loginradius_television_show',
       'Books' => 'loginradius_books',
-      'Movies' => 'loginradius_movies'
+      'Movies' => 'loginradius_movies',
     );
 
     foreach ($userprofile_extended_keys as $key => $userprofile_data_table) {
@@ -1271,13 +1272,20 @@ function lr_social_profile_data_save($user_id, $userprofile) {
   }
 
   $provider_premium_data = array(
-    'lr_contacts' => array('twitter', 'facebook', 'linkedin', 'google', 'yahoo', 'live'),
+    'lr_contacts' => array(
+      'twitter',
+      'facebook',
+      'linkedin',
+      'google',
+      'yahoo',
+      'live',
+    ),
     'facebook_profile_events' => array('facebook'),
     'facebook_posts' => array('facebook'),
     'followed_companies_on' => array('facebook', 'linkedin'),
     'status_message' => array('twitter', 'facebook', 'linkedin'),
     'twitter_mentions' => array('twitter'),
-    'lr_groups' => array('facebook', 'linkedin')
+    'lr_groups' => array('facebook', 'linkedin'),
   );
   foreach ($provider_premium_data as $key => $value) {
     if (in_array($userprofile->Provider, $value) && in_array($key, $lr_social_profile_data_profile_selection)) {
@@ -1300,19 +1308,19 @@ function lr_social_profile_data_form_user_admin_account_alter(&$form, &$form_sta
       'attributes' => array(
         'class' => 'lr_social_profile_data',
         'rel' => 'nofollow',
-      )
+      ),
     );
     $options['attributes']['title'] = t('User Profile Data');
     $uid_column = array(
       'uid' => array(
         'data' => 'Profile Data',
-        'field' => 'view'
-      )
+        'field' => 'view',
+      ),
     );
     $form['accounts']['#header'] = $form['accounts']['#header'] + $uid_column;
 
     foreach ($form['accounts']['#options'] as $key => $value) {
-      // this will have all user profile object which can be used below instead of $key.
+      // This will have all user profile object which can be used below instead of $key.
       $user_profile = user_load($key);
       $admin_access = 0;
 

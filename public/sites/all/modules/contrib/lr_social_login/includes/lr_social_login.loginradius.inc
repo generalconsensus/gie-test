@@ -5,7 +5,8 @@
  * Sdk page callback file for the lr_social_login module.
  * This class should be used only for Drupal site.
  */
-// Define LoginRadius domain
+
+// Define LoginRadius domain.
 define('LR_DOMAIN', 'api.loginradius.com');
 
 /**
@@ -27,7 +28,7 @@ class LoginRadius {
    *
    * @return boolean If valid - true, else - false
    */
-  public function loginradius_is_valid_guid($value) {
+  public function loginradiusIsValidGuid($value) {
     return preg_match('/^\{?[A-Z0-9]{8}-[A-Z0-9]{4}-[A-Z0-9]{4}-[A-Z0-9]{4}-[A-Z0-9]{12}\}?$/i', $value);
   }
 
@@ -36,7 +37,7 @@ class LoginRadius {
    *
    * @return boolean True, if a valid callback.
    */
-  public function loginradius_is_callback() {
+  public function loginradiusIsCallback() {
     if (isset($_POST['token'])) {
       return TRUE;
     }
@@ -52,12 +53,13 @@ class LoginRadius {
    *
    * @return string LoginRadius access token.
    */
-  public function loginradius_fetch_access_token($secret) {
-    if (!$this->loginradius_is_valid_guid($secret)) {
+  public function loginradiusFetchAccessToken($secret, $token) {
+      $token = isset($_POST['token']) ? $_POST['token']  : $token;
+    if (!$this->loginradiusIsValidGuid($secret) || empty($token)) {
       return FALSE;
     }
-    $validate_url = "https://" . LR_DOMAIN . "/api/v2/access_token?token=" . $_POST['token'] . "&secret=" . $secret;
-    $response = json_decode($this->loginradius_get_api_response($validate_url));
+    $validate_url = "https://" . LR_DOMAIN . "/api/v2/access_token?token=" . $token . "&secret=" . $secret;
+    $response = json_decode($this->loginradiusGetApiResponse($validate_url));
     if (isset($response->access_token) && $response->access_token != '') {
       return $response->access_token;
     }
@@ -74,13 +76,13 @@ class LoginRadius {
    *
    * @return object User profile data.
    */
-  public function loginradius_get_user_profiledata($access_token, $raw = FALSE) {
-     $validate_url = "https://" . LR_DOMAIN . "/api/v2/userprofile?access_token=" . $access_token;
+  public function loginradiusGetUserProfiledata($access_token, $raw = FALSE) {
+    $validate_url = "https://" . LR_DOMAIN . "/api/v2/userprofile?access_token=" . $access_token;
     if ($raw) {
       $validate_url = "https://" . LR_DOMAIN . "/api/v2/userprofile/raw?access_token=" . $access_token;
-      return $this->loginradius_get_api_response($validate_url);
+      return $this->loginradiusGetApiResponse($validate_url);
     }
-    return json_decode($this->loginradius_get_api_response($validate_url));
+    return json_decode($this->loginradiusGetApiResponse($validate_url));
   }
 
   /**
@@ -91,13 +93,13 @@ class LoginRadius {
    *
    * @return object User's albums data.
    */
-  public function loginradius_get_photo_albums($access_token, $raw = FALSE) {
+  public function loginradiusGetPhotoAlbums($access_token, $raw = FALSE) {
     $validate_url = "https://" . LR_DOMAIN . "/api/v2/album?access_token=" . $access_token;
     if ($raw) {
       $validate_url = "https://" . LR_DOMAIN . "/api/v2/album/raw?access_token=" . $access_token;
-      return $this->loginradius_get_api_response($validate_url);
+      return $this->loginradiusGetApiResponse($validate_url);
     }
-    return json_decode($this->loginradius_get_api_response($validate_url));
+    return json_decode($this->loginradiusGetApiResponse($validate_url));
   }
 
   /**
@@ -109,13 +111,13 @@ class LoginRadius {
    *
    * @return object User's photo data.
    */
-  public function loginradius_get_photos($access_token, $album_id = '', $raw = FALSE) {
+  public function loginradiusGetPhotos($access_token, $album_id = '', $raw = FALSE) {
     $validate_url = "https://" . LR_DOMAIN . "/api/v2/photo?access_token=" . $access_token . "&albumid=" . $album_id;
     if ($raw) {
       $validate_url = "https://" . LR_DOMAIN . "/api/v2/photo/raw?access_token=" . $access_token . "&albumid=" . $album_id;
-      return $this->loginradius_get_api_response($validate_url);
+      return $this->loginradiusGetApiResponse($validate_url);
     }
-    return json_decode($this->loginradius_get_api_response($validate_url));
+    return json_decode($this->loginradiusGetApiResponse($validate_url));
   }
 
   /**
@@ -126,13 +128,13 @@ class LoginRadius {
    *
    * @return object User's check-ins.
    */
-  public function loginradius_get_checkins($access_token, $raw = FALSE) {
+  public function loginradiusGetCheckins($access_token, $raw = FALSE) {
     $validate_url = "https://" . LR_DOMAIN . "/api/v2/checkin?access_token=" . $access_token;
     if ($raw) {
       $validate_url = "https://" . LR_DOMAIN . "/api/v2/checkin/raw?access_token=" . $access_token;
-      return $this->loginradius_get_api_response($validate_url);
+      return $this->loginradiusGetApiResponse($validate_url);
     }
-    return json_decode($this->loginradius_get_api_response($validate_url));
+    return json_decode($this->loginradiusGetApiResponse($validate_url));
   }
 
   /**
@@ -143,13 +145,13 @@ class LoginRadius {
    *
    * @return object User's audio files data.
    */
-  public function loginradius_get_audio($access_token, $raw = FALSE) {
+  public function loginradiusGetAudio($access_token, $raw = FALSE) {
     $validate_url = "https://" . LR_DOMAIN . "/api/v2/audio?access_token=" . $access_token;
     if ($raw) {
       $validate_url = "https://" . LR_DOMAIN . "/api/v2/audio/raw?access_token=" . $access_token;
-      return $this->loginradius_get_api_response($validate_url);
+      return $this->loginradiusGetApiResponse($validate_url);
     }
-    return json_decode($this->loginradius_get_api_response($validate_url));
+    return json_decode($this->loginradiusGetApiResponse($validate_url));
   }
 
   /**
@@ -162,27 +164,27 @@ class LoginRadius {
    *
    * @return bool True on success, false otherwise
    */
-  public function loginradius_send_message($access_token, $provider, $to, $subject, $message) {
+  public function loginradiusSendMessage($access_token, $provider, $to, $subject, $message) {
     if ($access_token != '') {
       if ($provider == 'twitter') {
         foreach ($to as $id) {
           $validateurl = 'https://' . LR_DOMAIN . '/api/v2/message?' . http_build_query(array(
-                'access_token' => $access_token,
-                'to' => $id,
-                'subject' => $subject,
-                'message' => $message
-          ));
-          json_decode($this->loginradius_get_api_response($validateurl, TRUE));
+              'access_token' => $access_token,
+              'to' => $id,
+              'subject' => $subject,
+              'message' => $message,
+            ));
+          json_decode($this->loginradiusGetApiResponse($validateurl, TRUE));
         }
       }
       else {
         $validateurl = 'https://' . LR_DOMAIN . '/api/v2/message?' . http_build_query(array(
-              'access_token' => $access_token,
-              'to' => implode(',', $to),
-              'subject' => $subject,
-              'message' => $message
-        ));
-         json_decode($this->loginradius_get_api_response($validateurl, TRUE));
+            'access_token' => $access_token,
+            'to' => implode(',', $to),
+            'subject' => $subject,
+            'message' => $message,
+          ));
+        json_decode($this->loginradiusGetApiResponse($validateurl, TRUE));
       }
       return;
     }
@@ -197,13 +199,13 @@ class LoginRadius {
    *
    * @return object User's contacts/friends/followers.
    */
-  public function loginradius_get_contacts($access_token, $next_cursor = '', $raw = FALSE) {
+  public function loginradiusGetContacts($access_token, $next_cursor = '', $raw = FALSE) {
     $validate_url = "https://" . LR_DOMAIN . "/api/v2/contact?access_token=" . $access_token . "&nextcursor=" . $next_cursor;
     if ($raw) {
       $validate_url = "https://" . LR_DOMAIN . "/api/v2/contact/raw?access_token=" . $access_token . "&nextcursor=" . $next_cursor;
-      return $this->loginradius_get_api_response($validate_url);
+      return $this->loginradiusGetApiResponse($validate_url);
     }
-    return json_decode($this->loginradius_get_api_response($validate_url));
+    return json_decode($this->loginradiusGetApiResponse($validate_url));
   }
 
   /**
@@ -214,13 +216,13 @@ class LoginRadius {
    *
    * @return object User's twitter mentions.
    */
-  public function loginradius_get_mentions($access_token, $raw = FALSE) {
+  public function loginradiusGetMentions($access_token, $raw = FALSE) {
     $validate_url = "https://" . LR_DOMAIN . "/api/v2/mention?access_token=" . $access_token;
     if ($raw) {
       $validate_url = "https://" . LR_DOMAIN . "/api/v2/mention/raw?access_token=" . $access_token;
-      return $this->loginradius_get_api_response($validate_url);
+      return $this->loginradiusGetApiResponse($validate_url);
     }
-    return json_decode($this->loginradius_get_api_response($validate_url));
+    return json_decode($this->loginradiusGetApiResponse($validate_url));
   }
 
   /**
@@ -231,13 +233,13 @@ class LoginRadius {
    *
    * @return object Information of the people, user is following.
    */
-  public function loginradius_get_following($access_token, $raw = FALSE) {
+  public function loginradiusGetFollowing($access_token, $raw = FALSE) {
     $validate_url = "https://" . LR_DOMAIN . "/api/v2/following?access_token=" . $access_token;
     if ($raw) {
       $validate_url = "https://" . LR_DOMAIN . "/api/v2/following/raw?access_token=" . $access_token;
-      return $this->loginradius_get_api_response($validate_url);
+      return $this->loginradiusGetApiResponse($validate_url);
     }
-    return json_decode($this->loginradius_get_api_response($validate_url));
+    return json_decode($this->loginradiusGetApiResponse($validate_url));
   }
 
   /**
@@ -248,13 +250,13 @@ class LoginRadius {
    *
    * @return object User's event data.
    */
-  public function loginradius_get_events($access_token, $raw = FALSE) {
+  public function loginradiusGetEvents($access_token, $raw = FALSE) {
     $validate_url = "https://" . LR_DOMAIN . "/api/v2/event?access_token=" . $access_token;
     if ($raw) {
       $validate_url = "https://" . LR_DOMAIN . "/api/v2/event/raw?access_token=" . $access_token;
-      return $this->loginradius_get_api_response($validate_url);
+      return $this->loginradiusGetApiResponse($validate_url);
     }
-    return json_decode($this->loginradius_get_api_response($validate_url));
+    return json_decode($this->loginradiusGetApiResponse($validate_url));
   }
 
   /**
@@ -265,13 +267,13 @@ class LoginRadius {
    *
    * @return object User's posted messages.
    */
-  public function loginradius_get_posts($access_token, $raw = FALSE) {
+  public function loginradiusGetPosts($access_token, $raw = FALSE) {
     $validate_url = "https://" . LR_DOMAIN . "/api/v2/post?access_token=" . $access_token;
     if ($raw) {
       $validate_url = "https://" . LR_DOMAIN . "/api/v2/post/raw?access_token=" . $access_token;
-      return $this->loginradius_get_api_response($validate_url);
+      return $this->loginradiusGetApiResponse($validate_url);
     }
-    return json_decode($this->loginradius_get_api_response($validate_url));
+    return json_decode($this->loginradiusGetApiResponse($validate_url));
   }
 
   /**
@@ -282,13 +284,13 @@ class LoginRadius {
    *
    * @return object Companies followed by user.
    */
-  public function loginradius_get_followed_companies($access_token, $raw = FALSE) {
+  public function loginradiusGetFollowedCompanies($access_token, $raw = FALSE) {
     $validate_url = "https://" . LR_DOMAIN . "/api/v2/company?access_token=" . $access_token;
     if ($raw) {
       $validate_url = "https://" . LR_DOMAIN . "/api/v2/company/raw?access_token=" . $access_token;
-      return $this->loginradius_get_api_response($validate_url);
+      return $this->loginradiusGetApiResponse($validate_url);
     }
-    return json_decode($this->loginradius_get_api_response($validate_url));
+    return json_decode($this->loginradiusGetApiResponse($validate_url));
   }
 
   /**
@@ -299,13 +301,13 @@ class LoginRadius {
    *
    * @return object Group data.
    */
-  public function loginradius_get_groups($access_token, $raw = FALSE) {
+  public function loginradiusGetGroups($access_token, $raw = FALSE) {
     $validate_url = "https://" . LR_DOMAIN . "/api/v2/group?access_token=" . $access_token;
     if ($raw) {
       $validate_url = "https://" . LR_DOMAIN . "/api/v2/group/raw?access_token=" . $access_token;
-      return $this->loginradius_get_api_response($validate_url);
+      return $this->loginradiusGetApiResponse($validate_url);
     }
-    return json_decode($this->loginradius_get_api_response($validate_url));
+    return json_decode($this->loginradiusGetApiResponse($validate_url));
   }
 
   /**
@@ -316,13 +318,13 @@ class LoginRadius {
    *
    * @return object Status messages.
    */
-  public function loginradius_get_status($access_token, $raw = FALSE) {
+  public function loginradiusGetStatus($access_token, $raw = FALSE) {
     $validate_url = "https://" . LR_DOMAIN . "/api/v2/status?access_token=" . $access_token;
     if ($raw) {
       $validate_url = "https://" . LR_DOMAIN . "/api/v2/status/raw?access_token=" . $access_token;
-      return $this->loginradius_get_api_response($validate_url);
+      return $this->loginradiusGetApiResponse($validate_url);
     }
-    return json_decode($this->loginradius_get_api_response($validate_url));
+    return json_decode($this->loginradiusGetApiResponse($validate_url));
   }
 
   /**
@@ -338,17 +340,17 @@ class LoginRadius {
    *
    * @return boolean Returns true if successful, false otherwise.
    */
-  public function loginradius_post_status($access_token, $title, $url, $imageurl, $status, $caption, $description) {
+  public function loginradiusPostStatus($access_token, $title, $url, $imageurl, $status, $caption, $description) {
     $url = "https://" . LR_DOMAIN . "/api/v2/status?" . http_build_query(array(
-          'access_token' => $access_token,
-          'title' => $title,
-          'url' => $url,
-          'imageurl' => $imageurl,
-          'status' => $status,
-          'caption' => $caption,
-          'description' => $description
-    ));
-    return json_decode($this->loginradius_get_api_response($url, TRUE));
+        'access_token' => $access_token,
+        'title' => $title,
+        'url' => $url,
+        'imageurl' => $imageurl,
+        'status' => $status,
+        'caption' => $caption,
+        'description' => $description,
+      ));
+    return json_decode($this->loginradiusGetApiResponse($url, TRUE));
   }
 
   /**
@@ -359,13 +361,13 @@ class LoginRadius {
    *
    * @return object Videos data.
    */
-  public function loginradius_get_videos($access_token, $raw = FALSE) {
+  public function loginradiusGetVideos($access_token, $raw = FALSE) {
     $validate_url = "https://" . LR_DOMAIN . "/api/v2/video?access_token=" . $access_token;
     if ($raw) {
       $validate_url = "https://" . LR_DOMAIN . "/api/v2/video/raw?access_token=" . $access_token;
-      return $this->loginradius_get_api_response($validate_url);
+      return $this->loginradiusGetApiResponse($validate_url);
     }
-    return json_decode($this->loginradius_get_api_response($validate_url));
+    return json_decode($this->loginradiusGetApiResponse($validate_url));
   }
 
   /**
@@ -376,13 +378,13 @@ class LoginRadius {
    *
    * @return object Videos data.
    */
-  public function loginradius_get_likes($access_token, $raw = FALSE) {
+  public function loginradiusGetLikes($access_token, $raw = FALSE) {
     $validate_url = "https://" . LR_DOMAIN . "/api/v2/like?access_token=" . $access_token;
     if ($raw) {
       $validate_url = "https://" . LR_DOMAIN . "/api/v2/like/raw?access_token=" . $access_token;
-      return $this->loginradius_get_api_response($validate_url);
+      return $this->loginradiusGetApiResponse($validate_url);
     }
-    return json_decode($this->loginradius_get_api_response($validate_url));
+    return json_decode($this->loginradiusGetApiResponse($validate_url));
   }
 
   /**
@@ -394,13 +396,13 @@ class LoginRadius {
    *
    * @return object Page data.
    */
-  public function loginradius_get_pages($access_token, $page_name, $raw = FALSE) {
+  public function loginradiusGetPages($access_token, $page_name, $raw = FALSE) {
     $validate_url = "https://" . LR_DOMAIN . "/api/v2/page?access_token=" . $access_token . "&pagename=" . $page_name;
     if ($raw) {
       $validate_url = "https://" . LR_DOMAIN . "/api/v2/page/raw?access_token=" . $access_token . "&pagename=" . $page_name;
-      return $this->loginradius_get_api_response($validate_url);
+      return $this->loginradiusGetApiResponse($validate_url);
     }
-    return json_decode($this->loginradius_get_api_response($validate_url));
+    return json_decode($this->loginradiusGetApiResponse($validate_url));
   }
 
   /**
@@ -410,18 +412,20 @@ class LoginRadius {
    *
    * @return string Data fetched from the LoginRadius API.
    */
-  public function loginradius_get_api_response($validate_url, $post = FALSE, $contentType = 'application/x-www-form-urlencoded') {
+  public function loginradiusGetApiResponse($validate_url, $post = FALSE, $content_type = 'application/x-www-form-urlencoded') {
     global $base_url;
-    $data ='';
-	if(!empty($post)){
-    if(is_array($post)){
-      $data = drupal_http_build_query($post);
+    $data = '';
+    if (!empty($post)) {
+      if (is_array($post)) {
+        $data = drupal_http_build_query($post);
+      }
+      else {
+        if ($content_type == 'application/json') {
+          $data = $post;
+        }
+      }
     }
-	else if($contentType == 'application/json'){
-	$data  = $post;
-	}
-	}
-    if(function_exists('drupal_http_request') && !in_array('drupal_http_request', $this->loginradius_get_disabled_functions())) {
+    if (function_exists('drupal_http_request') && !in_array('drupal_http_request', $this->loginradiusGetDisabledFunctions())) {
       $headers = array(
         'Referer' => $base_url,
         'User-Agent' => 'LoginRadius Module',
@@ -435,17 +439,14 @@ class LoginRadius {
           'method' => 'POST',
           'data' => $data,
           'timeout' => 15,
-          'headers' => array('Content-Type' => $contentType),
+          'headers' => array('Content-Type' => $content_type),
         );
       }
 
-
       $result = drupal_http_request($validate_url, $options);
       $jsonresponse = isset($result->data) ? $result->data : '';
-
-
     }
-     if(empty($jsonresponse)  && in_array('curl', get_loaded_extensions())) {
+    if (empty($jsonresponse) && in_array('curl', get_loaded_extensions())) {
       $curl_handle = curl_init();
       curl_setopt($curl_handle, CURLOPT_URL, $validate_url);
       curl_setopt($curl_handle, CURLOPT_CONNECTTIMEOUT, 15);
@@ -453,11 +454,11 @@ class LoginRadius {
       curl_setopt($curl_handle, CURLOPT_ENCODING, 'json');
       curl_setopt($curl_handle, CURLOPT_SSL_VERIFYPEER, FALSE);
       if ($post) {
-        curl_setopt($curl_handle, CURLOPT_HTTPHEADER, array('Content-type: ' . $contentType));
+        curl_setopt($curl_handle, CURLOPT_HTTPHEADER, array('Content-type: ' . $content_type));
         curl_setopt($curl_handle, CURLOPT_POST, 1);
         curl_setopt($curl_handle, CURLOPT_POSTFIELDS, $data);
       }
-      if (ini_get('open_basedir') == '' && (ini_get('safe_mode') == 'Off' or ! ini_get('safe_mode'))) {
+      if (ini_get('open_basedir') == '' && (ini_get('safe_mode') == 'Off' or !ini_get('safe_mode'))) {
         curl_setopt($curl_handle, CURLOPT_FOLLOWLOCATION, 1);
         curl_setopt($curl_handle, CURLOPT_RETURNTRANSFER, TRUE);
         $jsonresponse = curl_exec($curl_handle);
@@ -476,15 +477,21 @@ class LoginRadius {
     }
     return $jsonresponse;
   }
-    function loginradius_get_disabled_functions() {
-        $disabled_functions = trim(ini_get('disable_functions'));
-        if (drupal_strlen($disabled_functions) == 0) {
-            $disabled_functions = array();
-        }
-        else {
-            $disabled_functions = explode(',', $disabled_functions);
-            $disabled_functions = array_map('trim', $disabled_functions);
-        }
-        return $disabled_functions;
+
+  /**
+   * Check disabled funxtions.
+   *
+   * @return array|string
+   */
+  private function loginradiusGetDisabledFunctions() {
+    $disabled_functions = trim(ini_get('disable_functions'));
+    if (drupal_strlen($disabled_functions) == 0) {
+      $disabled_functions = array();
     }
+    else {
+      $disabled_functions = explode(',', $disabled_functions);
+      $disabled_functions = array_map('trim', $disabled_functions);
+    }
+    return $disabled_functions;
+  }
 }

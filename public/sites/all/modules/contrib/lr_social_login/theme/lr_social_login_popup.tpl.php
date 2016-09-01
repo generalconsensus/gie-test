@@ -1,5 +1,7 @@
 <?php
+
 /**
+ * @file
  * Theme email popup.
  */
 $message = variable_get('lr_social_login_emailrequired_popup_top');
@@ -25,8 +27,8 @@ $message = variable_get('lr_social_login_emailrequired_popup_top');
         <div><input type="text" name="email" id="email" class="inputtxt"/></div>
       </div>
       <div class="lr-popup-footer">
-        <input type="submit" name="lr_social_login_emailclick" id="lr_social_login_emailclick"
-               value="Submit" class="button colorless"/>
+        <input type="submit" name="lr_social_login_emailclick"
+               id="lr_social_login_emailclick" value="Submit" class="button colorless"/>
         <input type="submit" name="lr_social_login_emailclick_cancel"
                id="lr_social_login_emailclick_cancel" value="Cancel" class="button colorless"/>
       </div>

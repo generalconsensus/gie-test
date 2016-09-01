@@ -5,6 +5,7 @@ if (window.LoginRadius_Social_JS != true) {
     var options = {};
     options.login = true;
     LoginRadius_SocialLogin.util.ready(function () {
+        var loc = Drupal.settings.lrsociallogin.callback;
         $ui = LoginRadius_SocialLogin.lr_login_settings;
         $ui.interfacesize = Drupal.settings.lrsociallogin.interfacesize;
         $ui.lrinterfacebackground = Drupal.settings.lrsociallogin.lrinterfacebackground;
@@ -12,15 +13,17 @@ if (window.LoginRadius_Social_JS != true) {
         $ui.apikey = Drupal.settings.lrsociallogin.apikey;
         if (detectmob()) {
             $ui.isParentWindowLogin = true;
+            loc = Drupal.settings.lrsociallogin.location;
         }
-		else {
-			$ui.is_access_token = true;
-		}
-        $ui.callback = Drupal.settings.lrsociallogin.location;
+        else {
+            $ui.is_access_token = true;
+        }
+        $ui.callback = loc;
         $ui.lrinterfacecontainer = "interfacecontainerdiv";
         LoginRadius_SocialLogin.init(options);
     });
 }
+if(window.LoginRadiusSDK){
 LoginRadiusSDK.setLoginCallback(function () {
     var token = LoginRadiusSDK.getToken();
     var form = document.createElement('form');
@@ -36,6 +39,7 @@ LoginRadiusSDK.setLoginCallback(function () {
     document.body.appendChild(form);
     form.submit();
 });
+}
 function detectmob() {
     if (navigator.userAgent.match(/Android/i) || navigator.userAgent
         .match(/webOS/i) || navigator.userAgent.match(/iPhone/i) ||

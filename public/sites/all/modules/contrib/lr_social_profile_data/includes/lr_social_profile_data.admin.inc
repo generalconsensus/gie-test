@@ -66,6 +66,8 @@ function lr_social_profile_data_settings_form($form, &$form_state) {
  *
  * @return bool
  */
+/** @noinspection PhpInconsistentReturnPointsInspection */
+/** @noinspection PhpInconsistentReturnPointsInspection */
 function lr_social_profile_data_settings_form_submit($form, &$form_state) {
   if (!lr_social_login_save_settings($form_state)) {
     return FALSE;
@@ -79,14 +81,46 @@ function lr_social_profile_data_settings_form_submit($form, &$form_state) {
   }
 
   if (in_array('extended_profile_data', $lr_social_profile_data_profile_selection)) {
-    $extended_profile_data_array = array('loginradius_extended_profile_data', 'loginradius_positions', 'loginradius_companies', 'loginradius_education', 'loginradius_phone_numbers', 'loginradius_IMaccounts', 'loginradius_addresses', 'loginradius_sports', 'loginradius_inspirational_people', 'loginradius_skills', 'loginradius_current_status', 'loginradius_certifications', 'loginradius_courses', 'loginradius_volunteer', 'loginradius_recommendations_received', 'loginradius_languages', 'loginradius_patents', 'loginradius_favorites', 'loginradius_books', 'loginradius_games', 'loginradius_television_show', 'loginradius_movies');
+    $extended_profile_data_array = array(
+      'loginradius_extended_profile_data',
+      'loginradius_positions',
+      'loginradius_companies',
+      'loginradius_education',
+      'loginradius_phone_numbers',
+      'loginradius_IMaccounts',
+      'loginradius_addresses',
+      'loginradius_sports',
+      'loginradius_inspirational_people',
+      'loginradius_skills',
+      'loginradius_current_status',
+      'loginradius_certifications',
+      'loginradius_courses',
+      'loginradius_volunteer',
+      'loginradius_recommendations_received',
+      'loginradius_languages',
+      'loginradius_patents',
+      'loginradius_favorites',
+      'loginradius_books',
+      'loginradius_games',
+      'loginradius_television_show',
+      'loginradius_movies',
+    );
 
     foreach ($extended_profile_data_array as $table_name) {
       lr_social_profile_data_check_table_exists_and_create($table_name);
     }
   }
 
-  $create_table = array('extended_location_data' => 'loginradius_extended_location_data', 'followed_companies_on' => 'loginradius_linkedin_companies', 'facebook_profile_events' => 'loginradius_facebook_events', 'status_message' => 'loginradius_status', 'facebook_posts' => 'loginradius_facebook_posts', 'twitter_mentions' => 'loginradius_twitter_mentions', 'lr_groups' => 'loginradius_groups', 'lr_contacts' => 'loginradius_contacts');
+  $create_table = array(
+    'extended_location_data' => 'loginradius_extended_location_data',
+    'followed_companies_on' => 'loginradius_linkedin_companies',
+    'facebook_profile_events' => 'loginradius_facebook_events',
+    'status_message' => 'loginradius_status',
+    'facebook_posts' => 'loginradius_facebook_posts',
+    'twitter_mentions' => 'loginradius_twitter_mentions',
+    'lr_groups' => 'loginradius_groups',
+    'lr_contacts' => 'loginradius_contacts',
+  );
 
   foreach ($create_table as $table_key => $table_name) {
     lr_social_profile_data_check_table_selected_in_database($table_key, $table_name, $lr_social_profile_data_profile_selection);

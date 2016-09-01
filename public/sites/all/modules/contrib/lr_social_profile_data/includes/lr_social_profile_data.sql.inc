@@ -7,8 +7,8 @@
 
 /**
  * basic profile data table schema
- * 
- * @return array Schema of basic profile data table 
+ *
+ * @return array Schema of basic profile data table
  */
 function lr_social_profile_data_loginradius_basic_profile_data() {
   return array(
@@ -135,8 +135,8 @@ function lr_social_profile_data_loginradius_basic_profile_data() {
 
 /**
  * email table schema
- * 
- * @return array Schema of email table 
+ *
+ * @return array Schema of email table
  */
 function lr_social_profile_data_loginradius_emails() {
   return array(
@@ -166,8 +166,8 @@ function lr_social_profile_data_loginradius_emails() {
 
 /**
  * extended location schema
- * 
- * @return array Schema of table 
+ *
+ * @return array Schema of table
  */
 function lr_social_profile_data_loginradius_extended_location_data() {
   return array(
@@ -240,8 +240,8 @@ function lr_social_profile_data_loginradius_extended_location_data() {
 
 /**
  * Extended profile data table schema
- * 
- * @return array Schema of Extended profile data table 
+ *
+ * @return array Schema of Extended profile data table
  */
 function lr_social_profile_data_loginradius_extended_profile_data() {
   return array(
@@ -426,8 +426,8 @@ function lr_social_profile_data_loginradius_extended_profile_data() {
 
 /**
  * position table schema
- * 
- * @return array Schema of position table 
+ *
+ * @return array Schema of position table
  */
 function lr_social_profile_data_loginradius_positions() {
   return array(
@@ -487,8 +487,8 @@ function lr_social_profile_data_loginradius_positions() {
 
 /**
  * companies table schema
- * 
- * @return array Schema of companies table 
+ *
+ * @return array Schema of companies table
  */
 function lr_social_profile_data_loginradius_companies() {
   return array(
@@ -525,8 +525,8 @@ function lr_social_profile_data_loginradius_companies() {
 
 /**
  * education table schema
- * 
- * @return array Schema of education table 
+ *
+ * @return array Schema of education table
  */
 function lr_social_profile_data_loginradius_education() {
   return array(
@@ -598,8 +598,8 @@ function lr_social_profile_data_loginradius_education() {
 
 /**
  * phone number table schema
- * 
- * @return array Schema of phone number table 
+ *
+ * @return array Schema of phone number table
  */
 function lr_social_profile_data_loginradius_phone_numbers() {
   return array(
@@ -629,8 +629,8 @@ function lr_social_profile_data_loginradius_phone_numbers() {
 
 /**
  * im account table schema
- * 
- * @return array Schema of  im account table 
+ *
+ * @return array Schema of  im account table
  */
 function lr_social_profile_data_loginradius_IMaccounts() {
   return array(
@@ -660,8 +660,8 @@ function lr_social_profile_data_loginradius_IMaccounts() {
 
 /**
  * address table schema
- * 
- * @return array Schema of address table 
+ *
+ * @return array Schema of address table
  */
 function lr_social_profile_data_loginradius_addresses() {
   return array(
@@ -721,8 +721,8 @@ function lr_social_profile_data_loginradius_addresses() {
 
 /**
  * sport table schema
- * 
- * @return array Schema of sport table 
+ *
+ * @return array Schema of sport table
  */
 function lr_social_profile_data_loginradius_sports() {
   return array(
@@ -752,8 +752,8 @@ function lr_social_profile_data_loginradius_sports() {
 
 /**
  * inspirational peorple table schema
- * 
- * @return array Schema of inspirational table 
+ *
+ * @return array Schema of inspirational table
  */
 function lr_social_profile_data_loginradius_inspirational_people() {
   return array(
@@ -783,8 +783,8 @@ function lr_social_profile_data_loginradius_inspirational_people() {
 
 /**
  * skill table schema
- * 
- * @return array Schema of skill table 
+ *
+ * @return array Schema of skill table
  */
 function lr_social_profile_data_loginradius_skills() {
   return array(
@@ -814,8 +814,8 @@ function lr_social_profile_data_loginradius_skills() {
 
 /**
  * current status table schema
- * 
- * @return array Schema of current status table 
+ *
+ * @return array Schema of current status table
  */
 function lr_social_profile_data_loginradius_current_status() {
   return array(
@@ -856,8 +856,8 @@ function lr_social_profile_data_loginradius_current_status() {
 
 /**
  * certification table schema
- * 
- * @return array Schema of certification table 
+ *
+ * @return array Schema of certification table
  */
 function lr_social_profile_data_loginradius_certifications() {
   return array(
@@ -911,8 +911,8 @@ function lr_social_profile_data_loginradius_certifications() {
 
 /**
  * courses table schema
- * 
- * @return array Schema of courses table 
+ *
+ * @return array Schema of courses table
  */
 function lr_social_profile_data_loginradius_courses() {
   return array(
@@ -948,8 +948,8 @@ function lr_social_profile_data_loginradius_courses() {
 
 /**
  * volunteer table schema
- * 
- * @return array Schema of volunteer table 
+ *
+ * @return array Schema of volunteer table
  */
 function lr_social_profile_data_loginradius_volunteer() {
   return array(
@@ -991,8 +991,8 @@ function lr_social_profile_data_loginradius_volunteer() {
 
 /**
  * recommdention received table schema
- * 
- * @return array Schema of recommdention received table 
+ *
+ * @return array Schema of recommdention received table
  */
 function lr_social_profile_data_loginradius_recommendations_received() {
   return array(
@@ -1033,8 +1033,8 @@ function lr_social_profile_data_loginradius_recommendations_received() {
 
 /**
  * language table schema
- * 
- * @return array Schema of language table 
+ *
+ * @return array Schema of language table
  */
 function lr_social_profile_data_loginradius_languages() {
   return array(
@@ -1064,8 +1064,8 @@ function lr_social_profile_data_loginradius_languages() {
 
 /**
  * patent table schema
- * 
- * @return array Schema of patent table 
+ *
+ * @return array Schema of patent table
  */
 function lr_social_profile_data_loginradius_patents() {
   return array(
@@ -1098,6 +1098,7 @@ function lr_social_profile_data_loginradius_patents() {
     ),
   );
 }
+
 /**
  * game table schema
  *
@@ -1269,10 +1270,11 @@ function lr_social_profile_data_loginradius_books() {
     ),
   );
 }
+
 /**
  * favorites table schema
- * 
- * @return array Schema of favorites table 
+ *
+ * @return array Schema of favorites table
  */
 function lr_social_profile_data_loginradius_favorites() {
   return array(
@@ -1308,8 +1310,8 @@ function lr_social_profile_data_loginradius_favorites() {
 
 /**
  * linkedin companes table schema
- * 
- * @return array Schema of linkedin companes table 
+ *
+ * @return array Schema of linkedin companes table
  */
 function lr_social_profile_data_loginradius_linkedin_companies() {
   return array(
@@ -1339,8 +1341,8 @@ function lr_social_profile_data_loginradius_linkedin_companies() {
 
 /**
  * facebook events table schema
- * 
- * @return array Schema of facebook events table 
+ *
+ * @return array Schema of facebook events table
  */
 function lr_social_profile_data_loginradius_facebook_events() {
   return array(
@@ -1358,53 +1360,53 @@ function lr_social_profile_data_loginradius_facebook_events() {
         'not null' => FALSE,
         'description' => 'event_id ID of the user table.',
       ),
-        'owner_id' => array(
-            'type' => 'varchar',
-            'length' => 30,
-            'not null' => FALSE,
-            'description' => 'owner_id ID of the user table.',
-        ),
-        'owner_name' => array(
-            'type' => 'varchar',
-            'length' => 100,
-            'not null' => FALSE,
-            'description' => 'event_id ID of the user table.',
-        ),
+      'owner_id' => array(
+        'type' => 'varchar',
+        'length' => 30,
+        'not null' => FALSE,
+        'description' => 'owner_id ID of the user table.',
+      ),
+      'owner_name' => array(
+        'type' => 'varchar',
+        'length' => 100,
+        'not null' => FALSE,
+        'description' => 'event_id ID of the user table.',
+      ),
       'event' => array(
         'type' => 'varchar',
         'length' => 500,
         'not null' => FALSE,
         'description' => 'event of user',
       ),
-        'description' => array(
-            'type' => 'text',
-            'not null' => FALSE,
-            'description' => 'description of event',
-        ),
+      'description' => array(
+        'type' => 'text',
+        'not null' => FALSE,
+        'description' => 'description of event',
+      ),
       'start_time' => array(
         'type' => 'varchar',
         'length' => 30,
         'not null' => FALSE,
         'description' => 'start_time of user',
       ),
-        'updated_date' => array(
-            'type' => 'varchar',
-            'length' => 30,
-            'not null' => FALSE,
-            'description' => 'updated_time of user',
-        ),
-        'end_time' => array(
-            'type' => 'varchar',
-            'length' => 30,
-            'not null' => FALSE,
-            'description' => 'end_time of user',
-        ),
-        'privacy' => array(
-            'type' => 'varchar',
-            'length' => 30,
-            'not null' => FALSE,
-            'description' => 'privacy',
-        ),
+      'updated_date' => array(
+        'type' => 'varchar',
+        'length' => 30,
+        'not null' => FALSE,
+        'description' => 'updated_time of user',
+      ),
+      'end_time' => array(
+        'type' => 'varchar',
+        'length' => 30,
+        'not null' => FALSE,
+        'description' => 'end_time of user',
+      ),
+      'privacy' => array(
+        'type' => 'varchar',
+        'length' => 30,
+        'not null' => FALSE,
+        'description' => 'privacy',
+      ),
       'rsvp_status' => array(
         'type' => 'varchar',
         'length' => 50,
@@ -1423,8 +1425,8 @@ function lr_social_profile_data_loginradius_facebook_events() {
 
 /**
  * status table schema
- * 
- * @return array Schema of status table 
+ *
+ * @return array Schema of status table
  */
 function lr_social_profile_data_loginradius_status() {
   return array(
@@ -1495,8 +1497,8 @@ function lr_social_profile_data_loginradius_status() {
 
 /**
  * facebook posts table schema
- * 
- * @return array Schema of facebook posts table 
+ *
+ * @return array Schema of facebook posts table
  */
 function lr_social_profile_data_loginradius_facebook_posts() {
   return array(
@@ -1573,8 +1575,8 @@ function lr_social_profile_data_loginradius_facebook_posts() {
 
 /**
  * twitter mention table schema
- * 
- * @return array Schema of twitter mention table 
+ *
+ * @return array Schema of twitter mention table
  */
 function lr_social_profile_data_loginradius_twitter_mentions() {
   return array(
@@ -1645,8 +1647,8 @@ function lr_social_profile_data_loginradius_twitter_mentions() {
 
 /**
  * group table schema
- * 
- * @return array Schema of group table 
+ *
+ * @return array Schema of group table
  */
 function lr_social_profile_data_loginradius_groups() {
   return array(
@@ -1676,61 +1678,61 @@ function lr_social_profile_data_loginradius_groups() {
         'not null' => FALSE,
         'description' => 'group_name of user',
       ),
-        'email' => array(
-            'type' => 'varchar',
-            'length' => 100,
-            'not null' => FALSE,
-            'description' => 'email of group user',
-        ),
-        'group_description' => array(
-            'type' => 'text',
-            'not null' => FALSE,
-            'description' => 'description of group user',
-        ),
-        'type' => array(
-            'type' => 'varchar',
-            'length' => 100,
-            'not null' => FALSE,
-            'description' => 'type of group user',
-        ),
-        'country' => array(
-            'type' => 'varchar',
-            'length' => 30,
-            'not null' => FALSE,
-            'description' => 'country of group user',
-        ),
-        'postal_code' => array(
-            'type' => 'varchar',
-            'length' => 100,
-            'not null' => FALSE,
-            'description' => 'postal_code of group user',
-        ),
-        'logo' => array(
-            'type' => 'varchar',
-            'length' => 1000,
-            'not null' => FALSE,
-            'description' => 'logo of group user',
-        ),
-        'image_url' => array(
-            'type' => 'varchar',
-            'length' => 1000,
-            'not null' => FALSE,
-            'description' => 'image_url of group user',
-        ),
-        'member_count' => array(
-            'type' => 'int',
-            'length' => 11,
-            'not null' => FALSE,
-            'description' => 'members count of group user.',
-        ),
+      'email' => array(
+        'type' => 'varchar',
+        'length' => 100,
+        'not null' => FALSE,
+        'description' => 'email of group user',
+      ),
+      'group_description' => array(
+        'type' => 'text',
+        'not null' => FALSE,
+        'description' => 'description of group user',
+      ),
+      'type' => array(
+        'type' => 'varchar',
+        'length' => 100,
+        'not null' => FALSE,
+        'description' => 'type of group user',
+      ),
+      'country' => array(
+        'type' => 'varchar',
+        'length' => 30,
+        'not null' => FALSE,
+        'description' => 'country of group user',
+      ),
+      'postal_code' => array(
+        'type' => 'varchar',
+        'length' => 100,
+        'not null' => FALSE,
+        'description' => 'postal_code of group user',
+      ),
+      'logo' => array(
+        'type' => 'varchar',
+        'length' => 1000,
+        'not null' => FALSE,
+        'description' => 'logo of group user',
+      ),
+      'image_url' => array(
+        'type' => 'varchar',
+        'length' => 1000,
+        'not null' => FALSE,
+        'description' => 'image_url of group user',
+      ),
+      'member_count' => array(
+        'type' => 'int',
+        'length' => 11,
+        'not null' => FALSE,
+        'description' => 'members count of group user.',
+      ),
     ),
   );
 }
 
 /**
  * contacts table schema
- * 
- * @return array Schema of contacts table 
+ *
+ * @return array Schema of contacts table
  */
 function lr_social_profile_data_loginradius_contacts() {
   return array(
@@ -1807,18 +1809,18 @@ function lr_social_profile_data_loginradius_contacts() {
         'not null' => FALSE,
         'description' => 'gender of user',
       ),
-        'location' => array(
-            'type' => 'varchar',
-            'length' => 50,
-            'not null' => FALSE,
-            'description' => 'gender of user',
-        ),
-        'birth_date' => array(
-            'type' => 'varchar',
-            'length' => 30,
-            'not null' => FALSE,
-            'description' => 'Date of Birth of User.',
-        ),
+      'location' => array(
+        'type' => 'varchar',
+        'length' => 50,
+        'not null' => FALSE,
+        'description' => 'gender of user',
+      ),
+      'birth_date' => array(
+        'type' => 'varchar',
+        'length' => 30,
+        'not null' => FALSE,
+        'description' => 'Date of Birth of User.',
+      ),
     ),
   );
 }
