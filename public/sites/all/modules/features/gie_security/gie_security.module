@@ -19,18 +19,161 @@ function gie_security_form_node_form_alter(&$form) {
     'organization',
     'program',
     'blogs',
-    'news'
+    'news',
   );
 
   $admin_role = user_role_load_by_name('administrator');
   // Set field visibility based on whether the user is an admin
-  if (in_array($form['type']['#value'], $types) && !(user_has_role($admin_role->rid))) {
+  if (in_array($form['type']['#value'], $types) && !(user_has_role(
+      $admin_role->rid
+    ))
+  ) {
     $form['#submit'][] = 'gie_security_new_relic_insights';
   }
 }
 
 function gie_security_new_relic_insights($form, $form_state) {
-  if (module_exists('new_relic_insights') && function_exists('new_relic_insights_post_event') && !empty($form_state['values']['title_field']['und'][0]['value'])) {
-    new_relic_insights_post_event($form_state['values']['title_field']['und'][0]['value']);
+  if (module_exists('new_relic_insights') && function_exists(
+      'new_relic_insights_post_event'
+    ) && !empty($form_state['values']['title_field']['und'][0]['value'])
+  ) {
+    new_relic_insights_post_event(
+      $form_state['values']['title_field']['und'][0]['value']
+    );
   }
+}
+
+
+/**
+ * Implements hook_node_validate().
+ */
+function gie_security_node_validate($node, $form, &$form_state) {
+  global $user;
+  $content = array();
+
+  switch ($node->type) {
+    case 'discussion':
+      $content[] = $node->field_discussion_desc['und'][0]['value'];
+      break;
+  }
+
+
+  if (_gie_security_parse_content($content) && _gie_security_previous_offender($user)) {
+    gie_security_content_publish_operation('node', $node, 'unpublish', TRUE);
+  }
+  else {
+    return TRUE;
+  }
+
+}
+
+function _gie_security_previous_offender($user) {
+  if (empty($user->uid)) {
+    return FALSE;
+  }
+
+  // Ignore Administrators or Microsite Administrators
+  if (user_has_role(3) || user_has_role(9)) {
+    return FALSE;
+  }
+
+  $previous_content = db_query('select nid from node 
+  left join users_roles on users_roles.uid = node.uid 
+  where node.uid = :uid AND node.status = :status order by changed desc',
+    array(':uid' => $user->uid, ':status' => 0)
+  )->rowCount();
+
+  if ($previous_content >= 3) {
+    return TRUE;
+  }
+}
+
+function _gie_security_parse_content($content) {
+  $bad_words = array(
+    'http',
+    'http',
+    'www',
+    'episode',
+    'Episode',
+    'Streaming',
+    'streaming',
+    'Film',
+    'film',
+    'movie',
+    'Movie',
+    'Watch Online',
+    'watch online',
+  );
+
+  foreach ($content as $piece) {
+    if (_gie_security_strposa($piece, $bad_words)) {
+      return TRUE;
+    }
+  }
+}
+
+/*
+ * CREDIT to Antispam Module
+ */
+function gie_security_content_publish_operation(
+  $content_type,
+  $content,
+  $op,
+  $log_action = TRUE
+) {
+  // This code snippet is based on node.module::node_admin_nodes_submit().
+  // Only the node record is updated, no other hooks are invoked.
+
+  // Perform the update action.
+  db_update('node')
+    ->fields(
+      array(
+        'status' => ($op == 'publish' ? 1 : 0),
+      )
+    )
+    ->condition('nid', $content->nid)
+    ->execute();
+
+  // Perform the update action of the revision.
+  db_update('node_revision')
+    ->fields(
+      array(
+        'status' => ($op == 'publish' ? 1 : 0),
+      )
+    )
+    ->condition('nid', $content->nid)
+    ->condition('vid', $content->vid)
+    ->execute();
+
+  // Reset the cache for the updated node in order to update the dmin views.
+  entity_get_controller('node')->resetCache(array($content->nid));
+
+  if ($log_action) {
+    $action = ($op == 'publish' ? t('Content published') : t(
+      'Content unpublished'
+    ));
+    watchdog(
+      'content',
+      '@action: @title',
+      array('@action' => $action, '@title' => $content->title),
+      WATCHDOG_NOTICE,
+      l(t('view'), 'node/' . $content->nid)
+    );
+  }
+
+}
+
+/*
+ *  CREDIT: http://stackoverflow.com/questions/6284553/using-an-array-as-needles-in-strpos
+ */
+function _gie_security_strposa($haystack, $needle, $offset = 0) {
+  if (!is_array($needle)) {
+    $needle = array($needle);
+  }
+  foreach ($needle as $query) {
+    if (strpos($haystack, $query, $offset) !== FALSE) {
+      return TRUE;
+    } // stop on first true result
+  }
+  return FALSE;
 }
