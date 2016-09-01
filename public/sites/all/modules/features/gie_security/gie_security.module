@@ -79,6 +79,18 @@ function _gie_security_node_save($node) {
     case 'event':
       $content[] = $node->field_event_description['und'][0]['value'];
       break;
+    case 'innovation':
+      $content[] = $node->field_innovation_desc['und'][0]['value'];
+      break;
+    case 'funding':
+      $content[] = $node->field_funding_desc['und'][0]['value'];
+      break;
+    case 'needs':
+      $content[] = $node->body['und'][0]['value'];
+      break;
+    case 'resource':
+      $content[] = $node->field_resource_desc['und'][0]['value'];
+      break;
   }
   $content_flag = _gie_security_parse_content($content);
   $user_flag = _gie_security_previous_offender($user);
