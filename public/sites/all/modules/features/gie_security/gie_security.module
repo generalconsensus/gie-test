@@ -122,6 +122,8 @@ function _gie_security_previous_offender($user) {
 
   if ($previous_content >= 3) {
     return TRUE;
+  } else {
+    return FALSE;
   }
 }
 
@@ -150,11 +152,13 @@ function gie_security_content_publish_operation(
   // This code snippet is based on node.module::node_admin_nodes_submit().
   // Only the node record is updated, no other hooks are invoked.
 
+  $content->status = $op == 'publish' ? 1 : 0;
+
   // Perform the update action.
   db_update('node')
     ->fields(
       array(
-        'status' => ($op == 'publish' ? 1 : 0),
+        'status' => $content->status
       )
     )
     ->condition('nid', $content->nid)
@@ -164,12 +168,15 @@ function gie_security_content_publish_operation(
   db_update('node_revision')
     ->fields(
       array(
-        'status' => ($op == 'publish' ? 1 : 0),
+        'status' => $content->status
       )
     )
     ->condition('nid', $content->nid)
     ->condition('vid', $content->vid)
     ->execute();
+
+  // need to update user access to the node
+  node_access_acquire_grants($content);
 
   // Reset the cache for the updated node in order to update the dmin views.
   entity_get_controller('node')->resetCache(array($content->nid));
