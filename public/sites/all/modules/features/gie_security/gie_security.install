@@ -1,0 +1,28 @@
+<?php
+
+/*
+ * Adds default variable bad words
+ */
+function gie_security_update_7000() {
+  $bad_words = array(
+    'http',
+    'http',
+    'www',
+    'episode',
+    'Episode',
+    'Streaming',
+    'streaming',
+    'Film',
+    'film',
+    'movie',
+    'Movie',
+    'Watch Online',
+    'watch online',
+    'MEGASHARE',
+    'VODLOCKER',
+    'Putlocker',
+    'STREAMING',
+  );
+
+  variable_set('gie_security_bad_words', $bad_words);
+}
