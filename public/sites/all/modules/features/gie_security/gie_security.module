@@ -7,44 +7,6 @@
 include_once 'gie_security.features.inc';
 
 /**
- * @param $form
- * @param $form_state
- */
-function gie_security_form_node_form_alter(&$form) {
-  $types = array(
-    'innovation',
-    'funding',
-    'resource',
-    'event',
-    'organization',
-    'program',
-    'blogs',
-    'news',
-  );
-
-  $admin_role = user_role_load_by_name('administrator');
-  // Set field visibility based on whether the user is an admin
-  if (in_array($form['type']['#value'], $types) && !(user_has_role(
-      $admin_role->rid
-    ))
-  ) {
-    $form['#submit'][] = 'gie_security_new_relic_insights';
-  }
-}
-
-function gie_security_new_relic_insights($form, $form_state) {
-  if (module_exists('new_relic_insights') && function_exists(
-      'new_relic_insights_post_event'
-    ) && !empty($form_state['values']['title_field']['und'][0]['value'])
-  ) {
-    new_relic_insights_post_event(
-      $form_state['values']['title_field']['und'][0]['value']
-    );
-  }
-}
-
-
-/**
  * Implements hook_node_validate().
  */
 function gie_security_node_validate($node, $form, &$form_state) {
@@ -54,6 +16,12 @@ function gie_security_node_validate($node, $form, &$form_state) {
   switch ($node->type) {
     case 'discussion':
       $content[] = $node->field_discussion_desc['und'][0]['value'];
+      break;
+    case 'organization':
+      $content[] = $node->field_org_desc['und'][0]['value'];
+      break;
+    case 'event':
+      $content[] = $node->field_event_description['und'][0]['value'];
       break;
   }
 
@@ -153,7 +121,7 @@ function gie_security_content_publish_operation(
       'Content unpublished'
     ));
     watchdog(
-      'content',
+      'gie_security',
       '@action: @title',
       array('@action' => $action, '@title' => $content->title),
       WATCHDOG_NOTICE,
