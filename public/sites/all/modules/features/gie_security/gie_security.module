@@ -75,8 +75,6 @@ function gie_security_bad_words_settings_form_submit($form, &$form_state) {
   }
 }
 
-
-
 /**
  * Implements hook_form_BASE_FORM_ID_alter().
  */
@@ -94,7 +92,7 @@ function _gie_security_banned_mail_domain_validate($form, $form_state) {
 
     // Validate the e-mail address.
     if (_gie_security_strposa($form_state['values']['mail'], $bad_domains)) {
-      form_set_error('mail', t('The e-mail address %email has been reported as disposable.', array('%email' => $form_state['values']['mail'])));
+      form_set_error('mail', t('The e-mail address %email has been reported as disposable. Please contact an admin at info@globalinnovationexchange.org for further assistance', array('%email' => $form_state['values']['mail'])));
       watchdog(
         'gie_security_MB',
         '@action: @mail',
