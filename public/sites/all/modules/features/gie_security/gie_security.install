@@ -523,3 +523,16 @@ function gie_security_update_7001() {
 
   variable_set('gie_security_bad_email_domains', $bad_email_domains);
 }
+
+/**
+ * Set gie_security module weight to -1
+ */
+function gie_security_update_7002() {
+  db_update('system')
+      ->fields(array(
+          'weight' => -1,
+      ))
+      ->condition('type', 'module')
+      ->condition('name', 'gie_security')
+      ->execute();
+}
