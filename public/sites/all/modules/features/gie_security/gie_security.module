@@ -262,10 +262,12 @@ function gie_security_content_publish_operation(
     case 'node':
       $content_id = 'nid';
       $content_id_value = $content->nid;
+      $title = $content->title;
       break;
     case 'comment':
       $content_id = 'cid';
       $content_id_value = $content->cid;
+      $title = $content->subject;
       break;
     default:
       // entity type not found, exit function so we don't query some weird data
@@ -320,7 +322,7 @@ function gie_security_content_publish_operation(
     watchdog(
       $flag,
       '@action: @title',
-      array('@action' => $action, '@title' => $content->title),
+      array('@action' => $action, '@title' => $title),
       WATCHDOG_NOTICE
     );
   }
