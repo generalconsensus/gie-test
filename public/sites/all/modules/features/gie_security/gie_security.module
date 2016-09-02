@@ -121,6 +121,44 @@ function gie_security_node_update($node) {
   _gie_security_node_save($node);
 }
 
+/**
+ * Implements hook_comment_insert().
+ */
+function gie_security_comment_insert($comment) {
+  _gie_security_comment_save($comment);
+}
+
+/**
+ * Implements hook_comment_update().
+ */
+function gie_security_comment_update($comment) {
+  _gie_security_comment_save($comment);
+}
+
+/**
+ * Check comment info against list of banned words.
+ */
+function _gie_security_comment_save($comment) {
+  global $user;
+  // Ignore Administrators or Microsite Administrators
+  if (user_has_role(3) || user_has_role(9)) {
+    //return FALSE;
+  }
+
+  // initialize content array to be parsed later
+  $content = array();
+
+  // get info from the comment
+  $language = $comment->language;
+  $content[] = $comment->comment_body[$language][0]['value'];
+
+  $content_flag = _gie_security_parse_content($content);
+  $user_flag = _gie_security_previous_offender($user);
+
+  if ($content_flag || $user_flag) {
+    gie_security_content_publish_operation('comment', $comment, 'unpublish', TRUE, $content_flag, $user_flag);
+  }
+}
 
 /**
  * Implements hook_node_validate().
@@ -180,7 +218,12 @@ function _gie_security_previous_offender($user) {
     array(':uid' => $user->uid, ':status' => 0)
   )->rowCount();
 
-  if ($previous_content >= 3) {
+  $previous_comments = db_query('select cid from comment
+  where comment.uid = :uid AND comment.status = :status order by changed desc',
+    array(':uid' => $user->uid, ':status' => 0)
+  )->rowCount();
+
+  if ($previous_content >= 3 || $previous_comments >= 3) {
     return TRUE;
   } else {
     return FALSE;
@@ -214,32 +257,52 @@ function gie_security_content_publish_operation(
 
   $content->status = $op == 'publish' ? 1 : 0;
 
+  // assign variables based on entity type
+  switch ($content_type) {
+    case 'node':
+      $content_id = 'nid';
+      $content_id_value = $content->nid;
+      $title = $content->title;
+      break;
+    case 'comment':
+      $content_id = 'cid';
+      $content_id_value = $content->cid;
+      $title = $content->subject;
+      break;
+    default:
+      // entity type not found, exit function so we don't query some weird data
+      return;
+  }
+
   // Perform the update action.
-  db_update('node')
+  db_update($content_type)
     ->fields(
       array(
         'status' => $content->status
       )
     )
-    ->condition('nid', $content->nid)
+    ->condition($content_id, $content_id_value)
     ->execute();
 
-  // Perform the update action of the revision.
-  db_update('node_revision')
-    ->fields(
-      array(
-        'status' => $content->status
-      )
-    )
-    ->condition('nid', $content->nid)
-    ->condition('vid', $content->vid)
-    ->execute();
+  // ONLY NEEDED FOR NODE ENTITY TYPES
+  if ($content_type == 'node') {
+    // Perform the update action of the revision.
+    db_update('node_revision')
+        ->fields(
+            array(
+                'status' => $content->status
+            )
+        )
+        ->condition('nid', $content->nid)
+        ->condition('vid', $content->vid)
+        ->execute();
 
-  // need to update user access to the node
-  node_access_acquire_grants($content);
+    // need to update user access to the node
+    node_access_acquire_grants($content);
 
-  // Reset the cache for the updated node in order to update the dmin views.
-  entity_get_controller('node')->resetCache(array($content->nid));
+    // Reset the cache for the updated node in order to update the dmin views.
+    entity_get_controller('node')->resetCache(array($content->nid));
+  }
 
   if ($log_action) {
     $action = ($op == 'publish' ? t('Content published') : t(
@@ -259,7 +322,7 @@ function gie_security_content_publish_operation(
     watchdog(
       $flag,
       '@action: @title',
-      array('@action' => $action, '@title' => $content->title),
+      array('@action' => $action, '@title' => $title),
       WATCHDOG_NOTICE
     );
   }
