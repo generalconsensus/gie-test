@@ -50,7 +50,7 @@ function gie_security_banned_email_domains_settings_form($form) {
 
 function gie_security_banned_email_domains_settings_form_submit($form, &$form_state) {
   if (!empty($form_state['values']) && !empty($form_state['values']['banned_email_domains'])) {
-    variable_set('gie_security_bad_email_domains', explode(',', $form_state['values']['banned_words']));
+    variable_set('gie_security_bad_email_domains', explode(',', $form_state['values']['banned_email_domains']));
   }
 }
 
@@ -91,7 +91,7 @@ function _gie_security_banned_mail_domain_validate($form, $form_state) {
     $bad_domains = variable_get('gie_security_bad_email_domains');
 
     // Validate the e-mail address.
-    if (_gie_security_strposa($form_state['values']['mail'], $bad_domains)) {
+    if (_gie_security_strposa(trim($form_state['values']['mail']), $bad_domains)) {
       form_set_error('mail', t('The e-mail address %email has been reported as disposable. Please contact an admin at info@globalinnovationexchange.org for further assistance', array('%email' => $form_state['values']['mail'])));
       watchdog(
         'gie_security_MB',
