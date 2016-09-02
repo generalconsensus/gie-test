@@ -50,7 +50,9 @@ function gie_security_banned_email_domains_settings_form($form) {
 
 function gie_security_banned_email_domains_settings_form_submit($form, &$form_state) {
   if (!empty($form_state['values']) && !empty($form_state['values']['banned_email_domains'])) {
-    variable_set('gie_security_bad_email_domains', explode(',', $form_state['values']['banned_email_domains']));
+    $banned_emails = explode(',', $form_state['values']['banned_email_domains']);
+    $banned_emails = array_map('trim', $banned_emails);
+    variable_set('gie_security_bad_email_domains', $banned_emails);
   }
 }
 
@@ -71,7 +73,9 @@ function gie_security_bad_words_settings_form($form) {
 
 function gie_security_bad_words_settings_form_submit($form, &$form_state) {
   if (!empty($form_state['values']) && !empty($form_state['values']['banned_words'])) {
-    variable_set('gie_security_bad_words', explode(',', $form_state['values']['banned_words']));
+    $banned_words = explode(',', $form_state['values']['banned_words']);
+    $banned_words = array_map('trim', $banned_words);
+    variable_set('gie_security_bad_words', $banned_words);
   }
 }
 
