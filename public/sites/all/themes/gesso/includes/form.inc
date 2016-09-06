@@ -131,8 +131,9 @@ function gesso_form_element($vars) {
               $output .= '<div class="form-item__description description">'.$element['#description']."</div>\n";
           }
       }
-
-    $output .= '</div></div>';
+    if ($element['#theme'] != 'textarea' ||  !in_array('ckeditor_pre_render_text_format', $element['#pre_render'])) {
+      $output .= '</div></div>';
+    }
     return $output;
 
 
@@ -424,7 +425,7 @@ function gesso_fieldset($vars) {
   $output = '<fieldset' . drupal_attributes($element['#attributes']) . '>';
   if (!empty($element['#title'])) {
 
-//    $output = (module_exists('multistep') && !empty($vars['element']) && !empty($vars['element']['#entity']) && is_multistep($vars['element']['#entity'])) ? '<div class="form-item__label-container">' . $output : '';
+    $output = (module_exists('multistep') && !empty($vars['element']) && !empty($vars['element']['#entity']) && is_multistep($vars['element']['#entity'])) ? '<div class="form-item__label-container">' . $output : '';
     // Always wrap fieldset legends in a SPAN for CSS positioning.
     if ($only_use_smacss) {
       $output .= '<legend class="fieldset__legend"><span class="fieldset__legend-text">' . $element['#title'] . '</span></legend>';
@@ -432,11 +433,11 @@ function gesso_fieldset($vars) {
     else {
       $output .= '<legend class="fieldset__legend"><span class="fieldset__legend-text fieldset-legend">' . $element['#title'] . '</span></legend>';
     }
-//    $output .= (module_exists('multistep') && !empty($vars['element']) && !empty($vars['element']['#entity']) && is_multistep($vars['element']['#entity'])) ? '</div>'  : '';
+    $output .= (module_exists('multistep') && !empty($vars['element']) && !empty($vars['element']['#entity']) && is_multistep($vars['element']['#entity'])) ? '</div>'  : '';
 
   }
 
-//    $output .= (module_exists('multistep') && !empty($vars['element']) && !empty($vars['element']['#entity']) && is_multistep($vars['element']['#entity'])) ? '<div class="form-item__content-container">' : '';
+    $output .= (module_exists('multistep') && !empty($vars['element']) && !empty($vars['element']['#entity']) && is_multistep($vars['element']['#entity'])) ? '<div class="form-item__content-container">' : '';
 
   if ($only_use_smacss) {
     $output .= '<div class="fieldset__content">';
@@ -724,6 +725,41 @@ function _gesso_form_set_class(&$element, $class = array()) {
     if (!$only_use_smacss) {
       $element['#attributes']['class'][] = 'error';
     }
+  }
+}
+
+function gesso_text_format_wrapper($element) {
+  if (module_exists(
+      'multistep'
+    ) && !empty($element['element']) && !empty($element['element']['value']) && !empty($element['element']['value']['#entity']) && is_multistep(
+      $element['element']['value']['#entity']
+    )
+  ) {
+
+    $output = $element['element']['value']['#children'];
+
+    if (!empty($element['element']['#description'])) {
+      $output .= '</br><div class="description">' . $element['element']['#description'] . '</div>';
+    }
+    if (!empty($element['element']['value']['#suffix'])) {
+      $output .= $element['element']['value']['#suffix'];
+    }
+    if (!empty($element['element']['format']['#children'])) {
+      $output .= $element['element']['format']['#children'];
+    }
+    $output .= "</div></div>\n";
+
+    return $output;
+  }
+  else {
+    $output = '<div class="text-format-wrapper">';
+    $output .= $element['#children'];
+    if (!empty($element['#description'])) {
+      $output .= '<div class="description">' . $element['#description'] . '</div>';
+    }
+    $output .= "</div>\n";
+
+    return $output;
   }
 }
 
