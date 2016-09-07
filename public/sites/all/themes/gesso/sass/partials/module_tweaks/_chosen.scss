@@ -1,7 +1,7 @@
-.chosen-choices li {
-  .pane__content & { // undo bullet from _html-elements
-    &:before {
-      display: none;
-    }
-  }  
+.chosen-choices, .chosen-results {
+   li {
+     &:before {  // undo bullet from _html-elements
+       display: none !important;
+     }
+   }
 }

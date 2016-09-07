@@ -107,7 +107,7 @@ function gie_general_default_page_manager_handlers() {
   $export['contact_site__contact_page'] = $handler;
 
   $handler = new stdClass();
-  $handler->disabled = TRUE; /* Edit this to true to make a default handler disabled initially */
+  $handler->disabled = FALSE; /* Edit this to true to make a default handler disabled initially */
   $handler->api_version = 1;
   $handler->name = 'node_edit__add_edit_forms';
   $handler->task = 'node_edit';

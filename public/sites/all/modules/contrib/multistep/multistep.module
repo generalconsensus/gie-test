@@ -254,13 +254,15 @@ function multistep_field_group_formatter_info() {
     'form' => array(
       'multistep' => array(
         'label' => t('Multistep: Form step'),
-        'description' => t('This fieldgroup allows for multistep form functionality by rendering each step in a different page.'),
+        'label_description' => t('This fieldgroup allows for multistep form functionality by rendering each step in a different page.'),
+        'instance_settings' => array('description' => '')
       ),
     ),
     'display' => array(
       'multistep' => array(
         'label' => t('Multistep: Form step'),
-        'description' => t('This fieldgroup allows for multistep form functionality by rendering each step in a different page.'),
+        'label_description' => t('This fieldgroup allows for multistep form functionality by rendering each step in a different page.'),
+        'instance_settings' => array('description' => '')
       ),
     ),
   );
@@ -271,7 +273,7 @@ function multistep_field_group_formatter_info() {
  */
 function multistep_field_group_format_summary($group) {
   if ($group->format_type == 'multistep') {
-    return t('Multistep: Form step');
+      return t('Multistep: Form step');
   }
 }
 
@@ -286,12 +288,16 @@ function multistep_field_group_pre_render(&$element, $group, &$form) {
   if (!$access && $step == 'all') {
     $access = user_access('toggle multistep');
   }
-  $prefix = '<div id="multistep-' . $group->group_name . '">';
-  $prefix .= "<h1>$group->label</h1>";
+  $prefix = "<h1>$group->label</h1>";
   if ($group->format_type == 'multistep') {
+      $description = isset($group->format_settings['instance_settings']['description']) ? filter_xss_admin($group->format_settings['instance_settings']['description']) : '';
+      if (!empty($description)) {
+          $prefix .= '<div class="multistep-description">'.$description.'</div>';
+      }
+
     $element += array(
       '#type' => 'markup',
-      '#prefix' => $prefix,
+      '#prefix' => '<div id="multistep-' . $group->group_name . '" class="multistep">'.$prefix,
       '#suffix' => '</div>',
       '#weight' => $group->weight,
       '#access' => $access,
@@ -596,7 +602,7 @@ function multistep_get_steps($type) {
 }
 
 /**
- * group weight compare herper function
+ * Group weight compare helper function
  * 
  * @param $a
  * @param $b

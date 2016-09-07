@@ -434,3 +434,13 @@ function gie_general_update_7043() {
   );
   module_enable($modules, TRUE);
 }
+
+
+/**
+ * [#850] Disable fel module
+ */
+function gie_general_update_7044() {
+    module_disable(array('fel', 'fel_fields'), TRUE);
+    module_enable(array('label_help'), TRUE);
+    variable_get('node_admin_theme', '1');
+}

@@ -163,7 +163,6 @@ features[field_instance][] = node-innovation-field_innovation_cost_per_unit
 features[field_instance][] = node-innovation-field_innovation_created
 features[field_instance][] = node-innovation-field_innovation_desc
 features[field_instance][] = node-innovation-field_innovation_evidence
-features[field_instance][] = node-innovation-field_innovation_evidence_avail
 features[field_instance][] = node-innovation-field_innovation_funders
 features[field_instance][] = node-innovation-field_innovation_funding_goal
 features[field_instance][] = node-innovation-field_innovation_funding_type

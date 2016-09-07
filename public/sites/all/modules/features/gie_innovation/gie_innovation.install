@@ -97,3 +97,8 @@ function gie_innovation_update_7006() {
     field_delete_field('field_innovation_acquisition');
     field_purge_batch(1);
 }
+
+function gie_innovation_update_7007() {
+    field_delete_field('field_innovation_proof_avail');
+    field_purge_batch(1);
+}

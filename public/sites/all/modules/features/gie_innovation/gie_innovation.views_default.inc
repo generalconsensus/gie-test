@@ -181,7 +181,7 @@ function gie_innovation_views_default_views() {
   $handler->display->display_options['fields']['rendered_entity']['view_mode'] = 'featured';
   $handler->display->display_options['fields']['rendered_entity']['bypass_access'] = 0;
   $handler->display->display_options['defaults']['sorts'] = FALSE;
-  /* Sort criterion: Content: Innovation Photos and Videos (field_innovation_assets:delta) */
+  /* Sort criterion: Content: Add more photos and videos. (field_innovation_assets:delta) */
   $handler->display->display_options['sorts']['delta']['id'] = 'delta';
   $handler->display->display_options['sorts']['delta']['table'] = 'field_data_field_innovation_assets';
   $handler->display->display_options['sorts']['delta']['field'] = 'delta';
@@ -789,7 +789,7 @@ function gie_innovation_views_default_views() {
   $handler->display->display_options['empty']['area']['empty'] = TRUE;
   $handler->display->display_options['empty']['area']['content'] = 'No assistance needed at this time.';
   $handler->display->display_options['empty']['area']['format'] = 'filtered_html';
-  /* Relationship: Taxonomy term: Content using Assistance Type */
+  /* Relationship: Taxonomy term: Content using How can Exchange Members help you? */
   $handler->display->display_options['relationships']['reverse_field_innovation_assistance_node']['id'] = 'reverse_field_innovation_assistance_node';
   $handler->display->display_options['relationships']['reverse_field_innovation_assistance_node']['table'] = 'taxonomy_term_data';
   $handler->display->display_options['relationships']['reverse_field_innovation_assistance_node']['field'] = 'reverse_field_innovation_assistance_node';
@@ -1002,7 +1002,7 @@ function gie_innovation_views_default_views() {
   $handler->display->display_options['group_by'] = TRUE;
   $handler->display->display_options['defaults']['relationships'] = FALSE;
   $handler->display->display_options['defaults']['fields'] = FALSE;
-  /* Field: Content: Proof of Evidence (field_innovation_proof_evidence:delta) */
+  /* Field: Content: Additional Evidence Documentation (field_innovation_proof_evidence:delta) */
   $handler->display->display_options['fields']['delta']['id'] = 'delta';
   $handler->display->display_options['fields']['delta']['table'] = 'field_data_field_innovation_proof_evidence';
   $handler->display->display_options['fields']['delta']['field'] = 'delta';
@@ -1110,13 +1110,13 @@ function gie_innovation_views_default_views() {
   $handler->display->display_options['fields']['count']['relationship'] = 'flag_count_rel';
   $handler->display->display_options['fields']['count']['label'] = 'Favorites';
   $handler->display->display_options['fields']['count']['element_label_colon'] = FALSE;
-  /* Field: Content: Proof of Evidence (field_innovation_proof_evidence:delta) */
+  /* Field: Content: Additional Evidence Documentation (field_innovation_proof_evidence:delta) */
   $handler->display->display_options['fields']['delta']['id'] = 'delta';
   $handler->display->display_options['fields']['delta']['table'] = 'field_data_field_innovation_proof_evidence';
   $handler->display->display_options['fields']['delta']['field'] = 'delta';
   $handler->display->display_options['fields']['delta']['label'] = 'Evidence';
   $handler->display->display_options['fields']['delta']['element_label_colon'] = FALSE;
-  /* Field: Content: Website */
+  /* Field: Content: Do you have a website for the innovation? */
   $handler->display->display_options['fields']['field_innovation_website']['id'] = 'field_innovation_website';
   $handler->display->display_options['fields']['field_innovation_website']['table'] = 'field_data_field_innovation_website';
   $handler->display->display_options['fields']['field_innovation_website']['field'] = 'field_innovation_website';
@@ -1197,14 +1197,14 @@ function gie_innovation_views_default_views() {
   $handler->display->display_options['pager']['options']['offset'] = '0';
   $handler->display->display_options['defaults']['relationships'] = FALSE;
   $handler->display->display_options['defaults']['fields'] = FALSE;
-  /* Field: Content: Proof of Evidence (field_innovation_proof_evidence:delta) */
+  /* Field: Content: Additional Evidence Documentation (field_innovation_proof_evidence:delta) */
   $handler->display->display_options['fields']['delta']['id'] = 'delta';
   $handler->display->display_options['fields']['delta']['table'] = 'field_data_field_innovation_proof_evidence';
   $handler->display->display_options['fields']['delta']['field'] = 'delta';
   $handler->display->display_options['fields']['delta']['group_type'] = 'count';
   $handler->display->display_options['fields']['delta']['label'] = 'Evidence';
   $handler->display->display_options['fields']['delta']['element_label_colon'] = FALSE;
-  /* Field: Content: Website */
+  /* Field: Content: Do you have a website for the innovation? */
   $handler->display->display_options['fields']['field_innovation_website']['id'] = 'field_innovation_website';
   $handler->display->display_options['fields']['field_innovation_website']['table'] = 'field_data_field_innovation_website';
   $handler->display->display_options['fields']['field_innovation_website']['field'] = 'field_innovation_website';
@@ -1287,7 +1287,7 @@ function gie_innovation_views_default_views() {
   $handler->display->display_options['pager']['options']['offset'] = '0';
   $handler->display->display_options['style_plugin'] = 'default';
   $handler->display->display_options['row_plugin'] = 'fields';
-  /* Field: COUNT(Content: Proof of Evidence) */
+  /* Field: COUNT(Content: Additional Evidence Documentation) */
   $handler->display->display_options['fields']['field_innovation_proof_evidence']['id'] = 'field_innovation_proof_evidence';
   $handler->display->display_options['fields']['field_innovation_proof_evidence']['table'] = 'field_data_field_innovation_proof_evidence';
   $handler->display->display_options['fields']['field_innovation_proof_evidence']['field'] = 'field_innovation_proof_evidence';
@@ -1323,7 +1323,7 @@ function gie_innovation_views_default_views() {
   $handler->display->display_options['row_options']['default_field_elements'] = FALSE;
   $handler->display->display_options['defaults']['row_options'] = FALSE;
   $handler->display->display_options['defaults']['fields'] = FALSE;
-  /* Field: COUNT(Content: Proof of Evidence) */
+  /* Field: COUNT(Content: Additional Evidence Documentation) */
   $handler->display->display_options['fields']['field_innovation_proof_evidence']['id'] = 'field_innovation_proof_evidence';
   $handler->display->display_options['fields']['field_innovation_proof_evidence']['table'] = 'field_data_field_innovation_proof_evidence';
   $handler->display->display_options['fields']['field_innovation_proof_evidence']['field'] = 'field_innovation_proof_evidence';
@@ -1379,7 +1379,7 @@ function gie_innovation_views_default_views() {
   $handler->display->display_options['row_options']['default_field_elements'] = FALSE;
   $handler->display->display_options['defaults']['row_options'] = FALSE;
   $handler->display->display_options['defaults']['fields'] = FALSE;
-  /* Field: COUNT(Content: Funded By) */
+  /* Field: COUNT(Content: Do you have any funders?) */
   $handler->display->display_options['fields']['field_innovation_funders']['id'] = 'field_innovation_funders';
   $handler->display->display_options['fields']['field_innovation_funders']['table'] = 'field_data_field_innovation_funders';
   $handler->display->display_options['fields']['field_innovation_funders']['field'] = 'field_innovation_funders';
@@ -1443,7 +1443,7 @@ function gie_innovation_views_default_views() {
   $handler->display->display_options['row_options']['default_field_elements'] = FALSE;
   $handler->display->display_options['defaults']['row_options'] = FALSE;
   $handler->display->display_options['defaults']['fields'] = FALSE;
-  /* Field: COUNT(Content: Assistance Type) */
+  /* Field: COUNT(Content: How can Exchange Members help you?) */
   $handler->display->display_options['fields']['field_innovation_assistance']['id'] = 'field_innovation_assistance';
   $handler->display->display_options['fields']['field_innovation_assistance']['table'] = 'field_data_field_innovation_assistance';
   $handler->display->display_options['fields']['field_innovation_assistance']['field'] = 'field_innovation_assistance';
@@ -1998,7 +1998,7 @@ function gie_innovation_views_default_views() {
   $handler->display->display_options['filters']['type']['value'] = array(
     'innovation' => 'innovation',
   );
-  /* Filter criterion: Indexed Content: Related Sectors */
+  /* Filter criterion: Indexed Content: Sector */
   $handler->display->display_options['filters']['field_term_sector']['id'] = 'field_term_sector';
   $handler->display->display_options['filters']['field_term_sector']['table'] = 'search_api_index_default_node_index';
   $handler->display->display_options['filters']['field_term_sector']['field'] = 'field_term_sector';
