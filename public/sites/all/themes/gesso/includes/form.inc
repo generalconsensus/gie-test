@@ -739,7 +739,7 @@ function gesso_text_format_wrapper($element) {
     $output = $element['element']['value']['#children'];
 
     if (!empty($element['element']['#description'])) {
-      $output .= '</br><div class="description">' . $element['element']['#description'] . '</div>';
+      $output .= '</br><div class="form-item__description">' . $element['element']['#description'] . '</div>';
     }
     if (!empty($element['element']['value']['#suffix'])) {
       $output .= $element['element']['value']['#suffix'];
@@ -773,13 +773,26 @@ function gesso_text_format_wrapper($element) {
 function gesso_field_multiple_value_form($variables) {
   $element = $variables['element'];
   $output = '';
+  $is_multistep = module_exists('multistep') && !empty($element[0]) && !empty($element[0]['target_id']) && !empty($element[0]['target_id']['#entity']) && is_multistep($element[0]['target_id']['#entity']);
 
   if ($element['#cardinality'] > 1 || $element['#cardinality'] == FIELD_CARDINALITY_UNLIMITED) {
     $table_id = drupal_html_id($element['#field_name'] . '_values');
     $order_class = $element['#field_name'] . '-delta-order';
     $required = !empty($element['#required']) ? theme('form_required_marker', $variables) : '';
-    $label_classes = !empty($element['#title_classes']) ? (' class="' . implode(' ', $element['#title_classes']) . '"') : '';
     $rows = array();
+
+    if ($is_multistep) {
+      $label_classes = !empty($element['#title_classes']) ? (' class="' . implode(' ', $element['#title_classes']) . '"') : '';
+    } else {
+      $header = array(
+        array(
+          'data' => '<label>' . t('!title !required', array('!title' => $element['#title'], '!required' => $required)) . "</label>",
+          'colspan' => 2,
+          'class' => array('field-label'),
+        ),
+        t('Order'),
+      );
+    }
 
     // Sort items according to '_weight' (needed when the form comes back after
     // preview or failed validation).
@@ -808,22 +821,36 @@ function gesso_field_multiple_value_form($variables) {
         'class' => array('draggable'),
       );
     }
-    $table_args = array(
-      'rows' => $rows,
-      'attributes' => array(
-        'id' => $table_id,
-        'class' => array('field-multiple-table'),
-      ),
-    );
-    $parts['children'] = theme('table', $table_args);
 
-    $output = '<div class="form-item__label-container">' . $element['#title'];
-    $output .= '</div>';
-    $output .= '<div class="form-item__content-container">';
-    $output .= '<div class="form-item">';
-    $output .= gesso_order_output($element, $parts);
-    $output .= '<div class="clearfix">' . drupal_render($add_more_button) . '</div>';
-    $output .= '</div>';
+    // initialize the output form item
+    $output = '<div class="form-item">';
+
+    if ($is_multistep) {
+      $table_args = array(
+        'rows' => $rows,
+        'attributes' => array(
+          'id' => $table_id,
+          'class' => array('field-multiple-table'),
+        ),
+      );
+      $parts['children'] = theme('table', $table_args);
+
+      $output .= '<div class="form-item__label-container"><label class="form-item__label">' . $element['#title'];
+      $output .= '</label></div>';
+      $output .= '<div class="form-item__content-container">';
+      $output .= '<div class="form-item">';
+      $output .= gesso_order_output($element, $parts);
+      if (!empty($element['#description'])) {
+        $output .= '<div class="form-item__description">' . $element['#description'] . '</div>';
+      }
+      $output .= '<div class="clearfix">' . drupal_render($add_more_button) . '</div>';
+      $output .= '</div>';
+      $output .= '</div>';
+    } else {
+      $output .= theme('table', array('header' => $header, 'rows' => $rows, 'attributes' => array('id' => $table_id, 'class' => array('field-multiple-table'))));
+      $output .= $element['#description'] ? '<div class="description">' . $element['#description'] . '</div>' : '';
+      $output .= '<div class="clearfix">' . drupal_render($add_more_button) . '</div>';
+    }
     $output .= '</div>';
 
     drupal_add_tabledrag($table_id, 'order', 'sibling', $order_class);
