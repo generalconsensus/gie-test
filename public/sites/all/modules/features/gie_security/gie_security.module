@@ -1,0 +1,345 @@
+<?php
+/**
+ * @file
+ * Code for the GIE Security feature.
+ */
+
+include_once 'gie_security.features.inc';
+
+
+
+/**
+ * Implements hook_menu().
+ */
+function gie_security_menu() {
+
+  $items['admin/config/spam_protection/gie_security_banned_email_domains'] = array(
+    'title' => 'GIE Security Banned Email Domains',
+    'description' => 'Ban Domains for Email Providers',
+    'page callback' => 'drupal_get_form',
+    'page arguments' => array('gie_security_banned_email_domains_settings_form'),
+    'access arguments' => array('access administration pages'),
+  );
+
+  $items['admin/config/spam_protection/gie_security_banned_description_words'] = array(
+    'title' => 'GIE Security Banned Description Words',
+    'description' => 'Ban words from being used in description fields',
+    'page callback' => 'drupal_get_form',
+    'page arguments' => array('gie_security_bad_words_settings_form'),
+    'access arguments' => array('access administration pages'),
+  );
+
+
+  return $items;
+
+}
+
+function gie_security_banned_email_domains_settings_form($form) {
+
+  $form['service']['banned_email_domains'] = array(
+    '#type' => 'textarea',
+    '#title' => t('Banned Email Domains'),
+    '#default_value' => drupal_implode_tags(variable_get('gie_security_bad_email_domains')),
+    '#description' => t('Enter the email domains you want to ban'),
+  );
+  $form['options']['submit'] = array('#type' => 'submit', '#value' => t('Submit'));
+
+  return $form;
+}
+
+
+function gie_security_banned_email_domains_settings_form_submit($form, &$form_state) {
+  if (!empty($form_state['values']) && !empty($form_state['values']['banned_email_domains'])) {
+    $banned_emails = explode(',', $form_state['values']['banned_email_domains']);
+    $banned_emails = array_map('trim', $banned_emails);
+    variable_set('gie_security_bad_email_domains', $banned_emails);
+  }
+}
+
+
+function gie_security_bad_words_settings_form($form) {
+
+  $form['service']['banned_words'] = array(
+    '#type' => 'textarea',
+    '#title' => t('Banned Words'),
+    '#default_value' => drupal_implode_tags(variable_get('gie_security_bad_words')),
+    '#description' => t('Enter the terms you want to ban'),
+  );
+  $form['options']['submit'] = array('#type' => 'submit', '#value' => t('Submit'));
+
+  return $form;
+}
+
+
+function gie_security_bad_words_settings_form_submit($form, &$form_state) {
+  if (!empty($form_state['values']) && !empty($form_state['values']['banned_words'])) {
+    $banned_words = explode(',', $form_state['values']['banned_words']);
+    $banned_words = array_map('trim', $banned_words);
+    variable_set('gie_security_bad_words', $banned_words);
+  }
+}
+
+/**
+ * Implements hook_form_BASE_FORM_ID_alter().
+ */
+function gie_security_form_user_register_form_alter(&$form) {
+  $form['#validate'][] = '_gie_security_banned_mail_domain_validate';
+}
+
+/**
+ * Implement hook_user_validate().
+ */
+function _gie_security_banned_mail_domain_validate($form, $form_state) {
+  if (isset($form_state['complete form']['#user_category']) && $form_state['complete form']['#user_category'] == 'register') {
+
+    $bad_domains = variable_get('gie_security_bad_email_domains');
+
+    // Validate the e-mail address.
+    if (_gie_security_strposa(trim($form_state['values']['mail']), $bad_domains)) {
+      form_set_error('mail', t('The e-mail address %email has been reported as disposable. Please contact an admin at info@globalinnovationexchange.org for further assistance', array('%email' => $form_state['values']['mail'])));
+      watchdog(
+        'gie_security_MB',
+        '@action: @mail',
+        array('@action' => 'Mail Blocked', '@mail' => $form_state['values']['mail']),
+        WATCHDOG_NOTICE
+      );
+    }
+  }
+}
+
+/**
+ * Implements hook_node_insert().
+ */
+function gie_security_node_insert($node) {
+  _gie_security_node_save($node);
+}
+
+/**
+ * Implements hook_node_update().
+ */
+function gie_security_node_update($node) {
+  _gie_security_node_save($node);
+}
+
+/**
+ * Implements hook_comment_insert().
+ */
+function gie_security_comment_insert($comment) {
+  _gie_security_comment_save($comment);
+}
+
+/**
+ * Implements hook_comment_update().
+ */
+function gie_security_comment_update($comment) {
+  _gie_security_comment_save($comment);
+}
+
+/**
+ * Check comment info against list of banned words.
+ */
+function _gie_security_comment_save($comment) {
+  global $user;
+  // Ignore Administrators or Microsite Administrators
+  if (user_has_role(3) || user_has_role(9)) {
+    //return FALSE;
+  }
+
+  // initialize content array to be parsed later
+  $content = array();
+
+  // get info from the comment
+  $language = $comment->language;
+  $content[] = $comment->comment_body[$language][0]['value'];
+
+  $content_flag = _gie_security_parse_content($content);
+  $user_flag = _gie_security_previous_offender($user);
+
+  if ($content_flag || $user_flag) {
+    gie_security_content_publish_operation('comment', $comment, 'unpublish', TRUE, $content_flag, $user_flag);
+  }
+}
+
+/**
+ * Implements hook_node_validate().
+ */
+function _gie_security_node_save($node) {
+  global $user;
+  $content = array();
+
+  switch ($node->type) {
+    case 'discussion':
+      $content[] = $node->field_discussion_desc['und'][0]['value'];
+      break;
+    case 'organization':
+      $content[] = $node->field_org_desc['und'][0]['value'];
+      break;
+    case 'event':
+      $content[] = $node->field_event_description['und'][0]['value'];
+      break;
+    case 'innovation':
+      $content[] = $node->field_innovation_desc['und'][0]['value'];
+      break;
+    case 'funding':
+      $content[] = $node->field_funding_desc['und'][0]['value'];
+      break;
+    case 'needs':
+      $content[] = $node->body['und'][0]['value'];
+      break;
+    case 'resource':
+      $content[] = $node->field_resource_desc['und'][0]['value'];
+      break;
+  }
+  $content_flag = _gie_security_parse_content($content);
+  $user_flag = _gie_security_previous_offender($user);
+
+  if ($content_flag || $user_flag) {
+    gie_security_content_publish_operation('node', $node, 'unpublish', TRUE, $content_flag, $user_flag);
+  }
+  else {
+    return TRUE;
+  }
+
+}
+
+function _gie_security_previous_offender($user) {
+  if (empty($user->uid)) {
+    return FALSE;
+  }
+
+  // Ignore Administrators or Microsite Administrators
+  if (user_has_role(3) || user_has_role(9)) {
+    return FALSE;
+  }
+
+  $previous_content = db_query('select nid from node 
+  left join users_roles on users_roles.uid = node.uid 
+  where node.uid = :uid AND node.status = :status order by changed desc',
+    array(':uid' => $user->uid, ':status' => 0)
+  )->rowCount();
+
+  $previous_comments = db_query('select cid from comment
+  where comment.uid = :uid AND comment.status = :status order by changed desc',
+    array(':uid' => $user->uid, ':status' => 0)
+  )->rowCount();
+
+  if ($previous_content >= 3 || $previous_comments >= 3) {
+    return TRUE;
+  } else {
+    return FALSE;
+  }
+}
+
+function _gie_security_parse_content($content) {
+
+  $bad_words = variable_get('gie_security_bad_words');
+
+  foreach ($content as $piece) {
+    if (_gie_security_strposa($piece, $bad_words)) {
+      return TRUE;
+    }
+  }
+}
+
+/*
+ * CREDIT to Antispam Module
+ */
+function gie_security_content_publish_operation(
+  $content_type,
+  $content,
+  $op,
+  $log_action = TRUE,
+  $content_flag,
+  $user_flag
+) {
+  // This code snippet is based on node.module::node_admin_nodes_submit().
+  // Only the node record is updated, no other hooks are invoked.
+
+  $content->status = $op == 'publish' ? 1 : 0;
+
+  // assign variables based on entity type
+  switch ($content_type) {
+    case 'node':
+      $content_id = 'nid';
+      $content_id_value = $content->nid;
+      $title = $content->title;
+      break;
+    case 'comment':
+      $content_id = 'cid';
+      $content_id_value = $content->cid;
+      $title = $content->subject;
+      break;
+    default:
+      // entity type not found, exit function so we don't query some weird data
+      return;
+  }
+
+  // Perform the update action.
+  db_update($content_type)
+    ->fields(
+      array(
+        'status' => $content->status
+      )
+    )
+    ->condition($content_id, $content_id_value)
+    ->execute();
+
+  // ONLY NEEDED FOR NODE ENTITY TYPES
+  if ($content_type == 'node') {
+    // Perform the update action of the revision.
+    db_update('node_revision')
+        ->fields(
+            array(
+                'status' => $content->status
+            )
+        )
+        ->condition('nid', $content->nid)
+        ->condition('vid', $content->vid)
+        ->execute();
+
+    // need to update user access to the node
+    node_access_acquire_grants($content);
+
+    // Reset the cache for the updated node in order to update the dmin views.
+    entity_get_controller('node')->resetCache(array($content->nid));
+  }
+
+  if ($log_action) {
+    $action = ($op == 'publish' ? t('Content published') : t(
+      'Content unpublished'
+    ));
+
+    if ($content_flag && $user_flag) {
+      $flag = 'gie_security_FC_FU';
+    } elseif ($content_flag) {
+      $flag = 'gie_security_FC';
+    } elseif ($user_flag) {
+      $flag = 'gie_security_FU';
+    } else {
+      $flag = 'no_flag';
+    }
+
+    watchdog(
+      $flag,
+      '@action: @title',
+      array('@action' => $action, '@title' => $title),
+      WATCHDOG_NOTICE
+    );
+  }
+
+}
+
+/*
+ *  CREDIT: http://stackoverflow.com/questions/6284553/using-an-array-as-needles-in-strpos
+ */
+function _gie_security_strposa($haystack, $needle, $offset = 0) {
+  if (!is_array($needle)) {
+    $needle = array($needle);
+  }
+  foreach ($needle as $query) {
+    if (strpos($haystack, $query, $offset) !== FALSE) {
+      return TRUE;
+    } // stop on first true result
+  }
+  return FALSE;
+}

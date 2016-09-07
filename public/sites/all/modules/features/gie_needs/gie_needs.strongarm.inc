@@ -535,5 +535,19 @@ function gie_needs_strongarm() {
   $strongarm->value = 'wanteds/[term:name]';
   $export['pathauto_taxonomy_term_needs_type_pattern'] = $strongarm;
 
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'rh_taxonomy_term_action_needs_duration';
+  $strongarm->value = '2';
+  $export['rh_taxonomy_term_action_needs_duration'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'rh_taxonomy_term_action_needs_status';
+  $strongarm->value = '2';
+  $export['rh_taxonomy_term_action_needs_status'] = $strongarm;
+
   return $export;
 }

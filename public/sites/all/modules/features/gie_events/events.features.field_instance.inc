@@ -74,8 +74,8 @@ function events_field_default_field_instances() {
     'settings' => array(
       'description_display' => 'before',
       'max' => '',
-      'min' => '',
-      'prefix' => '',
+      'min' => 0,
+      'prefix' => '$',
       'suffix' => '',
       'user_register_form' => FALSE,
     ),
