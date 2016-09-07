@@ -771,75 +771,127 @@ function gesso_text_format_wrapper($element) {
  * @see theme_field_multiple_value_form()
  */
 function gesso_field_multiple_value_form($variables) {
-//  $element = $variables['element'];
-//  $output = '';
-//
-//  if ($element['#cardinality'] > 1 || $element['#cardinality'] == FIELD_CARDINALITY_UNLIMITED) {
-//    $table_id = drupal_html_id($element['#field_name'] . '_values');
-//    $order_class = $element['#field_name'] . '-delta-order';
-//    $required = !empty($element['#required']) ? theme('form_required_marker', $variables) : '';
-//    $label_classes = !empty($element['#title_classes']) ? (' class="' . implode(' ', $element['#title_classes']) . '"') : '';
-//    $header = array(
-//      array(
-//        'data' => '<label' . $label_classes . '>' . t('!title !required', array('!title' => $element['#title'], '!required' => $required)) . "</label>",
-//        'colspan' => 2,
-//        'class' => array('field-label'),
-//      ),
-//      t('Order'),
-//    );
-//    $rows = array();
-//
-//    // Sort items according to '_weight' (needed when the form comes back after
-//    // preview or failed validation).
-//    $items = array();
-//    foreach (element_children($element) as $key) {
-//      if ($key === 'add_more') {
-//        $add_more_button = &$element[$key];
-//      }
-//      else {
-//        $items[] = &$element[$key];
-//      }
-//    }
-//    usort($items, '_field_sort_items_value_helper');
-//
-//    // Add the items as table rows.
-//    foreach ($items as $key => $item) {
-//      $item['_weight']['#attributes']['class'] = array($order_class);
-//      $delta_element = drupal_render($item['_weight']);
-//      $cells = array(
-//        array('data' => '', 'class' => array('field-multiple-drag')),
-//        drupal_render($item),
-//        array('data' => $delta_element, 'class' => array('delta-order')),
-//      );
-//      $rows[] = array(
-//        'data' => $cells,
-//        'class' => array('draggable'),
-//      );
-//    }
-//    $table_args = array(
-//      'header' => $header,
-//      'rows' => $rows,
-//      'attributes' => array(
-//        'id' => $table_id,
-//        'class' => array('field-multiple-table'),
-//      ),
-//    );
-//    $parts['children'] = theme('table', $table_args);
-//    if ($element['#description']) {
-//      $parts['description'] = theme('fel_form_element_description', $variables);
-//    }
-//    $output = '<div class="form-item">';
-//    $output .= fel_order_output($element, $parts);
-//    $output .= '<div class="clearfix">' . drupal_render($add_more_button) . '</div>';
-//    $output .= '</div>';
-//
-//    drupal_add_tabledrag($table_id, 'order', 'sibling', $order_class);
-//  }
-//  else {
-//    foreach (element_children($element) as $key) {
-//      $output .= drupal_render($element[$key]);
-//    }
-//  }
-//
-//  return $output;
+  $element = $variables['element'];
+  $output = '';
+
+  if ($element['#cardinality'] > 1 || $element['#cardinality'] == FIELD_CARDINALITY_UNLIMITED) {
+    $table_id = drupal_html_id($element['#field_name'] . '_values');
+    $order_class = $element['#field_name'] . '-delta-order';
+    $required = !empty($element['#required']) ? theme('form_required_marker', $variables) : '';
+    $label_classes = !empty($element['#title_classes']) ? (' class="' . implode(' ', $element['#title_classes']) . '"') : '';
+    $rows = array();
+
+    // Sort items according to '_weight' (needed when the form comes back after
+    // preview or failed validation).
+    $items = array();
+    foreach (element_children($element) as $key) {
+      if ($key === 'add_more') {
+        $add_more_button = &$element[$key];
+      }
+      else {
+        $items[] = &$element[$key];
+      }
+    }
+    usort($items, '_field_sort_items_value_helper');
+
+    // Add the items as table rows.
+    foreach ($items as $key => $item) {
+      $item['_weight']['#attributes']['class'] = array($order_class);
+      $delta_element = drupal_render($item['_weight']);
+      $cells = array(
+        array('data' => '', 'class' => array('field-multiple-drag')),
+        drupal_render($item),
+        array('data' => $delta_element, 'class' => array('delta-order')),
+      );
+      $rows[] = array(
+        'data' => $cells,
+        'class' => array('draggable'),
+      );
+    }
+    $table_args = array(
+      'rows' => $rows,
+      'attributes' => array(
+        'id' => $table_id,
+        'class' => array('field-multiple-table'),
+      ),
+    );
+    $parts['children'] = theme('table', $table_args);
+
+    $output = '<div class="form-item__label-container">' . $element['#title'];
+    $output .= '</div>';
+    $output .= '<div class="form-item__content-container">';
+    $output .= '<div class="form-item">';
+    $output .= gesso_order_output($element, $parts);
+    $output .= '<div class="clearfix">' . drupal_render($add_more_button) . '</div>';
+    $output .= '</div>';
+    $output .= '</div>';
+
+    drupal_add_tabledrag($table_id, 'order', 'sibling', $order_class);
+  }
+  else {
+    foreach (element_children($element) as $key) {
+      $output .= drupal_render($element[$key]);
+    }
+  }
+
+  return $output;
+}
+
+
+/**
+ * Return the output of $parts in configured order.
+ *
+ * @param array $element
+ *   A form element.
+ * @param array $parts
+ *   An associative array with the following optional keys:
+ *     - 'title'.
+ *     - 'description'.
+ *     - 'children'.
+ *
+ * @return string
+ *   The items in order according to configuration in $element.
+ */
+function gesso_order_output(array $element, array &$parts) {
+  $element_order = gesso_get_order($element);
+  $parts_ordered = array();
+  $out = '';
+  foreach ($element_order as $element_item) {
+    if (!empty($parts[$element_item])) {
+      $out .= $parts[$element_item];
+      $parts_ordered[$element_item] = $parts[$element_item];
+    }
+  }
+  $parts = $parts_ordered;
+  return $out;
+}
+
+/**
+ * Determine the render order of a form element.
+ *
+ * Returns what order #title, #children and #description should be rendered in,
+ * based on #title_display and #description_display.
+ *
+ * @param array $element
+ *   Form element.
+ *
+ * @return array
+ *   An array with the three values 'title', 'children' and 'description' in
+ *   various orders.
+ */
+function gesso_get_order(array $element) {
+  if (!empty($element['#element_order'])) {
+    return $element['#element_order'];
+  }
+
+  $title_before = (empty($element['#title_display']) or $element['#title_display'] == 'before' or $element['#title_display'] == 'invisible');
+  $description_before = (empty($element['#description_display']) ? FALSE : ($element['#description_display'] == 'before'));
+
+  if ($title_before) {
+    $order = $description_before ? array('title', 'description', 'children') : array('title', 'children', 'description');
+  }
+  else {
+    $order = $description_before ? array('description', 'children', 'title') : array('children', 'title', 'description');
+  }
+  return $order;
 }
