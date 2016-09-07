@@ -114,7 +114,7 @@ function gesso_form_element($vars) {
           case 'after':
               //Force to the left in order meet requirements
               $output .=  ' '  . theme('form_element_label', $vars)  . "\n";
-              $output .= ' <div class="form-item__content-container">' . $prefix . $element['#children'] . $suffix . '<div>';
+              $output .= ' <div class="form-item__content-container">' . $prefix . $element['#children'] . $suffix . '<div>' . "\n";
               break;
 
           case 'none':
