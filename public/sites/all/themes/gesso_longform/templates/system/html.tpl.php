@@ -17,6 +17,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="cleartype" content="on">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <?php print $font_link; ?>
     <?php print $styles; ?>
     <?php print $scripts; ?>
   </head>
