@@ -103,7 +103,7 @@
     width: 30%;
   }
   @include breakpoint(1000px, $no-query: true) {
-    width: 20%;
+    //width: 20%;
   }
 }
 
@@ -114,7 +114,7 @@
     width: 70%;
   }
   @include breakpoint(1000px, $no-query: true) {
-    width: 80%;
+    //width: 80%;
   }
   .form-item__description {
     padding-left: 25px;
@@ -128,7 +128,7 @@
       content: "";
       left: 0;
       position: absolute;
-      top: 8px;
+      top: 10px;
     }
   }
 }
