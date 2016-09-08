@@ -508,6 +508,10 @@ function gie_innovation_strongarm() {
             'weight' => '28',
             'visible' => FALSE,
           ),
+          'full' => array(
+            'weight' => '10',
+            'visible' => FALSE,
+          ),
         ),
         'domain' => array(
           'default' => array(
@@ -516,6 +520,10 @@ function gie_innovation_strongarm() {
           ),
           'spotlight' => array(
             'weight' => '12',
+            'visible' => FALSE,
+          ),
+          'full' => array(
+            'weight' => '1',
             'visible' => FALSE,
           ),
         ),
@@ -528,6 +536,10 @@ function gie_innovation_strongarm() {
             'weight' => '3',
             'visible' => TRUE,
           ),
+          'full' => array(
+            'weight' => '10',
+            'visible' => FALSE,
+          ),
         ),
         'flag_abuse_node' => array(
           'default' => array(
@@ -536,6 +548,10 @@ function gie_innovation_strongarm() {
           ),
           'spotlight' => array(
             'weight' => '24',
+            'visible' => FALSE,
+          ),
+          'full' => array(
+            'weight' => '10',
             'visible' => FALSE,
           ),
         ),
