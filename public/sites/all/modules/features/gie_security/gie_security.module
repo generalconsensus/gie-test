@@ -142,7 +142,7 @@ function _gie_security_comment_save($comment) {
   global $user;
   // Ignore Administrators or Microsite Administrators
   if (user_has_role(3) || user_has_role(9)) {
-    //return FALSE;
+    return TRUE;
   }
 
   // initialize content array to be parsed later
@@ -166,6 +166,11 @@ function _gie_security_comment_save($comment) {
 function _gie_security_node_save($node) {
   global $user;
   $content = array();
+
+  // Ignore Administrators or Microsite Administrators
+  if (user_has_role(3) || user_has_role(9)) {
+    return TRUE;
+  }
 
   switch ($node->type) {
     case 'discussion':
