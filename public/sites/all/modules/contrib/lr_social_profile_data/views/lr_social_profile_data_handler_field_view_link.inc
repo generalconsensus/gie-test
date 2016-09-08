@@ -10,7 +10,7 @@ class lr_social_login_handler_field_view_link extends views_handler_field {
   /**
    * Define our additional configuration setting.
    */
-  function construct() {
+  public function construct() {
     parent::construct();
     $this->additional_fields['uid'] = 'uid';
   }
@@ -18,21 +18,27 @@ class lr_social_login_handler_field_view_link extends views_handler_field {
   /**
    * option defination that display in view admin page.
    */
-  function option_definition() {
-    $options = parent::option_definition();
-    $options['text'] = array('default' => t('View User Profile'), 'translatable' => TRUE);
-    $options['text2'] = array('default' => t('Show User Profile'), 'translatable' => TRUE);
+  public function optionDefinition() {
+    $options = parent::optionDefinition();
+    $options['text'] = array(
+      'default' => t('View User Profile'),
+      'translatable' => TRUE,
+    );
+    $options['text2'] = array(
+      'default' => t('Show User Profile'),
+      'translatable' => TRUE,
+    );
     return $options;
   }
 
   /**
    * Define the configuration form for our textfield.
-   * 
+   *
    * @param array $form Nested array of form elements that comprise the form.
    * @param array $form_state A keyed array containing the current state of the form.
-   * 
+   *
    */
-  function options_form(&$form, &$form_state) {
+  public function optionsForm(&$form, &$form_state) {
     $form['text'] = array(
       '#type' => 'textfield',
       '#title' => t('Text to display'),
@@ -48,32 +54,32 @@ class lr_social_login_handler_field_view_link extends views_handler_field {
   }
 
   /**
-   * Add additional fields into view page. 
+   * Add additional fields into view page.
    */
-  function query() {
+  public function query() {
     $this->ensure_my_table();
     $this->add_additional_fields();
   }
 
   /**
    * Render fields and display link
-   * 
+   *
    * @param string $values The element value to be rendered.
    * @return string  The rendered element.
    */
-  function render($values) {
+  public function render($values) {
     $value = $this->get_value($values, 'uid');
-    return $this->render_link($this->sanitize_value($value), $values);
+    return $this->rendeLink($this->sanitize_value($value), $values);
   }
 
   /**
    * Renders our field, displays a link if the user is allowed to.
-   * 
+   *
    * @param array $data
    * @param array $values
    * @return string
    */
-  function render_link($data, $values) {
+  public function rendeLink($data, $values) {
     if (variable_get('lr_social_profile_data_show_profile') == 1) {
       drupal_add_library('system', 'ui.tabs');
       $options = array(
@@ -81,12 +87,12 @@ class lr_social_login_handler_field_view_link extends views_handler_field {
           'class' => 'lr_social_login',
           'rel' => 'nofollow',
           'title' => $this->options['text'],
-        )
+        ),
       );
       $this->options['label'] = $this->options['text2'];
-      $userProfile = user_load($data);
+      $user_profile = user_load($data);
       $admin_access = 0;
-      foreach ($userProfile->roles as $keyd => $value) {
+      foreach ($user_profile->roles as $keyd => $value) {
         if (isset($value) && $value == "administrator") {
           $admin_access = 1;
         }
@@ -99,5 +105,4 @@ class lr_social_login_handler_field_view_link extends views_handler_field {
       }
     }
   }
-
 }

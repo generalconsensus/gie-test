@@ -400,7 +400,7 @@ function gie_needs_field_default_field_instances() {
     'settings' => array(
       'description_display' => 'after',
       'max' => '',
-      'min' => '',
+      'min' => 0,
       'prefix' => '',
       'suffix' => '',
       'user_register_form' => FALSE,
@@ -496,7 +496,7 @@ function gie_needs_field_default_field_instances() {
     'settings' => array(
       'description_display' => 'after',
       'max' => '',
-      'min' => '',
+      'min' => 0,
       'prefix' => '$',
       'suffix' => '',
       'user_register_form' => FALSE,
@@ -592,7 +592,7 @@ function gie_needs_field_default_field_instances() {
     'settings' => array(
       'description_display' => 'after',
       'max' => '',
-      'min' => '',
+      'min' => 0,
       'prefix' => '',
       'suffix' => '',
       'user_register_form' => FALSE,

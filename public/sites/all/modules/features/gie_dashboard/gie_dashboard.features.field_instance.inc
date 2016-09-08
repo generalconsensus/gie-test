@@ -947,7 +947,7 @@ function gie_dashboard_field_default_field_instances() {
         'display_label' => 1,
       ),
       'type' => 'options_onoff',
-      'weight' => 44,
+      'weight' => 15,
     ),
   );
 
