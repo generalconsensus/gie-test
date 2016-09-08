@@ -98,7 +98,18 @@ function gie_innovation_update_7006() {
     field_purge_batch(1);
 }
 
+/**
+ * Delete innovation proof availalable field as it was unnecessary
+ */
 function gie_innovation_update_7007() {
     field_delete_field('field_innovation_proof_avail');
+    field_purge_batch(1);
+}
+
+/**
+ * Delete innovation evidence available as it was unnecessary
+ */
+function gie_innovation_update_7008() {
+    field_delete_field('field_innovation_evidence_avail');
     field_purge_batch(1);
 }
