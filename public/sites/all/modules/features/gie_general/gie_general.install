@@ -444,3 +444,15 @@ function gie_general_update_7044() {
     module_enable(array('label_help'), TRUE);
     variable_get('node_admin_theme', '1');
 }
+
+
+/**
+ * Update summary field to handle more data
+ */
+function gie_general_update_7045() {
+  db_change_field('loginradius_positions', 'summary', 'summary', array(
+    'type' => 'text',
+    'size' => 'medium',
+    'not null' => TRUE,
+  ));
+}
