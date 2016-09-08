@@ -5,9 +5,9 @@
 // Grid via: singularity.gs
 
 .l-panels-multistep {
-  @include add-grid(12 at 700px);
+  @include add-grid(12 at 900px);
   @include add-gutter(2);
-  @include breakpoint(700px, $no-query: true) {
+  @include breakpoint(900px, $no-query: true) {
     &.main.sidebar {
       .l-main {
         @include grid-span(8,1);
