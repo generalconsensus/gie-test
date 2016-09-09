@@ -169,3 +169,375 @@ function gie_innovation_form_innovation_node_form_alter(&$form, &$form_state) {
   }
 }
 
+/**
+ * Implements hook_field_widget_info().
+ */
+function gie_innovation_field_widget_info() {
+  $widgets['exchange_autocomplete'] = array(
+    'label' => t('Exchange Autocomplete'),
+    'description' => t('An autocomplete text field.'),
+    'field types' => array('entityreference'),
+    'settings' => array(
+      'match_operator' => 'CONTAINS',
+      'size' => 60,
+      // We don't have a default here, because it's not the same between
+      // the two widgets, and the Field API doesn't update default
+      // settings when the widget changes.
+      'path' => '',
+    ),
+  );
+
+  return $widgets;
+}
+
+/**
+ * Implements hook_field_widget_settings_form().
+ */
+function gie_innovation_field_widget_settings_form($field, $instance) {
+  $widget = $instance['widget'];
+  $settings = $widget['settings'] + field_info_widget_settings($widget['type']);
+
+  $form = array();
+
+  if ($widget['type'] == 'exchange_autocomplete') {
+    $form['match_operator'] = array(
+      '#type' => 'select',
+      '#title' => t('Autocomplete matching'),
+      '#default_value' => $settings['match_operator'],
+      '#options' => array(
+        'STARTS_WITH' => t('Starts with'),
+        'CONTAINS' => t('Contains'),
+      ),
+      '#description' => t('Select the method used to collect autocomplete suggestions. Note that <em>Contains</em> can cause performance issues on sites with thousands of nodes.'),
+    );
+    $form['size'] = array(
+      '#type' => 'textfield',
+      '#title' => t('Size of textfield'),
+      '#default_value' => $settings['size'],
+      '#element_validate' => array('_element_validate_integer_positive'),
+      '#required' => TRUE,
+    );
+  }
+
+  return $form;
+}
+
+/**
+ * Implements hook_field_widget_form().
+ */
+function gie_innovation_field_widget_form(&$form, &$form_state, $field, $instance, $langcode, $items, $delta, $element) {
+  // Ensure that the entity target type exists before displaying the widget.
+  $entity_info = entity_get_info($field['settings']['target_type']);
+  if (empty($entity_info)) {
+    return;
+  }
+  $entity_type = $instance['entity_type'];
+  $entity = isset($element['#entity']) ? $element['#entity'] : NULL;
+  $handler = entityreference_get_selection_handler($field, $instance, $entity_type, $entity);
+
+  if ($instance['widget']['type'] == 'exchange_autocomplete') {
+
+    if ($instance['widget']['type'] == 'exchange_autocomplete') {
+      // We let the Field API handles multiple values for us, only take
+      // care of the one matching our delta.
+      if (isset($items[$delta])) {
+        $items = array($items[$delta]);
+      }
+      else {
+        $items = array();
+      }
+    }
+
+    $entity_ids = array();
+    $entity_labels = array();
+
+    // Build an array of entities ID.
+    foreach ($items as $item) {
+      $entity_ids[] = $item['target_id'];
+    }
+
+    // Load those entities and loop through them to extract their labels.
+    $entities = entity_load($field['settings']['target_type'], $entity_ids);
+
+    foreach ($entities as $entity_id => $entity_item) {
+      $label = $handler->getLabel($entity_item);
+      $key = "$label ($entity_id)";
+      // Labels containing commas or quotes must be wrapped in quotes.
+      if (strpos($key, ',') !== FALSE || strpos($key, '"') !== FALSE) {
+        $key = '"' . str_replace('"', '""', $key) . '"';
+      }
+      $entity_labels[] = $key;
+    }
+
+    // Prepare the autocomplete path.
+    if (!empty($instance['widget']['settings']['path'])) {
+      $autocomplete_path = $instance['widget']['settings']['path'];
+    }
+    else {
+      $autocomplete_path = $instance['widget']['type'] == 'exchange_autocomplete' ? 'gie_innovation/autocomplete/single' : '';
+    }
+
+    $autocomplete_path .= '/' . $field['field_name'] . '/' . $instance['entity_type'] . '/' . $instance['bundle'] . '/';
+    // Use <NULL> as a placeholder in the URL when we don't have an entity.
+    // Most webservers collapse two consecutive slashes.
+    $id = 'NULL';
+    if ($entity) {
+      list($eid) = entity_extract_ids($entity_type, $entity);
+      if ($eid) {
+        $id = $eid;
+      }
+    }
+    $autocomplete_path .= $id;
+
+    if ($instance['widget']['type'] == 'exchange_autocomplete') {
+      $element += array(
+        '#type' => 'textfield',
+        '#maxlength' => 1024,
+        '#default_value' => implode(', ', $entity_labels),
+        '#autocomplete_path' => $autocomplete_path,
+        '#size' => $instance['widget']['settings']['size'],
+        '#element_validate' => array('_exchange_autocomplete_validate'),
+      );
+      return array('target_id' => $element);
+    }
+  }
+}
+
+
+function _exchange_autocomplete_validate($element, &$form_state, $form) {
+  // If a value was entered into the autocomplete...
+  $value = '';
+  if (!empty($element['#value'])) {
+    // Take "label (entity id)', match the id from parenthesis.
+    if (preg_match("/.+\((\d+)\)/", $element['#value'], $matches)) {
+      $value = $matches[1];
+    }
+    else {
+      // Try to get a match from the input string when the user didn't use the
+      // autocomplete but filled in a value manually.
+      $field = field_info_field($element['#field_name']);
+      $handler = entityreference_get_selection_handler($field);
+      $field_name = $element['#field_name'];
+      $field = field_info_field($field_name);
+      $instance = field_info_instance($element['#entity_type'], $field_name, $element['#bundle']);
+      $handler = entityreference_get_selection_handler($field, $instance);
+      $value = $handler->validateAutocompleteInput($element['#value'], $element, $form_state, $form);
+    }
+  }
+  // Update the value of this element so the field can validate the product IDs.
+  form_set_value($element, $value, $form_state);
+}
+
+
+/**
+ * Menu Access callback for the autocomplete widget.
+ *
+ * @param $type
+ *   The widget type (i.e. 'single' or 'tags').
+ * @param $field_name
+ *   The name of the entity-reference field.
+ * @param $entity_type
+ *   The entity type.
+ * @param $bundle_name
+ *   The bundle name.
+ * @return
+ *   True if user can access this menu item.
+ */
+function gie_innovation_autocomplete_access_callback($type, $field_name, $entity_type, $bundle_name) {
+  $field = field_info_field($field_name);
+  $instance = field_info_instance($entity_type, $field_name, $bundle_name);
+
+  if (!$field || !$instance || $field['type'] != 'entityreference' || !field_access('edit', $field, $entity_type)) {
+    return FALSE;
+  }
+  return TRUE;
+}
+
+/**
+ * Menu callback: autocomplete the label of an entity.
+ *
+ * @param $type
+ *   The widget type (i.e. 'single' or 'tags').
+ * @param $field_name
+ *   The name of the entity-reference field.
+ * @param $entity_type
+ *   The entity type.
+ * @param $bundle_name
+ *   The bundle name.
+ * @param $entity_id
+ *   Optional; The entity ID the entity-reference field is attached to.
+ *   Defaults to ''.
+ * @param $string
+ *   The label of the entitentityreference_autocomplete_access_callbacky to query by.
+ */
+function gie_innovation_autocomplete_callback($type, $field_name, $entity_type, $bundle_name, $entity_id = '', $string = '') {
+  // If the request has a '/' in the search text, then the menu system will have
+  // split it into multiple arguments and $string will only be a partial. We want
+  //  to make sure we recover the intended $string.
+  $args = func_get_args();
+  // Shift off the $type, $field_name, $entity_type, $bundle_name, and $entity_id args.
+  array_shift($args);
+  array_shift($args);
+  array_shift($args);
+  array_shift($args);
+  array_shift($args);
+  $string = implode('/', $args);
+
+  $field = field_info_field($field_name);
+  $instance = field_info_instance($entity_type, $field_name, $bundle_name);
+
+  return gie_innovation_autocomplete_callback_get_matches($type, $field, $instance, $entity_type, $entity_id, $string);
+}
+
+
+/**
+ * Return JSON based on given field, instance and string.
+ *
+ * This function can be used by other modules that wish to pass a mocked
+ * definition of the field on instance.
+ *
+ * @param $type
+ *   The widget type (i.e. 'single' or 'tags').
+ * @param $field
+ *   The field array defintion.
+ * @param $instance
+ *   The instance array defintion.
+ * @param $entity_type
+ *   The entity type.
+ * @param $entity_id
+ *   Optional; The entity ID the entity-reference field is attached to.
+ *   Defaults to ''.
+ * @param $string
+ *   The label of the entity to query by.
+ */
+function gie_innovation_autocomplete_callback_get_matches($type, $field, $instance, $entity_type, $entity_id = '', $string = '') {
+  $matches = array();
+
+  $entity = NULL;
+  if ($entity_id !== 'NULL') {
+    $entity = entity_load_single($entity_type, $entity_id);
+    $has_view_access = (entity_access('view', $entity_type, $entity) !== FALSE);
+    $has_update_access = (entity_access('update', $entity_type, $entity) !== FALSE);
+    if (!$entity || !($has_view_access || $has_update_access)) {
+      return MENU_ACCESS_DENIED;
+    }
+  }
+
+  $handler = gie_innovation_get_selection_handler($field, $instance, $entity_type, $entity);
+
+  if ($type == 'tags') {
+    // The user enters a comma-separated list of tags. We only autocomplete the last tag.
+    $tags_typed = drupal_explode_tags($string);
+    $tag_last = drupal_strtolower(array_pop($tags_typed));
+    if (!empty($tag_last)) {
+      $prefix = count($tags_typed) ? implode(', ', $tags_typed) . ', ' : '';
+    }
+  }
+  else {
+    // The user enters a single tag.
+    $prefix = '';
+    $tag_last = $string;
+  }
+
+  if (isset($tag_last)) {
+
+
+    // Get an array of matching entities.
+    $entity_labels = $handler->getReferencableEntities($tag_last, $instance['widget']['settings']['match_operator'], 10);
+
+    // Grab the extra contextual information
+    $extra_user_info = db_query("select users.uid, field_data_field_user_firstname.field_user_firstname_value, field_data_field_user_lastname.field_user_lastname_value from users
+                  left join field_data_field_user_firstname on users.uid = field_data_field_user_firstname.entity_id
+                  left join field_data_field_user_lastname on users.uid = field_data_field_user_lastname.entity_id
+                  where users.uid in (:uids)", array(':uids' => array_keys($entity_labels['user'])))->fetchAllAssoc('uid');
+
+
+    // Loop through the products and convert them into autocomplete output.
+    foreach ($entity_labels as $values) {
+      foreach ($values as $entity_id => $label) {
+        $key = "$label ($entity_id)";
+        // Strip things like starting/trailing white spaces, line breaks and tags.
+        $key = preg_replace('/\s\s+/', ' ', str_replace("\n", '', trim(decode_entities(strip_tags($key)))));
+        // Names containing commas or quotes must be wrapped in quotes.
+        if (strpos($key, ',') !== FALSE || strpos($key, '"') !== FALSE) {
+          $key = '"' . str_replace('"', '""', $key) . '"';
+        }
+        $extra_firstname_info = !empty($extra_user_info[$entity_id]->field_user_firstname_value) ? $extra_user_info[$entity_id]->field_user_firstname_value : '';
+        $extra_lastname_info = !empty($extra_user_info[$entity_id]->field_user_lastname_value) ? $extra_user_info[$entity_id]->field_user_lastname_value : '';
+        $matches[$prefix . $key] = '<div class="reference-autocomplete">' . $label . ' (' . $extra_firstname_info . ' - ' . $extra_lastname_info . ')</div>';
+      }
+    }
+  }
+
+
+  drupal_json_output($matches);
+}
+
+
+/**
+ * Implements hook_ctools_plugin_type().
+ */
+function gie_innovation_ctools_plugin_type() {
+  $plugins['selection'] = array(
+    'classes' => array('class'),
+  );
+  return $plugins;
+}
+
+/**
+ * CTools callback; Process the behavoir plugins.
+ */
+function gie_innovation_behavior_plugin_process(&$plugin, $info) {
+  $plugin += array(
+    'description' => '',
+    'behavior type' => 'field',
+    'access callback' => FALSE,
+    'force enabled' => FALSE,
+  );
+}
+
+
+/**
+ * Get the selection handler for a given entityreference field.
+ */
+function gie_innovation_get_selection_handler($field, $instance = NULL, $entity_type = NULL, $entity = NULL) {
+  ctools_include('plugins');
+  $handler = $field['settings']['handler'];
+  $class = ctools_plugin_load_class('gie_innovation', 'selection', $handler, 'class');
+
+  if (class_exists($class)) {
+    return call_user_func(array(
+      $class,
+      'getInstance'
+    ), $field, $instance, $entity_type, $entity);
+  }
+  else {
+    return GieEntityReference_SelectionHandler_Broken::getInstance($field, $instance, $entity_type, $entity);
+  }
+}
+
+
+/**
+ * Implements hook_block_view_MODULE_DELTA_alter().
+ */
+function gie_innovation_block_view_multistep_innovation_alter(&$data, $block) {
+  foreach ($data['content']['multistep_block_navigation']['#children'] as $key => $value) {
+    switch ($key) {
+      case '0group_one':
+        $data['content']['multistep_block_navigation']['#children'][$key]['label'] = 'Basic Information';
+        break;
+      case '1group_two':
+        $data['content']['multistep_block_navigation']['#children'][$key]['label'] = 'Vision';
+        break;
+      case '2group_three':
+        $data['content']['multistep_block_navigation']['#children'][$key]['label'] = 'Funding';
+        break;
+      case '3group_four':
+        $data['content']['multistep_block_navigation']['#children'][$key]['label'] = 'Team';
+        break;
+      case '4group_five':
+        $data['content']['multistep_block_navigation']['#children'][$key]['label'] = 'Evidence';
+        break;
+    }
+  }
+}

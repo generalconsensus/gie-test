@@ -545,7 +545,7 @@ function gie_innovation_field_default_field_instances() {
         ),
       ),
       'type' => 'addressfield_standard',
-      'weight' => 9,
+      'weight' => 11,
     ),
   );
 
@@ -1815,7 +1815,7 @@ function gie_innovation_field_default_field_instances() {
     'label' => 'Funding Goal',
     'required' => 0,
     'settings' => array(
-      'description_display' => 'before',
+      'description_display' => 'after',
       'max' => '',
       'min' => 0,
       'prefix' => '$',

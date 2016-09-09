@@ -432,3 +432,4 @@ function gie_general_update_7044() {
     module_enable(array('label_help'), TRUE);
     variable_get('node_admin_theme', '1');
 }
+
