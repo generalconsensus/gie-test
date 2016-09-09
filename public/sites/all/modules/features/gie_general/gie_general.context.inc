@@ -22,6 +22,14 @@ function gie_general_context_default_contexts() {
         'context_condition_default' => 'context_condition_default',
       ),
     ),
+    'domain' => array(
+      'values' => array(
+        1 => 1,
+      ),
+      'options' => array(
+        'include_exclude' => '0',
+      ),
+    ),
   );
   $context->reactions = array(
     'block' => array(
@@ -89,7 +97,7 @@ function gie_general_context_default_contexts() {
       ),
     ),
   );
-  $context->condition_mode = 0;
+  $context->condition_mode = 1;
   $export['sitewide'] = $context;
 
   $context = new stdClass();
