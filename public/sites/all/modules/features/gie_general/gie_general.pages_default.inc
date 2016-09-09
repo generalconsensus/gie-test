@@ -129,7 +129,7 @@ function gie_general_default_page_manager_handlers() {
     'name' => 'add_edit_forms',
   );
   $display = new panels_display();
-  $display->layout = 'detail';
+  $display->layout = 'multistep';
   $display->layout_settings = array();
   $display->panel_settings = array(
     'style_settings' => array(
@@ -143,6 +143,8 @@ function gie_general_default_page_manager_handlers() {
       'box_third' => NULL,
       'bottom_sidebar' => NULL,
       'bottom' => NULL,
+      'preface' => NULL,
+      'sidebar' => NULL,
     ),
   );
   $display->cache = array();
@@ -169,7 +171,10 @@ function gie_general_default_page_manager_handlers() {
   $pane->style = array(
     'settings' => NULL,
   );
-  $pane->css = array();
+  $pane->css = array(
+    'css_id' => '',
+    'css_class' => 'pane--multistep-form',
+  );
   $pane->extras = array();
   $pane->position = 0;
   $pane->locks = array();
@@ -178,15 +183,43 @@ function gie_general_default_page_manager_handlers() {
   $display->panels['main'][0] = 'new-23bb80b1-0253-4da6-a25f-25ed7de2b135';
   $pane = new stdClass();
   $pane->pid = 'new-ae89a775-9073-48b1-8d36-3373b65ca0f8';
-  $pane->panel = 'main_sidebar';
+  $pane->panel = 'sidebar';
   $pane->type = 'block';
   $pane->subtype = 'multistep-innovation';
   $pane->shown = TRUE;
   $pane->access = array();
   $pane->configuration = array(
-    'override_title' => 0,
-    'override_title_text' => '',
+    'override_title' => 1,
+    'override_title_text' => 'Skip to other Sections',
     'override_title_heading' => 'h2',
+  );
+  $pane->cache = array();
+  $pane->style = array(
+    'settings' => NULL,
+  );
+  $pane->css = array(
+    'css_id' => '',
+    'css_class' => 'pane--mulitstep-progress',
+  );
+  $pane->extras = array();
+  $pane->position = 0;
+  $pane->locks = array();
+  $pane->uuid = 'ae89a775-9073-48b1-8d36-3373b65ca0f8';
+  $display->content['new-ae89a775-9073-48b1-8d36-3373b65ca0f8'] = $pane;
+  $display->panels['sidebar'][0] = 'new-ae89a775-9073-48b1-8d36-3373b65ca0f8';
+  $pane = new stdClass();
+  $pane->pid = 'new-9229e2e6-6096-4e99-bc8c-b93f47bdd631';
+  $pane->panel = 'sidebar';
+  $pane->type = 'custom';
+  $pane->subtype = 'custom';
+  $pane->shown = TRUE;
+  $pane->access = array();
+  $pane->configuration = array(
+    'admin_title' => 'Need help?',
+    'title' => 'Need help?',
+    'body' => 'Make your Innovation profile page SHINE! Read our best practices and writing techniques guide.&nbsp;',
+    'format' => 'filtered_html',
+    'substitute' => 1,
   );
   $pane->cache = array();
   $pane->style = array(
@@ -194,11 +227,11 @@ function gie_general_default_page_manager_handlers() {
   );
   $pane->css = array();
   $pane->extras = array();
-  $pane->position = 0;
+  $pane->position = 1;
   $pane->locks = array();
-  $pane->uuid = 'ae89a775-9073-48b1-8d36-3373b65ca0f8';
-  $display->content['new-ae89a775-9073-48b1-8d36-3373b65ca0f8'] = $pane;
-  $display->panels['main_sidebar'][0] = 'new-ae89a775-9073-48b1-8d36-3373b65ca0f8';
+  $pane->uuid = '9229e2e6-6096-4e99-bc8c-b93f47bdd631';
+  $display->content['new-9229e2e6-6096-4e99-bc8c-b93f47bdd631'] = $pane;
+  $display->panels['sidebar'][1] = 'new-9229e2e6-6096-4e99-bc8c-b93f47bdd631';
   $pane = new stdClass();
   $pane->pid = 'new-e1b03668-52fe-4016-ac73-24e99ff9393c';
   $pane->panel = 'title';

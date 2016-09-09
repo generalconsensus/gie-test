@@ -25,6 +25,11 @@
     line-height: 1.4;
     padding-bottom: 0.5em;
   }
+
+  .form-file {
+    margin-bottom: 0.5em;
+  }
+
 }
 
 .form-item__label {
@@ -94,7 +99,6 @@
 
 // multi-step layout for form elements
 .form-item__label-container {
-  line-height: 1.2;
   padding-bottom: 0.5em;
   @include breakpoint(800px, $no-query: true) {
     float: left;
@@ -102,8 +106,12 @@
     text-align: right;
     width: 30%;
   }
-  @include breakpoint(1000px, $no-query: true) {
-    width: 20%;
+  table & {
+    float: none;
+    width: 100%;
+  }
+  .form-item__label {
+    line-height: 1.2;
   }
 }
 
@@ -113,8 +121,26 @@
     float: left;
     width: 70%;
   }
-  @include breakpoint(1000px, $no-query: true) {
-    width: 80%;
+  table & {
+    float: none;
+    width: 100%;
+  }
+  table {
+    width: 100%;
+    .form-text {
+      width: 100%;
+    }
+  }
+  .form-item {
+    margin-bottom: 1em !important;
+  }
+  table .form-item {
+    .form-item {
+      margin-bottom: 0 !important;
+    }
+  }
+  .form-item__label {
+    line-height: 1.2;
   }
   .form-item__description {
     padding-left: 25px;
@@ -128,7 +154,10 @@
       content: "";
       left: 0;
       position: absolute;
-      top: 8px;
+      top: 10px;
     }
+  }
+  .filter-wrapper {
+    padding: 0;
   }
 }
