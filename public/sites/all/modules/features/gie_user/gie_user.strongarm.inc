@@ -116,34 +116,34 @@ function gie_user_strongarm() {
     'extra_fields' => array(
       'form' => array(
         'ckeditor' => array(
-          'weight' => '9',
-        ),
-        'account' => array(
-          'weight' => '3',
-        ),
-        'timezone' => array(
-          'weight' => '18',
-        ),
-        'googleanalytics' => array(
-          'weight' => '5',
-        ),
-        'mimemail' => array(
-          'weight' => '4',
-        ),
-        'contact' => array(
-          'weight' => '11',
-        ),
-        'metatags' => array(
-          'weight' => '13',
-        ),
-        'xmlsitemap' => array(
           'weight' => '12',
         ),
+        'account' => array(
+          'weight' => '6',
+        ),
+        'timezone' => array(
+          'weight' => '16',
+        ),
+        'googleanalytics' => array(
+          'weight' => '11',
+        ),
+        'mimemail' => array(
+          'weight' => '7',
+        ),
+        'contact' => array(
+          'weight' => '12',
+        ),
+        'metatags' => array(
+          'weight' => '14',
+        ),
+        'xmlsitemap' => array(
+          'weight' => '13',
+        ),
         'domain' => array(
-          'weight' => '2',
+          'weight' => '10',
         ),
         'redirect' => array(
-          'weight' => '14',
+          'weight' => '15',
         ),
       ),
       'display' => array(

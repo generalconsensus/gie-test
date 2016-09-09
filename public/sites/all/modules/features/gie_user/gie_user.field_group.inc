@@ -21,19 +21,8 @@ function gie_user_field_group_info() {
   $field_group->parent_name = '';
   $field_group->data = array(
     'label' => 'Tell Us About You',
-    'weight' => '1',
-    'children' => array(
-      0 => 'field_user_company',
-      1 => 'field_user_firstname',
-      2 => 'field_user_lastname',
-      3 => 'field_user_org',
-      4 => 'field_user_summary',
-      5 => 'field_user_title',
-      6 => 'field_user_motto',
-      7 => 'field_assistance_offered',
-      8 => 'field_user_parent',
-      9 => 'field_user_assistance',
-    ),
+    'weight' => '5',
+    'children' => array(),
     'format_type' => 'div',
     'format_settings' => array(
       'label' => 'Tell Us About You',
@@ -63,12 +52,8 @@ function gie_user_field_group_info() {
   $field_group->parent_name = '';
   $field_group->data = array(
     'label' => 'Choose Your Account Details',
-    'weight' => '0',
-    'children' => array(
-      0 => 'field_user_type',
-      1 => 'field_user_photo',
-      2 => 'account',
-    ),
+    'weight' => '4',
+    'children' => array(),
     'format_type' => 'div',
     'format_settings' => array(
       'label' => 'Choose Your Account Details',
@@ -229,12 +214,8 @@ function gie_user_field_group_info() {
   $field_group->parent_name = '';
   $field_group->data = array(
     'label' => 'Where else can we connect with you?',
-    'weight' => '7',
-    'children' => array(
-      0 => 'field_user_facebook',
-      1 => 'field_user_linkedin',
-      2 => 'field_user_twitter',
-    ),
+    'weight' => '8',
+    'children' => array(),
     'format_type' => 'div',
     'format_settings' => array(
       'label' => 'Where else can we connect with you?',
@@ -256,6 +237,38 @@ function gie_user_field_group_info() {
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
   $field_group->api_version = 1;
+  $field_group->identifier = 'group_four|user|user|form';
+  $field_group->group_name = 'group_four';
+  $field_group->entity_type = 'user';
+  $field_group->bundle = 'user';
+  $field_group->mode = 'form';
+  $field_group->parent_name = '';
+  $field_group->data = array(
+    'label' => 'Your Personalization & Outreach',
+    'weight' => '3',
+    'children' => array(
+      0 => 'field_user_address',
+      1 => 'field_user_facebook',
+      2 => 'field_user_linkedin',
+      3 => 'field_user_summary',
+      4 => 'field_user_twitter',
+      5 => 'field_user_motto',
+      6 => 'timezone',
+    ),
+    'format_type' => 'multistep',
+    'format_settings' => array(
+      'formatter' => '',
+      'instance_settings' => array(
+        'description' => '',
+        'classes' => 'group-four field-group-multistep',
+      ),
+    ),
+  );
+  $field_groups['group_four|user|user|form'] = $field_group;
+
+  $field_group = new stdClass();
+  $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
+  $field_group->api_version = 1;
   $field_group->identifier = 'group_interests|user|user|form';
   $field_group->group_name = 'group_interests';
   $field_group->entity_type = 'user';
@@ -264,16 +277,8 @@ function gie_user_field_group_info() {
   $field_group->parent_name = '';
   $field_group->data = array(
     'label' => 'What interests you about the Exchange?',
-    'weight' => '6',
-    'children' => array(
-      0 => 'field_user_education',
-      1 => 'field_user_interests',
-      2 => 'field_user_skills',
-      3 => 'field_user_other_interests',
-      4 => 'field_user_programs',
-      5 => 'field_term_sector',
-      6 => 'field_term_region',
-    ),
+    'weight' => '7',
+    'children' => array(),
     'format_type' => 'div',
     'format_settings' => array(
       'label' => 'What interests you about the Exchange?',
@@ -291,6 +296,105 @@ function gie_user_field_group_info() {
     ),
   );
   $field_groups['group_interests|user|user|form'] = $field_group;
+
+  $field_group = new stdClass();
+  $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
+  $field_group->api_version = 1;
+  $field_group->identifier = 'group_one|user|user|form';
+  $field_group->group_name = 'group_one';
+  $field_group->entity_type = 'user';
+  $field_group->bundle = 'user';
+  $field_group->mode = 'form';
+  $field_group->parent_name = '';
+  $field_group->data = array(
+    'label' => 'Your Basic Information',
+    'weight' => '0',
+    'children' => array(
+      0 => 'field_user_firstname',
+      1 => 'field_user_lastname',
+      2 => 'field_user_photo',
+      3 => 'field_newsletter_sign_up',
+      4 => 'field_user_notifications',
+      5 => 'field_user_mail_funding_rec',
+      6 => 'field_user_mail_innovation_rec',
+      7 => 'mimemail',
+      8 => 'account',
+      9 => 'contact',
+    ),
+    'format_type' => 'multistep',
+    'format_settings' => array(
+      'formatter' => '',
+      'instance_settings' => array(
+        'description' => '',
+        'classes' => 'group-one field-group-multistep',
+      ),
+    ),
+  );
+  $field_groups['group_one|user|user|form'] = $field_group;
+
+  $field_group = new stdClass();
+  $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
+  $field_group->api_version = 1;
+  $field_group->identifier = 'group_three|user|user|form';
+  $field_group->group_name = 'group_three';
+  $field_group->entity_type = 'user';
+  $field_group->bundle = 'user';
+  $field_group->mode = 'form';
+  $field_group->parent_name = '';
+  $field_group->data = array(
+    'label' => 'Your Exchange Information',
+    'weight' => '2',
+    'children' => array(
+      0 => 'field_user_interests',
+      1 => 'field_user_org',
+      2 => 'field_user_programs',
+      3 => 'field_term_sector',
+      4 => 'field_term_region',
+      5 => 'field_assistance_offered',
+      6 => 'field_user_parent',
+      7 => 'field_user_assistance',
+    ),
+    'format_type' => 'multistep',
+    'format_settings' => array(
+      'formatter' => '',
+      'instance_settings' => array(
+        'description' => '',
+        'classes' => 'group-three field-group-multistep',
+      ),
+    ),
+  );
+  $field_groups['group_three|user|user|form'] = $field_group;
+
+  $field_group = new stdClass();
+  $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
+  $field_group->api_version = 1;
+  $field_group->identifier = 'group_two|user|user|form';
+  $field_group->group_name = 'group_two';
+  $field_group->entity_type = 'user';
+  $field_group->bundle = 'user';
+  $field_group->mode = 'form';
+  $field_group->parent_name = '';
+  $field_group->data = array(
+    'label' => 'Your Professional Information',
+    'weight' => '1',
+    'children' => array(
+      0 => 'field_user_company',
+      1 => 'field_user_education',
+      2 => 'field_user_skills',
+      3 => 'field_user_title',
+      4 => 'field_user_type',
+      5 => 'field_user_other_interests',
+    ),
+    'format_type' => 'multistep',
+    'format_settings' => array(
+      'formatter' => '',
+      'instance_settings' => array(
+        'description' => '',
+        'classes' => 'group-two field-group-multistep',
+      ),
+    ),
+  );
+  $field_groups['group_two|user|user|form'] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -337,13 +441,12 @@ function gie_user_field_group_info() {
   $field_group->parent_name = '';
   $field_group->data = array(
     'label' => 'Notifications',
-    'weight' => '8',
+    'weight' => '9',
     'children' => array(
-      0 => 'field_user_notifications',
-      1 => 'field_user_mail_comment',
-      2 => 'field_user_mail_content_follow',
-      3 => 'field_user_mail_follow_edit',
-      4 => 'field_user_mail_user_follow',
+      0 => 'field_user_mail_comment',
+      1 => 'field_user_mail_content_follow',
+      2 => 'field_user_mail_follow_edit',
+      3 => 'field_user_mail_user_follow',
     ),
     'format_type' => 'div',
     'format_settings' => array(
@@ -374,11 +477,8 @@ function gie_user_field_group_info() {
   $field_group->parent_name = '';
   $field_group->data = array(
     'label' => 'Where are you from?',
-    'weight' => '3',
-    'children' => array(
-      0 => 'field_user_address',
-      1 => 'timezone',
-    ),
+    'weight' => '6',
+    'children' => array(),
     'format_type' => 'div',
     'format_settings' => array(
       'label' => 'Where are you from?',
@@ -408,6 +508,10 @@ function gie_user_field_group_info() {
   t('What interests you about the Exchange?');
   t('Where are you from?');
   t('Where else can we connect with you?');
+  t('Your Basic Information');
+  t('Your Exchange Information');
+  t('Your Personalization & Outreach');
+  t('Your Professional Information');
 
   return $field_groups;
 }

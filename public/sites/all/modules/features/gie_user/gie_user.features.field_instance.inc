@@ -612,7 +612,7 @@ function gie_user_field_default_field_instances() {
         'track_list' => 0,
       ),
       'type' => 'term_reference_tree',
-      'weight' => 7,
+      'weight' => 9,
     ),
   );
 
@@ -725,7 +725,7 @@ function gie_user_field_default_field_instances() {
       'module' => 'mailchimp_lists',
       'settings' => array(),
       'type' => 'mailchimp_lists_select',
-      'weight' => 10,
+      'weight' => 11,
     ),
   );
 
@@ -830,7 +830,7 @@ function gie_user_field_default_field_instances() {
         'track_list' => 0,
       ),
       'type' => 'term_reference_tree',
-      'weight' => 32,
+      'weight' => 12,
     ),
   );
 
@@ -935,7 +935,7 @@ function gie_user_field_default_field_instances() {
         'track_list' => 0,
       ),
       'type' => 'term_reference_tree',
-      'weight' => 30,
+      'weight' => 11,
     ),
   );
 
@@ -1060,7 +1060,7 @@ function gie_user_field_default_field_instances() {
         ),
       ),
       'type' => 'addressfield_standard',
-      'weight' => 17,
+      'weight' => 15,
     ),
   );
 
@@ -1291,7 +1291,7 @@ function gie_user_field_default_field_instances() {
         'size' => 60,
       ),
       'type' => 'taxonomy_autocomplete',
-      'weight' => 5,
+      'weight' => 12,
     ),
   );
 
@@ -1414,7 +1414,7 @@ function gie_user_field_default_field_instances() {
         'rows' => 5,
       ),
       'type' => 'text_textarea',
-      'weight' => 36,
+      'weight' => 13,
     ),
   );
 
@@ -1535,7 +1535,7 @@ function gie_user_field_default_field_instances() {
       'module' => 'html5_tools',
       'settings' => array(),
       'type' => 'urlwidget',
-      'weight' => 10,
+      'weight' => 19,
     ),
   );
 
@@ -1765,7 +1765,7 @@ function gie_user_field_default_field_instances() {
         'track_list' => 0,
       ),
       'type' => 'term_reference_tree',
-      'weight' => 31,
+      'weight' => 10,
     ),
   );
 
@@ -2009,7 +2009,7 @@ function gie_user_field_default_field_instances() {
       'module' => 'html5_tools',
       'settings' => array(),
       'type' => 'urlwidget',
-      'weight' => 9,
+      'weight' => 18,
     ),
   );
 
@@ -2548,7 +2548,7 @@ function gie_user_field_default_field_instances() {
         'size' => 60,
       ),
       'type' => 'text_textfield',
-      'weight' => 12,
+      'weight' => 14,
     ),
   );
 
@@ -2654,7 +2654,7 @@ function gie_user_field_default_field_instances() {
         'size' => 60,
       ),
       'type' => 'entityreference_autocomplete',
-      'weight' => 9,
+      'weight' => 14,
     ),
   );
 
@@ -2751,7 +2751,7 @@ function gie_user_field_default_field_instances() {
         'size' => 60,
       ),
       'type' => 'taxonomy_autocomplete',
-      'weight' => 35,
+      'weight' => 16,
     ),
   );
 
@@ -2857,7 +2857,7 @@ function gie_user_field_default_field_instances() {
         'size' => 60,
       ),
       'type' => 'entityreference_autocomplete',
-      'weight' => 10,
+      'weight' => 13,
     ),
   );
 
@@ -3087,7 +3087,7 @@ function gie_user_field_default_field_instances() {
         'progress_indicator' => 'throbber',
       ),
       'type' => 'image_image',
-      'weight' => 4,
+      'weight' => 5,
     ),
   );
 
@@ -3192,7 +3192,7 @@ function gie_user_field_default_field_instances() {
         'size' => 60,
       ),
       'type' => 'entityreference_autocomplete',
-      'weight' => 34,
+      'weight' => 15,
     ),
   );
 
@@ -3292,7 +3292,7 @@ function gie_user_field_default_field_instances() {
         'size' => 60,
       ),
       'type' => 'taxonomy_autocomplete',
-      'weight' => 33,
+      'weight' => 14,
     ),
   );
 
@@ -3712,7 +3712,7 @@ function gie_user_field_default_field_instances() {
       'module' => 'html5_tools',
       'settings' => array(),
       'type' => 'urlwidget',
-      'weight' => 8,
+      'weight' => 17,
     ),
   );
 
@@ -3835,7 +3835,7 @@ function gie_user_field_default_field_instances() {
         'track_list' => 0,
       ),
       'type' => 'term_reference_tree',
-      'weight' => 5,
+      'weight' => 15,
     ),
   );
 
