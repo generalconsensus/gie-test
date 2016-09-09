@@ -1,0 +1,26 @@
+.multistep-progress-bar-wrapper {
+  overflow: hidden;
+}
+
+.multistep-progress-bar {
+  background: $lightblue;
+  color: #fff;
+  font-size: $font-size-lg;
+  font-weight: bold;
+  height: 1.625em;
+  padding-right: 10px;
+  &.multistep-progress-bar-100 {
+    text-align: center;
+  }
+  &.multistep-progress-bar-0 {
+    padding-right: 0;
+  }
+}
+
+.multistep-progress-bar-percentage-right {
+  color: #000;
+  float: left;
+  font-size: $font-size-lg;
+  font-weight: bold;
+  padding-left: 5px;
+}
