@@ -11,6 +11,9 @@ include_once 'gie_messages.features.inc';
  * - Trigger Comment Notify message
  */
 function gie_messages_comment_insert($comment) {
+  // do not do for unpublished content
+  if ($comment->status == 0) return;
+
   $node = node_load($comment->nid);
   if ($comment->uid == $node->uid) {
     // Same comment author as node author
@@ -150,6 +153,9 @@ function gie_messages_flag_flag($flag, $content_id, $account, $flagging) {
  * - Trigger Node Update Notify message
  */
 function gie_messages_node_update($node) {
+  // do not do for unpublished content
+  if ($node->status == 0) return;
+
   // Load Favorite flag
   $flag = flag_get_flag('favorite');
   // End if flag not found
@@ -216,6 +222,9 @@ function gie_messages_node_update($node) {
  * - Trigger User Follow Create message (send message to all followers of node author)
  */
 function gie_messages_node_insert($node) {
+  // do not do for unpublished content
+  if ($node->status == 0) return;
+
   switch($node->type) {
     case 'innovation':
     case 'resource':
