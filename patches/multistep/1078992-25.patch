@@ -1,0 +1,139 @@
+diff --git a/multistep.module b/multistep.module
+index a4eee5e..195bd38 100644
+--- a/multistep.module
++++ b/multistep.module
+@@ -340,6 +340,76 @@ function multistep_node_delete($node) {
+   }
+ }
+ 
++
++/**
++ * Implements hook_form_FORM_ID_alter().
++ */
++function multistep_form_user_profile_form_alter(&$form, &$form_state, $form_id) {
++  $test = 1;
++
++  if (!is_object($form['#user'])) {
++    return;
++  }
++  /* Disable immediate redirection through "destination" parameter, but preserve the destination value.
++   * @todo Change this to pass all Request variables in an array
++  if (isset($_REQUEST['destination'])) {
++    $query = array('redirect' => $_REQUEST['destination']);
++    unset($_REQUEST['destination']);
++    // Add compatibility with Prepopulate
++    // @see http://drupal.org/node/889924
++    if (isset($_REQUEST['edit'])) {
++      $query = array_merge($query, array('edit' => $_REQUEST['edit']));
++    }
++    // @fixme Find a different way of bypassing the destination
++    drupal_goto($_REQUEST['q'], $query);
++  }*/
++  /* We need to remove #redirect to prevent redirection to the profile main page
++   * @todo Change this to work for Profile2 as an included module.
++  if (module_exists('content_profile') && is_content_profile($type)) {
++    unset($form['#redirect']);
++  }*/
++  $step = multistep_get_step($form['#user']);
++  $form['#multistep'] = array(
++    'previous' => multistep_get_previous($form['#user'], $step),
++    'current' => $step,
++    'next' => multistep_get_next($form['#user'], $step),
++  );
++  // This adds different submitting buttons (Previous, Save, Next, Done).
++  if ($step != multistep_get_first($form['#user'])) {
++    $form['actions']['previous'] = array(
++      '#type' => 'submit',
++      '#value' => variable_get('multistep_button_prev', t('< Previous')),
++      '#submit' => array('node_form_submit', 'multistep_submit'),
++      '#weight' => -999,
++      '#access' => variable_get('multistep_button_prev', TRUE),
++    );
++  }
++  $form['actions']['save'] = array(
++    '#type' => 'submit',
++    '#value' => variable_get('multistep_button_save', t('Save')),
++    '#submit' => array('node_form_submit', 'multistep_submit'),
++    '#weight' => 0,
++    '#access' => variable_get('multistep_button_save', TRUE),
++  );
++  if ($step != multistep_get_last($form['#user'])) {
++    $form['actions']['next'] = array(
++      '#type' => 'submit',
++      '#value' => variable_get('multistep_button_next', t('Next >')),
++      '#submit' => array('node_form_submit', 'multistep_submit'),
++      '#weight' => 999,
++    );
++  }
++  else {
++    $form['actions']['done'] = array(
++      '#type' => 'submit',
++      '#value' => variable_get('multistep_button_done', t('Done')),
++      '#submit' => array('node_form_submit', 'multistep_submit'),
++      '#weight' => 999,
++    );
++  }
++  $form['actions']['submit']['#access'] = FALSE;
++}
++
+ /**
+  * Implements hook_field_attach_form().
+  */
+@@ -599,17 +669,35 @@ function multistep_get_steps($type) {
+   $multistep = &drupal_static(__FUNCTION__);
+   if (is_object($type)) {
+     $type = $type->type;
++    if ($type->type) {
++      $type = $type->type;
++    }
++    elseif (!empty($type->mail)) {
++      $type = 'user';
++    }
+   }
+   if (!isset($multistep[$type])) {
+-    $groups = field_group_info_groups('node', $type, 'form');
+-    $steps = array();
+-    foreach ($groups as $group) {
+-      if ($group->format_type == 'multistep') {
+-        $steps[$group->group_name] = $group;
++    if ($type->type) {
++      $groups = field_group_info_groups('node', $type, 'form');
++      $steps = array();
++      foreach ($groups as $group) {
++        if ($group->format_type == 'multistep') {
++          $steps[$group->group_name] = $group;
++        }
+       }
++      uasort($steps, '_multistep_cmp_group_weight');
++      $multistep[$type] = $steps;
++    } elseif ($type == 'user') {
++      $groups = field_group_info_groups('user', $type, 'form');
++      $steps = array();
++      foreach ($groups as $group) {
++        if ($group->format_type == 'multistep') {
++          $steps[$group->group_name] = $group;
++        }
++      }
++      uasort($steps, '_multistep_cmp_group_weight');
++      $multistep[$type] = $steps;
+     }
+-    uasort($steps, '_multistep_cmp_group_weight');
+-    $multistep[$type] = $steps;
+   }
+   return $multistep[$type];
+ }
+@@ -646,8 +734,12 @@ function multistep_get_step($type) {
+   if (isset($_REQUEST['step'])) {
+     return $_REQUEST['step'];
+   }
+-  if (is_object($type)) {
+-    $type = $type->type;
++  if (is_object($type) ||  !empty($type->mail)) {
++    if ($type->type) {
++      $type = $type->type;
++    } elseif (!isset($type->type) && !empty($type->mail)) {
++      $type = 'user';
++    }
+   }
+   // @see http://drupal.org/node/566682 - Added support for hierarchical_select
+   if (arg(0) == 'hierarchical_select_json') {
