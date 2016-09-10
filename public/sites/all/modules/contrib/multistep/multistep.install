@@ -2,7 +2,7 @@
 
 /**
  * @file
- * 
+ *
  */
 
 /**
@@ -27,12 +27,19 @@ function multistep_schema() {
   $schema['multistep'] = array(
     'description' => 'Keeps track of submitted steps in multistep forms.',
     'fields' => array(
-      'nid' => array(
+      'id' => array(
         'type' => 'int',
         'unsigned' => TRUE,
         'not null' => TRUE,
         'default' => 0,
-        'description' => 'The primary identifier for a node.'
+        'description' => 'The primary identifier for an entity.'
+      ),
+      'entity_type' => array(
+        'type' => 'varchar',
+        'length' => 64,
+        'not null' => TRUE,
+        'default' => '',
+        'description' => 'The entity type.'
       ),
       'step' => array(
         'type' => 'varchar',
@@ -49,9 +56,9 @@ function multistep_schema() {
         'description' => 'The status of the step.'
       ),
     ),
-    'primary key' => array('nid', 'step'),
+    'primary key' => array('id', 'entity_type', 'step'),
     'indexes' => array(
-      'multistep_nid_step' => array('nid', 'step'),
+      'multistep_id_type_step' => array('id', 'entity_type', 'step'),
       'multistep_status' => array(array('status', 1)),
     ),
   );
@@ -79,19 +86,21 @@ function multistep_disable() {
  */
 function multistep_uninstall() {
   // Remove variables created by the module.
-  $node_types = node_type_get_types();
-  foreach ($node_types as $node_type) {
-    variable_del('multistep_expose_' . $node_type->type);
-    variable_del('multistep_menu_' . $node_type->type);
-    variable_del('multistep_progress_' . $node_type->type);
-    variable_del('multistep_steps_' . $node_type->type);
-    variable_del('multistep_buttons_' . $node_type->type);
-    variable_del('multistep_default_' . $node_type->type);
-    /*
-    * @todo Verify how Field API handles extra fields
-    foreach ($node_type['extra'] as $extra_field) {
-      variable_del('multistep_extra_' . $extra_field . '_' . $content_type['type']);
-    }*/
+  $info = entity_get_info();
+  foreach ($info as $entity_type => $info) {
+    foreach ($info['bundles'] as $type => $bundle_info) {
+      variable_del('multistep_expose_' . $entity_type . '_' . $type);
+      variable_del('multistep_menu_' . $entity_type . '_' . $type);
+      variable_del('multistep_progress_' . $entity_type . '_' . $type);
+      variable_del('multistep_steps_' . $entity_type . '_' . $type);
+      variable_del('multistep_buttons_' . $entity_type . '_' . $type);
+      variable_del('multistep_default_' . $entity_type . '_' . $type);
+      /*
+      * @todo Verify how Field API handles extra fields
+      foreach ($node_type['extra'] as $extra_field) {
+        variable_del('multistep_extra_' . $extra_field . '_' . $content_type['type']);
+      }*/
+    }
   }
   variable_del('multistep_status_revisions');
   variable_del('multistep_status_publishing');
@@ -110,7 +119,7 @@ function multistep_uninstall() {
 function multistep_update_6100(&$sandbox) {
   $schema['multistep'] = array(
     'fields' => array(
-      'nid' => array('type' => 'int', 'unsigned' => TRUE, 'not null' => TRUE, 'default' => 0, 'description' => 'The primary identifier for a node.'),
+      'id' => array('type' => 'int', 'unsigned' => TRUE, 'not null' => TRUE, 'default' => 0, 'description' => 'The primary identifier for an entity.'),
       'step' => array('type' => 'int', 'unsigned' => TRUE, 'not null' => TRUE, 'default' => 0, 'description' => 'A particular step of the nid.'),
       'status' => array('type' => 'varchar', 'length' => 12, 'not null' => TRUE, 'default' => '', 'description' => 'The status of the step.'),
     ),

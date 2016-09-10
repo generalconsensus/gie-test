@@ -66,9 +66,17 @@ function multistep_admin_settings_workflow_form($form, &$form_state) {
     '#default_value' => variable_get('multistep_show_step_numbers', FALSE),
     '#weight' => -6,
   );
+
+  $form['multistep_show_view_changes'] = array(
+    '#type' => 'checkbox',
+    '#title' => t('Show view changes button'),
+    '#description' => t('Show View Changes button in the multistep form.'),
+    '#default_value' => variable_get('multistep_show_view_changes', FALSE),
+    '#weight' => -6,
+  );
   return system_settings_form($form);
-}  
-  
+}
+
 /**
  * Form used for changing multistep form labels.
  */
@@ -114,19 +122,22 @@ function multistep_admin_settings_design_form($form, &$form_state) {
 function multistep_admin_settings_reset_form($form, &$form_state) {
   $form = array();
   $form['#description'] = t('This form will reset all the step data for the selected content type. Use this if you just enabled multistep for a content type that already contained nodes.') . '<br /><strong>' . t('Warning! Resetting the tables for a content type that already had multistep enabled could result in the loss of the step data!') . '</strong>';
-  $options = array('' => '- Select -');
-  foreach (node_type_get_types() as $type) {
-    if (is_multistep($type)) {
-      $options[$type->type] = $type->name;
-    }
-  }
-  $form['multistep_type'] = array(
+
+  $entity_info = entity_get_info();
+  $form['multistep_entity_type'] = array(
     '#type' => 'select',
-    '#title' => t('Content type'),
-    '#options' => $options,
+    '#title' => t('Entity type'),
+    '#options' => array_combine(array_keys($entity_info), array_keys($entity_info)),
+    '#default_value' => 'node',
     '#required' => TRUE,
-    '#weight' => -1,
+    '#weight' => -2,
+    '#ajax' => array(
+      'wrapper' => 'multistep_bundles',
+      'callback' => 'multistep_admin_settings_reset_form_ajax',
+    ),
   );
+  // Apply AJAX callback on initial load
+  $form['multistep_type'] = multistep_admin_settings_reset_form_ajax($form, $form_state);
   // Show reset button if multistep is enabled for this content type.
   $form['multistep_reset'] = array(
     '#type' => 'submit',
@@ -137,10 +148,31 @@ function multistep_admin_settings_reset_form($form, &$form_state) {
   return $form;
 }
 
+function multistep_admin_settings_reset_form_ajax($form, &$form_state) {
+  $entity_type = isset($form_state['values']['multistep_entity_type']) ? $form_state['values']['multistep_entity_type'] : 'node';
+  $options = array('' => '- Select -');
+  $info = entity_get_info($entity_type);
+  foreach ($info['bundles'] as $type => $bundle_info) {
+    if (is_multistep($entity_type, $type)) {
+      $options[$type] = $bundle_info['label'];
+    }
+  }
+  $form['multistep_type'] = array(
+    '#type' => 'select',
+    '#title' => t('Content type'),
+    '#options' => $options,
+    '#required' => TRUE,
+    '#weight' => -1,
+    '#prefix' => '<div id="multistep_bundles">',
+    '#suffix' => '</div>',
+  );
+  return $form['multistep_type'];
+}
+
 /**
  * Resets the multistep table data for the selected content type.
  */
 function multistep_admin_settings_reset_form_submit($form, &$form_state) {
-  _multistep_reset_data($form_state['values']['multistep_type']);
+  _multistep_reset_data($form_state['values']['multistep_entity_type'], $form_state['values']['multistep_type']);
   drupal_set_message(t('Data was reset successfully.'));
 }
