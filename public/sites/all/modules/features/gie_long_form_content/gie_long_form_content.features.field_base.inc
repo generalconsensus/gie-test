@@ -193,8 +193,8 @@ function gie_long_form_content_field_default_field_bases() {
     'module' => 'list',
     'settings' => array(
       'allowed_values' => array(
-        'default' => 'Default',
-        'font-family-1' => 'Option 1',
+        'default' => 'Arial (default)',
+        'font-family-lato' => 'Lato',
       ),
       'allowed_values_function' => '',
     ),
