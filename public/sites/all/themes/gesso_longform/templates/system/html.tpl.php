@@ -3,12 +3,14 @@
  * @file
  * Returns the HTML for the basic html structure of a single Drupal page.
  */
+// get font class and add space if found
+$font_class = (!empty($font_class)) ?  ' '.$font_class : '';
 ?><!DOCTYPE html>
-<!--[if lt IE 7]>      <html class="ie6 lt-ie9 lt-ie8 lt-ie7 no-js" <?php print $html_attributes; ?>> <![endif]-->
-<!--[if IE 7]>         <html class="ie7 lt-ie9 lt-ie8 no-js" <?php print $html_attributes; ?>> <![endif]-->
-<!--[if IE 8]>         <html class="ie8 lt-ie9 no-js" <?php print $html_attributes; ?>> <![endif]-->
-<!--[if IE 9]>         <html class="ie9 no-js" <?php print $html_attributes; ?>> <![endif]-->
-<!--[if gt IE 9]><!--> <html class="no-js" <?php print $html_attributes . $rdf_namespaces; ?>> <!--<![endif]-->
+<!--[if lt IE 7]>      <html class="ie6 lt-ie9 lt-ie8 lt-ie7 no-js<?php print $font_class; ?>" <?php print $html_attributes; ?>> <![endif]-->
+<!--[if IE 7]>         <html class="ie7 lt-ie9 lt-ie8 no-js<?php print $font_class; ?>" <?php print $html_attributes; ?>> <![endif]-->
+<!--[if IE 8]>         <html class="ie8 lt-ie9 no-js<?php print $font_class; ?>" <?php print $html_attributes; ?>> <![endif]-->
+<!--[if IE 9]>         <html class="ie9 no-js<?php print $font_class; ?>" <?php print $html_attributes; ?>> <![endif]-->
+<!--[if gt IE 9]><!--> <html class="no-js<?php print $font_class; ?>" <?php print $html_attributes . $rdf_namespaces; ?>> <!--<![endif]-->
   <head>
     <?php print $head; ?>
     <title><?php print $head_title; ?></title>

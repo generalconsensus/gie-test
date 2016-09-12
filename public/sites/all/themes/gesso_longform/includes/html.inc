@@ -160,7 +160,7 @@ function gesso_longform_preprocess_html(&$vars, $hook) {
     $font_class = $node->field_longform_font_family[$lang][0]['value'];
     // do not do for default selection in field
     if ($font_class != 'default') {
-      $vars['classes_array'][] = drupal_clean_css_identifier($font_class);
+      $vars['font_class'] = drupal_clean_css_identifier($font_class);
       $vars['font_link'] = "<link href='https://fonts.googleapis.com/css?family=Lato:400,400italic,700,700italic,300italic,300' rel='stylesheet' type='text/css'>";
     }
   }
