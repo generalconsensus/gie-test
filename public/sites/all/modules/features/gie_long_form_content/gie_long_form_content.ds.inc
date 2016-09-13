@@ -635,6 +635,13 @@ function gie_long_form_content_ds_field_settings_info() {
         ),
       ),
     ),
+    'field_paragraphs_animation' => array(
+      'formatter_settings' => array(
+        'ft' => array(
+          'func' => 'theme_ds_field_expert',
+        ),
+      ),
+    ),
   );
   $export['paragraphs_item|long_form_text|default'] = $ds_fieldsetting;
 
@@ -1235,26 +1242,26 @@ function gie_long_form_content_ds_layout_settings_info() {
   $ds_layout->entity_type = 'paragraphs_item';
   $ds_layout->bundle = 'long_form_text';
   $ds_layout->view_mode = 'default';
-  $ds_layout->layout = 'ds_reset';
+  $ds_layout->layout = 'long_form_text';
   $ds_layout->settings = array(
     'regions' => array(
-      'ds_content' => array(
-        0 => 'group_text',
-        1 => 'field_paragraph_text',
+      'main_content' => array(
+        0 => 'field_paragraph_text',
+        1 => 'field_paragraphs_animation',
       ),
     ),
     'fields' => array(
-      'group_text' => 'ds_content',
-      'field_paragraph_text' => 'ds_content',
+      'field_paragraph_text' => 'main_content',
+      'field_paragraphs_animation' => 'main_content',
     ),
     'classes' => array(),
     'wrappers' => array(
-      'ds_content' => 'div',
+      'main_content' => 'div',
     ),
     'layout_wrapper' => 'div',
     'layout_attributes' => '',
-    'layout_attributes_merge' => TRUE,
-    'layout_link_attribute' => FALSE,
+    'layout_attributes_merge' => 1,
+    'layout_link_attribute' => '',
     'layout_link_custom' => '',
   );
   $export['paragraphs_item|long_form_text|default'] = $ds_layout;
