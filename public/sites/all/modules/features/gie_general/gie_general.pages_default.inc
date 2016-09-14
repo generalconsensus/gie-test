@@ -182,10 +182,10 @@ function gie_general_default_page_manager_handlers() {
   $display->content['new-23bb80b1-0253-4da6-a25f-25ed7de2b135'] = $pane;
   $display->panels['main'][0] = 'new-23bb80b1-0253-4da6-a25f-25ed7de2b135';
   $pane = new stdClass();
-  $pane->pid = 'new-ae89a775-9073-48b1-8d36-3373b65ca0f8';
+  $pane->pid = 'new-79bfe880-f918-4379-8f77-5c1c329eeb55';
   $pane->panel = 'sidebar';
   $pane->type = 'block';
-  $pane->subtype = 'multistep-innovation';
+  $pane->subtype = 'multistep-node|innovation';
   $pane->shown = TRUE;
   $pane->access = array();
   $pane->configuration = array(
@@ -197,16 +197,13 @@ function gie_general_default_page_manager_handlers() {
   $pane->style = array(
     'settings' => NULL,
   );
-  $pane->css = array(
-    'css_id' => '',
-    'css_class' => 'pane--mulitstep-progress',
-  );
+  $pane->css = array();
   $pane->extras = array();
   $pane->position = 0;
   $pane->locks = array();
-  $pane->uuid = 'ae89a775-9073-48b1-8d36-3373b65ca0f8';
-  $display->content['new-ae89a775-9073-48b1-8d36-3373b65ca0f8'] = $pane;
-  $display->panels['sidebar'][0] = 'new-ae89a775-9073-48b1-8d36-3373b65ca0f8';
+  $pane->uuid = '79bfe880-f918-4379-8f77-5c1c329eeb55';
+  $display->content['new-79bfe880-f918-4379-8f77-5c1c329eeb55'] = $pane;
+  $display->panels['sidebar'][0] = 'new-79bfe880-f918-4379-8f77-5c1c329eeb55';
   $pane = new stdClass();
   $pane->pid = 'new-9229e2e6-6096-4e99-bc8c-b93f47bdd631';
   $pane->panel = 'sidebar';
