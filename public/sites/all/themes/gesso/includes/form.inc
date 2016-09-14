@@ -743,7 +743,11 @@ function gesso_text_format_wrapper($element) {
     }
     $output .= "</div></div>\n";
 
-    return $output;
+  }
+  elseif ($element['element']['#entity_type'] == 'comment') {
+    $output = '<div class="text-format-wrapper">';
+    $output .= !empty($element['element']['#children']) ? $element['element']['#children'] : '';
+    $output .= "</div>\n";
   }
   else {
     $output = '<div class="text-format-wrapper">';
@@ -753,8 +757,9 @@ function gesso_text_format_wrapper($element) {
     }
     $output .= "</div>\n";
 
-    return $output;
   }
+  return $output;
+
 }
 
 
