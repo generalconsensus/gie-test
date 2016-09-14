@@ -98,13 +98,7 @@ function multistep_admin_settings_workflow_form($form, &$form_state) {
     '#default_value' => variable_get('multistep_show_step_numbers', FALSE),
     '#weight' => -6,
   );
-  $form['multistep_show_view_changes'] = array(
-    '#type' => 'checkbox',
-    '#title' => t('Show view changes button'),
-    '#description' => t('Show View Changes button in the multistep form.'),
-    '#default_value' => variable_get('multistep_show_view_changes', FALSE),
-    '#weight' => -6,
-  );
+
   return system_settings_form($form);
 }
 
