@@ -182,7 +182,7 @@ function gie_general_default_page_manager_handlers() {
   $display->content['new-23bb80b1-0253-4da6-a25f-25ed7de2b135'] = $pane;
   $display->panels['main'][0] = 'new-23bb80b1-0253-4da6-a25f-25ed7de2b135';
   $pane = new stdClass();
-  $pane->pid = 'new-ae89a775-9073-48b1-8d36-3373b65ca0f8';
+  $pane->pid = 'new-e0f33d01-c639-41b5-ab81-d8c48a5af0d0';
   $pane->panel = 'sidebar';
   $pane->type = 'block';
   $pane->subtype = 'multistep-innovation';
@@ -197,29 +197,24 @@ function gie_general_default_page_manager_handlers() {
   $pane->style = array(
     'settings' => NULL,
   );
-  $pane->css = array(
-    'css_id' => '',
-    'css_class' => 'pane--mulitstep-progress',
-  );
+  $pane->css = array();
   $pane->extras = array();
   $pane->position = 0;
   $pane->locks = array();
-  $pane->uuid = 'ae89a775-9073-48b1-8d36-3373b65ca0f8';
-  $display->content['new-ae89a775-9073-48b1-8d36-3373b65ca0f8'] = $pane;
-  $display->panels['sidebar'][0] = 'new-ae89a775-9073-48b1-8d36-3373b65ca0f8';
+  $pane->uuid = 'e0f33d01-c639-41b5-ab81-d8c48a5af0d0';
+  $display->content['new-e0f33d01-c639-41b5-ab81-d8c48a5af0d0'] = $pane;
+  $display->panels['sidebar'][0] = 'new-e0f33d01-c639-41b5-ab81-d8c48a5af0d0';
   $pane = new stdClass();
-  $pane->pid = 'new-9229e2e6-6096-4e99-bc8c-b93f47bdd631';
+  $pane->pid = 'new-a9427ed2-613a-40dd-94ad-a3596d09e4fe';
   $pane->panel = 'sidebar';
-  $pane->type = 'custom';
-  $pane->subtype = 'custom';
+  $pane->type = 'block';
+  $pane->subtype = 'gie_innovation-innovation_node_edit_need_help';
   $pane->shown = TRUE;
   $pane->access = array();
   $pane->configuration = array(
-    'admin_title' => 'Need help?',
-    'title' => 'Need help?',
-    'body' => 'Make your Innovation profile page SHINE! Read our best practices and writing techniques guide.&nbsp;',
-    'format' => 'filtered_html',
-    'substitute' => 1,
+    'override_title' => 0,
+    'override_title_text' => '',
+    'override_title_heading' => 'h2',
   );
   $pane->cache = array();
   $pane->style = array(
@@ -229,9 +224,9 @@ function gie_general_default_page_manager_handlers() {
   $pane->extras = array();
   $pane->position = 1;
   $pane->locks = array();
-  $pane->uuid = '9229e2e6-6096-4e99-bc8c-b93f47bdd631';
-  $display->content['new-9229e2e6-6096-4e99-bc8c-b93f47bdd631'] = $pane;
-  $display->panels['sidebar'][1] = 'new-9229e2e6-6096-4e99-bc8c-b93f47bdd631';
+  $pane->uuid = 'a9427ed2-613a-40dd-94ad-a3596d09e4fe';
+  $display->content['new-a9427ed2-613a-40dd-94ad-a3596d09e4fe'] = $pane;
+  $display->panels['sidebar'][1] = 'new-a9427ed2-613a-40dd-94ad-a3596d09e4fe';
   $pane = new stdClass();
   $pane->pid = 'new-e1b03668-52fe-4016-ac73-24e99ff9393c';
   $pane->panel = 'title';
