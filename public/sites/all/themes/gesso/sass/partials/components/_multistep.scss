@@ -1,0 +1,32 @@
+.multistep {
+  h1 {
+    @extend %h2;
+  }
+  .form-item {
+    margin: 0 0 2.5em 0;
+  }
+}
+
+.multistep-description {
+  margin: 0 0 4em;
+  padding-left: 25px;
+  position: relative;
+  &:before {
+    @include image-replace(18px,18px);
+    @include svg-background(icon-help);
+    background-size: 18px 18px;
+    display: block;
+    content: "";
+    left: 0;
+    position: absolute;
+    top: 5px;
+  }
+  .pane--multistep-progress & {
+    font-size: em($font-size-md);
+    font-style: italic;
+    hyphens: none;
+    line-height: 1.4;
+    margin-top: 1em;
+    padding-bottom: 0.5em;
+  }
+}

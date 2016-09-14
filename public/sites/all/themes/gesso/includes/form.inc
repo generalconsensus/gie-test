@@ -100,24 +100,66 @@ function gesso_form_element($vars) {
     $suffix = isset($element['#field_suffix']) ? ' <span class="form-item__suffix field-suffix">' . $element['#field_suffix'] . '</span>' : '';
   }
 
-  switch ($element['#title_display']) {
-    case 'before':
-    case 'invisible':
-      $output .= ' ' . theme('form_element_label', $vars);
-      $output .= ' ' . $prefix . $element['#children'] . $suffix . "\n";
-      break;
+  if (module_exists('multistep') && !empty($vars['element']) && !empty($vars['element']['#entity']) && is_multistep($vars['element']['#entity'])) {
+      // reset the output to match the required setup
+      $output = '<div'.drupal_attributes($attributes).'>'."\n";
+      $vars['element']['multistep'] = TRUE;
+      switch ($element['#title_display']) {
+          case 'before':
+          case 'invisible':
+              $output .=  ' '  . theme('form_element_label', $vars);
+              $output .= ' <div class="form-item__content-container">' . $prefix . $element['#children'] . $suffix . "\n";
+              break;
 
-    case 'after':
-      $output .= ' ' . $prefix . $element['#children'] . $suffix;
-      $output .= ' ' . theme('form_element_label', $vars) . "\n";
-      break;
+          case 'after':
+              //Force to the left in order meet requirements
+              $output .=  ' '  . theme('form_element_label', $vars)  . "\n";
+              $output .= ' <div class="form-item__content-container">' . $prefix . $element['#children'] . $suffix  . "\n";
+              break;
 
-    case 'none':
-    case 'attribute':
-      // Output no label and no required marker, only the children.
-      $output .= ' ' . $prefix . $element['#children'] . $suffix . "\n";
-      break;
+          case 'none':
+          case 'attribute':
+              // Output no label and no required marker, only the children.
+              $output .= ' <div class="form-item__content-container">' . $prefix . $element['#children'] . $suffix . "\n";
+              break;
+      }
+
+      if (!empty($element['#description'])) {
+          if ($only_use_smacss) {
+              $output .= '<div class="form-item__description">'.$element['#description']."</div>\n";
+          } else {
+              $output .= '<div class="form-item__description description">'.$element['#description']."</div>\n";
+          }
+      }
+    if ($element['#theme'] != 'textarea' ||  !in_array('ckeditor_pre_render_text_format', $element['#pre_render'])) {
+      $output .= '</div></div>';
+    }
+    return $output;
+
+
+  } else {
+    switch ($element['#title_display']) {
+      case 'before':
+      case 'invisible':
+        $output .= ' ' . theme('form_element_label', $vars);
+        $output .= ' ' . $prefix . $element['#children'] . $suffix . "\n";
+        break;
+
+      case 'after':
+        $output .= ' ' . $prefix . $element['#children'] . $suffix;
+        $output .= ' ' . theme('form_element_label', $vars) . "\n";
+        break;
+
+      case 'none':
+      case 'attribute':
+        // Output no label and no required marker, only the children.
+        $output .= ' ' . $prefix . $element['#children'] . $suffix . "\n";
+        break;
+    }
   }
+
+
+
 
   if (!empty($element['#description'])) {
     if ($only_use_smacss) {
@@ -132,6 +174,7 @@ function gesso_form_element($vars) {
 
   return $output;
 }
+
 
 /**
  * Returns HTML for a form element label and required marker.
@@ -177,8 +220,15 @@ function gesso_form_element_label($vars) {
   }
 
   // The leading whitespace helps visually separate fields from inline labels.
-  return ' <label' . drupal_attributes($attributes) . '>' . $t('!title !required', array('!title' => $title, '!required' => $required)) . "</label>\n";
+//    $output .= ' <div class="form-item__label-container">' . theme('form_element_label', $vars) . '</div>';
+    $output = ' <label' . drupal_attributes($attributes) . '>' . $t('!title !required', array('!title' => $title, '!required' => $required)) . "</label>\n";
+    if (!empty($vars['element']['multistep']) && $vars['element']['multistep']) {
+        $output = '<div class="form-item__label-container">' . $output;
+        $output .= '</div>';
+    }
+    return $output;
 }
+
 
 /**
  * Returns HTML for a marker for required form elements.
@@ -370,32 +420,33 @@ function gesso_fieldset($vars) {
   else {
     _form_set_class($element, array('fieldset', 'form-wrapper'));
   }
+  
+  $multistep_exists = module_exists('multistep');
+  $element_exists = !empty($vars['element']) && !empty($vars['element']['#entity']) && is_multistep($vars['element']['#entity']);
+  $not_field_group = !(!empty($element['#group_fieldset']) && ($element['#group_fieldset'] == TRUE));
 
+  $output = ($multistep_exists && $element_exists && $not_field_group) ? '<div class="form-item">' : '<fieldset' . drupal_attributes($element['#attributes']) . '>';
 
-  $output = '<fieldset' . drupal_attributes($element['#attributes']) . '>';
   if (!empty($element['#title'])) {
+    $output .= ($multistep_exists && $element_exists && $not_field_group) ? '<div class="form-item__label-container">' : '';
     // Always wrap fieldset legends in a SPAN for CSS positioning.
-    if ($only_use_smacss) {
-      $output .= '<legend class="fieldset__legend"><span class="fieldset__legend-text">' . $element['#title'] . '</span></legend>';
-    }
-    else {
-      $output .= '<legend class="fieldset__legend"><span class="fieldset__legend-text fieldset-legend">' . $element['#title'] . '</span></legend>';
-    }
+    $output .= ($multistep_exists && $element_exists && $not_field_group) ? '<label class="form-item__label">' . $element['#title'] . '</label>' : '<legend class="fieldset__legend"><span class="fieldset__legend-text">' . $element['#title'] . '</span></legend>';
+    $output .= ($multistep_exists && $element_exists && $not_field_group) ? '</div>'  : '';
   }
 
   if ($only_use_smacss) {
-    $output .= '<div class="fieldset__content">';
+    $output .= ($multistep_exists && $element_exists && $not_field_group) ? '<div class="form-item__content-container">' : '<div class="fieldset__content">';
   }
   else {
-    $output .= '<div class="fieldset__content fieldset-wrapper">';
+    $output .= ($multistep_exists && $element_exists && $not_field_group) ? '<div class="form-item__content-container">' : '<div class="fieldset__content fieldset-wrapper">';
   }
 
   if (!empty($element['#description'])) {
     if ($only_use_smacss) {
-      $output .= '<div class="fieldset__description">' . $element['#description'] . '</div>';
+      $output .= ($multistep_exists && $element_exists && $not_field_group) ? '<div class="form-item__description">' . $element['#description'] . '</div>' : '<div class="fieldset__description">' . $element['#description'] . '</div>';
     }
     else {
-      $output .= '<div class="fieldset__description fieldset-description">' . $element['#description'] . '</div>';
+      $output .= ($multistep_exists && $element_exists && $not_field_group) ? '<div class="form-item__description">' . $element['#description'] . '</div>' : '<div class="fieldset__description fieldset-description">' . $element['#description'] . '</div>';
     }
   }
 
@@ -406,7 +457,7 @@ function gesso_fieldset($vars) {
   }
 
   $output .= '</div>';
-  $output .= "</fieldset>\n";
+  $output .= ($multistep_exists && $element_exists && $not_field_group) ? "</div>\n" : "</fieldset>\n";
 
   return $output;
 }
@@ -669,4 +720,203 @@ function _gesso_form_set_class(&$element, $class = array()) {
       $element['#attributes']['class'][] = 'error';
     }
   }
+}
+
+function gesso_text_format_wrapper($element) {
+  if (module_exists(
+      'multistep'
+    ) && !empty($element['element']) && !empty($element['element']['value']) && !empty($element['element']['value']['#entity']) && is_multistep(
+      $element['element']['value']['#entity']
+    )
+  ) {
+
+    $output = $element['element']['value']['#children'];
+
+    if (!empty($element['element']['#description'])) {
+      $output .= '</br><div class="form-item__description">' . $element['element']['#description'] . '</div>';
+    }
+    if (!empty($element['element']['value']['#suffix'])) {
+      $output .= $element['element']['value']['#suffix'];
+    }
+    if (!empty($element['element']['format']['#children'])) {
+      $output .= $element['element']['format']['#children'];
+    }
+    $output .= "</div></div>\n";
+
+  }
+  elseif ($element['element']['#entity_type'] == 'comment') {
+    $output = '<div class="text-format-wrapper">';
+    $output .= !empty($element['element']['#children']) ? $element['element']['#children'] : '';
+    $output .= "</div>\n";
+  }
+  else {
+    $output = '<div class="text-format-wrapper">';
+    $output .= !empty($element['#children']) ? $element['#children'] : '';
+    if (!empty($element['#description'])) {
+      $output .= '<div class="description">' . $element['#description'] . '</div>';
+    }
+    $output .= "</div>\n";
+
+  }
+  return $output;
+
+}
+
+
+
+/**
+ * Theme override for 'field_multiple_value_form'.
+ *
+ * @see theme_field_multiple_value_form()
+ */
+function gesso_field_multiple_value_form($variables) {
+  $element = $variables['element'];
+  $output = '';
+  $link_multistep =  module_exists('multistep') && !empty($element[0]) && !empty($element[0]['#type']) && $element[0]['#type'] == 'link_field' && !empty($element[0]['#entity']) && !empty($element[0]['#entity']) && is_multistep($element[0]['#entity']);
+  $field_collection_multistep =  module_exists('multistep') && !empty($element[0]) &&  !empty($element[0]['#entity_type']) && $element[0]['#entity_type'] == 'field_collection_item' &&  !empty($element[0]['#entity']) && !empty($element[0]['#entity']->hostEntity()) && is_multistep($element[0]['#entity']->hostEntity());
+  $is_multistep = module_exists('multistep') && !empty($element[0]) && !empty($element[0]['target_id']) && !empty($element[0]['target_id']['#entity']) && is_multistep($element[0]['target_id']['#entity']);
+
+  if ($element['#cardinality'] > 1 || $element['#cardinality'] == FIELD_CARDINALITY_UNLIMITED) {
+    $table_id = drupal_html_id($element['#field_name'] . '_values');
+    $order_class = $element['#field_name'] . '-delta-order';
+    $required = !empty($element['#required']) ? theme('form_required_marker', $variables) : '';
+    $rows = array();
+
+    if ($is_multistep || $field_collection_multistep || $link_multistep) {
+      $label_classes = !empty($element['#title_classes']) ? (' class="' . implode(' ', $element['#title_classes']) . '"') : '';
+    } else {
+      $header = array(
+        array(
+          'data' => '<label>' . t('!title !required', array('!title' => $element['#title'], '!required' => $required)) . "</label>",
+          'colspan' => 2,
+          'class' => array('field-label'),
+        ),
+        t('Order'),
+      );
+    }
+
+    // Sort items according to '_weight' (needed when the form comes back after
+    // preview or failed validation).
+    $items = array();
+    foreach (element_children($element) as $key) {
+      if ($key === 'add_more') {
+        $add_more_button = &$element[$key];
+      }
+      else {
+        $items[] = &$element[$key];
+      }
+    }
+    usort($items, '_field_sort_items_value_helper');
+
+    // Add the items as table rows.
+    foreach ($items as $key => $item) {
+      $item['_weight']['#attributes']['class'] = array($order_class);
+      $delta_element = drupal_render($item['_weight']);
+      $cells = array(
+        array('data' => '', 'class' => array('field-multiple-drag')),
+        drupal_render($item),
+        array('data' => $delta_element, 'class' => array('delta-order')),
+      );
+      $rows[] = array(
+        'data' => $cells,
+        'class' => array('draggable'),
+      );
+    }
+
+    // initialize the output form item
+    $output = '<div class="form-item">';
+
+    if ($is_multistep || $field_collection_multistep || $link_multistep) {
+      $table_args = array(
+        'rows' => $rows,
+        'attributes' => array(
+          'id' => $table_id,
+          'class' => array('field-multiple-table'),
+        ),
+      );
+      $parts['children'] = theme('table', $table_args);
+
+      $output .= '<div class="form-item__label-container"><label class="form-item__label">' . $element['#title'] . '</label></div>' . '<div class="form-item__content-container">' . '<div class="form-item">';
+      $output .= gesso_order_output($element, $parts);
+      if (!empty($element['#description'])) {
+        $output .= '<div class="form-item__description">' . $element['#description'] . '</div>';
+      }
+      $output .= '<div class="clearfix">' . drupal_render($add_more_button) . '</div>';
+      $output .= '</div>';
+      $output .= '</div>';
+    } else {
+      $output .= theme('table', array('header' => $header, 'rows' => $rows, 'attributes' => array('id' => $table_id, 'class' => array('field-multiple-table'))));
+      $output .= $element['#description'] ? '<div class="description">' . $element['#description'] . '</div>' : '';
+      $output .= '<div class="clearfix">' . drupal_render($add_more_button) . '</div>';
+    }
+    $output .= '</div>';
+
+    drupal_add_tabledrag($table_id, 'order', 'sibling', $order_class);
+  }
+  else {
+    foreach (element_children($element) as $key) {
+      $output .= drupal_render($element[$key]);
+    }
+  }
+
+  return $output;
+}
+
+
+/**
+ * Return the output of $parts in configured order.
+ *
+ * @param array $element
+ *   A form element.
+ * @param array $parts
+ *   An associative array with the following optional keys:
+ *     - 'title'.
+ *     - 'description'.
+ *     - 'children'.
+ *
+ * @return string
+ *   The items in order according to configuration in $element.
+ */
+function gesso_order_output(array $element, array &$parts) {
+  $element_order = gesso_get_order($element);
+  $parts_ordered = array();
+  $out = '';
+  foreach ($element_order as $element_item) {
+    if (!empty($parts[$element_item])) {
+      $out .= $parts[$element_item];
+      $parts_ordered[$element_item] = $parts[$element_item];
+    }
+  }
+  $parts = $parts_ordered;
+  return $out;
+}
+
+/**
+ * Determine the render order of a form element.
+ *
+ * Returns what order #title, #children and #description should be rendered in,
+ * based on #title_display and #description_display.
+ *
+ * @param array $element
+ *   Form element.
+ *
+ * @return array
+ *   An array with the three values 'title', 'children' and 'description' in
+ *   various orders.
+ */
+function gesso_get_order(array $element) {
+  if (!empty($element['#element_order'])) {
+    return $element['#element_order'];
+  }
+
+  $title_before = (empty($element['#title_display']) or $element['#title_display'] == 'before' or $element['#title_display'] == 'invisible');
+  $description_before = (empty($element['#description_display']) ? FALSE : ($element['#description_display'] == 'before'));
+
+  if ($title_before) {
+    $order = $description_before ? array('title', 'description', 'children') : array('title', 'children', 'description');
+  }
+  else {
+    $order = $description_before ? array('description', 'children', 'title') : array('children', 'title', 'description');
+  }
+  return $order;
 }

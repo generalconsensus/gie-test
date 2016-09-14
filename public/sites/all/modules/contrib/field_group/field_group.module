@@ -1282,7 +1282,7 @@ function field_group_field_group_format_summary($group) {
   if (isset($group->format_settings['formatter'])) {
     $output .= '<strong>' . $group->format_type . '</strong> ' . $group->format_settings['formatter'] . '';
   }
-  if (isset($group->format_settings['instance_settings'])) {
+  if (isset($group->format_settings['instance_settings']) && is_array($group->format_settings['instance_settings'])) {
     $last = end($group->format_settings['instance_settings']);
     $output .= '<br />';
     foreach ($group->format_settings['instance_settings'] as $key => $value) {
