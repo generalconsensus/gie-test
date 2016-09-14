@@ -245,8 +245,9 @@ function _gie_user_notifications_link_access() {
  */
 function gie_user_form_user_register_form_alter(&$form) {
   $user_email_verification = variable_get('user_email_verification');
+  global $user;
   // hide password on registration form if we are requiring email verification
-  if ($user_email_verification) {
+  if ($user_email_verification && !(user_has_role(3, $user) || user_has_role(7, $user))) {
     $form['account']['pass']['#access'] = FALSE;
   } else {
     // set up the password field for display
