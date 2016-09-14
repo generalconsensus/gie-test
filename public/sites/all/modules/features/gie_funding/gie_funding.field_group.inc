@@ -314,36 +314,6 @@ function gie_funding_field_group_info() {
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
   $field_group->api_version = 1;
-  $field_group->identifier = 'group_funding_details|node|funding|form';
-  $field_group->group_name = 'group_funding_details';
-  $field_group->entity_type = 'node';
-  $field_group->bundle = 'funding';
-  $field_group->mode = 'form';
-  $field_group->parent_name = '';
-  $field_group->data = array(
-    'label' => 'Key funding opportunity details',
-    'weight' => '3',
-    'children' => array(),
-    'format_type' => 'div',
-    'format_settings' => array(
-      'formatter' => 'open',
-      'instance_settings' => array(
-        'description' => '',
-        'show_label' => 1,
-        'label_element' => 'h3',
-        'effect' => 'none',
-        'speed' => 'fast',
-        'classes' => 'group-funding-details field-group-div',
-        'required_fields' => 1,
-        'id' => '',
-      ),
-    ),
-  );
-  $field_groups['group_funding_details|node|funding|form'] = $field_group;
-
-  $field_group = new stdClass();
-  $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
-  $field_group->api_version = 1;
   $field_group->identifier = 'group_funding_for_applicants|node|funding|form';
   $field_group->group_name = 'group_funding_for_applicants';
   $field_group->entity_type = 'node';
@@ -473,36 +443,6 @@ function gie_funding_field_group_info() {
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
   $field_group->api_version = 1;
-  $field_group->identifier = 'group_funding_stats|node|funding|form';
-  $field_group->group_name = 'group_funding_stats';
-  $field_group->entity_type = 'node';
-  $field_group->bundle = 'funding';
-  $field_group->mode = 'form';
-  $field_group->parent_name = '';
-  $field_group->data = array(
-    'label' => 'Provide some stats about your funding opportunity',
-    'weight' => '4',
-    'children' => array(),
-    'format_type' => 'div',
-    'format_settings' => array(
-      'formatter' => 'open',
-      'instance_settings' => array(
-        'description' => '',
-        'show_label' => 1,
-        'label_element' => 'h3',
-        'effect' => 'none',
-        'speed' => 'fast',
-        'classes' => 'group-funding-stats field-group-div',
-        'required_fields' => 1,
-        'id' => '',
-      ),
-    ),
-  );
-  $field_groups['group_funding_stats|node|funding|form'] = $field_group;
-
-  $field_group = new stdClass();
-  $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
-  $field_group->api_version = 1;
   $field_group->identifier = 'group_funding_stats|node|funding|full';
   $field_group->group_name = 'group_funding_stats';
   $field_group->entity_type = 'node';
@@ -547,8 +487,6 @@ function gie_funding_field_group_info() {
   t('Funding Stats');
   t('Funding Stats First');
   t('Funding Stats Second');
-  t('Key funding opportunity details');
-  t('Provide some stats about your funding opportunity');
 
   return $field_groups;
 }
