@@ -26,7 +26,7 @@ function gesso_form($vars) {
 /**
  * Returns HTML for a form element.
  */
-function gesso_form_element($vars) {
+function gesso_form_element(&$vars) {
   $element = &$vars['element'];
   $element_type = !empty($element['#type']) ? $element['#type'] : '';
   $element_type_class = drupal_html_class($element_type);
@@ -100,7 +100,7 @@ function gesso_form_element($vars) {
     $suffix = isset($element['#field_suffix']) ? ' <span class="form-item__suffix field-suffix">' . $element['#field_suffix'] . '</span>' : '';
   }
 
-  if (module_exists('multistep') && !empty($vars['element']) && !empty($vars['element']['#entity']) && is_multistep($vars['element']['#entity'])) {
+  if (module_exists('multistep') && !empty($vars['element']) && (!empty($vars['element']['#entity_type']) && $vars['element']['#entity_type'] != 'field_collection_item') && !empty($vars['element']['#entity']) && is_multistep($vars['element']['#entity_type'], $vars['element']['#bundle'])) {
       // reset the output to match the required setup
       $output = '<div'.drupal_attributes($attributes).'>'."\n";
       $vars['element']['multistep'] = TRUE;
@@ -421,28 +421,28 @@ function gesso_fieldset($vars) {
     _form_set_class($element, array('fieldset', 'form-wrapper'));
   }
 
-  $output = (module_exists('multistep') && !empty($vars['element']) && !empty($vars['element']['#entity']) && is_multistep($vars['element']['#entity']) && !($element['#group_fieldset'])) ? '<div class="form-item">' : '<fieldset' . drupal_attributes($element['#attributes']) . '>';
+  $output = (module_exists('multistep') && !empty($vars['element']) && !empty($vars['element']['#entity']) && is_multistep($element['#entity_type'], $element['#bundle']) && (empty($element['#group_fieldset']) || !($element['#group_fieldset'])))  ? '<div class="form-item">' : '<fieldset' . drupal_attributes($element['#attributes']) . '>';
 
   if (!empty($element['#title'])) {
-    $output .= (module_exists('multistep') && !empty($vars['element']) && !empty($vars['element']['#entity']) && is_multistep($vars['element']['#entity']) && !($element['#group_fieldset'])) ? '<div class="form-item__label-container">' : '';
+    $output .= (module_exists('multistep') && !empty($vars['element']) && !empty($vars['element']['#entity']) && is_multistep($element['#entity_type'], $element['#bundle']) && (empty($element['#group_fieldset']) || !($element['#group_fieldset'])))  ? '<div class="form-item__label-container">' : '';
     // Always wrap fieldset legends in a SPAN for CSS positioning.
-    $output .= (module_exists('multistep') && !empty($vars['element']) && !empty($vars['element']['#entity']) && is_multistep($vars['element']['#entity']) && !($element['#group_fieldset'])) ? '<label class="form-item__label">' . $element['#title'] . '</label>' : '<legend class="fieldset__legend"><span class="fieldset__legend-text">' . $element['#title'] . '</span></legend>';
-    $output .= (module_exists('multistep') && !empty($vars['element']) && !empty($vars['element']['#entity']) && is_multistep($vars['element']['#entity']) && !($element['#group_fieldset'])) ? '</div>'  : '';
+    $output .= (module_exists('multistep') && !empty($vars['element']) && !empty($vars['element']['#entity']) && is_multistep($element['#entity_type'], $element['#bundle']) && (empty($element['#group_fieldset']) || !($element['#group_fieldset'])))  ? '<label class="form-item__label">' . $element['#title'] . '</label>' : '<legend class="fieldset__legend"><span class="fieldset__legend-text">' . $element['#title'] . '</span></legend>';
+    $output .= (module_exists('multistep') && !empty($vars['element']) && !empty($vars['element']['#entity']) && is_multistep($element['#entity_type'], $element['#bundle']) && (empty($element['#group_fieldset']) || !($element['#group_fieldset'])))  ? '</div>'  : '';
   }
 
   if ($only_use_smacss) {
-    $output .= (module_exists('multistep') && !empty($vars['element']) && !empty($vars['element']['#entity']) && is_multistep($vars['element']['#entity']) && !($element['#group_fieldset'])) ? '<div class="form-item__content-container">' : '<div class="fieldset__content">';
+    $output .= (module_exists('multistep') && !empty($vars['element']) && !empty($vars['element']['#entity']) && is_multistep($element['#entity_type'], $element['#bundle']) && (empty($element['#group_fieldset']) || !($element['#group_fieldset'])))  ? '<div class="form-item__content-container">' : '<div class="fieldset__content">';
   }
   else {
-    $output .= (module_exists('multistep') && !empty($vars['element']) && !empty($vars['element']['#entity']) && is_multistep($vars['element']['#entity']) && !($element['#group_fieldset'])) ? '<div class="form-item__content-container">' : '<div class="fieldset__content fieldset-wrapper">';
+    $output .= (module_exists('multistep') && !empty($vars['element']) && !empty($vars['element']['#entity']) && is_multistep($element['#entity_type'], $element['#bundle']) && (empty($element['#group_fieldset']) || !($element['#group_fieldset'])))  ? '<div class="form-item__content-container">' : '<div class="fieldset__content fieldset-wrapper">';
   }
 
   if (!empty($element['#description'])) {
     if ($only_use_smacss) {
-      $output .= (module_exists('multistep') && !empty($vars['element']) && !empty($vars['element']['#entity']) && is_multistep($vars['element']['#entity']) && !($element['#group_fieldset'])) ? '<div class="form-item__description">' . $element['#description'] . '</div>' : '<div class="fieldset__description">' . $element['#description'] . '</div>';
+      $output .= (module_exists('multistep') && !empty($vars['element']) && !empty($vars['element']['#entity']) && is_multistep($element['#entity_type'], $element['#bundle']) && (empty($element['#group_fieldset']) || !($element['#group_fieldset'])))  ? '<div class="form-item__description">' . $element['#description'] . '</div>' : '<div class="fieldset__description">' . $element['#description'] . '</div>';
     }
     else {
-      $output .= (module_exists('multistep') && !empty($vars['element']) && !empty($vars['element']['#entity']) && is_multistep($vars['element']['#entity']) && !($element['#group_fieldset'])) ? '<div class="form-item__description">' . $element['#description'] . '</div>' : '<div class="fieldset__description fieldset-description">' . $element['#description'] . '</div>';
+      $output .= (module_exists('multistep') && !empty($vars['element']) && !empty($vars['element']['#entity']) && is_multistep($element['#entity_type'], $element['#bundle']) && (empty($element['#group_fieldset']) || !($element['#group_fieldset'])))  ? '<div class="form-item__description">' . $element['#description'] . '</div>' : '<div class="fieldset__description fieldset-description">' . $element['#description'] . '</div>';
     }
   }
 
@@ -453,7 +453,7 @@ function gesso_fieldset($vars) {
   }
 
   $output .= '</div>';
-  $output .= (module_exists('multistep') && !empty($vars['element']) && !empty($vars['element']['#entity']) && is_multistep($vars['element']['#entity']) && !($element['#group_fieldset'])) ? "</div>\n" : "</fieldset>\n";
+  $output .= (module_exists('multistep') && !empty($vars['element']) && !empty($vars['element']['#entity']) && is_multistep($element['#entity_type'], $element['#bundle']) && (empty($element['#group_fieldset']) || !($element['#group_fieldset'])))  ? "</div>\n" : "</fieldset>\n";
 
   return $output;
 }
@@ -721,9 +721,7 @@ function _gesso_form_set_class(&$element, $class = array()) {
 function gesso_text_format_wrapper($element) {
   if (module_exists(
       'multistep'
-    ) && !empty($element['element']) && !empty($element['element']['value']) && !empty($element['element']['value']['#entity']) && is_multistep(
-      $element['element']['value']['#entity']
-    )
+    ) && !empty($element['element']) && !empty($element['element']['value']) && !empty($element['element']['value']['#entity']) && is_multistep($element['element']['#entity_type'], $element['element']['#bundle'])
   ) {
 
     $output = $element['element']['value']['#children'];
@@ -743,7 +741,7 @@ function gesso_text_format_wrapper($element) {
   }
   else {
     $output = '<div class="text-format-wrapper">';
-    $output .= $element['#children'];
+    $output .= !empty($element['#children']) ? $element['#children'] : '';
     if (!empty($element['#description'])) {
       $output .= '<div class="description">' . $element['#description'] . '</div>';
     }
@@ -763,9 +761,9 @@ function gesso_text_format_wrapper($element) {
 function gesso_field_multiple_value_form($variables) {
   $element = $variables['element'];
   $output = '';
-  $link_multistep =  module_exists('multistep') && !empty($element[0]) && !empty($element[0]['#type']) && $element[0]['#type'] == 'link_field' && !empty($element[0]['#entity']) && !empty($element[0]['#entity']) && is_multistep($element[0]['#entity']);
-  $field_collection_multistep =  module_exists('multistep') && !empty($element[0]) &&  !empty($element[0]['#entity_type']) && $element[0]['#entity_type'] == 'field_collection_item' &&  !empty($element[0]['#entity']) && !empty($element[0]['#entity']->hostEntity()) && is_multistep($element[0]['#entity']->hostEntity());
-  $is_multistep = module_exists('multistep') && !empty($element[0]) && !empty($element[0]['target_id']) && !empty($element[0]['target_id']['#entity']) && is_multistep($element[0]['target_id']['#entity']);
+  $link_multistep =  module_exists('multistep') && !empty($element[0]) && !empty($element[0]['#type']) && $element[0]['#type'] == 'link_field' && !empty($element[0]['#entity_type']) && !empty($element[0]['#bundle']) && is_multistep($element[0]['#entity_type'], $element[0]['#bundle']);
+  $field_collection_multistep =  module_exists('multistep') && !empty($element[0]) &&  !empty($element[0]['#entity_type']) && $element[0]['#entity_type'] == 'field_collection_item' && !empty($element[0]['#entity']) && is_multistep($element[0]['#entity']->hostEntityType(), $element[0]['#entity']->hostEntityBundle());
+  $is_multistep = module_exists('multistep') && !empty($element[0]) && !empty($element[0]['#entity_type']) && !empty($element[0]['#bundle']) && ($element[0]['#entity_type'] != 'field_collection_item') && is_multistep($element[0]['#entity_type'], $element[0]['#bundle']);
 
   if ($element['#cardinality'] > 1 || $element['#cardinality'] == FIELD_CARDINALITY_UNLIMITED) {
     $table_id = drupal_html_id($element['#field_name'] . '_values');
