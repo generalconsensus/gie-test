@@ -420,29 +420,33 @@ function gesso_fieldset($vars) {
   else {
     _form_set_class($element, array('fieldset', 'form-wrapper'));
   }
+  
+  $multistep_exists = module_exists('multistep');
+  $element_exists = !empty($vars['element']) && !empty($vars['element']['#entity']) && is_multistep($vars['element']['#entity']);
+  $not_field_group = !(!empty($element['#group_fieldset']) && ($element['#group_fieldset'] == TRUE));
 
-  $output = (module_exists('multistep') && !empty($vars['element']) && !empty($vars['element']['#entity']) && is_multistep($vars['element']['#entity']) && (isset($element['#group_fieldset']) && !($element['#group_fieldset']))) ? '<div class="form-item">' : '<fieldset' . drupal_attributes($element['#attributes']) . '>';
+  $output = ($multistep_exists && $element_exists && $not_field_group) ? '<div class="form-item">' : '<fieldset' . drupal_attributes($element['#attributes']) . '>';
 
   if (!empty($element['#title'])) {
-    $output .= (module_exists('multistep') && !empty($vars['element']) && !empty($vars['element']['#entity']) && is_multistep($vars['element']['#entity']) && (isset($element['#group_fieldset']) && !($element['#group_fieldset']))) ? '<div class="form-item__label-container">' : '';
+    $output .= ($multistep_exists && $element_exists && $not_field_group) ? '<div class="form-item__label-container">' : '';
     // Always wrap fieldset legends in a SPAN for CSS positioning.
-    $output .= (module_exists('multistep') && !empty($vars['element']) && !empty($vars['element']['#entity']) && is_multistep($vars['element']['#entity']) && (isset($element['#group_fieldset']) && !($element['#group_fieldset']))) ? '<label class="form-item__label">' . $element['#title'] . '</label>' : '<legend class="fieldset__legend"><span class="fieldset__legend-text">' . $element['#title'] . '</span></legend>';
-    $output .= (module_exists('multistep') && !empty($vars['element']) && !empty($vars['element']['#entity']) && is_multistep($vars['element']['#entity']) && (isset($element['#group_fieldset']) && !($element['#group_fieldset']))) ? '</div>'  : '';
+    $output .= ($multistep_exists && $element_exists && $not_field_group) ? '<label class="form-item__label">' . $element['#title'] . '</label>' : '<legend class="fieldset__legend"><span class="fieldset__legend-text">' . $element['#title'] . '</span></legend>';
+    $output .= ($multistep_exists && $element_exists && $not_field_group) ? '</div>'  : '';
   }
 
   if ($only_use_smacss) {
-    $output .= (module_exists('multistep') && !empty($vars['element']) && !empty($vars['element']['#entity']) && is_multistep($vars['element']['#entity']) && (isset($element['#group_fieldset']) && !($element['#group_fieldset']))) ? '<div class="form-item__content-container">' : '<div class="fieldset__content">';
+    $output .= ($multistep_exists && $element_exists && $not_field_group) ? '<div class="form-item__content-container">' : '<div class="fieldset__content">';
   }
   else {
-    $output .= (module_exists('multistep') && !empty($vars['element']) && !empty($vars['element']['#entity']) && is_multistep($vars['element']['#entity']) && (isset($element['#group_fieldset']) && !($element['#group_fieldset']))) ? '<div class="form-item__content-container">' : '<div class="fieldset__content fieldset-wrapper">';
+    $output .= ($multistep_exists && $element_exists && $not_field_group) ? '<div class="form-item__content-container">' : '<div class="fieldset__content fieldset-wrapper">';
   }
 
   if (!empty($element['#description'])) {
     if ($only_use_smacss) {
-      $output .= (module_exists('multistep') && !empty($vars['element']) && !empty($vars['element']['#entity']) && is_multistep($vars['element']['#entity']) && (isset($element['#group_fieldset']) && !($element['#group_fieldset']))) ? '<div class="form-item__description">' . $element['#description'] . '</div>' : '<div class="fieldset__description">' . $element['#description'] . '</div>';
+      $output .= ($multistep_exists && $element_exists && $not_field_group) ? '<div class="form-item__description">' . $element['#description'] . '</div>' : '<div class="fieldset__description">' . $element['#description'] . '</div>';
     }
     else {
-      $output .= (module_exists('multistep') && !empty($vars['element']) && !empty($vars['element']['#entity']) && is_multistep($vars['element']['#entity']) && (isset($element['#group_fieldset']) && !($element['#group_fieldset']))) ? '<div class="form-item__description">' . $element['#description'] . '</div>' : '<div class="fieldset__description fieldset-description">' . $element['#description'] . '</div>';
+      $output .= ($multistep_exists && $element_exists && $not_field_group) ? '<div class="form-item__description">' . $element['#description'] . '</div>' : '<div class="fieldset__description fieldset-description">' . $element['#description'] . '</div>';
     }
   }
 
@@ -453,7 +457,7 @@ function gesso_fieldset($vars) {
   }
 
   $output .= '</div>';
-  $output .= (module_exists('multistep') && !empty($vars['element']) && !empty($vars['element']['#entity']) && is_multistep($vars['element']['#entity']) && (isset($element['#group_fieldset']) && !($element['#group_fieldset']))) ? "</div>\n" : "</fieldset>\n";
+  $output .= ($multistep_exists && $element_exists && $not_field_group) ? "</div>\n" : "</fieldset>\n";
 
   return $output;
 }
