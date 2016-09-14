@@ -285,26 +285,28 @@ function gie_funding_field_group_info() {
   $field_group->mode = 'form';
   $field_group->parent_name = '';
   $field_group->data = array(
-    'label' => 'About your Funding Opportunity',
+    'label' => 'About Your Opportunity',
     'weight' => '0',
     'children' => array(
       0 => 'title_field',
-      1 => 'field_funding_desc',
-      2 => 'field_funding_image',
+      1 => 'field_funding_deadline',
+      2 => 'field_funding_desc',
+      3 => 'field_funding_type',
+      4 => 'field_funding_eligibility_type',
+      5 => 'field_funding_grant_award_value',
+      6 => 'field_term_sector',
+      7 => 'field_term_region',
+      8 => 'field_term_country',
+      9 => 'field_funding_link',
+      10 => 'field_funding_image',
     ),
-    'format_type' => 'div',
+    'format_type' => 'multistep',
     'format_settings' => array(
-      'formatter' => 'open',
+      'label' => 'About Your Opportunity',
       'instance_settings' => array(
         'description' => '',
-        'show_label' => 1,
-        'label_element' => 'h3',
-        'effect' => 'none',
-        'speed' => 'fast',
-        'classes' => 'group-funding-about field-group-div',
-        'required_fields' => 1,
-        'id' => '',
       ),
+      'formatter' => '',
     ),
   );
   $field_groups['group_funding_about|node|funding|form'] = $field_group;
@@ -320,14 +322,8 @@ function gie_funding_field_group_info() {
   $field_group->parent_name = '';
   $field_group->data = array(
     'label' => 'Key funding opportunity details',
-    'weight' => '1',
-    'children' => array(
-      0 => 'field_funding_deadline',
-      1 => 'field_funding_organization',
-      2 => 'field_funding_grant_award_value',
-      3 => 'field_funding_link',
-      4 => 'field_funding_poc',
-    ),
+    'weight' => '3',
+    'children' => array(),
     'format_type' => 'div',
     'format_settings' => array(
       'formatter' => 'open',
@@ -348,6 +344,35 @@ function gie_funding_field_group_info() {
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
   $field_group->api_version = 1;
+  $field_group->identifier = 'group_funding_for_applicants|node|funding|form';
+  $field_group->group_name = 'group_funding_for_applicants';
+  $field_group->entity_type = 'node';
+  $field_group->bundle = 'funding';
+  $field_group->mode = 'form';
+  $field_group->parent_name = '';
+  $field_group->data = array(
+    'label' => 'For Applicants',
+    'weight' => '2',
+    'children' => array(
+      0 => 'field_funding_effort',
+      1 => 'field_funding_eligibility',
+      2 => 'field_funding_guidance',
+      3 => 'field_funding_innovation_stage',
+      4 => 'field_funding_innovation_type',
+    ),
+    'format_type' => 'multistep',
+    'format_settings' => array(
+      'label' => 'For Applicants',
+      'instance_settings' => array(
+        'description' => '',
+      ),
+    ),
+  );
+  $field_groups['group_funding_for_applicants|node|funding|form'] = $field_group;
+
+  $field_group = new stdClass();
+  $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
+  $field_group->api_version = 1;
   $field_group->identifier = 'group_funding_info|node|funding|form';
   $field_group->group_name = 'group_funding_info';
   $field_group->entity_type = 'node';
@@ -355,27 +380,23 @@ function gie_funding_field_group_info() {
   $field_group->mode = 'form';
   $field_group->parent_name = '';
   $field_group->data = array(
-    'label' => 'Additional funding opportunity information',
-    'weight' => '4',
+    'label' => 'Additional Information',
+    'weight' => '1',
     'children' => array(
       0 => 'field_funding_author',
-      1 => 'field_funding_eligibility',
-      2 => 'field_funding_guidance',
-      3 => 'field_related_programs',
+      1 => 'field_funding_duration',
+      2 => 'field_funding_organization',
+      3 => 'field_term_topic',
+      4 => 'field_funding_poc',
+      5 => 'field_related_programs',
     ),
-    'format_type' => 'div',
+    'format_type' => 'multistep',
     'format_settings' => array(
-      'formatter' => 'open',
+      'label' => 'Additional Information',
       'instance_settings' => array(
         'description' => '',
-        'show_label' => 1,
-        'label_element' => 'h3',
-        'effect' => 'none',
-        'speed' => 'fast',
-        'classes' => 'group-funding-info field-group-div',
-        'required_fields' => 1,
-        'id' => '',
       ),
+      'formatter' => '',
     ),
   );
   $field_groups['group_funding_info|node|funding|form'] = $field_group;
@@ -460,19 +481,8 @@ function gie_funding_field_group_info() {
   $field_group->parent_name = '';
   $field_group->data = array(
     'label' => 'Provide some stats about your funding opportunity',
-    'weight' => '3',
-    'children' => array(
-      0 => 'field_funding_duration',
-      1 => 'field_funding_effort',
-      2 => 'field_funding_type',
-      3 => 'field_funding_eligibility_type',
-      4 => 'field_funding_innovation_stage',
-      5 => 'field_funding_innovation_type',
-      6 => 'field_term_sector',
-      7 => 'field_term_topic',
-      8 => 'field_term_region',
-      9 => 'field_term_country',
-    ),
+    'weight' => '4',
+    'children' => array(),
     'format_type' => 'div',
     'format_settings' => array(
       'formatter' => 'open',
@@ -525,14 +535,15 @@ function gie_funding_field_group_info() {
 
   // Translatables
   // Included for use with string extractors like potx.
-  t('About your Funding Opportunity');
-  t('Additional funding opportunity information');
+  t('About Your Opportunity');
+  t('Additional Information');
   t('Card Author');
   t('Card Author Inner');
   t('Card Content');
   t('Card Counts');
   t('Card Image');
   t('Comment Content');
+  t('For Applicants');
   t('Funding Stats');
   t('Funding Stats First');
   t('Funding Stats Second');

@@ -169,10 +169,19 @@ function gie_funding_strongarm() {
     'extra_fields' => array(
       'form' => array(
         'path' => array(
-          'weight' => '5',
+          'weight' => '7',
         ),
         'rabbit_hole' => array(
-          'weight' => '2',
+          'weight' => '6',
+        ),
+        'domain' => array(
+          'weight' => '5',
+        ),
+        'metatags' => array(
+          'weight' => '9',
+        ),
+        'redirect' => array(
+          'weight' => '8',
         ),
       ),
       'display' => array(

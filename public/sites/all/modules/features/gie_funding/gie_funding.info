@@ -90,6 +90,7 @@ features[field_group][] = group_card_image|node|funding|spotlight
 features[field_group][] = group_comment_content|comment|comment_node_funding|default
 features[field_group][] = group_funding_about|node|funding|form
 features[field_group][] = group_funding_details|node|funding|form
+features[field_group][] = group_funding_for_applicants|node|funding|form
 features[field_group][] = group_funding_info|node|funding|form
 features[field_group][] = group_funding_stats_first|node|funding|full
 features[field_group][] = group_funding_stats_second|node|funding|full
