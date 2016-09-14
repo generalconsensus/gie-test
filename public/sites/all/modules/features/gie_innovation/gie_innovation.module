@@ -518,26 +518,49 @@ function gie_innovation_get_selection_handler($field, $instance = NULL, $entity_
 
 
 /**
- * Implements hook_block_view_MODULE_DELTA_alter().
+ * Implements hook_block_info().
  */
-function gie_innovation_block_view_multistep_innovation_alter(&$data, $block) {
-  foreach ($data['content']['multistep_block_navigation']['#children'] as $key => $value) {
-    switch ($key) {
-      case '0group_one':
-        $data['content']['multistep_block_navigation']['#children'][$key]['label'] = 'Basic Information';
-        break;
-      case '1group_two':
-        $data['content']['multistep_block_navigation']['#children'][$key]['label'] = 'Vision';
-        break;
-      case '2group_three':
-        $data['content']['multistep_block_navigation']['#children'][$key]['label'] = 'Funding';
-        break;
-      case '3group_four':
-        $data['content']['multistep_block_navigation']['#children'][$key]['label'] = 'Team';
-        break;
-      case '4group_five':
-        $data['content']['multistep_block_navigation']['#children'][$key]['label'] = 'Evidence';
-        break;
+function gie_innovation_block_info() {
+  $blocks = array();
+
+  $blocks['innovation_node_edit_need_help'] = array(
+    'info' => t('GIE Innovation Need help? Block')
+  );
+
+  return $blocks;
+}
+
+/**
+ * Implements hook_block_view_alter().
+ */
+function gie_innovation_block_view_alter(&$data, $block) {
+  $router_item = menu_get_item();
+  //Check that the node we are adding is an innovation
+  if ($router_item['2'] == 'innovation') {
+    if ($block->delta == 'node|innovation') {
+      foreach ($data['content']['multistep_block_navigation']['#children'] as $key => $value) {
+        switch ($key) {
+          case '0group_one':
+            $data['content']['multistep_block_navigation']['#children'][$key]['label'] = 'Basic Information';
+            break;
+          case '1group_two':
+            $data['content']['multistep_block_navigation']['#children'][$key]['label'] = 'Vision';
+            break;
+          case '2group_three':
+            $data['content']['multistep_block_navigation']['#children'][$key]['label'] = 'Funding';
+            break;
+          case '3group_four':
+            $data['content']['multistep_block_navigation']['#children'][$key]['label'] = 'Team';
+            break;
+          case '4group_five':
+            $data['content']['multistep_block_navigation']['#children'][$key]['label'] = 'Evidence';
+            break;
+        }
+      }
+    } elseif($block->delta == 'innovation_node_edit_need_help') {
+      $data['title'] = t('Need help?');
+      $data['content'] = t('Make your Innovation profile page SHINE! Read our best practices and writing techniques guide. ');
     }
   }
+
 }
