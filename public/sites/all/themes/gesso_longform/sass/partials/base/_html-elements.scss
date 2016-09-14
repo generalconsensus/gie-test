@@ -160,6 +160,9 @@ form {
 %hN {
   color: $heading-text-color;
   font-family: $header-font-family;
+  .font-family-lato & {
+    font-family: $lato-font-family;
+  }
   hyphens: none;
   line-height: 1.1;
   text-rendering: optimizeLegibility;
@@ -197,7 +200,7 @@ h4 {
     color: $white;
     text-decoration: none;
   }
-  
+
 
 }
 
@@ -225,6 +228,9 @@ hr {
 
 html {
   font-family: $base-font-family;
+  &.font-family-lato {
+    font-family: $lato-font-family;
+  }
   font-size: 100% * ($base-font-size / 16px);
   hyphens: none;
   line-height: $base-line-height;
@@ -452,6 +458,9 @@ video {
   a[href]:after {
     content: " <" attr(href) ">";
     font-family: $base-font-family;
+    .font-family-lato & {
+      font-family: $lato-font-family;
+    }
     font-size: 10pt;
     font-weight: normal;
     text-transform: lowercase;
