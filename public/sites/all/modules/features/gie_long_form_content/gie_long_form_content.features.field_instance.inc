@@ -1895,7 +1895,7 @@ function gie_long_form_content_field_default_field_instances() {
     'description' => '',
     'display' => array(
       'default' => array(
-        'label' => 'above',
+        'label' => 'hidden',
         'module' => 'list',
         'settings' => array(
           'field_delimiter' => '',
@@ -1911,8 +1911,8 @@ function gie_long_form_content_field_default_field_instances() {
             'linked' => 0,
           ),
         ),
-        'type' => 'list_default',
-        'weight' => 3,
+        'type' => 'list_key',
+        'weight' => 2,
       ),
     ),
     'ds_extras_field_template' => '',
@@ -1961,7 +1961,7 @@ function gie_long_form_content_field_default_field_instances() {
           ),
         ),
         'type' => 'text_default',
-        'weight' => 2,
+        'weight' => 1,
       ),
       'paragraphs_full_width' => array(
         'label' => 'hidden',
@@ -2099,7 +2099,7 @@ function gie_long_form_content_field_default_field_instances() {
           'view_mode' => 'long_form_asset',
         ),
         'type' => 'entityreference_entity_view',
-        'weight' => 1,
+        'weight' => 0,
       ),
       'paragraphs_full_width' => array(
         'label' => 'hidden',
@@ -2460,7 +2460,7 @@ function gie_long_form_content_field_default_field_instances() {
           ),
         ),
         'type' => 'text_default',
-        'weight' => 2,
+        'weight' => 1,
       ),
       'paragraphs_editor_preview' => array(
         'label' => 'above',
@@ -2539,7 +2539,7 @@ function gie_long_form_content_field_default_field_instances() {
           ),
         ),
         'type' => 'text_default',
-        'weight' => 1,
+        'weight' => 0,
       ),
       'paragraphs_editor_preview' => array(
         'label' => 'above',
@@ -2601,7 +2601,7 @@ function gie_long_form_content_field_default_field_instances() {
     'description' => '',
     'display' => array(
       'default' => array(
-        'label' => 'above',
+        'label' => 'hidden',
         'module' => 'list',
         'settings' => array(
           'field_delimiter' => '',
@@ -2617,8 +2617,8 @@ function gie_long_form_content_field_default_field_instances() {
             'linked' => 0,
           ),
         ),
-        'type' => 'list_default',
-        'weight' => 3,
+        'type' => 'list_key',
+        'weight' => 2,
       ),
     ),
     'ds_extras_field_template' => '',

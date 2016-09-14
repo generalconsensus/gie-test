@@ -1,13 +1,13 @@
 <?php
 /**
  * @file
- * long-form-text.tpl.php
+ * long-form-image.tpl.php
  */
 ?>
 
 <?php
   // Insert default classes to the class array
-  $classes_array = ['text-block', 'layout-constrain', 'component'];
+  $classes_array = ['image', 'component'];
 
   if (!empty($field_paragraphs_animation)) {
     // Insert animation class to array, along with "animated" which is needed by animate.css

@@ -1,13 +1,13 @@
 <?php
 /**
  * @file
- * long-form-text.tpl.php
+ * long-form-pullquote.tpl.php
  */
 ?>
 
 <?php
   // Insert default classes to the class array
-  $classes_array = ['text-block', 'layout-constrain', 'component'];
+  $classes_array = ['pullquote', 'component', 'layout-constrain'];
 
   if (!empty($field_paragraphs_animation)) {
     // Insert animation class to array, along with "animated" which is needed by animate.css
