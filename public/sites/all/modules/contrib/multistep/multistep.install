@@ -197,3 +197,23 @@ function multistep_update_7102() {
     ->condition('name', 'multistep')
     ->execute();
 }
+
+/**
+ * Change nid to id for portability with entities and set default allowable entities for multistep to nodes
+ */
+function multistep_update_7103() {
+  $schema = multistep_schema();
+  db_change_field('multistep', 'nid', 'id', $schema['multistep']['fields']['id']);
+
+  foreach (entity_get_info() as $type) {
+    foreach ($type['bundles'] as $key => $bundle) {
+      if ($type['base table'] == 'node') {
+        $options[$type['base table']][] = $key;
+      }
+    }
+  }
+
+  variable_set('multistep_default_entities', $options);
+
+}
+

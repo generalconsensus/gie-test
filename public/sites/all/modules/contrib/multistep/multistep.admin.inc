@@ -10,6 +10,38 @@
  */
 function multistep_admin_settings_workflow_form($form, &$form_state) {
   $form = array();
+  $options = array();
+  $defaults = variable_get('multistep_default_entities', FALSE);
+
+  foreach ($defaults as $key => $data) {
+    // The value is selected
+    if (!empty($data)) {
+      $result = explode('|', $key);
+      $default_options[$result[0] . '|' . $result[1]] = array(TRUE);
+    }
+  }
+
+  foreach (entity_get_info() as $type) {
+    foreach ($type['bundles'] as $key => $bundle) {
+      $options[$type['base table'] . '|' . $key] = array('entity' => $type['base table'], 'bundle' => $key);
+    }
+  }
+
+  $header = array(
+    'entity' => t('Entity'),
+    'bundle' => t('Bundle'),
+  );
+
+    //Build the tableselect.
+    $form['multistep_default_entities'] = array(
+      '#type' => 'tableselect',
+      '#header' => $header,
+      '#options' => $options,
+      '#empty' => t('No content available.'),
+      '#default_value' => $defaults,
+      '#tree' => TRUE
+    );
+
   $form['multistep_status_revisions'] = array(
     '#type' => 'radios',
     '#title' => t('Revisions'),
@@ -66,7 +98,6 @@ function multistep_admin_settings_workflow_form($form, &$form_state) {
     '#default_value' => variable_get('multistep_show_step_numbers', FALSE),
     '#weight' => -6,
   );
-
   $form['multistep_show_view_changes'] = array(
     '#type' => 'checkbox',
     '#title' => t('Show view changes button'),
