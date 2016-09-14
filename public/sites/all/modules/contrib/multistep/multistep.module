@@ -597,21 +597,23 @@ function _multistep_publishing($complete) {
  */
 function multistep_get_steps($type) {
   $multistep = &drupal_static(__FUNCTION__);
-  if (is_object($type)) {
+  if (is_object($type) && !empty($type->type)) {
     $type = $type->type;
   }
-  if (!isset($multistep[$type])) {
+  if (is_string($type) && (!isset($multistep[$type]))) {
     $groups = field_group_info_groups('node', $type, 'form');
     $steps = array();
     foreach ($groups as $group) {
-      if ($group->format_type == 'multistep') {
+      if (is_object($group) && !empty($group->format_type) && $group->format_type == 'multistep') {
         $steps[$group->group_name] = $group;
       }
     }
     uasort($steps, '_multistep_cmp_group_weight');
-    $multistep[$type] = $steps;
+    if (is_string($type)) {
+      $multistep[$type] = $steps;
+    }
   }
-  return $multistep[$type];
+  return is_string($type) ? $multistep[$type] : $multistep;
 }
 
 /**
