@@ -3,9 +3,18 @@
   li {
     .pane__content & { // undo bullet from _html-elements
       list-style: none !important;
+      padding-left: 0;
+      padding-bottom: 0;
       &:before {
         display: none;
       }
-    }  
+    }
+    input {
+      vertical-align: middle;
+    }
   }
+}
+
+.no-term-reference-tree-button {
+  //background-color: transparent;
 }
