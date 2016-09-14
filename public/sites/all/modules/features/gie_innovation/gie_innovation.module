@@ -575,6 +575,7 @@ function gie_innovation_block_view_alter(&$data, $block) {
   //Check that the node we are adding is an innovation
   if ((!empty($node_object) && $node_object->type == 'innovation') || !empty($router_item['map'][2]) && is_string($router_item['map'][2]) && $router_item['map'][2] == 'innovation') {
     if ($block->delta == 'innovation') {
+      $data['content']['multistep_block_body']['#markup'] = '<div class="multistep-description"> The more you fill out your Innovation Profile, the better traffic you will receive on it through the Exchange and through search engines.</div>';
       foreach ($data['content']['multistep_block_navigation']['#children'] as $key => $value) {
         switch ($key) {
           case '0group_one':
