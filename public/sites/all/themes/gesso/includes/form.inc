@@ -515,7 +515,10 @@ function gesso_password($vars) {
   element_set_attributes($element, array('id', 'name', 'size', 'maxlength'));
   _gesso_form_set_class($element, array('form-text'));
 
-  return '<input' . drupal_attributes($element['#attributes']) . '>';
+  $output = ' <div class="form-item__content-container">' . "\n";
+  $output .= '<input' . drupal_attributes($element['#attributes']) . '>' . '</div>';
+
+  return $output;
 }
 
 /**
