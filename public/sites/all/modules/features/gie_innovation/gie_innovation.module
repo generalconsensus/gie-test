@@ -612,7 +612,7 @@ function gie_innovation_block_view_alter(&$data, $block) {
           break;
         case 'innovation_node_edit_need_help':
           $data['title'] = t('Need help?');
-          $data['content'] = t('Make your Innovation profile page SHINE! Read our best practices and writing techniques guide. ');
+          $data['content'] = t('Here is some basic information we need from you in order to add you innovation to the Global Innovation Exchange. Don\'t worry, we want MUCH more than this, but this is critical - how will people find your work if it doesn\'t have a description?');
           break;
       }
     }
