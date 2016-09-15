@@ -751,9 +751,9 @@ function gesso_text_format_wrapper($element) {
   }
   else {
     $output = '<div class="text-format-wrapper">';
-    $output .= !empty($element['#children']) ? $element['#children'] : '';
-    if (!empty($element['#description'])) {
-      $output .= '<div class="description">' . $element['#description'] . '</div>';
+    $output .= !empty($element['element']['#children']) ? $element['element']['#children'] : '';
+    if (!empty($element['element']['#description'])) {
+      $output .= '<div class="description">' . $element['element']['#description'] . '</div>';
     }
     $output .= "</div>\n";
 
