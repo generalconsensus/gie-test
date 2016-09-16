@@ -447,15 +447,15 @@ function gie_organization_views_default_views() {
   $handler->display->display_options['style_options']['row_class_special'] = FALSE;
   $handler->display->display_options['row_plugin'] = 'entity';
   $handler->display->display_options['row_options']['view_mode'] = 'listing';
-  /* Field: Indexed Content: Node ID */
+  /* Field: Indexed Node: Node ID */
   $handler->display->display_options['fields']['nid']['id'] = 'nid';
   $handler->display->display_options['fields']['nid']['table'] = 'search_api_index_default_node_index';
   $handler->display->display_options['fields']['nid']['field'] = 'nid';
-  /* Sort criterion: Indexed Content: Title */
+  /* Sort criterion: Indexed Node: Funding Opportunity Title */
   $handler->display->display_options['sorts']['title_field']['id'] = 'title_field';
   $handler->display->display_options['sorts']['title_field']['table'] = 'search_api_index_default_node_index';
   $handler->display->display_options['sorts']['title_field']['field'] = 'title_field';
-  /* Filter criterion: Indexed Content: Content type */
+  /* Filter criterion: Indexed Node: Content type */
   $handler->display->display_options['filters']['type']['id'] = 'type';
   $handler->display->display_options['filters']['type']['table'] = 'search_api_index_default_node_index';
   $handler->display->display_options['filters']['type']['field'] = 'type';
@@ -474,7 +474,7 @@ function gie_organization_views_default_views() {
   $handler->display->display_options['empty']['area']['content'] = 'There are no organizations that match your search.';
   $handler->display->display_options['empty']['area']['format'] = 'filtered_html';
   $handler->display->display_options['defaults']['arguments'] = FALSE;
-  /* Contextual filter: Indexed Content: Domain ID */
+  /* Contextual filter: Indexed Node: Domain ID */
   $handler->display->display_options['arguments']['domain_domain_id']['id'] = 'domain_domain_id';
   $handler->display->display_options['arguments']['domain_domain_id']['table'] = 'search_api_index_default_node_index';
   $handler->display->display_options['arguments']['domain_domain_id']['field'] = 'domain_domain_id';
@@ -883,7 +883,7 @@ function gie_organization_views_default_views() {
   $handler->display->display_options['defaults']['relationships'] = FALSE;
   $handler->display->display_options['defaults']['sorts'] = FALSE;
   $handler->display->display_options['defaults']['arguments'] = FALSE;
-  /* Contextual filter: Content: Funded By (field_innovation_funders) */
+  /* Contextual filter: Content: Do you have any funders? (field_innovation_funders) */
   $handler->display->display_options['arguments']['field_innovation_funders_target_id']['id'] = 'field_innovation_funders_target_id';
   $handler->display->display_options['arguments']['field_innovation_funders_target_id']['table'] = 'field_data_field_innovation_funders';
   $handler->display->display_options['arguments']['field_innovation_funders_target_id']['field'] = 'field_innovation_funders_target_id';
@@ -892,7 +892,7 @@ function gie_organization_views_default_views() {
   $handler->display->display_options['arguments']['field_innovation_funders_target_id']['summary']['number_of_records'] = '0';
   $handler->display->display_options['arguments']['field_innovation_funders_target_id']['summary']['format'] = 'default_summary';
   $handler->display->display_options['arguments']['field_innovation_funders_target_id']['summary_options']['items_per_page'] = '25';
-  /* Contextual filter: Content: Related Organizations (field_innovation_related_org) */
+  /* Contextual filter: Content: Are there any related Organizations? (field_innovation_related_org) */
   $handler->display->display_options['arguments']['field_innovation_related_org_target_id']['id'] = 'field_innovation_related_org_target_id';
   $handler->display->display_options['arguments']['field_innovation_related_org_target_id']['table'] = 'field_data_field_innovation_related_org';
   $handler->display->display_options['arguments']['field_innovation_related_org_target_id']['field'] = 'field_innovation_related_org_target_id';
