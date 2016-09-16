@@ -85,6 +85,16 @@ function gie_innovation_default_pane_container() {
   $template = new stdClass();
   $template->disabled = FALSE; /* Edit this to true to make a default template disabled initially */
   $template->api_version = 2;
+  $template->name = 'multistep_help_innovation';
+  $template->title = 'Multistep Help Innovation';
+  $template->plugin = 'text';
+  $template->description = 'Help text block for the Innovation multistep form';
+  $template->configuration = '';
+  $export['multistep_help_innovation'] = $template;
+
+  $template = new stdClass();
+  $template->disabled = FALSE; /* Edit this to true to make a default template disabled initially */
+  $template->api_version = 2;
   $template->name = 'sdg_landing_page';
   $template->title = 'SDG Landing Page';
   $template->plugin = 'entity_reference';

@@ -219,6 +219,7 @@ features[pane_container][] = grants_introduction
 features[pane_container][] = grants_organizations
 features[pane_container][] = grants_partners
 features[pane_container][] = innovations_introduction
+features[pane_container][] = multistep_help_innovation
 features[pane_container][] = sdg_landing_page
 features[pane_container][] = sdg_landing_page_title
 features[pane_container][] = sdg_listing_page_introduction
