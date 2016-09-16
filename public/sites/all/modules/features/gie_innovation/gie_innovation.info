@@ -215,6 +215,7 @@ features[page_manager_pages][] = innovations
 features[page_manager_pages][] = sdg_landing_page
 features[pane_container][] = facet_pane
 features[pane_container][] = innovations_introduction
+features[pane_container][] = multistep_help_innovation
 features[pane_container][] = sdg_landing_page
 features[pane_container][] = sdg_landing_page_title
 features[pane_container][] = sdg_listing_page_introduction

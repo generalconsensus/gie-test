@@ -551,21 +551,6 @@ function gie_innovation_get_selection_handler($field, $instance = NULL, $entity_
   }
 }
 
-
-
-/**
- * Implements hook_block_info().
- */
-function gie_innovation_block_info() {
-  $blocks = array();
-
-  $blocks['innovation_node_edit_need_help'] = array(
-    'info' => t('GIE Innovation Need help? Block')
-  );
-
-  return $blocks;
-}
-
 /**
  * Implements hook_block_view_alter().
  */
@@ -573,7 +558,6 @@ function gie_innovation_block_view_alter(&$data, $block) {
 
   $block_names = array(
     'innovation',
-    'innovation_node_edit_need_help'
   );
   //Check that the node we are adding is an innovation
   if (in_array($block->delta, $block_names)) {
@@ -609,10 +593,6 @@ function gie_innovation_block_view_alter(&$data, $block) {
                 break;
             }
           }
-          break;
-        case 'innovation_node_edit_need_help':
-          $data['title'] = t('Need help?');
-          $data['content'] = t('Here is some basic information we need from you in order to add you innovation to the Global Innovation Exchange. Don\'t worry, we want MUCH more than this, but this is critical - how will people find your work if it doesn\'t have a description?');
           break;
       }
     }
