@@ -253,18 +253,21 @@ function gie_funding_field_default_field_instances() {
     ),
     'widget' => array(
       'active' => 1,
-      'module' => 'entityreference_view_widget',
+      'module' => 'gie_innovation',
       'settings' => array(
         'allow_duplicates' => 0,
         'close_modal' => 0,
+        'match_operator' => 'CONTAINS',
         'pass_argument' => 0,
         'pass_arguments' => '',
+        'path' => '',
         'rendered_entity' => 0,
+        'size' => 60,
         'view' => 'user_reference|multi_view_widget',
         'view_mode' => 'full',
       ),
-      'type' => 'entityreference_view_widget',
-      'weight' => 9,
+      'type' => 'exchange_autocomplete',
+      'weight' => 24,
     ),
   );
 
@@ -394,7 +397,7 @@ function gie_funding_field_default_field_instances() {
         'year_range' => '-3:+3',
       ),
       'type' => 'date_popup',
-      'weight' => 13,
+      'weight' => 4,
     ),
   );
 
@@ -803,7 +806,7 @@ function gie_funding_field_default_field_instances() {
         'apply_chosen' => 1,
       ),
       'type' => 'options_select',
-      'weight' => 23,
+      'weight' => 31,
     ),
   );
 
@@ -940,7 +943,7 @@ function gie_funding_field_default_field_instances() {
         'rows' => 5,
       ),
       'type' => 'text_textarea',
-      'weight' => 7,
+      'weight' => 28,
     ),
   );
 
@@ -1064,7 +1067,7 @@ function gie_funding_field_default_field_instances() {
         'apply_chosen' => 1,
       ),
       'type' => 'options_select',
-      'weight' => 14,
+      'weight' => 7,
     ),
   );
 
@@ -1199,7 +1202,7 @@ function gie_funding_field_default_field_instances() {
         'label_help_description' => '',
       ),
       'type' => 'numberfield',
-      'weight' => 12,
+      'weight' => 5,
     ),
   );
 
@@ -1336,7 +1339,7 @@ function gie_funding_field_default_field_instances() {
         'rows' => 5,
       ),
       'type' => 'text_textarea',
-      'weight' => 6,
+      'weight' => 32,
     ),
   );
 
@@ -1486,7 +1489,7 @@ function gie_funding_field_default_field_instances() {
         'progress_indicator' => 'throbber',
       ),
       'type' => 'image_image',
-      'weight' => 3,
+      'weight' => 11,
     ),
   );
 
@@ -1582,7 +1585,7 @@ function gie_funding_field_default_field_instances() {
         'apply_chosen' => 1,
       ),
       'type' => 'options_select',
-      'weight' => 16,
+      'weight' => 30,
     ),
   );
 
@@ -1678,7 +1681,7 @@ function gie_funding_field_default_field_instances() {
         'apply_chosen' => 1,
       ),
       'type' => 'options_select',
-      'weight' => 17,
+      'weight' => 29,
     ),
   );
 
@@ -1799,7 +1802,7 @@ function gie_funding_field_default_field_instances() {
       'module' => 'html5_tools',
       'settings' => array(),
       'type' => 'urlwidget',
-      'weight' => 14,
+      'weight' => 3,
     ),
   );
 
@@ -1905,7 +1908,7 @@ function gie_funding_field_default_field_instances() {
         'size' => 60,
       ),
       'type' => 'entityreference_autocomplete',
-      'weight' => 16,
+      'weight' => 25,
     ),
   );
 
@@ -2043,7 +2046,7 @@ function gie_funding_field_default_field_instances() {
       'module' => 'html5_tools',
       'settings' => array(),
       'type' => 'emailwidget',
-      'weight' => 15,
+      'weight' => 23,
     ),
   );
 
@@ -2153,7 +2156,7 @@ function gie_funding_field_default_field_instances() {
         'apply_chosen' => 1,
       ),
       'type' => 'options_select',
-      'weight' => 15,
+      'weight' => 6,
     ),
   );
 
@@ -2249,7 +2252,7 @@ function gie_funding_field_default_field_instances() {
       'module' => 'multiple_selects',
       'settings' => array(),
       'type' => 'multiple_selects',
-      'weight' => 8,
+      'weight' => 26,
     ),
   );
 
@@ -2345,7 +2348,7 @@ function gie_funding_field_default_field_instances() {
         'apply_chosen' => 1,
       ),
       'type' => 'options_select',
-      'weight' => 20,
+      'weight' => 10,
     ),
   );
 
@@ -2455,7 +2458,7 @@ function gie_funding_field_default_field_instances() {
         'apply_chosen' => 1,
       ),
       'type' => 'options_select',
-      'weight' => 21,
+      'weight' => 8,
     ),
   );
 
@@ -2574,7 +2577,7 @@ function gie_funding_field_default_field_instances() {
         'track_list' => 0,
       ),
       'type' => 'term_reference_tree',
-      'weight' => 18,
+      'weight' => 9,
     ),
   );
 
@@ -2670,7 +2673,7 @@ function gie_funding_field_default_field_instances() {
         'apply_chosen' => 1,
       ),
       'type' => 'options_select',
-      'weight' => 19,
+      'weight' => 27,
     ),
   );
 
