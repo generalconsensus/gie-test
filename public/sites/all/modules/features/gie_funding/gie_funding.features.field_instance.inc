@@ -253,17 +253,20 @@ function gie_funding_field_default_field_instances() {
     ),
     'widget' => array(
       'active' => 1,
-      'module' => 'entityreference_view_widget',
+      'module' => 'gie_innovation',
       'settings' => array(
         'allow_duplicates' => 0,
         'close_modal' => 0,
+        'match_operator' => 'CONTAINS',
         'pass_argument' => 0,
         'pass_arguments' => '',
+        'path' => '',
         'rendered_entity' => 0,
+        'size' => 60,
         'view' => 'user_reference|multi_view_widget',
         'view_mode' => 'full',
       ),
-      'type' => 'entityreference_view_widget',
+      'type' => 'exchange_autocomplete',
       'weight' => 24,
     ),
   );
