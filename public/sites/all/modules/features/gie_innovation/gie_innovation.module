@@ -570,33 +570,53 @@ function gie_innovation_block_info() {
  * Implements hook_block_view_alter().
  */
 function gie_innovation_block_view_alter(&$data, $block) {
-  $router_item = menu_get_item();
-  $node_object = menu_get_object('node', 1);
+
+  $block_names = array(
+    'innovation',
+    'innovation_node_edit_need_help'
+  );
   //Check that the node we are adding is an innovation
-  if ((!empty($node_object) && $node_object->type == 'innovation') || !empty($router_item['map'][2]) && is_string($router_item['map'][2]) && $router_item['map'][2] == 'innovation') {
-    if ($block->delta == 'innovation') {
-      foreach ($data['content']['multistep_block_navigation']['#children'] as $key => $value) {
-        switch ($key) {
-          case '0group_one':
-            $data['content']['multistep_block_navigation']['#children'][$key]['label'] = 'Basic Information';
-            break;
-          case '1group_two':
-            $data['content']['multistep_block_navigation']['#children'][$key]['label'] = 'Vision';
-            break;
-          case '2group_three':
-            $data['content']['multistep_block_navigation']['#children'][$key]['label'] = 'Funding';
-            break;
-          case '3group_four':
-            $data['content']['multistep_block_navigation']['#children'][$key]['label'] = 'Team';
-            break;
-          case '4group_five':
-            $data['content']['multistep_block_navigation']['#children'][$key]['label'] = 'Evidence';
-            break;
-        }
+  if (in_array($block->delta, $block_names)) {
+    $router_item = menu_get_item();
+    $node_object = menu_get_object('node', 1);
+
+    if (empty($node_object)) {
+      unset($data['content']);
+    }
+    elseif (($node_object->type == 'innovation') || !empty($router_item['map'][2]) && is_string(
+        $router_item['map'][2]
+      ) && $router_item['map'][2] == 'innovation'
+    ) {
+      switch ($block->delta) {
+        case 'innovation':
+          $data['content']['multistep_block_body']['#markup'] = '<div class="multistep-description"> The more you fill out your Innovation Profile, the better traffic you will receive on it through the Exchange and through search engines.</div>';
+          foreach ($data['content']['multistep_block_navigation']['#children'] as $key => $value) {
+            switch ($key) {
+              case '0group_one':
+                $data['content']['multistep_block_navigation']['#children'][$key]['label'] = 'Basic Information';
+                break;
+              case '1group_two':
+                $data['content']['multistep_block_navigation']['#children'][$key]['label'] = 'Vision';
+                break;
+              case '2group_three':
+                $data['content']['multistep_block_navigation']['#children'][$key]['label'] = 'Funding';
+                break;
+              case '3group_four':
+                $data['content']['multistep_block_navigation']['#children'][$key]['label'] = 'Team';
+                break;
+              case '4group_five':
+                $data['content']['multistep_block_navigation']['#children'][$key]['label'] = 'Evidence';
+                break;
+            }
+          }
+          break;
+        case 'innovation_node_edit_need_help':
+          $data['title'] = t('Need help?');
+          $data['content'] = t('Here is some basic information we need from you in order to add you innovation to the Global Innovation Exchange. Don\'t worry, we want MUCH more than this, but this is critical - how will people find your work if it doesn\'t have a description?');
+          break;
       }
-    } elseif($block->delta == 'innovation_node_edit_need_help') {
-      $data['title'] = t('Need help?');
-      $data['content'] = t('Make your Innovation profile page SHINE! Read our best practices and writing techniques guide. ');
     }
   }
 }
+
+
