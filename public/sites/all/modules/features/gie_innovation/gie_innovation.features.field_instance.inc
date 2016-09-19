@@ -874,8 +874,7 @@ function gie_innovation_field_default_field_instances() {
     'label' => 'Cost Per Beneficiary ($)',
     'required' => 0,
     'settings' => array(
-      'description_display' => 'after',
-      'max' => '',
+      'max' => 2147483647,
       'min' => 0,
       'prefix' => '$',
       'suffix' => '',
@@ -884,7 +883,9 @@ function gie_innovation_field_default_field_instances() {
     'widget' => array(
       'active' => 0,
       'module' => 'html5_tools',
-      'settings' => array(),
+      'settings' => array(
+        'label_help_description' => '',
+      ),
       'type' => 'numberfield',
       'weight' => 13,
     ),
@@ -1002,8 +1003,7 @@ function gie_innovation_field_default_field_instances() {
     'label' => 'Cost Per Unit ($)',
     'required' => 0,
     'settings' => array(
-      'description_display' => 'after',
-      'max' => '',
+      'max' => 2147483647,
       'min' => 0,
       'prefix' => '$',
       'suffix' => '',
@@ -1012,7 +1012,9 @@ function gie_innovation_field_default_field_instances() {
     'widget' => array(
       'active' => 0,
       'module' => 'html5_tools',
-      'settings' => array(),
+      'settings' => array(
+        'label_help_description' => '',
+      ),
       'type' => 'numberfield',
       'weight' => 14,
     ),
@@ -1727,9 +1729,8 @@ function gie_innovation_field_default_field_instances() {
     'label' => 'Funding Goal ($)',
     'required' => 0,
     'settings' => array(
-      'description_display' => 'after',
-      'max' => '',
-      'min' => '',
+      'max' => 2147483647,
+      'min' => 0,
       'prefix' => '$',
       'suffix' => '',
       'user_register_form' => FALSE,
@@ -1737,7 +1738,9 @@ function gie_innovation_field_default_field_instances() {
     'widget' => array(
       'active' => 0,
       'module' => 'html5_tools',
-      'settings' => array(),
+      'settings' => array(
+        'label_help_description' => '',
+      ),
       'type' => 'numberfield',
       'weight' => 12,
     ),
@@ -2407,8 +2410,7 @@ function gie_innovation_field_default_field_instances() {
     'label' => 'Actual Lives Impacted',
     'required' => 0,
     'settings' => array(
-      'description_display' => 'after',
-      'max' => '',
+      'max' => 2147483647,
       'min' => 0,
       'prefix' => '',
       'suffix' => '',
@@ -2417,7 +2419,9 @@ function gie_innovation_field_default_field_instances() {
     'widget' => array(
       'active' => 0,
       'module' => 'html5_tools',
-      'settings' => array(),
+      'settings' => array(
+        'label_help_description' => '',
+      ),
       'type' => 'numberfield',
       'weight' => 20,
     ),
@@ -2535,8 +2539,7 @@ function gie_innovation_field_default_field_instances() {
     'label' => 'Actual Lives Saved',
     'required' => 0,
     'settings' => array(
-      'description_display' => 'after',
-      'max' => '',
+      'max' => 2147483647,
       'min' => 0,
       'prefix' => '',
       'suffix' => '',
@@ -2545,7 +2548,9 @@ function gie_innovation_field_default_field_instances() {
     'widget' => array(
       'active' => 0,
       'module' => 'html5_tools',
-      'settings' => array(),
+      'settings' => array(
+        'label_help_description' => '',
+      ),
       'type' => 'numberfield',
       'weight' => 18,
     ),
@@ -3067,8 +3072,7 @@ function gie_innovation_field_default_field_instances() {
     'label' => 'Potential Lives Impacted',
     'required' => 0,
     'settings' => array(
-      'description_display' => 'after',
-      'max' => '',
+      'max' => 2147483647,
       'min' => 0,
       'prefix' => '',
       'suffix' => '',
@@ -3077,7 +3081,9 @@ function gie_innovation_field_default_field_instances() {
     'widget' => array(
       'active' => 0,
       'module' => 'html5_tools',
-      'settings' => array(),
+      'settings' => array(
+        'label_help_description' => '',
+      ),
       'type' => 'numberfield',
       'weight' => 21,
     ),
@@ -3196,8 +3202,7 @@ function gie_innovation_field_default_field_instances() {
     'label' => 'Potential Lives Saved',
     'required' => 0,
     'settings' => array(
-      'description_display' => 'after',
-      'max' => '',
+      'max' => 2147483647,
       'min' => 0,
       'prefix' => '',
       'suffix' => '',
@@ -3206,7 +3211,9 @@ function gie_innovation_field_default_field_instances() {
     'widget' => array(
       'active' => 0,
       'module' => 'html5_tools',
-      'settings' => array(),
+      'settings' => array(
+        'label_help_description' => '',
+      ),
       'type' => 'numberfield',
       'weight' => 19,
     ),
@@ -3578,8 +3585,7 @@ function gie_innovation_field_default_field_instances() {
     'label' => 'Funding Raised ($)',
     'required' => 0,
     'settings' => array(
-      'description_display' => 'after',
-      'max' => '',
+      'max' => 2147483647,
       'min' => 0,
       'prefix' => '$',
       'suffix' => '',
@@ -3588,7 +3594,9 @@ function gie_innovation_field_default_field_instances() {
     'widget' => array(
       'active' => 0,
       'module' => 'html5_tools',
-      'settings' => array(),
+      'settings' => array(
+        'label_help_description' => '',
+      ),
       'type' => 'numberfield',
       'weight' => 11,
     ),
