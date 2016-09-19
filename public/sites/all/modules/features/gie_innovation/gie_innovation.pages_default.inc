@@ -342,8 +342,8 @@ function gie_innovation_default_page_manager_pages() {
   $display->cache = array();
   $display->title = '';
   $display->uuid = '61dbe43a-75fe-43bc-a855-90bbfe646f07';
-  $display->storage_type = '';
-  $display->storage_id = '';
+  $display->storage_type = 'page_manager';
+  $display->storage_id = 'page_innovations__panel_context_e3797bcf-20be-4eba-8e89-930bb55f2e73';
   $display->content = array();
   $display->panels = array();
   $pane = new stdClass();
@@ -840,8 +840,8 @@ function gie_innovation_default_page_manager_pages() {
   $display->cache = array();
   $display->title = '';
   $display->uuid = '3cbd6349-a23e-4d52-b5dd-20dc2b2413e7';
-  $display->storage_type = '';
-  $display->storage_id = '';
+  $display->storage_type = 'page_manager';
+  $display->storage_id = 'page_sdg_landing_page__panel_context_a70e8770-5a2e-4270-be13-085c711113e7';
   $display->content = array();
   $display->panels = array();
   $pane = new stdClass();

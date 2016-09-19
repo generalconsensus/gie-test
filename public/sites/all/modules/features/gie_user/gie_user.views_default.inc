@@ -986,7 +986,7 @@ function gie_user_views_default_views() {
     1 => 0,
     3 => 0,
   );
-  /* Filter criterion: Content: Innovation Team (field_innovation_team) */
+  /* Filter criterion: Content: Who else works with you on the Exchange? (field_innovation_team) */
   $handler->display->display_options['filters']['field_innovation_team_target_id']['id'] = 'field_innovation_team_target_id';
   $handler->display->display_options['filters']['field_innovation_team_target_id']['table'] = 'field_data_field_innovation_team';
   $handler->display->display_options['filters']['field_innovation_team_target_id']['field'] = 'field_innovation_team_target_id';
@@ -1143,6 +1143,27 @@ function gie_user_views_default_views() {
   $handler->display->display_options['empty']['area']['content'] = 'This user has not created any innovations.';
   $handler->display->display_options['empty']['area']['format'] = 'filtered_html';
   $handler->display->display_options['defaults']['relationships'] = FALSE;
+  $handler->display->display_options['defaults']['arguments'] = FALSE;
+  /* Contextual filter: Content: Author uid */
+  $handler->display->display_options['arguments']['uid']['id'] = 'uid';
+  $handler->display->display_options['arguments']['uid']['table'] = 'node';
+  $handler->display->display_options['arguments']['uid']['field'] = 'uid';
+  $handler->display->display_options['arguments']['uid']['default_action'] = 'default';
+  $handler->display->display_options['arguments']['uid']['default_argument_type'] = 'user';
+  $handler->display->display_options['arguments']['uid']['default_argument_options']['user'] = FALSE;
+  $handler->display->display_options['arguments']['uid']['summary']['number_of_records'] = '0';
+  $handler->display->display_options['arguments']['uid']['summary']['format'] = 'default_summary';
+  $handler->display->display_options['arguments']['uid']['summary_options']['items_per_page'] = '25';
+  /* Contextual filter: Content: Who else works with you on the Exchange? (field_innovation_team) */
+  $handler->display->display_options['arguments']['field_innovation_team_target_id']['id'] = 'field_innovation_team_target_id';
+  $handler->display->display_options['arguments']['field_innovation_team_target_id']['table'] = 'field_data_field_innovation_team';
+  $handler->display->display_options['arguments']['field_innovation_team_target_id']['field'] = 'field_innovation_team_target_id';
+  $handler->display->display_options['arguments']['field_innovation_team_target_id']['default_action'] = 'default';
+  $handler->display->display_options['arguments']['field_innovation_team_target_id']['default_argument_type'] = 'user';
+  $handler->display->display_options['arguments']['field_innovation_team_target_id']['default_argument_options']['user'] = FALSE;
+  $handler->display->display_options['arguments']['field_innovation_team_target_id']['summary']['number_of_records'] = '0';
+  $handler->display->display_options['arguments']['field_innovation_team_target_id']['summary']['format'] = 'default_summary';
+  $handler->display->display_options['arguments']['field_innovation_team_target_id']['summary_options']['items_per_page'] = '25';
   $handler->display->display_options['defaults']['filter_groups'] = FALSE;
   $handler->display->display_options['defaults']['filters'] = FALSE;
   /* Filter criterion: Content: Published */

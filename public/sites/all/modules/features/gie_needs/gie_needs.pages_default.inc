@@ -67,8 +67,8 @@ function gie_needs_default_page_manager_pages() {
   $display->cache = array();
   $display->title = 'Exchange InDemand';
   $display->uuid = '2405cb67-b1de-494d-8a77-dd5f0208e449';
-  $display->storage_type = '';
-  $display->storage_id = '';
+  $display->storage_type = 'page_manager';
+  $display->storage_id = 'page_indemand_landing_page__panel_context_57516ba2-8e6c-47e2-8e7d-7695e927dea7';
   $display->content = array();
   $display->panels = array();
   $pane = new stdClass();

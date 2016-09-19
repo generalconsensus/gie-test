@@ -45,8 +45,8 @@ function gie_search_default_page_manager_handlers() {
   $display->cache = array();
   $display->title = 'Search';
   $display->uuid = '81989513-2050-402c-858d-291581ae2a20';
-  $display->storage_type = '';
-  $display->storage_id = '';
+  $display->storage_type = 'page_manager';
+  $display->storage_id = 'pm_existing_pages_solr_search__solr_search';
   $display->content = array();
   $display->panels = array();
   $pane = new stdClass();
@@ -278,8 +278,8 @@ function gie_search_default_page_manager_handlers() {
   $display->cache = array();
   $display->title = 'Search';
   $display->uuid = '41c51e95-c9db-4017-a053-93b5e9ca76e7';
-  $display->storage_type = '';
-  $display->storage_id = '';
+  $display->storage_type = 'page_manager';
+  $display->storage_id = 'search_node__solr_search';
   $display->content = array();
   $display->panels = array();
   $pane = new stdClass();
