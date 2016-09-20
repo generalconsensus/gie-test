@@ -637,7 +637,11 @@ function gie_dashboard_field_default_field_instances() {
   // Exported field_instance: 'node-program-field_featured'.
   $field_instances['node-program-field_featured'] = array(
     'bundle' => 'program',
-    'default_value' => NULL,
+    'default_value' => array(
+      0 => array(
+        'value' => 0,
+      ),
+    ),
     'deleted' => 0,
     'description' => '',
     'display' => array(
@@ -716,17 +720,20 @@ function gie_dashboard_field_default_field_instances() {
         'weight' => 0,
       ),
     ),
+    'ds_extras_field_template' => '',
     'entity_type' => 'node',
     'field_name' => 'field_featured',
     'label' => 'Featured',
-    'required' => FALSE,
+    'required' => 0,
     'settings' => array(
       'user_register_form' => FALSE,
     ),
     'widget' => array(
+      'active' => 1,
       'module' => 'options',
       'settings' => array(
-        'display_label' => 0,
+        'display_label' => 1,
+        'label_help_description' => '',
       ),
       'type' => 'options_onoff',
       'weight' => 42,

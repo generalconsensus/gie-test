@@ -176,4 +176,7 @@
   .filter-wrapper {
     padding: 0;
   }
+  .edit-icon,.add-icon { // hide extra controls
+    display: none;
+  }
 }
