@@ -10,6 +10,129 @@
 function gie_needs_field_default_field_instances() {
   $field_instances = array();
 
+  // Exported field_instance: 'comment-comment_node_needs-comment_body'.
+  $field_instances['comment-comment_node_needs-comment_body'] = array(
+    'bundle' => 'comment_node_needs',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'hidden',
+        'module' => 'text',
+        'settings' => array(
+          'field_delimiter' => '',
+          'linked_field' => array(
+            'advanced' => array(
+              'class' => '',
+              'rel' => '',
+              'target' => '',
+              'text' => '',
+              'title' => '',
+            ),
+            'destination' => '',
+            'linked' => 0,
+          ),
+        ),
+        'type' => 'text_default',
+        'weight' => 0,
+      ),
+    ),
+    'ds_extras_field_template' => '',
+    'entity_type' => 'comment',
+    'field_name' => 'comment_body',
+    'label' => 'Comment',
+    'required' => 1,
+    'settings' => array(
+      'better_formats' => array(
+        'allowed_formats' => array(
+          'comments_filtered' => 'comments_filtered',
+          'filtered_html' => 0,
+          'full_html' => 0,
+          'long_form_filtered' => 0,
+          'long_form_full' => 0,
+          'plain_text' => 0,
+        ),
+        'allowed_formats_toggle' => 1,
+        'default_order_toggle' => 0,
+        'default_order_wrapper' => array(
+          'formats' => array(
+            'comments_filtered' => array(
+              'weight' => 0,
+            ),
+            'filtered_html' => array(
+              'weight' => 0,
+            ),
+            'full_html' => array(
+              'weight' => 1,
+            ),
+            'long_form_filtered' => array(
+              'weight' => 0,
+            ),
+            'long_form_full' => array(
+              'weight' => 0,
+            ),
+            'plain_text' => array(
+              'weight' => 10,
+            ),
+          ),
+        ),
+      ),
+      'description_display' => 'after',
+      'text_processing' => 1,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'text',
+      'settings' => array(
+        'maxlength_js' => '',
+        'maxlength_js_enforce' => 0,
+        'maxlength_js_label' => 'Content limited to @limit characters, remaining: <strong>@remaining</strong>',
+        'maxlength_js_truncate_html' => 0,
+        'rows' => 5,
+      ),
+      'type' => 'text_textarea',
+      'weight' => -1,
+    ),
+  );
+
+  // Exported field_instance: 'comment-comment_node_news-subject_field'.
+  $field_instances['comment-comment_node_news-subject_field'] = array(
+    'bundle' => 'comment_node_news',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'comment',
+    'field_name' => 'subject_field',
+    'label' => 'Subject',
+    'required' => TRUE,
+    'settings' => array(
+      'hide_label' => array(
+        'entity' => 0,
+        'page' => 0,
+      ),
+      'text_processing' => 0,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'module' => 'text',
+      'settings' => array(
+        'size' => 60,
+      ),
+      'type' => 'text_textfield',
+      'weight' => -5,
+    ),
+  );
+
   // Exported field_instance: 'node-needs-body'.
   $field_instances['node-needs-body'] = array(
     'bundle' => 'needs',
@@ -400,7 +523,7 @@ function gie_needs_field_default_field_instances() {
     'settings' => array(
       'description_display' => 'after',
       'max' => '',
-      'min' => '',
+      'min' => 0,
       'prefix' => '',
       'suffix' => '',
       'user_register_form' => FALSE,
@@ -496,7 +619,7 @@ function gie_needs_field_default_field_instances() {
     'settings' => array(
       'description_display' => 'after',
       'max' => '',
-      'min' => '',
+      'min' => 0,
       'prefix' => '$',
       'suffix' => '',
       'user_register_form' => FALSE,
@@ -592,7 +715,7 @@ function gie_needs_field_default_field_instances() {
     'settings' => array(
       'description_display' => 'after',
       'max' => '',
-      'min' => '',
+      'min' => 0,
       'prefix' => '',
       'suffix' => '',
       'user_register_form' => FALSE,
@@ -2639,6 +2762,7 @@ function gie_needs_field_default_field_instances() {
   t('Amount - Items Needed');
   t('Amount - Monetary Value');
   t('Amount - People Needed');
+  t('Comment');
   t('Date Needed By');
   t('Description');
   t('Desired Certifications');
@@ -2658,6 +2782,7 @@ function gie_needs_field_default_field_instances() {
   t('Related Topics');
   t('Select an image to display on your InDemand Need. Use the focus selector to highlight the portion of the image you would like to feature. ');
   t('Status');
+  t('Subject');
   t('Title');
   t('Type of Need');
 

@@ -244,11 +244,22 @@ function _gie_user_notifications_link_access() {
  * Implements hook_form_FORM_ID_alter().
  */
 function gie_user_form_user_register_form_alter(&$form) {
-  $form['account']['pass']['#type'] = 'password';
-  $form['account']['pass']['#title'] = 'Password';
-  $form['account']['pass']['#attributes']['placeholder'] = t('Password');
-}
+  $user_email_verification = variable_get('user_email_verification');
+  global $user;
+  // hide password on registration form if we are requiring email verification
+  if ($user_email_verification && !(user_has_role(3, $user) || user_has_role(7, $user))) {
+    $form['account']['pass']['#access'] = FALSE;
+  } else {
+    // set up the password field for display
+    $form['account']['pass']['#type'] = 'password';
+    $form['account']['pass']['#title'] = 'Password';
+    $form['account']['pass']['#attributes']['placeholder'] = t('Password');
+  }
 
+  // place Account group fields below About group fields
+  $last_weight = $form['#groups']['group_about']->weight;
+  $form['#groups']['group_account']->weight = $last_weight+1;
+}
 
 /**
  * Implements hook_form_FORM_ID_alter().
@@ -257,13 +268,16 @@ function gie_user_form_user_profile_form_alter(&$form, &$form_state, $form_id) {
   // Hide "Select the types of assistance..." field
   $form['field_assistance_offered']['#access'] = FALSE;
 
+  // Get the current path
+  $current_path = current_path();
+
   // Hide Notifications group on user edit page
-  if (preg_match('/^user\/\d*\/edit$/', current_path()) && !user_has_role(3)) {
+  if (preg_match('/^user\/\d*\/edit$/', $current_path) && !user_has_role(3)) {
     field_group_hide_field_groups($form, array('group_user_notifications'));
   }
 
   // Alter form for User Notifications page
-  else if (preg_match('/^user\/\d*\/notifications/', current_path())) {
+  else if (preg_match('/^user\/\d*\/notifications/', $current_path)) {
 
     // Hide "Cancel Account" button
     $form['actions']['cancel']['#access'] = FALSE;
@@ -281,10 +295,26 @@ function gie_user_form_user_profile_form_alter(&$form, &$form_state, $form_id) {
     ));
   }
 
+  // redirect user reset form to user edit page
+  else if (preg_match('/^user\/reset\/\d*\/\d*\//', $current_path)) {
+    $form['#submit'][] = '_gie_user_edit_redirect';
+    return;
+  }
+
   // Add custom submit to redirect user to profile
   $form['#submit'][] = 'gie_user_profile_redirect';
 }
 
+/**
+ * Custom submission for sending the user to their User edit screen after User Reset form
+ */
+function _gie_user_edit_redirect($form, &$form_state) {
+  $user = $form_state['user'];
+  if (!empty($user) && !empty($user->uid) && $user->uid != 0) {
+    $uid = $user->uid;
+    $form_state['redirect'] = "user/$uid/edit";
+  }
+}
 
 /**
  * Custom Submission for sending the user back to their profile page after user edit

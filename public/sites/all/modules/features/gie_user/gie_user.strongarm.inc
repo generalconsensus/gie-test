@@ -140,7 +140,10 @@ function gie_user_strongarm() {
           'weight' => '12',
         ),
         'domain' => array(
-          'weight' => '1',
+          'weight' => '2',
+        ),
+        'redirect' => array(
+          'weight' => '14',
         ),
       ),
       'display' => array(
@@ -258,8 +261,8 @@ function gie_user_strongarm() {
     ),
     'statistics' => array(
       'status' => 1,
-      'requests' => 0,
-      'success' => 0,
+      'requests' => 6,
+      'success' => 6,
       'fails' => 0,
     ),
     'settings' => array(
@@ -297,6 +300,7 @@ function gie_user_strongarm() {
   $strongarm->name = 'panelizer_defaults_user_user';
   $strongarm->value = array(
     'status' => 1,
+    'help' => '',
     'view modes' => array(
       'page_manager' => array(
         'status' => 1,
@@ -317,6 +321,12 @@ function gie_user_strongarm() {
         'choice' => 0,
       ),
       'listing' => array(
+        'status' => 0,
+        'substitute' => 0,
+        'default' => 0,
+        'choice' => 0,
+      ),
+      'spotlight' => array(
         'status' => 0,
         'substitute' => 0,
         'default' => 0,
@@ -439,6 +449,48 @@ function gie_user_strongarm() {
   $strongarm->name = 'pm_existing_pages_disabled_user_registration';
   $strongarm->value = FALSE;
   $export['pm_existing_pages_disabled_user_registration'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'rh_taxonomy_term_action_company';
+  $strongarm->value = '2';
+  $export['rh_taxonomy_term_action_company'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'rh_taxonomy_term_action_member_help';
+  $strongarm->value = '2';
+  $export['rh_taxonomy_term_action_member_help'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'rh_taxonomy_term_action_other_interest';
+  $strongarm->value = '2';
+  $export['rh_taxonomy_term_action_other_interest'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'rh_taxonomy_term_action_team';
+  $strongarm->value = '2';
+  $export['rh_taxonomy_term_action_team'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'rh_taxonomy_term_action_user_skills';
+  $strongarm->value = '2';
+  $export['rh_taxonomy_term_action_user_skills'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'rh_taxonomy_term_action_user_type';
+  $strongarm->value = '2';
+  $export['rh_taxonomy_term_action_user_type'] = $strongarm;
 
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */

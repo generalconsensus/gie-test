@@ -346,6 +346,9 @@ function gie_user_field_group_info() {
       4 => 'field_user_mail_user_follow',
       5 => 'field_user_mail_funding_rec',
       6 => 'field_user_mail_innovation_rec',
+      7 => 'field_user_mail_follow_comment',
+      8 => 'field_user_mail_comment',
+      9 => 'field_user_notify_test',
     ),
     'format_type' => 'div',
     'format_settings' => array(

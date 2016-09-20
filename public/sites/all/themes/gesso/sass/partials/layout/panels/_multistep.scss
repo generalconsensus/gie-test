@@ -1,0 +1,35 @@
+// @file
+// Panels layout: sidebar_right
+// Media queries use: http://breakpoint-sass.com
+// Media queries use: github.com/Team-Sass/breakpoint/wiki/No-Query-Fallbacks
+// Grid via: singularity.gs
+
+.l-panels-multistep {
+  @include add-grid(12 at 900px);
+  @include add-gutter(2);
+  @include breakpoint(900px, $no-query: true) {
+    &.main.sidebar {
+      .l-main {
+        @include grid-span(8,1);
+      }
+      .l-sidebar {
+        @include grid-span(4,9);
+      }
+    }
+  }
+}
+
+.l-panels-multistep {
+  @include clearfix;
+  .l-preface,
+  .l-title,
+  .l-main,
+  .l-sidebar,
+  .l-wrapper {
+    @include clearfix;
+
+    @if $panels-admin {
+      @include border-box;
+    }
+  }
+}

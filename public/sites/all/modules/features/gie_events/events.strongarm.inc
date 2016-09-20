@@ -340,6 +340,10 @@ function events_strongarm() {
             'weight' => '26',
             'visible' => FALSE,
           ),
+          'full' => array(
+            'weight' => '10',
+            'visible' => FALSE,
+          ),
         ),
         'domain' => array(
           'default' => array(
@@ -348,6 +352,10 @@ function events_strongarm() {
           ),
           'spotlight' => array(
             'weight' => '13',
+            'visible' => FALSE,
+          ),
+          'full' => array(
+            'weight' => '1',
             'visible' => FALSE,
           ),
         ),
@@ -359,6 +367,10 @@ function events_strongarm() {
           'spotlight' => array(
             'weight' => '3',
             'visible' => TRUE,
+          ),
+          'full' => array(
+            'weight' => '10',
+            'visible' => FALSE,
           ),
         ),
       ),
@@ -498,6 +510,27 @@ function events_strongarm() {
   $strongarm->name = 'pathauto_taxonomy_term_event_type_pattern';
   $strongarm->value = '';
   $export['pathauto_taxonomy_term_event_type_pattern'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'rh_taxonomy_term_action_event_needs';
+  $strongarm->value = '2';
+  $export['rh_taxonomy_term_action_event_needs'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'rh_taxonomy_term_action_event_size';
+  $strongarm->value = '2';
+  $export['rh_taxonomy_term_action_event_size'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'rh_taxonomy_term_action_event_type';
+  $strongarm->value = '2';
+  $export['rh_taxonomy_term_action_event_type'] = $strongarm;
 
   return $export;
 }

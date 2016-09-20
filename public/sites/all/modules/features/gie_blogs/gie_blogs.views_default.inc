@@ -230,11 +230,11 @@ function gie_blogs_views_default_views() {
   $handler->display->display_options['fields']['nid']['id'] = 'nid';
   $handler->display->display_options['fields']['nid']['table'] = 'search_api_index_default_node_index';
   $handler->display->display_options['fields']['nid']['field'] = 'nid';
-  /* Sort criterion: Indexed Content: Date Added */
-  $handler->display->display_options['sorts']['field_resource_date']['id'] = 'field_resource_date';
-  $handler->display->display_options['sorts']['field_resource_date']['table'] = 'search_api_index_default_node_index';
-  $handler->display->display_options['sorts']['field_resource_date']['field'] = 'field_resource_date';
-  $handler->display->display_options['sorts']['field_resource_date']['order'] = 'DESC';
+  /* Sort criterion: Indexed Content: Date created */
+  $handler->display->display_options['sorts']['created']['id'] = 'created';
+  $handler->display->display_options['sorts']['created']['table'] = 'search_api_index_default_node_index';
+  $handler->display->display_options['sorts']['created']['field'] = 'created';
+  $handler->display->display_options['sorts']['created']['order'] = 'DESC';
   /* Filter criterion: Indexed Content: Content type */
   $handler->display->display_options['filters']['type']['id'] = 'type';
   $handler->display->display_options['filters']['type']['table'] = 'search_api_index_default_node_index';

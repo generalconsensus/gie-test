@@ -470,6 +470,10 @@ function gie_funding_strongarm() {
             'weight' => '1',
             'visible' => FALSE,
           ),
+          'full' => array(
+            'weight' => '1',
+            'visible' => FALSE,
+          ),
         ),
         'flag_favorite' => array(
           'default' => array(
@@ -484,6 +488,10 @@ function gie_funding_strongarm() {
             'weight' => '10',
             'visible' => FALSE,
           ),
+          'full' => array(
+            'weight' => '10',
+            'visible' => FALSE,
+          ),
         ),
         'flag_abuse_node' => array(
           'default' => array(
@@ -495,6 +503,10 @@ function gie_funding_strongarm() {
             'visible' => FALSE,
           ),
           'listing' => array(
+            'weight' => '10',
+            'visible' => FALSE,
+          ),
+          'full' => array(
             'weight' => '10',
             'visible' => FALSE,
           ),
@@ -673,6 +685,27 @@ function gie_funding_strongarm() {
   $strongarm->name = 'pathauto_taxonomy_term_funding_type_pattern';
   $strongarm->value = '';
   $export['pathauto_taxonomy_term_funding_type_pattern'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'rh_taxonomy_term_action_effort_level';
+  $strongarm->value = '2';
+  $export['rh_taxonomy_term_action_effort_level'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'rh_taxonomy_term_action_eligibility_type';
+  $strongarm->value = '2';
+  $export['rh_taxonomy_term_action_eligibility_type'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'rh_taxonomy_term_action_funding_type';
+  $strongarm->value = '2';
+  $export['rh_taxonomy_term_action_funding_type'] = $strongarm;
 
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
