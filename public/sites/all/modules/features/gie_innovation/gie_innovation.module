@@ -554,19 +554,34 @@ function gie_innovation_get_selection_handler($field, $instance = NULL, $entity_
   }
 }
 
-///**
-// * Implements hook_query_TAG_alter().
-// */
-//function gie_innovation_query_gie_entity_reference_user_access_alter(QueryAlterableInterface $query) {
-//  if (!empty($query->alterMetaData['entity_field_query']->propertyConditions[0]['value'])) {
-//    // First name
-//    $query->join('field_data_field_user_firstname', 'firstname', 'firstname.entity_id = users.uid');
-//    $query->join('field_data_field_user_lastname', 'lastname', 'lastname.entity_id = users.uid');
-//
-//    $or = db_or();
-//    $or->condition('lastname.field_user_lastname_value',  '%' . $query->alterMetaData['entity_field_query']->propertyConditions[0]['value'].   '%' , 'LIKE');
-//    $or->condition('firstname.field_user_firstname_value',  '%' . $query->alterMetaData['entity_field_query']->propertyConditions[0]['value'] . '%' , 'LIKE');
-//    $query->condition($or);
-//
-//  }
-//}
+/**
+ * Implements hook_query_TAG_alter().
+ *
+ * Add "full name OR username" condition to our user reference autocomplete query
+ */
+function gie_innovation_query_gie_entity_reference_user_access_alter(QueryAlterableInterface $query) {
+
+  if (!empty($query->alterMetaData['entity_field_query']->propertyConditions[0]['value'])) {
+    // Get the user's input value
+    $inputValue = $query->alterMetaData['entity_field_query']->propertyConditions[0]['value'];
+
+    // Join first name and last name tables
+    $query->leftJoin('field_data_field_user_firstname', 'firstname', 'users.uid = firstname.entity_id');
+    $query->leftJoin('field_data_field_user_lastname', 'lastname', 'users.uid = lastname.entity_id');
+
+    // Create 'OR' database condition
+    $or = db_or();
+
+    // Concat first and last names to search against a generated full name
+    $or->where("CONCAT(firstname.field_user_firstname_value, ' ', lastname.field_user_lastname_value) LIKE :inputValue", array(':inputValue' => '%' . $inputValue . '%'));
+
+    // get the username condition
+    $where =& $query->conditions();
+    $usernameCondition = $where[0];
+    // remove from original WHERE and place onto our 'OR' conditional
+    unset($where[0]);
+    $or->condition($usernameCondition['field'], $usernameCondition['value'], $usernameCondition['operator']);
+
+    $query->condition($or);
+  }
+}
