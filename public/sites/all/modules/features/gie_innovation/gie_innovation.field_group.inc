@@ -330,17 +330,17 @@ function gie_innovation_field_group_info() {
       4 => 'field_innovation_testers',
       5 => 'field_innovation_non_references',
       6 => 'field_innovation_proof_evidence',
-      7 => 'field_innovation_ref_avail',
-      8 => 'field_innovation_lives_impacted',
-      9 => 'field_innovation_lives_saved',
-      10 => 'field_innovation_potent_lives_im',
-      11 => 'field_innovation_potent_lives_sa',
+      7 => 'field_innovation_lives_impacted',
+      8 => 'field_innovation_lives_saved',
+      9 => 'field_innovation_potent_lives_im',
+      10 => 'field_innovation_potent_lives_sa',
     ),
     'format_type' => 'multistep',
     'format_settings' => array(
       'label' => 'Tell us about your Evidence & Validation.',
       'instance_settings' => array(
         'description' => 'The Global Innovation Exchange hopes to connect funders and collaborators with innovators who have the best ideas. Innovation can require financial resources. Tell us about existing funding you have and what your funding goals are.',
+        'nav_label' => 'Evidence',
       ),
     ),
   );
@@ -371,6 +371,7 @@ function gie_innovation_field_group_info() {
       'label' => 'Tell us about your Innovation Finances.',
       'instance_settings' => array(
         'description' => 'The Global Innovation Exchange hopes to connect funders and collaborators with innovators who have the best ideas. Innovation can require financial resources. Tell us about existing funding you have and what your funding goals are.',
+        'nav_label' => 'Funding',
       ),
     ),
   );
@@ -773,6 +774,7 @@ function gie_innovation_field_group_info() {
         'description' => 'Here is some basic information we need from you in order to add your innovation to the Global Innovation Exchange. Don\'t worry, we want MUCH more than this, but this is critical - how will people find your work if it doesn\'t have a description?
  
 Want to see a great example? Check out Alex\'s Greatest Innovation or Carl\'s Interesting Approach. ',
+        'nav_label' => 'Basic Information',
       ),
     ),
   );
@@ -801,6 +803,7 @@ Want to see a great example? Check out Alex\'s Greatest Innovation or Carl\'s In
       'label' => 'Tell us about your Innovation Team. ',
       'instance_settings' => array(
         'description' => 'Tell us more about the team that has contributed to the Innovation you are adding to the Exchange. Are there any organizations or programs affiliated with the Innovation? Are there other members of the Exchange whom have contributed to the Innovation? Who should members contact about your Innovation?',
+        'nav_label' => 'Team',
       ),
     ),
   );
@@ -832,6 +835,7 @@ Want to see a great example? Check out Alex\'s Greatest Innovation or Carl\'s In
       'label' => 'Tell us about your Vision.',
       'instance_settings' => array(
         'description' => 'The Global Innovation Exchange hopes to connect funders and collaborators with innovators who have the best ideas. Innovation can require financial resources. Tell us about existing funding you have and what your funding goals are. ',
+        'nav_label' => 'Vision',
       ),
     ),
   );
