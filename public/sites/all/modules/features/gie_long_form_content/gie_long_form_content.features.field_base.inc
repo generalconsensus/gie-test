@@ -52,6 +52,40 @@ function gie_long_form_content_field_default_field_bases() {
     'type' => 'text',
   );
 
+  // Exported field_base: 'field_background_video_upload'.
+  $field_bases['field_background_video_upload'] = array(
+    'active' => 1,
+    'cardinality' => 1,
+    'deleted' => 0,
+    'entity_types' => array(),
+    'field_name' => 'field_background_video_upload',
+    'indexes' => array(
+      'fid' => array(
+        0 => 'fid',
+      ),
+    ),
+    'locked' => 0,
+    'module' => 'video',
+    'settings' => array(
+      'autoconversion' => 1,
+      'autothumbnail' => 'auto',
+      'default_video_thumbnail' => array(
+        'fid' => 0,
+        'remove_button' => 'Remove',
+        'upload' => '',
+        'upload_button' => 'Upload',
+      ),
+      'presets' => array(),
+      'preview_video_thumb_style' => 'thumbnail',
+      'thumbnail_format' => 'jpg',
+      'uri_scheme' => 's3',
+      'uri_scheme_converted' => 's3',
+      'uri_scheme_thumbnails' => 's3',
+    ),
+    'translatable' => 0,
+    'type' => 'video',
+  );
+
   // Exported field_base: 'field_background_video_video'.
   $field_bases['field_background_video_video'] = array(
     'active' => 1,

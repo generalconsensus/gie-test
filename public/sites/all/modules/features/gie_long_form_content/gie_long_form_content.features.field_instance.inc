@@ -10,6 +10,66 @@
 function gie_long_form_content_field_default_field_instances() {
   $field_instances = array();
 
+  // Exported field_instance:
+  // 'asset-background_video-field_background_video_upload'.
+  $field_instances['asset-background_video-field_background_video_upload'] = array(
+    'bundle' => 'background_video',
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'video',
+        'settings' => array(
+          'field_delimiter' => '',
+          'linked_field' => array(
+            'advanced' => array(
+              'class' => '',
+              'rel' => '',
+              'target' => '',
+              'text' => '',
+              'title' => '',
+            ),
+            'destination' => '',
+            'linked' => 0,
+          ),
+          'poster_image_style' => '',
+          'widthxheight' => '640x360',
+        ),
+        'type' => 'video_formatter_player',
+        'weight' => 0,
+      ),
+      'full' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'ds_extras_field_template' => '',
+    'entity_type' => 'asset',
+    'field_name' => 'field_background_video_upload',
+    'label' => 'Video upload',
+    'required' => 1,
+    'settings' => array(
+      'default_dimensions' => '640x360',
+      'file_directory' => 'videos/original',
+      'file_extensions' => 'mp4',
+      'max_filesize' => '200 MB',
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'video',
+      'settings' => array(
+        'label_help_description' => '',
+        'progress_indicator' => 'throbber',
+      ),
+      'type' => 'video_upload',
+      'weight' => 31,
+    ),
+  );
+
   // Exported field_instance: 'node-long_form_page-body'.
   $field_instances['node-long_form_page-body'] = array(
     'bundle' => 'long_form_page',
@@ -3830,6 +3890,7 @@ function gie_long_form_content_field_default_field_instances() {
   t('Title #2');
   t('Title #3');
   t('Video');
+  t('Video upload');
 
   return $field_instances;
 }
