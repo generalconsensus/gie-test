@@ -182,36 +182,10 @@ function gie_general_default_page_manager_handlers() {
   $display->content['new-23bb80b1-0253-4da6-a25f-25ed7de2b135'] = $pane;
   $display->panels['main'][0] = 'new-23bb80b1-0253-4da6-a25f-25ed7de2b135';
   $pane = new stdClass();
-  $pane->pid = 'new-e0f33d01-c639-41b5-ab81-d8c48a5af0d0';
+  $pane->pid = 'new-74c0034f-978a-4335-a553-743421ec87c9';
   $pane->panel = 'sidebar';
-  $pane->type = 'block';
-  $pane->subtype = 'multistep-innovation';
-  $pane->shown = TRUE;
-  $pane->access = array();
-  $pane->configuration = array(
-    'override_title' => 1,
-    'override_title_text' => 'Skip to other Sections',
-    'override_title_heading' => 'h2',
-  );
-  $pane->cache = array();
-  $pane->style = array(
-    'settings' => NULL,
-  );
-  $pane->css = array(
-    'css_id' => '',
-    'css_class' => 'pane--multistep-progress',
-  );
-  $pane->extras = array();
-  $pane->position = 0;
-  $pane->locks = array();
-  $pane->uuid = 'e0f33d01-c639-41b5-ab81-d8c48a5af0d0';
-  $display->content['new-e0f33d01-c639-41b5-ab81-d8c48a5af0d0'] = $pane;
-  $display->panels['sidebar'][0] = 'new-e0f33d01-c639-41b5-ab81-d8c48a5af0d0';
-  $pane = new stdClass();
-  $pane->pid = 'new-56892092-2b08-4623-8aad-2f4b3c2c576e';
-  $pane->panel = 'sidebar';
-  $pane->type = 'custom';
-  $pane->subtype = 'custom';
+  $pane->type = 'pane';
+  $pane->subtype = 'multistep_help_funding';
   $pane->shown = TRUE;
   $pane->access = array(
     'plugins' => array(
@@ -228,7 +202,121 @@ function gie_general_default_page_manager_handlers() {
     ),
   );
   $pane->configuration = array(
-    'admin_title' => 'Multistep Help Block Funding',
+    'override_title' => 0,
+    'override_title_text' => '',
+    'override_title_heading' => 'h2',
+  );
+  $pane->cache = array();
+  $pane->style = array(
+    'settings' => NULL,
+  );
+  $pane->css = array();
+  $pane->extras = array();
+  $pane->position = 0;
+  $pane->locks = array();
+  $pane->uuid = '74c0034f-978a-4335-a553-743421ec87c9';
+  $display->content['new-74c0034f-978a-4335-a553-743421ec87c9'] = $pane;
+  $display->panels['sidebar'][0] = 'new-74c0034f-978a-4335-a553-743421ec87c9';
+  $pane = new stdClass();
+  $pane->pid = 'new-e0f33d01-c639-41b5-ab81-d8c48a5af0d0';
+  $pane->panel = 'sidebar';
+  $pane->type = 'block';
+  $pane->subtype = 'multistep-innovation';
+  $pane->shown = TRUE;
+  $pane->access = array(
+    'plugins' => array(
+      0 => array(
+        'name' => 'node_type',
+        'settings' => array(
+          'type' => array(
+            'innovation' => 'innovation',
+          ),
+        ),
+        'context' => 'argument_node_edit_1',
+        'not' => FALSE,
+      ),
+    ),
+  );
+  $pane->configuration = array(
+    'override_title' => 1,
+    'override_title_text' => 'Skip to other Sections',
+    'override_title_heading' => 'h2',
+  );
+  $pane->cache = array();
+  $pane->style = array(
+    'settings' => NULL,
+  );
+  $pane->css = array(
+    'css_id' => '',
+    'css_class' => 'pane--multistep-progress',
+  );
+  $pane->extras = array();
+  $pane->position = 1;
+  $pane->locks = array();
+  $pane->uuid = 'e0f33d01-c639-41b5-ab81-d8c48a5af0d0';
+  $display->content['new-e0f33d01-c639-41b5-ab81-d8c48a5af0d0'] = $pane;
+  $display->panels['sidebar'][1] = 'new-e0f33d01-c639-41b5-ab81-d8c48a5af0d0';
+  $pane = new stdClass();
+  $pane->pid = 'new-f3d358c9-0792-4bda-9d59-a3fe759a0733';
+  $pane->panel = 'sidebar';
+  $pane->type = 'block';
+  $pane->subtype = 'multistep-funding';
+  $pane->shown = TRUE;
+  $pane->access = array(
+    'plugins' => array(
+      0 => array(
+        'name' => 'node_type',
+        'settings' => array(
+          'type' => array(
+            'funding' => 'funding',
+          ),
+        ),
+        'context' => 'argument_node_edit_1',
+        'not' => FALSE,
+      ),
+    ),
+  );
+  $pane->configuration = array(
+    'override_title' => 0,
+    'override_title_text' => '',
+    'override_title_heading' => 'h2',
+  );
+  $pane->cache = array();
+  $pane->style = array(
+    'settings' => NULL,
+  );
+  $pane->css = array(
+    'css_id' => '',
+    'css_class' => 'pane--multistep-progress',
+  );
+  $pane->extras = array();
+  $pane->position = 2;
+  $pane->locks = array();
+  $pane->uuid = 'f3d358c9-0792-4bda-9d59-a3fe759a0733';
+  $display->content['new-f3d358c9-0792-4bda-9d59-a3fe759a0733'] = $pane;
+  $display->panels['sidebar'][2] = 'new-f3d358c9-0792-4bda-9d59-a3fe759a0733';
+  $pane = new stdClass();
+  $pane->pid = 'new-56892092-2b08-4623-8aad-2f4b3c2c576e';
+  $pane->panel = 'sidebar';
+  $pane->type = 'custom';
+  $pane->subtype = 'custom';
+  $pane->shown = TRUE;
+  $pane->access = array(
+    'plugins' => array(
+      0 => array(
+        'name' => 'node_type',
+        'settings' => array(
+          'type' => array(
+            'innovation' => 'innovation',
+          ),
+        ),
+        'context' => 'argument_node_edit_1',
+        'not' => FALSE,
+      ),
+    ),
+  );
+  $pane->configuration = array(
+    'admin_title' => 'Multistep Innovation Help Block Funding',
     'title' => 'Need help?',
     'body' => 'Here is some basic information we need from you in order to add you innovation to the Global Innovation Exchange. Don\'t worry, we want MUCH more than this, but this is critical - how will people find your work if it doesn\'t have a description?',
     'format' => 'filtered_html',
@@ -240,11 +328,11 @@ function gie_general_default_page_manager_handlers() {
   );
   $pane->css = array();
   $pane->extras = array();
-  $pane->position = 1;
+  $pane->position = 3;
   $pane->locks = array();
   $pane->uuid = '56892092-2b08-4623-8aad-2f4b3c2c576e';
   $display->content['new-56892092-2b08-4623-8aad-2f4b3c2c576e'] = $pane;
-  $display->panels['sidebar'][1] = 'new-56892092-2b08-4623-8aad-2f4b3c2c576e';
+  $display->panels['sidebar'][3] = 'new-56892092-2b08-4623-8aad-2f4b3c2c576e';
   $pane = new stdClass();
   $pane->pid = 'new-e1b03668-52fe-4016-ac73-24e99ff9393c';
   $pane->panel = 'title';
