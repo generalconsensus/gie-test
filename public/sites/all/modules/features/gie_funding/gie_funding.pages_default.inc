@@ -85,8 +85,8 @@ function gie_funding_default_page_manager_pages() {
   $display->cache = array();
   $display->title = 'Expired Funding';
   $display->uuid = 'bdbbea43-cdbe-430c-8e2c-73e8e66065aa';
-  $display->storage_type = '';
-  $display->storage_id = '';
+  $display->storage_type = 'page_manager';
+  $display->storage_id = 'page_funding__panel_context_8a08c5d9-5482-4a21-a90a-f8d8b788ae32';
   $display->content = array();
   $display->panels = array();
   $pane = new stdClass();
@@ -403,8 +403,8 @@ function gie_funding_default_page_manager_pages() {
   $display->cache = array();
   $display->title = '';
   $display->uuid = 'bdbbea43-cdbe-430c-8e2c-73e8e66065aa';
-  $display->storage_type = '';
-  $display->storage_id = '';
+  $display->storage_type = 'page_manager';
+  $display->storage_id = 'page_funding__panel_context_6bf8cd10-043a-402c-a0c0-e5f8c8975cb6';
   $display->content = array();
   $display->panels = array();
   $pane = new stdClass();
