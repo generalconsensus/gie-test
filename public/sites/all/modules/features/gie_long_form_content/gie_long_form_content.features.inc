@@ -133,6 +133,11 @@ function gie_long_form_content_paragraphs_info() {
       'bundle' => 'long_form_aside',
       'locked' => '1',
     ),
+    'long_form_background_video' => array(
+      'name' => 'Long Form Background Video',
+      'bundle' => 'long_form_background_video',
+      'locked' => '1',
+    ),
     'long_form_callout_card' => array(
       'name' => 'Long Form Callout Card',
       'bundle' => 'long_form_callout_card',
