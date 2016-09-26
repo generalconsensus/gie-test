@@ -282,6 +282,9 @@ function gie_user_form_user_profile_form_alter(&$form, &$form_state, $form_id) {
     // Hide "Cancel Account" button
     $form['actions']['cancel']['#access'] = FALSE;
 
+    // Hide featured field
+    $form['field_featured']['#access'] = FALSE;
+
     // Hide all field groups but Notifications
     field_group_hide_field_groups($form, array(
         'group_about',
