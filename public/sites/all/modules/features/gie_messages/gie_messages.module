@@ -236,24 +236,89 @@ function gie_messages_node_update($node) {
 
 /**
  * Implements hook_node_insert().
+ * - Trigger Microsite Admin New Content message (send message to all admins of the microsite domain)
  * - Trigger User Follow Create message (send message to all followers of node author)
  */
 function gie_messages_node_insert($node) {
   // do not do for unpublished content
   if ($node->status == 0) return;
 
+  // initiate list of users that already had a message created for them
+  $sent_list = [];
+  // initiate list of users who set their mail to Do Not Send
+  $do_not_send_list = [];
+
   switch($node->type) {
     case 'innovation':
     case 'resource':
     case 'funding':
+      // Microsite New Content message
+      // Get list of domains associated with node
+      $domains = $node->domains;
+
+      foreach ($domains as $key => $value) {
+        // skip for default domain
+        if ($key == domain_default_id()) continue;
+
+        // get the domain info
+        $machine_name = domain_load_machine_name($key);
+        $domain = domain_machine_name_load($machine_name);
+        $domain_name = $domain['sitename'];
+
+        // get list of recipients from the contact category
+        $recipients = db_query("SELECT recipients FROM {contact} WHERE category = :category LIMIT 1", array(":category" => $domain_name))->fetchField();
+
+        // if category not found, skip
+        if (empty($recipients)) continue;
+
+        // split string into an array and send message to each recipient
+        $recipients_array = explode(',',$recipients);
+        foreach ($recipients_array as $email) {
+          $user = user_load_by_mail($email);
+
+          // if user not found, skip
+          if (!$user) continue;
+
+          $uid = $user->uid;
+
+          if ($uid == $node->uid) {
+            // If user is node author, skip to next user
+            continue;
+          }
+
+          // skip previous users
+          if (in_array($uid, $sent_list) || in_array($uid, $do_not_send_list)) continue;
+          // add user to previous users list
+          $sent_list[] = $uid;
+
+          // Get notifier name based on user
+          $user = entity_metadata_wrapper('user', $uid);
+          $notifier_name = _gie_messages_get_notifier_name($user);
+          if ($notifier_name == 'do_not_send') {
+            // add user to "do not send" list
+            $do_not_send_list[] = $uid;
+            // user set to not receive emails, skip to next user
+            continue;
+          }
+
+          // set message entity
+          $message = message_create('microsite_new_content', array('uid' => $uid));
+          $wrapper = entity_metadata_wrapper('message', $message);
+          $wrapper->field_node_ref->set($node);
+          $wrapper->field_domain_text->set($domain_name);
+          // Save before message_notify_send_message, or else mid won't wxist for message digest to use
+          $wrapper->save();
+
+          // Send message using Message Notify
+          message_notify_send_message($message, array(), $notifier_name);
+        }
+      }
+
+      // User Follow Create Message
       // load Follow flag
       $flag = flag_get_flag('follow');
       // End if flag not found
       if (!$flag) break;
-
-      // initiate send and do not send lists
-      $do_not_send_list = [];
-      $send_list = [];
 
       // Get all users currently following node author
       $query = db_select('flagging', 'f');
@@ -270,6 +335,9 @@ function gie_messages_node_insert($node) {
           continue;
         }
 
+        // skip previous users
+        if (in_array($uid, $sent_list) || in_array($uid, $do_not_send_list)) continue;
+
         // Get notifier name based on user
         $user = entity_metadata_wrapper('user', $uid);
         $notifier_name = _gie_messages_get_notifier_name($user);
@@ -280,8 +348,8 @@ function gie_messages_node_insert($node) {
           continue;
         }
 
-        // Add user to send list
-        $send_list[] = $uid;
+        // Add user to sent list
+        $sent_list[] = $uid;
 
         // Set message entity
         $message = message_create('user_follow_create', array('uid' => $uid));
@@ -318,13 +386,10 @@ function gie_messages_node_insert($node) {
 
         while($record = $sector_result->fetchAssoc()){
           $uid = $record['entity_id'];
-          // skip users found via 'user_follow_create' process
-          if (in_array($uid, $send_list) || in_array($uid, $do_not_send_list)) continue;
+          // skip previous users
+          if (in_array($uid, $sent_list) || in_array($uid, $do_not_send_list)) continue;
           // skip node author
-          if ($uid == $node->uid) {
-            // If user is node author, skip to next user
-            continue;
-          }
+          if ($uid == $node->uid) continue;
           // Get notifier name based on user
           $user = entity_metadata_wrapper('user', $uid);
           // Get User Notifications frequency field
@@ -340,6 +405,9 @@ function gie_messages_node_insert($node) {
             // user set to not receive emails, skip to next user
             continue;
           }
+
+          // Add user to sent list
+          $sent_list[] = $uid;
 
           // check for Innovation or Funding content type.
           // Set message entity
