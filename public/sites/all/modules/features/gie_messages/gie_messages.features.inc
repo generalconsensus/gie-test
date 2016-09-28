@@ -176,6 +176,35 @@ function gie_messages_default_message_type() {
     },
     "rdf_mapping" : []
   }');
+  $items['microsite_admin_recommended'] = entity_import('message_type', '{
+    "name" : "microsite_admin_recommended",
+    "description" : "Microsite Admin recommended",
+    "argument_keys" : [],
+    "argument" : [],
+    "category" : "message_type",
+    "data" : {
+      "token options" : { "clear" : 0 },
+      "purge" : { "override" : 0, "enabled" : 0, "quota" : "", "days" : "" }
+    },
+    "language" : "",
+    "arguments" : null,
+    "message_text" : { "und" : [
+        {
+          "value" : "[message:field-domain-text]: [message:field-node-ref:author] recommended new content",
+          "format" : "filtered_html"
+        },
+        {
+          "value" : "[message:field-node-ref:author] has recommended a new [message:field-node-ref:content-type] for [message:field-domain-text]: [message:field-node-ref:url]",
+          "format" : "filtered_html"
+        },
+        {
+          "value" : "[message:field-node-ref:author] has recommended a new [message:field-node-ref:content-type] for [message:field-domain-text]: [message:field-node-ref:url]",
+          "format" : "filtered_html"
+        }
+      ]
+    },
+    "rdf_mapping" : []
+  }');
   $items['microsite_new_content'] = entity_import('message_type', '{
     "name" : "microsite_new_content",
     "description" : "Microsite New Content",

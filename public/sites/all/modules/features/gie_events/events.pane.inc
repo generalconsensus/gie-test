@@ -23,12 +23,32 @@ function events_default_pane_container() {
   $template = new stdClass();
   $template->disabled = FALSE; /* Edit this to true to make a default template disabled initially */
   $template->api_version = 2;
+  $template->name = 'events_introduction_suggest';
+  $template->title = 'Events Introduction (suggest)';
+  $template->plugin = 'text';
+  $template->description = 'Events introduction with suggest an event language';
+  $template->configuration = '';
+  $export['events_introduction_suggest'] = $template;
+
+  $template = new stdClass();
+  $template->disabled = FALSE; /* Edit this to true to make a default template disabled initially */
+  $template->api_version = 2;
   $template->name = 'past_events_introduction';
   $template->title = 'Past Events Introduction';
   $template->plugin = 'text';
   $template->description = '';
   $template->configuration = '';
   $export['past_events_introduction'] = $template;
+
+  $template = new stdClass();
+  $template->disabled = FALSE; /* Edit this to true to make a default template disabled initially */
+  $template->api_version = 2;
+  $template->name = 'past_events_introduction_suggest';
+  $template->title = 'Past Events Introduction (suggest)';
+  $template->plugin = 'text';
+  $template->description = 'Past Events introduction with suggest an event language';
+  $template->configuration = '';
+  $export['past_events_introduction_suggest'] = $template;
 
   return $export;
 }
