@@ -1186,8 +1186,7 @@ function gie_funding_field_default_field_instances() {
     'label' => 'Grant / Award Value',
     'required' => 0,
     'settings' => array(
-      'description_display' => 'before',
-      'max' => '',
+      'max' => 2147483647,
       'min' => 0,
       'prefix' => '$',
       'suffix' => '',
@@ -1196,7 +1195,9 @@ function gie_funding_field_default_field_instances() {
     'widget' => array(
       'active' => 0,
       'module' => 'html5_tools',
-      'settings' => array(),
+      'settings' => array(
+        'label_help_description' => '',
+      ),
       'type' => 'numberfield',
       'weight' => 12,
     ),
