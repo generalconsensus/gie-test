@@ -547,7 +547,7 @@ function gie_messages_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'message-funding_recommendation-field_node_ref'
+  // Exported field_instance: 'message-funding_recommendation-field_node_ref'.
   $field_instances['message-funding_recommendation-field_node_ref'] = array(
     'bundle' => 'funding_recommendation',
     'default_value' => NULL,
@@ -630,7 +630,8 @@ function gie_messages_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'message-innovation_recommendation-field_node_ref'
+  // Exported field_instance:
+  // 'message-innovation_recommendation-field_node_ref'.
   $field_instances['message-innovation_recommendation-field_node_ref'] = array(
     'bundle' => 'innovation_recommendation',
     'default_value' => NULL,
@@ -700,6 +701,200 @@ function gie_messages_field_default_field_instances() {
       'active' => 1,
       'module' => 'entityreference',
       'settings' => array(
+        'match_operator' => 'CONTAINS',
+        'path' => '',
+        'references_dialog_add' => 0,
+        'references_dialog_edit' => 0,
+        'references_dialog_search' => 0,
+        'references_dialog_search_view' => '',
+        'size' => 60,
+      ),
+      'type' => 'entityreference_autocomplete',
+      'weight' => 2,
+    ),
+  );
+
+  // Exported field_instance:
+  // 'message-microsite_admin_recommended-field_domain_text'.
+  $field_instances['message-microsite_admin_recommended-field_domain_text'] = array(
+    'bundle' => 'microsite_admin_recommended',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'text',
+        'settings' => array(
+          'field_delimiter' => '',
+          'linked_field' => array(
+            'advanced' => array(
+              'class' => '',
+              'rel' => '',
+              'target' => '',
+              'text' => '',
+              'title' => '',
+            ),
+            'destination' => '',
+            'linked' => 0,
+          ),
+        ),
+        'type' => 'text_default',
+        'weight' => 1,
+      ),
+      'message_notify_daily_digest' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 3,
+      ),
+      'message_notify_email_body' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 3,
+      ),
+      'message_notify_email_subject' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 3,
+      ),
+      'message_notify_weekly_digest' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 3,
+      ),
+    ),
+    'ds_extras_field_template' => '',
+    'entity_type' => 'message',
+    'field_name' => 'field_domain_text',
+    'label' => 'Domain text',
+    'required' => 0,
+    'settings' => array(
+      'better_formats' => array(
+        'allowed_formats' => array(
+          'comments_filtered' => 'comments_filtered',
+          'filtered_html' => 'filtered_html',
+          'full_html' => 'full_html',
+          'long_form_filtered' => 'long_form_filtered',
+          'long_form_full' => 'long_form_full',
+          'plain_text' => 'plain_text',
+        ),
+        'allowed_formats_toggle' => 0,
+        'default_order_toggle' => 0,
+        'default_order_wrapper' => array(
+          'formats' => array(
+            'comments_filtered' => array(
+              'weight' => 0,
+            ),
+            'filtered_html' => array(
+              'weight' => 0,
+            ),
+            'full_html' => array(
+              'weight' => 1,
+            ),
+            'long_form_filtered' => array(
+              'weight' => 0,
+            ),
+            'long_form_full' => array(
+              'weight' => 0,
+            ),
+            'plain_text' => array(
+              'weight' => 10,
+            ),
+          ),
+        ),
+      ),
+      'text_processing' => 0,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'text',
+      'settings' => array(
+        'label_help_description' => '',
+        'maxlength_js' => 0,
+        'maxlength_js_label' => 'Content limited to @limit characters, remaining: <strong>@remaining</strong>',
+        'size' => 60,
+      ),
+      'type' => 'text_textfield',
+      'weight' => 3,
+    ),
+  );
+
+  // Exported field_instance:
+  // 'message-microsite_admin_recommended-field_node_ref'.
+  $field_instances['message-microsite_admin_recommended-field_node_ref'] = array(
+    'bundle' => 'microsite_admin_recommended',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'entityreference',
+        'settings' => array(
+          'field_delimiter' => '',
+          'link' => FALSE,
+          'linked_field' => array(
+            'advanced' => array(
+              'class' => '',
+              'rel' => '',
+              'target' => '',
+              'text' => '',
+              'title' => '',
+            ),
+            'destination' => '',
+            'linked' => 0,
+          ),
+        ),
+        'type' => 'entityreference_label',
+        'weight' => 0,
+      ),
+      'message_notify_daily_digest' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 4,
+      ),
+      'message_notify_email_body' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 4,
+      ),
+      'message_notify_email_subject' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 4,
+      ),
+      'message_notify_weekly_digest' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 4,
+      ),
+    ),
+    'ds_extras_field_template' => '',
+    'entity_type' => 'message',
+    'entityconnect_show_add_icon' => 0,
+    'entityconnect_show_edit_icon' => 0,
+    'entityconnect_unload_add' => 1,
+    'entityconnect_unload_edit' => 1,
+    'field_name' => 'field_node_ref',
+    'label' => 'Node',
+    'required' => 0,
+    'settings' => array(
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'entityreference',
+      'settings' => array(
+        'label_help_description' => '',
         'match_operator' => 'CONTAINS',
         'path' => '',
         'references_dialog_add' => 0,
@@ -1024,6 +1219,7 @@ function gie_messages_field_default_field_instances() {
   // Translatables
   // Included for use with string extractors like potx.
   t('Comment');
+  t('Domain text');
   t('Flag');
   t('How often would you like to receive email updates on users and content?');
   t('Message text');
