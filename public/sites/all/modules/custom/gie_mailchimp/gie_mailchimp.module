@@ -14,15 +14,39 @@ function gie_mailchimp_node_insert($node) {
  * Implements hook_node_update().
  */
 function gie_mailchimp_node_update($node) {
-  // Only do for published innovations
-  if ($node->status != 0 && $node->type == 'innovation') {
-    _gie_mailchimp_node_insert_update($node);
+  // Only do for published innovations that have been created within past 14 days
+  if ($node->status != 0 && $node->type == 'innovation' && $node->created > strtotime('-14 days')) {
+    // Check if fields we need actually changed
+    $lang = $node->language;
+    $original = $node->original;
+
+    // compare the original and updated sector list
+    $sectors = $node->field_term_sector[$lang];
+    $original_sectors = $original->field_term_sector[$lang];
+    $sector_list = array();
+    $original_sector_list = array();
+
+    foreach($sectors as $sector) {
+      $sector_list[] = $sector['tid'];
+    }
+
+    foreach($original_sectors as $sector) {
+      $original_sector_list[] = $sector['tid'];
+    }
+
+    // get list of sectors that got added with update
+    $new_sectors = array_diff($sector_list, $original_sector_list);
+
+    // check if Node Title or Image changed, or if a sector has been added to the list
+    if ( $node->title != $original->title
+      || $node->field_innovation_image[$lang][0]['fid'] != $original->field_innovation_image[$lang][0]['fid']
+      || !empty($new_sectors) ) {
+      _gie_mailchimp_node_insert_update($node);
+    }
   }
 }
 
 function _gie_mailchimp_node_insert_update($node) {
-
-  // TODO: Check against node creation date. we don't want to recommend old content
 
   // DO SOME NODE RECOMMENDATION STUFF
   // Taken from gie_messages.module
@@ -124,6 +148,7 @@ function _gie_mailchimp_update_user($user, $node) {
     $image_url = file_create_url($uri);
   } else {
     // set URL to a default
+    // TODO: Include a default image path
     $image_url = '';
   }
 
