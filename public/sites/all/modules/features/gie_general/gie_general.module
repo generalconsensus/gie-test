@@ -285,10 +285,10 @@ function gie_general_block_view_alter(&$data, $block) {
                 $data['content']['multistep_block_navigation']['#children'][$key]['label'] = 'Vision';
                 break;
               case '2group_three':
-                $data['content']['multistep_block_navigation']['#children'][$key]['label'] = 'Funding';
+                $data['content']['multistep_block_navigation']['#children'][$key]['label'] = 'Team';
                 break;
               case '3group_four':
-                $data['content']['multistep_block_navigation']['#children'][$key]['label'] = 'Team';
+                $data['content']['multistep_block_navigation']['#children'][$key]['label'] = 'Funding';
                 break;
               case '4group_five':
                 $data['content']['multistep_block_navigation']['#children'][$key]['label'] = 'Evidence';
