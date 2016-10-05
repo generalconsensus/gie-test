@@ -114,6 +114,7 @@ features[field_instance][] = taxonomy_term-resource_type-name_field
 features[node][] = resource
 features[page_manager_pages][] = resources
 features[pane_container][] = resources_introduction
+features[pane_container][] = resources_introduction_suggest
 features[panelizer_defaults][] = node:resource:default
 features[taxonomy][] = resource_type
 features[variable][] = comment_anonymous_resource

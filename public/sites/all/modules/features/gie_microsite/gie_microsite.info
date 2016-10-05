@@ -6,6 +6,7 @@ version = 7.x-1.0
 project = gie_microsite
 dependencies[] = blockify
 dependencies[] = context
+dependencies[] = domain_ctools
 dependencies[] = domain_integration_search_api
 dependencies[] = field_group
 dependencies[] = flexslider

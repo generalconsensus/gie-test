@@ -237,6 +237,7 @@ function gie_messages_node_update($node) {
 /**
  * Implements hook_node_insert().
  * - Trigger User Follow Create message (send message to all followers of node author)
+ * - Trigger Microsite Admin Recommended message (send message to all Microsite Admins of Digital Finance)
  */
 function gie_messages_node_insert($node) {
   // do not do for unpublished content
@@ -353,6 +354,41 @@ function gie_messages_node_insert($node) {
           message_notify_send_message($message, array(), 'digest_week');
         }
       }
+      break;
+  }
+
+  switch($node->type) {
+    case 'event':
+    case 'resource':
+      // domain ID variables
+      $digital_finance_domain_id = 5;
+      $current_domain = domain_get_domain();
+      $node_domains = $node->domains;
+
+      // check if node was from Digital Finance
+      if ($current_domain['domain_id'] == $digital_finance_domain_id && !in_array($digital_finance_domain_id, $node_domains)) {
+        // get list of Microsite Adminstrators on Digital Finance
+        $query = db_query('SELECT uid FROM {domain_editor} WHERE domain_id = :domain_id', array(':domain_id' => $digital_finance_domain_id));
+        $result = $query->fetchCol();
+
+        foreach($result as $uid) {
+          $user = user_load($uid);
+          // skip for non admin users
+          if (empty(array_intersect(array('administrator', 'Microsite Administrator'), $user->roles))) continue;
+
+          // set message
+          $message = message_create('microsite_admin_recommended', array('uid' => $uid));
+          $wrapper = entity_metadata_wrapper('message', $message);
+          $wrapper->field_node_ref->set($node);
+          $wrapper->field_domain_text->set($current_domain['sitename']);
+          // Save before message_notify_send_message, or else mid won't exist for message digest to use
+          $wrapper->save();
+
+          // Send message using Message Notify immediately
+          message_notify_send_message($message, array(), 'email');
+        }
+      }
+
       break;
   }
 }
