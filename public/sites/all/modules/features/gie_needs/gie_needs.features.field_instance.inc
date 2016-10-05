@@ -521,8 +521,7 @@ function gie_needs_field_default_field_instances() {
     'label' => 'Amount - Items Needed',
     'required' => 0,
     'settings' => array(
-      'description_display' => 'after',
-      'max' => '',
+      'max' => 2147483647,
       'min' => 0,
       'prefix' => '',
       'suffix' => '',
@@ -531,7 +530,9 @@ function gie_needs_field_default_field_instances() {
     'widget' => array(
       'active' => 0,
       'module' => 'html5_tools',
-      'settings' => array(),
+      'settings' => array(
+        'label_help_description' => '',
+      ),
       'type' => 'numberfield',
       'weight' => 18,
     ),
@@ -617,8 +618,7 @@ function gie_needs_field_default_field_instances() {
     'label' => 'Amount - Monetary Value',
     'required' => 0,
     'settings' => array(
-      'description_display' => 'after',
-      'max' => '',
+      'max' => 2147483647,
       'min' => 0,
       'prefix' => '$',
       'suffix' => '',
@@ -627,7 +627,9 @@ function gie_needs_field_default_field_instances() {
     'widget' => array(
       'active' => 0,
       'module' => 'html5_tools',
-      'settings' => array(),
+      'settings' => array(
+        'label_help_description' => '',
+      ),
       'type' => 'numberfield',
       'weight' => 17,
     ),
@@ -713,8 +715,7 @@ function gie_needs_field_default_field_instances() {
     'label' => 'Amount - People Needed',
     'required' => 0,
     'settings' => array(
-      'description_display' => 'after',
-      'max' => '',
+      'max' => 2147483647,
       'min' => 0,
       'prefix' => '',
       'suffix' => '',
@@ -723,7 +724,9 @@ function gie_needs_field_default_field_instances() {
     'widget' => array(
       'active' => 0,
       'module' => 'html5_tools',
-      'settings' => array(),
+      'settings' => array(
+        'label_help_description' => '',
+      ),
       'type' => 'numberfield',
       'weight' => 19,
     ),

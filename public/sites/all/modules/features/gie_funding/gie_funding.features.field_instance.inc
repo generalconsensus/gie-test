@@ -151,7 +151,7 @@ function gie_funding_field_default_field_instances() {
     'bundle' => 'funding',
     'default_value' => NULL,
     'deleted' => 0,
-    'description' => 'This is the individual who is entering information into the form. This person can be different than the point of content. The funding author does need to have a profile on the Exchange.',
+    'description' => 'This is the individual who is entering information into the form. This person can be different than the point of contact. The funding author does need to have a profile on the Exchange.',
     'display' => array(
       'at_a_glance' => array(
         'label' => 'above',
@@ -242,6 +242,8 @@ function gie_funding_field_default_field_instances() {
     ),
     'ds_extras_field_template' => '',
     'entity_type' => 'node',
+    'entityconnect_show_add_icon' => 0,
+    'entityconnect_show_edit_icon' => 0,
     'entityconnect_unload_add' => 1,
     'entityconnect_unload_edit' => 1,
     'field_name' => 'field_funding_author',
@@ -253,18 +255,15 @@ function gie_funding_field_default_field_instances() {
     ),
     'widget' => array(
       'active' => 1,
-      'module' => 'entityreference_view_widget',
+      'module' => 'gie_innovation',
       'settings' => array(
-        'allow_duplicates' => 0,
-        'close_modal' => 0,
-        'pass_argument' => 0,
-        'pass_arguments' => '',
-        'rendered_entity' => 0,
-        'view' => 'user_reference|multi_view_widget',
-        'view_mode' => 'full',
+        'label_help_description' => '',
+        'match_operator' => 'CONTAINS',
+        'path' => '',
+        'size' => 60,
       ),
-      'type' => 'entityreference_view_widget',
-      'weight' => 9,
+      'type' => 'exchange_autocomplete',
+      'weight' => 24,
     ),
   );
 
@@ -394,7 +393,7 @@ function gie_funding_field_default_field_instances() {
         'year_range' => '-3:+3',
       ),
       'type' => 'date_popup',
-      'weight' => 13,
+      'weight' => 4,
     ),
   );
 
@@ -803,7 +802,7 @@ function gie_funding_field_default_field_instances() {
         'apply_chosen' => 1,
       ),
       'type' => 'options_select',
-      'weight' => 23,
+      'weight' => 31,
     ),
   );
 
@@ -940,7 +939,7 @@ function gie_funding_field_default_field_instances() {
         'rows' => 5,
       ),
       'type' => 'text_textarea',
-      'weight' => 7,
+      'weight' => 28,
     ),
   );
 
@@ -1064,7 +1063,7 @@ function gie_funding_field_default_field_instances() {
         'apply_chosen' => 1,
       ),
       'type' => 'options_select',
-      'weight' => 14,
+      'weight' => 7,
     ),
   );
 
@@ -1186,8 +1185,7 @@ function gie_funding_field_default_field_instances() {
     'label' => 'Grant / Award Value',
     'required' => 0,
     'settings' => array(
-      'description_display' => 'before',
-      'max' => '',
+      'max' => 2147483647,
       'min' => 0,
       'prefix' => '$',
       'suffix' => '',
@@ -1196,9 +1194,11 @@ function gie_funding_field_default_field_instances() {
     'widget' => array(
       'active' => 0,
       'module' => 'html5_tools',
-      'settings' => array(),
+      'settings' => array(
+        'label_help_description' => '',
+      ),
       'type' => 'numberfield',
-      'weight' => 12,
+      'weight' => 5,
     ),
   );
 
@@ -1335,7 +1335,7 @@ function gie_funding_field_default_field_instances() {
         'rows' => 5,
       ),
       'type' => 'text_textarea',
-      'weight' => 6,
+      'weight' => 32,
     ),
   );
 
@@ -1485,7 +1485,7 @@ function gie_funding_field_default_field_instances() {
         'progress_indicator' => 'throbber',
       ),
       'type' => 'image_image',
-      'weight' => 3,
+      'weight' => 11,
     ),
   );
 
@@ -1581,7 +1581,7 @@ function gie_funding_field_default_field_instances() {
         'apply_chosen' => 1,
       ),
       'type' => 'options_select',
-      'weight' => 16,
+      'weight' => 30,
     ),
   );
 
@@ -1677,7 +1677,7 @@ function gie_funding_field_default_field_instances() {
         'apply_chosen' => 1,
       ),
       'type' => 'options_select',
-      'weight' => 17,
+      'weight' => 29,
     ),
   );
 
@@ -1798,7 +1798,7 @@ function gie_funding_field_default_field_instances() {
       'module' => 'html5_tools',
       'settings' => array(),
       'type' => 'urlwidget',
-      'weight' => 14,
+      'weight' => 3,
     ),
   );
 
@@ -1904,7 +1904,7 @@ function gie_funding_field_default_field_instances() {
         'size' => 60,
       ),
       'type' => 'entityreference_autocomplete',
-      'weight' => 16,
+      'weight' => 25,
     ),
   );
 
@@ -2042,7 +2042,7 @@ function gie_funding_field_default_field_instances() {
       'module' => 'html5_tools',
       'settings' => array(),
       'type' => 'emailwidget',
-      'weight' => 15,
+      'weight' => 23,
     ),
   );
 
@@ -2152,7 +2152,7 @@ function gie_funding_field_default_field_instances() {
         'apply_chosen' => 1,
       ),
       'type' => 'options_select',
-      'weight' => 15,
+      'weight' => 6,
     ),
   );
 
@@ -2235,8 +2235,10 @@ function gie_funding_field_default_field_instances() {
     ),
     'ds_extras_field_template' => '',
     'entity_type' => 'node',
+    'entityconnect_show_add_icon' => 0,
+    'entityconnect_show_edit_icon' => 0,
     'entityconnect_unload_add' => 0,
-    'entityconnect_unload_edit' => 0,
+    'entityconnect_unload_edit' => 1,
     'field_name' => 'field_related_programs',
     'label' => 'Related Programs',
     'required' => 0,
@@ -2246,9 +2248,11 @@ function gie_funding_field_default_field_instances() {
     'widget' => array(
       'active' => 0,
       'module' => 'multiple_selects',
-      'settings' => array(),
+      'settings' => array(
+        'label_help_description' => '',
+      ),
       'type' => 'multiple_selects',
-      'weight' => 8,
+      'weight' => 26,
     ),
   );
 
@@ -2344,7 +2348,7 @@ function gie_funding_field_default_field_instances() {
         'apply_chosen' => 1,
       ),
       'type' => 'options_select',
-      'weight' => 20,
+      'weight' => 10,
     ),
   );
 
@@ -2454,7 +2458,7 @@ function gie_funding_field_default_field_instances() {
         'apply_chosen' => 1,
       ),
       'type' => 'options_select',
-      'weight' => 21,
+      'weight' => 8,
     ),
   );
 
@@ -2573,7 +2577,7 @@ function gie_funding_field_default_field_instances() {
         'track_list' => 0,
       ),
       'type' => 'term_reference_tree',
-      'weight' => 18,
+      'weight' => 9,
     ),
   );
 
@@ -2669,7 +2673,7 @@ function gie_funding_field_default_field_instances() {
         'apply_chosen' => 1,
       ),
       'type' => 'options_select',
-      'weight' => 19,
+      'weight' => 27,
     ),
   );
 
@@ -3157,7 +3161,7 @@ function gie_funding_field_default_field_instances() {
   t('The organization that is sponsoring the funding opportunity. The organization must have profile on the Exchange to be included on this line. Start typing the organization name to see if it has a profile on the Exchange yet. If it doesn\'t appear, please contact the organization and encourage them to create an organization profile. ');
   t('The title of the funding opportunity. ');
   t('The value of the award. If the award is a range, enter the lowest amount in the range. If the amount is unknown, please leave blank.');
-  t('This is the individual who is entering information into the form. This person can be different than the point of content. The funding author does need to have a profile on the Exchange.');
+  t('This is the individual who is entering information into the form. This person can be different than the point of contact. The funding author does need to have a profile on the Exchange.');
   t('Topic');
   t('Topics are issues that may be of interest to Exchange users. Select any (or none) topics that you think apply to your funding opportunity.');
 
