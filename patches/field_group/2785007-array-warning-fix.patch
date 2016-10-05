@@ -1,0 +1,13 @@
+diff --git a/public/sites/all/modules/contrib/field_group/field_group.module b/public/sites/all/modules/contrib/field_group/field_group.module
+index 412825f..d8413eb 100644
+--- a/public/sites/all/modules/contrib/field_group/field_group.module
++++ b/public/sites/all/modules/contrib/field_group/field_group.module
+@@ -1282,7 +1282,7 @@ function field_group_field_group_format_summary($group) {
+   if (isset($group->format_settings['formatter'])) {
+     $output .= '<strong>' . $group->format_type . '</strong> ' . $group->format_settings['formatter'] . '';
+   }
+-  if (isset($group->format_settings['instance_settings'])) {
++  if (isset($group->format_settings['instance_settings']) && is_array($group->format_settings['instance_settings'])) {
+     $last = end($group->format_settings['instance_settings']);
+     $output .= '<br />';
+     foreach ($group->format_settings['instance_settings'] as $key => $value) {

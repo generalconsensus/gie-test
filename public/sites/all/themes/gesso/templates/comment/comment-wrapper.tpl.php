@@ -15,6 +15,8 @@ $comment_form = render($content['comment_form']);
 
     <?php if ($comment_form): ?>
         <?php print $comment_form; ?>
+    <?php elseif ($login_link): ?>
+        <div class="comments__login"><?php print $login_link; ?></div>
     <?php endif; ?>
 
     <?php print $comments; ?>

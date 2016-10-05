@@ -1035,7 +1035,7 @@ function gie_microsite_views_default_views() {
   $handler->display->display_options['fields']['title']['alter']['ellipsis'] = FALSE;
   $handler->display->display_options['fields']['title']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['title']['link_to_node'] = FALSE;
-  /* Field: Content: Featured Image */
+  /* Field: Content: Choose an image for your Innovation. */
   $handler->display->display_options['fields']['field_innovation_image']['id'] = 'field_innovation_image';
   $handler->display->display_options['fields']['field_innovation_image']['table'] = 'field_data_field_innovation_image';
   $handler->display->display_options['fields']['field_innovation_image']['field'] = 'field_innovation_image';

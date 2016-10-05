@@ -192,10 +192,22 @@ function gie_innovation_strongarm() {
     'extra_fields' => array(
       'form' => array(
         'path' => array(
-          'weight' => '14',
+          'weight' => '16',
         ),
         'rabbit_hole' => array(
-          'weight' => '11',
+          'weight' => '17',
+        ),
+        'domain' => array(
+          'weight' => '18',
+        ),
+        'metatags' => array(
+          'weight' => '14',
+        ),
+        'redirect' => array(
+          'weight' => '19',
+        ),
+        'xmlsitemap' => array(
+          'weight' => '15',
         ),
       ),
       'display' => array(
@@ -496,6 +508,10 @@ function gie_innovation_strongarm() {
             'weight' => '28',
             'visible' => FALSE,
           ),
+          'full' => array(
+            'weight' => '10',
+            'visible' => FALSE,
+          ),
         ),
         'domain' => array(
           'default' => array(
@@ -504,6 +520,10 @@ function gie_innovation_strongarm() {
           ),
           'spotlight' => array(
             'weight' => '12',
+            'visible' => FALSE,
+          ),
+          'full' => array(
+            'weight' => '1',
             'visible' => FALSE,
           ),
         ),
@@ -516,6 +536,10 @@ function gie_innovation_strongarm() {
             'weight' => '3',
             'visible' => TRUE,
           ),
+          'full' => array(
+            'weight' => '10',
+            'visible' => FALSE,
+          ),
         ),
         'flag_abuse_node' => array(
           'default' => array(
@@ -524,6 +548,10 @@ function gie_innovation_strongarm() {
           ),
           'spotlight' => array(
             'weight' => '24',
+            'visible' => FALSE,
+          ),
+          'full' => array(
+            'weight' => '10',
             'visible' => FALSE,
           ),
         ),

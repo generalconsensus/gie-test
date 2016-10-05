@@ -753,6 +753,64 @@ function gie_long_form_content_field_default_field_instances() {
     ),
   );
 
+  // Exported field_instance: 'node-long_form_page-field_longform_font_family'.
+  $field_instances['node-long_form_page-field_longform_font_family'] = array(
+    'bundle' => 'long_form_page',
+    'default_value' => array(
+      0 => array(
+        'value' => 'default',
+      ),
+    ),
+    'deleted' => 0,
+    'description' => 'Select a font family for your long form content',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'list',
+        'settings' => array(
+          'field_delimiter' => '',
+          'linked_field' => array(
+            'advanced' => array(
+              'class' => '',
+              'rel' => '',
+              'target' => '',
+              'text' => '',
+              'title' => '',
+            ),
+            'destination' => '',
+            'linked' => 0,
+          ),
+        ),
+        'type' => 'list_default',
+        'weight' => 23,
+      ),
+      'full' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'ds_extras_field_template' => '',
+    'entity_type' => 'node',
+    'field_name' => 'field_longform_font_family',
+    'label' => 'Font family',
+    'required' => 1,
+    'settings' => array(
+      'description_display' => 'after',
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'options',
+      'settings' => array(
+        'apply_chosen' => '',
+      ),
+      'type' => 'options_select',
+      'weight' => 31,
+    ),
+  );
+
   // Exported field_instance: 'node-long_form_page-field_longform_partners'.
   $field_instances['node-long_form_page-field_longform_partners'] = array(
     'bundle' => 'long_form_page',
@@ -3728,6 +3786,7 @@ function gie_long_form_content_field_default_field_instances() {
   t('Caution: updating the title of this content will update the URL of the long form post. If you would like the URL to be something specific regardless of the title, set a custom path below.');
   t('Explanation');
   t('File');
+  t('Font family');
   t('Header Image');
   t('Image');
   t('Key Figure');
@@ -3740,6 +3799,7 @@ function gie_long_form_content_field_default_field_instances() {
   t('Report Description Title');
   t('Screenshot');
   t('Section Title');
+  t('Select a font family for your long form content');
   t('Subtitle');
   t('Text');
   t('This description will appear in the footer of your report. This description could be about the organization posting the report, or background information about the report itself.

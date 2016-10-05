@@ -88,6 +88,74 @@ function gie_messages_strongarm() {
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
+  $strongarm->name = 'field_bundle_settings_message__comment_reply_notify';
+  $strongarm->value = array(
+    'view_modes' => array(),
+    'extra_fields' => array(
+      'form' => array(),
+      'display' => array(
+        'message__message_text__0' => array(
+          'message_notify_email_subject' => array(
+            'weight' => '0',
+            'visible' => TRUE,
+          ),
+          'message_notify_email_body' => array(
+            'weight' => '1',
+            'visible' => FALSE,
+          ),
+          'message_notify_weekly_digest' => array(
+            'weight' => '1',
+            'visible' => FALSE,
+          ),
+          'message_notify_daily_digest' => array(
+            'weight' => '1',
+            'visible' => FALSE,
+          ),
+        ),
+        'message__message_text__1' => array(
+          'message_notify_email_subject' => array(
+            'weight' => '1',
+            'visible' => FALSE,
+          ),
+          'message_notify_email_body' => array(
+            'weight' => '0',
+            'visible' => TRUE,
+          ),
+          'message_notify_weekly_digest' => array(
+            'weight' => '2',
+            'visible' => FALSE,
+          ),
+          'message_notify_daily_digest' => array(
+            'weight' => '2',
+            'visible' => FALSE,
+          ),
+        ),
+        'message__message_text__2' => array(
+          'message_notify_weekly_digest' => array(
+            'weight' => '0',
+            'visible' => TRUE,
+          ),
+          'message_notify_daily_digest' => array(
+            'weight' => '0',
+            'visible' => TRUE,
+          ),
+          'message_notify_email_subject' => array(
+            'weight' => '2',
+            'visible' => FALSE,
+          ),
+          'message_notify_email_body' => array(
+            'weight' => '2',
+            'visible' => FALSE,
+          ),
+        ),
+      ),
+    ),
+  );
+  $export['field_bundle_settings_message__comment_reply_notify'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
   $strongarm->name = 'field_bundle_settings_message__favorite_notify';
   $strongarm->value = array(
     'view_modes' => array(),
@@ -220,6 +288,158 @@ function gie_messages_strongarm() {
     ),
   );
   $export['field_bundle_settings_message__follow_user_notify'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'field_bundle_settings_message__funding_recommendation';
+  $strongarm->value = array(
+    'view_modes' => array(),
+    'extra_fields' => array(
+      'form' => array(),
+      'display' => array(
+        'message__message_text__0' => array(
+          'message_notify_email_subject' => array(
+            'weight' => '0',
+            'visible' => TRUE,
+          ),
+          'message_notify_email_body' => array(
+            'weight' => '0',
+            'visible' => TRUE,
+          ),
+          'message_notify_weekly_digest' => array(
+            'weight' => '0',
+            'visible' => TRUE,
+          ),
+          'message_notify_daily_digest' => array(
+            'weight' => '0',
+            'visible' => TRUE,
+          ),
+        ),
+        'message__message_text__1' => array(
+          'message_notify_email_subject' => array(
+            'visible' => FALSE,
+            'weight' => 0,
+          ),
+          'message_notify_email_body' => array(
+            'visible' => TRUE,
+            'weight' => 0,
+          ),
+        ),
+      ),
+    ),
+  );
+  $export['field_bundle_settings_message__funding_recommendation'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'field_bundle_settings_message__innovation_recommendation';
+  $strongarm->value = array(
+    'view_modes' => array(),
+    'extra_fields' => array(
+      'form' => array(),
+      'display' => array(
+        'message__message_text__0' => array(
+          'message_notify_email_subject' => array(
+            'visible' => TRUE,
+            'weight' => 0,
+          ),
+          'message_notify_email_body' => array(
+            'weight' => '0',
+            'visible' => TRUE,
+          ),
+          'message_notify_daily_digest' => array(
+            'weight' => '0',
+            'visible' => TRUE,
+          ),
+          'message_notify_weekly_digest' => array(
+            'weight' => '0',
+            'visible' => TRUE,
+          ),
+        ),
+        'message__message_text__1' => array(
+          'message_notify_email_subject' => array(
+            'visible' => FALSE,
+            'weight' => 0,
+          ),
+          'message_notify_email_body' => array(
+            'visible' => TRUE,
+            'weight' => 0,
+          ),
+        ),
+      ),
+    ),
+  );
+  $export['field_bundle_settings_message__innovation_recommendation'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'field_bundle_settings_message__microsite_admin_recommended';
+  $strongarm->value = array(
+    'view_modes' => array(),
+    'extra_fields' => array(
+      'form' => array(),
+      'display' => array(
+        'message__message_text__0' => array(
+          'message_notify_email_subject' => array(
+            'weight' => '0',
+            'visible' => TRUE,
+          ),
+          'message_notify_email_body' => array(
+            'weight' => '1',
+            'visible' => FALSE,
+          ),
+          'message_notify_weekly_digest' => array(
+            'weight' => '1',
+            'visible' => FALSE,
+          ),
+          'message_notify_daily_digest' => array(
+            'weight' => '1',
+            'visible' => FALSE,
+          ),
+        ),
+        'message__message_text__1' => array(
+          'message_notify_email_subject' => array(
+            'weight' => '1',
+            'visible' => FALSE,
+          ),
+          'message_notify_email_body' => array(
+            'weight' => '0',
+            'visible' => TRUE,
+          ),
+          'message_notify_weekly_digest' => array(
+            'weight' => '2',
+            'visible' => FALSE,
+          ),
+          'message_notify_daily_digest' => array(
+            'weight' => '2',
+            'visible' => FALSE,
+          ),
+        ),
+        'message__message_text__2' => array(
+          'message_notify_weekly_digest' => array(
+            'weight' => '0',
+            'visible' => TRUE,
+          ),
+          'message_notify_daily_digest' => array(
+            'weight' => '0',
+            'visible' => TRUE,
+          ),
+          'message_notify_email_subject' => array(
+            'weight' => '2',
+            'visible' => FALSE,
+          ),
+          'message_notify_email_body' => array(
+            'weight' => '2',
+            'visible' => FALSE,
+          ),
+        ),
+      ),
+    ),
+  );
+  $export['field_bundle_settings_message__microsite_admin_recommended'] = $strongarm;
 
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
