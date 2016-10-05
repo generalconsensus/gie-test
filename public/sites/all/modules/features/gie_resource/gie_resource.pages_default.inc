@@ -273,20 +273,7 @@ function gie_resource_default_page_manager_pages() {
   $pane->type = 'pane';
   $pane->subtype = 'resources_introduction';
   $pane->shown = TRUE;
-  $pane->access = array(
-    'plugins' => array(
-      0 => array(
-        'name' => 'domain',
-        'settings' => array(
-          'domain_site' => 0,
-          'domains' => array(
-            'digitalfinance_globalinnovationexchange_org' => 'digitalfinance_globalinnovationexchange_org',
-          ),
-        ),
-        'not' => TRUE,
-      ),
-    ),
-  );
+  $pane->access = array();
   $pane->configuration = array(
     'override_title' => 1,
     'override_title_text' => '',
@@ -306,45 +293,6 @@ function gie_resource_default_page_manager_pages() {
   $pane->uuid = '63e72540-78bd-4dac-a6eb-354aec4fd6f8';
   $display->content['new-63e72540-78bd-4dac-a6eb-354aec4fd6f8'] = $pane;
   $display->panels['title'][0] = 'new-63e72540-78bd-4dac-a6eb-354aec4fd6f8';
-  $pane = new stdClass();
-  $pane->pid = 'new-7856d2d0-5c84-46ed-be7b-fdb864a51cd6';
-  $pane->panel = 'title';
-  $pane->type = 'pane';
-  $pane->subtype = 'resources_introduction_suggest';
-  $pane->shown = TRUE;
-  $pane->access = array(
-    'plugins' => array(
-      0 => array(
-        'name' => 'domain',
-        'settings' => array(
-          'domain_site' => 0,
-          'domains' => array(
-            'digitalfinance_globalinnovationexchange_org' => 'digitalfinance_globalinnovationexchange_org',
-          ),
-        ),
-        'not' => FALSE,
-      ),
-    ),
-  );
-  $pane->configuration = array(
-    'override_title' => 1,
-    'override_title_text' => '',
-    'override_title_heading' => 'h2',
-  );
-  $pane->cache = array();
-  $pane->style = array(
-    'settings' => NULL,
-  );
-  $pane->css = array(
-    'css_id' => '',
-    'css_class' => 'pane pane--landing-intro pane--resources-introduction',
-  );
-  $pane->extras = array();
-  $pane->position = 1;
-  $pane->locks = array();
-  $pane->uuid = '7856d2d0-5c84-46ed-be7b-fdb864a51cd6';
-  $display->content['new-7856d2d0-5c84-46ed-be7b-fdb864a51cd6'] = $pane;
-  $display->panels['title'][1] = 'new-7856d2d0-5c84-46ed-be7b-fdb864a51cd6';
   $display->hide_title = PANELS_TITLE_FIXED;
   $display->title_pane = '0';
   $handler->conf['display'] = $display;
