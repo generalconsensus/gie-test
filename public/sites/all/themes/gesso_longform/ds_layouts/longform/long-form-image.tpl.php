@@ -12,7 +12,7 @@
   if (!empty($field_paragraphs_animation)) {
     // Insert animation class to array, along with "animated" which is needed by animate.css
     $classes_array[] =  $field_paragraphs_animation[0]['value'];
-    $classes_array[] = 'animated';
+    $classes_array[] = 'wow';
 
     hide($content['field_paragraphs_animation']);
   }
