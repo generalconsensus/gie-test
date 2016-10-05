@@ -8,6 +8,7 @@
  * Returns HTML for a start/end date combination on form.
  */
 function gesso_date_combo($vars) {
+  $date_popup_multistep =  (module_exists('multistep') && !empty($vars['element']) && !empty($vars['element']['#entity']->type) && is_multistep($vars['element']['#entity']->type));
   $element = $vars['element'];
   $field = field_info_field($element['#field_name']);
   $instance = field_info_instance($element['#entity_type'], $element['#field_name'], $element['#bundle']);
@@ -49,7 +50,14 @@ function gesso_date_combo($vars) {
     $description = !empty($element['#fieldset_description']) ? '<div class="form-item__description description">' . $element['#fieldset_description'] . '</div>' : '';
   }
 
-  $legend = isset($element['#title']) ? '<legend class="form-item__legend">' . $title . ' ' . $required . '</legend>' : '';
+  if ($date_popup_multistep) {
+    $legend = '<div class="form-item__label-container">' .  $title . ' ' . $required . '</div>';
+    $fieldset = $legend . '<div class="form-item__content-container"><fieldset' . drupal_attributes($fieldset_attributes) . '>' .  $element['#children'] . '</fieldset></div>';
+    return '<div' . drupal_attributes($wrapper_attributes) . '>' . $fieldset  .  '</div>';
+  } else  {
+    $legend = isset($element['#title']) ? '<legend class="form-item__legend">' . $title . ' ' . $required . '</legend>' : '';
+    $fieldset = '<fieldset' . drupal_attributes($fieldset_attributes) . '>' . $legend . $element['#children'] . '</fieldset>' . $description;
+    return '<div' . drupal_attributes($wrapper_attributes) . '>' . $fieldset  .  '</div>';
+  }
 
-  return '<div' . drupal_attributes($wrapper_attributes) . '><fieldset' . drupal_attributes($fieldset_attributes) . '>' . $legend . $element['#children'] . '</fieldset>' . $description . '</div>';
 }
