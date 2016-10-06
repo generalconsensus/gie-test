@@ -1980,7 +1980,13 @@ function gie_long_form_content_field_default_field_instances() {
           ),
         ),
         'type' => 'image',
-        'weight' => 2,
+        'weight' => 1,
+      ),
+      'paragraphs_editor_preview' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
       ),
     ),
     'ds_extras_field_template' => '',
@@ -1995,14 +2001,15 @@ function gie_long_form_content_field_default_field_instances() {
       'alt_field_sync_title' => 0,
       'alt_field_update_on_edit' => 0,
       'default_image' => 0,
+      'description_display' => 'after',
       'file_directory' => '',
       'file_extensions' => 'png gif jpg jpeg',
       'focus' => 0,
       'focus_lock_ratio' => 0,
       'focus_min_size' => '',
-      'max_filesize' => '',
+      'max_filesize' => '2 MB',
       'max_resolution' => '',
-      'min_resolution' => '',
+      'min_resolution' => '1600x700',
       'random_default' => 0,
       'random_default_path' => '',
       'title_field' => 1,
@@ -2016,7 +2023,7 @@ function gie_long_form_content_field_default_field_instances() {
       'module' => 'image',
       'settings' => array(
         'label_help_description' => '',
-        'preview_image_style' => 'thumbnail',
+        'preview_image_style' => 'long_form_section_header',
         'progress_indicator' => 'throbber',
       ),
       'type' => 'image_image',
@@ -2054,7 +2061,13 @@ function gie_long_form_content_field_default_field_instances() {
           ),
         ),
         'type' => 'list_default',
-        'weight' => 3,
+        'weight' => 2,
+      ),
+      'paragraphs_editor_preview' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
       ),
     ),
     'ds_extras_field_template' => '',
@@ -2103,7 +2116,13 @@ function gie_long_form_content_field_default_field_instances() {
           ),
         ),
         'type' => 'text_default',
-        'weight' => 1,
+        'weight' => 0,
+      ),
+      'paragraphs_editor_preview' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
       ),
     ),
     'ds_extras_field_template' => '',
@@ -2162,6 +2181,55 @@ function gie_long_form_content_field_default_field_instances() {
       ),
       'type' => 'text_textarea',
       'weight' => 2,
+    ),
+  );
+
+  // Exported field_instance:
+  // 'paragraphs_item-long_form_image-field_paragraphs_animation'.
+  $field_instances['paragraphs_item-long_form_image-field_paragraphs_animation'] = array(
+    'bundle' => 'long_form_image',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'hidden',
+        'module' => 'list',
+        'settings' => array(
+          'field_delimiter' => '',
+          'linked_field' => array(
+            'advanced' => array(
+              'class' => '',
+              'rel' => '',
+              'target' => '',
+              'text' => '',
+              'title' => '',
+            ),
+            'destination' => '',
+            'linked' => 0,
+          ),
+        ),
+        'type' => 'list_key',
+        'weight' => 2,
+      ),
+    ),
+    'ds_extras_field_template' => '',
+    'entity_type' => 'paragraphs_item',
+    'field_name' => 'field_paragraphs_animation',
+    'label' => 'Animation',
+    'required' => 0,
+    'settings' => array(
+      'description_display' => 'after',
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'options',
+      'settings' => array(
+        'apply_chosen' => '',
+      ),
+      'type' => 'options_select',
+      'weight' => 3,
     ),
   );
 
@@ -2819,6 +2887,55 @@ function gie_long_form_content_field_default_field_instances() {
       ),
       'type' => 'text_textarea',
       'weight' => 1,
+    ),
+  );
+
+  // Exported field_instance:
+  // 'paragraphs_item-long_form_pullquote-field_paragraphs_animation'.
+  $field_instances['paragraphs_item-long_form_pullquote-field_paragraphs_animation'] = array(
+    'bundle' => 'long_form_pullquote',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'hidden',
+        'module' => 'list',
+        'settings' => array(
+          'field_delimiter' => '',
+          'linked_field' => array(
+            'advanced' => array(
+              'class' => '',
+              'rel' => '',
+              'target' => '',
+              'text' => '',
+              'title' => '',
+            ),
+            'destination' => '',
+            'linked' => 0,
+          ),
+        ),
+        'type' => 'list_key',
+        'weight' => 2,
+      ),
+    ),
+    'ds_extras_field_template' => '',
+    'entity_type' => 'paragraphs_item',
+    'field_name' => 'field_paragraphs_animation',
+    'label' => 'Animation',
+    'required' => 0,
+    'settings' => array(
+      'description_display' => 'after',
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'options',
+      'settings' => array(
+        'apply_chosen' => '',
+      ),
+      'type' => 'options_select',
+      'weight' => 4,
     ),
   );
 
@@ -3491,6 +3608,55 @@ function gie_long_form_content_field_default_field_instances() {
   );
 
   // Exported field_instance:
+  // 'paragraphs_item-long_form_text-field_paragraphs_animation'.
+  $field_instances['paragraphs_item-long_form_text-field_paragraphs_animation'] = array(
+    'bundle' => 'long_form_text',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'hidden',
+        'module' => 'list',
+        'settings' => array(
+          'field_delimiter' => '',
+          'linked_field' => array(
+            'advanced' => array(
+              'class' => '',
+              'rel' => '',
+              'target' => '',
+              'text' => '',
+              'title' => '',
+            ),
+            'destination' => '',
+            'linked' => 0,
+          ),
+        ),
+        'type' => 'list_key',
+        'weight' => 1,
+      ),
+    ),
+    'ds_extras_field_template' => '',
+    'entity_type' => 'paragraphs_item',
+    'field_name' => 'field_paragraphs_animation',
+    'label' => 'Animation',
+    'required' => 0,
+    'settings' => array(
+      'description_display' => 'after',
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'options',
+      'settings' => array(
+        'apply_chosen' => '',
+      ),
+      'type' => 'options_select',
+      'weight' => 3,
+    ),
+  );
+
+  // Exported field_instance:
   // 'paragraphs_item-long_form_video-field_paragraphs_caption'.
   $field_instances['paragraphs_item-long_form_video-field_paragraphs_caption'] = array(
     'bundle' => 'long_form_video',
@@ -3849,6 +4015,7 @@ function gie_long_form_content_field_default_field_instances() {
 
   // Translatables
   // Included for use with string extractors like potx.
+  t('Animation');
   t('Author');
   t('Body');
   t('Body #1');

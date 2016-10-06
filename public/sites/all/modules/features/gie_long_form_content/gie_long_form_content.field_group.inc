@@ -856,7 +856,7 @@ function gie_long_form_content_field_group_info() {
   $field_group->parent_name = '';
   $field_group->data = array(
     'label' => 'Text Wrapper',
-    'weight' => '0',
+    'weight' => '3',
     'children' => array(
       0 => 'group_text',
     ),
@@ -889,9 +889,7 @@ function gie_long_form_content_field_group_info() {
   $field_group->data = array(
     'label' => 'Text',
     'weight' => '6',
-    'children' => array(
-      0 => 'field_paragraph_text',
-    ),
+    'children' => array(),
     'format_type' => 'div',
     'format_settings' => array(
       'label' => 'Text',

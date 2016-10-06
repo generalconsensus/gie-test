@@ -655,6 +655,32 @@ function gie_long_form_content_field_default_field_bases() {
     'type' => 'text_long',
   );
 
+  // Exported field_base: 'field_paragraphs_animation'.
+  $field_bases['field_paragraphs_animation'] = array(
+    'active' => 1,
+    'cardinality' => 1,
+    'deleted' => 0,
+    'entity_types' => array(),
+    'field_name' => 'field_paragraphs_animation',
+    'indexes' => array(
+      'value' => array(
+        0 => 'value',
+      ),
+    ),
+    'locked' => 0,
+    'module' => 'list',
+    'settings' => array(
+      'allowed_values' => array(
+        'fadeIn' => 'Fade in',
+        'fadeInLeft' => 'Fade in left',
+        'fadeInRight' => 'Fade in right',
+      ),
+      'allowed_values_function' => '',
+    ),
+    'translatable' => 0,
+    'type' => 'list_text',
+  );
+
   // Exported field_base: 'field_paragraphs_aside_title'.
   $field_bases['field_paragraphs_aside_title'] = array(
     'active' => 1,

@@ -17,7 +17,9 @@
 
   // Hide content we don't want displayed
   hide($content['field_longform_orientation']);
-  if (!empty($content['field_longform_image'])) hide($content['field_longform_image']);
+  if (!empty($content['field_longform_image'])) {
+    hide($content['field_longform_image']);
+  }
 ?>
 
 <div class="<?php print $classes?>" <?php print $styles ?>>
