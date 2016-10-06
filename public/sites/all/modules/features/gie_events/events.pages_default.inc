@@ -325,20 +325,7 @@ function events_default_page_manager_pages() {
   $pane->type = 'pane';
   $pane->subtype = 'past_events_introduction';
   $pane->shown = TRUE;
-  $pane->access = array(
-    'plugins' => array(
-      0 => array(
-        'name' => 'domain',
-        'settings' => array(
-          'domain_site' => 0,
-          'domains' => array(
-            'digitalfinance_globalinnovationexchange_org' => 'digitalfinance_globalinnovationexchange_org',
-          ),
-        ),
-        'not' => TRUE,
-      ),
-    ),
-  );
+  $pane->access = array();
   $pane->configuration = array(
     'override_title' => 1,
     'override_title_text' => '',
@@ -358,45 +345,6 @@ function events_default_page_manager_pages() {
   $pane->uuid = '4f1e02d9-d47a-47f6-916c-3bb1a6a28fe0';
   $display->content['new-4f1e02d9-d47a-47f6-916c-3bb1a6a28fe0'] = $pane;
   $display->panels['title'][0] = 'new-4f1e02d9-d47a-47f6-916c-3bb1a6a28fe0';
-  $pane = new stdClass();
-  $pane->pid = 'new-f3a2efc9-750f-4364-9f10-a072c1c88b43';
-  $pane->panel = 'title';
-  $pane->type = 'pane';
-  $pane->subtype = 'past_events_introduction_suggest';
-  $pane->shown = TRUE;
-  $pane->access = array(
-    'plugins' => array(
-      0 => array(
-        'name' => 'domain',
-        'settings' => array(
-          'domain_site' => 0,
-          'domains' => array(
-            'digitalfinance_globalinnovationexchange_org' => 'digitalfinance_globalinnovationexchange_org',
-          ),
-        ),
-        'not' => FALSE,
-      ),
-    ),
-  );
-  $pane->configuration = array(
-    'override_title' => 1,
-    'override_title_text' => '',
-    'override_title_heading' => 'h2',
-  );
-  $pane->cache = array();
-  $pane->style = array(
-    'settings' => NULL,
-  );
-  $pane->css = array(
-    'css_id' => '',
-    'css_class' => 'pane pane--landing-intro pane--events-introduction',
-  );
-  $pane->extras = array();
-  $pane->position = 1;
-  $pane->locks = array();
-  $pane->uuid = 'f3a2efc9-750f-4364-9f10-a072c1c88b43';
-  $display->content['new-f3a2efc9-750f-4364-9f10-a072c1c88b43'] = $pane;
-  $display->panels['title'][1] = 'new-f3a2efc9-750f-4364-9f10-a072c1c88b43';
   $display->hide_title = PANELS_TITLE_FIXED;
   $display->title_pane = '0';
   $handler->conf['display'] = $display;
@@ -680,20 +628,7 @@ function events_default_page_manager_pages() {
   $pane->type = 'pane';
   $pane->subtype = 'events_introduction';
   $pane->shown = TRUE;
-  $pane->access = array(
-    'plugins' => array(
-      0 => array(
-        'name' => 'domain',
-        'settings' => array(
-          'domain_site' => 0,
-          'domains' => array(
-            'digitalfinance_globalinnovationexchange_org' => 'digitalfinance_globalinnovationexchange_org',
-          ),
-        ),
-        'not' => TRUE,
-      ),
-    ),
-  );
+  $pane->access = array();
   $pane->configuration = array(
     'override_title' => 1,
     'override_title_text' => '',
@@ -713,45 +648,6 @@ function events_default_page_manager_pages() {
   $pane->uuid = '09b9e23c-a945-402b-af15-e74aa944a491';
   $display->content['new-09b9e23c-a945-402b-af15-e74aa944a491'] = $pane;
   $display->panels['title'][0] = 'new-09b9e23c-a945-402b-af15-e74aa944a491';
-  $pane = new stdClass();
-  $pane->pid = 'new-fbbe10a0-2fd4-4a20-89fa-acfafcd31730';
-  $pane->panel = 'title';
-  $pane->type = 'pane';
-  $pane->subtype = 'events_introduction_suggest';
-  $pane->shown = TRUE;
-  $pane->access = array(
-    'plugins' => array(
-      0 => array(
-        'name' => 'domain',
-        'settings' => array(
-          'domain_site' => 0,
-          'domains' => array(
-            'digitalfinance_globalinnovationexchange_org' => 'digitalfinance_globalinnovationexchange_org',
-          ),
-        ),
-        'not' => FALSE,
-      ),
-    ),
-  );
-  $pane->configuration = array(
-    'override_title' => 1,
-    'override_title_text' => '',
-    'override_title_heading' => 'h2',
-  );
-  $pane->cache = array();
-  $pane->style = array(
-    'settings' => NULL,
-  );
-  $pane->css = array(
-    'css_id' => '',
-    'css_class' => 'pane pane--landing-intro pane--events-introduction',
-  );
-  $pane->extras = array();
-  $pane->position = 1;
-  $pane->locks = array();
-  $pane->uuid = 'fbbe10a0-2fd4-4a20-89fa-acfafcd31730';
-  $display->content['new-fbbe10a0-2fd4-4a20-89fa-acfafcd31730'] = $pane;
-  $display->panels['title'][1] = 'new-fbbe10a0-2fd4-4a20-89fa-acfafcd31730';
   $display->hide_title = PANELS_TITLE_FIXED;
   $display->title_pane = '0';
   $handler->conf['display'] = $display;
