@@ -221,3 +221,145 @@ function gie_microsite_form_menu_overview_form_alter(&$form, &$form_state, $form
     $form['#empty_text'] = array();
   }
 }
+
+/**
+ * Implements hook_domain_batch().
+ */
+function gie_microsite_domain_batch() {
+
+  $batch = array();
+  if (!module_exists('google_tag')) {
+    return array();
+  }
+  module_load_include('inc', 'google_tag', 'includes/admin');
+
+
+  // Grab google_tag_settings form
+  $form_state = array(
+    'no_redirect' => TRUE,
+  );
+
+  // Domains.
+
+
+  $general = google_tag_general_fieldset($form_state);
+  $tag_path = google_tag_path_fieldset($form_state);
+  $roles = google_tag_role_fieldset($form_state);
+  $statues = google_tag_status_fieldset($form_state);
+  $advanced = google_tag_advanced_fieldset($form_state);
+
+  $batch['google_tag_container_id'] = array(
+    '#form' => $general['google_tag_container_id'],
+    '#domain_action' => 'domain_conf',
+    '#system_default' => variable_get('google_tag_container_id', array()),
+    '#meta_description' => $general['google_tag_container_id']['#title'],
+    '#variable' => 'google_tag_container_id',
+    '#data_type' => 'string',
+    '#weight' => 0,
+    '#group' => t('Google Tag Manager'),
+    '#update_all' => TRUE,
+    '#module' => t('Domain Tag'),
+  );
+
+  $batch['google_tag_path_toggle'] = array(
+    '#form' => $tag_path['google_tag_path_toggle'],
+    '#domain_action' => 'domain_conf',
+    '#system_default' => variable_get('google_tag_path_toggle', 0),
+    '#meta_description' => $tag_path['google_tag_path_toggle']['#title'],
+    '#variable' => 'google_tag_path_toggle',
+    '#data_type' => 'integer',
+    '#weight' => 1,
+    '#group' => t('Google Tag Manager'),
+    '#update_all' => TRUE,
+    '#module' => t('Domain Tag'),
+  );
+
+  $batch['google_tag_path_list'] = array(
+    '#form' => $tag_path['google_tag_path_list'],
+    '#domain_action' => 'domain_conf',
+    '#system_default' => variable_get('google_tag_path_list', array()),
+    '#meta_description' => $tag_path['google_tag_path_list']['#title'],
+    '#variable' => 'google_tag_path_list',
+    '#data_type' => 'string',
+    '#weight' => 2,
+    '#group' => t('Google Tag Manager'),
+    '#update_all' => TRUE,
+    '#module' => t('Domain Tag'),
+  );
+
+  $batch['google_tag_role_toggle'] = array(
+    '#form' => $roles['google_tag_role_toggle'],
+    '#domain_action' => 'domain_conf',
+    '#system_default' => variable_get('google_tag_role_toggle', 0),
+    '#meta_description' => $roles['google_tag_role_toggle']['#title'],
+    '#variable' => 'google_tag_role_toggle',
+    '#data_type' => 'integer',
+    '#weight' => 3,
+    '#group' => t('Google Tag Manager'),
+    '#update_all' => TRUE,
+    '#module' => t('Domain Tag'),
+  );
+
+  $batch['google_tag_role_list'] = array(
+    '#form' => $roles['google_tag_role_list'],
+    '#domain_action' => 'domain_conf',
+    '#system_default' => variable_get('google_tag_role_list', array()),
+    '#meta_description' => $roles['google_tag_role_list']['#title'],
+    '#variable' => 'google_tag_role_list',
+    '#data_type' => 'string',
+    '#weight' => 4,
+    '#group' => t('Google Tag Manager'),
+    '#update_all' => TRUE,
+    '#module' => t('Domain Tag'),
+  );
+
+  $batch['google_tag_status_toggle'] = array(
+    '#form' => $statues['google_tag_status_toggle'],
+    '#domain_action' => 'domain_conf',
+    '#system_default' => variable_get('google_tag_status_toggle', 0),
+    '#meta_description' => $statues['google_tag_status_toggle']['#title'],
+    '#variable' => 'google_tag_status_toggle',
+    '#data_type' => 'integer',
+    '#weight' => 3,
+    '#group' => t('Google Tag Manager'),
+    '#update_all' => TRUE,
+    '#module' => t('Domain Tag'),
+  );
+
+  $batch['google_tag_status_list'] = array(
+    '#form' => $statues['google_tag_status_list'],
+    '#domain_action' => 'domain_conf',
+    '#system_default' => variable_get('google_tag_status_list', array()),
+    '#meta_description' => $statues['google_tag_status_list']['#title'],
+    '#variable' => 'google_tag_status_list',
+    '#data_type' => 'string',
+    '#weight' => 4,
+    '#group' => t('Google Tag Manager'),
+    '#update_all' => TRUE,
+    '#module' => t('Domain Tag'),
+  );
+
+  $batch['google_tag_compact_tag'] = array(
+    '#form' => $advanced['google_tag_compact_tag'],
+    '#domain_action' => 'domain_conf',
+    '#system_default' => variable_get('google_tag_compact_tag', 0),
+    '#meta_description' => $advanced['google_tag_compact_tag']['#title'],
+    '#variable' => 'google_tag_compact_tag',
+    '#data_type' => 'integer',
+    '#weight' => 3,
+    '#group' => t('Google Tag Manager'),
+    '#update_all' => TRUE,
+    '#module' => t('Domain Tag'),
+  );
+
+  return $batch;
+}
+
+/**
+ * Implements hook_domain_warning().
+ */
+function gie_microsite_domain_warning() {
+  return array(
+    'google_tag_manager_admin_settings_form' => 'admin/structure/domain/view/%domain_id/config',
+  );
+}
