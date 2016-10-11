@@ -70,7 +70,6 @@ function gie_general_user_default_permissions() {
     'name' => 'entityconnect add button',
     'roles' => array(
       'administrator' => 'administrator',
-      'authenticated user' => 'authenticated user',
     ),
     'module' => 'entityconnect',
   );
@@ -80,7 +79,6 @@ function gie_general_user_default_permissions() {
     'name' => 'entityconnect edit button',
     'roles' => array(
       'administrator' => 'administrator',
-      'authenticated user' => 'authenticated user',
     ),
     'module' => 'entityconnect',
   );

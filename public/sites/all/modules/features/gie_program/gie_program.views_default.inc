@@ -564,15 +564,15 @@ function gie_program_views_default_views() {
   $handler->display->display_options['style_options']['row_class_special'] = FALSE;
   $handler->display->display_options['row_plugin'] = 'entity';
   $handler->display->display_options['row_options']['view_mode'] = 'listing';
-  /* Field: Indexed Content: Node ID */
+  /* Field: Indexed Node: Node ID */
   $handler->display->display_options['fields']['nid']['id'] = 'nid';
   $handler->display->display_options['fields']['nid']['table'] = 'search_api_index_default_node_index';
   $handler->display->display_options['fields']['nid']['field'] = 'nid';
-  /* Sort criterion: Indexed Content: Title */
+  /* Sort criterion: Indexed Node: Funding Opportunity Title */
   $handler->display->display_options['sorts']['title_field']['id'] = 'title_field';
   $handler->display->display_options['sorts']['title_field']['table'] = 'search_api_index_default_node_index';
   $handler->display->display_options['sorts']['title_field']['field'] = 'title_field';
-  /* Filter criterion: Indexed Content: Content type */
+  /* Filter criterion: Indexed Node: Content type */
   $handler->display->display_options['filters']['type']['id'] = 'type';
   $handler->display->display_options['filters']['type']['table'] = 'search_api_index_default_node_index';
   $handler->display->display_options['filters']['type']['field'] = 'type';
@@ -591,7 +591,7 @@ function gie_program_views_default_views() {
   $handler->display->display_options['empty']['area']['content'] = 'There are no programs that match your search.';
   $handler->display->display_options['empty']['area']['format'] = 'filtered_html';
   $handler->display->display_options['defaults']['arguments'] = FALSE;
-  /* Contextual filter: Indexed Content: Domain ID */
+  /* Contextual filter: Indexed Node: Domain ID */
   $handler->display->display_options['arguments']['domain_domain_id']['id'] = 'domain_domain_id';
   $handler->display->display_options['arguments']['domain_domain_id']['table'] = 'search_api_index_default_node_index';
   $handler->display->display_options['arguments']['domain_domain_id']['field'] = 'domain_domain_id';

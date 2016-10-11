@@ -552,51 +552,33 @@ function gie_innovation_get_selection_handler($field, $instance = NULL, $entity_
 }
 
 /**
- * Implements hook_block_view_alter().
+ * Implements hook_query_TAG_alter().
+ *
+ * Add "full name OR username" condition to our user reference autocomplete query
  */
-function gie_innovation_block_view_alter(&$data, $block) {
+function gie_innovation_query_gie_entity_reference_user_access_alter(QueryAlterableInterface $query) {
 
-  $block_names = array(
-    'innovation',
-  );
-  //Check that the node we are adding is an innovation
-  if (in_array($block->delta, $block_names)) {
-    $router_item = menu_get_item();
-    $node_object = menu_get_object('node', 1);
+  if (!empty($query->alterMetaData['entity_field_query']->propertyConditions[0]['value'])) {
+    // Get the user's input value
+    $inputValue = $query->alterMetaData['entity_field_query']->propertyConditions[0]['value'];
 
-    if (empty($node_object)) {
-      unset($data['content']);
-    }
-    elseif (($node_object->type == 'innovation') || !empty($router_item['map'][2]) && is_string(
-        $router_item['map'][2]
-      ) && $router_item['map'][2] == 'innovation'
-    ) {
-      switch ($block->delta) {
-        case 'innovation':
-          $data['content']['multistep_block_body']['#markup'] = '<div class="multistep-description"> The more you fill out your Innovation Profile, the better traffic you will receive on it through the Exchange and through search engines.</div>';
-          foreach ($data['content']['multistep_block_navigation']['#children'] as $key => $value) {
-            switch ($key) {
-              case '0group_one':
-                $data['content']['multistep_block_navigation']['#children'][$key]['label'] = 'Basic Information';
-                break;
-              case '1group_two':
-                $data['content']['multistep_block_navigation']['#children'][$key]['label'] = 'Vision';
-                break;
-              case '2group_three':
-                $data['content']['multistep_block_navigation']['#children'][$key]['label'] = 'Funding';
-                break;
-              case '3group_four':
-                $data['content']['multistep_block_navigation']['#children'][$key]['label'] = 'Team';
-                break;
-              case '4group_five':
-                $data['content']['multistep_block_navigation']['#children'][$key]['label'] = 'Evidence';
-                break;
-            }
-          }
-          break;
-      }
-    }
+    // Join first name and last name tables
+    $query->leftJoin('field_data_field_user_firstname', 'firstname', 'users.uid = firstname.entity_id');
+    $query->leftJoin('field_data_field_user_lastname', 'lastname', 'users.uid = lastname.entity_id');
+
+    // Create 'OR' database condition
+    $or = db_or();
+
+    // Concat first and last names to search against a generated full name
+    $or->where("CONCAT(firstname.field_user_firstname_value, ' ', lastname.field_user_lastname_value) LIKE :inputValue", array(':inputValue' => '%' . $inputValue . '%'));
+
+    // get the username condition
+    $where =& $query->conditions();
+    $usernameCondition = $where[0];
+    // remove from original WHERE and place onto our 'OR' conditional
+    unset($where[0]);
+    $or->condition($usernameCondition['field'], $usernameCondition['value'], $usernameCondition['operator']);
+
+    $query->condition($or);
   }
 }
-
-

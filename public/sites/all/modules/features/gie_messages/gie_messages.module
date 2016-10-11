@@ -7,7 +7,25 @@
 include_once 'gie_messages.features.inc';
 
 /**
+ * Implements hook_mail_alter().
+ * - TEMPORARY: send digest emails to f1 via bcc
+ */
+function gie_messages_mail_alter(&$message)
+{
+  if ($message['id'] == 'message_digest_digest') {
+    $message['headers']['Bcc'] = 'aklatsky@forumone.com';
+    watchdog(
+      'gie_message_recorded',
+      '@action: @mail',
+      array('@action' => 'Mail Sent', '@mail' => $message['to']),
+      WATCHDOG_NOTICE
+    );
+  }
+}
+
+/**
  * Implements hook_comment_insert().
+ * - Trigger Comment Reply Notify message
  * - Trigger Comment Notify message
  */
 function gie_messages_comment_insert($comment) {
@@ -15,6 +33,13 @@ function gie_messages_comment_insert($comment) {
   if ($comment->status == 0) return;
 
   $node = node_load($comment->nid);
+  $parent_comment = comment_load($comment->pid);
+
+  if ($parent_comment) {
+    // Comment is a reply, do comment reply notify stuff
+    _gie_messages_comment_reply_message($node, $comment, $parent_comment);
+  }
+
   if ($comment->uid == $node->uid) {
     // Same comment author as node author
     return;
@@ -25,6 +50,16 @@ function gie_messages_comment_insert($comment) {
   $notifier_name = _gie_messages_get_notifier_name($user);
   // Get "Notify comment" field
   $notify_comment = $user->field_user_mail_comment->value();
+  // Get "Notify comment reply" field
+  $notify_comment_reply = $user->field_user_mail_comment_reply->value();
+
+  if (!empty($parent_comment) && $parent_comment->uid == $node->uid
+      && $notify_comment_reply) {
+    // Node author is the parent comment author and already received a Comment Reply message.
+    // Avoid sending more than 1 message to user.
+    return;
+  }
+
 
   if ($notifier_name == 'do_not_send' || !$notify_comment) {
     // user set to not receive emails
@@ -32,6 +67,40 @@ function gie_messages_comment_insert($comment) {
   }
 
   $message = message_create('comment_notify', array('uid' => $node->uid));
+  $wrapper = entity_metadata_wrapper('message', $message);
+  $wrapper->field_node_ref->set($node);
+  $wrapper->field_comment_ref->set($comment);
+  // Save before message_notify_send_message, or else mid won't exist for message digest to use
+  $wrapper->save();
+
+  // Send message using Message Notify
+  message_notify_send_message($message, array(), $notifier_name);
+}
+
+/**
+ * Logic for the Comment Reply Notify message
+ * @param $node
+ * @param $comment
+ * @param $parent_comment
+ */
+function _gie_messages_comment_reply_message($node, $comment, $parent_comment) {
+  // Same comment author as parent comment author
+  if ($comment->uid == $parent_comment->uid) {
+    return;
+  }
+
+  $parent_user = entity_metadata_wrapper('user', $parent_comment->uid);
+  // Get User notifications frequency field
+  $notifier_name = _gie_messages_get_notifier_name($parent_user);
+  // Get "Notify comment reply" field
+  $notify_comment_reply = $parent_user->field_user_mail_comment_reply->value();
+
+  if ($notifier_name == 'do_not_send' || !$notify_comment_reply) {
+    // user set to not receive emails
+    return;
+  }
+
+  $message = message_create('comment_reply_notify', array('uid' => $parent_comment->uid));
   $wrapper = entity_metadata_wrapper('message', $message);
   $wrapper->field_node_ref->set($node);
   $wrapper->field_comment_ref->set($comment);
@@ -234,6 +303,10 @@ function gie_messages_node_insert($node) {
       // End if flag not found
       if (!$flag) break;
 
+      // initiate send and do not send lists
+      $do_not_send_list = [];
+      $send_list = [];
+
       // Get all users currently following node author
       $query = db_select('flagging', 'f');
       $query->fields('f');
@@ -253,9 +326,14 @@ function gie_messages_node_insert($node) {
         $user = entity_metadata_wrapper('user', $uid);
         $notifier_name = _gie_messages_get_notifier_name($user);
         if ($notifier_name == 'do_not_send') {
+          // add user to "do not send" list
+          $do_not_send_list[] = $uid;
           // user set to not receive emails, skip to next user
           continue;
         }
+
+        // Add user to send list
+        $send_list[] = $uid;
 
         // Set message entity
         $message = message_create('user_follow_create', array('uid' => $uid));
@@ -266,6 +344,66 @@ function gie_messages_node_insert($node) {
 
         // Send message using Message Notify
         message_notify_send_message($message, array(), $notifier_name);
+      }
+
+      // ONLY DO THE FOLLOWING FOR INNOVATION AND FUNDING. SKIP FOR RESOURCE
+      if ($node->type == 'resource') break;
+      $lang = $node->language;
+      $sectors = $node->field_term_sector[$lang];
+      $sector_list = array();
+
+      foreach($sectors as $sector) {
+        $sector_list[] = $sector['tid'];
+      }
+      if (!empty($sector_list)) {
+        // Set message machine name based on node content type
+        $message_name = ($node->type == 'innovation') ? 'innovation_recommendation' : 'funding_recommendation';
+
+        // Get all users currently following sector term
+        $query = db_select('field_data_field_term_sector', 'f');
+        $query->fields('f',array('entity_id'));
+        $query->distinct();
+        $query->condition('entity_type','user','=');
+        $query->condition('field_term_sector_tid',$sector_list,'IN');
+
+        $sector_result = $query->execute();
+
+        while($record = $sector_result->fetchAssoc()){
+          $uid = $record['entity_id'];
+          // skip users found via 'user_follow_create' process
+          if (in_array($uid, $send_list) || in_array($uid, $do_not_send_list)) continue;
+          // skip node author
+          if ($uid == $node->uid) {
+            // If user is node author, skip to next user
+            continue;
+          }
+          // Get notifier name based on user
+          $user = entity_metadata_wrapper('user', $uid);
+          // Get User Notifications frequency field
+          $notifier_name = _gie_messages_get_notifier_name($user);
+          $user_fields = $user->value();
+          $innovation_rec =  !empty($user_fields->field_user_mail_innovation_rec) ? $user->field_user_mail_innovation_rec->value() : 0;
+          $funding_rec =  !empty($user_fields->field_user_mail_funding_rec) ? $user->field_user_mail_funding_rec->value() : 0;
+          // Get Recommendation Notify field appropriate for the node content type
+          $notify_recommendation = ($node->type == 'innovation') ? $innovation_rec : $funding_rec;
+          if ($notifier_name == 'do_not_send' || !$notify_recommendation) {
+            // add user to "do not send" list
+            $do_not_send_list[] = $uid;
+            // user set to not receive emails, skip to next user
+            continue;
+          }
+
+          // check for Innovation or Funding content type.
+          // Set message entity
+          $message = message_create($message_name, array('uid' => $uid));
+          $wrapper = entity_metadata_wrapper('message', $message);
+          $wrapper->field_node_ref->set($node);
+          // Save before message_notify_send_message, or else mid won't exist for message digest to use
+          $wrapper->save();
+
+          // Send message using Message Notify, force to weekly digest
+          message_notify_send_message($message, array(), 'digest_week');
+        }
       }
       break;
   }
