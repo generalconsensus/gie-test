@@ -1,108 +1,134 @@
 <?php
 
 /**
- * Implements hook_node_insert().
+ * Implements hook_cron().
  */
-function gie_mailchimp_node_insert($node) {
-  // Only do for published innovations
-  if ($node->status != 0 && $node->type == 'innovation') {
-    _gie_mailchimp_node_insert_update($node);
+function gie_mailchimp_cron() {
+  // get last cron run timestamp OR timestamp from 14 days ago
+  $last_cron_run = variable_get('gie_mailchimp_cron_last_run', strtotime('-14 days'));
+
+  // set last cron run to the request timestamp for future use
+  variable_set('gie_mailchimp_cron_last_run', REQUEST_TIME);
+
+  // Get list of innovation nodes that have been created or updated since last cron run
+  // Fields we want are: node id (nid), node author (uid), title, image field id (fid), and sector list
+  $result = db_query('SELECT n.nid, n.uid, n.title, i.field_innovation_image_fid, s.field_term_sector_tid
+    FROM {node} AS n
+    LEFT JOIN {field_data_field_innovation_image} AS i ON n.nid = i.entity_id
+    LEFT JOIN field_data_field_term_sector AS s ON n.nid = s.entity_id
+    WHERE n.type = :type
+    AND n.status = :status
+    and (n.created > :time OR (n.changed > :time AND n.created > :twoweeks))', array(
+    ':type' => 'innovation',
+    ':status' => 1,
+    ':time' => $last_cron_run,
+    ':twoweeks' => strtotime('-14 days', $last_cron_run),
+  ));
+
+  $node_array = array();
+
+  foreach($result as $node) {
+    // check if node object already exists in node array
+    if (array_key_exists($node->nid, $node_array)) {
+      // add sector tid to the existing sectors array
+      $node_array[$node->nid]['sectors'][] = $node->field_term_sector_tid;
+    } else {
+      // generate image file URL
+      if (!empty($node->field_innovation_image_fid)) {
+        $file = file_load($node->field_innovation_image_fid);
+        $uri = $file->uri;
+        $image_url = file_create_url($uri);
+      } else {
+        // set URL to a default
+        // TODO: Include a default image path
+        $image_url = '';
+      }
+
+      // generate node URL
+      global $conf;
+      // avoid using localhost, set as dev URL instead
+      $url = ($conf['syslog_identity'] != 'gie_vm') ? url(
+        'node/' . $node->nid,
+        array('absolute' => TRUE)
+      )
+        : 'http://dev.gie.byf1.io/node/' . $node->nid;
+
+      //initiate node array object
+      $node_array[$node->nid] = [
+        'id' => (integer) $node->nid,
+        'title' => $node->title,
+        'author_id' => (integer) $node->uid,
+        'url' => $url,
+        'image_url' => $image_url,
+        'sectors' => [$node->field_term_sector_tid],
+      ];
+    }
+  }
+
+  foreach ($node_array as $node) {
+    // get sector followers
+    $users = _gie_mailchimp_get_sector_followers($node);
+
+    foreach ($users as $user) {
+      // skip node author
+      if ($user['id'] == $node['author_id']) {
+        continue;
+      }
+
+      // Update user info/merge fields on MailChimp
+      _gie_mailchimp_update_user_nodes($user, $node);
+    }
   }
 }
 
 /**
- * Implements hook_node_update().
- */
-function gie_mailchimp_node_update($node) {
-  // Only do for published innovations that have been created within past 14 days
-  if ($node->status != 0 && $node->type == 'innovation' && $node->created > strtotime(
-      '-14 days'
-    )
-  ) {
-    // Check if fields we need actually changed
-    $lang = $node->language;
-    $original = $node->original;
-
-    // compare the original and updated sector list
-    $sectors = $node->field_term_sector[$lang];
-    $original_sectors = $original->field_term_sector[$lang];
-    $sector_list = array();
-    $original_sector_list = array();
-
-    foreach ($sectors as $sector) {
-      $sector_list[] = $sector['tid'];
-    }
-
-    foreach ($original_sectors as $sector) {
-      $original_sector_list[] = $sector['tid'];
-    }
-
-    // get list of sectors that got added with update
-    $new_sectors = array_diff($sector_list, $original_sector_list);
-
-    // check if Node Title or Image changed, or if a sector has been added to the list
-    if ($node->title != $original->title
-      || $node->field_innovation_image[$lang][0]['fid'] != $original->field_innovation_image[$lang][0]['fid']
-      || !empty($new_sectors)
-    ) {
-      _gie_mailchimp_node_insert_update($node);
-    }
-  }
-}
-
-function _gie_mailchimp_node_insert_update($node) {
-
-  // DO SOME NODE RECOMMENDATION STUFF
-  // Taken from gie_messages.module
-  // TODO: check into incorporating these steps directly to gie_messages module
-  $lang = $node->language;
-  $sectors = $node->field_term_sector[$lang];
-  $sector_list = array();
-
-  foreach ($sectors as $sector) {
-    $sector_list[] = $sector['tid'];
-  }
-
-  if (empty($sector_list)) {
-    return;
-  }
-
-  // Get all users currently following sector term
-  $query = db_select('field_data_field_term_sector', 'f');
-  $query->fields('f', array('entity_id'));
-  $query->distinct();
-  $query->condition('entity_type', 'user', '=');
-  $query->condition('field_term_sector_tid', $sector_list, 'IN');
-
-  $sector_result = $query->execute();
-
-  while ($record = $sector_result->fetchAssoc()) {
-    $uid = $record['entity_id'];
-
-    // skip node author
-    if ($uid == $node->uid) {
-      // If user is node author, skip to next user
-      continue;
-    }
-
-    // wrap user and node
-    $user_wrapper = entity_metadata_wrapper('user', $uid);
-    $node_wrapper = entity_metadata_wrapper('node', $node);
-
-    // FOR EACH USER THAT GOT RECOMMENDED, DO THE MC UPDATE USER STUFF
-    // TODO: Check into incorporating MailChimp Batch process into this
-    _gie_mailchimp_update_user($user_wrapper, $node_wrapper);
-  }
-}
-
-/**
- * Update MailChimp user merge fields
- * @param $user
- *   Wrapped user entity
+ * Get users that are currently following sectors of the node
  * @param $node
- *   Wrapped node entity
+ *   node includes nid, title, image fid, sectors array
+ * @return array
  */
-function _gie_mailchimp_update_user($user, $node) {
+function _gie_mailchimp_get_sector_followers($node) {
+  // if node includes an empty sector list, send back empty list
+  if (empty($node['sectors'])) {
+    return array();
+  }
+
+  // Get all users currently following any of the sector terms
+  // Fields we want: user id, email, first name, last name
+  $result = db_query('SELECT distinct s.entity_id, u.mail, f.field_user_firstname_value, l.field_user_lastname_value
+    FROM {field_data_field_term_sector} AS s
+    LEFT JOIN {users} AS u ON s.entity_id = u.uid
+    LEFT JOIN {field_data_field_user_firstname} AS f ON s.entity_id = f.entity_id
+    LEFT JOIN {field_data_field_user_lastname} AS l ON s.entity_id = l.entity_id
+    WHERE s.entity_type = :entity_type
+    AND u.status = :status
+    AND s.field_term_sector_tid IN (:sectors)', array(
+    ':entity_type' => 'user',
+    ':status' => 1,
+    ':sectors' => $node['sectors'],
+  ));
+
+  $users = array();
+
+  foreach ($result as $user) {
+    // create user object and include in users array
+    $users[] = [
+      'id' => $user->entity_id,
+      'email' => $user->mail,
+      'first_name' => $user->field_user_firstname_value,
+      'last_name' => $user->field_user_lastname_value,
+    ];
+  }
+
+  return $users;
+}
+
+/**
+ * Push a node to a user's MailChimp merge fields
+ * @param $user
+ * @param $node
+ */
+function _gie_mailchimp_update_user_nodes($user, $node) {
   module_load_include('php', 'gie_mailchimp', 'includes/MailChimp');
 
   // TODO: set to proper API key (maybe get from existing MailChimp module)
@@ -114,143 +140,93 @@ function _gie_mailchimp_update_user($user, $node) {
   // TODO: set to proper List ID
   $list_id = 'f20ed0c024';
 
-  // set user info
-  $mc_user = [
-    'email' => $user->mail->value(),
-    'first_name' => $user->field_user_firstname->value(),
-    'last_name' => $user->field_user_lastname->value(),
-
-    // initialize empty innovations field info
-    'inno1' => [
-      'id' => '',
-      'title' => '',
-      'url' => '',
-      'image_url' => '',
-    ],
-    'inno2' => [
-      'id' => '',
-      'title' => '',
-      'url' => '',
-      'image_url' => '',
-    ],
-    'inno3' => [
-      'id' => '',
-      'title' => '',
-      'url' => '',
-      'image_url' => '',
-    ],
+  // Initialize empty innovations field info for user
+  $empty_node_info = [
+    'id' => '',
+    'title' => '',
+    'url' => '',
+    'image_url' => '',
   ];
+  $user['inno1'] = $empty_node_info;
+  $user['inno2'] = $empty_node_info;
+  $user['inno3'] = $empty_node_info;
 
-  // generate ID (subscriber hash) for user
-  $mc_user_id = $MailChimp->subscriberHash($mc_user['email']);
+  // generate ID (subscriber has) for user
+  $mc_user_id = $MailChimp->subscriberHash($user['email']);
 
-  $nid = $node->nid->value();
-
-  // Get image info
-  $image = $node->field_innovation_image->value();
-  if ($image) {
-    $file = file_load($image['fid']);
-    $uri = $file->uri;
-    $image_url = file_create_url($uri);
-  }
-  else {
-    // set URL to a default
-    // TODO: Include a default image path
-    $image_url = '';
-  }
-
-  global $conf;
-  $node_url = ($conf['syslog_identity'] != 'gie_vm') ? url(
-    'node/' . $nid,
-    array('absolute' => TRUE)
-  )
-    : 'http://dev.gie.byf1.io/node/' . $nid;
-
-  // get new innovation node field info
-  $new_innovation = [
-    'id' => $nid,
-    'title' => $node->title->value(),
-    'url' => $node_url,
-    'image_url' => $image_url,
-  ];
-
-  // GET user info from MailChimp
-  $result = $MailChimp->get(
-    "lists/$list_id/members/$mc_user_id?fields=merge_fields"
-  );
+  $result = $MailChimp->get("lists/$list_id/members/$mc_user_id?fields=merge_fields");
 
   if ($MailChimp->success()) {
     // User found, set innovation fields
-    $mc_user['inno1']['id'] = $result['merge_fields']['INNO1ID'];
-    $mc_user['inno1']['title'] = $result['merge_fields']['INNO1TITLE'];
-    $mc_user['inno1']['url'] = $result['merge_fields']['INNO1URL'];
-    $mc_user['inno1']['image_url'] = $result['merge_fields']['INNO1IMG'];
+    $user['inno1']['id'] = $result['merge_fields']['INNO1ID'];
+    $user['inno1']['title'] = $result['merge_fields']['INNO1TITLE'];
+    $user['inno1']['url'] = $result['merge_fields']['INNO1URL'];
+    $user['inno1']['image_url'] = $result['merge_fields']['INNO1IMG'];
 
-    $mc_user['inno2']['id'] = $result['merge_fields']['INNO2ID'];
-    $mc_user['inno2']['title'] = $result['merge_fields']['INNO2TITLE'];
-    $mc_user['inno2']['url'] = $result['merge_fields']['INNO2URL'];
-    $mc_user['inno2']['image_url'] = $result['merge_fields']['INNO2IMG'];
+    $user['inno2']['id'] = $result['merge_fields']['INNO2ID'];
+    $user['inno2']['title'] = $result['merge_fields']['INNO2TITLE'];
+    $user['inno2']['url'] = $result['merge_fields']['INNO2URL'];
+    $user['inno2']['image_url'] = $result['merge_fields']['INNO2IMG'];
 
-    $mc_user['inno3']['id'] = $result['merge_fields']['INNO3ID'];
-    $mc_user['inno3']['title'] = $result['merge_fields']['INNO3TITLE'];
-    $mc_user['inno3']['url'] = $result['merge_fields']['INNO3URL'];
-    $mc_user['inno3']['image_url'] = $result['merge_fields']['INNO3IMG'];
+    $user['inno3']['id'] = $result['merge_fields']['INNO3ID'];
+    $user['inno3']['title'] = $result['merge_fields']['INNO3TITLE'];
+    $user['inno3']['url'] = $result['merge_fields']['INNO3URL'];
+    $user['inno3']['image_url'] = $result['merge_fields']['INNO3IMG'];
   }
 
   // set initial data body to pass with PUT method
   $data_body = [
-    'email_address' => $mc_user['email'],
+    'email_address' => $user['email'],
     'status_if_new' => 'subscribed',
     'merge_fields' => [
-      'FNAME' => ($mc_user['first_name']) ? $mc_user['first_name'] : '',
-      'LNAME' => ($mc_user['last_name']) ? $mc_user['last_name'] : '',
+      'FNAME' => ($user['first_name']) ? $user['first_name'] : '',
+      'LNAME' => ($user['last_name']) ? $user['last_name'] : '',
     ],
   ];
 
   // Create ordered MailChimp
   $mc_inno_ids = array(
-    'INNO1' => $mc_user['inno1']['id'],
-    'INNO2' => $mc_user['inno2']['id'],
-    'INNO3' => $mc_user['inno3']['id'],
+    'INNO1' => $user['inno1']['id'],
+    'INNO2' => $user['inno2']['id'],
+    'INNO3' => $user['inno3']['id'],
   );
 
-  if (!in_array($nid, $mc_inno_ids)) {
+  if (!in_array($node['id'], $mc_inno_ids)) {
     // Node not currently present on MailChimp member,
     // prepare ALL innovation merge fields for PUT
     $data_body['merge_fields'] = array_merge(
       $data_body['merge_fields'],
       [
         // Set INNO1 with the new innovation info
-        'INNO1ID' => $new_innovation['id'],
-        'INNO1TITLE' => $new_innovation['title'],
-        'INNO1URL' => $new_innovation['url'],
-        'INNO1IMG' => $new_innovation['image_url'],
+        'INNO1ID' => $node['id'],
+        'INNO1TITLE' => $node['title'],
+        'INNO1URL' => $node['url'],
+        'INNO1IMG' => $node['image_url'],
         // Shift previous INNO1 data to INNO2
-        'INNO2ID' => $mc_user['inno1']['id'],
-        'INNO2TITLE' => $mc_user['inno1']['title'],
-        'INNO2URL' => $mc_user['inno1']['url'],
-        'INNO2IMG' => $mc_user['inno1']['image_url'],
+        'INNO2ID' => $user['inno1']['id'],
+        'INNO2TITLE' => $user['inno1']['title'],
+        'INNO2URL' => $user['inno1']['url'],
+        'INNO2IMG' => $user['inno1']['image_url'],
         // Shift previous INNO2 data to INNO3
-        'INNO3ID' => $mc_user['inno2']['id'],
-        'INNO3TITLE' => $mc_user['inno2']['title'],
-        'INNO3URL' => $mc_user['inno2']['url'],
-        'INNO3IMG' => $mc_user['inno2']['image_url'],
+        'INNO3ID' => $user['inno2']['id'],
+        'INNO3TITLE' => $user['inno2']['title'],
+        'INNO3URL' => $user['inno2']['url'],
+        'INNO3IMG' => $user['inno2']['image_url'],
       ]
     );
-  }
-  else {
+  } else {
     // Node ID found in array, set the innovation key
-    $inno_key = (string) array_search($nid, $mc_inno_ids);
+    $inno_key = (string) array_search($node['id'], $mc_inno_ids);
     // Node currently in use by MailChimp member,
     // prepare the single Innovation for PUT
     $data_body['merge_fields'] = array_merge(
       $data_body['merge_fields'],
       [
         // Update the previous innovation with updated innovation info
-        $inno_key . 'ID' => $new_innovation['id'],
-        $inno_key . 'TITLE' => $new_innovation['title'],
-        $inno_key . 'URL' => $new_innovation['url'],
-        $inno_key . 'IMG' => $new_innovation['image_url'],
+        $inno_key . 'ID' => $node['id'],
+        $inno_key . 'TITLE' => $node['title'],
+        $inno_key . 'URL' => $node['url'],
+        $inno_key . 'IMG' => $node['image_url'],
       ]
     );
   }
