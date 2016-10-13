@@ -273,6 +273,18 @@ function gie_long_form_content_strongarm() {
       'diff_standard' => array(
         'custom_settings' => FALSE,
       ),
+      'center_aligned' => array(
+        'custom_settings' => FALSE,
+      ),
+      'left_aligned' => array(
+        'custom_settings' => FALSE,
+      ),
+      'left_image' => array(
+        'custom_settings' => FALSE,
+      ),
+      'right_image' => array(
+        'custom_settings' => FALSE,
+      ),
     ),
     'extra_fields' => array(
       'form' => array(),
@@ -347,6 +359,18 @@ function gie_long_form_content_strongarm() {
         'custom_settings' => FALSE,
       ),
       'diff_standard' => array(
+        'custom_settings' => FALSE,
+      ),
+      'center_aligned' => array(
+        'custom_settings' => FALSE,
+      ),
+      'left_aligned' => array(
+        'custom_settings' => FALSE,
+      ),
+      'left_image' => array(
+        'custom_settings' => FALSE,
+      ),
+      'right_image' => array(
         'custom_settings' => FALSE,
       ),
     ),
@@ -461,6 +485,18 @@ function gie_long_form_content_strongarm() {
         'custom_settings' => FALSE,
       ),
       'diff_standard' => array(
+        'custom_settings' => FALSE,
+      ),
+      'center_aligned' => array(
+        'custom_settings' => FALSE,
+      ),
+      'left_aligned' => array(
+        'custom_settings' => FALSE,
+      ),
+      'left_image' => array(
+        'custom_settings' => FALSE,
+      ),
+      'right_image' => array(
         'custom_settings' => FALSE,
       ),
     ),
