@@ -116,11 +116,8 @@ function gie_microsite_form_alter(&$form, &$form_state, $form_id) {
           global $user;
           // only do for non admin users
           if (empty(array_intersect(array('administrator', 'Microsite Administrator'), $user->roles))) {
-            // unset publish to Digital Finance domain (5)
-            unset($form['domains_raw']['#value'][$digial_finance_domain_id]);
-
-            // set domain source to default domain
-            $form['domain']['domain_source']['#value'] = 1;
+            // set to unpublish
+            $form['options']['status']['#default_value'] = 0;
 
             // add custom submit handler
             $form['#submit'][] = '_gie_microsite_custom_message_node_submit';
