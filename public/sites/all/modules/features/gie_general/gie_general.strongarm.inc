@@ -695,6 +695,9 @@ dashboard
   $strongarm->name = 'jquery_update_jquery_admin_version';
   $strongarm->value = 'default';
   $export['jquery_update_jquery_admin_version'] = $strongarm;
+  $strongarm->name = 'google_tag_compact_tag';
+  $strongarm->value = 1;
+  $export['google_tag_compact_tag'] = $strongarm;
 
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
@@ -702,6 +705,9 @@ dashboard
   $strongarm->name = 'jquery_update_jquery_version';
   $strongarm->value = '1.10';
   $export['jquery_update_jquery_version'] = $strongarm;
+  $strongarm->name = 'google_tag_container_id';
+  $strongarm->value = 'GTM-5R2H4B';
+  $export['google_tag_container_id'] = $strongarm;
 
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
@@ -709,6 +715,13 @@ dashboard
   $strongarm->name = 'menu_options_error_page';
   $strongarm->value = array();
   $export['menu_options_error_page'] = $strongarm;
+  $strongarm->name = 'google_tag_path_list';
+  $strongarm->value = 'admin*
+batch*
+node/add*
+node/*/*
+user/*/*';
+  $export['google_tag_path_list'] = $strongarm;
 
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
@@ -716,6 +729,9 @@ dashboard
   $strongarm->name = 'menu_parent_error_page';
   $strongarm->value = 'main-menu:0';
   $export['menu_parent_error_page'] = $strongarm;
+  $strongarm->name = 'google_tag_path_toggle';
+  $strongarm->value = '0';
+  $export['google_tag_path_toggle'] = $strongarm;
 
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
@@ -723,6 +739,19 @@ dashboard
   $strongarm->name = 'multistep_show_step_numbers';
   $strongarm->value = 1;
   $export['multistep_show_step_numbers'] = $strongarm;
+  $strongarm->name = 'google_tag_role_list';
+  $strongarm->value = array(
+    1 => 0,
+    2 => 0,
+    8 => 0,
+    6 => 0,
+    7 => 0,
+    4 => 0,
+    3 => 0,
+    5 => 0,
+    9 => 0,
+  );
+  $export['google_tag_role_list'] = $strongarm;
 
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
@@ -730,11 +759,25 @@ dashboard
   $strongarm->name = 'multistep_status_publishing';
   $strongarm->value = 'default';
   $export['multistep_status_publishing'] = $strongarm;
+  $strongarm->name = 'google_tag_role_toggle';
+  $strongarm->value = '0';
+  $export['google_tag_role_toggle'] = $strongarm;
 
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'multistep_status_revisions';
+  $strongarm->name = 'google_tag_status_list';
+  $strongarm->value = '403 Forbidden
+404 Not Found';
+  $export['google_tag_status_list'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'google_tag_status_toggle';
+  $strongarm->value = 0;
+  $export['google_tag_status_toggle'] = $strongarm;
   $strongarm->value = 'default';
   $export['multistep_status_revisions'] = $strongarm;
 
