@@ -316,10 +316,13 @@ function gie_security_content_publish_operation(
 
     if ($content_flag && $user_flag) {
       $flag = 'gie_security_FC_FU';
+      drupal_set_message('This content has been saved but is set to unpublish and should be reviewed shortly by a content admin. Message: gie_security_FC_FU');
     } elseif ($content_flag) {
       $flag = 'gie_security_FC';
+      drupal_set_message('This content has been saved but is set to unpublish and should be reviewed shortly by a content admin.  Message: gie_security_FC');
     } elseif ($user_flag) {
       $flag = 'gie_security_FU';
+      drupal_set_message('This content has been saved but is set to unpublish and should be reviewed shortly by a content admin. Message: gie_security_FU');
     } else {
       $flag = 'no_flag';
     }
