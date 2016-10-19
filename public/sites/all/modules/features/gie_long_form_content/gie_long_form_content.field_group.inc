@@ -1026,7 +1026,6 @@ function gie_long_form_content_field_group_info() {
   t('Section header');
   t('ShareThis Button');
   t('Text');
-  t('Text Wrapper');
   t('Title');
   t('Video');
   t('share');
