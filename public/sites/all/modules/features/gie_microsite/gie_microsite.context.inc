@@ -17,6 +17,11 @@ function gie_microsite_context_default_contexts() {
   $context->description = '';
   $context->tag = '';
   $context->conditions = array(
+    'default' => array(
+      'values' => array(
+        'context_condition_default' => 'context_condition_default',
+      ),
+    ),
     'domain' => array(
       'values' => array(
         1 => 1,

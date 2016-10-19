@@ -150,31 +150,30 @@ function gie_blogs_field_default_field_instances() {
           'plain_text' => 'plain_text',
         ),
         'allowed_formats_toggle' => 0,
-        'default_order_toggle' => 0,
+        'default_order_toggle' => 1,
         'default_order_wrapper' => array(
           'formats' => array(
             'comments_filtered' => array(
-              'weight' => 0,
+              'weight' => -47,
             ),
             'filtered_html' => array(
-              'weight' => 0,
+              'weight' => -48,
             ),
             'full_html' => array(
-              'weight' => 1,
+              'weight' => -50,
             ),
             'long_form_filtered' => array(
-              'weight' => 0,
+              'weight' => -49,
             ),
             'long_form_full' => array(
-              'weight' => 0,
+              'weight' => -46,
             ),
             'plain_text' => array(
-              'weight' => 10,
+              'weight' => -45,
             ),
           ),
         ),
       ),
-      'description_display' => 'after',
       'display_summary' => 0,
       'text_processing' => 1,
       'user_register_form' => FALSE,
@@ -183,6 +182,7 @@ function gie_blogs_field_default_field_instances() {
       'active' => 1,
       'module' => 'text',
       'settings' => array(
+        'label_help_description' => '',
         'maxlength_js' => '',
         'maxlength_js_enforce' => 0,
         'maxlength_js_label' => 'Content limited to @limit characters, remaining: <strong>@remaining</strong>',
