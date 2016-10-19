@@ -138,11 +138,6 @@ function gie_long_form_content_paragraphs_info() {
       'bundle' => 'long_form_callout_card',
       'locked' => '1',
     ),
-    'long_form_enhanced_text' => array(
-      'name' => 'Long Form Enhanced Text',
-      'bundle' => 'long_form_enhanced_text',
-      'locked' => '1',
-    ),
     'long_form_image' => array(
       'name' => 'Long Form Image',
       'bundle' => 'long_form_image',
