@@ -658,16 +658,16 @@ dashboard
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
-  $strongarm->name = 'feed_item_length';
-  $strongarm->value = 'title';
-  $export['feed_item_length'] = $strongarm;
+  $strongarm->name = 'expire_user_user_page';
+  $strongarm->value = 1;
+  $export['expire_user_user_page'] = $strongarm;
 
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
-  $strongarm->name = 'expire_user_user_page';
-  $strongarm->value = 1;
-  $export['expire_user_user_page'] = $strongarm;
+  $strongarm->name = 'feed_item_length';
+  $strongarm->value = 'title';
+  $export['feed_item_length'] = $strongarm;
 
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
@@ -692,9 +692,6 @@ dashboard
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
-  $strongarm->name = 'jquery_update_jquery_admin_version';
-  $strongarm->value = 'default';
-  $export['jquery_update_jquery_admin_version'] = $strongarm;
   $strongarm->name = 'google_tag_compact_tag';
   $strongarm->value = 1;
   $export['google_tag_compact_tag'] = $strongarm;
@@ -702,9 +699,6 @@ dashboard
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
-  $strongarm->name = 'jquery_update_jquery_version';
-  $strongarm->value = '1.10';
-  $export['jquery_update_jquery_version'] = $strongarm;
   $strongarm->name = 'google_tag_container_id';
   $strongarm->value = 'GTM-5R2H4B';
   $export['google_tag_container_id'] = $strongarm;
@@ -712,9 +706,6 @@ dashboard
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
-  $strongarm->name = 'menu_options_error_page';
-  $strongarm->value = array();
-  $export['menu_options_error_page'] = $strongarm;
   $strongarm->name = 'google_tag_path_list';
   $strongarm->value = 'admin*
 batch*
@@ -726,9 +717,6 @@ user/*/*';
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
-  $strongarm->name = 'menu_parent_error_page';
-  $strongarm->value = 'main-menu:0';
-  $export['menu_parent_error_page'] = $strongarm;
   $strongarm->name = 'google_tag_path_toggle';
   $strongarm->value = '0';
   $export['google_tag_path_toggle'] = $strongarm;
@@ -736,9 +724,6 @@ user/*/*';
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
-  $strongarm->name = 'multistep_show_step_numbers';
-  $strongarm->value = 1;
-  $export['multistep_show_step_numbers'] = $strongarm;
   $strongarm->name = 'google_tag_role_list';
   $strongarm->value = array(
     1 => 0,
@@ -756,9 +741,6 @@ user/*/*';
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
-  $strongarm->name = 'multistep_status_publishing';
-  $strongarm->value = 'default';
-  $export['multistep_status_publishing'] = $strongarm;
   $strongarm->name = 'google_tag_role_toggle';
   $strongarm->value = '0';
   $export['google_tag_role_toggle'] = $strongarm;
@@ -766,7 +748,6 @@ user/*/*';
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
-  $strongarm->name = 'multistep_status_revisions';
   $strongarm->name = 'google_tag_status_list';
   $strongarm->value = '403 Forbidden
 404 Not Found';
@@ -778,15 +759,34 @@ user/*/*';
   $strongarm->name = 'google_tag_status_toggle';
   $strongarm->value = 0;
   $export['google_tag_status_toggle'] = $strongarm;
-  $strongarm->value = 'default';
-  $export['multistep_status_revisions'] = $strongarm;
 
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
-  $strongarm->name = 'multistep_workflow_mode';
-  $strongarm->value = 'free';
-  $export['multistep_workflow_mode'] = $strongarm;
+  $strongarm->name = 'jquery_update_jquery_admin_version';
+  $strongarm->value = 'default';
+  $export['jquery_update_jquery_admin_version'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'jquery_update_jquery_version';
+  $strongarm->value = '1.10';
+  $export['jquery_update_jquery_version'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'menu_options_error_page';
+  $strongarm->value = array();
+  $export['menu_options_error_page'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'menu_parent_error_page';
+  $strongarm->value = 'main-menu:0';
+  $export['menu_parent_error_page'] = $strongarm;
 
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
@@ -867,6 +867,13 @@ user/*/*';
   $strongarm->name = 'panelizer_node:error_page:page_manager_selection';
   $strongarm->value = 'node:error_page:default';
   $export['panelizer_node:error_page:page_manager_selection'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'pathauto_node_error_page_pattern';
+  $strongarm->value = 'errors/[node:title]';
+  $export['pathauto_node_error_page_pattern'] = $strongarm;
 
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
