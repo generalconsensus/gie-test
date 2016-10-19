@@ -120,7 +120,7 @@ function gie_microsite_form_alter(&$form, &$form_state, $form_id) {
             $form['options']['status']['#default_value'] = 0;
 
             // add custom submit handler
-            $form['#submit'][] = '_gie_microsite_custom_message_node_submit';
+            $form['#submit'][] = '_gie_microsite_digital_finance_custom_message_node_submit';
           }
         }
       }
@@ -131,7 +131,7 @@ function gie_microsite_form_alter(&$form, &$form_state, $form_id) {
 /**
  * Set a custom message after node submission
  */
-function _gie_microsite_custom_message_node_submit($form, &$form_state) {
+function _gie_microsite_digital_finance_custom_message_node_submit($form, &$form_state) {
   drupal_set_message(t('Your '.$form['#node']->type.' has been submitted and is under review. Once it has been approved, it will be viewable on the Digital Finance site.'));
 }
 
