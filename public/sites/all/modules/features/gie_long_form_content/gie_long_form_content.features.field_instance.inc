@@ -439,6 +439,7 @@ function gie_long_form_content_field_default_field_instances() {
         'microsite_text_callout' => -20,
       ),
       'default_edit_mode' => 'closed',
+      'description_display' => 'after',
       'title' => 'Paragraph',
       'title_multiple' => 'Paragraphs',
       'user_register_form' => FALSE,
@@ -4254,7 +4255,6 @@ function gie_long_form_content_field_default_field_instances() {
   t('Learn More Link');
   t('Leave this field blank, it will not display on your long form report.');
   t('Long form block');
-  t('Orientation');
   t('Partners');
   t('Pullquote Text');
   t('Report Description');

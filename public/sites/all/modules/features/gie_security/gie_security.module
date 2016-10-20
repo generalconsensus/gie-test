@@ -316,10 +316,13 @@ function gie_security_content_publish_operation(
 
     if ($content_flag && $user_flag) {
       $flag = 'gie_security_FC_FU';
+      drupal_set_message('"Sorry, the content you created has been flagged as spam. Our content administrators are constantly monitoring flagged content and publishing any that has been incorrectly flagged. If you do not see your content on the Global Innovation Exchange within 2-3 business days, please contact us at info@globalinnovationexchange.com. Message: gie_security_FC_FU');
     } elseif ($content_flag) {
       $flag = 'gie_security_FC';
+      drupal_set_message('"Sorry, the content you created has been flagged as spam. Our content administrators are constantly monitoring flagged content and publishing any that has been incorrectly flagged. If you do not see your content on the Global Innovation Exchange within 2-3 business days, please contact us at info@globalinnovationexchange.com.  Message: gie_security_FC');
     } elseif ($user_flag) {
       $flag = 'gie_security_FU';
+      drupal_set_message('"Sorry, the content you created has been flagged as spam. Our content administrators are constantly monitoring flagged content and publishing any that has been incorrectly flagged. If you do not see your content on the Global Innovation Exchange within 2-3 business days, please contact us at info@globalinnovationexchange.com. Message: gie_security_FU');
     } else {
       $flag = 'no_flag';
     }
