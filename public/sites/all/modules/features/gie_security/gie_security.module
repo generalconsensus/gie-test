@@ -140,8 +140,12 @@ function gie_security_comment_update($comment) {
  */
 function _gie_security_comment_save($comment) {
   global $user;
-  // Ignore Administrators or Microsite Administrators
-  if (user_has_role(3) || user_has_role(9)) {
+
+  // load the User Whitelist flag
+  $flag = flag_get_flag('gie_user_whitelist');
+
+  // Ignore Administrators or Microsite Administrators, or whitelist users
+  if (user_has_role(3) || user_has_role(9) || ($flag && $flag->is_flagged($user->uid))) {
     return TRUE;
   }
 
@@ -167,8 +171,11 @@ function _gie_security_node_save($node) {
   global $user;
   $content = array();
 
-  // Ignore Administrators or Microsite Administrators
-  if (user_has_role(3) || user_has_role(9)) {
+  // load the User Whitelist flag
+  $flag = flag_get_flag('gie_user_whitelist');
+
+  // Ignore Administrators or Microsite Administrators, or whitelist users
+  if (user_has_role(3) || user_has_role(9) || ($flag && $flag->is_flagged($user->uid))) {
     return TRUE;
   }
 
