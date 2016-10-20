@@ -200,7 +200,6 @@ function _gie_security_node_save($node) {
 
   if ($content_flag || $user_flag) {
     gie_security_content_publish_operation('node', $node, 'unpublish', TRUE, $content_flag, $user_flag);
-    drupal_set_message(t("Sorry, the content you created has been flagged as spam. Our content administrators are constantly monitoring flagged content and publishing any that has been incorrectly flagged. If you do not see your content on the Global Innovation Exchange within 2-3 business days, please contact us at info@globalinnovationexchange.com."));
   }
   else {
     return TRUE;
