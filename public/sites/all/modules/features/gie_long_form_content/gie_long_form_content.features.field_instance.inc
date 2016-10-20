@@ -4255,6 +4255,7 @@ function gie_long_form_content_field_default_field_instances() {
   t('Learn More Link');
   t('Leave this field blank, it will not display on your long form report.');
   t('Long form block');
+  t('Orientation');
   t('Partners');
   t('Pullquote Text');
   t('Report Description');
