@@ -57,6 +57,7 @@ function gie_security_flag_default_flags() {
     ),
   );
   return $flags;
+}
 
 /**
  * Implements hook_views_api().
