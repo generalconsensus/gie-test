@@ -1,0 +1,5 @@
+name = GIE MailChimp
+description = Custom MailChimp integration for GIE
+package = GIE
+core = 7.x
+
