@@ -492,6 +492,7 @@ function gie_microsite_field_default_field_instances() {
         'microsite_section_break_image' => 'microsite_section_break_image',
         'microsite_text' => 'microsite_text',
         'microsite_text_callout' => -1,
+        'microsite_user_reference' => 'microsite_user_reference',
       ),
       'bundle_weights' => array(
         'long_form_50_50' => 2,
@@ -512,9 +513,9 @@ function gie_microsite_field_default_field_instances() {
         'microsite_section_break_image' => 15,
         'microsite_text' => 16,
         'microsite_text_callout' => -32,
+        'microsite_user_reference' => -38,
       ),
       'default_edit_mode' => 'closed',
-      'description_display' => 'after',
       'title' => 'Paragraph',
       'title_multiple' => 'Paragraphs',
       'user_register_form' => FALSE,
@@ -522,7 +523,9 @@ function gie_microsite_field_default_field_instances() {
     'widget' => array(
       'active' => 0,
       'module' => 'paragraphs',
-      'settings' => array(),
+      'settings' => array(
+        'label_help_description' => '',
+      ),
       'type' => 'paragraphs_embed',
       'weight' => 42,
     ),
@@ -3172,6 +3175,53 @@ function gie_microsite_field_default_field_instances() {
     ),
   );
 
+  // Exported field_instance:
+  // 'paragraphs_item-microsite_user_reference-field_para_user_reference'.
+  $field_instances['paragraphs_item-microsite_user_reference-field_para_user_reference'] = array(
+    'bundle' => 'microsite_user_reference',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'hidden',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 1,
+      ),
+      'paragraphs_editor_preview' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'ds_extras_field_template' => '',
+    'entity_type' => 'paragraphs_item',
+    'entityconnect_show_add_icon' => 0,
+    'entityconnect_show_edit_icon' => 0,
+    'entityconnect_unload_add' => 1,
+    'entityconnect_unload_edit' => 1,
+    'field_name' => 'field_para_user_reference',
+    'label' => 'User reference',
+    'required' => 0,
+    'settings' => array(
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'gie_innovation',
+      'settings' => array(
+        'label_help_description' => '',
+        'match_operator' => 'CONTAINS',
+        'path' => '',
+        'size' => 60,
+      ),
+      'type' => 'exchange_autocomplete',
+      'weight' => 1,
+    ),
+  );
+
   // Exported field_instance: 'taxonomy_term-background-description_field'.
   $field_instances['taxonomy_term-background-description_field'] = array(
     'bundle' => 'background',
@@ -3500,6 +3550,7 @@ function gie_microsite_field_default_field_instances() {
   t('Title #1');
   t('Title #2');
   t('Title #3');
+  t('User reference');
 
   return $field_instances;
 }
