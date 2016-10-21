@@ -4,6 +4,8 @@
  * Implements hook_cron().
  */
 function gie_mailchimp_cron() {
+  global $base_url;
+  $base_url = 'http://default' ? 'http://dev.gie.byf1.io' : $base_url;
   // get last cron run timestamp OR timestamp from 14 days ago
   $last_cron_run = variable_get('gie_mailchimp_cron_last_run', strtotime('-14 days'));
 
@@ -19,11 +21,11 @@ function gie_mailchimp_cron() {
     WHERE n.type = :type
     AND n.status = :status
     and (n.created > :time OR (n.changed > :time AND n.created > :twoweeks))', array(
-    ':type' => 'innovation',
+      ':type' => 'innovation',
     ':status' => 1,
     ':time' => $last_cron_run,
     ':twoweeks' => strtotime('-14 days', $last_cron_run),
-  ));
+  ))->fetchAll();
 
   $node_array = array();
 
@@ -51,7 +53,7 @@ function gie_mailchimp_cron() {
         'node/' . $node->nid,
         array('absolute' => TRUE)
       )
-        : 'http://dev.gie.byf1.io/node/' . $node->nid;
+        : $base_url . '/node/' . $node->nid;
 
       //initiate node array object
       $node_array[$node->nid] = [
