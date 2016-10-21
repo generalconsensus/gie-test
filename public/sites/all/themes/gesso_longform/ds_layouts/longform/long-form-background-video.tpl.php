@@ -18,15 +18,12 @@
   $url = $content['field_background_video_video']['#object']->field_background_video_video['und'][0]['entity']->field_background_video_upload['und'][0]['uri'];
   $url = (file_create_url($url)); ?>
 
-  <div id="long_form_background_video_wrapper">
-    <div class="section__video-wrapper">
-      <video class="section__video" autoplay="" muted="" loop="">
-        <source class="video" src="<?php print $url ?>" type="video/mp4">
+  <div class="background-video component layout-constrain">
+    <div class="background-video__video">
+      <video autoplay="" muted="" loop="">
+        <source src="<?php print $url ?>" type="video/mp4">
       </video>
     </div>
-
   </div>
 
 <?php endif; ?>
-
-
