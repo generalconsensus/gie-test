@@ -82,6 +82,7 @@ features[field_base][] = field_para_slider_content
 features[field_base][] = field_para_slider_title
 features[field_base][] = field_para_user_reference
 features[field_group][] = group_callout_text|paragraphs_item|microsite_text_callout|default
+features[field_group][] = group_constraint|paragraphs_item|microsite_user_reference|default
 features[field_group][] = group_container|paragraphs_item|long_form_50_50|left_image
 features[field_group][] = group_container|paragraphs_item|long_form_50_50|right_image
 features[field_group][] = group_header_text|paragraphs_item|long_form_header|default

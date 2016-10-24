@@ -853,11 +853,11 @@ function gie_microsite_ds_layout_settings_info() {
   $ds_layout->settings = array(
     'regions' => array(
       'ds_content' => array(
-        0 => 'microsite_user_reference_entity_view_1',
+        0 => 'microsite_user_reference_para_user_reference',
       ),
     ),
     'fields' => array(
-      'microsite_user_reference_entity_view_1' => 'ds_content',
+      'microsite_user_reference_para_user_reference' => 'ds_content',
     ),
     'classes' => array(),
     'wrappers' => array(
