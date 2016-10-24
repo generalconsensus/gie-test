@@ -1119,6 +1119,38 @@ function gie_long_form_content_ds_layout_settings_info() {
 
   $ds_layout = new stdClass();
   $ds_layout->api_version = 1;
+  $ds_layout->id = 'paragraphs_item|long_form_enhanced_text|default';
+  $ds_layout->entity_type = 'paragraphs_item';
+  $ds_layout->bundle = 'long_form_enhanced_text';
+  $ds_layout->view_mode = 'default';
+  $ds_layout->layout = 'long_form_enhanced_text';
+  $ds_layout->settings = array(
+    'regions' => array(
+      'main_content' => array(
+        0 => 'field_paragraph_text',
+        1 => 'field_longform_image',
+        2 => 'field_longform_orientation',
+      ),
+    ),
+    'fields' => array(
+      'field_paragraph_text' => 'main_content',
+      'field_longform_image' => 'main_content',
+      'field_longform_orientation' => 'main_content',
+    ),
+    'classes' => array(),
+    'wrappers' => array(
+      'main_content' => 'div',
+    ),
+    'layout_wrapper' => 'div',
+    'layout_attributes' => '',
+    'layout_attributes_merge' => 1,
+    'layout_link_attribute' => '',
+    'layout_link_custom' => '',
+  );
+  $export['paragraphs_item|long_form_enhanced_text|default'] = $ds_layout;
+
+  $ds_layout = new stdClass();
+  $ds_layout->api_version = 1;
   $ds_layout->id = 'paragraphs_item|long_form_image|default';
   $ds_layout->entity_type = 'paragraphs_item';
   $ds_layout->bundle = 'long_form_image';
