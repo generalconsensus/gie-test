@@ -10,6 +10,66 @@
 function gie_long_form_content_field_default_field_instances() {
   $field_instances = array();
 
+  // Exported field_instance:
+  // 'asset-background_video-field_background_video_upload'.
+  $field_instances['asset-background_video-field_background_video_upload'] = array(
+    'bundle' => 'background_video',
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'video',
+        'settings' => array(
+          'field_delimiter' => '',
+          'linked_field' => array(
+            'advanced' => array(
+              'class' => '',
+              'rel' => '',
+              'target' => '',
+              'text' => '',
+              'title' => '',
+            ),
+            'destination' => '',
+            'linked' => 0,
+          ),
+          'poster_image_style' => '',
+          'widthxheight' => '640x360',
+        ),
+        'type' => 'video_formatter_player',
+        'weight' => 0,
+      ),
+      'full' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'ds_extras_field_template' => '',
+    'entity_type' => 'asset',
+    'field_name' => 'field_background_video_upload',
+    'label' => 'Video upload',
+    'required' => 1,
+    'settings' => array(
+      'default_dimensions' => '640x360',
+      'file_directory' => 'videos/original',
+      'file_extensions' => 'mp4',
+      'max_filesize' => '200 MB',
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'video',
+      'settings' => array(
+        'label_help_description' => '',
+        'progress_indicator' => 'throbber',
+      ),
+      'type' => 'video_upload',
+      'weight' => 31,
+    ),
+  );
+
   // Exported field_instance: 'node-long_form_page-body'.
   $field_instances['node-long_form_page-body'] = array(
     'bundle' => 'long_form_page',
@@ -336,6 +396,7 @@ function gie_long_form_content_field_default_field_instances() {
       'allowed_bundles' => array(
         'long_form_50_50' => -1,
         'long_form_aside' => 'long_form_aside',
+        'long_form_background_video' => 'long_form_background_video',
         'long_form_callout_card' => 'long_form_callout_card',
         'long_form_enhanced_text' => 'long_form_enhanced_text',
         'long_form_featured_content' => -1,
@@ -357,6 +418,7 @@ function gie_long_form_content_field_default_field_instances() {
       'bundle_weights' => array(
         'long_form_50_50' => -28,
         'long_form_aside' => -31,
+        'long_form_background_video' => -29,
         'long_form_callout_card' => -34,
         'long_form_enhanced_text' => -29,
         'long_form_featured_content' => -27,
@@ -1353,6 +1415,164 @@ function gie_long_form_content_field_default_field_instances() {
       ),
       'type' => 'text_textfield',
       'weight' => 0,
+    ),
+  );
+
+  // Exported field_instance:
+  // 'paragraphs_item-long_form_background_video-field_background_video_text'.
+  $field_instances['paragraphs_item-long_form_background_video-field_background_video_text'] = array(
+    'bundle' => 'long_form_background_video',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'text',
+        'settings' => array(
+          'field_delimiter' => '',
+          'linked_field' => array(
+            'advanced' => array(
+              'class' => '',
+              'rel' => '',
+              'target' => '',
+              'text' => '',
+              'title' => '',
+            ),
+            'destination' => '',
+            'linked' => 0,
+          ),
+        ),
+        'type' => 'text_default',
+        'weight' => 0,
+      ),
+      'paragraphs_editor_preview' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'ds_extras_field_template' => '',
+    'entity_type' => 'paragraphs_item',
+    'field_name' => 'field_background_video_text',
+    'label' => 'Text',
+    'required' => 0,
+    'settings' => array(
+      'better_formats' => array(
+        'allowed_formats' => array(
+          'comments_filtered' => 'comments_filtered',
+          'filtered_html' => 'filtered_html',
+          'full_html' => 'full_html',
+          'long_form_filtered' => 'long_form_filtered',
+          'long_form_full' => 'long_form_full',
+          'plain_text' => 'plain_text',
+        ),
+        'allowed_formats_toggle' => 0,
+        'default_order_toggle' => 0,
+        'default_order_wrapper' => array(
+          'formats' => array(
+            'comments_filtered' => array(
+              'weight' => 0,
+            ),
+            'filtered_html' => array(
+              'weight' => 0,
+            ),
+            'full_html' => array(
+              'weight' => 1,
+            ),
+            'long_form_filtered' => array(
+              'weight' => 0,
+            ),
+            'long_form_full' => array(
+              'weight' => 0,
+            ),
+            'plain_text' => array(
+              'weight' => 10,
+            ),
+          ),
+        ),
+      ),
+      'text_processing' => 0,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'text',
+      'settings' => array(
+        'label_help_description' => '',
+        'maxlength_js' => 0,
+        'maxlength_js_label' => 'Content limited to @limit characters, remaining: <strong>@remaining</strong>',
+        'size' => 60,
+      ),
+      'type' => 'text_textfield',
+      'weight' => 1,
+    ),
+  );
+
+  // Exported field_instance:
+  // 'paragraphs_item-long_form_background_video-field_background_video_video'.
+  $field_instances['paragraphs_item-long_form_background_video-field_background_video_video'] = array(
+    'bundle' => 'long_form_background_video',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'entityreference',
+        'settings' => array(
+          'field_delimiter' => '',
+          'link' => FALSE,
+          'linked_field' => array(
+            'advanced' => array(
+              'class' => '',
+              'rel' => '',
+              'target' => '',
+              'text' => '',
+              'title' => '',
+            ),
+            'destination' => '',
+            'linked' => 0,
+          ),
+        ),
+        'type' => 'entityreference_label',
+        'weight' => 1,
+      ),
+      'paragraphs_editor_preview' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'ds_extras_field_template' => '',
+    'entity_type' => 'paragraphs_item',
+    'entityconnect_show_add_icon' => 0,
+    'entityconnect_show_edit_icon' => 0,
+    'entityconnect_unload_add' => 0,
+    'entityconnect_unload_edit' => 0,
+    'field_name' => 'field_background_video_video',
+    'label' => 'Video',
+    'required' => 1,
+    'settings' => array(
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'entityreference',
+      'settings' => array(
+        'label_help_description' => '',
+        'match_operator' => 'CONTAINS',
+        'path' => '',
+        'references_dialog_add' => 1,
+        'references_dialog_edit' => 0,
+        'references_dialog_search' => 0,
+        'references_dialog_search_view' => '',
+        'size' => 60,
+      ),
+      'type' => 'entityreference_autocomplete',
+      'weight' => 2,
     ),
   );
 
@@ -4052,6 +4272,7 @@ function gie_long_form_content_field_default_field_instances() {
   t('Title #2');
   t('Title #3');
   t('Video');
+  t('Video upload');
 
   return $field_instances;
 }
