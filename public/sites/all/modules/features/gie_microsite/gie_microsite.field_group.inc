@@ -59,16 +59,17 @@ function gie_microsite_field_group_info() {
     ),
     'format_type' => 'div',
     'format_settings' => array(
-      'formatter' => 'collapsible',
+      'label' => 'Constraint',
       'instance_settings' => array(
+        'id' => '',
+        'classes' => 'layout-constrain',
         'description' => '',
-        'show_label' => 1,
+        'show_label' => '0',
         'label_element' => 'h3',
         'effect' => 'none',
-        'speed' => 'fast',
-        'classes' => 'group-constraint field-group-div',
-        'id' => '',
+        'speed' => 'none',
       ),
+      'formatter' => 'open',
     ),
   );
   $field_groups['group_constraint|paragraphs_item|microsite_user_reference|default'] = $field_group;

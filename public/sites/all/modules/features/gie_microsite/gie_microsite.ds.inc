@@ -853,10 +853,12 @@ function gie_microsite_ds_layout_settings_info() {
   $ds_layout->settings = array(
     'regions' => array(
       'ds_content' => array(
-        0 => 'microsite_user_reference_para_user_reference',
+        0 => 'group_constraint',
+        1 => 'microsite_user_reference_para_user_reference',
       ),
     ),
     'fields' => array(
+      'group_constraint' => 'ds_content',
       'microsite_user_reference_para_user_reference' => 'ds_content',
     ),
     'classes' => array(),
