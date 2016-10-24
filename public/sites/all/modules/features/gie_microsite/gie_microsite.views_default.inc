@@ -1384,7 +1384,7 @@ function gie_microsite_views_default_views() {
 
   /* Display: Master */
   $handler = $view->new_display('default', 'Master', 'default');
-  $handler->display->display_options['css_class'] = 'layout-grid layout-grid--cols-4';
+  $handler->display->display_options['css_class'] = 'view--card-view-4col';
   $handler->display->display_options['use_more_always'] = FALSE;
   $handler->display->display_options['access']['type'] = 'perm';
   $handler->display->display_options['access']['perm'] = 'access user profiles';
