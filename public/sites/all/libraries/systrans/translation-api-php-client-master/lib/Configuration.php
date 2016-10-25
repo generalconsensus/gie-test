@@ -127,6 +127,13 @@ class Configuration
     protected $tempFolderPath;
 
     /**
+     * Debug switch (default set to false)
+     *
+     * @var bool
+     */
+    protected $curlSSLVerify = false;
+
+    /**
      * Constructor
      */
     public function __construct()
@@ -459,6 +466,29 @@ class Configuration
         $report .= "    Temp Folder Path: ".self::getDefaultConfiguration()->getTempFolderPath()."\n";
   
         return $report;
+    }
+
+    /**
+     * Allows CURL to get around CA certification issues
+     *
+     * @param bool $verify curlSSLVerify flag
+     *
+     * @return Configuration
+     */
+    public function setStopCurlSSLVerify($verify)
+    {
+      $this->curlSSLVerify = $verify;
+      return $this;
+    }
+
+    /**
+     * Gets the curlSSLVerify flag
+     *
+     * @return bool
+     */
+    public function getStopCurlSSLVerify()
+    {
+      return $this->curlSSLVerify;
     }
 
 }
