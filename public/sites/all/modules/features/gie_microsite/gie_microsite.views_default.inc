@@ -1372,5 +1372,68 @@ function gie_microsite_views_default_views() {
   $handler->display->display_options['cache']['type'] = 'none';
   $export['microsite_partners'] = $view;
 
+  $view = new view();
+  $view->name = 'microsite_user_reference';
+  $view->description = '';
+  $view->tag = 'default';
+  $view->base_table = 'users';
+  $view->human_name = 'Microsite User Reference';
+  $view->core = 7;
+  $view->api_version = '3.0';
+  $view->disabled = FALSE; /* Edit this to true to make a default view disabled initially */
+
+  /* Display: Master */
+  $handler = $view->new_display('default', 'Master', 'default');
+  $handler->display->display_options['css_class'] = 'view--card-view-4col';
+  $handler->display->display_options['use_more_always'] = FALSE;
+  $handler->display->display_options['access']['type'] = 'perm';
+  $handler->display->display_options['access']['perm'] = 'access user profiles';
+  $handler->display->display_options['cache']['type'] = 'none';
+  $handler->display->display_options['query']['type'] = 'views_query';
+  $handler->display->display_options['exposed_form']['type'] = 'basic';
+  $handler->display->display_options['pager']['type'] = 'none';
+  $handler->display->display_options['pager']['options']['offset'] = '0';
+  $handler->display->display_options['style_plugin'] = 'default';
+  $handler->display->display_options['style_options']['row_class_special'] = FALSE;
+  $handler->display->display_options['row_plugin'] = 'entity';
+  $handler->display->display_options['row_options']['view_mode'] = 'listing';
+  /* Relationship: Entity Reference: Referencing entity */
+  $handler->display->display_options['relationships']['reverse_field_para_user_reference_paragraphs_item']['id'] = 'reverse_field_para_user_reference_paragraphs_item';
+  $handler->display->display_options['relationships']['reverse_field_para_user_reference_paragraphs_item']['table'] = 'users';
+  $handler->display->display_options['relationships']['reverse_field_para_user_reference_paragraphs_item']['field'] = 'reverse_field_para_user_reference_paragraphs_item';
+  $handler->display->display_options['relationships']['reverse_field_para_user_reference_paragraphs_item']['required'] = TRUE;
+  /* Field: User: Name */
+  $handler->display->display_options['fields']['name']['id'] = 'name';
+  $handler->display->display_options['fields']['name']['table'] = 'users';
+  $handler->display->display_options['fields']['name']['field'] = 'name';
+  $handler->display->display_options['fields']['name']['label'] = '';
+  $handler->display->display_options['fields']['name']['alter']['word_boundary'] = FALSE;
+  $handler->display->display_options['fields']['name']['alter']['ellipsis'] = FALSE;
+  /* Contextual filter: Paragraphs item: Paragraphs item ID */
+  $handler->display->display_options['arguments']['item_id']['id'] = 'item_id';
+  $handler->display->display_options['arguments']['item_id']['table'] = 'paragraphs_item';
+  $handler->display->display_options['arguments']['item_id']['field'] = 'item_id';
+  $handler->display->display_options['arguments']['item_id']['relationship'] = 'reverse_field_para_user_reference_paragraphs_item';
+  $handler->display->display_options['arguments']['item_id']['default_action'] = 'default';
+  $handler->display->display_options['arguments']['item_id']['default_argument_type'] = 'node';
+  $handler->display->display_options['arguments']['item_id']['summary']['number_of_records'] = '0';
+  $handler->display->display_options['arguments']['item_id']['summary']['format'] = 'default_summary';
+  $handler->display->display_options['arguments']['item_id']['summary_options']['items_per_page'] = '25';
+  /* Filter criterion: User: Active */
+  $handler->display->display_options['filters']['status']['id'] = 'status';
+  $handler->display->display_options['filters']['status']['table'] = 'users';
+  $handler->display->display_options['filters']['status']['field'] = 'status';
+  $handler->display->display_options['filters']['status']['value'] = '1';
+  $handler->display->display_options['filters']['status']['group'] = 1;
+  $handler->display->display_options['filters']['status']['expose']['operator'] = FALSE;
+
+  /* Display: EVA Field */
+  $handler = $view->new_display('entity_view', 'EVA Field', 'para_user_reference');
+  $handler->display->display_options['entity_type'] = 'paragraphs_item';
+  $handler->display->display_options['bundles'] = array(
+    0 => 'microsite_user_reference',
+  );
+  $export['microsite_user_reference'] = $view;
+
   return $export;
 }
