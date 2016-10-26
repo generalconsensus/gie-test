@@ -642,7 +642,7 @@ $conf['maintenance_theme'] = 'gesso';
 /**
  * Change file upload sizes
  */
-ini_set('upload_max_filesize','20M');
+ini_set('upload_max_filesize','200M');
 ini_set('post_max_size','20M');
 
 /**

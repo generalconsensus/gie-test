@@ -140,6 +140,7 @@ features[facetapi][] = search_api@default_user_index:block:field_assistance_offe
 features[facetapi][] = search_api@default_user_index:block:field_term_region
 features[facetapi][] = search_api@default_user_index:block:field_term_sector
 features[facetapi][] = search_api@default_user_index:block:field_user_address:country
+features[facetapi][] = search_api@default_user_index:block:field_user_assistance
 features[facetapi][] = search_api@default_user_index:block:field_user_interests
 features[facetapi][] = search_api@default_user_index:block:field_user_lastname
 features[facetapi][] = search_api@default_user_index:block:field_user_org

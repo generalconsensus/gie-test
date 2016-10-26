@@ -1,0 +1,81 @@
+// @file
+// Styles for long-form-enhanced-text paragraph type.
+
+$image-width: 1600px;
+$image-height: 700px;
+
+.enhanced-text {
+  background-color: #003359;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin: 2em 0;
+  min-height: $image-height * 0.5;
+  @include breakpoint($image-width * 0.6) {
+    min-height: $image-height * 0.6;
+  }
+  @include breakpoint($image-width * 0.7) {
+    min-height: $image-height * 0.7;
+  }
+  @include breakpoint($image-width * 0.8) {
+    min-height: $image-height * 0.8;
+  }
+  @include breakpoint($image-width * 0.9) {
+    min-height: $image-height * 0.9;
+  }
+  @include breakpoint($image-width, $no-query: true) {
+    min-height: $image-height;
+  }
+  max-height: $image-height;
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+
+  &.center-justified {
+    text-align: center;
+  }
+
+  .enhanced-text__wrapper {
+    display: table;
+    //margin: 0 auto;
+    padding: 0 15%;
+    width: 100%;
+    .enhanced-text__inner {
+      display: table-row;
+      width: 100%;
+      .enhanced-text__text {
+        color: #fff;
+        display: table-cell;
+        font-size: em(20px);
+        @include breakpoint(600px) {
+          font-size: em(28px);
+        }
+        @include breakpoint(900px, $no-query: true) {
+          font-size: em(42px);
+        }
+        height: $image-height * 0.5;
+        @include breakpoint($image-width * 0.6) {
+          height: $image-height * 0.6;
+        }
+        @include breakpoint($image-width * 0.7) {
+          height: $image-height * 0.7
+        }
+        @include breakpoint($image-width * 0.8) {
+          height: $image-height * 0.8;
+        }
+        @include breakpoint($image-width * 0.9) {
+          height: $image-height * 0.9;
+        }
+        @include breakpoint($image-width, $no-query: true) {
+          height: $image-height;
+        }
+        line-height: 1.3;
+        vertical-align: middle;
+        width: 100%;
+        p {
+          margin: 0.25em 0;
+        }
+      }
+    }
+  }
+}

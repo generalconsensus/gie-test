@@ -10,6 +10,66 @@
 function gie_long_form_content_field_default_field_instances() {
   $field_instances = array();
 
+  // Exported field_instance:
+  // 'asset-background_video-field_background_video_upload'.
+  $field_instances['asset-background_video-field_background_video_upload'] = array(
+    'bundle' => 'background_video',
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'video',
+        'settings' => array(
+          'field_delimiter' => '',
+          'linked_field' => array(
+            'advanced' => array(
+              'class' => '',
+              'rel' => '',
+              'target' => '',
+              'text' => '',
+              'title' => '',
+            ),
+            'destination' => '',
+            'linked' => 0,
+          ),
+          'poster_image_style' => '',
+          'widthxheight' => '640x360',
+        ),
+        'type' => 'video_formatter_player',
+        'weight' => 0,
+      ),
+      'full' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'ds_extras_field_template' => '',
+    'entity_type' => 'asset',
+    'field_name' => 'field_background_video_upload',
+    'label' => 'Video upload',
+    'required' => 1,
+    'settings' => array(
+      'default_dimensions' => '640x360',
+      'file_directory' => 'videos/original',
+      'file_extensions' => 'mp4',
+      'max_filesize' => '200 MB',
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'video',
+      'settings' => array(
+        'label_help_description' => '',
+        'progress_indicator' => 'throbber',
+      ),
+      'type' => 'video_upload',
+      'weight' => 31,
+    ),
+  );
+
   // Exported field_instance: 'node-long_form_page-body'.
   $field_instances['node-long_form_page-body'] = array(
     'bundle' => 'long_form_page',
@@ -336,7 +396,9 @@ function gie_long_form_content_field_default_field_instances() {
       'allowed_bundles' => array(
         'long_form_50_50' => -1,
         'long_form_aside' => 'long_form_aside',
+        'long_form_background_video' => 'long_form_background_video',
         'long_form_callout_card' => 'long_form_callout_card',
+        'long_form_enhanced_text' => 'long_form_enhanced_text',
         'long_form_featured_content' => -1,
         'long_form_header' => -1,
         'long_form_image' => 'long_form_image',
@@ -347,28 +409,35 @@ function gie_long_form_content_field_default_field_instances() {
         'long_form_text' => 'long_form_text',
         'long_form_video' => 'long_form_video',
         'microsite_callout_card' => -1,
+        'microsite_highlight' => -1,
+        'microsite_news_slider' => -1,
         'microsite_section_break_image' => -1,
         'microsite_text' => -1,
+        'microsite_text_callout' => -1,
       ),
       'bundle_weights' => array(
-        'long_form_50_50' => 11,
-        'long_form_aside' => 7,
-        'long_form_callout_card' => -10,
-        'long_form_featured_content' => 14,
-        'long_form_header' => 15,
-        'long_form_image' => 2,
-        'long_form_key_figure' => 9,
-        'long_form_pullquote' => -10,
-        'long_form_section_break_image' => -10,
-        'long_form_section_header_image' => -10,
-        'long_form_text' => 5,
-        'long_form_video' => -10,
-        'microsite_callout_card' => 23,
-        'microsite_section_break_image' => 24,
-        'microsite_text' => 25,
+        'long_form_50_50' => -28,
+        'long_form_aside' => -31,
+        'long_form_background_video' => -29,
+        'long_form_callout_card' => -34,
+        'long_form_enhanced_text' => -29,
+        'long_form_featured_content' => -27,
+        'long_form_header' => -26,
+        'long_form_image' => -33,
+        'long_form_key_figure' => -30,
+        'long_form_pullquote' => -35,
+        'long_form_section_break_image' => -37,
+        'long_form_section_header_image' => -38,
+        'long_form_text' => -32,
+        'long_form_video' => -36,
+        'microsite_callout_card' => -25,
+        'microsite_highlight' => -22,
+        'microsite_news_slider' => -21,
+        'microsite_section_break_image' => -24,
+        'microsite_text' => -23,
+        'microsite_text_callout' => -20,
       ),
       'default_edit_mode' => 'closed',
-      'description_display' => 'after',
       'title' => 'Paragraph',
       'title_multiple' => 'Paragraphs',
       'user_register_form' => FALSE,
@@ -376,7 +445,9 @@ function gie_long_form_content_field_default_field_instances() {
     'widget' => array(
       'active' => 0,
       'module' => 'paragraphs',
-      'settings' => array(),
+      'settings' => array(
+        'label_help_description' => '',
+      ),
       'type' => 'paragraphs_embed',
       'weight' => 4,
     ),
@@ -1348,6 +1419,164 @@ function gie_long_form_content_field_default_field_instances() {
   );
 
   // Exported field_instance:
+  // 'paragraphs_item-long_form_background_video-field_background_video_text'.
+  $field_instances['paragraphs_item-long_form_background_video-field_background_video_text'] = array(
+    'bundle' => 'long_form_background_video',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'text',
+        'settings' => array(
+          'field_delimiter' => '',
+          'linked_field' => array(
+            'advanced' => array(
+              'class' => '',
+              'rel' => '',
+              'target' => '',
+              'text' => '',
+              'title' => '',
+            ),
+            'destination' => '',
+            'linked' => 0,
+          ),
+        ),
+        'type' => 'text_default',
+        'weight' => 0,
+      ),
+      'paragraphs_editor_preview' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'ds_extras_field_template' => '',
+    'entity_type' => 'paragraphs_item',
+    'field_name' => 'field_background_video_text',
+    'label' => 'Text',
+    'required' => 0,
+    'settings' => array(
+      'better_formats' => array(
+        'allowed_formats' => array(
+          'comments_filtered' => 'comments_filtered',
+          'filtered_html' => 'filtered_html',
+          'full_html' => 'full_html',
+          'long_form_filtered' => 'long_form_filtered',
+          'long_form_full' => 'long_form_full',
+          'plain_text' => 'plain_text',
+        ),
+        'allowed_formats_toggle' => 0,
+        'default_order_toggle' => 0,
+        'default_order_wrapper' => array(
+          'formats' => array(
+            'comments_filtered' => array(
+              'weight' => 0,
+            ),
+            'filtered_html' => array(
+              'weight' => 0,
+            ),
+            'full_html' => array(
+              'weight' => 1,
+            ),
+            'long_form_filtered' => array(
+              'weight' => 0,
+            ),
+            'long_form_full' => array(
+              'weight' => 0,
+            ),
+            'plain_text' => array(
+              'weight' => 10,
+            ),
+          ),
+        ),
+      ),
+      'text_processing' => 0,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'text',
+      'settings' => array(
+        'label_help_description' => '',
+        'maxlength_js' => 0,
+        'maxlength_js_label' => 'Content limited to @limit characters, remaining: <strong>@remaining</strong>',
+        'size' => 60,
+      ),
+      'type' => 'text_textfield',
+      'weight' => 1,
+    ),
+  );
+
+  // Exported field_instance:
+  // 'paragraphs_item-long_form_background_video-field_background_video_video'.
+  $field_instances['paragraphs_item-long_form_background_video-field_background_video_video'] = array(
+    'bundle' => 'long_form_background_video',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'entityreference',
+        'settings' => array(
+          'field_delimiter' => '',
+          'link' => FALSE,
+          'linked_field' => array(
+            'advanced' => array(
+              'class' => '',
+              'rel' => '',
+              'target' => '',
+              'text' => '',
+              'title' => '',
+            ),
+            'destination' => '',
+            'linked' => 0,
+          ),
+        ),
+        'type' => 'entityreference_label',
+        'weight' => 1,
+      ),
+      'paragraphs_editor_preview' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'ds_extras_field_template' => '',
+    'entity_type' => 'paragraphs_item',
+    'entityconnect_show_add_icon' => 0,
+    'entityconnect_show_edit_icon' => 0,
+    'entityconnect_unload_add' => 0,
+    'entityconnect_unload_edit' => 0,
+    'field_name' => 'field_background_video_video',
+    'label' => 'Video',
+    'required' => 1,
+    'settings' => array(
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'entityreference',
+      'settings' => array(
+        'label_help_description' => '',
+        'match_operator' => 'CONTAINS',
+        'path' => '',
+        'references_dialog_add' => 1,
+        'references_dialog_edit' => 0,
+        'references_dialog_search' => 0,
+        'references_dialog_search_view' => '',
+        'size' => 60,
+      ),
+      'type' => 'entityreference_autocomplete',
+      'weight' => 2,
+    ),
+  );
+
+  // Exported field_instance:
   // 'paragraphs_item-long_form_callout_card-field_para_callout_body_1'.
   $field_instances['paragraphs_item-long_form_callout_card-field_para_callout_body_1'] = array(
     'bundle' => 'long_form_callout_card',
@@ -1941,6 +2170,237 @@ function gie_long_form_content_field_default_field_instances() {
       ),
       'type' => 'text_textfield',
       'weight' => 10,
+    ),
+  );
+
+  // Exported field_instance:
+  // 'paragraphs_item-long_form_enhanced_text-field_longform_image'.
+  $field_instances['paragraphs_item-long_form_enhanced_text-field_longform_image'] = array(
+    'bundle' => 'long_form_enhanced_text',
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'hidden',
+        'module' => 'image',
+        'settings' => array(
+          'field_delimiter' => '',
+          'image_link' => '',
+          'image_style' => '',
+          'linked_field' => array(
+            'advanced' => array(
+              'class' => '',
+              'rel' => '',
+              'target' => '',
+              'text' => '',
+              'title' => '',
+            ),
+            'destination' => '',
+            'linked' => 0,
+          ),
+        ),
+        'type' => 'image',
+        'weight' => 1,
+      ),
+      'paragraphs_editor_preview' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'ds_extras_field_template' => '',
+    'entity_type' => 'paragraphs_item',
+    'field_name' => 'field_longform_image',
+    'label' => 'Image',
+    'required' => 0,
+    'settings' => array(
+      'alt_field' => 0,
+      'alt_field_default' => '',
+      'alt_field_hide' => 0,
+      'alt_field_sync_title' => 0,
+      'alt_field_update_on_edit' => 0,
+      'default_image' => 0,
+      'description_display' => 'after',
+      'file_directory' => '',
+      'file_extensions' => 'png gif jpg jpeg',
+      'focus' => 0,
+      'focus_lock_ratio' => 0,
+      'focus_min_size' => '',
+      'max_filesize' => '2 MB',
+      'max_resolution' => '',
+      'min_resolution' => '1600x700',
+      'random_default' => 0,
+      'random_default_path' => '',
+      'title_field' => 1,
+      'title_field_default' => '',
+      'title_field_hide' => 0,
+      'title_field_update_on_edit' => 0,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'image',
+      'settings' => array(
+        'label_help_description' => '',
+        'preview_image_style' => 'long_form_section_header',
+        'progress_indicator' => 'throbber',
+      ),
+      'type' => 'image_image',
+      'weight' => 3,
+    ),
+  );
+
+  // Exported field_instance:
+  // 'paragraphs_item-long_form_enhanced_text-field_longform_orientation'.
+  $field_instances['paragraphs_item-long_form_enhanced_text-field_longform_orientation'] = array(
+    'bundle' => 'long_form_enhanced_text',
+    'default_value' => array(
+      0 => array(
+        'value' => 'center',
+      ),
+    ),
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'hidden',
+        'module' => 'list',
+        'settings' => array(
+          'field_delimiter' => '',
+          'linked_field' => array(
+            'advanced' => array(
+              'class' => '',
+              'rel' => '',
+              'target' => '',
+              'text' => '',
+              'title' => '',
+            ),
+            'destination' => '',
+            'linked' => 0,
+          ),
+        ),
+        'type' => 'list_default',
+        'weight' => 2,
+      ),
+      'paragraphs_editor_preview' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'ds_extras_field_template' => '',
+    'entity_type' => 'paragraphs_item',
+    'field_name' => 'field_longform_orientation',
+    'label' => 'Orientation',
+    'required' => 1,
+    'settings' => array(
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'options',
+      'settings' => array(
+        'apply_chosen' => '',
+        'label_help_description' => '',
+      ),
+      'type' => 'options_select',
+      'weight' => 4,
+    ),
+  );
+
+  // Exported field_instance:
+  // 'paragraphs_item-long_form_enhanced_text-field_paragraph_text'.
+  $field_instances['paragraphs_item-long_form_enhanced_text-field_paragraph_text'] = array(
+    'bundle' => 'long_form_enhanced_text',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'hidden',
+        'module' => 'text',
+        'settings' => array(
+          'field_delimiter' => '',
+          'linked_field' => array(
+            'advanced' => array(
+              'class' => '',
+              'rel' => '',
+              'target' => '',
+              'text' => '',
+              'title' => '',
+            ),
+            'destination' => '',
+            'linked' => 0,
+          ),
+        ),
+        'type' => 'text_default',
+        'weight' => 0,
+      ),
+      'paragraphs_editor_preview' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'ds_extras_field_template' => '',
+    'entity_type' => 'paragraphs_item',
+    'field_name' => 'field_paragraph_text',
+    'label' => 'Text',
+    'required' => 0,
+    'settings' => array(
+      'better_formats' => array(
+        'allowed_formats' => array(
+          'comments_filtered' => 0,
+          'filtered_html' => 0,
+          'full_html' => 0,
+          'long_form_filtered' => 'long_form_filtered',
+          'long_form_full' => 0,
+          'plain_text' => 0,
+        ),
+        'allowed_formats_toggle' => 1,
+        'default_order_toggle' => 0,
+        'default_order_wrapper' => array(
+          'formats' => array(
+            'comments_filtered' => array(
+              'weight' => 0,
+            ),
+            'filtered_html' => array(
+              'weight' => 0,
+            ),
+            'full_html' => array(
+              'weight' => 1,
+            ),
+            'long_form_filtered' => array(
+              'weight' => 0,
+            ),
+            'long_form_full' => array(
+              'weight' => 0,
+            ),
+            'plain_text' => array(
+              'weight' => 10,
+            ),
+          ),
+        ),
+      ),
+      'text_processing' => 1,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'text',
+      'settings' => array(
+        'label_help_description' => '',
+        'maxlength_js' => '',
+        'maxlength_js_enforce' => 0,
+        'maxlength_js_label' => 'Content limited to @limit characters, remaining: <strong>@remaining</strong>',
+        'maxlength_js_truncate_html' => 0,
+        'rows' => 5,
+      ),
+      'type' => 'text_textarea',
+      'weight' => 2,
     ),
   );
 
@@ -3793,6 +4253,7 @@ function gie_long_form_content_field_default_field_instances() {
   t('Learn More Link');
   t('Leave this field blank, it will not display on your long form report.');
   t('Long form block');
+  t('Orientation');
   t('Partners');
   t('Pullquote Text');
   t('Report Description');
@@ -3811,6 +4272,7 @@ function gie_long_form_content_field_default_field_instances() {
   t('Title #2');
   t('Title #3');
   t('Video');
+  t('Video upload');
 
   return $field_instances;
 }
