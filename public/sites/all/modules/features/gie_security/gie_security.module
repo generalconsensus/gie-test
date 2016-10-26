@@ -207,6 +207,9 @@ function _gie_security_node_save($node) {
 
   if ($content_flag || $user_flag) {
     gie_security_content_publish_operation('node', $node, 'unpublish', TRUE, $content_flag, $user_flag);
+    // set the GIE Node Spam flag to true
+    // Flag module will take care of the actual flagging
+    $node->flag['gie_node_spam'] = true;
   }
   else {
     return TRUE;
@@ -357,4 +360,31 @@ function _gie_security_strposa($haystack, $needle, $offset = 0) {
     } // stop on first true result
   }
   return FALSE;
+}
+
+/**
+ * Implements hook_action_info().
+ */
+function gie_security_action_info() {
+  return array(
+    'gie_security_unflag_spam_publish' => array(
+      'type' => 'node',
+      'label' => t('Unflag as spam and publish'),
+      'configurable' => FALSE,
+      'triggers' => array('any'),
+    ),
+  );
+}
+
+function gie_security_unflag_spam_publish(&$entity, $context) {
+  // unflag the GIE Node Spam flag
+  $flag = flag_get_flag('gie_node_spam');
+  if ($flag) {
+    $flag->flag('unflag', $entity->nid);
+  }
+
+  // Publish node
+  $entity->status = 1;
+
+  watchdog('action', 'Set @type %title to published and unflag for spam.', array('@type' => $entity->type, '%title' => $entity->title));
 }
