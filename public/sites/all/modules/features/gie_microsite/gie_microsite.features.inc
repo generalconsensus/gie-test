@@ -111,6 +111,11 @@ function gie_microsite_paragraphs_info() {
       'bundle' => 'microsite_text_callout',
       'locked' => '1',
     ),
+    'microsite_user_reference' => array(
+      'name' => 'Microsite User Reference',
+      'bundle' => 'microsite_user_reference',
+      'locked' => '1',
+    ),
   );
   return $items;
 }

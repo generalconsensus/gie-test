@@ -5,6 +5,25 @@
  */
 
 /**
+ * Implements hook_default_asset_type().
+ */
+function gie_long_form_content_default_asset_type() {
+  $items = array();
+  $items['background_video'] = entity_import('asset_type', '{
+    "type" : "background_video",
+    "name" : "Background video",
+    "icon" : "none",
+    "description" : "",
+    "help" : "",
+    "weight" : "0",
+    "locked" : "0",
+    "uuid" : "",
+    "rdf_mapping" : []
+  }');
+  return $items;
+}
+
+/**
  * Implements hook_ctools_plugin_api().
  */
 function gie_long_form_content_ctools_plugin_api($module = NULL, $api = NULL) {
@@ -133,9 +152,19 @@ function gie_long_form_content_paragraphs_info() {
       'bundle' => 'long_form_aside',
       'locked' => '1',
     ),
+    'long_form_background_video' => array(
+      'name' => 'Long Form Background Video',
+      'bundle' => 'long_form_background_video',
+      'locked' => '1',
+    ),
     'long_form_callout_card' => array(
       'name' => 'Long Form Callout Card',
       'bundle' => 'long_form_callout_card',
+      'locked' => '1',
+    ),
+    'long_form_enhanced_text' => array(
+      'name' => 'Long Form Enhanced Text',
+      'bundle' => 'long_form_enhanced_text',
       'locked' => '1',
     ),
     'long_form_image' => array(
