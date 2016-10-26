@@ -40,5 +40,4 @@ $app->getApiKeyWithPrefix('default');
 $translation = $app->callApi('translate', 'GET', $queryParams, []);
 
 $test = 1;
-//$app->run();
 
