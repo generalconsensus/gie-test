@@ -476,7 +476,9 @@ function gie_microsite_field_default_field_instances() {
       'allowed_bundles' => array(
         'long_form_50_50' => 'long_form_50_50',
         'long_form_aside' => -1,
+        'long_form_background_video' => -1,
         'long_form_callout_card' => -1,
+        'long_form_enhanced_text' => -1,
         'long_form_featured_content' => 'long_form_featured_content',
         'long_form_header' => 'long_form_header',
         'long_form_image' => -1,
@@ -488,6 +490,7 @@ function gie_microsite_field_default_field_instances() {
         'long_form_video' => -1,
         'microsite_callout_card' => 'microsite_callout_card',
         'microsite_highlight' => 'microsite_highlight',
+        'microsite_innovation_reference' => 'microsite_innovation_reference',
         'microsite_news_slider' => -1,
         'microsite_section_break_image' => 'microsite_section_break_image',
         'microsite_text' => 'microsite_text',
@@ -497,7 +500,9 @@ function gie_microsite_field_default_field_instances() {
       'bundle_weights' => array(
         'long_form_50_50' => 2,
         'long_form_aside' => 3,
+        'long_form_background_video' => 35,
         'long_form_callout_card' => 4,
+        'long_form_enhanced_text' => 37,
         'long_form_featured_content' => 5,
         'long_form_header' => 6,
         'long_form_image' => 7,
@@ -509,6 +514,7 @@ function gie_microsite_field_default_field_instances() {
         'long_form_video' => 13,
         'microsite_callout_card' => 14,
         'microsite_highlight' => -36,
+        'microsite_innovation_reference' => -44,
         'microsite_news_slider' => 31,
         'microsite_section_break_image' => 15,
         'microsite_text' => 16,
@@ -2323,6 +2329,57 @@ function gie_microsite_field_default_field_instances() {
   );
 
   // Exported field_instance:
+  // 'paragraphs_item-microsite_innovation_reference-field_para_innovation_reference'.
+  $field_instances['paragraphs_item-microsite_innovation_reference-field_para_innovation_reference'] = array(
+    'bundle' => 'microsite_innovation_reference',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 3,
+      ),
+      'paragraphs_editor_preview' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'ds_extras_field_template' => '',
+    'entity_type' => 'paragraphs_item',
+    'entityconnect_show_add_icon' => 0,
+    'entityconnect_show_edit_icon' => 0,
+    'entityconnect_unload_add' => 1,
+    'entityconnect_unload_edit' => 1,
+    'field_name' => 'field_para_innovation_reference',
+    'label' => 'Innovation reference',
+    'required' => 0,
+    'settings' => array(
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'entityreference',
+      'settings' => array(
+        'label_help_description' => '',
+        'match_operator' => 'CONTAINS',
+        'path' => '',
+        'references_dialog_add' => 0,
+        'references_dialog_edit' => 0,
+        'references_dialog_search' => 0,
+        'references_dialog_search_view' => '',
+        'size' => 60,
+      ),
+      'type' => 'entityreference_autocomplete',
+      'weight' => 1,
+    ),
+  );
+
+  // Exported field_instance:
   // 'paragraphs_item-microsite_news_slider-field_para_slider_content'.
   $field_instances['paragraphs_item-microsite_news_slider-field_para_slider_content'] = array(
     'bundle' => 'microsite_news_slider',
@@ -3535,6 +3592,7 @@ function gie_microsite_field_default_field_instances() {
   t('Featured Content');
   t('Header Options');
   t('Image');
+  t('Innovation reference');
   t('Microsite Footer Desc');
   t('Microsite Footer Title');
   t('Microsite Logo');

@@ -91,6 +91,11 @@ function gie_microsite_paragraphs_info() {
       'bundle' => 'microsite_highlight',
       'locked' => '1',
     ),
+    'microsite_innovation_reference' => array(
+      'name' => 'Microsite Innovation Reference',
+      'bundle' => 'microsite_innovation_reference',
+      'locked' => '1',
+    ),
     'microsite_news_slider' => array(
       'name' => 'Microsite News Slider',
       'bundle' => 'microsite_news_slider',
