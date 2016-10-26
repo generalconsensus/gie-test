@@ -229,6 +229,7 @@ features[views_view][] = microsite_content_slider
 features[views_view][] = microsite_description
 features[views_view][] = microsite_featured_content
 features[views_view][] = microsite_logo
+features[views_view][] = microsite_node_reference
 features[views_view][] = microsite_partners
 features[views_view][] = microsite_user_reference
 features_exclude[dependencies][ctools] = ctools
