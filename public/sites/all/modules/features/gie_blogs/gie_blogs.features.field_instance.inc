@@ -434,7 +434,7 @@ function gie_blogs_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 12,
+        'weight' => 18,
       ),
       'listing' => array(
         'label' => 'above',
@@ -592,7 +592,7 @@ function gie_blogs_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 10,
+        'weight' => 16,
       ),
       'listing' => array(
         'label' => 'hidden',
@@ -766,7 +766,7 @@ function gie_blogs_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 13,
+        'weight' => 19,
       ),
       'listing' => array(
         'label' => 'above',
@@ -940,7 +940,7 @@ function gie_blogs_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 11,
+        'weight' => 17,
       ),
       'listing' => array(
         'label' => 'hidden',
@@ -1126,7 +1126,7 @@ function gie_blogs_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 0,
+        'weight' => 15,
       ),
       'listing' => array(
         'label' => 'above',
@@ -1250,7 +1250,7 @@ function gie_blogs_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 0,
+        'weight' => 12,
       ),
       'listing' => array(
         'label' => 'above',
@@ -1383,7 +1383,7 @@ function gie_blogs_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 0,
+        'weight' => 11,
       ),
       'listing' => array(
         'label' => 'inline',
@@ -1529,7 +1529,7 @@ function gie_blogs_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 0,
+        'weight' => 5,
       ),
       'listing' => array(
         'label' => 'above',
@@ -1633,7 +1633,7 @@ function gie_blogs_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 26,
+        'weight' => 28,
       ),
       'listing' => array(
         'label' => 'hidden',

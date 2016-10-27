@@ -271,13 +271,11 @@ function gie_blogs_ds_layout_settings_info() {
       'ds_content' => array(
         0 => 'field_blogs_image',
         1 => 'field_blogs_description',
-        2 => 'comments',
       ),
     ),
     'fields' => array(
       'field_blogs_image' => 'ds_content',
       'field_blogs_description' => 'ds_content',
-      'comments' => 'ds_content',
     ),
     'classes' => array(),
     'wrappers' => array(
