@@ -92,7 +92,7 @@ function gie_microsite_paragraphs_info() {
       'locked' => '1',
     ),
     'microsite_innovation_reference' => array(
-      'name' => 'Microsite Innovation Reference',
+      'name' => 'Microsite Node Reference',
       'bundle' => 'microsite_innovation_reference',
       'locked' => '1',
     ),

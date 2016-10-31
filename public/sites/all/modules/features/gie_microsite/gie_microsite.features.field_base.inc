@@ -525,7 +525,10 @@ function gie_microsite_field_default_field_bases() {
           'type' => 'none',
         ),
         'target_bundles' => array(
+          'event' => 'event',
+          'funding' => 'funding',
           'innovation' => 'innovation',
+          'resource' => 'resource',
         ),
       ),
       'target_type' => 'node',
