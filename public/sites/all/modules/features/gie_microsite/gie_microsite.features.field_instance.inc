@@ -2356,7 +2356,7 @@ function gie_microsite_field_default_field_instances() {
     'entityconnect_unload_add' => 1,
     'entityconnect_unload_edit' => 1,
     'field_name' => 'field_para_innovation_reference',
-    'label' => 'Innovation reference',
+    'label' => 'Node reference',
     'required' => 0,
     'settings' => array(
       'user_register_form' => FALSE,
@@ -3592,13 +3592,13 @@ function gie_microsite_field_default_field_instances() {
   t('Featured Content');
   t('Header Options');
   t('Image');
-  t('Innovation reference');
   t('Microsite Footer Desc');
   t('Microsite Footer Title');
   t('Microsite Logo');
   t('Microsite Page Sections');
   t('Microsite Partners');
   t('Name');
+  t('Node reference');
   t('Orientation');
   t('Read more Link');
   t('Slider Content');
