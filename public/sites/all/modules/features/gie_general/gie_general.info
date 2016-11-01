@@ -47,6 +47,7 @@ dependencies[] = file
 dependencies[] = flag
 dependencies[] = flag_abuse
 dependencies[] = gie_homepage
+dependencies[] = gie_translation
 dependencies[] = html5_tools
 dependencies[] = image
 dependencies[] = imagefield_tokens

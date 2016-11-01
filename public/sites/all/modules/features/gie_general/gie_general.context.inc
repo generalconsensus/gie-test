@@ -34,11 +34,17 @@ function gie_general_context_default_contexts() {
   $context->reactions = array(
     'block' => array(
       'blocks' => array(
+        'gie_translation-gie_translation_language_link' => array(
+          'module' => 'gie_translation',
+          'delta' => 'gie_translation_language_link',
+          'region' => 'header',
+          'weight' => '-10',
+        ),
         'system-user-menu' => array(
           'module' => 'system',
           'delta' => 'user-menu',
           'region' => 'header',
-          'weight' => '-10',
+          'weight' => '-9',
         ),
         'blockify-blockify-site-name' => array(
           'module' => 'blockify',

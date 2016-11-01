@@ -1,0 +1,144 @@
+<?php
+/**
+ * @file
+ * Code for GIE Translation.
+ */
+
+/**
+ * Implements hook_block_info().
+ */
+function gie_translation_block_info() {
+  $blocks['gie_translation_language_link'] = array(
+    'info' => t('GIE Translation - Language link'),
+  );
+
+  return $blocks;
+}
+
+/**
+ * Implements hook_block_view().
+ */
+function gie_translation_block_view($delta = '') {
+  $block = array();
+
+  switch ($delta) {
+    case 'gie_translation_language_link':
+      ctools_include('ajax');
+      ctools_include('modal');
+      ctools_modal_add_js();
+
+      $modal_style = array(
+        'gie-translation-language-modal-style' => array(
+          'modalSize' => array(
+            //@todo: adjust to actual sizing of modal frame
+            'type' => 'fixed',
+            'width' => 430,
+            'height' => 250,
+          ),
+          'modalOptions' => array(
+            //@todo: change to actual background settings
+            'opacity' => .75,
+            'background-color' => '#000000',
+          ),
+          'modalTheme' => 'gie_translation_modal',
+          'animation' => 'fadeIn',
+        ),
+      );
+
+      drupal_add_js($modal_style, 'setting');
+      ctools_add_js('gie_translation', 'gie_translation');
+
+      // build the "Language" link with necessary classes and path
+      $content = l("Language", 'gie_translation/nojs', array(
+        "attributes" => array(
+          "class" => array(
+            'nav__link',
+            'ctools-use-modal',
+            'ctools-modal-gie-translation-language-modal-style',
+          )
+        )
+      ));
+
+      $block['subject'] = '';
+      $block['content'] = array(
+        '#type' => 'markup',
+        // wrap in div with user menu class to borrow styling
+        '#markup' => "<div class=\"block--system-user-menu\"><ul class=\"nav\"><li class=\"nav__item\">$content</li></ul></div>",
+      );
+      break;
+  }
+
+  return $block;
+}
+
+/**
+ * Implements hook_menu().
+ */
+function gie_translation_menu() {
+
+  $items['gie_translation/%ctools_js'] = array(
+    'title' => 'GIE Translation modal',
+    'page arguments' => array(1),
+    'page callback' => 'gie_translation_modal_page',
+    'access callback' => TRUE,
+    'type' => MENU_NORMAL_ITEM,
+  );
+
+  return $items;
+}
+
+function gie_translation_modal_page($js = NULL) {
+  $title = t('Select Language');
+
+  $languages = [
+    [
+      'title' => 'English',
+      'abbr' => 'en',
+    ],
+    [
+      'title' => 'Español',
+      'abbr' => 'es',
+    ],
+    [
+      'title' => 'Français',
+      'abbr' => 'fr',
+    ],
+    [
+      'title' => 'Korean',
+      'abbr' => 'kr',
+    ],
+    [
+      'title' => 'Bahasa',
+      'abbr' => 'ba',
+    ],
+    [
+      'title' => 'Kiswahili',
+      'abbr' => 'ki',
+    ],
+  ];
+
+  // Begin unordered list
+  $contents = '<ul>';
+
+  foreach ($languages as $language) {
+    // Construct the link for the language
+    //@todo: construct proper link path
+    $link = l($language['title'], $language['abbr']);
+
+    // include in contents as list item
+    $contents .= "<li>$link</li>";
+  }
+
+  // End unordered list
+  $contents .= '</ul>';
+
+  if ($js) {
+    ctools_include('modal');
+    ctools_include('ajax');
+
+    ctools_modal_render($title, $contents);
+  } else {
+    drupal_set_title($title);
+    return $contents;
+  }
+}

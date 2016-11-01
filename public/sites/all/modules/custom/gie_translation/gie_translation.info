@@ -1,0 +1,6 @@
+name = GIE Translation Customization
+description = For use with customizing of Systrans within GIE
+package = GIE
+core = 7.x
+
+dependencies[] = ctools
