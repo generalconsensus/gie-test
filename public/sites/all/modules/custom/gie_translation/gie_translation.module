@@ -90,6 +90,7 @@ function gie_translation_menu() {
 function gie_translation_modal_page($js = NULL) {
   $title = t('Select Language');
 
+  //@todo: add proper languages and abbreviations
   $languages = [
     [
       'title' => 'English',
@@ -105,7 +106,7 @@ function gie_translation_modal_page($js = NULL) {
     ],
     [
       'title' => 'Korean',
-      'abbr' => 'kr',
+      'abbr' => 'ko',
     ],
     [
       'title' => 'Bahasa',
@@ -119,11 +120,11 @@ function gie_translation_modal_page($js = NULL) {
 
   // Begin unordered list
   $contents = '<ul>';
+  global $_domain;
 
   foreach ($languages as $language) {
     // Construct the link for the language
-    //@todo: construct proper link path
-    $link = l($language['title'], $language['abbr']);
+    $link = l($language['title'], 'http://'.$language['abbr'].'.'.$_domain['subdomain'], array('external' => TRUE));
 
     // include in contents as list item
     $contents .= "<li>$link</li>";
