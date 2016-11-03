@@ -435,7 +435,7 @@ function gie_search_default_search_api_index() {
             }
           }
         },
-        "search_api_alter_node_status" : { "status" : 0, "weight" : "0", "settings" : [] },
+        "search_api_alter_node_status" : { "status" : 1, "weight" : "0", "settings" : [] },
         "search_api_alter_node_access" : { "status" : 0, "weight" : "0", "settings" : [] },
         "panelizer" : { "status" : 0, "weight" : "0", "settings" : [] },
         "search_api_alter_add_hierarchy" : { "status" : 0, "weight" : "0", "settings" : { "fields" : [] } },
