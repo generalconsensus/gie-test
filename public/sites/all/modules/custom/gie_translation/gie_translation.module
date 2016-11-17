@@ -47,23 +47,43 @@ function gie_translation_block_view($delta = '') {
 
       drupal_add_js($modal_style, 'setting');
       ctools_add_js('gie_translation', 'gie_translation');
-
-      // build the "Language" link with necessary classes and path
-      $content = l("Language", 'gie_translation/nojs', array(
-        "attributes" => array(
-          "class" => array(
-            'nav__link',
-            'ctools-use-modal',
-            'ctools-modal-gie-translation-language-modal-style',
-          )
-        )
-      ));
+      global $_domain;
+      $links = '';
+      foreach($languages = _gie_translation_get_language() as $language) {
+        $links.= l($language['title'], 'http://'.$language['abbr'].'.'.$_domain['subdomain'], array('attributes' => ['class' => ['tb-megamenu-big-button', 'has-icon-language', 'nav__link']]));
+      }
 
       $block['subject'] = '';
       $block['content'] = array(
         '#type' => 'markup',
         // wrap in div with user menu class to borrow styling
-        '#markup' => "<div class=\"block--system-user-menu\"><ul class=\"nav\"><li class=\"nav__item\">$content</li></ul></div>",
+       '#markup' => '<div class="tb-megamenu tb-megamenu-main-menu" role="navigation">
+      <button data-target=".nav-collapse" data-toggle="collapse" class="btn btn-navbar tb-megamenu-button menuIstance-processed" type="button">
+      <i class="fa fa-reorder"></i>
+    </button>
+    <div class="nav-collapse" style="height: auto; overflow: visible;">
+      <ul class="tb-megamenu-nav nav level-0 items-9" role="list">
+        <li data-id="9999" data-level="1" data-type="menu_item" data-class="tb-megamenu-item--language" data-xicon="" data-caption="" data-alignsub="center" data-group="0" data-hidewcol="0" data-hidesub="0" class="tb-megamenu-item level-1 mega tb-megamenu-item--language mega-align-center dropdown" role="listitem" aria-level="1">
+          <a href="#" class="nav__link nav__link--parent" aria-haspopup="true" aria-expanded="false">Language</a>
+            <div data-class="" data-width="" class="tb-megamenu-submenu dropdown-menu mega-dropdown-menu nav-child">
+              <div class="mega-dropdown-inner">
+                <div class="tb-megamenu-row row-fluid">
+                  <div data-showblocktitle="0" data-class="" data-width="12" data-hidewcol="" id="tb-megamenu-column-3" class="tb-megamenu-column span12  mega-col-nav">
+                    <div class="tb-megamenu-column-inner mega-inner clearfix">
+                      <div data-type="block" data-block="gie_general--language_submenu" class="tb-megamenu-block tb-block tb-megamenu-block">
+                        <div class="block-inner">
+                          <div id="block-gie-language-submenu nav--subnav" class="block block--gie-general">' . $links . '</div>  
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+      </li>
+     </ul>
+    </div>
+   </div>'
       );
       break;
   }
@@ -91,32 +111,7 @@ function gie_translation_modal_page($js = NULL) {
   $title = t('Select Language');
 
   //@todo: add proper languages and abbreviations
-  $languages = [
-    [
-      'title' => 'English',
-      'abbr' => 'en',
-    ],
-    [
-      'title' => 'Español',
-      'abbr' => 'es',
-    ],
-    [
-      'title' => 'Français',
-      'abbr' => 'fr',
-    ],
-    [
-      'title' => 'Korean',
-      'abbr' => 'ko',
-    ],
-    [
-      'title' => 'Bahasa',
-      'abbr' => 'ba',
-    ],
-    [
-      'title' => 'Kiswahili',
-      'abbr' => 'ki',
-    ],
-  ];
+  $languages = _gie_translation_get_language();
 
   // Begin unordered list
   $contents = '<ul>';
@@ -142,4 +137,33 @@ function gie_translation_modal_page($js = NULL) {
     drupal_set_title($title);
     return $contents;
   }
+}
+
+function _gie_translation_get_language() {
+  return $languages = [
+    [
+      'title' => 'English',
+      'abbr' => 'en',
+    ],
+    [
+      'title' => 'Español',
+      'abbr' => 'es',
+    ],
+    [
+      'title' => 'Français',
+      'abbr' => 'fr',
+    ],
+    [
+      'title' => 'Korean',
+      'abbr' => 'ko',
+    ],
+    [
+      'title' => 'Bahasa',
+      'abbr' => 'ba',
+    ],
+    [
+      'title' => 'Kiswahili',
+      'abbr' => 'ki',
+    ],
+  ];
 }

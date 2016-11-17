@@ -1,0 +1,8 @@
+.region-header {
+  .region__inner{
+    text-align: right;
+    > .block {
+      display: inline-block;
+    }
+  }
+}
