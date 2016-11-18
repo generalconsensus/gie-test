@@ -36,6 +36,35 @@ function gie_user_field_default_field_bases() {
     'type' => 'taxonomy_term_reference',
   );
 
+  // Exported field_base: 'field_language_preference'.
+  $field_bases['field_language_preference'] = array(
+    'active' => 1,
+    'cardinality' => 1,
+    'deleted' => 0,
+    'entity_types' => array(),
+    'field_name' => 'field_language_preference',
+    'indexes' => array(
+      'value' => array(
+        0 => 'value',
+      ),
+    ),
+    'locked' => 0,
+    'module' => 'list',
+    'settings' => array(
+      'allowed_values' => array(
+        'en' => 'English',
+        'es' => 'Español',
+        'fr' => 'Français',
+        'kr' => 'Korean',
+        'hi' => 'Bahasa',
+        'sw' => 'Kiswahili',
+      ),
+      'allowed_values_function' => '',
+    ),
+    'translatable' => 0,
+    'type' => 'list_text',
+  );
+
   // Exported field_base: 'field_newsletter_sign_up'.
   $field_bases['field_newsletter_sign_up'] = array(
     'active' => 1,
