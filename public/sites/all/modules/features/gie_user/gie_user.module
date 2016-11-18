@@ -259,12 +259,15 @@ function gie_user_form_user_register_form_alter(&$form) {
   // place Account group fields below About group fields
   $last_weight = $form['#groups']['group_about']->weight;
   $form['#groups']['group_account']->weight = $last_weight+1;
+
+  $form['#submit'][] = '_gie_user_language_preference';
 }
 
 /**
  * Implements hook_form_FORM_ID_alter().
  */
 function gie_user_form_user_profile_form_alter(&$form, &$form_state, $form_id) {
+
   // Hide "Select the types of assistance..." field
   $form['field_assistance_offered']['#access'] = FALSE;
 
@@ -303,6 +306,15 @@ function gie_user_form_user_profile_form_alter(&$form, &$form_state, $form_id) {
 
   // Add custom submit to redirect user to profile
   $form['#submit'][] = 'gie_user_profile_redirect';
+}
+
+/**
+ * Set the language preference of the user if they are on a non-standard language
+ */
+function _gie_user_language_preference($form, &$form_state) {
+  if (!empty($_SERVER['HTTP_SLINKS_TRANSLATE'])) {
+      watchdog('slink_test', 'Slink Translate Test: :slink_translate.', array(':slink_translate' => $_SERVER['HTTP_SLINKS_TRANSLATE']));
+  }
 }
 
 /**

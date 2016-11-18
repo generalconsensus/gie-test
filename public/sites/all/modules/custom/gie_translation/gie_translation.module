@@ -58,9 +58,7 @@ function gie_translation_block_view($delta = '') {
         '#type' => 'markup',
         // wrap in div with user menu class to borrow styling
        '#markup' => '<div class="tb-megamenu tb-megamenu-main-menu" role="navigation">
-      <button data-target=".nav-collapse" data-toggle="collapse" class="btn btn-navbar tb-megamenu-button menuIstance-processed" type="button">
-      <i class="fa fa-reorder"></i>
-    </button>
+      <button data-target=".nav-collapse" data-toggle="collapse" class="btn btn-navbar tb-megamenu-button menuIstance-processed" type="button"><i class="fa fa-reorder"></i></button>
     <div class="nav-collapse" style="height: auto; overflow: visible;">
       <ul class="tb-megamenu-nav nav level-0 items-9" role="list">
         <li data-id="9999" data-level="1" data-type="menu_item" data-class="tb-megamenu-item--language" data-xicon="" data-caption="" data-alignsub="center" data-group="0" data-hidewcol="0" data-hidesub="0" class="tb-megamenu-item level-1 mega tb-megamenu-item--language mega-align-center dropdown" role="listitem" aria-level="1">
@@ -80,8 +78,8 @@ function gie_translation_block_view($delta = '') {
               </div>
             </div>
           </div>
-      </li>
-     </ul>
+        </li>
+      </ul>
     </div>
    </div>'
       );
