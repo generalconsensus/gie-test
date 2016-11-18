@@ -312,8 +312,16 @@ function gie_user_form_user_profile_form_alter(&$form, &$form_state, $form_id) {
  * Set the language preference of the user if they are on a non-standard language
  */
 function _gie_user_language_preference($form, &$form_state) {
-  if (!empty($_SERVER['HTTP_SLINKS_TRANSLATE'])) {
-      watchdog('slink_test', 'Slink Translate Test: :slink_translate.', array(':slink_translate' => $_SERVER['HTTP_SLINKS_TRANSLATE']));
+  $lang_abbr = [];
+  $edit = array();
+  $languages = _gie_translation_get_language();
+  foreach ($languages as $lang) {
+    $lang_abbr[] = $lang['abbr'];
+  }
+  if (array_search($_SERVER['HTTP_SLINKS_TRANSLATE'], $lang_abbr)) {
+    $edit['field_language_preference'][LANGUAGE_NONE][0]['value'] = $_SERVER['HTTP_SLINKS_TRANSLATE'];
+    user_save($form_state['user'], $edit);
+    watchdog('slink_test', 'Slink Translate Test: :slink_translate.', array(':slink_translate' => $_SERVER['HTTP_SLINKS_TRANSLATE']));
   }
 }
 

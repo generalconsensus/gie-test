@@ -18,6 +18,7 @@ dependencies[] = flag
 dependencies[] = gie_funding
 dependencies[] = gie_general
 dependencies[] = gie_innovation
+dependencies[] = gie_translation
 dependencies[] = google_recaptcha
 dependencies[] = html5_tools
 dependencies[] = image
