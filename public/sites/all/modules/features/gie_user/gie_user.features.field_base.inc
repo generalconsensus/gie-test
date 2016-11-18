@@ -55,7 +55,7 @@ function gie_user_field_default_field_bases() {
         'en' => 'English',
         'es' => 'Español',
         'fr' => 'Français',
-        'kr' => 'Korean',
+        'ko' => 'Korean',
         'hi' => 'Bahasa',
         'sw' => 'Kiswahili',
       ),

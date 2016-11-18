@@ -692,17 +692,20 @@ function gie_user_field_default_field_instances() {
         'weight' => 0,
       ),
     ),
+    'ds_extras_field_template' => '',
     'entity_type' => 'user',
     'field_name' => 'field_language_preference',
     'label' => 'Language Preference',
-    'required' => FALSE,
+    'required' => 0,
     'settings' => array(
-      'user_register_form' => FALSE,
+      'user_register_form' => 0,
     ),
     'widget' => array(
+      'active' => 1,
       'module' => 'options',
       'settings' => array(
         'apply_chosen' => '',
+        'label_help_description' => '',
       ),
       'type' => 'options_select',
       'weight' => 37,
