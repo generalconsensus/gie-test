@@ -1,0 +1,39 @@
+diff --git a/public/sites/all/modules/contrib/google_recaptcha/google_recaptcha.api.php b/public/sites/all/modules/contrib/google_recaptcha/google_recaptcha.api.php
+index 040469c..1ce8137 100644
+--- a/public/sites/all/modules/contrib/google_recaptcha/google_recaptcha.api.php
++++ b/public/sites/all/modules/contrib/google_recaptcha/google_recaptcha.api.php
+@@ -32,6 +32,16 @@ function hook_google_recaptcha_available_forms_alter(&$available_forms) {
+   $always_protected['search_'] = t('Search');
+ }
+ 
++
++/**
++ * Alters the final javascript recpatcha url
++ *
++ * @param string $url
++ *   Modified javascript url
++ */
++function hook_google_recaptca_url_alter(&$url) {
++  $url = 'https://www.google.com/recaptcha/api.js?onload=google_recaptcha_onload&render=explicit&hl=es';
++}
+ /**
+  * @} End of "addtogroup hooks".
+  */
+diff --git a/public/sites/all/modules/contrib/google_recaptcha/google_recaptcha.under_hood.inc b/public/sites/all/modules/contrib/google_recaptcha/google_recaptcha.under_hood.inc
+index 990d300..6fcec22 100644
+--- a/public/sites/all/modules/contrib/google_recaptcha/google_recaptcha.under_hood.inc
++++ b/public/sites/all/modules/contrib/google_recaptcha/google_recaptcha.under_hood.inc
+@@ -9,9 +9,10 @@
+  */
+ function g_add_captcha(&$form, $form_id) {
+   $tune = variable_get('google_recaptcha');
+-
+-  $recaptcha_api = array(
+-    'data' => 'https://www.google.com/recaptcha/api.js?onload=google_recaptcha_onload&render=explicit',
++  $url = 'https://www.google.com/recaptcha/api.js?onload=google_recaptcha_onload&render=explicit';
++  drupal_alter('google_recaptca_url', $url);
++    $recaptcha_api = array(
++    'data' => $url,
+     'scope' => 'footer',
+     'type' => 'external',
+     'defer' => TRUE,
