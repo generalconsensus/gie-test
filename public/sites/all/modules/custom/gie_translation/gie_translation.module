@@ -137,6 +137,9 @@ function gie_translation_modal_page($js = NULL) {
   }
 }
 
+/*
+ * This returns the current supported languages for GIE
+ */
 function _gie_translation_get_language() {
   return $languages = [
     [
@@ -164,4 +167,20 @@ function _gie_translation_get_language() {
       'abbr' => 'ki',
     ],
   ];
+}
+
+
+/*
+ * This alters the recaptcha url to set the recpatcha in the language of the user upon load
+ */
+function gie_translation_google_recaptca_url_alter(&$url) {
+  $lang_abbr = [];
+  $languages = _gie_translation_get_language();
+  foreach ($languages as $lang) {
+    $lang_abbr[] = $lang['abbr'];
+  }
+  if (array_search($_SERVER['HTTP_SLINKS_TRANSLATE'], $lang_abbr)) {
+    $url = 'https://www.google.com/recaptcha/api.js?onload=google_recaptcha_onload&render=explicit&hl=' . $_SERVER['HTTP_SLINKS_TRANSLATE'];
+  }
+
 }
