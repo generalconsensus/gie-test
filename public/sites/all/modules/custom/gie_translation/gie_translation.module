@@ -114,10 +114,9 @@ function gie_translation_modal_page($js = NULL) {
   // Begin unordered list
   $contents = '<ul>';
   global $_domain;
-
   foreach ($languages as $language) {
     // Construct the link for the language
-    $link = l($language['title'], 'http://'.$language['abbr'].'.'.$_domain['subdomain'], array('external' => TRUE));
+    $link = l($language['title'], $_domain['scheme'] . '://'.$language['abbr'].'.'.$_domain['subdomain'], array('external' => TRUE));
 
     // include in contents as list item
     $contents .= "<li>$link</li>";
