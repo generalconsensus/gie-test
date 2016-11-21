@@ -64,7 +64,7 @@
         });
 
         // Remove menu id, add class, and format subnav menus.
-        $langMenu.removeAttr('id').attr('class', 'nav nav--mobile-menu').find('.tb-megamenu-submenu,.view').each(function () {
+        $langMenu.removeAttr('id').attr('class', 'nav').find('.tb-megamenu-submenu,.view').each(function () {
           // remove any wrappers
           while ($(this).parent().is('div')) {
             $(this).unwrap();
