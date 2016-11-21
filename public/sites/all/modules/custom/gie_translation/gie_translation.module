@@ -109,7 +109,7 @@ function gie_translation_modal_page($js = NULL) {
   $title = t('Select Language');
 
   //@todo: add proper languages and abbreviations
-  $languages = _gie_translation_get_language();
+  $languages = _gie_translation_get_language(TRUE);
 
   // Begin unordered list
   $contents = '<ul>';
@@ -139,33 +139,44 @@ function gie_translation_modal_page($js = NULL) {
 /*
  * This returns the current supported languages for GIE
  */
-function _gie_translation_get_language() {
-  return $languages = [
+function _gie_translation_get_language($exclude_current = FALSE) {
+   $languages = [
     [
       'title' => 'English',
       'abbr' => 'en',
     ],
     [
-      'title' => 'Español',
+      'title' => 'Spanish Español',
       'abbr' => 'es',
     ],
     [
-      'title' => 'Français',
+      'title' => 'French Français',
       'abbr' => 'fr',
     ],
     [
-      'title' => 'Korean',
+      'title' => 'Korean 한국어',
       'abbr' => 'ko',
     ],
     [
-      'title' => 'Bahasa',
+      'title' => 'Hindi Bahasa हिन्दी',
       'abbr' => 'ba',
     ],
     [
-      'title' => 'Kiswahili',
+      'title' => 'Swahili Kiswahili',
       'abbr' => 'ki',
     ],
   ];
+
+  if ($exclude_current && !empty($_SERVER['HTTP_SLINKS_TRANSLATE'])) {
+    foreach ($languages as $key => $language) {
+      if ($languages[$key]['abbr'] == $_SERVER['HTTP_SLINKS_TRANSLATE']) {
+      unset ($languages[$key]);
+      break;
+      }
+    }
+  }
+    return $languages;
+
 }
 
 
