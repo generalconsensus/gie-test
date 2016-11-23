@@ -8,8 +8,8 @@
  * Implements hook_block_info().
  */
 function gie_translation_block_info() {
-  $blocks['gie_translation_language_link'] = array(
-    'info' => t('GIE Translation - Language link'),
+  $blocks['gie_translation_lang_modaldata'] = array(
+    'info' => t('GIE Translation - Language Modal Data'),
   );
 
   return $blocks;
@@ -22,53 +22,22 @@ function gie_translation_block_view($delta = '') {
   $block = array();
 
   switch ($delta) {
-    case 'gie_translation_language_link':
-      ctools_include('ajax');
-      ctools_include('modal');
-      ctools_modal_add_js();
+    case 'gie_translation_lang_modaldata':
 
-      $modal_style = array(
-        'gie-translation-language-modal-style' => array(
-          'modalSize' => array(
-            //@todo: adjust to actual sizing of modal frame
-            'type' => 'fixed',
-            'width' => 430,
-            'height' => 250,
-          ),
-          'modalOptions' => array(
-            //@todo: change to actual background settings
-            'opacity' => .75,
-            'background-color' => '#000000',
-          ),
-          'modalTheme' => 'gie_translation_modal',
-          'animation' => 'fadeIn',
-        ),
-      );
-
-      drupal_add_js($modal_style, 'setting');
-      ctools_add_js('gie_translation', 'gie_translation');
+      $content = '<div class="language-modal remodal" data-remodal-id="modal-language-switcher"><div class="language-modal__content"><ul>';
       global $_domain;
       $links = '';
       foreach($languages = _gie_translation_get_language() as $language) {
         $links.= l($language['title'], $_domain['scheme'] . '://' .$language['abbr'].'.'.$_domain['subdomain'], array('attributes' => ['class' => ['tb-megamenu-big-button', 'has-icon-language', 'nav__link']]));
       }
 
-      // build the "Language" link with necessary classes and path
-      $content = l("Language", 'gie_translation/nojs', array(
-        "attributes" => array(
-          "class" => array(
-            'nav__link',
-            'ctools-use-modal',
-            'ctools-modal-gie-translation-language-modal-style',
-          )
-        )
-      ));
+      $content .= $links  . '</ul><button data-remodal-action="cancel" class="button">Close</button></div></div>';
 
       $block['subject'] = '';
       $block['content'] = array(
         '#type' => 'markup',
         // wrap in div with user menu class to borrow styling
-        '#markup' => "<div class=\"block--system-user-menu\"><ul class=\"nav\"><li class=\"nav__item\">$content</li></ul></div>",
+        '#markup' => $content,
       );
       break;
   }
@@ -92,6 +61,7 @@ function gie_translation_menu() {
 
   return $items;
 }
+
 
 function gie_translation_modal_page($js = NULL) {
   $title = t('Select Language');
@@ -127,7 +97,7 @@ function gie_translation_modal_page($js = NULL) {
  * This returns the current supported languages for GIE
  */
 function _gie_translation_get_language($exclude_current = FALSE) {
-   $languages = [
+  $languages = [
     [
       'title' => 'English',
       'abbr' => 'en',
@@ -157,12 +127,12 @@ function _gie_translation_get_language($exclude_current = FALSE) {
   if ($exclude_current && !empty($_SERVER['HTTP_SLINKS_TRANSLATE'])) {
     foreach ($languages as $key => $language) {
       if ($languages[$key]['abbr'] == $_SERVER['HTTP_SLINKS_TRANSLATE']) {
-      unset ($languages[$key]);
-      break;
+        unset ($languages[$key]);
+        break;
       }
     }
   }
-    return $languages;
+  return $languages;
 
 }
 
