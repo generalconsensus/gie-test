@@ -1,0 +1,41 @@
+.language-modal {
+  position: relative;
+}
+
+.language-modal__x {
+  background: $orange url(../images/bg/x.png) center center no-repeat;
+  cursor: pointer;
+  height: 46px;
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  width: 46px;
+
+  &:focus,
+  &:hover {
+    opacity: 0.9;
+  }
+}
+
+.language-modal__title {
+  color: $primary-text-color;
+  font-weight: 300;
+}
+
+
+
+.language-modal__list {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.language-modal__list-item {
+  display: block;
+  list-style: none;
+  width: 50%;
+}
+
+.language-modal__link {
+  font-size: $font-size-lg;
+  font-weight: 300;
+}
