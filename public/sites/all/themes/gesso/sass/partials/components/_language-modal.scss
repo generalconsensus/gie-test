@@ -21,15 +21,20 @@
   background-repeat: no-repeat;
   background-position: center;
   cursor: pointer;
-  height: 46px;
+  height: 36px;
   position: absolute;
   right: 10px;
   top: 10px;
-  width: 46px;
+  width: 36px;
 
   &:focus,
   &:hover {
     background-color: darken($orange,10%);
+  }
+
+  @include breakpoint(400px, $no-query: true) {
+    height: 46px;
+    width: 46px;
   }
 }
 
@@ -39,21 +44,27 @@
   margin-bottom: 2em;
 }
 
-
 .language-modal__list {
-  display: flex;
-  flex-wrap: wrap;
   margin: 0 auto 2.5em;
-  max-width: 300px;
   padding: 0;
+
+  @include breakpoint(400px, $no-query: true) {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 300px;
+  }
 }
 
 .language-modal__list-item {
   box-sizing: border-box;
-  flex: 1 0 50%;
+  display: block;
   list-style: none;
   padding: 5px 10px;
   text-align: left;
+
+  @include breakpoint(400px, $no-query: true) {
+    flex: 1 0 50%;
+  }
 }
 
 .language-modal__link {
