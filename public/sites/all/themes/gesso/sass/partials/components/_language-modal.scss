@@ -1,9 +1,25 @@
 .language-modal {
+  overflow: hidden;
   position: relative;
+
+  &:before {
+    @include svg-background(globe-large);
+    content: "";
+    display: block;
+    height: 140px;
+    left: -45px;
+    position: absolute;
+    top: -45px;
+    width: 140px;
+    z-index: -1;
+  }
 }
 
 .language-modal__x {
-  background: $orange url(../images/bg/x.png) center center no-repeat;
+  @include svg-background(close-x);
+  background-color: $orange;
+  background-repeat: no-repeat;
+  background-position: center;
   cursor: pointer;
   height: 46px;
   position: absolute;
@@ -13,26 +29,31 @@
 
   &:focus,
   &:hover {
-    opacity: 0.9;
+    background-color: darken($orange,10%);
   }
 }
 
 .language-modal__title {
   color: $primary-text-color;
   font-weight: 300;
+  margin-bottom: 2em;
 }
-
 
 
 .language-modal__list {
   display: flex;
   flex-wrap: wrap;
+  margin: 0 auto 2.5em;
+  max-width: 300px;
+  padding: 0;
 }
 
 .language-modal__list-item {
-  display: block;
+  box-sizing: border-box;
+  flex: 1 0 50%;
   list-style: none;
-  width: 50%;
+  padding: 5px 10px;
+  text-align: left;
 }
 
 .language-modal__link {
