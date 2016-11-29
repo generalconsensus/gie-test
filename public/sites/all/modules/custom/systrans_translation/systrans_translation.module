@@ -53,14 +53,16 @@ function systrans_translation_translate($input, $source = 'en', $target) {
 
   list($response, $httpHeader) = $app->callApi('translate', 'GET', $queryParams, [], []);
 
-//  $test = $app->getSerializer()->deserialize($response, 'string', $httpHeader);
-
   return _systrans_retrieve_translation($response);
 }
 
 
 function _systrans_retrieve_translation($response) {
-  return $response[0]->outputs[0]->output;
+  $output = '';
+  foreach ($response->outputs as $key => $value) {
+    $output .= $value->output;
+  }
+  return $output;
 }
 
 
