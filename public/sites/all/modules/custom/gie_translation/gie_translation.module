@@ -34,7 +34,7 @@ function gie_translation_block_view($delta = '') {
         $links.= '<li class="language-modal__list-item">' . l($language['title'], $_domain['scheme'] . '://' .$language['abbr'].'.'.$_domain['subdomain'], array('attributes' => ['class' => ['language-modal__link']])) . '</li>';
       }
 
-      $content .= $links  . '</ul><button data-remodal-action="cancel" class="button button--remodal">Close</button></div></div>';
+      $content .= $links  . '</ul></div><button data-remodal-action="cancel" class="button button--remodal">Close</button></div>';
 
       $block['subject'] = '';
       $block['content'] = array(
@@ -133,9 +133,12 @@ function _gie_translation_get_language($exclude_current = FALSE) {
     ],
   ];
 
-  if ($exclude_current && !empty($_SERVER['HTTP_SLINKS_TRANSLATE'])) {
+  if ($exclude_current) {
     foreach ($languages as $key => $language) {
       if ($languages[$key]['abbr'] == $_SERVER['HTTP_SLINKS_TRANSLATE']) {
+        unset ($languages[$key]);
+        break;
+      } elseif (empty($_SERVER['HTTP_SLINKS_TRANSLATE']) && $languages[$key]['abbr'] == 'en') {
         unset ($languages[$key]);
         break;
       }
