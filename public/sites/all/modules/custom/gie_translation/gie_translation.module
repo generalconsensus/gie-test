@@ -27,14 +27,14 @@ function gie_translation_block_view($delta = '') {
       $content = '<div class="language-modal remodal" data-remodal-id="modal-language-switcher">';
       $content .= '<div class="language-modal__x" data-remodal-action="cancel"></div>';
       $content .= '<h2 class="language-modal__title">Select Language</h2>';
-      $content .= '<div class="language-modal__content"><ul class="language-modal__list">';
+      $content .= '<div class="language-modal__content notranslate"><ul class="language-modal__list">';
       global $_domain;
       $links = '';
       foreach($languages = _gie_translation_get_language() as $language) {
         $links.= '<li class="language-modal__list-item">' . l($language['title'], $_domain['scheme'] . '://' .$language['abbr'].'.'.$_domain['subdomain'], array('attributes' => ['class' => ['language-modal__link']])) . '</li>';
       }
 
-      $content .= $links  . '</ul><button data-remodal-action="cancel" class="button button--remodal">Close</button></div></div>';
+      $content .= $links  . '</ul></div><button data-remodal-action="cancel" class="button button--remodal">Close</button></div>';
 
       $block['subject'] = '';
       $block['content'] = array(
@@ -76,8 +76,14 @@ function gie_translation_modal_page($js = NULL) {
   $contents = '<ul>';
   global $_domain;
   foreach ($languages as $language) {
-    // Construct the link for the language
-    $link = l($language['title'], $_domain['scheme'] . '://'.$language['abbr'].'.'.$_domain['subdomain'], array('external' => TRUE));
+    if ($language['abbr'] == 'en') {
+      // Construct the link for the language
+      $link = l($language['title'], $_domain['scheme'] . '://'.$_domain['subdomain'], array('external' => TRUE));
+    } else {
+      // Construct the link for the language
+      $link = l($language['title'], $_domain['scheme'] . '://'.$language['abbr'].'.'.$_domain['subdomain'], array('external' => TRUE));
+    }
+
 
     // include in contents as list item
     $contents .= "<li>$link</li>";
@@ -127,9 +133,12 @@ function _gie_translation_get_language($exclude_current = FALSE) {
     ],
   ];
 
-  if ($exclude_current && !empty($_SERVER['HTTP_SLINKS_TRANSLATE'])) {
+  if ($exclude_current) {
     foreach ($languages as $key => $language) {
       if ($languages[$key]['abbr'] == $_SERVER['HTTP_SLINKS_TRANSLATE']) {
+        unset ($languages[$key]);
+        break;
+      } elseif (empty($_SERVER['HTTP_SLINKS_TRANSLATE']) && $languages[$key]['abbr'] == 'en') {
         unset ($languages[$key]);
         break;
       }
