@@ -30,8 +30,16 @@ function gie_translation_block_view($delta = '') {
       $content .= '<div class="language-modal__content notranslate"><ul class="language-modal__list">';
       global $_domain;
       $links = '';
-      foreach($languages = _gie_translation_get_language() as $language) {
-        $links.= '<li class="language-modal__list-item">' . l($language['title'], $_domain['scheme'] . '://' .$language['abbr'].'.'.$_domain['subdomain'], array('attributes' => ['class' => ['language-modal__link']])) . '</li>';
+      $languages = _gie_translation_get_language(TRUE);
+      foreach($languages as $language) {
+        if ($language['abbr'] == 'en') {
+          // Construct the link for the language
+          $links.= '<li class="language-modal__list-item">' . l($language['title'], $_domain['scheme'] . '://' . $_domain['subdomain'], array('attributes' => ['class' => ['language-modal__link']])) . '</li>';
+        } else {
+          // Construct the link for the language
+          $links.= '<li class="language-modal__list-item">' . l($language['title'], $_domain['scheme'] . '://' .$language['abbr'].'.'.$_domain['subdomain'], array('attributes' => ['class' => ['language-modal__link']])) . '</li>';
+        }
+
       }
 
       $content .= $links  . '</ul></div><button data-remodal-action="cancel" class="button button--remodal">Close</button></div>';
@@ -49,58 +57,6 @@ function gie_translation_block_view($delta = '') {
   return $block;
 }
 
-/**
- * Implements hook_menu().
- */
-function gie_translation_menu() {
-
-  $items['gie_translation/%ctools_js'] = array(
-    'title' => 'GIE Translation modal',
-    'page arguments' => array(1),
-    'page callback' => 'gie_translation_modal_page',
-    'access callback' => TRUE,
-    'type' => MENU_NORMAL_ITEM,
-  );
-
-  return $items;
-}
-
-
-function gie_translation_modal_page($js = NULL) {
-  $title = t('Select Language');
-
-  //@todo: add proper languages and abbreviations
-  $languages = _gie_translation_get_language(TRUE);
-
-  // Begin unordered list
-  $contents = '<ul>';
-  global $_domain;
-  foreach ($languages as $language) {
-    if ($language['abbr'] == 'en') {
-      // Construct the link for the language
-      $link = l($language['title'], $_domain['scheme'] . '://'.$_domain['subdomain'], array('external' => TRUE));
-    } else {
-      // Construct the link for the language
-      $link = l($language['title'], $_domain['scheme'] . '://'.$language['abbr'].'.'.$_domain['subdomain'], array('external' => TRUE));
-    }
-
-
-    // include in contents as list item
-    $contents .= "<li>$link</li>";
-  }
-
-  // End unordered list
-  $contents .= '</ul>';
-
-  if ($js) {
-    ctools_include('modal');
-    ctools_include('ajax');
-
-    ctools_modal_render($title, $contents);
-  } else {
-    return '<h2>' . $title . '</h2>' . $contents;
-  }
-}
 
 /*
  * This returns the current supported languages for GIE
