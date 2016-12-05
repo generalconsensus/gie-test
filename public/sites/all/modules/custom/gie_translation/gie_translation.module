@@ -80,12 +80,16 @@ function _gie_translation_get_language($exclude_current = FALSE) {
       'abbr' => 'ko',
     ],
     [
-      'title' => 'Hindi Bahasa हिन्दी',
-      'abbr' => 'ba',
+      'title' => 'Hindi हिन्दी',
+      'abbr' => 'hi',
+    ],
+    [
+      'title' => 'Bahasa Indonesia',
+      'abbr' => 'id',
     ],
     [
       'title' => 'Swahili Kiswahili',
-      'abbr' => 'ki',
+      'abbr' => 'sw',
     ],
   ];
 
