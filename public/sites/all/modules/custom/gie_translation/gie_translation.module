@@ -32,8 +32,13 @@ function gie_translation_block_view($delta = '') {
       $links = '';
       $languages = _gie_translation_get_language(TRUE);
       foreach($languages as $language) {
+        if ($language['abbr'] == 'en') {
           // Construct the link for the language
-          $links.= '<li class="language-modal__list-item">' . l($language['title'], $_domain['scheme'] . '://' .$language['abbr'].'.'.$_domain['subdomain'], array('attributes' => ['class' => ['language-modal__link']])) . '</li>';
+          $links.= '<li class="language-modal__list-item">' . l($language['title'], $_domain['scheme'] . '://www.' . $_domain['subdomain'], array('attributes' => ['class' => ['language-modal__link']])) . '</li>';
+        } else {
+          // Construct the link for the language
+          $links .= '<li class="language-modal__list-item">' . l($language['title'], $_domain['scheme'] . '://' . $language['abbr'] . '.' . $_domain['subdomain'], array('attributes' => ['class' => ['language-modal__link']])) . '</li>';
+        }
       }
 
       $content .= $links  . '</ul></div><button data-remodal-action="cancel" class="button button--remodal">Close</button></div>';
