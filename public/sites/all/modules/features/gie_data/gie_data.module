@@ -69,3 +69,29 @@ function _gie_data_data_count($field) {
 
     }
 }
+
+
+
+function gie_data_datalayer_alter(&$data_layer) {
+  // Make the title lowercase on some node type.
+  $content = ['innovation', 'funding', 'resource'];
+  if (isset($data_layer['entityBundle']) && (in_array($data_layer['entityBundle'], $content))) {
+    $data_layer['entityLabel'] = strtolower($data_layer['entityLabel']);
+    $type = false;
+    if ($obj = _datalayer_menu_get_any_object($type)) {
+        $flag_counts = flag_get_counts('node', $obj->nid);
+        if (!empty($flag_counts)) {
+          $data_layer['entityFavoriteFlag'] = $flag_counts['favorite'];
+        }
+        if (!empty($obj->comment_count)) {
+          $data_layer['entityComments'] = $obj->comment_count;
+        }
+        if (!empty($obj->field_innovation_proof_evidence)) {
+          $data_layer['entityEvidence'] = count($obj->field_innovation_proof_evidence[LANGUAGE_NONE]);
+        }
+        if (!empty($obj->field_funding_grant_award_value)) {
+          $data_layer['entityGrantAward'] = $obj->field_funding_grant_award_value[LANGUAGE_NONE][0]['value'];
+        }
+    }
+  }
+}
