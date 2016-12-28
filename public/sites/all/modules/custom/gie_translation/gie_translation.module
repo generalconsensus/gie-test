@@ -86,10 +86,10 @@ function _gie_translation_get_language($exclude_current = FALSE) {
       'title' => 'Bahasa Indonesia',
       'abbr' => 'id',
     ],
-    [
-      'title' => 'Swahili Kiswahili',
-      'abbr' => 'sw',
-    ],
+//    [
+//      'title' => 'Swahili Kiswahili',
+//      'abbr' => 'sw',
+//    ],
   ];
 
   if ($exclude_current) {
