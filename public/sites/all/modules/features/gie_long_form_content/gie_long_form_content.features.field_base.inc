@@ -31,6 +31,96 @@ function gie_long_form_content_field_default_field_bases() {
     'type' => 'text_with_summary',
   );
 
+  // Exported field_base: 'field_background_video_text'.
+  $field_bases['field_background_video_text'] = array(
+    'active' => 1,
+    'cardinality' => 1,
+    'deleted' => 0,
+    'entity_types' => array(),
+    'field_name' => 'field_background_video_text',
+    'indexes' => array(
+      'format' => array(
+        0 => 'format',
+      ),
+    ),
+    'locked' => 0,
+    'module' => 'text',
+    'settings' => array(
+      'max_length' => 255,
+    ),
+    'translatable' => 0,
+    'type' => 'text',
+  );
+
+  // Exported field_base: 'field_background_video_upload'.
+  $field_bases['field_background_video_upload'] = array(
+    'active' => 1,
+    'cardinality' => 1,
+    'deleted' => 0,
+    'entity_types' => array(),
+    'field_name' => 'field_background_video_upload',
+    'indexes' => array(
+      'fid' => array(
+        0 => 'fid',
+      ),
+    ),
+    'locked' => 0,
+    'module' => 'video',
+    'settings' => array(
+      'autoconversion' => 1,
+      'autothumbnail' => 'auto',
+      'default_video_thumbnail' => array(
+        'fid' => 0,
+        'remove_button' => 'Remove',
+        'upload' => '',
+        'upload_button' => 'Upload',
+      ),
+      'presets' => array(),
+      'preview_video_thumb_style' => 'thumbnail',
+      'thumbnail_format' => 'jpg',
+      'uri_scheme' => 's3',
+      'uri_scheme_converted' => 's3',
+      'uri_scheme_thumbnails' => 's3',
+    ),
+    'translatable' => 0,
+    'type' => 'video',
+  );
+
+  // Exported field_base: 'field_background_video_video'.
+  $field_bases['field_background_video_video'] = array(
+    'active' => 1,
+    'cardinality' => 1,
+    'deleted' => 0,
+    'entity_types' => array(),
+    'field_name' => 'field_background_video_video',
+    'indexes' => array(
+      'target_id' => array(
+        0 => 'target_id',
+      ),
+    ),
+    'locked' => 0,
+    'module' => 'entityreference',
+    'settings' => array(
+      'handler' => 'base',
+      'handler_settings' => array(
+        'behaviors' => array(
+          'views-select-list' => array(
+            'status' => 0,
+          ),
+        ),
+        'sort' => array(
+          'type' => 'none',
+        ),
+        'target_bundles' => array(
+          'background_video' => 'background_video',
+        ),
+      ),
+      'target_type' => 'asset',
+    ),
+    'translatable' => 0,
+    'type' => 'entityreference',
+  );
+
   // Exported field_base: 'field_header_image'.
   $field_bases['field_header_image'] = array(
     'active' => 1,
@@ -195,6 +285,53 @@ function gie_long_form_content_field_default_field_bases() {
       'allowed_values' => array(
         'default' => 'Arial (default)',
         'font-family-lato' => 'Lato',
+      ),
+      'allowed_values_function' => '',
+    ),
+    'translatable' => 0,
+    'type' => 'list_text',
+  );
+
+  // Exported field_base: 'field_longform_image'.
+  $field_bases['field_longform_image'] = array(
+    'active' => 1,
+    'cardinality' => 1,
+    'deleted' => 0,
+    'entity_types' => array(),
+    'field_name' => 'field_longform_image',
+    'indexes' => array(
+      'fid' => array(
+        0 => 'fid',
+      ),
+    ),
+    'locked' => 0,
+    'module' => 'image',
+    'settings' => array(
+      'default_image' => 0,
+      'uri_scheme' => 's3',
+    ),
+    'translatable' => 0,
+    'type' => 'image',
+  );
+
+  // Exported field_base: 'field_longform_orientation'.
+  $field_bases['field_longform_orientation'] = array(
+    'active' => 1,
+    'cardinality' => 1,
+    'deleted' => 0,
+    'entity_types' => array(),
+    'field_name' => 'field_longform_orientation',
+    'indexes' => array(
+      'value' => array(
+        0 => 'value',
+      ),
+    ),
+    'locked' => 0,
+    'module' => 'list',
+    'settings' => array(
+      'allowed_values' => array(
+        'center' => 'Center justified',
+        'left' => 'Left justified',
       ),
       'allowed_values_function' => '',
     ),
@@ -606,6 +743,32 @@ function gie_long_form_content_field_default_field_bases() {
     'settings' => array(),
     'translatable' => 0,
     'type' => 'text_long',
+  );
+
+  // Exported field_base: 'field_paragraphs_animation'.
+  $field_bases['field_paragraphs_animation'] = array(
+    'active' => 1,
+    'cardinality' => 1,
+    'deleted' => 0,
+    'entity_types' => array(),
+    'field_name' => 'field_paragraphs_animation',
+    'indexes' => array(
+      'value' => array(
+        0 => 'value',
+      ),
+    ),
+    'locked' => 0,
+    'module' => 'list',
+    'settings' => array(
+      'allowed_values' => array(
+        'fadeIn' => 'Fade in',
+        'fadeInLeft' => 'Fade in left',
+        'fadeInRight' => 'Fade in right',
+      ),
+      'allowed_values_function' => '',
+    ),
+    'translatable' => 0,
+    'type' => 'list_text',
   );
 
   // Exported field_base: 'field_paragraphs_aside_title'.

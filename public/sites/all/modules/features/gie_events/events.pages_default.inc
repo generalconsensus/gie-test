@@ -85,8 +85,8 @@ function events_default_page_manager_pages() {
   $display->cache = array();
   $display->title = 'Past Events';
   $display->uuid = '61dbe43a-75fe-43bc-a855-90bbfe646f07';
-  $display->storage_type = '';
-  $display->storage_id = '';
+  $display->storage_type = 'page_manager';
+  $display->storage_id = 'page_events__panel_context_ba4f793a-3b23-443f-8fdc-be6041b5111c';
   $display->content = array();
   $display->panels = array();
   $pane = new stdClass();
@@ -388,8 +388,8 @@ function events_default_page_manager_pages() {
   $display->cache = array();
   $display->title = 'Events';
   $display->uuid = '61dbe43a-75fe-43bc-a855-90bbfe646f07';
-  $display->storage_type = '';
-  $display->storage_id = '';
+  $display->storage_type = 'page_manager';
+  $display->storage_id = 'page_events__panel_context_d8d734ae-c8a8-49ab-a54c-7bd914483787';
   $display->content = array();
   $display->panels = array();
   $pane = new stdClass();

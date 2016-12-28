@@ -4,7 +4,7 @@ $ol-bullet-size: 60px;
 
 .text-block {
 	padding: 0 1em;
-
+    line-height: 2em;
   ol {
     margin-left: $ol-bullet-size;
     padding-left: 0;
@@ -36,7 +36,7 @@ $ol-bullet-size: 60px;
       width: $ol-bullet-size;
     }
   }
- 
+
 
   ul {
     list-style: outside;
@@ -55,8 +55,7 @@ $ol-bullet-size: 60px;
       left: -1em;
       padding: 0 .5em;
       position: absolute;
-      top: -5px;
     }
   }
- 
+
 }
