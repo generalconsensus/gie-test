@@ -457,3 +457,14 @@ function gie_general_update_7046() {
     user_save($user);
   }
 }
+
+/**
+ * [GIE-958] Disable Domain Analytics and Google Analytics modules
+ */
+//function gie_general_update_7046() {
+//  $modules = [
+//    'domain_analytics',
+//    'googleanalytics',
+//  ];
+//  module_disable($modules, TRUE);
+//}

@@ -10,6 +10,25 @@
 function gie_general_user_default_permissions() {
   $permissions = array();
 
+  // Exported permission: 'administer google tag manager'.
+  $permissions['administer google tag manager'] = array(
+    'name' => 'administer google tag manager',
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
+    'module' => 'google_tag',
+  );
+
+  // Exported permission: 'create error_page content'.
+  $permissions['create error_page content'] = array(
+    'name' => 'create error_page content',
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
+    'module' => 'admin_menu',
+  );
+
+
   // Exported permission: 'access administration menu'.
   $permissions['access administration menu'] = array(
     'name' => 'access administration menu',
