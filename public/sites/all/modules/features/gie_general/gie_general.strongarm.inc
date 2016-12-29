@@ -658,16 +658,16 @@ dashboard
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
-  $strongarm->name = 'feed_item_length';
-  $strongarm->value = 'title';
-  $export['feed_item_length'] = $strongarm;
+  $strongarm->name = 'expire_user_user_page';
+  $strongarm->value = 1;
+  $export['expire_user_user_page'] = $strongarm;
 
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
-  $strongarm->name = 'expire_user_user_page';
-  $strongarm->value = 1;
-  $export['expire_user_user_page'] = $strongarm;
+  $strongarm->name = 'feed_item_length';
+  $strongarm->value = 'title';
+  $export['feed_item_length'] = $strongarm;
 
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
@@ -824,6 +824,13 @@ dashboard
   $strongarm->name = 'panelizer_node:error_page:page_manager_selection';
   $strongarm->value = 'node:error_page:default';
   $export['panelizer_node:error_page:page_manager_selection'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'pathauto_node_error_page_pattern';
+  $strongarm->value = 'errors/[node:title]';
+  $export['pathauto_node_error_page_pattern'] = $strongarm;
 
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
