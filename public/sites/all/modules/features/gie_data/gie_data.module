@@ -75,50 +75,50 @@ function _gie_data_data_count($field) {
 
 function gie_data_datalayer_alter(&$data_layer) {
   $content = ['innovation', 'funding', 'resource'];
-  if (isset($data_layer['entityBundle']) && (in_array($data_layer['entityBundle'], $content))) {
-    $data_layer['entityLabel'] = strtolower($data_layer['entityLabel']);
-    $type = FALSE;
-    if ($obj = _datalayer_menu_get_any_object($type)) {
-      $taxonomy = _datalayer_get_entity_terms('node', $data_layer['entityBundle'], $obj);
-      $flag_counts = flag_get_counts('node', $obj->nid);
-      if (!empty($flag_counts)) {
-        $data_layer['entityFavoriteFlag'] = $flag_counts['favorite'];
-      }
-      if (!empty($obj->comment_count)) {
-        $data_layer['entityComments'] = $obj->comment_count;
-      }
-      if (!empty($obj->field_innovation_proof_evidence)) {
-        $data_layer['entityEvidence'] = count(
-          $obj->field_innovation_proof_evidence[LANGUAGE_NONE]
-        );
-      }
-      if (!empty($obj->field_funding_grant_award_value)) {
-        $data_layer['entityGrantAward'] = $obj->field_funding_grant_award_value[LANGUAGE_NONE][0]['value'];
-      }
-      if (!empty($taxonomy['topic'])) {
-        $data_layer['entityTermTopic']  = $taxonomy['topic'];
-      }
-      if (!empty($taxonomy['sector'])) {
-        $data_layer['entityTermSector']  = $taxonomy['sector'];
-      }
-      if (!empty($taxonomy['region'])) {
-        $data_layer['entityTermRegion']  = $taxonomy['region'];
-      }
-      if (!empty($taxonomy['solution_type'])) {
-        $data_layer['entityInnovationType']  = $taxonomy['solution_type'];
-      }
-      if (!empty($taxonomy['innovation_stage'])) {
-        $data_layer['entityInnovationStage']  = $taxonomy['innovation_stage'];
-      }
+if (isset($data_layer['entityBundle']) && (in_array($data_layer['entityBundle'], $content))) {
+  $data_layer['entityLabel'] = strtolower($data_layer['entityLabel']);
+  $type = FALSE;
+  if ($obj = _datalayer_menu_get_any_object($type)) {
+    $taxonomy = _datalayer_get_entity_terms('node', $data_layer['entityBundle'], $obj);
+    $flag_counts = flag_get_counts('node', $obj->nid);
+    if (!empty($flag_counts)) {
+      $data_layer['entityFavoriteFlag'] = $flag_counts['favorite'];
+    }
+    if (!empty($obj->comment_count)) {
+      $data_layer['entityComments'] = $obj->comment_count;
+    }
+    if (!empty($obj->field_innovation_proof_evidence)) {
+      $data_layer['entityEvidence'] = count(
+        $obj->field_innovation_proof_evidence[LANGUAGE_NONE]
+      );
+    }
+    if (!empty($obj->field_funding_grant_award_value)) {
+      $data_layer['entityGrantAward'] = $obj->field_funding_grant_award_value[LANGUAGE_NONE][0]['value'];
+    }
+    if (!empty($taxonomy['topic'])) {
+      $data_layer['entityTermTopic']  = array_values($taxonomy['topic']);
+    }
+    if (!empty($taxonomy['sector'])) {
+      $data_layer['entityTermSector']  = array_values($taxonomy['sector']);
+    }
+    if (!empty($taxonomy['region'])) {
+      $data_layer['entityTermRegion']  = array_values($taxonomy['region']);
+    }
+    if (!empty($taxonomy['solution_type'])) {
+      $data_layer['entityInnovationType']  = array_values($taxonomy['solution_type']);
+    }
+    if (!empty($taxonomy['innovation_stage'])) {
+      $data_layer['entityInnovationStage']  = array_values($taxonomy['innovation_stage']);
     }
   }
+}
 
   if (!(user_is_anonymous())) {
     global $user;
     if (!empty($userobj = user_load($user->uid))) {
       $taxonomy = _datalayer_get_entity_terms('user', 'user', $userobj);
       if (!empty($taxonomy['assistance_type'])) {
-        $data_layer['userAssistance']  = $taxonomy['assistance_type'];
+        $data_layer['userAssistance']  = array_values($taxonomy['assistance_type']);
       }
       if (!empty($userobj->field_user_org)) {
         foreach ($userobj->field_user_org[LANGUAGE_NONE] as $org) {
@@ -129,20 +129,26 @@ function gie_data_datalayer_alter(&$data_layer) {
         }
       }
       if (!empty($taxonomy['user_type'])) {
-        $data_layer['userType']  = $taxonomy['user_type'];
+        $data_layer['userType']  = array_values($taxonomy['user_type']);
       }
       if (!empty($taxonomy['sector'])) {
-        $data_layer['userTermSector']  = $taxonomy['sector'];
+        $data_layer['userTermSector']  = array_values($taxonomy['sector']);
       }
       if (!empty($taxonomy['region'])) {
-        $data_layer['userTermRegion']  = $taxonomy['region'];
+        $data_layer['userTermRegion']  = array_values($taxonomy['region']);
       }
       if (!empty($taxonomy['topic'])) {
-        $data_layer['userInterests']  = $taxonomy['topic'];
+        $data_layer['userInterests']  = array_values($taxonomy['topic']);
       }
       if (!empty($taxonomy['user_skills'])) {
-        $data_layer['userSkills']  = $taxonomy['user_skills'];
+        $data_layer['userSkills']  = array_values($taxonomy['user_skills']);
       }
     }
+  }
+
+  if (!empty($_SERVER['HTTP_SLINKS_TRANSLATE'])) {
+    $data_layer['languageCode'] = $_SERVER['HTTP_SLINKS_TRANSLATE'];
+  } else {
+    $data_layer['languageCode'] = 'en';
   }
 }
