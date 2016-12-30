@@ -677,8 +677,8 @@ $conf['s3fs_domain'] = 'static.globalinnovationexchange.org';
 /**
  * Change memory limit
  */
-ini_set('max_execution_time', '90');
-ini_set('max_input_time', '90');
+ini_set('max_execution_time', '160');
+ini_set('max_input_time', '160');
 
 /**
  * Add the domain module setup routine.
