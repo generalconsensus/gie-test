@@ -6,7 +6,6 @@ version = 7.x-1.0
 project = gie_domain
 dependencies[] = ctools
 dependencies[] = domain
-dependencies[] = domain_analytics
 dependencies[] = domain_conf
 dependencies[] = domain_content
 dependencies[] = domain_menu_access
