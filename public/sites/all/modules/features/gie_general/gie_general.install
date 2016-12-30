@@ -468,3 +468,16 @@ function gie_general_update_7047() {
   ];
   module_disable($modules, TRUE);
 }
+
+
+/**
+ * Update all taxonomy terms with semi-colons to have commas
+ */
+function gie_general_update_7048() {
+  $taxonomies = db_query('select tid from taxonomy_term_data where name like (:semi)', array(':semi' => '%' . db_like(';') . '%'))->fetchCol('tid');
+  foreach ($taxonomies as $taxonomy) {
+    $taxonomy = taxonomy_term_load($taxonomy);
+    $taxonomy->name = str_replace(';', ',', $taxonomy->name);
+    taxonomy_term_save($taxonomy);
+  }
+}
