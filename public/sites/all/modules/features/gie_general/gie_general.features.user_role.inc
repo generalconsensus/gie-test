@@ -22,5 +22,17 @@ function gie_general_user_default_roles() {
     'weight' => 7,
   );
 
+  // Exported role: Superadmin.
+  $roles['Superadmin'] = array(
+    'name' => 'Superadmin',
+    'weight' => 8,
+  );
+
+  // Exported role: administrator.
+  $roles['administrator'] = array(
+    'name' => 'administrator',
+    'weight' => 6,
+  );
+
   return $roles;
 }

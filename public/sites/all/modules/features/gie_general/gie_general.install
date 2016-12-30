@@ -444,10 +444,24 @@ function gie_general_update_7045() {
   ));
 }
 
+
+/**
+ * Give certain users superadmin role
+ */
+function gie_general_update_7046() {
+  $users = [2783, 256, 2522];
+  $rid = 10;
+  foreach ($users as $uid) {
+    $user = user_load($uid);
+    $user->roles[$rid] = 'Superadmin';
+    user_save($user);
+  }
+}
+
 /**
  * [GIE-958] Disable Domain Analytics and Google Analytics modules
  */
-function gie_general_update_7046() {
+function gie_general_update_7047() {
   $modules = [
     'domain_analytics',
     'googleanalytics',
