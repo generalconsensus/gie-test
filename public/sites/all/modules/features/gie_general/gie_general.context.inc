@@ -38,7 +38,13 @@ function gie_general_context_default_contexts() {
           'module' => 'system',
           'delta' => 'user-menu',
           'region' => 'header',
-          'weight' => '-10',
+          'weight' => '-9',
+        ),
+        'gie_translation-gie_translation_lang_modaldata' => array(
+          'module' => 'gie_translation',
+          'delta' => 'gie_translation_lang_modaldata',
+          'region' => 'header',
+          'weight' => '-8',
         ),
         'blockify-blockify-site-name' => array(
           'module' => 'blockify',

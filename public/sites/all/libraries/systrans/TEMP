@@ -1,0 +1,171 @@
+[DEBUG] HTTP Request body  ~BEGIN~
+Array
+(
+)
+
+~END~
+[DEBUG] HTTP Response body ~BEGIN~
+
+~END~
+* About to connect() to ssi-usaid-01.systran.us port 8904 (#0)
+*   Trying 52.20.241.171... * connected
+* Connected to ssi-usaid-01.systran.us (52.20.241.171) port 8904 (#0)
+* Initializing NSS with certpath: sql:/etc/pki/nssdb
+*   CAfile: /etc/pki/tls/certs/ca-bundle.crt
+  CApath: none
+* Peer's certificate issuer is not recognized: 'CN=RapidSSL SHA256 CA - G3,O=GeoTrust Inc.,C=US'
+* NSS error -8179
+* Closing connection #0
+* Peer certificate cannot be authenticated with known CA certificates
+[DEBUG] HTTP Request body  ~BEGIN~
+Array
+(
+)
+
+~END~
+* About to connect() to ssi-usaid-01.systran.us port 8904 (#0)
+*   Trying 52.20.241.171... * connected
+* Connected to ssi-usaid-01.systran.us (52.20.241.171) port 8904 (#0)
+* Initializing NSS with certpath: sql:/etc/pki/nssdb
+* warning: ignoring value of ssl.verifyhost
+* skipping SSL peer certificate verification
+* SSL connection using TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256
+* Server certificate:
+* 	subject: CN=*.systran.us,OU=Domain Control Validated - RapidSSL(R),OU=See www.rapidssl.com/resources/cps (c)14,OU=GT37800100
+* 	start date: Nov 09 02:32:19 2014 GMT
+* 	expire date: Dec 11 05:10:16 2017 GMT
+* 	common name: *.systran.us
+* 	issuer: CN=RapidSSL SHA256 CA - G3,O=GeoTrust Inc.,C=US
+> GET /translate?key=47b50569-d36b-4987-a091-232aa3302437&source=en&target=es&input=Hello HTTP/1.1
+User-Agent: PHP-Systran/1.0.0
+Host: ssi-usaid-01.systran.us:8904
+Accept: */*
+
+< HTTP/1.1 200 OK
+< Access-Control-Allow-Origin: *
+< Access-Control-Allow-Headers: X-Requested-With,Content-Type,X-HTTP-METHOD-OVERRIDE,X-User-Agent
+< Content-Length: 31
+< Content-Type: application/json; charset=utf-8
+< Vary: Accept-Encoding
+< Date: Tue, 25 Oct 2016 22:41:11 GMT
+< Connection: keep-alive
+< 
+* Connection #0 to host ssi-usaid-01.systran.us left intact
+[DEBUG] HTTP Response body ~BEGIN~
+{"outputs":[{"output":"Hola"}]}
+~END~
+* Closing connection #0
+[DEBUG] HTTP Request body  ~BEGIN~
+Array
+(
+)
+
+~END~
+* About to connect() to ssi-usaid-01.systran.us port 8904 (#0)
+*   Trying 52.20.241.171... * connected
+* Connected to ssi-usaid-01.systran.us (52.20.241.171) port 8904 (#0)
+* Initializing NSS with certpath: sql:/etc/pki/nssdb
+* warning: ignoring value of ssl.verifyhost
+* skipping SSL peer certificate verification
+* SSL connection using TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256
+* Server certificate:
+* 	subject: CN=*.systran.us,OU=Domain Control Validated - RapidSSL(R),OU=See www.rapidssl.com/resources/cps (c)14,OU=GT37800100
+* 	start date: Nov 09 02:32:19 2014 GMT
+* 	expire date: Dec 11 05:10:16 2017 GMT
+* 	common name: *.systran.us
+* 	issuer: CN=RapidSSL SHA256 CA - G3,O=GeoTrust Inc.,C=US
+> GET /translate?key=47b50569-d36b-4987-a091-232aa3302437&source=en&target=es&input=Hello HTTP/1.1
+User-Agent: PHP-Systran/1.0.0
+Host: ssi-usaid-01.systran.us:8904
+Accept: */*
+
+< HTTP/1.1 200 OK
+< Access-Control-Allow-Origin: *
+< Access-Control-Allow-Headers: X-Requested-With,Content-Type,X-HTTP-METHOD-OVERRIDE,X-User-Agent
+< Content-Length: 31
+< Content-Type: application/json; charset=utf-8
+< Vary: Accept-Encoding
+< Date: Tue, 25 Oct 2016 22:41:38 GMT
+< Connection: keep-alive
+< 
+* Connection #0 to host ssi-usaid-01.systran.us left intact
+[DEBUG] HTTP Response body ~BEGIN~
+{"outputs":[{"output":"Hola"}]}
+~END~
+* Closing connection #0
+[DEBUG] HTTP Request body  ~BEGIN~
+Array
+(
+)
+
+~END~
+* About to connect() to ssi-usaid-01.systran.us port 8904 (#0)
+*   Trying 52.20.241.171... * connected
+* Connected to ssi-usaid-01.systran.us (52.20.241.171) port 8904 (#0)
+* Initializing NSS with certpath: sql:/etc/pki/nssdb
+* warning: ignoring value of ssl.verifyhost
+* skipping SSL peer certificate verification
+* SSL connection using TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256
+* Server certificate:
+* 	subject: CN=*.systran.us,OU=Domain Control Validated - RapidSSL(R),OU=See www.rapidssl.com/resources/cps (c)14,OU=GT37800100
+* 	start date: Nov 09 02:32:19 2014 GMT
+* 	expire date: Dec 11 05:10:16 2017 GMT
+* 	common name: *.systran.us
+* 	issuer: CN=RapidSSL SHA256 CA - G3,O=GeoTrust Inc.,C=US
+> GET /translate?key=47b50569-d36b-4987-a091-232aa3302437&source=en&target=es&input=Hello HTTP/1.1
+User-Agent: PHP-Systran/1.0.0
+Host: ssi-usaid-01.systran.us:8904
+Accept: */*
+
+< HTTP/1.1 200 OK
+< Access-Control-Allow-Origin: *
+< Access-Control-Allow-Headers: X-Requested-With,Content-Type,X-HTTP-METHOD-OVERRIDE,X-User-Agent
+< Content-Length: 31
+< Content-Type: application/json; charset=utf-8
+< Vary: Accept-Encoding
+< Date: Tue, 25 Oct 2016 22:42:03 GMT
+< Connection: keep-alive
+< 
+* Connection #0 to host ssi-usaid-01.systran.us left intact
+[DEBUG] HTTP Response body ~BEGIN~
+{"outputs":[{"output":"Hola"}]}
+~END~
+* Closing connection #0
+[DEBUG] HTTP Request body  ~BEGIN~
+Array
+(
+)
+
+~END~
+* About to connect() to ssi-usaid-01.systran.us port 8904 (#0)
+*   Trying 52.20.241.171... * connected
+* Connected to ssi-usaid-01.systran.us (52.20.241.171) port 8904 (#0)
+* Initializing NSS with certpath: sql:/etc/pki/nssdb
+* warning: ignoring value of ssl.verifyhost
+* skipping SSL peer certificate verification
+* SSL connection using TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256
+* Server certificate:
+* 	subject: CN=*.systran.us,OU=Domain Control Validated - RapidSSL(R),OU=See www.rapidssl.com/resources/cps (c)14,OU=GT37800100
+* 	start date: Nov 09 02:32:19 2014 GMT
+* 	expire date: Dec 11 05:10:16 2017 GMT
+* 	common name: *.systran.us
+* 	issuer: CN=RapidSSL SHA256 CA - G3,O=GeoTrust Inc.,C=US
+> GET /translate?key=47b50569-d36b-4987-a091-232aa3302437&source=en&target=es&input=Hello HTTP/1.1
+User-Agent: PHP-Systran/1.0.0
+Host: ssi-usaid-01.systran.us:8904
+Accept: */*
+
+< HTTP/1.1 200 OK
+< Access-Control-Allow-Origin: *
+< Access-Control-Allow-Headers: X-Requested-With,Content-Type,X-HTTP-METHOD-OVERRIDE,X-User-Agent
+< Content-Length: 31
+< Content-Type: application/json; charset=utf-8
+< Vary: Accept-Encoding
+< Date: Tue, 25 Oct 2016 22:52:10 GMT
+< Connection: keep-alive
+< 
+* Connection #0 to host ssi-usaid-01.systran.us left intact
+[DEBUG] HTTP Response body ~BEGIN~
+{"outputs":[{"output":"Hola"}]}
+~END~
+* Closing connection #0
