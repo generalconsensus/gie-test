@@ -443,3 +443,41 @@ function gie_general_update_7045() {
     'not null' => TRUE,
   ));
 }
+
+
+/**
+ * Give certain users superadmin role
+ */
+function gie_general_update_7046() {
+  $users = [2783, 256, 2522];
+  $rid = 10;
+  foreach ($users as $uid) {
+    $user = user_load($uid);
+    $user->roles[$rid] = 'Superadmin';
+    user_save($user);
+  }
+}
+
+/**
+ * [GIE-958] Disable Domain Analytics and Google Analytics modules
+ */
+function gie_general_update_7047() {
+  $modules = [
+    'domain_analytics',
+    'googleanalytics',
+  ];
+  module_disable($modules, TRUE);
+}
+
+
+/**
+ * Update all taxonomy terms with semi-colons to have commas
+ */
+function gie_general_update_7048() {
+  $taxonomies = db_query('select tid from taxonomy_term_data where name like (:semi)', array(':semi' => '%' . db_like(';') . '%'))->fetchCol('tid');
+  foreach ($taxonomies as $taxonomy) {
+    $taxonomy = taxonomy_term_load($taxonomy);
+    $taxonomy->name = str_replace(';', ',', $taxonomy->name);
+    taxonomy_term_save($taxonomy);
+  }
+}
