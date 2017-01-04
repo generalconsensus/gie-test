@@ -259,7 +259,6 @@ function gie_user_form_user_register_form_alter(&$form) {
   // place Account group fields below About group fields
   $last_weight = $form['#groups']['group_about']->weight;
   $form['#groups']['group_account']->weight = $last_weight+1;
-  $form['#validate'][] = 'gie_user_validate';
 
   $form['#submit'][] = '_gie_user_language_preference';
 }
@@ -304,6 +303,8 @@ function gie_user_form_user_profile_form_alter(&$form, &$form_state, $form_id) {
     $form['#submit'][] = '_gie_user_edit_redirect';
     return;
   }
+// Microsite Admin Validate
+  $form['#validate'][] = '_gie_user_validate';
 
   // Add custom submit to redirect user to profile
   $form['#submit'][] = 'gie_user_profile_redirect';
@@ -533,17 +534,15 @@ function gie_user_social_field_validate($field_name, $field_value) {
 /*
  * Validation on user edit form
  */
-function gie_user_validate($form, &$form_state){
-  global $_domain;
+function _gie_user_validate($form, &$form_state){
   if (!empty($form_state['values']['roles']) && in_array(9, array_keys($form_state['values']['roles'], TRUE)))  {
-    if (empty($form_state['values']['domain'])) {
+    if (empty($form_state['values']['domain_user'])) {
       form_set_error('domain_user', 'The Microsite Administrator Role requires a Microsite Domain.');
     }
-    if (count($form_state['values']['domain']) > 1) {
+    if (count($form_state['values']['domain_user']) > 1) {
       form_set_error('domain_user', 'The Microsite Administrator Role requires a single Microsite Domain, however more than one domain was selected.');
     }
-    $form_state['values']['domain_user'][$_domain['domain_id']] = $_domain['domain_id'];
-  } 
+  }
 }
 
 
