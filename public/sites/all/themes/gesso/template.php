@@ -133,5 +133,9 @@ function gesso_comment_post_forbidden($variables) {
 }
 
 function gesso_menu_tree__user_menu($variables) {
-  return '' . '<ul class="nav"><li class="nav__item"><a href="#" data-remodal-target="modal-language-switcher" class="nav__link nav__link--language">Language</a></li>' . $variables['tree'] . '</ul>';
+  $menu = '<ul class="nav">' . $variables['tree'];
+  if (user_has_role(10)) {
+    $menu .= '<li class="nav__item"><a href="#" data-remodal-target="modal-language-switcher" class="nav__link nav__link--language">Language</a></li>';
+  }
+  return $menu .=  '</ul>';
 }
