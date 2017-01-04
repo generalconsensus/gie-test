@@ -9,9 +9,10 @@
  */
 function g_add_captcha(&$form, $form_id) {
   $tune = variable_get('google_recaptcha');
-
-  $recaptcha_api = array(
-    'data' => 'https://www.google.com/recaptcha/api.js?onload=google_recaptcha_onload&render=explicit',
+  $url = 'https://www.google.com/recaptcha/api.js?onload=google_recaptcha_onload&render=explicit';
+  drupal_alter('google_recaptca_url', $url);
+    $recaptcha_api = array(
+    'data' => $url,
     'scope' => 'footer',
     'type' => 'external',
     'defer' => TRUE,

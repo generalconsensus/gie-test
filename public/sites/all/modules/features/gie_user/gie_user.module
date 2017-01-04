@@ -259,12 +259,15 @@ function gie_user_form_user_register_form_alter(&$form) {
   // place Account group fields below About group fields
   $last_weight = $form['#groups']['group_about']->weight;
   $form['#groups']['group_account']->weight = $last_weight+1;
+
+  $form['#submit'][] = '_gie_user_language_preference';
 }
 
 /**
  * Implements hook_form_FORM_ID_alter().
  */
 function gie_user_form_user_profile_form_alter(&$form, &$form_state, $form_id) {
+
   // Hide "Select the types of assistance..." field
   $form['field_assistance_offered']['#access'] = FALSE;
 
@@ -300,9 +303,28 @@ function gie_user_form_user_profile_form_alter(&$form, &$form_state, $form_id) {
     $form['#submit'][] = '_gie_user_edit_redirect';
     return;
   }
+// Microsite Admin Validate
+  $form['#validate'][] = '_gie_user_validate';
 
   // Add custom submit to redirect user to profile
   $form['#submit'][] = 'gie_user_profile_redirect';
+}
+
+/**
+ * Set the language preference of the user if they are on a non-standard language
+ */
+function _gie_user_language_preference($form, &$form_state) {
+  $lang_abbr = [];
+  $edit = array();
+  $languages = _gie_translation_get_language();
+  foreach ($languages as $lang) {
+    $lang_abbr[] = $lang['abbr'];
+  }
+  if (array_search($_SERVER['HTTP_SLINKS_TRANSLATE'], $lang_abbr)) {
+    $edit['field_language_preference'][LANGUAGE_NONE][0]['value'] = $_SERVER['HTTP_SLINKS_TRANSLATE'];
+    user_save($form_state['user'], $edit);
+    watchdog('slink_test', 'Slink Translate Test: :slink_translate.', array(':slink_translate' => $_SERVER['HTTP_SLINKS_TRANSLATE']));
+  }
 }
 
 /**
@@ -426,13 +448,12 @@ function gie_user_ctools_plugin_directory($owner, $plugin_type) {
  */
 function gie_user_user_presave(&$edit, $account, $category) {
   global $databases;
+  global $_domain;
   if (!empty($databases) && !empty($databases['default']['default']['database']) && $databases['default']['default']['database'] != 'giexchange_www') {
     $edit['field_newsletter_sign_up']['und'][0]['subscribe'] = false;
   }
-  global $_domain;
-  if (!empty($_domain['domain_id'])) {
+  if ((empty($account->domain_user))) {
     $edit['domain_user']['1'] = '1';
-    $edit['domain_user'][$_domain['domain_id']] = $_domain['domain_id'];
   }
 }
 
@@ -506,6 +527,20 @@ function gie_user_social_field_validate($field_name, $field_value) {
       else {
         return TRUE;
       }
+    }
+  }
+}
+
+/*
+ * Validation on user edit form
+ */
+function _gie_user_validate($form, &$form_state){
+  if (!empty($form_state['values']['roles']) && in_array(9, array_keys($form_state['values']['roles'], TRUE)))  {
+    if (empty($form_state['values']['domain_user'])) {
+      form_set_error('domain_user', 'The Microsite Administrator Role requires a Microsite Domain.');
+    }
+    if (count($form_state['values']['domain_user']) > 1) {
+      form_set_error('domain_user', 'The Microsite Administrator Role requires a single Microsite Domain, however more than one domain was selected.');
     }
   }
 }

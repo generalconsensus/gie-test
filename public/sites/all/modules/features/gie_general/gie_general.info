@@ -61,6 +61,7 @@ dependencies[] = flag
 dependencies[] = flag_abuse
 dependencies[] = flexslider
 dependencies[] = gie_homepage
+dependencies[] = gie_translation
 dependencies[] = google_tag
 dependencies[] = honeypot
 dependencies[] = html5_tools

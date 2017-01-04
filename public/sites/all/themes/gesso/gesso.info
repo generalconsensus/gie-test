@@ -36,6 +36,7 @@ regions[page_bottom] = 'Page bottom'
 ; ========================================
 
 scripts[] = 'js/mobile-menu.js'
+scripts[] = 'js/remodal/dist/remodal.min.js'
 scripts[] = 'js/scripts.js'
 
 ; ========================================
@@ -90,4 +91,3 @@ version = "7.x-1.2+8-dev"
 core = "7.x"
 project = "gesso"
 datestamp = "1417636382"
-
