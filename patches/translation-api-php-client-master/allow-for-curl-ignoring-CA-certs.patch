@@ -1,0 +1,64 @@
+diff --git a/public/sites/all/libraries/systrans/translation-api-php-client-master/lib/ApiClient.php b/public/sites/all/libraries/systrans/translation-api-php-client-master/lib/ApiClient.php
+index fcb684c..b4578f4 100755
+--- a/public/sites/all/libraries/systrans/translation-api-php-client-master/lib/ApiClient.php
++++ b/public/sites/all/libraries/systrans/translation-api-php-client-master/lib/ApiClient.php
+@@ -193,7 +193,12 @@ class ApiClient
+ 
+         // Set user agent
+         curl_setopt($curl, CURLOPT_USERAGENT, $this->config->getUserAgent());
+-  
++
++        // Allow for CA CERTIFICATES to be ignored -> https://curl.haxx.se/docs/sslcerts.html
++        if ($this->config->getStopCurlSSLVerify()) {
++          curl_setopt($curl, CURLOPT_SSL_VERIFYPEER, FALSE);
++        }
++
+         // debugging for curl
+         if ($this->config->getDebug()) {
+             error_log("[DEBUG] HTTP Request body  ~BEGIN~\n".print_r($postData, true)."\n~END~\n", 3, $this->config->getDebugFile());
+diff --git a/public/sites/all/libraries/systrans/translation-api-php-client-master/lib/Configuration.php b/public/sites/all/libraries/systrans/translation-api-php-client-master/lib/Configuration.php
+index fbab88d..b83200b 100755
+--- a/public/sites/all/libraries/systrans/translation-api-php-client-master/lib/Configuration.php
++++ b/public/sites/all/libraries/systrans/translation-api-php-client-master/lib/Configuration.php
+@@ -127,6 +127,13 @@ class Configuration
+     protected $tempFolderPath;
+ 
+     /**
++     * Debug switch (default set to false)
++     *
++     * @var bool
++     */
++    protected $curlSSLVerify = false;
++
++    /**
+      * Constructor
+      */
+     public function __construct()
+@@ -461,4 +468,27 @@ class Configuration
+         return $report;
+     }
+ 
++    /**
++     * Allows CURL to get around CA certification issues
++     *
++     * @param bool $verify curlSSLVerify flag
++     *
++     * @return Configuration
++     */
++    public function setStopCurlSSLVerify($verify)
++    {
++      $this->curlSSLVerify = $verify;
++      return $this;
++    }
++
++    /**
++     * Gets the curlSSLVerify flag
++     *
++     * @return bool
++     */
++    public function getStopCurlSSLVerify()
++    {
++      return $this->curlSSLVerify;
++    }
++
+ }

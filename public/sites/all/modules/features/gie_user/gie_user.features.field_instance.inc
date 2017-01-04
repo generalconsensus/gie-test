@@ -560,7 +560,7 @@ function gie_user_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 31,
+        'weight' => 37,
       ),
       'title' => array(
         'label' => 'above',
@@ -613,6 +613,102 @@ function gie_user_field_default_field_instances() {
       ),
       'type' => 'term_reference_tree',
       'weight' => 7,
+    ),
+  );
+
+  // Exported field_instance: 'user-user-field_language_preference'.
+  $field_instances['user-user-field_language_preference'] = array(
+    'bundle' => 'user',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'list',
+        'settings' => array(
+          'field_delimiter' => '',
+          'linked_field' => array(
+            'advanced' => array(
+              'class' => '',
+              'rel' => '',
+              'target' => '',
+              'text' => '',
+              'title' => '',
+            ),
+            'destination' => '',
+            'linked' => 0,
+          ),
+        ),
+        'type' => 'list_default',
+        'weight' => 38,
+      ),
+      'full' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'listing' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'resource_user' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'spotlight' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'title' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'user_teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'user_teaser_summary' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'user_teaser_with_motto' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'ds_extras_field_template' => '',
+    'entity_type' => 'user',
+    'field_name' => 'field_language_preference',
+    'label' => 'Language Preference',
+    'required' => 0,
+    'settings' => array(
+      'user_register_form' => 0,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'options',
+      'settings' => array(
+        'apply_chosen' => '',
+        'label_help_description' => '',
+      ),
+      'type' => 'options_select',
+      'weight' => 37,
     ),
   );
 
@@ -671,7 +767,7 @@ function gie_user_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 29,
+        'weight' => 35,
       ),
       'title' => array(
         'label' => 'above',
@@ -778,7 +874,7 @@ function gie_user_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 28,
+        'weight' => 34,
       ),
       'title' => array(
         'label' => 'above',
@@ -883,7 +979,7 @@ function gie_user_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 27,
+        'weight' => 33,
       ),
       'title' => array(
         'label' => 'above',
@@ -1006,7 +1102,7 @@ function gie_user_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 23,
+        'weight' => 29,
       ),
       'title' => array(
         'label' => 'above',
@@ -1113,7 +1209,7 @@ function gie_user_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 32,
+        'weight' => 38,
       ),
       'title' => array(
         'label' => 'above',
@@ -1247,7 +1343,7 @@ function gie_user_field_default_field_instances() {
         'label' => 'hidden',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 11,
+        'weight' => 18,
       ),
       'title' => array(
         'label' => 'hidden',
@@ -1344,7 +1440,7 @@ function gie_user_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 19,
+        'weight' => 25,
       ),
       'title' => array(
         'label' => 'above',
@@ -1467,7 +1563,7 @@ function gie_user_field_default_field_instances() {
         'label' => 'hidden',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 15,
+        'weight' => 22,
       ),
       'title' => array(
         'label' => 'hidden',
@@ -1588,7 +1684,7 @@ function gie_user_field_default_field_instances() {
         'label' => 'hidden',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 6,
+        'weight' => 13,
       ),
       'title' => array(
         'label' => 'hidden',
@@ -1713,7 +1809,7 @@ function gie_user_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 20,
+        'weight' => 26,
       ),
       'title' => array(
         'label' => 'above',
@@ -1818,7 +1914,7 @@ function gie_user_field_default_field_instances() {
         'label' => 'hidden',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 9,
+        'weight' => 16,
       ),
       'title' => array(
         'label' => 'hidden',
@@ -1941,7 +2037,7 @@ function gie_user_field_default_field_instances() {
         'label' => 'hidden',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 14,
+        'weight' => 21,
       ),
       'title' => array(
         'label' => 'hidden',
@@ -2066,7 +2162,7 @@ function gie_user_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 0,
+        'weight' => 10,
       ),
       'title' => array(
         'label' => 'above',
@@ -2266,7 +2362,7 @@ function gie_user_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 0,
+        'weight' => 12,
       ),
       'title' => array(
         'label' => 'above',
@@ -2366,7 +2462,7 @@ function gie_user_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 0,
+        'weight' => 11,
       ),
       'title' => array(
         'label' => 'above',
@@ -2666,7 +2762,7 @@ function gie_user_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 0,
+        'weight' => 8,
       ),
       'title' => array(
         'label' => 'above',
@@ -2762,7 +2858,7 @@ function gie_user_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 24,
+        'weight' => 30,
       ),
       'title' => array(
         'label' => 'above',
@@ -2903,7 +2999,7 @@ function gie_user_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 21,
+        'weight' => 27,
       ),
       'title' => array(
         'label' => 'above',
@@ -3007,7 +3103,7 @@ function gie_user_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 26,
+        'weight' => 32,
       ),
       'title' => array(
         'label' => 'above',
@@ -3105,7 +3201,7 @@ function gie_user_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 30,
+        'weight' => 36,
       ),
       'title' => array(
         'label' => 'above',
@@ -3441,7 +3537,7 @@ function gie_user_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 25,
+        'weight' => 31,
       ),
       'title' => array(
         'label' => 'above',
@@ -3547,7 +3643,7 @@ function gie_user_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 22,
+        'weight' => 28,
       ),
       'title' => array(
         'label' => 'above',
@@ -3645,7 +3741,7 @@ function gie_user_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 17,
+        'weight' => 24,
       ),
       'title' => array(
         'label' => 'above',
@@ -3821,7 +3917,7 @@ function gie_user_field_default_field_instances() {
         'label' => 'hidden',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 10,
+        'weight' => 17,
       ),
       'title' => array(
         'label' => 'hidden',
@@ -3944,7 +4040,7 @@ function gie_user_field_default_field_instances() {
         'label' => 'hidden',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 16,
+        'weight' => 23,
       ),
       'title' => array(
         'label' => 'hidden',
@@ -4083,7 +4179,7 @@ function gie_user_field_default_field_instances() {
         'label' => 'hidden',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 13,
+        'weight' => 20,
       ),
       'title' => array(
         'label' => 'hidden',
@@ -4150,6 +4246,7 @@ function gie_user_field_default_field_instances() {
   t('First Name');
   t('Is there a motto, saying, or famous quote that inspires you?');
   t('Job Title');
+  t('Language Preference');
   t('Last Name');
   t('LinkedIn');
   t('List any skills you have. If another user has previously entered a skill it will show up in a drop down list, if it is a new skill then it will be created. These will later be used to match you with innovations in need of your skills on the Exchange. ');

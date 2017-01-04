@@ -1,0 +1,126 @@
+<?php
+/**
+ * @file
+ * Code for GIE Translation.
+ */
+
+/**
+ * Implements hook_block_info().
+ */
+function gie_translation_block_info() {
+  $blocks['gie_translation_lang_modaldata'] = array(
+    'info' => t('GIE Translation - Language Modal Data'),
+  );
+
+  return $blocks;
+}
+
+
+/**
+ * Implements hook_block_view().
+ */
+function gie_translation_block_view($delta = '') {
+  $block = array();
+
+  // If the user is a Super Admin
+  if (user_has_role(10)) {
+    switch ($delta) {
+      case 'gie_translation_lang_modaldata':
+
+        $content = '<div class="language-modal remodal" data-remodal-id="modal-language-switcher">';
+        $content .= '<div class="language-modal__x" data-remodal-action="cancel"></div>';
+        $content .= '<h2 class="language-modal__title">Select Language</h2>';
+        $content .= '<div class="language-modal__content notranslate"><ul class="language-modal__list">';
+        global $_domain;
+        $links = '';
+        $languages = _gie_translation_get_language(TRUE);
+        foreach($languages as $language) {
+          if ($language['abbr'] == 'en') {
+            // Construct the link for the language
+            $links.= '<li class="language-modal__list-item">' . l($language['title'], $_domain['scheme'] . '://www.' . $_domain['subdomain'], array('attributes' => ['class' => ['language-modal__link']])) . '</li>';
+          } else {
+            // Construct the link for the language
+            $links .= '<li class="language-modal__list-item">' . l($language['title'], $_domain['scheme'] . '://' . $language['abbr'] . '.' . $_domain['subdomain'], array('attributes' => ['class' => ['language-modal__link']])) . '</li>';
+          }
+        }
+
+        $content .= $links  . '</ul></div><button data-remodal-action="cancel" class="button button--remodal">Close</button></div>';
+
+        $block['subject'] = '';
+        $block['content'] = array(
+          '#type' => 'markup',
+          // wrap in div with user menu class to borrow styling
+          '#markup' => $content,
+        );
+        break;
+    }
+    return $block;
+  }
+}
+
+
+/*
+ * This returns the current supported languages for GIE
+ */
+function _gie_translation_get_language($exclude_current = FALSE) {
+  $languages = [
+    [
+      'title' => 'English',
+      'abbr' => 'en',
+    ],
+    [
+      'title' => 'Spanish Español',
+      'abbr' => 'es',
+    ],
+    [
+      'title' => 'French Français',
+      'abbr' => 'fr',
+    ],
+    [
+      'title' => 'Korean 한국어',
+      'abbr' => 'ko',
+    ],
+    [
+      'title' => 'Hindi हिन्दी',
+      'abbr' => 'hi',
+    ],
+    [
+      'title' => 'Bahasa Indonesia',
+      'abbr' => 'id',
+    ],
+//    [
+//      'title' => 'Swahili Kiswahili',
+//      'abbr' => 'sw',
+//    ],
+  ];
+
+  if ($exclude_current) {
+    foreach ($languages as $key => $language) {
+      if ($languages[$key]['abbr'] == $_SERVER['HTTP_SLINKS_TRANSLATE']) {
+        unset ($languages[$key]);
+        break;
+      } elseif (empty($_SERVER['HTTP_SLINKS_TRANSLATE']) && $languages[$key]['abbr'] == 'en') {
+        unset ($languages[$key]);
+        break;
+      }
+    }
+  }
+  return $languages;
+
+}
+
+
+/*
+ * This alters the recaptcha url to set the recpatcha in the language of the user upon load
+ */
+function gie_translation_google_recaptca_url_alter(&$url) {
+  $lang_abbr = [];
+  $languages = _gie_translation_get_language();
+  foreach ($languages as $lang) {
+    $lang_abbr[] = $lang['abbr'];
+  }
+  if (array_search($_SERVER['HTTP_SLINKS_TRANSLATE'], $lang_abbr)) {
+    $url = 'https://www.google.com/recaptcha/api.js?onload=google_recaptcha_onload&render=explicit&hl=' . $_SERVER['HTTP_SLINKS_TRANSLATE'];
+  }
+
+}
