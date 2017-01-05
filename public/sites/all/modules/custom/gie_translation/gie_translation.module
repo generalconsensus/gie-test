@@ -39,7 +39,7 @@ function gie_translation_block_view($delta = '') {
 
         foreach($languages as $language) {
           if ($language['abbr'] == 'en') {
-            $www = preg_match('/^(www\.)/', $_domain['subdomain']) ? 'www' : '';
+            $www = preg_match('/^(www\.)/', $_domain['subdomain']) ? '' : 'www';
             // Construct the link for the language
             $links.= '<li class="language-modal__list-item">' . l($language['title'], $http_protocol . '://' . $www . '.' . $_domain['subdomain'], array('attributes' => ['class' => ['language-modal__link']])) . '</li>';
           } else {
