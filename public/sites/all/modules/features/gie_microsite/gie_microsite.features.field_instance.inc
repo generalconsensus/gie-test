@@ -1243,6 +1243,59 @@ function gie_microsite_field_default_field_instances() {
   );
 
   // Exported field_instance:
+  // 'paragraphs_item-long_form_header-field_para_header_size'.
+  $field_instances['paragraphs_item-long_form_header-field_para_header_size'] = array(
+    'bundle' => 'long_form_header',
+    'default_value' => array(
+      0 => array(
+        'value' => 'large',
+      ),
+    ),
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'hidden',
+        'module' => 'list',
+        'settings' => array(
+          'field_delimiter' => '',
+          'linked_field' => array(
+            'advanced' => array(
+              'class' => '',
+              'rel' => '',
+              'target' => '',
+              'text' => '',
+              'title' => '',
+            ),
+            'destination' => '',
+            'linked' => 0,
+          ),
+        ),
+        'type' => 'list_key',
+        'weight' => 3,
+      ),
+    ),
+    'ds_extras_field_template' => '',
+    'entity_type' => 'paragraphs_item',
+    'field_name' => 'field_para_header_size',
+    'label' => 'Size',
+    'required' => 1,
+    'settings' => array(
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'options',
+      'settings' => array(
+        'apply_chosen' => '',
+        'label_help_description' => '',
+      ),
+      'type' => 'options_select',
+      'weight' => 7,
+    ),
+  );
+
+  // Exported field_instance:
   // 'paragraphs_item-long_form_header-field_para_header_subtitle'.
   $field_instances['paragraphs_item-long_form_header-field_para_header_subtitle'] = array(
     'bundle' => 'long_form_header',
@@ -3601,6 +3654,7 @@ function gie_microsite_field_default_field_instances() {
   t('Node reference');
   t('Orientation');
   t('Read more Link');
+  t('Size');
   t('Slider Content');
   t('Subtitle');
   t('Text');
