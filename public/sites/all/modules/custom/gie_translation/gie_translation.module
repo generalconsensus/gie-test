@@ -34,13 +34,16 @@ function gie_translation_block_view($delta = '') {
         global $_domain;
         $links = '';
         $languages = _gie_translation_get_language(TRUE);
+        $is_https = isset($_SERVER['HTTPS']) && strtolower($_SERVER['HTTPS']) == 'on';
+        $http_protocol = $is_https ? 'https' : 'http';
+
         foreach($languages as $language) {
           if ($language['abbr'] == 'en') {
             // Construct the link for the language
-            $links.= '<li class="language-modal__list-item">' . l($language['title'], $_domain['scheme'] . '://www.' . $_domain['subdomain'], array('attributes' => ['class' => ['language-modal__link']])) . '</li>';
+            $links.= '<li class="language-modal__list-item">' . l($language['title'], $http_protocol . '://www.' . $_domain['subdomain'], array('attributes' => ['class' => ['language-modal__link']])) . '</li>';
           } else {
             // Construct the link for the language
-            $links .= '<li class="language-modal__list-item">' . l($language['title'], $_domain['scheme'] . '://' . $language['abbr'] . '.' . $_domain['subdomain'], array('attributes' => ['class' => ['language-modal__link']])) . '</li>';
+            $links .= '<li class="language-modal__list-item">' . l($language['title'], $http_protocol . '://' . $language['abbr'] . '.' . $_domain['subdomain'], array('attributes' => ['class' => ['language-modal__link']])) . '</li>';
           }
         }
 
