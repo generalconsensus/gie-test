@@ -11,6 +11,7 @@ dependencies[] = field_group
 dependencies[] = flexslider
 dependencies[] = gie_long_form_content
 dependencies[] = gie_taxonomies
+dependencies[] = gie_translation
 dependencies[] = link
 dependencies[] = menu
 dependencies[] = rh_taxonomy

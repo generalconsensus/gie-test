@@ -46,6 +46,12 @@ function gie_microsite_context_default_contexts() {
           'region' => 'header',
           'weight' => '-80',
         ),
+        'gie_translation-gie_translation_lang_modaldata' => array(
+          'module' => 'gie_translation',
+          'delta' => 'gie_translation_lang_modaldata',
+          'region' => 'header',
+          'weight' => '-10',
+        ),
         'views-microsite_logo-microsite_logo' => array(
           'module' => 'views',
           'delta' => 'microsite_logo-microsite_logo',
