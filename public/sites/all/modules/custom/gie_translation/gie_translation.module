@@ -39,9 +39,10 @@ function gie_translation_block_view($delta = '') {
 
         foreach($languages as $language) {
           if ($language['abbr'] == 'en') {
-            $www = preg_match('/^(www\.)/', $_domain['subdomain']) ? '' : 'www';
+            // Add the www prefix to get it to work with the English domain link, since systrans likes to overwrite urls without any exception
+            $url = preg_match('/^(www\.)/', $_domain['subdomain']) ?  $_domain['subdomain'] : 'www.' .  $_domain['subdomain'];
             // Construct the link for the language
-            $links.= '<li class="language-modal__list-item">' . l($language['title'], $http_protocol . '://' . $www . '.' . $_domain['subdomain'], array('attributes' => ['class' => ['language-modal__link']])) . '</li>';
+            $links.= '<li class="language-modal__list-item">' . l($language['title'], $http_protocol . '://' .  $url, array('attributes' => ['class' => ['language-modal__link']])) . '</li>';
           } else {
             // Construct the link for the language
             $links .= '<li class="language-modal__list-item">' . l($language['title'], $http_protocol . '://' . $language['abbr'] . '.' . $_domain['subdomain'], array('attributes' => ['class' => ['language-modal__link']])) . '</li>';
