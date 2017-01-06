@@ -46,7 +46,7 @@ function gie_translation_block_view($delta = '') {
 
             if ($selected_domain) {
               // Add the www prefix to get it to work with the English domain link, since systrans likes to overwrite urls without any exception
-              $url = preg_replace('/^(www\.)/', '', $_domain['subdomain']) ?  $_domain['subdomain'] : 'www.' .  $_domain['subdomain'];
+              $url = preg_replace('/^(www\.)/', '',  $_domain['subdomain']);
             } else {
               // Add the www prefix to get it to work with the English domain link, since systrans likes to overwrite urls without any exception
               $url = preg_match('/^(www\.)/', $_domain['subdomain']) ?  $_domain['subdomain'] : 'www.' .  $_domain['subdomain'];
