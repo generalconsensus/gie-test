@@ -37,10 +37,19 @@ function gie_translation_block_view($delta = '') {
         $is_https = isset($_SERVER['HTTPS']) && strtolower($_SERVER['HTTPS']) == 'on';
         $http_protocol = $is_https ? 'https' : 'http';
 
+        //Exceptions for HTTPS domains that are preset to www. prefix domains (GIE, scalingoffgrid)
+        $select_domains = [1, 2, 7, 9, 12, 20, 23];
+        $selected_domain = in_array($_domain['domain_id'], $select_domains);
+
         foreach($languages as $language) {
           if ($language['abbr'] == 'en') {
-            // Add the www prefix to get it to work with the English domain link, since systrans likes to overwrite urls without any exception
-            $url = preg_match('/^(www\.)/', $_domain['subdomain']) ?  $_domain['subdomain'] : 'www.' .  $_domain['subdomain'];
+            if ($selected_domain) {
+              // Add the www prefix to get it to work with the English domain link, since systrans likes to overwrite urls without any exception
+              $url = preg_replace('/^(www\.)/', '',  $_domain['subdomain']);
+            } else {
+              // Add the www prefix to get it to work with the English domain link, since systrans likes to overwrite urls without any exception
+              $url = preg_match('/^(www\.)/', $_domain['subdomain']) ?  $_domain['subdomain'] : 'www.' .  $_domain['subdomain'];
+            }
             // Construct the link for the language
             $links.= '<li class="language-modal__list-item">' . l($language['title'], $http_protocol . '://' .  $url, array('attributes' => ['class' => ['language-modal__link']])) . '</li>';
           } else {
