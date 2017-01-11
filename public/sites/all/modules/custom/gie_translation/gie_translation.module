@@ -38,7 +38,7 @@ function gie_translation_block_view($delta = '') {
         $http_protocol = $is_https ? 'https' : 'http';
 
         //Exceptions for HTTPS domains that are preset to www. prefix domains (GIE, scalingoffgrid)
-        $select_domains = [1, 20];
+        $select_domains = [1, 2, 7, 9, 12, 20, 23];
         $selected_domain = in_array($_domain['domain_id'], $select_domains);
 
         foreach($languages as $language) {
