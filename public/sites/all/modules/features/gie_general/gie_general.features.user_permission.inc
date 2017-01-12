@@ -305,15 +305,6 @@ function gie_general_user_default_permissions() {
     'module' => 'user',
   );
 
-  // Exported permission: 'add JS snippets for google analytics'.
-  $permissions['add JS snippets for google analytics'] = array(
-    'name' => 'add JS snippets for google analytics',
-    'roles' => array(
-      'Superadmin' => 'Superadmin',
-    ),
-    'module' => 'googleanalytics',
-  );
-
   // Exported permission: 'admin_display_suite'.
   $permissions['admin_display_suite'] = array(
     'name' => 'admin_display_suite',
@@ -592,16 +583,6 @@ function gie_general_user_default_permissions() {
       'administrator' => 'administrator',
     ),
     'module' => 'flexslider',
-  );
-
-  // Exported permission: 'administer google analytics'.
-  $permissions['administer google analytics'] = array(
-    'name' => 'administer google analytics',
-    'roles' => array(
-      'Superadmin' => 'Superadmin',
-      'administrator' => 'administrator',
-    ),
-    'module' => 'googleanalytics',
   );
 
   // Exported permission: 'administer honeypot'.
@@ -4684,16 +4665,6 @@ function gie_general_user_default_permissions() {
     'module' => 'pathauto',
   );
 
-  // Exported permission: 'opt-in or out of tracking'.
-  $permissions['opt-in or out of tracking'] = array(
-    'name' => 'opt-in or out of tracking',
-    'roles' => array(
-      'Superadmin' => 'Superadmin',
-      'administrator' => 'administrator',
-    ),
-    'module' => 'googleanalytics',
-  );
-
   // Exported permission: 'override player dimensions'.
   $permissions['override player dimensions'] = array(
     'name' => 'override player dimensions',
@@ -5341,16 +5312,6 @@ function gie_general_user_default_permissions() {
       'administrator' => 'administrator',
     ),
     'module' => 'domain',
-  );
-
-  // Exported permission: 'use PHP for tracking visibility'.
-  $permissions['use PHP for tracking visibility'] = array(
-    'name' => 'use PHP for tracking visibility',
-    'roles' => array(
-      'Superadmin' => 'Superadmin',
-      'administrator' => 'administrator',
-    ),
-    'module' => 'googleanalytics',
   );
 
   // Exported permission: 'use advanced search'.
