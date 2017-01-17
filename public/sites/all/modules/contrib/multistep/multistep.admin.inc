@@ -10,38 +10,6 @@
  */
 function multistep_admin_settings_workflow_form($form, &$form_state) {
   $form = array();
-  $options = array();
-  $defaults = variable_get('multistep_default_entities', FALSE);
-
-  foreach ($defaults as $key => $data) {
-    // The value is selected
-    if (!empty($data)) {
-      $result = explode('|', $key);
-      $default_options[$result[0] . '|' . $result[1]] = array(TRUE);
-    }
-  }
-
-  foreach (entity_get_info() as $type) {
-    foreach ($type['bundles'] as $key => $bundle) {
-      $options[$type['base table'] . '|' . $key] = array('entity' => $type['base table'], 'bundle' => $key);
-    }
-  }
-
-  $header = array(
-    'entity' => t('Entity'),
-    'bundle' => t('Bundle'),
-  );
-
-    //Build the tableselect.
-    $form['multistep_default_entities'] = array(
-      '#type' => 'tableselect',
-      '#header' => $header,
-      '#options' => $options,
-      '#empty' => t('No content available.'),
-      '#default_value' => $defaults,
-      '#tree' => TRUE
-    );
-
   $form['multistep_status_revisions'] = array(
     '#type' => 'radios',
     '#title' => t('Revisions'),
@@ -98,7 +66,6 @@ function multistep_admin_settings_workflow_form($form, &$form_state) {
     '#default_value' => variable_get('multistep_show_step_numbers', FALSE),
     '#weight' => -6,
   );
-
   return system_settings_form($form);
 }
 
@@ -178,7 +145,7 @@ function multistep_admin_settings_reset_form_ajax($form, &$form_state) {
   $options = array('' => '- Select -');
   $info = entity_get_info($entity_type);
   foreach ($info['bundles'] as $type => $bundle_info) {
-    if (is_multistep($entity_type, $type)) {
+    if (is_multistep($type, $entity_type)) {
       $options[$type] = $bundle_info['label'];
     }
   }
@@ -198,6 +165,6 @@ function multistep_admin_settings_reset_form_ajax($form, &$form_state) {
  * Resets the multistep table data for the selected content type.
  */
 function multistep_admin_settings_reset_form_submit($form, &$form_state) {
-  _multistep_reset_data($form_state['values']['multistep_entity_type'], $form_state['values']['multistep_type']);
+  _multistep_reset_data($form_state['values']['multistep_type'], $form_state['values']['multistep_entity_type']);
   drupal_set_message(t('Data was reset successfully.'));
 }
