@@ -136,12 +136,14 @@ function _gie_translation_get_language($exclude_current = FALSE) {
 
   if ($exclude_current) {
     foreach ($languages as $key => $language) {
-      if ($languages[$key]['abbr'] == $_SERVER['HTTP_SLINKS_TRANSLATE']) {
-        unset ($languages[$key]);
-        break;
-      } elseif (empty($_SERVER['HTTP_SLINKS_TRANSLATE']) && $languages[$key]['abbr'] == 'en') {
-        unset ($languages[$key]);
-        break;
+      if ($_SERVER['HTTP_SLINKS_TRANSLATE']) {
+        if ($languages[$key]['abbr'] == $_SERVER['HTTP_SLINKS_TRANSLATE']) {
+          unset ($languages[$key]);
+          break;
+        } elseif (empty($_SERVER['HTTP_SLINKS_TRANSLATE']) && $languages[$key]['abbr'] == 'en') {
+          unset ($languages[$key]);
+          break;
+        }
       }
     }
   }
