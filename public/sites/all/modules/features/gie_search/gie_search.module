@@ -33,3 +33,36 @@ function gie_search_default_search_api_index_alter(array &$defaults) {
     }
   }
 }
+
+/**
+ * Implements hook_block_inf().
+ */
+function gie_search_block_info() {
+  $blocks = array();
+
+  $blocks['search_help_text'] = array(
+    'info' => t('GIE Search help text')
+  );
+
+  return $blocks;
+}
+
+/**
+ * Implements hook_block_view().
+ */
+function gie_search_block_view($delta = '') {
+  $block = array();
+
+  switch ($delta) {
+    case 'search_help_text':
+      $domain = $GLOBALS['_domain'];
+
+      // only do for YouthPower domain (ID: 7)
+      if ($domain['domain_id'] === 7) {
+        $block['content'] = 'Search yields content from across the Global Innovation Exchange and is not specific to ' . $domain['sitename'] . ' content.';
+      }
+      break;
+  }
+
+  return $block;
+}
