@@ -4,6 +4,50 @@
  * Code for GIE Translation.
  */
 
+
+/**
+ * Implements hook_menu().
+ */
+function gie_translation_menu() {
+  $items = array();
+  $items['admin/gie_translation/translation_menu_settings'] = array(
+    'title' => 'Translation Menu Admin Settings',
+    'page arguments' => array('gie_translation_menu_settings_form', 2),
+    'page callback' => 'drupal_get_form',
+    'access callback' => TRUE,
+    'type' => MENU_CALLBACK,
+  );
+  return $items;
+}
+
+function gie_translation_menu_settings_form($form) {
+  $domains = [];
+  $domain_list = domain_domains();
+  foreach ($domain_list as $key => $domain) {
+    $domains[$key] = $domain['sitename'] . ' - ' . $domain['subdomain'];
+  }
+  $form['domains'] = array(
+    '#type' => 'checkboxes',
+    '#options' => $domains,
+    '#default_value' => variable_get('gie_translation_menu_domains'),
+    '#title' => t('Which domains should be shown by default?'),
+  );
+
+  $form['submit'] = array(
+    '#type' => 'submit',
+    '#value' => t('Submit'),
+    '#weight' => 15,
+  );
+  return $form;
+}
+
+
+function gie_translation_menu_settings_form_submit($form, $form_state) {
+ if (!empty($form_state['values']['domains'])) {
+   variable_set('gie_translation_menu_domains', $form_state['values']['domains']);
+ }
+}
+
 /**
  * Implements hook_block_info().
  */
@@ -20,10 +64,10 @@ function gie_translation_block_info() {
  * Implements hook_block_view().
  */
 function gie_translation_block_view($delta = '') {
-  $block = array();
 
   // If the user is a Super Admin
   if (user_has_role(10)) {
+    $block = array();
     switch ($delta) {
       case 'gie_translation_lang_modaldata':
 
@@ -34,41 +78,25 @@ function gie_translation_block_view($delta = '') {
         global $_domain;
         $links = '';
         $languages = _gie_translation_get_language(TRUE);
-        $is_https = isset($_SERVER['HTTPS']) && strtolower($_SERVER['HTTPS']) == 'on';
+        $is_https = isset($_SERVER['HTTPS']) && strtolower(
+            $_SERVER['HTTPS']
+          ) == 'on';
         $http_protocol = $is_https ? 'https' : 'http';
 
-        if ($_domain['domain_id'] != 9) {
-          foreach($languages as $language) {
-            if ($language['abbr'] == 'en') {
-              if (preg_match('/^(www\.)/', $_domain['subdomain'])) {
-                // Add the www prefix to get it to work with the English domain link, since systrans likes to overwrite urls without any exception
-                $url = preg_replace('/^(www\.)/', '',  $_domain['subdomain']);
-              } else {
-                // Add the www prefix to get it to work with the English domain link, since systrans likes to overwrite urls without any exception
-                $url = 'www.' .  $_domain['subdomain'];
-              }
-              // Construct the link for the language
-              $links.= '<li class="language-modal__list-item">' . l($language['title'], $http_protocol . '://' .  $url, array('attributes' => ['class' => ['language-modal__link']])) . '</li>';
-            } else {
-              //Force SSL for all non top-level domains that are linking to non-english
-              $http_protocol =  !(preg_match('/^(www\.)/', $_domain['subdomain'])) ? 'http' : $http_protocol;
-              // Construct the link for the language
-              $links .= '<li class="language-modal__list-item">' . l($language['title'], $http_protocol . '://' . $language['abbr'] . '.' . $_domain['subdomain'], array('attributes' => ['class' => ['language-modal__link']])) . '</li>';
-            }
-          }
-        } else {
-          foreach($languages as $language) {
-            if ($language['abbr'] == 'en') {
-              // Do nothing as the original http://www.tantangansawit.org/ is not in english
-            } elseif ($language['abbr'] == 'id') {
-              // If this is not set than we know we are on the main Indonesian site
-              if (!empty($_SERVER['HTTP_SLINKS_TRANSLATE'])) {
+        if (in_array(
+          $_domain['domain_id'],
+          variable_get('gie_translation_menu_domains')
+        )) {
+          if ($_domain['domain_id'] != 9) {
+            foreach ($languages as $language) {
+              if ($language['abbr'] == 'en') {
                 if (preg_match('/^(www\.)/', $_domain['subdomain'])) {
                   // Add the www prefix to get it to work with the English domain link, since systrans likes to overwrite urls without any exception
                   $url = preg_replace('/^(www\.)/', '', $_domain['subdomain']);
                 }
                 else {
-                  $url = $_domain['subdomain'];
+                  // Add the www prefix to get it to work with the English domain link, since systrans likes to overwrite urls without any exception
+                  $url = 'www.' . $_domain['subdomain'];
                 }
                 // Construct the link for the language
                 $links .= '<li class="language-modal__list-item">' . l(
@@ -77,24 +105,71 @@ function gie_translation_block_view($delta = '') {
                     array('attributes' => ['class' => ['language-modal__link']])
                   ) . '</li>';
               }
-            } else {
-              // Construct the link for the language
-              $links .= '<li class="language-modal__list-item">' . l($language['title'], $http_protocol . '://' . $language['abbr'] . '.' . $_domain['subdomain'], array('attributes' => ['class' => ['language-modal__link']])) . '</li>';
+              else {
+                //Force SSL for all non top-level domains that are linking to non-english
+                $http_protocol = !(preg_match(
+                  '/^(www\.)/',
+                  $_domain['subdomain']
+                )) ? 'http' : $http_protocol;
+                // Construct the link for the language
+                $links .= '<li class="language-modal__list-item">' . l(
+                    $language['title'],
+                    $http_protocol . '://' . $language['abbr'] . '.' . $_domain['subdomain'],
+                    array('attributes' => ['class' => ['language-modal__link']])
+                  ) . '</li>';
+              }
             }
           }
+          else {
+            foreach ($languages as $language) {
+              if ($language['abbr'] == 'en') {
+                // Do nothing as the original http://www.tantangansawit.org/ is not in english
+              }
+              elseif ($language['abbr'] == 'id') {
+                // If this is not set than we know we are on the main Indonesian site
+                if (!empty($_SERVER['HTTP_SLINKS_TRANSLATE'])) {
+                  if (preg_match('/^(www\.)/', $_domain['subdomain'])) {
+                    // Add the www prefix to get it to work with the English domain link, since systrans likes to overwrite urls without any exception
+                    $url = preg_replace(
+                      '/^(www\.)/',
+                      '',
+                      $_domain['subdomain']
+                    );
+                  }
+                  else {
+                    $url = $_domain['subdomain'];
+                  }
+                  // Construct the link for the language
+                  $links .= '<li class="language-modal__list-item">' . l(
+                      $language['title'],
+                      $http_protocol . '://' . $url,
+                      array('attributes' => ['class' => ['language-modal__link']])
+                    ) . '</li>';
+                }
+              }
+              else {
+                // Construct the link for the language
+                $links .= '<li class="language-modal__list-item">' . l(
+                    $language['title'],
+                    $http_protocol . '://' . $language['abbr'] . '.' . $_domain['subdomain'],
+                    array('attributes' => ['class' => ['language-modal__link']])
+                  ) . '</li>';
+              }
+            }
+          }
+
+          $content .= $links . '</ul></div><button data-remodal-action="cancel" class="button button--remodal">Close</button></div>';
+
+          $block['subject'] = '';
+          $block['content'] = array(
+            '#type' => 'markup',
+            // wrap in div with user menu class to borrow styling
+            '#markup' => $content,
+          );
+          return $block;
         }
-
-        $content .= $links  . '</ul></div><button data-remodal-action="cancel" class="button button--remodal">Close</button></div>';
-
-        $block['subject'] = '';
-        $block['content'] = array(
-          '#type' => 'markup',
-          // wrap in div with user menu class to borrow styling
-          '#markup' => $content,
-        );
         break;
     }
-    return $block;
   }
 }
 
