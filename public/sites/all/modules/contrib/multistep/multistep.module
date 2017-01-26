@@ -652,10 +652,8 @@ function multistep_submit($form, &$form_state) {
     else {
       $form_state['redirect'] = array('node/' . $nid);
     }
-  } elseif ($user) {
-    if ($form_state['user']->uid) {
-      $uid = $form_state['user']->uid;
-    }
+  } elseif ($user && !empty($form_state['user']->uid)) {
+    $uid = $form_state['user']->uid;
     // Update the step list for this node in the database
     $current_step = $form['#multistep']['current'];
     $status = module_invoke_all('multistep_update_status', $form_state, 'submitted', $current_step);
