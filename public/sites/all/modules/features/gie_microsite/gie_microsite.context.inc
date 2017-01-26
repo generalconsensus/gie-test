@@ -17,6 +17,11 @@ function gie_microsite_context_default_contexts() {
   $context->description = '';
   $context->tag = '';
   $context->conditions = array(
+    'default' => array(
+      'values' => array(
+        'context_condition_default' => 'context_condition_default',
+      ),
+    ),
     'domain' => array(
       'values' => array(
         1 => 1,
@@ -40,6 +45,12 @@ function gie_microsite_context_default_contexts() {
           'delta' => 'user-menu',
           'region' => 'header',
           'weight' => '-80',
+        ),
+        'gie_translation-gie_translation_lang_modaldata' => array(
+          'module' => 'gie_translation',
+          'delta' => 'gie_translation_lang_modaldata',
+          'region' => 'header',
+          'weight' => '-10',
         ),
         'views-microsite_logo-microsite_logo' => array(
           'module' => 'views',

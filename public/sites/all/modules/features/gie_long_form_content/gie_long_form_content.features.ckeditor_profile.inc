@@ -14,7 +14,7 @@ function gie_long_form_content_ckeditor_profile_defaults() {
       'settings' => array(
         'ss' => 2,
         'toolbar' => '[
-    [\'Format\',\'Bold\',\'Italic\',\'Underline\',\'NumberedList\',\'BulletedList\',\'Anchor\',\'Link\']
+    [\'Styles\',\'Format\',\'Bold\',\'Italic\',\'Underline\',\'NumberedList\',\'BulletedList\',\'Anchor\',\'Link\',\'Maximize\']
 ]',
         'expand' => 't',
         'default' => 't',
@@ -67,7 +67,7 @@ function gie_long_form_content_ckeditor_profile_defaults() {
         'ss' => 2,
         'toolbar' => '[
     [\'Format\',\'Bold\',\'Italic\',\'Underline\',\'NumberedList\',\'BulletedList\',\'Anchor\',\'Link\',\'Unlink\'],
-    [\'Image\',\'asset_image\',\'assetSearch\',\'JustifyCenter\']
+    [\'Image\',\'asset_image\',\'assetSearch\',\'JustifyCenter\',\'Maximize\']
 ]',
         'expand' => 't',
         'default' => 't',

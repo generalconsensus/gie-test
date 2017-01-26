@@ -40,6 +40,6 @@ features[variable][] = panelizer_defaults_node_page
 features[variable][] = panelizer_node:page:default_selection
 features[variable][] = panelizer_node:page:page_manager_selection
 features[variable][] = panelizer_node:page:teaser_selection
-features_exclude[field_base][body] = body
 features_exclude[dependencies][gie_groups] = gie_groups
+features_exclude[field_base][body] = body
 features_exclude[field_instance][node-page-og_group_ref] = node-page-og_group_ref

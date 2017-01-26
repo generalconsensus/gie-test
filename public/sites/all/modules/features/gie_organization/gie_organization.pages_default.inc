@@ -60,8 +60,8 @@ function gie_organization_default_page_manager_pages() {
   $display->cache = array();
   $display->title = '';
   $display->uuid = '9efa1bf4-4fba-43c4-b5b0-42e6d3e944f2';
-  $display->storage_type = '';
-  $display->storage_id = '';
+  $display->storage_type = 'page_manager';
+  $display->storage_id = 'page_organizations__panel_context_9ace6400-d090-4a71-b7a4-ddb6c7935773';
   $display->content = array();
   $display->panels = array();
   $pane = new stdClass();
@@ -266,8 +266,8 @@ function gie_organization_default_page_manager_pages() {
   $display->cache = array();
   $display->title = 'Exchange Partners';
   $display->uuid = '0f4df4b1-bbf6-420d-ac01-1022e16e4e0d';
-  $display->storage_type = '';
-  $display->storage_id = '';
+  $display->storage_type = 'page_manager';
+  $display->storage_id = 'page_partners__panel_context_6da8c919-9716-4a48-b01c-37f152824144';
   $display->content = array();
   $display->panels = array();
   $pane = new stdClass();

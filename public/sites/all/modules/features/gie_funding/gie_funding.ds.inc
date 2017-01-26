@@ -68,11 +68,6 @@ function gie_funding_ds_field_settings_info() {
   $ds_fieldsetting->bundle = 'funding';
   $ds_fieldsetting->view_mode = 'full';
   $ds_fieldsetting->settings = array(
-    'comments' => array(
-      'weight' => '3',
-      'label' => 'hidden',
-      'format' => 'default',
-    ),
     'field_funding_eligibility' => array(
       'formatter_settings' => array(
         'ft' => array(
@@ -508,27 +503,25 @@ function gie_funding_ds_layout_settings_info() {
     'regions' => array(
       'ds_content' => array(
         0 => 'group_funding_stats',
-        1 => 'field_funding_eligibility',
-        2 => 'group_funding_stats_first',
+        1 => 'group_funding_stats_first',
+        2 => 'field_funding_eligibility',
         3 => 'field_funding_guidance',
         4 => 'group_funding_stats_second',
-        5 => 'comments',
-        6 => 'field_funding_poc',
-        7 => 'field_funding_grant_award_value',
-        8 => 'field_funding_eligibility_type',
-        9 => 'field_term_region',
-        10 => 'field_term_sector',
-        11 => 'field_funding_duration',
-        12 => 'field_funding_effort',
+        5 => 'field_funding_poc',
+        6 => 'field_funding_grant_award_value',
+        7 => 'field_funding_eligibility_type',
+        8 => 'field_term_region',
+        9 => 'field_term_sector',
+        10 => 'field_funding_duration',
+        11 => 'field_funding_effort',
       ),
     ),
     'fields' => array(
       'group_funding_stats' => 'ds_content',
-      'field_funding_eligibility' => 'ds_content',
       'group_funding_stats_first' => 'ds_content',
+      'field_funding_eligibility' => 'ds_content',
       'field_funding_guidance' => 'ds_content',
       'group_funding_stats_second' => 'ds_content',
-      'comments' => 'ds_content',
       'field_funding_poc' => 'ds_content',
       'field_funding_grant_award_value' => 'ds_content',
       'field_funding_eligibility_type' => 'ds_content',

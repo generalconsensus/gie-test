@@ -169,10 +169,19 @@ function gie_funding_strongarm() {
     'extra_fields' => array(
       'form' => array(
         'path' => array(
-          'weight' => '5',
+          'weight' => '7',
         ),
         'rabbit_hole' => array(
-          'weight' => '2',
+          'weight' => '6',
+        ),
+        'domain' => array(
+          'weight' => '5',
+        ),
+        'metatags' => array(
+          'weight' => '9',
+        ),
+        'redirect' => array(
+          'weight' => '8',
         ),
       ),
       'display' => array(
@@ -470,6 +479,10 @@ function gie_funding_strongarm() {
             'weight' => '1',
             'visible' => FALSE,
           ),
+          'full' => array(
+            'weight' => '1',
+            'visible' => FALSE,
+          ),
         ),
         'flag_favorite' => array(
           'default' => array(
@@ -484,6 +497,10 @@ function gie_funding_strongarm() {
             'weight' => '10',
             'visible' => FALSE,
           ),
+          'full' => array(
+            'weight' => '10',
+            'visible' => FALSE,
+          ),
         ),
         'flag_abuse_node' => array(
           'default' => array(
@@ -495,6 +512,10 @@ function gie_funding_strongarm() {
             'visible' => FALSE,
           ),
           'listing' => array(
+            'weight' => '10',
+            'visible' => FALSE,
+          ),
+          'full' => array(
             'weight' => '10',
             'visible' => FALSE,
           ),

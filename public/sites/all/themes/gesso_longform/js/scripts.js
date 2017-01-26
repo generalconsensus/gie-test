@@ -5,6 +5,9 @@
 
   'use strict';
 
+  // Initiate wow.
+  new WOW().init();
+
   // Generic function that runs on window resize.
   function resizeStuff() {
   }

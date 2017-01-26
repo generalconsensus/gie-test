@@ -656,8 +656,8 @@ ini_set('memory_limit', '512M');
 /**
  * Change file upload sizes
  */
-ini_set('upload_max_filesize','20M');
-ini_set('post_max_size','20M');
+ini_set('upload_max_filesize','200M');
+ini_set('post_max_size','200M');
 
 /**
  * AWS Settings
@@ -673,6 +673,12 @@ $conf['s3fs_use_s3_for_private'] = 1;
 $conf['s3fs_use_s3_for_public'] = 1;
 $conf['s3fs_use_cname'] = 1;
 $conf['s3fs_domain'] = 'static.globalinnovationexchange.org';
+
+/**
+ * Change memory limit
+ */
+ini_set('max_execution_time', '90');
+ini_set('max_input_time', '90');
 
 /**
  * Add the domain module setup routine.

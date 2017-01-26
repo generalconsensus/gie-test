@@ -22,6 +22,14 @@ function gie_general_context_default_contexts() {
         'context_condition_default' => 'context_condition_default',
       ),
     ),
+    'domain' => array(
+      'values' => array(
+        1 => 1,
+      ),
+      'options' => array(
+        'include_exclude' => '0',
+      ),
+    ),
   );
   $context->reactions = array(
     'block' => array(
@@ -30,7 +38,13 @@ function gie_general_context_default_contexts() {
           'module' => 'system',
           'delta' => 'user-menu',
           'region' => 'header',
-          'weight' => '-10',
+          'weight' => '-9',
+        ),
+        'gie_translation-gie_translation_lang_modaldata' => array(
+          'module' => 'gie_translation',
+          'delta' => 'gie_translation_lang_modaldata',
+          'region' => 'header',
+          'weight' => '-8',
         ),
         'blockify-blockify-site-name' => array(
           'module' => 'blockify',
@@ -89,7 +103,7 @@ function gie_general_context_default_contexts() {
       ),
     ),
   );
-  $context->condition_mode = 0;
+  $context->condition_mode = 1;
   $export['sitewide'] = $context;
 
   $context = new stdClass();

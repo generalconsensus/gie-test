@@ -562,15 +562,17 @@ function gie_microsite_ds_layout_settings_info() {
         0 => 'group_text_wrapper',
         1 => 'field_para_header_image',
         2 => 'field_para_header_options',
-        3 => 'field_para_header_subtitle',
-        4 => 'field_para_header_title',
-        5 => 'group_header_text',
+        3 => 'field_para_header_size',
+        4 => 'field_para_header_subtitle',
+        5 => 'field_para_header_title',
+        6 => 'group_header_text',
       ),
     ),
     'fields' => array(
       'group_text_wrapper' => 'main_content',
       'field_para_header_image' => 'main_content',
       'field_para_header_options' => 'main_content',
+      'field_para_header_size' => 'main_content',
       'field_para_header_subtitle' => 'main_content',
       'field_para_header_title' => 'main_content',
       'group_header_text' => 'main_content',
@@ -652,6 +654,36 @@ function gie_microsite_ds_layout_settings_info() {
     'layout_link_custom' => '',
   );
   $export['paragraphs_item|microsite_highlight|default'] = $ds_layout;
+
+  $ds_layout = new stdClass();
+  $ds_layout->api_version = 1;
+  $ds_layout->id = 'paragraphs_item|microsite_innovation_reference|default';
+  $ds_layout->entity_type = 'paragraphs_item';
+  $ds_layout->bundle = 'microsite_innovation_reference';
+  $ds_layout->view_mode = 'default';
+  $ds_layout->layout = 'ds_reset';
+  $ds_layout->settings = array(
+    'regions' => array(
+      'ds_content' => array(
+        0 => 'group_constraint',
+        1 => 'microsite_node_reference_para_innovation_reference',
+      ),
+    ),
+    'fields' => array(
+      'group_constraint' => 'ds_content',
+      'microsite_node_reference_para_innovation_reference' => 'ds_content',
+    ),
+    'classes' => array(),
+    'wrappers' => array(
+      'ds_content' => 'div',
+    ),
+    'layout_wrapper' => 'div',
+    'layout_attributes' => '',
+    'layout_attributes_merge' => TRUE,
+    'layout_link_attribute' => FALSE,
+    'layout_link_custom' => '',
+  );
+  $export['paragraphs_item|microsite_innovation_reference|default'] = $ds_layout;
 
   $ds_layout = new stdClass();
   $ds_layout->api_version = 1;
@@ -842,6 +874,36 @@ function gie_microsite_ds_layout_settings_info() {
     'layout_link_custom' => '',
   );
   $export['paragraphs_item|microsite_text|left_aligned'] = $ds_layout;
+
+  $ds_layout = new stdClass();
+  $ds_layout->api_version = 1;
+  $ds_layout->id = 'paragraphs_item|microsite_user_reference|default';
+  $ds_layout->entity_type = 'paragraphs_item';
+  $ds_layout->bundle = 'microsite_user_reference';
+  $ds_layout->view_mode = 'default';
+  $ds_layout->layout = 'ds_reset';
+  $ds_layout->settings = array(
+    'regions' => array(
+      'ds_content' => array(
+        0 => 'group_constraint',
+        1 => 'microsite_user_reference_para_user_reference',
+      ),
+    ),
+    'fields' => array(
+      'group_constraint' => 'ds_content',
+      'microsite_user_reference_para_user_reference' => 'ds_content',
+    ),
+    'classes' => array(),
+    'wrappers' => array(
+      'ds_content' => 'div',
+    ),
+    'layout_wrapper' => 'div',
+    'layout_attributes' => '',
+    'layout_attributes_merge' => TRUE,
+    'layout_link_attribute' => FALSE,
+    'layout_link_custom' => '',
+  );
+  $export['paragraphs_item|microsite_user_reference|default'] = $ds_layout;
 
   return $export;
 }

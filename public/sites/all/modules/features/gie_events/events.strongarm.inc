@@ -340,6 +340,10 @@ function events_strongarm() {
             'weight' => '26',
             'visible' => FALSE,
           ),
+          'full' => array(
+            'weight' => '10',
+            'visible' => FALSE,
+          ),
         ),
         'domain' => array(
           'default' => array(
@@ -348,6 +352,10 @@ function events_strongarm() {
           ),
           'spotlight' => array(
             'weight' => '13',
+            'visible' => FALSE,
+          ),
+          'full' => array(
+            'weight' => '1',
             'visible' => FALSE,
           ),
         ),
@@ -359,6 +367,10 @@ function events_strongarm() {
           'spotlight' => array(
             'weight' => '3',
             'visible' => TRUE,
+          ),
+          'full' => array(
+            'weight' => '10',
+            'visible' => FALSE,
           ),
         ),
       ),

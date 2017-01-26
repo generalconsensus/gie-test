@@ -1,0 +1,143 @@
+<?php
+
+
+/**
+ * Implements hook_libraries_info().
+ */
+function systrans_translation_libraries_info() {
+  $libraries['systrans'] = array(
+    'name' => 'Systrans',
+    'vendor url' => 'https://github.com/SYSTRAN/translation-api-php-client',
+    'download url' => 'https://github.com/SYSTRAN/translation-api-php-client/archive/master.zip',
+    'path' => '',
+    'version arguments' => array(
+      'file' => 'composer.json',
+      // Version 2.0.6
+      'pattern' => '/\"version": \"((\d+)\.(\d+)\.(\d+))\",/',
+    ),
+    'files' => array(
+      'php' => array('autoload.php'),
+    ),
+  );
+
+  return $libraries;
+}
+
+
+
+
+function systrans_translation_translate($input, $source = 'en', $target) {
+
+  $library = _systrans_load_library();
+  if (!$library['loaded']) {
+    throw new Exception(t('Unable to load the Systrans Translation Api. Please ensure that the systrans library is installed correctly.'));
+  }
+  else if (!class_exists('Systran\Client\ApiClient')) {
+    throw new Exception(t('Cannot load Systran\Client\ApiClient class. Please ensure that the systrans library is installed correctly.'));
+  }
+
+  $app = new \Systran\Client\ApiClient();
+  $app->getConfig()->setApiKey('default', variable_get('systrans_translation_api'));
+  $app->getConfig()->setCurlTimeout(60);
+  $app->getConfig()->setStopCurlSSLVerify(variable_get('systrans_translation_ssl_verify'));
+  $app->getConfig()->setDebug(TRUE);
+  $app->getConfig()->setDebugFile('TEMP');
+  $app->getConfig()->setHost(variable_get('systrans_translation_host'));
+  $queryParams = [
+    'key' => $app->getApiKeyWithPrefix('default'),
+    'source' => $source,
+    'target' => $target,
+    'input' => $input
+  ];
+  $app->getApiKeyWithPrefix('default');
+  $translation = $app->callApi('translate', 'GET', $queryParams, [], []);
+
+  return _systrans_retrieve_translation($translation);
+}
+
+
+function _systrans_retrieve_translation($translation) {
+  return $translation[0]->outputs[0]->output;
+}
+
+
+/**
+ * Implements hook_menu().
+ */
+function systrans_translation_menu() {
+  $items = array();
+  $items['admin/config/translations/systrans'] = array(
+    'title' => 'Systrans Translations Configuration',
+    'page arguments' => array('systrans_admin_config_form', 2),
+    'page callback' => 'drupal_get_form',
+    'access callback' => TRUE,
+    'type' => MENU_CALLBACK,
+  );
+  return $items;
+}
+
+function systrans_admin_config_form($form, $form_state) {
+
+  $form['systran_config']['host'] = array(
+    '#title' => 'Systrans Host',
+    '#type' => 'textfield',
+    '#default_value' => variable_get('systrans_translation_host', ''),
+  );
+
+  $form['systran_config']['api'] = array(
+    '#title' => 'Systrans API',
+    '#type' => 'textfield',
+    '#default_value' => variable_get('systrans_translation_api', ''),
+  );
+
+  $form['systran_config']['ssl_verify'] = array(
+    '#title' => 'Systrans SSL Verify',
+    '#type' => 'checkbox',
+    '#default_value' => variable_get('systrans_translation_ssl_verify', FALSE),
+  );
+  $form['systran_config']['submit'] = array(
+    '#type' => 'submit',
+    '#value' => t('Submit'),
+  );
+
+  return $form;
+
+}
+
+
+function systrans_admin_config_form_validate($form, $form_state) {
+  if (empty($form_state['values']['api'])) {
+    form_set_error('api', t('The API key must be set'));
+  }
+  if (empty($form_state['values']['host'])) {
+    form_set_error('host', t('The Host key must be set'));
+  }
+}
+
+function systrans_admin_config_form_submit($form, $form_state) {
+  if (!empty($form_state['values']['api'])) {
+    variable_set('systrans_translation_api', $form_state['values']['api']);
+  }
+
+  if (!empty($form_state['values']['host'])) {
+    variable_set('systrans_translation_host', $form_state['values']['host']);
+  }
+
+  variable_set('systrans_translation_ssl_verify', $form_state['values']['ssl_verify']);
+
+}
+
+function _systrans_load_library() {
+  // Start by calling libraries_load().
+  $library = libraries_load('systrans');
+  // If it detects and loads the library, great! We're done.
+  if (!empty($library['loaded'])) {
+    return $library;
+  }
+  // Otherwise, clear the systrans value from the Libraries cache, erase the
+  // static data for libraries_load(), then call it again to get the real
+  // state of the library.
+  cache_clear_all('systrans', 'cache_libraries');
+  drupal_static_reset('libraries_load');
+  return libraries_load('systrans');
+}

@@ -16,5 +16,21 @@
         color: #fff;
       }
     }
+
+    .nav__link--language {
+      padding-left: 30px;
+      position: relative;
+
+      &:before {
+        @include svg-background(globe-small);
+        content: "";
+        display: block;
+        height: 24px;
+        left: 0;
+        position: absolute;
+        width: 24px;
+        top: -5px;
+      }
+    }
   }
 }

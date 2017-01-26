@@ -154,7 +154,7 @@ function gie_blogs_strongarm() {
             'visible' => TRUE,
           ),
           'full' => array(
-            'weight' => '25',
+            'weight' => '27',
             'visible' => FALSE,
           ),
           'search_index' => array(
@@ -192,7 +192,7 @@ function gie_blogs_strongarm() {
             'visible' => TRUE,
           ),
           'full' => array(
-            'weight' => '17',
+            'weight' => '20',
             'visible' => FALSE,
           ),
           'search_index' => array(
@@ -246,7 +246,7 @@ function gie_blogs_strongarm() {
             'visible' => TRUE,
           ),
           'full' => array(
-            'weight' => '19',
+            'weight' => '22',
             'visible' => FALSE,
           ),
           'listing' => array(
@@ -276,7 +276,7 @@ function gie_blogs_strongarm() {
             'visible' => TRUE,
           ),
           'full' => array(
-            'weight' => '22',
+            'weight' => '24',
             'visible' => FALSE,
           ),
           'listing' => array(
@@ -306,7 +306,7 @@ function gie_blogs_strongarm() {
             'visible' => TRUE,
           ),
           'full' => array(
-            'weight' => '18',
+            'weight' => '21',
             'visible' => FALSE,
           ),
           'listing' => array(
@@ -336,7 +336,7 @@ function gie_blogs_strongarm() {
             'visible' => TRUE,
           ),
           'full' => array(
-            'weight' => '23',
+            'weight' => '25',
             'visible' => FALSE,
           ),
           'listing' => array(
@@ -350,7 +350,7 @@ function gie_blogs_strongarm() {
             'visible' => FALSE,
           ),
           'full' => array(
-            'weight' => '24',
+            'weight' => '26',
             'visible' => FALSE,
           ),
           'listing' => array(
@@ -376,7 +376,7 @@ function gie_blogs_strongarm() {
             'visible' => FALSE,
           ),
           'full' => array(
-            'weight' => '21',
+            'weight' => '23',
             'visible' => FALSE,
           ),
           'listing' => array(

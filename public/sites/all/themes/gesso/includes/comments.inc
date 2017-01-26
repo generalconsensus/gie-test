@@ -6,7 +6,7 @@
 
 /**
  * Implements hook_preprocess_comment_wrapper().
- */
+ */ 
 function gesso_preprocess_comment_wrapper(&$vars) {
   // Add a HTML id so it can be used as an anchor target.
   $vars['attributes_array']['id'] = 'comments';
@@ -17,6 +17,16 @@ function gesso_preprocess_comment_wrapper(&$vars) {
   // Add classes to subcomponents.
   $vars['title_attributes_array']['class'][] = 'comments__title';
   $vars['form_title_attributes_array']['class'][] = 'comments__title comments__title--form';
+
+  // Create Login links for anonymous users
+  $node = $vars['node'];
+  if (variable_get('comment_form_location_' . $node->type, COMMENT_FORM_BELOW) == COMMENT_FORM_SEPARATE_PAGE) {
+    $destination = array('destination' => "comment/reply/$node->nid#comment-form--2");
+  }
+  else {
+    $destination = array('destination' => "node/$node->nid#comment-form--2");
+  }
+  $vars['login_link'] = t('<a href="@login">Log in</a> or <a href="@register">register</a> to post comments', array('@login' => url('user/login', array('query' => $destination)), '@register' => url('user/register')));
 }
 
 /**

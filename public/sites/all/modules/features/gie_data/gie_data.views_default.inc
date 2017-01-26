@@ -1354,7 +1354,7 @@ function gie_data_views_default_views() {
   $handler->display->display_options['fields']['nid']['label'] = '';
   $handler->display->display_options['fields']['nid']['exclude'] = TRUE;
   $handler->display->display_options['fields']['nid']['element_label_colon'] = FALSE;
-  /* Field: Content: Country Created In */
+  /* Field: Content: Where did you create your innovation? */
   $handler->display->display_options['fields']['field_innovation_created']['id'] = 'field_innovation_created';
   $handler->display->display_options['fields']['field_innovation_created']['table'] = 'field_data_field_innovation_created';
   $handler->display->display_options['fields']['field_innovation_created']['field'] = 'field_innovation_created';
@@ -1363,7 +1363,7 @@ function gie_data_views_default_views() {
   $handler->display->display_options['fields']['field_innovation_created']['exclude'] = TRUE;
   $handler->display->display_options['fields']['field_innovation_created']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['field_innovation_created']['separator'] = ', ';
-  /* Field: Content: Country Implemented In */
+  /* Field: Content: Where have you implemented your innovation? */
   $handler->display->display_options['fields']['field_innovation_implemented']['id'] = 'field_innovation_implemented';
   $handler->display->display_options['fields']['field_innovation_implemented']['table'] = 'field_data_field_innovation_implemented';
   $handler->display->display_options['fields']['field_innovation_implemented']['field'] = 'field_innovation_implemented';
@@ -1486,7 +1486,7 @@ function gie_data_views_default_views() {
   $handler->display->display_options['header']['area']['content'] = 'Measured by the number of innovations requiring these skills. ';
   $handler->display->display_options['header']['area']['format'] = 'filtered_html';
   $handler->display->display_options['defaults']['relationships'] = FALSE;
-  /* Relationship: Content: Assistance Type (field_innovation_assistance) */
+  /* Relationship: Content: How can Exchange Members help you? (field_innovation_assistance) */
   $handler->display->display_options['relationships']['field_innovation_assistance_tid']['id'] = 'field_innovation_assistance_tid';
   $handler->display->display_options['relationships']['field_innovation_assistance_tid']['table'] = 'field_data_field_innovation_assistance';
   $handler->display->display_options['relationships']['field_innovation_assistance_tid']['field'] = 'field_innovation_assistance_tid';

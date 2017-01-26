@@ -290,6 +290,10 @@ function gie_needs_strongarm() {
             'weight' => '18',
             'visible' => FALSE,
           ),
+          'full' => array(
+            'weight' => '10',
+            'visible' => FALSE,
+          ),
         ),
         'wanted_counts_comments' => array(
           'listing' => array(
@@ -302,6 +306,10 @@ function gie_needs_strongarm() {
           ),
           'search_listing' => array(
             'weight' => '19',
+            'visible' => FALSE,
+          ),
+          'full' => array(
+            'weight' => '10',
             'visible' => FALSE,
           ),
         ),
@@ -318,6 +326,10 @@ function gie_needs_strongarm() {
             'weight' => '21',
             'visible' => FALSE,
           ),
+          'full' => array(
+            'weight' => '10',
+            'visible' => FALSE,
+          ),
         ),
         'wanted_counts_wanted_people_needed' => array(
           'listing' => array(
@@ -332,6 +344,10 @@ function gie_needs_strongarm() {
             'weight' => '20',
             'visible' => FALSE,
           ),
+          'full' => array(
+            'weight' => '10',
+            'visible' => FALSE,
+          ),
         ),
         'wanted_counts_wanted_funding_available' => array(
           'listing' => array(
@@ -344,6 +360,22 @@ function gie_needs_strongarm() {
           ),
           'search_listing' => array(
             'weight' => '22',
+            'visible' => FALSE,
+          ),
+          'full' => array(
+            'weight' => '10',
+            'visible' => FALSE,
+          ),
+        ),
+        'domain' => array(
+          'full' => array(
+            'weight' => '1',
+            'visible' => FALSE,
+          ),
+        ),
+        'flag_favorite' => array(
+          'full' => array(
+            'weight' => '10',
             'visible' => FALSE,
           ),
         ),

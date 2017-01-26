@@ -1,0 +1,57 @@
+<?php
+/**
+ * @file
+ * Requirements hooks for the Systrans API module.
+ */
+
+/**
+ * Implements hook_requirements().
+ */
+function systrans_translation_requirements($phase) {
+
+  $requirements = array();
+  // Ensure translations don't break at install time:
+  $t = get_t();
+
+  if ($phase == 'update') {
+    $path = drupal_get_path('module', 'libraries') . '/libraries.info';
+    $info = drupal_parse_info_file($path);
+    if (version_compare($info['version'], '7.x-2.0', '<')) {
+
+      $requirements['systrans'] = array(
+        'title' => $t('Systrans library'),
+        'description' => $t('libraries 2.x is required for Systrans 7.x-2.8 or higher.'),
+        '%libpath' => $path,
+        '%dirname' => 'Systrans',
+        'value' => NULL,
+        'severity' => REQUIREMENT_ERROR,
+      );
+      return $requirements;
+    }
+  }
+
+  // Report Drupal version:
+  if (in_array($phase, array('runtime', 'update'))) {
+    $library = libraries_detect('mailchimp');
+    $requirements['systrans'] = array(
+      'title' => $t('Systrans'),
+    );
+
+    if ($library['installed']) {
+      $requirements['systrans'] += array(
+        'value' => $library['version'],
+        'description' => $t('The Systrans wrapper library is installed correctly.'),
+        'severity' => REQUIREMENT_OK,
+      );
+    }
+    else {
+      $requirements['systrans'] += array(
+        'value' => $library['error'],
+        'description' => $library['error message'],
+        'severity' => REQUIREMENT_ERROR,
+      );
+    }
+  }
+  return $requirements;
+}
+

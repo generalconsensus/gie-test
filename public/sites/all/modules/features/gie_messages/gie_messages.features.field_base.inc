@@ -33,9 +33,6 @@ function gie_messages_field_default_field_bases() {
           ),
         ),
         'sort' => array(
-          'direction' => 'ASC',
-          'field' => 'comment_body:value',
-          'property' => 'nid',
           'type' => 'none',
         ),
         'target_bundles' => array(),

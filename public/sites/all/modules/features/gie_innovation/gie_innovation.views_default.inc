@@ -1435,16 +1435,16 @@ function gie_innovation_views_default_views() {
   $handler->display->display_options['style_options']['row_class_special'] = FALSE;
   $handler->display->display_options['row_plugin'] = 'entity';
   $handler->display->display_options['row_options']['view_mode'] = 'listing';
-  /* Field: Indexed Content: Node ID */
+  /* Field: Indexed Node: Node ID */
   $handler->display->display_options['fields']['nid']['id'] = 'nid';
   $handler->display->display_options['fields']['nid']['table'] = 'search_api_index_default_node_index';
   $handler->display->display_options['fields']['nid']['field'] = 'nid';
-  /* Sort criterion: Indexed Content: Date created */
+  /* Sort criterion: Indexed Node: Date created */
   $handler->display->display_options['sorts']['created']['id'] = 'created';
   $handler->display->display_options['sorts']['created']['table'] = 'search_api_index_default_node_index';
   $handler->display->display_options['sorts']['created']['field'] = 'created';
   $handler->display->display_options['sorts']['created']['order'] = 'DESC';
-  /* Contextual filter: Indexed Content: Domain ID */
+  /* Contextual filter: Indexed Node: Domain ID */
   $handler->display->display_options['arguments']['domain_domain_id']['id'] = 'domain_domain_id';
   $handler->display->display_options['arguments']['domain_domain_id']['table'] = 'search_api_index_default_node_index';
   $handler->display->display_options['arguments']['domain_domain_id']['field'] = 'domain_domain_id';
@@ -1453,14 +1453,14 @@ function gie_innovation_views_default_views() {
   $handler->display->display_options['arguments']['domain_domain_id']['summary']['format'] = 'default_summary';
   $handler->display->display_options['arguments']['domain_domain_id']['break_phrase'] = 1;
   $handler->display->display_options['arguments']['domain_domain_id']['not'] = 0;
-  /* Filter criterion: Indexed Content: Content type */
+  /* Filter criterion: Indexed Node: Content type */
   $handler->display->display_options['filters']['type']['id'] = 'type';
   $handler->display->display_options['filters']['type']['table'] = 'search_api_index_default_node_index';
   $handler->display->display_options['filters']['type']['field'] = 'type';
   $handler->display->display_options['filters']['type']['value'] = array(
     'innovation' => 'innovation',
   );
-  /* Filter criterion: Indexed Content: Status */
+  /* Filter criterion: Indexed Node: Status */
   $handler->display->display_options['filters']['status']['id'] = 'status';
   $handler->display->display_options['filters']['status']['table'] = 'search_api_index_default_node_index';
   $handler->display->display_options['filters']['status']['field'] = 'status';
@@ -1815,14 +1815,14 @@ function gie_innovation_views_default_views() {
   $handler->display->display_options['style_plugin'] = 'default';
   $handler->display->display_options['row_plugin'] = 'entity';
   $handler->display->display_options['row_options']['view_mode'] = 'listing';
-  /* Filter criterion: Indexed Content: Content type */
+  /* Filter criterion: Indexed Node: Content type */
   $handler->display->display_options['filters']['type']['id'] = 'type';
   $handler->display->display_options['filters']['type']['table'] = 'search_api_index_default_node_index';
   $handler->display->display_options['filters']['type']['field'] = 'type';
   $handler->display->display_options['filters']['type']['value'] = array(
     'innovation' => 'innovation',
   );
-  /* Filter criterion: Indexed Content: Sector */
+  /* Filter criterion: Indexed Node: Related Sectors */
   $handler->display->display_options['filters']['field_term_sector']['id'] = 'field_term_sector';
   $handler->display->display_options['filters']['field_term_sector']['table'] = 'search_api_index_default_node_index';
   $handler->display->display_options['filters']['field_term_sector']['field'] = 'field_term_sector';

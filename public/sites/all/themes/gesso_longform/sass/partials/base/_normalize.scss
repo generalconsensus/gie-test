@@ -47,6 +47,9 @@ template {
   select,
   textarea {
     font-family: $base-font-family;
+    .font-family-lato & {
+      font-family: $lato-font-family;
+    }
   }
 }
 

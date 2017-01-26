@@ -1,0 +1,5 @@
+<?php
+
+function gie_mailchimp_update_7000() {
+  variable_set('gie_mailchimp_cron_last_run', strtotime('-14 days'));
+}

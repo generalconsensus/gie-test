@@ -635,7 +635,7 @@ $conf['search_cron_limit'] = 0;
 /**
  * Change file upload sizes
 */
-ini_set('upload_max_filesize','20M');
+ini_set('upload_max_filesize','200M');
 ini_set('post_max_size','20M');
 
 /**

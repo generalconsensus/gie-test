@@ -313,13 +313,13 @@ function events_views_default_views() {
   $handler->display->display_options['fields']['count']['relationship'] = 'flag_count_rel';
   $handler->display->display_options['fields']['count']['label'] = 'Favorites';
   $handler->display->display_options['fields']['count']['element_label_colon'] = FALSE;
-  /* Field: Content: Proof of Evidence (field_innovation_proof_evidence:delta) */
+  /* Field: Content: Additional Evidence Documentation (field_innovation_proof_evidence:delta) */
   $handler->display->display_options['fields']['delta']['id'] = 'delta';
   $handler->display->display_options['fields']['delta']['table'] = 'field_data_field_innovation_proof_evidence';
   $handler->display->display_options['fields']['delta']['field'] = 'delta';
   $handler->display->display_options['fields']['delta']['label'] = 'Evidence';
   $handler->display->display_options['fields']['delta']['element_label_colon'] = FALSE;
-  /* Field: Content: Website */
+  /* Field: Content: Do you have a website for the innovation? */
   $handler->display->display_options['fields']['field_innovation_website']['id'] = 'field_innovation_website';
   $handler->display->display_options['fields']['field_innovation_website']['table'] = 'field_data_field_innovation_website';
   $handler->display->display_options['fields']['field_innovation_website']['field'] = 'field_innovation_website';
@@ -817,7 +817,7 @@ function events_views_default_views() {
   $handler->display->display_options['style_options']['row_class_special'] = FALSE;
   $handler->display->display_options['row_plugin'] = 'entity';
   $handler->display->display_options['row_options']['view_mode'] = 'listing';
-  /* Field: Indexed Content: Node ID */
+  /* Field: Indexed Node: Node ID */
   $handler->display->display_options['fields']['nid']['id'] = 'nid';
   $handler->display->display_options['fields']['nid']['table'] = 'search_api_index_default_node_index';
   $handler->display->display_options['fields']['nid']['field'] = 'nid';
@@ -825,7 +825,7 @@ function events_views_default_views() {
   $handler->display->display_options['sorts']['field_event_date_value']['id'] = 'field_event_date_value';
   $handler->display->display_options['sorts']['field_event_date_value']['table'] = 'search_api_index_default_node_index';
   $handler->display->display_options['sorts']['field_event_date_value']['field'] = 'field_event_date_value';
-  /* Filter criterion: Indexed Content: Content type */
+  /* Filter criterion: Indexed Node: Content type */
   $handler->display->display_options['filters']['type']['id'] = 'type';
   $handler->display->display_options['filters']['type']['table'] = 'search_api_index_default_node_index';
   $handler->display->display_options['filters']['type']['field'] = 'type';
@@ -855,7 +855,7 @@ function events_views_default_views() {
   $handler->display->display_options['empty']['area']['content'] = 'There are no events that match your search.';
   $handler->display->display_options['empty']['area']['format'] = 'filtered_html';
   $handler->display->display_options['defaults']['arguments'] = FALSE;
-  /* Contextual filter: Indexed Content: Domain ID */
+  /* Contextual filter: Indexed Node: Domain ID */
   $handler->display->display_options['arguments']['domain_domain_id']['id'] = 'domain_domain_id';
   $handler->display->display_options['arguments']['domain_domain_id']['table'] = 'search_api_index_default_node_index';
   $handler->display->display_options['arguments']['domain_domain_id']['field'] = 'domain_domain_id';
@@ -866,14 +866,14 @@ function events_views_default_views() {
   $handler->display->display_options['arguments']['domain_domain_id']['not'] = 0;
   $handler->display->display_options['defaults']['filter_groups'] = FALSE;
   $handler->display->display_options['defaults']['filters'] = FALSE;
-  /* Filter criterion: Indexed Content: Content type */
+  /* Filter criterion: Indexed Node: Content type */
   $handler->display->display_options['filters']['type']['id'] = 'type';
   $handler->display->display_options['filters']['type']['table'] = 'search_api_index_default_node_index';
   $handler->display->display_options['filters']['type']['field'] = 'type';
   $handler->display->display_options['filters']['type']['value'] = array(
     'event' => 'event',
   );
-  /* Filter criterion: Indexed Content: Status */
+  /* Filter criterion: Indexed Node: Status */
   $handler->display->display_options['filters']['status']['id'] = 'status';
   $handler->display->display_options['filters']['status']['table'] = 'search_api_index_default_node_index';
   $handler->display->display_options['filters']['status']['field'] = 'status';
@@ -931,7 +931,7 @@ function events_views_default_views() {
   $handler->display->display_options['sorts']['field_event_date_value']['field'] = 'field_event_date_value';
   $handler->display->display_options['defaults']['filter_groups'] = FALSE;
   $handler->display->display_options['defaults']['filters'] = FALSE;
-  /* Filter criterion: Indexed Content: Content type */
+  /* Filter criterion: Indexed Node: Content type */
   $handler->display->display_options['filters']['type']['id'] = 'type';
   $handler->display->display_options['filters']['type']['table'] = 'search_api_index_default_node_index';
   $handler->display->display_options['filters']['type']['field'] = 'type';
@@ -973,7 +973,7 @@ function events_views_default_views() {
   $handler->display->display_options['sorts']['field_event_date_value']['field'] = 'field_event_date_value';
   $handler->display->display_options['sorts']['field_event_date_value']['order'] = 'DESC';
   $handler->display->display_options['defaults']['arguments'] = FALSE;
-  /* Contextual filter: Indexed Content: Domain ID */
+  /* Contextual filter: Indexed Node: Domain ID */
   $handler->display->display_options['arguments']['domain_domain_id']['id'] = 'domain_domain_id';
   $handler->display->display_options['arguments']['domain_domain_id']['table'] = 'search_api_index_default_node_index';
   $handler->display->display_options['arguments']['domain_domain_id']['field'] = 'domain_domain_id';
@@ -985,7 +985,7 @@ function events_views_default_views() {
   $handler->display->display_options['defaults']['filter_groups'] = FALSE;
   $handler->display->display_options['filter_groups']['operator'] = 'OR';
   $handler->display->display_options['defaults']['filters'] = FALSE;
-  /* Filter criterion: Indexed Content: Content type */
+  /* Filter criterion: Indexed Node: Content type */
   $handler->display->display_options['filters']['type']['id'] = 'type';
   $handler->display->display_options['filters']['type']['table'] = 'search_api_index_default_node_index';
   $handler->display->display_options['filters']['type']['field'] = 'type';
@@ -993,7 +993,7 @@ function events_views_default_views() {
     'event' => 'event',
   );
   $handler->display->display_options['filters']['type']['group'] = 1;
-  /* Filter criterion: Indexed Content: Status */
+  /* Filter criterion: Indexed Node: Status */
   $handler->display->display_options['filters']['status']['id'] = 'status';
   $handler->display->display_options['filters']['status']['table'] = 'search_api_index_default_node_index';
   $handler->display->display_options['filters']['status']['field'] = 'status';

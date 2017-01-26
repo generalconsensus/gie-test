@@ -1,0 +1,8 @@
+name = "Systrans Translation Api"
+description = "Module to allow translations through systrans API"
+package = Translations
+core = 7.x
+version = 7.x-1.0
+dependencies[] = libraries
+
+files[] = js/systrans_language_dropdown.js

@@ -13,6 +13,7 @@
           $mobileBar = $('<div class="mobile-menu__bar"><button class="mobile-menu__button js-mobile-menu-button mobile-menu__button--menu"><span class="mobile-menu__icon mobile-menu__icon--menu">Menu</span></button><a class="mobile-menu__button mobile-menu__button--home" href="/" rel="home"><span class="mobile-menu__icon mobile-menu__icon--home">Home</span></a><button class="mobile-menu__button js-mobile-search-button mobile-menu__button--search"><span class="mobile-menu__icon mobile-menu__icon--search">Search</span></button></div>'),
           $mobileLinks = $('<div class="mobile-menu__links element-hidden"></div>'),
           $mainMenu = $('.region-navigation', context).find('.nav--main-menu, .block--system-main-menu .nav, .block--tb-megamenu-main-menu .nav, .block--menu-menu-microsite-menu .nav').not('.contextual-links').first().clone(),
+          $langMenu = $('.header', context).find('.block--gie-translation-gie-translation-language-link .nav li').not('.contextual-links').first().clone(),
           $isSuperfish = ($mainMenu.hasClass('sf-menu')) ? true : false,
           $isMegaMenu = ($mainMenu.hasClass('tb-megamenu-nav')) ? true : false;
 
@@ -62,15 +63,54 @@
 
         });
 
+        // Remove menu id, add class, and format subnav menus.
+        $langMenu.removeAttr('id').attr('class', 'nav').find('.tb-megamenu-submenu,.view').each(function () {
+          // remove any wrappers
+          while ($(this).parent().is('div')) {
+            $(this).unwrap();
+          }
+          var $parentLink = $(this).siblings('a');
+          $parentLink.addClass('nav__link--parent').parent('li').addClass('nav__item--parent');
+          if ($parentLink.siblings('.nav__subnav-arrow').length < 1) {
+            $parentLink.after('<button class="nav__subnav-arrow">Show</button>');
+          }
+
+          if ($(this).is('.tb-megamenu-submenu')) {
+            $(this).attr('class','nav--subnav').removeAttr("style");
+            $(this).find(".block a").each(function(){
+              $(this).attr('class','nav__link nav__header').removeAttr("style");
+              $(this).wrap("<div class='nav__item'></div>");
+            });
+          }
+
+          // if ($(this).is('.view')) {
+            $(this).addClass('nav__view');
+            var $childLink = $(this).find('.view__header').find('h2,a');
+            $childLink.addClass('nav__header').closest('.view__header').addClass('nav__item--lvl2parent');
+            if ($childLink.siblings('.nav__lvl2subnav-arrow').length < 1) {
+              $childLink.after('<button class="nav__lvl2subnav-arrow">Show</button>');
+            }
+            $(this).find('.item-list ul').addClass('nav--lvl2subnav').unwrap();
+            $(this).find('.view__footer a').appendTo($(this).find('.nav--lvl2subnav')).addClass('nav__link--view-all').wrap('<li class="nav__item"></li>');
+            $(this).find('.view__footer').remove();
+          // }
+
+          // Remove any inline styles.
+          $(this).removeAttr('style').find('ul, li, a').removeAttr('style');
+
+        });
+
+
+        $langMenu.clone().appendTo($mainMenu);
+        $('.block--system-user-menu').eq(0).find('> ul.nav .nav__item').clone().appendTo($mainMenu);
+
+        // add utility links
         $mainMenu.find('.nav__item--parent').each(function(){
           $(this).find('.nav--subnav,.nav__view').wrapAll('<div class="nav__toggler"></div>');
         });
 
         // Remove third level menu items.
         $mainMenu.find('ul ul').remove();
-
-        // add utility links
-        $('.block--system-user-menu').eq(0).find('> ul.nav .nav__item').clone().appendTo($mainMenu);
 
         // add a home link
         $('<li class="nav__item"><a href="/" class="nav__link">Home</a></li>').prependTo($mainMenu);

@@ -545,16 +545,16 @@ function gie_funding_views_default_views() {
   $handler->display->display_options['empty']['area']['empty'] = TRUE;
   $handler->display->display_options['empty']['area']['content'] = 'There are no funding opportunities that match your search.';
   $handler->display->display_options['empty']['area']['format'] = 'filtered_html';
-  /* Field: Indexed Content: Node ID */
+  /* Field: Indexed Node: Node ID */
   $handler->display->display_options['fields']['nid']['id'] = 'nid';
   $handler->display->display_options['fields']['nid']['table'] = 'search_api_index_default_node_index';
   $handler->display->display_options['fields']['nid']['field'] = 'nid';
-  /* Sort criterion: Indexed Content: Date created */
+  /* Sort criterion: Indexed Node: Date created */
   $handler->display->display_options['sorts']['created']['id'] = 'created';
   $handler->display->display_options['sorts']['created']['table'] = 'search_api_index_default_node_index';
   $handler->display->display_options['sorts']['created']['field'] = 'created';
   $handler->display->display_options['sorts']['created']['order'] = 'DESC';
-  /* Filter criterion: Indexed Content: Content type */
+  /* Filter criterion: Indexed Node: Content type */
   $handler->display->display_options['filters']['type']['id'] = 'type';
   $handler->display->display_options['filters']['type']['table'] = 'search_api_index_default_node_index';
   $handler->display->display_options['filters']['type']['field'] = 'type';
@@ -575,13 +575,13 @@ function gie_funding_views_default_views() {
   $handler->display->display_options['row_options']['view_mode'] = 'listing';
   $handler->display->display_options['defaults']['row_options'] = FALSE;
   $handler->display->display_options['defaults']['sorts'] = FALSE;
-  /* Sort criterion: Indexed Content: Date created */
+  /* Sort criterion: Indexed Node: Date created */
   $handler->display->display_options['sorts']['created']['id'] = 'created';
   $handler->display->display_options['sorts']['created']['table'] = 'search_api_index_default_node_index';
   $handler->display->display_options['sorts']['created']['field'] = 'created';
   $handler->display->display_options['sorts']['created']['order'] = 'DESC';
   $handler->display->display_options['defaults']['arguments'] = FALSE;
-  /* Contextual filter: Indexed Content: Domain ID */
+  /* Contextual filter: Indexed Node: Domain ID */
   $handler->display->display_options['arguments']['domain_domain_id']['id'] = 'domain_domain_id';
   $handler->display->display_options['arguments']['domain_domain_id']['table'] = 'search_api_index_default_node_index';
   $handler->display->display_options['arguments']['domain_domain_id']['field'] = 'domain_domain_id';
@@ -596,7 +596,7 @@ function gie_funding_views_default_views() {
     2 => 'OR',
   );
   $handler->display->display_options['defaults']['filters'] = FALSE;
-  /* Filter criterion: Indexed Content: Content type */
+  /* Filter criterion: Indexed Node: Content type */
   $handler->display->display_options['filters']['type']['id'] = 'type';
   $handler->display->display_options['filters']['type']['table'] = 'search_api_index_default_node_index';
   $handler->display->display_options['filters']['type']['field'] = 'type';
@@ -604,7 +604,7 @@ function gie_funding_views_default_views() {
     'funding' => 'funding',
   );
   $handler->display->display_options['filters']['type']['group'] = 1;
-  /* Filter criterion: Indexed Content: Status */
+  /* Filter criterion: Indexed Node: Status */
   $handler->display->display_options['filters']['status']['id'] = 'status';
   $handler->display->display_options['filters']['status']['table'] = 'search_api_index_default_node_index';
   $handler->display->display_options['filters']['status']['field'] = 'status';
@@ -612,13 +612,13 @@ function gie_funding_views_default_views() {
     1 => '1',
   );
   $handler->display->display_options['filters']['status']['group'] = 1;
-  /* Filter criterion: Indexed Content: Deadlines */
+  /* Filter criterion: Indexed Node: Deadlines */
   $handler->display->display_options['filters']['field_funding_deadline']['id'] = 'field_funding_deadline';
   $handler->display->display_options['filters']['field_funding_deadline']['table'] = 'search_api_index_default_node_index';
   $handler->display->display_options['filters']['field_funding_deadline']['field'] = 'field_funding_deadline';
   $handler->display->display_options['filters']['field_funding_deadline']['operator'] = 'empty';
   $handler->display->display_options['filters']['field_funding_deadline']['group'] = 2;
-  /* Filter criterion: Indexed Content: Deadlines */
+  /* Filter criterion: Indexed Node: Deadlines */
   $handler->display->display_options['filters']['field_funding_deadline_1']['id'] = 'field_funding_deadline_1';
   $handler->display->display_options['filters']['field_funding_deadline_1']['table'] = 'search_api_index_default_node_index';
   $handler->display->display_options['filters']['field_funding_deadline_1']['field'] = 'field_funding_deadline';
@@ -639,13 +639,13 @@ function gie_funding_views_default_views() {
   $handler->display->display_options['row_options']['view_mode'] = 'listing';
   $handler->display->display_options['defaults']['row_options'] = FALSE;
   $handler->display->display_options['defaults']['sorts'] = FALSE;
-  /* Sort criterion: Indexed Content: Deadlines */
+  /* Sort criterion: Indexed Node: Deadlines */
   $handler->display->display_options['sorts']['field_funding_deadline']['id'] = 'field_funding_deadline';
   $handler->display->display_options['sorts']['field_funding_deadline']['table'] = 'search_api_index_default_node_index';
   $handler->display->display_options['sorts']['field_funding_deadline']['field'] = 'field_funding_deadline';
   $handler->display->display_options['sorts']['field_funding_deadline']['order'] = 'DESC';
   $handler->display->display_options['defaults']['arguments'] = FALSE;
-  /* Contextual filter: Indexed Content: Domain ID */
+  /* Contextual filter: Indexed Node: Domain ID */
   $handler->display->display_options['arguments']['domain_domain_id']['id'] = 'domain_domain_id';
   $handler->display->display_options['arguments']['domain_domain_id']['table'] = 'search_api_index_default_node_index';
   $handler->display->display_options['arguments']['domain_domain_id']['field'] = 'domain_domain_id';
@@ -656,7 +656,7 @@ function gie_funding_views_default_views() {
   $handler->display->display_options['arguments']['domain_domain_id']['not'] = 0;
   $handler->display->display_options['defaults']['filter_groups'] = FALSE;
   $handler->display->display_options['defaults']['filters'] = FALSE;
-  /* Filter criterion: Indexed Content: Content type */
+  /* Filter criterion: Indexed Node: Content type */
   $handler->display->display_options['filters']['type']['id'] = 'type';
   $handler->display->display_options['filters']['type']['table'] = 'search_api_index_default_node_index';
   $handler->display->display_options['filters']['type']['field'] = 'type';
@@ -664,7 +664,7 @@ function gie_funding_views_default_views() {
     'funding' => 'funding',
   );
   $handler->display->display_options['filters']['type']['group'] = 1;
-  /* Filter criterion: Indexed Content: Status */
+  /* Filter criterion: Indexed Node: Status */
   $handler->display->display_options['filters']['status']['id'] = 'status';
   $handler->display->display_options['filters']['status']['table'] = 'search_api_index_default_node_index';
   $handler->display->display_options['filters']['status']['field'] = 'status';
@@ -672,13 +672,13 @@ function gie_funding_views_default_views() {
     1 => '1',
   );
   $handler->display->display_options['filters']['status']['group'] = 1;
-  /* Filter criterion: Indexed Content: Deadlines */
+  /* Filter criterion: Indexed Node: Deadlines */
   $handler->display->display_options['filters']['field_funding_deadline']['id'] = 'field_funding_deadline';
   $handler->display->display_options['filters']['field_funding_deadline']['table'] = 'search_api_index_default_node_index';
   $handler->display->display_options['filters']['field_funding_deadline']['field'] = 'field_funding_deadline';
   $handler->display->display_options['filters']['field_funding_deadline']['operator'] = 'not empty';
   $handler->display->display_options['filters']['field_funding_deadline']['group'] = 1;
-  /* Filter criterion: Indexed Content: Deadlines */
+  /* Filter criterion: Indexed Node: Deadlines */
   $handler->display->display_options['filters']['field_funding_deadline_1']['id'] = 'field_funding_deadline_1';
   $handler->display->display_options['filters']['field_funding_deadline_1']['table'] = 'search_api_index_default_node_index';
   $handler->display->display_options['filters']['field_funding_deadline_1']['field'] = 'field_funding_deadline';
@@ -763,13 +763,13 @@ function gie_funding_views_default_views() {
   $handler->display->display_options['fields']['count']['relationship'] = 'flag_count_rel';
   $handler->display->display_options['fields']['count']['label'] = 'Favorites';
   $handler->display->display_options['fields']['count']['element_label_colon'] = FALSE;
-  /* Field: Content: Proof of Evidence (field_innovation_proof_evidence:delta) */
+  /* Field: Content: Additional Evidence Documentation (field_innovation_proof_evidence:delta) */
   $handler->display->display_options['fields']['delta']['id'] = 'delta';
   $handler->display->display_options['fields']['delta']['table'] = 'field_data_field_innovation_proof_evidence';
   $handler->display->display_options['fields']['delta']['field'] = 'delta';
   $handler->display->display_options['fields']['delta']['label'] = 'Evidence';
   $handler->display->display_options['fields']['delta']['element_label_colon'] = FALSE;
-  /* Field: Content: Website */
+  /* Field: Content: Do you have a website for the innovation? */
   $handler->display->display_options['fields']['field_innovation_website']['id'] = 'field_innovation_website';
   $handler->display->display_options['fields']['field_innovation_website']['table'] = 'field_data_field_innovation_website';
   $handler->display->display_options['fields']['field_innovation_website']['field'] = 'field_innovation_website';

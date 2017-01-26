@@ -45,10 +45,33 @@ function gie_search_default_page_manager_handlers() {
   $display->cache = array();
   $display->title = 'Search';
   $display->uuid = '81989513-2050-402c-858d-291581ae2a20';
-  $display->storage_type = '';
-  $display->storage_id = '';
+  $display->storage_type = 'page_manager';
+  $display->storage_id = 'pm_existing_pages_solr_search__solr_search';
   $display->content = array();
   $display->panels = array();
+  $pane = new stdClass();
+  $pane->pid = 'new-fe234be3-8b62-4ed7-be48-e49f5ae3ff8d';
+  $pane->panel = 'main';
+  $pane->type = 'block';
+  $pane->subtype = 'gie_search-search_help_text';
+  $pane->shown = TRUE;
+  $pane->access = array();
+  $pane->configuration = array(
+    'override_title' => 1,
+    'override_title_text' => '',
+    'override_title_heading' => 'h2',
+  );
+  $pane->cache = array();
+  $pane->style = array(
+    'settings' => NULL,
+  );
+  $pane->css = array();
+  $pane->extras = array();
+  $pane->position = 0;
+  $pane->locks = array();
+  $pane->uuid = 'fe234be3-8b62-4ed7-be48-e49f5ae3ff8d';
+  $display->content['new-fe234be3-8b62-4ed7-be48-e49f5ae3ff8d'] = $pane;
+  $display->panels['main'][0] = 'new-fe234be3-8b62-4ed7-be48-e49f5ae3ff8d';
   $pane = new stdClass();
   $pane->pid = 'new-b51b79b9-cbe7-4db6-8614-aa8133603419';
   $pane->panel = 'main';
@@ -69,11 +92,11 @@ function gie_search_default_page_manager_handlers() {
   );
   $pane->css = array();
   $pane->extras = array();
-  $pane->position = 0;
+  $pane->position = 1;
   $pane->locks = array();
   $pane->uuid = 'b51b79b9-cbe7-4db6-8614-aa8133603419';
   $display->content['new-b51b79b9-cbe7-4db6-8614-aa8133603419'] = $pane;
-  $display->panels['main'][0] = 'new-b51b79b9-cbe7-4db6-8614-aa8133603419';
+  $display->panels['main'][1] = 'new-b51b79b9-cbe7-4db6-8614-aa8133603419';
   $pane = new stdClass();
   $pane->pid = 'new-aeea9f19-5499-43e6-bdd9-9e2326873767';
   $pane->panel = 'sidebar';
@@ -278,8 +301,8 @@ function gie_search_default_page_manager_handlers() {
   $display->cache = array();
   $display->title = 'Search';
   $display->uuid = '41c51e95-c9db-4017-a053-93b5e9ca76e7';
-  $display->storage_type = '';
-  $display->storage_id = '';
+  $display->storage_type = 'page_manager';
+  $display->storage_id = 'search_node__solr_search';
   $display->content = array();
   $display->panels = array();
   $pane = new stdClass();

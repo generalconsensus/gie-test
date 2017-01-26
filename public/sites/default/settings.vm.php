@@ -589,9 +589,7 @@ $conf['search_api_override_servers'] = array(
   'elasticsearch' => array(
     'options' => array(
       '0' => array(
-        'host' => 'search.globalinnovationexchange.org',
-        'port' => '443',
-        'transport' => 'Https'
+        'host' => 'localhost',
       ),
     ),
   ),
@@ -636,8 +634,8 @@ $conf['maintenance_theme'] = 'gesso';
 /**
  * Change file upload sizes
  */
-ini_set('upload_max_filesize','20M');
-ini_set('post_max_size','20M');
+ini_set('upload_max_filesize','200M');
+ini_set('post_max_size','200M');
 
 /**
  * Change memory limit

@@ -7,6 +7,34 @@
 include_once 'gie_innovation.features.inc';
 
 /**
+ * Implements hook_ctools_plugin_directory().
+ */
+function gie_innovation_ctools_plugin_directory($module, $plugin) {
+  if ($module == 'gie_innovation') {
+    return 'plugins/' . $plugin;
+  }
+}
+
+
+/**
+ * Implements hook_menu().
+ */
+function gie_innovation_menu() {
+  $items = array();
+
+  $items['gie_innovation/autocomplete/single/%/%/%'] = array(
+    'title' => 'Exchange Reference Autocomplete',
+    'page callback' => 'gie_innovation_autocomplete_callback',
+    'page arguments' => array(2, 3, 4, 5),
+    'access callback' => 'gie_innovation_autocomplete_access_callback',
+    'access arguments' => array(2, 3, 4, 5),
+    'type' => MENU_CALLBACK,
+  );
+
+  return $items;
+}
+
+/**
  * Implements hook_ds_fields_info().
  * - Custom display for non exchange references: display full name of user.
  */
@@ -46,7 +74,11 @@ function gie_innovation_field_formatter_info() {
   return array(
     'gie_listing_link' => array(
       'label' => t('Listing link'),
-      'field types' => array('taxonomy_term_reference', 'number_integer', 'text'),
+      'field types' => array(
+        'taxonomy_term_reference',
+        'number_integer',
+        'text'
+      ),
     ),
   );
 }
@@ -65,7 +97,7 @@ function gie_innovation_field_formatter_view($entity_type, $entity, $field, $ins
     $link_status = TRUE;
 
     // Set listing page based on bundle
-    switch($instance['bundle']) {
+    switch ($instance['bundle']) {
       case 'innovation':
         $listing_page = 'innovations';
         break;
@@ -84,7 +116,7 @@ function gie_innovation_field_formatter_view($entity_type, $entity, $field, $ins
     }
 
     // Set facet based on field
-    switch($field['field_name']) {
+    switch ($field['field_name']) {
       case 'field_innovation_created':
         $facet_link = 'created-in';
         break;
@@ -128,15 +160,17 @@ function gie_innovation_field_formatter_view($entity_type, $entity, $field, $ins
         $name = $term->name;
         $facet_value = $item['tid'];
 
-        if($link_status && isset($facet_link) && isset($listing_page)) {
+        if ($link_status && isset($facet_link) && isset($listing_page)) {
           $output = l($name, $listing_page . '/' . $facet_link . '/' . $facet_value);
-        } else {
+        }
+        else {
           $output = check_plain($name);
         }
 
         $element[$delta] = array('#markup' => $output);
       }
-    } elseif ($field['type'] == 'number_integer') {
+    }
+    elseif ($field['type'] == 'number_integer') {
 
       // Format integers
       foreach ($items as $delta => $item) {
@@ -146,7 +180,8 @@ function gie_innovation_field_formatter_view($entity_type, $entity, $field, $ins
 
         if ($link_status && isset($facet_link) && isset($listing_page)) {
           $output = l($output_text, $listing_page . '/' . $facet_link . '/' . $facet_value);
-        } else {
+        }
+        else {
           $output = check_plain($output_text);
         }
 
@@ -516,51 +551,34 @@ function gie_innovation_get_selection_handler($field, $instance = NULL, $entity_
   }
 }
 
-
 /**
- * Implements hook_block_info().
+ * Implements hook_query_TAG_alter().
+ *
+ * Add "full name OR username" condition to our user reference autocomplete query
  */
-function gie_innovation_block_info() {
-  $blocks = array();
+function gie_innovation_query_gie_entity_reference_user_access_alter(QueryAlterableInterface $query) {
 
-  $blocks['innovation_node_edit_need_help'] = array(
-    'info' => t('GIE Innovation Need help? Block')
-  );
+  if (!empty($query->alterMetaData['entity_field_query']->propertyConditions[0]['value'])) {
+    // Get the user's input value
+    $inputValue = $query->alterMetaData['entity_field_query']->propertyConditions[0]['value'];
 
-  return $blocks;
-}
+    // Join first name and last name tables
+    $query->leftJoin('field_data_field_user_firstname', 'firstname', 'users.uid = firstname.entity_id');
+    $query->leftJoin('field_data_field_user_lastname', 'lastname', 'users.uid = lastname.entity_id');
 
-/**
- * Implements hook_block_view_alter().
- */
-function gie_innovation_block_view_alter(&$data, $block) {
-  $router_item = menu_get_item();
-  //Check that the node we are adding is an innovation
-  if ($router_item['2'] == 'innovation') {
-    if ($block->delta == 'node|innovation') {
-      foreach ($data['content']['multistep_block_navigation']['#children'] as $key => $value) {
-        switch ($key) {
-          case '0group_one':
-            $data['content']['multistep_block_navigation']['#children'][$key]['label'] = 'Basic Information';
-            break;
-          case '1group_two':
-            $data['content']['multistep_block_navigation']['#children'][$key]['label'] = 'Vision';
-            break;
-          case '2group_three':
-            $data['content']['multistep_block_navigation']['#children'][$key]['label'] = 'Funding';
-            break;
-          case '3group_four':
-            $data['content']['multistep_block_navigation']['#children'][$key]['label'] = 'Team';
-            break;
-          case '4group_five':
-            $data['content']['multistep_block_navigation']['#children'][$key]['label'] = 'Evidence';
-            break;
-        }
-      }
-    } elseif($block->delta == 'innovation_node_edit_need_help') {
-      $data['title'] = t('Need help?');
-      $data['content'] = t('Make your Innovation profile page SHINE! Read our best practices and writing techniques guide. ');
-    }
+    // Create 'OR' database condition
+    $or = db_or();
+
+    // Concat first and last names to search against a generated full name
+    $or->where("CONCAT(firstname.field_user_firstname_value, ' ', lastname.field_user_lastname_value) LIKE :inputValue", array(':inputValue' => '%' . $inputValue . '%'));
+
+    // get the username condition
+    $where =& $query->conditions();
+    $usernameCondition = $where[0];
+    // remove from original WHERE and place onto our 'OR' conditional
+    unset($where[0]);
+    $or->condition($usernameCondition['field'], $usernameCondition['value'], $usernameCondition['operator']);
+
+    $query->condition($or);
   }
-
 }

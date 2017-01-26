@@ -17,11 +17,6 @@ function events_ds_field_settings_info() {
   $ds_fieldsetting->bundle = 'event';
   $ds_fieldsetting->view_mode = 'full';
   $ds_fieldsetting->settings = array(
-    'comments' => array(
-      'weight' => '3',
-      'label' => 'inline',
-      'format' => 'default',
-    ),
     'field_event_full_description' => array(
       'formatter_settings' => array(
         'ft' => array(
@@ -250,37 +245,33 @@ function events_ds_layout_settings_info() {
   $ds_layout->settings = array(
     'regions' => array(
       'ds_content' => array(
-        0 => 'field_term_sector',
-        1 => 'group_event_details',
+        0 => 'group_event_details',
+        1 => 'field_term_sector',
         2 => 'field_term_topic',
         3 => 'group_event_details_first',
         4 => 'field_event_full_description',
-        5 => 'field_event_who_should_attend',
-        6 => 'field_term_region',
-        7 => 'comments',
+        5 => 'field_term_region',
+        6 => 'field_event_who_should_attend',
+        7 => 'group_event_details_second',
         8 => 'field_term_country',
-        9 => 'group_event_details_second',
-        10 => 'field_event_country',
-        11 => 'field_event_size',
-        12 => 'field_event_needs',
-        13 => 'field_event_type',
-        14 => 'field_event_website_url',
-        15 => 'field_event_rsvp_url',
-        16 => 'field_event_program',
+        9 => 'field_event_size',
+        10 => 'field_event_needs',
+        11 => 'field_event_type',
+        12 => 'field_event_website_url',
+        13 => 'field_event_rsvp_url',
+        14 => 'field_event_program',
       ),
     ),
     'fields' => array(
-      'field_term_sector' => 'ds_content',
       'group_event_details' => 'ds_content',
+      'field_term_sector' => 'ds_content',
       'field_term_topic' => 'ds_content',
       'group_event_details_first' => 'ds_content',
       'field_event_full_description' => 'ds_content',
-      'field_event_who_should_attend' => 'ds_content',
       'field_term_region' => 'ds_content',
-      'comments' => 'ds_content',
-      'field_term_country' => 'ds_content',
+      'field_event_who_should_attend' => 'ds_content',
       'group_event_details_second' => 'ds_content',
-      'field_event_country' => 'ds_content',
+      'field_term_country' => 'ds_content',
       'field_event_size' => 'ds_content',
       'field_event_needs' => 'ds_content',
       'field_event_type' => 'ds_content',
@@ -288,11 +279,7 @@ function events_ds_layout_settings_info() {
       'field_event_rsvp_url' => 'ds_content',
       'field_event_program' => 'ds_content',
     ),
-    'classes' => array(
-      'layout_class' => array(
-        '' => '',
-      ),
-    ),
+    'classes' => array(),
     'wrappers' => array(
       'ds_content' => 'div',
     ),

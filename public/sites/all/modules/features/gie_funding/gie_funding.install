@@ -10,3 +10,20 @@ function gie_funding_update_7000() {
     field_delete_field('field_funding_link');
     field_purge_batch(1);
 }
+
+/**
+ * Delete unused Funding field groups for form.
+ */
+function gie_funding_update_7001() {
+  // Delete "Funding Details" form group
+  $group = field_group_load_field_group('group_funding_details','node','funding','form');
+  if ($group) {
+    field_group_group_export_delete($group);
+  }
+
+  // Delete "Funding Stats" form group
+  $group = field_group_load_field_group('group_funding_stats','node','funding','form');
+  if ($group) {
+    field_group_group_export_delete($group);
+  }
+}

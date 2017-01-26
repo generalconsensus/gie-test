@@ -59,6 +59,22 @@ function gesso_preprocess_html(&$vars, $hook) {
   // Body element attributes.
   $vars['body_attributes_array'] = array();
 
+  // Add remodal CSS
+  drupal_add_css(
+    $vars['theme_path'] . '/js/remodal/dist/remodal.css',
+    array(
+      'group' => CSS_THEME,
+      'browsers' => array('IE' => 'gte IE 9'),
+    )
+  );
+  drupal_add_css(
+    $vars['theme_path'] . '/js/remodal/dist/remodal-default-theme.css',
+    array(
+      'group' => CSS_THEME,
+      'browsers' => array('IE' => 'gte IE 9'),
+    )
+  );
+
   // Hide styles.css from IE8 and below.
   drupal_add_css(
     $vars['theme_path'] . '/css/styles.css',

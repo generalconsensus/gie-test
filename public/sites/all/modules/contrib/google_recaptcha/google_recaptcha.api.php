@@ -32,6 +32,16 @@ function hook_google_recaptcha_available_forms_alter(&$available_forms) {
   $always_protected['search_'] = t('Search');
 }
 
+
+/**
+ * Alters the final javascript recpatcha url
+ *
+ * @param string $url
+ *   Modified javascript url
+ */
+function hook_google_recaptca_url_alter(&$url) {
+  $url = 'https://www.google.com/recaptcha/api.js?onload=google_recaptcha_onload&render=explicit&hl=es';
+}
 /**
  * @} End of "addtogroup hooks".
  */

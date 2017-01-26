@@ -49,8 +49,8 @@ function events_panelizer_defaults() {
   $display->cache = array();
   $display->title = '%node:title';
   $display->uuid = '28ed67bb-217c-4e2c-ba0d-1833ce1b76b0';
-  $display->storage_type = '';
-  $display->storage_id = '';
+  $display->storage_type = 'panelizer_default';
+  $display->storage_id = 'node:event:default';
   $display->content = array();
   $display->panels = array();
   $pane = new stdClass();
@@ -78,6 +78,32 @@ function events_panelizer_defaults() {
   $pane->uuid = 'da000b27-5f80-47ce-af7e-719230f086c3';
   $display->content['new-da000b27-5f80-47ce-af7e-719230f086c3'] = $pane;
   $display->panels['bottom'][0] = 'new-da000b27-5f80-47ce-af7e-719230f086c3';
+  $pane = new stdClass();
+  $pane->pid = 'new-dc5eab74-65cc-4bed-bac3-c24f7bf6c544';
+  $pane->panel = 'bottom';
+  $pane->type = 'node_comment_wrapper';
+  $pane->subtype = 'node_comment_wrapper';
+  $pane->shown = TRUE;
+  $pane->access = array();
+  $pane->configuration = array(
+    'mode' => '1',
+    'comments_per_page' => '50',
+    'context' => 'panelizer',
+    'override_title' => 0,
+    'override_title_text' => '',
+    'override_title_heading' => 'h2',
+  );
+  $pane->cache = array();
+  $pane->style = array(
+    'settings' => NULL,
+  );
+  $pane->css = array();
+  $pane->extras = array();
+  $pane->position = 1;
+  $pane->locks = array();
+  $pane->uuid = 'dc5eab74-65cc-4bed-bac3-c24f7bf6c544';
+  $display->content['new-dc5eab74-65cc-4bed-bac3-c24f7bf6c544'] = $pane;
+  $display->panels['bottom'][1] = 'new-dc5eab74-65cc-4bed-bac3-c24f7bf6c544';
   $pane = new stdClass();
   $pane->pid = 'new-fc6fe658-b854-4c4e-ba88-e5e4f5a5b139';
   $pane->panel = 'bottom_sidebar';

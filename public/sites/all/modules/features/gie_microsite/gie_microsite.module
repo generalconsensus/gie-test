@@ -79,26 +79,60 @@ function gie_microsite_admin_edit_access_callback($term, $permission) {
 /**
  * Implements hook_form_alter().
  * - Change the contact form category to appropriate domain
+ * - Change Event/Resource forms for Digital Finance
  */
 function gie_microsite_form_alter(&$form, &$form_state, $form_id) {
-  if ($form_id == 'contact_site_form') {
-    // get current domain
-    $domain = $GLOBALS['_domain'];
+  switch ($form_id) {
+    case 'contact_site_form':
+      // get current domain
+      $domain = $GLOBALS['_domain'];
 
-    // get the category ID corresponding to the current domain
-    $cid = array_search($domain['sitename'],$form['cid']['#options']);
+      // get the category ID corresponding to the current domain
+      $cid = array_search($domain['sitename'],$form['cid']['#options']);
 
-    // change the default category to the found category id
-    if ($cid) {
-      $form['cid']['#default_value'] = $cid;
-    }
+      // change the default category to the found category id
+      if ($cid) {
+        $form['cid']['#default_value'] = $cid;
+      }
 
-    // hide the Category drop-down field
-    $form['cid']['#access'] = FALSE;
+      // hide the Category drop-down field
+      $form['cid']['#access'] = FALSE;
 
-    // add custom submit to alter from field
-    array_unshift($form['#submit'], '_gie_microsite_contact_submit_alter');
+      // add custom submit to alter from field
+      array_unshift($form['#submit'], '_gie_microsite_contact_submit_alter');
+      break;
+    case 'event_node_form':
+    case 'resource_node_form':
+      $node = $form_state['node'];
+
+      // only do for new nodes
+      if (!isset($node->nid) || isset($node->is_new)) {
+        // domain ID variables
+        $digial_finance_domain_id = 5;
+        $current_domain = domain_get_domain();
+
+        // only do for Digital Finance Domain (5)
+        if ($current_domain['domain_id'] == $digial_finance_domain_id) {
+          global $user;
+          // only do for non admin users
+          if (empty(array_intersect(array('administrator', 'Microsite Administrator'), $user->roles))) {
+            // set to unpublish
+            $form['options']['status']['#default_value'] = 0;
+
+            // add custom submit handler
+            $form['#submit'][] = '_gie_microsite_digital_finance_custom_message_node_submit';
+          }
+        }
+      }
+      break;
   }
+}
+
+/**
+ * Set a custom message after node submission
+ */
+function _gie_microsite_digital_finance_custom_message_node_submit($form, &$form_state) {
+  drupal_set_message(t('Your '.$form['#node']->type.' has been submitted and is under review. Once it has been approved, it will be viewable on the Digital Finance site.'));
 }
 
 /**

@@ -56,11 +56,6 @@ function gie_needs_ds_field_settings_info() {
   $ds_fieldsetting->bundle = 'needs';
   $ds_fieldsetting->view_mode = 'full';
   $ds_fieldsetting->settings = array(
-    'comments' => array(
-      'weight' => '5',
-      'label' => 'hidden',
-      'format' => 'default',
-    ),
     'post_date' => array(
       'weight' => '4',
       'label' => 'inline',
@@ -88,6 +83,22 @@ function gie_needs_ds_field_settings_info() {
             'rel' => '',
             'text' => '',
           ),
+        ),
+      ),
+    ),
+    'field_needs_additional_info' => array(
+      'formatter_settings' => array(
+        'ft' => array(
+          'func' => 'theme_ds_field_expert',
+          'lb-el' => 'h2',
+          'lb-col' => TRUE,
+          'lbw-el' => 'div',
+          'ow' => TRUE,
+          'ow-el' => 'div',
+          'ow-cl' => '',
+          'ow-def-cl' => TRUE,
+          'ow-at' => '',
+          'ow-def-at' => TRUE,
         ),
       ),
     ),
@@ -129,22 +140,6 @@ function gie_needs_ds_field_settings_info() {
           'func' => 'theme_ds_field_expert',
           'lb-el' => 'h2',
           'lb-col' => TRUE,
-          'ow' => TRUE,
-          'ow-el' => 'div',
-          'ow-cl' => '',
-          'ow-def-cl' => TRUE,
-          'ow-at' => '',
-          'ow-def-at' => TRUE,
-        ),
-      ),
-    ),
-    'field_needs_additional_info' => array(
-      'formatter_settings' => array(
-        'ft' => array(
-          'func' => 'theme_ds_field_expert',
-          'lb-el' => 'h2',
-          'lb-col' => TRUE,
-          'lbw-el' => 'div',
           'ow' => TRUE,
           'ow-el' => 'div',
           'ow-cl' => '',
@@ -355,7 +350,6 @@ function gie_needs_ds_layout_settings_info() {
         2 => 'field_needs_instructions',
         3 => 'field_needs_certifications',
         4 => 'post_date',
-        5 => 'comments',
       ),
     ),
     'fields' => array(
@@ -364,7 +358,6 @@ function gie_needs_ds_layout_settings_info() {
       'field_needs_instructions' => 'ds_content',
       'field_needs_certifications' => 'ds_content',
       'post_date' => 'ds_content',
-      'comments' => 'ds_content',
     ),
     'classes' => array(),
     'wrappers' => array(
