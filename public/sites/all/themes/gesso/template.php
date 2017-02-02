@@ -136,7 +136,7 @@ function gesso_menu_tree__user_menu($variables) {
   $menu = '<ul class="nav">' ;
   global $_domain;
 
-  if (user_has_role(10) && in_array($_domain['domain_id'], variable_get('gie_translation_menu_domains'))) {
+  if (in_array($_domain['domain_id'], variable_get('gie_translation_menu_domains'))) {
     $menu .= '<li class="nav__item"><a href="#" data-remodal-target="modal-language-switcher" class="nav__link nav__link--language">Language</a></li>';
   }
   return  $menu . $variables['tree'] . '</ul>';

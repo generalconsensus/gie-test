@@ -65,8 +65,6 @@ function gie_translation_block_info() {
  */
 function gie_translation_block_view($delta = '') {
 
-  // If the user is a Super Admin
-  if (user_has_role(10)) {
     $block = array();
     switch ($delta) {
       case 'gie_translation_lang_modaldata':
@@ -170,7 +168,6 @@ function gie_translation_block_view($delta = '') {
         }
         break;
     }
-  }
 }
 
 
