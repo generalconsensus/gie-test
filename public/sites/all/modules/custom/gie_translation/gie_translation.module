@@ -86,6 +86,9 @@ function gie_translation_block_view($delta = '') {
           variable_get('gie_translation_menu_domains')
         )) {
           if ($_domain['domain_id'] != 9) {
+            //Disallow the GIE bogus appended urls from going into a recursive loop trying to get a subdomain.
+            $_domain['subdomain'] = ($_domain['domain_id'] == 1 && $_domain['subdomain'] != 'www.globalinnovationexchange.org') ? 'www.globalinnovationexchange.org' : $_domain['subdomain'];
+
             foreach ($languages as $language) {
               if ($language['abbr'] == 'en') {
                 if (preg_match('/^(www\.)/', $_domain['subdomain'])) {
