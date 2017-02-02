@@ -76,8 +76,8 @@ function systrans_translation_menu() {
     'description' => 'Systrans Translation configuration settings',
     'page arguments' => array('systrans_admin_config_form', 2),
     'page callback' => 'drupal_get_form',
-    'access callback' => TRUE,
-    'type' => MENU_NORMAL_ITEM
+    'access arguments' => array('access administration pages'),
+    'type' => MENU_CALLBACK,
   );
   return $items;
 }
