@@ -14,7 +14,7 @@ function gie_translation_menu() {
     'title' => 'Translation Menu Admin Settings',
     'page arguments' => array('gie_translation_menu_settings_form', 2),
     'page callback' => 'drupal_get_form',
-    'access callback' => TRUE,
+    'access arguments' => array('access administration pages'),
     'type' => MENU_CALLBACK,
   );
   return $items;
