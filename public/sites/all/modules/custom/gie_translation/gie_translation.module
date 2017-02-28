@@ -85,6 +85,7 @@ function gie_translation_block_view($delta = '') {
           $_domain['domain_id'],
           variable_get('gie_translation_menu_domains')
         )) {
+          $path = current_path();
           if ($_domain['domain_id'] != 9) {
             //Disallow the GIE bogus appended urls from going into a recursive loop trying to get a subdomain.
             $_domain['subdomain'] = ($_domain['domain_id'] == 1 && $_domain['subdomain'] != 'www.globalinnovationexchange.org') ? 'www.globalinnovationexchange.org' : $_domain['subdomain'];
@@ -102,7 +103,7 @@ function gie_translation_block_view($delta = '') {
                 // Construct the link for the language
                 $links .= '<li class="language-modal__list-item">' . l(
                     $language['title'],
-                    $http_protocol . '://' . $url,
+                    $http_protocol . '://' . $url . '/' . $path,
                     array('attributes' => ['class' => ['language-modal__link']])
                   ) . '</li>';
               }
@@ -115,7 +116,7 @@ function gie_translation_block_view($delta = '') {
                 // Construct the link for the language
                 $links .= '<li class="language-modal__list-item">' . l(
                     $language['title'],
-                    $http_protocol . '://' . $language['abbr'] . '.' . $_domain['subdomain'],
+                    $http_protocol . '://' . $language['abbr'] . '.' . $_domain['subdomain'] . '/' . $path,
                     array('attributes' => ['class' => ['language-modal__link']])
                   ) . '</li>';
               }
@@ -143,7 +144,7 @@ function gie_translation_block_view($delta = '') {
                   // Construct the link for the language
                   $links .= '<li class="language-modal__list-item">' . l(
                       $language['title'],
-                      $http_protocol . '://' . $url,
+                      $http_protocol . '://' . $url . '/' . $path,
                       array('attributes' => ['class' => ['language-modal__link']])
                     ) . '</li>';
                 }
@@ -152,7 +153,7 @@ function gie_translation_block_view($delta = '') {
                 // Construct the link for the language
                 $links .= '<li class="language-modal__list-item">' . l(
                     $language['title'],
-                    $http_protocol . '://' . $language['abbr'] . '.' . $_domain['subdomain'],
+                    $http_protocol . '://' . $language['abbr'] . '.' . $_domain['subdomain'] . '/' . $path,
                     array('attributes' => ['class' => ['language-modal__link']])
                   ) . '</li>';
               }
