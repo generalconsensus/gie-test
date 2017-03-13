@@ -27,7 +27,7 @@ function gie_domain_color_selector_menu() {
  */
 function gie_domain_color_selector_form($form, &$form_state, $domain = array()) {
   $body_class = variable_get('domain_' . $domain['machine_name'] . '_gie_domain_color_selector_body_class', 'microsite-palette1');
-  $color_option = array('none', 'microsite-palette1', 'microsite-palette2');
+  $color_option = array('none', 'microsite-palette1', 'microsite-palette2', 'microsite-palette3');
 
   if ($body_class) {
     $form['color_selector'] = array(
@@ -70,7 +70,7 @@ function gie_domain_color_selector_form_validate($form, &$form_state, $domain = 
  * @param array $arguments
  */
 function gie_domain_color_selector_form_submit($form, &$form_state, $domain = array(), $arguments = array()) {
-  $color_option = array('none', 'microsite-palette1', 'microsite-palette2');
+  $color_option = array('none', 'microsite-palette1', 'microsite-palette2', 'microsite-palette3');
   if (isset($form_state['values']['color_selector']) && is_numeric($form_state['values']['color_selector']) && !empty($form['domain']['#value']['machine_name'])) {
     variable_set('domain_' . $form['domain']['#value']['machine_name'] . '_gie_domain_color_selector_body_class', $color_option[$form_state['values']['color_selector']]);
   }
