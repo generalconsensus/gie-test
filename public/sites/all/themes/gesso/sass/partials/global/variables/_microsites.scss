@@ -1,35 +1,45 @@
 // Micro Site Map
 $micrositeColorMap: (
- 1: (
-   primary: #00498f,
-   secondary: #cd1041,
-   tertiary: #cd1041,
-   light-gray: #dae3e7,
-   dark-gray: #444545,
-   header: #035b94,
-   site-header: #565a5c,
-   main-menu: #00498f,
- ),
- 2: (
-   primary: #cd1041,
-   secondary: #faa74a,
-   tertiary: #0094b4,
-   light-gray: #dae3e7,
-   dark-gray: #444545,
-   header: #0094b4,
-   site-header: #0094b4,
-   main-menu: #444545,
- ),
- 3: (
-   primary: #bb2031,
-   secondary: #4b95cf,
-   tertiary: #325a8b,
-   light-gray: #cfcdc9,
-   dark-gray: #6d6564,
-   header: #325a8b,
-   site-header: #325a8b,
-   main-menu: #6d6564,
- )
+  1: (
+    primary: #00498f,
+    secondary: #cd1041,
+    tertiary: #cd1041,
+    light-gray: #dae3e7,
+    dark-gray: #444545,
+    header: #035b94,
+    site-header: #565a5c,
+    main-menu: #00498f,
+  ),
+  2: (
+    primary: #cd1041,
+    secondary: #faa74a,
+    tertiary: #0094b4,
+    light-gray: #dae3e7,
+    dark-gray: #444545,
+    header: #0094b4,
+    site-header: #0094b4,
+    main-menu: #444545,
+  ),
+  3: (
+    primary: #bb2031,
+    secondary: #4b95cf,
+    tertiary: #325a8b,
+    light-gray: #cfcdc9,
+    dark-gray: #6d6564,
+    header: #325a8b,
+    site-header: #325a8b,
+    main-menu: #6d6564,
+  ),
+  4: (
+    primary: #1D1571,
+    secondary: #ed254e,
+    tertiary: #6C67A3,
+    light-gray: #dae3e7,
+    dark-gray: #444545,
+    header: #035b94,
+    site-header: #1D1571,
+    main-menu: #1D1571
+  )
 );
 
 //Micro Site Function
