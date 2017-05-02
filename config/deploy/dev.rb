@@ -2,7 +2,7 @@
 set :stage, :dev
 
 # An array containing site URL, used for Varnish bans
-set :site_url, %w{dev.gie.byf1.io}
+set :site_url, %w{test1.gie.byf1.io}
 
 # An array containing drupal sites to copy settings files in
 set :site_folder, %w{default}
@@ -11,7 +11,7 @@ set :site_folder, %w{default}
 set :webroot, 'public'
 
 # The path to the project on the server
-set :deploy_to, '/var/www/vhosts/gie.dev'
+set :deploy_to, '/var/www/vhosts/test1.dev'
 
 # Where the temporary directory is
 set :tmp_dir, fetch(:deploy_to)
