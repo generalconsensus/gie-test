@@ -24,9 +24,9 @@ set :branch, "master"
 # Supports bulk-adding hosts to roles, the primary
 # server in each group is considered to be the first
 # unless any hosts have the primary property set.
-role :app, %w{gie@utility.gie.byf1.io}, :primary => true
-role :web, %w{gie@utility.gie.byf1.io}
-role :db,  %w{gie@utility.gie.byf1.io}
+role :app, %w{test1@utility.gie.byf1.io}, :primary => true
+role :web, %w{test1@utility.gie.byf1.io}
+role :db,  %w{test1@utility.gie.byf1.io}
 
 # Extended Server Syntax
 # ======================
