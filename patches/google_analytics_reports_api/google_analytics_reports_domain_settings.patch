@@ -1,0 +1,24 @@
+diff --git a/public/sites/all/modules/contrib/google_analytics_reports/google_analytics_reports_api/google_analytics_reports_api.info b/public/sites/all/modules/contrib/google_analytics_reports/google_analytics_reports_api/google_analytics_reports_api.info
+index 666e577..d220201 100644
+--- a/public/sites/all/modules/contrib/google_analytics_reports/google_analytics_reports_api/google_analytics_reports_api.info
++++ b/public/sites/all/modules/contrib/google_analytics_reports/google_analytics_reports_api/google_analytics_reports_api.info
+@@ -4,6 +4,7 @@ description = API to access statistics from the <a href="https://developers.goog
+ core = 7.x
+ 
+ files[] = google_analytics_reports_api.lib.inc
++files[] = google_analytics_reports_api.admin.inc
+ 
+ configure = admin/config/system/google-analytics-reports-api
+ 
+diff --git a/public/sites/all/modules/contrib/google_analytics_reports/google_analytics_reports_api/google_analytics_reports_api.module b/public/sites/all/modules/contrib/google_analytics_reports/google_analytics_reports_api/google_analytics_reports_api.module
+index a92ba79..b9eb2e6 100644
+--- a/public/sites/all/modules/contrib/google_analytics_reports/google_analytics_reports_api/google_analytics_reports_api.module
++++ b/public/sites/all/modules/contrib/google_analytics_reports/google_analytics_reports_api/google_analytics_reports_api.module
+@@ -221,6 +221,7 @@ function google_analytics_reports_api_domain_conf() {
+     '#collapsed' => FALSE,
+   );
+   if ($profile_id) {
++    module_load_include('inc', 'google_analytics_reports_api', 'google_analytics_reports_api.admin');
+     $admin_form = google_analytics_reports_api_admin();
+     $form['google_analytics_reports_api']['google_analytics_reports_api_profile_id'] = $admin_form['ga']['google_analytics_reports_api_profile_id'];
+     $form['google_analytics_reports_api']['google_analytics_reports_api_profile_id']['#description'] = t('Choose your Google Analytics profile.');

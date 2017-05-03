@@ -26,7 +26,11 @@ angular.module('gieDataViz').directive('horizontalBarChart', function() {
 
   return {
     restrict: 'E',
-    template: '<svg class="chart bar-chart horizontal" id="horizontal_bar_chart__{{$id}}" data="data"></svg>',
+    template: '<div data="data" items="items" selection="selection">' +
+      '<h2 data-ng-if="data.chartTitle"> {{ data.chartTitle }} </h2>' +
+      '<select data-ng-if="items" ng-options="item as item.label for item in items track by item.id" data-ng-model="$parent.selection"></select>' +
+      '<div><svg class="chart bar-chart horizontal" id="horizontal_bar_chart__{{$id}}"></svg></div>' +
+      '</div>',
     replace: true,
     scope: { data: "=" },
     link: function (scope){

@@ -121,5 +121,4 @@ function gie_security_flag_default_flags() {
     'api_version' => 3,
   );
   return $flags;
-
 }

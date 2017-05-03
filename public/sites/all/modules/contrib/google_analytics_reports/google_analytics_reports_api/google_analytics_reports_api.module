@@ -221,6 +221,7 @@ function google_analytics_reports_api_domain_conf() {
     '#collapsed' => FALSE,
   );
   if ($profile_id) {
+    module_load_include('inc', 'google_analytics_reports_api', 'google_analytics_reports_api.admin');
     $admin_form = google_analytics_reports_api_admin();
     $form['google_analytics_reports_api']['google_analytics_reports_api_profile_id'] = $admin_form['ga']['google_analytics_reports_api_profile_id'];
     $form['google_analytics_reports_api']['google_analytics_reports_api_profile_id']['#description'] = t('Choose your Google Analytics profile.');
