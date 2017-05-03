@@ -10,24 +10,24 @@ function gie_general_install() {
 /**
  * Implements hook_update_n
  * disable core modules that are replaced by contrib modules
-*/
+ */
 
 function gie_general_update_7000() {
-    $modules = array(
-        'overlay',
-        'toolbar',
-        'shortcut',
-        'dashboard',
-        'color'
-    );
-    module_disable($modules, TRUE);
+  $modules = array(
+    'overlay',
+    'toolbar',
+    'shortcut',
+    'dashboard',
+    'color',
+  );
+  module_disable($modules, TRUE);
 }
 
 function gie_general_update_7001() {
-    $modules = array(
-        'gie_assets'
-    );
-    module_enable($modules, TRUE);
+  $modules = array(
+    'gie_assets',
+  );
+  module_enable($modules, TRUE);
 }
 
 /**
@@ -68,7 +68,7 @@ function gie_general_update_7004() {
  */
 function gie_general_update_7005() {
   $modules = array(
-    'gie_user'
+    'gie_user',
   );
   module_enable($modules, TRUE);
 }
@@ -100,10 +100,10 @@ function gie_general_update_7008() {
  * Enable GIE Search feature.
  */
 function gie_general_update_7009() {
-    $modules = array(
-        'gie_search'
-    );
-    module_enable($modules, TRUE);
+  $modules = array(
+    'gie_search',
+  );
+  module_enable($modules, TRUE);
 }
 
 /**
@@ -111,19 +111,23 @@ function gie_general_update_7009() {
  */
 function gie_general_update_7010() {
   db_insert('date_formats')
-    ->fields(array(
+    ->fields(
+      array(
         'format' => 'n/j/Y',
         'type' => 'custom',
         'locked' => 0,
-      ))
+      )
+    )
     ->execute();
 
   db_insert('date_format_type')
-    ->fields(array(
+    ->fields(
+      array(
         'type' => 'gie_general_slash_no_time',
         'title' => 'Slash (no time)',
         'locked' => 0,
-      ))
+      )
+    )
     ->execute();
 
   variable_set('date_format_gie_general_slash_no_time', 'n/j/Y');
@@ -141,53 +145,53 @@ function gie_general_update_7011() {
  * Delete 'Funding Sector' term field.
  */
 function gie_general_update_7012() {
-    field_delete_field('field_funding_sector');
+  field_delete_field('field_funding_sector');
 }
 
 /**
  * Delete 'Sector fields shared across content types in favor of shared field' term field.
  */
 function gie_general_update_7013() {
-    field_delete_field('field_innovation_sector');
-    field_delete_field('field_org_focus_work');
-    field_delete_field('field_resource_sector');
-    field_delete_field('field_user_sector');
+  field_delete_field('field_innovation_sector');
+  field_delete_field('field_org_focus_work');
+  field_delete_field('field_resource_sector');
+  field_delete_field('field_user_sector');
 }
 
 /**
  * Delete 'Topic fields shared across content types in favor of shared field' term field.
  */
 function gie_general_update_7014() {
-    field_delete_field('field_funding_topic');
-    field_delete_field('field_innovation_topic');
-    field_delete_field('field_resource_topic');
+  field_delete_field('field_funding_topic');
+  field_delete_field('field_innovation_topic');
+  field_delete_field('field_resource_topic');
 }
 
 /**
  * Delete 'Region term field so I can readd it since its not showing.
  */
 function gie_general_update_7015() {
-    field_delete_field('field_term_region');
+  field_delete_field('field_term_region');
 }
 
 /**
  * Delete 'Region fields shared across content types in favor of shared field' term field.
  */
 function gie_general_update_7016() {
-    field_delete_field('field_funding_region');
-    field_delete_field('field_innovation_region');
-    field_delete_field('field_org_region');
-    field_delete_field('field_resource_region');
-    field_delete_field('field_user_region');
+  field_delete_field('field_funding_region');
+  field_delete_field('field_innovation_region');
+  field_delete_field('field_org_region');
+  field_delete_field('field_resource_region');
+  field_delete_field('field_user_region');
 }
 
 /**
  * Delete 'Country fields shared across content types in favor of shared field' term field.
  */
 function gie_general_update_7017() {
-    field_delete_field('field_funding_countries');
-    field_delete_field('field_resource_country');
-    field_delete_field('field_user_country');
+  field_delete_field('field_funding_countries');
+  field_delete_field('field_resource_country');
+  field_delete_field('field_user_country');
 }
 
 /**
@@ -195,7 +199,7 @@ function gie_general_update_7017() {
  */
 function gie_general_update_7018() {
   $modules = array(
-      'gie_discussion'
+    'gie_discussion',
   );
   module_enable($modules, TRUE);
 }
@@ -205,7 +209,7 @@ function gie_general_update_7018() {
  */
 function gie_general_update_7019() {
   $modules = array(
-    'gie_homepage'
+    'gie_homepage',
   );
   module_enable($modules, TRUE);
 }
@@ -216,7 +220,7 @@ function gie_general_update_7019() {
  */
 function gie_general_update_7020() {
   $modules = array(
-    'gie_basic_page'
+    'gie_basic_page',
   );
   module_enable($modules, TRUE);
 }
@@ -233,7 +237,7 @@ function gie_general_update_7021() {
  */
 function gie_general_update_7022() {
   $modules = array(
-    'events'
+    'events',
   );
   module_enable($modules, TRUE);
 }
@@ -242,10 +246,10 @@ function gie_general_update_7022() {
  * Enable GIE Feeds feature.
  */
 function gie_general_update_7023() {
-    $modules = array(
-        'gie_feeds'
-    );
-    module_enable($modules, TRUE);
+  $modules = array(
+    'gie_feeds',
+  );
+  module_enable($modules, TRUE);
 }
 
 /**
@@ -253,7 +257,7 @@ function gie_general_update_7023() {
  */
 function gie_general_update_7024() {
   $modules = array(
-    'gie_dashboard'
+    'gie_dashboard',
   );
   module_enable($modules, TRUE);
 }
@@ -263,7 +267,7 @@ function gie_general_update_7024() {
  */
 function gie_general_update_7025() {
   $modules = array(
-    'gie_needs'
+    'gie_needs',
   );
   module_enable($modules, TRUE);
 }
@@ -273,7 +277,7 @@ function gie_general_update_7025() {
  */
 function gie_general_update_7026() {
   $modules = array(
-    'gie_messages'
+    'gie_messages',
   );
   module_enable($modules, TRUE);
 }
@@ -283,7 +287,7 @@ function gie_general_update_7026() {
  */
 function gie_general_update_7027() {
   $modules = array(
-    'gie_long_form_content'
+    'gie_long_form_content',
   );
   module_enable($modules, TRUE);
 }
@@ -293,7 +297,7 @@ function gie_general_update_7027() {
  */
 function gie_general_update_7028() {
   $modules = array(
-    'gie_userprofedit'
+    'gie_userprofedit',
   );
   module_enable($modules, TRUE);
 }
@@ -310,7 +314,7 @@ function gie_general_update_7029() {
  */
 function gie_general_update_7030() {
   $modules = array(
-    'gie_groups'
+    'gie_groups',
   );
   module_enable($modules, TRUE);
 }
@@ -327,7 +331,7 @@ function gie_general_update_7031() {
  */
 function gie_general_update_7032() {
   $modules = array(
-    'gie_groups'
+    'gie_groups',
   );
   module_disable($modules, TRUE);
 }
@@ -339,7 +343,7 @@ function gie_general_update_7033() {
   $modules = array(
     'og_menu_single',
     'og_ui',
-    'og'
+    'og',
   );
   module_disable($modules, TRUE);
 }
@@ -349,7 +353,7 @@ function gie_general_update_7033() {
  */
 function gie_general_update_7034() {
   $modules = array(
-    'gie_microsite'
+    'gie_microsite',
   );
   module_enable($modules, TRUE);
 }
@@ -359,7 +363,7 @@ function gie_general_update_7034() {
  */
 function gie_general_update_7035() {
   $modules = array(
-    'gie_domain'
+    'gie_domain',
   );
   module_enable($modules, TRUE);
 }
@@ -369,7 +373,7 @@ function gie_general_update_7035() {
  */
 function gie_general_update_7036() {
   $modules = array(
-    'gie_data_viz'
+    'gie_data_viz',
   );
   module_enable($modules, TRUE);
 }
@@ -379,7 +383,7 @@ function gie_general_update_7036() {
  */
 function gie_general_update_7037() {
   $modules = array(
-    'gie_data'
+    'gie_data',
   );
   module_enable($modules, TRUE);
 }
@@ -388,11 +392,11 @@ function gie_general_update_7037() {
  * Enable GIE Blog and News feature.
  */
 function gie_general_update_7038() {
-    $modules = array(
-        'gie_blog',
-        'gie_news',
-    );
-    module_enable($modules, TRUE);
+  $modules = array(
+    'gie_blog',
+    'gie_news',
+  );
+  module_enable($modules, TRUE);
 }
 
 /**
@@ -430,7 +434,7 @@ function gie_general_update_7042() {
  */
 function gie_general_update_7043() {
   $modules = array(
-    'gie_security'
+    'gie_security',
   );
   module_enable($modules, TRUE);
 }
@@ -440,9 +444,9 @@ function gie_general_update_7043() {
  * [#850] Disable fel module
  */
 function gie_general_update_7044() {
-    module_disable(array('fel', 'fel_fields'), TRUE);
-    module_enable(array('label_help'), TRUE);
-    variable_get('node_admin_theme', '1');
+  module_disable(array('fel', 'fel_fields'), TRUE);
+  module_enable(array('label_help'), TRUE);
+  variable_get('node_admin_theme', '1');
 }
 
 
@@ -450,11 +454,16 @@ function gie_general_update_7044() {
  * Update summary field to handle more data
  */
 function gie_general_update_7045() {
-  db_change_field('loginradius_positions', 'summary', 'summary', array(
-    'type' => 'text',
-    'size' => 'medium',
-    'not null' => TRUE,
-  ));
+  db_change_field(
+    'loginradius_positions',
+    'summary',
+    'summary',
+    array(
+      'type' => 'text',
+      'size' => 'medium',
+      'not null' => TRUE,
+    )
+  );
 }
 
 
@@ -487,7 +496,10 @@ function gie_general_update_7047() {
  * Update all taxonomy terms with semi-colons to have commas
  */
 function gie_general_update_7048() {
-  $taxonomies = db_query('select tid from taxonomy_term_data where name like (:semi)', array(':semi' => '%' . db_like(';') . '%'))->fetchCol('tid');
+  $taxonomies = db_query(
+    'select tid from taxonomy_term_data where name like (:semi)',
+    array(':semi' => '%' . db_like(';') . '%')
+  )->fetchCol('tid');
   foreach ($taxonomies as $taxonomy) {
     $taxonomy = taxonomy_term_load($taxonomy);
     $taxonomy->name = str_replace(';', ',', $taxonomy->name);

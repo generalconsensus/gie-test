@@ -266,8 +266,10 @@ function gie_general_field_default_field_instances() {
   t('Description');
   t('Please categorize how the content is offensive or inappropriate.');
   t('Please categorize how you find this content offensive or inappropriate. ');
-  t('Please provide additional detail regarding this content and where on the page you are seeing the inappropriate or offensive details. 
-');
+  t(
+    'Please provide additional detail regarding this content and where on the page you are seeing the inappropriate or offensive details. 
+'
+  );
   t('Title');
 
   return $field_instances;

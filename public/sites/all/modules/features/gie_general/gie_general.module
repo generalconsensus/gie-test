@@ -9,7 +9,7 @@ include_once 'gie_general.features.inc';
 /**
  * Implements hook_menu_alter().
  * - Alter title of 'User Account' link.
- * - Alter Dashboard so only logged in users see link. 
+ * - Alter Dashboard so only logged in users see link.
  */
 function gie_general_menu_alter(&$items) {
   $items['user']['title callback'] = '_gie_general_welcome';
@@ -29,11 +29,13 @@ function _gie_general_welcome() {
     // TODO: remove this statement if first name becomes required
     if (!empty($first_name)) {
       $name = $first_name;
-    } else {
+    }
+    else {
       $name = $user->name->value();
     }
     return t('Welcome, ') . $name . '!';
-  } else {
+  }
+  else {
     return t('User account');
   }
 }
@@ -66,7 +68,7 @@ function gie_general_block_info() {
 function gie_general_block_view($delta = '') {
   $block = array();
 
-  switch($delta) {
+  switch ($delta) {
     case 'about_submenu':
       $block['subject'] = '';
       $block['content'] = _gie_general_contents($delta);
@@ -95,7 +97,7 @@ function gie_general_block_view($delta = '') {
 function _gie_general_contents($block_id) {
   $block = array();
 
-  switch($block_id) {
+  switch ($block_id) {
     case 'about_submenu':
       $block = array(
         'about_page' => array(
@@ -222,7 +224,7 @@ function _gie_general_contents($block_id) {
 /**
  * Callback to change the theme for nodes.
  */
-function _gie_general_node_theme($node){
+function _gie_general_node_theme($node) {
   global $theme;
   switch ($node->type) {
     // Change theme for long form pages
@@ -232,6 +234,7 @@ function _gie_general_node_theme($node){
       return $theme;
   }
 }
+
 /*
  * Implements hook_cron fixing slow cache clears
  */
@@ -259,7 +262,7 @@ function gie_general_block_view_alter(&$data, $block) {
 
   $block_names = array(
     'innovation',
-    'funding'
+    'funding',
   );
   //Check that the node we are adding is an innovation
   if (in_array($block->delta, $block_names)) {
@@ -298,34 +301,37 @@ function gie_general_block_view_alter(&$data, $block) {
           break;
       }
     }
-  elseif (($node_object->type == 'funding') || !empty($router_item['map'][2]) && is_string(
-      $router_item['map'][2]
-    ) && $router_item['map'][2] == 'funding'
-  ) {
-    switch ($block->delta) {
-      case 'funding':
-        $data['content']['multistep_block_body']['#markup'] = '<div class="multistep-description"> The more you fill out your Innovation Profile, the better traffic you will receive on it through the Exchange and through search engines.</div>';
-        foreach ($data['content']['multistep_block_navigation']['#children'] as $key => $value) {
-          switch ($key) {
-            case '0group_funding_about':
-              $data['content']['multistep_block_navigation']['#children'][$key]['label'] = 'Opportunity';
-              break;
-            case '1group_funding_info':
-              $data['content']['multistep_block_navigation']['#children'][$key]['label'] = 'Additional Info';
-              break;
-            case '2group_funding_for_applicants':
-              $data['content']['multistep_block_navigation']['#children'][$key]['label'] = 'For Applicants';
-              break;
+    elseif (($node_object->type == 'funding') || !empty($router_item['map'][2]) && is_string(
+        $router_item['map'][2]
+      ) && $router_item['map'][2] == 'funding'
+    ) {
+      switch ($block->delta) {
+        case 'funding':
+          $data['content']['multistep_block_body']['#markup'] = '<div class="multistep-description"> The more you fill out your Innovation Profile, the better traffic you will receive on it through the Exchange and through search engines.</div>';
+          foreach ($data['content']['multistep_block_navigation']['#children'] as $key => $value) {
+            switch ($key) {
+              case '0group_funding_about':
+                $data['content']['multistep_block_navigation']['#children'][$key]['label'] = 'Opportunity';
+                break;
+              case '1group_funding_info':
+                $data['content']['multistep_block_navigation']['#children'][$key]['label'] = 'Additional Info';
+                break;
+              case '2group_funding_for_applicants':
+                $data['content']['multistep_block_navigation']['#children'][$key]['label'] = 'For Applicants';
+                break;
+            }
           }
-        }
-        break;
+          break;
       }
     }
   }
 }
 
 function gie_general_test() {
-  $taxonomies = db_query('select tid from taxonomy_term_data where name like (:semi)', array(':semi' => '%' . db_like(';') . '%'))->fetchCol('tid');
+  $taxonomies = db_query(
+    'select tid from taxonomy_term_data where name like (:semi)',
+    array(':semi' => '%' . db_like(';') . '%')
+  )->fetchCol('tid');
   foreach ($taxonomies as $taxonomy) {
     $taxonomy = taxonomy_term_load($taxonomy);
     $taxonomy->name = str_replace(';', ',', $taxonomy->name);
