@@ -178,6 +178,7 @@ features[page_manager_pages][] = member_directory
 features[page_manager_pages][] = user_notifications
 features[pane_container][] = members_directory_introduction
 features[panelizer_defaults][] = user:user:default
+features[panels_mini][] = dashboard_profile_header
 features[panels_mini][] = user_overview
 features[quicktabs][] = user_profile_tabs
 features[taxonomy][] = company

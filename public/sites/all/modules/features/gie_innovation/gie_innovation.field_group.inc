@@ -772,6 +772,7 @@ function gie_innovation_field_group_info() {
       'label' => 'Tell us the basics',
       'instance_settings' => array(
         'description' => 'Here is some basic information we need from you in order to add your innovation to the Global Innovation Exchange. Don\'t worry, we want MUCH more than this, but this is critical - how will people find your work if it doesn\'t have a description?',
+        'nav_label' => 'Basic Information',
       ),
     ),
   );

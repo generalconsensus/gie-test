@@ -1,0 +1,9 @@
+.pane--dashboard-data-viz {
+  @extend %dashboard-pane;
+  .pane__title {
+    @extend %dashboard-header;
+  }
+  .pane__content {
+    padding: 1em;
+  }
+}

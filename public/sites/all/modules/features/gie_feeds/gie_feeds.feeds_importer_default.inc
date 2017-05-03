@@ -280,5 +280,73 @@ function gie_feeds_feeds_importer_default() {
   );
   $export['csv_importer'] = $feeds_importer;
 
+  $feeds_importer = new stdClass();
+  $feeds_importer->disabled = FALSE; /* Edit this to true to make a default feeds_importer disabled initially */
+  $feeds_importer->api_version = 1;
+  $feeds_importer->id = 'user_importer';
+  $feeds_importer->config = array(
+    'name' => 'User Importer',
+    'description' => 'This imports users in to the system.',
+    'fetcher' => array(
+      'plugin_key' => 'FeedsFileFetcher',
+      'config' => array(
+        'allowed_extensions' => 'txt csv tsv xml opml',
+        'direct' => FALSE,
+        'directory' => 'private://feeds',
+        'allowed_schemes' => array(
+          0 => 's3',
+          1 => 'public',
+          2 => 'private',
+        ),
+      ),
+    ),
+    'parser' => array(
+      'plugin_key' => 'FeedsCSVParser',
+      'config' => array(
+        'delimiter' => ',',
+        'no_headers' => 0,
+      ),
+    ),
+    'processor' => array(
+      'plugin_key' => 'FeedsUserProcessor',
+      'config' => array(
+        'roles' => array(
+          8 => 0,
+          6 => 0,
+          7 => 0,
+          4 => 0,
+          3 => 0,
+          5 => 0,
+          9 => 0,
+        ),
+        'status' => '1',
+        'defuse_mail' => 0,
+        'mappings' => array(
+          0 => array(
+            'source' => 'Email',
+            'target' => 'mail',
+            'unique' => 1,
+          ),
+          1 => array(
+            'source' => 'Expertise',
+            'target' => 'field_user_type',
+            'unique' => FALSE,
+          ),
+        ),
+        'update_existing' => '2',
+        'input_format' => 'plain_text',
+        'skip_hash_check' => 0,
+        'bundle' => 'user',
+      ),
+    ),
+    'content_type' => '',
+    'update' => 0,
+    'import_period' => '-1',
+    'expire_period' => 3600,
+    'import_on_create' => 1,
+    'process_in_background' => 0,
+  );
+  $export['user_importer'] = $feeds_importer;
+
   return $export;
 }

@@ -15,7 +15,8 @@ function gie_domain_strongarm() {
   $strongarm->api_version = 1;
   $strongarm->name = 'domain_bootstrap_modules';
   $strongarm->value = array(
-    0 => 'domain_conf',
+    0 => 'domain_alias',
+    1 => 'domain_conf',
   );
   $export['domain_bootstrap_modules'] = $strongarm;
 
@@ -51,7 +52,7 @@ function gie_domain_strongarm() {
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'domain_dev_gie_byf1_io_gie_domain_color_selector_body_class';
-  $strongarm->value = 'microsite-palette1';
+  $strongarm->value = 'none';
   $export['domain_dev_gie_byf1_io_gie_domain_color_selector_body_class'] = $strongarm;
 
   $strongarm = new stdClass();
