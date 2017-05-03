@@ -18,7 +18,9 @@ function gie_messages_ctools_plugin_api($module = NULL, $api = NULL) {
  */
 function gie_messages_default_message_type() {
   $items = array();
-  $items['comment_notify'] = entity_import('message_type', '{
+  $items['comment_notify'] = entity_import(
+    'message_type',
+    '{
     "name" : "comment_notify",
     "description" : "Comment notify",
     "argument_keys" : [],
@@ -46,8 +48,11 @@ function gie_messages_default_message_type() {
       ]
     },
     "rdf_mapping" : []
-  }');
-  $items['comment_reply_notify'] = entity_import('message_type', '{
+  }'
+  );
+  $items['comment_reply_notify'] = entity_import(
+    'message_type',
+    '{
     "name" : "comment_reply_notify",
     "description" : "Comment reply notify",
     "argument_keys" : [],
@@ -75,8 +80,11 @@ function gie_messages_default_message_type() {
       ]
     },
     "rdf_mapping" : []
-  }');
-  $items['favorite_notify'] = entity_import('message_type', '{
+  }'
+  );
+  $items['favorite_notify'] = entity_import(
+    'message_type',
+    '{
     "name" : "favorite_notify",
     "description" : "Favorite notify",
     "argument_keys" : [],
@@ -104,8 +112,11 @@ function gie_messages_default_message_type() {
       ]
     },
     "rdf_mapping" : []
-  }');
-  $items['follow_user_notify'] = entity_import('message_type', '{
+  }'
+  );
+  $items['follow_user_notify'] = entity_import(
+    'message_type',
+    '{
     "name" : "follow_user_notify",
     "description" : "Follow: User Notify",
     "argument_keys" : [],
@@ -133,8 +144,11 @@ function gie_messages_default_message_type() {
       ]
     },
     "rdf_mapping" : []
-  }');
-  $items['funding_recommendation'] = entity_import('message_type', '{
+  }'
+  );
+  $items['funding_recommendation'] = entity_import(
+    'message_type',
+    '{
     "name" : "funding_recommendation",
     "description" : "Funding recommendation",
     "argument_keys" : [],
@@ -154,8 +168,11 @@ function gie_messages_default_message_type() {
       ]
     },
     "rdf_mapping" : []
-  }');
-  $items['innovation_recommendation'] = entity_import('message_type', '{
+  }'
+  );
+  $items['innovation_recommendation'] = entity_import(
+    'message_type',
+    '{
     "name" : "innovation_recommendation",
     "description" : "Innovation recommendation",
     "argument_keys" : [],
@@ -175,66 +192,11 @@ function gie_messages_default_message_type() {
       ]
     },
     "rdf_mapping" : []
-  }');
-  $items['microsite_admin_recommended'] = entity_import('message_type', '{
-    "name" : "microsite_admin_recommended",
-    "description" : "Microsite Admin recommended",
-    "argument_keys" : [],
-    "argument" : [],
-    "category" : "message_type",
-    "data" : {
-      "token options" : { "clear" : 0 },
-      "purge" : { "override" : 0, "enabled" : 0, "quota" : "", "days" : "" }
-    },
-    "language" : "",
-    "arguments" : null,
-    "message_text" : { "und" : [
-        {
-          "value" : "[message:field-domain-text]: [message:field-node-ref:author] recommended new content",
-          "format" : "filtered_html"
-        },
-        {
-          "value" : "[message:field-node-ref:author] has recommended a new [message:field-node-ref:content-type] for [message:field-domain-text]: [message:field-node-ref:url]",
-          "format" : "filtered_html"
-        },
-        {
-          "value" : "[message:field-node-ref:author] has recommended a new [message:field-node-ref:content-type] for [message:field-domain-text]: [message:field-node-ref:url]",
-          "format" : "filtered_html"
-        }
-      ]
-    },
-    "rdf_mapping" : []
-  }');
-  $items['microsite_new_content'] = entity_import('message_type', '{
-    "name" : "microsite_new_content",
-    "description" : "Microsite New Content",
-    "argument_keys" : [],
-    "argument" : [],
-    "category" : "message_type",
-    "data" : {
-      "token options" : { "clear" : 0 },
-      "purge" : { "override" : 0, "enabled" : 0, "quota" : "", "days" : "" }
-    },
-    "language" : "",
-    "arguments" : null,
-    "message_text" : { "und" : [
-        {
-          "value" : "[message:field-domain-text]:\\u0026nbsp;[message:field-node-ref:author] posted new content",
-          "format" : "filtered_html"
-        },
-        {
-          "value" : "[message:field-domain-text]:\\u0026nbsp;[message:field-node-ref:author] has posted a new\\u0026nbsp;[message:field-node-ref:content-type]:\\u0026nbsp;[message:field-node-ref:url]",
-          "format" : "filtered_html"
-        },
-        {
-          "value" : "[message:field-domain-text]:\\u0026nbsp;[message:field-node-ref:author] has posted a new\\u0026nbsp;[message:field-node-ref:content-type]:\\u0026nbsp;[message:field-node-ref:url]",
-          "format" : "filtered_html"
-        }
-      ]
-    },
-    "rdf_mapping" : []
-  }');
-  $items['node_update_notify'] = entity_import('message_type', '{
+  }'
+  );
+  $items['node_update_notify'] = entity_import(
+    'message_type',
+    '{
     "name" : "node_update_notify",
     "description" : "Node update notify",
     "argument_keys" : [],
@@ -262,8 +224,11 @@ function gie_messages_default_message_type() {
       ]
     },
     "rdf_mapping" : []
-  }');
-  $items['user_follow_create'] = entity_import('message_type', '{
+  }'
+  );
+  $items['user_follow_create'] = entity_import(
+    'message_type',
+    '{
     "name" : "user_follow_create",
     "description" : "User follow create",
     "argument_keys" : [],
@@ -291,6 +256,7 @@ function gie_messages_default_message_type() {
       ]
     },
     "rdf_mapping" : []
-  }');
+  }'
+  );
   return $items;
 }
