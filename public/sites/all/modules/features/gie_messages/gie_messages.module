@@ -10,8 +10,7 @@ include_once 'gie_messages.features.inc';
  * Implements hook_mail_alter().
  * - TEMPORARY: send digest emails to f1 via bcc
  */
-function gie_messages_mail_alter(&$message)
-{
+function gie_messages_mail_alter(&$message) {
   if ($message['id'] == 'message_digest_digest') {
     $message['headers']['Bcc'] = 'aklatsky@forumone.com';
     watchdog(
@@ -30,7 +29,9 @@ function gie_messages_mail_alter(&$message)
  */
 function gie_messages_comment_insert($comment) {
   // do not do for unpublished content
-  if ($comment->status == 0) return;
+  if ($comment->status == 0) {
+    return;
+  }
 
   $node = node_load($comment->nid);
   $parent_comment = comment_load($comment->pid);
@@ -54,7 +55,8 @@ function gie_messages_comment_insert($comment) {
   $notify_comment_reply = $user->field_user_mail_comment_reply->value();
 
   if (!empty($parent_comment) && $parent_comment->uid == $node->uid
-      && $notify_comment_reply) {
+    && $notify_comment_reply
+  ) {
     // Node author is the parent comment author and already received a Comment Reply message.
     // Avoid sending more than 1 message to user.
     return;
@@ -100,7 +102,10 @@ function _gie_messages_comment_reply_message($node, $comment, $parent_comment) {
     return;
   }
 
-  $message = message_create('comment_reply_notify', array('uid' => $parent_comment->uid));
+  $message = message_create(
+    'comment_reply_notify',
+    array('uid' => $parent_comment->uid)
+  );
   $wrapper = entity_metadata_wrapper('message', $message);
   $wrapper->field_node_ref->set($node);
   $wrapper->field_comment_ref->set($comment);
@@ -117,7 +122,7 @@ function _gie_messages_comment_reply_message($node, $comment, $parent_comment) {
  * - Trigger Favorite Notify message
  */
 function gie_messages_flag_flag($flag, $content_id, $account, $flagging) {
-  switch($flag->name) {
+  switch ($flag->name) {
     case 'favorite':
 
       // Load node entity and check for node author
@@ -142,11 +147,14 @@ function gie_messages_flag_flag($flag, $content_id, $account, $flagging) {
       // Check for previous Favorite Notify messages
       $query = db_select('field_data_field_user_ref', 'u');
       $query->join('field_data_field_node_ref', 'n', 'u.entity_id=n.entity_id');
-      $query->fields('u', array('entity_id', 'bundle', 'field_user_ref_target_id'));
+      $query->fields(
+        'u',
+        array('entity_id', 'bundle', 'field_user_ref_target_id')
+      );
       $query->fields('n', array('field_node_ref_target_id'));
-      $query->condition('u.bundle','favorite_notify','=');
-      $query->condition('u.field_user_ref_target_id',$account->uid,'=');
-      $query->condition('n.field_node_ref_target_id',$content_id,'=');
+      $query->condition('u.bundle', 'favorite_notify', '=');
+      $query->condition('u.field_user_ref_target_id', $account->uid, '=');
+      $query->condition('n.field_node_ref_target_id', $content_id, '=');
 
       $result = $query->execute();
       if ($result->rowCount() > 0) {
@@ -189,11 +197,14 @@ function gie_messages_flag_flag($flag, $content_id, $account, $flagging) {
       // Check for previous Follow: User Notify messages
       $query = db_select('field_data_field_user_ref', 'u');
       $query->join('message', 'm', 'u.entity_id=m.mid');
-      $query->fields('u', array('entity_id', 'bundle', 'field_user_ref_target_id'));
+      $query->fields(
+        'u',
+        array('entity_id', 'bundle', 'field_user_ref_target_id')
+      );
       $query->fields('m', array('uid'));
-      $query->condition('u.bundle','follow_user_notify','=');
-      $query->condition('u.field_user_ref_target_id',$account->uid,'=');
-      $query->condition('m.uid',$content_id,'=');
+      $query->condition('u.bundle', 'follow_user_notify', '=');
+      $query->condition('u.field_user_ref_target_id', $account->uid, '=');
+      $query->condition('m.uid', $content_id, '=');
 
       $result = $query->execute();
       if ($result->rowCount() > 0) {
@@ -203,7 +214,10 @@ function gie_messages_flag_flag($flag, $content_id, $account, $flagging) {
       }
 
       // Set message entity
-      $message = message_create('follow_user_notify', array('uid' => $content_id));
+      $message = message_create(
+        'follow_user_notify',
+        array('uid' => $content_id)
+      );
       $wrapper = entity_metadata_wrapper('message', $message);
       $wrapper->field_user_ref->set($account);
       $wrapper->field_flag_ref->set($flagging);
@@ -223,22 +237,26 @@ function gie_messages_flag_flag($flag, $content_id, $account, $flagging) {
  */
 function gie_messages_node_update($node) {
   // do not do for unpublished content
-  if ($node->status == 0) return;
+  if ($node->status == 0) {
+    return;
+  }
 
   // Load Favorite flag
   $flag = flag_get_flag('favorite');
   // End if flag not found
-  if (!$flag) return;
+  if (!$flag) {
+    return;
+  }
 
   // Get users who have favorited this node
   $query = db_select('flagging', 'f');
   $query->fields('f');
-  $query->condition('entity_id',$node->nid,'=');
-  $query->condition('fid',$flag->fid,'=');
+  $query->condition('entity_id', $node->nid, '=');
+  $query->condition('fid', $flag->fid, '=');
 
   $result = $query->execute();
 
-  foreach($result as $record) {
+  foreach ($result as $record) {
 
     $uid = $record->uid;
     if ($uid == $node->uid) {
@@ -259,16 +277,16 @@ function gie_messages_node_update($node) {
 
     // Get specific node update notifications from past 24 hours to user
     $q = db_select('message', 'm');
-    $q->join('field_data_field_node_ref','n','m.mid=n.entity_id');
-    $q->fields('m',array('mid','type','uid','timestamp'));
-    $q->fields('n',array('field_node_ref_target_id'));
-    $q->condition('m.type','node_update_notify','=');
-    $q->condition('m.uid',$uid,'=');
-    $q->condition('n.field_node_ref_target_id',$node->nid,'=');
-    $q->condition('m.timestamp',(time() - 86400),'>'); // 86400 = 1 day
+    $q->join('field_data_field_node_ref', 'n', 'm.mid=n.entity_id');
+    $q->fields('m', array('mid', 'type', 'uid', 'timestamp'));
+    $q->fields('n', array('field_node_ref_target_id'));
+    $q->condition('m.type', 'node_update_notify', '=');
+    $q->condition('m.uid', $uid, '=');
+    $q->condition('n.field_node_ref_target_id', $node->nid, '=');
+    $q->condition('m.timestamp', (time() - 86400), '>'); // 86400 = 1 day
 
     $r = $q->execute();
-    if($r->rowCount() > 0) {
+    if ($r->rowCount() > 0) {
       // If messages found, skip to next user
       // Limits node update notifications to once every 24 hours
       continue;
@@ -292,16 +310,20 @@ function gie_messages_node_update($node) {
  */
 function gie_messages_node_insert($node) {
   // do not do for unpublished content
-  if ($node->status == 0) return;
+  if ($node->status == 0) {
+    return;
+  }
 
-  switch($node->type) {
+  switch ($node->type) {
     case 'innovation':
     case 'resource':
     case 'funding':
       // load Follow flag
       $flag = flag_get_flag('follow');
       // End if flag not found
-      if (!$flag) break;
+      if (!$flag) {
+        break;
+      }
 
       // initiate send and do not send lists
       $do_not_send_list = [];
@@ -310,12 +332,12 @@ function gie_messages_node_insert($node) {
       // Get all users currently following node author
       $query = db_select('flagging', 'f');
       $query->fields('f');
-      $query->condition('entity_id',$node->uid,'=');
-      $query->condition('fid',$flag->fid,'=');
+      $query->condition('entity_id', $node->uid, '=');
+      $query->condition('fid', $flag->fid, '=');
 
       $result = $query->execute();
 
-      foreach($result as $record) {
+      foreach ($result as $record) {
         $uid = $record->uid;
         if ($uid == $node->uid) {
           // If user is node author, skip to next user
@@ -347,12 +369,14 @@ function gie_messages_node_insert($node) {
       }
 
       // ONLY DO THE FOLLOWING FOR INNOVATION AND FUNDING. SKIP FOR RESOURCE
-      if ($node->type == 'resource') break;
+      if ($node->type == 'resource') {
+        break;
+      }
       $lang = $node->language;
       $sectors = $node->field_term_sector[$lang];
       $sector_list = array();
 
-      foreach($sectors as $sector) {
+      foreach ($sectors as $sector) {
         $sector_list[] = $sector['tid'];
       }
       if (!empty($sector_list)) {
@@ -361,17 +385,19 @@ function gie_messages_node_insert($node) {
 
         // Get all users currently following sector term
         $query = db_select('field_data_field_term_sector', 'f');
-        $query->fields('f',array('entity_id'));
+        $query->fields('f', array('entity_id'));
         $query->distinct();
-        $query->condition('entity_type','user','=');
-        $query->condition('field_term_sector_tid',$sector_list,'IN');
+        $query->condition('entity_type', 'user', '=');
+        $query->condition('field_term_sector_tid', $sector_list, 'IN');
 
         $sector_result = $query->execute();
 
-        while($record = $sector_result->fetchAssoc()){
+        while ($record = $sector_result->fetchAssoc()) {
           $uid = $record['entity_id'];
           // skip users found via 'user_follow_create' process
-          if (in_array($uid, $send_list) || in_array($uid, $do_not_send_list)) continue;
+          if (in_array($uid, $send_list) || in_array($uid, $do_not_send_list)) {
+            continue;
+          }
           // skip node author
           if ($uid == $node->uid) {
             // If user is node author, skip to next user
@@ -382,8 +408,10 @@ function gie_messages_node_insert($node) {
           // Get User Notifications frequency field
           $notifier_name = _gie_messages_get_notifier_name($user);
           $user_fields = $user->value();
-          $innovation_rec =  !empty($user_fields->field_user_mail_innovation_rec) ? $user->field_user_mail_innovation_rec->value() : 0;
-          $funding_rec =  !empty($user_fields->field_user_mail_funding_rec) ? $user->field_user_mail_funding_rec->value() : 0;
+          $innovation_rec = !empty($user_fields->field_user_mail_innovation_rec) ? $user->field_user_mail_innovation_rec->value(
+          ) : 0;
+          $funding_rec = !empty($user_fields->field_user_mail_funding_rec) ? $user->field_user_mail_funding_rec->value(
+          ) : 0;
           // Get Recommendation Notify field appropriate for the node content type
           $notify_recommendation = ($node->type == 'innovation') ? $innovation_rec : $funding_rec;
           if ($notifier_name == 'do_not_send' || !$notify_recommendation) {
@@ -420,7 +448,7 @@ function _gie_messages_get_notifier_name($user) {
   $notification = $user->field_user_notifications->value();
 
   // Get notifier based on email message frequency of user
-  switch($notification) {
+  switch ($notification) {
     case 'daily':
       $notifier_name = 'digest_day';
       break;
