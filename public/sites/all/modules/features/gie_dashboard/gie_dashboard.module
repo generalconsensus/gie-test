@@ -25,7 +25,10 @@ function gie_dashboard_ctools_plugin_directory($owner, $plugin_type) {
  *
  * Adds multiple IDs for MLT call
  */
-function gie_dashboard_search_api_solr_query_alter(array &$call_args, SearchApiQueryInterface $query) {
+function gie_dashboard_search_api_solr_query_alter(
+  array &$call_args,
+  SearchApiQueryInterface $query
+) {
   $id = search_api_solr_site_hash();
   $nids =  &drupal_static('_mlt_nids');
   $node_index = 'id:"' . $id . '-default_node_index-' . $nids[0] . '"';
@@ -77,12 +80,15 @@ function gie_dashboard_form_node_form_alter(&$form) {
     'organization',
     'program',
     'blogs',
-    'news'
+    'news',
   );
 
   $admin_role = user_role_load_by_name('administrator');
   // Set field visibility based on whether the user is an admin
-  if (in_array($form['type']['#value'], $types) && !(user_has_role($admin_role->rid)) && !empty($form['field_featured'])) {
+  if (in_array($form['type']['#value'], $types) && !(user_has_role(
+      $admin_role->rid
+    )) && !empty($form['field_featured'])
+  ) {
     $form['field_featured']['#type'] = 'hidden';
   }
 }
@@ -140,7 +146,9 @@ function gie_dashboard_create_node($type, $uid, $pieces, $payload = NULL) {
     $node = new stdClass();
     $node->title = devel_create_greeking(1, TRUE);
     $node->type = $type;
-    node_object_prepare($node); // Sets some defaults. Invokes hook_prepare() and hook_node_prepare().
+    node_object_prepare(
+      $node
+    ); // Sets some defaults. Invokes hook_prepare() and hook_node_prepare().
     $node->language = LANGUAGE_NONE; // Or e.g. 'en' if locale is enabled
     $node->uid = $uid;
     $node->status = 1; //(1 or 0): published or not
@@ -211,17 +219,17 @@ function gie_dashboard_create_user($pieces, $name = NULL, $payload = NULL) {
       LANGUAGE_NONE => array(
         array(
           'delta' => 0,
-          'tid' => '545'
-        )
-      )
+          'tid' => '545',
+        ),
+      ),
     );
     $user->field_term_sector = array(
       LANGUAGE_NONE => array(
         array(
           'delta' => 0,
-          'tid' => '419'
-        )
-      )
+          'tid' => '419',
+        ),
+      ),
     );
     user_save($user);
     // If you want to send the welcome email, use the following code
@@ -250,55 +258,71 @@ function dashboard_recommendation_engine($bundle, $filter) {
   switch ($filter) {
     case 'my_sectors':
 
-      $matches = db_query_range("SELECT DISTINCT node.nid, flagging.fid as flagged, field_data_field_featured.field_featured_value as featured FROM node
+      $matches = db_query_range(
+        "SELECT DISTINCT node.nid, flagging.fid as flagged, field_data_field_featured.field_featured_value as featured FROM node
       LEFT JOIN field_data_field_term_sector sector_1 ON node.nid = sector_1.entity_id AND (sector_1.entity_type = 'node' AND sector_1.deleted = '0')
       INNER JOIN taxonomy_term_data  ON sector_1.field_term_sector_tid = taxonomy_term_data.tid
       INNER JOIN field_data_field_term_sector sector_2 ON taxonomy_term_data.tid = sector_2.field_term_sector_tid AND (sector_2.entity_type = 'user' AND sector_2.deleted = '0')
       INNER JOIN users ON sector_2.entity_id = users.uid
       LEFT OUTER JOIN flagging ON flagging.uid = :uid AND flagging.entity_id = node.nid
       LEFT JOIN field_data_field_featured ON field_data_field_featured.entity_id = node.nid
-      WHERE flagging.fid IS NULL AND node.uid <> :uid AND users.uid = :uid AND node.status = '1' AND node.type IN (:bundle) ORDER BY node.changed DESC", 0, $display_items, array(
-        ':uid' => $user->uid,
-        ':bundle' => $bundle
-      ))->fetchAll();
+      WHERE flagging.fid IS NULL AND node.uid <> :uid AND users.uid = :uid AND node.status = '1' AND node.type IN (:bundle) ORDER BY node.changed DESC",
+        0,
+        $display_items,
+        array(
+          ':uid' => $user->uid,
+          ':bundle' => $bundle,
+        )
+      )->fetchAll();
 
       break;
 
     case 'my_topics':
 
-      $matches = db_query_range("SELECT DISTINCT node.nid, flagging.fid as flagged, field_data_field_featured.field_featured_value as featured FROM node
+      $matches = db_query_range(
+        "SELECT DISTINCT node.nid, flagging.fid as flagged, field_data_field_featured.field_featured_value as featured FROM node
       LEFT JOIN field_data_field_term_topic term_1 ON node.nid = term_1.entity_id AND (term_1.entity_type = 'node' AND term_1.deleted = '0')
       INNER JOIN taxonomy_term_data  ON term_1.field_term_topic_tid = taxonomy_term_data.tid
       INNER JOIN field_data_field_user_interests ON taxonomy_term_data.tid = field_data_field_user_interests.field_user_interests_tid AND (field_data_field_user_interests.entity_type = 'user' AND field_data_field_user_interests.deleted = '0')
       INNER JOIN users ON field_data_field_user_interests.entity_id = users.uid
       LEFT OUTER JOIN flagging ON flagging.uid = :uid AND flagging.entity_id = node.nid
       LEFT JOIN field_data_field_featured ON field_data_field_featured.entity_id = node.nid
-      WHERE flagging.fid IS NULL AND node.uid <> :uid AND users.uid = :uid  AND node.status = '1' AND node.type IN (:bundle) ORDER BY node.changed DESC", 0, $display_items, array(
-        ':uid' => $user->uid,
-        ':bundle' => $bundle
-      ))->fetchAll();
+      WHERE flagging.fid IS NULL AND node.uid <> :uid AND users.uid = :uid  AND node.status = '1' AND node.type IN (:bundle) ORDER BY node.changed DESC",
+        0,
+        $display_items,
+        array(
+          ':uid' => $user->uid,
+          ':bundle' => $bundle,
+        )
+      )->fetchAll();
 
       break;
 
     case 'my_skills':
 
-      $matches = db_query_range("SELECT DISTINCT node.nid, flagging.fid as flagged, field_data_field_featured.field_featured_value as featured FROM node
+      $matches = db_query_range(
+        "SELECT DISTINCT node.nid, flagging.fid as flagged, field_data_field_featured.field_featured_value as featured FROM node
       LEFT JOIN field_data_field_innovation_assistance ON node.nid = field_data_field_innovation_assistance.entity_id AND (field_data_field_innovation_assistance.entity_type = 'node' AND field_data_field_innovation_assistance.deleted = '0')
       INNER JOIN taxonomy_term_data  ON field_data_field_innovation_assistance.field_innovation_assistance_tid = taxonomy_term_data.tid
       INNER JOIN field_data_field_user_assistance ON taxonomy_term_data.tid = field_data_field_user_assistance.field_user_assistance_tid AND (field_data_field_user_assistance.entity_type = 'user' AND field_data_field_user_assistance.deleted = '0')
       INNER JOIN users ON field_data_field_user_assistance.entity_id = users.uid
       LEFT OUTER JOIN flagging ON flagging.uid = :uid AND flagging.entity_id = node.nid
       LEFT JOIN field_data_field_featured ON field_data_field_featured.entity_id = node.nid
-      WHERE flagging.fid IS NULL AND node.uid <> :uid AND users.uid = :uid  AND node.status = '1' AND node.type IN (:bundle) ORDER BY node.changed DESC", 0, $display_items, array(
-        ':uid' => $user->uid,
-        ':bundle' => $bundle
-      ))->fetchAll();
+      WHERE flagging.fid IS NULL AND node.uid <> :uid AND users.uid = :uid  AND node.status = '1' AND node.type IN (:bundle) ORDER BY node.changed DESC",
+        0,
+        $display_items,
+        array(
+          ':uid' => $user->uid,
+          ':bundle' => $bundle,
+        )
+      )->fetchAll();
 
       break;
 
     case 'my_friends':
 
-      $matches = db_query_range("SELECT DISTINCT friends_content.nid as nid, following_friends_content.entity_id as flagged,
+      $matches = db_query_range(
+        "SELECT DISTINCT friends_content.nid as nid, following_friends_content.entity_id as flagged,
       field_data_field_featured.field_featured_value as featured
       FROM node friends_content
       INNER JOIN (
@@ -313,27 +337,36 @@ function dashboard_recommendation_engine($bundle, $filter) {
       ) following_friends_content on following_friends_content.entity_id = friends_content.nid
       LEFT JOIN field_data_field_featured ON field_data_field_featured.entity_id = friends_content.nid
       WHERE friends_content.uid <> :uid AND friends_content.status = '1' AND friends_content.type in (:bundle)
-      AND following_friends_content.entity_id is null ORDER BY friends_content.changed DESC", 0, $display_items, array(
-        ':follow_fid' => $follow_user->fid,
-        ':uid' => $user->uid,
-        ':bundle' => $bundle,
-        ':favorite_fid' => $favorite->fid
-      ))->fetchAll();
+      AND following_friends_content.entity_id is null ORDER BY friends_content.changed DESC",
+        0,
+        $display_items,
+        array(
+          ':follow_fid' => $follow_user->fid,
+          ':uid' => $user->uid,
+          ':bundle' => $bundle,
+          ':favorite_fid' => $favorite->fid,
+        )
+      )->fetchAll();
 
 
       break;
 
 
     case 'im_following':
-      $matches = db_query_range('SELECT DISTINCT flagging.entity_id as nid, flagging.fid as flagged, field_data_field_featured.field_featured_value as featured
+      $matches = db_query_range(
+        'SELECT DISTINCT flagging.entity_id as nid, flagging.fid as flagged, field_data_field_featured.field_featured_value as featured
         FROM flagging
         INNER JOIN node on node.nid = flagging.entity_id
         LEFT JOIN field_data_field_featured ON field_data_field_featured.entity_id = node.nid
-        WHERE node.uid <> :uid AND node.type IN (:bundle) AND flagging.uid = :uid AND flagging.fid = :favorite_fid', 0, $display_items, array(
-        ':bundle' => $bundle,
-        ':uid' => $user->uid,
-        ':favorite_fid' => $favorite->fid
-      ))->fetchAll();
+        WHERE node.uid <> :uid AND node.type IN (:bundle) AND flagging.uid = :uid AND flagging.fid = :favorite_fid',
+        0,
+        $display_items,
+        array(
+          ':bundle' => $bundle,
+          ':uid' => $user->uid,
+          ':favorite_fid' => $favorite->fid,
+        )
+      )->fetchAll();
 
       break;
 
@@ -341,11 +374,16 @@ function dashboard_recommendation_engine($bundle, $filter) {
     case 'funding':
     case 'resource':
     case 'event':
-      $matches = db_query_range('SELECT node.nid FROM node
-        WHERE node.type IN (:bundle) AND node.uid = :uid ORDER BY node.changed DESC', 0, $display_items, array(
-        ':bundle' => $filter,
-        ':uid' => $user->uid
-      ))->fetchCol();
+      $matches = db_query_range(
+        'SELECT node.nid FROM node
+        WHERE node.type IN (:bundle) AND node.uid = :uid ORDER BY node.changed DESC',
+        0,
+        $display_items,
+        array(
+          ':bundle' => $filter,
+          ':uid' => $user->uid,
+        )
+      )->fetchCol();
 
       break;
 
@@ -355,41 +393,54 @@ function dashboard_recommendation_engine($bundle, $filter) {
     case 'net_organization':
     case 'net_program':
 
-      $matches = db_query_range('SELECT DISTINCT flagging.entity_id as nid, 1 as flagged, field_data_field_featured.field_featured_value as featured
+      $matches = db_query_range(
+        'SELECT DISTINCT flagging.entity_id as nid, 1 as flagged, field_data_field_featured.field_featured_value as featured
         FROM flagging
         INNER JOIN node on node.nid = flagging.entity_id
         LEFT JOIN field_data_field_featured ON field_data_field_featured.entity_id = node.nid
-        WHERE node.type IN (:bundle) AND flagging.uid = :uid AND flagging.fid = :favorite_fid', 0, $display_items, array(
-        ':bundle' => substr($filter, 4),
-        ':uid' => $user->uid,
-        ':favorite_fid' => $favorite->fid
-      ))->fetchAll();
+        WHERE node.type IN (:bundle) AND flagging.uid = :uid AND flagging.fid = :favorite_fid',
+        0,
+        $display_items,
+        array(
+          ':bundle' => substr($filter, 4),
+          ':uid' => $user->uid,
+          ':favorite_fid' => $favorite->fid,
+        )
+      )->fetchAll();
 
       break;
 
     case 'net_event':
 
-      $matches = db_query_range("SELECT DISTINCT 'event', flagging.entity_id as nid, 1 as flagged, field_data_field_featured.field_featured_value as featured
+      $matches = db_query_range(
+        "SELECT DISTINCT 'event', flagging.entity_id as nid, 1 as flagged, field_data_field_featured.field_featured_value as featured
         FROM flagging
         INNER JOIN node on node.nid = flagging.entity_id
         LEFT JOIN field_data_field_featured ON field_data_field_featured.entity_id = node.nid
-        WHERE node.type IN (:bundle) AND flagging.uid = :uid AND flagging.fid = :attending_fid", 0, $display_items, array(
-        ':bundle' => substr($filter, 4),
-        ':uid' => $user->uid,
-        ':attending_fid' => $attending->fid
-      ))->fetchAll();
+        WHERE node.type IN (:bundle) AND flagging.uid = :uid AND flagging.fid = :attending_fid",
+        0,
+        $display_items,
+        array(
+          ':bundle' => substr($filter, 4),
+          ':uid' => $user->uid,
+          ':attending_fid' => $attending->fid,
+        )
+      )->fetchAll();
 
       break;
 
     case 'net_users':
 
-      $matches = db_query('SELECT DISTINCT flagging.entity_id as uid, 1 as flagged, field_data_field_featured.field_featured_value as featured
+      $matches = db_query(
+        'SELECT DISTINCT flagging.entity_id as uid, 1 as flagged, field_data_field_featured.field_featured_value as featured
     FROM flagging
     LEFT JOIN field_data_field_featured ON field_data_field_featured.entity_id = flagging.uid
-    WHERE flagging.fid = :fid AND flagging.uid = :uid', array(
-        ':fid' => $follow_user->fid,
-        ':uid' => $user->uid
-      ))->fetchAll();
+    WHERE flagging.fid = :fid AND flagging.uid = :uid',
+        array(
+          ':fid' => $follow_user->fid,
+          ':uid' => $user->uid,
+        )
+      )->fetchAll();
 
       break;
 
@@ -417,43 +468,47 @@ function dashboard_recommended_innovations_form($form) {
     '#type' => 'container',
     '#attributes' => array(
       'class' => array(
-        'dashboard-filters'
+        'dashboard-filters',
       ),
-    )
+    ),
   );
   $form['recommended_innovations']['my_sectors'] = array(
     '#type' => 'submit',
     '#value' => t('My Sectors'),
     '#prefix' => '<span class="dashboard-filters__item has-icon-sectors">',
-    '#suffix' => '</span>'
+    '#suffix' => '</span>',
   );
   $form['recommended_innovations']['my_topics'] = array(
     '#type' => 'submit',
     '#value' => t('My Topics'),
     '#prefix' => '<span class="dashboard-filters__item has-icon-topics">',
-    '#suffix' => '</span>'
+    '#suffix' => '</span>',
   );
   $form['recommended_innovations']['my_skills'] = array(
     '#type' => 'submit',
     '#value' => t('My Skills'),
     '#prefix' => '<span class="dashboard-filters__item has-icon-my-skills">',
-    '#suffix' => '</span>'
+    '#suffix' => '</span>',
   );
   $form['recommended_innovations']['my_friends'] = array(
     '#type' => 'submit',
     '#value' => t('My Friends'),
     '#prefix' => '<span class="dashboard-filters__item has-icon-my-friends">',
-    '#suffix' => '</span>'
+    '#suffix' => '</span>',
   );
   $form['recommended_innovations']['im_following'] = array(
     '#type' => 'submit',
     '#value' => t('I\'m Following'),
     '#prefix' => '<span class="dashboard-filters__item has-icon-following">',
-    '#suffix' => '</span>'
+    '#suffix' => '</span>',
   );
 
   // Add dynamic is-active class to form element
-  $form['recommended_innovations'][$filter]['#prefix'] = str_replace('">', ' is-active">', $form['recommended_innovations'][$filter]['#prefix']);
+  $form['recommended_innovations'][$filter]['#prefix'] = str_replace(
+    '">',
+    ' is-active">',
+    $form['recommended_innovations'][$filter]['#prefix']
+  );
 
   if (!empty($matches)) {
     $payload = gie_dashboard_card_build($matches);
@@ -462,19 +517,41 @@ function dashboard_recommended_innovations_form($form) {
     global $user;
     switch ($filter) {
       case 'my_sectors':
-        $payload[] = t('There are no innovation recommendations based on your sector preferences.') . ' ' . l(t('Update your preferences'), 'user/' . $user->uid . '/edit') . ' ' . t('to get better results');
+        $payload[] = t(
+            'There are no innovation recommendations based on your sector preferences.'
+          ) . ' ' . l(
+            t('Update your preferences'),
+            'user/' . $user->uid . '/edit'
+          ) . ' ' . t('to get better results');
         break;
       case 'my_topics':
-        $payload[] = t('There are no innovation recommendations based on your topic preferences.') . ' ' . l(t('Update your preferences'), 'user/' . $user->uid . '/edit') . ' ' . t('to get better results');
+        $payload[] = t(
+            'There are no innovation recommendations based on your topic preferences.'
+          ) . ' ' . l(
+            t('Update your preferences'),
+            'user/' . $user->uid . '/edit'
+          ) . ' ' . t('to get better results');
         break;
       case 'my_skills':
-        $payload[] = t('There are no innovation recommendations requesting your skills.') . ' ' . l(t('Update your preferences'), 'user/' . $user->uid . '/edit') . ' ' . t('to get better results');
+        $payload[] = t(
+            'There are no innovation recommendations requesting your skills.'
+          ) . ' ' . l(
+            t('Update your preferences'),
+            'user/' . $user->uid . '/edit'
+          ) . ' ' . t('to get better results');
         break;
       case 'my_friends':
-        $payload[] = t('There are no innovation recommendations on what your friends are following.') . ' ' . l(t('Find members to follow'), 'members') . ' ' . t('to get better results');
+        $payload[] = t(
+            'There are no innovation recommendations on what your friends are following.'
+          ) . ' ' . l(t('Find members to follow'), 'members') . ' ' . t(
+            'to get better results'
+          );
         break;
       case 'im_following':
-        $payload[] = t('You are not following any innovations') . ' ' . l(t('Find innovations to follow'), 'innovations');
+        $payload[] = t('You are not following any innovations') . ' ' . l(
+            t('Find innovations to follow'),
+            'innovations'
+          );
         break;
     }
   }
@@ -482,8 +559,11 @@ function dashboard_recommended_innovations_form($form) {
 
   $form['updates'] = array(
     '#type' => 'item',
-    '#markup' => '<div class="view--card-view-4col">' . implode("", $payload) . '</div>',
-    '#weight' => 5
+    '#markup' => '<div class="view--card-view-4col">' . implode(
+        "",
+        $payload
+      ) . '</div>',
+    '#weight' => 5,
   );
 
   return $form;
@@ -520,7 +600,7 @@ function dashboard_recommended_innovations_form_submit($form, &$form_state) {
       array(
         'query' => array(
           'qt-dashboard' => 2,
-          'stdfilter' => $filter
+          'stdfilter' => $filter,
         ),
       ),
     );
@@ -544,39 +624,43 @@ function dashboard_recommended_funding_form($form) {
     '#type' => 'container',
     '#attributes' => array(
       'class' => array(
-        'dashboard-filters'
+        'dashboard-filters',
       ),
-    )
+    ),
   );
 
   $form['recommended_funding']['my_sectors'] = array(
     '#type' => 'submit',
     '#value' => t('My Sectors'),
     '#prefix' => '<span class="dashboard-filters__item has-icon-sectors">',
-    '#suffix' => '</span>'
+    '#suffix' => '</span>',
   );
   $form['recommended_funding']['my_topics'] = array(
     '#type' => 'submit',
     '#value' => t('My Topics'),
     '#prefix' => '<span class="dashboard-filters__item has-icon-topics">',
-    '#suffix' => '</span>'
+    '#suffix' => '</span>',
   );
   $form['recommended_funding']['my_friends'] = array(
     '#type' => 'submit',
     '#value' => t('My Friends'),
     '#prefix' => '<span class="dashboard-filters__item has-icon-my-friends">',
-    '#suffix' => '</span>'
+    '#suffix' => '</span>',
   );
   $form['recommended_funding']['im_following'] = array(
     '#type' => 'submit',
     '#value' => t('I\'m Following'),
     '#prefix' => '<span class="dashboard-filters__item has-icon-following">',
-    '#suffix' => '</span>'
+    '#suffix' => '</span>',
   );
 
   // Add dynamic is-active class to form element
   if (!empty($form['recommended_funding'][$filter]) && !empty($form['recommended_funding'][$filter]['#prefix'])) {
-    $form['recommended_funding'][$filter]['#prefix'] = str_replace('">', ' is-active">', $form['recommended_funding'][$filter]['#prefix']);
+    $form['recommended_funding'][$filter]['#prefix'] = str_replace(
+      '">',
+      ' is-active">',
+      $form['recommended_funding'][$filter]['#prefix']
+    );
   }
 
 //  $form['submit'] = array(
@@ -595,16 +679,32 @@ function dashboard_recommended_funding_form($form) {
     global $user;
     switch ($filter) {
       case 'my_sectors':
-        $payload[] = t('There are no funding opportunity recommendations based on your sector preferences.') . ' ' . l(t('Update your preferences'), 'user/' . $user->uid . '/edit') . ' ' . t('to get better results');
+        $payload[] = t(
+            'There are no funding opportunity recommendations based on your sector preferences.'
+          ) . ' ' . l(
+            t('Update your preferences'),
+            'user/' . $user->uid . '/edit'
+          ) . ' ' . t('to get better results');
         break;
       case 'my_topics':
-        $payload[] = t('There are no funding opportunity recommendations based on your topic preferences.') . ' ' . l(t('Update your preferences'), 'user/' . $user->uid . '/edit') . ' ' . t('to get better results');
+        $payload[] = t(
+            'There are no funding opportunity recommendations based on your topic preferences.'
+          ) . ' ' . l(
+            t('Update your preferences'),
+            'user/' . $user->uid . '/edit'
+          ) . ' ' . t('to get better results');
         break;
       case 'my_friends':
-        $payload[] = t('There are no funding opportunity recommendations based on on what your friends are following.') . ' ' . l(t('Find members to follow'), 'members') . ' ' . t('to get better results');
+        $payload[] = t(
+            'There are no funding opportunity recommendations based on on what your friends are following.'
+          ) . ' ' . l(t('Find members to follow'), 'members') . ' ' . t(
+            'to get better results'
+          );
         break;
       case 'im_following':
-        $payload[] = t('You are not following any funding opportunities') . ' ' . l(t('Find funding opportunities to follow'), 'funding');
+        $payload[] = t(
+            'You are not following any funding opportunities'
+          ) . ' ' . l(t('Find funding opportunities to follow'), 'funding');
         break;
     }
   }
@@ -612,7 +712,10 @@ function dashboard_recommended_funding_form($form) {
 
   $form['updates'] = array(
     '#type' => 'item',
-    '#markup' => '<div class="view--card-view-4col">' . implode("", $payload) . '</div>',
+    '#markup' => '<div class="view--card-view-4col">' . implode(
+        "",
+        $payload
+      ) . '</div>',
     '#weight' => 5,
   );
 
@@ -647,7 +750,7 @@ function dashboard_recommended_funding_form_submit($form, &$form_state) {
       array(
         'query' => array(
           'qt-dashboard' => 3,
-          'stdfilter' => $filter
+          'stdfilter' => $filter,
         ),
       ),
     );
@@ -672,44 +775,51 @@ function dashboard_my_portfolio_form($form) {
     '#type' => 'container',
     '#attributes' => array(
       'class' => array(
-        'dashboard-filters'
+        'dashboard-filters',
       ),
-    )
+    ),
   );
 
   $form['my_portfolio']['innovation'] = array(
     '#type' => 'submit',
     '#value' => t('My Innovations'),
     '#prefix' => '<span class="dashboard-filters__item has-icon-innovation">',
-    '#suffix' => '</span>'
+    '#suffix' => '</span>',
   );
   $form['my_portfolio']['funding'] = array(
     '#type' => 'submit',
     '#value' => t('My Funding Opportunities'),
     '#prefix' => '<span class="dashboard-filters__item has-icon-funding">',
-    '#suffix' => '</span>'
+    '#suffix' => '</span>',
   );
   $form['my_portfolio']['resource'] = array(
     '#type' => 'submit',
     '#value' => t('My Resources'),
     '#prefix' => '<span class="dashboard-filters__item has-icon-resource">',
-    '#suffix' => '</span>'
+    '#suffix' => '</span>',
   );
   $form['my_portfolio']['event'] = array(
     '#type' => 'submit',
     '#value' => t('My Events'),
     '#prefix' => '<span class="dashboard-filters__item has-icon-event">',
-    '#suffix' => '</span>'
+    '#suffix' => '</span>',
   );
 
   // Add dynamic is-active class to form element
-  $form['my_portfolio'][$filter]['#prefix'] = str_replace('">', ' is-active">', $form['my_portfolio'][$filter]['#prefix']);
+  $form['my_portfolio'][$filter]['#prefix'] = str_replace(
+    '">',
+    ' is-active">',
+    $form['my_portfolio'][$filter]['#prefix']
+  );
 
 
   if (!empty($matches)) {
     foreach ($matches as $key => $sector_match) {
       $favorites = flag_get_counts('node', $sector_match);
-      $comments = db_query('SELECT count(nid) FROM comment WHERE comment.nid = :nid', array(':nid' => $sector_match))->fetchField();
+      $comments = db_query(
+        'SELECT count(nid) FROM comment WHERE comment.nid = :nid',
+        array(':nid' => $sector_match)
+      )->fetchField();
       $node = node_load($sector_match);
 
       // Grab image
@@ -717,13 +827,31 @@ function dashboard_my_portfolio_form($form) {
       $img = '';
       switch ($node->type) {
         case 'innovation':
-          $img_path = (!empty($node->field_innovation_image)) && !empty($node->field_innovation_image['und'][0]) && !empty($node->field_innovation_image['und'][0]['uri']) ? image_style_url('card__500x300_', $node->field_innovation_image['und'][0]['uri']) : image_style_url('card__500x300_', 's3://default_images/innovation-default-image.jpg');
+          $img_path = (!empty($node->field_innovation_image)) && !empty($node->field_innovation_image['und'][0]) && !empty($node->field_innovation_image['und'][0]['uri']) ? image_style_url(
+            'card__500x300_',
+            $node->field_innovation_image['und'][0]['uri']
+          ) : image_style_url(
+            'card__500x300_',
+            's3://default_images/innovation-default-image.jpg'
+          );
           break;
         case 'funding':
-          $img_path = (!empty($node->field_funding_image)) && !empty($node->field_funding_image['und'][0]) && !empty($node->field_funding_image['und'][0]['uri']) ? image_style_url('card__500x300_', $node->field_funding_image['und'][0]['uri']) : image_style_url('card__500x300_', 's3://default_images/innovation-default-image.jpg');
+          $img_path = (!empty($node->field_funding_image)) && !empty($node->field_funding_image['und'][0]) && !empty($node->field_funding_image['und'][0]['uri']) ? image_style_url(
+            'card__500x300_',
+            $node->field_funding_image['und'][0]['uri']
+          ) : image_style_url(
+            'card__500x300_',
+            's3://default_images/innovation-default-image.jpg'
+          );
           break;
         case 'event':
-          $img_path = (!empty($node->field_event_image)) && !empty($node->field_event_image['und'][0]) && !empty($node->field_event_image['und'][0]['uri']) ? image_style_url('card__500x300_', $node->field_event_image['und'][0]['uri']) : image_style_url('card__500x300_', 's3://default_images/innovation-default-image.jpg');
+          $img_path = (!empty($node->field_event_image)) && !empty($node->field_event_image['und'][0]) && !empty($node->field_event_image['und'][0]['uri']) ? image_style_url(
+            'card__500x300_',
+            $node->field_event_image['und'][0]['uri']
+          ) : image_style_url(
+            'card__500x300_',
+            's3://default_images/innovation-default-image.jpg'
+          );
           break;
 
       }
@@ -731,7 +859,7 @@ function dashboard_my_portfolio_form($form) {
       if (!empty($img_path)) {
         $variables = array(
           'path' => $img_path,
-          'alt' => $node->title
+          'alt' => $node->title,
         );
 
         $img = theme('image', $variables);
@@ -744,9 +872,15 @@ function dashboard_my_portfolio_form($form) {
             ' . $img . '
             </div>
              <div class="layout-slat__content">
-                    <div class="dashboard-table__date">' . date('F jS, Y', $node->changed) . '
+                    <div class="dashboard-table__date">' . date(
+          'F jS, Y',
+          $node->changed
+        ) . '
                     </div>
-                    <h4 class="dashboard-table__title">' . l($node->title, "node/" . $node->nid) . '</h4>
+                    <h4 class="dashboard-table__title">' . l(
+          $node->title,
+          "node/" . $node->nid
+        ) . '</h4>
                 </div>
             </div>';
 
@@ -754,11 +888,11 @@ function dashboard_my_portfolio_form($form) {
         $column_payload,
         (array(
           'data' => (!empty($favorites) ? $favorites['favorite'] : 0),
-          'class' => 'dashboard-table__data'
+          'class' => 'dashboard-table__data',
         )),
         (array(
           'data' => (!empty($comments) ? $comments : 0),
-          'class' => 'dashboard-table__data'
+          'class' => 'dashboard-table__data',
         )),
       );
       $inc += 1;
@@ -769,30 +903,42 @@ function dashboard_my_portfolio_form($form) {
     switch ($filter) {
       case 'innovation':
         $payload[] = array(
-          t('You haven\'t created any innovations! Click ') . l(t('here'), 'node/add/innovation') . ' ' . t('to add your innovations.'),
+          t('You haven\'t created any innovations! Click ') . l(
+            t('here'),
+            'node/add/innovation'
+          ) . ' ' . t('to add your innovations.'),
           NULL,
-          NULL
+          NULL,
         );
         break;
       case 'funding':
         $payload[] = array(
-          t('You haven\'t created any funding opportunities! Click ') . l(t('here'), 'node/add/funding') . ' ' . t('to add your funding opportunities.'),
+          t('You haven\'t created any funding opportunities! Click ') . l(
+            t('here'),
+            'node/add/funding'
+          ) . ' ' . t('to add your funding opportunities.'),
           NULL,
-          NULL
+          NULL,
         );
         break;
       case 'resource':
         $payload[] = array(
-          t('You haven\'t created any resources! Click ') . l(t('here'), 'node/add/resources') . ' ' . t('to add your resources.'),
+          t('You haven\'t created any resources! Click ') . l(
+            t('here'),
+            'node/add/resources'
+          ) . ' ' . t('to add your resources.'),
           NULL,
-          NULL
+          NULL,
         );
         break;
       case 'event':
         $payload[] = array(
-          t('You haven\'t created any events! Click ') . l(t('here'), 'node/add/event') . ' ' . t('to add your events.'),
+          t('You haven\'t created any events! Click ') . l(
+            t('here'),
+            'node/add/event'
+          ) . ' ' . t('to add your events.'),
           NULL,
-          NULL
+          NULL,
         );
         break;
     }
@@ -802,11 +948,11 @@ function dashboard_my_portfolio_form($form) {
     array(),
     array(
       'data' => strtoupper(t('Favorites')),
-      'class' => 'dashboard-table__fav-header'
+      'class' => 'dashboard-table__fav-header',
     ),
     array(
       'data' => strtoupper(t('Comments')),
-      'class' => 'dashboard-table__comment-header'
+      'class' => 'dashboard-table__comment-header',
     ),
   );
 
@@ -815,7 +961,7 @@ function dashboard_my_portfolio_form($form) {
     '#theme' => 'table',
     '#rows' => $payload,
     '#header' => $header,
-    '#attributes' => array('class' => array('dashboard-table'))
+    '#attributes' => array('class' => array('dashboard-table')),
   );
 
 
@@ -857,7 +1003,7 @@ function dashboard_my_portfolio_form_submit($form, &$form_state) {
       array(
         'query' => array(
           'qt-dashboard' => 1,
-          'pfilter' => $filter
+          'pfilter' => $filter,
         ),
       ),
     );
@@ -879,7 +1025,7 @@ function dashboard_my_network_form($form) {
     'net_resource',
     'net_event',
     'net_organization',
-    'net_program'
+    'net_program',
   );
   $filter = (!empty($_GET) && !empty($_GET['nfilter'])) ? $_GET['nfilter'] : 'net_users';
   $matches = dashboard_recommendation_engine($bundle, $filter);
@@ -889,56 +1035,60 @@ function dashboard_my_network_form($form) {
     '#type' => 'container',
     '#attributes' => array(
       'class' => array(
-        'dashboard-filters'
+        'dashboard-filters',
       ),
-    )
+    ),
   );
 
   $form['my_network']['net_users'] = array(
     '#type' => 'submit',
     '#value' => t('Members'),
     '#prefix' => '<span class="dashboard-filters__item has-icon-members">',
-    '#suffix' => '</span>'
+    '#suffix' => '</span>',
   );
   $form['my_network']['net_innovation'] = array(
     '#type' => 'submit',
     '#value' => t('Innovations'),
     '#prefix' => '<span class="dashboard-filters__item has-icon-innovation">',
-    '#suffix' => '</span>'
+    '#suffix' => '</span>',
   );
   $form['my_network']['net_funding'] = array(
     '#type' => 'submit',
     '#value' => t('Funding Ops'),
     '#prefix' => '<span class="dashboard-filters__item has-icon-funding">',
-    '#suffix' => '</span>'
+    '#suffix' => '</span>',
   );
   $form['my_network']['net_resource'] = array(
     '#type' => 'submit',
     '#value' => t('Resources'),
     '#prefix' => '<span class="dashboard-filters__item has-icon-resource">',
-    '#suffix' => '</span>'
+    '#suffix' => '</span>',
   );
   $form['my_network']['net_event'] = array(
     '#type' => 'submit',
     '#value' => t('Events'),
     '#prefix' => '<span class="dashboard-filters__item has-icon-event">',
-    '#suffix' => '</span>'
+    '#suffix' => '</span>',
   );
   $form['my_network']['net_organization'] = array(
     '#type' => 'submit',
     '#value' => t('Organizations'),
     '#prefix' => '<span class="dashboard-filters__item has-icon-organization">',
-    '#suffix' => '</span>'
+    '#suffix' => '</span>',
   );
   $form['my_network']['net_program'] = array(
     '#type' => 'submit',
     '#value' => t('Programs'),
     '#prefix' => '<span class="dashboard-filters__item has-icon-program">',
-    '#suffix' => '</span>'
+    '#suffix' => '</span>',
   );
 
   // Add dynamic is-active class to form element
-  $form['my_network'][$filter]['#prefix'] = str_replace('">', ' is-active">', $form['my_network'][$filter]['#prefix']);
+  $form['my_network'][$filter]['#prefix'] = str_replace(
+    '">',
+    ' is-active">',
+    $form['my_network'][$filter]['#prefix']
+  );
 
 
   if (!empty($matches)) {
@@ -953,32 +1103,57 @@ function dashboard_my_network_form($form) {
 
     switch ($filter) {
       case 'net_users':
-        $payload[] = t('You have not followed a members! Click ') . l(t('here'), 'members') . ' ' . t('to find members');
+        $payload[] = t('You have not followed a members! Click ') . l(
+            t('here'),
+            'members'
+          ) . ' ' . t('to find members');
         break;
       case 'net_innovation':
-        $payload[] = t('You have not followed an innovation! Click ') . l(t('here'), 'innovations') . ' ' . t('to find innovations');
+        $payload[] = t('You have not followed an innovation! Click ') . l(
+            t('here'),
+            'innovations'
+          ) . ' ' . t('to find innovations');
         break;
       case 'net_funding':
-        $payload[] = t('You have not followed a funding opportunity! Click ') . l(t('here'), 'funding') . ' ' . t('to find funding opportunities');
+        $payload[] = t(
+            'You have not followed a funding opportunity! Click '
+          ) . l(t('here'), 'funding') . ' ' . t(
+            'to find funding opportunities'
+          );
         break;
       case 'net_resource':
-        $payload[] = t('You have not followed a resource! Click ') . l(t('here'), 'resources') . ' ' . t('to find resources');
+        $payload[] = t('You have not followed a resource! Click ') . l(
+            t('here'),
+            'resources'
+          ) . ' ' . t('to find resources');
         break;
       case 'net_event':
-        $payload[] = t('You have not followed an event! Click ') . l(t('here'), 'events') . ' ' . t('to find events');
+        $payload[] = t('You have not followed an event! Click ') . l(
+            t('here'),
+            'events'
+          ) . ' ' . t('to find events');
         break;
       case 'net_organization':
-        $payload[] = t('You have not followed an organization! Click ') . l(t('here'), 'organizations') . ' ' . t('to find organizations');
+        $payload[] = t('You have not followed an organization! Click ') . l(
+            t('here'),
+            'organizations'
+          ) . ' ' . t('to find organizations');
         break;
       case 'net_program':
-        $payload[] = t('You have not followed a program! Click ') . l(t('here'), 'programs') . ' ' . t('to find programs');
+        $payload[] = t('You have not followed a program! Click ') . l(
+            t('here'),
+            'programs'
+          ) . ' ' . t('to find programs');
         break;
     }
   }
 
   $form['updates'] = array(
     '#type' => 'item',
-    '#markup' => '<div class="view--card-view-4col">' . implode("", $payload) . '</div>',
+    '#markup' => '<div class="view--card-view-4col">' . implode(
+        "",
+        $payload
+      ) . '</div>',
     '#weight' => 5,
   );
 
@@ -1023,7 +1198,7 @@ function dashboard_my_network_form_submit($form, &$form_state) {
       array(
         'query' => array(
           'qt-dashboard' => 4,
-          'nfilter' => $filter
+          'nfilter' => $filter,
         ),
       ),
     );
@@ -1048,7 +1223,7 @@ function gie_dashboard_ds_fields_info($entity_type) {
         'funding|spotlight',
         'event|spotlight',
         'organization|spotlight',
-        'program|spotlight'
+        'program|spotlight',
       ),
       'function' => 'gie_dashboard_spotlight_card_entity_classification',
     );
@@ -1107,19 +1282,39 @@ function gie_dashboard_card_build($matches, $alternate = FALSE, $user = FALSE) {
   if (!$user) {
     foreach ($matches as $key => $sector_match) {
       $inc += 1;
-      $entity = entity_view('node', array(node_load($sector_match->nid)), 'spotlight');
+      $entity = entity_view(
+        'node',
+        array(node_load($sector_match->nid)),
+        'spotlight'
+      );
       if (!empty($entity)) {
         if (!empty($sector_match->event)) {
-          $entity['node'][key($entity['node'])]['dashboard_spotlight_card_entity_classification'][0]['#markup'] = '<h2 class="card__spotlight-type-event">' . strtoupper(t('Attending')) . '</h2>';
+          $entity['node'][key(
+            $entity['node']
+          )]['dashboard_spotlight_card_entity_classification'][0]['#markup'] = '<h2 class="card__spotlight-type-event">' . strtoupper(
+              t('Attending')
+            ) . '</h2>';
         }
         elseif (!empty($sector_match->featured)) {
-          $entity['node'][key($entity['node'])]['dashboard_spotlight_card_entity_classification'][0]['#markup'] = '<h2 class="card__spotlight-type-update">' . strtoupper(t('Exchange Updates')) . '</h2>';
+          $entity['node'][key(
+            $entity['node']
+          )]['dashboard_spotlight_card_entity_classification'][0]['#markup'] = '<h2 class="card__spotlight-type-update">' . strtoupper(
+              t('Exchange Updates')
+            ) . '</h2>';
         }
         elseif (!empty($sector_match->flagged)) {
-          $entity['node'][key($entity['node'])]['dashboard_spotlight_card_entity_classification'][0]['#markup'] = '<h2 class="card__spotlight-type-followed">' . strtoupper(t('Followed By You')) . '</h2>';
+          $entity['node'][key(
+            $entity['node']
+          )]['dashboard_spotlight_card_entity_classification'][0]['#markup'] = '<h2 class="card__spotlight-type-followed">' . strtoupper(
+              t('Followed By You')
+            ) . '</h2>';
         }
         else {
-          $entity['node'][key($entity['node'])]['dashboard_spotlight_card_entity_classification'][0]['#markup'] = '<h2 class="card__spotlight-type-new">' . strtoupper(t('New for You')) . '</h2>';
+          $entity['node'][key(
+            $entity['node']
+          )]['dashboard_spotlight_card_entity_classification'][0]['#markup'] = '<h2 class="card__spotlight-type-new">' . strtoupper(
+              t('New for You')
+            ) . '</h2>';
         }
       }
       $entity = render($entity);
@@ -1129,16 +1324,32 @@ function gie_dashboard_card_build($matches, $alternate = FALSE, $user = FALSE) {
   else {
     foreach ($matches as $key => $sector_match) {
       $inc += 1;
-      $entity = entity_view('user', array(user_load($sector_match->uid)), 'spotlight');
+      $entity = entity_view(
+        'user',
+        array(user_load($sector_match->uid)),
+        'spotlight'
+      );
       if (!empty($entity)) {
         if (!empty($sector_match->featured)) {
-          $entity['user'][key($entity['user'])]['dashboard_spotlight_card_user_classification'][0]['#markup'] = '<h2 class="card__spotlight-type-update">' . strtoupper(t('Exchange Updates')) . '</h2>';
+          $entity['user'][key(
+            $entity['user']
+          )]['dashboard_spotlight_card_user_classification'][0]['#markup'] = '<h2 class="card__spotlight-type-update">' . strtoupper(
+              t('Exchange Updates')
+            ) . '</h2>';
         }
         elseif (!empty($sector_match->flagged)) {
-          $entity['user'][key($entity['user'])]['dashboard_spotlight_card_user_classification'][0]['#markup'] = '<h2 class="card__spotlight-type-followed">' . strtoupper(t('Followed By You')) . '</h2>';
+          $entity['user'][key(
+            $entity['user']
+          )]['dashboard_spotlight_card_user_classification'][0]['#markup'] = '<h2 class="card__spotlight-type-followed">' . strtoupper(
+              t('Followed By You')
+            ) . '</h2>';
         }
         else {
-          $entity['user'][key($entity['user'])]['dashboard_spotlight_card_user_classification'][0]['#markup'] = '<h2 class="card__spotlight-type-new">' . strtoupper(t('New for You')) . '</h2>';
+          $entity['user'][key(
+            $entity['user']
+          )]['dashboard_spotlight_card_user_classification'][0]['#markup'] = '<h2 class="card__spotlight-type-new">' . strtoupper(
+              t('New for You')
+            ) . '</h2>';
         }
       }
       $entity = render($entity);

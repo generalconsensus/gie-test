@@ -12,7 +12,7 @@ $plugin = array(
   'edit form' => 'dashboard_whats_new_header_image_admin_form',
   'render callback' => 'dashboard_whats_new_header_image_render',
   'defaults' => array(
-    'type' => ''
+    'type' => '',
   ),
 );
 
@@ -48,7 +48,10 @@ function dashboard_whats_new_header_image_render() {
   $block = new stdClass();
 
   global $user;
-  $profile_uri = db_query('SELECT file_managed.uri FROM field_data_field_user_photo INNER JOIN file_managed ON file_managed.fid = field_data_field_user_photo.field_user_photo_fid WHERE field_data_field_user_photo.entity_id = :uid', array(':uid' => $user->uid))->fetchField();
+  $profile_uri = db_query(
+    'SELECT file_managed.uri FROM field_data_field_user_photo INNER JOIN file_managed ON file_managed.fid = field_data_field_user_photo.field_user_photo_fid WHERE field_data_field_user_photo.entity_id = :uid',
+    array(':uid' => $user->uid)
+  )->fetchField();
 
   if (!empty($profile_uri)) {
     $image = image_style_url('dashboard_profile_image', $profile_uri);
@@ -60,7 +63,9 @@ function dashboard_whats_new_header_image_render() {
     </div>
     <div class="dashboard-header__text">
       <h2 class ="dashboard-header__title">Your Exchange Dashboard</h2>
-      <h3 class="dashboard-header__welcome">WELCOME ' . strtoupper($user->name) . '</h3>
+      <h3 class="dashboard-header__welcome">WELCOME ' . strtoupper(
+      $user->name
+    ) . '</h3>
     </div>
     <div class="dashboard-header__actions">
       <a class="button button--update-profile" href="/user/' . $user->uid . '/edit">Update your profile</a>

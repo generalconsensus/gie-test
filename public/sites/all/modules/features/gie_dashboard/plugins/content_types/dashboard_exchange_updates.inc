@@ -12,7 +12,7 @@ $plugin = array(
   'edit form' => 'dashboard_whats_new_exchange_updates_admin_form',
   'render callback' => 'dashboard_whats_new_exchange_updates_render',
   'defaults' => array(
-    'type' => ''
+    'type' => '',
   ),
 );
 
@@ -49,9 +49,18 @@ function dashboard_whats_new_exchange_updates_render() {
   // Render block
   $block = new stdClass();
 
-  $results = gie_homepage_sitewide_summary_generator(array('innovations' => array(), 'funding' => array(), 'users' => array(), 'orgs' => array()));
+  $results = gie_homepage_sitewide_summary_generator(
+    array(
+      'innovations' => array(),
+      'funding' => array(),
+      'users' => array(),
+      'orgs' => array(),
+    )
+  );
 
-  $block->content = '<h2 class="pane__title">' . strtoupper(t('Exchange at a Glance')) . '</h2>
+  $block->content = '<h2 class="pane__title">' . strtoupper(
+      t('Exchange at a Glance')
+    ) . '</h2>
   <div class="view view--data-points">
 <div class=" views-row">
 <article about="/node/4040">

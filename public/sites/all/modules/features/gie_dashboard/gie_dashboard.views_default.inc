@@ -246,7 +246,11 @@ function gie_dashboard_views_default_views() {
   $handler->display->display_options['filters']['uid_current']['value'] = '0';
 
   /* Display: You May Know */
-  $handler = $view->new_display('panel_pane', 'You May Know', 'dashboard_users');
+  $handler = $view->new_display(
+    'panel_pane',
+    'You May Know',
+    'dashboard_users'
+  );
   $handler->display->display_options['argument_input'] = array(
     'field_user_org_target_id' => array(
       'type' => 'none',
@@ -259,7 +263,11 @@ function gie_dashboard_views_default_views() {
   );
 
   /* Display: People You Follow */
-  $handler = $view->new_display('panel_pane', 'People You Follow', 'panel_pane_1');
+  $handler = $view->new_display(
+    'panel_pane',
+    'People You Follow',
+    'panel_pane_1'
+  );
   $handler->display->display_options['defaults']['title'] = FALSE;
   $handler->display->display_options['title'] = 'People You Follow';
   $handler->display->display_options['defaults']['pager'] = FALSE;

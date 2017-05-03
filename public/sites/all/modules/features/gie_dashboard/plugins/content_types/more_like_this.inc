@@ -13,7 +13,7 @@ $plugin = array(
   'edit form' => 'more_like_this_edit_form',
   'render callback' => 'more_like_this_render',
   'defaults' => array(
-    'type' => ''
+    'type' => '',
   ),
 );
 
@@ -112,8 +112,8 @@ function more_like_this_render($subtype, $conf) {
         'body:value',
         'field_term_sector',
         'field_term_region',
-        'field_term_topic'
-      )
+        'field_term_topic',
+      ),
     );
 
     $query->setOption('search_api_mlt', $mlt);
